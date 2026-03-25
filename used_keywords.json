@@ -1,4 +1,145 @@
 {
-  "last_updated": "",
-  "keywords": []
+  "last_updated": "2026-03-26",
+  "keywords": [
+    {
+      "category": "baseball",
+      "keyword": "김도영",
+      "title": "김도영 KBO 개막 D-2 — 타격왕 3연패 도전, 2026 시즌 관전 포인트 총정리",
+      "event": "KBO 개막 전 타격왕 도전",
+      "date": "2026-03-26"
+    },
+    {
+      "category": "baseball",
+      "keyword": "크리스플렉센",
+      "title": "크리스 플렉센 두산 복귀 — 시범경기 12⅓이닝 1자책, 개막 에이스 낙점",
+      "event": "두산 복귀 시범경기 호투",
+      "date": "2026-03-26"
+    },
+    {
+      "category": "golf",
+      "keyword": "김효주",
+      "title": "김효주 파운더스컵 우승 — 16언더파, 넬리코다 1타 차 제압하며 통산 9승",
+      "event": "파운더스컵 우승 통산9승",
+      "date": "2026-03-26"
+    },
+    {
+      "category": "golf",
+      "keyword": "LPGA포드챔피언십",
+      "title": "LPGA 포드챔피언십 2026 — 피닉스 오늘 개막, 김효주 연속 우승 도전",
+      "event": "포드챔피언십 피닉스 개막",
+      "date": "2026-03-26"
+    },
+    {
+      "category": "soccer",
+      "keyword": "손흥민",
+      "title": "손흥민 8경기 무득점 슬럼프 — 코트디부아르 평가전이 반전의 계기 될까",
+      "event": "8경기 무득점 슬럼프",
+      "date": "2026-03-26"
+    },
+    {
+      "category": "soccer",
+      "keyword": "코트디부아르전",
+      "title": "한국 대표팀 코트디부아르 평가전 — 28일 런던, 홍명보호 최종 점검",
+      "event": "코트디부아르 3월 평가전",
+      "date": "2026-03-26"
+    },
+    {
+      "category": "sports_etc",
+      "keyword": "안세영",
+      "title": "안세영 전영오픈 패배 후 — 36연승 끊기고 달라진 것들, 다음 대회는?",
+      "event": "전영오픈 결승 패배 36연승종료",
+      "date": "2026-03-26"
+    },
+    {
+      "category": "sports_etc",
+      "keyword": "류현진WBC",
+      "title": "류현진 2026 WBC 참가 의사 — 베테랑의 귀환, 한국 야구 희망이 되다",
+      "event": "WBC 참가 의사 표명",
+      "date": "2026-03-26"
+    },
+    {
+      "category": "japan_travel",
+      "keyword": "도쿄벚꽃",
+      "title": "도쿄 벚꽃 2026 만개 — 지금 가야 하는 이유, 우에노·신주쿠·치도리가후치 완벽 코스",
+      "event": "도쿄 벚꽃 만개 3월27일",
+      "date": "2026-03-26"
+    },
+    {
+      "category": "japan_travel",
+      "keyword": "오사카벚꽃",
+      "title": "오사카 벚꽃 3박4일 여행 — 도톤보리·나라·교토 4월 1일 만개 코스",
+      "event": "오사카 벚꽃 3박4일 코스",
+      "date": "2026-03-26"
+    },
+    {
+      "category": "china_travel",
+      "keyword": "청명절여행",
+      "title": "청명절 중국 여행 2026 — 무비자 30일 완전정복, 꼭 알아야 할 5가지",
+      "event": "청명절 무비자 여행 안내",
+      "date": "2026-03-26"
+    },
+    {
+      "category": "china_travel",
+      "keyword": "상하이봄",
+      "title": "상하이 봄 여행 2박3일 — 와이탄·예원·디즈니랜드 완벽 코스 총정리",
+      "event": "상하이 봄 2박3일 코스",
+      "date": "2026-03-26"
+    },
+    {
+      "category": "overseas_travel",
+      "keyword": "다낭봄여행",
+      "title": "다낭 봄여행 2026 — 항공권 30만원대, 4월 유류할증료 인상 전 예약 필수",
+      "event": "다낭 봄여행 유류할증료 인상전",
+      "date": "2026-03-26"
+    },
+    {
+      "category": "overseas_travel",
+      "keyword": "동남아특가",
+      "title": "동남아 항공권 특가 2026 — 발리·방콕·코타키나발루 20만원대 비교 총정리",
+      "event": "동남아 항공권 특가 비교",
+      "date": "2026-03-26"
+    },
+    {
+      "category": "domestic_travel",
+      "keyword": "진해군항제",
+      "title": "진해 군항제 2026 — 국내 최대 벚꽃 축제, 여좌천 로망스다리 완벽 가이드",
+      "event": "진해 군항제 벚꽃 축제",
+      "date": "2026-03-26"
+    },
+    {
+      "category": "domestic_travel",
+      "keyword": "경주벚꽃",
+      "title": "경주 봄 여행 — 불국사·보문호 벚꽃 만개 시기와 당일치기 코스 총정리",
+      "event": "경주 불국사 보문호 벚꽃",
+      "date": "2026-03-26"
+    },
+    {
+      "category": "recipe",
+      "keyword": "냉이된장국",
+      "title": "냉이된장국 황금 레시피 — 봄 향기 가득, 멸치육수부터 끓이는 시간까지",
+      "event": "냉이된장국 황금 레시피",
+      "date": "2026-03-26"
+    },
+    {
+      "category": "recipe",
+      "keyword": "주꾸미볶음",
+      "title": "주꾸미볶음 봄 제철 레시피 — 쫄깃한 식감 비법, 매콤달콤 양념 황금 비율",
+      "event": "주꾸미볶음 봄제철 레시피",
+      "date": "2026-03-26"
+    },
+    {
+      "category": "kpop",
+      "keyword": "BTS아리랑",
+      "title": "BTS ARIRANG 컴백 — 넷플릭스 1840만 명 시청, 스포티파이 K-팝 역사 신기록",
+      "event": "BTS ARIRANG 넷플릭스 컴백라이브",
+      "date": "2026-03-26"
+    },
+    {
+      "category": "kpop",
+      "keyword": "월간남친지수",
+      "title": "넷플릭스 월간남친 지수 주연 — 블랙핑크 지수의 연기 변신, 3월 신작 화제",
+      "event": "넷플릭스 월간남친 지수 주연",
+      "date": "2026-03-26"
+    }
+  ]
 }
