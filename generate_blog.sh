@@ -15,7 +15,7 @@ DATE_FULL=$(date +%Y-%m-%d)
 OUTPUT_DIR="$SCRIPT_DIR/output/$DATE"
 LOG_FILE="$SCRIPT_DIR/logs/generate_$DATE.log"
 KEYWORDS_FILE="$SCRIPT_DIR/used_keywords.json"
-GITHUB_REPO="https://github.com/deok22-cmd/naverblog"
+GITHUB_REPO="git@github.com:deok22-cmd/naverblog"
 
 mkdir -p "$SCRIPT_DIR/logs"
 log() { echo "[$(date '+%H:%M:%S')] $1" | tee -a "$LOG_FILE"; }
@@ -264,6 +264,106 @@ if [ "$GENERATED" -lt 10 ]; then
   log "⚠️  경고: 생성 파일이 10개 미만. GitHub Push 중단."
   exit 1
 fi
+
+# ── index.html 생성 ──────────────────────────────────────────
+log "index.html 생성 중..."
+python3 << PYEOF
+import os, re
+from collections import defaultdict
+
+output_dir = "$OUTPUT_DIR"
+date_full  = "$DATE_FULL"
+
+CATEGORY_NAMES = {
+    'baseball':        '⚾ 야구',
+    'golf':            '⛳ 골프',
+    'soccer':          '⚽ 축구',
+    'sports_etc':      '🏅 기타 스포츠',
+    'japan_travel':    '🗾 일본 여행',
+    'china_travel':    '🇨🇳 중국 여행',
+    'overseas_travel': '✈️ 해외 여행',
+    'domestic_travel': '🏔️ 국내 여행',
+    'recipe':          '🍳 레시피',
+    'kpop':            '🎵 연예/Kpop',
+}
+
+files = sorted([f for f in os.listdir(output_dir)
+                if f.endswith('.html') and f != 'index.html'])
+
+items = []
+for fname in files:
+    fpath = os.path.join(output_dir, fname)
+    try:
+        with open(fpath, 'r', encoding='utf-8') as f:
+            content = f.read()
+        m = re.search(r'<title>(.*?)</title>', content, re.IGNORECASE | re.DOTALL)
+        title = m.group(1).strip() if m else fname
+    except Exception:
+        title = fname
+    cat_id   = fname.split('_')[0] if '_' in fname else 'etc'
+    cat_name = CATEGORY_NAMES.get(cat_id, cat_id)
+    items.append((cat_id, cat_name, fname, title))
+
+by_cat = defaultdict(list)
+for cat_id, cat_name, fname, title in items:
+    by_cat[cat_id].append((cat_name, fname, title))
+
+total    = len(files)
+sections = ""
+for cat_id in list(CATEGORY_NAMES.keys()):
+    if cat_id not in by_cat:
+        continue
+    posts    = by_cat[cat_id]
+    cat_name = posts[0][0]
+    li_items = "".join(
+        f'<li><a href="{fname}">{title}</a></li>'
+        for _, fname, title in posts
+    )
+    sections += f"""
+    <div class="cat-section">
+      <h2>{cat_name}</h2>
+      <ul>{li_items}</ul>
+    </div>"""
+
+html = f"""<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>블로그 원고 목록 — {date_full}</title>
+<style>
+  body {{ font-family: 'Noto Sans KR', sans-serif; background:#f5f5f5; margin:0; padding:20px; }}
+  .container {{ max-width:900px; margin:0 auto; background:#fff; border-radius:12px;
+               box-shadow:0 2px 12px rgba(0,0,0,.08); padding:32px; }}
+  h1 {{ color:#1a73e8; border-bottom:3px solid #1a73e8; padding-bottom:12px; margin-top:0; }}
+  .meta {{ color:#888; margin-bottom:24px; font-size:14px; }}
+  .cat-section {{ margin-bottom:28px; }}
+  h2 {{ font-size:17px; color:#333; background:#f0f4ff; padding:8px 14px;
+        border-radius:6px; border-left:4px solid #1a73e8; margin:0 0 4px; }}
+  ul {{ list-style:none; padding:0; margin:0; }}
+  li {{ padding:9px 12px; border-bottom:1px solid #f0f0f0; }}
+  li:last-child {{ border-bottom:none; }}
+  a {{ color:#222; text-decoration:none; font-size:15px; line-height:1.5; }}
+  a:hover {{ color:#1a73e8; text-decoration:underline; }}
+  .total {{ display:inline-block; background:#1a73e8; color:#fff;
+            border-radius:20px; padding:2px 12px; font-size:14px; }}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>📋 블로그 원고 목록</h1>
+  <p class="meta">생성일: {date_full} &nbsp;|&nbsp; 총 <span class="total">{total}개</span></p>
+  {sections}
+</div>
+</body>
+</html>"""
+
+index_path = os.path.join(output_dir, 'index.html')
+with open(index_path, 'w', encoding='utf-8') as f:
+    f.write(html)
+print(f"index.html 생성 완료 — {total}개 원고 링크 포함")
+PYEOF
+log "index.html 생성 완료"
 
 # ── GitHub Push ──────────────────────────────────────────────
 log "GitHub Push 시작..."
