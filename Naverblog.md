@@ -165,7 +165,7 @@
 
 - 주제 선정 및 원고 작성 요청 시:
   - 원고: `./output/yymmdd/***.html` 파일로 저장
-  - 이미지: `./images/yymmdd/***.png` 파일로 저장 (원고당 3장)
+  - 이미지: `./images/yymmdd/mainKeyword_사진설명.png` 형식으로 저장 (원고당 3장)
   - `Naverblog.md` 지침 엄격 준수
 
 위 내용을 Naverblog.md 에 저장하고 내가 지침을 수정 요청하면 이 file의 내용을 수정해줘.
