@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텐트깔끄미 블로그 콘텐츠 관리 대쉬보드</title>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        header {
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .btn-brand {
+            background: #e67e22;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th {
+            background: #f8f9fa;
+            color: #555;
+            font-size: 13px;
+            text-transform: uppercase;
+            padding: 12px;
+            border-bottom: 2px solid #dee2e6;
+            text-align: left;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            vertical-align: middle;
+        }
+
+        .date {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: #7f8c8d;
+            width: 100px;
+        }
+
+        .topic-title {
+            font-weight: bold;
+            color: #333;
+            font-size: 16px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .topic-news {
+            font-size: 13px;
+            color: #27ae60;
+            background: #e9f7ef;
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-bottom: 5px;
+        }
+
+        .keyword-badge {
+            font-size: 12px;
+            color: #2980b9;
+            background: #ebf5fb;
+            padding: 2px 6px;
+            border-radius: 3px;
+            margin-right: 5px;
+        }
+
+        .status-badge {
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .status-todo {
+            background: #fee7d1;
+            color: #e67e22;
+        }
+
+        .status-done {
+            background: #d5f5e3;
+            color: #27ae60;
+        }
+
+        .link-btn {
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .link-btn:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>⛺ 텐트깔끄미 블로그 마케팅 일지</h1>
+            <a href="http://www.tentme.co.kr" class="btn-brand" target="_blank">공식 홈페이지 바로가기</a>
+        </header>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>날짜</th>
+                    <th>주제 및 업계 소식</th>
+                    <th>핵심 키워드</th>
+                    <th>상태</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 2026-04-03 #1 -->
+                <tr>
+                    <td class="date">2026.04.03</td>
+                    <td>
+                        <span class="topic-news">📢 소식: 자라섬 GOCF 캠핑 페어 개최 임박</span>
+                        <span class="topic-title"><a href="260403_jarasum_dust_care.html"
+                                style="text-decoration: none; color: inherit;">4월 자라섬 GOCF 가기 전 필수 체크! 텐트 망치는 '송화가루'와
+                                '황사' 완벽 방어법</a></span>
+                        <small style="color:#888;">GOCF의 축제 분위기와 연계하여 봄철 미세먼지 세탁의 중요성 강조</small>
+                    </td>
+                    <td>
+                        <span class="keyword-badge">#텐트세탁</span><br>
+                        <span class="keyword-badge">#송화가루제거</span><br>
+                        <span class="keyword-badge">#GOCF2026</span>
+                    </td>
+                    <td>
+                        <span class="status-badge status-done">작성 완료</span><br>
+                        <a href="260403_jarasum_dust_care.html" class="link-btn">원고 보기</a>
+                    </td>
+                </tr>
+                <!-- 2026-04-03 #2 -->
+                <tr>
+                    <td class="date">2026.04.03</td>
+                    <td>
+                        <span class="topic-news">☁️ 트렌드: 봄철 기습 강수 대비 (우중 캠핑)</span>
+                        <span class="topic-title"><a href="260403_water_repellent_guide.html"
+                                style="text-decoration: none; color: inherit;">"비 오는 소리는 좋지만 눅눅한 건 싫어!" 4월 우중 캠핑 대비 텐트
+                                발수 코팅 자가진단법</a></span>
+                        <small style="color:#888;">봄철 기습 강우에 대비한 닉왁스 발수 코팅의 중요성과 원단 보호 솔루션</small>
+                    </td>
+                    <td>
+                        <span class="keyword-badge">#텐트발수코팅</span><br>
+                        <span class="keyword-badge">#우중캠핑준비</span><br>
+                        <span class="keyword-badge">#닉왁스발수</span>
+                    </td>
+                    <td>
+                        <span class="status-badge status-done">작성 완료</span><br>
+                        <a href="260403_water_repellent_guide.html" class="link-btn">원고 보기</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <footer style="margin-top: 50px; text-align: center; color: #bdc3c7; font-size: 13px;">
+            <p>본 대쉬보드는 텐트깔끄미 브랜드의 '깔끔함'과 '정직함'을 원칙으로 자동 생성됩니다.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
