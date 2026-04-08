@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026-04-06 Naver Blog Topic Selection Dashboard</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #34495e;
+            --accent: #ff8f00;
+            --success: #27ae60;
+            --info: #2980b9;
+            --warning: #f1c40f;
+            --danger: #c0392b;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+
+        body {
+            font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            color: var(--dark);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: -1px;
+        }
+
+        .date-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .summary-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            border-bottom: 5px solid var(--accent);
+        }
+
+        .summary-card h3 {
+            margin: 0;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            text-transform: uppercase;
+        }
+
+        .summary-card p {
+            margin: 10px 0 0;
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            color: #7f8c8d;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            padding: 20px;
+            text-align: left;
+            border-bottom: 2px solid #edf2f7;
+        }
+
+        td {
+            padding: 20px;
+            border-bottom: 1px solid #edf2f7;
+            vertical-align: top;
+        }
+
+        tr:hover {
+            background-color: #fcfdfe;
+        }
+
+        .num {
+            font-weight: bold;
+            color: var(--accent);
+            font-size: 1.2em;
+            width: 40px;
+        }
+
+        .type {
+            width: 120px;
+        }
+
+        .section-label {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 6px;
+            color: white;
+            font-size: 0.75em;
+            font-weight: bold;
+        }
+
+        .title-col {
+            min-width: 350px;
+        }
+
+        .main-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: var(--primary);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .sub {
+            font-size: 0.9em;
+            color: #7f8c8d;
+            line-height: 1.5;
+        }
+
+        .keyword {
+            font-size: 0.85em;
+            color: #34495e;
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 8px;
+            border-left: 3px solid var(--info);
+            line-height: 1.6;
+        }
+
+        .format {
+            font-size: 0.85em;
+            color: #7f8c8d;
+        }
+
+        .link {
+            text-align: center;
+        }
+
+        .link-wait {
+            display: inline-block;
+            padding: 6px 12px;
+            background-color: #f8f9fa;
+            color: #bdc3c7;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            font-size: 0.85em;
+            text-decoration: none;
+            cursor: not-allowed;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>네이버 블로그 주제 선정 대시보드</h1>
+            <div class="date-badge">📅 2026-04-06 (월요일) 캠페인</div>
+        </header>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <h3>전체 주제</h3>
+                <p>8</p>
+            </div>
+            <div class="summary-card" style="border-bottom-color: var(--info);">
+                <h3>축제 / 여행</h3>
+                <p>3</p>
+            </div>
+            <div class="summary-card" style="border-bottom-color: var(--success);">
+                <h3>IT / 경제</h3>
+                <p>2</p>
+            </div>
+            <div class="summary-card" style="border-bottom-color: var(--warning);">
+                <h3>스포츠 / 레시피</h3>
+                <p>3</p>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>카테고리</th>
+                    <th>제목 및 기획 의도</th>
+                    <th>키워드</th>
+                    <th>포맷</th>
+                    <th>상태</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- #1 창녕 유채축제 -->
+                <tr>
+                    <td class="num">1</td>
+                    <td class="type"><span class="section-label" style="background:#ff8f00">🎪 축제·이벤트</span></td>
+                    <td class="title-col">
+                        <div class="main-title"><a href="festival_changnyeong_canola.html" style="text-decoration: none; color: inherit;">창녕 낙동강 유채축제 2026 — 33만 평 노란 물결, 실시간 개화 상황 및 주차 꿀팁 완벽 가이드</a></div>
+                        <div class="sub">시안: 전국 최대 규모 유채꽃 단지, 인파 피하는 평일/오전 방문 전략 및 현지인 맛집 리스트</div>
+                    </td>
+                    <td class="keyword">빅: 창녕 낙동강 유채축제<br>미들: 남지 유채꽃축제<br>롱테일: 2026 실시간 개화 상황 주차 명당 불꽃쇼 일정</td>
+                    <td class="format">로컬 축제 가이드</td>
+                    <td class="link"><a href="festival_changnyeong_canola.html" style="color: #2e7d32; font-weight: bold;">✔️ 작성 완료</a></td>
+                </tr>
+
+                <!-- #2 제천 청풍호 -->
+                <tr>
+                    <td class="num">2</td>
+                    <td class="type"><span class="section-label" style="background:#ff8f00">🎪 축제·이벤트</span></td>
+                    <td class="title-col">
+                        <div class="main-title"><a href="festival_jecheon_cheongpung.html" style="text-decoration: none; color: inherit;">제천 청풍호 봄나들이 2026 실시간 — 비봉산 케이블카 예약 및 벚꽃 드라이브 코스</a></div>
+                        <div class="sub">시안: '내륙의 바다' 청풍호반의 화려한 벚꽃 엔딩! 주차 명당 및 주변 가볼 만한 곳</div>
+                    </td>
+                    <td class="keyword">빅: 제천 청풍호 봄나들이<br>미들: 청풍호 벚꽃 축제<br>롱테일: 비봉산 케이블카 예약 주차 드라이브 코스</td>
+                    <td class="format">지역 축제 가이드</td>
+                    <td class="link"><a href="festival_jecheon_cheongpung.html" style="color: #2e7d32; font-weight: bold;">✔️ 작성 완료</a></td>
+                </tr>
+
+                <!-- #3 경주 불국사 겹벚꽃 -->
+                <tr>
+                    <td class="num">3</td>
+                    <td class="type"><span class="section-label" style="background:#00796b">🗺️ 국내여행</span></td>
+                    <td class="title-col">
+                        <div class="main-title"><a href="travel_gyeongju_double_cherry.html" style="text-decoration: none; color: inherit;">경주 불국사 겹벚꽃 실시간 개화 상황 — 벚꽃 엔딩 후 시작되는 분홍색 솜사탕의 유혹</a></div>
+                        <div class="sub">시안: 일반 벚꽃보다 늦게 피어 더 아름다운 경주 겹벚꽃 명당 및 황리단길 카페 투어 코스</div>
+                    </td>
+                    <td class="keyword">빅: 경주 불국사 겹벚꽃<br>미들: 경주 겹벚꽃 시기<br>롱테일: 실시간 개화 상황 주차 대릉원 산책 코스</td>
+                    <td class="format">시즌 여행 가이드</td>
+                    <td class="link"><a href="travel_gyeongju_double_cherry.html" style="color: #2e7d32; font-weight: bold;">✔️ 작성 완료</a></td>
+                </tr>
+
+                <!-- #4 KBO 결과 -->
+                <tr>
+                    <td class="num">4</td>
+                    <td class="type"><span class="section-label" style="background:#1a4731">⚾ 스포츠</span></td>
+                    <td class="title-col">
+                        <div class="main-title"><a href="sports_kbo_sunday_results.html" style="text-decoration: none; color: inherit;">2026 KBO 리그 4월 5일 경기 결과 — 두산 잭 로그 6이닝 무실점·SSG 단독 선두 도약</a></div>
+                        <div class="sub">시안: 잭 로그의 호투로 4연패 탈출한 두산, 오지환 맹활약의 LG 승리 및 SSG의 파죽지세 4연승</div>
+                    </td>
+                    <td class="keyword">빅: KBO 경기 결과<br>미들: 2026 KBO 순위<br>롱테일: 잭 로그 박준순 홈런 오지환 하이라이트 TVING 중계</td>
+                    <td class="format">스포츠 위클리 리뷰</td>
+                    <td class="link"><a href="sports_kbo_sunday_results.html" style="color: #2e7d32; font-weight: bold;">✔️ 작성 완료</a></td>
+                </tr>
+
+                <!-- #5 환율 위기 -->
+                <tr>
+                    <td class="num">5</td>
+                    <td class="type"><span class="section-label" style="background:#388e3c">💡 생활·정보</span></td>
+                    <td class="title-col">
+                        <div class="main-title"><a href="economy_exchange_rate_1530.html" style="text-decoration: none; color: inherit;">원-달러 환율 1,530원 돌파, 경제 위기인가? — 고환율 시대 자산 관리 및 해외 직구 팁</a></div>
+                        <div class="sub">시안: 2008년 금융위기급 환율 급등! 원인 분석과 실생활 물가 영향 및 환테크 전략</div>
+                    </td>
+                    <td class="keyword">빅: 환율 1530원<br>미들: 원달러 환율 전망<br>롱테일: 경제 위기 가능성 외환보유고 해외 여행 경비</td>
+                    <td class="format">경제 이슈 분석</td>
+                    <td class="link"><a href="economy_exchange_rate_1530.html" style="color: #2e7d32; font-weight: bold;">✔️ 작성 완료</a></td>
+                </tr>
+
+                <!-- #6 마스터스 개막 -->
+                <tr>
+                    <td class="num">6</td>
+                    <td class="type"><span class="section-label" style="background:#1a4731">⛳ 스포츠</span></td>
+                    <td class="title-col">
+                        <div class="main-title"><a href="sports_masters_2026_augusta.html" style="text-decoration: none; color: inherit;">2026 마스터스 토너먼트 개막 — 로리 매킬로이의 대회 2연패인가, 새로운 챔피언의 탄생인가?</a></div>
+                        <div class="sub">시안: 지난해 커리어 그랜드슬램을 달성한 로리 매킬로이! 디펜딩 챔피언의 위엄과 오거스타 내셔널 관전 포인트</div>
+                    </td>
+                    <td class="keyword">빅: 2026 마스터스<br>미들: 오거스타 내셔널<br>롱테일: 로리 매킬로이 우승 상금 타이거 우즈 출전 중계 시간</td>
+                    <td class="format">메이저 스포츠 뉴스</td>
+                    <td class="link"><a href="sports_masters_2026_augusta.html" style="color: #2e7d32; font-weight: bold;">✔️ 작성 완료</a></td>
+                </tr>
+
+                <!-- #7 아이패드 비교 -->
+                <tr>
+                    <td class="num">7</td>
+                    <td class="type"><span class="section-label" style="background:#388e3c">💡 생활·정보</span></td>
+                    <td class="title-col">
+                        <div class="main-title"><a href="it_ipad_air_vs_pro_m4.html" style="text-decoration: none; color: inherit;">대학생 아이패드 에어 M4 vs 프로 현실적인 비교 — 4월 교육할인 끝물 구매 가이드</a></div>
+                        <div class="sub">시안: 가성비냐 성능이냐? 용도별 아이패드 추천 및 애플 펜슬 프로 호환성 완벽 정리</div>
+                    </td>
+                    <td class="keyword">빅: 아이패드 에어 M4<br>미들: 아이패드 프로 비교<br>롱테일: 대학생 추천 교육할인 가격 스펙 차이</td>
+                    <td class="format">IT 구매 가이드</td>
+                    <td class="link"><a href="it_ipad_air_vs_pro_m4.html" style="color: #2e7d32; font-weight: bold;">✔️ 작성 완료</a></td>
+                </tr>
+
+                <!-- #8 봄 부추 레시피 -->
+                <tr>
+                    <td class="num">8</td>
+                    <td class="type"><span class="section-label" style="background:#e64a19">🍜 맛집·음식</span></td>
+                    <td class="title-col">
+                        <div class="main-title"><a href="food_spring_chive_geotjeori.html" style="text-decoration: none; color: inherit;">봄 기운 가득! 부추·달래 겉절이 황금레시피 — 잃어버린 입맛 소환하는 초간단 비법</a></div>
+                        <div class="sub">시안: 봄에만 맛보는 보약 채소! 실패 없는 양념장 비율과 삼겹살 꿀조합 밑반찬 만들기</div>
+                    </td>
+                    <td class="keyword">빅: 봄 부추 겉절이<br>미들: 달래 무침 레시피<br>롱테일: 황금레시피 만드는법 봄나물 요리 밑반찬</td>
+                    <td class="format">생활 요리 레시피</td>
+                    <td class="link"><a href="food_spring_chive_geotjeori.html" style="color: #2e7d32; font-weight: bold;">✔️ 작성 완료</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <footer>
+            <p>© 2026 안티그래비티 봇 - 실시간 하이엔드 블로그 자동화</p>
+            <p>대시보드 업데이트: 2026-04-06 14:54 | 운영 지침: Naverblog.md v2</p>
+        </footer>
+    </div>
+</body>
+
+</html>
