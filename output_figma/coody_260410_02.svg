@@ -1,0 +1,26 @@
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1080" height="1080" fill="white"/>
+  
+  <!-- Section Title -->
+  <rect x="100" y="60" width="880" height="120" fill="#FFF1F0" rx="10"/>
+  <text fill="#D32F2F" xml:space="preserve" font-family="Pretendard, sans-serif" font-size="70" font-weight="800" text-anchor="middle"><tspan x="540" y="145">확실한 차이를 경험하세요</tspan></text>
+  <text fill="#222" xml:space="preserve" font-family="Pretendard, sans-serif" font-size="45" font-weight="700" text-anchor="middle"><tspan x="540" y="240">오염된 텐트가 새것처럼 쾌적하게!</tspan></text>
+
+  <!-- Image Comparison Area -->
+  <g id="ComparisonArea">
+    <!-- Before Area (Left) -->
+    <rect x="50" y="320" width="490" height="660" fill="#333333" rx="10"/>
+    <text fill="white" xml:space="preserve" font-family="Pretendard, sans-serif" font-size="50" font-weight="800" text-anchor="middle" opacity="0.8"><tspan x="295" y="650">BEFORE</tspan></text>
+    <text fill="white" xml:space="preserve" font-family="Pretendard, sans-serif" font-size="25" font-weight="400" text-anchor="middle" opacity="0.5"><tspan x="295" y="720">(오염된 사진 영역)</tspan></text>
+    
+    <!-- After Area (Right) -->
+    <rect x="540" y="320" width="490" height="660" fill="#E0F2F1" rx="10"/>
+    <text fill="#00796B" xml:space="preserve" font-family="Pretendard, sans-serif" font-size="50" font-weight="800" text-anchor="middle" opacity="0.8"><tspan x="785" y="650">AFTER</tspan></text>
+    <text fill="#00796B" xml:space="preserve" font-family="Pretendard, sans-serif" font-size="25" font-weight="400" text-anchor="middle" opacity="0.5"><tspan x="785" y="720">(세척 완료 사진 영역)</tspan></text>
+    
+    <!-- Divider Line -->
+    <line x1="540" y1="320" x2="540" y2="980" stroke="white" stroke-width="6"/>
+  </g>
+
+  <text fill="#666" xml:space="preserve" font-family="Pretendard, sans-serif" font-size="32" font-weight="500" text-anchor="middle"><tspan x="540" y="1040">텐트깔끄미만의 3단계 특수 세척 시스템의 결과입니다.</tspan></text>
+</svg>

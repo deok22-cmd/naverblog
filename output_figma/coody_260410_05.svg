@@ -1,0 +1,9 @@
+<!-- Updated: 2026-04-10 18:05 -->
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect width="1080" height="1080" fill="#00796B"/>
+  <image href="../images/260410/9_coody_price_2.png" x="0" y="0" width="1080" height="1080" opacity="0.2" preserveAspectRatio="xMidYMid slice"/>
+  <rect x="140" y="450" width="800" height="120" fill="white" rx="60"/>
+  <text fill="#00796B" xml:space="preserve" style="white-space: pre" font-family="Pretendard, sans-serif" font-size="50" font-weight="800"><tspan x="200" y="525">텐트깔끄미</tspan></text>
+  <path d="M850 480L880 510L850 540" stroke="#00796B" stroke-width="8" stroke-linecap="round"/>
+  <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Pretendard, sans-serif" font-size="80" font-weight="800" text-anchor="middle"><tspan x="540" y="350">보송보송한 다음 캠핑을</tspan><tspan x="540" y="750">지금 바로 예약하세요!</tspan></text>
+</svg>

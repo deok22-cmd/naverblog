@@ -1,0 +1,22 @@
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 1. 배경 이미지 전용 레이어 (이것만 클릭해서 Fill을 Image로 바꾸세요!) -->
+  <rect id="BACKGROUND_IMAGE_HERE" width="1080" height="1080" fill="#004D40"/>
+  
+  <!-- 2. 글씨를 잘 보이게 해주는 어두운 반투명 막 (이건 건드리지 마세요!) -->
+  <rect id="DARK_OVERLAY" width="1080" height="1080" fill="black" fill-opacity="0.4"/>
+
+  <!-- 3. 메인 타이틀 (절대 투명해지지 않는 레이어) -->
+  <text fill="#FFD54F" xml:space="preserve" font-family="Pretendard, sans-serif" font-size="90" font-weight="800">
+    <tspan x="100" y="300">쿠디 전담 케어,</tspan>
+    <tspan x="100" y="420">텐트깔끄미가 답입니다.</tspan>
+  </text>
+  
+  <!-- 4. 상세 리스트 박스 -->
+  <rect x="100" y="550" width="880" height="400" fill="white" fill-opacity="0.1" stroke="white" stroke-width="2" rx="15"/>
+  <text fill="white" xml:space="preserve" font-family="Pretendard, sans-serif" font-size="45" font-weight="600">
+    <tspan x="150" y="650">✓ 대형 에어텐트 전용 세척 설비</tspan>
+    <tspan x="150" y="740">✓ 에어빔 손상 없는 저온 열풍 건조</tspan>
+    <tspan x="150" y="830">✓ 원단 보호를 위한 프리미엄 약제</tspan>
+    <tspan x="150" y="920">✓ 2026년형 발수 코팅 복원 시스템</tspan>
+  </text>
+</svg>

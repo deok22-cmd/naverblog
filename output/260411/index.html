@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026.04.11 콘텐츠 생산 대시보드</title>
+    <style>
+        :root {
+            --primary: #00796b;
+            --secondary: #ff8f00;
+            --accent: #d32f2f;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #2d3436;
+        }
+
+        body {
+            font-family: 'Apple SD Gothic Neo', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #636e72;
+            font-size: 1.1rem;
+        }
+
+        .stat-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            border-top: 4px solid var(--primary);
+        }
+
+        .stat-card h3 {
+            font-size: 0.9rem;
+            color: #b2bec3;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .stat-card .value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .content-list {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #f1f2f6;
+            transition: all 0.2s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .item:hover {
+            background-color: #f1f2fb;
+        }
+
+        .item:last-child {
+            border-bottom: none;
+        }
+
+        .badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 15px;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        .badge-done {
+            background: #e6f7ff;
+            color: #1890ff;
+            border: 1px solid #91d5ff;
+        }
+
+        .badge-wait {
+            background: #fff7e6;
+            color: #fa8c16;
+            border: 1px solid #ffd591;
+        }
+
+        .title-area {
+            flex-grow: 1;
+        }
+
+        .title-area h4 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #2d3436;
+        }
+
+        .title-area p {
+            margin: 4px 0 0;
+            font-size: 0.85rem;
+            color: #636e72;
+        }
+
+        .status-icon {
+            margin-left: auto;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>April 11, 2026</h1>
+            <p>1만 명 달성을 위한 전략적 콘텐츠 생산 현황 (송파 골드 스탠다드 v3)</p>
+        </header>
+
+        <div class="stat-row">
+            <div class="stat-card">
+                <h3>목표 발행수</h3>
+                <div class="value">10</div>
+            </div>
+            <div class="stat-card">
+                <h3>작성 완료</h3>
+                <div class="value">5</div>
+            </div>
+            <div class="stat-card">
+                <h3>진척률</h3>
+                <div class="value">50%</div>
+            </div>
+        </div>
+
+        <div class="content-list">
+            <!-- 1번원고 완료 -->
+            <a href="travel_ganghwa_goryeosan_opening.html" class="item">
+                <span class="badge badge-done">✔️ 작성 완료</span>
+                <div class="title-area">
+                    <h4>1. 강화 고려산 진달래축제 2026 개막 리포트 — 실시간 개화 상황 및 주차 성공 전략</h4>
+                    <p>#국내여행 #Seasonal #Opening_Day</p>
+                </div>
+                <span class="status-icon">👉</span>
+            </a>
+
+            <!-- 2번원고 완료 -->
+            <a href="travel_gochang_greenbarley_2026.html" class="item">
+                <span class="badge badge-done">✔️ 작성 완료</span>
+                <div class="title-area">
+                    <h4>2. 전북 고창 학원농장 청보리밭 축제 2026 — 초록빛 물결 속의 힐링, 실시간 개화 상황 및 주차 정보</h4>
+                    <p>#국내여행 #Seasonal #청보리밭</p>
+                </div>
+                <span class="status-icon">👉</span>
+            </a>
+
+            <!-- 3번원고 완료 -->
+            <a href="travel_cheongju_daytrip_2026.html" class="item">
+                <span class="badge badge-done">✔️ 작성 완료</span>
+                <div class="title-area">
+                    <h4>3. 청주 가볼만한곳 당일 여행 코스 3곳 추천 — 수암골 벽화마을·육거리시장·청남대 봄 나들이</h4>
+                    <p>#국내여행 #청주여행 #당일치기</p>
+                </div>
+                <span class="status-icon">👉</span>
+            </a>
+
+            <!-- 4번원고 완료 -->
+            <a href="travel_gimpo_cherry_blossom_2026.html" class="item">
+                <span class="badge badge-done">✔️ 작성 완료</span>
+                <div class="title-area">
+                    <h4>4. 김포 벚꽃축제 2026 — 금빛수로 & 계양천 벚꽃길 실시간 현황 및 수도권 숨은 명소</h4>
+                    <p>#국내여행 #Seasonal #김포벚꽃</p>
+                </div>
+                <span class="status-icon">👉</span>
+            </a>
+
+            <!-- 5번원고 완료 -->
+            <a href="travel_sokcho_yeongrangho_cherry_blossom_2026.html" class="item">
+                <span class="badge badge-done">✔️ 작성 완료</span>
+                <div class="title-area">
+                    <h4>5. 속초 영랑호 벚꽃축제 2026 — 설악산과 호수가 빚어내는 환상적인 벚꽃 엔딩 가이드</h4>
+                    <p>#국내여행 #Seasonal #영랑호벚꽃</p>
+                </div>
+                <span class="status-icon">👉</span>
+            </a>
+
+            <!-- 6번원고 대기 -->
+            <div class="item">
+                <span class="badge badge-wait">⏳ 작성 대기</span>
+                <div class="title-area">
+                    <h4>6. [IT] 갤럭시 S26 고화질 벚꽃 사진 보정법 — 라이트룸 모바일 프리셋 공유</h4>
+                    <p>#AI·앱사용법 #Evergreen #사진보정</p>
+                </div>
+            </div>
+
+            <!-- 7번원고 대기 -->
+            <div class="item">
+                <span class="badge badge-wait">⏳ 작성 대기</span>
+                <div class="title-area">
+                    <h4>7. [Living] 자동차 봄맞이 에바크리닝 비용 및 셀프 에어컨 냄새 제거 방법</h4>
+                    <p>#생활·정보 #Evergreen #차량관리</p>
+                </div>
+            </div>
+
+            <!-- 8번원고 대기 -->
+            <div class="item">
+                <span class="badge badge-wait">⏳ 작성 대기</span>
+                <div class="title-area">
+                    <h4>8. [Economy] 4월말 종료되는 청년 주택드림 청약통장 혜택 및 가입 서두를 이유</h4>
+                    <p>#생활·정보 #Evergreen #금융혜택</p>
+                </div>
+            </div>
+
+            <!-- 9번원고 대기 -->
+            <div class="item">
+                <span class="badge badge-wait">⏳ 작성 대기</span>
+                <div class="title-area">
+                    <h4>9. [Travel Tip] 주말 고속도로 정체 실시간 확인법 및 상습 정체 구간 우회 전략</h4>
+                    <p>#항공·교통 꿀팁 #Evergreen #교통정보</p>
+                </div>
+            </div>
+
+            <!-- 10번원고 대기 -->
+            <div class="item">
+                <span class="badge badge-wait">⏳ 작성 대기</span>
+                <div class="title-area">
+                    <h4>10. [Authority] 텐트 곰팡이 방지 보관법 및 우중 캠핑 후 건조 서비스 '텐트깔끄미' 안내</h4>
+                    <p>#텐트깔끄미 #Authority #텐트세탁</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-# 블로그 운영 지침 v3 (하이엔드 송파 골드 스탠다드 적용)
+# 네이버 블로그 운영 지침 v5 (플래티넘 에디터 세이프 스탠다드)
 
 ---
 
@@ -53,13 +53,26 @@
 
 ---
 
-## 02 | 주제 선정 5대 기준 (우선순위 순)
+## 02 | 주제 선정 및 트래픽 전략 (2026-04-09 최적화)
 
-1. **실시간 로컬 정보 (최우선 ★★★)** — `[지역명 + 축제/행사 + 실시간/주차/웨이팅 꿀팁]` 조합. 
-2. **인물명 + 대기록 스포츠 이슈 (★★★)** — 한국 선수 우승 임박·국가대표 경기 등.
-3. **당일 이슈·연예 가십 (★★)** — 트래픽용으로만 활용.
-4. **시즌 키워드 (★★)** — 날짜별로 쪼개 경쟁 감소. 예: "경주 벚꽃 오늘이 절정"
-5. **고단가 롱테일 (★★)** — IT/의료/금융 정보성. 광고단가 최적화.
+### 2.1. 콘텐츠 레이어 분배 (7:2:1 법칙)
+일시적 트래픽에 의지하지 않고 견고한 성장을 위해 콘텐츠 비중을 강제한다.
+- **70% [에버그린]**: 계절과 무관한 '드라이브 코스', '주차 팁', '생활 정보', 'IT 팁' (기저 트래픽 확보)
+- **20% [시의성]**: 축제 실시간 리포트, 시즌 한정 명소 (폭발적 유입 담당)
+- **10% [전문성]**: 텐트깔끄미 수익형 원고, 전문 칼럼 (브랜딩 및 이웃 확보)
+
+### 2.2. T-2 선점 스케줄링 (2주전 선점)
+- 대중의 관심이 폭발하기 **2주 전**에 관련 키워드를 선점하여 검색 엔진 상단을 장악한다.
+- **발행 타이밍**: 주말 계획이 수립되는 **수/목요일 심야~새벽**을 메인 발행 시간으로 잡는다.
+
+### 2.3. 지역 허브 및 시리즈화 (Regional Hub)
+- 특정 지역 포스팅 시 해당 지역의 맛집, 주차, 카페 등 연관 글을 **내부 링크**로 촘촘하게 엮는다.
+- 방문자당 페이지뷰(PV) 2.0 이상을 목표로 하며, 독자가 블로그 내에서 계속 머물게 설계한다.
+
+### 2.4. 폭포(Waterfall) 낙수 전략
+- 여행/축제 트래픽을 IT/경제/생활/서비스 카테고리로 흘려보내 전체적인 블로그 지수를 높인다.
+
+**※ 주의사항: 모든 원고 작성 전 반드시 `1만명_달성_액션플랜.md`를 상호 참조하여 전략적 정렬을 확인한다.**
 
 ---
 
@@ -69,76 +82,59 @@
 
 ---
 
-## 04 | [골드 스탠다드] 포맷 & 디자인 v3
+## 04 | [플래티넘 스탠다드] 포맷 & 디자인 v5 (Editor-Safe)
 
 ### 핵심 원칙
-**"송파구 숨은 명소" 원고 포맷을 100% 계승하여, 압도적인 전문성과 가시성을 확보한다.**
+**네이버 블로그 에디터 복사-붙여넣기 시 디자인 무결성을 유지하며, 압도적인 전문성을 확보한다.**
 
-1. **디테일한 CSS**: `.course-step`, `.step-num`, `.highlight` 등 시각적 보조 도구를 적극 활용.
-2. **분량 및 내용**: 공백 포함 15,000자 내외의 하이엔드 정보성 원고 지향 (절대 후략/생략 금지)
-- **주제 선정 소스**: 국내 여행 및 축제 정보는 반드시 **`festival.md`**(전국 축제 일정)와 **`관광공사.md`**(한국관광공사 공식 추천 데이터)를 상호 참조하여 선정한다. 실시간성과 공신력을 동시에 확보한다.
-- **[Narrative Master 2.0] 섹션 구성**: 원고 내 소제목(h2, h3 등)으로 구분되는 '꼭지'를 반드시 9개 이상 유지하되, 각 꼭지별 본문은 **최소 8~12행 이상의 압도적이고 밀도 높은 서술**을 지향한다. 단순 요약이 아닌, 현장의 온도, 질감, 전문가적 식견이 고도로 농축된 스토리텔링 형태여야 한다. 독자가 정보의 깊이에 완전히 매료되도록 서술 밀도를 극대화한다.
-- **[Visual Diversity] 가독성 강화**: 압도적인 본문 텍스트 사이사이에 **`.course-step`**, **`.point-box`**, **`.tip`**, **`<table>`** 등을 전략적으로 배치하여 시각적 리듬감을 부여한다. 긴 단락은 의미 단위로 2~3개로 나누되, 전체적인 텍스트의 총량은 절대 줄어들지 않도록 주의한다.
-- **메타텍스트 노출 절대 금지 (CRITICAL)**: 독자가 읽는 원고 본문 내에 'Z.E.P 1.0 프로토콜', '15,000자 작성', '검증 완료', '지침 준수' 등 내부 운영 기준이나 AI 작업 절차에 관한 문구를 **절대 포함하지 않는다**. 독자가 이 글이 AI나 매뉴얼에 의해 기계적으로 생성된 것임을 인지하게 만드는 모든 흔적을 제거하고, 오직 순수한 정보와 스토리텔링만 남긴다.
-3. **강조**: 마크다운 `**` 절대 금지. 반드시 **`<strong>`** 태그만 사용.
-4. **이미지**: 원고당 3장 필수. 쿼터 소진 시 **국내여행·해외여행은 상세 영문 프롬프트 3개(`ratio 1:1` 명시)**, **기타 카테고리는 상세 영문 프롬프트 2개(`ratio 1:1` 명시)**와 촬영 가이드를 반드시 제공한다.
-5. **데이터 시각화**: 비교 테이블(`<table>`)을 본문 중간에 1~2개 배치하여 정보 요약 제공.
-6. **로컬 데이터**: 단순 정보가 아닌 "주민만 아는 맛집", "주차 지옥 피하는 시간대" 등 실전 데이터 포함.
-7. **해시태그**: 원고 최하단에 해당 주제와 밀접한 관련이 있는 해시태그 **10개**를 반드시 삽입한다. 각 태그는 `<span class="tag">#태그명</span>` 형식을 사용한다.
+1. **에디터 세이프 디자인 (v5)**: 
+   - 네이버 에디터에서 삭제되기 쉬운 `grid`, `flex`, `linear-gradient`, `aspect-ratio` 사용을 **엄격히 금지**한다.
+   - 다단 레이아웃이나 카드 형태는 네이버가 완벽히 보존하는 **`<table>` 태그**와 **단순 `border`, `background-color`**를 조합하여 구현한다.
+2. **고밀도 내러티브 (꼭지 9+ 규칙)**: 
+   - 원고 내 소제목(h2, h3)으로 구분되는 **'꼭지'를 반드시 9개 이상** 유지한다.
+   - 각 꼭지별 본문은 **최소 10~15행 이상의 압도적 서술**을 유지하되, 독자의 피로도를 낮추고 체류 시간을 늘리기 위해 **2~3개의 짧은 문단으로 강제로 분할**한다.
+   - 이때, 네이버 에디터에서의 가독성을 위해 CSS margin 대신 **문단 사이에 `<br><br>` 태그를 삽입**하여 물리적인 여백을 확보한다.
+3. **내부 링크 자동 연동 (T-1 낙수전략)**: 
+   - 모든 원고 최하단(해시태그 직전)에 **[같이 볼만한 글]** 섹션을 반드시 삽입한다.
+   - 링크 대상: **전날(T-1) 발행된 1번과 2번 원고**의 제목과 상대 경로 링크를 걸어 블로그 내 체류 시간을 극대화한다.
+4. **강조 및 지침**: 
+   - 마크다운 `**` 절대 금지. 반드시 **`<strong>`** 태그만 사용.
+   - 이미지 쿼터 소진 시: 원고 내 이미지 영역을 `.img-placeholder`로 시각적 확보 후, 그 안에 **상세 영문 프롬프트**를 텍스트로 삽입한다.
 
-### [표준 템플릿 v3]
+### [표준 템플릿 v5]
 
 ```html
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>제목</title>
 <style>
-  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
-  p { margin-bottom: 24px; }
-  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 3px solid [컬러]; padding-bottom: 10px; margin-bottom: 20px; color: [컬러]; }
-  h2 { font-size: 1.15em; font-weight: 700; border-left: 4px solid [컬러]; padding-left: 10px; margin-top: 48px; margin-bottom: 16px; color: [컬러-다크]; }
-  h3 { font-size: 1.1em; font-weight: 700; margin-top: 32px; margin-bottom: 12px; color: [컬러-미들]; }
-  .lead { background: [컬러-연하게]; border-left: 4px solid [컬러]; padding: 20px; margin: 24px 0; font-size: 1.05em; color: [컬러-다크]; border-radius: 0 8px 8px 0; }
-  .point-box { border: 1px solid [컬러-연하게]; border-radius: 8px; padding: 20px; margin: 24px 0; background: #f5fcfb; }
-  .tip { background: #fffbea; border-left: 3px solid #fb8c00; padding: 14px 18px; margin: 20px 0; font-size: 0.95em; color: #5d4037; }
-  .closing-box { border-top: 2px solid [컬러]; margin-top: 60px; padding-top: 24px; font-size: 0.92em; color: #555; line-height: 1.8; }
-  .tag { display: inline-block; background: #f0f0f0; border-radius: 4px; padding: 2px 10px; margin: 3px; font-size: 0.85em; color: #616161; border: 1px solid #e0e0e0; }
-  img { width: 100%; border-radius: 12px; margin: 24px 0; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-  .img-cap { text-align: center; font-size: 0.85em; color: #757575; margin-top: -12px; margin-bottom: 32px; font-style: italic; }
-  table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.92em; table-layout: fixed; }
-  th { background: [컬러]; color: #fff; padding: 12px; text-align: center; border: 1px solid [컬러-다크]; }
-  td { border: 1px solid #eee; padding: 12px; text-align: center; }
-  .highlight { color: #d32f2f; font-weight: bold; }
-  .course-step { display: flex; align-items: flex-start; margin-bottom: 16px; }
-  .step-num { flex-shrink: 0; width: 28px; height: 28px; background: [컬러]; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: bold; margin-right: 12px; margin-top: 4px; }
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid [컬러]; padding-bottom: 12px; color: [컬러-다크]; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: [컬러-연하게]; padding: 12px 15px; border-left: 6px solid [컬러]; margin-top: 50px; color: [컬러-다크]; }
+  .intro-box { background: #f9fdf9; border: 2px solid #eee; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-card { border: 1px solid #ddd; padding: 15px; border-radius: 8px; text-align: center; }
+  .step-box { border-left: 4px solid [컬러]; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
 </style>
 </head>
 <body>
-  <h1>[Catchy Title]</h1>
-  <div class="lead">
-    📸 <strong>실시간 상황</strong>: ...<br>
-    🛑 <strong>현장 주의</strong>: ...<br>
-    ✅ <strong>핵심 추천</strong>: ...
+  <h1>제목</h1>
+  <div class="intro-box">핵심 요약 및 리드문</div>
+  <!-- 본문 (9개 이상의 꼭지) -->
+  <div class="recommend-area">
+    <strong>🔗 같이 볼만한 글</strong>
+    <ul>
+      <li><a href="../전날폴더/파일명1.html">전날 1번원고 제목</a></li>
+      <li><a href="../전날폴더/파일명2.html">전날 2번원고 제목</a></li>
+    </ul>
   </div>
-  <!-- 본문 시작 -->
-  <!-- 1. H2와 문단 -->
-  <!-- 2. .course-step 기반 상세 경로 -->
-  <!-- 3. .point-box 기반 전문 정보 -->
-  <!-- 4. .tip 기반 로컬 맛집/꿀팁 -->
-  <!-- 5. <table> 기반 비교 분석 -->
-  <!-- 6. .closing-box 마무리 -->
-  <!-- 7. 해시태그 (10개) -->
-  <div class="tags">
-    <span class="tag">#태그1</span>
-    <span class="tag">#태그2</span>
-    ...
-  </div>
+  <div class="tags">해시태그 10개</div>
 </body>
 </html>
-```
+``````
 
 ---
 
@@ -206,13 +202,18 @@
    - **작성 완료**: 원고 HTML 파일이 생성된 상태. (`✔️ 작성 완료` 표시 및 해당 파일로의 하이퍼링크 연결)
    - **제목 링크**: `작성 완료` 상태가 되면 대시보드 리스트의 **기사 제목**에도 해당 원고 파일로의 하이퍼링크를 반드시 연결한다.
 
-### 10.2. 이미지 생성 및 노출 규칙
-1. **이미지 자동 생성**: AI 도구의 이미지 생성 쿼터가 남아 있는 경우, 반드시 원고 내 적절한 위치에 이미지를 자동 생성하여 삽입한다.
-2. **쿼터 소진 시**: 
-   - 원고 본문 HTML 내부에 영문 프롬프트를 절대 직접 노출하지 않는다.
-   - 대신, 대화창(채팅) 응답 결과물에 해당 기사에 필요한 **영문 이미지 제작 프롬프트 3개**를 별도로 정리하여 사용자에게 보여준다.
-3. **이미지 캡션 강제 규정**: 
-   - 이미지 자동 생성 여부와 관계없이, 이미지 하단에는 반드시 이미지에 대한 **한 줄 설명**을 추가한다.
-   - 해당 문장의 가장 뒤에는 반드시 **"(AI 제작 이미지)"** 문구를 삽입한다.
+### 10.2. 이미지 생성 및 관리 규칙 (v3.8 업데이트)
+ 
+1. **저장 경로 및 관리**: 
+   - 모든 이미지는 원고 폴더(`output/yymmdd/`)와 분리하여 전용 이미지 폴더에 저장한다.
+   - 경로 형식: `d:\lightsail\naverblog\images\yymmdd\`
+   - 원고 내 참조: 반드시 상대 경로(예: `../../images/yymmdd/파일명.png`)를 사용한다.
+2. **파일 네이밍 규칙**: 
+   - 규칙: `원고seq_keyword_imageseq.png` 
+   - 예시: 1번 원고의 첫 번째 이미지는 `1_gapyung_seoul_1.png`
+3. **이미지 자동 생성**: AI 도구의 쿼터 허용 시, 여행 및 일반 원고당 3장을 자동 생성하여 삽입한다.
+    - **쿼터 소진 시 대응**: 이미지 생성이 불가능할 경우, 원고 내 이미지 삽입 위치에 시각적 영역(Placeholder)을 확보하고 그 안에 **상세 영문 프롬프트(`ratio 1:1` 포함)**를 텍스트로 삽입한다. 이미지 캡션(`.img-cap`)은 기존과 동일하게 하단에 유지한다.
+4. **이미지 캡션 강제 규정**: 
+   - 이미지 하단에는 한 줄 설명을 추가하고, 마지막에 반드시 **"AI 제작 이미지"** 문구를 삽입한다.
 
 ---
