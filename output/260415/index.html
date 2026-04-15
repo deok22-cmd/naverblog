@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026.04.15 콘텐츠 생산 대시보드</title>
+    <style>
+        :root {
+            --primary: #00796b;
+            --secondary: #ff8f00;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #2d3436;
+        }
+
+        body {
+            font-family: 'Apple SD Gothic Neo', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .stat-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            border-top: 4px solid var(--primary);
+        }
+
+        .stat-card .value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .content-list {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #f1f2f6;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .item:hover {
+            background-color: #f1f2fb;
+        }
+
+        .badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 15px;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        .badge-done {
+            background: #e6f7ff;
+            color: #1890ff;
+            border: 1px solid #91d5ff;
+        }
+
+        .badge-wait {
+            background: #fff7e6;
+            color: #fa8c16;
+            border: 1px solid #ffd591;
+        }
+
+        .title-area {
+            flex-grow: 1;
+        }
+
+        .title-area h4 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #2d3436;
+        }
+
+        .title-area p {
+            margin: 4px 0 0;
+            font-size: 0.85em;
+            color: #636e72;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>April 15, 2026</h1>
+            <p>플래티넘 에디터 세이프 스탠다드 v5 생산 현황</p>
+        </header>
+
+        <div class="stat-row">
+            <div class="stat-card">
+                <h3>목표 발행수</h3>
+                <div class="value">10</div>
+            </div>
+            <div class="stat-card">
+                <h3>작성 완료</h3>
+                <div class="value" id="done-count">12</div>
+            </div>
+            <div class="stat-card">
+                <h3>진척률</h3>
+                <div class="value" id="progress">120%</div>
+            </div>
+        </div>
+
+        <div class="content-list">
+            <a href="travel_taean_tulip_festival_2026.html" class="item">
+                <span class="badge badge-done">✔️ 작성 완료</span>
+                <div class="title-area" id="title-1">
+                    <h4>1. 태안 세계 튤립 박람회 2026 — 실시간 개화 상황 및 입장권 할인 예약 꿀팁</h4>
+                    <p>#축제 #Taean #TulipFestival</p>
+                </div>
+            </a>
+            <a href="travel_haman_nakhwa_festival_2026.html" class="item">
+                <span class="badge badge-done">✔️ 작성 완료</span>
+                <div class="title-area" id="title-2">
+                    <h4>2. 함안 낙화놀이 2026 — 5월 가정의 달 최고의 야경, 사전 예약 방법과 명당 선점 가이드</h4>
+                    <p>#축제 #Haman #FlowerFestival</p>
+                </div>
+            </a>
+            <a href="travel_childrens_day_events_2026.html" class="item">
+                <span class="badge badge-done">✔️ 작성 완료</span>
+                <div class="title-area" id="title-3">
+                    <h4>3. 어린이날 행사 2026 선공개 — 서울 근교 아이와 가볼만한 곳 BEST 5 및 무료 체험 안내</h4>
+                    <p>#국내여행 #ChildrensDay #FamilyTrip</p>
+                </div>
+            </a>
+            <a href="travel_geoje_healing_trip_2026.html" class="item">
+                <span class="badge badge-done">✔️ 작성 완료</span>
+                <div class="title-area" id="title-4">
+                    <h4>4. 거제도 당일치기 코스 — 4월 말 공곶이 수선화와 지심도 동백 엔딩 투어 가이드</h4>
+                    <p>#국내여행 #Geoje #Travel</p>
+                </div>
+            </a>
+            <a href="travel_everland_tulip_festival_2026.html" class="item">
+                <span class="badge badge-done">✔️ 작성 완료</span>
+                <div class="title-area" id="title-5">
+                    <h4>5. 에버랜드 튤립 축제 2026 — 스마트 줄서기 노하우와 평일 대기 시간 줄이는 실무 비법</h4>
+                    <p>#국내여행 #Everland #Spring</p>
+                </div>
+            </a>
+            <a href="travel_damyang_bamboo_festival_2026.html" class="item">
+                <span class="badge badge-done">✔️ 작성 완료</span>
+                <div class="title-area" id="title-6">
+                    <h4>6. 담양 대나무 축제 2026 미리보기 — 죽녹원 힐링 산책과 죽순 요리 맛집 베스트 3 추천</h4>
+                    <p>#축제 #Damyang #Bamboo</p>
+                </div>
+            </a>
+            <a href="travel_gapado_barley_festival_2026.html" class="item">
+                <span class="badge badge-done">✔️ 작성 완료</span>
+                <div class="title-area" id="title-7">
+                    <h4>7. 제주도 가파도 청보리 축제 2026 — 배 시간표와 자전거 대여, 꼭 먹어야 할 뿔소라 정식 가이드</h4>
+                    <p>#국내여행 #Gapado #Spring</p>
+                </div>
+            </a>
+            <a href="travel_artitaya_golf_tour_2026.html" class="item">
+                <span class="badge badge-done">✔️ 작성 완료</span>
+                <div class="title-area" id="title-8">
+                    <h4>8. 아티타야 골프 투어 태국 vs 일본 비교 — 5월 해외 골프 여행지 선택 가이드</h4>
+                    <p>#해외여행 #Artitaya #Golf</p>
+                </div>
+            </a>
+            <a href="lifestyle_tent_cleaning_guide_2026.html" class="item">
+                <span class="badge badge-done">✔️ 작성 완료</span>
+                <div class="title-area" id="title-9">
+                    <h4>9. 전문 텐트 세탁 서비스 '텐트깔끄미' 이용 가이드 — 곰팡이 제거부터 발수 코팅까지 한 번에 해결하기</h4>
+                    <p>#아웃도어 #Camping #TentCare</p>
+                </div>
+            </a>
+            <a href="lifestyle_winter_camping_care_2026.html" class="item">
+                <span class="badge badge-done">✔️ 작성 완료</span>
+                <div class="title-area" id="title-10">
+                    <h4>10. 동계 캠핑 장비 보관 및 관리 꿀팁 — 난로, 침낭, 배터리 수명을 늘리는 시즌 오프 매뉴얼</h4>
+                    <p>#아웃도어 #Camping #Gear</p>
+                </div>
+            </a>
+            <a href="travel_suncheonman_garden_2026.html" class="item">
+                <span class="badge badge-done">✔️ 작성 완료</span>
+                <div class="title-area" id="title-11">
+                    <h4>11. 순천만 국가정원 2026 미리보기 — 스카이큐브 예약 팁과 초보자를 위한 최적의 산책 코스</h4>
+                    <p>#국내여행 #Suncheon #Garden</p>
+                </div>
+            </a>
+            <a href="travel_goyang_flower_expo_2026.html" class="item">
+                <span class="badge badge-done">✔️ 작성 완료</span>
+                <div class="title-area" id="title-12">
+                    <h4>12. 고양 국제 꽃 박람회 2026 — 일산 호수공원 꽃 물결, 주차 전략과 셔틀버스 이용법 총정리</h4>
+                    <p>#축제 #Goyang #FlowerExpo</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
