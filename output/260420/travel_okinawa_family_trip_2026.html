@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function copyPrompt(id) {
+            const text = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+                const originalText = btn.innerText;
+                btn.innerText = "복사 완료!";
+                btn.style.background = "#27ae60";
+                setTimeout(() => { btn.innerText = originalText; btn.style.background = "#0277bd"; }, 2000);
+            });
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 16px;
+            background: #fff;
+            font-family: 'Apple SD Gothic Neo', sans-serif;
+            font-size: 16px;
+            line-height: 1.9;
+            color: #222;
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 1.6em;
+            font-weight: 800;
+            border-bottom: 5px solid #0277bd;
+            padding-bottom: 12px;
+            color: #01579b;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.2em;
+            font-weight: 700;
+            background: #e1f5fe;
+            padding: 12px 15px;
+            border-left: 6px solid #0277bd;
+            margin-top: 50px;
+            color: #01579b;
+        }
+
+        .intro-box {
+            background: #f1f8ff;
+            border: 2px solid #bbdefb;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            border: 1px solid #ddd;
+        }
+
+        .info-table th {
+            background: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            width: 25%;
+            text-align: left;
+        }
+
+        .info-table td {
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+
+        .img-placeholder {
+            background: #f5f5f5;
+            border: 2px dashed #ccc;
+            padding: 40px 20px;
+            text-align: center;
+            margin: 30px 0;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .img-placeholder p {
+            margin: 10px 0;
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+
+        .copy-btn {
+            background: #0277bd;
+            color: #fff;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .recommend-area {
+            background: #f8f9fa;
+            border: 1px solid #eee;
+            padding: 20px;
+            margin: 40px 0;
+            border-radius: 10px;
+        }
+
+        .tags {
+            margin-top: 50px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 3px 10px;
+            border-radius: 5px;
+            margin: 3px;
+            font-size: 0.85em;
+            color: #666;
+            border: 1px solid #ddd;
+        }
+
+        .img-cap {
+            text-align: center;
+            font-size: 0.9em;
+            color: #888;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>오키나와 3박 4일 가족여행 일정 코스 및 5월 렌터카 예약 주의사항 총정리</h1>
+
+    <div class="intro-box">
+        에메랄드빛 바다와 따스한 햇살, 동양의 하와이라 불리는 <strong>오키나와</strong>는 5월에 떠나기에 더없이 좋은 여행지입니다. 특히 2026년 5월은 본격적인 장마가 시작되기 전인 초순을
+        공략한다면, 덥지도 춥지도 않은 환상적인 기온 아래서 해수욕과 관광을 동시에 즐길 수 있는 최고의 타이밍입니다. 하지만 일본의 황금연휴인 '골든위크' 기간과 겹치면 항공권과 숙박비가 폭등하고 렌터카
+        구하기가 하늘의 별 따기가 되므로 정교한 예약 전략이 필수적입니다. 아이와 함께하는 츄라우미 수족관 탐방부터 부모님 모시고 가기 좋은 남부 해안 절경 코스, 그리고 초보자도 안심하고 운전할 수 있는
+        렌터카 보험(NOC) 꿀팁까지 오직 가족 여행객을 위한 맞춤형 3박 4일 일정을 완벽하게 가이드 해드립니다.
+    </div>
+
+    <h2>1. 5월 오키나와 여행의 장점과 골든위크 회피 전략</h2>
+    5월의 오키나와는 평균 기온 23도에서 27도 사이로, 반팔 차림으로 활동하기 가장 쾌적한 시기입니다. 바다 온도가 충분히 올라가 스노클링이나 다이빙 같은 해양 액티비티를 즐기기에도 부족함이 없습니다.
+    무엇보다 5월 중순 이후 시작되는 장마(츠유)를 피해 <strong>5월 초순</strong>에 방문하는 것이 가장 성공적인 여행의 핵심입니다. 맑은 하늘에 비치는 투명한 바다색은 오직 이 시기에만 볼 수
+    있는 오키나와의 진면목이기 때문입니다.<br><br>
+    다만, 주의해야 할 점은 일본 최대의 연휴인 '골든위크(4월 말~5월 초)'입니다. 이 기간에는 일본 현지인 관광객이 대거 몰리면서 렌터카 가격이 평소의 2~3배로 치솟고 주요 관광지마다 긴 줄이 늘어섭니다.
+    따라서 2026년 5월 여행을 계획하신다면 골든위크가 끝나는 5월 6일 이후부터 장마 전인 15일 사이를 공략하는 것이 가장 현명합니다. 비용은 저렴해지면서도 여유로운 관광이 가능한 이 보석 같은 기간을
+    놓치지 마세요.
+
+    <div class="img-placeholder">
+        <p id="prompt1">Beautiful panoramic view of Kouri Bridge in Okinawa, emerald green ocean, white sand beach under
+            a bright blue sky with scattered clouds, a white car driving on the bridge, realistic, 8k resolution,
+            cinematic lighting, ratio 1:1</p>
+        <button class="copy-btn" onclick="copyPrompt('prompt1')">프롬프트 복사</button>
+    </div>
+    <div class="img-cap">에메랄드빛 바다를 배경으로 코우리 대교를 달리는 흰색 차량의 풍경 - AI 제작 이미지</div>
+
+    <h2>2. 1일차: 나하 도착 및 국제거리의 활기찬 야경 탐방</h2>
+    공항에 도착하자마자 미리 예약한 셔틀을 타고 렌터카 사무소로 이동하여 차량을 인수하는 것으로 오키나와 여행이 시작됩니다. 첫날은 나하 시내를 중심으로 가볍게 일정을 잡는 것이 좋습니다. 대형 쇼핑몰과
+    아기자기한 상점들이 모여있는 <strong>국제거리(고쿠사이도리)</strong>는 오키나와에서 가장 활기찬 장소입니다. 이곳에서 오키나와 특산물인 '자색 고구마 타르트'를 맛보거나 귀여운 기념품들을 쇼핑하며
+    여행의 기분을 만끽해 보세요.<br><br>
+    저녁 식사로는 오키나와산 흑돼지 요리인 '아구 샤부샤부'나 두툼한 '스테이크'를 추천합니다. 전후 미국의 영향을 많이 받은 오키나와 특유의 식문화 덕분에 수준 높은 스테이크 전문점이 시내 곳곳에 있습니다.
+    식사 후에는 재건 중인 슈리성의 야경을 보거나, 골목길 곳곳에 있는 이자카야에서 오키나와식 전통 소주인 '아와모리' 한 잔으로 하루를 마무리하면 좋습니다. 첫날은 운전 방향이 반대인 일본 도로에 적응하는
+    시간으로 삼고 조심스럽게 여정을 시작하십시오.
+
+    <h2>3. 2일차: 중부 아메리칸 빌리지와 만좌모의 비경</h2>
+    2일차는 나하를 벗어나 위로 올라가며 중부의 매력을 탐험하는 날입니다. 가장 먼저 들를 곳은 거대한 코끼리 코 모양의 기암괴석이 장관인 <strong>만좌모</strong>입니다. 푸른 바다를 배경으로 펼쳐진
+    넓은 잔디밭은 장관이며, 이곳에서 가족들과 함께 찍는 기념사진은 평생의 추억이 됩니다. 이후에는 미국풍의 이국적인 분위기가 넘쳐나는 '아메리칸 빌리지'로 이동합니다.<br><br>
+    아메리칸 빌리지는 형형색색의 건물들과 예쁜 카페들이 많아 아이들이 무척 좋아합니다. 특히 선셋 비치에서 바라보는 노을은 황홀할 정도로 아름답습니다. 점심으로는 오키나와 사람들의 소울푸드인 '오키나와 소바'를
+    시도해 보세요. 우리가 흔히 아는 메밀 소바가 아닌 밀가루 면에 돼지고기 차슈가 올라간 독특한 형태로, 담백하면서도 깊은 국물 맛이 일품입니다. 중부의 리조트 단지에 숙박하며 여유로운 리조트 라이프를 시작해
+    보시는 것도 좋은 선택입니다.
+
+    <h2>4. 3일차: 북부 츄라우미 수족관과 코우리 대교 힐링 코스</h2>
+    오키나와 여행의 하이라이트인 3일차는 북부로 향합니다. 세계 2위 규모를 자랑하는 <strong>츄라우미 수족관</strong>에서는 집채만 한 고래상어와 거대한 가오리들이 헤엄치는 거대 수조 '쿠로시오의
+    바다'를 마주하게 됩니다. 아이들에게는 신비로운 바다 세계를 보여주고, 어른들에게는 압도적인 스케일의 감동을 선사하는 곳입니다. 수족관 관람 후에는 아름다운 가로수길인 '비세후쿠기 길'을 자전거로 산책하거나
+    물소 수레를 타보는 정적인 경험도 추천합니다.<br><br>
+    오후에는 바다 위를 가로지르는 2km 길이의 '코우리 대교'를 건너 코우리 섬으로 들어갑니다. 차창 밖으로 끝없이 펼쳐지는 에메랄드빛 바다는 감탄을 자아내며, 섬 안의 '하트 바위'는 연인들에게 특히 인기
+    있는 포토 스팟입니다. 북부의 청정 자연 속에서 즐기는 해수욕은 그 어떤 휴양지 부럽지 않은 평온함을 줍니다. 저녁에는 북부 유명 맛집에서 신선한 해산물 덮밥인 '카이센동'을 즐기며 오키나와에서의 마지막 밤을
+    풍성하게 장식해 보세요.
+
+    <div class="info-table">
+        <table>
+            <tr>
+                <th>구분</th>
+                <th>상세 준비 내용</th>
+                <th>특이 사항</th>
+            </tr>
+            <tr>
+                <td>필수 서류</td>
+                <td>국제면허증, 여권, 한국면허증</td>
+                <td>영문면허증 사용 불가(일본)</td>
+            </tr>
+            <tr>
+                <td>렌터카 보험</td>
+                <td>CDW(면책) 및 NOC(휴업보상)</td>
+                <td>풀커버 보험 가입 강력 권장</td>
+            </tr>
+            <tr>
+                <td>예약 시점</td>
+                <td>여행 2개월 전 권장</td>
+                <td>성수기/연휴 기간 조기 매진 주의</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>5. 4일차: 남부 해안 절경 산책 및 공항 면세점 쇼핑</h2>
+    여행의 마지막 날은 공항으로 내려오는 길에 남부의 숨겨진 명소들을 둘러봅니다. 탁 트인 태평양 바다를 한눈에 내려다볼 수 있는 <strong>치넨미사키 공원</strong>은 오키나와 남부의 정수를 보여주는
+    장소입니다. 바람에 흔들리는 푸른 풀밭과 짙푸른 바다의 조화는 마음마저 정화해 줍니다. 시간이 허락한다면 유네스코 세계문화유산인 '세이화 우타키'를 방문해 오키나와의 영적인 기운과 역사를 느껴보는 것도 의미
+    있는 마무리입니다.<br><br>
+    공항 인근의 '아시비나 아울렛'이나 대형 쇼핑몰 '이온몰 라이카무'에 들러 마지막 쇼핑을 즐긴 후 렌터카를 반납합니다. 렌터카 반납 시에는 반드시 지정된 주유소에서 기름을 가득 채운 후 영수증을 지참해야
+    한다는 점을 잊지 마세요. 3박 4일간의 짧지만 강렬했던 오키나와에서의 시간이 아쉽겠지만, 쇼핑한 봉투 가득 담긴 기념품과 카메라 속 수천 장의 사진이 여러분의 일상에 큰 힘이 되어줄 것입니다. 안전하고
+    즐거웠던 오키나와 가족 여행은 이렇게 완벽하게 마무리됩니다.
+
+    <h2>6. 일본 렌터카 운전 시 꼭 알아야 할 3가지 주의사항</h2>
+    오키나와는 대중교통이 불편해 렌터카가 필수지만, 운전 환경이 한국과 반대이므로 주의가 필요합니다. 첫째, <strong>차선 방향과 깜빡이 위치</strong>입니다. 일본은 좌측통행이며 운전석이 오른쪽에
+    있습니다. 가장 흔히 하는 실수가 와이퍼와 깜빡이 레버를 헷갈리는 것인데, "깜빡이는 오른쪽!"을 머릿속에 계속 되새겨야 합니다. 둘째, '일단 정지(止まれ)' 표지판입니다. 일본은 정지 신호가 있는 곳에서는
+    바퀴가 완전히 멈춰야 하며, 이를 어길 시 엄격한 단속 대상이 됩니다.<br><br>
+    셋째, 우회전 방식입니다. 일본에서의 우회전은 신호등에 별도의 화살표가 없더라도 직진 신호 시 반대편 차량이 오지 않을 때 조심스럽게 진행하는 방식이 많습니다. 익숙하지 않다면 뒤차의 흐름을 지켜보며 천천히
+    따라가는 것이 안전합니다. 오키나와 사람들은 대체로 느긋하게 양보 운전을 하는 편이므로 서두르지 말고 안전거리를 충분히 확보하며 주행하신다면 금세 적응하실 수 있을 것입니다.
+
+    <div class="img-placeholder">
+        <p id="prompt2">Interior of a modern Japanese rental car in Okinawa, views of tropical palm trees and ocean
+            through the windshield, car dashboard showing a GPS map, right-hand drive steering wheel, realistic, 8k,
+            ratio 1:1</p>
+        <button class="copy-btn" onclick="copyPrompt('prompt2')">프롬프트 복사</button>
+    </div>
+    <div class="img-cap">일본 오키나와 렌터카 내부에서 바라본 이국적인 도로 풍경 - AI 제작 이미지</div>
+
+    <h2>7. 렌터카 보험의 핵심: CDW와 NOC 완벽 이해하기</h2>
+    렌터카 예약 시 가장 고민되는 것이 보험 선택입니다. 단순히 저렴한 가격에 혹하기보다 보험 보장 범위를 꼼꼼히 따져야 합니다. <strong>CDW(Crash Damage Waiver)</strong>는 사고
+    시 사용자가 부담해야 할 대인/대물 면책금을 보장해 주지만, 사고로 인해 차량이 공업사에 들어갔을 때 렌터카 업체가 입는 손해인 NOC는 보장하지 않는 경우가 많습니다.<br><br>
+    따라서 전원주택 거주자나 초보 운전자뿐만 아니라 숙련된 운전자라도 <strong>NOC(Non-Operation Charge)</strong> 보장 보험이 포함된 상품을 선택하시길 강력히 권장합니다. 타이어
+    펑크나 배터리 방전 등 사소한 문제부터 사고로 차량 운행이 불가능한 경우까지 포괄적으로 보상해 주기 때문입니다. 낯선 해외 도로에서 발생할 수 있는 만약의 사태에 대비해 하루 수천 원의 추가 비용으로 마음
+    편한 여행을 보장받는 것은 매우 합리적인 투자입니다. 예약 시 'Full Coverage' 또는 '安心(안심) 플랜'이라는 키워드를 꼭 확인하세요.
+
+    <h2>8. 국제운전면허증 발급법 및 일본 현지 필수 지참 서류</h2>
+    일본에서 운전하려면 <strong>국제운전면허증</strong>이 반드시 필요합니다. 최근 발급되는 영문 운전면허증은 오키나와를 포함한 일본 전역에서 효력이 없으므로 주의해야 합니다. 국제운전면허증은 전국
+    운전면허시험장이나 경찰서에서 신분증, 여권용 사진, 수수료를 지참하면 당일 즉시 발급 가능합니다. 인천국제공항 내 국제운전면허 발급 센터를 이용할 수도 있지만, 운영 시간이 제한적이므로 가급적 집 근처에서
+    미리 발급받으시는 것을 추천합니다.<br><br>
+    현지 렌터카 사무소에서 차량을 인수할 때 제시해야 하는 서류는 3가지입니다: **1) 한국 운전면허증 원본, 2) 국제운전면허증 원본, 3) 여권**. 이 중 하나라도 누락되면 예약 여부와 상관없이 차량
+    인수가 불가능하며 환불도 받기 어렵습니다. 스마트폰에 저장된 사진이나 사본은 절대 인정되지 않으니 출항 전 가방에 원본 서류들이 들어있는지 두 번 세 번 꼭 확인하시기 바랍니다. 아는 만큼 보이고 준비한 만큼
+    즐거운 것이 해외 렌터카 여행의 정석입니다.
+
+    <div class="img-placeholder">
+        <p id="prompt3">Close up photorealistic colorful donuts or sweets from American Village in Okinawa, neon signs
+            in the background, bokeh night lights, vibrant and aesthetic, 8k, ratio 1:1</p>
+        <button class="copy-btn" onclick="copyPrompt('prompt3')">프롬프트 복사</button>
+    </div>
+    <div class="img-cap">오키나와 아메리칸 빌리지의 화려하고 먹음직스러운 디저트 메뉴 - AI 제작 이미지</div>
+
+    <h2>9. 5월 오키나와 여행을 위한 짐 싸기 체크리스트</h2>
+    완벽한 5월 오키나와 여행을 위해 옷차림은 기본적으로 여름옷 위주로 챙기되, 에어컨 바람에 대비한 가벼운 겉옷이나 린넨 셔츠 한 장 정도는 필수입니다. 5월의 오키나와 태양은 매우 강렬하므로
+    <strong>자외선 차단제와 모자, 선글라스</strong>는 필수 준비물입니다. 또한, 해수욕을 즐길 계획이라면 래시가드와 아쿠아슈즈를 한국에서 미리 챙겨가면 현지에서 비싼 가격에 대여하거나 구매하는
+    수고를 덜 수 있습니다.<br><br>
+    일본 여행의 필수품인 '110V 돼지코 어댑터'와 보조배터리도 잊지 마세요. 렌터카 내비게이션보다 구글 맵을 활용하는 경우가 많아 데이터 소모와 배터리 소모가 빠르기 때문입니다. 휴대용 우산이나 우비도 하나쯤
+    챙기면 소나기(스콜)를 만났을 때 유용하게 쓰입니다. 마지막으로, 오키나와는 동전이 많이 생기는 나라입니다. 작은 동전 지갑 하나를 준비하신다면 일본 시장이나 자판기를 이용할 때 훨씬 편리합니다. 꼼꼼한
+    준비물 체크와 설레는 마음만 있다면, 2026년 5월 오키나와는 여러분 가족에게 최고의 선물이 될 것입니다.
+
+    <div class="recommend-area">
+        <strong>🔗 같이 볼만한 글</strong>
+        <ul>
+            <li><a href="../260419/travel_seoul_botanical_garden_2026.html">서울식물원 해봄축제 - 마곡 나들이 피크닉 명당 주차 총정리</a></li>
+            <li><a href="../260419/travel_icheon_pottery_festival_2026.html">이천 도자기 축제 2026 일정 예약 방법 및 예스파크 물레 체험 주차 꿀팁
+                    정주행</a></li>
+        </ul>
+    </div>
+
+    <div class="tags">
+        <span class="tag">#오키나와여행</span>
+        <span class="tag">#오키나와3박4일</span>
+        <span class="tag">#오키나와렌터카예약</span>
+        <span class="tag">#일본운전주의사항</span>
+        <span class="tag">#츄라우미수족관</span>
+        <span class="tag">#아메리칸빌리지</span>
+        <span class="tag">#오키나와가족여행</span>
+        <span class="tag">#국제운전면허증발급</span>
+        <span class="tag">#나하국제거리</span>
+        <span class="tag">#5월해외여행추천</span>
+    </div>
+</body>
+
+</html>

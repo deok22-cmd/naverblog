@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function copyPrompt(id) {
+            const text = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+                const originalText = btn.innerText;
+                btn.innerText = "복사 완료!";
+                btn.style.background = "#27ae60";
+                setTimeout(() => { btn.innerText = originalText; btn.style.background = "#1a4731"; }, 2000);
+            });
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 16px;
+            background: #fff;
+            font-family: 'Apple SD Gothic Neo', sans-serif;
+            font-size: 16px;
+            line-height: 1.9;
+            color: #222;
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 1.6em;
+            font-weight: 800;
+            border-bottom: 5px solid #1a4731;
+            padding-bottom: 12px;
+            color: #1a4731;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.25em;
+            font-weight: 700;
+            background: #f1f8e9;
+            padding: 12px 15px;
+            border-left: 6px solid #1a4731;
+            margin-top: 50px;
+            color: #1a4731;
+        }
+
+        h3 {
+            font-size: 1.1em;
+            font-weight: 700;
+            color: #2e7d32;
+            margin-top: 35px;
+            border-bottom: 1px dashed #c0c0c0;
+            padding-bottom: 5px;
+        }
+
+        .intro-box {
+            background: #f9fbf9;
+            border: 2px solid #c8e6c9;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        .formula-box {
+            background: #263238;
+            color: #cfd8dc;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Consolas', monospace;
+            font-size: 0.95em;
+            margin: 20px 0;
+            border-left: 8px solid #4db6ac;
+            overflow-x: auto;
+        }
+
+        .table-preview {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9em;
+        }
+
+        .table-preview th {
+            background: #e0f2f1;
+            padding: 10px;
+            border: 1px solid #b2dfdb;
+        }
+
+        .table-preview td {
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+            text-align: center;
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            border: 1px solid #ddd;
+        }
+
+        .info-table th {
+            background: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            width: 25%;
+            text-align: left;
+        }
+
+        .info-table td {
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+
+        .img-placeholder {
+            background: #f5f5f5;
+            border: 2px dashed #ccc;
+            padding: 40px 20px;
+            text-align: center;
+            margin: 30px 0;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .img-placeholder p {
+            margin: 10px 0;
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+
+        .copy-btn {
+            background: #1a4731;
+            color: #fff;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .recommend-area {
+            background: #f8f9fa;
+            border: 1px solid #eee;
+            padding: 20px;
+            margin: 40px 0;
+            border-radius: 10px;
+        }
+
+        .tags {
+            margin-top: 50px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 3px 10px;
+            border-radius: 5px;
+            margin: 3px;
+            font-size: 0.85em;
+            color: #666;
+            border: 1px solid #ddd;
+        }
+
+        .img-cap {
+            text-align: center;
+            font-size: 0.9em;
+            color: #888;
+            margin-bottom: 30px;
+        }
+
+        .highlight {
+            color: #d32f2f;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>[실무 툴박스 2.0] 구글 스프레드시트 QUERY 함수 완벽 정복: 고수의 데이터 추출 비법</h1>
+
+    <div class="intro-box">
+        과거 VLOOKUP이나 SUMIFS 함수로 고군분투하시던 시절은 이제 잊으셔도 좋습니다. 2026년 현재, 구글 스프레드시트 실무자들 사이에서 <strong>가장 강력한 '치트키'</strong>로
+        꼽히는 것은 단연 <strong>QUERY 함수</strong>입니다. SQL과 유사한 Google Visualization API Query Language를 기반으로 하는 이 함수는 복잡한 수식
+        수천 줄을 단 한 줄로 줄여줄 뿐만 아니라, 원본 데이터가 바뀌면 보고서까지
+        자동으로 업데이트되는 '자동화의 정수'를 보여줍니다. 데이터 분석가들만 쓰던 이 강력한 도구를 이제 여러분의 실무 엑셀에 이식할 시간입니다. 기초 문법부터 실무에서 바로 써먹는 다단계 필터링, 그리고
+        동적 대시보드 제작법까지, 실무에서 즉시 활용 가능한 핵심 기술 위주로 2026년 버전을 완벽하게 가이드해 드립니다.
+    </div>
+
+    <h2>1. 왜 QUERY 함수인가? VLOOKUP과의 결정적 차이</h2>
+    우리가 흔히 쓰는 VLOOKUP은 단 하나의 값을 찾아오는 데 최적화되어 있습니다. 하지만 수만 행의 데이터 중에서 "서울 지역의, 5월 매출이 100만 원 이상인, 대리급 직원의 리스트"를 통째로 가져와야
+    한다면 VLOOKUP은 한계에 부딪힙니다. 이때 <strong>QUERY 함수</strong>를 사용하면 SQL과 유사한 문법을 통해 수천 명의 데이터를 0.1초 만에 추출하고 원하는 순서로 정렬까지 마칠 수
+    있습니다.<br><br>
+    QUERY 함수의 가장 큰 장점은 <strong>'가변성'</strong>에 있습니다. 구글 시트의 피벗 테이블 역시 자동 업데이트 기능을 지원하지만, QUERY 함수는 별도의 편집기 UI를 거칠 필요 없이
+    수식 한 줄을 수정하는 것만으로 보고서의 구조와 필터, 정렬 상태를 즉시 바꿀 수 있다는 점에서 압도적인 유연함을 자랑합니다. 업무 시간을 80% 이상 단축해주는 이 마법 같은 함수의 세계로 지금 바로 들어가
+    보겠습니다.
+
+    <div class="img-placeholder">
+        <p id="prompt1">A clean, high-resolution screenshot of a Google Sheets interface, focusing on the formula bar
+            showing '=QUERY(A1:E100, "SELECT B, C, D WHERE E > 500000", 1)', a data table with columns like 'Date,
+            Sales, Region' visible below, professional office software UI, realistic, 8k, ratio 1:1</p>
+        <button class="copy-btn" onclick="copyPrompt('prompt1')">프롬프트 복사</button>
+    </div>
+    <div class="img-cap">구글 스프레드시트에서 QUERY 함수가 데이터를 실시간으로 집계하는 추상적 개념도 - AI 제작 이미지</div>
+
+    <h2>2. QUERY 함수의 기본 구조: 세 개의 인자만 기억하세요</h2>
+    QUERY 함수를 처음 접하면 복잡해 보이지만, 사실 구조는 매우 단순합니다. <strong>=QUERY(데이터_범위, "쿼리_문장", [헤더_유무])</strong> 이 세 가지만 기억하면 됩니다. 여기서
+    가장 중요한 것이 바로 큰따옴표("") 안에 들어가는 쿼리 문장입니다. 이 문장은 우리가 컴퓨터에게 "어떤 열을 가져올지", "어떤 조건으로 거를지"를 명령하는 아주 직관적인 영문법으로 구성되어
+    있습니다.<br><br>
+    예를 들어, `Select A, B`라고 적으면 A열과 B열만 가져오라는 뜻이고, `limit 10`이라고 적으면 상위 10개만 보여달라는 뜻입니다. 기본 형식을 익히는 가장 좋은 방법은 전체 데이터 범위를
+    지정한 후 `Select *` (모든 열 가져오기)부터 시작해 보는 것입니다. 수식 입력줄에 단 몇 글자만 적었을 뿐인데 수백 행의 데이터가 쏟아져 나오는 쾌감을 느끼는 순간, 여러분은 이미 고수의 길로
+    접어든 것입니다.
+
+    <div class="formula-box">
+        =QUERY(A:E, "SELECT B, C, E WHERE D > 1000000 ORDER BY E DESC", 1)
+    </div>
+
+    <h2>3. 실전 필터링 'WHERE' 절: 데이터 추출의 핵심</h2>
+    내가 원하는 데이터만 콕 집어 가져오려면 <strong>WHERE 절</strong>을 마스터해야 합니다. 여기서는 부등호(>, <,>=, <=, !=)뿐만 아니라 텍스트 일치 여부도 판단할 수 있습니다.
+            텍스트를 검색할 때는 반드시 작은따옴표('')를 사용해야 한다는 점에 유의하세요. 예를 들어 부서명이 '영업팀' 인 데이터만 뽑고 싶다면 `WHERE B='영업팀' `과 같이 작성합니다. 또한
+            부서가 영업팀이 **아닌** 데이터를 가져올 때는 `!=` 기호를 활용하면 매우 유용합니다.<br><br>
+            여러 조건을 동시에 걸 때는 `AND`와 `OR`를 활용합니다. "팀이 영업팀이면서(AND) 매출액이 500만 원 이상인 경우"를 필터링하는 방식입니다. 또한, 특정 단어가 포함된 데이터를 찾을
+            때는 `contains` 구문을 활용하면 매우 유용합니다. `WHERE A contains '서울'`이라고 입력하면 주소가 서울인 모든 행을 검색할 수 있습니다. 필터 기능을 수동으로 켰다 껐다
+            하는 번거로움이 Query 함수 하나로 말끔히 사라지는 마법을 경험해 보세요.
+
+            <h2>4. 정렬과 제한 'ORDER BY' & 'LIMIT': 보고서의 정석</h2>
+            데이터를 추출했다면 이제 보기 좋게 나열할 차례입니다. <strong>ORDER BY</strong> 절은 특정 열을 기준으로 오름차순(ASC) 또는 내림차순(DESC) 정렬을 수행합니다.
+            매출액이 가장 높은 순서대로 랭킹을 매기고 싶다면 `ORDER BY E DESC`라고 적어주기만 하면 됩니다. 엑셀의 정렬 버튼을 매번 누를 필요 없이 수식 자체가 정렬 상태를 강제하기 때문에
+            항상 최신 랭킹이 유지됩니다.<br><br>
+            보고서의 가독성을 위해 상위 몇 개만 보여주고 싶을 때는 <strong>LIMIT</strong> 절을 사용합니다. `LIMIT 5`라고 덧붙이면 1위부터 5위까지의 데이터만 깔끔하게
+            출력됩니다. 대시보드의 요약 화면을 구성할 때 이 두 구문의 조합은 그야말로 필수적입니다. 수만 명의 고객 데이터 중에서 오늘 생일인 사람 상위 10명을 뽑아 실시간 리스트를 만드는 것이
+            Query 함수를 쓰면 단 10초 만에 끝납니다.
+
+            <div class="img-placeholder">
+                <p id="prompt2">Close up of a Google Sheets grid showing the result of a QUERY operation, a clean table
+                    with
+                    headers and rows of data, one specific row is being highlighted with a soft green selection box,
+                    clear text and numbers, modern web browser UI, realistic, 8k, ratio 1:1</p>
+                <button class="copy-btn" onclick="copyPrompt('prompt2')">프롬프트 복사</button>
+            </div>
+            <div class="img-cap">방대한 원본 데이터 중에서 QUERY 함수를 통해 필요한 정보만 정확히 필터링한 결과 화면 - AI 제작 이미지</div>
+
+            <h2>5. 집계의 마법 'GROUP BY': 피벗 테이블을 수식으로</h2>
+            QUERY 함수의 진정한 강력함은 <strong>GROUP BY</strong> 절에서 터져 나옵니다. 이는 집계 테이블을 수식 한 줄로 완벽히 구현하게 해줍니다. 예를 들어 부서별 매출 합계를
+            구하고 싶다면 `SELECT B, SUM(E) GROUP BY B`라고 입력합니다. 그러면 함수가 알아서 각 부서명을 중복 없이 추출하고, 해당 부서에 속한 모든 매출액을 합산하여 결과 리스트를
+            만들어 줍니다.<br><br>
+            단순 합계(`SUM`)뿐만 아니라 평균(`AVG`), 개수(`COUNT`) 등 모든 통계 수치를 실시간으로 파악할 수 있으며, 더 나아가 가로형 피벗 테이블 구조가 필요할 때는 전용 키워드인
+            `PIVOT`을 함께 사용할 수도 있습니다. 진짜 피벗 레이아웃까지 구현하는 중급 활용법은 본 시리즈의 다음 편에서 더 자세히 다루도록 하겠습니다.
+
+            <h3>📊 QUERY 집계 구문 예시 테이블</h3>
+            <table class="table-preview">
+                <thead>
+                    <tr>
+                        <th>명령어</th>
+                        <th>설명</th>
+                        <th>실제 수식 예시</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SUM</td>
+                        <td>합계 계산</td>
+                        <td>SELECT B, SUM(C) GROUP BY B</td>
+                    </tr>
+                    <tr>
+                        <td>AVG</td>
+                        <td>평균 계산</td>
+                        <td>SELECT B, AVG(C) GROUP BY B</td>
+                    </tr>
+                    <tr>
+                        <td>COUNT</td>
+                        <td>데이터 개수</td>
+                        <td>SELECT B, COUNT(A) GROUP BY B</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>6. 깔끔한 레이아웃을 위한 'LABEL' & 'FORMAT'</h2>
+            Query 함수로 추출한 데이터의 헤더가 `sum 매출액` 처럼 지저분하게 나오는 것이 불만이었다면 <strong>LABEL</strong> 절을 주목하세요. 추출된 열의 제목을 원하는
+            한글명으로 즉석에서 바꿔줄 수 있습니다. `LABEL SUM(E) '총 매출액'`이라고 적으면 결과 표 상단에 예쁜 제목이 붙습니다. 이는 별도의 입력 없이도 바로 보고서로 활용할 수 있는
+            수준의 품질을 만들어 줍니다.<br><br>
+            여기에 <strong>FORMAT</strong> 절까지 더하면 완벽합니다. 날짜 형식이나 금액 형식을 지정할 수 있는데, `FORMAT E '#,##0원'`과 같이 입력하면 숫자에 천 단위
+            쉼표와 함께 '원' 표시가 자동으로 붙어 출력됩니다. 수동으로 셀 서식을 일일이 맞출 필요가 없어 업무의 디테일과 속도가 동시에 올라갑니다. 수식 하나로 데이터 분석부터 포맷팅까지 끝내는 것,
+            이것이 진정한 2026년형 업무 효율화입니다.
+
+            <h2>7. 동적 쿼리 제작: 다른 셀의 값과 연동하기</h2>
+            Query 함수를 마스터했다는 증거는 바로 <strong>동적 참조</strong>를 사용하는 것입니다. 쿼리문 안에 고정된 값을 넣는 대신, 특정 셀(예: G1)에 입력된 텍스트를 검색
+            조건으로 활용하는 방식입니다. 예를 들어 G1 셀에 '영업팀'이라고 쓰면 영업팀 리스트가 나오고, '인사팀'이라고 바꾸면 즉시 인사팀 리스트로 변하는 검색기를 만들 수 있습니다.<br><br>
+            이때 수식 내부에 큰따옴표와 앤드(&) 기호를 사용하는 문법(`"&G1&"`)이 처음에는 낯설 수 있지만, 한 번 손에 익히면 신세계가 열립니다. 이를 통해 나만의 ERP 검색 시스템이나 재고
+            관리 프로그램을 스프레드시트 단 하나로 구축할 수 있게 됩니다. 실제 업무에서 상사가 "A지역 실적 좀 보여줘"라고 할 때마다 수식을 고치는 것이 아니라, 검색창에 입력값만 바꿔서 보여주는 '일
+            잘하는 직원'의 이미지를 각인시킬 수 있습니다.
+
+            <div class="formula-box">
+                =QUERY(A:Z, "SELECT * WHERE B = '"& G1 &"'", 1)
+            </div>
+
+            <h2>8. QUERY 함수 사용 시 주의사항: 에러 대처법</h2>
+            아무리 강력한 함수라도 주의할 점은 있습니다. 가장 흔한 에러는 <strong>데이터 유형 혼용</strong>입니다. 하나의 열에 숫자와 텍스트가 섞여 있으면 Query 함수는 더 많은 유형을
+            기준으로 판단하여 다른 유형의 데이터를 무시해버립니다. 따라서 원본 데이터의 열별 데이터 유형(숫자, 텍스트, 날짜)을 통일하는 습관이 가장 중요합니다.<br><br>
+            또한, 원본 범위를 지정할 때 `A:Z`처럼 행 번호를 생략하면 나중에 데이터가 추가되어도 수식을 수정할 필요가 없어 편리합니다. 마지막 인자인 헤더 유무(1 또는 0)를 정확히 기재하지 않으면
+            첫 번째 데이터 행이 제목으로 취급되어 분석 결과가 틀어질 수 있습니다. 기본기를 탄탄히 다진 상태에서 응용력을 발휘한다면, 여러분의 스프레드시트는 단순한 표가 아닌 강력한 '데이터베이스
+            엔진'으로 거듭날 것입니다.
+
+            <div class="img-placeholder">
+                <p id="prompt3">A professional Google Sheets dashboard view, showing multiple tables and a small bar
+                    chart
+                    generated by QUERY functions, clean layout, corporate data analysis style, visible sheet tabs at the
+                    bottom, neutral office lighting reflected on the screen, realistic, 8k, ratio 1:1</p>
+                <button class="copy-btn" onclick="copyPrompt('prompt3')">프롬프트 복사</button>
+            </div>
+            <div class="img-cap">QUERY 함수로 자동화된 대시보드를 공유하며 팀과 전략을 논의하는 사무실 풍경 - AI 제작 이미지</div>
+
+            <h2>9. 맺음말: 실무 툴박스 2.0으로 완성하는 업무 자동화</h2>
+            지금까지 구글 스프레드시트의 심장과도 같은 <strong>QUERY 함수</strong>에 대해 아주 깊이 있게 알아보았습니다. 처음에는 생소한 영문법에 당황할 수 있지만, 한 번만 제대로
+            익혀두면 평생의 실무 경쟁력이 됩니다. 이미 수많은 실무 사례를 통해 검증된 QUERY 기술이 여러분의 시간을 아껴드릴 준비를 마쳤습니다. 이제 더 이상 복잡한 매크로나
+            코딩을 배우지 않아도 됩니다. Query 함수 하나면 충분합니다.<br><br>
+            앞으로 이 시리즈를 통해 구글 스프레드시트뿐만 아니라 피그마, 노션 등 현업에서 가장 많이 쓰이는 도구들의 핵심 기능들을 하나하나 세세하게 파헤쳐 드릴 예정입니다. 다음 '실무 툴박스 2.0'
+            시리즈는 어떤 주제가 될지 기대해 주세요. 여러분의 클릭 한 번이 더 나은 콘텐츠를 만드는 힘이 됩니다. 질문이나 막히는 부분이 있다면 언제든 댓글로 남겨주세요. 함께 고민하며 해결해
+            드리겠습니다!
+
+            <div class="recommend-area">
+                <strong>🔗 같이 볼만한 실무 가이드</strong>
+                <ul>
+                    <li><a href="lifestyle_parents_day_gift_guide_2026.html">2026 어버이날 카네이션 배달 vs 용돈박스: 실패 없는 부모님 선물 트렌드
+                            분석</a></li>
+                    <li><a href="lifestyle_rural_home_security_guide_2026.html">전원주택 도어락 및 보안 카메라 설치 가이드: 시골집 방범을 위한 스마트
+                            기기 추천</a></li>
+                </ul>
+            </div>
+
+            <div class="tags">
+                <span class="tag">#구글스프레드시트</span>
+                <span class="tag">#QUERY함수</span>
+                <span class="tag">#실무툴박스2.0</span>
+                <span class="tag">#엑셀자동화</span>
+                <span class="tag">#구글시트꿀팁</span>
+                <span class="tag">#데이터집계</span>
+                <span class="tag">#구글시트강좌</span>
+                <span class="tag">#SQL기초</span>
+                <span class="tag">#업무효율화</span>
+                <span class="tag">#VLOOKUP대체</span>
+            </div>
+</body>
+
+</html>
