@@ -4,7 +4,7 @@
 
 ### 📅 오늘의 차례
 - **NEXT_TOPIC**: `RECIPE`
-- **LAST_UPDATED**: `2026-04-25`
+- **LAST_UPDATED**: `2026-05-02`
 
 ---
 
@@ -18,6 +18,12 @@
 | 2026-04-23 | SPREADSHEET | ARRAYFORMULA 완벽 정복 |
 | 2026-04-23 | RECIPE | 비법 간장게장 (약재 육수) |
 | 2026-04-25 | SPREADSHEET | MAP, LAMBDA, LET 가이드 |
+| 2026-04-27 | RECIPE | 한우 불고기 (연육 및 양념 비법) |
+| 2026-04-28 | SPREADSHEET | 조건부 서식(심화) |
+| 2026-04-29 | RECIPE | 해물파전 (바삭한 비법) |
+| 2026-04-30 | SPREADSHEET | IMPORTRANGE 완벽 가이드 |
+| 2026-05-01 | RECIPE | 매콤 닭볶음탕 황금레시피 |
+| 2026-05-02 | SPREADSHEET | FILTER & SORT 완벽 가이드 |
 
 ---
 *다음 진행 시 `NEXT_TOPIC`을 확인하고 발행 후 해당 값을 변경해 주세요.*

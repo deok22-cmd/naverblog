@@ -1,0 +1,5 @@
+# 로컬 운영 스크립트 로그
+.scripts/logs/
+
+# Claude Code 로컬 설정
+.claude/settings.local.json
