@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>구글 스프레드시트 REGEXEXTRACT & REGEXREPLACE 완벽 가이드 2026</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #1565c0; padding-bottom: 12px; color: #0d47a1; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e3f2fd; padding: 12px 15px; border-left: 6px solid #1565c0; margin-top: 50px; color: #0d47a1; }
+  .intro-box { background: #f3f8ff; border: 2px solid #90caf9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .code-block { background: #1e1e1e; color: #d4d4d4; padding: 18px 20px; border-radius: 8px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em; line-height: 1.7; margin: 18px 0; overflow-x: auto; white-space: pre; }
+  .code-inline { background: #f0f4ff; color: #0d47a1; padding: 2px 8px; border-radius: 4px; font-family: Consolas, monospace; font-size: 0.9em; border: 1px solid #c5cae9; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #1565c0; color: #fff; padding: 10px 14px; font-weight: 700; text-align: left; font-size: 0.95em; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #e0e0e0; font-size: 0.95em; font-family: Consolas, monospace; }
+  .info-table tr:nth-child(even) td { background: #f3f8ff; }
+  .step-box { border-left: 4px solid #1565c0; padding: 15px 20px; background: #fff; border: 1px solid #e0e0e0; border-left-width: 4px; margin-bottom: 15px; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px; padding: 16px 20px; margin: 20px 0; }
+  .tip-box { background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 8px; padding: 16px 20px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .recommend-area ul { padding-left: 20px; margin: 10px 0 0; }
+  .recommend-area li { margin-bottom: 6px; }
+  .recommend-area a { color: #1565c0; text-decoration: none; }
+  .recommend-area a:hover { text-decoration: underline; }
+  .tags { margin: 30px 0 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; }
+  .img-placeholder { background: #e3f2fd; border: 2px dashed #1565c0; border-radius: 10px; padding: 28px 22px; text-align: left; color: #0d47a1; }
+  .img-placeholder .ph-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; font-weight: 700; font-size: 0.95em; color: #1565c0; }
+  .img-placeholder .ph-file { font-family: Consolas, monospace; background: #fff; border: 1px solid #90caf9; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; color: #1565c0; }
+  .img-placeholder .prompt-text { background: #fff; border: 1px solid #90caf9; border-radius: 6px; padding: 14px; font-family: Consolas, 'Courier New', monospace; font-size: 0.85em; line-height: 1.55; color: #333; white-space: pre-wrap; word-break: break-word; margin: 0 0 12px 0; max-height: 220px; overflow: auto; }
+  .copy-btn { background: #1565c0; color: #fff; border: none; padding: 8px 18px; border-radius: 5px; cursor: pointer; font-size: 0.88em; font-weight: 600; transition: background 0.2s; }
+  .copy-btn:hover { background: #0d47a1; }
+</style>
+</head>
+<body>
+
+<h1>구글 스프레드시트<br>REGEXEXTRACT & REGEXREPLACE 완벽 가이드<br>정규표현식으로 데이터 클렌징 끝내기 2026</h1>
+
+<div class="intro-box">
+  엑셀이나 구글 스프레드시트를 쓰다 보면 반드시 마주치는 상황이 있습니다. 셀 하나에 이름, 전화번호, 이메일이 한꺼번에 뭉쳐 있거나, 날짜 형식이 제멋대로 섞여 있거나, 필요 없는 문자들이 끼어 있는 지저분한 데이터입니다. 이 문제를 가장 강력하게 해결하는 도구가 바로 <strong>REGEXEXTRACT</strong>와 <strong>REGEXREPLACE</strong> 함수입니다. 정규표현식(Regular Expression)이라는 패턴 언어를 사용하여 어떤 형태의 문자열도 원하는 방식으로 추출하고 변환할 수 있습니다. 오늘 이 두 함수를 완벽히 정복하면, 데이터 클렌징 작업의 90%는 자동화할 수 있습니다.
+</div>
+
+<h2>📌 정규표현식(Regex)이란 무엇인가</h2>
+
+<strong>정규표현식(Regular Expression, 줄여서 Regex)</strong>은 문자열에서 특정 패턴을 찾거나 교체하기 위한 언어입니다. 마치 검색창에서 "단어 포함"으로 검색하는 것보다 훨씬 정밀하게, 패턴 자체를 정의하여 문자열을 다루는 기술입니다.<br><br>
+
+예를 들어, "연락처: 010-1234-5678 / 이메일: hong@gmail.com"이라는 문장에서 전화번호만 뽑아내고 싶다면, 정규표현식으로 "숫자 3자리 - 숫자 4자리 - 숫자 4자리 패턴"을 정의하면 자동으로 추출해 줍니다.<br><br>
+
+구글 스프레드시트는 Google의 RE2 정규표현식 엔진을 사용합니다. 파이썬이나 자바스크립트의 정규표현식과 유사하나, 일부 기능(예: lookbehind 단언)이 지원되지 않으니 참고하세요.
+
+<div class="img-area">
+  <img src="../../images/260506/5_spreadsheet_regex_1.png" alt="구글 스프레드시트 REGEX 함수 활용 화면" style="width: 100%; max-width: 780px; border-radius: 10px;">
+  <div class="img-caption">[구글 스프레드시트 REGEX 함수 활용 화면] / AI 생성 이미지</div>
+</div>
+
+<h2>🔍 필수 정규표현식 패턴 사전</h2>
+
+REGEXEXTRACT와 REGEXREPLACE를 사용하기 전에, 자주 쓰이는 기본 패턴들을 먼저 익혀두세요. 이 패턴들은 실무에서 80% 이상의 상황을 커버합니다.<br><br>
+
+<table class="info-table">
+  <tr><th>패턴</th><th>의미</th><th>예시</th></tr>
+  <tr><td>\d</td><td>숫자 하나 (0~9)</td><td>\d\d\d = 숫자 3자리</td></tr>
+  <tr><td>\d+</td><td>숫자 1개 이상 연속</td><td>\d+ = 1234, 99, 0</td></tr>
+  <tr><td>\d{3}</td><td>숫자 정확히 3개</td><td>\d{3} = 010, 123</td></tr>
+  <tr><td>\d{3,4}</td><td>숫자 3~4개</td><td>전화번호 중간/끝 부분</td></tr>
+  <tr><td>[A-Za-z]</td><td>영문자 한 글자</td><td>[A-Za-z]+ = 영단어</td></tr>
+  <tr><td>[가-힣]</td><td>한글 한 글자</td><td>[가-힣]+ = 한글 단어</td></tr>
+  <tr><td>.</td><td>임의의 한 문자</td><td>.+ = 모든 문자열</td></tr>
+  <tr><td>^</td><td>문자열 시작</td><td>^서울 = '서울'로 시작</td></tr>
+  <tr><td>$</td><td>문자열 끝</td><td>\.com$ = .com으로 끝남</td></tr>
+  <tr><td>()</td><td>그룹 지정 (캡처)</td><td>(\d+)원 = 숫자 부분 추출</td></tr>
+  <tr><td>|</td><td>OR 조건</td><td>서울|부산 = 서울 또는 부산</td></tr>
+  <tr><td>\s</td><td>공백 문자</td><td>\s+ = 공백 여러 개</td></tr>
+  <tr><td>\w</td><td>단어 문자(문자+숫자+_)</td><td>\w+ = 단어</td></tr>
+</table>
+
+<h2>📤 REGEXEXTRACT — 원하는 패턴만 쏙 뽑기</h2>
+
+<strong>REGEXEXTRACT</strong>는 셀에서 정규표현식 패턴에 맞는 첫 번째 문자열을 추출하는 함수입니다.<br><br>
+
+<strong>기본 문법:</strong>
+<div class="code-block">=REGEXEXTRACT(텍스트, 정규표현식)</div>
+
+패턴이 일치하지 않으면 오류(#N/A)가 반환됩니다. 오류 방지를 위해 <span class="code-inline">IFERROR</span>로 감싸는 것을 권장합니다.<br><br>
+
+<div class="step-box">
+  <strong>예제 1: 전화번호 추출</strong><br>
+  A1 셀에 "고객명: 홍길동 / 연락처: 010-1234-5678 / 부서: 영업1팀" 이 있을 때
+  <div class="code-block">=REGEXEXTRACT(A1, "\d{3}-\d{3,4}-\d{4}")</div>
+  결과: <strong>010-1234-5678</strong>
+</div>
+
+<div class="step-box">
+  <strong>예제 2: 이메일 주소 추출</strong><br>
+  A1 셀에 "담당: kim.sales@company.co.kr" 이 있을 때
+  <div class="code-block">=REGEXEXTRACT(A1, "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")</div>
+  결과: <strong>kim.sales@company.co.kr</strong>
+</div>
+
+<div class="step-box">
+  <strong>예제 3: 괄호 안 텍스트만 추출</strong><br>
+  A1 셀에 "홍길동(영업팀장)" 이 있을 때
+  <div class="code-block">=REGEXEXTRACT(A1, "\(([^)]+)\)")</div>
+  결과: <strong>(영업팀장)</strong> — 괄호 제거를 원하면 캡처 그룹 활용
+  <div class="code-block">=REGEXEXTRACT(A1, "\(([^)]+)\)", 1)</div>
+  결과: <strong>영업팀장</strong>
+</div>
+
+<div class="step-box">
+  <strong>예제 4: 숫자(금액)만 추출</strong><br>
+  A1 셀에 "결제금액: 35,000원" 이 있을 때
+  <div class="code-block">=REGEXEXTRACT(A1, "[\d,]+")</div>
+  결과: <strong>35,000</strong>
+</div>
+
+<div class="step-box">
+  <strong>예제 5: 날짜 형식 추출 (YYYY-MM-DD)</strong><br>
+  A1 셀에 "등록일: 2026-05-06 (수)" 이 있을 때
+  <div class="code-block">=REGEXEXTRACT(A1, "\d{4}-\d{2}-\d{2}")</div>
+  결과: <strong>2026-05-06</strong>
+</div>
+
+<h2>🔄 REGEXREPLACE — 패턴 찾아서 바꾸기</h2>
+
+<strong>REGEXREPLACE</strong>는 셀에서 정규표현식 패턴에 맞는 부분을 다른 텍스트로 교체하는 함수입니다.<br><br>
+
+<strong>기본 문법:</strong>
+<div class="code-block">=REGEXREPLACE(텍스트, 정규표현식, 교체할_텍스트)</div>
+
+<div class="img-area">
+  <img src="../../images/260506/5_spreadsheet_regex_2.png" alt="REGEXREPLACE로 데이터 정제 전후 비교" style="width: 100%; max-width: 780px; border-radius: 10px;">
+  <div class="img-caption">[REGEXREPLACE로 데이터 정제 전후 비교] / AI 생성 이미지</div>
+</div>
+
+<div class="step-box">
+  <strong>예제 1: 전화번호 형식 통일 (하이픈 제거)</strong><br>
+  A1 셀에 "010-1234-5678"이 있을 때 하이픈 없애기
+  <div class="code-block">=REGEXREPLACE(A1, "-", "")</div>
+  결과: <strong>01012345678</strong>
+</div>
+
+<div class="step-box">
+  <strong>예제 2: 연속된 공백 → 단일 공백으로 정리</strong><br>
+  A1 셀에 "홍길동&nbsp;&nbsp;&nbsp;영업팀"처럼 공백이 여러 개일 때
+  <div class="code-block">=REGEXREPLACE(A1, "\s+", " ")</div>
+  결과: <strong>홍길동 영업팀</strong>
+</div>
+
+<div class="step-box">
+  <strong>예제 3: 특수문자 전부 제거</strong><br>
+  A1 셀에 "가격!@#$: 35,000원!!!"이 있을 때
+  <div class="code-block">=REGEXREPLACE(A1, "[^가-힣A-Za-z0-9\s,.]", "")</div>
+  결과: <strong>가격 35,000원</strong>
+</div>
+
+<div class="step-box">
+  <strong>예제 4: 날짜 형식 변환 (2026.05.06 → 2026-05-06)</strong><br>
+  A1 셀에 "2026.05.06"이 있을 때
+  <div class="code-block">=REGEXREPLACE(A1, "\.", "-")</div>
+  결과: <strong>2026-05-06</strong>
+</div>
+
+<div class="step-box">
+  <strong>예제 5: 개인정보 마스킹 처리</strong><br>
+  A1 셀에 "010-1234-5678"에서 뒷 4자리 마스킹
+  <div class="code-block">=REGEXREPLACE(A1, "\d{4}$", "****")</div>
+  결과: <strong>010-1234-****</strong>
+</div>
+
+<h2>🏆 실무 활용 시나리오 — 이 상황이라면 이 패턴!</h2>
+
+현업에서 반드시 마주치는 데이터 처리 상황별 최적 REGEX 공식을 정리했습니다.<br><br>
+
+<strong>시나리오 1: 주소에서 시/도만 추출</strong><br>
+고객 주소가 "서울특별시 강남구 테헤란로 123"일 때 '서울특별시'만 추출
+<div class="code-block">=REGEXEXTRACT(A1, "^[^\s]+")</div>
+결과: <strong>서울특별시</strong><br><br>
+
+<strong>시나리오 2: URL에서 도메인만 추출</strong><br>
+"https://www.example.co.kr/page/detail"에서 도메인만
+<div class="code-block">=REGEXEXTRACT(A1, "https?://([^/]+)")</div>
+결과: <strong>www.example.co.kr</strong><br><br>
+
+<strong>시나리오 3: 숫자 뒤 단위 텍스트 제거</strong><br>
+"35,000원", "120개", "15km" 등에서 숫자와 쉼표만 남기기
+<div class="code-block">=REGEXREPLACE(A1, "[^0-9,]", "")</div>
+결과: <strong>35,000 / 120 / 15</strong><br><br>
+
+<strong>시나리오 4: 영문 이메일 도메인 부분만 추출</strong><br>
+"hong@gmail.com"에서 "@" 뒤만 추출
+<div class="code-block">=REGEXEXTRACT(A1, "@(.+)$")</div>
+결과: <strong>gmail.com</strong>
+
+<h2>⚠️ 자주 실수하는 패턴과 해결법</h2>
+
+<div class="warn-box">
+  <strong>⚠️ 실수 1: 특수문자를 이스케이프하지 않음</strong><br>
+  `.`, `*`, `+`, `(`, `)`, `[`, `]` 등 정규표현식에서 특별한 의미를 가진 문자를 <strong>그대로 검색</strong>하려면 앞에 백슬래시(<span class="code-inline">\</span>)를 붙여야 합니다.<br>
+  예: 점(.)을 찾을 때 → <span class="code-inline">\.</span> / 괄호를 찾을 때 → <span class="code-inline">\(</span>, <span class="code-inline">\)</span>
+</div>
+
+<div class="warn-box">
+  <strong>⚠️ 실수 2: REGEXEXTRACT에서 일치 없을 때 오류</strong><br>
+  패턴이 일치하지 않으면 #N/A 오류가 발생합니다. 실무에서는 항상 <span class="code-inline">IFERROR</span>로 감싸세요.<br>
+  <div class="code-block">=IFERROR(REGEXEXTRACT(A1, "\d{3}-\d{4}-\d{4}"), "전화번호 없음")</div>
+</div>
+
+<div class="warn-box">
+  <strong>⚠️ 실수 3: 대소문자 구분</strong><br>
+  기본적으로 REGEX 함수는 대소문자를 구분합니다. 대소문자 무관하게 검색하려면 패턴 앞에 <span class="code-inline">(?i)</span>를 추가하세요.<br>
+  <div class="code-block">=REGEXEXTRACT(A1, "(?i)gmail")</div>
+  이 패턴은 "Gmail", "GMAIL", "gmail" 모두 일치합니다.
+</div>
+
+<div class="tip-box">
+  <strong>💡 팁: REGEXMATCH로 조건 확인 후 사용</strong><br>
+  추출 전에 <span class="code-inline">REGEXMATCH</span> 함수로 패턴이 존재하는지 먼저 확인하면 더욱 안전합니다.<br>
+  <div class="code-block">=IF(REGEXMATCH(A1, "\d{3}-\d{4}-\d{4}"), REGEXEXTRACT(A1, "\d{3}-\d{4}-\d{4}"), "해당없음")</div>
+</div>
+
+<div class="img-area">
+  <img src="../../images/260506/5_spreadsheet_regex_3.png" alt="실무 데이터 분석가의 REGEX 활용 현장" style="width: 100%; max-width: 780px; border-radius: 10px;">
+  <div class="img-caption">[실무 데이터 분석가의 REGEX 활용 현장] / AI 생성 이미지</div>
+</div>
+
+<h2>🔗 ARRAYFORMULA와 결합하여 전체 열 처리</h2>
+
+<strong>ARRAYFORMULA</strong>와 결합하면 하나의 수식으로 전체 열의 데이터를 한꺼번에 변환할 수 있어 실무 효율이 극대화됩니다.<br><br>
+
+<div class="step-box">
+  <strong>전체 A열 전화번호 하이픈 제거 — 한 번에</strong>
+  <div class="code-block">=ARRAYFORMULA(IF(A2:A="", "", REGEXREPLACE(A2:A, "-", "")))</div>
+  A2:A 전체에 대해 하이픈을 제거한 결과를 한 셀에서 모두 출력합니다.
+</div>
+
+<div class="step-box">
+  <strong>전체 B열에서 이메일만 추출 — 한 번에</strong>
+  <div class="code-block">=ARRAYFORMULA(IFERROR(REGEXEXTRACT(B2:B, "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"), "없음"))</div>
+  B열 전체에서 이메일 주소를 추출하되, 없는 경우 "없음"으로 표시합니다.
+</div>
+
+ARRAYFORMULA와의 조합은 수천 행의 데이터를 처리할 때 특히 강력합니다. 개별 셀마다 수식을 복사하는 수작업 없이, 한 줄의 수식으로 전체 데이터 클렌징이 완료됩니다.
+
+<h2>📊 REGEXEXTRACT vs SPLIT vs LEFT/MID/RIGHT 비교</h2>
+
+<table class="info-table">
+  <tr><th>함수</th><th>장점</th><th>단점</th><th>적합한 상황</th></tr>
+  <tr><td>REGEXEXTRACT</td><td>복잡한 패턴 처리 가능, 위치 무관</td><td>Regex 문법 학습 필요</td><td>이메일, 전화번호, 날짜 등 패턴이 있는 데이터</td></tr>
+  <tr><td>SPLIT</td><td>간단하고 직관적</td><td>구분자가 일정해야 함</td><td>콤마, 슬래시 등 구분자로 나뉜 데이터</td></tr>
+  <tr><td>LEFT/MID/RIGHT</td><td>위치 기반으로 확실</td><td>위치가 고정되어야 함</td><td>앞 5자리, 특정 위치의 문자열</td></tr>
+</table>
+
+데이터의 패턴이 불규칙하거나 위치가 고정되지 않은 경우, REGEXEXTRACT가 압도적으로 유리합니다. 반면 구분자가 명확하다면 SPLIT이 더 간결할 수 있으니 상황에 맞게 선택하세요.
+
+<h2>🛠️ 오늘 바로 쓸 수 있는 REGEX 공식 모음집</h2>
+
+복사해서 바로 활용할 수 있는 완성된 공식들입니다.<br><br>
+
+<strong>한국 전화번호 추출:</strong>
+<div class="code-block">=IFERROR(REGEXEXTRACT(A1, "0\d{1,2}-\d{3,4}-\d{4}"), "")</div>
+
+<strong>이메일 추출:</strong>
+<div class="code-block">=IFERROR(REGEXEXTRACT(A1, "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"), "")</div>
+
+<strong>한글만 추출:</strong>
+<div class="code-block">=IFERROR(REGEXEXTRACT(A1, "[가-힣]+"), "")</div>
+
+<strong>숫자만 추출:</strong>
+<div class="code-block">=IFERROR(REGEXEXTRACT(A1, "\d+"), "")</div>
+
+<strong>영문자만 추출:</strong>
+<div class="code-block">=IFERROR(REGEXEXTRACT(A1, "[A-Za-z]+"), "")</div>
+
+<strong>날짜(YYYY-MM-DD) 추출:</strong>
+<div class="code-block">=IFERROR(REGEXEXTRACT(A1, "\d{4}-\d{2}-\d{2}"), "")</div>
+
+<strong>URL 추출:</strong>
+<div class="code-block">=IFERROR(REGEXEXTRACT(A1, "https?://[^\s]+"), "")</div>
+
+<strong>특수문자 모두 제거:</strong>
+<div class="code-block">=REGEXREPLACE(A1, "[^가-힣A-Za-z0-9\s]", "")</div>
+
+<strong>앞뒤 공백 및 연속 공백 정리:</strong>
+<div class="code-block">=TRIM(REGEXREPLACE(A1, "\s+", " "))</div>
+
+<h2>❓ REGEX 함수 자주 묻는 질문</h2>
+
+<strong>Q. REGEXEXTRACT로 여러 개의 일치값을 모두 추출할 수 있나요?</strong><br>
+A. 기본 REGEXEXTRACT는 첫 번째 일치값만 반환합니다. 모든 일치값을 추출하려면 Google Apps Script를 활용하거나, 데이터 전처리 후 여러 REGEXEXTRACT를 조합해야 합니다.<br><br>
+
+<strong>Q. 한글 자음/모음도 정규표현식으로 처리할 수 있나요?</strong><br>
+A. 가능합니다. 한글 자음은 <span class="code-inline">[ㄱ-ㅎ]</span>, 모음은 <span class="code-inline">[ㅏ-ㅣ]</span>, 완성형 한글은 <span class="code-inline">[가-힣]</span>으로 표현합니다.<br><br>
+
+<strong>Q. REGEXREPLACE에서 교체 텍스트에 캡처 그룹을 사용할 수 있나요?</strong><br>
+A. 네, 가능합니다. 교체 텍스트에서 <span class="code-inline">\1</span>, <span class="code-inline">\2</span> 등으로 캡처된 그룹을 참조할 수 있습니다.<br>
+예: "홍길동(010-1234-5678)"에서 "(전화번호: 010-1234-5678)"로 변환
+<div class="code-block">=REGEXREPLACE(A1, "([가-힣]+)\((\d{3}-\d{4}-\d{4})\)", "\1(전화번호: \2)")</div>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260505/recipe_gangwon_jangkalguksu_2026.html">강원도 장칼국수 — 고추장·된장 황금비율 육수 황금레시피 2026</a></li>
+    <li><a href="../260505/travel_yeongju_buseoksa_modan_2026.html">영주 부석사 모란꽃 만개기 — 풍기 인삼시장 연계 가족 코스 2026</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#구글스프레드시트</span>
+  <span class="tag">#REGEXEXTRACT</span>
+  <span class="tag">#REGEXREPLACE</span>
+  <span class="tag">#정규표현식</span>
+  <span class="tag">#데이터클렌징</span>
+  <span class="tag">#스프레드시트함수</span>
+  <span class="tag">#구글시트</span>
+  <span class="tag">#엑셀대체</span>
+  <span class="tag">#업무자동화</span>
+  <span class="tag">#데이터분석</span>
+</div>
+
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#1565c0"; }, 2000);
+  });
+}
+</script>
+</body>
+</html>
