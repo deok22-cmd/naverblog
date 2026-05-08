@@ -3,8 +3,8 @@
 본 파일은 **구글 스프레드시트**와 **요리 레시피** 서브 주제가 매일 번갈아 가며 발행될 수 있도록 추적합니다.
 
 ### 📅 오늘의 차례
-- **NEXT_TOPIC**: `RECIPE`
-- **LAST_UPDATED**: `2026-05-08`
+- **NEXT_TOPIC**: `SPREADSHEET`
+- **LAST_UPDATED**: `2026-05-09`
 
 ---
 
@@ -30,6 +30,7 @@
 | 2026-05-06 | SPREADSHEET | REGEXEXTRACT & REGEXREPLACE 정규표현식 데이터 클렌징 |
 | 2026-05-07 | RECIPE | 안동찜닭 (간장 캐러멜라이징 공법) |
 | 2026-05-08 | SPREADSHEET | 피벗 테이블 자동화 (동적 범위·QUERY·Apps Script) |
+| 2026-05-09 | RECIPE | 탱글한 도토리묵 무침 (탄닌 제거·들기름 양념 황금비율) |
 
 ---
 *다음 진행 시 `NEXT_TOPIC`을 확인하고 발행 후 해당 값을 변경해 주세요.*
