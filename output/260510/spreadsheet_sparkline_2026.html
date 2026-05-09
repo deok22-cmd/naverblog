@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>구글 스프레드시트 SPARKLINE 완벽 가이드 2026 — 셀 안에 미니 차트 그리는 마이크로 시각화 기술</title>
+<style>
+  body { margin: 0 auto; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #1565c0; padding-bottom: 12px; color: #0d47a1; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e3f2fd; padding: 12px 15px; border-left: 6px solid #1565c0; margin-top: 50px; color: #0d47a1; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1565c0; margin-top: 28px; }
+  .intro-box { background: #e8f0fe; border: 2px solid #90caf9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .formula-box { background: #1a237e; color: #e8eaf6; border-radius: 8px; padding: 16px 20px; font-family: Consolas, 'Courier New', monospace; font-size: 0.95em; margin: 20px 0; overflow-x: auto; white-space: pre-wrap; word-break: break-all; }
+  .formula-box .comment { color: #7986cb; }
+  .example-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.92em; }
+  .example-table th { background: #1565c0; color: #fff; padding: 9px 14px; text-align: center; border: 1px solid #90caf9; }
+  .example-table td { padding: 9px 14px; border: 1px solid #bbdefb; text-align: center; }
+  .example-table tr:nth-child(even) td { background: #e3f2fd; }
+  .step-box { border-left: 4px solid #1565c0; padding: 15px 20px; background: #fff; border: 1px solid #bbdefb; border-left-width: 4px; margin-bottom: 15px; border-radius: 4px; }
+  .tip-box { background: #e8f5e9; border: 1px solid #a5d6a7; padding: 18px 22px; border-radius: 8px; margin: 20px 0; }
+  .caution-box { background: #fff3e0; border: 1px solid #ffcc02; padding: 18px 22px; border-radius: 8px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; }
+  .img-placeholder { background: #e3f2fd; border: 2px dashed #1565c0; border-radius: 10px; padding: 28px 22px; text-align: left; color: #0d47a1; }
+  .img-placeholder .ph-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; font-weight: 700; font-size: 0.95em; color: #0d47a1; }
+  .img-placeholder .ph-file { font-family: Consolas, monospace; background: #fff; border: 1px solid #90caf9; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; color: #1565c0; }
+  .img-placeholder .prompt-text { background: #fff; border: 1px solid #90caf9; border-radius: 6px; padding: 14px; font-family: Consolas, 'Courier New', monospace; font-size: 0.85em; line-height: 1.55; color: #333; white-space: pre-wrap; word-break: break-word; margin: 0 0 12px 0; max-height: 220px; overflow: auto; }
+  .copy-btn { background: #1565c0; color: #fff; border: none; padding: 8px 18px; border-radius: 5px; cursor: pointer; font-size: 0.88em; font-weight: 600; transition: background 0.2s; }
+  .copy-btn:hover { background: #0d47a1; }
+</style>
+</head>
+<body>
+
+<h1>구글 스프레드시트 SPARKLINE 완벽 가이드 2026 — 셀 안에 미니 차트 그리는 마이크로 시각화 기술</h1>
+
+<div class="intro-box">
+  데이터는 숫자만으로는 이야기를 전달하지 못합니다. 수십 개의 수치가 나열된 표를 보는 상대방이 한눈에 추세를 파악하게 하려면 시각화가 필요합니다. 그런데 매번 차트를 따로 삽입하기엔 시트가 복잡해지고 인쇄도 불편해집니다. 이 문제를 정확히 해결하는 함수가 바로 <strong>SPARKLINE</strong>입니다. 단 한 줄의 수식으로 <strong>셀 하나 안에 완전한 미니 차트</strong>를 그릴 수 있으며, 꺾은선 그래프·막대 그래프·원형 차트까지 자유자재로 선택할 수 있습니다. 보고서 테이블 자체에 시각 정보를 내장하는 '마이크로 시각화' 기술의 핵심이 바로 SPARKLINE입니다.
+</div>
+
+<h2>📊 SPARKLINE이란? — 기본 개념과 작동 원리</h2>
+
+<strong>SPARKLINE</strong>은 구글 스프레드시트에서 <strong>셀 하나 안에 소형 차트(미니 차트)를 렌더링</strong>하는 함수입니다. Microsoft Excel에도 스파크라인 기능이 있지만, Google의 SPARKLINE은 <strong>함수 형태</strong>로 구현되어 있어 다른 수식과 조합이 가능하고, ARRAYFORMULA·FILTER·QUERY 등과 연계하면 더욱 강력한 자동화를 구현할 수 있습니다.
+
+<br><br>
+
+기본 문법은 단 두 가지 인수로 구성됩니다.
+
+<div class="formula-box">=SPARKLINE(데이터, [옵션])</div>
+
+첫 번째 인수 <strong>데이터</strong>는 차트로 그릴 숫자 배열 또는 범위입니다. 두 번째 인수 <strong>옵션</strong>은 선택 사항으로, 차트 유형·색상·최솟값·최댓값 등 시각 속성을 지정하는 2열 배열({속성명, 값} 쌍)입니다. 옵션을 생략하면 기본 꺾은선 그래프가 회색으로 표시됩니다.
+
+<br><br>
+
+SPARKLINE의 중요한 특성 중 하나는 <strong>셀의 크기에 따라 차트가 자동으로 리사이즈</strong>된다는 점입니다. 셀 높이와 너비를 늘리면 그 안의 스파크라인 차트도 함께 커지며, 반대로 작게 만들어도 비율에 맞게 줄어듭니다. 이 덕분에 행 높이를 적절히 설정해 두면 표 안에 매우 선명한 미니 차트를 내장할 수 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260510/5_sparkline_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-1">A clean, professional screenshot-style illustration of a Google Sheets spreadsheet showing the SPARKLINE function in use. The spreadsheet has a clean white background with blue column headers. Column A shows product names (제품A, 제품B, 제품C, etc.), columns B through G show monthly sales numbers (January to June), and column H is labeled "추세" (Trend) and contains small sparkline mini-charts — line charts in column H showing upward, downward, and mixed trends for each product row. The active cell H2 shows the formula bar with =SPARKLINE(B2:G2). Blue and green accent colors for the mini line charts. Clean sans-serif Korean typography. Modern, high-resolution UI design mockup. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">SPARKLINE 함수로 구현한 추세 컬럼 예시 화면 / AI 제작 이미지</div>
+</div>
+
+<h2>📈 차트 유형 4가지 — charttype 옵션 완전 정복</h2>
+
+SPARKLINE의 핵심 옵션은 <strong>charttype</strong>입니다. 지원하는 4가지 차트 유형과 특징을 정리합니다.
+
+<br><br>
+
+<strong>① 꺾은선 그래프 (line) — 기본값</strong>
+
+<div class="formula-box">=SPARKLINE(B2:G2, {"charttype","line"; "color","#1565c0"; "linewidth",2})</div>
+
+기본 차트 유형으로, 시계열 데이터의 <strong>추세 변화</strong>를 표현하기에 가장 적합합니다. "color"로 선 색상을 지정하고, "linewidth"로 선 두께(1~5)를 조절합니다. 복수 계열 데이터를 넣으면 여러 개의 선이 그려집니다.
+
+<br><br>
+
+<strong>② 막대 그래프 (bar)</strong>
+
+<div class="formula-box">=SPARKLINE(B2:G2, {"charttype","bar"; "color1","#1565c0"; "color2","#e3f2fd"; "max",100})</div>
+
+각 항목의 <strong>상대적 크기 비교</strong>에 유리합니다. "color1"은 데이터 값의 막대 색상, "color2"는 나머지 영역(배경) 색상입니다. "max" 옵션으로 최댓값 기준을 고정할 수 있어, 여러 행의 스파크라인을 동일한 스케일로 비교할 때 유용합니다.
+
+<br><br>
+
+<strong>③ 세로 막대 그래프 (column)</strong>
+
+<div class="formula-box">=SPARKLINE(B2:G2, {"charttype","column"; "color","#00796b"; "negcolor","#e64a19"; "lowcolor","#ffcc02"})</div>
+
+양수/음수 값을 가진 데이터에서 특히 강력합니다. "negcolor"로 음수 값의 막대 색상을 별도 지정할 수 있어, 손익·증감률 데이터를 한눈에 구분하기 쉽습니다. "lowcolor"로 최솟값 막대의 색상을 강조할 수도 있습니다.
+
+<br><br>
+
+<strong>④ 원형 차트 (pie)</strong>
+
+<div class="formula-box">=SPARKLINE({30,50,20}, {"charttype","pie"; "color1","#1565c0"; "color2","#ef5350"; "color3","#43a047"})</div>
+
+두 개 이상의 값이 전체에서 차지하는 <strong>비율 분포</strong>를 표현합니다. 각 섹터 색상을 "color1", "color2", "color3" 등으로 순서대로 지정합니다. 단, 원형 차트는 데이터 계열이 많거나 값 차이가 작을 경우 가독성이 떨어질 수 있으므로, 3~5개 항목의 비율 비교에 가장 적합합니다.
+
+<h2>🗂️ 옵션 파라미터 완전 레퍼런스</h2>
+
+SPARKLINE 옵션은 <strong>{"옵션명", 값; "옵션명", 값; ...}</strong> 형태의 2열 배열로 전달합니다. 자주 사용하는 핵심 옵션을 정리합니다.
+
+<br><br>
+
+<table class="example-table">
+  <tr><th>옵션명</th><th>적용 차트</th><th>설명</th><th>예시 값</th></tr>
+  <tr><td>charttype</td><td>전체</td><td>차트 유형 지정</td><td>"line" / "bar" / "column" / "pie"</td></tr>
+  <tr><td>color</td><td>line, column</td><td>메인 색상</td><td>"#1565c0" / "blue"</td></tr>
+  <tr><td>color1~colorN</td><td>bar, pie</td><td>각 섹터/구간 색상</td><td>"#ef5350"</td></tr>
+  <tr><td>negcolor</td><td>column</td><td>음수 값 막대 색상</td><td>"#e64a19"</td></tr>
+  <tr><td>lowcolor</td><td>column</td><td>최솟값 막대 색상</td><td>"#ffcc02"</td></tr>
+  <tr><td>highcolor</td><td>column</td><td>최댓값 막대 색상</td><td>"#00796b"</td></tr>
+  <tr><td>firstcolor</td><td>column</td><td>첫 번째 값 막대 색상</td><td>"#7b1fa2"</td></tr>
+  <tr><td>lastcolor</td><td>column</td><td>마지막 값 막대 색상</td><td>"#f57f17"</td></tr>
+  <tr><td>linewidth</td><td>line</td><td>선 두께 (1~5)</td><td>2</td></tr>
+  <tr><td>min</td><td>전체</td><td>Y축 최솟값 고정</td><td>0</td></tr>
+  <tr><td>max</td><td>전체</td><td>Y축 최댓값 고정</td><td>100</td></tr>
+  <tr><td>empty</td><td>line</td><td>빈 셀 처리 방식</td><td>"zero" / "ignore"</td></tr>
+  <tr><td>nan</td><td>line</td><td>텍스트/오류 처리</td><td>"convert" / "ignore"</td></tr>
+  <tr><td>rtl</td><td>전체</td><td>오른쪽→왼쪽 방향</td><td>TRUE / FALSE</td></tr>
+</table>
+
+<h2>🛠️ 실무 활용 사례 1 — 월별 매출 추세 대시보드</h2>
+
+다음은 제품별 월별 매출 데이터에 SPARKLINE을 적용해 추세 대시보드를 만드는 실무 예제입니다.
+
+<br><br>
+
+<strong>가상 데이터 구조:</strong>
+
+<table class="example-table">
+  <tr><th>제품명</th><th>1월</th><th>2월</th><th>3월</th><th>4월</th><th>5월</th><th>6월</th><th>추세(SPARKLINE)</th></tr>
+  <tr><td>제품 A</td><td>320</td><td>410</td><td>380</td><td>520</td><td>490</td><td>610</td><td>↗ (상승 추세)</td></tr>
+  <tr><td>제품 B</td><td>850</td><td>790</td><td>720</td><td>680</td><td>640</td><td>590</td><td>↘ (하강 추세)</td></tr>
+  <tr><td>제품 C</td><td>220</td><td>310</td><td>180</td><td>390</td><td>280</td><td>420</td><td>∿ (등락 반복)</td></tr>
+</table>
+
+H2 셀에 입력할 SPARKLINE 수식:
+
+<div class="formula-box">=SPARKLINE(B2:G2, {"charttype","line"; "color","#1565c0"; "linewidth",2; "min",0})</div>
+
+이를 H2:H4 범위에 복사하면 각 행의 데이터에 맞는 미니 꺾은선 그래프가 자동으로 생성됩니다. "min",0 옵션을 추가하면 0 기준점이 고정되어 제품 간 상대적 수준 비교도 가능합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260510/5_sparkline_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-2">A realistic, high-quality Google Sheets UI screenshot showing an advanced SPARKLINE dashboard for monthly sales analysis. The spreadsheet displays a professional Korean business report table with product names on the left (제품A, 제품B, 제품C, 제품D), monthly sales figures (1월 through 6월) in blue-highlighted columns, and a final column labeled "증감현황" (Change Status) showing column-type sparkline mini-charts with green bars for positive months and red bars for negative months. A second sparkline-type column shows line graphs in blue with varying slope directions. Modern spreadsheet styling with clean Korean typography, alternating row background colors (white and light blue). Conditional formatting highlights cells above average in green and below average in orange. Photorealistic UI design, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">SPARKLINE column형으로 구현한 증감 현황 대시보드 / AI 제작 이미지</div>
+</div>
+
+<h2>🛠️ 실무 활용 사례 2 — 손익 증감률 시각화 (column형)</h2>
+
+전월 대비 증감률처럼 양수와 음수가 혼재하는 데이터를 시각화할 때는 column 차트가 탁월합니다.
+
+<br><br>
+
+<strong>월별 증감률 데이터 (%):</strong>
+
+<table class="example-table">
+  <tr><th>월</th><th>1월</th><th>2월</th><th>3월</th><th>4월</th><th>5월</th><th>6월</th></tr>
+  <tr><td>증감률(%)</td><td>+5.2</td><td>-3.1</td><td>+8.7</td><td>-1.4</td><td>+12.3</td><td>+4.8</td></tr>
+</table>
+
+<div class="formula-box">=SPARKLINE(B2:G2, {
+  "charttype","column";
+  "color","#1565c0";
+  "negcolor","#e53935";
+  "highcolor","#00796b";
+  "lowcolor","#f57f17"
+})</div>
+
+이 수식에서 양수 막대는 파란색(`#1565c0`), 음수 막대는 빨간색(`#e53935`)으로 자동 구분되며, 최댓값 막대는 초록색(`#00796b`), 최솟값 막대는 주황색(`#f57f17`)으로 강조됩니다. 데이터 흐름을 한눈에 파악하기에 매우 직관적인 시각화입니다.
+
+<h2>🛠️ 실무 활용 사례 3 — 진행률 표시 bar형</h2>
+
+목표 대비 달성률을 표현할 때는 bar 차트가 가장 효과적입니다.
+
+<br><br>
+
+<strong>프로젝트 진행률 데이터:</strong>
+
+<table class="example-table">
+  <tr><th>과제</th><th>진행률(%)</th><th>잔여(%)</th><th>시각화</th></tr>
+  <tr><td>과제 A</td><td>72</td><td>28</td><td>[████████░░] 72%</td></tr>
+  <tr><td>과제 B</td><td>45</td><td>55</td><td>[████░░░░░░] 45%</td></tr>
+  <tr><td>과제 C</td><td>98</td><td>2</td><td>[██████████] 98%</td></tr>
+</table>
+
+<div class="formula-box"><span class="comment">// C2 셀에 잔여율 자동 계산: =100-B2</span>
+=SPARKLINE({B2, 100-B2}, {
+  "charttype","bar";
+  "color1","#1565c0";
+  "color2","#e3f2fd";
+  "max",100
+})</div>
+
+진행률(B2)과 잔여율(100-B2)을 인라인 배열로 전달하고, 최댓값을 100으로 고정하면 모든 행이 같은 스케일의 진행률 바가 됩니다. 이 방식은 프로젝트 현황 보고서, OKR 추적 시트, 예산 집행 현황표 등에 즉시 적용 가능한 실전 패턴입니다.
+
+<h2>⚠️ 자주 발생하는 오류와 해결법</h2>
+
+<div class="caution-box">
+  <strong>⚠️ SPARKLINE 사용 시 주의사항</strong><br><br>
+  <strong>1. 텍스트 셀이 범위에 포함된 경우</strong><br>
+  → "nan","convert" 또는 "nan","ignore" 옵션 추가로 오류 방지<br><br>
+  <strong>2. 빈 셀(공백)이 범위에 있는 경우</strong><br>
+  → "empty","zero"(0으로 처리) 또는 "empty","ignore"(건너뜀) 선택<br><br>
+  <strong>3. 음수 데이터에 bar 차트 사용 시</strong><br>
+  → bar 타입은 음수를 지원하지 않으므로 column 타입으로 변경할 것<br><br>
+  <strong>4. 데이터가 1개뿐인 경우</strong><br>
+  → SPARKLINE은 최소 2개 이상의 데이터 포인트 필요 (#NUM! 오류 발생 가능)<br><br>
+  <strong>5. 인쇄 시 스파크라인이 흐릿하게 출력될 때</strong><br>
+  → 행 높이를 충분히 확보하고 페이지 인쇄 배율 100%로 고정
+</div>
+
+<h2>🔗 SPARKLINE과 다른 함수의 조합 — 실전 고급 패턴</h2>
+
+SPARKLINE의 진가는 다른 함수와 조합할 때 더욱 빛납니다.
+
+<br><br>
+
+<strong>패턴 1 — FILTER + SPARKLINE: 조건부 데이터만 차트화</strong>
+
+<div class="formula-box"><span class="comment">// 판매량이 300 이상인 월만 꺾은선 그래프로 표시</span>
+=SPARKLINE(FILTER(B2:G2, B2:G2>=300))</div>
+
+<br>
+
+<strong>패턴 2 — IFERROR + SPARKLINE: 데이터 없을 때 빈 셀 처리</strong>
+
+<div class="formula-box"><span class="comment">// 데이터가 없거나 오류 발생 시 빈 문자열 반환</span>
+=IFERROR(SPARKLINE(B2:G2, {"charttype","column"})," ")</div>
+
+<br>
+
+<strong>패턴 3 — SPARKLINE + 직접 배열: 최근 N개 데이터만 표시</strong>
+
+<div class="formula-box"><span class="comment">// G2 기준 최근 4개 데이터(D2:G2)만 스파크라인으로 표시</span>
+=SPARKLINE(OFFSET(G2,0,-3,1,4))</div>
+
+<br>
+
+<strong>패턴 4 — 다계열 꺾은선: 두 개 시계열 동시 비교</strong>
+
+<div class="formula-box"><span class="comment">// 올해 매출(B2:G2)과 전년도 매출(B10:G10)을 하나의 셀에 비교</span>
+=SPARKLINE({B2:G2; B10:G10}, {"charttype","line"})</div>
+
+<br><br>
+
+이처럼 SPARKLINE은 단순한 미니 차트 함수가 아니라, 다양한 함수와 결합하면 자동으로 업데이트되는 <strong>동적 인포그래픽 셀</strong>을 구현하는 강력한 도구입니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260510/5_sparkline_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-3">A professional Google Sheets screenshot showing multiple SPARKLINE use cases side by side in a comparison dashboard. Left section shows a project tracker table with bar-type sparklines displaying progress bars in blue and light blue (진행률 columns). Middle section shows a financial P&L table with column-type sparklines where green bars represent positive months and red bars show negative months (손익 현황). Right section shows a compact KPI dashboard with small line sparklines in various colors showing different metric trends over time. Each section has Korean column headers in dark blue. Clean, modern business spreadsheet aesthetics with precise alignment. Photorealistic UI mockup, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">진행률·손익·KPI를 한 화면에 담은 SPARKLINE 대시보드 / AI 제작 이미지</div>
+</div>
+
+<h2>📐 스파크라인 셀 최적 설계 — 행 높이·너비 가이드</h2>
+
+SPARKLINE은 셀 크기에 자동으로 맞춰지므로, 시각적으로 명확한 차트를 만들려면 셀 크기 설정이 중요합니다.
+
+<br><br>
+
+<strong>권장 설정값:</strong>
+
+<br><br>
+
+<strong>꺾은선(line) 미니 차트:</strong> 행 높이 35~50px, 열 너비 80~120px 이상. 너무 좁으면 추세 변화를 읽기 어렵습니다.
+
+<br><br>
+
+<strong>세로 막대(column) 미니 차트:</strong> 행 높이 45~60px, 열 너비 80px 이상. 데이터 포인트 수가 많을수록 너비를 넓게 설정합니다.
+
+<br><br>
+
+<strong>진행률 바(bar) 차트:</strong> 행 높이 25~35px, 열 너비 100~150px 이상. 바 차트는 가로 방향이므로 너비가 충분해야 합니다.
+
+<br><br>
+
+실용적인 팁으로, 여러 행에 SPARKLINE을 사용할 때는 <strong>전체 행을 선택한 후 행 높이를 일괄 적용</strong>하면 일관된 시각적 통일감을 얻을 수 있습니다. Google 스프레드시트에서 행 번호를 Shift+클릭으로 복수 선택한 후 오른쪽 클릭 → '행 크기 조절'을 선택하면 됩니다.
+
+<h2>✅ SPARKLINE 빠른 참고 치트시트</h2>
+
+<div class="tip-box">
+  <strong>📋 SPARKLINE 한눈에 보기 — 핵심 수식 모음</strong><br><br>
+  <strong>기본 꺾은선:</strong> =SPARKLINE(B2:G2)<br>
+  <strong>컬러 꺾은선:</strong> =SPARKLINE(B2:G2, {"charttype","line"; "color","#1565c0"; "linewidth",2})<br>
+  <strong>진행률 바:</strong> =SPARKLINE({B2, 100-B2}, {"charttype","bar"; "color1","#1565c0"; "color2","#e3f2fd"; "max",100})<br>
+  <strong>컬럼(양음수):</strong> =SPARKLINE(B2:G2, {"charttype","column"; "color","#1565c0"; "negcolor","#e53935"})<br>
+  <strong>원형 차트:</strong> =SPARKLINE({A2,B2,C2}, {"charttype","pie"; "color1","#1565c0"; "color2","#43a047"; "color3","#ef5350"})<br>
+  <strong>IFERROR 방어:</strong> =IFERROR(SPARKLINE(B2:G2)," ")<br>
+  <strong>공백 처리:</strong> =SPARKLINE(B2:G2, {"nan","ignore"; "empty","zero"})
+</div>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260509/travel_busan_taejonsa_hydrangea_2026.html">부산 태종사 수국꽃문화축제 2026 — 30여 종 5,000그루 수국 성지 완전 가이드</a></li>
+    <li><a href="../260509/travel_yeongwol_donggang_rafting_2026.html">영월 동강 래프팅 2026 — 어라연 코스 완전 정복, 예약·준비물 총정리</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#구글스프레드시트</span>
+  <span class="tag">#SPARKLINE함수</span>
+  <span class="tag">#스파크라인</span>
+  <span class="tag">#미니차트</span>
+  <span class="tag">#데이터시각화</span>
+  <span class="tag">#구글시트함수</span>
+  <span class="tag">#스프레드시트실무</span>
+  <span class="tag">#엑셀대안</span>
+  <span class="tag">#마이크로시각화</span>
+  <span class="tag">#구글시트2026</span>
+</div>
+
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#1565c0"; }, 2000);
+  });
+}
+</script>
+</body>
+</html>
