@@ -1,0 +1,267 @@
+﻿# build-dashboard.ps1
+# 네이버·티스토리 통합 운영 대시보드 빌더
+# output/, output_tistory/ 폴더를 스캔하여 루트의 dashboard.html을 재생성한다.
+# daily-run.ps1이 매일 호출하며, 수동으로도 단독 실행 가능.
+
+$ErrorActionPreference = "Continue"
+$ProjectRoot       = "D:\lightsail\naverblog"
+$OutputDir         = Join-Path $ProjectRoot "output"
+$TistoryDir        = Join-Path $ProjectRoot "output_tistory"
+$ImagesDir         = Join-Path $ProjectRoot "images"
+$DashboardPath     = Join-Path $ProjectRoot "dashboard.html"
+
+$utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+
+# ---- 1. 폴더 스캔 ----
+function Get-DateFolders([string]$root) {
+    if (-not (Test-Path $root)) { return @() }
+    Get-ChildItem -Path $root -Directory -ErrorAction SilentlyContinue |
+        Where-Object { $_.Name -match '^\d{6}$' } |
+        Select-Object -ExpandProperty Name
+}
+
+$naverDates   = Get-DateFolders $OutputDir
+$tistoryDates = Get-DateFolders $TistoryDir
+$imageDates   = Get-DateFolders $ImagesDir
+
+$allDates = @($naverDates + $tistoryDates) | Sort-Object -Unique -Descending
+
+# ---- 2. 각 날짜별 메타데이터 수집 ----
+function Count-Articles([string]$dir) {
+    if (-not (Test-Path $dir)) { return 0 }
+    @(Get-ChildItem -Path $dir -Filter "*.html" -File -ErrorAction SilentlyContinue |
+        Where-Object { $_.Name -ne "index.html" }).Count
+}
+
+function Get-IndexLink([string]$root, [string]$date) {
+    $idx = Join-Path (Join-Path $root $date) "index.html"
+    if (Test-Path $idx) { return $true }
+    return $false
+}
+
+$rows = @()
+foreach ($d in $allDates) {
+    $naverPath   = Join-Path $OutputDir $d
+    $tistoryPath = Join-Path $TistoryDir $d
+    $imagesPath  = Join-Path $ImagesDir $d
+
+    $naverCount   = Count-Articles $naverPath
+    $tistoryCount = Count-Articles $tistoryPath
+    $hasNaverIdx   = Get-IndexLink $OutputDir $d
+    $hasTistoryIdx = Get-IndexLink $TistoryDir $d
+    $imageCount   = if (Test-Path $imagesPath) { @(Get-ChildItem -Path $imagesPath -File -ErrorAction SilentlyContinue).Count } else { 0 }
+
+    $rows += [PSCustomObject]@{
+        Date          = $d
+        NaverCount    = $naverCount
+        TistoryCount  = $tistoryCount
+        ImageCount    = $imageCount
+        HasNaverIdx   = $hasNaverIdx
+        HasTistoryIdx = $hasTistoryIdx
+    }
+}
+
+# ---- 3. 집계 통계 ----
+$totalNaver   = ($rows | Measure-Object -Property NaverCount   -Sum).Sum
+$totalTistory = ($rows | Measure-Object -Property TistoryCount -Sum).Sum
+$totalImages  = ($rows | Measure-Object -Property ImageCount   -Sum).Sum
+$activeDays   = $rows.Count
+$tistoryDays  = @($rows | Where-Object { $_.TistoryCount -gt 0 }).Count
+$gapDays      = @($rows | Where-Object { $_.NaverCount -gt 0 -and $_.TistoryCount -eq 0 }).Count
+$latestDate   = if ($rows.Count -gt 0) { $rows[0].Date } else { "(없음)" }
+$generatedAt  = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+
+# ---- 4. HTML 행 생성 ----
+function Format-DateLabel([string]$d) {
+    if ($d.Length -ne 6) { return $d }
+    $yy = $d.Substring(0,2)
+    $mm = $d.Substring(2,2)
+    $dd = $d.Substring(4,2)
+    return "20$yy-$mm-$dd"
+}
+
+$sbRows = New-Object System.Text.StringBuilder
+foreach ($r in $rows) {
+    $label = Format-DateLabel $r.Date
+
+    # Naver 상태
+    if ($r.NaverCount -ge 5) {
+        $naverBadge = "<span class='badge ok'>OK 5/5</span>"
+    } elseif ($r.NaverCount -gt 0) {
+        $naverBadge = "<span class='badge partial'>$($r.NaverCount)/5</span>"
+    } else {
+        $naverBadge = "<span class='badge none'>-</span>"
+    }
+    if ($r.HasNaverIdx) {
+        $naverLink = "<a class='btn-link' href='output/$($r.Date)/index.html' target='_blank'>네이버 열기</a>"
+    } else {
+        $naverLink = "<span class='muted'>없음</span>"
+    }
+
+    # Tistory 상태
+    if ($r.TistoryCount -ge 5) {
+        $tistoryBadge = "<span class='badge ok'>OK 5/5</span>"
+    } elseif ($r.TistoryCount -gt 0) {
+        $tistoryBadge = "<span class='badge partial'>$($r.TistoryCount)/5</span>"
+    } else {
+        $tistoryBadge = "<span class='badge missing'>미발행</span>"
+    }
+    if ($r.HasTistoryIdx) {
+        $tistoryLink = "<a class='btn-link tistory' href='output_tistory/$($r.Date)/index.html' target='_blank'>티스토리 열기</a>"
+    } else {
+        $tistoryLink = "<span class='muted'>없음</span>"
+    }
+
+    $imageCell = if ($r.ImageCount -gt 0) { "$($r.ImageCount)장" } else { "<span class='muted'>0</span>" }
+
+    [void]$sbRows.AppendLine(@"
+      <tr>
+        <td class='date-cell'>$label<br><span class='date-raw'>$($r.Date)</span></td>
+        <td>$naverBadge<br>$naverLink</td>
+        <td>$tistoryBadge<br>$tistoryLink</td>
+        <td class='center'>$imageCell</td>
+      </tr>
+"@)
+}
+
+# ---- 5. 전체 HTML ----
+$html = @"
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>네이버·티스토리 통합 운영 대시보드</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; margin: 0; padding: 24px; background: #f4f6f8; color: #222; line-height: 1.6; }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+  h1 { font-size: 1.6em; color: #004d40; border-bottom: 4px solid #00796b; padding-bottom: 12px; margin: 0 0 8px 0; }
+  .subtitle { color: #777; font-size: 0.9em; margin-bottom: 24px; }
+  .stats { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 32px; }
+  .stat-card { background: #fff; padding: 18px 22px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); min-width: 150px; flex: 1; }
+  .stat-card .label { font-size: 0.82em; color: #888; }
+  .stat-card .value { font-size: 1.8em; font-weight: 800; color: #004d40; margin-top: 4px; }
+  .stat-card.tistory .value { color: #ff6f00; }
+  .stat-card.image .value { color: #555; }
+  .stat-card.warning .value { color: #c62828; }
+  section { background: #fff; border-radius: 12px; padding: 22px 26px; margin-bottom: 22px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+  section h2 { font-size: 1.15em; color: #004d40; margin-top: 0; padding-bottom: 8px; border-bottom: 2px solid #e0f2f1; }
+  table { width: 100%; border-collapse: collapse; }
+  th { background: #00796b; color: #fff; padding: 10px 12px; text-align: left; font-size: 0.9em; font-weight: 700; }
+  th:first-child { border-top-left-radius: 6px; }
+  th:last-child { border-top-right-radius: 6px; }
+  td { padding: 12px; border-bottom: 1px solid #eee; font-size: 0.92em; vertical-align: top; }
+  tr:hover td { background: #f9fdfd; }
+  .date-cell { font-weight: 700; color: #00695c; min-width: 110px; }
+  .date-raw { font-family: Consolas, monospace; font-size: 0.78em; color: #999; font-weight: 400; }
+  .center { text-align: center; }
+  .badge { display: inline-block; padding: 3px 9px; border-radius: 10px; font-size: 0.78em; font-weight: 700; }
+  .badge.ok { background: #e8f5e9; color: #2e7d32; border: 1px solid #a5d6a7; }
+  .badge.partial { background: #fff8e1; color: #ef6c00; border: 1px solid #ffcc80; }
+  .badge.missing { background: #ffebee; color: #c62828; border: 1px solid #ef9a9a; }
+  .badge.none { background: #eee; color: #999; border: 1px solid #ddd; }
+  .btn-link { display: inline-block; margin-top: 6px; padding: 4px 10px; background: #00796b; color: #fff; border-radius: 5px; font-size: 0.8em; text-decoration: none; transition: background 0.15s; }
+  .btn-link:hover { background: #004d40; }
+  .btn-link.tistory { background: #ff6f00; }
+  .btn-link.tistory:hover { background: #e65100; }
+  .muted { color: #bbb; font-size: 0.85em; }
+  .quick-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+  .ql-card { display: block; background: #fafafa; border: 1px solid #e0e0e0; padding: 14px 16px; border-radius: 10px; text-decoration: none; color: #333; transition: all 0.15s; }
+  .ql-card:hover { background: #e0f2f1; border-color: #00796b; color: #004d40; }
+  .ql-card .ql-title { font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .ql-card .ql-desc { font-size: 0.82em; color: #777; }
+  .footer { text-align: center; color: #aaa; font-size: 0.82em; margin: 30px 0 10px 0; }
+  .footer code { background: #eee; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>네이버 · 티스토리 통합 운영 대시보드</h1>
+  <div class="subtitle">최근 갱신: $generatedAt · 자동 빌드 by <code>.scripts/build-dashboard.ps1</code></div>
+
+  <div class="stats">
+    <div class="stat-card"><div class="label">활성 발행일</div><div class="value">$($activeDays)일</div></div>
+    <div class="stat-card"><div class="label">네이버 누적 원고</div><div class="value">$($totalNaver)건</div></div>
+    <div class="stat-card tistory"><div class="label">티스토리 누적 원고</div><div class="value">$($totalTistory)건</div></div>
+    <div class="stat-card tistory"><div class="label">티스토리 미러 발행일</div><div class="value">$($tistoryDays)일</div></div>
+    <div class="stat-card image"><div class="label">총 이미지 자산</div><div class="value">$($totalImages)장</div></div>
+    <div class="stat-card warning"><div class="label">티스토리 미발행 일수</div><div class="value">$($gapDays)일</div></div>
+  </div>
+
+  <section>
+    <h2>📅 일자별 발행 현황 (최신순)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>발행일</th>
+          <th>네이버 블로그</th>
+          <th>티스토리 미러</th>
+          <th class='center'>이미지</th>
+        </tr>
+      </thead>
+      <tbody>
+$($sbRows.ToString())      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>📚 트래커 및 운영 지침 (Quick Access)</h2>
+    <div class="quick-links">
+      <a class="ql-card" href="naverblog.md" target="_blank">
+        <div class="ql-title">📖 naverblog.md</div>
+        <div class="ql-desc">운영 지침 v5 + 11조 (티스토리 미러)</div>
+      </a>
+      <a class="ql-card" href="국내여행지.md" target="_blank">
+        <div class="ql-title">🗺️ 국내여행지.md</div>
+        <div class="ql-desc">국내여행 주제 데이터베이스</div>
+      </a>
+      <a class="ql-card" href="sub_topic_tracker.md" target="_blank">
+        <div class="ql-title">🔄 sub_topic_tracker.md</div>
+        <div class="ql-desc">서브 카테고리 순환 트래커</div>
+      </a>
+      <a class="ql-card" href="spreadsheet.md" target="_blank">
+        <div class="ql-title">📊 spreadsheet.md</div>
+        <div class="ql-desc">스프레드시트 주제 로드맵</div>
+      </a>
+      <a class="ql-card" href="receipt.md" target="_blank">
+        <div class="ql-title">🍽️ receipt.md</div>
+        <div class="ql-desc">레시피 주제 로드맵</div>
+      </a>
+      <a class="ql-card" href="festival.md" target="_blank">
+        <div class="ql-title">🎪 festival.md</div>
+        <div class="ql-desc">전국 축제 일정</div>
+      </a>
+      <a class="ql-card" href="조회수분석.md" target="_blank">
+        <div class="ql-title">📈 조회수분석.md</div>
+        <div class="ql-desc">유입 데이터 분석</div>
+      </a>
+      <a class="ql-card" href="1만명_달성_액션플랜.md" target="_blank">
+        <div class="ql-title">🎯 1만명 액션플랜</div>
+        <div class="ql-desc">성장 전략 노트</div>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>⚙️ 운영 메모</h2>
+    <ul style="margin: 0; padding-left: 22px; font-size: 0.92em; color: #555;">
+      <li>본 대시보드는 매일 새벽 4시 자동 발행 직후 <code>.scripts/build-dashboard.ps1</code>에 의해 재생성됩니다.</li>
+      <li>수동 갱신이 필요한 경우 PowerShell에서 <code>.\.scripts\build-dashboard.ps1</code>을 실행하세요.</li>
+      <li><span class="badge ok">OK 5/5</span> 정상 발행 · <span class="badge partial">N/5</span> 부분 발행 · <span class="badge missing">미발행</span> 티스토리 미러 누락 · <span class="badge none">-</span> 발행 데이터 없음</li>
+      <li>티스토리 미러 누락분은 해당 날짜의 네이버 원고를 참조해 보강 작성하세요. (운영 지침 11조)</li>
+    </ul>
+  </section>
+
+  <div class="footer">naverblog @ D:\lightsail\naverblog · auto-generated</div>
+</div>
+</body>
+</html>
+"@
+
+[System.IO.File]::WriteAllText($DashboardPath, $html, $utf8NoBom)
+Write-Host "Dashboard generated: $DashboardPath"
+Write-Host "  Active days     : $activeDays"
+Write-Host "  Naver articles  : $totalNaver"
+Write-Host "  Tistory articles: $totalTistory"
+Write-Host "  Tistory gap days: $gapDays"

@@ -9,8 +9,8 @@
 | 파일 | 역할 |
 |---|---|
 | `daily-prompt.md` | 매일 실행될 자기완결적 작업 지시문 (Naverblog 운영 규칙 포함) |
-| `daily-run.ps1` | Claude Code CLI를 호출하는 PowerShell 래퍼 |
-| `logs/daily-YYYYMMDD-HHMMSS.log` | 매 실행마다 생성되는 실행 로그 |
+| `daily-run.ps1` | Claude Code CLI를 호출하고, 작성 성공 시 GitHub로 자동 push 하는 PowerShell 래퍼 |
+| `logs/daily-YYYYMMDD-HHMMSS.log` | 매 실행마다 생성되는 실행 로그 (Claude 출력 + git add/commit/push 결과 포함) |
 
 ---
 
@@ -109,9 +109,12 @@ Get-ChildItem D:\lightsail\naverblog\.scripts\logs\daily-20260502*.log | ForEach
 
 1. **04:00 (자동)** — 작업 스케줄러가 `daily-run.ps1` 실행
 2. **04:00~04:15 (자동)** — Claude가 5개 주제 선정, 대시보드, 5개 원고(placeholder 모드) 생성
-3. **기상 후 (수동)** — Antigravity에 다음과 같이 지시:
+3. **04:15 직후 (자동)** — wrapper가 `output/YYMMDD/` 폴더와 트래커 파일(`국내여행지.md`, `sub_topic_tracker.md`, `spreadsheet.md`, `receipt.md`)만 staging 한 뒤 `[Auto] YYYY-MM-DD 일자 원고 자동 발행` 메시지로 commit, 현재 브랜치를 origin으로 push (`https://github.com/deok22-cmd/naverblog`). 그 외의 사전에 변경되어 있던 파일은 staging 하지 않음
+4. **기상 후 (수동)** — Antigravity에 다음과 같이 지시:
    > `D:\lightsail\naverblog\output\YYMMDD\` 의 모든 HTML 파일을 읽고, 각 `.img-placeholder` 안의 영문 프롬프트와 `.ph-file` 경로를 사용해 이미지 15장을 생성·저장해줘
-4. **이미지 생성 후 (수동)** — `output/YYMMDD/` 의 각 HTML에서 placeholder를 `<img>` 태그로 치환 (Claude에게 "오늘 5개 원고 placeholder를 img 태그로 변환" 요청 또는 직접 작업)
-5. **발행** — 완성된 HTML을 네이버 블로그 에디터에 복사·붙여넣기
+5. **이미지 생성 후 (수동)** — `output/YYMMDD/` 의 각 HTML에서 placeholder를 `<img>` 태그로 치환 (Claude에게 "오늘 5개 원고 placeholder를 img 태그로 변환" 요청 또는 직접 작업)
+6. **발행** — 완성된 HTML을 네이버 블로그 에디터에 복사·붙여넣기
+
+> 자동 push 트러블슈팅: Git Credential Manager 인증이 만료되어 push가 실패하면 wrapper는 commit만 한 채 종료한다. 수동으로 `git push origin main` 한 번 실행 시 GCM 로그인 창이 떠 재인증되며, 이후 자동화가 정상 복구된다. 모든 git 출력은 그날의 `logs/daily-*.log`에 기록되므로 실패 원인은 로그에서 확인.
 
 ---

@@ -1,6 +1,10 @@
-# Naverblog 일일 자동 발행 작업 (placeholder 모드)
+# Naverblog 일일 자동 발행 작업 (placeholder 모드 + 티스토리 미러)
 
 매일 새벽 4시(KST) Windows 작업 스케줄러가 실행하는 자동 발행 파이프라인이다. 본 프롬프트만으로 컨텍스트가 자기완결되도록 구성되어 있으며, 시작 시 이미 작업 디렉터리는 `D:\lightsail\naverblog`이다.
+
+**작업 흐름 요약**:
+- **Phase A (네이버)**: 5건의 네이버 블로그 원고를 `output/YYMMDD/`에 작성, 트래커 갱신.
+- **Phase B (티스토리 미러)**: 동일 5건 주제를 **제목·본문 완전 재작성**하여 `output_tistory/YYMMDD/`에 미러 작성 (트래커 재갱신 X).
 
 ---
 
@@ -182,6 +186,90 @@ function copyPrompt(id) {
 
 ---
 
+## 5.5 Phase B — 티스토리 미러 생성 (필수)
+
+Phase A(1~5단계)에서 작성한 원고와 동일한 주제로 **티스토리용 미러 원고 5건**을 생성한다. 본 단계는 `Naverblog.md` 11조(티스토리 동시 발행 규정)에 따라 수행한다.
+
+### 5.5.1 작성 대상 식별
+- 본 실행에서 새로 작성한 `output/YYMMDD/<slug>.html` 파일들을 모두 미러 대상으로 한다.
+- Resume 모드에서 이미 `✔️ 작성 완료` 상태이던 행은 미러 작성 여부를 다음 규칙으로 결정:
+  - `output_tistory/YYMMDD/<같은-slug>.html`이 **존재하지 않으면** 미러 생성 (이전 실행에서 빠진 것).
+  - 이미 존재하면 건드리지 않는다.
+
+### 5.5.2 폴더 및 파일명
+- 폴더: `output_tistory/YYMMDD/` (없으면 생성).
+- 파일명: 네이버 원고와 **동일한 슬러그** 사용 (예: `travel_imsil_cheese_2026.html`).
+- 대시보드: `output_tistory/YYMMDD/index.html` (네이버 대시보드와 동일 구조, 5개 슬롯 모두 티스토리 변형 제목으로 표시).
+
+### 5.5.3 제목 변형 (필수)
+네이버 제목과 단어 단위 일치율 60% 이하가 되도록 다음 중 최소 2개 기법을 조합한다.
+1. 앵글 전환 (정보형 ↔ 후기형 ↔ 가이드형 ↔ 큐레이션형)
+2. 키워드 순서 재배치 (빅키워드/미들/롱테일 위치 변경)
+3. 숫자·연도 위치 변경
+4. 수식어 교체 ('완벽 가이드' → '정밀 분석' → '리얼 후기' 등)
+
+### 5.5.4 본문 재작성 (필수)
+네이버 본문을 그대로 옮기는 행위는 절대 금지. 다음을 모두 준수:
+1. **꼭지 순서·소제목 재구성**: `h2` 9개 이상 유지하되 순서·그루핑·소제목 문구를 모두 다르게 작성.
+2. **도입부(`intro-box`) 완전 교체**: 리드문을 1인칭 시점·다른 문장 구조로 재작성.
+3. **문장 paraphrase 90% 이상**: 동일 팩트(시간/가격/날짜)도 어휘와 문장 구조를 바꿔 재작성.
+4. **표·체크리스트 변형**: 동일 정보라도 행 순서, 헤더명, 보조 설명 위치 다르게 표시.
+5. **레이아웃 박스 변형**: Platinum v5 골격은 유지하되 `info-card` 배치, `step-box` ↔ `intro-box` 스왑 등 가능.
+6. **분량 유지**: 1.5만 자 내외, 꼭지 9+ 그대로. 분량 축소 금지.
+
+### 5.5.4-bis HTML 출력 형식 — **인라인 스타일 강제 (티스토리 에디터 호환)**
+
+티스토리 HTML 에디터는 `<style>` 블록의 클래스 셀렉터(`.intro-box`, `.h2`, `.info-table` 등)를 거의 모두 스트립한다. 본 폴더의 출력은 **인라인 `style="..."` 속성만으로 모든 시각 표현이 결정**되어야 한다. (네이버 폴더 `output/YYMMDD/`는 기존 Platinum v5 클래스 기반 그대로 유지)
+
+**필수 규칙**:
+1. **`<style>` 블록을 출력에 포함하지 않는다.** `<head>`에는 `<meta charset>`, `<meta viewport>`, `<title>`만 둔다.
+2. **모든 표현 요소에 인라인 스타일을 박는다**: `<h1>`, `<h2>`, `<p>`, `<div>`(intro/step/tip/caution box), `<table>`, `<th>`, `<td>`, `<img>`, `<span>` (태그·뱃지), `<a>` (링크 색상) 등.
+3. **표의 짝/홀 행 색상 분기**: `tr:nth-child(even)` 의사클래스는 인라인으로 옮기지 못한다. **각 `<tr>` 내부의 `<td>`마다 짝수 행은 `background: #f1faf9;`(여행) 또는 `#fff8f6;`(레시피), 홀수 행은 `background: #fff;`**로 직접 지정.
+4. **링크 색상**: `<a style="color: #00796b; text-decoration: none;">` (여행 카테고리) / `#e64a19` (레시피). 티스토리 기본 링크 색을 덮어쓰기 위해 반드시 인라인 명시.
+5. **외곽 래퍼**: 전체 본문을 `<div style="font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; padding: 16px;">`로 감싼다.
+6. **단락 간격**: 본문 단락은 `<p style="margin: 1em 0;">`로 감싸 티스토리가 단락 간격을 줄이는 것을 방지.
+7. **카테고리별 인라인 컬러 팔레트**:
+    - 여행: `#00796b` (border/accent), `#004d40` (제목 색), `#e0f2f1` (h2 배경), `#f1faf9` (intro/표 짝수행), `#b2dfdb` (intro 보더)
+    - 레시피: `#e64a19` (border/accent), `#bf360c` (제목 색), `#fbe9e7` (h2 배경), `#fff8f6` (intro/표 짝수행), `#ffccbc` (intro 보더)
+    - 박스 색은 카테고리 공통: 팁박스 `background: #fffde7; border: 1px solid #f9a825;`, 주의박스 `background: #fce4ec; border: 1px solid #e57373;`, 코드/공식 박스 `background: #263238; color: #80cbc4;`
+
+**참고 템플릿**: 인라인 스타일 적용 예시는 `output_tistory/260511/travel_seoul_hyunchungwon_memorial_2026.html`을 참고한다. 새로 작성하는 모든 티스토리 미러는 이 파일과 동일한 구조 패턴을 따른다.
+
+**금지**:
+- `<style>...</style>` 블록 출력 (어떤 셀렉터도 포함하지 말 것)
+- `class="..."` 속성 사용 (시각 표현용 클래스는 사용 금지, ID는 스크립트용에 한해 허용)
+- `<script>` 블록 (티스토리 에디터가 스크립트를 차단하는 경우가 많아 placeholder/copy 기능은 미러 작성 시 생략)
+
+### 5.5.5 이미지 — 재활용 (캡션·alt만 재작성)
+- 이미지 파일은 **복사하지 않는다**. 네이버와 동일한 `images/YYMMDD/` 폴더를 상대경로로 참조.
+  - 티스토리 원고 위치: `output_tistory/YYMMDD/<slug>.html`
+  - 이미지 참조 경로: `../../images/YYMMDD/<seq>_<slug>_<idx>.png` (네이버와 동일한 경로 구조)
+- placeholder 모드인 경우에도 동일한 영문 프롬프트 재활용 OK.
+- 단, **`<img alt="">` 텍스트와 한글 캡션(`img-caption`) 문구는 반드시 재작성**한다 (마지막 `AI 제작 이미지` 라벨은 유지).
+
+### 5.5.6 내부 링크 (티스토리 내부 순환)
+- `recommend-area` 박스의 '같이 볼만한 글' 링크는 **`output_tistory/<yesterday_yymmdd>/` 폴더**의 원고를 가리킨다.
+  - 상대경로 예: `<a href="../<yesterday>/<slug>.html">`
+- 전날 티스토리 폴더가 없으면(초기 도입 시점 등), 당일 다른 4건의 티스토리 미러 중 2개를 무작위로 선정해 같은 폴더 내 링크(`./<slug>.html`)로 처리.
+
+### 5.5.7 대시보드 작성
+`output_tistory/YYMMDD/index.html` 생성. 네이버 대시보드와 동일 CSS·마크업을 사용하되, '주제' 컬럼에는 **티스토리 변형 제목**을 표시하고 각 셀의 `<a href>`는 동일 폴더 내 미러 파일을 가리킨다. 상태는 모두 `✔️ 작성 완료`.
+
+### 5.5.8 트래커 비건드림
+Phase B에서는 `국내여행지.md`, `sub_topic_tracker.md`, `spreadsheet.md`, `receipt.md` 등 **어떤 트래커도 수정하지 않는다**. 주제가 동일하므로 Phase A의 마킹을 재사용한다.
+
+### 5.5.9 자가 검증
+각 티스토리 파일 저장 직전, 다음을 확인:
+- [ ] 제목 단어 일치율 ≤ 60%
+- [ ] 인트로 박스 첫 3문장 완전 재작성
+- [ ] `h2` 순서·소제목 문구가 네이버와 다름
+- [ ] 동일 팩트의 문장 구조 paraphrase 완료
+- [ ] '같이 볼만한 글' 박스가 `output_tistory` 내부를 가리킴
+- [ ] **`<style>` 블록과 `class` 속성이 없으며 모든 시각 표현이 인라인 `style="..."`로만 구현됨**
+- [ ] 표의 모든 `<td>`에 행별 배경색이 명시되어 있음 (nth-child 의존 금지)
+
+---
+
 ## 6. 금지 사항 (절대 준수)
 
 1. **git 명령 금지**: `git add`, `git commit`, `git push` 등 일체 실행하지 않는다. 모든 변경은 작업 디렉터리에만 남긴다.
@@ -197,7 +285,7 @@ function copyPrompt(id) {
 작업이 모두 끝나면 다음 형식의 한 줄 요약을 출력하고 종료한다.
 
 ```
-[DAILY OK YYYY-MM-DD] 5 articles created in output/YYMMDD/, trackers updated, 0 git commits
+[DAILY OK YYYY-MM-DD] 5 naver + 5 tistory articles created in output/YYMMDD/ and output_tistory/YYMMDD/, trackers updated, 0 git commits
 ```
 
 오류 발생 시:

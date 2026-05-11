@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>네이버·티스토리 통합 운영 대시보드</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; margin: 0; padding: 24px; background: #f4f6f8; color: #222; line-height: 1.6; }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+  h1 { font-size: 1.6em; color: #004d40; border-bottom: 4px solid #00796b; padding-bottom: 12px; margin: 0 0 8px 0; }
+  .subtitle { color: #777; font-size: 0.9em; margin-bottom: 24px; }
+  .stats { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 32px; }
+  .stat-card { background: #fff; padding: 18px 22px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); min-width: 150px; flex: 1; }
+  .stat-card .label { font-size: 0.82em; color: #888; }
+  .stat-card .value { font-size: 1.8em; font-weight: 800; color: #004d40; margin-top: 4px; }
+  .stat-card.tistory .value { color: #ff6f00; }
+  .stat-card.image .value { color: #555; }
+  .stat-card.warning .value { color: #c62828; }
+  section { background: #fff; border-radius: 12px; padding: 22px 26px; margin-bottom: 22px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+  section h2 { font-size: 1.15em; color: #004d40; margin-top: 0; padding-bottom: 8px; border-bottom: 2px solid #e0f2f1; }
+  table { width: 100%; border-collapse: collapse; }
+  th { background: #00796b; color: #fff; padding: 10px 12px; text-align: left; font-size: 0.9em; font-weight: 700; }
+  th:first-child { border-top-left-radius: 6px; }
+  th:last-child { border-top-right-radius: 6px; }
+  td { padding: 12px; border-bottom: 1px solid #eee; font-size: 0.92em; vertical-align: top; }
+  tr:hover td { background: #f9fdfd; }
+  .date-cell { font-weight: 700; color: #00695c; min-width: 110px; }
+  .date-raw { font-family: Consolas, monospace; font-size: 0.78em; color: #999; font-weight: 400; }
+  .center { text-align: center; }
+  .badge { display: inline-block; padding: 3px 9px; border-radius: 10px; font-size: 0.78em; font-weight: 700; }
+  .badge.ok { background: #e8f5e9; color: #2e7d32; border: 1px solid #a5d6a7; }
+  .badge.partial { background: #fff8e1; color: #ef6c00; border: 1px solid #ffcc80; }
+  .badge.missing { background: #ffebee; color: #c62828; border: 1px solid #ef9a9a; }
+  .badge.none { background: #eee; color: #999; border: 1px solid #ddd; }
+  .btn-link { display: inline-block; margin-top: 6px; padding: 4px 10px; background: #00796b; color: #fff; border-radius: 5px; font-size: 0.8em; text-decoration: none; transition: background 0.15s; }
+  .btn-link:hover { background: #004d40; }
+  .btn-link.tistory { background: #ff6f00; }
+  .btn-link.tistory:hover { background: #e65100; }
+  .muted { color: #bbb; font-size: 0.85em; }
+  .quick-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+  .ql-card { display: block; background: #fafafa; border: 1px solid #e0e0e0; padding: 14px 16px; border-radius: 10px; text-decoration: none; color: #333; transition: all 0.15s; }
+  .ql-card:hover { background: #e0f2f1; border-color: #00796b; color: #004d40; }
+  .ql-card .ql-title { font-weight: 700; font-size: 0.95em; margin-bottom: 4px; }
+  .ql-card .ql-desc { font-size: 0.82em; color: #777; }
+  .footer { text-align: center; color: #aaa; font-size: 0.82em; margin: 30px 0 10px 0; }
+  .footer code { background: #eee; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>네이버 · 티스토리 통합 운영 대시보드</h1>
+  <div class="subtitle">최근 갱신: 2026-05-11 10:59:11 · 자동 빌드 by <code>.scripts/build-dashboard.ps1</code></div>
+
+  <div class="stats">
+    <div class="stat-card"><div class="label">활성 발행일</div><div class="value">13일</div></div>
+    <div class="stat-card"><div class="label">네이버 누적 원고</div><div class="value">65건</div></div>
+    <div class="stat-card tistory"><div class="label">티스토리 누적 원고</div><div class="value">5건</div></div>
+    <div class="stat-card tistory"><div class="label">티스토리 미러 발행일</div><div class="value">1일</div></div>
+    <div class="stat-card image"><div class="label">총 이미지 자산</div><div class="value">167장</div></div>
+    <div class="stat-card warning"><div class="label">티스토리 미발행 일수</div><div class="value">12일</div></div>
+  </div>
+
+  <section>
+    <h2>📅 일자별 발행 현황 (최신순)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>발행일</th>
+          <th>네이버 블로그</th>
+          <th>티스토리 미러</th>
+          <th class='center'>이미지</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td class='date-cell'>2026-05-11<br><span class='date-raw'>260511</span></td>
+        <td><span class='badge ok'>OK 5/5</span><br><a class='btn-link' href='output/260511/index.html' target='_blank'>네이버 열기</a></td>
+        <td><span class='badge ok'>OK 5/5</span><br><a class='btn-link tistory' href='output_tistory/260511/index.html' target='_blank'>티스토리 열기</a></td>
+        <td class='center'>15장</td>
+      </tr>
+      <tr>
+        <td class='date-cell'>2026-05-10<br><span class='date-raw'>260510</span></td>
+        <td><span class='badge ok'>OK 5/5</span><br><a class='btn-link' href='output/260510/index.html' target='_blank'>네이버 열기</a></td>
+        <td><span class='badge missing'>미발행</span><br><span class='muted'>없음</span></td>
+        <td class='center'>15장</td>
+      </tr>
+      <tr>
+        <td class='date-cell'>2026-05-09<br><span class='date-raw'>260509</span></td>
+        <td><span class='badge ok'>OK 5/5</span><br><a class='btn-link' href='output/260509/index.html' target='_blank'>네이버 열기</a></td>
+        <td><span class='badge missing'>미발행</span><br><span class='muted'>없음</span></td>
+        <td class='center'>2장</td>
+      </tr>
+      <tr>
+        <td class='date-cell'>2026-05-08<br><span class='date-raw'>260508</span></td>
+        <td><span class='badge ok'>OK 5/5</span><br><a class='btn-link' href='output/260508/index.html' target='_blank'>네이버 열기</a></td>
+        <td><span class='badge missing'>미발행</span><br><span class='muted'>없음</span></td>
+        <td class='center'><span class='muted'>0</span></td>
+      </tr>
+      <tr>
+        <td class='date-cell'>2026-05-07<br><span class='date-raw'>260507</span></td>
+        <td><span class='badge ok'>OK 5/5</span><br><a class='btn-link' href='output/260507/index.html' target='_blank'>네이버 열기</a></td>
+        <td><span class='badge missing'>미발행</span><br><span class='muted'>없음</span></td>
+        <td class='center'>15장</td>
+      </tr>
+      <tr>
+        <td class='date-cell'>2026-05-06<br><span class='date-raw'>260506</span></td>
+        <td><span class='badge ok'>OK 5/5</span><br><a class='btn-link' href='output/260506/index.html' target='_blank'>네이버 열기</a></td>
+        <td><span class='badge missing'>미발행</span><br><span class='muted'>없음</span></td>
+        <td class='center'>15장</td>
+      </tr>
+      <tr>
+        <td class='date-cell'>2026-05-05<br><span class='date-raw'>260505</span></td>
+        <td><span class='badge ok'>OK 5/5</span><br><a class='btn-link' href='output/260505/index.html' target='_blank'>네이버 열기</a></td>
+        <td><span class='badge missing'>미발행</span><br><span class='muted'>없음</span></td>
+        <td class='center'>15장</td>
+      </tr>
+      <tr>
+        <td class='date-cell'>2026-05-04<br><span class='date-raw'>260504</span></td>
+        <td><span class='badge ok'>OK 5/5</span><br><a class='btn-link' href='output/260504/index.html' target='_blank'>네이버 열기</a></td>
+        <td><span class='badge missing'>미발행</span><br><span class='muted'>없음</span></td>
+        <td class='center'>15장</td>
+      </tr>
+      <tr>
+        <td class='date-cell'>2026-05-03<br><span class='date-raw'>260503</span></td>
+        <td><span class='badge ok'>OK 5/5</span><br><a class='btn-link' href='output/260503/index.html' target='_blank'>네이버 열기</a></td>
+        <td><span class='badge missing'>미발행</span><br><span class='muted'>없음</span></td>
+        <td class='center'>15장</td>
+      </tr>
+      <tr>
+        <td class='date-cell'>2026-05-02<br><span class='date-raw'>260502</span></td>
+        <td><span class='badge ok'>OK 5/5</span><br><a class='btn-link' href='output/260502/index.html' target='_blank'>네이버 열기</a></td>
+        <td><span class='badge missing'>미발행</span><br><span class='muted'>없음</span></td>
+        <td class='center'>15장</td>
+      </tr>
+      <tr>
+        <td class='date-cell'>2026-05-01<br><span class='date-raw'>260501</span></td>
+        <td><span class='badge ok'>OK 5/5</span><br><a class='btn-link' href='output/260501/index.html' target='_blank'>네이버 열기</a></td>
+        <td><span class='badge missing'>미발행</span><br><span class='muted'>없음</span></td>
+        <td class='center'>15장</td>
+      </tr>
+      <tr>
+        <td class='date-cell'>2026-04-30<br><span class='date-raw'>260430</span></td>
+        <td><span class='badge ok'>OK 5/5</span><br><a class='btn-link' href='output/260430/index.html' target='_blank'>네이버 열기</a></td>
+        <td><span class='badge missing'>미발행</span><br><span class='muted'>없음</span></td>
+        <td class='center'>15장</td>
+      </tr>
+      <tr>
+        <td class='date-cell'>2026-04-29<br><span class='date-raw'>260429</span></td>
+        <td><span class='badge ok'>OK 5/5</span><br><a class='btn-link' href='output/260429/index.html' target='_blank'>네이버 열기</a></td>
+        <td><span class='badge missing'>미발행</span><br><span class='muted'>없음</span></td>
+        <td class='center'>15장</td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>📚 트래커 및 운영 지침 (Quick Access)</h2>
+    <div class="quick-links">
+      <a class="ql-card" href="naverblog.md" target="_blank">
+        <div class="ql-title">📖 naverblog.md</div>
+        <div class="ql-desc">운영 지침 v5 + 11조 (티스토리 미러)</div>
+      </a>
+      <a class="ql-card" href="국내여행지.md" target="_blank">
+        <div class="ql-title">🗺️ 국내여행지.md</div>
+        <div class="ql-desc">국내여행 주제 데이터베이스</div>
+      </a>
+      <a class="ql-card" href="sub_topic_tracker.md" target="_blank">
+        <div class="ql-title">🔄 sub_topic_tracker.md</div>
+        <div class="ql-desc">서브 카테고리 순환 트래커</div>
+      </a>
+      <a class="ql-card" href="spreadsheet.md" target="_blank">
+        <div class="ql-title">📊 spreadsheet.md</div>
+        <div class="ql-desc">스프레드시트 주제 로드맵</div>
+      </a>
+      <a class="ql-card" href="receipt.md" target="_blank">
+        <div class="ql-title">🍽️ receipt.md</div>
+        <div class="ql-desc">레시피 주제 로드맵</div>
+      </a>
+      <a class="ql-card" href="festival.md" target="_blank">
+        <div class="ql-title">🎪 festival.md</div>
+        <div class="ql-desc">전국 축제 일정</div>
+      </a>
+      <a class="ql-card" href="조회수분석.md" target="_blank">
+        <div class="ql-title">📈 조회수분석.md</div>
+        <div class="ql-desc">유입 데이터 분석</div>
+      </a>
+      <a class="ql-card" href="1만명_달성_액션플랜.md" target="_blank">
+        <div class="ql-title">🎯 1만명 액션플랜</div>
+        <div class="ql-desc">성장 전략 노트</div>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>⚙️ 운영 메모</h2>
+    <ul style="margin: 0; padding-left: 22px; font-size: 0.92em; color: #555;">
+      <li>본 대시보드는 매일 새벽 4시 자동 발행 직후 <code>.scripts/build-dashboard.ps1</code>에 의해 재생성됩니다.</li>
+      <li>수동 갱신이 필요한 경우 PowerShell에서 <code>.\.scripts\build-dashboard.ps1</code>을 실행하세요.</li>
+      <li><span class="badge ok">OK 5/5</span> 정상 발행 · <span class="badge partial">N/5</span> 부분 발행 · <span class="badge missing">미발행</span> 티스토리 미러 누락 · <span class="badge none">-</span> 발행 데이터 없음</li>
+      <li>티스토리 미러 누락분은 해당 날짜의 네이버 원고를 참조해 보강 작성하세요. (운영 지침 11조)</li>
+    </ul>
+  </section>
+
+  <div class="footer">naverblog @ D:\lightsail\naverblog · auto-generated</div>
+</div>
+</body>
+</html>
