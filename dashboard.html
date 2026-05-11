@@ -45,12 +45,54 @@
   .ql-card .ql-desc { font-size: 0.82em; color: #777; }
   .footer { text-align: center; color: #aaa; font-size: 0.82em; margin: 30px 0 10px 0; }
   .footer code { background: #eee; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+  .top-launcher { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 0 0 24px 0; }
+  .launch-card { display: flex; align-items: center; gap: 12px; padding: 14px 18px; border-radius: 12px; text-decoration: none; color: #fff; font-weight: 700; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.12s, box-shadow 0.12s; }
+  .launch-card:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0,0,0,0.15); }
+  .launch-card .lc-icon { font-size: 1.8em; line-height: 1; }
+  .launch-card .lc-text { display: flex; flex-direction: column; }
+  .launch-card .lc-label { font-size: 0.7em; font-weight: 500; opacity: 0.85; letter-spacing: 0.04em; }
+  .launch-card .lc-name { font-size: 1.0em; font-weight: 800; }
+  .lc-naver { background: linear-gradient(135deg, #03c75a, #02a847); }
+  .lc-tistory { background: linear-gradient(135deg, #ff5a1f, #e64a19); }
+  .lc-adpost { background: linear-gradient(135deg, #19ce60, #0f8a40); }
+  .lc-adsense { background: linear-gradient(135deg, #4285f4, #1a73e8); }
 </style>
 </head>
 <body>
 <div class="wrap">
   <h1>네이버 · 티스토리 통합 운영 대시보드</h1>
-  <div class="subtitle">최근 갱신: 2026-05-11 10:59:11 · 자동 빌드 by <code>.scripts/build-dashboard.ps1</code></div>
+  <div class="subtitle">최근 갱신: 2026-05-11 11:10:47 · 자동 빌드 by <code>.scripts/build-dashboard.ps1</code></div>
+
+  <div class="top-launcher">
+    <a class="launch-card lc-naver" href="https://blog.naver.com/deokhodong" target="_blank" rel="noopener">
+      <span class="lc-icon">🟢</span>
+      <span class="lc-text">
+        <span class="lc-label">NAVER BLOG</span>
+        <span class="lc-name">호동과세공주</span>
+      </span>
+    </a>
+    <a class="launch-card lc-tistory" href="https://tentme.tistory.com/" target="_blank" rel="noopener">
+      <span class="lc-icon">🟠</span>
+      <span class="lc-text">
+        <span class="lc-label">TISTORY</span>
+        <span class="lc-name">슬기로운 개선 생활</span>
+      </span>
+    </a>
+    <a class="launch-card lc-adpost" href="https://adpost.naver.com/" target="_blank" rel="noopener">
+      <span class="lc-icon">💰</span>
+      <span class="lc-text">
+        <span class="lc-label">REVENUE</span>
+        <span class="lc-name">네이버 애드포스트</span>
+      </span>
+    </a>
+    <a class="launch-card lc-adsense" href="https://www.google.com/adsense/" target="_blank" rel="noopener">
+      <span class="lc-icon">💵</span>
+      <span class="lc-text">
+        <span class="lc-label">REVENUE</span>
+        <span class="lc-name">Google 애드센스</span>
+      </span>
+    </a>
+  </div>
 
   <div class="stats">
     <div class="stat-card"><div class="label">활성 발행일</div><div class="value">13일</div></div>
