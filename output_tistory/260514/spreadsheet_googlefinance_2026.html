@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GOOGLEFINANCE 함수 실전 마스터 — 환율 조회·KRX 코드·포트폴리오 수익률 자동화, 구글 시트 투자 활용 가이드</title>
+</head>
+<body style="margin:0; padding:16px; background:#fff; font-family:'Apple SD Gothic Neo',sans-serif; font-size:16px; line-height:1.9; color:#222; max-width:780px; margin:0 auto;">
+
+<h1 style="font-size:1.6em; font-weight:800; border-bottom:5px solid #1565c0; padding-bottom:12px; color:#0d47a1; text-align:center;">GOOGLEFINANCE 함수 실전 마스터 — 환율 조회·KRX 코드·포트폴리오 수익률 자동화, 구글 시트 투자 활용 가이드</h1>
+
+<div style="background:#e8f4fd; border:2px solid #90caf9; padding:25px; border-radius:10px; margin:30px 0;">
+<span style="display:inline-block; background:#1565c0; color:#fff; padding:3px 10px; border-radius:12px; font-size:0.82em; font-weight:700; margin-right:6px;">📊 스프레드시트</span><span style="display:inline-block; background:#1565c0; color:#fff; padding:3px 10px; border-radius:12px; font-size:0.82em; font-weight:700; margin-right:6px;">GOOGLEFINANCE</span><span style="display:inline-block; background:#1565c0; color:#fff; padding:3px 10px; border-radius:12px; font-size:0.82em; font-weight:700; margin-right:6px;">투자 자동화</span><br><br>
+주식 앱을 여러 개 켜두고 포트폴리오를 수동으로 집계하던 시절은 끝납니다. 구글 스프레드시트의 <strong>GOOGLEFINANCE 함수</strong>는 셀 하나에 수식을 넣는 것만으로 실시간(약 20분 지연) 주가, 환율, 52주 최고가·최저가, 과거 가격 이력까지 자동으로 불러옵니다.<br><br>
+이 가이드에서는 실전 대시보드 구조부터 시작해 기본 문법, KRX 국내 주식 코드, CURRENCY 환율 조회, SPARKLINE 조합, 과거 데이터 활용까지 순서대로 짚겠습니다. 코딩 지식은 필요 없습니다.<br><br>
+<table style="width:100%; margin:20px 0; border-collapse:collapse;">
+  <tr><th style="background:#1565c0; color:#fff; padding:10px 14px; font-size:0.93em; text-align:left;">항목</th><th style="background:#1565c0; color:#fff; padding:10px 14px; font-size:0.93em; text-align:left;">내용</th></tr>
+  <tr><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#fff;">함수명</td><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#fff;">GOOGLEFINANCE</td></tr>
+  <tr><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#e8f4fd;">지원 플랫폼</td><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#e8f4fd;">Google Sheets (구글 스프레드시트)</td></tr>
+  <tr><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#fff;">갱신 주기</td><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#fff;">약 20분 지연 (증권사 실시간 데이터와 차이 있을 수 있음)</td></tr>
+  <tr><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#e8f4fd;">지원 거래소</td><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#e8f4fd;">NYSE, NASDAQ, KRX(한국), TSE(일본), LSE(런던) 등</td></tr>
+  <tr><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#fff;">비용</td><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#fff;">무료 (Google Sheets 계정만 있으면 됨)</td></tr>
+</table>
+</div>
+
+<h2 style="font-size:1.2em; font-weight:700; background:#e3f2fd; padding:12px 15px; border-left:6px solid #1565c0; margin-top:50px; color:#0d47a1;">🖥️ 실전 투자 대시보드 완전 구축 — 먼저 구조를 잡자</h2>
+
+이론보다 실전 구조부터 보는 것이 빠릅니다. 아래 11열짜리 포트폴리오 시트 구조를 먼저 만들고, 각 수식을 채워나가는 방식으로 진행하겠습니다.<br><br>
+
+<div style="border-left:4px solid #1565c0; padding:15px 20px; background:#fff; border:1px solid #e3f2fd; border-left-width:4px; margin-bottom:15px; border-radius:4px;"><strong>[A열]</strong> 종목명 (예: 삼성전자, 애플, 테슬라)</div>
+<div style="border-left:4px solid #1565c0; padding:15px 20px; background:#fff; border:1px solid #e3f2fd; border-left-width:4px; margin-bottom:15px; border-radius:4px;"><strong>[B열]</strong> 티커 코드 (예: KRX:005930, AAPL, TSLA)</div>
+<div style="border-left:4px solid #1565c0; padding:15px 20px; background:#fff; border:1px solid #e3f2fd; border-left-width:4px; margin-bottom:15px; border-radius:4px;"><strong>[C열]</strong> 현재가 → <code>=GOOGLEFINANCE(B2)</code></div>
+<div style="border-left:4px solid #1565c0; padding:15px 20px; background:#fff; border:1px solid #e3f2fd; border-left-width:4px; margin-bottom:15px; border-radius:4px;"><strong>[D열]</strong> 등락률(%) → <code>=GOOGLEFINANCE(B2,"changepct")</code></div>
+<div style="border-left:4px solid #1565c0; padding:15px 20px; background:#fff; border:1px solid #e3f2fd; border-left-width:4px; margin-bottom:15px; border-radius:4px;"><strong>[E열]</strong> 52주 최고가 → <code>=GOOGLEFINANCE(B2,"high52")</code></div>
+<div style="border-left:4px solid #1565c0; padding:15px 20px; background:#fff; border:1px solid #e3f2fd; border-left-width:4px; margin-bottom:15px; border-radius:4px;"><strong>[F열]</strong> 52주 최저가 → <code>=GOOGLEFINANCE(B2,"low52")</code></div>
+<div style="border-left:4px solid #1565c0; padding:15px 20px; background:#fff; border:1px solid #e3f2fd; border-left-width:4px; margin-bottom:15px; border-radius:4px;"><strong>[G열]</strong> 평균 매수가 (수동 입력)</div>
+<div style="border-left:4px solid #1565c0; padding:15px 20px; background:#fff; border:1px solid #e3f2fd; border-left-width:4px; margin-bottom:15px; border-radius:4px;"><strong>[H열]</strong> 보유 수량 (수동 입력)</div>
+<div style="border-left:4px solid #1565c0; padding:15px 20px; background:#fff; border:1px solid #e3f2fd; border-left-width:4px; margin-bottom:15px; border-radius:4px;"><strong>[I열]</strong> 매수 총액 → <code>=G2*H2</code></div>
+<div style="border-left:4px solid #1565c0; padding:15px 20px; background:#fff; border:1px solid #e3f2fd; border-left-width:4px; margin-bottom:15px; border-radius:4px;"><strong>[J열]</strong> 현재 평가액 → <code>=C2*H2</code></div>
+<div style="border-left:4px solid #1565c0; padding:15px 20px; background:#fff; border:1px solid #e3f2fd; border-left-width:4px; margin-bottom:15px; border-radius:4px;"><strong>[K열]</strong> 수익률(%) → <code>=(J2-I2)/I2*100</code></div>
+
+K열(수익률)에 조건부 서식을 적용하면 됩니다. 양수는 초록 배경, 음수는 빨간 배경으로 표시하면 포트폴리오 현황을 한눈에 파악할 수 있습니다.
+
+<div style="margin:30px 0; text-align:center;">
+  <div style="background:#e3f2fd; border:2px dashed #1565c0; border-radius:10px; padding:28px 22px; text-align:left; color:#0d47a1;">
+    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; font-weight:700; font-size:0.95em; color:#0d47a1;">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span style="font-family:Consolas,monospace; background:#fff; border:1px solid #90caf9; padding:4px 10px; border-radius:4px; font-size:0.85em; color:#1565c0;">images/260514/5_googlefinance_1.png</span>
+    </div>
+    <pre style="background:#fff; border:1px solid #90caf9; border-radius:6px; padding:14px; font-family:Consolas,'Courier New',monospace; font-size:0.85em; line-height:1.55; color:#333; white-space:pre-wrap; word-break:break-word; margin:0 0 12px 0; max-height:220px; overflow:auto;">Google Sheets spreadsheet screenshot showing a professional investment portfolio dashboard. Multiple cells displaying stock ticker symbols, real-time prices in green and red, percentage change columns, bar charts and sparkline mini-charts within cells. Clean modern interface with blue header row. Columns showing stock name, current price, change %, 52-week high, market cap. Professional financial data layout. High resolution monitor display. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+  </div>
+  <div style="font-size:0.9em; color:#666; margin-top:10px; font-style:italic;">GOOGLEFINANCE 함수로 구성한 포트폴리오 대시보드 구조 / AI 제작 이미지</div>
+</div>
+
+<h2 style="font-size:1.2em; font-weight:700; background:#e3f2fd; padding:12px 15px; border-left:6px solid #1565c0; margin-top:50px; color:#0d47a1;">📐 GOOGLEFINANCE 기본 문법 완전 해부</h2>
+
+GOOGLEFINANCE 함수의 전체 문법은 다음과 같습니다.<br><br>
+
+<div style="background:#263238; color:#80cbc4; font-family:Consolas,'Courier New',monospace; padding:16px 20px; border-radius:8px; margin:20px 0; font-size:0.95em; line-height:1.7;">=GOOGLEFINANCE(티커, [속성], [시작일], [종료일_또는_기간], [간격])</div>
+
+<strong>① 티커 (필수)</strong>: 조회할 종목 코드입니다. 미국 주식은 티커만 입력("AAPL"), 국내 주식은 거래소 코드를 붙여야 합니다("KRX:005930").<br><br>
+
+<strong>② 속성 (선택, 기본값: "price")</strong>: 조회할 데이터 종류입니다. 생략하면 현재가(price)를 반환합니다.<br><br>
+
+<strong>③ 시작일 (선택)</strong>: 과거 데이터 조회 시 DATE(2026,1,1) 또는 "2026-01-01" 형식으로 입력합니다.<br><br>
+
+<strong>④ 종료일_또는_기간 (선택)</strong>: 과거 데이터의 끝 날짜 또는 일수(숫자). TODAY()와 조합하면 항상 오늘까지 자동 갱신됩니다.<br><br>
+
+<strong>⑤ 간격 (선택)</strong>: 과거 데이터 조회 단위. "DAILY"(일별) 또는 "WEEKLY"(주별)를 사용합니다.
+
+<h2 style="font-size:1.2em; font-weight:700; background:#e3f2fd; padding:12px 15px; border-left:6px solid #1565c0; margin-top:50px; color:#0d47a1;">🏷️ 핵심 속성(attribute) 파라미터 총정리</h2>
+
+<table style="width:100%; margin:30px 0; border-collapse:collapse;">
+  <tr><th style="background:#1565c0; color:#fff; padding:10px 14px; font-size:0.93em; text-align:left;">속성 코드</th><th style="background:#1565c0; color:#fff; padding:10px 14px; font-size:0.93em; text-align:left;">의미</th><th style="background:#1565c0; color:#fff; padding:10px 14px; font-size:0.93em; text-align:left;">사용 예</th></tr>
+  <tr><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#fff;">"price"</td><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#fff;">현재가 (기본값, ~20분 지연)</td><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#fff;">=GOOGLEFINANCE("AAPL")</td></tr>
+  <tr><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#e8f4fd;">"high" / "low"</td><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#e8f4fd;">당일 고가 / 저가</td><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#e8f4fd;">=GOOGLEFINANCE("AAPL","high")</td></tr>
+  <tr><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#fff;">"volume"</td><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#fff;">당일 거래량</td><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#fff;">=GOOGLEFINANCE("AAPL","volume")</td></tr>
+  <tr><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#e8f4fd;">"marketcap"</td><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#e8f4fd;">시가총액</td><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#e8f4fd;">=GOOGLEFINANCE("AAPL","marketcap")</td></tr>
+  <tr><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#fff;">"pe" / "eps"</td><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#fff;">주가수익비율(PER) / 주당순이익(EPS)</td><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#fff;">=GOOGLEFINANCE("AAPL","pe")</td></tr>
+  <tr><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#e8f4fd;">"high52" / "low52"</td><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#e8f4fd;">52주 최고가 / 52주 최저가</td><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#e8f4fd;">=GOOGLEFINANCE("AAPL","high52")</td></tr>
+  <tr><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#fff;">"change" / "changepct"</td><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#fff;">전일 대비 변동금액 / 등락률(%)</td><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#fff;">=GOOGLEFINANCE("AAPL","changepct")</td></tr>
+  <tr><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#e8f4fd;">"closeyest"</td><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#e8f4fd;">전일 종가</td><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#e8f4fd;">=GOOGLEFINANCE("AAPL","closeyest")</td></tr>
+  <tr><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#fff;">"beta"</td><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#fff;">베타값 (시장 대비 변동성)</td><td style="padding:10px 14px; border-bottom:1px solid #e3f2fd; font-size:0.93em; background:#fff;">=GOOGLEFINANCE("AAPL","beta")</td></tr>
+</table>
+
+<h2 style="font-size:1.2em; font-weight:700; background:#e3f2fd; padding:12px 15px; border-left:6px solid #1565c0; margin-top:50px; color:#0d47a1;">🇰🇷 국내 주식 KRX 코드 — 삼성전자부터 NAVER까지</h2>
+
+한국 주식을 조회할 때는 반드시 거래소 코드 <code>KRX:</code>를 티커 앞에 붙여야 합니다. 종목 코드는 6자리 숫자이며 한국거래소(KRX)에서 부여됩니다.<br><br>
+
+<div style="background:#263238; color:#80cbc4; font-family:Consolas,'Courier New',monospace; padding:16px 20px; border-radius:8px; margin:20px 0; font-size:0.95em; line-height:1.7;">삼성전자:      =GOOGLEFINANCE("KRX:005930")
+SK하이닉스:    =GOOGLEFINANCE("KRX:000660")
+NAVER:        =GOOGLEFINANCE("KRX:035420")
+카카오:        =GOOGLEFINANCE("KRX:035720")
+LG에너지솔루션: =GOOGLEFINANCE("KRX:373220")
+현대차:        =GOOGLEFINANCE("KRX:005380")
+셀트리온:      =GOOGLEFINANCE("KRX:068270")</div>
+
+종목 코드를 모를 경우, 네이버 금융이나 한국거래소 공식 사이트에서 종목명으로 검색해 6자리 코드를 확인 후 사용합니다.<br><br>
+
+<div style="background:#fffde7; border:1px solid #f9a825; padding:16px 20px; border-radius:8px; margin:20px 0;">
+<strong>💡 실전 팁: 셀 참조로 티커 관리하기</strong><br>
+티커 코드를 함수 안에 직접 쓰는 것보다 A열에 티커를 입력하고 <code>=GOOGLEFINANCE(A2,"price")</code>처럼 셀 참조를 사용하면, 종목을 변경할 때 A열만 수정하면 됩니다. 대시보드 확장도 훨씬 편리합니다.
+</div>
+
+<h2 style="font-size:1.2em; font-weight:700; background:#e3f2fd; padding:12px 15px; border-left:6px solid #1565c0; margin-top:50px; color:#0d47a1;">💱 환율 실시간 조회 — CURRENCY 쌍으로 달러·엔·유로 한번에</h2>
+
+환율 데이터는 <code>CURRENCY:기준통화종결통화</code> 형식으로 입력합니다. 달러/원 환율은 <code>"CURRENCY:USDKRW"</code>입니다.<br><br>
+
+<div style="background:#263238; color:#80cbc4; font-family:Consolas,'Courier New',monospace; padding:16px 20px; border-radius:8px; margin:20px 0; font-size:0.95em; line-height:1.7;">달러/원 (USD → KRW): =GOOGLEFINANCE("CURRENCY:USDKRW")
+유로/원 (EUR → KRW): =GOOGLEFINANCE("CURRENCY:EURKRW")
+달러/엔 (USD → JPY): =GOOGLEFINANCE("CURRENCY:USDJPY")
+달러/위안 (USD → CNY): =GOOGLEFINANCE("CURRENCY:USDCNY")
+파운드/달러 (GBP → USD): =GOOGLEFINANCE("CURRENCY:GBPUSD")</div>
+
+<h3 style="font-size:1.05em; font-weight:700; color:#1565c0; margin-top:25px; padding-left:10px; border-left:3px solid #90caf9;">원화 환산 수식 예제</h3>
+
+<div style="background:#263238; color:#80cbc4; font-family:Consolas,'Courier New',monospace; padding:16px 20px; border-radius:8px; margin:20px 0; font-size:0.95em; line-height:1.7;">A2: AAPL          (티커)
+B2: =GOOGLEFINANCE(A2)           (현재가, 달러)
+C2: 10                           (보유 수량)
+D2: =B2*C2                       (달러 평가액)
+E1: =GOOGLEFINANCE("CURRENCY:USDKRW")  (현재 달러/원 환율)
+E2: =D2*$E$1                     (원화 환산 평가액, 자동 갱신)</div>
+
+<h2 style="font-size:1.2em; font-weight:700; background:#e3f2fd; padding:12px 15px; border-left:6px solid #1565c0; margin-top:50px; color:#0d47a1;">🔗 SPARKLINE과 조합 — 셀 안에 30일 가격 추이 미니 차트</h2>
+
+SPARKLINE 함수와 GOOGLEFINANCE를 결합하면 별도 차트 없이 셀 안에 가격 추이를 시각화할 수 있습니다. 대시보드의 시각적 완성도를 크게 높여주는 핵심 테크닉입니다.<br><br>
+
+<div style="background:#263238; color:#80cbc4; font-family:Consolas,'Courier New',monospace; padding:16px 20px; border-radius:8px; margin:20px 0; font-size:0.95em; line-height:1.7;">라인 차트 (최근 30일):
+=SPARKLINE(
+  GOOGLEFINANCE(B2,"close",TODAY()-30,TODAY(),"DAILY"),
+  {"charttype","line";"color","#1565c0";"linewidth",2}
+)
+
+컬럼 차트 (최근 30일 거래량):
+=SPARKLINE(
+  GOOGLEFINANCE(B2,"volume",TODAY()-30,TODAY(),"DAILY"),
+  {"charttype","column";"color","#43a047"}
+)
+
+52주 고가/현재가/저가 막대:
+=SPARKLINE(
+  {GOOGLEFINANCE(B2,"low52"),GOOGLEFINANCE(B2,"price"),GOOGLEFINANCE(B2,"high52")},
+  {"charttype","bar";"color1","#ef5350";"color2","#1e88e5"}
+)</div>
+
+이 수식들을 각 종목 행의 별도 열에 배치하면, 포트폴리오 테이블 안에서 각 종목의 단기 추세를 직관적으로 비교할 수 있습니다.
+
+<div style="margin:30px 0; text-align:center;">
+  <div style="background:#e3f2fd; border:2px dashed #1565c0; border-radius:10px; padding:28px 22px; text-align:left; color:#0d47a1;">
+    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; font-weight:700; font-size:0.95em; color:#0d47a1;">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span style="font-family:Consolas,monospace; background:#fff; border:1px solid #90caf9; padding:4px 10px; border-radius:4px; font-size:0.85em; color:#1565c0;">images/260514/5_googlefinance_2.png</span>
+    </div>
+    <pre style="background:#fff; border:1px solid #90caf9; border-radius:6px; padding:14px; font-family:Consolas,'Courier New',monospace; font-size:0.85em; line-height:1.55; color:#333; white-space:pre-wrap; word-break:break-word; margin:0 0 12px 0; max-height:220px; overflow:auto;">Complete investment portfolio dashboard in Google Sheets. Multiple rows for different stocks (Samsung, Apple, Tesla, SPY ETF). Columns showing current price, daily change in green/red text, sparkline mini-charts in individual cells showing 30-day trends, profit/loss column with green positive and red negative cell backgrounds. Exchange rate cell showing USD/KRW. Summary row at bottom showing total portfolio value. Professional clean layout. Photorealistic UI screenshot, ultra high detail, 1:1 aspect ratio.</pre>
+  </div>
+  <div style="font-size:0.9em; color:#666; margin-top:10px; font-style:italic;">GOOGLEFINANCE + SPARKLINE 조합 완성 투자 대시보드 / AI 제작 이미지</div>
+</div>
+
+<h2 style="font-size:1.2em; font-weight:700; background:#e3f2fd; padding:12px 15px; border-left:6px solid #1565c0; margin-top:50px; color:#0d47a1;">📈 과거 가격 데이터 — 히스토리컬 차트 구현</h2>
+
+GOOGLEFINANCE는 과거 데이터 조회도 가능합니다. 시작일과 종료일을 지정하면 해당 기간의 날짜·종가 배열이 아래 방향으로 자동 확장됩니다.<br><br>
+
+<div style="background:#263238; color:#80cbc4; font-family:Consolas,'Courier New',monospace; padding:16px 20px; border-radius:8px; margin:20px 0; font-size:0.95em; line-height:1.7;">특정 기간 종가 데이터:
+=GOOGLEFINANCE("KRX:005930","close",DATE(2026,1,1),TODAY())
+
+최근 90일 일별 종가:
+=GOOGLEFINANCE("AAPL","close",TODAY()-90,TODAY(),"DAILY")
+
+주별 데이터:
+=GOOGLEFINANCE("TSLA","close",DATE(2025,1,1),TODAY(),"WEEKLY")</div>
+
+과거 데이터를 불러온 후 해당 범위를 선택해 차트 삽입 기능을 이용하면 가격 추이 라인 차트를 쉽게 만들 수 있습니다.<br><br>
+
+<div style="background:#fce4ec; border:1px solid #e57373; padding:16px 20px; border-radius:8px; margin:20px 0;">
+<strong>⚠️ 주의: 과거 데이터 입력 위치</strong><br>
+과거 데이터는 함수를 입력한 셀부터 아래 방향으로 자동 확장됩니다. 함수 셀 아래에 이미 데이터가 있으면 "#REF!" 오류가 발생하므로, 반드시 아래쪽 행들이 비어 있는 공간에 입력하세요.
+</div>
+
+<h2 style="font-size:1.2em; font-weight:700; background:#e3f2fd; padding:12px 15px; border-left:6px solid #1565c0; margin-top:50px; color:#0d47a1;">🏦 ETF & 뮤추얼펀드 데이터 조회</h2>
+
+GOOGLEFINANCE는 주식 외에도 ETF와 뮤추얼펀드 데이터를 조회할 수 있습니다. 미국 ETF는 일반 주식과 동일한 방식으로 티커를 입력합니다.<br><br>
+
+<div style="background:#263238; color:#80cbc4; font-family:Consolas,'Courier New',monospace; padding:16px 20px; border-radius:8px; margin:20px 0; font-size:0.95em; line-height:1.7;">SPY (S&amp;P500 ETF):     =GOOGLEFINANCE("SPY")
+QQQ (나스닥100 ETF):  =GOOGLEFINANCE("QQQ")
+TIGER 200 (국내 ETF): =GOOGLEFINANCE("KRX:102110")
+KODEX 반도체:         =GOOGLEFINANCE("KRX:091160")
+뮤추얼펀드(VTSAX):    =GOOGLEFINANCE("MUTF:VTSAX")</div>
+
+<h2 style="font-size:1.2em; font-weight:700; background:#e3f2fd; padding:12px 15px; border-left:6px solid #1565c0; margin-top:50px; color:#0d47a1;">⚠️ 주의사항 & IFERROR 처리 — 오류 없는 대시보드 만들기</h2>
+
+<div style="background:#fce4ec; border:1px solid #e57373; padding:16px 20px; border-radius:8px; margin:20px 0;">
+<strong>⚠️ 반드시 알아야 할 제약사항</strong><br>
+1. <strong>약 20분 지연 데이터</strong>: 증권사 HTS 실시간 데이터와 최대 20분 차이가 날 수 있어, 초단기 트레이딩 판단 자료로 사용하면 안 됩니다.<br>
+2. <strong>KRX 일부 속성 미지원</strong>: "pe", "eps" 등이 반환되지 않는 경우가 있습니다. IFERROR로 처리하세요.<br>
+3. <strong>상장폐지 종목 오류</strong>: 상장폐지·합병 종목은 오류를 반환합니다.<br>
+4. <strong>주말·공휴일 처리</strong>: 거래 없는 날은 마지막 거래일 가격을 반환합니다.
+</div>
+
+<div style="background:#263238; color:#80cbc4; font-family:Consolas,'Courier New',monospace; padding:16px 20px; border-radius:8px; margin:20px 0; font-size:0.95em; line-height:1.7;">지원 안 되는 속성 오류 처리:
+=IFERROR(GOOGLEFINANCE("KRX:005930","pe"), "N/A")</div>
+
+IFERROR를 적용하면 오류 대신 "N/A" 텍스트가 표시되어 대시보드가 깔끔하게 유지됩니다.
+
+<div style="margin:30px 0; text-align:center;">
+  <div style="background:#e3f2fd; border:2px dashed #1565c0; border-radius:10px; padding:28px 22px; text-align:left; color:#0d47a1;">
+    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; font-weight:700; font-size:0.95em; color:#0d47a1;">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span style="font-family:Consolas,monospace; background:#fff; border:1px solid #90caf9; padding:4px 10px; border-radius:4px; font-size:0.85em; color:#1565c0;">images/260514/5_googlefinance_3.png</span>
+    </div>
+    <pre style="background:#fff; border:1px solid #90caf9; border-radius:6px; padding:14px; font-family:Consolas,'Courier New',monospace; font-size:0.85em; line-height:1.55; color:#333; white-space:pre-wrap; word-break:break-word; margin:0 0 12px 0; max-height:220px; overflow:auto;">Close-up of a Google Sheets spreadsheet showing historical stock price data table. Columns labeled Date and Close Price with rows of financial data. Next to the table, a smooth line chart showing 90-day price trend for a major tech stock, chart rendered in blue with grid lines. Formula bar at top showing GOOGLEFINANCE formula. Clean white spreadsheet interface. Photorealistic software UI screenshot, ultra high detail, 1:1 aspect ratio.</pre>
+  </div>
+  <div style="font-size:0.9em; color:#666; margin-top:10px; font-style:italic;">GOOGLEFINANCE 과거 데이터 조회 및 라인 차트 구현 예시 / AI 제작 이미지</div>
+</div>
+
+<h2 style="font-size:1.2em; font-weight:700; background:#e3f2fd; padding:12px 15px; border-left:6px solid #1565c0; margin-top:50px; color:#0d47a1;">📊 환율 모니터링 대시보드 — 해외 거래·여행 준비에도 활용</h2>
+
+GOOGLEFINANCE는 주식 투자자뿐 아니라 해외 거래, 유학, 여행 준비 중인 분들에게도 유용합니다. 주요 통화 환율을 한 시트에 모아두면 별도 환율 앱 없이도 스마트폰 구글 시트 앱에서 바로 확인할 수 있습니다.<br><br>
+
+<div style="background:#263238; color:#80cbc4; font-family:Consolas,'Courier New',monospace; padding:16px 20px; border-radius:8px; margin:20px 0; font-size:0.95em; line-height:1.7;">A1: "통화쌍"    B1: "현재 환율"
+A2: USD/KRW    B2: =GOOGLEFINANCE("CURRENCY:USDKRW")
+A3: EUR/KRW    B3: =GOOGLEFINANCE("CURRENCY:EURKRW")
+A4: JPY/KRW    B4: =GOOGLEFINANCE("CURRENCY:JPYKRW")
+A5: CNY/KRW    B5: =GOOGLEFINANCE("CURRENCY:CNYKRW")
+A6: GBP/KRW    B6: =GOOGLEFINANCE("CURRENCY:GBPKRW")</div>
+
+이 시트를 구글 스프레드시트 앱으로 스마트폰에서 열면, 별도 환율 앱 없이도 개인 환율 모니터가 완성됩니다.
+
+<div style="background:#f8f9fa; border:1px solid #eee; padding:20px; margin:40px 0; border-radius:10px;">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260513/travel_seoul_jungnang_rose_festival_2026.html" style="color:#1565c0; text-decoration:none;">서울 중랑구 장미축제 2026 — 5.45km 국내 최장 장미터널 야간 라이트업과 사진 명당 가이드</a></li>
+    <li><a href="../260513/travel_gokseong_world_rose_festival_2026.html" style="color:#1565c0; text-decoration:none;">곡성 세계장미축제 2026 — 1,004종 장미 정원과 섬진강 뷰 포토존 완벽 가이드</a></li>
+  </ul>
+</div>
+
+<div>
+  <span style="display:inline-block; background:#f0f0f0; padding:3px 10px; border-radius:5px; margin:3px; font-size:0.85em; color:#666; border:1px solid #ddd;">#GOOGLEFINANCE</span>
+  <span style="display:inline-block; background:#f0f0f0; padding:3px 10px; border-radius:5px; margin:3px; font-size:0.85em; color:#666; border:1px solid #ddd;">#구글시트주식</span>
+  <span style="display:inline-block; background:#f0f0f0; padding:3px 10px; border-radius:5px; margin:3px; font-size:0.85em; color:#666; border:1px solid #ddd;">#투자대시보드</span>
+  <span style="display:inline-block; background:#f0f0f0; padding:3px 10px; border-radius:5px; margin:3px; font-size:0.85em; color:#666; border:1px solid #ddd;">#구글스프레드시트환율</span>
+  <span style="display:inline-block; background:#f0f0f0; padding:3px 10px; border-radius:5px; margin:3px; font-size:0.85em; color:#666; border:1px solid #ddd;">#포트폴리오자동화</span>
+  <span style="display:inline-block; background:#f0f0f0; padding:3px 10px; border-radius:5px; margin:3px; font-size:0.85em; color:#666; border:1px solid #ddd;">#KRX종목코드</span>
+  <span style="display:inline-block; background:#f0f0f0; padding:3px 10px; border-radius:5px; margin:3px; font-size:0.85em; color:#666; border:1px solid #ddd;">#SPARKLINE조합</span>
+  <span style="display:inline-block; background:#f0f0f0; padding:3px 10px; border-radius:5px; margin:3px; font-size:0.85em; color:#666; border:1px solid #ddd;">#실시간주가조회</span>
+  <span style="display:inline-block; background:#f0f0f0; padding:3px 10px; border-radius:5px; margin:3px; font-size:0.85em; color:#666; border:1px solid #ddd;">#구글파이낸스</span>
+  <span style="display:inline-block; background:#f0f0f0; padding:3px 10px; border-radius:5px; margin:3px; font-size:0.85em; color:#666; border:1px solid #ddd;">#스프레드시트실무</span>
+</div>
+
+</body>
+</html>
