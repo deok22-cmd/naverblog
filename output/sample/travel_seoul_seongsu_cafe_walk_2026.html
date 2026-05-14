@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>서울 성수동 카페거리 도보 가이드 — 연무장길부터 서울숲길까지 핫플 30선과 마이크로 동선 완전 정복</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  h3 { font-size: 1.05em; color: #00796b; margin-top: 28px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px; font-weight: 700; }
+  .info-table td { padding: 10px; border: 1px solid #ddd; }
+  .info-table tr:nth-child(even) { background: #f1faf9; }
+  .info-card { border: 1px solid #ddd; padding: 15px; border-radius: 8px; text-align: center; }
+  .step-box { border-left: 4px solid #00796b; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 18px; border-radius: 8px; margin: 22px 0; }
+  .caution-box { background: #fce4ec; border: 1px solid #e57373; padding: 18px; border-radius: 8px; margin: 22px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; }
+  .img-placeholder { background: #e0f2f1; border: 2px dashed #00796b; border-radius: 10px; padding: 28px 22px; text-align: left; color: #004d40; }
+  .img-placeholder .ph-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; font-weight: 700; font-size: 0.95em; color: #004d40; }
+  .img-placeholder .ph-file { font-family: Consolas, monospace; background: #fff; border: 1px solid #b2dfdb; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; color: #00796b; }
+  .img-placeholder .prompt-text { background: #fff; border: 1px solid #b2dfdb; border-radius: 6px; padding: 14px; font-family: Consolas, 'Courier New', monospace; font-size: 0.85em; line-height: 1.55; color: #333; white-space: pre-wrap; word-break: break-word; margin: 0 0 12px 0; max-height: 220px; overflow: auto; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 8px 18px; border-radius: 5px; cursor: pointer; font-size: 0.88em; font-weight: 600; transition: background 0.2s; }
+  .copy-btn:hover { background: #004d40; }
+</style>
+</head>
+<body>
+
+<h1>서울 성수동 카페거리 도보 가이드 — 연무장길부터 서울숲길까지 핫플 30선과 마이크로 동선 완전 정복</h1>
+
+<div class="intro-box">
+<strong>📍 한 줄 요약</strong><br>
+1960년대 신발·인쇄 공장이 빼곡했던 서울 성동구 성수동이 어느새 서울에서 가장 빠르게 진화하는 카페 동네가 되었습니다.<br><br>
+연무장길의 공장형 카페부터 서울숲길의 브런치 명소까지, 한 번 발을 들이면 반나절은 훌쩍 지나가는 이곳을 어떻게 효율적으로 누벼야 할지 정리했습니다.<br><br>
+교통편, 평일과 주말 동선 차이, 추천 카페 BEST 5, 주차 명당, 인근 연계 코스까지 — 성수동을 처음 가는 분이든 자주 가는 분이든 모두에게 도움이 될 마이크로 가이드를 준비했습니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/sample/1_seongsu_cafe_walk_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-1">A wide eye-level photograph of Seongsu-dong Yeonmujang-gil cafe street in Seoul at golden hour. Old red-brick factory buildings with large industrial windows have been converted into stylish cafes and roasteries, with exposed steel beams, raw concrete walls, and warm Edison bulb lighting spilling onto the cobblestone street. Young Korean people in their 20s and 30s walk leisurely with takeaway coffee cups, wearing casual streetwear. A vintage neon cafe sign glows in the background. Soft golden sunlight rakes across the textured brick facades, creating long shadows. Cinematic atmosphere blending industrial heritage with hip modern coffee culture. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">연무장길 공장 리노베이션 카페 거리 / AI 제작 이미지</div>
+</div>
+
+<h2>1. 성수동, 왜 지금 서울에서 가장 핫한 동네가 되었을까</h2>
+
+성수동을 처음 가시는 분이라면 가장 먼저 드는 질문이 있습니다. "왜 하필 성수동인가?" 입니다.<br><br>
+
+답은 의외로 단순합니다. 1960년대부터 1990년대까지 성수동은 서울에서 가장 큰 신발 공장 단지였습니다. 수제화 거리가 지금도 성수역 일대에 남아 있는 이유가 바로 그 때문이고, 인쇄소와 금속 가공 공장도 함께 자리 잡고 있었습니다.<br><br>
+
+그런데 2000년대 들어 산업이 옮겨가면서 이 거대한 공장 건물들이 비어 버렸습니다. 천장이 5미터에서 7미터까지 높고, 골조가 그대로 노출되어 있으며, 거대한 통창이 있는 이 공간들이 카페 운영자들의 눈에 들어온 것이 약 2010년경입니다.<br><br>
+
+그때부터 약 15년이 지난 지금, 성수동은 단순히 카페가 많은 동네가 아니라 <strong>서울에서 가장 빠른 속도로 신규 매장이 들어서는 라이프스타일 거점</strong>이 되었습니다. 통계청 사업체 조사에 따르면 성수동1가·2가 일대의 음식점·카페 점포 수는 2015년 대비 2024년에 약 3.2배 증가했습니다.<br><br>
+
+흥미로운 점은, 다른 핫플과 달리 성수동은 옛 산업 시설의 외형을 거의 그대로 보존하면서 내부만 카페·갤러리·편집숍으로 바꾸는 방식을 택했다는 것입니다. 그래서 길을 걷다 보면 1970년대 인쇄소 간판 옆에 2024년 신상 베이커리 카페가 나란히 서 있는, 시간이 겹쳐진 풍경을 만나게 됩니다.<br><br>
+
+이 가이드는 그 시간의 겹을 알차게 누비기 위한 도보 동선을 중심으로 정리했습니다. 차를 가져갈 분도, 대중교통으로 오실 분도 모두 활용할 수 있도록 구성했으니 천천히 따라와 주세요.
+
+<h2>2. 위치와 교통 — 가장 효율적인 진입 동선</h2>
+
+성수동은 행정구역상 서울 성동구 성수동1가와 성수동2가에 걸쳐 있습니다. 한강 북쪽, 강변북로와 동부간선도로 사이에 위치하며 잠실대교를 건너면 바로 강남권과 연결됩니다.<br><br>
+
+지하철로 오신다면 선택지가 의외로 많습니다. 가장 추천드리는 진입 동선은 <strong>지하철 2호선 뚝섬역 8번 출구</strong>입니다. 출구를 나오자마자 연무장길 진입로가 보이고, 도보 3분이면 첫 번째 카페 군락에 도착할 수 있습니다.<br><br>
+
+서울숲 산책을 우선하고 싶으시다면 <strong>분당선(수인분당선) 서울숲역 3번 출구</strong>가 정답입니다. 출구에서 서울숲 정문까지 도보 2분, 서울숲을 가로질러 연무장길까지 도보 15분이면 닿습니다.<br><br>
+
+수제화 거리와 성수역 인근 핫플(노티드 도넛·LCDC 등)을 보시려면 <strong>2호선 성수역 3번 출구</strong>가 가깝습니다. 다만 성수역 일대는 연무장길 군락과 도보 10~12분 거리이므로, 두 곳을 모두 보시려면 동선을 미리 짜야 합니다.<br><br>
+
+버스로 오시는 분은 성수역사거리·뚝섬역 정류장이 가장 무난합니다. 다만 강변북로 정체가 잦은 주말 오후에는 지하철이 압도적으로 빠릅니다. 자차로 오시는 분께는 별도로 8장에서 주차 명당을 정리해 두었으니 그 부분을 참고해 주세요.<br><br>
+
+요약하면, <strong>"카페 위주 = 뚝섬역, 자연 위주 = 서울숲역, 수제화·노티드 위주 = 성수역"</strong>입니다. 자신의 우선순위에 따라 진입 출구만 잘 골라도 한 시간 정도는 절약할 수 있습니다.
+
+<table class="info-table">
+<tr><th>출발지</th><th>추천 진입역</th><th>출구</th><th>도보 시간</th></tr>
+<tr><td>강남권에서 오실 때</td><td>분당선 서울숲역</td><td>3번</td><td>서울숲 2분</td></tr>
+<tr><td>강북 도심에서 오실 때</td><td>2호선 뚝섬역</td><td>8번</td><td>연무장길 3분</td></tr>
+<tr><td>광진·송파에서 오실 때</td><td>2호선 성수역</td><td>3번</td><td>수제화거리 1분</td></tr>
+<tr><td>경기 동부에서 오실 때</td><td>분당선 서울숲역</td><td>5번</td><td>갤러리아 포레 3분</td></tr>
+</table>
+
+<h2>3. 연무장길 — 성수동 카페 문화의 심장부</h2>
+
+연무장길은 성수동을 처음 가는 분께 가장 먼저 추천드리고 싶은 거리입니다. 뚝섬역 8번 출구에서 시작해 약 500미터 길이의 이 도로 양옆으로 가장 상징적인 공장형 카페들이 줄지어 있기 때문입니다.<br><br>
+
+거리 이름의 유래는 일제강점기 이곳에 있던 군사 훈련 시설 "연무장(練武場)"에서 따왔습니다. 광복 이후 신발·금속 공장이 들어서면서 산업도로로 쓰였고, 그 시절의 흔적이 지금 카페 외관에 그대로 남아 있습니다.<br><br>
+
+연무장길의 진수는 <strong>5미터 이상의 천장 높이</strong>입니다. 일반 상가 건물의 천장이 보통 2.5미터 안팎인 점을 고려하면, 이곳에 들어선 카페들의 공간감은 비교할 수 없을 만큼 압도적입니다. 두 시간을 앉아 있어도 답답함이 느껴지지 않는 이유입니다.<br><br>
+
+거리를 걷다 보면 자그마치(JAGMACHI), 대림창고, 어니언 성수, 카멜커피, 센터커피 같은 시그니처 매장이 자연스럽게 눈에 들어옵니다. 각 매장의 자세한 추천 포인트는 6장에서 상세히 다루겠습니다.<br><br>
+
+연무장길에서 한 가지 팁을 드리자면, <strong>골목 안쪽으로 한 블록만 더 들어가 보세요</strong>. 큰 도로변의 카페는 사진은 잘 나오지만 대기 시간이 30분에서 1시간까지 걸리는 곳이 흔합니다. 골목 안쪽에는 비슷한 수준의 공장 리노베이션 카페가 대기 없이 즐길 수 있는 곳이 적어도 5~6곳은 더 있습니다.<br><br>
+
+특히 비 오는 평일 오후의 연무장길은 사진과 시간을 동시에 챙길 수 있는 황금 타이밍입니다. 처마 아래에서 빗소리를 들으며 커피를 마시는 분위기를 좋아하신다면, 이때를 노리시는 걸 적극 추천드립니다.
+
+<h2>4. 서울숲길과 서울숲 — 카페와 자연을 잇는 산책로</h2>
+
+성수동의 또 다른 축은 서울숲입니다. 2005년 6월에 개장한 이 도시공원은 총면적 약 120만 평방미터(약 36만 평)로, 뉴욕 센트럴파크의 약 1/3 규모에 해당합니다.<br><br>
+
+서울숲 정문(분당선 서울숲역 3번 출구)에서 출발해 연무장길 방향으로 이어지는 길이 바로 <strong>서울숲길</strong>입니다. 좁은 이 길 양옆에 브런치 카페와 디저트 명소가 빼곡합니다.<br><br>
+
+서울숲 안에서 꼭 들러야 할 포인트는 세 곳입니다. 첫째, <strong>자작나무숲</strong>입니다. 강원도 인제 원대리 자작나무숲을 도시에서 가장 가깝게 느낄 수 있는 공간이고, 약 200여 그루의 자작나무가 5~6월에 가장 청량한 신록을 보여 줍니다.<br><br>
+
+둘째는 <strong>사슴방사장</strong>입니다. 약 10여 마리의 꽃사슴이 자유롭게 노니는 공간으로, 아이와 함께 오시는 분께는 무조건 1순위 포인트입니다. 사슴들이 가장 활발한 시간대는 오전 9~10시와 오후 4~5시입니다.<br><br>
+
+셋째는 <strong>한강 전망 데크</strong>입니다. 서울숲 남쪽 끝에서 한강 자전거 도로와 연결되는 지점에 작은 전망대가 있는데, 평일 해질 무렵 이곳에서 보이는 한강 노을은 도심에서 만나기 어려운 풍경입니다.<br><br>
+
+서울숲길에서 가장 인기 있는 브런치 카페는 멜팅포인트(MELTING POINT), 베이커리 라스, 누데이크 성수 등이 있습니다. 평일 오전 10시 30분에서 11시 30분 사이가 가장 한적하고, 주말이라면 8시 오픈런을 노리는 편이 마음 편합니다.<br><br>
+
+서울숲을 가로질러 연무장길까지 도보로 약 15분 거리이지만, 중간에 사진 찍을 포인트가 워낙 많아 실제로는 30~40분 이상 걸리는 경우가 대부분입니다. 시간 여유를 충분히 잡고 출발하시기 바랍니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/sample/1_seongsu_cafe_walk_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-2">A serene morning photograph of Seoul Forest (Seoul-sup) birch tree grove in late spring. Tall slender white birch trees create vertical lines against soft green new foliage, with dappled sunlight filtering through the leaves onto a wooden walking path. A young Korean family with two children walks together holding hands, dressed in casual spring outfits. Distant view of Seoul cityscape skyscrapers visible through the trees in the background. Fresh dewy atmosphere, very soft pastel green and white color palette, peaceful and meditative mood. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">서울숲 자작나무숲 5월 신록 풍경 / AI 제작 이미지</div>
+</div>
+
+<h2>5. 뚝섬역 인근 마이크로 카페 거리 — 잘 알려지지 않은 보석들</h2>
+
+연무장길과 서울숲길이 성수동의 정문이라면, 뚝섬역 1~7번 출구 쪽 골목은 <strong>현지인이 더 많이 가는 후문</strong>입니다. 관광객 비중이 적어 대기 시간이 짧고, 가격대도 합리적입니다.<br><br>
+
+뚝섬역 4번 출구 방향 골목에는 작은 단독 주택을 개조한 카페들이 모여 있습니다. 천장이 높지는 않지만, 1980~90년대 주택의 정취가 그대로 남아 있어 오히려 더 아늑한 분위기를 좋아하시는 분께 추천드립니다.<br><br>
+
+이 일대에서 특히 추천드리는 곳은 카페 그라플(GRAPLE), 커피 한약방 성수, 그리고 작은 베이커리 매장 몇 곳입니다. 모두 좌석 수가 20~30석 정도로 작지만, 그래서 카페 주인과 가볍게 대화도 나눌 수 있는 매장들입니다.<br><br>
+
+또 한 가지 추천드리고 싶은 곳은 <strong>성수동 1가의 인쇄소 골목</strong>입니다. 지금도 운영 중인 작은 활자 인쇄소들이 카페와 갤러리 사이사이 자리 잡고 있어, 사진가들 사이에서는 "시간이 멈춘 골목"으로 통합니다.<br><br>
+
+뚝섬역 인근 카페 거리는 평일 점심 시간(12시~14시)이 가장 한적합니다. 큰길가 카페가 대기 줄로 가득할 때, 이 골목으로 한 블록만 들어오시면 거의 즉시 자리에 앉을 수 있습니다.<br><br>
+
+다만 골목길이 좁고 인도가 따로 없는 구간이 있으므로, 어린 자녀와 함께 오시는 분은 차량 통행에 한 번 더 주의를 기울여 주시기 바랍니다. 일방통행 구간이 많아 차들이 의외로 빠르게 지나갑니다.
+
+<h2>6. 추천 카페 BEST 5 — 시간 없을 때 골라 가는 정수</h2>
+
+성수동 카페가 너무 많아서 어디부터 갈지 모르겠다는 분께, 다음 다섯 곳만은 꼭 추천드립니다. 각각 성격이 달라서 두세 곳을 함께 들러도 인상이 겹치지 않습니다.<br><br>
+
+<div class="step-box">
+<strong>① 어니언 성수 (Onion Seongsu)</strong><br>
+연무장길 한복판, 1970년대 공장 건물을 그대로 살린 시그니처 카페입니다. 마당이 있는 안채 구조라 사진이 가장 잘 나오는 곳이기도 합니다. 빵 종류가 약 30가지로 풍부하고, 페이스트리 류는 오전 11시 전에 가야 가장 다양하게 만날 수 있습니다.<br><br>
+대기는 주말 기준 1시간 이상, 평일은 20~30분 정도입니다.
+</div>
+
+<div class="step-box">
+<strong>② 카멜커피 성수 (CAMEL Coffee Seongsu)</strong><br>
+노란 박스 외관이 시그니처인 스페셜티 커피 전문점입니다. 본점이 한남동에 있는데 성수점은 공간감이 훨씬 큽니다. 핸드드립 라인업이 강하고, 디저트는 카멜 마들렌이 시그니처입니다.<br><br>
+연무장길 진입부에 위치해 동선 시작점으로 잡기 좋습니다.
+</div>
+
+<div class="step-box">
+<strong>③ 자그마치 (JAGMACHI)</strong><br>
+옛 인쇄소를 그대로 살린 매장으로, 거대한 인쇄기가 매장 한복판에 보존되어 있습니다. 단순한 카페가 아니라 디자인 갤러리·편집숍 기능을 함께 하는 복합 공간입니다.<br><br>
+2층 좌석에서 인쇄기를 내려다보며 마시는 커피의 분위기가 압도적입니다.
+</div>
+
+<div class="step-box">
+<strong>④ 대림창고 (Daelim Changgo)</strong><br>
+1970년대 정미소 건물을 개조한 갤러리 카페입니다. 미디어 아트 전시와 카페가 결합된 공간으로, 전시 기간에 따라 입장료가 별도로 있을 수 있으니 방문 전 인스타그램 공지 확인 필수입니다.<br><br>
+주말 저녁에는 라이브 공연이 열리기도 합니다.
+</div>
+
+<div class="step-box">
+<strong>⑤ 센터커피 성수 (Center Coffee Seongsu)</strong><br>
+인더스트리얼 디자인의 정수를 보여 주는 매장입니다. 노출 콘크리트와 검은 강철 빔의 조합이 가장 아름다운 곳 중 하나로, 사진 매니아들의 성지로 통합니다.<br><br>
+드립 커피 라인업이 단단하고, 좌석은 약 60석 규모입니다.
+</div>
+
+이 다섯 곳을 모두 들르신다면 도보로만 약 1.5km, 카페별 30분~1시간씩 머무신다면 총 4~5시간 코스가 됩니다. 식사 시간을 포함하면 반나절은 충분히 잡으셔야 합니다.<br><br>
+
+만약 시간이 두세 시간밖에 없으시다면, <strong>"어니언 성수 → 자그마치"</strong> 두 곳 조합을 가장 강력하게 추천드립니다. 성수동의 가장 상징적인 두 가지 결을 모두 경험할 수 있는 동선입니다.
+
+<h2>7. 평일과 주말의 동선 차이 — 1시간을 아끼는 황금 시간</h2>
+
+성수동의 가장 큰 함정은 <strong>주말 대기 시간</strong>입니다. 같은 카페라도 평일에는 즉시 입장 가능한 곳이 주말이 되면 1시간 이상 대기로 변신합니다.<br><br>
+
+평일에 가실 수 있다면 <strong>화·수·목요일 오전 10시~오후 1시</strong>가 가장 한적합니다. 오전 10시 오픈 직후에는 베이커리 라인업도 가장 풍성하고, 사진 찍기에도 햇빛 각도가 좋습니다.<br><br>
+
+평일 점심 시간(12시~13시 30분)은 직장인 손님이 몰리는 시간이라 잠시 붐비지만, 오후 1시 30분이 지나면 다시 한적해집니다. 이 시간대에 카페 두세 곳을 차분히 도는 것이 가장 효율적입니다.<br><br>
+
+주말에 가실 수밖에 없다면, <strong>토요일 오전 8시~10시</strong>가 골든타임입니다. 일부 카페는 10시에 오픈하므로, 첫 매장 앞에서 9시 50분쯤부터 대기하면 오픈과 동시에 들어갈 수 있습니다. 이를 "오픈런"이라고 부릅니다.<br><br>
+
+가장 피해야 할 시간대는 <strong>주말 오후 1시~5시</strong>입니다. 이때는 어니언 성수, 대림창고, 카멜커피 모두 30분 이상 대기가 기본이고, 비 오는 토요일 오후라면 1시간 이상도 흔합니다.<br><br>
+
+또 하나 알아두실 점은, 일요일이 토요일보다 한 단계 한적하다는 것입니다. 일요일 오전 11시에서 오후 1시 사이가 주말에 갈 수 있는 두 번째 황금 시간대입니다.<br><br>
+
+비 오는 날과 황사·미세먼지가 심한 날은 의외의 기회입니다. 평소 1시간 대기 카페가 즉시 입장으로 바뀌는 경우가 흔합니다. 야외 사진을 포기하시는 대신 시간을 얻으시는 선택입니다.
+
+<table class="info-table">
+<tr><th>요일·시간대</th><th>대기 강도</th><th>추천 동선</th></tr>
+<tr><td>평일 오전 10~13시</td><td>★ (한적)</td><td>풀 코스 5곳 가능</td></tr>
+<tr><td>평일 오후 14~18시</td><td>★★ (보통)</td><td>3~4곳 가능</td></tr>
+<tr><td>토요일 오전 8~10시</td><td>★★ (오픈런)</td><td>2~3곳 + 서울숲</td></tr>
+<tr><td>주말 오후 13~17시</td><td>★★★★★ (극혼잡)</td><td>1~2곳만 권장</td></tr>
+<tr><td>일요일 오전 11~13시</td><td>★★★ (중간)</td><td>3곳 + 산책</td></tr>
+<tr><td>비 오는 평일 오후</td><td>★ (한적)</td><td>풀 코스 + 사진</td></tr>
+</table>
+
+<h2>8. 주차 명당과 대중교통 활용법 — 자차 vs 지하철 비교</h2>
+
+성수동 주차는 솔직히 말씀드리면 <strong>각오해야 할 부분</strong>입니다. 평일 오전이라도 큰길가 노상 주차는 불법인 구간이 대부분이고, 단속도 잦습니다.<br><br>
+
+가장 안정적인 공영 주차장은 <strong>성수공영주차장 1·2호기</strong>입니다. 30분 1,500원, 1일 최대 25,000원 수준입니다. 연무장길까지 도보 5~7분 거리이고, 평일 오전이라면 거의 확실하게 자리가 있습니다.<br><br>
+
+서울숲 방향에서 주차하시려면 <strong>서울숲 공영주차장</strong>이 가장 합리적입니다. 30분 1,000원, 1일 최대 10,000원으로 성수공영주차장보다 저렴합니다. 다만 주말 오후에는 만차가 빠릅니다.<br><br>
+
+조금 비싸지만 확실한 옵션은 <strong>갤러리아 포레 지하주차장</strong>입니다. 시간당 4,800원으로 가격은 높지만, 주말에도 자리가 있는 편이고 연무장길까지 도보 8분입니다.<br><br>
+
+<div class="tip-box">
+<strong>💡 주차 꿀팁</strong> — 카멜커피 본점, 누데이크 성수, 대림창고는 자체 발렛 또는 제휴 주차가 있는 경우가 있습니다. 매장 인스타그램 공지를 미리 확인하시면 평일 기준 2시간 무료가 가능한 매장도 있습니다.
+</div>
+
+자차로 오실 때 가장 큰 변수는 <strong>강변북로 정체</strong>입니다. 주말 오전 11시 이후 강변북로 동쪽 구간(잠실대교~성수대교)은 평균 정체 구간으로 변신합니다. 강남에서 오시는 분이라면 차라리 지하철로 한 번 환승하시는 편이 정신 건강에 좋습니다.<br><br>
+
+대중교통 활용 시 가장 좋은 패턴은 <strong>왕복 모두 분당선 서울숲역 이용</strong>입니다. 강남구·송파구·분당에서 환승 한 번이면 도착하고, 출구가 서울숲 정문 바로 앞이라 이동 동선이 짧습니다.<br><br>
+
+밤 늦게까지 머무실 분께 한 가지 알려드릴 점은, 2호선 막차가 자정 전후라는 사실입니다. 11시 30분이 넘으면 택시 잡기도 만만치 않으니, 일정을 너무 빡빡하게 잡지 마시기 바랍니다.
+
+<h2>9. 성수동 식사·디저트 명소 — 카페만으로는 채울 수 없는 부분</h2>
+
+카페만 가는 코스는 의외로 빨리 지칩니다. 두세 곳을 돌고 나면 단 음식이 부담스러워지고, 든든한 한 끼가 필요해집니다. 성수동은 식사 메뉴도 다양하니 미리 한두 곳 점찍어 두시면 좋습니다.<br><br>
+
+가장 추천드리는 점심 메뉴는 <strong>성수면옥의 평양냉면</strong>입니다. 성수역 도보 5분 거리에 위치한 노포로, 1979년 개업한 이래 40년 넘게 같은 자리에서 운영 중입니다. 슴슴한 평양식 육수가 카페 디저트로 묵직해진 입을 깔끔하게 정리해 줍니다.<br><br>
+
+고기 메뉴를 원하시면 <strong>마장축산물시장</strong>이 도보 12분 거리에 있습니다. 한우 정육식당이 줄지어 있고, 평일 점심 특선 메뉴를 1만 5천 원 안팎으로 즐길 수 있는 곳이 의외로 많습니다.<br><br>
+
+가벼운 한 끼라면 <strong>멜팅포인트 성수</strong>의 샐러드 보울을 추천드립니다. 서울숲길에 위치해 있고, 평일 점심에는 직장인 손님이 많지만 회전이 빠른 편입니다.<br><br>
+
+디저트만 따로 챙기시려면 다음 세 곳이 정답입니다.<br><br>
+
+<div class="step-box">
+<strong>① 노티드 도넛 성수</strong><br>
+크림 도넛으로 유명한 시그니처 브랜드의 성수 플래그십입니다. 평일 오전 11시 이전이 가장 다양한 메뉴를 만나기 좋은 시간이고, 박스 포장으로 가져가시려면 줄이 있을 수 있습니다.
+</div>
+
+<div class="step-box">
+<strong>② 누데이크 성수 (Nudake Seongsu)</strong><br>
+젠틀몬스터의 디저트 브랜드로, 매장 자체가 미디어아트 같은 비주얼을 자랑합니다. 시그니처 메뉴 피크-시리즈는 단순한 디저트가 아니라 디자인 작품 같다는 평이 많습니다.
+</div>
+
+<div class="step-box">
+<strong>③ 베이커리 라스 (LAS)</strong><br>
+서울숲길의 작은 베이커리로, 사워도우 빵과 페이스트리가 강점입니다. 카페와 별도로 빵만 사서 서울숲에서 피크닉을 즐기시기에도 좋습니다.
+</div>
+
+식사와 디저트, 카페를 모두 챙기시는 풀 코스는 약 6~7시간이 소요됩니다. 하루 종일 잡으셔도 결코 길지 않은 동네라는 점, 미리 알아두시면 좋겠습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/sample/1_seongsu_cafe_walk_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-3">An intimate interior photograph of a converted factory cafe in Seongsu-dong, Seoul. Soaring 7-meter ceiling with exposed steel trusses and large industrial skylights, raw concrete columns, and a giant preserved printing press as central decor. A young Korean woman in her late 20s sits at a wooden communal table reading a book with a latte and almond croissant in front of her. Warm pendant Edison lights hang from the ceiling. Mix of vintage industrial heritage and minimalist modern design. Soft afternoon natural light pouring in through tall arched windows. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">옛 인쇄소 리노베이션 카페 내부 / AI 제작 이미지</div>
+</div>
+
+<h2>10. 인근 연계 코스 — 한나절을 알차게 채우는 확장 동선</h2>
+
+성수동만 보고 가시기 아쉽다면, 도보 또는 자전거로 30분 이내에 닿는 연계 명소들이 의외로 많습니다.<br><br>
+
+가장 추천드리는 1순위 연계는 <strong>뚝섬한강공원</strong>입니다. 서울숲 남쪽 끝에서 한강 보행 다리로 연결되어 있고, 자전거 대여(따릉이)를 이용하시면 한강 동쪽 라인을 시원하게 달릴 수 있습니다. 5~6월의 한강은 정말 아름답습니다.<br><br>
+
+가족 단위로 오시면 <strong>한양대학교 캠퍼스</strong>를 추천드립니다. 성수역에서 도보 10분 거리이고, 캠퍼스 자체가 워낙 넓고 푸르러서 아이들과 산책하기 좋습니다. 박물관과 도서관도 개방되어 있는 시간대가 있으니, 비 오는 날에 특히 유용합니다.<br><br>
+
+조금 더 멀리 가실 의향이 있다면, <strong>건대입구역 일대</strong>가 지하철 한 정거장 거리입니다. 카페 분위기와는 완전히 다른 젊은 거리의 활기를 경험할 수 있고, 저녁 식사 옵션이 폭발적으로 많습니다.<br><br>
+
+미술관·갤러리 매니아라면 <strong>플랫폼-L 컨템포러리 아트센터</strong>가 도보 15분 거리에 있습니다. 무료 전시도 있고, 성수동의 산업 유산과 결을 같이하는 컨템포러리 미술 작품을 만날 수 있는 곳입니다.<br><br>
+
+야경을 좋아하시는 분께는 <strong>응봉산</strong>을 적극 추천드립니다. 성수동에서 차로 10분, 도보 약 30분 거리에 있는 도심 야경 명당으로, 한강과 중랑천이 만나는 풍경을 가장 가까이서 볼 수 있는 곳입니다. 옥수역이 가깝습니다.<br><br>
+
+이런 연계 코스를 잘 활용하시면 성수동을 단순한 "카페 동네"가 아니라 "성동구 동부 라이프스타일 거점"으로 확장해서 누비실 수 있습니다.
+
+<h2>11. 마무리 — 성수동을 가장 잘 누리는 한 가지 비결</h2>
+
+지금까지 성수동 카페거리의 위치, 교통, 거리별 특징, 추천 카페, 시간대 전략, 주차, 식사, 연계 코스까지 정리해 드렸습니다. 마지막으로 가장 중요한 한 가지를 말씀드리고 싶습니다.<br><br>
+
+<strong>성수동은 한 번에 다 보려고 하지 마세요.</strong> 풀 코스를 한 번에 돌면 약 8시간이 걸리고, 그렇게 다녀오시면 정작 가장 인상 깊었던 한 카페의 기억이 다른 카페들에 묻혀 버립니다.<br><br>
+
+처음 가시는 분이라면 "어니언 성수 + 자그마치 + 서울숲 자작나무숲" 3개 포인트만 잡고 천천히 돌아보시는 걸 권합니다. 한 번에 다 보겠다는 욕심을 내려놓으시면, 오히려 다음에 또 오고 싶다는 마음이 자연스럽게 생깁니다.<br><br>
+
+성수동은 분기마다 새로운 매장이 들어서고 옛 매장이 사라지는 동네입니다. 6개월 만에 다시 가시면 풍경의 1/3이 바뀌어 있는 곳이라는 점, 미리 알아두시면 좋겠습니다. 그래서 이 가이드를 작성한 2026년 5월 기준이라는 점을 다시 한번 강조드립니다.<br><br>
+
+<div class="caution-box">
+<strong>⚠️ 방문 전 마지막 체크</strong><br>
+1. 가시는 카페의 인스타그램 공지를 당일 오전에 한 번 더 확인하세요(임시 휴무·전시 입장료 변동 가능).<br>
+2. 평일 오전을 활용할 수 있다면 절대적으로 추천합니다.<br>
+3. 자차보다 분당선 서울숲역 이용이 시간·비용 모두 효율적입니다.<br>
+4. 식사 한 끼는 꼭 챙기세요. 카페 디저트만으로는 4시간 이상 버티기 어렵습니다.
+</div>
+
+성수동의 매력은 결국 "옛 시간과 지금 시간이 한 거리에 공존한다"는 점입니다. 천천히 그 겹을 느끼시면서 한나절 보내고 오시면, 서울에서 가장 깊은 인상으로 남는 동네가 될 것입니다.<br><br>
+
+다음에 성수동에 다시 가실 때는 이번에 못 들른 카페 한 곳, 산책 코스 한 갈래를 새로 발견하시기 바랍니다. 이 가이드가 그 첫 걸음에 작게나마 도움이 되었기를 바랍니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+  <li><a href="../260513/travel_seoul_olympic_park_rose_garden_2026.html">서울 올림픽공원 장미광장 — 88올림픽 기념 장미 만개 가이드</a></li>
+  <li><a href="../260513/travel_seoul_jungrang_rose_festival_2026.html">서울 중랑구 장미축제 — 5.45km 국내 최장 장미터널 야간 가이드</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<span class="tag">#성수동카페거리</span>
+<span class="tag">#연무장길</span>
+<span class="tag">#서울숲</span>
+<span class="tag">#성수동도보가이드</span>
+<span class="tag">#어니언성수</span>
+<span class="tag">#자그마치</span>
+<span class="tag">#대림창고</span>
+<span class="tag">#성수동핫플</span>
+<span class="tag">#성수동맛집</span>
+<span class="tag">#성수동주차</span>
+</div>
+
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+
+</body>
+</html>
