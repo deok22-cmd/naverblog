@@ -39,7 +39,7 @@ output/YYMMDD/<slug>.html
 네이버/티스토리 듀얼처럼 **3번째 채널**로 승격:
 - 신규 서브에이전트 `insta-card-builder` — `output/YYMMDD/<slug>.html`을 읽어
   `prompts.md` + `card_*.svg`(텍스트 자동 치환) + `caption.txt`를 자동 생성.
-- `trend-writer`·티스토리 미러와 동일한 파일/Git 패턴 → `output_insta/YYMMDD/<slug>/`.
+- 티스토리 미러와 동일한 파일/Git 패턴 → `output_insta/YYMMDD/<slug>/`.
 - Figma의 image-fill·Export만 수동(또는 Figma MCP 연결 시 자동화 검토).
 
 ## 주의 (현재 환경)
