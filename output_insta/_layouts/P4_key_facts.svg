@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== P4 : 핵심 팩트 (사진중심 · 스크림 워시 · 대형 숫자타일/십자선 없음) =====
+       핵심 지표 3~4개를 '라벨 → 값' 텍스트 블록으로 차분히. 채움: title, fact1~4(라벨/값), footer
+       ※ 거대 숫자 타일 금지 — 값도 일반 텍스트 크기 위계로 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.48"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.64"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="270" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">한눈에 보는 핵심</text>
+  <rect x="82" y="304" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="450" font-size="30" font-weight="600" fill="#b2dfdb">라벨 A</text>
+    <text x="80" y="512" font-size="56" font-weight="800" fill="#ffffff">값 A</text>
+    <line x1="80" y1="566" x2="1000" y2="566" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="650" font-size="30" font-weight="600" fill="#b2dfdb">라벨 B</text>
+    <text x="80" y="712" font-size="56" font-weight="800" fill="#ffffff">값 B</text>
+    <line x1="80" y1="766" x2="1000" y2="766" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="850" font-size="30" font-weight="600" fill="#b2dfdb">라벨 C</text>
+    <text x="80" y="912" font-size="56" font-weight="800" fill="#ffffff">값 C</text>
+    <line x1="80" y1="966" x2="1000" y2="966" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="1050" font-size="30" font-weight="600" fill="#b2dfdb">라벨 D</text>
+    <text x="80" y="1112" font-size="56" font-weight="800" fill="#ffffff">값 D</text>
+  </g>
+
+  <text x="80" y="1240" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">2026년 기준 · 보조 안내 한 줄.</text>
+</svg>

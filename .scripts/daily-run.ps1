@@ -75,6 +75,88 @@ try {
     Write-Log "ERROR (Dashboard rebuild): $_"
 }
 
+# === Step 1.6: 인스타 카드 채널 (Phase C) ===
+# 콘텐츠(네이버/티스토리) 성공 시에만 진행. 실패는 비치명적(전체 종료코드 불변).
+Write-Log ""
+Write-Log "=== Insta Card Channel @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="
+if ($exit -ne 0) {
+    Write-Log "SKIP Insta: Claude content step exit $exit (콘텐츠 실패 시 인스타 생략)."
+} else {
+    try {
+        $YMD = Get-Date -Format "yyMMdd"
+
+        # GEMINI 키 로드 (gitignore된 로컬 시크릿)
+        $SecretFile = Join-Path $ScriptsDir "secret.env.ps1"
+        if (Test-Path -LiteralPath $SecretFile) {
+            . $SecretFile
+            Write-Log "GEMINI key: loaded from secret.env.ps1"
+        } else {
+            Write-Log "WARN: $SecretFile 없음 — 이미지 생성/래스터는 스킵됩니다(카드 SVG만 생성)."
+        }
+
+        # Phase C-1: insta-card-builder 5건 (독립 Claude 실행 — 콘텐츠 예산과 분리)
+        $InstaPrompt = Join-Path $ScriptsDir "insta-prompt.md"
+        if (Test-Path -LiteralPath $InstaPrompt) {
+            Write-Log "--- Phase C-1: insta-card-builder (cards/prompts/caption) ---"
+            $ip = Get-Content -LiteralPath $InstaPrompt -Raw -Encoding utf8
+            $ip | & claude `
+                -p `
+                --model claude-sonnet-4-6 `
+                --permission-mode bypassPermissions `
+                --max-budget-usd 6 `
+                --output-format text `
+                --add-dir $ProjectRoot 2>&1 |
+            ForEach-Object {
+                $line = "$_"
+                Write-Host $line
+                [System.IO.File]::AppendAllText($LogFile, "$line`r`n", $utf8NoBom)
+            }
+            Write-Log "Phase C-1 claude exit: $LASTEXITCODE"
+        } else {
+            Write-Log "WARN: $InstaPrompt 없음 — Phase C-1 스킵."
+        }
+
+        # Phase C-2: 슬러그별 배경 생성 + 래스터 (순수 node — Claude 예산 미사용, 멱등)
+        $InstaDay = Join-Path $ProjectRoot "output_insta\$YMD"
+        $nodeOk   = [bool](Get-Command node -ErrorAction SilentlyContinue)
+        if (-not $nodeOk) {
+            Write-Log "WARN: node 미발견 — Phase C-2(이미지/래스터) 스킵."
+        } elseif (-not $env:GEMINI_API_KEY) {
+            Write-Log "WARN: GEMINI_API_KEY 없음 — Phase C-2 스킵(카드 SVG는 생성됨)."
+        } elseif (-not (Test-Path -LiteralPath $InstaDay)) {
+            Write-Log "WARN: $InstaDay 없음 — insta-card-builder 산출물 없음. Phase C-2 스킵."
+        } else {
+            Write-Log "--- Phase C-2: insta_render + insta_rasterize (node) ---"
+            Get-ChildItem -LiteralPath $InstaDay -Directory | ForEach-Object {
+                $slugName = $_.Name
+                $slugDir  = $_.FullName
+                $cardCnt  = (Get-ChildItem -LiteralPath $slugDir -Filter "card_*.svg" -ErrorAction SilentlyContinue |
+                             Where-Object { $_.Name -notlike "*_done.svg" }).Count
+                $pngDir   = Join-Path $slugDir "png"
+                $pngCnt   = 0
+                if (Test-Path -LiteralPath $pngDir) {
+                    $pngCnt = (Get-ChildItem -LiteralPath $pngDir -Filter "card_*.png" -ErrorAction SilentlyContinue).Count
+                }
+                if ($cardCnt -lt 1) {
+                    Write-Log "  SKIP $slugName : card SVG 없음"
+                } elseif ($pngCnt -ge 10) {
+                    Write-Log "  SKIP $slugName : png 이미 $pngCnt 개 (멱등)"
+                } else {
+                    Write-Log "  RENDER $slugName"
+                    & node "$ProjectRoot\scripts\insta_render.mjs" "$slugDir" 2>&1 |
+                        ForEach-Object { [System.IO.File]::AppendAllText($LogFile, "    $_`r`n", $utf8NoBom) }
+                    Write-Log "  RASTER $slugName"
+                    & node "$ProjectRoot\scripts\insta_rasterize.mjs" "$slugDir" 2>&1 |
+                        ForEach-Object { [System.IO.File]::AppendAllText($LogFile, "    $_`r`n", $utf8NoBom) }
+                }
+            }
+            Write-Log "Phase C-2 complete."
+        }
+    } catch {
+        Write-Log "ERROR (Insta Card Channel): $_"
+    }
+}
+
 # === Step 2: 작성 성공 시 git add / commit / push ===
 Write-Log ""
 Write-Log "=== Git Auto-Push @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="

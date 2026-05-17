@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== card_05 : 정보 한눈에 (P1 — 정보 표 5행) ===== -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="270" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">정보 한눈에</text>
+  <rect x="82" y="304" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="450" font-size="42" font-weight="600" fill="#ffffff">일정</text>
+    <text x="1000" y="450" font-size="42" font-weight="800" fill="#80cbc4" text-anchor="end">6.4(목) ~ 6.8(월)</text>
+    <line x1="80" y1="492" x2="1000" y2="492" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="582" font-size="42" font-weight="600" fill="#ffffff">장소</text>
+    <text x="1000" y="582" font-size="42" font-weight="800" fill="#80cbc4" text-anchor="end">무주등나무운동장</text>
+    <line x1="80" y1="624" x2="1000" y2="624" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="714" font-size="42" font-weight="600" fill="#ffffff">실내 입장료</text>
+    <text x="1000" y="714" font-size="42" font-weight="800" fill="#80cbc4" text-anchor="end">1편 6,000원</text>
+    <line x1="80" y1="756" x2="1000" y2="756" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="846" font-size="42" font-weight="600" fill="#ffffff">야외 1일권</text>
+    <text x="1000" y="846" font-size="42" font-weight="800" fill="#80cbc4" text-anchor="end">30,000원</text>
+    <line x1="80" y1="888" x2="1000" y2="888" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="978" font-size="42" font-weight="600" fill="#ffffff">예매처</text>
+    <text x="1000" y="978" font-size="42" font-weight="800" fill="#80cbc4" text-anchor="end">mjff.or.kr</text>
+  </g>
+
+  <text x="80" y="1110" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">2026년 기준 · 변동 사항은 공식 홈페이지 확인.</text>
+</svg>

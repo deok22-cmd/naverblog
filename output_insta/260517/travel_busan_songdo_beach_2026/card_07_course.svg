@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== 정보타입 P2 : 타임라인 스파인 — 암남공원 추천 탐방 루트 ===== -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1a18"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+
+  <rect x="70" y="170" width="940" height="1010" rx="28" fill="#000000" fill-opacity="0.58" stroke="#00796b" stroke-width="2"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="120" y="300" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="60" font-weight="800" fill="#ffffff">추천 탐방 루트</text>
+  <rect x="122" y="328" width="130" height="9" fill="#00796b"/>
+
+  <!-- 세로 스파인 -->
+  <line x1="180" y1="430" x2="180" y2="1010" stroke="#00796b" stroke-width="4"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <circle cx="180" cy="450" r="16" fill="#00796b"/>
+    <text x="240" y="445" font-size="40" font-weight="700" fill="#ffffff">케이블카 서쪽 스테이션 도착</text>
+    <text x="240" y="490" font-size="28" font-weight="500" fill="#b2dfdb">스카이파크 — 탐방 시작점</text>
+    <text x="960" y="460" font-size="34" font-weight="800" fill="#80cbc4" text-anchor="end">출발</text>
+
+    <circle cx="180" cy="590" r="16" fill="#00796b"/>
+    <text x="240" y="585" font-size="40" font-weight="700" fill="#ffffff">스카이워크 체험</text>
+    <text x="240" y="630" font-size="28" font-weight="500" fill="#b2dfdb">절벽 위 유리 바닥 산책로</text>
+    <text x="960" y="600" font-size="34" font-weight="800" fill="#80cbc4" text-anchor="end">30분</text>
+
+    <circle cx="180" cy="730" r="16" fill="#00796b"/>
+    <text x="240" y="725" font-size="40" font-weight="700" fill="#ffffff">암남공원 해안 절벽 둘레길</text>
+    <text x="240" y="770" font-size="28" font-weight="500" fill="#b2dfdb">해송 숲길·전망덱·야생화 구간</text>
+    <text x="960" y="740" font-size="34" font-weight="800" fill="#80cbc4" text-anchor="end">약 3.5km</text>
+
+    <circle cx="180" cy="870" r="16" fill="#00796b"/>
+    <text x="240" y="865" font-size="40" font-weight="700" fill="#ffffff">스카이파크 복귀 후 케이블카</text>
+    <text x="240" y="910" font-size="28" font-weight="500" fill="#b2dfdb">동쪽 송림공원으로 귀환</text>
+    <text x="960" y="880" font-size="34" font-weight="800" fill="#80cbc4" text-anchor="end">편도 15~20분</text>
+
+    <circle cx="180" cy="1010" r="16" fill="#00796b"/>
+    <text x="240" y="1005" font-size="40" font-weight="700" fill="#ffffff">총 소요 시간</text>
+    <text x="960" y="1020" font-size="34" font-weight="800" fill="#80cbc4" text-anchor="end">약 2시간~2시간 30분</text>
+  </g>
+
+  <text x="120" y="1110" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">전체 가이드는 프로필 블로그에서.</text>
+</svg>

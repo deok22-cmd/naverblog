@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== 그룹타입 E : 하단 리본 캡션 (주의사항) ===== -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.50" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#15201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <!-- 하단 리본 카드 (주의 — 높이 늘림) -->
+  <rect x="60" y="880" width="960" height="380" rx="24" fill="#000000" fill-opacity="0.65" stroke="#00796b" stroke-width="2"/>
+  <text x="100" y="952" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="26" font-weight="700" fill="#80cbc4" letter-spacing="3">09 · 방문 전 꼭 확인</text>
+  <text x="100" y="1018" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="52" font-weight="800" fill="#ffffff" letter-spacing="-1">이것만은 주의하세요</text>
+  <text x="100" y="1080" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="500" fill="#e0f2f1">· 카페·레스토랑 인기 공간은 사전 예약 필수</text>
+  <text x="100" y="1128" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="500" fill="#e0f2f1">· 소규모 카페 예고 없는 임시 휴업 가능</text>
+  <text x="100" y="1176" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="500" fill="#e0f2f1">· 주말 낮 12~1시 레스토랑 웨이팅 발생</text>
+  <text x="100" y="1224" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="500" fill="#e0f2f1">· 언덕 구간 많음 — 굽 있는 신발 금지</text>
+</svg>

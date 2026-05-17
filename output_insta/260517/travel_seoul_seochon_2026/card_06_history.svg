@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== 그룹타입 A : 헤드라인-하단 — 카드06 역사 탐방(세종생가터·이상의집) ===== -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.42" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.82"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text id="index" x="990" y="190" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="150" font-weight="800" fill="#ffffff" fill-opacity="0.16" text-anchor="end">06</text>
+
+  <rect x="80" y="852" width="64" height="10" fill="#00796b"/>
+  <text x="80" y="970" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="88" font-weight="800" fill="#ffffff" letter-spacing="-2">세종·이상·윤동주</text>
+
+  <g id="chips">
+    <rect x="80" y="1030" width="300" height="74" rx="37" fill="#00796b"/>
+    <text x="230" y="1078" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="33" font-weight="700" fill="#ffffff" text-anchor="middle">이상의 집 무료</text>
+    <rect x="400" y="1030" width="380" height="74" rx="37" fill="#00796b"/>
+    <text x="590" y="1078" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="33" font-weight="700" fill="#ffffff" text-anchor="middle">화~일 10:00~18:00</text>
+  </g>
+
+  <text x="80" y="1196" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e0f2f1">통인동 골목 한 블록에 수백 년이 켜켜이.</text>
+  <text x="80" y="1252" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e0f2f1">근대 문학의 숨결을 그 자리에서 느껴보세요.</text>
+</svg>

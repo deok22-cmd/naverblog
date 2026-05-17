@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== card_09 : 주의사항 (E — 하단 텍스트·사진 최대) ===== -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.52" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.80"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="1066" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="28" font-weight="700" fill="#80cbc4" letter-spacing="3">놓치면 아쉬운 주의사항</text>
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="64" font-weight="800" fill="#ffffff" letter-spacing="-2">
+    <tspan x="80" y="1150">6월 6일 현충일</tspan>
+    <tspan x="80" y="1228">오후 4시 전 도착</tspan>
+  </text>
+  <text x="80" y="1302" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="500" fill="#e0f2f1">야외 상영 취소 시 공식 SNS 공지 확인 · 환불 규정 숙지</text>
+</svg>

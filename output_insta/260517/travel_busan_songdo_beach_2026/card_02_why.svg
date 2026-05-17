@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== 그룹타입 B : 상단 컬러밴드 — 왜 지금 송도인가 ===== -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.55" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.72"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1a18"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+
+  <!-- 상단 솔리드 밴드 -->
+  <rect x="0" y="0" width="1080" height="430" fill="#004d40"/>
+  <rect x="0" y="430" width="1080" height="6" fill="#80cbc4"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="150" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#80cbc4" letter-spacing="3">02 · 지금 가야 하는 이유</text>
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="84" font-weight="800" fill="#ffffff" letter-spacing="-2">
+    <tspan x="80" y="260">해운대 말고</tspan>
+    <tspan x="80" y="360">송도가 정답</tspan>
+  </text>
+
+  <text x="80" y="1280" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="36" font-weight="600" fill="#e0f2f1">100년 역사 + 케이블카 + 스카이워크, 셋 다 여기.</text>
+</svg>

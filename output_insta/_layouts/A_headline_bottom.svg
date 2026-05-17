@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== A : 헤드라인-하단 (사진중심 · 하단 스크림만 · 넘버링 없음) =====
+       채움: headline=h2 핵심구, chips=수치 0~2개(선택), subline=요약 1~2줄 -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.40" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.82"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <rect x="80" y="852" width="64" height="10" fill="#00796b"/>
+  <text x="80" y="980" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="98" font-weight="800" fill="#ffffff" letter-spacing="-2">핵심 헤드라인</text>
+
+  <g id="chips">
+    <rect x="80" y="1030" width="330" height="74" rx="37" fill="#00796b"/>
+    <text x="245" y="1078" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle">수치 칩 1</text>
+    <rect x="430" y="1030" width="330" height="74" rx="37" fill="#00796b"/>
+    <text x="595" y="1078" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle">수치 칩 2</text>
+  </g>
+
+  <text x="80" y="1196" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="40" font-weight="500" fill="#e0f2f1">요약 문장 첫 번째 줄,</text>
+  <text x="80" y="1252" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="40" font-weight="500" fill="#e0f2f1">요약 문장 두 번째 줄입니다.</text>
+</svg>

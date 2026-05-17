@@ -17,13 +17,15 @@ model: sonnet
 2. `card_01_*.svg` ~ `card_10_*.svg` — Figma import용 완성 SVG 10장 (배경은 교체 슬롯)
 3. `caption.txt` — 인스타 본문 + 해시태그 15개
 
-## 표준 레퍼런스 (절대 기준)
-디자인 문법은 다음 4개 프로토타입을 **정답 틀**로 삼아 100% 일관 유지:
-- `output_insta/260516/euljiro/card_01_cover.svg` — 커버(훅) 아키타입
-- `output_insta/260516/euljiro/card_03_nogari.svg` — 정보강조(헤드라인+칩) 아키타입
-- `output_insta/260516/euljiro/card_05_price.svg` — 정보패널(글래스 표) 아키타입
-- `output_insta/260516/euljiro/card_10_cta.svg` — 마무리 CTA 아키타입
-작업 시작 전 이 4개를 Read 하여 viewBox·폰트·여백·그라데·색 구조를 그대로 차용한다. 임의 변형 금지.
+## 표준 레퍼런스 (절대 기준) — 레이아웃 라이브러리 v2
+디자인 문법의 단일 표준은 **`output_insta/_layouts/`** 폴더다. (`260516/euljiro`는 역사적 프로토타입 — 더 이상 표준 아님)
+
+작업 시작 전 반드시:
+1. `output_insta/_layouts/README.md` 를 Read — 카탈로그·슬롯별 허용 풀·결정 규칙·slug 회전 시드 전체.
+2. 각 카드에 결정된 그룹타입의 템플릿 SVG(`A_headline_bottom.svg` … `P4_key_facts.svg`, README 카탈로그의 실제 파일명)를 Read 하여 viewBox·폰트·여백·스크림·색·구조를 **그대로 차용**하고 placeholder 텍스트만 원고 사실로 교체. **README §0 두 하드룰 절대 준수** — 사진을 가리는 불투명 밴드/패널/박스 추가 금지(그라데이션 스크림만), 숫자 배지·워터마크·카드번호 키커·장식 거대숫자 추가 금지(텍스트·타이포 위계로만).
+3. 커버(card_01)·CTA(card_10)는 고정 아키타입: `output_insta/260516/euljiro/card_01_cover.svg` / `card_10_cta.svg`의 구조를 그대로 차용.
+
+레이아웃 구조(좌표·대비층·brand-bar·BG 슬롯·viewBox)는 절대 임의 변형 금지. 색은 카테고리 팔레트만 치환.
 
 ## 작성 절차
 
@@ -38,19 +40,23 @@ model: sonnet
 - `caution-box` → 주의 카드
 - `recommend-area`+`.tag` → 카드10 CTA + caption.txt 해시태그
 
-### 2. 10카드 매핑 (표준)
-| # | 역할 | 틀 | 소스 |
+### 2. 10카드 매핑 + 레이아웃 회전 (표준)
+역할(소스)은 고정, **형식(그룹타입)은 회전**한다. 슬롯별 허용 풀·결정 규칙·slug 시드 계산은 `_layouts/README.md` §2–3을 그대로 따른다.
+
+| # | 역할 | 소스 | 레이아웃 |
 |---|---|---|---|
-| 01 | 커버(훅) | cover | h1 + intro 이중성 |
-| 02 | 왜 가나 | cover변형 | intro 3줄 |
-| 03 | 핵심 꼭지 A | nogari | h2 대표① + 수치칩 |
-| 04 | 핵심 꼭지 B | nogari | h2 대표② |
-| 05 | 정보 한눈에 | price | info-table |
-| 06 | 핵심 꼭지 C | nogari | h2 대표③ |
-| 07 | 동선/코스 | price변형 | step-box 타임라인 |
-| 08 | 꿀팁 ✅ | price변형 | tip-box (저장 유도) |
-| 09 | 주의 ⚠️ | nogari변형 | caution-box |
-| 10 | 마무리 CTA | cta | recommend + 저장유도 |
+| 01 | 커버(훅) | h1 + intro 이중성 | G0 고정 |
+| 02 | 왜 가나 | intro 3줄 | `[B,C,E]` 중 시드 선택 |
+| 03 | 핵심 꼭지 A | h2 대표① (+수치) | `[A,B,C,D,E,F]` 회전 |
+| 04 | 핵심 꼭지 B | h2 대표② | `[A,B,C,D,E,F]` 회전 |
+| 05 | 정보 한눈에 | info-table | `P1`(행≥5) / `P4`(핵심지표4) |
+| 06 | 핵심 꼭지 C | h2 대표③ | `[A,B,C,D,E,F]` 회전 |
+| 07 | 동선/코스 | step-box | `P2`(단계≤3이면 `F`) |
+| 08 | 꿀팁 | tip-box(저장유도) | `P3`(3포인트면 `F`) |
+| 09 | 주의 | caution-box | `[A,E]` 중 시드 선택 |
+| 10 | 마무리 CTA | recommend+저장유도 | G9 고정 |
+
+**필수 준수**: ① 콘텐츠 형태가 레이아웃을 강제(표=P1, 지표4=P4, 단계=P2, 체크=P3, 정확히 3포인트=F, 단일 지배 수치/한 단어=D) — 형태 안 맞으면 그 타입 금지(창작 금지). ② 인접 카드 동일 타입 금지. ③ 03·04·06은 서로 다른 3개 콘텐츠 타입. ④ slug 시드로 글마다 배열을 다르게.
 (원고 꼭지 수에 따라 03·04·06을 ±2 가감하여 6~10장 스케일)
 
 ### 3. 카테고리 컬러 (Naverblog.md 01조, SVG에 강제 적용)
@@ -74,11 +80,12 @@ model: sonnet
 ### 5. prompts.md 규칙
 - 카드별 영문 프롬프트 + 끝에 스타일 앵커를 **이미 합쳐서** 코드블록(```)에 넣는다 (사용자가 블록 통째 복붙)
 - 스타일 앵커(전 카드 동일): `Editorial photography, cinematic color grade matching the article mood, shallow depth of field, photorealistic, ultra-detailed, atmospheric, vertical 4:5 composition (1080x1350), no text, no letters, no signage text, no watermark`
-- 각 프롬프트에 negative space 위치 명시(상/하/측), 글자 금지 문구 필수
+- 레이아웃이 회전하므로 **특정 텍스트 영역을 비우라는 지시 금지**(예: "하단 1/3 비움"). 대신 전체적으로 분위기 있고 과하지 않게 균일·세로 4:5를 요구. 각 레이아웃이 자체 대비층(스크림·패널·밴드)을 가져 배경은 범용이어도 안전. 글자 금지 문구(`no text...`)는 필수 유지 (`_layouts/README.md` §5)
 - 상단에 Gemini 사용 규칙 4줄(글자금지/세트감/빈공간/비율) 포함
 
 ### 6. caption.txt 규칙
 - 1줄 훅(대안전략 "여의도 말고 여기" 톤) → 본문 4~6줄 핵심 → 위치/주의 → 저장 유도 1줄 → "프로필 블로그" 안내 → `.`×3 줄바꿈 → 해시태그 15개(원고 .tag 10개 + 일반 확장 5개)
+- **보너스 적격 유지 (insta_card_pipeline.md §7 준수)**: 캡션·카드에 협찬/유료파트너십/제3자 브랜드 홍보, 제휴(쿠팡 등) 직접 판매·링크 문구를 **절대 넣지 않는다**. 허용되는 외부 유도는 **자기 블로그 정보 가이드 링크 안내뿐**. (자동 산출물은 항상 오리지널 정보형 = 보너스 적격 상태여야 함)
 
 ## 작성 후 자가 검증 (출력 직전 필수)
 - [ ] SVG 10개 모두 viewBox 1080×1350, `BG__REPLACE_WITH_IMAGE` 사각형 + 주석 존재
@@ -99,5 +106,6 @@ model: sonnet
 ## 금기
 - 원고에 없는 수치·장소·평점 창작 금지
 - 배경 SVG/프롬프트에 한글·영문 글자 렌더 요청 금지 (텍스트는 SVG 레이어 전담)
-- 프로토타입 디자인 구조 임의 변형 금지 (색만 카테고리별 치환)
+- `_layouts/` 템플릿 구조(좌표·대비층·brand-bar·BG슬롯·viewBox) 임의 변형 금지 (색만 카테고리별 치환)
+- 회전 규칙 무시하고 한 타입만 반복 금지 — 인접 비동일·03/04/06 3종 상이·slug 시드 준수
 - 새 주제 조사·WebSearch 금지 (원고가 곧 단일 진실원천)

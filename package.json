@@ -1,0 +1,24 @@
+{
+  "name": "naverblog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deok22-cmd/naverblog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/deok22-cmd/naverblog/issues"
+  },
+  "homepage": "https://github.com/deok22-cmd/naverblog#readme",
+  "dependencies": {
+    "puppeteer-core": "^23.11.1"
+  }
+}

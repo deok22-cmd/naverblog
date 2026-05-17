@@ -53,14 +53,17 @@ output_insta/<YYMMDD>/<slug>/
 ### 3.1 가능 범위
 원고 → 프롬프트/SVG/캡션(서브에이전트) → **이미지 생성·주입(스크립트)** → `*_done.svg` 10장. **Figma 없이 완성 SVG 자동 산출.** (선택) PNG 래스터화까지.
 
-### 3.2 1회 셋업
-1. Google AI Studio / Cloud에서 결제 활성화 후 API 키 발급.
-2. 키를 환경변수로만 보관 (git 커밋 금지):
-   ```powershell
-   setx GEMINI_API_KEY "발급키"
+### 3.2 1회 셋업  ✅ 2026-05-17 검증 완료
+1. Google AI Studio / Cloud에서 **결제(billing) 활성화 후** API 키 발급. — **필수 확인됨**: 무료 티어는 이미지 모델 쿼터 `limit:0`이라 결제 미활성 키는 100% 실패(`RESOURCE_EXHAUSTED`). 결제 활성 후 동일 키 즉시 동작.
+2. 키를 환경변수로만 보관 (git 커밋 금지). 실행 시 인라인 전달:
    ```
-3. Node 패키지: `npm i @google/genai`
-4. 아래 스크립트를 `scripts/insta_render.mjs`로 저장.
+   GEMINI_API_KEY=<키> node scripts/insta_render.mjs output_insta/<YYMMDD>/<slug>
+   ```
+3. **SDK·`npm i` 불요.** 구현된 `scripts/insta_render.mjs`는 Node 내장 `fetch`로 REST 호출(모델 `gemini-2.5-flash-image`, `generateContent` + `responseModalities:["IMAGE"]`). 원안의 Imagen SDK(`@google/genai`)는 결제 외 추가 제약이 있어 채택하지 않음.
+4. 스크립트는 이미 저장돼 있음(아래 3.3은 설계 참고용 원안 — 실제 동작본은 리포의 `scripts/insta_render.mjs`).
+   - 산출: 각 `card_NN_*_done.svg`(base64 `<image>` 자체완결) + `img/NN.png`(원본, Figma 수동 경로 겸용). 원본 `card_NN_*.svg`는 무변형.
+   - `node scripts/insta_render.mjs <dir> 3,7` 처럼 2번째 인자로 특정 카드만 재생성 가능.
+   - prompts.md가 CRLF여도 처리(스크립트가 개행 정규화).
 
 ### 3.3 렌더 스크립트 (`scripts/insta_render.mjs`)
 ```js
@@ -103,8 +106,15 @@ for (let i = 0; i < svgs.length; i++) {
 }
 ```
 
-### 3.4 (선택) PNG 래스터화
-완성 SVG를 업로드용 PNG로: **Playwright(headless Chromium) + Pretendard 웹폰트 임베드** 방식을 권장(한글 폰트 안정). `sharp`/`resvg`는 시스템에 Pretendard 미설치 시 한글 깨짐 위험.
+### 3.4 PNG 래스터화  ✅ 2026-05-17 검증 완료
+`_done.svg` → 업로드용 PNG(정확히 1080×1350):
+```
+node scripts/insta_rasterize.mjs output_insta/<YYMMDD>/<slug> [3,7]
+```
+- 엔진: **시스템 설치 Microsoft Edge(Chromium)를 `puppeteer-core`로 헤드리스 구동**. 브라우저 다운로드 불요(Win10 내장 Edge 사용). `npm i puppeteer-core` 1회만.
+- 한글: **Pretendard가 OS에 설치돼 있어**(`%LOCALAPPDATA%/Microsoft/Windows/Fonts/PretendardVariable.ttf`) 디자인 의도 폰트 그대로, 가변폰트 weight(800/600)까지 정확. 미설치 시 Malgun Gothic 폴백.
+- 산출: `<dir>/png/card_NN_*.png` (1080×1350, deviceScaleFactor 1).
+- `sharp`/`resvg-js`는 가변폰트 weight 처리 불안정으로 미채택. Edge 경로 변경 시 `INSTA_BROWSER` 환경변수로 지정 가능.
 
 ### 3.5 품질 게이트 (권장)
 완전 무인 발행은 표지 리스크가 있으므로: 스크립트 실행 → `*_done.svg` 10장을 사람이 1초씩 훑고 OK → 업로드. 불량 카드만 해당 프롬프트 재실행(인덱스 지정).
@@ -134,6 +144,37 @@ for (let i = 0; i < svgs.length; i++) {
 - [x] 프로토타입 4종 SVG + prompts + caption (`output_insta/260516/euljiro/`)
 - [x] `insta-card-builder` 서브에이전트
 - [x] 본 파이프라인 문서
-- [ ] **(다음) 프로토타입 4종 디자인 검수 → 을지로 card_01~10 완성** ← 표준 확정
-- [ ] Phase A 1~2주 수동 운영 안정화
-- [ ] Phase B: Google API 키 + `scripts/insta_render.mjs` 가동
+- [x] 을지로 `card_01~10` 전 10장 완성 (2026-05-17, 빠진 6장 02·04·06·07·08·09 아키타입 그대로 생성)
+- [x] 10장 디자인 검수 → 표준 확정 (2026-05-17 사용자 OK)
+- [x] **Phase B end-to-end 검증 완료 (2026-05-17)**: 결제 활성 키 + `scripts/insta_render.mjs`로 을지로 10장 `_done.svg` + `img/01~10.png` 자동 산출, 품질 게이트 통과
+- [x] PNG 래스터화 검증 완료 (2026-05-17): `scripts/insta_rasterize.mjs`, Edge+puppeteer-core, 을지로 10장 1080×1350 PNG 산출 — **Figma 수동 단계 완전 제거**
+- [x] **레이아웃 라이브러리 v2 (2026-05-17)**: 단일 표준이 `output_insta/_layouts/`로 이전(README = 카탈로그+회전 규칙). 콘텐츠 6종(A~F)+정보 4종(P1~P4)+고정 북엔드, 슬롯별 회전+콘텐츠형태 하드제약+slug 시드. `insta_render.mjs`에 배경 재사용 모드(`INSTA_REUSE=1`/`--reuse`) 추가 → 레이아웃 교체 시 무과금. 260517 5세트 v2 전환 완료(무과금). `260516/euljiro`는 폐기 프로토타입.
+- [x] **자동발행 파이프라인 통합 완료 (2026-05-17, 2026-05-18 04:00 첫 자동실행)**: `\NaverblogDaily`(매일 04:00) → `daily-run.ps1` Step 1.6 신설. Phase C-1 = 별도 `claude -p`(`insta-prompt.md`, 예산 분리)로 insta-card-builder ×5(카드/프롬프트/캡션). Phase C-2 = PowerShell이 `insta_render.mjs`+`insta_rasterize.mjs` 슬러그별 실행(순수 node, 멱등: png 10장이면 스킵). 키는 `.scripts/secret.env.ps1`(gitignore) dot-source. 콘텐츠 실패 시 인스타 스킵·실패 비치명적. 인스타 산출물은 로컬 보관(대용량 intermediates는 .gitignore, git 미푸시 — 기본값).
+
+---
+
+## 7 | Instagram 시즌 보너스 적격성 규칙 (필수 — 못박음, 2026-05-17)
+
+> 근거: Meta "Instagram 시기별 보너스 프로그램 규정"(초대제·테스트). **사진·슬라이드 시즌 보너스 — 한국 기준: 3개월 연속 매월 최소 조회수 100만**, 만 19세+·한국 거주/납세·프로페셔널 계정·수익화 정책 준수. 보너스 제외: **브랜디드/홍보/콜라보 콘텐츠**, 정책 미준수 콘텐츠. 사진·슬라이드 보너스는 **음악 포함 게시물만** 집계.
+
+### 7.1 원천 분리 (Hard Rule)
+- **본 자동 파이프라인은 오직 "오리지널 정보형 카드뉴스"만 생성한다.** 협찬·광고·제휴(쿠팡 등) 게시물은 **이 파이프라인으로 만들지 않으며**, 파이프라인 밖에서 별도 수동 제작·운영한다. (원천에서 섞지 않음 → 자동 산출물은 항상 보너스 적격 상태 유지)
+
+### 7.2 보너스 적격 불변식 (자동 산출물 = 적격, 이 상태를 깨지 말 것)
+- 전체 공개 / 오리지널 / **비(非)브랜디드 / 비콜라보**.
+- 보너스 대상 게시물에 다음 **금지**: ① 인스타 "유료 파트너십(브랜디드 콘텐츠)" 라벨 ② Collab(공동 게시) ③ 캡션·카드 내 제3자 브랜드 홍보·제휴 직접 판매/링크. (※ **자기 블로그 정보 가이드 링크는 허용** — 제휴 판매 문구만 금지)
+
+### 7.3 협찬·광고 게시물 운영 (분리 관리)
+- 자동 파이프라인 밖에서 **수동 제작**한다.
+- 인스타 **"유료 파트너십" 라벨을 정확히 표기**(법적 고지 의무).
+- **보너스 수익 기대 대상에서 제외**하고, 적격 게시물과 **명확히 분리**해 관리(가능하면 발행 슬롯/표기 구분).
+- 자동 캡션(`caption.txt`)에는 협찬/제휴 판매 문구를 절대 넣지 않는다 → `.claude/agents/insta-card-builder.md` 캡션 규칙에 반영.
+
+### 7.4 게시(업로드) 시 수동 필수 체크 — 운영자 책임 (파이프라인이 못 함)
+- **음악 추가**: 사진·슬라이드 보너스는 음악 포함분만 집계 → 업로드 시 인앱에서 직접 선택(운영자 수행).
+- **전체 공개**로 게시.
+- **정기 발행 유지**: 최신 150개/2주 보너스 기간, 게시 후 최대 28일 수익 윈도우 → 자동 일발행과 정합.
+- 집계 조회 = 로그인 사용자·일정 화질·피드/탐색(프로필 조회 미집계) → 저장·공유 최적화가 보너스에도 직결.
+
+### 7.5 전략 위치
+블로그 광고/제휴 = 즉시·확실한 베이스라인(유지). 인스타 슬라이드 보너스 = **초대제 업사이드**(월 100만×3개월 충족 시 자격). 사업을 보너스에만 걸지 않되, 자동 산출물은 항상 7.2를 만족시켜 초대 시 즉시 수익화 가능 상태를 유지한다.
