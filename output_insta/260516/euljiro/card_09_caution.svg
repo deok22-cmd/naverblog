@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.42" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.82"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma: 이 사각형 선택 → Fill을 'Image'로 → Gemini 카드9 배경 PNG ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#1a1310"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text id="index" x="990" y="190" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="150" font-weight="800" fill="#ffffff" fill-opacity="0.16" text-anchor="end">05</text>
+
+  <g id="headline">
+    <rect x="80" y="852" width="64" height="10" fill="#00796b"/>
+    <text x="80" y="980" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="98" font-weight="800" fill="#ffffff" letter-spacing="-2">이것만은 주의</text>
+  </g>
+
+  <g id="chips">
+    <rect x="80" y="1030" width="330" height="74" rx="37" fill="#00796b"/>
+    <text x="245" y="1078" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle">우천 시 영업 X</text>
+    <rect x="430" y="1030" width="330" height="74" rx="37" fill="#00796b"/>
+    <text x="595" y="1078" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle">현금 결제 위주</text>
+  </g>
+
+  <text id="subline" x="80" y="1196" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="40" font-weight="500" fill="#e0f2f1">성인 전용 바·이자카야 다수 있고,</text>
+  <text x="80" y="1252" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="40" font-weight="500" fill="#e0f2f1">낡은 계단·바닥 미끄럼 주의하세요.</text>
+</svg>

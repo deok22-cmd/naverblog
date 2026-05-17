@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma: 이 사각형 선택 → Fill을 'Image'로 → Gemini 카드8(저디테일) 배경 PNG ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#1a201d"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+
+  <!-- 글래스 정보 패널 -->
+  <g id="panel">
+    <rect x="70" y="170" width="940" height="1010" rx="28" fill="#000000" fill-opacity="0.58" stroke="#00796b" stroke-width="2"/>
+  </g>
+
+  <g id="panel-title">
+    <text x="120" y="300" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="60" font-weight="800" fill="#ffffff">이것만 알면 실패 없음</text>
+    <rect x="122" y="328" width="130" height="9" fill="#00796b"/>
+  </g>
+
+  <g id="checklist" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <path d="M120 438 l13 16 l28 -34" stroke="#00796b" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="180" y="460" font-size="40" font-weight="600" fill="#ffffff">인스타 #힙지로카페로 최신 핫플 확인</text>
+    <line x1="120" y1="530" x2="960" y2="530" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <path d="M120 578 l13 16 l28 -34" stroke="#00796b" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="180" y="600" font-size="40" font-weight="600" fill="#ffffff">주말 19~21시 만석 → 18시 전 도착</text>
+    <line x1="120" y1="670" x2="960" y2="670" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <path d="M120 718 l13 16 l28 -34" stroke="#00796b" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="180" y="740" font-size="40" font-weight="600" fill="#ffffff">노가리 골목은 현금 결제 위주</text>
+    <line x1="120" y1="810" x2="960" y2="810" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <path d="M120 858 l13 16 l28 -34" stroke="#00796b" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="180" y="880" font-size="40" font-weight="600" fill="#ffffff">카페 영업 불규칙 → 당일 인스타 확인</text>
+  </g>
+
+  <text x="120" y="1010" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="40" font-weight="800" fill="#80cbc4">저장해두고 그대로 따라가세요  ↓</text>
+  <text x="120" y="1110" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">전체 10단계 코스는 프로필 블로그에서.</text>
+</svg>
