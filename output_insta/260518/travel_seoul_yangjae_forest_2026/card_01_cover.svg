@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== G0 COVER : 양재시민의숲 메타세콰이어 ===== -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.40" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.80"/>
+    </linearGradient>
+    <linearGradient id="scrimTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.42"/>
+      <stop offset="0.26" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1f1c"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimTop)"/>
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="150" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#80cbc4" letter-spacing="6">SEOUL · 양재</text>
+
+  <g id="title">
+    <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="112" font-weight="800" fill="#ffffff" letter-spacing="-3">
+      <tspan x="80" y="976">메타세콰이어</tspan>
+      <tspan x="80" y="1104">초록 터널</tspan>
+    </text>
+    <text x="80" y="1184" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="42" font-weight="600" fill="#e0f2f1">서울 도심 40분, 6월 신록의 양재시민의숲</text>
+  </g>
+
+  <text x="80" y="1276" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#cfd8d6">밀어서 코스 보기  →</text>
+</svg>

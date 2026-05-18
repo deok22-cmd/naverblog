@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== A : 헤드라인-하단 — 주의 (주차·인파 회피·계절 주의사항) =====
+       headline=이것만은 피하세요, chips=벚꽃 시즌 / 주말 오후 5시 이후, subline -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.40" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.82"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <rect x="80" y="852" width="64" height="10" fill="#00796b"/>
+  <text x="80" y="974" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="92" font-weight="800" fill="#ffffff" letter-spacing="-2">이것만은 피하세요</text>
+
+  <g id="chips">
+    <rect x="80" y="1030" width="370" height="74" rx="37" fill="#004d40"/>
+    <text x="265" y="1078" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle">벚꽃 시즌 주말 낮</text>
+    <rect x="470" y="1030" width="390" height="74" rx="37" fill="#004d40"/>
+    <text x="665" y="1078" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle">주말 오후 5시 이후 주차</text>
+  </g>
+
+  <text x="80" y="1196" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e0f2f1">벚꽃 주말 낮은 산책이 불편할 만큼 혼잡.</text>
+  <text x="80" y="1252" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e0f2f1">800m 반경 주차장 만차 — 대중교통이 답.</text>
+</svg>

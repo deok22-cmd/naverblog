@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== P2 : 코스 단계 (course — 수목원 방문 동선) =====
+       순차 단계를 순수 텍스트 행으로(좌: 단계·보조 / 우: 시간) -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="270" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">추천 탐방 동선</text>
+  <rect x="82" y="304" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="442" font-size="42" font-weight="700" fill="#ffffff">입장 · 매표소</text>
+    <text x="80" y="488" font-size="28" font-weight="500" fill="#b2dfdb">입장권 + 트램 탑승권 동시 구매</text>
+    <text x="1000" y="458" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">09:00</text>
+    <line x1="80" y1="540" x2="1000" y2="540" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="612" font-size="42" font-weight="700" fill="#ffffff">호랑이숲</text>
+    <text x="80" y="658" font-size="28" font-weight="500" fill="#b2dfdb">오전 먹이 시간대 관찰 확률 높음</text>
+    <text x="1000" y="628" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">09:30~</text>
+    <line x1="80" y1="710" x2="1000" y2="710" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="782" font-size="42" font-weight="700" fill="#ffffff">트램 탑승 → 스카이워크</text>
+    <text x="80" y="828" font-size="28" font-weight="500" fill="#b2dfdb">능선 정류장 하차 후 도보</text>
+    <text x="1000" y="798" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">10:30~</text>
+    <line x1="80" y1="880" x2="1000" y2="880" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="952" font-size="42" font-weight="700" fill="#ffffff">고산식물원 · 암석원</text>
+    <text x="80" y="998" font-size="28" font-weight="500" fill="#b2dfdb">주차장 도보 20분 이내</text>
+    <text x="1000" y="968" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">13:00~</text>
+    <line x1="80" y1="1050" x2="1000" y2="1050" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="1122" font-size="42" font-weight="700" fill="#ffffff">최소 탐방 시간</text>
+    <text x="1000" y="1122" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">4~5시간</text>
+  </g>
+
+  <text x="80" y="1240" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">오후 17:00 입장 마감 · 전체 코스는 프로필 블로그에서.</text>
+</svg>

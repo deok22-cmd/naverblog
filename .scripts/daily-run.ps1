@@ -139,8 +139,8 @@ if ($exit -ne 0) {
                 }
                 if ($cardCnt -lt 1) {
                     Write-Log "  SKIP $slugName : card SVG 없음"
-                } elseif ($pngCnt -ge 10) {
-                    Write-Log "  SKIP $slugName : png 이미 $pngCnt 개 (멱등)"
+                } elseif ($pngCnt -ge $cardCnt) {
+                    Write-Log "  SKIP $slugName : png 이미 $pngCnt 개 (card $cardCnt, 멱등)"
                 } else {
                     Write-Log "  RENDER $slugName"
                     & node "$ProjectRoot\scripts\insta_render.mjs" "$slugDir" 2>&1 |

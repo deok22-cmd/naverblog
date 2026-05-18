@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== P1 : 정보 표 (사진중심 · 전면 스크림 워시만, 불투명 박스/보더 없음) ===== -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="190" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">정보 한눈에</text>
+  <rect x="82" y="224" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="356" font-size="38" font-weight="600" fill="#ffffff">위치</text>
+    <text x="1000" y="356" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">전남 함평군 함평읍</text>
+    <line x1="80" y1="392" x2="1000" y2="392" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="470" font-size="38" font-weight="600" fill="#ffffff">수국 개화</text>
+    <text x="1000" y="470" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">6월 초~중순 예상</text>
+    <line x1="80" y1="506" x2="1000" y2="506" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="584" font-size="38" font-weight="600" fill="#ffffff">교통</text>
+    <text x="1000" y="584" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">광주송정역 버스 / 함평IC</text>
+    <line x1="80" y1="620" x2="1000" y2="620" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="698" font-size="38" font-weight="600" fill="#ffffff">입장료</text>
+    <text x="1000" y="698" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">행사 기간 별도 사전 확인</text>
+    <line x1="80" y1="734" x2="1000" y2="734" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="812" font-size="38" font-weight="600" fill="#ffffff">주차</text>
+    <text x="1000" y="812" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">공원 내 대형 주차장</text>
+    <line x1="80" y1="848" x2="1000" y2="848" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="926" font-size="38" font-weight="600" fill="#ffffff">운영</text>
+    <text x="1000" y="926" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">공원 상시 개방</text>
+    <line x1="80" y1="962" x2="1000" y2="962" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="1040" font-size="38" font-weight="600" fill="#ffffff">문의</text>
+    <text x="1000" y="1040" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">061-320-2566</text>
+  </g>
+
+  <text x="80" y="1150" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">2026년 기준 · 방문 전 함평군청 홈페이지 최신 공지 확인.</text>
+</svg>

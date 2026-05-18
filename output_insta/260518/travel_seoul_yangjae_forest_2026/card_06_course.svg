@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== P2 : 코스 단계 (course · 하루 코스 제안 4~5시간) ===== -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1f1c"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="270" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">하루 코스 제안</text>
+  <rect x="82" y="304" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="430" font-size="40" font-weight="700" fill="#ffffff">양재역 도착 → 메타세콰이어 숲길</text>
+    <text x="80" y="474" font-size="27" font-weight="500" fill="#b2dfdb">8번 출구 도보 5분, 초록 터널 산책</text>
+    <text x="1000" y="446" font-size="34" font-weight="800" fill="#80cbc4" text-anchor="end">40분</text>
+    <line x1="80" y1="522" x2="1000" y2="522" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="592" font-size="40" font-weight="700" fill="#ffffff">야생화 단지 · 자작나무 숲</text>
+    <text x="80" y="636" font-size="27" font-weight="500" fill="#b2dfdb">동쪽·북쪽 구역 여유 산책</text>
+    <text x="1000" y="608" font-size="34" font-weight="800" fill="#80cbc4" text-anchor="end">30분</text>
+    <line x1="80" y1="684" x2="1000" y2="684" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="754" font-size="40" font-weight="700" fill="#ffffff">잔디광장 피크닉</text>
+    <text x="80" y="798" font-size="27" font-weight="500" fill="#b2dfdb">메타세콰이어 경계 그늘 명당</text>
+    <text x="1000" y="770" font-size="34" font-weight="800" fill="#80cbc4" text-anchor="end">60분</text>
+    <line x1="80" y1="846" x2="1000" y2="846" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="916" font-size="40" font-weight="700" fill="#ffffff">양재천 자전거 편도 라이딩</text>
+    <text x="80" y="960" font-size="27" font-weight="500" fill="#b2dfdb">대여 후 편도 4km 라이딩</text>
+    <text x="1000" y="932" font-size="34" font-weight="800" fill="#80cbc4" text-anchor="end">60분</text>
+    <line x1="80" y1="1008" x2="1000" y2="1008" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="1078" font-size="40" font-weight="700" fill="#ffffff">귀환 후 카페</text>
+    <text x="80" y="1122" font-size="27" font-weight="500" fill="#b2dfdb">양재역·양재천 수변 카페</text>
+    <text x="1000" y="1094" font-size="34" font-weight="800" fill="#80cbc4" text-anchor="end">30분</text>
+    <line x1="80" y1="1170" x2="1000" y2="1170" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="1240" font-size="42" font-weight="800" fill="#ffffff">총 소요 시간</text>
+    <text x="1000" y="1240" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">4~5시간</text>
+  </g>
+</svg>

@@ -17,8 +17,8 @@
 
 ## 3. 멱등 처리 (Resume-safe)
 
-- 각 `<slug>` 에 대해 `output_insta/YYMMDD/<slug>/` 에 `card_01_*.svg ~ card_10_*.svg` 가 **이미 10개 존재**하면 그 슬러그는 **건너뛴다**(이전 실행/재실행 중복 방지).
-- 하나도 없거나 불완전하면 생성 대상.
+- 각 `<slug>` 에 대해 `output_insta/YYMMDD/<slug>/` 에 **완성 세트**(`caption.txt` + `prompts.md` + `card_01_*.svg`부터 마지막 CTA까지 연속 `card_*.svg` ≥6장, prompts.md 코드블록 수 = svg 수)가 이미 있으면 그 슬러그는 **건너뛴다**(이전 실행/재실행 중복 방지).
+- 카드 수는 가변(7~10)이므로 "정확히 10개"를 기준으로 삼지 않는다. 세트가 없거나 불완전(파일 누락·블록 수 불일치, 또는 카드 7장 미만)하면 생성 대상.
 
 ## 4. 생성 (insta-card-builder 서브에이전트)
 
@@ -26,9 +26,9 @@
 
 - 원고(사실 진실원천) 절대경로: `D:\lightsail\naverblog\output\YYMMDD\<slug>.html`
 - 출력 폴더(정확히): `D:\lightsail\naverblog\output_insta\YYMMDD\<slug>\`
-- 표준: `output_insta/_layouts/` 라이브러리 v2 + `README.md` 회전 규칙을 그대로 적용. slug 문자코드 합 시드로 02~09 그룹타입 결정(콘텐츠 형태 최우선, 인접 비동일, 03/04/06 3종 상이). card_01=커버·card_10=CTA 고정.
+- 표준: `output_insta/_layouts/` 라이브러리 + `README.md` **§2–3 가변 길이 규칙**을 그대로 적용. slug 문자코드 합 시드로 **카드 총수(7~10, 하한 7 엄수)·중간 역할 선택·순서·그룹타입**을 결정(콘텐츠 형태 최우선 = info/course/tips/caution 소스 없으면 그 카드 미생성하되 원고 h2 point로 보충해 최소 7장, 인접 비동일, 여러 point는 서로 다른 타입, 장수·순서가 글마다 다르게). `card_01`=커버 고정, **마지막 카드**=CTA 고정, 파일번호 연속(빈 번호 없음). 같은 날 5슬러그의 (장수·역할순서)가 최소 3종 이상 달라야 함.
 - 카테고리 팔레트: 원고 카테고리로 판별(국내여행 `#00796b/#004d40/#e0f2f1/#80cbc4/#b2dfdb/#cfd8d6`).
-- 산출 3종만: `card_01_*.svg`~`card_10_*.svg`(BG 슬롯+주석 보존, viewBox 1080x1350, 한글 살아있는 `<text>`), `prompts.md`(README §5 규칙), `caption.txt`(해시태그 15개).
+- 산출 3종만: `card_01_*.svg`~`card_NN_*.svg`(연속 7~10장, BG 슬롯+주석 보존, viewBox 1080x1350, 한글 살아있는 `<text>`), `prompts.md`(README §5 규칙, 코드블록 수 = svg 수), `caption.txt`(해시태그 15개).
 - 수치는 원고 값만, 없으면 칩/행/타일 제외(창작 금지). 배경 SVG/프롬프트에 글자 렌더 요청 금지.
 
 ## 5. 금지 사항 (절대 준수)

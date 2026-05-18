@@ -15,3 +15,6 @@ package-lock.json
 output_insta/**/img/
 output_insta/**/*_done.svg
 output_insta/**/png/
+
+# 인스타 재구성 전 로컬 안전 백업 (임시·로컬 전용 — 커밋 제외)
+output_insta/**/_backup_pre_recompose/

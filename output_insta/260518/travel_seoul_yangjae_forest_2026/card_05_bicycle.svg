@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== E : 하단 텍스트 (point 양재천 자전거 · 사진 최대 · 하단 스크림만) ===== -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.52" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.82"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="1006" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="28" font-weight="700" fill="#80cbc4" letter-spacing="3">양재천 자전거 연계</text>
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="74" font-weight="800" fill="#ffffff" letter-spacing="-2">
+    <tspan x="80" y="1098">13km 수변 전용도로</tspan>
+    <tspan x="80" y="1180">왕복 2.5~3시간</tspan>
+  </text>
+  <text x="80" y="1248" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="500" fill="#e0f2f1">차도와 완전 분리, 일반·전기·따릉이 대여 가능. 시간 없으면 편도 4~5km 반환.</text>
+</svg>
