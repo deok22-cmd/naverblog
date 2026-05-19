@@ -238,8 +238,8 @@ try {
     }
 
     # 오늘자 output_insta(인스타 카드) 폴더 stage
-    # .gitignore가 대용량 산출물(*_done.svg, png/, img/)은 자동 제외 →
-    # 가벼운 원본(prompts.md/caption.txt/card_NN_*.svg)만 push됨.
+    # 원본(prompts.md/caption.txt/card_NN_*.svg) + **png/(인스타 즉시 업로드용 최종본,
+    # 2026-05-19부터 push 포함)**. .gitignore가 img/·*_done.svg만 제외(재생성 가능).
     if (Test-Path $InstaAbsPath) {
         $out = & git add -- $InstaRelPath 2>&1
         if ($out) { $out | ForEach-Object { Write-Log "git add output_insta: $_" } }

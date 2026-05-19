@@ -11,10 +11,12 @@ package-lock.json
 # 시크릿 (절대 커밋 금지) — GEMINI_API_KEY 등
 .scripts/secret.env.ps1
 
-# 인스타 대용량 산출물 (재생성 가능 — 리포 비대화 방지, 로컬 보관/업로드용)
+# 인스타 대용량 산출물 (재생성 가능 — 리포 비대화 방지, 로컬 보관)
 output_insta/**/img/
 output_insta/**/*_done.svg
-output_insta/**/png/
+# output_insta/**/png/  ← 2026-05-19 해제: png는 인스타 즉시 업로드용 최종본이라
+#   원격에서 사용해야 하므로 git push 대상으로 포함(사용자 요청).
+#   ※ 일 ~70MB 누적 — 비대화 시 retention(오래된 날짜 png 정리) 도입 검토.
 
 # 인스타 재구성 전 로컬 안전 백업 (임시·로컬 전용 — 커밋 제외)
 output_insta/**/_backup_pre_recompose/
