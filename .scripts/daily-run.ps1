@@ -157,6 +157,32 @@ if ($exit -ne 0) {
     }
 }
 
+# === Step 1.7: 티스토리 Phase B 검수 게이트 (구조+중복) ===
+# daily-prompt.md §5.5.9-bis/ter. 모델 honor-system이 아닌 wrapper 강제 지점.
+# FAIL 시 $gateBlocked=$true → Step 2에서 commit/push 차단.
+Write-Log ""
+Write-Log "=== Tistory QA Gate @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="
+$gateBlocked = $false
+if ($exit -ne 0) {
+    Write-Log "SKIP Gate: Claude content step exit $exit (콘텐츠 실패 시 push도 어차피 스킵)."
+} else {
+    $GateScript = Join-Path $ScriptsDir "tistory-gate.ps1"
+    $GateDay    = Get-Date -Format "yyMMdd"
+    if (Test-Path -LiteralPath $GateScript) {
+        & powershell -NoProfile -ExecutionPolicy Bypass -File $GateScript -Day $GateDay 2>&1 |
+        ForEach-Object {
+            $line = "$_"
+            Write-Host $line
+            [System.IO.File]::AppendAllText($LogFile, "$line`r`n", $utf8NoBom)
+        }
+        $gateExit = $LASTEXITCODE
+        Write-Log "Gate exit code: $gateExit"
+        if ($gateExit -ne 0) { $gateBlocked = $true }
+    } else {
+        Write-Log "WARN: $GateScript 없음 — 게이트 미실행(차단하지 않음)."
+    }
+}
+
 # === Step 2: 작성 성공 시 git add / commit / push ===
 Write-Log ""
 Write-Log "=== Git Auto-Push @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="
@@ -164,6 +190,11 @@ Write-Log "=== Git Auto-Push @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="
 if ($exit -ne 0) {
     Write-Log "SKIP: Claude exited with code $exit, no push attempted."
     exit $exit
+}
+
+if ($gateBlocked) {
+    Write-Log "[BLOCK] Tistory QA Gate FAIL — commit/push 중단. FAIL 슬러그를 표준 템플릿으로 재작성 후 다음 실행에서 재검증."
+    exit 2
 }
 
 try {
@@ -174,6 +205,8 @@ try {
     $TistoryAbsPath       = Join-Path $ProjectRoot "output_tistory\$YYMMDD"
     $ImagesRelPath        = "images/$YYMMDD"
     $ImagesAbsPath        = Join-Path $ProjectRoot "images\$YYMMDD"
+    $InstaRelPath         = "output_insta/$YYMMDD"
+    $InstaAbsPath         = Join-Path $ProjectRoot "output_insta\$YYMMDD"
     # 추적 가능한 트래커 파일 (있을 때만 stage)
     $Trackers = @(
         "국내여행지.md",
@@ -202,6 +235,16 @@ try {
     if (Test-Path $ImagesAbsPath) {
         $out = & git add -- $ImagesRelPath 2>&1
         if ($out) { $out | ForEach-Object { Write-Log "git add images: $_" } }
+    }
+
+    # 오늘자 output_insta(인스타 카드) 폴더 stage
+    # .gitignore가 대용량 산출물(*_done.svg, png/, img/)은 자동 제외 →
+    # 가벼운 원본(prompts.md/caption.txt/card_NN_*.svg)만 push됨.
+    if (Test-Path $InstaAbsPath) {
+        $out = & git add -- $InstaRelPath 2>&1
+        if ($out) { $out | ForEach-Object { Write-Log "git add output_insta: $_" } }
+    } else {
+        Write-Log "WARN: $InstaAbsPath not found. Skipping insta stage."
     }
 
     # 통합 대시보드 stage (매일 갱신되므로 항상 포함)

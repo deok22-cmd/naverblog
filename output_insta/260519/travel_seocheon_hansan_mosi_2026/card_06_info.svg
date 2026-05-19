@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== P1 : 정보 표 — info (2026 한산모시문화제 행사 정보) =====
+       slug: travel_seocheon_hansan_mosi_2026 | seed=3161 | layout=P1 (5행) -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.52"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.68"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="270" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">행사 정보 한눈에</text>
+  <rect x="82" y="304" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="450" font-size="42" font-weight="600" fill="#ffffff">축제 기간</text>
+    <text x="1000" y="450" font-size="40" font-weight="800" fill="#80cbc4" text-anchor="end">2026.06.12(금)~06.14(일)</text>
+    <line x1="80" y1="492" x2="1000" y2="492" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="582" font-size="42" font-weight="600" fill="#ffffff">장소</text>
+    <text x="1000" y="582" font-size="40" font-weight="800" fill="#80cbc4" text-anchor="end">한산모시관 일원, 서천</text>
+    <line x1="80" y1="624" x2="1000" y2="624" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="714" font-size="42" font-weight="600" fill="#ffffff">입장료</text>
+    <text x="1000" y="714" font-size="40" font-weight="800" fill="#80cbc4" text-anchor="end">무료 (체험 소재비 별도)</text>
+    <line x1="80" y1="756" x2="1000" y2="756" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="846" font-size="42" font-weight="600" fill="#ffffff">주요 프로그램</text>
+    <text x="1000" y="846" font-size="40" font-weight="800" fill="#80cbc4" text-anchor="end">길쌈놀이·패션쇼·베틀짜기</text>
+    <line x1="80" y1="888" x2="1000" y2="888" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="978" font-size="42" font-weight="600" fill="#ffffff">문의</text>
+    <text x="1000" y="978" font-size="40" font-weight="800" fill="#80cbc4" text-anchor="end">041-957-9030</text>
+  </g>
+
+  <text x="80" y="1110" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">2026년 기준 · 심화 체험(한산모시학교)은 사전 예약 필요.</text>
+</svg>

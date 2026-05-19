@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== G0 Cover : 커버 훅 — travel_andong_hwahoe_mask_2026 =====
+       카테고리: 국내여행  팔레트: #00796b / #004d40 / #e0f2f1 -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.30" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.88"/>
+    </linearGradient>
+    <linearGradient id="scrimTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.52"/>
+      <stop offset="0.28" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1f1c"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimTop)"/>
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <!-- 상단 브랜드 워드마크 -->
+  <text x="80" y="96" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#80cbc4" letter-spacing="3">travelkorea_365</text>
+
+  <!-- 메인 타이틀 -->
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="108" font-weight="800" fill="#ffffff" letter-spacing="-3">
+    <tspan x="80" y="950">하회별신굿</tspan>
+    <tspan x="80" y="1072">탈놀이</tspan>
+  </text>
+
+  <!-- 서브 태그라인 -->
+  <text x="80" y="1168" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="42" font-weight="500" fill="#e0f2f1">유네스코 무형유산 · 6월 공연 완전 가이드</text>
+
+  <!-- 액센트 바 -->
+  <rect x="80" y="900" width="80" height="10" fill="#00796b"/>
+
+  <!-- 칩 -->
+  <rect x="80" y="1212" width="300" height="66" rx="33" fill="#00796b"/>
+  <text x="230" y="1256" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="700" fill="#ffffff" text-anchor="middle">무료 관람</text>
+  <rect x="398" y="1212" width="340" height="66" rx="33" fill="#004d40"/>
+  <text x="568" y="1256" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="700" fill="#e0f2f1" text-anchor="middle">화~일 오후 2시</text>
+</svg>

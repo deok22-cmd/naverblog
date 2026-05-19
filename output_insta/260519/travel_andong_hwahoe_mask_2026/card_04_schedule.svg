@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== A : 헤드라인-하단 — point 역할 (6월 공연 일정) =====
+       카테고리: 국내여행  팔레트: #00796b / #004d40 / #e0f2f1 -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.40" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.82"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <rect x="80" y="852" width="64" height="10" fill="#00796b"/>
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="98" font-weight="800" fill="#ffffff" letter-spacing="-2">
+    <tspan x="80" y="980">6월 공연</tspan>
+    <tspan x="80" y="1082">일정 안내</tspan>
+  </text>
+
+  <g id="chips">
+    <rect x="80" y="1130" width="310" height="74" rx="37" fill="#00796b"/>
+    <text x="235" y="1178" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle">화~일 오후 2시</text>
+    <rect x="408" y="1130" width="200" height="74" rx="37" fill="#00796b"/>
+    <text x="508" y="1178" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle">무료</text>
+  </g>
+
+  <text x="80" y="1268" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e0f2f1">야외 공연 · 기상 악화 시 취소 가능</text>
+  <text x="80" y="1318" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="500" fill="#b2dfdb">당일 확인: 054-854-3664</text>
+</svg>
