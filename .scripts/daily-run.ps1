@@ -238,11 +238,19 @@ try {
     }
 
     # 오늘자 output_insta(인스타 카드) 폴더 stage
-    # 원본(prompts.md/caption.txt/card_NN_*.svg) + **png/(인스타 즉시 업로드용 최종본,
-    # 2026-05-19부터 push 포함)**. .gitignore가 img/·*_done.svg만 제외(재생성 가능).
     if (Test-Path $InstaAbsPath) {
+        # (1) 원본(prompts.md/caption.txt/card_NN_*.svg) — .gitignore 존중(img/·*_done.svg·png/ 제외)
         $out = & git add -- $InstaRelPath 2>&1
         if ($out) { $out | ForEach-Object { Write-Log "git add output_insta: $_" } }
+        # (2) **당일 png만 강제 포함** (인스타 즉시 업로드용 최종본 — 원격 사용 필요, 2026-05-19).
+        #     png는 .gitignore 기본 제외(과거 누적분 사고 방지)라 -f로 당일치만 push.
+        Get-ChildItem -LiteralPath $InstaAbsPath -Directory -ErrorAction SilentlyContinue | ForEach-Object {
+            $pngRel = "$InstaRelPath/$($_.Name)/png"
+            if (Test-Path -LiteralPath (Join-Path $_.FullName "png")) {
+                $out = & git add -f -- $pngRel 2>&1
+                if ($out) { $out | ForEach-Object { Write-Log "git add -f png: $_" } }
+            }
+        }
     } else {
         Write-Log "WARN: $InstaAbsPath not found. Skipping insta stage."
     }

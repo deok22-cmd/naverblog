@@ -14,9 +14,11 @@ package-lock.json
 # 인스타 대용량 산출물 (재생성 가능 — 리포 비대화 방지, 로컬 보관)
 output_insta/**/img/
 output_insta/**/*_done.svg
-# output_insta/**/png/  ← 2026-05-19 해제: png는 인스타 즉시 업로드용 최종본이라
-#   원격에서 사용해야 하므로 git push 대상으로 포함(사용자 요청).
-#   ※ 일 ~70MB 누적 — 비대화 시 retention(오래된 날짜 png 정리) 도입 검토.
+output_insta/**/png/
+#  ↑ png는 기본 제외 유지(과거 날짜 누적분이 git add -A로 휩쓸리는 사고 방지).
+#  단 인스타 즉시 업로드용이라 원격 사용 필요 → daily-run.ps1이 **당일 폴더 png만
+#  `git add -f`로 강제 포함**해 push(사용자 요청, 2026-05-19). 과거 날짜 png는
+#  계속 제외돼 status 깨끗·리포 비대화 없음.
 
 # 인스타 재구성 전 로컬 안전 백업 (임시·로컬 전용 — 커밋 제외)
 output_insta/**/_backup_pre_recompose/
