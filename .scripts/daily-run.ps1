@@ -255,6 +255,24 @@ try {
         Write-Log "WARN: $InstaAbsPath not found. Skipping insta stage."
     }
 
+    # 인스타 png retention (2026-05-19): 약 3일 지난 날짜의 추적 png를 git에서 제거.
+    # png는 인스타 즉시 업로드용이라 최근 ~3일만 원격 보유하면 충분 → 누적 비대화 방지.
+    # git rm(인덱스+워킹트리)로 다음 커밋부터 최신 트리에서 빠진다(원본 SVG/캡션은 유지).
+    try {
+        $pngCutoff = [int]((Get-Date).AddDays(-3).ToString("yyMMdd"))
+        $trackedInsta = & git ls-files -- output_insta 2>$null
+        $oldPng = @($trackedInsta | Where-Object {
+            $_ -match '^output_insta/(\d{6})/.+/png/.+\.png$' -and [int]$Matches[1] -lt $pngCutoff
+        })
+        if ($oldPng.Count -gt 0) {
+            $rmOut = & git rm -q --ignore-unmatch -- $oldPng 2>&1
+            if ($rmOut) { $rmOut | ForEach-Object { Write-Log "git rm old png: $_" } }
+            Write-Log "insta png retention: $($oldPng.Count)개 png 제거 (날짜 < $pngCutoff)"
+        } else {
+            Write-Log "insta png retention: 제거 대상 없음 (cutoff $pngCutoff)"
+        }
+    } catch { Write-Log "WARN insta png retention: $_" }
+
     # 통합 대시보드 stage (매일 갱신되므로 항상 포함)
     $DashboardAbsPath = Join-Path $ProjectRoot "dashboard.html"
     if (Test-Path $DashboardAbsPath) {
