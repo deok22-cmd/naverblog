@@ -55,6 +55,9 @@ foreach ($f in $files) {
   if ($h -match '>작성일 20') { $codes += 'F6:작성일줄' }
   # F7 팔레트 이탈 색 (2026-05-19 #4/#5 드리프트 실측색 denylist)
   if ($h -match '#4a8c4a|#2e7da6|#1a4f6e|#2d5a2d|#3d7a3d|#246090|#e6c840') { $codes += 'F7:비팔레트색' }
+  # F8 태그칩 누락 (2026-05-20 추가) — 표준 10개 chip(span background:#f0f0f0); 8 미만이면 FAIL.
+  $chipCount = ([regex]::Matches($h, 'background:#f0f0f0')).Count
+  if ($chipCount -lt 8) { $codes += "F8:태그칩부족($chipCount)" }
 
   $structFail = $codes.Count -gt 0
 
