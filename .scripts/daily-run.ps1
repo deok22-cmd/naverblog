@@ -2,13 +2,11 @@
 # Windows 작업 스케줄러가 매일 새벽 4:00 실행
 # 1) Claude CLI로 원고 5건 작성 → 2) 작성 결과만 GitHub에 자동 push
 
-# === 티스토리 자동 발행 일시 중단 플래그 (2026-05-20 사용자 지시) ===
-# 사유: 티스토리 애드센스 인증 위해 AI 일괄 업로드 보류, 사용자가 자기 여행
-#       이미지로 수동 1건만 작성한다(작성 가이드: 티스토리수동작성.md).
-# True 동안: ① Step 1.7 게이트 호출 skip ② Step 2 output_tistory 스테이징 skip.
-# 재개: 사용자가 "티스토리 원고 자동작성 재개해줘" 라고 하면 본 값을 $false 로
-#       변경하고 daily-prompt.md §5 SUSPENDED 배너 제거.
-$TistorySuspended = $true
+# === 티스토리 자동 발행 플래그 (2026-05-20 재개) ===
+# 2026-05-20 일시 중단 → 2026-05-20 같은 날 사용자 지시로 재개.
+# False(현재): 티스토리 미러 5건 + 게이트 정상 실행.
+# True 로 다시 돌리려면 사용자가 "티스토리 자동작성 중단해줘" 등 명확히 지시.
+$TistorySuspended = $false
 
 $ErrorActionPreference = "Continue"
 $ProjectRoot = "D:\lightsail\naverblog"

@@ -2,9 +2,7 @@
 
 매일 새벽 4시 KST 작업 스케줄러가 실행. 작업 디렉터리는 이미 `D:\lightsail\naverblog`.
 
-**큰 틀 (2026-05-20 현재)**: 네이버 원고 5건 → ~~티스토리 5건~~(**자동 일시 중단**) → 인스타 카드 5건.
-
-> ⛔ **티스토리 자동 발행 일시 중단** (2026-05-20, 사용자 지시): 애드센스 인증 위해 AI 일괄 업로드 보류. **자동 실행에서는 §5(티스토리 미러)를 완전히 건너뛴다** — 파일 작성·폴더 생성 X, 게이트 호출 X(wrapper가 skip). 출력 한 줄에 `tistory: SUSPENDED`를 덧붙인다. 티스토리 수동 1건은 사용자가 별도 요청 시 `티스토리수동작성.md` 가이드로 진행. **재개 트리거**: 사용자가 *"티스토리 원고 자동작성 재개해줘"* 라고 하면 본 배너 제거 + `daily-run.ps1`의 `$TistorySuspended = $false` 동시 복원.
+**큰 틀**: 네이버 원고 5건 → 티스토리 미러 5건 → 인스타 카드 5건.
 
 ---
 
@@ -70,8 +68,6 @@
 
 ## 5. 티스토리 미러 5건 (`output_tistory/YYMMDD/<slug>.html`)
 
-> 🛑 **현재 자동 일시 중단** — 본 §5는 *작성하지 않는다*. 큰 틀 안내 참조. 아래 룰은 재개 후 사용용으로 보존만.
-
 > ⛔ 티스토리는 **글을 새로 쓰는 일**이다. 네이버 HTML을 CSS만 바꿔 옮기는 것이 아니다. 제목·본문이 네이버와 그대로 같으면 중복 콘텐츠 저품질 위험.
 
 - **폴더·파일명**: 네이버와 동일 slug.
@@ -131,11 +127,10 @@
 
 ## 9. 완료 출력
 
-성공 (티스토리 일시 중단 중인 현재):
+성공:
 ```
-[DAILY OK YYYY-MM-DD] 5 naver created in output/YYMMDD/, tistory: SUSPENDED, trackers updated, 0 git commits
+[DAILY OK YYYY-MM-DD] 5 naver + 5 tistory created in output/YYMMDD/, trackers updated, 0 git commits
 ```
-(자동 재개 후) `5 naver + 5 tistory created in ...` 형태로 복원.
 
 오류:
 ```
