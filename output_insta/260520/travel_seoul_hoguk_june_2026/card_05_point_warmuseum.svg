@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== A : 헤드라인-하단 (point - 전쟁기념관 전시 구성) ===== -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.40" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.82"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1f1c"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <rect x="80" y="852" width="64" height="10" fill="#00796b"/>
+  <text x="80" y="960" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="88" font-weight="800" fill="#ffffff" letter-spacing="-2">전쟁기념관</text>
+
+  <g id="chips">
+    <rect x="80" y="1008" width="306" height="74" rx="37" fill="#00796b"/>
+    <text x="233" y="1056" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle">입장 무료</text>
+    <rect x="406" y="1008" width="306" height="74" rx="37" fill="#00796b"/>
+    <text x="559" y="1056" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle">화~일 09:00~18:00</text>
+  </g>
+
+  <text x="80" y="1172" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e0f2f1">1층 전쟁역사실 · 2~3층 6·25전쟁 전시실</text>
+  <text x="80" y="1224" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e0f2f1">야외 전차·전투기·함포 전시 — 약 2~3시간 소요</text>
+</svg>

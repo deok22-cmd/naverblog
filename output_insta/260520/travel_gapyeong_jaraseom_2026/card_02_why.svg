@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== card_02 : why — E 레이아웃 (하단 텍스트·사진 최대) ===== -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.52" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.80"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d2620"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="1020" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="28" font-weight="700" fill="#80cbc4" letter-spacing="3">자라섬 꽃 페스타</text>
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="72" font-weight="800" fill="#ffffff" letter-spacing="-2">
+    <tspan x="80" y="1118">서울 60km,</tspan>
+    <tspan x="80" y="1204">사실상 무료</tspan>
+  </text>
+  <text x="80" y="1276" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="500" fill="#e0f2f1">5.23~6.14 · 10만㎡ 봄꽃밭 · 입장료 환급 가능</text>
+</svg>

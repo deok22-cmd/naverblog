@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== A : 헤드라인-하단 — point (장미 포토스팟 가이드, POOL[0]=A) ===== -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.40" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.82"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <rect x="80" y="852" width="64" height="10" fill="#00796b"/>
+  <text x="80" y="960" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="86" font-weight="800" fill="#ffffff" letter-spacing="-2">포토스팟</text>
+  <text x="80" y="1058" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="86" font-weight="800" fill="#ffffff" letter-spacing="-2">3선</text>
+
+  <g id="chips">
+    <rect x="80" y="1106" width="340" height="74" rx="37" fill="#00796b"/>
+    <text x="250" y="1153" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle">아치 터널</text>
+    <rect x="440" y="1106" width="340" height="74" rx="37" fill="#00796b"/>
+    <text x="610" y="1153" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle">분수대 화단</text>
+  </g>
+
+  <text x="80" y="1258" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="40" font-weight="500" fill="#e0f2f1">아치 터널 · 원형화단 · 언덕 전망대,</text>
+  <text x="80" y="1306" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="40" font-weight="500" fill="#e0f2f1">이른 아침 방문이 최상의 컷.</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== B : 상단 텍스트 (사진중심 · 상단 스크림) ===== point2 역할 — 개화 절정 시기 -->
+  <defs>
+    <linearGradient id="scrimTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.66"/>
+      <stop offset="0.36" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.78" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1f1c"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimTop)"/>
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="150" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#80cbc4" letter-spacing="3">개화 절정 타이밍</text>
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="86" font-weight="800" fill="#ffffff" letter-spacing="-2">
+    <tspan x="80" y="270">5월 23일~30일</tspan>
+    <tspan x="80" y="372">주말이 절정</tspan>
+  </text>
+  <text x="80" y="452" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="40" font-weight="500" fill="#e0f2f1">기온 15~22°C · 맑은 날 이른 오전 최적</text>
+
+  <text x="80" y="1290" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="600" fill="#e0f2f1">강비 직후엔 꽃잎이 지므로 출발 전 날씨 확인.</text>
+</svg>

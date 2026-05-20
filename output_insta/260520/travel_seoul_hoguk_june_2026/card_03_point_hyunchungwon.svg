@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== E : 하단 텍스트 (point - 국립서울현충원) ===== -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.52" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.80"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1f1c"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="1036" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="28" font-weight="700" fill="#80cbc4" letter-spacing="3">국립서울현충원</text>
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="70" font-weight="800" fill="#ffffff" letter-spacing="-2">
+    <tspan x="80" y="1120">동작역 도보 5분</tspan>
+  </text>
+  <text x="80" y="1192" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="500" fill="#e0f2f1">현충탑·묘역 산책·한강 전경 — 연중 09:00~18:00, 입장 무료</text>
+  <text x="80" y="1270" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="500" fill="#b2dfdb">지하철 4·9호선 동작역</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== card_03 : point1 — F 레이아웃 (텍스트 3포인트 리스트) ===== -->
+  <!-- 꽃밭 품종별 포토스팟: 작약·꽃양귀비·수레국화 3개 병렬 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.64"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d2620"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="250" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">포토스팟 3구역</text>
+  <rect x="82" y="284" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <rect x="80" y="452" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="520" font-size="46" font-weight="700" fill="#ffffff">작약 구역</text>
+    <text x="80" y="574" font-size="30" font-weight="500" fill="#b2dfdb">짙은 분홍·흰색 — 웨딩 콘셉트 사진 1순위</text>
+    <line x1="80" y1="636" x2="1000" y2="636" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="700" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="768" font-size="46" font-weight="700" fill="#ffffff">꽃양귀비 구역</text>
+    <text x="80" y="822" font-size="30" font-weight="500" fill="#b2dfdb">선명한 빨강·분홍 — 역광 촬영 시 꽃잎 반투명</text>
+    <line x1="80" y1="884" x2="1000" y2="884" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="948" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="1016" font-size="46" font-weight="700" fill="#ffffff">수레국화 구역</text>
+    <text x="80" y="1070" font-size="30" font-weight="500" fill="#b2dfdb">코발트블루 — 초록 줄기와 파란 꽃의 강렬한 대비</text>
+  </g>
+
+  <text x="80" y="1240" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#cfd8d6">포토프레임 조형물은 평일 오전 일찍 → 대기 없이 촬영.</text>
+</svg>
