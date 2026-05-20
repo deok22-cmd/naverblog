@@ -2,6 +2,14 @@
 # Windows 작업 스케줄러가 매일 새벽 4:00 실행
 # 1) Claude CLI로 원고 5건 작성 → 2) 작성 결과만 GitHub에 자동 push
 
+# === 티스토리 자동 발행 일시 중단 플래그 (2026-05-20 사용자 지시) ===
+# 사유: 티스토리 애드센스 인증 위해 AI 일괄 업로드 보류, 사용자가 자기 여행
+#       이미지로 수동 1건만 작성한다(작성 가이드: 티스토리수동작성.md).
+# True 동안: ① Step 1.7 게이트 호출 skip ② Step 2 output_tistory 스테이징 skip.
+# 재개: 사용자가 "티스토리 원고 자동작성 재개해줘" 라고 하면 본 값을 $false 로
+#       변경하고 daily-prompt.md §5 SUSPENDED 배너 제거.
+$TistorySuspended = $true
+
 $ErrorActionPreference = "Continue"
 $ProjectRoot = "D:\lightsail\naverblog"
 $ScriptsDir  = Join-Path $ProjectRoot ".scripts"
@@ -163,7 +171,9 @@ if ($exit -ne 0) {
 Write-Log ""
 Write-Log "=== Tistory QA Gate @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="
 $gateBlocked = $false
-if ($exit -ne 0) {
+if ($TistorySuspended) {
+    Write-Log "SKIP Gate: Tistory 자동 발행 일시 중단(`$TistorySuspended=$true). 수동 작성은 별도."
+} elseif ($exit -ne 0) {
     Write-Log "SKIP Gate: Claude content step exit $exit (콘텐츠 실패 시 push도 어차피 스킵)."
 } else {
     $GateScript = Join-Path $ScriptsDir "tistory-gate.ps1"
@@ -223,8 +233,10 @@ try {
         Write-Log "WARN: $TodayAbsPath not found. Skipping output stage."
     }
 
-    # 오늘자 output_tistory(티스토리 미러) 폴더 stage
-    if (Test-Path $TistoryAbsPath) {
+    # 오늘자 output_tistory(티스토리 미러) 폴더 stage — 자동 일시 중단 시 skip
+    if ($TistorySuspended) {
+        Write-Log "SKIP Tistory stage: 자동 발행 일시 중단(수동 1건은 사용자가 별도 stage/push)."
+    } elseif (Test-Path $TistoryAbsPath) {
         $out = & git add -- $TistoryRelPath 2>&1
         if ($out) { $out | ForEach-Object { Write-Log "git add output_tistory: $_" } }
     } else {
