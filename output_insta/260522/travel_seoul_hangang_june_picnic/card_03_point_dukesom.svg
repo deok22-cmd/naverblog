@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== C : 측면 텍스트 (point 역할) — 뚝섬한강공원 =====
+       타입 C: 좌측 방향 그라데, 서술형. 카테고리=국내여행 -->
+  <defs>
+    <linearGradient id="scrimLeft" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.74"/>
+      <stop offset="0.52" stop-color="#000000" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1f1c"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimLeft)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="430" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="28" font-weight="700" fill="#80cbc4" letter-spacing="3">뚝섬한강공원</text>
+
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="78" font-weight="800" fill="#ffffff" letter-spacing="-2">
+    <tspan x="80" y="540">수상스포츠와</tspan>
+    <tspan x="80" y="630">노을 명당</tspan>
+  </text>
+
+  <rect x="82" y="688" width="120" height="8" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="36" font-weight="500" fill="#e0f2f1">
+    <text x="80" y="790">2호선 뚝섬유원지역 도보 5분.</text>
+    <text x="80" y="848">카약·웨이크보드·수상스키 체험 가능.</text>
+    <text x="80" y="906">전망복합시설 앞 잔디 광장이 피크닉 명당.</text>
+  </g>
+
+  <text x="80" y="1040" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="36" font-weight="500" fill="#b2dfdb">아차산 방향 서쪽 노을 + 한강 황금빛 파노라마</text>
+</svg>

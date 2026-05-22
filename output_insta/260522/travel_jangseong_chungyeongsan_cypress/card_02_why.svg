@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- card_02 : why (E 타입 — 하단 텍스트, 사진 최대) — 왜 6월 편백숲인가 -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.52" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.80"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="1066" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="28" font-weight="700" fill="#80cbc4" letter-spacing="3">지금 가야 하는 이유</text>
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="72" font-weight="800" fill="#ffffff" letter-spacing="-2">
+    <tspan x="80" y="1150">피톤치드 절정</tspan>
+  </text>
+  <text x="80" y="1218" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="500" fill="#e0f2f1">6월, 700만 그루 편백이 가장 짙은 향을 뿜는 계절.</text>
+  <text x="80" y="1268" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="500" fill="#b2dfdb">7~8월 성수기보다 조용하고 서늘하다.</text>
+</svg>

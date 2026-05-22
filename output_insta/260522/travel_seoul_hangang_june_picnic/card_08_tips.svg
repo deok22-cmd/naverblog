@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== P3 : 체크리스트 (tips 역할) — 한강 피크닉 준비물 =====
+       타입 P3: 체크리스트 4항목 + 저장 유도. 카테고리=국내여행 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.48"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1f1c"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="270" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="60" font-weight="800" fill="#ffffff">피크닉 준비물 체크</text>
+  <rect x="82" y="304" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <rect x="80" y="430" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="500" font-size="42" font-weight="600" fill="#ffffff">방수 돗자리 — 풀물 방지 필수</text>
+    <line x1="80" y1="560" x2="1000" y2="560" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="610" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="680" font-size="42" font-weight="600" fill="#ffffff">모기 기피제 + 얇은 겉옷</text>
+    <line x1="80" y1="740" x2="1000" y2="740" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="790" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="860" font-size="42" font-weight="600" fill="#ffffff">음식·음료 (배달 앱 피크닉 픽업 가능)</text>
+    <line x1="80" y1="920" x2="1000" y2="920" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="970" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="1040" font-size="42" font-weight="600" fill="#ffffff">선크림 — 6월 강변 자외선 주의</text>
+  </g>
+
+  <text x="80" y="1150" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="40" font-weight="800" fill="#80cbc4">저장해두고 그대로 따라가세요  ↓</text>
+  <text x="80" y="1240" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">바비큐는 지정 구역에서만 / 직접 조리 대부분 구역 금지.</text>
+</svg>

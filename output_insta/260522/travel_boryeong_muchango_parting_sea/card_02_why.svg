@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== C : 측면 텍스트 — 왜 6월 무창포인가 ===== -->
+  <defs>
+    <linearGradient id="scrimLeft" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.74"/>
+      <stop offset="0.52" stop-color="#000000" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d2420"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimLeft)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="430" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="28" font-weight="700" fill="#80cbc4" letter-spacing="3">왜 지금 가나</text>
+
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="78" font-weight="800" fill="#ffffff" letter-spacing="-2">
+    <tspan x="80" y="540">6월이</tspan>
+    <tspan x="80" y="630">딱 좋은 이유</tspan>
+  </text>
+
+  <rect x="82" y="688" width="120" height="8" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="36" font-weight="500" fill="#e0f2f1">
+    <text x="80" y="790">장마 전, 맑고 파도 잔잔한 시기.</text>
+    <text x="80" y="848">바닷길 약 1.5km · 석대도까지</text>
+    <text x="80" y="906">맨발 갯벌 체험 최적 조건.</text>
+  </g>
+</svg>
