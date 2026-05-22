@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== card_03 : info (P4 — 핵심 팩트 4개) — 교통·주차 핵심 정보 ===== -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1f1c"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="270" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">가기 전 필수 정보</text>
+  <rect x="82" y="304" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="450" font-size="42" font-weight="600" fill="#ffffff">주차장</text>
+    <text x="1000" y="450" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">예구마을 · 소형차 30대</text>
+    <line x1="80" y1="492" x2="1000" y2="492" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="582" font-size="42" font-weight="600" fill="#ffffff">부산 → 거제</text>
+    <text x="1000" y="582" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">사상터미널 약 50분</text>
+    <line x1="80" y1="624" x2="1000" y2="624" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="714" font-size="42" font-weight="600" fill="#ffffff">통영 → 거제</text>
+    <text x="1000" y="714" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">약 40분</text>
+    <line x1="80" y1="756" x2="1000" y2="756" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="846" font-size="42" font-weight="600" fill="#ffffff">진입 주의</text>
+    <text x="1000" y="846" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">1차선 · 대형차 진입 불가</text>
+    <line x1="80" y1="888" x2="1000" y2="888" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+  </g>
+
+  <text x="80" y="980" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="700" fill="#e0f2f1">주말 절정기 — 오전 8~9시 도착 강력 권장</text>
+
+  <text x="80" y="1110" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">예구마을 주차 무료 또는 소액 유료(현지 확인 필요).</text>
+</svg>

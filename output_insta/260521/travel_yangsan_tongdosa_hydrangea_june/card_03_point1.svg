@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- F : 텍스트 3포인트 리스트 — point1 / 서운암 수국 포토존 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.48"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1f1c"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="230" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#80cbc4" letter-spacing="3">포토존 · 경내</text>
+  <text x="80" y="330" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="72" font-weight="800" fill="#ffffff" letter-spacing="-2">수국 잘 담기는</text>
+  <text x="80" y="420" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="72" font-weight="800" fill="#ffffff" letter-spacing="-2">포토존 3선</text>
+
+  <rect x="82" y="476" width="140" height="9" fill="#00796b"/>
+
+  <!-- 포인트 1 -->
+  <text x="80" y="590" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="44" font-weight="700" fill="#ffffff">돌계단 양쪽</text>
+  <text x="80" y="648" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="400" fill="#b2dfdb">입구 좌우로 수국이 늘어선 대표 포토존</text>
+  <line x1="80" y1="700" x2="1000" y2="700" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+  <!-- 포인트 2 -->
+  <text x="80" y="794" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="44" font-weight="700" fill="#ffffff">흰 담장 옆 구간</text>
+  <text x="80" y="852" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="400" fill="#b2dfdb">흰 담장과 파란 수국의 강렬한 색 대비</text>
+  <line x1="80" y1="904" x2="1000" y2="904" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+  <!-- 포인트 3 -->
+  <text x="80" y="998" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="44" font-weight="700" fill="#ffffff">뒤편 소나무숲 초입</text>
+  <text x="80" y="1056" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="400" fill="#b2dfdb">그늘 아래 수국군락, 오전 빛이 가장 아름다움</text>
+
+  <text x="80" y="1220" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="36" font-weight="600" fill="#80cbc4">저장하고 그대로 찾아가세요  ↓</text>
+</svg>
