@@ -22,6 +22,10 @@ $enc = [System.Text.Encoding]::UTF8
 $tdir = Join-Path $ProjectRoot "output_tistory\$Day"
 $ndir = Join-Path $ProjectRoot "output\$Day"
 
+# 추천(내부순환) 박스 헤딩 — 문구 변형 허용("같이 볼만한 글" / "함께 읽으면 좋은 글" 등).
+# F5 검사와 dedup $cut(추천박스 이후 산문 제외)이 같은 패턴을 공유한다.
+$recHead = '(같이|함께)[^<]{0,15}(볼만|보면|읽으면|읽어)[^<]{0,10}글'
+
 if (-not (Test-Path -LiteralPath $tdir)) {
   Write-Host "[BLOCK] tistory 폴더 없음: $tdir"
   exit 1
@@ -41,16 +45,16 @@ foreach ($f in $files) {
   $codes = @()
 
   # ===== 1) 구조 적합성 (Platinum 인라인 표준 / daily-prompt.md §5.5.4-bis) =====
-  # F1 외곽 래퍼 div (§5.5.4-bis 규칙 5) — 모든 정상본·기준템플릿(260511) 공통
-  if ($h -notmatch [regex]::Escape('max-width: 780px; margin: 0 auto; padding: 16px;')) { $codes += 'F1:wrapper없음' }
-  # F2 h1 Platinum 시그니처 (굵기 800 + 5px 밑줄). 색은 카테고리 무관(여행/레시피 공통 형태)
-  if ($h -notmatch [regex]::Escape('font-weight: 800; border-bottom: 5px solid')) { $codes += 'F2:h1비표준' }
+  # F1 외곽 래퍼 div (§5.5.4-bis 규칙 5) — 콜론 뒤 공백 유무 무관(압축 CSS 허용)
+  if ($h -notmatch 'max-width:\s*780px;\s*margin:\s*0\s+auto;\s*padding:\s*16px;') { $codes += 'F1:wrapper없음' }
+  # F2 h1 Platinum 시그니처 (굵기 800 + 5px 밑줄). 콜론 뒤 공백 유무 무관.
+  if ($h -notmatch 'font-weight:\s*800;\s*border-bottom:\s*5px\s+solid') { $codes += 'F2:h1비표준' }
   # F3 이미지 프롬프트 placeholder 누출 (네이버 전용 산출물이 티스토리로 새면 안 됨)
   if ($h -match '이미지 프롬프트 \(placeholder\)|AI 이미지 생성 영역|프롬프트 복사하기|prompt-text|img-placeholder|id="prompt-') { $codes += 'F3:프롬프트박스누출' }
   # F4 <style> 블록 / class 속성 (§5.5.4-bis 금지 — CSS-only 복사 사고 클래스도 차단)
   if ($h -match '<style' -or $h -match ' class="') { $codes += 'F4:style/class' }
-  # F5 추천(내부순환) 박스 — 정상본/기준템플릿은 둘 중 한 문구를 반드시 가짐
-  if (-not ($h -match '같이 볼만한 글' -or $h -match '같이 보면 좋은 글')) { $codes += 'F5:추천박스없음' }
+  # F5 추천(내부순환) 박스 — 헤딩 문구 변형 허용($recHead)
+  if ($h -notmatch $recHead) { $codes += 'F5:추천박스없음' }
   # F6 비표준 '작성일 20YY' 부제 줄 (표준 템플릿엔 없음 — 범용템플릿 드리프트 마커)
   if ($h -match '>작성일 20') { $codes += 'F6:작성일줄' }
   # F7 팔레트 이탈 색 (2026-05-19 #4/#5 드리프트 실측색 denylist)
@@ -72,8 +76,8 @@ foreach ($f in $files) {
     $cut = {
       param($x)
       $x = $x -replace '(?s)<script.*?</script>', '' -replace '(?s)<style.*?</style>', ''
-      $i = $x.IndexOf('같이 볼만한'); if ($i -lt 0) { $i = $x.IndexOf('같이 보면 좋은') }
-      if ($i -ge 0) { $x = $x.Substring(0, $i) }
+      $m = [regex]::Match($x, $recHead)
+      if ($m.Success) { $x = $x.Substring(0, $m.Index) }
       ($x -replace '<[^>]+>', ' ' -replace '\s+', ' ')
     }
     $nL = (& $cut $nc) -split '(?<=[.!?])\s+' | ForEach-Object { $_.Trim() } | Where-Object { $_.Length -ge 20 }
