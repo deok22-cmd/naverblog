@@ -122,6 +122,19 @@ node scripts/insta_rasterize.mjs output_insta/<YYMMDD>/<slug> [3,7]
 ### 3.6 비용 인지
 이미지 1장당 수 센트(모델별 상이). 원고 1건=10장, 일 N건이면 일일 비용 ≈ 10·N·단가. AI Studio에서 일일 쿼터·예산 알림 설정 권장.
 
+### 3.7 비용 절감 정책 — 첫 번째 원고만 자동 렌더 (2026-05-22, 못박음)
+> 배경: 인스타 채널이 아직 미수익화라 원고 1건당 ~3,000–4,000원의 이미지 자동생성 비용을 매일 5건 전부 지불하는 것은 부담. **별도 지시가 있을 때까지** 다음 정책을 적용한다.
+
+- **첫 번째 원고(원고 seq 1) 1건만** 기존 풀 프로세스 — Phase B 자동 이미지 생성 → `_done.svg` 주입 → PNG 래스터까지.
+- **2~5번 원고**는 `insta-card-builder` 산출물(`card_NN_*.svg` + `prompts.md` + `caption.txt`)까지만 두고, **운영자가 수동으로 이미지를 제작·삽입**한다(과금 0).
+- '첫 번째 원고' 판별 = `output/<YMD>/`의 네이버 HTML 중 **`CreationTime`이 가장 이른 것**(`index.html` 제외) = 원고 seq 1. `daily-run.ps1` Step 1.6 Phase C-2가 그 슬러그의 insta 폴더에만 `insta_render.mjs`+`insta_rasterize.mjs`를 실행하고, 나머지 슬러그는 `SKIP` 로그만 남긴다.
+- Phase C-1(서브에이전트의 SVG/프롬프트/캡션 생성)은 **변함없이 5건 전부** 수행한다 — 줄어드는 것은 Phase C-2(유료 렌더)뿐이다.
+- 정책 해제 시: `daily-run.ps1` Phase C-2의 `if ($slugName -ne $firstSlug) { ... return }` 가드를 제거하면 전 슬러그 자동 렌더로 복귀.
+
+### 3.8 우하단 브랜드 워터마크 (2026-05-22)
+- 전 카드 SVG는 우하단 코너에 `<g id="brand-watermark">` 배지(불투명 코너 탭 + 흰 `travelkorea_365`)를 가진다. `_layouts/` 전 템플릿 + 커버 템플릿에 내장 — 에이전트는 차용만 한다.
+- 목적: 수동(운영자가 Gemini 앱에서 받은 이미지)·자동 어느 경로든 배경 우하단에 찍히는 Gemini 로고를 불투명하게 가리고, 동시에 채널을 각인. 좌표·구조·표준은 `_layouts/README.md` §0 참조.
+
 ---
 
 ## 4 | 폴더·명명 규칙

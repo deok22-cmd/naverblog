@@ -122,8 +122,15 @@ if ($exit -ne 0) {
             Write-Log "WARN: $InstaPrompt 없음 — Phase C-1 스킵."
         }
 
-        # Phase C-2: 슬러그별 배경 생성 + 래스터 (순수 node — Claude 예산 미사용, 멱등)
+        # Phase C-2: 배경 생성 + 래스터 (순수 node — Claude 예산 미사용, 멱등)
+        #  ★ 비용 절감 정책 (2026-05-22): 인스타 미수익화 동안 유료 이미지 자동생성·
+        #     주입(_done.svg)·PNG는 '그날의 첫 번째 원고' 1건만 수행한다. 2~5번 원고는
+        #     card_*.svg/prompts.md/caption.txt(=Phase C-1 산출)까지만 두고 운영자가
+        #     수동으로 이미지를 넣는다. 별도 지시가 있을 때까지 유지.
+        #     '첫 번째 원고' = output/<YMD>/ 의 네이버 HTML 중 CreationTime 가장 이른
+        #     것(index.html 제외) = 원고 seq 1. 그 슬러그의 insta 폴더만 render+raster.
         $InstaDay = Join-Path $ProjectRoot "output_insta\$YMD"
+        $NaverDay = Join-Path $ProjectRoot "output\$YMD"
         $nodeOk   = [bool](Get-Command node -ErrorAction SilentlyContinue)
         if (-not $nodeOk) {
             Write-Log "WARN: node 미발견 — Phase C-2(이미지/래스터) 스킵."
@@ -132,10 +139,28 @@ if ($exit -ne 0) {
         } elseif (-not (Test-Path -LiteralPath $InstaDay)) {
             Write-Log "WARN: $InstaDay 없음 — insta-card-builder 산출물 없음. Phase C-2 스킵."
         } else {
-            Write-Log "--- Phase C-2: insta_render + insta_rasterize (node) ---"
+            # 그날의 첫 번째 원고 슬러그 판별 (네이버 HTML CreationTime 최솟값 = seq 1)
+            $firstSlug = $null
+            if (Test-Path -LiteralPath $NaverDay) {
+                $firstHtml = Get-ChildItem -LiteralPath $NaverDay -Filter "*.html" -ErrorAction SilentlyContinue |
+                             Where-Object { $_.Name -ne "index.html" } |
+                             Sort-Object CreationTime, Name | Select-Object -First 1
+                if ($firstHtml) { $firstSlug = $firstHtml.BaseName }
+            }
+            if (-not $firstSlug) {
+                # 폴백: 네이버 폴더 판별 실패 시 insta 폴더명 알파벳 첫 번째
+                $fb = Get-ChildItem -LiteralPath $InstaDay -Directory -ErrorAction SilentlyContinue |
+                      Sort-Object Name | Select-Object -First 1
+                if ($fb) { $firstSlug = $fb.Name }
+            }
+            Write-Log "--- Phase C-2: insta_render + insta_rasterize (첫 번째 원고만: $firstSlug) ---"
             Get-ChildItem -LiteralPath $InstaDay -Directory | ForEach-Object {
                 $slugName = $_.Name
                 $slugDir  = $_.FullName
+                if ($slugName -ne $firstSlug) {
+                    Write-Log "  SKIP $slugName : 2~5번 원고는 수동 이미지(비용 절감 정책 2026-05-22)"
+                    return
+                }
                 $cardCnt  = (Get-ChildItem -LiteralPath $slugDir -Filter "card_*.svg" -ErrorAction SilentlyContinue |
                              Where-Object { $_.Name -notlike "*_done.svg" }).Count
                 $pngDir   = Join-Path $slugDir "png"

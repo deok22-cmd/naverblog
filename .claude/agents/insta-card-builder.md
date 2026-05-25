@@ -68,6 +68,7 @@ model: sonnet
 - viewBox `0 0 1080 1350` 고정, `width/height` 동일
 - 배경 사각형은 반드시 `<rect id="BG__REPLACE_WITH_IMAGE" ...>` 1개 + 위에 안내 주석 (Figma image-fill 슬롯 / Phase B 스크립트 주입 지점)
 - scrim 그라데, 좌측 brand-bar, 배지, 헤드라인, 칩, 패널 구조는 프로토타입 그대로
+- **우하단 `<g id="brand-watermark">` 코너 배지는 전 카드(커버·중간·CTA) 필수** — 템플릿에 이미 들어 있으니 그대로 차용한다(좌표·`path`·구조 고정, `fill`만 카테고리 dark 팔레트로 치환, `travelkorea_365` 텍스트 상수). 절대 삭제·이동 금지. 배경 합성 시 우하단에 찍히는 Gemini 로고를 가리는 표준 요소다(README §0).
 - **CTA(마지막 카드)는 `_layouts/G9_cta_follow.svg` 강제**: 흰 팔로우 카드(`#follow-card`)·상단 브랜드 워드마크·`@travelkorea_365` 핸들 상수·북마크·info-chip·블로그 줄·해시태그 유지, 헤드라인 3줄만 slug별 변형. 이 흰 카드는 §0 불투명 금지의 유일 예외이므로 **CTA 외 카드엔 흰 카드/불투명 패널 절대 복제 금지**.
 - 폰트 `Pretendard, 'Apple SD Gothic Neo', sans-serif` 고정
 - 한글 텍스트는 살아있는 `<text>`로 유지 (Figma 편집 가능). path 아웃라인 금지
@@ -93,6 +94,7 @@ model: sonnet
 - [ ] 마지막 카드 = `G9_cta_follow.svg` 차용(흰 팔로우 카드+`@travelkorea_365`+브랜드 워드마크+북마크), 헤드라인 slug별 변형, CTA 외 카드엔 흰 카드/불투명 패널 0
 - [ ] 같은 날 다른 슬러그와 (장수·역할 순서)가 다르게 나오는 구성인지 확인(천편일률 금지)
 - [ ] SVG 전부 viewBox 1080×1350, `BG__REPLACE_WITH_IMAGE` 사각형 1개 + 주석 존재
+- [ ] 전 카드 우하단 `brand-watermark` 코너 배지 존재(템플릿 차용, fill 카테고리 dark, `travelkorea_365` 텍스트 유지)
 - [ ] 카테고리 컬러 팔레트 일관 적용 (프로토타입 색 잔존 없음)
 - [ ] 모든 텍스트가 원고 사실 기반 (가격·시간 창작 0), 소스 없는 역할 카드 미생성
 - [ ] prompts.md 코드블록 수 = SVG 수와 정확히 일치, 전부 스타일 앵커 인라인

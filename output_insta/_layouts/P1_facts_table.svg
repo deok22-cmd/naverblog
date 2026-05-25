@@ -36,4 +36,13 @@
   </g>
 
   <text x="80" y="1110" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">2026년 기준 · 보조 안내 한 줄.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) =====
+       배경 합성 시 우측 하단에 찍히는 Gemini 로고를 가리는 불투명 코너 배지 + 채널 각인.
+       BG·스크림 위 레이어. README §0 불투명 금지의 명문 예외(소형 코너 배지, G9 흰 카드와 동급).
+       'travelkorea_365' = 핸들 상수. fill만 카테고리 dark 팔레트로 치환, 좌표·구조 불변. -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
 </svg>
