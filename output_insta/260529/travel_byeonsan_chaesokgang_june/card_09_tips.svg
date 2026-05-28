@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== P3 : 체크리스트 / tips — 채석강 탐방 필수 준비물 ===== -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.48"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1f1c"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="270" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="60" font-weight="800" fill="#ffffff">이것만 알면 실패 없음</text>
+  <rect x="82" y="304" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <rect x="80" y="430" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="500" font-size="42" font-weight="600" fill="#ffffff">조석 시간표 앱 저장 — 출발 전 확인</text>
+    <line x1="80" y1="560" x2="1000" y2="560" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="610" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="680" font-size="42" font-weight="600" fill="#ffffff">미끄럼 방지 밑창 운동화 또는 트레킹화</text>
+    <line x1="80" y1="740" x2="1000" y2="740" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="790" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="860" font-size="42" font-weight="600" fill="#ffffff">우의 (서해 날씨는 빠르게 변함)</text>
+    <line x1="80" y1="920" x2="1000" y2="920" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="970" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="1040" font-size="42" font-weight="600" fill="#ffffff">스마트폰 손전등 — 동굴 내부 필수</text>
+  </g>
+
+  <text x="80" y="1150" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="40" font-weight="800" fill="#80cbc4">저장해두고 그대로 따라가세요  ↓</text>
+  <text x="80" y="1240" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">전체 가이드는 프로필 블로그에서.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>
