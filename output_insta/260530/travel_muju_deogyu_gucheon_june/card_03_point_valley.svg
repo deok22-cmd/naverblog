@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== D : 중앙 강조 문장 — 구천동계곡 핵심 매력 (point1) ===== -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.46"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.60"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="540" y="470" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="700" fill="#80cbc4" text-anchor="middle" letter-spacing="3">덕유산 · 구천동</text>
+
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="88" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="-2">
+    <tspan x="540" y="640">36km 계곡에</tspan>
+    <tspan x="540" y="752">초록 터널이</tspan>
+    <tspan x="540" y="864">펼쳐진다</tspan>
+  </text>
+
+  <rect x="490" y="918" width="100" height="6" fill="#00796b"/>
+
+  <text x="540" y="1010" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="40" font-weight="500" fill="#e0f2f1" text-anchor="middle">향적봉(1,614m) 수원지에서 내려오는 물줄기.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

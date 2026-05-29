@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px 14px; font-size: 0.95em; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #e0f2f1; font-size: 0.92em; }
+  .step-box { border-left: 4px solid #00796b; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .img-area { margin: 30px 0; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #bbb; border-radius: 8px; padding: 20px; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 700; color: #555; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 12px; font-size: 0.88em; color: #444; white-space: pre-wrap; margin: 8px 0; font-family: 'Courier New', monospace; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; font-size: 0.9em; margin-top: 6px; }
+  .img-caption { text-align: center; font-size: 0.88em; color: #777; margin-top: 8px; font-style: italic; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>강릉 경포해변 6월 초여름 — 개장 전 한산한 동해와 경포호 노을 산책</h1>
+
+<div class="intro-box">
+7월과 8월, 수십만 인파가 몰려드는 경포해변은 6월이면 전혀 다른 모습입니다.<br><br>
+아직 해수욕장 정식 개장(통상 7월 초) 전인 6월의 경포는 파도 소리와 갈매기 울음만 가득한 고요한 공간으로 돌아와 있습니다.<br><br>
+이른 아침 경포호에 피어오르는 물안개, 해 질 무렵 경포대 처마 아래로 물드는 석양, 안목해변 커피거리의 여유로운 아침 한 잔까지 — 6월 강릉은 진정한 여행의 맛을 느끼게 해 주는 계절입니다.<br><br>
+<strong>경포 여행 핵심 정보</strong>
+<table class="info-table" style="margin-top:15px;">
+  <tr><th>항목</th><th>내용</th></tr>
+  <tr><td>위치</td><td>강원도 강릉시 강문동 경포로 일원</td></tr>
+  <tr><td>해수욕장 개장</td><td>7월 초 (6월은 비개장 — 조용히 해변 산책 가능)</td></tr>
+  <tr><td>주차</td><td>경포해변 공영주차장 (소액 유료, 성수기 외 비교적 여유)</td></tr>
+  <tr><td>경포호 둘레길</td><td>약 4.3km, 소요 1시간 10분~1시간 30분</td></tr>
+  <tr><td>추천 방문시간</td><td>일출 전후(오전 5~7시) 또는 일몰 전후(오후 6~8시)</td></tr>
+</table>
+</div>
+
+<h2>01. 6월 경포해변, 피서객 없는 고요한 동해</h2>
+<p>강릉 경포해변은 동해안을 대표하는 피서지로, 해마다 7~8월이면 상상을 초월하는 인파가 몰립니다.<br><br>
+그러나 정식 개장 이전인 6월의 경포는 전혀 다른 매력을 품고 있습니다. 백사장에는 사람 대신 갈매기 발자국만 남아 있고, 파도 소리가 온전히 귀를 채우는 고요한 해변이 펼쳐집니다.<br><br>
+이 시기 경포에서는 해변 산책, 일출 감상, 해파랑길 트레킹 등 여유로운 활동이 가능하며, 숙박 요금도 성수기 대비 절반 이하로 내려가는 경우가 많습니다.<br><br>
+수온이 아직 피서에 적합하지 않지만 발목 정도의 물놀이나 맨발 해변 걷기를 즐기기에는 충분합니다.<br><br>
+6월 강릉의 평균 기온은 낮 20~24도, 아침저녁으로는 15~18도 수준으로, 긴소매 외투 하나만 챙기면 온종일 쾌적하게 움직일 수 있습니다.<br><br>
+여름의 시작이지만 아직 무덥지 않고, 동해 특유의 청명한 공기와 강렬한 파란 하늘이 최고의 배경을 만들어 주는 시기가 바로 6월입니다.</p>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260530/2_gyeongpo_beach_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-1">Empty Gyeongpo beach in Gangneung Korea in early June morning, wide white sandy beach with gentle waves, no tourists, clear blue sky with soft morning light, seagulls walking on the sand, East Sea ocean horizon, fresh clean atmosphere, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">6월 이른 아침 경포해변 — 피서객 없는 고요한 동해 / AI 제작 이미지</div>
+</div>
+
+<h2>02. 경포해변 기본 정보 — 위치·주차·접근법</h2>
+<p>경포해변은 강원도 강릉시 강문동에 위치하며, 강릉 시내에서 차로 약 10~15분 거리에 있습니다.<br><br>
+강릉KTX역에서 버스를 이용하면 경포대·경포해변 방면 시내버스가 정기 운행되어, 자가용 없이도 충분히 접근이 가능합니다.<br><br>
+공영주차장은 해변 인근에 여러 곳이 분산 배치되어 있습니다. 성수기를 제외한 6월에는 주차 공간이 비교적 여유롭고 요금도 합리적인 편입니다.<br><br>
+경포해변은 해변 자체 외에도 인근에 경포호·경포대·오죽헌·선교장 등 주요 명소가 연결되어 있어 하루 일정으로 여러 코스를 묶어 다닐 수 있습니다.<br><br>
+숙박은 경포해변 주변 팬션·모텔부터 강릉 시내 호텔까지 선택지가 다양합니다. 6월 비성수기에는 예약 없이도 당일 숙소를 구하기 어렵지 않습니다.<br><br>
+강릉은 강원도 주요 도시 중 접근성이 뛰어난 편으로, 수도권에서 KTX로 약 2시간이면 강릉역에 도착합니다.</p>
+
+<h2>03. 경포호 둘레길 — 새벽 물안개와 노을 산책</h2>
+<p>경포해변 바로 뒤편에 위치한 경포호는 면적이 약 1.2㎢에 달하는 자연호로, 둘레길이 약 4.3km 조성되어 있습니다.<br><br>
+이른 새벽이면 경포호 수면 위로 물안개가 피어오르는 신비로운 장관이 펼쳐집니다. 해 뜨기 30분 전인 오전 5시 내외에 도착하면 물안개와 일출이 어우러지는 최고의 순간을 만날 수 있습니다.<br><br>
+둘레길은 전체적으로 평탄하며 왕복 1시간 10분~1시간 30분이 소요됩니다. 자전거 전용 구간과 도보 구간이 분리되어 있어 안전하게 걸을 수 있습니다.<br><br>
+경포호 주변에는 봄에 피었던 꽃들이 지고 6월에는 짙은 초록 나무와 갈대가 시야를 가득 채웁니다. 왜가리·청둥오리 등 물새들도 호수 변에서 쉽게 만날 수 있습니다.<br><br>
+저녁에는 경포호에 반영되는 황금빛 노을이 일품입니다. 일몰 후 어스름이 내려앉을 무렵까지 걸으면 호수에 반사된 불빛과 별이 어우러지는 야경도 감상할 수 있습니다.<br><br>
+경포호 둘레길에는 중간중간 쉬어갈 수 있는 벤치와 정자가 마련되어 있어 걷다가 앉아 풍경을 즐기기 좋습니다.</p>
+
+<h2>04. 경포대 정자 — 관동팔경의 운치</h2>
+<p>경포호 북쪽 언덕 위에 자리한 경포대는 관동팔경 가운데 하나로 꼽히는 유서 깊은 정자입니다.<br><br>
+고려 충숙왕 13년(1326년)에 창건된 것으로 전해지며, 현재 건물은 조선 시대 중수된 것입니다. 정자 내부에는 율곡 이이·허난설헌 등 조선 선비들이 남긴 시액(詩額)이 걸려 있어 당대의 풍류를 엿볼 수 있습니다.<br><br>
+경포대에서 내려다보면 경포호와 그 뒤로 펼쳐지는 경포해변·동해 바다가 한눈에 들어옵니다. 강릉 시내에서 가장 손쉽게 '호수 + 바다' 조망을 동시에 즐길 수 있는 뷰 포인트입니다.<br><br>
+정자까지는 경포호 둘레길에서 약 5~10분 거리에 있으며, 정자 입장은 무료입니다.<br><br>
+해 질 무렵 경포대에서 바라보는 서쪽 하늘과 호수의 조화는 강릉 여행에서 빠질 수 없는 장면입니다. 사진보다 실제로 눈에 담았을 때 그 깊이가 훨씬 크게 다가옵니다.</p>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260530/2_gyeongpo_beach_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-2">Traditional Korean Gyeongpodae pavilion on a small hill overlooking Gyeongpo Lake in Gangneung, evening golden hour light, reflection of the pavilion in the calm lake water, lush green trees surrounding, traditional wooden architecture with curved roof, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">경포대에서 바라본 경포호 저녁 전경 / AI 제작 이미지</div>
+</div>
+
+<h2>05. 해파랑길 35코스 — 강릉 해안 트레킹</h2>
+<p>경포해변은 동해 해안을 따라 이어지는 해파랑길의 주요 통과 지점 중 하나입니다.<br><br>
+해파랑길 35코스는 강릉 사천해변에서 강문해변까지 이어지는 약 19km 구간으로, 경포해변을 관통합니다.<br><br>
+6월 초여름 해파랑길은 강렬한 태양 아래 부서지는 파도와 짙푸른 소나무 숲이 번갈아 나타나며, 여름 본격 시즌에 앞서 비교적 한산하게 걷기 좋은 환경입니다.<br><br>
+전체 35코스를 완주하면 약 5~6시간이 걸리지만, 경포해변~강문해변 구간(약 5km)만 부분 걸어도 동해의 매력을 충분히 체감할 수 있습니다.<br><br>
+경포해변 북단에서 강문해변 방향으로 걸으면 강문철교를 건너며 경포호와 바다가 만나는 독특한 지형을 바라보는 시점이 나옵니다. 이 구간은 사진 명소로도 인기입니다.<br><br>
+트레킹 후에는 강문해변 주변의 횟집이나 어물전에서 싱싱한 동해 해산물 한 접시로 마무리하는 코스를 추천합니다.</p>
+
+<h2>06. 강릉 커피거리 — 안목해변 카페 투어</h2>
+<p>강릉 안목해변 일대는 국내 손꼽히는 커피 명소로, '강릉 커피거리'라는 이름으로 전국 여행자들에게 잘 알려져 있습니다.<br><br>
+해변을 따라 개성 있는 카페들이 줄지어 들어서 있으며, 동해 바다를 바라보며 커피 한 잔을 즐기는 경험은 강릉 여행의 상징과도 같습니다.<br><br>
+6월에는 성수기보다 여유롭게 자리를 잡고 커피 한 잔을 마시며 파도를 감상할 수 있는 시간을 누릴 수 있습니다.<br><br>
+유명 카페들은 아메리카노·라테 기준 5,000~8,000원 선으로 운영되는 곳이 많으며, 각 카페마다 시그니처 메뉴와 인테리어가 달라 골라 가는 재미가 있습니다.<br><br>
+강릉은 국내 최초로 '커피 도시'로 마케팅에 나선 지역으로, 강릉 커피 콩도, 강릉 커피 축제 등 커피 관련 콘텐츠가 풍성합니다.<br><br>
+커피 마니아라면 안목해변 외에도 강릉 시내 중앙시장 주변에 위치한 강릉 커피 1세대 명소를 방문해 보는 것도 색다른 경험이 됩니다.</p>
+
+<h2>07. 강릉 초당 순두부·해산물 점심 추천</h2>
+<p>강릉의 향토 음식을 꼽으라면 초당 순두부를 빠뜨릴 수 없습니다.<br><br>
+허균·허난설헌의 생가가 있는 초당동 일대에는 순두부 전문 식당이 밀집해 있으며, 동해 바닷물로 만드는 강릉 특유의 부드러운 순두부를 맛볼 수 있습니다.<br><br>
+한 끼 식사로는 순두부찌개 세트 기준으로 1만 원 안팎의 가격으로 든든하게 즐길 수 있습니다.<br><br>
+해산물 애호가라면 강문해변이나 주문진항에서 활어회를 즐기는 것도 강릉 여행의 큰 즐거움입니다. 6월에는 성수기 대비 가격이 합리적인 편이어서 더욱 부담 없이 즐길 수 있습니다.<br><br>
+강릉 중앙시장에는 지역 특산품인 감자떡·메밀전·건오징어 등 간식류가 풍성하게 나와 있어 식사 전후 시장 구경을 추천합니다.<br><br>
+강릉 도심에서 걸어서 이동 가능한 범위에 순두부·시장·카페가 모여 있어 도보 관광 동선을 짜기에도 수월한 도시입니다.</p>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260530/2_gyeongpo_beach_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-3">Gangneung coffee street Anmok beach in South Korea, row of cozy cafes facing the East Sea, outdoor seating areas with umbrellas, morning light on the ocean, people enjoying coffee with ocean view, charming seaside atmosphere, Korean coastal town vibe, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">강릉 안목해변 커피거리 — 동해를 바라보며 즐기는 한 잔 / AI 제작 이미지</div>
+</div>
+
+<h2>08. 오죽헌·선교장 역사 탐방 연계 코스</h2>
+<p>강릉은 자연 풍광 외에도 조선 시대 역사·문화 유산이 풍부한 도시입니다.<br><br>
+<strong>오죽헌</strong>은 율곡 이이(1536~1584)가 태어난 집으로, 조선 최고의 성리학자를 배출한 고택을 직접 볼 수 있는 곳입니다. 경내에는 신사임당의 초충도를 비롯한 유물을 전시하는 박물관도 있습니다. 입장료는 성인 기준 소액이 부과됩니다.<br><br>
+<strong>선교장</strong>은 조선 후기 99칸 규모의 전통 가옥으로, 300년 이상 원형을 유지하고 있는 국내 최고의 민가 건축물 중 하나입니다. 활래정 연못과 정원, 고택 숙박 체험도 운영되어 하룻밤 묵으며 조선 시대 분위기를 온전히 경험해 볼 수도 있습니다.<br><br>
+오죽헌과 선교장은 강릉 시내에서 차로 5~10분 거리에 위치해 있어 경포 여행 동선에 자연스럽게 연결됩니다.<br><br>
+역사 탐방에 관심 없는 분이라도 선교장의 고즈넉한 정원과 전통 마당은 인생 사진 명소로 손색이 없으니 잠시 들러 볼 것을 권합니다.</p>
+
+<h2>09. 주차 전략 및 대중교통 이용법</h2>
+<p>강릉 경포 지역은 여러 곳에 공영주차장이 분산되어 있습니다. 경포해변 공영주차장은 해변에서 도보 5분 내외로 접근 가능하며, 성수기가 아닌 6월에는 비교적 여유 있게 주차할 수 있습니다.<br><br>
+경포호 둘레길 이용 시에는 경포호 공영주차장을 이용하면 편리하며, 이곳에 주차 후 경포대·경포해변·커피거리까지 도보로 연결하는 동선이 효율적입니다.<br><br>
+KTX 강릉역 이용자는 역 앞에서 시내버스를 이용하면 경포해변·경포대까지 30분 내외로 이동할 수 있습니다.<br><br>
+강릉 시내 자전거 대여소에서 자전거를 빌려 경포호 둘레길~경포해변~커피거리를 자전거로 순환하는 코스도 인기 있는 선택지입니다.<br><br>
+숙박 예약 시 경포해변 주변 숙소를 이용하면 주차 걱정 없이 도보로 해변·호수를 모두 즐길 수 있어 가장 편리합니다.</p>
+
+<h2>10. 6월 강릉 날씨와 복장 팁</h2>
+<p>6월 강릉의 날씨는 맑고 청명한 날이 많으며, 낮 기온은 20~24도로 활동하기에 쾌적한 편입니다.<br><br>
+아침과 저녁에는 해풍이 불어 기온이 15~18도까지 내려갈 수 있으니 얇은 긴소매 겉옷이나 바람막이 하나는 꼭 챙기시기 바랍니다.<br><br>
+장마 시작 전인 6월 초중순은 날씨가 비교적 안정적이지만, 6월 하순으로 갈수록 강수 확률이 높아지므로 여행 전 일기예보 확인이 중요합니다.<br><br>
+해변 방문 시 자외선이 강하므로 선크림과 선글라스는 필수입니다. 아직 수영은 이른 시기이지만 발목 물놀이를 즐기려는 분은 샌들이나 물에 강한 신발을 준비하면 좋습니다.<br><br>
+트레킹을 계획한다면 편안한 운동화나 경량 등산화를 권장합니다. 해파랑길은 포장 도로와 모래사장·자갈 구간이 혼재하여 슬리퍼나 하이힐은 적합하지 않습니다.<br><br>
+6월 강릉은 성수기보다 여행 경비를 절약하면서도 더 여유롭고 진짜 강릉의 매력을 즐길 수 있는 최적의 방문 시기입니다.</p>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260529/travel_pohang_homigot_guryongpo_june.html">포항 호미곶·구룡포 6월 초여름 드라이브 — 일출 명소와 과메기 포구 당일 코스</a></li>
+    <li><a href="../260529/travel_byeonsan_chaesokgang_june.html">변산반도 채석강·적벽강 6월 서해 절경 — 퇴적암 절벽과 노을이 만드는 풍경</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#강릉여행</span>
+  <span class="tag">#경포해변</span>
+  <span class="tag">#6월여행</span>
+  <span class="tag">#동해여행</span>
+  <span class="tag">#강원도여행</span>
+  <span class="tag">#경포호둘레길</span>
+  <span class="tag">#강릉커피거리</span>
+  <span class="tag">#초당순두부</span>
+  <span class="tag">#국내여행</span>
+  <span class="tag">#초여름나들이</span>
+</div>
+</body>
+</html>
