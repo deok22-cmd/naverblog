@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== G9 CTA 표준 — 보성 율포해변·녹차밭 slug 변형 =====
+       G9_cta_follow.svg 구조 그대로 차용. 색 = 국내여행 팔레트.
+       README §0 흰 팔로우 카드 = 명문 예외, CTA 한정. -->
+  <defs>
+    <linearGradient id="scrimAll" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="0.55" stop-color="#000000" stop-opacity="0.58"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.86"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="170%">
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1f1c"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimAll)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <!-- 북마크 아이콘 -->
+  <path id="bookmark" d="M912 84 h78 a10 10 0 0 1 10 10 v150 l-49 -33 -49 33 v-150 a10 10 0 0 1 10 -10 z" fill="#00796b"/>
+
+  <!-- 상단 브랜드 워드마크 -->
+  <text x="540" y="152" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="36" font-weight="800" fill="#ffffff" letter-spacing="4">travelkorea_365</text>
+
+  <!-- 헤드라인 — slug별 변형: 보성·녹차밭·율포 앵글 -->
+  <g id="cta-title">
+    <text x="540" y="566" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="48" font-weight="600" fill="#b2dfdb" letter-spacing="2">차밭과 바다가 부르면</text>
+    <text x="540" y="664" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="72" font-weight="800" fill="#ffffff" letter-spacing="-2">보성으로</text>
+    <text x="540" y="754" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="72" font-weight="800" fill="#ffffff" letter-spacing="-2">떠나세요</text>
+  </g>
+
+  <!-- 흰색 팔로우 카드 (README §0 유일 명문 예외 — CTA 한정) -->
+  <g id="follow-card">
+    <rect x="90" y="800" width="900" height="154" rx="77" fill="#ffffff" filter="url(#cardShadow)"/>
+
+    <!-- 프로필 아바타 -->
+    <circle cx="178" cy="877" r="60" fill="#0d3b34" stroke="#00796b" stroke-width="5"/>
+    <g fill="#80cbc4">
+      <path d="M178 838 L205 880 L151 880 Z"/>
+      <path d="M178 858 L212 901 L144 901 Z"/>
+      <rect x="170" y="898" width="16" height="15"/>
+    </g>
+
+    <!-- 핸들 (상수) -->
+    <text x="262" y="895" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="40" font-weight="700" fill="#16302c">@travelkorea_365</text>
+
+    <!-- 팔로우 버튼 -->
+    <rect x="730" y="833" width="178" height="88" rx="22" fill="#00796b"/>
+    <text x="819" y="892" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="40" font-weight="700" fill="#ffffff">팔로우</text>
+
+    <!-- 클릭 커서 -->
+    <g transform="translate(886 882)">
+      <path d="M0 0 L0 40 L11 31 L18 47 L25 44 L18 28 L31 28 Z" fill="#ffffff" stroke="#16302c" stroke-width="2.5" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <!-- 서브 카피 -->
+  <text x="540" y="1024" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="600" fill="#80cbc4">— 전남 여행 코스 받아보기 —</text>
+
+  <!-- info-chip -->
+  <g id="info-chip">
+    <rect x="80" y="1070" width="640" height="70" rx="35" fill="#ffffff" fill-opacity="0.14" stroke="#00796b" stroke-width="2"/>
+    <text x="110" y="1115" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="600" fill="#ffffff">전남 보성 · 대한다원 차로 10분</text>
+  </g>
+
+  <text x="80" y="1198" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="600" fill="#80cbc4">보성 전체 코스 가이드 → 프로필 블로그</text>
+
+  <text x="80" y="1262" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="500" fill="#9e9e9e">#보성여행 #율포해변 #녹차밭 #대한다원 #전라남도여행</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

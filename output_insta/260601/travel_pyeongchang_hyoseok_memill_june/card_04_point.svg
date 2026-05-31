@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== card_04 : D 타입 — point (흥정계곡 핵심 메시지) ===== -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.30"/>
+      <stop offset="0.50" stop-color="#000000" stop-opacity="0.52"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.72"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1f1a"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="540" y="490" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="700" fill="#80cbc4" letter-spacing="4">흥정계곡</text>
+
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="88" font-weight="800" fill="#ffffff" letter-spacing="-2" text-anchor="middle">
+    <tspan x="540" y="620">봉평 옆</tspan>
+    <tspan x="540" y="724">청량한</tspan>
+    <tspan x="540" y="828">초여름 피서지</tspan>
+  </text>
+
+  <rect x="390" y="892" width="300" height="8" fill="#00796b"/>
+
+  <text x="540" y="980" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e0f2f1">차로 10~15분 · 맑고 차가운 계곡물</text>
+  <text x="540" y="1040" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="36" font-weight="400" fill="#b2dfdb">6월엔 인파 적고 신록이 가득</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>
