@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- card_09 : tips — P3 레이아웃 (체크리스트 · 저장 유도) -->
+  <!-- 대천해수욕장 접근법 3가지 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.48"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d2620"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="270" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="60" font-weight="800" fill="#ffffff">대천 가는 3가지 방법</text>
+  <rect x="82" y="304" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <rect x="80" y="430" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="500" font-size="42" font-weight="600" fill="#ffffff">KTX·새마을호 → 대천역</text>
+    <line x1="80" y1="560" x2="1000" y2="560" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="610" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="680" font-size="42" font-weight="600" fill="#ffffff">강남센트럴 고속버스 → 대천터미널</text>
+    <line x1="80" y1="740" x2="1000" y2="740" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="790" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="860" font-size="42" font-weight="600" fill="#ffffff">자가용 서해안고속도로 → 대천IC</text>
+    <line x1="80" y1="920" x2="1000" y2="920" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="970" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="1040" font-size="42" font-weight="600" fill="#ffffff">6월 공영주차장 무료·저렴</text>
+  </g>
+
+  <text x="80" y="1150" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="40" font-weight="800" fill="#80cbc4">저장해두고 그대로 따라가세요  ↓</text>
+  <text x="80" y="1240" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">전체 코스와 교통 동선은 프로필 블로그에서.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

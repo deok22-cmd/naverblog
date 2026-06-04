@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.40" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.80"/>
+    </linearGradient>
+    <linearGradient id="scrimTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.45"/>
+      <stop offset="0.26" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma: 이 사각형 1개만 선택 → Fill을 'Image'로 교체 → Gemini 배경 PNG, Crop ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#15201e"/>
+  <!-- ▲▲▲ 위 사각형이 배경 슬롯입니다 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimTop)"/>
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <g id="badge">
+    <rect x="80" y="84" width="288" height="64" rx="32" fill="#00796b"/>
+    <text x="224" y="126" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="29" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="2">전남 · 청산도</text>
+  </g>
+
+  <g id="title">
+    <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="112" font-weight="800" fill="#ffffff" letter-spacing="-3">
+      <tspan x="80" y="980">느리게 걷는</tspan>
+      <tspan x="80" y="1108">섬이 있다</tspan>
+    </text>
+    <text x="80" y="1188" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="42" font-weight="600" fill="#e0f2f1">완도 청산도 슬로길 6월 완전 탐방 가이드</text>
+  </g>
+
+  <text x="80" y="1278" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#cfd8d6">밀어서 코스 보기  →</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) =====
+       배경 합성 시 우측 하단에 찍히는 Gemini 로고를 가리는 불투명 코너 배지 + 채널 각인.
+       BG·스크림 위 레이어. README §0 불투명 금지의 명문 예외(소형 코너 배지, G9 흰 카드와 동급).
+       'travelkorea_365' = 핸들 상수. fill만 카테고리 dark 팔레트로 치환, 좌표·구조 불변. -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

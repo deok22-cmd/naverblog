@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== D : 중앙 강조 문장 (사진중심 · 전면 스크림 · 단일 핵심 메시지) =====
+       point 역할 — 구들장 논 유네스코 유산 핵심 메시지 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.48"/>
+      <stop offset="0.5" stop-color="#000000" stop-opacity="0.54"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.72"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <g id="center-statement" text-anchor="middle">
+    <text x="540" y="420" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="700" fill="#80cbc4" letter-spacing="3">구들장 논 · 2013년 등재</text>
+
+    <text x="540" y="590" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="82" font-weight="800" fill="#ffffff" letter-spacing="-2">돌 위에 흙,</text>
+    <text x="540" y="690" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="82" font-weight="800" fill="#ffffff" letter-spacing="-2">그 위에 벼.</text>
+
+    <rect x="420" y="730" width="240" height="9" fill="#00796b"/>
+
+    <text x="540" y="848" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="44" font-weight="500" fill="#e0f2f1">유네스코 세계중요농업유산(GIAHS)</text>
+    <text x="540" y="912" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="44" font-weight="500" fill="#e0f2f1">척박한 섬에서 식량을 일군 지혜.</text>
+
+    <text x="540" y="1060" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="36" font-weight="600" fill="#b2dfdb">6월, 논에는 초록빛 벼 새순이 가득합니다.</text>
+  </g>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) =====
+       'travelkorea_365' = 핸들 상수. fill만 카테고리 dark 팔레트로 치환, 좌표·구조 불변. -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

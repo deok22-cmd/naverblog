@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== P1 : 정보 표 (사진중심 · 전면 스크림 워시만, 불투명 박스/보더 없음) =====
+       info 역할 — 완도↔청산도 접근 핵심 정보 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="220" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">가는 법 한눈에</text>
+  <rect x="82" y="254" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="400" font-size="42" font-weight="600" fill="#ffffff">출발지</text>
+    <text x="1000" y="400" font-size="42" font-weight="800" fill="#80cbc4" text-anchor="end">완도여객선터미널</text>
+    <line x1="80" y1="442" x2="1000" y2="442" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="532" font-size="42" font-weight="600" fill="#ffffff">소요 시간</text>
+    <text x="1000" y="532" font-size="42" font-weight="800" fill="#80cbc4" text-anchor="end">편도 약 50분</text>
+    <line x1="80" y1="574" x2="1000" y2="574" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="664" font-size="42" font-weight="600" fill="#ffffff">성인 편도</text>
+    <text x="1000" y="664" font-size="42" font-weight="800" fill="#80cbc4" text-anchor="end">약 8,900원</text>
+    <line x1="80" y1="706" x2="1000" y2="706" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="796" font-size="42" font-weight="600" fill="#ffffff">서울→완도</text>
+    <text x="1000" y="796" font-size="42" font-weight="800" fill="#80cbc4" text-anchor="end">KTX 목포 후 1시간 30분</text>
+    <line x1="80" y1="838" x2="1000" y2="838" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="928" font-size="42" font-weight="600" fill="#ffffff">6월 예약</text>
+    <text x="1000" y="928" font-size="42" font-weight="800" fill="#80cbc4" text-anchor="end">당일 발권 가능</text>
+    <line x1="80" y1="970" x2="1000" y2="970" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+  </g>
+
+  <text x="80" y="1076" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">정확한 시간표 · 한국해운조합 홈페이지 확인.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) =====
+       'travelkorea_365' = 핸들 상수. fill만 카테고리 dark 팔레트로 치환, 좌표·구조 불변. -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>
