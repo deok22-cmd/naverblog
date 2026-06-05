@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== A : 헤드라인-하단 · caution 카드 — 독도·결항·행남 통제 주의사항 ===== -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.40" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.82"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <rect x="80" y="852" width="64" height="10" fill="#00796b"/>
+  <text x="80" y="960" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="96" font-weight="800" fill="#ffffff" letter-spacing="-2">가기 전 필수 확인</text>
+
+  <g id="chips">
+    <rect x="80" y="1010" width="320" height="74" rx="37" fill="#00796b"/>
+    <text x="240" y="1058" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle">기상 결항 빈번</text>
+    <rect x="420" y="1010" width="360" height="74" rx="37" fill="#00796b"/>
+    <text x="600" y="1058" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle">독도 사전 예약 필수</text>
+  </g>
+
+  <text x="80" y="1176" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e0f2f1">행남해안 파도 높은 날 구간 통제 가능</text>
+  <text x="80" y="1232" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e0f2f1">왕복 일정 여유롭게 · 변경 규정 미리 확인</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>
