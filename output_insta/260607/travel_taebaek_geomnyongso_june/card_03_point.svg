@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- card_03 : point (D — 중앙 강조 문장) — 검룡소, 한강의 어머니 샘 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="0.50" stop-color="#000000" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.68"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <!-- 키커 -->
+  <text x="540" y="360" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#80cbc4" letter-spacing="4">검룡소 · 한강 발원지</text>
+
+  <!-- 중앙 핵심 문장 -->
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="82" font-weight="800" fill="#ffffff" letter-spacing="-2" text-anchor="middle">
+    <tspan x="540" y="530">서울 한강의</tspan>
+    <tspan x="540" y="630">물줄기는</tspan>
+    <tspan x="540" y="730">이 샘에서</tspan>
+    <tspan x="540" y="830">시작된다</tspan>
+  </text>
+
+  <rect x="390" y="884" width="300" height="8" fill="#00796b"/>
+
+  <!-- 보조 설명 -->
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e0f2f1" text-anchor="middle">
+    <tspan x="540" y="960">1987년 국립지리원 공식 지정.</tspan>
+    <tspan x="540" y="1010">수온 9~10°C, 하루 2,000~3,000톤.</tspan>
+    <tspan x="540" y="1060">여기서 한강 하구까지 514km.</tspan>
+  </text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>
