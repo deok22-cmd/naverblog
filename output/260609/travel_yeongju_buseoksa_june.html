@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .img-area { margin: 30px 0; }
+  .img-placeholder { background: #f4f8f7; border: 2px dashed #b2dfdb; padding: 20px; border-radius: 8px; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 0.9em; color: #555; }
+  .ph-file { font-family: monospace; color: #888; font-size: 0.82em; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; padding: 12px; border-radius: 4px; font-size: 0.88em; color: #555; white-space: pre-wrap; margin: 8px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 8px 18px; border-radius: 4px; cursor: pointer; margin-top: 6px; font-size: 0.9em; }
+  .img-caption { text-align: center; color: #888; font-size: 0.9em; margin-top: 10px; font-style: italic; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .recommend-area a { color: #00796b; text-decoration: none; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = orig; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>영주 부석사 6월 신록, 무량수전과 소백산 조망 기행</h1>
+
+<div class="intro-box">
+경상북도 영주 봉황산 자락에 자리 잡은 부석사는 천사백 년 역사를 간직한 한국 불교 건축의 정수입니다.<br><br>
+무량수전(국보 제18호)은 고려 시대 목조 건축의 백미로, 국내 현존 목조 건물 중 가장 아름다운 건물 중 하나로 손꼽힙니다. 안양루에서 바라보는 소백산 줄기의 파노라마는 이 절을 단순한 종교 공간을 넘어 '풍경을 담는 그릇'으로 만들어 줍니다.<br><br>
+6월에는 경내 전체가 짙은 신록으로 물들고, 소백산 능선이 초록빛 물결로 가득 차는 시기입니다. 고즈넉한 산사의 공기와 천사백 년 목조 건축의 온기가 만나는 부석사의 6월을 소개합니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260609/4_buseoksa_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-1">Muryangsujeon Hall (국보 제18호) of Buseoksa Temple, Yeongju, South Korea, in early summer. Ancient wooden Goryeo-era architecture with curved eaves and wooden pillars, stone lanterns and platform in foreground, surrounded by lush dense green summer forest. Sobaeksan mountain ridgeline visible in background. Morning light illuminating the wooden structure, peaceful Buddhist atmosphere. Photorealistic, ultra high detail, 1:1 aspect ratio, heritage photography, warm golden tones, vivid greens.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">부석사 무량수전 — 고려 목조 건축의 백미 / AI 제작 이미지</div>
+</div>
+
+<h2>① 부석사란 — 한국 불교 건축의 천사백 년 역사</h2>
+
+부석사는 신라 문무왕 16년(676년) 의상대사(義湘大師)가 왕명을 받아 창건한 사찰입니다.<br><br>
+의상대사는 당나라에서 화엄 사상을 공부하고 귀국한 후 화엄 10찰(華嚴十刹)을 건립하였는데, 부석사는 그 중 본찰(本刹)로서 한국 화엄 사상의 중심지가 되었습니다. 창건 이후 통일신라와 고려 시대를 거치며 꾸준히 중건과 확장이 이루어졌고, 현재 남아 있는 주요 건물들은 대부분 고려 후기~조선 초기 양식을 보존하고 있습니다.<br><br>
+사찰 이름인 '부석(浮石)'은 무량수전 뒤편 서쪽에 있는 큰 돌에서 유래했습니다. 전설에 따르면 의상대사를 흠모한 선묘(善妙)라는 당나라 여인이 용으로 변해 이 돌을 띄워 사찰을 지키고 사찰 건립을 도왔다고 합니다. '뜬 돌'이라는 뜻의 부석은 돌 아래에 공간이 있어 실제로 사람이 들어갈 수 있을 만큼 기묘한 형태로, 전설을 직접 확인하러 오는 방문객의 발길이 꾸준히 이어집니다.<br><br>
+2018년에는 통도사·법주사 등 7개 산지 사찰과 함께 '산사, 한국의 산지 승원'이라는 명칭으로 유네스코 세계문화유산에 등재되어 국제적인 가치를 공인받았습니다.
+
+<h2>② 찾아가는 방법 — 영주 기점 대중교통과 자가용</h2>
+
+자가용으로는 중앙고속도로 영주IC에서 빠져나와 부석면 방향으로 약 30분 달리면 부석사 주차장에 도착합니다. 서울에서는 약 2시간 30분~3시간, 대구에서는 약 1시간 30분 거리입니다.<br><br>
+대중교통으로는 서울 청량리역에서 영주역까지 무궁화호나 ITX-새마을 열차를 이용(약 2시간 30분~3시간), 영주역에서 부석사 행 버스로 환승합니다. 버스는 영주 시내 버스터미널 또는 영주역 앞 정류장에서 탑승 가능하며 배차 간격이 1~2시간이므로 시간 확인이 필요합니다.<br><br>
+부석사 주차장은 넓게 조성되어 있으며 소형 차량 기준 소정의 주차료가 부과됩니다. 주차장에서 부석사 경내 입구까지는 도보 약 15분 거리로, 울창한 소나무 숲길을 걸으며 천천히 사찰 분위기에 젖어드는 시간입니다.<br><br>
+입장료는 성인 기준 소정의 요금이 부과되며(방문 전 공식 홈페이지 확인 권장), 오전 9시 이전과 오후 5시 이후에는 별도 운영 정책이 있을 수 있으니 방문 시간 계획에 반영하세요.
+
+<h2>③ 부석사 경내 감상 포인트 — 천왕문부터 무량수전까지</h2>
+
+부석사 경내는 아래에서 위로 오르는 구조로 되어 있어, 입구에서 무량수전까지 단계적으로 고도가 높아지며 시야가 트이는 구성입니다.<br><br>
+<strong>일주문과 천왕문:</strong> 일주문을 지나 천왕문까지 이어지는 진입로 양쪽에 수백 년 수령의 은행나무들이 줄지어 있습니다. 가을 단풍이 유명하지만, 6월에는 짙은 초록빛 은행나무 터널이 형성되어 또 다른 계절미를 선사합니다.<br><br>
+<strong>범종루와 안양루:</strong> 천왕문을 지나면 범종루가 있으며, 한국 전통 건축의 안과 밖을 가르는 구분 없는 개방성이 인상적입니다. 안양루에서는 소백산 줄기를 배경으로 경내 전체가 내려다보이는 빼어난 조망이 열립니다.<br><br>
+<strong>무량수전:</strong> 고려 후기에 중건된 무량수전은 배흘림 기둥과 맞배지붕으로 구성된 목조 건물로, 군더더기 없이 절제된 아름다움이 돋보입니다. 내부에는 건물 나이와 같은 '부석사 소조여래좌상(국보 제45호)'이 봉안되어 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260609/4_buseoksa_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-2">View from Anyangru pavilion at Buseoksa Temple, Yeongju, North Gyeongsang, South Korea. Sweeping panoramic view of Sobaeksan mountain ranges and valleys in summer, layered ridgelines covered in lush green forest, misty morning atmosphere, traditional wooden pavilion railing framing the view, ancient stone steps and lanterns in foreground, blue sky. Photorealistic, ultra high detail, 1:1 aspect ratio, landscape photography, serene atmosphere, rich green tones.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">안양루에서 바라본 소백산 줄기의 여름 파노라마 / AI 제작 이미지</div>
+</div>
+
+<h2>④ 6월 신록 속 부석사의 특별한 매력</h2>
+
+부석사는 가을 단풍 명소로 널리 알려져 있지만, 6월 신록의 부석사를 아는 이는 생각보다 많지 않습니다.<br><br>
+<strong>소백산 신록과의 조화가 압권입니다.</strong> 해발 700~800m의 봉황산 중턱에 자리 잡은 부석사에서는 6월 초여름 소백산 능선이 짙은 초록빛으로 물드는 장관을 정면으로 바라볼 수 있습니다. 안양루 난간에 기대어 소백산 방향을 바라보면, 짙은 녹음이 겹겹이 펼쳐지는 능선이 마치 살아있는 산수화 같습니다.<br><br>
+<strong>관광객이 많지 않아 고즈넉합니다.</strong> 가을 단풍 시즌과 달리 6월에는 방문객이 줄어 경내가 비교적 한산합니다. 무량수전 앞마당에서 홀로 목조 건물의 세월을 감상하거나, 은행나무 그늘 아래 앉아 소백산을 바라보는 여유로운 시간을 가질 수 있습니다.<br><br>
+<strong>이른 아침 산사의 고요함이 남다릅니다.</strong> 법고 소리가 울려 퍼지는 새벽 예불 시간, 안개가 소백산 능선을 감싸는 오전 7~8시 사이의 부석사는 세속과 완전히 분리된 별천지 같은 고요함을 선사합니다.
+
+<h2>⑤ 무량수전의 건축적 아름다움 — 배흘림 기둥과 맞배지붕</h2>
+
+무량수전은 우리나라에서 현존하는 가장 오래된 목조 건물 중 하나로(공식적으로는 안동 봉정사 극락전 다음으로 오래된 건물), 한국 목조 건축사의 정수를 담고 있습니다.<br><br>
+외부에서 가장 먼저 눈에 들어오는 것은 <strong>배흘림 기둥</strong>입니다. 기둥이 아래에서 위로 올라가면서 중간이 볼록하게 부풀어 오른 형태를 배흘림이라 하며, 이는 시각적 착시를 보정해 멀리서 볼 때 기둥이 직선으로 보이도록 하는 고도의 건축적 계산의 산물입니다.<br><br>
+지붕은 단순한 <strong>맞배지붕</strong> 양식으로, 기와가 양쪽으로만 경사진 가장 간결한 형태입니다. 화려한 팔작지붕 대신 이 단순한 형태를 택한 것은 절제와 균형의 미학을 추구했던 고려 시대 장인의 안목을 보여 줍니다.<br><br>
+건물 내부로 들어가면 정면에 '부석사 소조여래좌상'이 봉안되어 있습니다. 소조(塑造), 즉 흙을 빚어 만든 불상으로 높이 2.78미터에 달하며, 표정과 의복의 표현이 세밀하고 자연스러워 고려 시대 조각 예술의 정수를 보여 줍니다.
+
+<h2>⑥ 안양루와 부석 — 전설을 품은 경내 명소</h2>
+
+무량수전 앞 <strong>안양루(安養樓)</strong>는 부석사에서 경관이 가장 뛰어난 누각입니다.<br><br>
+안양(安養)은 극락세계를 뜻하는 불교 용어로, 이 누각에 오르면 극락의 경치에 비견되는 소백산 조망이 펼쳐진다는 의미가 담겨 있습니다. 실제로 안양루에서 내려다보면 나지막한 영주 분지와 그 뒤로 펼쳐지는 소백산의 겹겹이 쌓인 능선이 한 폭의 그림처럼 보입니다. 일몰 무렵에는 능선 위로 붉게 물드는 저녁노을과 사찰의 기와지붕이 어우러지는 장면이 연출됩니다.<br><br>
+무량수전 서쪽 조금 아래에는 <strong>부석(浮石)</strong>이 있습니다. 가로 약 3미터, 세로 약 4미터의 큰 자연석 아래에 공간이 형성되어 있어, 실제로 종이 한 장이 들어갈 정도로 돌이 떠 있는 것처럼 보입니다. 선묘 전설이 깃든 이 돌은 방문객들이 소원을 빌며 돌아보는 명소이기도 합니다.
+
+<h2>⑦ 소수서원 연계 코스 — 영주 반나절 유교 문화 탐방</h2>
+
+부석사를 방문했다면 차로 30분 거리에 있는 <strong>소수서원(紹修書院)</strong>을 연계해 보세요.<br><br>
+소수서원은 1543년 풍기 군수 주세붕이 고려 말 성리학자 안향(安珦)을 기리기 위해 세운 우리나라 최초의 서원입니다. 2019년에는 안동 도산서원 등과 함께 '한국의 서원'이라는 명칭으로 유네스코 세계문화유산에 등재되어, 부석사와 소수서원을 합치면 하루에 두 군데의 유네스코 세계유산을 탐방하는 특별한 여정이 완성됩니다.<br><br>
+서원 내부는 강당·사당·재사 등으로 구성되어 있으며, 경내에는 수령 수백 년의 당산나무와 은행나무 고목이 자리 잡고 있어 그늘 아래 앉아 쉬어 가기에도 좋습니다. 입장료는 성인 기준 소정의 요금이 부과됩니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260609/4_buseoksa_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-3">Stone stairway leading up through tall ancient pine trees to Buseoksa Temple entrance, Yeongju, South Korea, early summer morning. Dappled sunlight through lush green pine canopy, old stone lanterns flanking the path, mossy stone steps, peaceful pilgrimage atmosphere, slight morning mist in the distance. A lone visitor ascending the stairs in traditional Korean clothing. Photorealistic, ultra high detail, 1:1 aspect ratio, heritage travel photography, tranquil spiritual mood.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">부석사로 오르는 소나무 숲 진입로 / AI 제작 이미지</div>
+</div>
+
+<h2>⑧ 영주 맛집 — 풍기인삼·순흥묵밥·한우</h2>
+
+영주는 풍기인삼과 한우, 사과로 유명한 고장입니다.<br><br>
+<strong>풍기인삼순대국밥</strong>은 영주를 방문했을 때 반드시 맛봐야 할 별미입니다. 풍기읍 일대 식당에서 인삼이 들어간 순대국밥을 제공하며, 특유의 삼 향과 진한 육수가 어우러져 일반 순대국과는 차원이 다른 맛을 냅니다. 가격은 1인당 8,000~10,000원 선으로 부담 없습니다.<br><br>
+<strong>순흥묵밥</strong>도 영주의 대표 향토 음식입니다. 도토리묵을 뚝배기에 담아 뜨거운 장국을 부어 먹는 음식으로, 부석사 가는 길목인 순흥면 일대 식당에서 쉽게 찾을 수 있습니다. 고소하고 구수한 묵밥 한 그릇에 반찬이 곁들여 나오는 한 끼 가격은 7,000~9,000원 수준입니다.
+
+<h2>⑨ 방문 팁 — 이른 아침이 최고의 선택인 이유</h2>
+
+부석사를 가장 특별하게 즐기는 방법은 이른 아침 방문입니다.<br><br>
+오전 8시 이전에 도착하면 관광객이 거의 없어 무량수전 앞마당을 혼자 독차지하는 듯한 고즈넉한 경험을 할 수 있습니다. 이른 아침 소백산에서 내려오는 안개가 경내를 감싸는 장면은 이 시간대 방문자만의 특권입니다.<br><br>
+6월 기준 부석사는 오전 7시~일몰 시간까지 개방됩니다. 이른 아침 방문 후 오전 11시~12시경 소수서원을 둘러보고, 풍기읍에서 점심 식사를 한 후 귀가하는 반나절 일정을 추천드립니다.<br><br>
+경내는 소박한 카페 시설이 있어 방문 후 기념품과 차를 즐길 수 있습니다. 단풍 시즌(10월 중하순)에는 방문객이 집중되므로, 조용히 감상하고 싶다면 6월이 훨씬 이상적인 타이밍입니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260608/travel_inje_jajaknamusuep_june.html">인제 원대리 자작나무숲 6월 신록 — 북유럽 감성 산림욕 코스</a></li>
+    <li><a href="../260608/travel_gyeongju_gampo_munmudaewang_june.html">경주 감포·문무대왕릉 6월 해안 드라이브</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#영주여행</span>
+  <span class="tag">#부석사</span>
+  <span class="tag">#무량수전</span>
+  <span class="tag">#6월여행</span>
+  <span class="tag">#경북여행</span>
+  <span class="tag">#소백산</span>
+  <span class="tag">#유네스코세계문화유산</span>
+  <span class="tag">#사찰여행</span>
+  <span class="tag">#신록여행</span>
+  <span class="tag">#소수서원</span>
+</div>
+
+</body>
+</html>

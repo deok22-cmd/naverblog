@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 25px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px 12px; text-align: left; font-size: 0.95em; }
+  .info-table td { padding: 10px 12px; border: 1px solid #ddd; font-size: 0.95em; }
+  .img-area { margin: 30px 0; }
+  .img-placeholder { background: #f4f8f7; border: 2px dashed #b2dfdb; padding: 20px; border-radius: 8px; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 0.9em; color: #555; }
+  .ph-file { font-family: monospace; color: #888; font-size: 0.82em; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; padding: 12px; border-radius: 4px; font-size: 0.88em; color: #555; white-space: pre-wrap; margin: 8px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 8px 18px; border-radius: 4px; cursor: pointer; margin-top: 6px; font-size: 0.9em; }
+  .img-caption { text-align: center; color: #888; font-size: 0.9em; margin-top: 10px; font-style: italic; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .recommend-area a { color: #00796b; text-decoration: none; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = orig; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>통영 소매물도·등대섬 6월 당일치기, 남해 에메랄드 섬여행 가이드</h1>
+
+<div class="intro-box">
+경남 통영 앞바다에 점점이 떠 있는 수백 개의 섬 중에서 소매물도는 단연 '가장 아름다운 섬'으로 손꼽힙니다.<br><br>
+에메랄드빛 바다와 짙은 녹색 섬이 빚어내는 색채 대비, 소매물도와 등대섬(대항도)을 잇는 자연 방파제, 섬 정상에서 내려다보는 한려수도의 파노라마는 수십 차례 방문해도 새로운 감동을 주는 명소입니다.<br><br>
+6월은 해수욕장 개장 전으로 인파가 적고, 바다 색이 연중 가장 투명하고 짙어지는 시기입니다. 여름 피서철 이전에 섬 여행의 진수를 경험하고 싶다면 지금이 최적의 타이밍입니다.<br><br>
+배를 타고 닿는 그 섬, 소매물도와 등대섬의 매력을 지금 소개합니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260609/3_somaemuldo_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-1">Aerial view of Somaemuldo Island and Deungdaeseom (lighthouse island) connected by a natural stone causeway, Tongyeong, South Korea. Emerald-turquoise sea surrounding the small green islands, rocky cliffs and forested hillsides, white lighthouse visible on lighthouse island, traditional ferry approaching the dock, blue summer sky with scattered clouds, crystal clear water showing the seafloor. Photorealistic, ultra high detail, 1:1 aspect ratio, vibrant colors, drone photography style.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">소매물도와 등대섬을 잇는 자연 방파제 항공 전경 / AI 제작 이미지</div>
+</div>
+
+<h2>① 소매물도란 — 통영 앞바다의 에메랄드 보석</h2>
+
+소매물도는 경상남도 통영시 한산면에 속하는 면적 약 2.51㎢의 작은 섬입니다.<br><br>
+섬 이름의 유래에는 두 가지 설이 있습니다. 매물도(賣勿島) 중에서 크기가 작다는 의미에서 '소(小)매물도'라 불리게 됐다는 설과, 섬 모양이 매화(梅花)를 닮았다는 데서 유래한다는 설이 공존합니다. 어느 쪽이든 이름처럼 섬 자체가 작고 아름다운 보석 같은 존재라는 데에는 이견이 없습니다.<br><br>
+소매물도의 가장 큰 명물은 섬 동쪽에 위치한 <strong>등대섬(대항도)</strong>과의 연결입니다. 소매물도와 등대섬 사이에는 조개껍데기와 자갈로 이루어진 자연 방파제가 형성되어 있어, 물이 빠지는 간조 때에는 두 섬 사이를 걸어서 건널 수 있습니다. 이 방파제를 걷는 경험 자체가 소매물도 여행의 하이라이트로 꼽힙니다.<br><br>
+섬 전체가 가파른 언덕과 바위 절벽으로 이루어져 있어 독특한 지형을 자랑하며, 섬 정상(해발 약 152m)에 오르면 한려해상국립공원의 수많은 섬들이 360도 파노라마로 펼쳐지는 장관을 만날 수 있습니다.<br><br>
+CNN과 내셔널 지오그래픽 등 해외 매체에도 소개된 바 있어 외국인 관광객의 발길도 꾸준히 이어지고 있습니다.
+
+<h2>② 배편 이용 가이드 — 통영 여객선터미널 출발</h2>
+
+소매물도로 가려면 배를 타야 합니다. 통영시 도남동에 위치한 <strong>통영여객선터미널</strong>에서 소매물도 행 여객선이 출발합니다.<br><br>
+항로 소요 시간은 약 1시간 20분~1시간 30분이며, 하루 2~3회 운항합니다. 단, 기상 상황과 시즌에 따라 운항 횟수와 시간이 크게 달라지므로 <strong>반드시 출발 전날 또는 당일 아침 여객선사에 운항 여부를 확인</strong>하시기 바랍니다. 기상 악화 시에는 결항이 자주 발생합니다.<br><br>
+당일치기를 계획한다면 가능한 한 가장 빠른 첫 배를 이용하는 것이 좋습니다. 섬에서 충분한 시간을 보내고 여유 있게 돌아오려면 최소 오전 7~8시대 배를 타야 합니다. 복귀 편 마지막 배 시간도 반드시 확인해 두세요.<br><br>
+여객선 요금은 성인 기준 왕복 수만 원 수준이며(시즌과 여객선사에 따라 다름), 통영여객선터미널 1층과 공식 홈페이지에서 예매 가능합니다. 특히 주말과 여름 성수기에는 좌석이 빠르게 매진되므로 사전 예매를 강력히 권장합니다.
+
+<h2>③ 소매물도 도착 후 첫걸음 — 몽돌해변과 선착장 풍경</h2>
+
+소매물도 선착장에 내리면 가장 먼저 <strong>몽돌해변</strong>이 반겨줍니다.<br><br>
+파도에 오랜 세월 깎이고 다듬어진 둥근 자갈 몽돌이 해변 전체를 뒤덮고 있으며, 몽돌 위를 걷는 특유의 사각사각 소리가 이색적인 촉각 경험을 선사합니다. 수심이 얕고 수질이 매우 맑아 6월에는 스노클링을 즐기기에도 좋은 조건입니다.<br><br>
+선착장 주변 마을에는 민박집과 간이 식당 몇 곳이 있어 간단한 식사나 음료를 해결할 수 있습니다. 신선한 해산물을 맛보고 싶다면 마을 어민들이 직접 운영하는 소규모 횟집에서 갓 잡은 자연산 생선회를 즐겨 보세요.<br><br>
+마을에서 등대섬 방향으로 조성된 트레킹 길을 따라 오르면 능선에서 양쪽 바다를 동시에 조망하는 비경이 펼쳐집니다. 20분 남짓 오르는 이 구간은 다소 경사가 있지만, 정상에 가까워질수록 시야가 급격히 트이며 탄성을 자아내는 풍경이 기다리고 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260609/3_somaemuldo_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-2">Natural stone and pebble causeway connecting Somaemuldo to lighthouse island (Deungdaeseom), Tongyeong, South Korea. People walking across the exposed pathway at low tide, crystal-clear turquoise sea on both sides, white lighthouse visible in the background on the rocky hill, green hillsides, sunny summer day with bright blue sky. Wide angle perspective showing the full causeway. Photorealistic, ultra high detail, 1:1 aspect ratio, travel photography, vivid summer colors.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">간조 때 열리는 소매물도~등대섬 자연 방파제 / AI 제작 이미지</div>
+</div>
+
+<h2>④ 등대섬 트레킹 — 자연 방파제를 건너 한려수도 파노라마로</h2>
+
+소매물도 여행의 가장 드라마틱한 순간은 등대섬으로 건너가는 자연 방파제를 밟는 순간입니다.<br><br>
+방파제는 간조 때 노출되어 걸어서 건널 수 있으며, 만조 시에는 물속에 잠겨 도보로 건너는 것이 불가능합니다. 따라서 <strong>물때를 반드시 미리 확인</strong>해야 합니다. 국립해양조사원 홈페이지나 조석 예측 앱을 통해 당일의 간조 시간을 확인하고, 간조 전후 2시간을 방문 타이밍으로 잡는 것이 좋습니다.<br><br>
+방파제를 건너 등대섬에 오르면 고도 100m가 넘는 정상부에 자리 잡은 <strong>소매물도 등대</strong>를 만납니다. 1917년에 처음 세워진 이 하얀 등대는 남해의 거친 파도를 헤치는 선박들의 길잡이였으며, 지금도 현역으로 작동 중입니다.<br><br>
+등대 옆 전망 포인트에서는 매물도, 소지도, 저도, 비진도 등 한려해상국립공원의 수십 개 섬들이 병풍처럼 펼쳐지는 절경을 감상할 수 있습니다. 맑은 날 이 뷰는 한국에서 볼 수 있는 가장 아름다운 바다 전망 중 하나로 손꼽힙니다.
+
+<h2>⑤ 6월 소매물도를 찾아야 하는 이유</h2>
+
+소매물도는 1년 내내 아름답지만 6월에만 누릴 수 있는 특별한 매력이 있습니다.<br><br>
+<strong>바다 색이 가장 투명합니다.</strong> 장마가 시작되기 전 6월의 남해 바다는 연중 투명도가 가장 높습니다. 수심 5~6미터의 바닥까지 보이는 맑은 에메랄드빛 바다를 볼 수 있는 것은 이 시기의 특권입니다.<br><br>
+<strong>관광객이 적어 조용합니다.</strong> 7~8월 성수기에는 배에 정원이 꽉 차고 섬 내 트레킹 코스가 혼잡해지는 반면, 6월에는 비교적 여유롭게 섬을 즐길 수 있습니다. 특히 평일 방문이라면 마을과 해변을 거의 전세 낸 듯 한가롭게 즐길 수 있습니다.<br><br>
+<strong>섬 식물이 가장 싱그럽습니다.</strong> 6월의 소매물도는 산비탈 전체가 짙은 초록으로 물들고, 야생화와 들풀이 길 주변을 가득 채웁니다. 에메랄드 바다와 짙은 녹색 섬의 대비는 이 시기가 가장 극적으로 아름답습니다.
+
+<h2>⑥ 섬 내 이동과 편의시설 안내</h2>
+
+소매물도는 작은 섬이지만 내부 트레킹 코스가 잘 정비되어 있습니다.<br><br>
+선착장~몽돌해변~능선~등대섬을 잇는 주 코스의 총 거리는 왕복 약 4~5km로, 천천히 걸어도 2~3시간이면 충분히 소화할 수 있습니다. 트레킹 구간 일부에 경사가 있으므로 미끄럼 방지 기능이 있는 편한 신발을 착용하는 것이 좋습니다.<br><br>
+섬 내 식당과 편의점은 매우 제한적입니다. 마을 내 민박집과 연계된 간이 식당에서 라면, 생선구이, 막걸리 등을 판매하지만, 메뉴와 운영 여부가 시즌마다 달라질 수 있습니다. 당일치기라면 기본적인 물과 간식은 통영에서 미리 챙겨 가는 것을 권장합니다.<br><br>
+섬에는 화장실이 있으며, 선착장과 트레킹 코스 중간에 위치하고 있습니다. 쓰레기는 반드시 섬 밖으로 가지고 나와야 하는 섬 환경 보호 규칙을 꼭 지켜 주세요.
+
+<h2>⑦ 당일치기 코스 — 완벽한 하루 시간 배분</h2>
+
+소매물도 당일치기를 위한 권장 시간 배분표입니다.<br><br>
+<strong>오전 7~8시:</strong> 통영여객선터미널 출발. 선착장에서 배를 기다리는 동안 터미널 내 편의점에서 간식과 음료를 미리 구매해 두세요.<br><br>
+<strong>오전 8시 30분~10시:</strong> 소매물도 도착 후 몽돌해변 산책, 마을 구경. 여유가 있다면 현지 간이 식당에서 해산물 아침 식사를 즐겨 보세요.<br><br>
+<strong>오전 10시~12시:</strong> 등대섬 방향 능선 트레킹. 간조 시간에 맞춰 등대섬 자연 방파제를 건너 등대 전망대에서 한려수도 파노라마 감상.<br><br>
+<strong>오후 12시~1시 30분:</strong> 등대섬 감상 후 다시 소매물도로 돌아와 점심 식사 및 몽돌해변 휴식.<br><br>
+<strong>오후 1시 30분~3시:</strong> 귀환 선착장 대기 및 통영행 배 탑승.<br><br>
+<strong>오후 4시 30분~5시:</strong> 통영 시내 도착. 저녁 식사 후 귀가 또는 통영 시내 관광 연계.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260609/3_somaemuldo_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-3">White lighthouse on Deungdaeseom lighthouse island, Tongyeong, South Korea. Panoramic ocean view from the lighthouse hilltop, multiple small islands of Hallyeohaesang National Park scattered in turquoise blue sea below, summer sky with white clouds, green hillside slope in foreground, lighthouse tower bright white against blue sky. Photorealistic, ultra high detail, 1:1 aspect ratio, cinematic landscape photography, vivid blue and green tones.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">등대섬 정상에서 바라본 한려수도 파노라마 / AI 제작 이미지</div>
+</div>
+
+<h2>⑧ 통영 시내 맛집 — 돌아오는 길 꿀딱지 코스</h2>
+
+소매물도를 다녀온 뒤 통영 시내에서 저녁을 즐기는 것도 여행의 큰 즐거움입니다.<br><br>
+<strong>통영 굴구이·굴전</strong>은 통영 여행에서 빠지면 아쉬운 음식입니다. 통영은 국내 굴 생산량의 상당 부분을 차지하는 굴 생산 1번지로, 6월에는 봄 굴 마감 시즌에 해당해 싱싱하고 통통한 굴을 저렴하게 즐길 수 있습니다.<br><br>
+<strong>통영 충무김밥</strong>도 놓치면 안 될 별미입니다. 통영역 맞은편과 서호시장 일대에 충무김밥 전문 식당들이 즐비하며, 작고 심플한 참기름 김밥에 꼴뚜기무침과 깍두기가 함께 나오는 이 조합은 통영에서만 완성되는 맛입니다. 1인분에 6,000~8,000원 수준으로 부담 없는 가격도 매력입니다.<br><br>
+저녁 식사 후에는 통영 강구안(강구항) 문화마당과 동피랑 벽화마을을 산책하며 하루를 마무리하는 것도 좋은 선택입니다.
+
+<h2>⑨ 방문 주의사항과 준비물 체크리스트</h2>
+
+소매물도 여행을 계획하기 전 반드시 체크해야 할 사항들을 정리했습니다.<br><br>
+<strong>기상 확인이 최우선입니다.</strong> 남해 바다는 기상 변화가 빠르고, 기상 악화 시 여객선이 결항하거나 귀항이 지연될 수 있습니다. 방문 전날과 당일 아침 날씨 예보를 반드시 확인하고, 파고 2~3미터 이상 예보 시에는 일정 변경을 검토하세요.<br><br>
+<strong>멀미 대비가 필요합니다.</strong> 소매물도로 향하는 항로는 남해 먼바다를 지나는 구간이 있어 파도가 거친 날에는 멀미가 심할 수 있습니다. 멀미약은 탑승 30분 전에 복용하거나 패치형을 귀 뒤에 붙이는 것이 효과적입니다.<br><br>
+<strong>물때표를 반드시 확인하세요.</strong> 등대섬 방파제를 걸어서 건너려면 간조 시간을 미리 파악해야 합니다. 국립해양조사원 조석 예측 서비스에서 통영 인근 소매물도 물때표를 확인해 방문 당일의 간조 시간을 계획에 반영해 두세요.<br><br>
+자외선 차단제, 모자, 편안한 트레킹화, 물과 간식, 카메라를 필수 준비물로 챙겨 주시고, 쓰레기는 모두 개인이 회수해 섬 환경 보전에 동참해 주세요.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260608/travel_inje_jajaknamusuep_june.html">인제 원대리 자작나무숲 6월 신록 — 북유럽 감성 산림욕 코스</a></li>
+    <li><a href="../260608/travel_gyeongju_gampo_munmudaewang_june.html">경주 감포·문무대왕릉 6월 해안 드라이브</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#통영여행</span>
+  <span class="tag">#소매물도</span>
+  <span class="tag">#등대섬</span>
+  <span class="tag">#남해섬여행</span>
+  <span class="tag">#6월여행</span>
+  <span class="tag">#경남여행</span>
+  <span class="tag">#한려해상국립공원</span>
+  <span class="tag">#당일치기섬</span>
+  <span class="tag">#초여름바다</span>
+  <span class="tag">#통영당일치기</span>
+</div>
+
+</body>
+</html>

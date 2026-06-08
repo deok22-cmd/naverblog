@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .img-area { margin: 30px 0; }
+  .img-placeholder { background: #f4f8f7; border: 2px dashed #b2dfdb; padding: 20px; border-radius: 8px; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 0.9em; color: #555; }
+  .ph-file { font-family: monospace; color: #888; font-size: 0.82em; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; padding: 12px; border-radius: 4px; font-size: 0.88em; color: #555; white-space: pre-wrap; margin: 8px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 8px 18px; border-radius: 4px; cursor: pointer; margin-top: 6px; font-size: 0.9em; }
+  .img-caption { text-align: center; color: #888; font-size: 0.9em; margin-top: 10px; font-style: italic; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .recommend-area a { color: #00796b; text-decoration: none; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = orig; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>양양 낙산사·하조대 6월 초여름 동해 드라이브 코스, 당일치기 가이드</h1>
+
+<div class="intro-box">
+강원도 양양은 서울에서 동해고속도로를 타면 약 2시간 만에 닿는 동해안의 보물 같은 여행지입니다.<br><br>
+1,350년 역사를 자랑하는 낙산사는 동해 바다를 바라보는 절벽 위에 자리 잡아, 불교 성지이자 동해 최고의 전망 명소로 동시에 손꼽힙니다. 여기에 기암절벽과 소나무가 어우러진 하조대까지 더하면 하루 드라이브로 완성되는 완벽한 동해 코스가 됩니다.<br><br>
+6월은 해수욕장 개장 이전으로 방문객이 적고, 동해의 바다색이 연중 가장 투명하게 빛나는 시기입니다. 북적이는 여름 성수기가 시작되기 전 진정한 동해의 아름다움을 만끽할 수 있는 최고의 타이밍입니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260609/5_naksansa_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-1">Naksansa Temple complex on the East Sea coast, Yangyang, South Korea. Hongryanam hermitage perched on dramatic rocky cliff face with ocean waves crashing below, traditional Korean temple architecture, green hillside forest, bright blue summer sky, blue East Sea stretching to the horizon. Morning light illuminating the cliff hermitage. Photorealistic, ultra high detail, 1:1 aspect ratio, travel photography, cinematic coastal scenery, vivid blue and green palette.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">낙산사 홍련암 — 동해 절벽 위의 관음 기도처 / AI 제작 이미지</div>
+</div>
+
+<h2>① 낙산사란 — 동해를 품은 천사백 년 관음 성지</h2>
+
+낙산사(洛山寺)는 문무왕 11년(671년) 의상대사가 창건한 강원도 양양군 강현면 전진리에 자리한 사찰입니다.<br><br>
+의상대사는 당나라 유학에서 돌아오는 길에 동해 바다 속에 관음보살이 머무는 굴이 있다는 말을 듣고, 이 굴을 발견해 사찰을 세웠다는 창건 설화가 전해집니다. 이로 인해 낙산사는 양양(洛山)의 관음보살을 모시는 3대 관음 성지 중 하나(금강산 보덕굴·낙산사·보리암)로 불리며, 지금도 전국에서 관음기도를 올리러 오는 불자들이 끊이지 않습니다.<br><br>
+안타깝게도 2005년 4월 강원 동해안 산불로 절 대부분이 소실되는 참변을 겪었습니다. 하지만 이후 복원 공사가 착실히 진행되어 현재는 사찰의 주요 건물들이 대부분 재건되었으며, 소실을 피한 홍예문(虹霓門), 해수관음상, 홍련암은 원형 그대로 남아 있습니다.<br><br>
+낙산사의 가장 큰 매력은 동해 바다와의 거리입니다. 절 동쪽 경계선 바로 아래가 동해 절벽이어서, 경내를 걷는 내내 바다 소리가 들려오고 어디서든 동해를 시야에 담을 수 있습니다.
+
+<h2>② 찾아가는 방법 — 서울 기점 버스와 자가용</h2>
+
+자가용으로는 서울 양양고속도로(서울~양양고속도로)를 이용해 양양IC에서 빠져나와 낙산사 방면으로 약 10분이면 도착합니다. 서울에서 약 2시간~2시간 30분 소요됩니다.<br><br>
+대중교통으로는 서울 동서울터미널에서 양양행 버스가 약 30~60분 간격으로 운행되며 소요 시간은 약 2시간 30분 내외입니다. 양양 공용버스터미널에서 낙산사 방면 버스로 환승하거나 택시를 이용하면 약 10~15분 거리입니다.<br><br>
+낙산사 주차장은 사찰 입구 인근에 조성되어 있습니다. 주차료는 소형 차량 기준 소정의 비용이 발생하며, 여름 성수기에는 주차 대기가 생기므로 오전 9시 이전 도착을 권장합니다. 사찰 입장료는 성인 기준 수천 원 수준이며, 방문 전 낙산사 공식 홈페이지에서 최신 정보를 확인해 주세요.
+
+<h2>③ 낙산사 경내 감상 포인트</h2>
+
+낙산사 경내는 홍예문에서 시작해 의상대·관음전·홍련암으로 이어지는 산책 동선이 핵심입니다.<br><br>
+<strong>홍예문(虹霓門):</strong> 사찰 경내로 들어가는 무지개 모양의 돌문으로, 조선 세조 13년(1467년)에 축조된 것으로 전해집니다. 2005년 산불에서 기적적으로 살아남은 건물 중 하나로, 아치 사이로 동해 바다가 훤히 보이는 구도가 인상적입니다.<br><br>
+<strong>해수관음상:</strong> 경내 해안 쪽 절벽 가장자리에 세워진 높이 16미터의 청동 관음상으로, 동해를 향해 서 있는 모습이 장엄합니다. 관음상 뒤로 푸른 동해가 펼쳐지는 구도는 낙산사를 대표하는 사진 포인트입니다.<br><br>
+<strong>홍련암(紅蓮庵):</strong> 낙산사에서 가장 오래되고 신령스러운 곳으로 꼽히는 해안 암자입니다. 바위 절벽 위에 지어져 건물 마루 아래로 동해 파도가 드나드는 구멍이 있으며, 그 구멍을 통해 바다를 들여다보면 관음보살을 만날 수 있다는 전설이 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260609/5_naksansa_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-2">Large bronze Haesugwaneumsang (Sea Goddess of Mercy) statue at Naksansa Temple, Yangyang, South Korea, 16 meters tall, standing on cliff edge facing the East Sea. Deep blue ocean stretching to horizon behind the golden-green statue, lush summer forest on hillsides, bright summer sky. Wide angle view showing the full statue with ocean background. Photorealistic, ultra high detail, 1:1 aspect ratio, travel photography, dramatic coastal composition, vibrant colors.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">낙산사 해수관음상 — 동해를 향해 선 16미터 청동 관음상 / AI 제작 이미지</div>
+</div>
+
+<h2>④ 홍련암 — 파도 소리 속 관음 기도의 성지</h2>
+
+낙산사 방문의 하이라이트는 경내 가장 동쪽 바위 절벽에 자리한 홍련암입니다.<br><br>
+홍련암은 절벽 위 바위를 기반으로 지어진 작은 암자로, 건물 아래에는 동해 바다와 직접 연결된 바위 구멍이 있습니다. 법당 마룻바닥에 작은 구멍이 뚫려 있어 아래를 들여다보면 동해 파도가 드나드는 것을 직접 눈으로 확인할 수 있습니다.<br><br>
+이 암자에서는 파도 소리가 항상 들려오며, 창문을 열면 동해 바다가 눈앞에 펼쳐집니다. 경건한 기도 분위기와 생동감 있는 바다 풍경이 공존하는 이 공간은 '동해에서 가장 특별한 기도처'라는 별명이 전혀 과장이 아님을 체감하게 합니다.<br><br>
+홍련암에서 절벽 위 데크를 따라 걸으면 동해를 향해 뻗은 소나무 군락과 함께 파도가 부서지는 바위 해안이 아래로 펼쳐지는 경관을 감상할 수 있습니다. 해 질 무렵 이 구간에서 바라보는 석양은 양양 여행에서 결코 놓치면 안 될 장면입니다.
+
+<h2>⑤ 6월 낙산사의 특별한 매력 — 초여름 동해 바람</h2>
+
+낙산사는 1년 내내 많은 방문객이 찾는 곳이지만, 6월에는 남다른 특별함이 있습니다.<br><br>
+<strong>해수욕장 개장 전 고요함이 있습니다.</strong> 양양 낙산해수욕장은 통상 6월 하순~7월 초에 개장합니다. 개장 이전인 6월에는 주변 지역 전체가 한산하고, 낙산사도 성수기 인파에 비해 훨씬 조용합니다. 홍련암 앞 바위 해안에서 혼자만의 시간을 갖는 특별한 경험을 할 수 있습니다.<br><br>
+<strong>동해 바다색이 가장 맑습니다.</strong> 6월의 동해는 짙은 코발트블루로 빛나며, 가시 거리도 맑은 날 수십 킬로미터에 달할 만큼 투명합니다. 해수관음상을 배경으로 찍는 사진에서 바다 색이 가장 선명하게 나오는 시기입니다.<br><br>
+<strong>바다에서 불어오는 초여름 바람이 상쾌합니다.</strong> 기온이 낮지도 높지도 않은 6월 초여름, 동해에서 불어오는 해풍은 청량하고 상쾌합니다. 홍련암 앞 데크에서 바람을 맞으며 동해를 바라보는 경험은 도시에서는 절대 할 수 없는 치유의 시간입니다.
+
+<h2>⑥ 하조대 — 기암절벽과 소나무의 동해 명소</h2>
+
+낙산사에서 차로 약 20분 남쪽으로 내려가면 <strong>하조대(河趙臺)</strong>가 나옵니다.<br><br>
+하조대는 양양군 현북면 하광정리에 위치한 기암절벽 위 정자로, 조선 개국 공신 하륜(河崙)과 조준(趙浚)이 만년에 이곳에서 은거했다는 데서 이름이 유래했습니다. 수백 년 수령의 노송(老松)들이 바위 절벽 위에 자리 잡고 있어, 소나무와 기암절벽, 동해 바다가 삼위일체를 이루는 절경을 선사합니다.<br><br>
+정자 앞 바위 절벽 아래에는 작은 등대가 서 있으며, 이 등대와 소나무, 기암절벽, 동해가 함께 프레임에 담기는 구도는 하조대를 대표하는 사진 포인트입니다. 일출 명소로도 유명해 이른 새벽에 방문하면 동해 위로 해가 떠오르는 장관을 감상할 수 있습니다.<br><br>
+하조대 주차장 무료, 입장료 없음. 정자까지는 주차장에서 도보 5분 거리로 접근성이 매우 좋습니다.
+
+<h2>⑦ 낙산해수욕장·오산해수욕장 6월 미리보기</h2>
+
+낙산사 바로 옆에 위치한 <strong>낙산해수욕장</strong>은 강원도를 대표하는 해수욕장 중 하나입니다.<br><br>
+6월에는 아직 공식 개장 전이지만, 백사장 산책과 석양 감상은 연중 가능합니다. 해수욕 없이도 길고 넓은 백사장을 혼자 걷는 경험은 6월에만 가능한 호사입니다. 7월 초 정식 개장 이후에는 피서객이 몰려 주차와 식당 대기 등이 복잡해지므로, 6월에 미리 답사해 두면 성수기 여행 계획을 세우는 데도 도움이 됩니다.<br><br>
+낙산해수욕장에서 북쪽으로 1km 거리에는 <strong>오산해수욕장</strong>도 있습니다. 낙산보다 규모는 작지만 한적하고 조용한 분위기라 현지인들에게 더 인기 있는 숨은 명소입니다. 카페와 서퍼들이 자주 찾는 곳이기도 합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260609/5_naksansa_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-3">Hajoday rock formation and pavilion, Yangyang, Gangwon Province, South Korea. Dramatic coastal basalt cliffs with ancient gnarled pine trees growing from the rocks, small white lighthouse below on rocky shore, deep blue East Sea crashing against the base. Traditional wooden gazebo (정자) on the cliff top framed by old pine trees, blue summer sky with light clouds. Photorealistic, ultra high detail, 1:1 aspect ratio, coastal landscape photography, cinematic composition, vivid natural colors.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">하조대 기암절벽과 소나무, 동해 등대 전경 / AI 제작 이미지</div>
+</div>
+
+<h2>⑧ 양양 맛집 — 연어·물회·닭갈비 삼총사</h2>
+
+양양은 최근 서핑의 성지로 떠오른 동시에 맛있는 먹거리도 풍부한 고장입니다.<br><br>
+<strong>양양 연어</strong>는 가을이 제철이지만, 연어 양식장과 연어 횟집이 발달해 있어 6월에도 신선한 연어 요리를 즐길 수 있습니다. 양양읍 시내 연어 전문점에서는 연어 회·연어 덮밥·연어 샐러드 등 다양한 메뉴를 합리적인 가격에 제공합니다.<br><br>
+<strong>동해안 물회</strong>도 빠질 수 없습니다. 낙산사 인근 해산물 식당에서 제공하는 물회는 갓 잡은 싱싱한 생선·오징어·미역·야채를 새콤달콤한 초고추장에 비벼 먹는 여름 별미입니다. 1인분에 15,000~20,000원 수준입니다.<br><br>
+<strong>양양 닭갈비</strong>도 강원도 양양 특유의 닭갈비 맛이 있습니다. 춘천 닭갈비보다 덜 유명하지만 현지인들이 즐겨 찾는 숨은 맛집들이 시내에 여럿 있습니다.
+
+<h2>⑨ 당일치기 동선과 방문 팁</h2>
+
+양양 낙산사·하조대 당일치기 추천 동선입니다.<br><br>
+<strong>오전 9시:</strong> 낙산사 도착·경내 산책. 홍예문→해수관음상→홍련암→의상대 순서로 약 1시간 30분 소요됩니다.<br><br>
+<strong>오전 11시:</strong> 낙산해수욕장 백사장 산책. 이른 오전에는 한산해 6월의 동해를 여유롭게 즐길 수 있습니다.<br><br>
+<strong>낮 12시~1시:</strong> 낙산사 인근 식당에서 물회 또는 해산물 점심 식사.<br><br>
+<strong>오후 1시 30분:</strong> 차로 20분 남쪽 이동, 하조대 방문. 기암절벽·소나무·등대 조망 및 산책 약 30분~1시간.<br><br>
+<strong>오후 3시:</strong> 양양읍 시내로 이동, 연어 카페나 서핑 숍 구경, 양양 5일장(3·8일 장) 해당 시 방문.<br><br>
+<strong>오후 5시:</strong> 귀가 출발. 서울까지 평일 기준 약 2시간 30분 소요됩니다.<br><br>
+6월 방문 시에는 자외선 차단제와 바람막이를 꼭 챙기세요. 동해 바닷바람이 강한 날에는 체감 기온이 낮을 수 있습니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260608/travel_inje_jajaknamusuep_june.html">인제 원대리 자작나무숲 6월 신록 — 북유럽 감성 산림욕 코스</a></li>
+    <li><a href="../260608/travel_gyeongju_gampo_munmudaewang_june.html">경주 감포·문무대왕릉 6월 해안 드라이브</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#양양여행</span>
+  <span class="tag">#낙산사</span>
+  <span class="tag">#하조대</span>
+  <span class="tag">#강원도여행</span>
+  <span class="tag">#6월여행</span>
+  <span class="tag">#동해여행</span>
+  <span class="tag">#낙산해수욕장</span>
+  <span class="tag">#홍련암</span>
+  <span class="tag">#동해당일치기</span>
+  <span class="tag">#초여름동해</span>
+</div>
+
+</body>
+</html>
