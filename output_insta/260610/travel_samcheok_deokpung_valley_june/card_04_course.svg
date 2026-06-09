@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== P2 : 코스 단계 — course 카드 (덕풍계곡 트레킹 구간) ===== -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="270" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">트레킹 코스 동선</text>
+  <rect x="82" y="304" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="442" font-size="42" font-weight="700" fill="#ffffff">덕풍마을 주차장 출발</text>
+    <text x="80" y="488" font-size="28" font-weight="500" fill="#b2dfdb">탐방로 입구 안내판 · 데크 구간</text>
+    <text x="1000" y="458" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">0~1km</text>
+    <line x1="80" y1="540" x2="1000" y2="540" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="612" font-size="42" font-weight="700" fill="#ffffff">본격 도하 구간</text>
+    <text x="80" y="658" font-size="28" font-weight="500" fill="#b2dfdb">계곡 교차 반복 · 아쿠아슈즈 필수</text>
+    <text x="1000" y="628" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">1~2.5km</text>
+    <line x1="80" y1="710" x2="1000" y2="710" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="782" font-size="42" font-weight="700" fill="#ffffff">물돼지소 도착</text>
+    <text x="80" y="828" font-size="28" font-weight="500" fill="#b2dfdb">수심 2~4m · 발 담그고 간식 보충</text>
+    <text x="1000" y="798" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">2.5km</text>
+    <line x1="80" y1="880" x2="1000" y2="880" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="952" font-size="42" font-weight="700" fill="#ffffff">용소 도착 (종점)</text>
+    <text x="80" y="998" font-size="28" font-weight="500" fill="#b2dfdb">수심 6~8m · 에메랄드 물빛 · 휴식</text>
+    <text x="1000" y="968" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">4km</text>
+    <line x1="80" y1="1050" x2="1000" y2="1050" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="1122" font-size="42" font-weight="700" fill="#ffffff">총 소요 시간</text>
+    <text x="1000" y="1122" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">3~4시간 (왕복)</text>
+  </g>
+
+  <text x="80" y="1240" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">오후 2시 이전 하산 완료 권장.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

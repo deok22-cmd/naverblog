@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== card_07 : INFO (P1 — 정보 표) =====
+       소스: info-table 8행 | 국내여행 팔레트 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1f1c"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="180" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">방문 정보 한눈에</text>
+  <rect x="82" y="214" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="340" font-size="38" font-weight="600" fill="#ffffff">위치</text>
+    <text x="1000" y="340" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">전남 장흥군 우드랜드길 180</text>
+    <line x1="80" y1="374" x2="1000" y2="374" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="450" font-size="38" font-weight="600" fill="#ffffff">운영 시간</text>
+    <text x="1000" y="450" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">08:00~18:00</text>
+    <line x1="80" y1="484" x2="1000" y2="484" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="560" font-size="38" font-weight="600" fill="#ffffff">입장료</text>
+    <text x="1000" y="560" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">성인 5,000원</text>
+    <line x1="80" y1="594" x2="1000" y2="594" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="670" font-size="38" font-weight="600" fill="#ffffff">주차</text>
+    <text x="1000" y="670" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">무료</text>
+    <line x1="80" y1="704" x2="1000" y2="704" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="780" font-size="38" font-weight="600" fill="#ffffff">탐방 적기</text>
+    <text x="1000" y="780" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">6월~8월</text>
+    <line x1="80" y1="814" x2="1000" y2="814" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="890" font-size="38" font-weight="600" fill="#ffffff">연계 명소</text>
+    <text x="1000" y="890" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">천관산도립공원</text>
+    <line x1="80" y1="924" x2="1000" y2="924" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="1000" font-size="38" font-weight="600" fill="#ffffff">문의</text>
+    <text x="1000" y="1000" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">061-864-0063</text>
+    <line x1="80" y1="1034" x2="1000" y2="1034" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="1110" font-size="38" font-weight="600" fill="#ffffff">서울 소요 시간</text>
+    <text x="1000" y="1110" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">약 4시간~4시간 30분</text>
+  </g>
+
+  <text x="80" y="1220" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="28" font-weight="500" fill="#b2dfdb">계절에 따라 운영 시간 변동 — 방문 전 확인 권장.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>
