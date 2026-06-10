@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- card_03 : A 헤드라인-하단 — 서해 일몰 명당 (point 1)
+       카테고리: 국내여행 | 팔레트: #00796b / #004d40 / #e0f2f1 / #80cbc4 -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.40" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.82"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <rect x="80" y="852" width="64" height="10" fill="#00796b"/>
+  <text x="80" y="968" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="94" font-weight="800" fill="#ffffff" letter-spacing="-2">서해 황금빛</text>
+  <text x="80" y="1066" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="94" font-weight="800" fill="#ffffff" letter-spacing="-2">일몰 명당</text>
+
+  <g id="chips">
+    <rect x="80" y="1108" width="360" height="74" rx="37" fill="#00796b"/>
+    <text x="260" y="1156" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle">일몰 19:40~19:50</text>
+    <rect x="460" y="1108" width="340" height="74" rx="37" fill="#00796b"/>
+    <text x="630" y="1156" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle">박명 20~30분</text>
+  </g>
+
+  <text x="80" y="1250" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e0f2f1">솔밭 쉼터·조개탑 조형물 인근이 최고 명당,</text>
+  <text x="80" y="1298" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e0f2f1">간조 시 모래펄 황금 반사가 절정.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>
