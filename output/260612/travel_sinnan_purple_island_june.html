@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px 14px; text-align: left; }
+  .info-table td { padding: 10px 14px; border: 1px solid #ddd; }
+  .info-card { border: 1px solid #ddd; padding: 15px; border-radius: 8px; text-align: center; }
+  .step-box { border-left: 4px solid #00796b; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #bbb; border-radius: 8px; padding: 20px; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 700; color: #555; }
+  .ph-file { font-size: 0.85em; color: #888; font-family: monospace; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 12px; font-size: 0.85em; color: #444; white-space: pre-wrap; margin: 10px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.9em; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; text-align: center; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>신안 퍼플섬 배 시간표와 자전거 대여, 보라색 마을 인생샷 명당</h1>
+
+<div class="intro-box">
+전남 신안군에는 섬 전체가 보라색으로 물든 특별한 곳이 있습니다. 반월도와 박지도를 아우르는 <strong>신안 퍼플섬</strong>은 집 지붕부터 다리 난간, 화장실 문, 벤치 하나까지 온통 보랏빛으로 칠해진 국내 유일의 보라색 섬입니다. 6월 중하순이면 버들마편초와 도라지꽃이 만개해 섬 전체가 보라 물결로 넘실대고, 바다 위를 가로지르는 퍼플교 위에서 찍는 사진은 어느 각도에서도 인생샷이 됩니다. 배 시간표부터 입장료 꿀팁, 자전거 대여 정보까지 한 번에 정리해 드립니다.
+</div>
+
+<h2>① 신안 퍼플섬이란? 반월도·박지도의 보랏빛 세계</h2>
+
+신안 퍼플섬은 전라남도 신안군 안좌면에 속하는 <strong>반월도</strong>와 <strong>박지도</strong> 두 섬을 통틀어 부르는 이름입니다. 두 섬은 보라색 해상보행교로 서로 이어져 있으며, 안좌도와도 다리로 연결되어 있어 자동차나 자전거로 이동이 가능합니다.<br><br>
+
+퍼플섬이 탄생한 배경은 2019년 신안군의 아이디어에서 비롯됩니다. 주민들이 마을 환경을 개선하면서 보라색 테마를 전면 도입했고, 외벽과 지붕, 도로 경계석, 우편함, 심지어 쓰레기통까지 모두 보라색으로 통일했습니다. 처음에는 낯설게 느껴졌던 이 색채 전략이 SNS를 통해 급속도로 퍼지면서 지금은 연간 수십만 명이 찾는 명소로 성장했습니다.<br><br>
+
+섬 안에는 지역 주민들이 실제 거주하고 있으며, 자연환경과 사람이 어우러지는 진짜 섬마을의 분위기를 느낄 수 있습니다. 관광지로 조성된 곳이지만 그 안에서 살아가는 사람들의 일상이 고스란히 담겨 있어, 억지스럽지 않은 따뜻함이 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260612/1_sinnan_purple_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-1">Aerial view of Sinan Purple Island (Banweol-do and Bakji-do) in South Korea, showing two small islands connected by a brilliant purple suspension bridge over turquoise sea water. All buildings, rooftops, fences and pathways are painted in deep violet and lavender purple. Rolling purple flower fields of verbena and bellflower surround the traditional Korean village houses. Summer blue sky with soft white clouds. Drone perspective shot, photorealistic, ultra high detail, golden hour warm light, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">신안 퍼플섬 전경 — 반월도와 박지도를 잇는 보라색 해상보행교 / AI 제작 이미지</div>
+</div>
+
+<h2>② 퍼플섬 가는 법 — 천사대교부터 안좌도까지</h2>
+
+신안 퍼플섬을 찾아가는 방법은 크게 두 가지입니다. 가장 일반적인 방법은 <strong>자가용</strong>을 이용하는 것이며, 2019년 개통된 천사대교 덕분에 도서 지역 특유의 불편함 없이 접근할 수 있습니다.<br><br>
+
+자가용으로 가는 경우 서해안고속도로 목포IC에서 빠져나와 압해도를 거쳐 천사대교를 건너면 됩니다. 천사대교는 총 연장 10.8km로 국내 두 번째로 긴 연도교이며, 다리 위에서 바라보는 다도해 풍경만으로도 이미 여행의 시작이 됩니다. 암태도, 팔금도, 안좌도를 연결하는 연도교를 따라 달리면 안좌도 선착장에 도착합니다.<br><br>
+
+대중교통 이용자라면 목포 버스터미널에서 안좌도행 배나 버스를 이용할 수 있습니다. 단, 반월도·박지도로 들어가는 소형 선박은 안좌도 선착장에서 운항하며, 운항 시간과 편수는 날씨와 조석에 따라 변경될 수 있으므로 신안군청 교통지원과(061-240-8167)에 미리 전화해 당일 운항 여부를 확인하는 것을 권장합니다.<br><br>
+
+차량을 이용하는 경우 안좌도에서 반월도 방향 도로를 따라가면 선착장 바지선을 통해 차량을 실어 나를 수 있습니다. 바지선 운임은 별도로 발생하므로 현장에서 확인하시기 바랍니다. 자전거나 도보 여행자는 해상보행교를 직접 건너는 방식으로 두 섬을 연결해 다닐 수 있어 더욱 쾌적합니다.
+
+<h2>③ 배 운항 시간표와 선착장 이용 안내</h2>
+
+안좌도 선착장에서 반월도로 향하는 선박은 소형 여객선 또는 바지선 형태로 운항됩니다. 일반 관광객이 가장 많이 이용하는 루트는 <strong>차도선(바지선)</strong>으로, 차량 동반 여행자에게 필수 코스입니다.<br><br>
+
+운항 시각은 계절과 조석 상황에 따라 유동적으로 변경됩니다. 통상적으로 오전 첫 배는 8~9시 사이에 출발하며, 막배는 오후 6시 내외로 운항하지만 이는 공식 정보가 아닌 일반적인 관행이므로 <strong>반드시 방문 전날 신안군청(061-240-8167) 또는 퍼플섬 관광 안내소에 전화로 당일 시간표를 확인</strong>하시기 바랍니다.<br><br>
+
+날씨가 악화되거나 강풍 주의보가 발효될 경우 운항이 중단될 수 있습니다. 특히 여름철은 갑작스러운 소나기나 태풍 영향을 받을 수 있으므로, 기상청 날씨 예보를 함께 체크하는 것이 안전합니다. 차량 탑재 바지선의 경우 만차 시 다음 편을 기다려야 하므로 성수기에는 일찍 도착하시는 것이 좋습니다.
+
+<h2>④ 입장료와 보라색 착용 무료 입장 꿀팁</h2>
+
+신안 퍼플섬의 정식 입장료는 <strong>어른 5,000원, 청소년 3,000원, 어린이 1,000원</strong>이며, 65세 이상 어르신은 무료로 입장하실 수 있습니다. 여기서 퍼플섬만의 독특한 특전이 하나 있습니다.<br><br>
+
+<strong>보라색 옷이나 신발, 모자, 가방 등을 착용하면 입장료가 전액 면제</strong>됩니다. 단순히 옷 색이 보라색이면 되는 것이 아니라 '제대로 된 보라색 아이템'을 착용해야 하며, 현장 직원이 판단합니다. 보라색 머리핀이나 자그마한 스카프 하나만으로도 인정해 주는 경우가 많으니, 여행 전 보라색 아이템 하나쯤은 꼭 챙겨가시기 바랍니다.<br><br>
+
+이 아이디어는 단순한 마케팅을 넘어 방문객에게 보라색 테마에 능동적으로 참여하도록 유도하는 장치입니다. 실제로 퍼플섬을 찾는 관광객의 상당수가 의도적으로 보라색 옷을 맞춰 입고 오며, 덕분에 섬 전체가 한 폭의 그림처럼 어우러지는 풍경이 연출됩니다. 입장료를 아끼면서 사진도 더 잘 나오는 일석이조 전략이니 적극 활용해 보세요.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260612/1_sinnan_purple_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-2">Close-up view of the Purple Bridge (퍼플교) walkway at Sinan Purple Island, South Korea. The suspension footbridge painted in vivid purple stretches across calm turquoise sea water. Tourists wearing purple clothing walk along the bridge. Purple verbena flowers bloom on the island hillside in the background. Bright summer afternoon, blue sky reflection on sea, photorealistic, ultra high detail, eye-level perspective, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">퍼플교 위에서 바라본 바다 풍경 — 보라색 다리와 에메랄드 바다의 조화 / AI 제작 이미지</div>
+</div>
+
+<h2>⑤ 반월도 산책 — 문브릿지 건너 보라빛 언덕까지</h2>
+
+반월도는 퍼플섬에서 첫 번째로 만나게 되는 섬입니다. 안좌도에서 반월도로 이어지는 <strong>문브릿지(380m)</strong>를 건너는 순간, 본격적인 보라색 세계가 시작됩니다. 문브릿지는 이름처럼 보름달을 형상화한 아치 디자인이 특징으로, 다리 위에서 안좌도 방향으로 돌아보는 풍경도 아름답습니다.<br><br>
+
+반월도 안으로 들어서면 가장 먼저 보라색으로 단장된 마을길이 이어집니다. 주민들이 거주하는 실제 집들의 담벼락과 대문, 지붕 기와까지 보라색으로 칠해져 있어 마을 전체가 통일감 있는 보라 팔레트를 이룹니다. 골목을 따라 걸으면 마을 안쪽 높은 곳에서 바다를 내려다보는 뷰포인트에 닿을 수 있으며, 이곳에서 박지도를 잇는 퍼플교(915m)가 한눈에 들어옵니다.<br><br>
+
+반월도 언덕 구간에는 버들마편초와 도라지꽃이 계단식으로 심어져 있어, 6월 중하순에 방문하면 보라색 꽃밭 사이로 걷는 낭만적인 경험을 할 수 있습니다. 산책로는 비교적 완만하게 정비되어 있으나 일부 구간은 경사가 있으므로 운동화를 착용하시는 것이 좋습니다. 전체 순환 코스는 반월도 기준 약 1.5~2시간이 소요됩니다.
+
+<h2>⑥ 박지도 전동카트·자전거 대여와 추천 코스</h2>
+
+반월도에서 퍼플교(915m)를 건너면 <strong>박지도</strong>에 도착합니다. 박지도는 반월도보다 규모가 작지만, 섬 곳곳을 자전거나 전동카트로 누빌 수 있어 더욱 활동적인 여행이 가능합니다.<br><br>
+
+<strong>자전거 대여</strong>는 박지도 입구 부근의 대여소에서 가능하며, 요금은 성인 기준 1인 1시간에 약 3,000원~5,000원 수준입니다(현장 시세 변동 가능). <strong>전동카트</strong>는 1인 기준 약 2,000~3,000원으로 이용할 수 있으며, 경사가 있는 구간을 편하게 오르내릴 수 있어 어르신이나 어린 자녀와 함께하는 가족 여행객에게 특히 적합합니다.<br><br>
+
+박지도 추천 코스는 다음과 같습니다. 입도 후 곧바로 해안 산책로를 따라 섬 외곽을 한 바퀴 돌면 탁 트인 다도해 뷰를 감상할 수 있습니다. 섬 중앙 언덕에는 박지도 전망대가 있으며, 이곳에서 반월도·안좌도·주변 소도서를 한눈에 조망할 수 있습니다. 박지도 서쪽 해변은 조용한 편이라 이른 아침이나 오후 늦게 찾으면 한적하게 일몰 포인트를 즐길 수 있습니다.
+
+<h2>⑦ 인생샷 명당 5선 — 퍼플교 위에서 찍어야 할 각도</h2>
+
+신안 퍼플섬을 찾는 이유 중 가장 큰 것이 사진입니다. 여기서는 어디에서 찍어도 보라색 피사체가 가득한 덕분에 평범한 스마트폰으로도 감각적인 사진이 나옵니다. 특히 추천하는 포인트를 소개합니다.<br><br>
+
+<strong>1. 퍼플교 중간 지점</strong> — 915m 퍼플교 한가운데에서 양 섬 방향으로 찍으면 보라색 다리가 무한히 뻗어 나가는 극적인 원근감 사진이 완성됩니다. 역광이 들어오는 오후 4~5시 사이가 황금 시간대입니다.<br><br>
+
+<strong>2. 반월도 언덕 꽃밭</strong> — 버들마편초와 도라지꽃이 만개하는 6월 중하순에는 꽃밭 안에서 바다를 배경으로 찍는 사진이 압도적입니다. 이른 아침 이슬 맺힌 꽃 위로 빛이 들어올 때 특히 아름답습니다.<br><br>
+
+<strong>3. 박지도 전망대</strong> — 섬 전체를 내려다보는 높은 위치로, 다도해와 보라색 마을이 어우러진 광각 사진을 담을 수 있습니다.<br><br>
+
+<strong>4. 보라색 마을 골목</strong> — 반월도 마을 안쪽 골목에서 양쪽 벽이 온통 보라색인 좁은 길을 배경으로 찍으면 색채가 강렬한 거리 사진이 나옵니다.<br><br>
+
+<strong>5. 문브릿지(380m) 위</strong> — 반월도와 안좌도를 잇는 문브릿지 위에서 수면 반사광을 살려 찍으면 하늘과 바다가 보라와 청록으로 어우러지는 몽환적인 사진이 됩니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260612/1_sinnan_purple_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-3">A traditional Korean village on Banweol Island, Sinan Purple Island. Every house, wall, fence, and pathway is painted deep purple and violet. Lush purple verbena flowers and bellflowers bloom along terraced hillside garden paths. A young woman in a purple dress walks along the village alley. Warm afternoon golden sunlight, shadows playing on purple walls, photorealistic, ultra high detail, travel photography style, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">반월도 보라색 마을 골목 — 집 담벼락부터 꽃길까지 온통 보랏빛 / AI 제작 이미지</div>
+</div>
+
+<h2>⑧ 6월 버들마편초·도라지꽃 — 퍼플섬이 보랏빛인 또 다른 이유</h2>
+
+퍼플섬의 보라색은 단순히 페인트 색에서만 나오는 것이 아닙니다. 섬 곳곳에 심어진 <strong>버들마편초</strong>(Verbena bonariensis)와 <strong>도라지꽃</strong>이 6월 중순부터 꽃을 피우기 시작해 7월까지 보랏빛 물결을 더합니다. 버들마편초는 줄기가 가늘고 키가 크며 작은 보라색 꽃송이가 군집을 이루는 식물로, 바람에 하늘하늘 흔들리는 모습이 매우 로맨틱합니다.<br><br>
+
+도라지꽃은 우리에게 친숙한 식물이지만 군락을 이루어 필 때의 모습은 전혀 다른 차원의 아름다움을 선사합니다. 퍼플섬에서는 이 두 종류의 식물을 계획적으로 군식하여 6~9월 내내 보라색 꽃이 끊이지 않도록 했습니다.<br><br>
+
+6월 중하순에 방문하면 꽃이 막 피어나는 시점이라 신선하고 깨끗한 색감을 담을 수 있습니다. 7~8월에는 꽃이 절정을 이루어 시각적 임팩트가 극대화되지만 여름철 더위와 인파가 함께 찾아옵니다. 사진보다 여유로운 산책을 즐기고 싶다면 6월 방문이 상대적으로 쾌적합니다.
+
+<h2>⑨ 퍼플섬 주변 맛집과 안좌도 먹거리</h2>
+
+섬 여행의 묘미 중 하나는 현지 제철 먹거리입니다. 반월도·박지도 안에는 소규모 음식점 몇 곳이 운영되며, 주로 신선한 해산물 위주의 메뉴를 제공합니다. 낙지볶음, 전어구이, 장어탕 등 신안 앞바다에서 갓 잡아 올린 재료를 사용하므로 가격 대비 신선도는 보장됩니다.<br><br>
+
+다만 섬 안의 식당 수는 많지 않고 좌석이 제한적입니다. 점심 시간대 성수기에는 대기가 발생하므로, 가능하면 식사 시간을 앞뒤로 조금 비켜 잡거나 안좌도 본섬에서 식사를 해결하고 들어오는 것도 좋은 방법입니다. 안좌도 내에는 백반집과 횟집이 몇 곳 있으며, 신안 특산물인 자연산 낙지와 민어 요리를 맛볼 수 있습니다.<br><br>
+
+간식으로는 반월도 선착장 근처 매점에서 판매하는 <strong>보라색 아이스크림</strong>이 방문객에게 특히 인기입니다. 자색 고구마와 블루베리 성분으로 만든 것으로, 먹는 것까지 보라색 테마를 유지할 수 있어 SNS 사진 소재로도 좋습니다. 먹거리 가격은 현장 시세에 따라 다르므로 참고 수준으로만 인지하시기 바랍니다.
+
+<h2>⑩ 여름 방문 전 준비물과 꼭 챙길 주의사항</h2>
+
+6월 중하순의 신안 퍼플섬은 낮 최고기온이 28~33도에 달하는 초여름 날씨입니다. 섬 특유의 해풍이 있어 체감 온도는 낮지만, 직사광선이 강하고 그늘이 많지 않으므로 자외선 차단제와 선글라스, 넓은 챙의 모자는 필수입니다. 보라색 모자나 선글라스를 준비하면 입장료 면제와 인생샷 두 가지를 동시에 노릴 수 있습니다.<br><br>
+
+퍼플교 위는 바람이 강하게 불기도 합니다. 바람에 날릴 수 있는 가벼운 물건은 미리 가방 안에 넣어두고, 긴 머리라면 고무줄로 묶는 것이 편합니다. 해상보행교 위에서는 뛰거나 갑자기 방향을 바꾸는 행동을 삼가시기 바랍니다.<br><br>
+
+주차는 안좌도 선착장 인근과 반월도 입구 주차장을 이용하며, 성수기 주말에는 주차 공간이 부족할 수 있습니다. 대중교통 이용이 어려운 경우에는 오전 일찍 도착하거나 평일 방문을 권장합니다. 반려동물은 별도 규정이 있을 수 있으므로 방문 전 사전 확인이 필요합니다. 전체적으로 퍼플섬은 반나절~하루 코스로 여유 있게 즐길 수 있는 여행지이며, 목포와 연계한 1박 2일 일정을 잡으면 더욱 풍성한 여행이 됩니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260611/travel_haeinsa_gayasan_june_trekking.html">가야산 국립공원 6월 초여름 — 해인사 팔만대장경과 신록 산행 코스 정리</a></li>
+    <li><a href="../260611/travel_boryeong_daecheon_beach_june.html">보령 대천해수욕장 6월 개장 전 미리보기 — 서해 일몰 명당과 머드 체험 준비</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#신안퍼플섬</span>
+  <span class="tag">#반월도박지도</span>
+  <span class="tag">#퍼플섬배시간표</span>
+  <span class="tag">#신안여행</span>
+  <span class="tag">#보라색섬</span>
+  <span class="tag">#퍼플교</span>
+  <span class="tag">#자전거대여</span>
+  <span class="tag">#6월여행</span>
+  <span class="tag">#인생샷명당</span>
+  <span class="tag">#전남여행</span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f9fdf9; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 14px; text-align: left; }
+  .info-table td { padding: 10px 14px; border: 1px solid #ddd; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .caution-box { background: #fce4ec; border: 1px solid #e57373; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #bbb; border-radius: 8px; padding: 20px; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 700; color: #555; }
+  .ph-file { font-size: 0.85em; color: #888; font-family: monospace; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 12px; font-size: 0.85em; color: #444; white-space: pre-wrap; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.9em; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; text-align: center; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>여의도 한강공원 주차 무료시간과 자리 잘 나는 지구는 어디</h1>
+
+<div class="intro-box">
+"여의도 한강공원 주차비 얼마예요?" — 주말 피크닉을 앞두고 가장 많이 검색하는 질문 중 하나입니다. 한강공원은 무료 입장이지만 주차비는 별도로 부과됩니다. 게다가 여의도 구역은 한강공원 11개 지구 중 요금이 가장 비싼 편에 속합니다. 언제 가야 주차비를 아낄 수 있는지, 어느 주차장에 자리가 잘 나는지, 무료로 주차하는 조건은 무엇인지 — 자주 묻는 궁금증을 낱낱이 정리해 드립니다. 한강 나들이 전에 꼭 한 번 읽어두세요.
+</div>
+
+<h2>① 여의도 한강공원 주차장, 몇 곳이고 어떻게 구성되나</h2>
+
+서울 한강공원은 뚝섬, 잠실, 여의도, 반포, 이촌, 망원, 양화, 강서, 난지, 광나루, 암사 등 총 12개 지구로 구성됩니다. 이 중 <strong>여의도 한강공원</strong>은 수도권 직장인과 주말 피크닉 인파가 가장 많이 몰리는 지구로, 5개의 주차장(1~5주차장)을 운영하고 있습니다.<br><br>
+
+각 주차장의 위치와 특성이 조금씩 다릅니다. <strong>여의도 1주차장</strong>은 국회의사당 방향 입구 가장 가까이에 있어 접근성이 좋지만, 그만큼 가장 빨리 차는 경향이 있습니다. <strong>2주차장</strong>은 한강 수변 보행로와 가까워 수상무대나 물빛광장 방향 이용자가 주로 이용합니다. <strong>3주차장</strong>은 여의나루역 쪽과 가까워 지하철 환승 후 자전거 대여를 겸하는 이용자가 많습니다. <strong>4주차장과 5주차장</strong>은 조금 외곽에 위치해 있어 상대적으로 여유가 있습니다.<br><br>
+
+주차장별 정확한 위치와 혼잡도 실시간 정보는 서울시 미래한강본부 통합주차포털(ihangangpark.kr)에서 확인할 수 있습니다. 방문 당일 출발 전에 이 사이트를 체크해두면 불필요한 주차장 탐색 시간을 줄일 수 있습니다.
+
+<h2>② 주차 요금 체계 — 최초 30분부터 일일 최대까지</h2>
+
+여의도 한강공원 주차장 요금은 다음과 같습니다. 최초 <strong>30분 기준 1,000~3,000원</strong>이며, 그 이후 <strong>10분마다 300~400원</strong>이 추가됩니다. 주차장마다 세부 요금이 조금 다를 수 있으므로, 입차 시 주차장 입구의 안내판을 확인하시기 바랍니다.<br><br>
+
+하루 종일 주차하는 경우 <strong>일일 최대요금 15,000원</strong>이 적용됩니다. 여의도는 11개 지구 한강공원 주차장 중 일일 최대요금이 가장 높은 편에 속합니다. 반면 강서나 난지 등 외곽 지구 주차장은 일일 최대요금이 더 낮습니다. 피크닉을 4~5시간 즐길 계획이라면 중간 단계 요금이 적용되어 실제 부담은 생각보다 적을 수 있습니다.<br><br>
+
+<strong>월 정기권</strong>은 월 80,000~100,000원 수준으로, 여의도 직장인이나 자주 방문하는 분들에게 유리합니다. 정기권 구매는 미래한강본부 통합주차포털 또는 현장 정산소에서 문의하시면 됩니다. 요금 체계는 서울시 정책에 따라 변경될 수 있으니 방문 직전 공식 사이트에서 최신 요금표를 반드시 확인하시기 바랍니다(문의: 여의도 1·2주차장 02-747-5645, 3주차장 02-782-8634).
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260612/3_hangang_parking_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-1">Aerial view of Yeouido Hangang Park in Seoul, South Korea, showing the large green lawn area by the Han River with picnic blankets and umbrellas. Multiple parking lots are visible along the park boundary, with cars neatly arranged. The National Assembly building is visible in the background. Han River bridge and Seoul city skyline on the horizon. Summer afternoon, clear blue sky, photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">여의도 한강공원 전경 — 국회의사당과 한강을 배경으로 한 넓은 잔디밭과 주차장 / AI 제작 이미지</div>
+</div>
+
+<h2>③ 무료 주차 조건과 감면 혜택 정리</h2>
+
+한강공원 주차장에서 무료 또는 감면 혜택을 받을 수 있는 경우는 다음과 같습니다.<br><br>
+
+<strong>설날·추석 명절 연휴</strong>: 명절 전일·당일·다음날 각 3일씩, 한강공원 전 주차장이 무료로 운영됩니다. 이 기간에는 주차 요금 없이 이용 가능하지만, 그만큼 방문객이 집중되어 자리 경쟁이 심해지는 역설이 있습니다.<br><br>
+
+<strong>장애인 등록 차량</strong>: 80% 감면이 적용되어 실질적으로 무료에 가깝습니다. 장애인 주차 구역에 법정 스티커를 부착한 차량이어야 합니다.<br><br>
+
+<strong>경차·저공해 차량</strong>: 50% 감면이 적용됩니다. 경차의 경우 주차비가 절반으로 줄어들어 장시간 주차 시 상당한 절감 효과가 있습니다. 저공해 차량 스티커가 부착된 경우 입차 시 해당 스티커를 확인 후 감면이 처리됩니다.<br><br>
+
+<strong>국가유공자, 5.18 민주화운동 부상자</strong>: 증빙 서류 확인 후 감면 혜택이 적용됩니다. 현장 정산소에 관련 증빙을 지참하시기 바랍니다.<br><br>
+
+한강공원 주차장 운영 시간인 <strong>하절기(4~10월) 오전 9시 이전</strong>에 이미 입차해 있거나, 운영 종료 후에도 잔차가 있는 경우 별도 조치가 있을 수 있으므로 운영 시간(하절기 9:00~23:00, 동절기 9:00~21:00)을 숙지하고 출차 계획을 세우시기 바랍니다.
+
+<h2>④ 여의도 1~5 주차장 지구별 특징과 접근 팁</h2>
+
+같은 여의도 한강공원이라도 어느 주차장에 차를 세우느냐에 따라 걷는 거리와 편의가 크게 달라집니다.<br><br>
+
+<strong>1주차장</strong>: 여의도역(5·9호선) 방향에서 진입하기 편리합니다. 피크닉 잔디밭과 물빛광장에 가장 가깝지만 인기가 높아 주말 낮 시간에는 만차가 잦습니다. 오전 10시 이전 입차를 권장합니다.<br><br>
+
+<strong>2·3주차장</strong>: 수상무대 주변과 분수대 방향 이용자에게 적합합니다. 여의나루역 쪽으로 진입하는 경로를 이용하면 큰 혼잡 없이 접근 가능합니다.<br><br>
+
+<strong>4주차장</strong>: 한강공원 서쪽 방향에 위치해 마포대교와 가깝습니다. 자전거를 가져온 분들이 넓은 자전거 도로 시작 지점으로 접근하기 용이합니다.<br><br>
+
+<strong>5주차장</strong>: 5개 주차장 중 상대적으로 외진 위치이지만, 그만큼 자리가 남아 있는 경우가 많습니다. 공원 내 걷기 행동 반경이 넓은 분이라면 5주차장에 차를 세우고 공원 전체를 천천히 탐방하는 방식도 좋습니다.
+
+<h2>⑤ 자리 잘 나는 시간대와 주말 혼잡 회피 전략</h2>
+
+여의도 한강공원 주차장이 가장 혼잡한 시간대는 <strong>토·일요일 낮 12시~오후 4시</strong>입니다. 이 시간에는 1~3주차장이 순서대로 만차가 되며, 인근 도로까지 정체가 길어집니다. 벚꽃 시즌(4월)이나 연휴에는 이보다 더 극심한 혼잡이 발생합니다.<br><br>
+
+<strong>평일 방문</strong>은 주차 스트레스 없이 한강을 즐길 수 있는 최선의 방법입니다. 평일 낮이나 퇴근 이후 저녁 시간대에는 전반적으로 여유가 있습니다. 특히 오후 6시~8시 사이의 일몰 시간대는 노을 감상 명소로도 좋고 주차는 오후보다 훨씬 수월합니다.<br><br>
+
+<strong>주말 방문이 불가피한 경우</strong>라면 오전 9~11시 사이에 일찍 도착하거나, 반대로 오후 5시 이후를 노리는 것이 좋습니다. 오후 늦게는 기존 차량이 빠지기 시작해 여유 공간이 생깁니다. 또한 공원 내 혼잡을 피해 4·5주차장 쪽으로 우선 진입하는 것도 전략입니다.<br><br>
+
+대중교통 이용이 가능하다면 지하철 <strong>여의나루역(5호선)</strong>이나 <strong>여의도역(5·9호선)</strong>을 이용하는 것이 가장 편리합니다. 자전거 이용자는 한강변 자전거 도로를 통해 접근할 수 있어 주차 걱정 없이 여의도 한강공원을 만끽할 수 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260612/3_hangang_parking_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-2">Weekend afternoon scene at Yeouido Hangang Park Seoul, crowded with families and couples having picnics on the green lawn. Colorful camping chairs and blankets spread across the riverbank. People riding bicycles along the riverside path. Pedestrians walking toward the parking lot in the foreground. Han River bridge and high-rise apartments reflected in the calm water. Late afternoon golden hour light, photorealistic, ultra high detail, street photography style, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">여의도 한강공원 주말 풍경 — 피크닉 인파와 자전거 이용자로 활기찬 한강변 / AI 제작 이미지</div>
+</div>
+
+<h2>⑥ 운영 시간 전후 주차 — 알아두면 득이 되는 정보</h2>
+
+한강공원 주차장은 운영 시간이 정해져 있어, 그 시간 이외에는 별도 정책이 적용됩니다. 하절기(4~10월) 기준 운영 시간은 <strong>오전 9시~오후 11시</strong>입니다.<br><br>
+
+오전 9시 이전에 이미 입차되어 있는 차량은 개장 시 자동으로 입차 시각이 기록되어 요금이 산정되는 방식입니다. 따라서 '운영 전 미리 들어가 있으면 무료'라는 방식은 적용되지 않습니다.<br><br>
+
+오후 11시(하절기 종료 시간) 이후에는 잔차 안내가 있으며, 이를 무시하고 계속 주차하는 경우 과태료 또는 견인 조치가 취해질 수 있습니다. 야간 피크닉이나 음악 공연 관람 후 늦게 돌아가야 할 경우 반드시 오후 11시 이전에 출차할 수 있도록 일정을 조율하세요.<br><br>
+
+동절기(11~3월)에는 운영 시간이 오전 9시~오후 9시로 단축됩니다. 겨울 저녁 한강 야경을 즐기러 갔다가 출차 시간을 놓쳐 낭패를 보는 경우가 있으므로, 계절별 운영 시간 차이를 반드시 기억해 두시기 바랍니다.
+
+<h2>⑦ 결제 방법과 나갈 때 정산 꿀팁</h2>
+
+여의도 한강공원 주차장은 <strong>자동 정산기</strong>로 운영됩니다. 현금과 신용카드, 체크카드 모두 사용 가능하며, 일부 주차장은 스마트폰 간편결제(카카오페이, 네이버페이 등)도 지원합니다.<br><br>
+
+정산은 출차 전에 차량 번호를 자동 인식하는 방식이므로, 주차권이나 영수증을 별도로 보관하지 않아도 됩니다. 출차 시 정산기에서 결제를 완료한 뒤 10~15분 이내에 출차 게이트를 통과하면 됩니다. 이 시간을 넘기면 추가 요금이 부과될 수 있으니 결제 후 신속히 이동하세요.<br><br>
+
+경차나 저공해 차량 감면을 받으려면 입차 전부터 감면 등록이 되어 있어야 합니다. 서울시 주차 통합 서비스에 차량을 사전 등록해 두면 자동으로 감면이 적용됩니다. 처음 방문 시에는 현장 정산소 직원에게 문의하시면 안내를 받을 수 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260612/3_hangang_parking_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-3">Automated parking payment terminal at a Seoul Han River park parking lot. Clean modern machine interface with digital display showing parking fee amount in Korean won. A hand reaching to tap a credit card on the contactless reader. Background shows the park entrance gate and green trees in soft focus. Bright daylight, photorealistic, ultra high detail, documentary photography style, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">한강공원 자동 정산기 이용 안내 — 카드 결제로 간편하게 출차 정산 / AI 제작 이미지</div>
+</div>
+
+<h2>⑧ 여의도 만차 시 인근 대체 주차 옵션</h2>
+
+주말 오후 여의도 한강공원 주차장 전체가 만차가 되는 경우, 다음 대안을 활용해 보세요.<br><br>
+
+<strong>여의도 KBS 주차장</strong>: 주말 방송국 이용이 적은 시간대에는 공영 이용이 가능한 경우가 있습니다. 방문 전 사전 확인이 필요합니다.<br><br>
+
+<strong>여의도 공영 주차장(국회의사당 주변)</strong>: 주말 공공기관 운영이 없는 날 활용 가능성이 있으나 정책 변경이 잦으므로 당일 현장 안내에 따라 이용하세요.<br><br>
+
+<strong>이촌 한강공원</strong>: 여의도에서 차로 10분 거리의 이촌 한강공원은 규모가 크고 주차 여유가 상대적으로 많습니다. 자전거를 가져온 분이라면 이촌에서 출발해 여의도까지 한강 자전거 도로를 따라 달리는 방법도 훌륭한 선택입니다.<br><br>
+
+<strong>반포 한강공원</strong> 역시 뱀포대교 건너편에 있어 접근 거리가 짧고, 세빛섬과 반포대교 무지개 분수라는 별도 즐길거리까지 있어 여의도 만차 시의 최적 대안으로 꼽힙니다. 반포 주차장은 하루 최대요금이 여의도보다 저렴한 편입니다.
+
+<h2>⑨ 한강공원 주차 실전 꿀팁 종합 — 요약 정리</h2>
+
+지금까지 소개한 내용을 한눈에 정리합니다.<br><br>
+
+<strong>가장 싸게 주차하는 방법</strong>: 경차 또는 저공해 차량 이용(50% 감면), 명절 당일 방문(전 구역 무료), 단시간 방문(2~3시간 이내 최소 요금).<br><br>
+
+<strong>자리 잘 나는 시간대</strong>: 평일 전반, 주말 오전 9~11시 이전, 오후 5시 이후.<br><br>
+
+<strong>자리 잘 나는 지구</strong>: 여의도 4·5 주차장, 이촌 한강공원, 반포 한강공원 순으로 상대적으로 여유가 있습니다.<br><br>
+
+<strong>대중교통 최강 루트</strong>: 지하철 5호선 여의나루역 3번 출구 → 도보 5분 = 주차비 0원.<br><br>
+
+<strong>실시간 혼잡 정보</strong>: 미래한강본부 통합주차포털(ihangangpark.kr) 방문 전 반드시 확인.<br><br>
+
+여의도 한강공원은 서울의 핵심 쉼터인 만큼 주말에는 항상 혼잡합니다. 위의 꿀팁을 잘 활용해 주차 스트레스 없이 한강 나들이를 즐기시기 바랍니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260611/travel_haeinsa_gayasan_june_trekking.html">가야산 국립공원 6월 초여름 — 해인사 팔만대장경과 신록 산행 코스 정리</a></li>
+    <li><a href="../260611/travel_boryeong_daecheon_beach_june.html">보령 대천해수욕장 6월 개장 전 미리보기 — 서해 일몰 명당과 머드 체험 준비</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#여의도한강공원주차</span>
+  <span class="tag">#한강공원주차요금</span>
+  <span class="tag">#한강주차무료시간</span>
+  <span class="tag">#여의도주차</span>
+  <span class="tag">#한강공원</span>
+  <span class="tag">#주차꿀팁</span>
+  <span class="tag">#서울나들이</span>
+  <span class="tag">#경차주차할인</span>
+  <span class="tag">#한강피크닉</span>
+  <span class="tag">#여의도나들이</span>
+</div>
+
+</body>
+</html>
