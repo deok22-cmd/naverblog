@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== G0 커버 : 기후동행카드 vs K-패스 비교 ===== -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.40" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.80"/>
+    </linearGradient>
+    <linearGradient id="scrimTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.45"/>
+      <stop offset="0.26" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1a0d"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimTop)"/>
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#388e3c"/>
+
+  <g id="badge">
+    <rect x="80" y="84" width="280" height="64" rx="32" fill="#388e3c"/>
+    <text x="220" y="126" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="29" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="2">생활 · 절약정보</text>
+  </g>
+
+  <g id="title">
+    <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="110" font-weight="800" fill="#ffffff" letter-spacing="-3">
+      <tspan x="80" y="980">기후동행 vs</tspan>
+      <tspan x="80" y="1108">K-패스</tspan>
+    </text>
+    <text x="80" y="1190" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="40" font-weight="600" fill="#a5d6a7">내 생활권 기준으로 뭐가 이득인지 비교</text>
+  </g>
+
+  <text x="80" y="1278" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#c8e6c9">밀어서 비교 보기  →</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#1b5e20"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

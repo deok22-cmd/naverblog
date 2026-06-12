@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== A : 헤드라인-하단 — point1 카드 (터미널별 주차구역) ===== -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.40" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.82"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#1a2e1b"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#388e3c"/>
+
+  <rect x="80" y="852" width="64" height="10" fill="#388e3c"/>
+  <text x="80" y="970" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="86" font-weight="800" fill="#ffffff" letter-spacing="-2">내 터미널 먼저</text>
+  <text x="80" y="1068" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="86" font-weight="800" fill="#ffffff" letter-spacing="-2">확인하세요</text>
+
+  <g id="chips">
+    <rect x="80" y="1110" width="280" height="74" rx="37" fill="#388e3c"/>
+    <text x="220" y="1158" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="700" fill="#ffffff" text-anchor="middle">제1터미널 P1·P3</text>
+    <rect x="378" y="1110" width="280" height="74" rx="37" fill="#388e3c"/>
+    <text x="518" y="1158" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="700" fill="#ffffff" text-anchor="middle">제2터미널 P2·P4</text>
+  </g>
+
+  <text x="80" y="1246" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="36" font-weight="500" fill="#e8f5e9">항공사 이용 터미널을 먼저 확인하고 주차구역 선택.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#1b5e20"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

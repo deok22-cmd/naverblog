@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1f8e9; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px; text-align: center; }
+  .info-table td { border: 1px solid #ddd; padding: 10px 14px; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 16px 20px; border-radius: 8px; margin: 20px 0; }
+  .caution-box { background: #fce4ec; border: 1px solid #e57373; padding: 16px 20px; border-radius: 8px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #ccc; border-radius: 8px; padding: 20px; text-align: left; margin-bottom: 0; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 700; color: #555; }
+  .ph-file { font-family: monospace; font-size: 0.85em; color: #888; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 12px; font-size: 0.82em; color: #444; white-space: pre-wrap; word-break: break-all; margin: 0 0 10px; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 7px 16px; border-radius: 5px; cursor: pointer; font-size: 0.85em; }
+  .copy-btn:hover { background: #1b5e20; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>북한산 탐방예약 푸는 시간과 취소표 잡는 법</h1>
+
+<div class="intro-box">
+  주말에 북한산을 오르려고 국립공원 예약 시스템에 접속했다가 <strong>이미 마감</strong>된 것을 보고 당황하신 적 있으신가요?<br><br>
+  북한산의 일부 탐방로와 야영장은 <strong>탐방예약제</strong>를 운영하고 있어, 무작정 찾아가면 입장이 제한될 수 있습니다.<br><br>
+  하지만 예약이 꽉 찼다고 포기할 필요는 없습니다. <strong>취소표</strong>를 활용하는 방법이 있고, 예약 오픈 시간을 미리 파악해 두면 원하는 날 탐방이 훨씬 수월해집니다.<br><br>
+  이 글에서는 북한산 탐방예약제 적용 구역, 예약 시스템 이용 방법, 취소표 확인 요령, 예약 없이 이용 가능한 코스까지 체계적으로 안내해 드립니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260613/4_bukhansan_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-1">Panoramic view of Bukhansan National Park mountain scenery in Seoul, South Korea. Dramatic rocky granite peaks (Baegundae) rising above a lush green forest. Hikers visible on a trail below. Clear summer sky with clouds. The city of Seoul partially visible in the distant background through the trees. Photorealistic, ultra high detail, 1:1 aspect ratio, inspiring nature scene.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">북한산국립공원 백운대 능선과 서울 전경 / AI 제작 이미지</div>
+</div>
+
+<h2>01. 북한산 탐방예약제, 왜 생겼나</h2>
+
+북한산국립공원은 서울과 경기도 북부에 걸쳐 있는 도심 속 국립공원으로, 연간 탐방객 수가 <strong>세계에서 가장 많은 국립공원</strong> 중 하나로 손꼽힐 만큼 방문객이 많습니다.<br><br>
+과도한 탐방이 생태계에 미치는 부담을 줄이고, 주요 탐방 구역의 훼손을 방지하기 위해 일부 구역에 <strong>탐방예약제</strong>가 도입되었습니다.<br><br>
+예약제가 적용되는 대표 구역은 <strong>우이령 탐방로</strong>로, 이 구간은 생태적으로 민감한 곳이라 탐방 인원 수를 엄격히 제한하고 있습니다.<br><br>
+나머지 일반 탐방로(백운대, 인수봉, 도봉산 구역 등)는 예약 없이 자유롭게 이용할 수 있습니다.<br><br>
+탐방예약제 덕분에 보호 구역은 더 깨끗하고 조용한 환경을 유지할 수 있게 되었으며, 예약자들은 붐비지 않는 탐방을 즐길 수 있다는 이점도 있습니다.
+
+<h2>02. 예약 필수 구역 — 북한산 우이령 탐방로</h2>
+
+북한산에서 탐방예약이 <strong>필수</strong>인 대표 구역은 <strong>우이령 탐방로</strong>입니다.<br><br>
+우이령은 북한산 우이동과 도봉산 오봉 사이를 잇는 약 6.8km 길이의 숲길로, 1968년부터 오랫동안 군사 보호 구역으로 통제되다가 2009년에 일반에 개방되었습니다.<br><br>
+워낙 생태적 가치가 높아 지금도 하루 허용 탐방 인원이 제한되어 있으며, 예약 없이는 입장이 불가합니다.<br><br>
+우이령 탐방로 예약 적용 기간은 계절에 따라 다릅니다. <strong>1월~8월과 12월에는 주말(토·일)과 공휴일에만 예약제를 운영</strong>하며, 평일은 예약 없이 이용 가능합니다.<br><br>
+<strong>9월~11월(단풍 시즌)에는 주중과 주말 모두 예약제</strong>를 운영하므로, 가을 우이령 탐방을 계획하고 있다면 반드시 사전 예약이 필요합니다.<br><br>
+우이령 탐방로 예약 및 운영 관련 자세한 사항은 국립공원공단 예약 시스템(reservation.knps.or.kr) 또는 북한산국립공원사무소(02-909-0497)에서 확인하세요.
+
+<h2>03. 국립공원 예약 시스템 이용 방법</h2>
+
+북한산 우이령 탐방로 예약은 <strong>국립공원공단 예약 시스템(reservation.knps.or.kr)</strong>에서 진행합니다.<br><br>
+예약 절차는 다음과 같습니다.<br><br>
+<strong>1단계</strong>: 국립공원 예약 시스템(reservation.knps.or.kr)에 접속 후 회원 가입 또는 로그인.<br><br>
+<strong>2단계</strong>: 상단 메뉴에서 '탐방로 예약제' 선택 → '북한산' 검색 → '우이령 탐방로' 선택.<br><br>
+<strong>3단계</strong>: 방문 날짜와 입장 인원을 선택 후 예약 신청. 예약 가능 잔여 인원을 확인할 수 있습니다.<br><br>
+<strong>4단계</strong>: 예약 신청 후 결제 완료까지 마쳐야 예약이 확정됩니다. 미결제 시 자동 취소되므로 주의하세요.<br><br>
+예약 오픈 정확한 시간은 탐방로 종류와 시기에 따라 다를 수 있으므로, 예약 시스템 공지사항이나 국립공원공단 SNS를 미리 확인해 두는 것이 좋습니다.<br><br>
+모바일 앱으로도 예약이 가능하며, 앱을 미리 설치해 두면 알림을 받으면서 빠르게 예약할 수 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260613/4_bukhansan_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-2">Uiryeong Trail in Bukhansan National Park, Seoul, South Korea. A narrow forested hiking path winding through old-growth trees. Dappled sunlight filtering through thick green forest canopy. Small wooden signpost visible. Hikers in summer hiking gear walking along the trail. Cool peaceful forest atmosphere. Photorealistic, ultra high detail, 1:1 aspect ratio, nature trail beauty.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">북한산 우이령 탐방로 숲길 풍경 / AI 제작 이미지</div>
+</div>
+
+<h2>04. 취소표 잡는 요령</h2>
+
+탐방예약이 마감되었더라도 <strong>취소표</strong>를 통해 탐방 기회를 얻을 수 있습니다.<br><br>
+취소표는 기존 예약자가 예약을 취소할 때 자동으로 빈 자리가 생기는 것으로, 이를 빠르게 잡는 것이 핵심입니다.<br><br>
+<strong>취소표 확인 방법</strong>: 국립공원 예약 시스템(reservation.knps.or.kr)에 로그인 후 원하는 날짜와 탐방로를 선택하면, 실시간으로 잔여 예약 수를 확인할 수 있습니다. '0석'이라고 나와 있더라도 수시로 새로고침하면 취소가 발생할 때 곧바로 잡을 수 있습니다.<br><br>
+<strong>취소표가 많이 나오는 시간대</strong>: 일반적으로 예약 당일 이른 오전이나 탐방 전날 저녁에 취소가 집중되는 경향이 있습니다. 이는 예약 후 기상 변화나 일정 변경으로 취소가 발생하기 때문입니다.<br><br>
+<strong>알림 기능 활용</strong>: 예약 시스템 앱을 설치하고 알림을 설정해 두면 잔여 자리가 생길 때 빠르게 대응할 수 있습니다.<br><br>
+<strong>미결제 자동 취소 활용</strong>: 예약 후 일정 시간 내에 결제를 완료하지 않으면 예약이 자동으로 취소됩니다. 이 자동 취소분이 취소표로 다시 열리므로, 결제 마감 시간 직후에 접속해 보는 것도 전략입니다.<br><br>
+인기 날짜일수록 경쟁이 치열하므로, 여러 날짜를 함께 모니터링하다가 가장 먼저 빈 자리가 나오는 날로 예약하는 유연한 전략이 효과적입니다.
+
+<div class="tip-box">
+  <strong>💡 예약 팁 요약</strong><br><br>
+  ① 원하는 날짜보다 1~2주 앞서 예약 오픈 시간에 맞춰 접속하세요.<br><br>
+  ② 모바일 앱 알림을 켜 두면 취소 발생 시 빠르게 잡을 수 있습니다.<br><br>
+  ③ 탐방 전날 저녁에 취소표가 종종 나오니 한 번 더 확인해 보세요.
+</div>
+
+<h2>05. 예약 없이 즐길 수 있는 북한산 코스</h2>
+
+우이령 탐방로처럼 예약이 필요한 구역 외에도 <strong>북한산 대부분의 탐방로는 예약 없이 자유롭게 이용</strong>할 수 있습니다.<br><br>
+<strong>백운대 코스</strong>: 북한산 최고봉(836m)에 오르는 가장 인기 있는 코스로, 우이동 탐방지원센터에서 출발합니다. 예약 없이 이용 가능하며, 왕복 3~4시간이 소요됩니다.<br><br>
+<strong>인수봉 코스</strong>: 암벽 등반의 성지로 유명한 인수봉 주변 산책로도 자유 탐방이 가능합니다.<br><br>
+<strong>도봉산 구역</strong>: 북한산국립공원 내 도봉산 구역(도봉탐방지원센터 출발)도 예약 없이 오를 수 있습니다. 만장봉, 선인봉, 자운봉 등 화강암 암봉의 절경을 감상할 수 있습니다.<br><br>
+<strong>둘레길</strong>: 북한산 둘레길(전체 71.5km)은 예약 없이 언제든지 이용 가능한 완만한 산책로로, 어르신이나 어린이와 함께 부담 없이 걸을 수 있습니다.<br><br>
+주말 오전에는 일반 탐방로도 상당히 붐빌 수 있으므로, 덜 혼잡하게 산행을 즐기고 싶다면 평일 오전을 선택하거나 탐방 시작 시간을 이른 아침으로 설정하는 것이 좋습니다.
+
+<h2>06. 야영장 예약도 미리 해두세요</h2>
+
+북한산 내에는 <strong>북한산 야영장</strong>이 운영되고 있으며, 이 역시 국립공원 예약 시스템을 통한 사전 예약이 필요합니다.<br><br>
+야영장 예약은 탐방로 예약과 마찬가지로 reservation.knps.or.kr에서 진행하며, 인기 시즌에는 예약 오픈 직후 빠르게 마감되는 경우가 많습니다.<br><br>
+야영장 예약 오픈 시간은 구체적으로 공지사항을 통해 확인하는 것이 가장 정확하며, 일반적으로 예약일 기준 수 주 전에 공지가 올라옵니다.<br><br>
+야영 예약과 취소 관련 규정은 수시로 바뀔 수 있으므로, 예약 전 반드시 최신 공지를 확인하시기 바랍니다.<br><br>
+가을 단풍 시즌과 봄 꽃 시즌에는 야영장 경쟁이 더욱 치열해지므로, 캠핑 계획이 있다면 최소 한 달 전부터 일정을 확인하고 예약에 나서는 것이 좋습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260613/4_bukhansan_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-3">View from the summit of Baegundae peak in Bukhansan, Seoul, South Korea. Dramatic rocky summit with a small Korean flag. Panoramic view of the city of Seoul spreading out far below, surrounded by layers of forested mountains. Clear blue sky with some clouds. Hikers resting at the top. Photorealistic, ultra high detail, 1:1 aspect ratio, epic mountain perspective.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">북한산 백운대 정상에서 바라본 서울 전경 / AI 제작 이미지</div>
+</div>
+
+<h2>07. 북한산 탐방 시 안전 수칙</h2>
+
+북한산은 도심에서 가깝지만 화강암 암봉이 많아 생각보다 험한 구간이 있습니다.<br><br>
+<strong>등산 장비</strong>: 미끄럼 방지 기능이 있는 트레킹화는 필수입니다. 슬리퍼나 운동화로 오르다 부상을 당하는 사례가 빈번합니다.<br><br>
+<strong>충분한 물과 간식</strong>: 한여름에는 탈수 위험이 있으므로 500ml 이상의 물을 꼭 챙기세요.<br><br>
+<strong>기상 확인</strong>: 산행 당일 기상 예보를 반드시 확인하세요. 비가 오거나 기상이 좋지 않으면 암봉 구간이 매우 미끄러워집니다.<br><br>
+<strong>하산 시간 계획</strong>: 일몰 후에는 길 찾기가 어렵고 기온이 급격히 떨어질 수 있습니다. 일몰 전 2시간 전에는 하산을 시작하는 것을 권장합니다.<br><br>
+<strong>입산 통제 구역 확인</strong>: 계절에 따라 일부 구간이 입산 통제될 수 있습니다. 탐방 전 북한산국립공원 홈페이지(knps.or.kr)에서 통제 구역 정보를 확인하세요.
+
+<h2>08. 북한산 탐방 예약 핵심 정보 요약</h2>
+
+북한산 탐방 예약 관련 핵심 내용을 한 번에 정리합니다.<br><br>
+<strong>예약 필수 구역</strong>: 우이령 탐방로 (주말·공휴일 1~8월, 12월 / 주중·주말 9~11월).<br><br>
+<strong>예약 시스템</strong>: reservation.knps.or.kr (모바일 앱 동일).<br><br>
+<strong>취소표 전략</strong>: 잔여 수 실시간 새로고침 / 앱 알림 활용 / 탐방 전날 저녁 재확인.<br><br>
+<strong>자유 탐방 코스</strong>: 백운대, 도봉산, 북한산 둘레길 등 일반 탐방로는 예약 불필요.<br><br>
+<strong>문의</strong>: 북한산국립공원사무소 02-909-0497.<br><br>
+북한산은 서울 시민에게 가장 가까운 자연 치유 공간입니다. 예약 제도를 잘 활용하면 쾌적하고 안전한 탐방을 즐길 수 있습니다.
+
+<h2>09. 생태탐방원 — 북한산 속 특별한 숙박 체험</h2>
+
+국립공원 예약 시스템에서는 탐방로 예약 외에 <strong>북한산 생태탐방원</strong> 이용 예약도 가능합니다.<br><br>
+생태탐방원은 국립공원 내에 설치된 숙박형 탐방 시설로, 자연을 더 가까이 느끼며 1박 2일 산악 생태 프로그램에 참여할 수 있는 특별한 경험을 제공합니다.<br><br>
+이용 요금은 시설과 프로그램에 따라 다르며, 예약 시스템에서 상세 내용을 확인하고 신청할 수 있습니다.<br><br>
+가족 단위 방문객이나 자연 교육에 관심 있는 분들에게 특히 추천하며, 아이들에게 도심 가까운 자연 속에서의 하룻밤을 선물할 수 있는 좋은 기회입니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260612/travel_siheung_gwangokji_lotus_june.html">시흥 관곡지 연꽃 언제 피나, 연꽃테마파크 주차와 산책 코스</a></li>
+    <li><a href="../260612/travel_sinnan_purple_island_june.html">신안 퍼플섬 배 시간표와 자전거 대여, 보라색 마을 인생샷 명당</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#북한산탐방예약</span>
+  <span class="tag">#우이령탐방로</span>
+  <span class="tag">#북한산등산</span>
+  <span class="tag">#국립공원예약</span>
+  <span class="tag">#취소표잡기</span>
+  <span class="tag">#북한산국립공원</span>
+  <span class="tag">#서울근교등산</span>
+  <span class="tag">#백운대</span>
+  <span class="tag">#등산예약</span>
+  <span class="tag">#수도권등산</span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== P3 : 체크리스트 (사진중심 · 스크림 워시 · 박스/보더 없음) ===== -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.48"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1a0f"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#388e3c"/>
+
+  <text x="80" y="270" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="60" font-weight="800" fill="#ffffff">이것만 알면 예약 성공</text>
+  <rect x="82" y="304" width="140" height="9" fill="#388e3c"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <rect x="80" y="430" width="34" height="8" fill="#81c784"/>
+    <text x="80" y="500" font-size="42" font-weight="600" fill="#ffffff">1~2주 앞서 오픈 시간에 맞춰 접속</text>
+    <line x1="80" y1="560" x2="1000" y2="560" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+    <rect x="80" y="610" width="34" height="8" fill="#81c784"/>
+    <text x="80" y="680" font-size="42" font-weight="600" fill="#ffffff">모바일 앱 알림으로 취소 즉시 대응</text>
+    <line x1="80" y1="740" x2="1000" y2="740" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+    <rect x="80" y="790" width="34" height="8" fill="#81c784"/>
+    <text x="80" y="860" font-size="42" font-weight="600" fill="#ffffff">탐방 전날 저녁 취소표 재확인</text>
+    <line x1="80" y1="920" x2="1000" y2="920" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+    <rect x="80" y="970" width="34" height="8" fill="#81c784"/>
+    <text x="80" y="1040" font-size="42" font-weight="600" fill="#ffffff">여러 날짜 동시 모니터링, 유연하게 선택</text>
+  </g>
+
+  <text x="80" y="1150" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="40" font-weight="800" fill="#81c784">저장해두고 그대로 따라가세요  ↓</text>
+  <text x="80" y="1240" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#a5d6a7">전체 예약 가이드는 프로필 블로그에서.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#1b5e20"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

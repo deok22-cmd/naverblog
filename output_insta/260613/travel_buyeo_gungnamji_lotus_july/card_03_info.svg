@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- card_03 : P4 — info — 궁남지 핵심 팩트 4개 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.48"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.64"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d2420"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="270" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">한눈에 보는 핵심</text>
+  <rect x="82" y="304" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="450" font-size="30" font-weight="600" fill="#b2dfdb">2026 서동연꽃축제 기간</text>
+    <text x="80" y="512" font-size="56" font-weight="800" fill="#ffffff">7월 3일(금) ~ 7월 5일(일)</text>
+    <line x1="80" y1="566" x2="1000" y2="566" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="650" font-size="30" font-weight="600" fill="#b2dfdb">입장료</text>
+    <text x="80" y="712" font-size="56" font-weight="800" fill="#ffffff">무료 (예약 불필요)</text>
+    <line x1="80" y1="766" x2="1000" y2="766" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="850" font-size="30" font-weight="600" fill="#b2dfdb">연꽃 절정 시기</text>
+    <text x="80" y="912" font-size="56" font-weight="800" fill="#ffffff">7월 중순 ~ 8월 초</text>
+    <line x1="80" y1="966" x2="1000" y2="966" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="1050" font-size="30" font-weight="600" fill="#b2dfdb">최적 관람 시간</text>
+    <text x="80" y="1112" font-size="56" font-weight="800" fill="#ffffff">오전 6시 ~ 10시</text>
+  </g>
+
+  <text x="80" y="1240" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">2026년 기준 · 세부 일정은 부여군 공식 홈페이지에서 확인.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

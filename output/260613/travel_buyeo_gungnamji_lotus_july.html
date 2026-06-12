@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px; text-align: center; }
+  .info-table td { border: 1px solid #ddd; padding: 10px 14px; }
+  .step-box { border-left: 4px solid #00796b; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 16px 20px; border-radius: 8px; margin: 20px 0; }
+  .caution-box { background: #fce4ec; border: 1px solid #e57373; padding: 16px 20px; border-radius: 8px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #ccc; border-radius: 8px; padding: 20px; text-align: left; margin-bottom: 0; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 700; color: #555; }
+  .ph-file { font-family: monospace; font-size: 0.85em; color: #888; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 12px; font-size: 0.82em; color: #444; white-space: pre-wrap; word-break: break-all; margin: 0 0 10px; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 7px 16px; border-radius: 5px; cursor: pointer; font-size: 0.85em; }
+  .copy-btn:hover { background: #004d40; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>부여 궁남지 서동연꽃축제 2026 날짜와 야간 경관, 주변 볼거리</h1>
+
+<div class="intro-box">
+  충청남도 부여군에 자리한 <strong>궁남지</strong>는 우리나라 최초의 인공 연못으로 알려진 백제 시대의 유산입니다.<br><br>
+  1,400년이 넘는 역사를 지닌 이 연못에는 매년 여름, 1만 평을 가득 채운 연꽃이 피어나며 전국에서 방문객을 불러 모읍니다.<br><br>
+  2026년 <strong>부여서동연꽃축제</strong>는 <strong>7월 3일(금)부터 7월 5일(일)</strong>까지 3일간 궁남지 일원에서 개최됩니다. 입장료는 무료입니다.<br><br>
+  축제 기간이 지나도 7월 중순~8월 초까지 연꽃이 절정을 이루므로, 축제 이후 방문자도 아름다운 풍경을 충분히 즐길 수 있습니다.<br><br>
+  이 글에서는 2026년 축제 일정, 야간 경관 포인트, 주변 연계 볼거리, 주차 정보까지 한 번에 정리해 드립니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260613/2_buyeo_gungnamji_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-1">Aerial panoramic view of Gungnamji lotus pond in Buyeo, South Korea in full summer bloom. The vast ancient artificial pond is completely covered with thousands of pink lotus flowers. Traditional Korean pavilion (Poryungjeong) sits on a small island connected by a stone causeway. Lush greenery surrounds the pond. Bright summer blue sky. Photorealistic, ultra high detail, 1:1 aspect ratio, vibrant natural colors.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">부여 궁남지 연꽃 만개 전경과 포룡정 / AI 제작 이미지</div>
+</div>
+
+<h2>01. 궁남지, 우리나라 최초의 인공 연못</h2>
+
+궁남지는 백제 무왕 시절 조성된 왕실 정원 연못으로, 삼국사기에 "궁의 남쪽에 연못을 팠다"는 기록이 남아 있어 <strong>우리나라 인공 정원 연못의 효시</strong>로 여겨집니다.<br><br>
+백제 무왕의 탄생 설화인 서동과 신라 선화공주의 사랑 이야기가 깃든 곳이기도 해, 역사와 낭만이 공존하는 특별한 장소입니다.<br><br>
+연못 한가운데에는 작은 섬과 <strong>포룡정</strong>이라는 정자가 세워져 있으며, 섬까지 이어지는 석교 위에서 내려다보면 연꽃이 사방을 에워싼 장관을 볼 수 있습니다.<br><br>
+현재의 궁남지는 1960년대 발굴 조사를 거쳐 복원된 형태로, 원래 규모는 지금보다 훨씬 컸을 것으로 추정됩니다.<br><br>
+사적 제135호로 지정된 이 연못은 백제 문화유산의 중심지 부여를 찾는 여행자라면 반드시 들러야 할 필수 코스입니다.
+
+<h2>02. 2026 부여서동연꽃축제 일정과 프로그램</h2>
+
+<strong>2026년 부여서동연꽃축제</strong>는 7월 3일(금)부터 7월 5일(일)까지 3일간 궁남지 일원(충남 부여군 서동공원)에서 개최됩니다.<br><br>
+입장료는 무료이며, 별도 예약 없이 현장 방문만으로 참여할 수 있습니다.<br><br>
+축제 기간 중에는 연꽃 감상 외에도 <strong>야간 경관 조명</strong>, 문화 공연, 체험 프로그램, 먹거리 부스 등이 운영될 예정입니다.<br><br>
+야간에는 연못과 포룡정에 조명이 켜져 낮과 전혀 다른 분위기의 연꽃 풍경을 감상할 수 있습니다.<br><br>
+세부 프로그램과 운영 시간은 축제 개최 전 부여군 공식 홈페이지 또는 서동연꽃축제 공식 SNS를 통해 최신 공고를 확인하시기 바랍니다.<br><br>
+축제 기간이 아닌 7월 중순~8월 초에도 연꽃이 절정을 이루므로, 축제 후 방문자도 충분히 아름다운 연꽃을 만나실 수 있습니다.
+
+<div class="tip-box">
+  <strong>💡 연꽃 감상 최적 시간</strong><br><br>
+  연꽃은 오전에 피고 오후에 오므라드는 성질이 있습니다. 가장 아름다운 모습은 <strong>오전 6시~10시</strong>이며, 이 시간대에 조용하게 산책하면 안개 속 연꽃 풍경을 독점할 수 있습니다.
+</div>
+
+<h2>03. 연꽃 절정 시기와 개화 현황 확인법</h2>
+
+궁남지 연꽃은 보통 <strong>7월 초부터 개화가 왕성해져 7월 중순~8월 초에 절정</strong>을 맞이합니다.<br><br>
+축제가 열리는 7월 첫째 주에는 개화가 한창 진행 중인 시기로, 연꽃이 절정에 이르기 직전의 신선한 모습을 볼 수 있습니다.<br><br>
+절정을 목표로 한다면 <strong>7월 15일 전후</strong>를 목표로 방문하시는 것이 좋으나, 해마다 기온 차이로 인해 1~2주 편차가 생길 수 있습니다.<br><br>
+방문 1~2주 전에 부여군청 홈페이지, 부여서동연꽃축제 공식 SNS, 또는 최근 방문자들의 실시간 블로그 포스팅을 통해 개화 현황을 확인하시면 헛걸음을 막을 수 있습니다.<br><br>
+연꽃은 분홍색과 흰색 두 가지 종류가 섞여 있으며, 흰 연꽃은 분홍 연꽃보다 약간 늦게 피는 경향이 있어 두 종류를 함께 보고 싶다면 7월 중순이 적기입니다.<br><br>
+8월로 접어들면 꽃이 지고 연밥이 자라기 시작하는데, 이 시기에도 연밥과 넓은 연잎이 만들어내는 초록빛 풍경이 나름의 운치가 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260613/2_buyeo_gungnamji_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-2">Close-up of pink and white lotus flowers blooming in Gungnamji pond, Buyeo. Soft morning light filters through the petals revealing delicate textures. Green lotus leaves and stems surround the blossoms. Water droplets on large round leaves. Traditional Korean stone bridge visible in the background. Photorealistic, ultra high detail, 1:1 aspect ratio, soft warm tones.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">궁남지 분홍·흰 연꽃 근접 촬영과 연잎 / AI 제작 이미지</div>
+</div>
+
+<h2>04. 야간 경관 — 조명으로 더욱 빛나는 궁남지</h2>
+
+부여서동연꽃축제의 또 다른 매력은 <strong>야간 경관</strong>입니다.<br><br>
+해가 지고 어둠이 내려앉으면 연못 주변과 포룡정에 형형색색의 조명이 켜지며, 수면에 반사된 불빛이 연꽃과 어우러져 낮과는 전혀 다른 신비로운 분위기를 연출합니다.<br><br>
+특히 포룡정 위에서 바라보는 야간 조명 연꽃 풍경은 많은 여행객이 꼽는 궁남지 방문의 하이라이트 중 하나입니다.<br><br>
+야간에는 기온도 낮아져 한여름 더위를 피해 산책하기 좋으며, 해 질 무렵 하늘이 붉게 물들 때 촬영한 연꽃 사진은 특히 인상적인 결과물을 만들어 줍니다.<br><br>
+야간 조명 운영 시간은 매년 변동될 수 있으므로, 방문 전 공식 축제 홈페이지에서 운영 시간을 미리 확인하시기 바랍니다.<br><br>
+축제 기간이 아닌 시기에도 궁남지는 저녁 산책지로 인기가 있으므로, 연꽃 절정기 주말 저녁에 방문하는 것도 좋은 선택입니다.
+
+<h2>05. 궁남지 주변 볼거리 — 정림사지와 백제문화단지</h2>
+
+부여를 방문한다면 궁남지 외에도 인근의 <strong>백제 역사 유산</strong>을 함께 둘러보는 것을 강력히 권장합니다.<br><br>
+<strong>정림사지(국보 제9호)</strong>는 궁남지에서 도보 이동이 가능한 거리에 있으며, 백제 시대 5층 석탑이 현재까지 원형을 유지하고 있는 귀중한 유적입니다.<br><br>
+<strong>백제문화단지</strong>는 사비 백제의 왕궁과 능사, 민간 마을을 재현한 대규모 테마 파크로, 백제 문화의 전반을 체험할 수 있는 곳입니다. 궁남지에서 차로 약 10분 거리에 위치합니다.<br><br>
+<strong>국립부여박물관</strong>도 백제 문화를 깊이 있게 이해하고 싶다면 꼭 들러야 할 공간으로, 국보 제287호 금동대향로를 비롯해 백제의 정수가 담긴 유물들을 전시하고 있습니다.<br><br>
+부여는 작은 도시이지만 백제 역사 유산이 촘촘하게 분포해 있어, 하루 동안 차로 이동하며 주요 유적지를 대부분 둘러볼 수 있습니다.<br><br>
+부여 여행은 역사 문화와 자연 감상을 동시에 즐길 수 있는 충남의 대표 여행 코스로, 유네스코 세계유산에 등재된 백제 역사 유적지구를 직접 눈으로 확인할 수 있다는 점에서 더욱 의미 있는 여행이 됩니다.
+
+<h2>06. 궁남지 입장료와 운영 안내</h2>
+
+궁남지 자체는 <strong>무료로 개방</strong>되어 있으며, 별도의 입장권 구매나 예약 없이 언제든지 방문할 수 있습니다.<br><br>
+공원 운영은 24시간이지만, 야간 조명 운영 시간은 시기에 따라 달라질 수 있으니 방문 전 확인을 권장합니다.<br><br>
+서동연꽃축제 기간에도 기본 입장은 무료이나, 일부 체험 프로그램은 재료비 수준의 소액 비용이 발생할 수 있습니다.<br><br>
+부여군청 문의전화를 통해 궁남지와 축제 관련 최신 정보를 얻을 수 있으며, 방문 당일 현장 안내소에서도 프로그램 일정을 확인할 수 있습니다.<br><br>
+연꽃 절정기에는 주말 오전부터 방문객이 급증하므로, 가능하다면 평일 오전 방문을 고려해 보시기 바랍니다.
+
+<h2>07. 주차와 찾아가는 방법</h2>
+
+궁남지는 충청남도 부여군 부여읍 동남리에 위치합니다. 내비게이션에 <strong>"궁남지"</strong>를 검색하면 바로 안내됩니다.<br><br>
+공용 주차장이 궁남지 인근에 마련되어 있으며, 기본적으로 무료 또는 저렴한 비용으로 이용 가능합니다. 실제 이용 요금은 방문 시 현장에서 확인하시기 바랍니다.<br><br>
+축제 기간에는 방문객이 크게 몰리므로 주차 공간이 부족할 수 있습니다. 이 기간에는 <strong>부여 버스터미널</strong> 인근 공간이나 인근 공용 주차장을 이용한 뒤 도보로 이동하는 방법도 권장합니다.<br><br>
+대중교통으로는 부여 버스터미널에서 시내버스를 이용해 궁남지 정류장에서 하차하거나 도보로 이동할 수 있습니다.<br><br>
+수도권에서 출발한다면 대전 또는 공주를 경유하는 고속버스나 자가용을 이용하는 경우가 많으며, 충남 당일치기 코스로 부여~공주를 묶는 여행 코스도 인기입니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260613/2_buyeo_gungnamji_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-3">Nighttime scene at Gungnamji pond in Buyeo during the Seodong Lotus Festival. The pavilion on the small island is beautifully illuminated in warm golden and teal lights. The lights reflect on the dark water surface. Silhouettes of visitors walking along the lit pathway. Glowing lotus decorations. Long exposure photography effect. Photorealistic, ultra high detail, 1:1 aspect ratio, magical festival atmosphere.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">서동연꽃축제 야간 경관 조명과 포룡정 / AI 제작 이미지</div>
+</div>
+
+<h2>08. 부여 먹거리와 1박 2일 여행 코스</h2>
+
+부여 여행에서 빠질 수 없는 먹거리 중 하나가 <strong>부여 연잎밥</strong>입니다.<br><br>
+궁남지 인근 식당에서 연잎으로 싼 찐밥을 즐길 수 있으며, 연꽃의 향기가 밥에 은은하게 스며들어 특별한 맛과 향을 선사합니다. 1만 원 안팎으로 한 끼를 즐길 수 있습니다.<br><br>
+부여의 또 다른 특산물인 <strong>밤(栗)</strong>을 활용한 간식과 막걸리도 현지 시장에서 맛볼 수 있습니다.<br><br>
+<strong>추천 1박 2일 코스</strong>: 1일차 — 궁남지 연꽃 오전 산책 → 정림사지 → 국립부여박물관 → 서동공원 야간 경관; 2일차 — 백제문화단지 → 부소산성 → 낙화암 → 고란사.<br><br>
+부소산성과 낙화암은 백제 멸망의 역사가 깃든 곳으로, 백마강을 내려다보는 전망이 장엄합니다.<br><br>
+부여는 역사적 울림과 자연 감상이 어우러진 여행지로, 가족 여행이나 역사 기행 코스로도 훌륭한 선택지입니다.
+
+<h2>09. 연꽃 사진 명당 포인트</h2>
+
+궁남지에서 인생 사진을 남기고 싶다면 다음 포인트를 기억해 두세요.<br><br>
+<strong>포룡정 정자</strong>: 섬 위 정자를 배경으로 연꽃이 가득 찬 구도는 궁남지의 상징적인 사진입니다. 오전 빛이 정자 앞면을 환하게 밝혀 줄 때 촬영하면 좋습니다.<br><br>
+<strong>석교 위 앵글</strong>: 섬으로 이어지는 다리 위에서 수면 방향으로 내려다보면 연꽃이 사방을 가득 채운 구도가 완성됩니다.<br><br>
+<strong>연못 외곽 산책로</strong>: 연못을 둘러싼 산책로의 여러 지점에서 연꽃 군락을 배경으로 한 사진을 찍을 수 있으며, 이른 아침 안개와 함께하면 더욱 신비로운 분위기가 연출됩니다.<br><br>
+<strong>야간 조명 반사</strong>: 축제 기간 밤에는 수면에 비치는 조명 반사를 이용한 사진이 매우 아름답게 나옵니다. 스마트폰 야간 모드를 활용하면 노이즈 없이 선명하게 담을 수 있습니다.<br><br>
+연꽃 접사 사진을 원한다면 산책로 가장자리에서 핀 연꽃을 가까이 담아보세요. 이슬이 맺힌 오전 시간대가 특히 좋습니다.
+
+<h2>10. 2026 방문 준비 체크리스트</h2>
+
+부여 궁남지와 서동연꽃축제를 알차게 즐기기 위한 준비 사항을 정리합니다.<br><br>
+<strong>① 방문 일정 확인</strong>: 2026 서동연꽃축제는 7월 3일~5일입니다. 축제 세부 일정은 부여군 공식 홈페이지에서 발행 직전 최신 공고를 확인하세요.<br><br>
+<strong>② 연꽃 절정 시기</strong>: 절정은 7월 중순~8월 초. 축제 이후 방문이라도 연꽃 감상에는 충분합니다.<br><br>
+<strong>③ 방문 시간</strong>: 오전 6~10시가 가장 아름다운 시간대입니다. 야간 조명은 저녁 이후 즐기세요.<br><br>
+<strong>④ 복장</strong>: 7월 한여름 야외 관람이므로 선크림, 모자, 시원한 옷차림이 필수입니다.<br><br>
+<strong>⑤ 주변 연계</strong>: 정림사지, 국립부여박물관, 백제문화단지와 함께 하루 또는 1박 2일 코스로 즐기면 알찹니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260612/travel_siheung_gwangokji_lotus_june.html">시흥 관곡지 연꽃 언제 피나, 연꽃테마파크 주차와 산책 코스</a></li>
+    <li><a href="../260612/travel_sinnan_purple_island_june.html">신안 퍼플섬 배 시간표와 자전거 대여, 보라색 마을 인생샷 명당</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#부여궁남지</span>
+  <span class="tag">#서동연꽃축제</span>
+  <span class="tag">#부여연꽃</span>
+  <span class="tag">#부여여행</span>
+  <span class="tag">#궁남지축제2026</span>
+  <span class="tag">#충남연꽃</span>
+  <span class="tag">#백제역사</span>
+  <span class="tag">#7월여행</span>
+  <span class="tag">#연꽃명소</span>
+  <span class="tag">#서동공원</span>
+</div>
+
+</body>
+</html>
