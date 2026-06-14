@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1f8e9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px; text-align: center; }
+  .info-table td { padding: 10px 14px; border: 1px solid #ddd; vertical-align: top; }
+  .tip-box { background: #fffde7; border-left: 4px solid #f9a825; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #ccc; border-radius: 8px; padding: 20px; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 0.9em; }
+  .ph-file { font-family: monospace; font-size: 0.8em; color: #888; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 15px; border-radius: 6px; font-size: 0.8em; white-space: pre-wrap; text-align: left; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; font-size: 0.85em; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; text-align: center; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>비 오는 날 수도권 아이랑 갈 실내 나들이, 무료부터 유료까지 장소 8곳</h1>
+
+<div class="intro-box">
+주말 나들이를 계획했는데 아침에 일어나 보니 비가 쏟아진다면, 아이와 함께 어디 가야 할지 막막하지요.<br><br>
+이 글에서는 비가 와도 걱정 없이 즐길 수 있는 수도권 실내 나들이 장소 8곳을 골랐습니다. 무료 입장이 가능한 박물관부터 하루 종일 즐길 수 있는 유료 어트랙션까지, 아이의 연령대와 이동 거리를 고려해 선택할 수 있도록 정리했습니다.<br><br>
+비가 많이 오는 장마철에도, 갑작스러운 소나기가 내리는 날에도 꺼내볼 수 있는 실용 가이드입니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260615/4_rainy_indoor_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-1">Photorealistic ultra high detail 1:1 aspect ratio interior photo of a children's science museum in South Korea. A spacious modern exhibition hall with interactive science exhibits, children and parents exploring displays together. Bright colorful interior with educational panels, large screen displays, hands-on experiment stations, children's curiosity and joy visible. Indoor science activity atmosphere, natural light from skylights, clean modern design. --ar 1:1</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">어린이 과학관 실내 전시 — 비 오는 날 아이와 함께하기 좋은 수도권 실내 나들이 명소 / AI 제작 이미지</div>
+</div>
+
+<h2>① 비 오는 날도 아이와 나들이가 충분히 가능한 이유</h2>
+
+비가 오면 당일 여행 계획이 틀어지는 경우가 많습니다. 하지만 실내 공간만 잘 고르면 날씨 영향을 전혀 받지 않고 아이와 더 풍부하고 교육적인 시간을 보낼 수 있습니다.<br><br>
+수도권에는 국립 박물관, 과학관, 아쿠아리움, 실내 테마파크, 어린이 전용 공간 등 퀄리티 높은 실내 나들이 옵션이 밀집해 있습니다. 특히 국립 시설은 무료 또는 저렴한 비용으로 이용할 수 있어 부담 없이 찾아갈 수 있습니다.<br><br>
+비 오는 날의 실내 나들이는 오히려 맑은 날보다 더 집중도 높게 즐길 수 있다는 이점도 있습니다. 야외 나들이 대신 전시와 체험에 집중하게 되어 아이의 학습과 경험 측면에서 알차게 활용할 수 있습니다.<br><br>
+대중교통 접근성이 높은 서울 시내 시설들은 비가 오는 날에도 지하철·버스를 이용해 불편 없이 이동할 수 있는 것도 큰 장점입니다.
+
+<h2>② 국립과천과학관 — 우주·공룡·기초과학 체험이 한 자리에</h2>
+
+경기도 과천시에 자리한 국립과천과학관은 아이와의 실내 나들이 장소로 수도권 최고의 선택지 중 하나입니다.<br><br>
+5개 상설 전시관에 총 3,800여 점의 전시물이 있으며, 우주·천문관, 첨단기술관, 자연사관, 어린이탐구체험관 등 연령대별로 다양한 전시를 즐길 수 있습니다. 특히 실물 크기의 공룡 화석 복원 전시와, 천장을 가득 채우는 항공우주 전시가 아이들에게 인기입니다.<br><br>
+입장료는 성인 4,000원, 어린이 2,000원으로 매우 합리적이며, 천문대·돔 영상관은 별도 예약 요금이 있습니다. 오전 9시 30분에 개관하며, 1회 방문으로 최소 3~4시간이 필요한 규모입니다.<br><br>
+지하철 4호선 대공원역(동물원 입구)에서 도보 10분 거리에 있어 대중교통으로도 편리하게 접근할 수 있습니다. 과천대공원 옆에 위치해 있어 날씨가 좋아지면 야외 산책도 이어서 즐길 수 있습니다.
+
+<h2>③ 국립중앙박물관 어린이박물관 — 무료 체험, 단 사전 예약 필수</h2>
+
+서울 용산구에 있는 국립중앙박물관 안의 어린이박물관은 무료로 이용할 수 있는 최상급 실내 나들이 장소입니다.<br><br>
+역사와 문화재를 어린이의 눈높이에 맞춰 재구성한 체험형 전시가 가득하며, 유아부터 초등학생까지 연령별로 다른 방식으로 즐길 수 있습니다. 단, 입장권은 국립중앙박물관 홈페이지에서 사전 예약이 필수입니다. 무료임에도 인기가 높아 주말 예약은 빠르게 마감됩니다.<br><br>
+어린이박물관과 함께 본관의 국립중앙박물관 상설전시도 무료로 입장 가능합니다. 청동기 시대 유물부터 조선 시대 회화까지 수만 점의 문화재가 전시되어 있어 박물관 자체로도 하루를 보내기 충분합니다.<br><br>
+지하철 4호선·경의중앙선 이촌역에서 도보 5분 거리이며, 주차장도 넓어 자가용 방문도 편리합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260615/4_rainy_indoor_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-2">Photorealistic ultra high detail 1:1 aspect ratio interior image of COEX Aquarium in Seoul, South Korea. A dark atmospheric underwater tunnel with a large curved acrylic viewing window showing hundreds of fish, sharks, rays swimming overhead and to the sides. Families and children gazing upward in wonder, turquoise blue water lighting, dramatic marine life display, schools of fish creating beautiful patterns. --ar 1:1</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">코엑스 아쿠아리움 — 800종 해양 생물과 함께하는 감동적인 수중 터널 / AI 제작 이미지</div>
+</div>
+
+<h2>④ 코엑스 아쿠아리움 — 800종 생물의 신비한 수중 세계</h2>
+
+서울 강남구 코엑스몰 내 자리한 코엑스 아쿠아리움은 비 오는 날 아이와 방문하기 딱 좋은 곳입니다.<br><br>
+총 800여 종, 40,000여 마리의 해양 생물을 만날 수 있으며, 그 중 하이라이트는 대형 수중 터널입니다. 머리 위와 양쪽을 가득 채우는 아크릴 유리 사이로 상어, 가오리, 거북 등이 헤엄치는 장면은 어린아이부터 어른까지 모두 탄성을 자아냅니다.<br><br>
+입장료는 성인 약 29,000원, 소인(4~12세) 약 24,000원 수준이며(정가 기준, 통합 할인권 등 이용 시 절감 가능), 평균 관람 소요 시간은 1시간 30분~2시간입니다. 코엑스몰 전체가 쇼핑과 식사 공간으로 연결되어 있어 관람 후에도 시간을 알차게 보낼 수 있습니다.<br><br>
+지하철 2호선 삼성역 또는 9호선 봉은사역과 직결되어 우산 없이도 이동 가능한 것이 비 오는 날 특히 강점입니다.
+
+<h2>⑤ 국립어린이과학관 — 서울 한가운데서 만나는 과학 체험</html>
+
+서울 종로구 어린이대공원 바로 옆에 자리한 국립어린이과학관은 서울 시내에서 접근하기 가장 쉬운 과학 체험 공간입니다.<br><br>
+화재 안전 체험, 기계 원리 탐구, 신재생에너지 전시, DIY 만들기 체험 등 초등학생들이 직접 참여하며 배우는 콘텐츠가 풍부합니다. 유아를 위한 유아 전용 체험존도 따로 마련되어 있어 영·유아 동반 가족도 부담 없이 즐길 수 있습니다.<br><br>
+관람 시간은 오전 9시 30분~오후 5시 30분이며, 입장료는 성인 3,000원, 소인 2,000원으로 매우 합리적입니다. 단, 인기 체험 프로그램은 입장 후 선착순으로 예약되는 시스템이므로 오전 일찍 도착해 먼저 체험 코너를 확보하는 전략이 필요합니다.<br><br>
+지하철 7호선 어린이대공원역에서 도보 5분이면 닿을 수 있어 교통이 매우 편리합니다. 어린이대공원 자체도 무료 입장이 가능해 날씨가 개면 바로 이어서 야외 산책을 즐길 수 있습니다.
+
+<h2>⑥ 서울 어린이대공원 실내 동물관·곤충관</h2>
+
+서울 광진구 어린이대공원은 무료 입장 가능한 공원으로, 내부에 실내 관람 시설도 갖춰져 있습니다.<br><br>
+동물원 관람관과 열대동물관 일부는 실내에서 관람이 가능하여 비 오는 날에도 동물 친구들을 만날 수 있습니다. 특히 파충류관과 곤충관은 아이들에게 인기 있는 공간으로, 뱀, 도마뱀, 거북 등의 파충류와 다양한 곤충을 가까이서 관찰할 수 있습니다.<br><br>
+공원 내 놀이동산은 별도 요금이 있지만, 동물원과 식물원 등 주요 시설은 무료입니다. 입장 자체에 비용이 들지 않아 예산이 빠듯한 날 방문하기에도 부담이 없습니다.<br><br>
+지하철 5호선·7호선 아차산역 또는 능동역에서 도보로 이동 가능합니다. 차를 가져온다면 공원 인근 유료 주차장을 이용하면 됩니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260615/4_rainy_indoor_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-3">Photorealistic ultra high detail 1:1 aspect ratio image of a children's interactive museum interior in South Korea on a rainy day. Children aged 4-8 playing with colorful hands-on exhibits, a warm bright interior with educational displays about nature and science, parents watching nearby. Activity stations with blocks, science kits, and creative play areas, soft indirect lighting, clean modern design, happy engaged children. --ar 1:1</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">어린이 체험 박물관 — 비 오는 날 아이와 교육과 놀이를 동시에 즐기는 실내 공간 / AI 제작 이미지</div>
+</div>
+
+<h2>⑦ 경기도어린이박물관 — 용인 삼성화재교통박물관과 묶음 코스</h2>
+
+경기도 용인시 기흥구에 자리한 경기도어린이박물관은 수도권 최대 규모의 어린이 전용 박물관입니다.<br><br>
+4개 층에 걸쳐 자연생태, 건강, 문화예술, 우리나라 등 주제별 체험 전시가 마련되어 있습니다. 영·유아를 위한 전용 놀이 공간도 잘 갖춰져 있어 3세 미만 영아도 충분히 즐길 수 있습니다. 관람료는 어른·어린이 모두 4,000원이며 인터넷 예약 후 방문하는 것이 대기를 줄일 수 있습니다.<br><br>
+경기도어린이박물관 바로 인근에는 삼성화재교통박물관도 있습니다. 클래식 자동차부터 최신 전기차까지 약 250대의 역대 자동차와 교통 역사 전시를 관람할 수 있으며, 특히 자동차에 관심이 많은 아이들에게 환상적인 경험이 됩니다.<br><br>
+두 박물관을 하루에 묶어 즐기면 알찬 실내 당일 코스가 완성됩니다. 용인 에버랜드와도 가까워 날씨가 좋아지면 연계 방문도 가능합니다.
+
+<h2>⑧ 롯데월드·에버랜드 실내 구역 우천 활용법</h2>
+
+비 오는 날 테마파크 방문을 고민하는 분들이 많은데, 실내 구역을 중심으로 즐기면 오히려 최고의 선택이 될 수 있습니다.<br><br>
+롯데월드(서울 잠실)는 세계 최대 규모의 실내 테마파크로, 주요 놀이기구의 80% 이상이 실내에 있습니다. 비가 와도 자이로스핀, 아틀란티스 어드벤처 등 인기 어트랙션을 즐기는 데 전혀 지장이 없습니다. 오히려 비 오는 날 야외 파크 방문객이 줄어 실내 구역 대기 시간이 평소보다 짧아지는 경우가 많습니다.<br><br>
+에버랜드(경기 용인)는 야외 비중이 높지만, T익스프레스, 아마존 익스프레스 등 주요 놀이기구 대기줄 차양막이 있고, 워터파크 캐리비안베이 실내 파도풀도 비 오는 날 더욱 활기찹니다. 에버랜드 공식 앱에서 실시간 대기 시간을 확인하며 동선을 짜면 더욱 효율적으로 즐길 수 있습니다.<br><br>
+두 테마파크 모두 입장료가 상당하므로, 통합 할인권이나 카드사 제휴 혜택을 미리 검색해 두는 것을 추천합니다.
+
+<h2>⑨ 실내 파크 vs 박물관, 아이 연령별 선택 가이드</h2>
+
+비 오는 날 장소 선택은 아이의 연령대를 가장 먼저 고려하세요.<br><br>
+<strong>0~3세 영아·유아</strong>: 국립중앙박물관 어린이박물관(무료, 예약 필수), 어린이대공원 실내 놀이 공간, 대형 쇼핑몰 내 키즈 놀이 공간이 적합합니다. 이동 동선이 짧고 수유실·기저귀교환대가 잘 갖춰진 곳을 우선 선택하세요.<br><br>
+<strong>4~7세 유아·취학 전</strong>: 국립과천과학관, 국립어린이과학관, 경기도어린이박물관이 최적입니다. 체험형 전시가 많아 에너지를 충분히 소모할 수 있고, 호기심을 자극하는 다양한 콘텐츠가 풍부합니다.<br><br>
+<strong>8세 이상 초등학생</strong>: 코엑스 아쿠아리움, 삼성화재교통박물관, 롯데월드 실내 어트랙션 등 더 넓은 범위의 옵션이 가능합니다. 아이가 특별히 좋아하는 주제(공룡, 자동차, 바다생물 등)에 맞춰 선택하면 훨씬 만족도가 높아집니다.
+
+<h2>⑩ 비 오는 날 대중교통 이동 팁</h2>
+
+비 오는 날 아이와 외출할 때는 이동 과정의 피로도를 최소화하는 것이 중요합니다.<br><br>
+최대한 지하철과 연결되거나 도보 이동이 짧은 장소를 선택하세요. 코엑스 아쿠아리움(삼성역 직결), 국립중앙박물관(이촌역 5분), 국립어린이과학관(어린이대공원역 5분), 롯데월드(잠실역 도보 3분) 등이 지하철 연결이 우수합니다.<br><br>
+우산보다 유아용 우비를 챙기면 아이의 움직임이 자유롭고 짐도 줄어듭니다. 유아차를 가져갈 때는 미리 각 시설의 유아차 대여 가능 여부와 엘리베이터 위치를 확인해 두면 당황하지 않습니다.<br><br>
+비 오는 날 주요 박물관·과학관은 방문객이 평소보다 늘어나는 경향이 있습니다. 오전 10시 개관 시간에 맞춰 도착하는 '오프닝 전략'이 혼잡을 피하는 가장 효과적인 방법입니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260614/travel_busan_haeundae_beach_july.html">해운대해수욕장 2026 개장 날짜와 운영 시간, 여름 피서 준비물과 주변 볼거리</a></li>
+    <li><a href="../260614/local_huyanglim_reservation_tips.html">자연휴양림 예약 오픈 몇 시, 숲나들e 취소표 줍는 실전 방법과 성수기 추첨 일정</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#비오는날나들이</span>
+  <span class="tag">#수도권실내나들이</span>
+  <span class="tag">#아이랑갈만한곳</span>
+  <span class="tag">#국립과천과학관</span>
+  <span class="tag">#코엑스아쿠아리움</span>
+  <span class="tag">#경기도어린이박물관</span>
+  <span class="tag">#장마철나들이</span>
+  <span class="tag">#실내놀이</span>
+  <span class="tag">#어린이박물관</span>
+  <span class="tag">#국립어린이과학관</span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== F : 텍스트 3포인트 리스트 — point: 연령별 선택 가이드 =====
+       원고 ⑨ 정확히 3개 연령대 병렬 → F 적합 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.64"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="248" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="60" font-weight="800" fill="#ffffff">아이 나이별 장소 고르기</text>
+  <rect x="82" y="282" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <rect x="80" y="450" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="518" font-size="46" font-weight="700" fill="#ffffff">0~3세 영아·유아</text>
+    <text x="80" y="572" font-size="30" font-weight="500" fill="#b2dfdb">국립중앙박물관 어린이박물관(무료·예약) · 어린이대공원</text>
+    <line x1="80" y1="634" x2="1000" y2="634" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="698" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="766" font-size="46" font-weight="700" fill="#ffffff">4~7세 유아·취학 전</text>
+    <text x="80" y="820" font-size="30" font-weight="500" fill="#b2dfdb">국립과천과학관 · 국립어린이과학관 · 경기도어린이박물관</text>
+    <line x1="80" y1="882" x2="1000" y2="882" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="946" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="1014" font-size="46" font-weight="700" fill="#ffffff">8세 이상 초등학생</text>
+    <text x="80" y="1068" font-size="30" font-weight="500" fill="#b2dfdb">코엑스 아쿠아리움 · 삼성화재교통박물관 · 롯데월드</text>
+  </g>
+
+  <text x="80" y="1238" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#cfd8d6">아이가 좋아하는 주제(공룡·자동차·바다생물)에 맞춰 선택하면 만족도 UP.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

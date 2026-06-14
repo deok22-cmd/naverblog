@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== card_05 : point2 (A 헤드라인-하단) — 2026 달라진 점: 계절 구분 폐지 ===== -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.40" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.82"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0a1a2e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#1565c0"/>
+
+  <rect x="80" y="852" width="64" height="10" fill="#1565c0"/>
+  <text x="80" y="964" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="90" font-weight="800" fill="#ffffff" letter-spacing="-2">계절 구분</text>
+  <text x="80" y="1060" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="90" font-weight="800" fill="#ffffff" letter-spacing="-2">폐지됐다</text>
+
+  <g id="chips">
+    <rect x="80" y="1100" width="350" height="74" rx="37" fill="#1565c0"/>
+    <text x="255" y="1148" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle">2026년 개편</text>
+    <rect x="450" y="1100" width="350" height="74" rx="37" fill="#1565c0"/>
+    <text x="625" y="1148" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle">연간 통합 지원</text>
+  </g>
+
+  <text x="80" y="1236" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e3f2fd">하절기·동절기 따로 신청 불필요,</text>
+  <text x="80" y="1285" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e3f2fd">한 번 신청으로 연중 사용 가능합니다.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#0d47a1"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

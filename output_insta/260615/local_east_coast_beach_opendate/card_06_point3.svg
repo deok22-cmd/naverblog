@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== F : 텍스트 3포인트 리스트 — point3(양양 해변 3곳 선택 가이드) ===== -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.52"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.68"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="200" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#80cbc4" letter-spacing="3">양양 · 해변 선택 가이드</text>
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="78" font-weight="800" fill="#ffffff" letter-spacing="-2">
+    <tspan x="80" y="320">목적에 맞는</tspan>
+    <tspan x="80" y="410">양양 해변</tspan>
+  </text>
+  <rect x="82" y="460" width="120" height="8" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <!-- 포인트 1 -->
+    <rect x="80" y="530" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="610" font-size="46" font-weight="800" fill="#ffffff">낙산해수욕장</text>
+    <text x="80" y="668" font-size="34" font-weight="500" fill="#e0f2f1">가족 피서 · 낙산사 인접 · 7월 초~중순 개장</text>
+    <line x1="80" y1="710" x2="1000" y2="710" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <!-- 포인트 2 -->
+    <rect x="80" y="756" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="836" font-size="46" font-weight="800" fill="#ffffff">하조대해수욕장</text>
+    <text x="80" y="894" font-size="34" font-weight="500" fill="#e0f2f1">7~8월 약 50일 운영 · 잔잔한 파도 · 등대 뷰</text>
+    <line x1="80" y1="936" x2="1000" y2="936" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <!-- 포인트 3 -->
+    <rect x="80" y="982" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="1062" font-size="46" font-weight="800" fill="#ffffff">서피비치</text>
+    <text x="80" y="1120" font-size="34" font-weight="500" fill="#e0f2f1">서핑 스쿨 6월~11월 상시 · 수영보다 서핑 목적</text>
+  </g>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

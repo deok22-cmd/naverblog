@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== card_07 : point4 (B 상단 텍스트) — 전기요금 복지할인 중복 혜택 ===== -->
+  <defs>
+    <linearGradient id="scrimTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.66"/>
+      <stop offset="0.36" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.78" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0a1a2e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimTop)"/>
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#1565c0"/>
+
+  <text x="80" y="150" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#42a5f5" letter-spacing="3">중복 혜택</text>
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="82" font-weight="800" fill="#ffffff" letter-spacing="-2">
+    <tspan x="80" y="270">바우처 +</tspan>
+    <tspan x="80" y="370">복지할인</tspan>
+    <tspan x="80" y="470">동시 가능</tspan>
+  </text>
+  <text x="80" y="554" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e3f2fd">에너지바우처와 한전 전기요금 복지할인은 중복 적용됩니다.</text>
+
+  <text x="80" y="1290" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="600" fill="#e3f2fd">복지할인 신청: 한전 고객센터 123 또는 한전 홈페이지</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#0d47a1"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

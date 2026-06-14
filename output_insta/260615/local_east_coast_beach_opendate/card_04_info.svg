@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== P4 : 핵심 팩트 — info(개장일·요금·주차·수온 지표 4개) ===== -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.48"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.64"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="270" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">동해안 핵심 수치</text>
+  <rect x="82" y="304" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="450" font-size="30" font-weight="600" fill="#b2dfdb">강릉 경포 공식 개장일</text>
+    <text x="80" y="512" font-size="56" font-weight="800" fill="#ffffff">2026년 7월 4일(토)</text>
+    <line x1="80" y1="566" x2="1000" y2="566" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="650" font-size="30" font-weight="600" fill="#b2dfdb">공공 샤워장 요금</text>
+    <text x="80" y="712" font-size="56" font-weight="800" fill="#ffffff">무료 ~ 1,500원</text>
+    <line x1="80" y1="766" x2="1000" y2="766" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="850" font-size="30" font-weight="600" fill="#b2dfdb">주차 혼잡 시작 시각</text>
+    <text x="80" y="912" font-size="56" font-weight="800" fill="#ffffff">오전 10시 이후 만차</text>
+    <line x1="80" y1="966" x2="1000" y2="966" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="1050" font-size="30" font-weight="600" fill="#b2dfdb">8월 말~9월 초 수온</text>
+    <text x="80" y="1112" font-size="56" font-weight="800" fill="#ffffff">약 25°C (연중 최고)</text>
+  </g>
+
+  <text x="80" y="1240" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">2026년 기준 · 지자체 공시 전 재확인 권장.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>
