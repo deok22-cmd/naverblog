@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== C : 측면 텍스트 (사진중심 · 좌측 방향 그라데만, 불투명 패널 없음) ===== -->
+  <defs>
+    <linearGradient id="scrimLeft" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.74"/>
+      <stop offset="0.52" stop-color="#000000" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimLeft)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#388e3c"/>
+
+  <text x="80" y="430" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="28" font-weight="700" fill="#66bb6a" letter-spacing="3">덕수궁 + 선유도</text>
+
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="78" font-weight="800" fill="#ffffff" letter-spacing="-2">
+    <tspan x="80" y="540">퇴근 후</tspan>
+    <tspan x="80" y="630">야간 산책 코스</tspan>
+  </text>
+
+  <rect x="82" y="688" width="120" height="8" fill="#388e3c"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="36" font-weight="500" fill="#e8f5e9">
+    <text x="80" y="790">덕수궁 오후 8시까지 입장 가능,</text>
+    <text x="80" y="848">돌담길 900m 야간 산책 코스.</text>
+    <text x="80" y="906">선유도공원 한강 야경은 무료.</text>
+  </g>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#1b5e20"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

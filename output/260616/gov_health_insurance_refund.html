@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>건강보험 환급금 내가 받을 수 있나, 본인부담상한제 초과금 조회와 신청 방법</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1fdf5; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 25px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 12px; text-align: center; font-size: 0.95em; }
+  .info-table td { border: 1px solid #ddd; padding: 10px 12px; font-size: 0.95em; }
+  .tip-box { background: #fffde7; border-left: 4px solid #f9a825; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .caution-box { background: #fce4ec; border-left: 4px solid #e57373; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #fff; border: 1px solid #c8e6c9; border-left-width: 4px; margin-bottom: 15px; border-radius: 0 8px 8px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #a5d6a7; border-radius: 8px; padding: 20px; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 700; color: #1b5e20; }
+  .ph-file { font-family: monospace; font-size: 0.82em; color: #888; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; padding: 15px; font-size: 0.83em; line-height: 1.6; white-space: pre-wrap; border-radius: 5px; margin: 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; margin-top: 10px; font-size: 0.9em; }
+  .img-caption { text-align: center; font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>건강보험 환급금 내가 받을 수 있나, 본인부담상한제 초과금 조회와 신청 방법</h1>
+
+<div class="intro-box">
+  1년 동안 병원에 많이 다녀서 의료비를 많이 냈다면, 국민건강보험공단에서 일정 금액을 돌려받을 수 있습니다.<br><br>
+  이것이 <strong>본인부담상한제</strong>로, 건강보험 가입자가 1년간 낸 의료비 본인부담금이 소득에 따른 상한액을 초과하면 그 초과분을 환급해 주는 제도입니다.<br><br>
+  신청하지 않으면 돌려받지 못하는 경우도 있습니다. 조회 방법부터 신청까지 단계별로 정리합니다. ※ 이 글의 금액·기준은 2026년 국민건강보험공단 공개 자료 기준이며, 변동될 수 있으므로 신청 전 공단 홈페이지(nhis.or.kr) 또는 고객센터(☎1577-1000)에서 최신 정보를 반드시 확인하세요.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260616/5_health_refund_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-1">A Korean person using the National Health Insurance Service mobile app on a smartphone to check health insurance refund status. Close-up of hands holding a modern smartphone showing a health insurance app interface with refund amount displayed, green and white color scheme, clean UI design, on a wooden desk with a health insurance card and glasses nearby, soft natural lighting, focused and informative composition. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">국민건강보험 앱으로 환급금 조회하는 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>① 건강보험 환급금이란 — 의료비 많이 낸 분들 주목</h2>
+
+한국의 건강보험 제도는 국민이 의료비를 지나치게 많이 부담하지 않도록 상한선을 두고 있습니다. 이것이 <strong>본인부담상한제</strong>입니다.<br><br>
+1월 1일부터 12월 31일까지 1년간 건강보험이 적용되는 의료 서비스를 이용하면서 낸 본인부담금 합계가 해당 연도 소득 분위별 상한액을 초과하면, 공단이 그 초과분을 환급해 줍니다.<br><br>
+이 제도는 저소득층일수록 더 낮은 상한액을 적용해 의료비 부담을 줄이는 구조입니다. 수입이 낮을수록, 의료비를 많이 낼수록 환급받을 가능성이 높아집니다.<br><br>
+환급금은 신청하지 않아도 공단이 자동으로 지급하는 경우도 있지만, 계좌 정보가 등록되지 않았거나 고지서를 받지 못한 경우 직접 신청이 필요합니다. 조회부터 해보는 것이 먼저입니다.
+
+<h2>② 본인부담상한제 — 얼마 이상 내면 돌려받나</h2>
+
+본인부담상한제는 건강보험 가입자의 소득 분위에 따라 상한액이 달라집니다. 소득이 낮은 1분위(하위 10%)가 가장 낮은 상한액을 적용받고, 소득이 높은 10분위(상위 10%)는 가장 높은 상한액이 적용됩니다.<br><br>
+<strong>2026년 최고상한액은 843만 원</strong>입니다. 이는 소득 최상위 분위에 적용되는 금액으로, 1년간 의료비 본인부담금이 843만 원을 초과하면 그 초과분을 환급받을 수 있다는 의미입니다.<br><br>
+중·저소득 분위의 상한액은 이보다 낮아, 예를 들어 저소득 분위라면 수십만 원~백만 원대의 상한액이 적용되는 경우도 있습니다. 본인의 분위별 정확한 상한액은 국민건강보험공단 홈페이지 또는 앱에서 조회할 수 있습니다.<br><br>
+중요한 점은 건강보험이 적용되는 비용만 해당한다는 것입니다. 비급여 항목(미용 목적 시술, 특실 차액, 일부 주사제 등)은 본인부담상한제 계산에 포함되지 않습니다.
+
+<h2>③ 2026년 본인부담상한액 소득 구간별 기준</h2>
+
+소득 분위별 정확한 상한액은 매년 달라지므로 최신 정보는 <strong>국민건강보험공단 홈페이지(nhis.or.kr)</strong>에서 확인하는 것이 가장 정확합니다.<br><br>
+일반적으로 1년 의료비 본인부담금이 100만 원을 초과했다면 환급 대상 여부를 한 번쯤 확인해 볼 가치가 있습니다. 특히 입원 치료나 장기 외래 치료를 받은 경우, 의료비가 상당히 누적되어 있을 가능성이 있습니다.<br><br>
+<div class="tip-box">
+  <strong>💡 확인이 특히 필요한 경우</strong><br><br>
+  • 1년 중 입원 치료를 받은 경우<br>
+  • 만성 질환으로 정기적으로 병원·약국을 이용한 경우<br>
+  • 암·희귀질환 등 중증 질환 치료를 받은 경우<br>
+  • 가족 중 저소득층 건강보험 가입자가 있는 경우<br>
+  • 의료급여 수급자가 포함된 가구
+</div>
+
+<h2>④ 환급금 조회하는 법 — 온라인과 앱</h2>
+
+<strong>방법 1: 국민건강보험 홈페이지(nhis.or.kr)</strong><br><br>
+PC 또는 스마트폰 브라우저에서 nhis.or.kr에 접속합니다. 공인인증서 또는 간편 인증(카카오·네이버·PASS 등)으로 로그인한 뒤, '민원여기요' 또는 '환급금 조회' 메뉴를 선택하면 본인의 환급 대상 여부와 금액을 바로 확인할 수 있습니다.<br><br>
+<strong>방법 2: The 건강보험 앱</strong><br><br>
+스마트폰 앱스토어에서 '더 건강보험' 또는 'The 건강보험' 앱을 다운로드합니다. 로그인 후 '환급금 조회' 메뉴에서 즉시 확인 가능합니다. 스마트폰에 익숙한 분이라면 앱이 가장 빠르고 편리합니다.<br><br>
+<strong>방법 3: 전화 조회(1577-1000)</strong><br><br>
+국민건강보험공단 고객센터에 전화해 본인 확인 후 환급금 여부와 금액을 안내받을 수 있습니다. 온라인이 불편한 어르신이나 인증 수단이 없는 경우 유용합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260616/5_health_refund_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-2">Modern exterior of a National Health Insurance Service branch office in South Korea, clean government building facade with the NHIS logo and Korean text visible, well-maintained entrance with automatic glass doors, people walking in and out, daytime with blue sky, professional and accessible public service facility appearance, green and white color scheme matching the NHIS brand. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">국민건강보험공단 지사 외관 / AI 제작 이미지</div>
+</div>
+
+<h2>⑤ 환급금 신청 방법 — 온라인·전화·방문</h2>
+
+조회 결과 환급 대상 금액이 있다면 신청을 통해 입금받을 수 있습니다.<br><br>
+<div class="step-box">
+  <strong>🖥️ 온라인 신청 (nhis.or.kr 또는 The 건강보험 앱)</strong><br><br>
+  ① nhis.or.kr 또는 앱 로그인<br>
+  ② '환급금 조회' 또는 '민원 신청' 메뉴 선택<br>
+  ③ 환급금 확인 후 '신청하기' 클릭<br>
+  ④ 본인 명의 계좌번호 입력 후 신청 완료
+</div>
+
+<div class="step-box">
+  <strong>📞 전화 신청 (1577-1000)</strong><br><br>
+  ① 고객센터 전화 후 상담사 연결<br>
+  ② 본인 확인 절차 진행<br>
+  ③ 환급금 신청 및 계좌 정보 제공
+</div>
+
+<div class="step-box">
+  <strong>🏢 방문 신청 (전국 건강보험공단 지사)</strong><br><br>
+  ① 가까운 건강보험공단 지사 방문<br>
+  ② 본인 신분증과 입금받을 통장 지참<br>
+  ③ 창구에서 환급 신청서 작성 및 제출
+</div>
+
+<h2>⑥ 지급 시기와 입금 확인 방법</h2>
+
+온라인 또는 전화로 신청 완료 후 <strong>통상 1~3일(영업일 기준) 이내</strong>에 신청 시 등록한 계좌로 입금됩니다.<br><br>
+방문 신청의 경우 처리 기간이 다소 길어질 수 있으며, 공단 담당자가 진행 상황을 안내해 줍니다.<br><br>
+입금 확인은 nhis.or.kr 또는 The 건강보험 앱의 '신청 내역 조회' 또는 '지급 내역 조회' 메뉴에서 가능합니다. 통장에서 직접 확인하는 방법도 물론 가능합니다.<br><br>
+국민건강보험공단에서 발송하는 환급금 안내 문자(SMS)나 카카오톡 메시지를 받은 경우, 해당 링크 또는 앱을 통해 바로 신청할 수 있습니다.
+
+<h2>⑦ 자동 지급 대상인지 확인하는 법</h2>
+
+공단이 본인 명의 계좌 정보를 보유하고 있으면 별도 신청 없이 자동으로 지급하는 경우도 있습니다. 특히 공단에서 환급 안내 우편물 또는 문자를 받은 경우가 이에 해당합니다.<br><br>
+자동 지급 여부를 확인하려면 nhis.or.kr 로그인 후 '환급금 자동 지급 내역' 또는 '지급 예정 내역' 메뉴를 확인하거나, 고객센터(1577-1000)에 문의하세요.<br><br>
+계좌 정보가 공단에 등록되어 있지 않거나 변경된 경우 자동 지급이 되지 않을 수 있으니, 계좌 정보를 미리 등록해 두는 것이 좋습니다. nhis.or.kr 또는 The 건강보험 앱에서 계좌 등록이 가능합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260616/5_health_refund_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-3">Close-up of Korean health insurance-related documents and ID card on a desk, national health insurance card with blue and green design, printed medical expense receipt, pen and notepad with figures written down, reading glasses resting on the documents, laptop in background showing an insurance website, organized and professional document arrangement, warm office lighting. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">건강보험 환급 관련 서류와 카드 / AI 제작 이미지</div>
+</div>
+
+<h2>⑧ 체납 중이면 환급금은 어떻게 되나</h2>
+
+<strong>2026년부터는 건강보험료를 체납 중인 경우 환급금에서 자동으로 체납액을 상계(공제)하고 지급합니다.</strong><br><br>
+예를 들어 환급금이 50만 원인데 체납액이 30만 원이라면, 체납액 30만 원을 먼저 공제한 후 잔여 20만 원만 지급됩니다.<br><br>
+체납액이 환급금보다 많은 경우에는 환급금이 체납액 납부에 전액 적용되어 현금으로 받는 금액이 없을 수 있습니다.<br><br>
+체납 이력이 있는 경우, 환급 신청 전에 체납액 규모를 먼저 확인하고 납부 계획을 세우는 것이 좋습니다. 체납액 조회도 nhis.or.kr 또는 고객센터를 통해 가능합니다.
+
+<h2>⑨ 소멸시효 3년 — 놓치면 안 되는 기한</h2>
+
+건강보험 환급금에는 <strong>소멸시효 3년</strong>이 적용됩니다. 환급금이 발생한 날로부터 3년이 지나면 권리가 소멸되어 더 이상 청구할 수 없습니다.<br><br>
+공단에서 환급 안내를 해주더라도 신청하지 않고 방치하거나, 안내를 받지 못한 채 3년이 지나면 해당 금액을 받을 수 없게 됩니다.<br><br>
+따라서 과거 3년 이내 의료비를 많이 낸 기간이 있다면 지금이라도 조회해 보는 것이 중요합니다. 소멸시효 임박 전 남은 환급금이 있다면 빠르게 신청하세요.<br><br>
+특히 본인이 아닌 가족(부모님, 조부모 등)의 환급금 여부도 확인해 드리면 큰 도움이 됩니다. 대리 신청도 가능하므로 가족 중 건강보험 환급금을 놓치고 있는 분이 없는지 주기적으로 확인해 보세요.
+
+<h2>⑩ 자주 묻는 질문</h2>
+
+<strong>Q. 가족 대신 신청할 수 있나요?</strong><br><br>
+대리 신청이 가능합니다. 신청인 본인의 신분증과 대리권을 증명하는 위임장, 피대리인의 신분증 사본을 지참해 공단 지사를 방문하면 됩니다.<br><br>
+<strong>Q. 직장 건강보험과 지역 건강보험 모두 해당되나요?</strong><br><br>
+네, 직장 가입자와 지역 가입자 모두 본인부담상한제 적용 대상입니다.<br><br>
+<strong>Q. 환급금이 언제 발생했는지 어떻게 아나요?</strong><br><br>
+공단은 매년 1년치 의료비를 집계한 후 이듬해 7~8월경 환급 대상자에게 안내를 발송하는 것이 일반적입니다. 정확한 지급 주기는 공단 공지를 확인하세요.<br><br>
+<strong>Q. 건강보험공단 연락처와 홈페이지는?</strong><br><br>
+• 홈페이지: nhis.or.kr<br>
+• 고객센터: ☎1577-1000 (평일 오전 9시~오후 6시)<br>
+• 앱: The 건강보험(스마트폰 앱스토어 검색)
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260615/gov_energy_voucher_2026.html">에너지바우처 2026 신청 대상과 지원 금액, 전기요금 복지할인 받는 방법</a></li>
+    <li><a href="../260615/local_east_coast_beach_opendate.html">동해안 해수욕장 개장일 언제, 강릉·속초·양양 날짜와 샤워장 요금</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#건강보험환급금</span>
+  <span class="tag">#본인부담상한제</span>
+  <span class="tag">#건강보험공단</span>
+  <span class="tag">#의료비환급</span>
+  <span class="tag">#nhis환급</span>
+  <span class="tag">#건강보험혜택</span>
+  <span class="tag">#복지제도</span>
+  <span class="tag">#의료비절약</span>
+  <span class="tag">#더건강보험앱</span>
+  <span class="tag">#생활정보</span>
+</div>
+
+</body>
+</html>

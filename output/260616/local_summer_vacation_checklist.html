@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>여름 휴가 준비물 바다·계곡·캠핑 상황별 체크리스트, 빠뜨리기 쉬운 것</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1fdf5; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 25px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 12px; text-align: center; font-size: 0.95em; }
+  .info-table td { border: 1px solid #ddd; padding: 10px 12px; font-size: 0.95em; }
+  .tip-box { background: #fffde7; border-left: 4px solid #f9a825; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .caution-box { background: #fce4ec; border-left: 4px solid #e57373; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #a5d6a7; border-radius: 8px; padding: 20px; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 700; color: #1b5e20; }
+  .ph-file { font-family: monospace; font-size: 0.82em; color: #888; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; padding: 15px; font-size: 0.83em; line-height: 1.6; white-space: pre-wrap; border-radius: 5px; margin: 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; margin-top: 10px; font-size: 0.9em; }
+  .img-caption { text-align: center; font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>여름 휴가 준비물 바다·계곡·캠핑 상황별 체크리스트, 빠뜨리기 쉬운 것</h1>
+
+<div class="intro-box">
+  매년 여름 "이걸 왜 안 챙겼지?" 하는 상황이 반복됩니다.<br><br>
+  바다, 계곡, 캠핑은 모두 야외에서 물과 함께하는 여름 나들이지만, 필요한 준비물은 생각보다 많이 다릅니다.<br><br>
+  상황별 핵심 준비물과 함께 특히 빠뜨리기 쉬운 아이템을 정리했습니다. 출발 전 한 번 훑어보면 현지에서 후회할 일이 크게 줄어들 것입니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260616/3_summer_checklist_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-1">Flat lay of summer vacation essentials arranged neatly on a white background: sunscreen bottle, colorful beach towel, sunglasses, reusable water bottle, snorkeling mask and fins, waterproof sandals, sun hat, portable first aid kit, lip balm, waterproof bag. Clean and organized product photography style, bright natural lighting, top-down view. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">여름 휴가 필수 준비물 한눈에 보기 / AI 제작 이미지</div>
+</div>
+
+<h2>① 여름 휴가 준비, 왜 상황별 체크리스트가 필요한가</h2>
+
+여름 나들이 준비물을 무작정 던져 넣다 보면 짐은 무거워지는데 막상 필요한 건 없는 상황이 생깁니다.<br><br>
+바다, 계곡, 캠핑은 같은 야외 활동이지만 환경 조건이 전혀 다릅니다. 바다에서는 강한 자외선과 모래가 변수이고, 계곡에서는 미끄러운 바위와 갑작스러운 기온 변화가 복병입니다. 캠핑은 밤새 머무는 만큼 취침 환경과 취사 도구까지 챙겨야 합니다.<br><br>
+공통 아이템과 상황별 전용 아이템을 구분해 두면 짐 꾸리기가 훨씬 효율적입니다. 특히 가족 단위 여행이라면 구성원별로 역할을 나눠 각자 담당 아이템을 확인하는 방식이 누락을 줄이는 데 효과적입니다.<br><br>
+이 글에서는 바다·계곡·캠핑 세 상황별 기본 준비물과 함께, 실제로 많이 빠뜨리는 아이템을 집중 정리합니다. 출발 전 체크리스트로 활용해 보세요.
+
+<h2>② 바다 여행 기본 준비물</h2>
+
+바다 여행의 핵심 준비물은 <strong>자외선 차단과 물 관련 용품</strong>에 집중됩니다. 해수욕장은 그늘이 적고 반사광이 강해 자외선 노출 강도가 평소의 몇 배에 달합니다.<br><br>
+<strong>필수 준비물</strong>: 수영복(여벌 포함), 래쉬가드, 수건(대형), 선크림(SPF50 이상·PA+++ 이상), 선글라스, 모자(챙이 넓은 것), 방수백(슬리퍼·핸드폰 방수 파우치 포함), 비치타월 또는 돗자리, 미네랄워터 충분히, 간편 도시락 또는 간식.<br><br>
+수영복 여벌은 젖은 수영복을 갈아입기 위한 것으로 특히 여러 날 여행 시 필수입니다. 해변에서 탈의실이 멀 경우 이동이 불편하므로 차 안 또는 가방 속에 반드시 준비해 두세요.<br><br>
+모래가 많이 묻는 해변 특성상 방수 파우치는 스마트폰과 지갑 보호에 필수입니다. 조개 줍기, 물놀이 중 스마트폰이 물에 노출될 수 있으므로 주의하세요.
+
+<h2>③ 바다에서 빠뜨리기 쉬운 것들</h2>
+
+<div class="caution-box">
+  <strong>⚠️ 바다 여행 자주 누락되는 아이템</strong><br><br>
+  • 수영모 — 공공 수영장은 필수, 해변에서도 해파리 방어에 유용<br>
+  • 선크림 추가분(덧바름용) — 1개론 부족, 4시간마다 재도포 필요<br>
+  • 멀미약 — 뱃길 이용 시 사전 복용 필수<br>
+  • 모래 제거용 브러시 — 신발·가방·발바닥 모래 정리용<br>
+  • 비상용 반창고·소독제 — 산호나 조개 조각에 발 긁힘 대비<br>
+  • 방수 지갑 또는 넥 파우치 — 물속 이동 중 현금·카드 보관용
+</div>
+
+선크림은 외출 30분 전 바르고, 입수 전후로 재도포하는 것이 원칙입니다. "한 번 바르면 된다"는 생각은 오해입니다. 여름 해변에서 4시간 이상 있다면 최소 한 번 이상 덧발라야 합니다.<br><br>
+멀미약은 섬 여행이나 배를 타야 하는 경우 반드시 챙겨야 합니다. 승선 30~60분 전 복용해야 효과가 있으므로 배를 탈 예정이라면 미리 구입해 두세요.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260616/3_summer_checklist_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-2">A family hiking and playing in a cool clear mountain valley stream in South Korea during summer. Parents and children wading in crystal clear shallow water between mossy rocks, lush green trees and mountains surrounding the gorge, people wearing water shoes and quick-dry clothing, portable cooler bag on rocks nearby, peaceful nature scenery with sunlight filtering through trees. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">여름 계곡 가족 물놀이 풍경 / AI 제작 이미지</div>
+</div>
+
+<h2>④ 계곡 여행 기본 준비물</h2>
+
+계곡 여행은 바다보다 기온이 낮고 그늘이 많지만, 예상치 못한 위험 요소도 많습니다. 미끄러운 바위, 갑자기 불어나는 물, 낮과 밤의 기온 차가 대표적입니다.<br><br>
+<strong>필수 준비물</strong>: 아쿠아슈즈(계곡화), 래쉬가드, 방수 샌들 또는 크록스, 얇은 긴팔 겉옷(체온 유지용), 방수 파우치, 비상 식량 및 물, 구급함(밴드·소독제), 돗자리 또는 방수 매트, 모기 기피제.<br><br>
+아쿠아슈즈는 계곡 여행에서 가장 중요한 안전 장비입니다. 맨발이나 일반 슬리퍼로 계곡 바위를 밟으면 미끄러져 크게 다칠 수 있습니다. 특히 아이들에게 반드시 착용시켜야 합니다.<br><br>
+여름 계곡이라도 물속은 생각보다 차갑습니다. 특히 입수 직후 심장에 부담이 갈 수 있으므로 발부터 천천히 물에 적응한 후 입수하는 것이 안전합니다. 심장 질환이 있는 분은 급격한 냉수 입수를 삼가세요.
+
+<h2>⑤ 계곡에서 빠뜨리기 쉬운 것들</h2>
+
+<div class="caution-box">
+  <strong>⚠️ 계곡 여행 자주 누락되는 아이템</strong><br><br>
+  • 긴팔 겉옷 — 물에 오래 있으면 체온이 빠르게 떨어짐<br>
+  • 모기 기피제 — 계곡 주변 그늘에 모기 극심, 피부 노출 부위에 필수<br>
+  • 아쿠아슈즈(여벌) — 1켤레가 젖으면 교체용 필요<br>
+  • 식수(충분히) — 계곡물은 음용 불가, 생수를 충분히 지참<br>
+  • 구급함(특히 소독제) — 바위 긁힘, 벌레 물림 대비<br>
+  • 쓰레기 봉투 — 자연 환경 보호를 위해 반드시 지참
+</div>
+
+계곡은 산속에 위치해 편의점과 식당에서 멀리 떨어진 경우가 많습니다. 식수와 간식은 충분히 가져가야 합니다. 계곡물은 겉보기엔 깨끗해도 수인성 질병 원인균이 있을 수 있으므로 절대 음용하지 마세요.<br><br>
+갑작스러운 기상 변화로 계곡물이 불어날 수 있습니다. 상류에 비가 오면 계곡이 급격히 범람하므로, 기상 예보를 반드시 확인하고 비가 예보된 날은 계곡 방문을 자제하는 것이 안전합니다.
+
+<h2>⑥ 캠핑 기본 준비물</h2>
+
+캠핑은 세 가지 중 준비물이 가장 많고 다양합니다. 잠자리, 식사, 야외 생활이 모두 포함되기 때문입니다.<br><br>
+<strong>텐트 및 취침 장비</strong>: 텐트(사이즈 확인), 타프(차양막), 매트 또는 에어 매트, 침낭(여름용), 베개(인플레이터블 또는 압축형), 랜턴 또는 헤드램프(건전지 여분).<br><br>
+<strong>취사 장비</strong>: 버너+가스통(여분), 코펠(냄비·프라이팬), 식기류(접시·컵·수저·젓가락), 조리도구(집게·주걱), 도마, 식칼, 식재료 박스 또는 쿨러박스, 아이스팩.<br><br>
+<strong>생활 도구</strong>: 키친타올, 랙 또는 식기 건조대, 세제 및 수세미, 쓰레기봉투(다량), 방충 스프레이, 불쏘시개 및 장작(허용 캠핑장만), 여분 배터리 또는 보조배터리, 구급함.
+
+<h2>⑦ 캠핑에서 빠뜨리기 쉬운 것들</h2>
+
+<div class="caution-box">
+  <strong>⚠️ 캠핑 자주 누락되는 아이템</strong><br><br>
+  • 피크(팩)와 말렛 — 텐트 구매 시 기본 포함이지만 분실 잦음<br>
+  • 랜턴 여분 배터리 / 보조배터리 — 밤에 전원 없으면 암흑<br>
+  • 쓰레기봉투 다량 — 하룻밤 캠핑도 쓰레기 생각보다 많음<br>
+  • 방충망 또는 전기 모기채 — 여름 캠핑 모기 극심<br>
+  • 샤워 슬리퍼(공용 화장실용) — 위생상 필수<br>
+  • 마른 행주·키친타올 — 요리 후 설거지 마무리에 필수<br>
+  • 여분 가스통 — 한 개가 생각보다 빨리 소진
+</div>
+
+텐트 설치 후 바닥에 빛이 새는지 확인하는 것이 중요합니다. 빛이 새면 모기와 벌레가 모여들기 때문입니다. 타프는 비 대비뿐 아니라 강한 햇빛을 막는 필수품으로, 여름 캠핑에서 타프 없는 식사 시간은 무척 불편합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260616/3_summer_checklist_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-3">Beautiful family campsite at night in a Korean mountain forest, two tents illuminated from inside with warm orange glow, a campfire burning with dancing flames in the foreground, camping chairs and folding table with cooking equipment nearby, starry night sky visible above the tree canopy, lanterns hanging from trees, peaceful and cozy summer camping atmosphere. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">여름밤 캠핑사이트 전경 / AI 제작 이미지</div>
+</div>
+
+<h2>⑧ 어디서든 공통으로 챙겨야 할 것들</h2>
+
+바다·계곡·캠핑 공통으로 빠지면 안 되는 아이템이 있습니다.<br><br>
+<strong>의약품</strong>: 소화제, 지사제, 해열제, 두통약, 밴드(대·소), 소독약, 알레르기약(해당자), 처방약(복용 중인 분). 여름 음식이 쉽게 상하는 계절인 만큼 소화제와 지사제는 반드시 챙겨야 합니다.<br><br>
+<strong>식수와 전해질</strong>: 생수는 1인 하루 최소 2L 기준으로 넉넉히 준비합니다. 땀을 많이 흘릴 때는 이온 음료나 전해질 스틱을 챙겨 탈수를 예방하세요.<br><br>
+<strong>보조배터리</strong>: 야외에서는 스마트폰 배터리 소모가 빠릅니다. 10,000mAh 이상 용량의 보조배터리를 하나 이상 챙기면 길 잃음이나 응급 연락 단절을 방지할 수 있습니다.<br><br>
+<strong>긴급 연락처</strong>: 방문지 관할 소방서·경찰서 번호, 응급실 위치, 보험 고객센터 번호를 미리 저장해 두세요. 해외 여행만큼은 아니지만 여름 야외에서 응급 상황은 언제든 생길 수 있습니다.
+
+<h2>⑨ 현지에서 사면 비싼 것, 미리 사야 할 것</h2>
+
+여름 피서지에서 판매되는 물품은 평소보다 가격이 크게 올라가는 경향이 있습니다. 특히 다음 아이템은 출발 전 구매를 강력히 권장합니다.<br><br>
+<strong>선크림</strong>: 해변 편의점과 가게에서 같은 제품이 마트보다 30~50% 비쌀 수 있습니다. 넉넉한 용량으로 미리 구매해 가세요.<br><br>
+<strong>아쿠아슈즈</strong>: 피서지 주변 스포츠용품점이나 온라인에서 미리 구매하면 현지보다 저렴합니다. 특히 아이들 것은 사이즈가 맞는지 직접 신어보고 구매하는 것이 중요합니다.<br><br>
+<strong>방수 파우치·케이스</strong>: 편의점에서도 팔지만 품질이 낮은 경우가 있습니다. 방수 등급과 크기를 확인하고 미리 좋은 제품을 준비하세요.<br><br>
+<strong>아이스팩</strong>: 캠핑장이나 피서지 주변 마트에서 구매 가능하지만 성수기에 품절되는 경우가 있습니다. 가능하면 출발 전날 냉동해 두세요.
+
+<h2>⑩ 짐 부피 최소화 노하우</h2>
+
+<div class="tip-box">
+  <strong>💡 짐 줄이는 핵심 전략</strong><br><br>
+  ① 옷은 빠르게 건조되는 폴리에스터 소재 중심으로 최소화<br>
+  ② 압축팩(트래블 백) 활용 시 부피 30~50% 절감 가능<br>
+  ③ 공용 아이템(선크림·구급함·물)은 1세트만 공동 운반<br>
+  ④ 현지 조달 가능한 것(음식·얼음·생수)은 현장에서 구매<br>
+  ⑤ 사용 후 버릴 수 있는 아이템(일회용 우비·즉석 핫팩 등)은 소형으로 선택
+</div>
+
+짐은 목적지별 핵심 아이템에 집중하고, 현지에서 살 수 있는 것과 없는 것을 구분하는 것이 핵심입니다.<br><br>
+여름 피서는 많이 챙길수록 오히려 무거워서 즐거움이 반감되기도 합니다. 꼭 필요한 것만 챙기고, 현지에서 유연하게 보충하는 전략이 오히려 여유로운 여행을 만들어 줍니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260615/travel_taean_mallipo_sinduri_summer.html">태안 만리포 해수욕장 7월 4일 개장과 신두리 해안사구, 서해 여름 당일 코스</a></li>
+    <li><a href="../260615/travel_yangyang_surf_hajo_july.html">양양 서피비치 초보 서핑 강습 비용 얼마, 하조대 등대 전망과 7월 동해 코스</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#여름휴가준비물</span>
+  <span class="tag">#바다여행준비물</span>
+  <span class="tag">#계곡여행준비물</span>
+  <span class="tag">#캠핑준비물</span>
+  <span class="tag">#여름피서</span>
+  <span class="tag">#휴가체크리스트</span>
+  <span class="tag">#여름짐싸기</span>
+  <span class="tag">#수영준비물</span>
+  <span class="tag">#여름여행팁</span>
+  <span class="tag">#아이랑여름</span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== P2 : 코스 단계 — course 역할 (환급금 신청 방법 3단계) ===== -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+  <text x="80" y="270" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">신청 방법 3가지</text>
+  <rect x="82" y="304" width="140" height="9" fill="#00796b"/>
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="442" font-size="42" font-weight="700" fill="#ffffff">온라인 신청</text>
+    <text x="80" y="490" font-size="28" font-weight="500" fill="#b2dfdb">nhis.or.kr 또는 The 건강보험 앱 로그인 후 신청</text>
+    <text x="1000" y="458" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">가장 빠름</text>
+    <line x1="80" y1="542" x2="1000" y2="542" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+    <text x="80" y="614" font-size="42" font-weight="700" fill="#ffffff">전화 신청</text>
+    <text x="80" y="662" font-size="28" font-weight="500" fill="#b2dfdb">1577-1000 고객센터 본인 확인 후 계좌 제공</text>
+    <text x="1000" y="630" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">평일 9~18시</text>
+    <line x1="80" y1="714" x2="1000" y2="714" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+    <text x="80" y="786" font-size="42" font-weight="700" fill="#ffffff">방문 신청</text>
+    <text x="80" y="834" font-size="28" font-weight="500" fill="#b2dfdb">전국 건강보험공단 지사 · 신분증 + 통장 지참</text>
+    <text x="1000" y="802" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">신분증 필수</text>
+    <line x1="80" y1="886" x2="1000" y2="886" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+    <text x="80" y="958" font-size="42" font-weight="700" fill="#ffffff">입금 소요</text>
+    <text x="1000" y="958" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">1~3 영업일</text>
+  </g>
+  <text x="80" y="1240" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">신청 전 계좌 정보 nhis.or.kr에서 미리 등록해 두세요.</text>
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>
