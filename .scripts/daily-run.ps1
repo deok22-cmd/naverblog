@@ -46,7 +46,7 @@ try {
         -p `
         --model claude-sonnet-4-6 `
         --permission-mode bypassPermissions `
-        --max-budget-usd 5 `
+        --max-budget-usd 7 `
         --output-format text `
         --add-dir $ProjectRoot 2>&1 |
     ForEach-Object {
@@ -60,6 +60,28 @@ try {
 } catch {
     [System.IO.File]::AppendAllText($LogFile, "FATAL (Claude step): $_`r`n", $utf8NoBom)
     exit 1
+}
+
+# === Step 1.4: 네이버 이미지 캡션 보정 (deterministic) ===
+# 모델이 <img alt="...">에만 캡션을 넣고 화면 <div class="img-caption">를 누락하는
+# 사고(2026-06-11~13)를 기계적으로 0으로 만든다. alt 텍스트로 누락된 캡션 div를 삽입(멱등).
+Write-Log ""
+Write-Log "=== Naver Caption Fix @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="
+try {
+    $CaptionScript = Join-Path $ScriptsDir "fix-naver-captions.ps1"
+    $CaptionDay    = Get-Date -Format "yyMMdd"
+    if (Test-Path -LiteralPath $CaptionScript) {
+        & powershell -NoProfile -ExecutionPolicy Bypass -File $CaptionScript -Day $CaptionDay 2>&1 |
+        ForEach-Object {
+            $line = "$_"
+            Write-Host $line
+            [System.IO.File]::AppendAllText($LogFile, "$line`r`n", $utf8NoBom)
+        }
+    } else {
+        Write-Log "WARN: $CaptionScript 없음 — 캡션 보정 스킵."
+    }
+} catch {
+    Write-Log "ERROR (Naver Caption Fix): $_"
 }
 
 # === Step 1.5: 통합 대시보드 재빌드 ===
@@ -243,6 +265,7 @@ try {
     # 추적 가능한 트래커 파일 (있을 때만 stage)
     $Trackers = @(
         "국내여행지.md",
+        "생활정보.md",
         "sub_topic_tracker.md",
         "spreadsheet.md",
         "receipt.md"
