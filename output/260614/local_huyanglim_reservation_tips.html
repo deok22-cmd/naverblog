@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1f8e9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #e8f5e9; color: #1b5e20; padding: 9px 12px; border: 1px solid #c8e6c9; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border: 1px solid #ddd; font-size: 0.9em; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #fafafa; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; border-radius: 0 8px 8px 0; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; border-radius: 8px; padding: 16px 20px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .recommend-area a { color: #388e3c; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; }
+  .img-placeholder { background: #f8f9fa; border: 2px dashed #388e3c; border-radius: 8px; padding: 20px; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; color: #388e3c; flex-wrap: wrap; gap: 6px; }
+  .ph-file { font-family: monospace; font-size: 0.82em; color: #666; background: #eee; padding: 2px 8px; border-radius: 3px; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 14px; border-radius: 5px; font-size: 0.83em; text-align: left; white-space: pre-wrap; word-break: break-all; margin: 0; }
+  .copy-btn { margin-top: 10px; background: #388e3c; color: #fff; border: none; padding: 8px 18px; border-radius: 5px; cursor: pointer; font-size: 0.9em; }
+  .img-caption { text-align: center; font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector('button[onclick="copyPrompt(\''+id+'\')"]');
+    const orig = btn.innerText;
+    btn.innerText = "복사 완료!"; btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = orig; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>자연휴양림 예약 오픈 몇 시, 숲나들e 취소표 줍는 실전 방법과 성수기 추첨 일정</h1>
+
+<div class="intro-box">
+<strong>🌲 핵심 요약</strong><br><br>
+전국 170여 개 국립자연휴양림을 통합 예약하는 <strong>숲나들e(foresttrip.go.kr)</strong>의 예약 오픈 시간은 사용일 기준 <strong>6주 전 수요일 오전 9시</strong>입니다.<br><br>
+성수기(7월 15일~8월 24일)에는 추첨제로 전환되며, 취소표는 <strong>예약 당일 자정 전후</strong>에 가장 많이 발생합니다.<br><br>
+이 글에서 예약 오픈 일정부터 취소표 줍기 전략, 우선 예약 제도까지 실전에 바로 써먹을 수 있는 방법을 모두 알려드립니다.
+</div>
+
+<h2>① 숲나들e란 무엇인가 — 국립자연휴양림 통합 예약</h2>
+
+<strong>숲나들e(www.foresttrip.go.kr)</strong>는 산림청이 운영하는 전국 국립자연휴양림 통합 예약 시스템입니다.<br><br>
+전국 170여 개 국립자연휴양림의 숙박 시설(숲속의 집, 산림문화휴양관, 야영장 등)을 한 곳에서 검색·예약할 수 있어 자연 속 힐링 여행을 계획하는 분들에게 필수적인 서비스입니다.<br><br>
+숙박 유형은 통나무 숙박동(숲속의 집), 황토방, 복층형 하우스, 카라반, 텐트 야영장 등 다양하며 지역별·규모별로 선택의 폭이 넓습니다.<br><br>
+가격은 민간 캠핑장이나 글램핑에 비해 저렴한 편이지만, 그만큼 경쟁도 치열합니다. 특히 수도권 인근 인기 휴양림(잣나무숲, 운악산 등)은 오픈 직후 수 분 내에 모두 마감되는 것으로 유명합니다.<br><br>
+앱도 있으며(구글 플레이·앱스토어에서 '숲나들e' 검색), 앱을 이용하면 잔여 객실 알림 등 편리한 기능을 더 쉽게 활용할 수 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260614/3_huyanglim_reservation_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-1">Beautiful Korean national forest recreation area, cozy wooden log cabin (숲속의 집) nestled in dense green pine and oak forest, morning sunlight filtering through leaves, misty forest air, small wooden deck with chairs, peaceful mountain stream nearby, family enjoying nature retreat, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">국립자연휴양림 숲속의 집 전형적인 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>② 예약 오픈 시간 — 비성수기 선착순의 모든 것</h2>
+
+비성수기 기간(10월~다음 해 6월, 9월 일부)에는 <strong>선착순 예약제</strong>로 운영됩니다.<br><br>
+선착순 예약 오픈 일시는 <strong>사용일 기준 6주 전(42일 전) 수요일 오전 9시</strong>입니다.<br><br>
+예를 들어, 8월 마지막 주 금요일 숙박을 원한다면 해당 날짜의 6주 전 수요일 오전 9시 정각에 예약이 풀립니다.<br><br>
+오픈 직후 수분 내에 인기 시설이 매진되므로, 예약 전날 밤부터 대상 시설과 날짜를 미리 장바구니나 즐겨찾기에 담아두는 것이 중요합니다.<br><br>
+숲나들e는 PC와 앱 모두에서 9시 정각 직전에 새로고침을 반복하며 대기하는 방식이 효과적입니다. 인터넷 속도와 브라우저 응답이 빠를수록 유리합니다.<br><br>
+예약 성공 후 결제는 정해진 기한 내에 완료해야 하며, 기한을 넘기면 자동으로 취소됩니다. 결제 기한은 휴양림별로 다를 수 있으므로 예약 확인 화면에서 반드시 확인하세요.
+
+<h2>③ 성수기 추첨제 일정 — 7월 15일~8월 24일</h2>
+
+여름 성수기인 <strong>7월 15일~8월 24일</strong> 기간에는 선착순 방식 대신 <strong>추첨제</strong>로 전환됩니다.<br><br>
+추첨 신청은 매월 <strong>4일~9일 오전 9시~오후 6시</strong> 사이에 원하는 시설과 날짜를 선택해 신청하면 됩니다.<br><br>
+당첨 발표는 매월 <strong>10일 오후 4시</strong>에 이루어지며, 당첨된 분들은 20일까지 결제를 완료해야 예약이 확정됩니다.<br><br>
+미당첨 건과 미결제로 취소된 건은 매월 <strong>15일 오전 9시</strong>부터 선착순으로 다시 오픈됩니다.<br><br>
+추첨제 기간에는 경쟁률이 매우 높으므로, 1지망 외에 대체 일정이나 시설도 함께 신청해 두면 당첨 확률이 높아집니다.<br><br>
+추첨에 탈락했더라도 15일 오전 9시 선착순 기회를 노려보세요. 미결제 취소분이 반드시 나오기 때문에 포기하지 않는 것이 중요합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260614/3_huyanglim_reservation_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-2">Korean family at a national forest campsite, parents setting up tent in lush green forest, children playing near small crystal clear mountain stream, wooden picnic table with food spread, filtered sunlight through tall pine trees, summer vacation atmosphere, peaceful and joyful family camping experience, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">국립자연휴양림 가족 캠핑 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>④ 취소표 줍는 실전 전략</h2>
+
+가장 강력한 예약 성공 전략 중 하나가 바로 <strong>취소표 노리기</strong>입니다.<br><br>
+취소표가 가장 많이 발생하는 시간대는 <strong>예약 당일 자정 직후(0시~오전 2시)</strong>와 <strong>다음날 오전(오전 9시 전후)</strong>입니다.<br><br>
+숲나들e 앱의 <strong>'잔여 객실 알림' 기능</strong>을 활성화해두면 원하는 시설에 취소분이 발생했을 때 즉시 푸시 알림을 받을 수 있습니다.<br><br>
+알림을 받는 즉시 빠르게 예약 화면으로 진입해 결제까지 완료해야 하므로, 미리 결제 카드 정보를 등록해두는 것이 필수입니다.<br><br>
+또한 마감 기한을 넘긴 결제 취소분은 누군가의 취소 알림이 오기 전 평일 낮 시간대에 갑자기 풀리기도 합니다. 자주 사이트나 앱을 들여다보는 습관을 들이면 예상치 못한 기회를 잡을 수 있습니다.<br><br>
+
+<div class="tip-box">
+💡 <strong>취소표 줍기 3단계</strong><br><br>
+① 숲나들e 앱 설치 → 원하는 시설 '잔여 객실 알림' 등록<br>
+② 결제 카드 사전 등록으로 결제 시간 단축<br>
+③ 알림 수신 즉시 빠르게 예약 → 결제 완료
+</div>
+
+<h2>⑤ 우선 예약 제도 — 다자녀·장애인·국가유공자</h2>
+
+숲나들e에는 일반 선착순보다 먼저 예약할 수 있는 <strong>우선 예약 제도</strong>가 있습니다.<br><br>
+<strong>다자녀 우선 예약</strong>: 미성년 자녀 3인 이상인 가구는 일반 선착순보다 이른 날짜에 우선 예약권이 주어집니다. 자녀 수 증빙 서류(주민등록등본 등)를 사전에 등록해야 합니다.<br><br>
+<strong>장애인 우선 예약</strong>: 장애인복지법에 따른 등록 장애인은 우선 예약 대상에 해당되며, 장애인 등록증을 시스템에 사전 등록해야 합니다.<br><br>
+<strong>국가유공자 우선 예약</strong>: 국가유공자와 그 유족도 우선 예약 혜택을 받을 수 있습니다. 관련 증서를 사전 등록하시기 바랍니다.<br><br>
+해당 혜택은 숲나들e 홈페이지 회원 정보 → 우선 예약 자격 등록 메뉴에서 사전 신청합니다. 처음 한 번 등록하면 이후 예약 시 자동으로 우선 예약 자격이 적용됩니다.
+
+<h2>⑥ 연박 전략과 예약 팁</h2>
+
+자연휴양림은 <strong>연박(2박 이상) 예약이 경쟁이 덜 치열</strong>한 경향이 있습니다.<br><br>
+1박짜리 주말 객실은 순식간에 마감되지만, 2박 이상 연박은 상대적으로 더 오래 남아있는 경우가 있습니다.<br><br>
+평일 중심으로 연박을 계획하거나, 금~일 2박, 토~월 2박 등 평일이 포함된 연박 조합을 활용하면 예약 성공률이 높아집니다.<br><br>
+또한 인기가 덜한 비수도권 시설을 활용하는 것도 방법입니다. 지방 국립자연휴양림 중에도 자연 환경이 매우 뛰어난 곳이 많으므로, 검색 지역을 넓혀보시기 바랍니다.<br><br>
+예약 취소 시 환불 규정도 사전에 확인하세요. 취소 시점에 따라 환불 금액이 달라지며, 당일 취소는 환불이 되지 않는 경우도 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260614/3_huyanglim_reservation_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-3">Person using smartphone app to book a forest recreation cabin in Korea, screen showing Supmadeule (숲나들e) reservation app interface, cozy background of Korean national forest with tall pine trees, soft evening light, practical and informative atmosphere showing digital booking process, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">숲나들e 앱으로 자연휴양림 예약하는 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>⑦ 인기 국립자연휴양림 추천</h2>
+
+전국 170여 개 중 특히 인기 있는 곳들을 소개합니다.<br><br>
+<strong>수도권 근교</strong>: 국립유명산자연휴양림(가평), 국립운악산자연휴양림(가평), 국립축령산자연휴양림(남양주), 국립중미산자연휴양림(양평).<br><br>
+<strong>강원도</strong>: 국립방태산자연휴양림(인제), 국립백복령자연휴양림(정선), 국립오대산자연휴양림(평창) — 계곡이 맑고 경치가 수려합니다.<br><br>
+<strong>충청·경상·전라</strong>: 국립지리산자연휴양림(함양), 국립덕유산자연휴양림(무주), 국립주왕산자연휴양림(청송) 등이 남부권에서 인기입니다.<br><br>
+지역별 특성과 시설 현황은 숲나들e 홈페이지 '휴양림 소개' 메뉴에서 상세히 확인하실 수 있습니다.
+
+<h2>⑧ 예약 시 알아두면 좋은 추가 정보</h2>
+
+<strong>반려동물 동반 가능 시설</strong>: 일부 휴양림은 반려동물 동반 입장이 가능합니다. 반드시 예약 시 시설 안내에서 '반려동물 동반 가능 여부'를 확인하세요.<br><br>
+<strong>장작 구매</strong>: 야영장에서 모닥불을 피울 경우 현장에서 장작을 구입할 수 있으며, 외부 반입은 일부 시설에서 제한되는 경우도 있습니다.<br><br>
+<strong>취사 여부</strong>: 숲속의 집 등 숙박 시설 내 취사 여부는 시설마다 다릅니다. 예약 시 반드시 확인하세요.<br><br>
+<strong>우천 시</strong>: 폭우나 태풍 등 기상 특보 상황에서는 예약을 취소할 경우 100% 환불이 되므로, 날씨를 면밀히 확인해두세요.
+
+<h2>⑨ 숲나들e 예약 일정 캘린더 정리</h2>
+
+<table class="info-table">
+  <tr><th>구분</th><th>일정</th><th>내용</th></tr>
+  <tr><td>비성수기 선착순</td><td>사용일 6주 전 수요일 09:00</td><td>오픈과 동시에 빠르게 예약 진행</td></tr>
+  <tr><td>성수기 추첨 신청</td><td>매월 4일~9일(09:00~18:00)</td><td>원하는 시설·날짜 선택 후 신청</td></tr>
+  <tr><td>추첨 결과 발표</td><td>매월 10일 16:00</td><td>당첨 여부 문자·앱 확인</td></tr>
+  <tr><td>당첨 후 결제</td><td>매월 20일까지</td><td>기한 초과 시 자동 취소</td></tr>
+  <tr><td>미당첨 선착순 전환</td><td>매월 15일 09:00</td><td>취소분 선착순 오픈</td></tr>
+  <tr><td>성수기 기간</td><td>7월 15일~8월 24일</td><td>추첨제 전용 운영</td></tr>
+</table>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260613/travel_jeonju_deokjin_lotus_june.html">전주 덕진공원 연꽃 절정 시기와 연화교 산책 코스, 주차 정보</a></li>
+    <li><a href="../260613/travel_buyeo_gungnamji_lotus_july.html">부여 궁남지 서동연꽃축제 2026 날짜와 야간 경관, 주변 볼거리</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+<span class="tag">#자연휴양림예약</span>
+<span class="tag">#숲나들e</span>
+<span class="tag">#자연휴양림취소표</span>
+<span class="tag">#국립자연휴양림</span>
+<span class="tag">#여름캠핑</span>
+<span class="tag">#성수기추첨</span>
+<span class="tag">#휴양림예약방법</span>
+<span class="tag">#산림청예약</span>
+<span class="tag">#여름휴가준비</span>
+<span class="tag">#캠핑예약</span>
+</div>
+
+</body>
+</html>

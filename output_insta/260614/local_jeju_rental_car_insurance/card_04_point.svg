@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== card_04 : point (F · 텍스트 3포인트 리스트) =====
+       소스: h2④ 제주 렌터카 싸게 빌리는 실전 팁 (step-box 4개 중 3개 선택)
+       팔레트: primary=#00796b dark=#004d40 light=#e0f2f1 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.64"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="250" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">렌터카 절약 3원칙</text>
+  <rect x="82" y="284" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <rect x="80" y="452" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="520" font-size="46" font-weight="700" fill="#ffffff">비수기·평일을 노려라</text>
+    <text x="80" y="574" font-size="30" font-weight="500" fill="#b2dfdb">성수기 대비 최대 절반 가격으로 이용 가능</text>
+    <line x1="80" y1="636" x2="1000" y2="636" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="700" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="768" font-size="46" font-weight="700" fill="#ffffff">차종 선택에 욕심 버려라</text>
+    <text x="80" y="822" font-size="30" font-weight="500" fill="#b2dfdb">경차·소형차로 제주 전역 충분히 여행 가능</text>
+    <line x1="80" y1="884" x2="1000" y2="884" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="948" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="1016" font-size="46" font-weight="700" fill="#ffffff">멤버십·카드 혜택을 챙겨라</text>
+    <text x="80" y="1070" font-size="30" font-weight="500" fill="#b2dfdb">예약 전 카드사 앱 제휴 할인 반드시 확인</text>
+  </g>
+
+  <text x="80" y="1240" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#cfd8d6">비교 사이트 활용 + 사전 예약이 기본.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

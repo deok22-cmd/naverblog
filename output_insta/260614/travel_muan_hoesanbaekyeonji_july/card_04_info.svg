@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== card_04 : INFO (P1 — 정보표 6행) — 찾아가는 길과 주차 안내 ===== -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="260" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">방문 정보 한눈에</text>
+  <rect x="82" y="294" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="420" font-size="38" font-weight="600" fill="#ffffff">주소</text>
+    <text x="1000" y="420" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">전남 무안군 일로읍 백련로 333</text>
+    <line x1="80" y1="456" x2="1000" y2="456" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="536" font-size="38" font-weight="600" fill="#ffffff">목포에서</text>
+    <text x="1000" y="536" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">차로 약 20분</text>
+    <line x1="80" y1="572" x2="1000" y2="572" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="652" font-size="38" font-weight="600" fill="#ffffff">광주에서</text>
+    <text x="1000" y="652" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">차로 약 50분</text>
+    <line x1="80" y1="688" x2="1000" y2="688" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="768" font-size="38" font-weight="600" fill="#ffffff">대중교통</text>
+    <text x="1000" y="768" font-size="34" font-weight="800" fill="#80cbc4" text-anchor="end">목포역 → 무안행 버스 하차</text>
+    <line x1="80" y1="804" x2="1000" y2="804" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="884" font-size="38" font-weight="600" fill="#ffffff">주차</text>
+    <text x="1000" y="884" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">대형 무료주차장 (성수기 만차 주의)</text>
+    <line x1="80" y1="920" x2="1000" y2="920" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="1000" font-size="38" font-weight="600" fill="#ffffff">입장료</text>
+    <text x="1000" y="1000" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">연지 탐방 무료</text>
+  </g>
+
+  <text x="80" y="1120" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">문의 061-450-5419 · 2026년 기준</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

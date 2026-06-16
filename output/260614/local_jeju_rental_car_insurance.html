@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1f8e9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #e8f5e9; color: #1b5e20; padding: 9px 12px; border: 1px solid #c8e6c9; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border: 1px solid #ddd; font-size: 0.9em; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #fafafa; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; border-radius: 0 8px 8px 0; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; border-radius: 8px; padding: 16px 20px; margin: 20px 0; }
+  .caution-box { background: #fce4ec; border: 1px solid #e57373; border-radius: 8px; padding: 16px 20px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .recommend-area a { color: #388e3c; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; }
+  .img-placeholder { background: #f8f9fa; border: 2px dashed #388e3c; border-radius: 8px; padding: 20px; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; color: #388e3c; flex-wrap: wrap; gap: 6px; }
+  .ph-file { font-family: monospace; font-size: 0.82em; color: #666; background: #eee; padding: 2px 8px; border-radius: 3px; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 14px; border-radius: 5px; font-size: 0.83em; text-align: left; white-space: pre-wrap; word-break: break-all; margin: 0; }
+  .copy-btn { margin-top: 10px; background: #388e3c; color: #fff; border: none; padding: 8px 18px; border-radius: 5px; cursor: pointer; font-size: 0.9em; }
+  .img-caption { text-align: center; font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector('button[onclick="copyPrompt(\''+id+'\')"]');
+    const orig = btn.innerText;
+    btn.innerText = "복사 완료!"; btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = orig; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>제주 렌터카 싸게 빌리는 법과 완전자차 보험, 비교사이트 활용 꿀팁</h1>
+
+<div class="intro-box">
+<strong>🚗 핵심 요약</strong><br><br>
+제주도 여행의 필수품, 렌터카를 가장 저렴하게 빌리려면 <strong>비교 사이트 활용 + 최소 2주~1개월 전 예약</strong>이 기본입니다.<br><br>
+보험은 <strong>완전자차</strong>(면책금 0~최소화)가 제주 초행자에게 안전하며, 단독사고까지 보상받으려면 <strong>수퍼자차</strong>를 선택하세요.<br><br>
+이 글에서 비교사이트 선택법부터 보험 종류 비교, 연령 할증, 주유 반납 주의사항까지 한 번에 정리해 드립니다.
+</div>
+
+<h2>① 제주 렌터카는 왜 미리 예약해야 하나</h2>
+
+제주도는 국내 최대 관광지답게 연중 수백만 명이 방문합니다.<br><br>
+특히 여름 휴가철(7~8월)과 추석·설 연휴 전후에는 제주 공항에 내리자마자 렌터카 업체 창구가 긴 줄로 메워지고, 대기 시간만 1시간을 훌쩍 넘기는 경우도 있습니다.<br><br>
+현장 예약은 선택 폭이 좁고 가격도 비쌀 수밖에 없습니다.<br><br>
+반면 <strong>비교 사이트를 통한 사전 예약</strong>은 동일 차종·동일 보험 기준으로도 현장보다 30~50% 저렴한 경우가 많습니다.<br><br>
+여름 성수기라면 최소 4주~6주 전, 연휴에는 2~3개월 전 예약이 좋습니다. 예약이 늦을수록 선택 가능한 차종이 줄고 가격이 오릅니다.<br><br>
+렌터카 비교 사이트들은 복수의 렌터카 업체를 동시에 비교해주기 때문에, 개별 업체 홈페이지를 하나씩 돌아다니는 것보다 훨씬 효율적입니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260614/4_jeju_rental_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-1">Scenic Jeju Island coastal road with a modern rental car driving along cliffs overlooking the turquoise East China Sea, dramatic volcanic basalt coastline, green subtropical vegetation, blue sky with white clouds, open road leading to Jeju's iconic landscapes, freedom and travel concept, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">제주 해안도로 렌터카 드라이브 장면 / AI 제작 이미지</div>
+</div>
+
+<h2>② 렌터카 비교 사이트 주요 특징</h2>
+
+제주 렌터카를 비교 예약하는 주요 사이트들의 특징을 알아두면 유리합니다.<br><br>
+<strong>렌터카코리아·카모아</strong>: 국내 렌터카 비교 사이트 중 점유율이 높습니다. 국내 주요 렌터카 업체들이 대부분 등록되어 있으며, 필터로 차종·가격·보험을 한눈에 비교할 수 있습니다.<br><br>
+<strong>제주패스·제주속으로</strong>: 제주 전문 여행 플랫폼에서도 렌터카 비교 서비스를 제공합니다. 제주 특화 혜택이나 패키지 상품과 연동된 경우가 있어 함께 확인해보는 것이 좋습니다.<br><br>
+어느 사이트를 이용하든 <strong>보험 조건, 차량 상태, 리뷰 신뢰도</strong>를 단순 최저가보다 먼저 확인하세요.<br><br>
+같은 차종이라도 업체에 따라 차량 연식·옵션(블랙박스 유무, 내비게이션 포함 여부)이 다르므로 리뷰를 꼼꼼히 읽어보는 것이 중요합니다.
+
+<h2>③ 자차보험 종류 비교 — 일반·완전·수퍼자차</h2>
+
+렌터카 선택 시 가장 중요한 결정이 바로 <strong>자차보험 선택</strong>입니다.<br><br>
+
+<table class="info-table">
+  <tr><th>보험 종류</th><th>특징</th><th>권장 대상</th></tr>
+  <tr><td><strong>일반자차</strong></td><td>사고 시 면책금 발생 (보통 30만~100만 원 선). 본인 부담 한도 내 처리</td><td>운전 경험 많고 제주 운전 익숙한 분</td></tr>
+  <tr><td><strong>완전자차</strong></td><td>면책금 0 또는 최소화. 보험 한도 내 수리비 전액 처리</td><td>제주 초행·운전 경험 적은 분 (강력 추천)</td></tr>
+  <tr><td><strong>수퍼자차</strong></td><td>완전자차에 더해 단독사고(혼자 긁힘·찌그러짐)까지 보상</td><td>좁은 제주 골목 운전이 걱정되는 분</td></tr>
+</table>
+
+<strong>완전자차를 추천하는 이유</strong>: 제주는 관광객 운전자가 많고 골목길, 해안도로, 오름 진입로 등 낯선 길이 많아 경미한 접촉 사고 발생률이 높습니다.<br><br>
+일반자차로 빌렸다가 가벼운 접촉으로 수십만 원의 면책금을 물게 되면, 절약한 렌터카 요금보다 손해가 커질 수 있습니다.<br><br>
+완전자차의 추가 요금은 하루 1만~2만 원 선이므로, 사고 걱정 없이 여행에 집중하려면 충분히 가치 있는 비용입니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260614/4_jeju_rental_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-2">Jeju Island rental car counter at Jeju International Airport, friendly Korean rental car agent helping tourists with paperwork, bright modern rental company office, car keys being handed over, travel maps and Jeju tourist brochures on counter, warm welcoming atmosphere, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">제주 공항 렌터카 카운터에서 계약하는 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>④ 제주 렌터카 싸게 빌리는 실전 팁</h2>
+
+<div class="step-box">
+<strong>▶ 팁 1. 비수기·평일을 노려라</strong><br><br>
+7~8월 성수기와 명절 연휴는 렌터카 가격이 평소의 1.5~2배까지 오릅니다. 5~6월, 9~10월 같은 비수기 평일에 예약하면 같은 차종을 훨씬 저렴하게 이용할 수 있습니다.
+</div>
+
+<div class="step-box">
+<strong>▶ 팁 2. 차종 선택에 욕심 부리지 마라</strong><br><br>
+SUV나 대형차를 택하면 요금이 크게 오릅니다. 제주 도로는 경차나 소형차로도 충분히 여행 가능합니다. 카니발급 대형 차량은 성수기 수요가 몰려 가격이 급등합니다.
+</div>
+
+<div class="step-box">
+<strong>▶ 팁 3. 공항 외 픽업 장소 비교</strong><br><br>
+공항 1터미널·2터미널 현장 픽업은 셔틀 이용 없이 편리하지만, 공항 밖 렌터카 타운(도두항 방향)에서 픽업하면 가격이 더 저렴한 경우가 있습니다. 셔틀 시간을 감수할 수 있다면 고려해볼 만합니다.
+</div>
+
+<div class="step-box">
+<strong>▶ 팁 4. 멤버십·카드사 혜택 활용</strong><br><br>
+SK렌터카·롯데렌터카 등 대형 업체는 이동통신사 멤버십, 카드사 제휴 할인이 다양합니다. 예약 전 본인 카드사 앱에서 제휴 혜택을 확인해보세요.
+</div>
+
+<h2>⑤ 연령 할증 — 26세 미만이라면 반드시 확인</h2>
+
+만 26세 미만 운전자에게는 <strong>연령 할증 요금</strong>이 부과됩니다.<br><br>
+업체마다 다르지만, 대략 하루 1만~3만 원의 추가 비용이 발생합니다. 3박 4일 여행이라면 최대 12만 원이 추가될 수 있으므로, 예약 전 연령 할증 조건을 반드시 확인해야 합니다.<br><br>
+또한 예약자와 실제 운전자가 다를 경우 추가 운전자 등록이 필요하며, 이 경우도 연령에 따라 별도 요금이 부과될 수 있습니다.<br><br>
+일부 업체에서는 <strong>전연령 렌터카</strong> 특화 상품을 운영하는데, 20세 이상이라면 할증 없이 렌트할 수 있어 젊은 여행객에게 유리합니다.<br><br>
+예약 시 '전연령' 필터를 체크해 해당 업체를 추려내는 방법도 활용해보세요.
+
+<h2>⑥ 주유 반납 주의사항</h2>
+
+제주 렌터카의 가장 흔한 함정이 바로 <strong>주유 반납</strong>입니다.<br><br>
+대부분의 렌터카 업체는 <strong>만충 반납(Full-to-Full)</strong> 조건으로 차량을 제공합니다. 즉, 가득 채워서 빌리고 반납 시에도 가득 채워 반납해야 합니다.<br><br>
+반납 전에 주유를 못 했다면 업체에서 대신 주유하고 그 비용을 청구하는데, 이때 일반 주유소보다 훨씬 비싼 단가를 적용하는 업체도 있습니다.<br><br>
+반납 장소 인근 주유소 위치를 미리 파악해두고, 반납 30분~1시간 전에 주유를 완료하는 것이 좋습니다.<br><br>
+
+<div class="caution-box">
+⚠️ <strong>주의</strong>: 반납 직전 주유소에서 가득 채운 뒤 렌터카 타운까지 셔틀을 이용하면 연료가 약간 소모됩니다. 이 미세한 차이를 문제 삼는 일부 업체도 있으니, 반납 직전에 최대한 가까운 주유소를 이용하거나 업체에 미리 확인하세요.
+</div>
+
+<h2>⑦ 차량 외관 사전 확인 — 기존 흠집 체크</html>
+
+렌터카를 수령할 때 반드시 차량 외관 상태를 꼼꼼히 확인하고, 기존 흠집과 손상 부위를 직원과 함께 기록해야 합니다.<br><br>
+대부분의 업체가 차량 인수 시 외관 체크리스트를 제공하지만, 사진이나 영상으로도 직접 기록해두는 것이 중요합니다.<br><br>
+반납 시 새로운 흠집이 발견되면 분쟁이 생길 수 있는데, 사전에 찍어둔 사진이 있으면 억울한 상황을 피할 수 있습니다.<br><br>
+특히 하부 손상, 타이어 측면, 범퍼 모서리 등 기존 흠집이 있기 쉬운 부위를 꼼꼼히 확인하세요.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260614/4_jeju_rental_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-3">Tourist carefully inspecting rental car exterior for existing scratches and dents at Jeju rental car lot, person taking photos of car exterior with smartphone, thorough pre-rental vehicle inspection, rental car lot with multiple vehicles, morning light, responsible and smart travel concept, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">렌터카 수령 시 외관 흠집 사전 체크하는 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>⑧ 제주 렌터카 이용 시 알아두면 좋은 것들</h2>
+
+<strong>블랙박스 장착 여부</strong>: 예약 시 블랙박스 장착 차량인지 확인하세요. 사고 발생 시 블랙박스 영상이 과실 비율을 결정하는 데 매우 유용합니다.<br><br>
+<strong>내비게이션</strong>: 대부분의 렌터카에 내비게이션이 기본 내장되어 있습니다. 스마트폰 거치대와 USB 충전 케이블은 직접 챙겨가면 편리합니다.<br><br>
+<strong>제주 전용 도로 주의</strong>: 제주에는 좁은 중산간 도로, 오름 진입로 등이 많습니다. 내비게이션이 안내해도 1차선 비포장길로 진입하게 되는 경우가 있으니 주의하세요.<br><br>
+<strong>반납 시간 엄수</strong>: 반납 시간이 조금이라도 늦어지면 추가 1일치 요금이 발생할 수 있습니다. 반납 1시간 전에는 반납 장소로 향하는 여유를 두세요.
+
+<h2>⑨ 제주 렌터카 예약 전 최종 체크리스트</h2>
+
+<table class="info-table">
+  <tr><th>확인 항목</th><th>체크 포인트</th></tr>
+  <tr><td>예약 시기</td><td>성수기 4~6주 전, 연휴 2~3개월 전</td></tr>
+  <tr><td>보험 선택</td><td>완전자차 이상 선택 권장 (초행자·경험 적은 운전자)</td></tr>
+  <tr><td>연령 할증</td><td>만 26세 미만 추가 요금 확인 / 전연령 상품 검토</td></tr>
+  <tr><td>주유 조건</td><td>만충 반납 여부 확인, 반납 직전 주유 완료</td></tr>
+  <tr><td>차량 외관</td><td>수령 시 기존 흠집 사진·영상으로 기록</td></tr>
+  <tr><td>블랙박스</td><td>장착 차량 선택 여부 확인</td></tr>
+  <tr><td>반납 시간</td><td>여유 있게 1시간 전 반납 장소로 출발</td></tr>
+</table>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260613/travel_jeonju_deokjin_lotus_june.html">전주 덕진공원 연꽃 절정 시기와 연화교 산책 코스, 주차 정보</a></li>
+    <li><a href="../260613/travel_buyeo_gungnamji_lotus_july.html">부여 궁남지 서동연꽃축제 2026 날짜와 야간 경관, 주변 볼거리</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+<span class="tag">#제주렌터카</span>
+<span class="tag">#완전자차보험</span>
+<span class="tag">#렌터카싸게</span>
+<span class="tag">#제주여행준비</span>
+<span class="tag">#렌터카비교</span>
+<span class="tag">#제주자동차여행</span>
+<span class="tag">#렌터카보험종류</span>
+<span class="tag">#제주드라이브</span>
+<span class="tag">#여름제주여행</span>
+<span class="tag">#렌터카예약</span>
+</div>
+
+</body>
+</html>

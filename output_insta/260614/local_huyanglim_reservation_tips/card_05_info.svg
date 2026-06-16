@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== P1 : 정보 표 — 숲나들e 예약 일정 캘린더 ===== -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1f1c"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="230" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="60" font-weight="800" fill="#ffffff">예약 일정 한눈에</text>
+  <rect x="82" y="264" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="410" font-size="40" font-weight="600" fill="#ffffff">비성수기 선착순</text>
+    <text x="1000" y="410" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">6주 전 수요일 09:00</text>
+    <line x1="80" y1="450" x2="1000" y2="450" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="540" font-size="40" font-weight="600" fill="#ffffff">추첨 신청 기간</text>
+    <text x="1000" y="540" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">매월 4~9일</text>
+    <line x1="80" y1="580" x2="1000" y2="580" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="670" font-size="40" font-weight="600" fill="#ffffff">당첨 발표</text>
+    <text x="1000" y="670" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">매월 10일 16:00</text>
+    <line x1="80" y1="710" x2="1000" y2="710" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="800" font-size="40" font-weight="600" fill="#ffffff">당첨 결제 기한</text>
+    <text x="1000" y="800" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">매월 20일까지</text>
+    <line x1="80" y1="840" x2="1000" y2="840" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="930" font-size="40" font-weight="600" fill="#ffffff">미당첨 선착순</text>
+    <text x="1000" y="930" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">매월 15일 09:00</text>
+    <line x1="80" y1="970" x2="1000" y2="970" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="1060" font-size="40" font-weight="600" fill="#ffffff">성수기 추첨 기간</text>
+    <text x="1000" y="1060" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">7월 15일~8월 24일</text>
+  </g>
+
+  <text x="80" y="1190" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">2026년 산림청 숲나들e 기준 · 변경 가능성 있음.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>
