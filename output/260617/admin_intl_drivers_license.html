@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1faf2; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px; font-size: 0.95em; }
+  .info-table td { padding: 10px; border: 1px solid #ddd; font-size: 0.95em; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 12px; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .caution-box { background: #fce4ec; border: 1px solid #e57373; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #bbb; border-radius: 10px; padding: 20px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; color: #555; }
+  .ph-file { font-size: 0.8em; color: #888; font-family: monospace; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 14px; border-radius: 6px; font-size: 0.82em; line-height: 1.6; white-space: pre-wrap; }
+  .copy-btn { margin-top: 10px; background: #388e3c; color: #fff; border: none; padding: 8px 18px; border-radius: 5px; cursor: pointer; font-size: 0.88em; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>국제운전면허증 당일 발급 받는 곳과 온라인 신청 방법, 인정 국가 133개 확인</h1>
+
+<div class="intro-box">
+해외여행에서 렌터카를 빌려 자유롭게 드라이브하고 싶다면 <strong>국제운전면허증</strong>이 꼭 필요합니다.<br><br>
+국제운전면허증은 한국 운전면허증을 해외에서 인정받기 위한 국제 협약 기반 문서입니다. 발급 절차가 복잡하지 않고, 방문 신청 시 <strong>당일 즉시 발급</strong>이 가능해 여행 직전에도 충분히 준비할 수 있습니다.<br><br>
+이 글에서는 국제운전면허증 발급 방법(방문·온라인), 비용, 유효기간, 인정 국가 133개 확인 방법, 해외 렌터카 이용 시 주의사항을 도로교통공단 안내 기준으로 정리해 드립니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260617/5_intl_license_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-1">International Driving Permit document placed on a car dashboard alongside a Korean driver's license and passport, scenic European countryside road visible through windshield, concept of freedom of overseas road trip, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">국제운전면허증과 한국 운전면허증 — 해외 렌터카 여행의 필수 서류 / AI 제작 이미지</div>
+</div>
+
+<h2>01. 국제운전면허증이란 — 제네바 협약 기반 국제 공식 문서</h2>
+
+국제운전면허증(IDP, International Driving Permit)은 <strong>1949년 제네바 협약</strong>에 따라 만들어진 공식 번역 문서입니다.<br><br>
+한국 운전면허증을 외국어로 번역·인증한 문서라고 이해하면 쉽습니다. 단독으로는 효력이 없고, <strong>반드시 한국 운전면허증과 함께 제시</strong>해야 합니다.<br><br>
+제네바 협약에 가입한 나라들 사이에서만 통용되므로, 방문 예정 국가가 이 협약에 가입했는지 먼저 확인해야 합니다. 대부분의 주요 여행지(미국·유럽·일본·호주 등)는 협약 가입국입니다.<br><br>
+일부 국가는 별도 도로교통 협약이 있어 국제운전면허증 대신 <strong>영문운전면허증</strong>이 필요할 수도 있습니다. 국가별 요건은 외교부 해외안전여행 사이트에서 확인하세요.
+
+<h2>02. 발급 비용과 유효기간</h2>
+
+국제운전면허증 발급 비용은 다음과 같습니다.
+
+<table class="info-table">
+  <tr>
+    <th>신청 방법</th>
+    <th>비용</th>
+    <th>수령 방법</th>
+  </tr>
+  <tr>
+    <td style="background:#f1faf9;">방문 신청 (운전면허시험장 등)</td>
+    <td style="background:#f1faf9;">8,500원</td>
+    <td style="background:#f1faf9;">즉시 발급 (현장 수령)</td>
+  </tr>
+  <tr>
+    <td style="background:#fff;">온라인 신청 (안전운전 통합민원)</td>
+    <td style="background:#fff;">8,500원 + 등기비</td>
+    <td style="background:#fff;">등기 우편 수령 (수일 소요)</td>
+  </tr>
+</table>
+
+<strong>유효기간은 발급일로부터 1년</strong>입니다. 1년이 지나면 효력이 소멸되므로 장기 해외 체류자는 재발급이 필요합니다. 다만 한국 운전면허증 자체의 유효기간이 국제운전면허증보다 짧게 남아 있다면, 한국 운전면허증 만료일이 실질적인 유효기한이 됩니다.
+
+<h2>03. 방문 신청 — 운전면허시험장·경찰서에서 당일 발급</h2>
+
+국제운전면허증을 가장 빠르게 받는 방법은 <strong>운전면허시험장을 직접 방문</strong>하는 것입니다. 전국 운전면허시험장에서 즉시 발급이 가능합니다.<br><br>
+일부 경찰서와 지방자치단체 민원 창구에서도 발급이 가능하나, 담당 부서마다 다를 수 있으므로 방문 전 전화로 확인하시기 바랍니다.<br><br>
+<strong>운전면허시험장 운영 시간</strong>은 일반적으로 평일 오전 9시~오후 6시이며, 토요일 오전에도 운영하는 곳이 있습니다. 가까운 운전면허시험장의 정확한 운영 시간은 도로교통공단 공식 홈페이지에서 확인하세요.
+
+<div class="tip-box">
+💡 <strong>꿀팁</strong>: 여행 출발 전날 운전면허시험장을 방문해도 충분히 당일 발급이 가능합니다. 단, 점심 시간(12:00~13:00) 전후에는 대기가 발생할 수 있으니 오전 이른 시간을 노리세요.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260617/5_intl_license_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-2">Interior of a Korean driver's license examination center, clean government office with numbered service counters, applicants waiting with documents, modern administrative environment, calm and efficient atmosphere, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">도로교통공단 운전면허시험장 발급 창구 — 방문 시 즉시 수령 가능 / AI 제작 이미지</div>
+</div>
+
+<h2>04. 온라인 신청 — 안전운전 통합민원 사이트 이용</h2>
+
+방문이 어렵다면 <strong>도로교통공단 안전운전 통합민원 사이트(https://www.safedriving.or.kr)</strong>에서 온라인으로 신청할 수 있습니다.<br><br>
+온라인 신청 절차는 다음과 같습니다:
+
+<div class="step-box">1. 안전운전 통합민원 사이트 접속 후 회원가입·로그인</div>
+<div class="step-box">2. '국제운전면허 발급' 메뉴 선택</div>
+<div class="step-box">3. 본인 인증 (휴대폰 인증 또는 공동인증서)</div>
+<div class="step-box">4. 여권용 사진 파일 업로드 (3.5×4.5cm, 6개월 이내 촬영)</div>
+<div class="step-box">5. 배송지 입력 후 수수료 결제 (8,500원 + 등기비)</div>
+<div class="step-box">6. 등기 우편으로 수령 (신청 후 수일 소요)</div>
+
+온라인 신청은 편리하지만 수령까지 수일이 걸리므로 <strong>출국 최소 1~2주 전</strong>에 신청하는 것이 안전합니다.
+
+<h2>05. 필요 서류와 준비물</h2>
+
+방문 또는 온라인 신청 시 필요한 서류는 다음과 같습니다.
+
+<table class="info-table">
+  <tr>
+    <th>구분</th>
+    <th>필요 서류</th>
+    <th>비고</th>
+  </tr>
+  <tr>
+    <td style="background:#f1faf9;">본인 신청</td>
+    <td style="background:#f1faf9;">신분증, 운전면허증, 여권용 사진 1매</td>
+    <td style="background:#f1faf9;">사진: 3.5×4.5cm, 6개월 이내 촬영</td>
+  </tr>
+  <tr>
+    <td style="background:#fff;">대리인 신청</td>
+    <td style="background:#fff;">신청자 신분증·위임장, 대리인 신분증</td>
+    <td style="background:#fff;">대리인 방문 가능 여부 사전 확인 필수</td>
+  </tr>
+</table>
+
+여권용 사진은 일반 증명사진과 규격이 같습니다. 스마트폰 사진 앱이나 근처 증명사진 촬영 키오스크를 이용하면 빠르게 준비할 수 있습니다.
+
+<h2>06. 한국 운전면허 인정 국가 133개 확인 방법</h2>
+
+2026년 4월 기준, 한국 국제운전면허증이 통용되는 국가 및 지역은 <strong>총 133개국</strong>입니다. 미국, 캐나다, 영국, 프랑스, 독일, 이탈리아, 호주, 일본, 태국 등 주요 여행지가 대부분 포함됩니다.<br><br>
+정확한 인정 국가 목록은 <strong>외교부 해외안전여행 공식 사이트(www.0404.go.kr)</strong>에서 확인할 수 있습니다. 국가마다 조건이 달라질 수 있으므로, 여행 전 반드시 최신 목록을 확인하세요.<br><br>
+중국, 러시아 등 일부 국가는 별도 도로교통 협약을 통해 한국 면허를 인정하나, 국제운전면허증이 아닌 별도 절차가 필요할 수 있습니다.
+
+<div class="caution-box">
+⚠️ <strong>주의</strong>: 협약 가입국이라도 해당 국가 내 지방에 따라 운전 허용 여부가 다를 수 있습니다. 렌터카 이용 전 현지 법규를 반드시 확인하세요.
+</div>
+
+<h2>07. 국가별 주의사항 — 인정하더라도 별도 조건이 있는 경우</h2>
+
+국제운전면허증이 통용되는 나라라도 <strong>추가 조건이 붙는 경우</strong>가 있습니다.<br><br>
+<strong>미국</strong>: 주(State)마다 규정이 다를 수 있습니다. 대부분의 주에서는 한국 운전면허증과 국제운전면허증을 함께 제시하면 렌터카 이용이 가능합니다. 뉴욕주는 별도로 영문운전면허증 또는 국제운전면허증 중 하나를 인정하는 방식을 적용합니다.<br><br>
+<strong>일본</strong>: 국제운전면허증 사용이 가능하나, 일부 렌터카 업체에서 별도 서류를 요구할 수 있습니다. 일본 교통 규정(좌측 통행)을 사전에 숙지하는 것이 중요합니다.<br><br>
+<strong>유럽</strong>: EU 국가들은 대부분 국제운전면허증을 인정합니다. 단, 일부 동유럽 국가는 별도 서류나 현지 면허 인증을 요구하는 경우가 있으니 사전 확인이 필요합니다.
+
+<h2>08. 해외 렌터카 이용 시 추가 준비사항</h2>
+
+국제운전면허증 외에도 해외 렌터카 이용 시 준비해야 할 것들이 있습니다.<br><br>
+<strong>신용카드</strong>: 대부분의 렌터카 업체는 신용카드 보증금을 요구합니다. 직불카드(데빗카드)는 거절되는 경우가 많으니 반드시 신용카드를 준비하세요.<br><br>
+<strong>자동차 보험</strong>: 기본 보험 외에 <strong>완전자차보험(Full CDW)</strong>을 추가하는 것을 권장드립니다. 해외에서 사고가 나면 처리 비용이 매우 크게 발생할 수 있습니다.<br><br>
+<strong>현지 교통 규칙</strong>: 좌측 통행 국가(영국·호주·일본 등)의 경우 운전에 익숙해지는 시간이 필요합니다. 처음 몇 시간은 속도를 낮추고 조심스럽게 운전하세요.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260617/5_intl_license_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-3">A young Korean traveler picking up a rental car abroad at an overseas airport rental counter, showing passport and international driving permit, bright modern car rental office with car keys on counter, confident and excited expression, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">해외 렌터카 픽업 — 국제운전면허증과 여권을 함께 제시 / AI 제작 이미지</div>
+</div>
+
+<h2>09. 국제운전면허증 vs 영문운전면허증 — 차이를 알아야 합니다</h2>
+
+국제운전면허증과 영문운전면허증은 비슷해 보이지만 <strong>다른 문서</strong>입니다.<br><br>
+<strong>국제운전면허증</strong>은 제네바 협약 기반의 국제 표준 문서로, 협약 가입국 133개국에서 통용됩니다. 유효기간은 1년입니다.<br><br>
+<strong>영문운전면허증</strong>은 한국 운전면허증의 내용을 영어로 번역한 문서로, 주로 미국·캐나다·뉴질랜드 등 일부 국가에서만 단독으로 인정됩니다. 도로교통공단에서 발급합니다.<br><br>
+어느 것이 필요한지는 방문 국가에 따라 다릅니다. 미국 뉴욕, 캐나다 등 일부 지역은 영문운전면허증을 더 선호합니다. 방문 국가 렌터카 업체 정책을 사전에 확인하는 것이 가장 확실합니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260616/travel_boryeong_daecheon_mud_july.html">대천해수욕장 7월 4일 개장과 보령 머드축제 날짜, 숙박·주차 미리 챙기기</a></li>
+    <li><a href="../260616/local_summer_vacation_checklist.html">여름 휴가 준비물 바다·계곡·캠핑 상황별 체크리스트, 빠뜨리기 쉬운 것</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#국제운전면허증</span>
+  <span class="tag">#국제면허발급</span>
+  <span class="tag">#해외렌터카</span>
+  <span class="tag">#국제운전면허당일발급</span>
+  <span class="tag">#도로교통공단</span>
+  <span class="tag">#해외여행준비</span>
+  <span class="tag">#인정국가133개</span>
+  <span class="tag">#IDP</span>
+  <span class="tag">#영문운전면허</span>
+  <span class="tag">#렌터카여행</span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== card_07 : tips (P3 — 체크리스트 4항목) =====
+       카테고리: 생활·정보 / 소스: h2-05 필요 서류 + tip-box -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.48"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1e10"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#388e3c"/>
+
+  <text x="80" y="270" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="60" font-weight="800" fill="#ffffff">발급 전 준비물 체크</text>
+  <rect x="82" y="304" width="140" height="9" fill="#388e3c"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <rect x="80" y="430" width="34" height="8" fill="#a5d6a7"/>
+    <text x="80" y="500" font-size="42" font-weight="600" fill="#ffffff">신분증 + 운전면허증</text>
+    <line x1="80" y1="560" x2="1000" y2="560" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="610" width="34" height="8" fill="#a5d6a7"/>
+    <text x="80" y="680" font-size="42" font-weight="600" fill="#ffffff">여권용 사진 1매 (3.5×4.5cm)</text>
+    <line x1="80" y1="740" x2="1000" y2="740" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="790" width="34" height="8" fill="#a5d6a7"/>
+    <text x="80" y="860" font-size="42" font-weight="600" fill="#ffffff">수수료 8,500원</text>
+    <line x1="80" y1="920" x2="1000" y2="920" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="970" width="34" height="8" fill="#a5d6a7"/>
+    <text x="80" y="1040" font-size="42" font-weight="600" fill="#ffffff">점심 전 오전 방문 (대기 최소화)</text>
+  </g>
+
+  <text x="80" y="1150" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="40" font-weight="800" fill="#a5d6a7">저장해두고 그대로 따라가세요  ↓</text>
+  <text x="80" y="1240" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#c8e6c9">전체 가이드는 프로필 블로그에서.</text>
+
+  <!-- ===== 브랜드 워터마크 ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#1b5e20"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

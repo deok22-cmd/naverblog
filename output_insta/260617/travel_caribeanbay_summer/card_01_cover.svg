@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== G0 COVER : 캐리비안베이 여름 성수기 =====
+       카테고리: 국내여행 | 팔레트: #00796b / #004d40 / #e0f2f1
+       slug: travel_caribeanbay_summer | 260617 -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.28" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="0.68" stop-color="#000000" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.88"/>
+    </linearGradient>
+    <linearGradient id="scrimTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.52"/>
+      <stop offset="0.22" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1f1c"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimTop)"/>
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <!-- 상단 채널 태그 -->
+  <text x="80" y="100" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#80cbc4" letter-spacing="3">travelkorea_365</text>
+
+  <!-- 키커 -->
+  <text x="80" y="840" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="700" fill="#80cbc4" letter-spacing="3">용인 캐리비안베이</text>
+
+  <!-- 메인 타이틀 -->
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="104" font-weight="800" fill="#ffffff" letter-spacing="-3">
+    <tspan x="80" y="968">여름 성수기</tspan>
+    <tspan x="80" y="1084">완전 공략</tspan>
+  </text>
+
+  <!-- 구분선 -->
+  <rect x="80" y="1110" width="120" height="8" fill="#00796b"/>
+
+  <!-- 서브 카피 -->
+  <text x="80" y="1188" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e0f2f1">산리오 콜라보 · 덜 붐비는 시간 · 할인팁</text>
+
+  <!-- 캡션 -->
+  <text x="80" y="1260" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">2026년 여름 성수기 6월 12일 ~ 9월 초</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px; font-size: 0.95em; }
+  .info-table td { padding: 10px; border: 1px solid #ddd; font-size: 0.95em; }
+  .step-box { border-left: 4px solid #00796b; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .caution-box { background: #fce4ec; border: 1px solid #e57373; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #bbb; border-radius: 10px; padding: 20px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; color: #555; }
+  .ph-file { font-size: 0.8em; color: #888; font-family: monospace; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 14px; border-radius: 6px; font-size: 0.82em; line-height: 1.6; white-space: pre-wrap; }
+  .copy-btn { margin-top: 10px; background: #00796b; color: #fff; border: none; padding: 8px 18px; border-radius: 5px; cursor: pointer; font-size: 0.88em; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>캐리비안베이 여름 성수기 시작일과 산리오 콜라보·야외풀 개방 일정, 덜 붐비는 시간대는</h1>
+
+<div class="intro-box">
+6월이 되면 워터파크 검색량이 폭발적으로 늘어납니다.<br><br>
+경기도 용인 에버랜드 옆에 자리한 <strong>캐리비안베이</strong>는 국내 최대 규모의 워터파크로, 매년 여름 수백만 명이 찾는 국민 물놀이 명소입니다.<br><br>
+2026년에는 개장 30주년을 맞아 산리오 캐릭터즈와의 특별 콜라보 이벤트가 열리고 있어 평소보다 더 많은 관심이 쏠리고 있습니다.<br><br>
+이 글에서는 2026년 캐리비안베이의 여름 성수기 일정, 야외풀 개방 현황, 입장료 정보, 그리고 현명하게 덜 붐비는 시간대를 고르는 전략까지 꼼꼼하게 정리해 드립니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260617/1_caribeanbay_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-1">Aerial view of a large outdoor water park in South Korea during summer, massive wave pool filled with colorful floats and thousands of visitors, giant water slides spiraling down from tall towers, bright blue water contrasting with lush green trees, sunny day with clear sky, photorealistic, ultra high detail, 1:1 aspect ratio, vibrant and energetic atmosphere</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">캐리비안베이 전경 — 파도풀과 슬라이드가 어우러진 국내 최대 워터파크 / AI 제작 이미지</div>
+</div>
+
+<h2>01. 캐리비안베이 2026년 여름 시즌 개장 일정</h2>
+
+캐리비안베이는 연중 운영하는 것이 아니라 크게 <strong>미들 시즌과 여름 성수기</strong>로 나뉘어 운영됩니다.<br><br>
+2026년에는 <strong>5월 29일(금)부터 미들 시즌이 시작</strong>되었으며, 6월 12일부터는 본격적인 여름 성수기 체제로 전환되어 실내외 모든 물놀이 시설이 풀가동 상태에 돌입했습니다.<br><br>
+성수기는 통상 <strong>9월 초까지</strong> 이어지며, 이 기간 중에는 평일·주말 모두 운영 시간이 확대되어 늦게까지 즐길 수 있습니다.<br><br>
+여름 성수기 중에도 날씨나 시설 점검에 따라 일부 슬라이드가 일시 운휴할 수 있으므로, 방문 전 공식 홈페이지에서 당일 운영 현황을 확인하는 습관이 좋습니다.
+
+<table class="info-table">
+  <tr>
+    <th>시즌 구분</th>
+    <th>기간</th>
+    <th>운영 특징</th>
+  </tr>
+  <tr>
+    <td style="background:#f1faf9;">미들 시즌</td>
+    <td style="background:#f1faf9;">5월 29일 ~ 6월 11일</td>
+    <td style="background:#f1faf9;">주요 실내외 시설 운영 시작</td>
+  </tr>
+  <tr>
+    <td style="background:#fff;">여름 성수기</td>
+    <td style="background:#fff;">6월 12일 ~ 9월 초</td>
+    <td style="background:#fff;">실내외 전 시설 풀가동, 산리오 콜라보</td>
+  </tr>
+</table>
+
+<h2>02. 산리오 캐릭터즈 콜라보 이벤트 — 개장 30주년 특별 기획</h2>
+
+2026년 캐리비안베이의 가장 큰 화제는 단연 <strong>산리오 캐릭터즈와의 콜라보</strong>입니다.<br><br>
+<strong>헬로키티, 포차코, 마이멜로디, 시나모롤</strong> 등 인기 산리오 캐릭터들을 테마로 한 포토존과 굿즈, 식음료 메뉴가 6월 12일부터 9월 6일까지 운영됩니다.<br><br>
+포토존은 입장 직후 좌측에 위치한 이벤트 존에 집중되어 있으며, 인기 포토존의 경우 오픈 직후와 저녁 6시 이후에 대기가 적으므로 이 시간대를 노리는 것이 좋습니다.<br><br>
+한정 굿즈는 수량이 정해져 있어 일찍 소진되는 경우가 많습니다. 구매를 원한다면 입장 직후 굿즈 판매 부스를 먼저 들르는 것을 추천드립니다.
+
+<div class="tip-box">
+💡 <strong>꿀팁</strong>: 산리오 콜라보 굿즈는 현장 판매와 함께 공식 앱에서 사전 예약 주문이 가능한 경우가 있습니다. 방문 전 앱을 미리 설치하고 확인해 두세요.
+</div>
+
+<h2>03. 입장료 안내 — 시즌·나이·구매 방법에 따라 달라집니다</h2>
+
+캐리비안베이 입장료는 <strong>시즌과 방문 요일, 연령대</strong>에 따라 달라집니다.<br><br>
+여름 성수기(6~8월)가 가장 높은 가격대이며, 미들 시즌이나 평일에는 상대적으로 할인된 가격이 적용됩니다.<br><br>
+공식 홈페이지나 에버랜드 앱을 통해 <strong>사전 예약·온라인 구매</strong>를 하면 현장 구매보다 10~20% 저렴하게 이용할 수 있습니다. 네이버·카카오 등 제휴 플랫폼의 할인 쿠폰도 꼭 챙겨 보세요.<br><br>
+신한·현대·롯데 등 <strong>특정 카드사 제휴 할인</strong>이 있으며, 최대 50%까지 할인 혜택을 제공하는 카드도 있습니다. 카드 할인과 온라인 구매 할인은 중복 적용이 안 되는 경우가 많으니 미리 비교하시기 바랍니다.<br><br>
+에버랜드와 캐리비안베이를 하루에 모두 이용할 계획이라면 <strong>통합 패키지권</strong>을 구매하는 것이 개별 구매보다 훨씬 경제적입니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260617/1_caribeanbay_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-2">Interior of a tropical-themed water park in South Korea, featuring Sanrio characters decorations and colorful posters, families and children enjoying indoor pools with clear warm water, bright lighting, palm tree decorations, cheerful and festive atmosphere, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">캐리비안베이 실내 풀 — 산리오 캐릭터즈 콜라보 특별 데코레이션이 곳곳에 / AI 제작 이미지</div>
+</div>
+
+<h2>04. 실내풀 vs 실외풀 — 날씨에 따라 전략을 세우세요</h2>
+
+캐리비안베이는 <strong>실내와 실외 구역이 모두 갖춰져 있어</strong> 날씨와 상관없이 즐길 수 있다는 것이 큰 장점입니다.<br><br>
+<strong>실내 구역(스파 존·웨이브 풀)</strong>은 연중 일정 수온을 유지하며 운영됩니다. 실외 슬라이드와 파도풀은 6월 이후 본격적으로 가동되며, 성수기에는 전 시설이 동시에 운영됩니다.<br><br>
+맑은 날에는 <strong>실외 파도풀과 대형 슬라이드</strong>를 중심으로 즐기고, 오후에 소나기가 예상된다면 실내 탈의실을 기준으로 동선을 잡는 것이 현명합니다.<br><br>
+비가 와도 실내 풀은 정상 운영되지만 실외 슬라이드 일부는 일시 중단될 수 있습니다. 기상 앱을 확인하고 오전에 실외, 오후에 실내 순으로 동선을 짜는 방법을 권장드립니다.
+
+<h2>05. 워터슬라이드 명당과 대기 줄이는 순서</h2>
+
+캐리비안베이에는 수십 종의 슬라이드가 있습니다. 그중에서도 <strong>메가 슬라이드, 토네이도, 핫 스팟</strong>이 항상 가장 긴 줄을 만듭니다.<br><br>
+전략은 간단합니다. 입장과 동시에 <strong>인기 슬라이드를 먼저 탑승</strong>하세요. 오전 10~11시에는 대기가 20~30분 수준이지만, 오후 1~3시 피크 타임에는 같은 슬라이드에 1시간 이상 기다려야 할 수 있습니다.<br><br>
+파도풀은 매 정시에 파도가 시작되는 방식으로 운영됩니다. 파도 시작 5분 전에 자리를 잡으면 좋은 위치를 차지할 수 있습니다.<br><br>
+비교적 덜 알려진 슬라이드라도 탑승 경험은 충분히 즐겁습니다. 긴 줄에 지치지 않으려면 <strong>인기 슬라이드 2~3개 + 나머지 시설 자유 탐방</strong>으로 계획하는 것을 추천드립니다.
+
+<h2>06. 덜 붐비는 시간대와 요일 전략</h2>
+
+여름 성수기 주말에는 개장 직후부터 만원 상태가 됩니다.<br><br>
+가능하다면 <strong>평일 방문</strong>을 우선 고려하세요. 평일에는 주말 대비 입장 인원이 절반 이하로 줄어들고, 인기 슬라이드 대기 시간도 크게 감소합니다.<br><br>
+<strong>오픈 직후(10:00~11:30)</strong>가 하루 중 가장 한산한 시간대입니다. 반대로 점심 이후 오후 2~3시가 가장 붐빕니다.<br><br>
+주말에 꼭 방문해야 한다면, <strong>장마철(7월 초·중순)의 흐린 평일</strong>을 노리는 것이 의외의 꿀팁입니다. 가랑비 정도는 워터파크에서 오히려 운치가 되며, 비를 피해 사람이 몰리지 않아 상당히 여유롭게 즐길 수 있습니다.
+
+<div class="tip-box">
+💡 <strong>꿀팁</strong>: 저녁 시간(17:00 이후) 입장 가능한 <strong>나이트 패스</strong>를 활용하면 더위도 피하고 대기 시간도 크게 줄일 수 있습니다. 성수기 중에는 오후 7~9시에도 상당수 시설이 운영됩니다.
+</div>
+
+<h2>07. 교통·주차·에버랜드 연계 동선</h2>
+
+대중교통을 이용한다면 <strong>강남역·수원역에서 에버랜드 셔틀버스</strong>를 이용하는 것이 가장 편리합니다. 소요 시간은 약 40~50분이며, 셔틀 버스는 이른 아침부터 운행합니다.<br><br>
+자가용으로 방문하는 경우 <strong>에버랜드 주차장과 캐리비안베이 주차장이 공유</strong>됩니다. 성수기 주말에는 주차장이 일찍 만차가 되므로 오전 9시 이전에 도착하는 것을 권장드립니다.<br><br>
+주차비는 시간당 요금 방식으로 부과됩니다. 자세한 주차 요금은 공식 홈페이지를 통해 방문 전 확인하시기 바랍니다.<br><br>
+에버랜드와 캐리비안베이는 연결 통로로 이동이 가능하여, 하루에 두 곳을 모두 방문하는 것도 가능합니다. 단, 한 곳을 충분히 즐기려면 최소 반나절 이상이 필요하므로 일정을 여유 있게 잡으시기 바랍니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 이미지 생성 영역</span>
+      <span class="ph-file">images/260617/1_caribeanbay_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-3">Families and friends enjoying a lazy river and outdoor pools at a large Korean water park on a sunny summer day, colorful inflatable rings floating on calm water, kids splashing and laughing, lush trees in background, vibrant summer holiday mood, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">캐리비안베이 레이지 리버와 야외풀 — 여름 가족 물놀이의 정석 / AI 제작 이미지</div>
+</div>
+
+<h2>08. 준비물과 사물함·탈의실 이용 팁</h2>
+
+캐리비안베이 방문 시 가져가야 할 기본 준비물을 정리해 드립니다.<br><br>
+<strong>수영복은 필수</strong>이며, 반바지 타입과 래시가드를 함께 챙기면 슬라이드 탑승 시 편리합니다. 래시가드는 자외선 차단과 피부 보호에도 효과적입니다.<br><br>
+<strong>워터파크용 샌들</strong>은 필수 준비물 중 하나입니다. 맨발로 이동하면 뜨거운 바닥에 발이 데일 수 있습니다. 물놀이 전용 아쿠아 슈즈를 활용하면 더욱 안전합니다.<br><br>
+<strong>사물함은 유료</strong>로 운영됩니다. 성수기에는 원하는 위치의 사물함이 조기 소진되는 경우가 있으므로, 입장 직후 사물함 확보를 우선으로 하는 것이 좋습니다.<br><br>
+탈의실 내부는 건식과 습식 구역이 분리되어 있습니다. 짐을 최소화하고, 방수 가방에 귀중품을 넣어 이동하는 것을 권장드립니다.
+
+<h2>09. 음식·매점 활용과 인근 맛집 정보</h2>
+
+캐리비안베이 내부에는 다양한 식음료 매점이 있습니다. 치킨·피자·컵라면·각종 음료 등을 현장에서 즐길 수 있으며, 산리오 콜라보 한정 음식도 판매합니다.<br><br>
+내부 음식 가격은 일반 외식보다 높은 편입니다. 비용이 부담된다면 <strong>도시락이나 간식을 지정 반입</strong>할 수 있습니다. 단, 반입 가능한 음식과 음료 종류에 제한이 있으므로 공식 홈페이지에서 사전에 확인하시기 바랍니다.<br><br>
+인근 에버랜드 주변 상권에도 맛집이 즐비합니다. 방문 후 용인 시내로 이동하면 다양한 외식 선택지가 있습니다.
+
+<h2>10. 아이와 함께할 때 꼭 확인할 것들</h2>
+
+<strong>키 제한</strong>이 있는 시설이 많습니다. 대형 슬라이드는 대부분 110~120cm 이상 탑승이 가능하며, 어린 자녀가 있다면 입장 전 공식 홈페이지에서 키 제한을 확인하세요.<br><br>
+유아·어린이 전용 풀은 별도로 마련되어 있어, 영아와 함께하는 가족도 안심하고 즐길 수 있습니다. 구명조끼는 무료로 대여하는 경우가 많으나 수량이 한정되어 있으니 일찍 대여하시기 바랍니다.<br><br>
+<strong>자외선 차단제</strong>는 실내외 구분 없이 필수입니다. 워터파크에서는 땀과 물에 쉽게 지워지므로, 방수 기능이 있는 제품을 사용하고 1~2시간마다 재도포하시기 바랍니다.<br><br>
+성수기 주말에는 아이들이 혼잡한 시설에서 길을 잃는 경우도 있습니다. 입장 전 아이에게 보호자 연락처를 알려 주거나 이름표 팔찌를 착용시켜 두는 것이 안전합니다.
+
+<div class="caution-box">
+⚠️ <strong>주의</strong>: 심장 질환, 임산부, 음주 상태에서는 슬라이드 이용이 제한됩니다. 현장 안전 요원의 안내를 반드시 따르세요.
+</div>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260616/travel_boryeong_daecheon_mud_july.html">대천해수욕장 7월 4일 개장과 보령 머드축제 날짜, 숙박·주차 미리 챙기기</a></li>
+    <li><a href="../260616/local_summer_vacation_checklist.html">여름 휴가 준비물 바다·계곡·캠핑 상황별 체크리스트, 빠뜨리기 쉬운 것</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#캐리비안베이</span>
+  <span class="tag">#워터파크</span>
+  <span class="tag">#여름물놀이</span>
+  <span class="tag">#용인여행</span>
+  <span class="tag">#캐리비안베이입장료</span>
+  <span class="tag">#에버랜드</span>
+  <span class="tag">#산리오콜라보</span>
+  <span class="tag">#캐리비안베이성수기</span>
+  <span class="tag">#여름여행</span>
+  <span class="tag">#가족여행</span>
+</div>
+
+</body>
+</html>

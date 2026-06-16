@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1faf2; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px; font-size: 0.95em; }
+  .info-table td { padding: 10px; border: 1px solid #ddd; font-size: 0.95em; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .caution-box { background: #fce4ec; border: 1px solid #e57373; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #bbb; border-radius: 10px; padding: 20px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; color: #555; }
+  .ph-file { font-size: 0.8em; color: #888; font-family: monospace; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 14px; border-radius: 6px; font-size: 0.82em; line-height: 1.6; white-space: pre-wrap; }
+  .copy-btn { margin-top: 10px; background: #388e3c; color: #fff; border: none; padding: 8px 18px; border-radius: 5px; cursor: pointer; font-size: 0.88em; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>KTX 명절 기차표 예매 오픈 시각과 취소표 나오는 시간대, SRT 예매와 차이 정리</h1>
+
+<div class="intro-box">
+추석과 설, 황금 연휴를 앞두면 어김없이 고민이 시작됩니다. "KTX 기차표 언제 풀리지? SRT는 따로 예매해야 하나?"<br><br>
+명절 기차표 예매는 일반 예매와 달리 <strong>별도의 오픈 일정과 절차</strong>가 있습니다. 예매 시작과 동시에 수십만 명이 몰리기 때문에 사전에 준비하지 않으면 아무리 앱을 빨리 켜도 실패하기 쉽습니다.<br><br>
+이 글에서는 코레일 KTX와 SR SRT의 명절 예매 오픈 시각, 모바일·PC 세팅 방법, 취소표 나오는 시간대와 포착 방법, 그리고 예매 실패 시 대안까지 모두 정리해 드립니다.<br><br>
+명절 기차표, 올해는 꼭 잡으시길 바랍니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260617/3_ktx_reservation_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-1">Person using a smartphone app to book KTX high-speed train tickets in Korea, screen showing train ticket booking interface with available seats, sitting in a bright modern Korean home, determined expression, close-up of hands and phone screen, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">코레일 앱으로 명절 기차표 예매하는 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>01. 명절 기차표 예매의 기본 구조 — KTX vs SRT는 완전히 별개</h2>
+
+먼저 가장 중요한 사실을 짚고 넘어가겠습니다.<br><br>
+<strong>KTX(코레일)와 SRT(SR)는 완전히 별개의 회사</strong>입니다. 예매 시스템, 홈페이지, 앱, 예매 오픈 날짜가 모두 다릅니다. KTX 예매에 성공했다고 SRT 표를 자동으로 확보하는 것이 아니며, 반대도 마찬가지입니다.<br><br>
+코레일(KTX)은 <strong>코레일 앱(코레일톡)</strong> 또는 레츠코레일 홈페이지에서, SRT는 <strong>SRT 앱</strong> 또는 SRT 홈페이지(etk.srail.kr)에서 예매합니다.<br><br>
+두 시스템 모두 명절 예매 시기에는 오픈과 동시에 수요가 폭주하므로, 양쪽 앱을 모두 사전에 설치하고 로그인 상태를 유지해 두는 것이 기본입니다.
+
+<h2>02. KTX 명절 예매 오픈 시각과 일정 확인 방법</h2>
+
+코레일 명절 예매는 보통 <strong>출발일 한 달 전 전후</strong>에 예매 오픈이 공지됩니다.<br><br>
+오픈 시각은 대부분 <strong>오전 7시</strong>로, 평일 오전 시간대에 진행됩니다. 오픈 당일은 트래픽이 집중되어 서버가 느려질 수 있으므로 <strong>오픈 10~15분 전부터 앱을 실행하고 대기</strong>하는 것이 좋습니다.<br><br>
+정확한 예매 오픈 날짜와 시각은 <strong>코레일 공식 홈페이지와 코레일톡 앱의 공지사항</strong>에서 확인할 수 있습니다. 해마다 오픈 날짜가 달라지므로 매 명절마다 공지를 직접 확인하는 것이 가장 정확합니다.
+
+<table class="info-table">
+  <tr>
+    <th>구분</th>
+    <th>예매 채널</th>
+    <th>오픈 시각 패턴</th>
+  </tr>
+  <tr>
+    <td style="background:#f1faf9;">코레일 KTX</td>
+    <td style="background:#f1faf9;">코레일톡 앱·레츠코레일</td>
+    <td style="background:#f1faf9;">오전 7시 (공지 기준)</td>
+  </tr>
+  <tr>
+    <td style="background:#fff;">SR SRT</td>
+    <td style="background:#fff;">SRT 앱·etk.srail.kr</td>
+    <td style="background:#fff;">오전 7시 (공지 기준)</td>
+  </tr>
+</table>
+
+<h2>03. SRT 예매 오픈과 코레일 KTX와 다른 점</h2>
+
+SRT는 수서역에서 출발해 동탄·오산·대전·대구·부산·광주송정 방향으로 운행합니다.<br><br>
+KTX와 SRT의 가장 큰 차이는 <strong>출발역</strong>입니다. KTX는 서울역, 용산역이 기점이고 SRT는 수서역이 기점입니다. 수서역은 3호선·분당선 환승이 되므로 강남·분당권에 거주하는 분들에게 SRT가 더 유리할 수 있습니다.<br><br>
+SRT 역시 명절 예매는 별도 일정에 공지되며, 코레일과 오픈 날짜가 동일하거나 비슷한 경우도 있고 며칠 차이가 나는 경우도 있습니다.<br><br>
+SRT 예매는 앱 속도가 코레일톡보다 상대적으로 안정적이라는 이용자 후기가 많습니다. 같은 노선이 있다면 SRT도 함께 시도해 볼 것을 권장드립니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260617/3_ktx_reservation_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-2">A sleek South Korean KTX high-speed train departing from a modern station platform during the Chuseok holiday season, families with luggage boarding the train, warm autumn sunset light, crowded but festive holiday atmosphere, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">명절에 KTX를 타고 고향으로 향하는 귀성 풍경 / AI 제작 이미지</div>
+</div>
+
+<h2>04. 모바일 앱 vs PC 예매 — 속도 차이와 세팅 방법</h2>
+
+명절 예매에는 <strong>모바일 앱</strong>이 PC보다 실질적으로 유리합니다.<br><br>
+이유는 간단합니다. 앱은 자동 로그인이 유지되어 오픈 순간 바로 검색과 좌석 선택으로 넘어갈 수 있습니다. PC는 캡챠 인증, 공동인증서 로그인 등 추가 과정이 있어 결정적인 몇 초를 잃을 수 있습니다.<br><br>
+<strong>모바일 사전 준비 사항</strong>:
+
+<div class="step-box">1. 앱 최신 버전 업데이트 완료</div>
+<div class="step-box">2. 회원 로그인 상태 유지 확인</div>
+<div class="step-box">3. 결제 수단 등록 (카드 번호·카드사 앱 사전 인증)</div>
+<div class="step-box">4. 출발·도착역 즐겨찾기 등록</div>
+<div class="step-box">5. 오픈 5분 전 앱 실행, 와이파이 연결 상태 확인</div>
+
+PC를 활용하고 싶다면 <strong>IE(인터넷 익스플로러) 대신 크롬 브라우저</strong>를 사용하고, 공동인증서는 미리 로그인 상태를 유지해 두는 것이 도움이 됩니다.
+
+<h2>05. 취소표 나오는 시간대와 포착 전략</h2>
+
+예매 오픈에 실패했다고 포기하지 마세요. <strong>취소표</strong>가 있습니다.<br><br>
+취소표는 예매 후 결제 기한 내에 결제를 완료하지 않은 표들이 일괄 취소되면서 나오는 경우와, 개인 사정으로 취소하는 경우 두 가지로 발생합니다.<br><br>
+가장 많은 취소표가 쏟아지는 시간대는 <strong>결제 기한이 만료되는 시각 직후(보통 새벽 1~3시)</strong>입니다. 특히 예매 오픈 다음 날부터 수일 사이에 취소표가 집중적으로 나오는 경향이 있습니다.<br><br>
+<strong>새벽 3~5시</strong>에도 취소표가 꾸준히 나옵니다. 자동 새로고침 기능이 있는 앱을 이용하거나, 직접 반복적으로 조회하면서 빈 좌석을 확인하세요.
+
+<div class="tip-box">
+💡 <strong>취소표 꿀팁</strong>: 코레일 앱의 '열차 조회' 화면에서 원하는 날짜와 노선을 고정해 두고 주기적으로 새로고침하세요. 좌석 잔여가 표시되는 순간 바로 결제까지 완료해야 합니다.
+</div>
+
+<h2>06. 결제 기한 만료 후 대량 취소표 노리기</h2>
+
+코레일 KTX는 예매 후 일정 시간 내(통상 10~30분)에 결제를 완료하지 않으면 자동 취소됩니다.<br><br>
+수십만 명이 예매에 성공하더라도, 그중 상당수가 결제를 완료하지 않거나 취소하게 됩니다. 이 표들이 특정 시각에 일괄 풀리는 현상을 <strong>"결제 기한 취소 타임"</strong>이라고 부릅니다.<br><br>
+이 시간대는 예매 오픈 당일과 그 이후 2~3일에 집중되며, <strong>일요일 자정 전후</strong>에도 대량으로 나오는 경향이 있습니다. 결제 시간 제한으로 미결제 처리된 표가 월요일 새벽에 쏟아지기 때문입니다.<br><br>
+이 타임을 노린다면 취소표 알림 서비스나 앱 알람 기능을 적극 활용하시기 바랍니다.
+
+<h2>07. 좌석 등급 선택 — 일반실 vs 특실 vs 입석</h2>
+
+KTX와 SRT 모두 <strong>일반실, 특실, 입석(서서 타는 표)</strong>으로 나뉩니다.<br><br>
+성수기에는 특실도 조기 소진됩니다. 특실 요금은 일반실보다 40~50% 높지만, 좌석이 더 넓고 쾌적합니다. 장거리 이동이라면 특실을 노려보는 것도 방법입니다.<br><br>
+입석(자유석) 표는 일반 좌석 표가 매진된 후에도 구매할 수 있는 경우가 있습니다. 명절에는 어느 정도 혼잡함을 감수해야 하지만, 아예 못 가는 것보다는 낫습니다.<br><br>
+KTX-이음은 일반 KTX보다 속도가 약간 느리지만 노선에 따라 유일한 선택지가 되기도 합니다. 강릉·여수·경전선 방향은 KTX-이음이 운행합니다.
+
+<h2>08. 추석 2026 예매 시기 예상 일정</h2>
+
+2026년 추석은 음력 8월 15일로, 정확한 양력 날짜는 코레일·SR 공식 홈페이지에서 확인이 필요합니다.<br><br>
+일반적인 패턴으로 보면 <strong>추석 출발일 약 1달 전</strong>에 예매 오픈 공지가 뜹니다. 7월 중순~하순경 코레일과 SR 공식 채널을 주의 깊게 살펴보시기 바랍니다.<br><br>
+앱 푸시 알림을 켜 두면 예매 공지를 놓치지 않을 수 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260617/3_ktx_reservation_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-3">Interior of a modern KTX train in South Korea during Chuseok holiday, passengers with luggage and traditional gift boxes, warm lighting, some people sleeping in seats, others looking at smartphones, autumn scenery visible through windows, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">추석 귀성길 KTX 차내 — 명절 분위기가 물씬 풍기는 고속열차 / AI 제작 이미지</div>
+</div>
+
+<h2>09. 코레일 멤버십과 할인 카드 활용</h2>
+
+코레일 회원이라면 <strong>코레일 멤버십 포인트</strong>를 활용해 일부 할인을 받을 수 있습니다. 평소에 기차를 자주 이용한다면 포인트를 쌓아 두었다가 명절 표 구매에 사용하는 것도 좋은 방법입니다.<br><br>
+신한·현대·롯데 등 주요 카드사는 코레일과 제휴 할인 협약을 맺고 있습니다. 특정 카드로 결제 시 5~10% 할인이 적용되는 경우가 있으니, 예매 전 본인이 사용하는 카드사의 혜택을 미리 확인하시기 바랍니다.<br><br>
+단, 명절 특가 기간에는 제휴 할인이 제외되는 경우도 있으므로 결제 전에 적용 여부를 꼭 확인하세요.
+
+<h2>10. 예매 실패했을 때 대안</h2>
+
+KTX·SRT 예매에 완전히 실패했다면 다음 방법을 검토해 보세요.<br><br>
+<strong>고속버스·시외버스</strong>: 명절에도 일정 좌석이 남아있는 경우가 많습니다. 코버스·고버스 앱에서 실시간 조회가 가능합니다. 시간이 오래 걸리지만 표를 못 구한 것보다는 낫습니다.<br><br>
+<strong>무궁화·새마을 일반 열차</strong>: KTX보다 소요 시간이 길지만 명절 특수 운행이 추가되는 경우도 있습니다. 코레일 앱에서 일반 열차도 함께 조회해 보세요.<br><br>
+<strong>자가용 카풀·카셰어링</strong>: 같은 방향으로 이동하는 지인과 동행하거나, 카풀 앱을 활용하는 방법도 있습니다. 명절 귀성·귀경 카풀 수요는 상당히 많습니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260616/travel_boryeong_daecheon_mud_july.html">대천해수욕장 7월 4일 개장과 보령 머드축제 날짜, 숙박·주차 미리 챙기기</a></li>
+    <li><a href="../260616/local_summer_vacation_checklist.html">여름 휴가 준비물 바다·계곡·캠핑 상황별 체크리스트, 빠뜨리기 쉬운 것</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#KTX예매</span>
+  <span class="tag">#SRT예매</span>
+  <span class="tag">#명절기차표</span>
+  <span class="tag">#추석기차표</span>
+  <span class="tag">#취소표</span>
+  <span class="tag">#코레일톡</span>
+  <span class="tag">#명절예매오픈</span>
+  <span class="tag">#설날기차표</span>
+  <span class="tag">#KTX취소표</span>
+  <span class="tag">#기차표예매팁</span>
+</div>
+
+</body>
+</html>
