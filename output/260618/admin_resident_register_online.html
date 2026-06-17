@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1f8e9; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 14px; font-size: 0.95em; }
+  .info-table td { border: 1px solid #ddd; padding: 10px 14px; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #fff; border: 1px solid #c8e6c9; border-left-width: 4px; margin-bottom: 15px; border-radius: 0 6px 6px 0; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .caution-box { background: #fce4ec; border: 1px solid #e57373; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-area .img-placeholder { background: #f5f5f5; border: 2px dashed #a5d6a7; border-radius: 8px; padding: 20px; text-align: left; }
+  .img-area .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 700; color: #388e3c; }
+  .img-area .ph-file { font-size: 0.8em; color: #888; font-family: monospace; }
+  .img-area pre.prompt-text { background: #263238; color: #80cbc4; padding: 12px; border-radius: 6px; font-size: 0.82em; white-space: pre-wrap; margin: 10px 0; }
+  .img-area .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 5px; padding: 7px 16px; cursor: pointer; font-size: 0.85em; }
+  .img-caption { font-size: 0.9em; color: #555; margin-top: 8px; font-style: italic; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = '복사 완료!';
+    btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>주민등록등본 인터넷 발급 방법과 무인발급기 수수료, 정부24 PDF까지</h1>
+
+<div class="intro-box">
+은행 업무, 이직, 학교 제출, 전월세 계약 등 주민등록등본이 필요한 순간은 생각보다 자주 찾아옵니다.<br><br>
+예전에는 주민센터에 직접 방문해야 했지만, 이제는 <strong>정부24(gov.kr)에서 인터넷으로 무료</strong>로 발급받을 수 있습니다. PC는 물론 스마트폰으로도 가능하고 PDF로 저장해 바로 이메일 제출도 됩니다.<br><br>
+이 글에서는 정부24 PC·모바일 발급 방법, PDF 저장법, 무인발급기 위치와 수수료 비교, 그리고 대리 발급 방법까지 모두 담았습니다.<br><br>
+출처: 정부24 공식 서비스(gov.kr) 안내 기준.
+</div>
+
+<h2>① 주민등록등본과 초본, 차이점이 뭔가요</h2>
+<p style="margin: 1em 0;">
+주민등록등본과 초본은 모두 정부24에서 발급받을 수 있는 주민등록 서류이지만, 담고 있는 정보의 범위가 다릅니다.<br><br>
+<strong>주민등록등본(謄本)</strong>은 같은 세대에 등록된 모든 세대원의 정보(성명, 주민등록번호, 주소, 전입일 등)가 포함되어 있습니다. 금융기관, 학교, 직장 등 대부분의 제출처에서 요구하는 기본 서류입니다.<br><br>
+<strong>주민등록초본(抄本)</strong>은 본인 1인의 주민등록 이력(과거 주소 변동 내역 포함)이 담긴 서류로, 주로 법원이나 일부 금융기관에서 요구합니다.<br><br>
+제출 용도에 맞는 서류를 선택하세요. 어떤 서류를 내야 할지 모를 때는 요청처에 직접 확인하는 것이 가장 정확합니다.
+</p>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260618/5_resident_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-1">A Korean person using a laptop at home to access the gov.kr (정부24) website to issue a resident registration certificate (주민등록등본) online. The laptop screen clearly shows a Korean government portal with document issuance options. Modern minimal home desk setup, natural light. A freshly printed document visible beside the laptop. Photorealistic, ultra high detail, 1:1 aspect ratio, everyday Korean life photography, convenience of online civil service.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">정부24에서 주민등록등본을 인터넷으로 무료 발급하는 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>② 정부24 PC에서 주민등록등본 발급받는 방법</h2>
+
+<div class="step-box">
+<strong>1단계. 정부24 접속 및 로그인</strong><br>
+gov.kr 접속 → '로그인' 클릭 → 공동인증서, 카카오, PASS 등 간편인증으로 본인 확인
+</div>
+
+<div class="step-box">
+<strong>2단계. 주민등록등본 검색</strong><br>
+상단 검색창에 '주민등록등본' 입력 → 검색 결과 중 '주민등록표 등본(초본) 교부' 선택 → '발급하기' 클릭
+</div>
+
+<div class="step-box">
+<strong>3단계. 발급 옵션 선택</strong><br>
+세대 전체 vs 일부 세대원, 주민등록번호 뒷자리 공개 여부, 발급 목적 등을 선택합니다. 대부분의 경우 기본 설정 그대로 진행하면 됩니다.
+</div>
+
+<div class="step-box">
+<strong>4단계. 출력 또는 저장</strong><br>
+화면에 발급된 등본이 표시되면 프린터 출력 또는 PDF 저장 버튼을 클릭합니다. 정부24 인터넷 발급은 <strong>수수료 무료</strong>입니다.
+</div>
+
+<p style="margin: 1em 0;">
+PC 환경에서 발급 시 프린터 드라이버와 정부24 전용 출력 프로그램(공공서비스 가상프린터 등)을 사전에 설치해야 하는 경우가 있습니다. 오류 발생 시 정부24 고객센터(1588-2188)에 문의하세요.
+</p>
+
+<h2>③ 모바일 스마트폰으로 발급받는 방법</h2>
+<p style="margin: 1em 0;">
+스마트폰에서는 정부24 앱을 설치하거나, 모바일 웹(m.gov.kr)을 이용해 주민등록등본을 발급받을 수 있습니다.<br><br>
+<strong>① 정부24 앱 설치</strong>: 앱스토어 또는 구글 플레이에서 '정부24' 검색 후 설치합니다.<br><br>
+<strong>② 로그인</strong>: 카카오톡·PASS 간편인증이 가장 편리합니다. 공동인증서도 사용 가능합니다.<br><br>
+<strong>③ 주민등록등본 검색 및 발급</strong>: PC 버전과 동일한 절차로 발급 옵션을 선택 후 완료합니다.<br><br>
+모바일 발급 시 스마트폰 화면 해상도에 따라 글씨가 작게 보일 수 있으므로, 중요 내용(이름·주민번호·주소)은 확대해서 확인하세요.
+</p>
+
+<h2>④ PDF로 저장하고 이메일로 제출하는 방법</h2>
+<p style="margin: 1em 0;">
+정부24에서 발급한 주민등록등본은 PDF 파일로 저장할 수 있어, 이메일 첨부나 온라인 서류 제출에 매우 유용합니다.<br><br>
+PC에서는 발급 화면에서 <strong>인쇄 대화상자를 열고 '프린터'를 'PDF로 저장' 또는 'Microsoft Print to PDF'로 선택</strong>하면 PDF 파일로 저장됩니다. 운영체제에 따라 다를 수 있으며, Chrome 브라우저에서는 인쇄 → 대상 → 'PDF로 저장' 옵션을 이용하세요.<br><br>
+모바일에서는 발급 후 '파일로 저장' 버튼이 제공되거나, 공유 기능을 통해 파일 앱에 저장할 수 있습니다.<br><br>
+<strong>주의</strong>: PDF로 저장된 등본은 공식 출력본과 동일한 효력을 가지며, 위조 방지 문양이 포함되어 있습니다. 다만 일부 기관에서는 인쇄본 원본 제출을 요구하는 경우도 있으니 사전에 확인하세요.
+</p>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260618/5_resident_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-2">A modern Korean self-service kiosk machine (무인민원발급기) in a public building lobby (such as a bank or community center), displaying a touchscreen menu in Korean. The kiosk is white and clean, showing a resident registration document issuance screen. A person pressing the touchscreen. Fluorescent office lighting, modern interior. Photorealistic, ultra high detail, 1:1 aspect ratio, public service technology photography, South Korea administrative convenience.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">편의점·주민센터 등에 설치된 무인민원발급기(자동발급기) 사용 장면 / AI 제작 이미지</div>
+</div>
+
+<h2>⑤ 무인발급기 위치 찾기와 이용 방법</h2>
+<p style="margin: 1em 0;">
+인터넷 환경이 어렵거나 PC가 없을 때는 <strong>무인민원발급기(자동발급기)</strong>를 이용하는 것이 편리합니다. 편의점(GS25, CU), 주민센터, 은행 로비, 지하철역 등 전국 4,000여 곳에 설치되어 있습니다.<br><br>
+무인발급기 위치는 <strong>정부24 → 서비스 → 무인발급기 위치찾기</strong> 메뉴, 또는 행정안전부 공식 사이트에서 우편번호나 주소로 가장 가까운 기기를 검색할 수 있습니다.<br><br>
+이용 방법은 다음과 같습니다. 기기의 터치스크린에서 '주민등록등본' 선택 → 신분증 또는 주민등록번호 입력 → 발급 옵션 선택 → 카드 결제(200원) → 발급.<br><br>
+24시간 운영되는 기기도 있으며(편의점 내 설치 기기 등), 야간이나 주말에도 이용할 수 있어 평일 낮에 시간을 내기 어려운 분들에게 유용합니다.
+</p>
+
+<h2>⑥ 발급 수수료 비교</h2>
+<table class="info-table">
+  <thead>
+    <tr><th>발급 방법</th><th>수수료</th><th>특징</th></tr>
+  </thead>
+  <tbody>
+    <tr><td style="background:#fff;">정부24 인터넷 (PC/모바일)</td><td style="background:#fff;"><strong>무료</strong></td><td style="background:#fff;">24시간, 가장 편리</td></tr>
+    <tr><td style="background:#f1f8e9;">무인발급기 (편의점·은행 등)</td><td style="background:#f1f8e9;">200원</td><td style="background:#f1f8e9;">24시간(일부), 출력본 즉시 수령</td></tr>
+    <tr><td style="background:#fff;">주민센터 방문 창구</td><td style="background:#fff;">400원</td><td style="background:#fff;">평일 09:00~18:00</td></tr>
+    <tr><td style="background:#f1f8e9;">이해관계인 발급 (방문)</td><td style="background:#f1f8e9;">500원</td><td style="background:#f1f8e9;">신청인 외 관계자 발급 시</td></tr>
+  </tbody>
+</table>
+
+<h2>⑦ 세대원 전체 vs 개인 출력 항목 선택</h2>
+<p style="margin: 1em 0;">
+주민등록등본 발급 시 표시 항목을 선택할 수 있습니다.<br><br>
+<strong>세대 전체 포함</strong>: 같은 주소에 등록된 모든 세대원(배우자·자녀·부모 등)의 정보가 포함됩니다. 가족관계 확인이 필요한 경우 선택합니다.<br><br>
+<strong>주민등록번호 공개 여부</strong>: 뒷자리를 모두 표시할 것인지, 뒷자리 일부를 *(별표)로 처리할 것인지 선택할 수 있습니다. 개인정보 보호를 위해 제출처에서 요구하지 않는 한 뒷자리 생략을 권장합니다.<br><br>
+<strong>이전 주소 포함 여부</strong>: 과거 주소 변동 이력을 포함하거나 현재 주소만 표시하도록 선택할 수 있습니다. 일반 용도에서는 현재 주소만 포함하는 것이 기본입니다.
+</p>
+
+<h2>⑧ 대리인이 발급받을 수 있나요?</h2>
+<p style="margin: 1em 0;">
+본인 외에 <strong>세대원(같은 세대에 등록된 가족)</strong>이라면 주민센터 방문을 통해 대리 발급을 받을 수 있습니다. 이 경우 대리인의 신분증과 본인과의 관계를 확인할 수 있는 서류가 필요합니다.<br><br>
+세대원이 아닌 제3자가 발급받으려면 <strong>위임장과 본인의 위임 사실을 확인할 수 있는 서류</strong>가 필요하며, 이해관계인(채권자 등 법적 필요성이 있는 경우)은 소명 자료를 제출해야 합니다.<br><br>
+인터넷(정부24)에서는 본인 인증을 거쳐야 하므로 대리 발급이 불가능합니다. 반드시 본인이 직접 인증 후 발급해야 합니다.
+</p>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260618/5_resident_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-3">Close-up of a freshly printed Korean resident registration certificate (주민등록등본) on white paper, with official government stamp and security watermark pattern visible. The document is neatly placed on a clean desk beside a smartphone. Important text fields are visible but not readable personal information. Photorealistic, ultra high detail, 1:1 aspect ratio, official document photography, crisp paper texture, South Korean administrative document.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">정부24에서 발급된 주민등록등본 출력본, 공식 위조방지 문양이 포함됩니다 / AI 제작 이미지</div>
+</div>
+
+<h2>⑨ 자주 묻는 실수와 해결 방법</h2>
+<p style="margin: 1em 0;">
+<strong>Q. 발급 중 오류가 떠서 진행이 안 됩니다.</strong><br>
+A. 정부24는 특정 브라우저(크롬, 엣지 권장) 및 운영체제에서 최적화되어 있습니다. 인터넷 익스플로러는 지원이 종료되었으니 다른 브라우저로 시도하세요. 그래도 안 된다면 정부24 고객센터 1588-2188로 문의하세요.<br><br>
+<strong>Q. 발급된 등본 PDF를 이메일로 보냈더니 상대방이 열리지 않는다고 합니다.</strong><br>
+A. 정부24에서 발급된 PDF에는 열람 보안 기능이 적용될 수 있습니다. 파일을 보낼 때 비밀번호 설정 여부를 확인하거나, 상대방에게 Adobe Reader 최신 버전을 사용하도록 안내하세요.<br><br>
+<strong>Q. 주민등록번호 뒷자리가 표시되지 않아 제출이 거부되었습니다.</strong><br>
+A. 기본 설정에서 뒷자리를 별표 처리하지 않는 옵션을 선택해 재발급하면 됩니다. 처음 발급 시 옵션을 잘 확인하세요.
+</p>
+
+<h2>⑩ 개인정보 보호: 등본 폐기와 정보 유출 주의</h2>
+<p style="margin: 1em 0;">
+주민등록등본에는 이름, 주민등록번호, 주소, 가족 정보 등 민감한 개인정보가 담겨 있습니다.<br><br>
+<strong>사용 후 반드시 파기</strong>하세요. 종이 등본은 파쇄기나 가위로 잘라 버리고, PDF 파일은 제출 후 기기에서 삭제하는 것을 권장합니다.<br><br>
+최근에는 주민등록등본을 악용한 스미싱이나 명의도용 사기 피해 사례가 보고되고 있습니다. <strong>신뢰할 수 없는 기관이나 개인에게 등본을 전달하지 마시고</strong>, 제출처가 공식적인 기관인지 반드시 확인하세요.<br><br>
+본인의 주민등록등본 발급 이력은 정부24 마이페이지 → '발급 이력 조회'에서 확인할 수 있으며, 본인이 신청하지 않은 발급 이력이 있다면 즉시 행정안전부 민원 또는 경찰청에 신고하시기 바랍니다.
+</p>
+
+<div class="tip-box">
+<strong>📌 주민등록등본 발급 핵심 정리</strong><br><br>
+✅ 정부24 인터넷 발급: 무료, 24시간 가능<br>
+✅ 무인발급기: 200원, 출력본 즉시 수령<br>
+✅ 주민센터 방문: 400원, 평일 09:00~18:00<br>
+✅ 대리 발급: 세대원은 방문 가능, 인터넷은 본인만<br>
+✅ 정부24 고객센터: 1588-2188
+</div>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260617/admin_passport_reissue.html">여권 재발급 기간 얼마나 걸리나, 비용과 정부24 온라인 신청 가능 조건</a></li>
+    <li><a href="../260617/admin_intl_drivers_license.html">국제운전면허증 당일 발급 받는 곳과 온라인 신청 방법, 인정 국가 133개 확인</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#주민등록등본</span>
+  <span class="tag">#인터넷발급</span>
+  <span class="tag">#정부24</span>
+  <span class="tag">#무인발급기</span>
+  <span class="tag">#등본발급방법</span>
+  <span class="tag">#무료발급</span>
+  <span class="tag">#행정셀프발급</span>
+  <span class="tag">#생활정보</span>
+  <span class="tag">#온라인민원</span>
+  <span class="tag">#PDF발급</span>
+</div>
+</body>
+</html>

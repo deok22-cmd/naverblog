@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== P1 : 정보 표 (생활·정보 팔레트 #388e3c/#1b5e20/#e8f5e9) | info — 수수료 비교 ===== -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1a0f"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#388e3c"/>
+
+  <text x="80" y="270" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">발급 수수료 비교</text>
+  <rect x="82" y="304" width="140" height="9" fill="#388e3c"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="450" font-size="42" font-weight="600" fill="#ffffff">정부24 인터넷</text>
+    <text x="1000" y="450" font-size="42" font-weight="800" fill="#a5d6a7" text-anchor="end">무료</text>
+    <line x1="80" y1="492" x2="1000" y2="492" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="582" font-size="42" font-weight="600" fill="#ffffff">무인발급기</text>
+    <text x="1000" y="582" font-size="42" font-weight="800" fill="#a5d6a7" text-anchor="end">200원</text>
+    <line x1="80" y1="624" x2="1000" y2="624" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="714" font-size="42" font-weight="600" fill="#ffffff">주민센터 창구</text>
+    <text x="1000" y="714" font-size="42" font-weight="800" fill="#a5d6a7" text-anchor="end">400원</text>
+    <line x1="80" y1="756" x2="1000" y2="756" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="846" font-size="42" font-weight="600" fill="#ffffff">이해관계인 방문</text>
+    <text x="1000" y="846" font-size="42" font-weight="800" fill="#a5d6a7" text-anchor="end">500원</text>
+    <line x1="80" y1="888" x2="1000" y2="888" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="978" font-size="42" font-weight="600" fill="#ffffff">무인발급기 운영</text>
+    <text x="1000" y="978" font-size="42" font-weight="800" fill="#a5d6a7" text-anchor="end">24시간(일부)</text>
+  </g>
+
+  <text x="80" y="1110" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#c8e6c9">편의점·은행·지하철역 등 전국 4,000여 곳 설치.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#1b5e20"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

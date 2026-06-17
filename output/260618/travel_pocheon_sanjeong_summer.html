@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px 14px; font-size: 0.95em; }
+  .info-table td { border: 1px solid #ddd; padding: 10px 14px; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-area .img-placeholder { background: #f5f5f5; border: 2px dashed #b2dfdb; border-radius: 8px; padding: 20px; text-align: left; }
+  .img-area .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 700; color: #00796b; }
+  .img-area .ph-file { font-size: 0.8em; color: #888; font-family: monospace; }
+  .img-area pre.prompt-text { background: #263238; color: #80cbc4; padding: 12px; border-radius: 6px; font-size: 0.82em; white-space: pre-wrap; margin: 10px 0; }
+  .img-area .copy-btn { background: #00796b; color: #fff; border: none; border-radius: 5px; padding: 7px 16px; cursor: pointer; font-size: 0.85em; }
+  .img-caption { font-size: 0.9em; color: #555; margin-top: 8px; font-style: italic; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = '복사 완료!';
+    btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = '#00796b'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>포천 산정호수 여름 둘레길 코스와 보트 요금, 수도권 당일 피서지로 어떨까</h1>
+
+<div class="intro-box">
+서울에서 차로 1시간 남짓이면 닿는 <strong>포천 산정호수</strong>는 해발 300m 명성산 자락에 자리한 고원 호수입니다.<br><br>
+입장료 없이 무료로 즐길 수 있고, 시원한 수변 둘레길과 오리배, 조각공원까지 갖춘 복합 피서 명소라 여름에 특히 인기가 높습니다.<br><br>
+더운 날씨에 서울 근교에서 무더위를 피할 수 있는 장소를 찾고 계신다면, 산정호수는 꽤 훌륭한 선택지입니다.<br><br>
+이번 글에서는 여름 둘레길 코스, 보트와 오리배 이용 정보, 주차 방법, 그리고 인근 연계 명소까지 실질적인 정보를 정리해드립니다.
+</div>
+
+<h2>① 포천 산정호수, 어떤 곳인가요</h2>
+<p style="margin: 1em 0;">
+포천 산정호수는 경기도 포천시 영북면에 위치한 자연 호수로, 정식 명칭은 <strong>산정호수(山井湖水)</strong>입니다. 한자 뜻 그대로 '산 속의 우물 같은 호수'라는 의미로, 명성산과 청계산이 병풍처럼 감싸고 있는 형태입니다.<br><br>
+가을에는 단풍과 억새로 유명하지만, 여름에는 짙은 초록의 산과 맑은 호수가 어우러져 청량한 풍경을 즐길 수 있습니다. 무엇보다 <strong>입장료가 무료</strong>라는 점이 가족 단위 나들이에 큰 장점입니다.<br><br>
+호수 둘레가 약 2.7km로 성인 기준 여유롭게 걸어도 1시간 이내에 완주할 수 있어, 어린아이와 노인 분들도 무리 없이 산책을 즐기실 수 있습니다.
+</p>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260618/2_sanjeong_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-1">Peaceful panoramic view of Sanjeong Lake (산정호수) in Pocheon, Gyeonggi Province, South Korea on a sunny summer day. Clear blue-green lake water surrounded by lush green Myeongseong Mountain and other mountains. A small lakeside walking path with benches and trees visible, a few people walking leisurely. Bright summer sky with white clouds. Photorealistic, ultra high detail, 1:1 aspect ratio, travel photography style, serene and refreshing atmosphere.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">명성산을 배경으로 펼쳐진 포천 산정호수의 여름 전경 / AI 제작 이미지</div>
+</div>
+
+<h2>② 여름 둘레길 코스 상세</h2>
+<p style="margin: 1em 0;">
+산정호수 둘레길은 호수를 따라 이어지는 약 2.7km의 순환 코스로, 평균 소요 시간은 천천히 걸어도 50분에서 1시간 20분 사이입니다.<br><br>
+걷기 좋은 수변 산책로가 잘 정비되어 있으며, 중간중간 나무 데크와 벤치가 설치되어 있어 쉬어가기 편합니다. 여름에는 호수 수면에서 올라오는 시원한 바람과 울창한 나무 그늘 덕분에 한낮에도 비교적 쾌적하게 걸을 수 있습니다.<br><br>
+<strong>둘레길 중 '수변 데크 구간'</strong>은 호수 위에 놓인 나무 다리 형태로 조성되어 있어 수면과 가장 가까이에서 걸을 수 있는 인기 포인트입니다. 이 구간에서 바라보는 명성산 방향 전망이 특히 좋습니다.<br><br>
+전체 코스가 평탄하고 포장이 잘 되어 있어 유모차나 휠체어도 일부 구간 이용이 가능하지만, 호수 건너편 자연 산책로 쪽은 흙길이 포함되어 있으니 착용 신발에 따라 코스를 조절하시기 바랍니다.
+</p>
+
+<h2>③ 오리배·보트 이용 안내와 요금</h2>
+<p style="margin: 1em 0;">
+산정호수의 또 다른 즐거움은 <strong>오리배와 보트</strong>입니다. 호수 입구 선착장에서 오리배(페달식)와 일반 보트를 대여할 수 있으며, 여름 시즌에는 오전부터 꽤 빠르게 대기 줄이 생깁니다.<br><br>
+이용 요금은 현장 안내에 따르며, 통상적으로 오리배 30분 기준 2인 승선 시 1만 원대 초반 수준입니다. 기상 상황(바람이 강하거나 비가 올 경우)에 따라 운영이 중단될 수 있으므로 방문 당일 현장에서 확인하세요.<br><br>
+<strong>주말 오전 10시~12시 사이</strong>에 특히 대기가 길어지는 경향이 있으므로, 이른 아침에 도착해 보트를 먼저 타고 둘레길을 걷는 순서로 동선을 짜는 것이 효율적입니다.
+</p>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260618/2_sanjeong_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-2">Cute duck-shaped pedal boats (오리배) and colorful rowboats on the crystal clear lake of Sanjeong Lake in Pocheon, South Korea on a summer afternoon. A family with children enjoying a boat ride. Green mountains reflection on the water surface. Bright sunny day, clear blue water, joyful family vacation atmosphere. Photorealistic, ultra high detail, 1:1 aspect ratio, vibrant summer colors.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">산정호수에서 오리배를 즐기는 여름 나들이객들 / AI 제작 이미지</div>
+</div>
+
+<h2>④ 주차 요금과 대중교통 접근 방법</h2>
+<p style="margin: 1em 0;">
+산정호수 입장은 무료이지만, 주차는 유료입니다.<br><br>
+<strong>주차요금</strong>은 차종에 따라 다르게 적용됩니다. 경차는 1,000원, 소형차 2,000원, 중형차 5,000원, 대형차 10,000원이며, <strong>1시간 이내 출차 시에는 주차료가 부과되지 않습니다.</strong> 문의 전화 031-540-6350.<br><br>
+대중교통으로는 서울 동서울터미널 또는 의정부에서 포천 방면 버스를 이용한 후 영북면에서 택시를 이용하거나, 포천 시내에서 산정호수 방면 농어촌 버스를 탑승할 수 있습니다. 다만 대중교통 배차 간격이 넓어 <strong>자가용 이용이 훨씬 편리합니다.</strong><br><br>
+서울 북부(의정부·구리 방면)에서 출발 시 약 50분~1시간, 서울 도심에서는 약 1시간 20분 내외가 소요됩니다.
+</p>
+
+<h2>⑤ 조각공원과 주요 볼거리</h2>
+<p style="margin: 1em 0;">
+산정호수 둘레길 중간에는 <strong>야외 조각공원</strong>이 조성되어 있으며, 크고 작은 야외 조각 작품들이 산책길 곳곳에 배치되어 있습니다. 특별히 입장료를 받지 않고 둘레길을 걸으면서 자연스럽게 작품을 감상할 수 있습니다.<br><br>
+여름에는 호수 주변의 수생식물과 연꽃이 피기 시작하며, 호수 수면에 반영되는 산 그림자와 어우러진 풍경이 사진 촬영 포인트로 인기가 높습니다.<br><br>
+호수 남측에는 전망 포인트가 있어 명성산 전체를 한눈에 담는 구도의 인생샷을 찍을 수 있습니다.
+</p>
+
+<h2>⑥ 여름 더위 피하는 수변 포인트</h2>
+<p style="margin: 1em 0;">
+산정호수는 해발 300m 고원에 위치해 서울보다 체감 기온이 2~4도 정도 낮습니다. 그 덕분에 한여름 폭염에도 비교적 시원하게 즐길 수 있는 환경입니다.<br><br>
+오전 일찍 방문하면 안개가 걷히지 않아 신비로운 분위기를 경험할 수도 있고, 정오를 전후한 시간대에는 나무 그늘 아래 벤치에 앉아 독서나 피크닉을 즐기는 방문객도 많습니다.<br><br>
+<strong>호수 서쪽 수변 데크 구간</strong>은 그늘이 풍부하고 물과 가장 가까워 시원한 바람이 잘 통하므로, 더위를 피하려는 분들에게 특히 추천드립니다.
+</p>
+
+<h2>⑦ 근처 명소: 허브아일랜드와 비둘기낭폭포</h2>
+<p style="margin: 1em calls;">
+산정호수에서 차로 20~30분 거리에 포천의 또 다른 인기 명소들이 있습니다.<br><br>
+<strong>포천 허브아일랜드</strong>(영북면)는 다양한 허브 식물과 라벤더 정원을 즐길 수 있는 테마파크로, 6월 말~7월 초 라벤더 시즌에는 보라빛 물결을 감상할 수 있습니다. 입장료는 성인 기준이 있으며 계절마다 달라지므로 방문 전 공식 홈페이지에서 확인하세요.<br><br>
+<strong>비둘기낭폭포</strong>(포천시 영북면 대회산리)는 천연기념물 제537호로 지정된 현무암 협곡 폭포입니다. 주상절리로 이뤄진 독특한 지형과 시원하게 떨어지는 폭포가 여름 방문의 하이라이트입니다. 비가 온 다음 날 수량이 풍부해 더욱 인상적인 장관을 볼 수 있습니다.
+</p>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260618/2_sanjeong_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-3">A well-maintained lakeside walking trail at Sanjeong Lake in Pocheon, South Korea in summer. A wooden deck path stretching along the water's edge, lush green trees creating shade over the path, reflections of mountains on the calm lake surface. A family and couples strolling leisurely. Bright sunny afternoon, ultra high detail, 1:1 aspect ratio, photorealistic travel photography, fresh summer greenery, peaceful and refreshing atmosphere.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">산정호수 수변 데크 둘레길에서 산과 호수가 어우러진 여름 산책 풍경 / AI 제작 이미지</div>
+</div>
+
+<h2>⑧ 산정호수 주변 맛집과 카페</h2>
+<p style="margin: 1em 0;">
+산정호수 입구 주변에는 포천 지역 음식을 맛볼 수 있는 식당과 카페가 여러 곳 자리하고 있습니다.<br><br>
+<strong>이동갈비</strong>는 포천을 대표하는 향토 음식으로, 영북면을 포함한 포천 전역에서 쉽게 찾아볼 수 있습니다. 연탄 불에 구운 소갈비를 달콤 짭조름한 양념장에 재워 만든 이동갈비는 한 끼 식사로 최고이며, 2인 기준 4만 원대 안팎이 일반적인 가격 범위입니다.<br><br>
+호수 주변 카페에서는 탁 트인 호수 뷰를 즐기며 음료를 마실 수 있으며, 주말에는 야외 좌석을 확보하기 위해 조금 서두르는 것이 좋습니다.
+</p>
+
+<h2>⑨ 숙박 정보와 캠핑 여부</h2>
+<p style="margin: 1em 0;">
+산정호수 당일치기가 가장 보편적이지만, 1박 2일 일정으로 여유롭게 즐기고 싶은 분들을 위한 숙박 옵션도 다양합니다.<br><br>
+영북면 일대에는 포천 산정호수 리조트를 비롯해 다양한 펜션과 글램핑장이 운영 중입니다. 여름 성수기(7~8월)에는 주말 예약이 일찍 마감되므로 한 달 전 이상 미리 예약하는 것이 안전합니다.<br><br>
+캠핑을 원하는 분들은 산정호수 인근 공영 캠핑장(포천시 영북면 일원)이나 명성산 인근 캠핑장을 알아보시면 됩니다.
+</p>
+
+<h2>⑩ 여름 방문 시 유의사항과 실용 팁</h2>
+<p style="margin: 1em 0;">
+여름 주말, 특히 7~8월 연휴와 방학 기간에는 산정호수 주차장이 일찍 만차가 되는 경우가 많습니다. <strong>오전 9시 이전에 도착하거나, 인근 임시 주차 공간을 이용하고 도보로 이동하는 것</strong>을 추천합니다.<br><br>
+호수 주변 수변 구역에서는 수영이나 낚시가 금지되어 있으며, 음식물을 호수 주변에 버리지 않도록 주의해주세요. 반려동물 동반 시에는 목줄을 착용하고, 배변 봉투를 꼭 지참하세요.<br><br>
+여름철에는 갑작스러운 소나기가 내리는 경우가 잦으므로 가벼운 우비나 우산 하나를 챙겨두면 당황하지 않고 일정을 이어갈 수 있습니다.
+</p>
+
+<div class="tip-box">
+<strong>📌 산정호수 여름 방문 핵심 정보</strong><br><br>
+✅ 입장 무료, 주차 유료 (경차 1,000원~대형 10,000원, 1시간 이내 무료)<br>
+✅ 보트·오리배: 현장 안내 요금, 기상에 따라 운영 변동<br>
+✅ 둘레길 2.7km, 약 1시간 내외<br>
+✅ 문의 031-540-6350<br>
+✅ 여름 주말 오전 9시 이전 도착 권장
+</div>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260617/travel_caribeanbay_summer.html">캐리비안베이 여름 성수기 시작일과 산리오 콜라보·야외풀 개방 일정, 덜 붐비는 시간대는</a></li>
+    <li><a href="../260617/travel_gokseong_railbike.html">곡성 섬진강 기차마을 레일바이크 요금과 증기기관차 예약, 여름 물놀이 코스까지</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#포천여행</span>
+  <span class="tag">#산정호수</span>
+  <span class="tag">#포천산정호수</span>
+  <span class="tag">#수도권피서지</span>
+  <span class="tag">#경기도당일치기</span>
+  <span class="tag">#여름나들이</span>
+  <span class="tag">#오리배</span>
+  <span class="tag">#둘레길산책</span>
+  <span class="tag">#서울근교여행</span>
+  <span class="tag">#무료입장</span>
+</div>
+</body>
+</html>

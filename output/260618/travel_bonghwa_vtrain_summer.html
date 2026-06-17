@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px 14px; font-size: 0.95em; }
+  .info-table td { border: 1px solid #ddd; padding: 10px 14px; }
+  .info-card { border: 1px solid #ddd; padding: 15px; border-radius: 8px; text-align: center; }
+  .step-box { border-left: 4px solid #00796b; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-area .img-placeholder { background: #f5f5f5; border: 2px dashed #b2dfdb; border-radius: 8px; padding: 20px; text-align: left; }
+  .img-area .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 700; color: #00796b; }
+  .img-area .ph-file { font-size: 0.8em; color: #888; font-family: monospace; }
+  .img-area pre.prompt-text { background: #263238; color: #80cbc4; padding: 12px; border-radius: 6px; font-size: 0.82em; white-space: pre-wrap; margin: 10px 0; }
+  .img-area .copy-btn { background: #00796b; color: #fff; border: none; border-radius: 5px; padding: 7px 16px; cursor: pointer; font-size: 0.85em; }
+  .img-caption { font-size: 0.9em; color: #555; margin-top: 8px; font-style: italic; }
+  function copyPrompt(id) {
+    const text = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+      const originalText = btn.innerText;
+      btn.innerText = '복사 완료!';
+      btn.style.background = '#27ae60';
+      setTimeout(() => { btn.innerText = originalText; btn.style.background = '#00796b'; }, 2000);
+    });
+  }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = '복사 완료!';
+    btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = '#00796b'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>봉화 분천역 협곡열차 V-train 여름 운행 시간표와 예약 방법, 백두대간수목원 연계 코스</h1>
+
+<div class="intro-box">
+낙동강 상류, 사람의 발길이 거의 닿지 않는 백두대간의 깊은 협곡 사이를 기차가 천천히 달립니다.<br><br>
+봉화 분천역에서 출발하는 <strong>백두대간협곡열차(V-train, 브이트레인)</strong>는 비동역·양원역·승부역을 지나 철암역까지 약 27km 구간을 왕복하는 우리나라 대표 관광열차입니다.<br><br>
+창문 너머로 펼쳐지는 협곡의 풍경, 울창한 소나무 숲, 에메랄드빛 강물이 어우러진 이 여행은 한 번 경험하면 두고두고 기억에 남습니다.<br><br>
+여름 방학이 시작되기 전, 서울에서 2시간 남짓 거리의 이 협곡 열차 여행을 준비하는 분들을 위해 운행 시간표, 요금, 예약 방법부터 백두대간수목원 연계 코스까지 꼼꼼하게 정리했습니다.
+</div>
+
+<h2>① 백두대간협곡열차 V-train이란</h2>
+<p style="margin: 1em 0;">
+백두대간협곡열차는 한국철도공사(코레일)가 운영하는 관광 전용 열차로, 경북 봉화군 분천역에서 강원 삼척시 도계역(또는 경북 철암역)을 잇는 협곡 구간을 운행합니다.<br><br>
+V-train이라는 이름은 열차가 통과하는 백두대간의 험한 지형, 즉 낙동강 상류의 V자형 협곡에서 따온 것입니다.<br><br>
+총 3량으로 구성된 열차는 일반 기차와 달리 최대 속도를 낮춰 천천히 달리며, 탑승객이 창밖 풍경을 여유롭게 감상할 수 있도록 설계되어 있습니다.<br><br>
+특히 양원역과 승부역은 도로가 전혀 없어 열차나 도보로만 접근할 수 있는 고립된 간이역이어서, V-train을 타지 않고서는 절대 볼 수 없는 절경이 기다리고 있습니다.
+</p>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260618/1_vtrain_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-1">A vintage-style Korean tourist train V-train (white and green livery) stopped at Buncheon Station platform in Bonghwa, North Gyeongsang Province, South Korea. The small rustic station is surrounded by lush green mountains and cedar trees in summer. Warm morning light, photorealistic, ultra high detail, 1:1 aspect ratio, travel photography style, few passengers boarding, traditional Korean mountain scenery backdrop.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">봉화 분천역 플랫폼에서 출발을 기다리는 V-train 협곡열차 / AI 제작 이미지</div>
+</div>
+
+<h2>② 여름 운행 시간표와 정차역</h2>
+<p style="margin: 1em 0;">
+V-train은 <strong>하루 3회 왕복 운행</strong>하며, 정비 관계로 <strong>월요일과 화요일에는 원칙적으로 운행하지 않습니다.</strong> 수요일부터 일요일 사이에 방문 계획을 세우시는 것이 안전합니다.<br><br>
+정차역은 분천 → 비동 → 양원 → 승부 → 철암 순서이며, 왕복으로 이용할 경우 철암역에서 약 30분~1시간 관람 후 다시 분천역으로 돌아오는 코스가 일반적입니다.<br><br>
+각 역마다 정차 시간이 10~15분 정도 주어지므로, 승부역 같은 명소에서 플랫폼에 내려 사진을 찍거나 잠깐 주변을 둘러볼 수 있습니다.<br><br>
+<strong>구체적인 시간표는 코레일 홈페이지(korail.com) 또는 코레일 앱(코레일 KTX)에서 날짜를 선택한 후 확인하세요.</strong> 운행 여부와 잔여 좌석이 날짜마다 다르기 때문에 반드시 발행 직전에 재확인해야 합니다.
+</p>
+
+<table class="info-table">
+  <thead>
+    <tr><th>구분</th><th>내용</th></tr>
+  </thead>
+  <tbody>
+    <tr><td style="background:#fff;">운행 구간</td><td style="background:#fff;">분천 → 비동 → 양원 → 승부 → 철암 (편도 약 27km)</td></tr>
+    <tr><td style="background:#f1faf9;">1일 운행 횟수</td><td style="background:#f1faf9;">3회 왕복 (정기 운행)</td></tr>
+    <tr><td style="background:#fff;">운행 미실시일</td><td style="background:#fff;">월요일·화요일 (정비일, 임시 변경 가능)</td></tr>
+    <tr><td style="background:#f1faf9;">정차 시간</td><td style="background:#f1faf9;">각 역 10~15분 내외 정차</td></tr>
+    <tr><td style="background:#fff;">소요 시간</td><td style="background:#fff;">분천~철암 편도 약 1시간 30분</td></tr>
+  </tbody>
+</table>
+
+<h2>③ 요금과 예약 방법</h2>
+<p style="margin: 1em 0;">
+V-train 요금은 일반 무궁화호보다 높은 관광 열차 요금이 적용됩니다.<br><br>
+정확한 요금은 코레일 홈페이지에서 구간별로 확인할 수 있으며, 왕복 이용 시 편도보다 할인 혜택이 적용되는 경우도 있습니다. <strong>코레일 멤버십 회원이라면 포인트 적립과 조기 예매 할인을 적극 활용하세요.</strong><br><br>
+예약은 <strong>코레일 홈페이지(www.letskorail.com) 또는 코레일 KTX 앱</strong>에서 가능하며, 출발일 1개월 전부터 예매를 시작할 수 있습니다.<br><br>
+여름 방학(7~8월)과 주말에는 좌석이 매우 빠르게 소진되므로, 최소 2~3주 전에 예매하는 것을 강력히 권장합니다. 취소 발생 시 잔여 좌석이 생기기도 하므로 코레일 앱의 알림 기능을 설정해두면 도움이 됩니다.
+</p>
+
+<h2>④ 분천역: 산타마을과 출발 전 즐길거리</h2>
+<p style="margin: 1em 0;">
+분천역은 단순한 출발역을 넘어 <strong>핀란드의 산타 마을과 자매결연을 맺은 '분천 산타마을'</strong>로도 유명합니다. 작은 역 광장에는 통나무 산타 조형물과 순록 모형이 서 있고, 포토존이 여러 곳 조성되어 있습니다.<br><br>
+여름 시즌에는 열차 출발 전 30분~1시간 여유를 두고 도착하여, 역 주변의 소나무 숲 산책로를 걷거나 분천역 내 작은 카페에서 음료를 즐길 수 있습니다.<br><br>
+분천역 인근에는 낙동강 자전거길도 이어져 있어, 열차 여행 후 짧은 라이딩을 즐기는 여행자도 늘고 있습니다.<br><br>
+주차는 분천역 인근 무료 주차장을 이용할 수 있으며, 주말에는 일찍 도착해야 자리를 확보하기 수월합니다.
+</p>
+
+<h2>⑤ 비동역·양원역: 간이역의 고즈넉한 낭만</h2>
+<p style="margin: 1em 0;">
+비동역은 협곡 사이 작은 마을에 숨어 있는 간이역으로, 정차 시간에 플랫폼에 내리면 낙동강 상류의 맑은 물소리와 새소리가 그대로 전해집니다.<br><br>
+<strong>양원역</strong>은 1988년에 <strong>주민들이 직접 놓은 나무 침목을 모아 플랫폼을 만들었다</strong>는 이야기로 유명한 역입니다. 마을 어르신들의 간절한 요청으로 생긴 자생적인 역이라는 사연 덕분에, 많은 여행자에게 가장 기억에 남는 정차 구간으로 꼽힙니다.<br><br>
+양원역 플랫폼 바로 옆으로는 에메랄드빛 낙동강 지류가 흐르며, 여름에는 특히 맑고 투명한 물빛이 인상적입니다. 정차 시간 동안 빠르게 내려 사진 한 장 담아 가세요.
+</p>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260618/1_vtrain_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-2">A panoramic view from inside the V-train tourist train window showing the dramatic Nakdong River gorge valley in summer. Emerald green river flowing through steep mountain cliffs, dense green forest on both sides, bright blue sky. The view is through a large train window, photorealistic, ultra high detail, 1:1 aspect ratio, travel photography, golden afternoon light, South Korea Bonghwa Gyeongsangbuk-do.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">V-train 차창 밖으로 펼쳐지는 낙동강 상류 협곡의 에메랄드빛 풍경 / AI 제작 이미지</div>
+</div>
+
+<h2>⑥ 승부역: 하늘도 세 평이라는 절경 명소</h2>
+<p style="margin: 1em 0;">
+V-train 여행의 하이라이트는 단연 <strong>승부역</strong>입니다. "하늘도 세 평, 꽃밭도 세 평, 승부역은 작아도 아담하다"라는 시구가 붙어 있는 이 역은, 사방이 높은 산으로 둘러싸여 하늘이 작게만 보이는 깊은 골짜기에 자리하고 있습니다.<br><br>
+승부역 역시 도로로는 접근이 완전히 불가능한 완전한 고립역이어서, 오직 이 열차를 타야만 발을 디딜 수 있습니다. 역 플랫폼 바로 앞으로는 낙동강 지류가 흐르고, 여름에는 맑은 물에 발을 담글 수 있는 작은 공간도 마련되어 있습니다.<br><br>
+정차 시간 동안 열차에서 내려 역 주변을 산책하거나, 예쁜 꽃밭과 함께 기념사진을 찍으면 잊지 못할 추억을 남길 수 있습니다.<br><br>
+여름철 승부역에서 바라보는 협곡의 짙은 초록은 그야말로 서울 어디서도 볼 수 없는 풍경입니다.
+</p>
+
+<h2>⑦ 철암역: 종착역에서 만나는 탄광의 역사</h2>
+<p style="margin: 1em 0;">
+V-train의 종착역인 철암역은 한국 근대 산업화의 흔적을 고스란히 간직한 공간입니다. 철암역 주변에는 석탄 산업이 활발했던 시절의 건물들이 아직 남아 있으며, 지역 주민들의 기억과 사진으로 구성된 <strong>철암 탄광역사촌</strong>을 무료로 둘러볼 수 있습니다.<br><br>
+철암역에서의 체류 시간은 보통 30분에서 1시간 사이로, 이 시간 동안 역사촌을 빠르게 둘러본 후 돌아오는 V-train에 탑승하면 됩니다.<br><br>
+철암 시내 식당에서 늦은 점심이나 간식을 해결할 수도 있으며, 두부 요리와 산채 비빔밥 같은 소박한 로컬 음식이 여행의 피로를 씻어줍니다.
+</p>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260618/1_vtrain_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-3">Seungbu Station platform on a summer day in Bonghwa, South Korea. A tiny isolated train station surrounded by towering green mountains on all sides, narrow strip of blue sky visible above. A small flower garden by the platform, crystal clear stream beside the tracks, a few tourists taking photos. The phrase 하늘도 세 평 sign on the station wall. Photorealistic, ultra high detail, 1:1 aspect ratio, bright summer daylight, serene and remote mountain atmosphere.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">사방이 산으로 둘러싸인 승부역 플랫폼과 '하늘도 세 평' 표지판 / AI 제작 이미지</div>
+</div>
+
+<h2>⑧ 백두대간수목원 연계 여름 코스</h2>
+<p style="margin: 1em 0;">
+봉화 여행에서 V-train과 함께 꼭 들러야 할 곳이 <strong>국립백두대간수목원</strong>입니다. 분천역에서 차로 약 30분 거리에 있으며, 산림청이 운영하는 국내 최대 규모(5,179ha)의 산림 식물원입니다.<br><br>
+여름에는 호랑이 관찰 구역의 한국 호랑이(백두산 호랑이)를 가까이서 볼 수 있으며, 5.5km의 스카이워크 트레일과 고산 습지를 즐기기에 최적인 계절이기도 합니다.<br><br>
+<strong>입장료는 성인 기준 5,000원</strong>이며, 수목원 내 전동 카트를 이용하면 넓은 면적을 무리 없이 둘러볼 수 있습니다. 여름방학 시즌에는 주말 예약이 빠르게 마감되므로, 국립백두대간수목원 공식 홈페이지(bdgarden.kr)에서 사전 예약 후 방문하세요.<br><br>
+V-train 탑승(오전) → 백두대간수목원 관람(오후) 코스로 하루를 알차게 채울 수 있습니다.
+</p>
+
+<h2>⑨ 봉화 주변 숙박과 맛집 정보</h2>
+<p style="margin: 1em 0;">
+1박 2일 일정으로 봉화를 여행한다면, 분천역 인근 펜션이나 봉화읍 시내의 숙박시설을 이용하는 것이 편리합니다. 봉화 지역은 대형 리조트보다 가족 단위 펜션과 민박이 주류를 이루며, 조용한 자연 속 힐링을 원하는 여행자에게 잘 맞습니다.<br><br>
+맛집으로는 봉화 청량산 인근의 <strong>산채 비빔밥</strong>과 봉화 특산품인 <strong>봉화 산나물</strong>을 활용한 정식 메뉴가 유명합니다. 봉화읍 시내 재래시장에서는 봉화 송이버섯이나 산나물 건조품을 기념품으로 구입할 수도 있습니다.
+</p>
+
+<h2>⑩ 여름 방문 시 준비물과 주의사항</h2>
+<p style="margin: 1em 0;">
+V-train 구간은 협곡 사이를 지나기 때문에 기본적으로 시원한 편이지만, 한여름 열차 내부는 냉방이 작동되므로 가벼운 긴팔 하나 챙기는 것이 좋습니다.<br><br>
+승부역과 양원역에서 내릴 경우 플랫폼 주변이 비포장이거나 경사가 있을 수 있으니 <strong>운동화나 트레킹화</strong>를 착용하세요. 샌들이나 슬리퍼는 불편할 수 있습니다.<br><br>
+열차 안에서의 식사는 간단한 도시락이나 간식 위주로 준비하면 좋으며, 정차 역마다 매점이나 편의시설은 없으니 음료와 간식은 분천역 출발 전에 미리 챙겨두세요.<br><br>
+<strong>예약 취소·변경은 출발 당일 취소 시 50% 위약금이 발생</strong>할 수 있으니, 일정 변경 가능성이 있다면 최소 1~2일 전에 취소 처리하는 것이 좋습니다.
+</p>
+
+<div class="tip-box">
+<strong>📌 V-train 여행 핵심 체크리스트</strong><br><br>
+✅ 코레일 앱에서 2~3주 전 예매 (여름 주말 좌석 빠름)<br>
+✅ 월·화요일 운행 없음 확인<br>
+✅ 분천역 도착은 출발 30분 전 여유 있게<br>
+✅ 운동화 착용, 음료·간식 분천역 출발 전 구매<br>
+✅ 백두대간수목원 연계 시 bdgarden.kr 사전 예약
+</div>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260617/travel_gokseong_railbike.html">곡성 섬진강 기차마을 레일바이크 요금과 증기기관차 예약, 여름 물놀이 코스까지</a></li>
+    <li><a href="../260617/travel_caribeanbay_summer.html">캐리비안베이 여름 성수기 시작일과 산리오 콜라보·야외풀 개방 일정, 덜 붐비는 시간대는</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#봉화여행</span>
+  <span class="tag">#V트레인</span>
+  <span class="tag">#분천역협곡열차</span>
+  <span class="tag">#백두대간협곡열차</span>
+  <span class="tag">#봉화기차여행</span>
+  <span class="tag">#승부역</span>
+  <span class="tag">#양원역</span>
+  <span class="tag">#백두대간수목원</span>
+  <span class="tag">#여름여행</span>
+  <span class="tag">#수도권근교여행</span>
+</div>
+</body>
+</html>
