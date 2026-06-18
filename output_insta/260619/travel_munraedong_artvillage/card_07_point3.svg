@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== F : 텍스트 리스트 (point-3 — 하루 코스 3가지 연계 포인트) =====
+       카테고리: 국내여행 / 팔레트: #00796b #004d40 #e0f2f1 #80cbc4 #b2dfdb
+       정확히 3개 병렬: 인더스트리얼 카페 / 타임스퀘어 연계 / 한강 자전거 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.64"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="250" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">하루 코스로 즐기기</text>
+  <rect x="82" y="284" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <rect x="80" y="452" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="520" font-size="46" font-weight="700" fill="#ffffff">인더스트리얼 카페</text>
+    <text x="80" y="574" font-size="30" font-weight="500" fill="#b2dfdb">아메리카노 4,000~6,000원대 · 작품 감상 겸용</text>
+    <line x1="80" y1="636" x2="1000" y2="636" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="700" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="768" font-size="46" font-weight="700" fill="#ffffff">타임스퀘어 연계</text>
+    <text x="80" y="822" font-size="30" font-weight="500" fill="#b2dfdb">문래역 도보 10분 · 영화관·서점·식사 가능</text>
+    <line x1="80" y1="884" x2="1000" y2="884" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="948" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="1016" font-size="46" font-weight="700" fill="#ffffff">여의도 한강 자전거</text>
+    <text x="80" y="1070" font-size="30" font-weight="500" fill="#b2dfdb">따릉이로 문래역~여의도한강공원 약 15분</text>
+  </g>
+
+  <text x="80" y="1240" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#cfd8d6">오전 11시 출발이면 오후 3시쯤 여유롭게 마무리.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

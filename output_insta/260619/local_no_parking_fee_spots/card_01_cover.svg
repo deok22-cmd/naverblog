@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== card_01 : COVER (G0) — local_no_parking_fee_spots =====
+       카테고리: 로컬/생활정보  팔레트: medium=#388e3c / dark=#2e7d32 / light=#e8f5e9
+       BG 슬롯(rect id="BG__REPLACE_WITH_IMAGE")만 배경 이미지로 교체. 나머지 건드리지 말 것. -->
+  <defs>
+    <linearGradient id="scrimCoverTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.55"/>
+      <stop offset="0.30" stop-color="#000000" stop-opacity="0.10"/>
+    </linearGradient>
+    <linearGradient id="scrimCoverBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.50" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.88"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#1a2e1c"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimCoverTop)"/>
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimCoverBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#388e3c"/>
+
+  <!-- 상단 채널명 -->
+  <text x="80" y="110" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="700" fill="#81c784" letter-spacing="3">travelkorea_365</text>
+
+  <!-- 키커 -->
+  <text x="80" y="900" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#81c784" letter-spacing="3">수도권 나들이</text>
+
+  <!-- 메인 헤드라인 -->
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="96" font-weight="800" fill="#ffffff" letter-spacing="-3">
+    <tspan x="80" y="1010">주차비</tspan>
+    <tspan x="80" y="1118">0원 명소</tspan>
+  </text>
+
+  <!-- 구분선 -->
+  <rect x="80" y="1148" width="200" height="9" fill="#388e3c"/>
+
+  <!-- 서브 카피 -->
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e8f5e9">
+    <tspan x="80" y="1212">공원별 무료주차 조건</tspan>
+    <tspan x="80" y="1262">한눈에 정리했습니다</tspan>
+  </text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#2e7d32"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

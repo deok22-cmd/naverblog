@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== card_05 : INFO (P1 — 정보 표 6행) — local_no_parking_fee_spots =====
+       카테고리: 로컬/생활정보  팔레트: medium=#388e3c / dark=#2e7d32 / light=#e8f5e9
+       소스: h2⑧ info-table "스마트 나들이 전략" 6행
+       BG 슬롯만 교체. P1은 5행 기준 — 여기서는 6행을 줄 간격 조정해 표현. -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#388e3c"/>
+
+  <!-- 제목 -->
+  <text x="80" y="220" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">스마트 나들이 전략</text>
+  <rect x="82" y="254" width="140" height="9" fill="#388e3c"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <!-- 행 1 -->
+    <text x="80" y="380" font-size="38" font-weight="600" fill="#ffffff">오전 일찍 출발</text>
+    <text x="1000" y="380" font-size="38" font-weight="800" fill="#81c784" text-anchor="end">무료 자리 확보↑</text>
+    <line x1="80" y1="412" x2="1000" y2="412" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+    <!-- 행 2 -->
+    <text x="80" y="492" font-size="38" font-weight="600" fill="#ffffff">대중교통 이용</text>
+    <text x="1000" y="492" font-size="38" font-weight="800" fill="#81c784" text-anchor="end">주차비 0원</text>
+    <line x1="80" y1="524" x2="1000" y2="524" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+    <!-- 행 3 -->
+    <text x="80" y="604" font-size="38" font-weight="600" fill="#ffffff">따릉이·킥보드</text>
+    <text x="1000" y="604" font-size="38" font-weight="800" fill="#81c784" text-anchor="end">역~명소 1~2km</text>
+    <line x1="80" y1="636" x2="1000" y2="636" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+    <!-- 행 4 -->
+    <text x="80" y="716" font-size="38" font-weight="600" fill="#ffffff">주차 앱 사전 예약</text>
+    <text x="1000" y="716" font-size="38" font-weight="800" fill="#81c784" text-anchor="end">할인+자리 보장</text>
+    <line x1="80" y1="748" x2="1000" y2="748" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+    <!-- 행 5 -->
+    <text x="80" y="828" font-size="38" font-weight="600" fill="#ffffff">실시간 주차 앱</text>
+    <text x="1000" y="828" font-size="38" font-weight="800" fill="#81c784" text-anchor="end">헛걸음 예방</text>
+    <line x1="80" y1="860" x2="1000" y2="860" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+    <!-- 행 6 -->
+    <text x="80" y="940" font-size="38" font-weight="600" fill="#ffffff">이면도로 공영주차장</text>
+    <text x="1000" y="940" font-size="38" font-weight="800" fill="#81c784" text-anchor="end">저렴한 요금</text>
+  </g>
+
+  <text x="80" y="1070" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#a5d6a7">카카오맵·네이버지도 공영주차장 잔여면수 실시간 조회 가능.</text>
+
+  <!-- ===== 브랜드 워터마크 ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#2e7d32"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== G0 COVER : 커버 (admin 행정 팔레트 #1a237e/#283593/#e8eaf6) =====
+       slug: admin_esta_application / seed: 2368 / 2026-06-19 -->
+  <defs>
+    <linearGradient id="scrimCover" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.28"/>
+      <stop offset="0.50" stop-color="#000000" stop-opacity="0.44"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.86"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1224"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimCover)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#283593"/>
+
+  <!-- 채널 워드마크 상단 -->
+  <text x="80" y="128" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="700" fill="#9fa8da" letter-spacing="3">travelkorea_365</text>
+
+  <!-- 카테고리 키커 -->
+  <text x="80" y="820" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#7986cb" letter-spacing="4">미국 여행 준비</text>
+
+  <!-- 구분선 -->
+  <rect x="80" y="848" width="80" height="8" fill="#283593"/>
+
+  <!-- 메인 헤드라인 -->
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="102" font-weight="800" fill="#ffffff" letter-spacing="-3">
+    <tspan x="80" y="972">ESTA</tspan>
+    <tspan x="80" y="1082">완전정복</tspan>
+  </text>
+
+  <!-- 서브 카피 -->
+  <text x="80" y="1160" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#c5cae9">비용 40달러 · 유효기간 · 신청 절차</text>
+  <text x="80" y="1210" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="36" font-weight="400" fill="#9fa8da">공식 사이트(esta.cbp.dhs.gov) 직접 신청 가이드</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#1a237e"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

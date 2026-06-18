@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== P2 : 코스 단계 · course (조회 방법 5단계) · 생활정보 팔레트 ===== -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#1a0e00"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#f57c00"/>
+
+  <text x="80" y="270" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">조회 5단계</text>
+  <rect x="82" y="304" width="140" height="9" fill="#f57c00"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="442" font-size="42" font-weight="700" fill="#ffffff">공식 사이트 접속</text>
+    <text x="80" y="488" font-size="28" font-weight="500" fill="#ffcc80">cont.insure.or.kr · 모바일 가능 · 공식 앱 제공</text>
+    <text x="1000" y="458" font-size="36" font-weight="800" fill="#ffb74d" text-anchor="end">Step 1</text>
+    <line x1="80" y1="540" x2="1000" y2="540" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="612" font-size="42" font-weight="700" fill="#ffffff">본인인증</text>
+    <text x="80" y="658" font-size="28" font-weight="500" fill="#ffcc80">휴대폰 인증 · 아이핀 · 공동인증서 중 선택</text>
+    <text x="1000" y="628" font-size="36" font-weight="800" fill="#ffb74d" text-anchor="end">Step 2</text>
+    <line x1="80" y1="710" x2="1000" y2="710" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="782" font-size="42" font-weight="700" fill="#ffffff">정보 제공 동의</text>
+    <text x="80" y="828" font-size="28" font-weight="500" fill="#ffcc80">개인정보 수집 및 보험사 정보 조회 동의</text>
+    <text x="1000" y="798" font-size="36" font-weight="800" fill="#ffb74d" text-anchor="end">Step 3</text>
+    <line x1="80" y1="880" x2="1000" y2="880" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="952" font-size="42" font-weight="700" fill="#ffffff">보험 계약 조회</text>
+    <text x="80" y="998" font-size="28" font-weight="500" fill="#ffcc80">만기보험금·휴면보험금 자동 표시</text>
+    <text x="1000" y="968" font-size="36" font-weight="800" fill="#ffb74d" text-anchor="end">Step 4</text>
+    <line x1="80" y1="1050" x2="1000" y2="1050" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="1122" font-size="42" font-weight="700" fill="#ffffff">온라인 청구 신청</text>
+    <text x="1000" y="1122" font-size="36" font-weight="800" fill="#ffb74d" text-anchor="end">Step 5</text>
+  </g>
+
+  <text x="80" y="1240" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#ffcc80">계좌 입력 후 심사 통상 1~5 영업일 이내 입금.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#e65100"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

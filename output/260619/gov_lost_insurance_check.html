@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1f8e9; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 14px; font-size: 0.95em; }
+  .info-table td { border: 1px solid #ddd; padding: 10px 14px; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #fff; border: 1px solid #c8e6c9; border-left-width: 4px; margin-bottom: 15px; border-radius: 0 6px 6px 0; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .caution-box { background: #fce4ec; border: 1px solid #e57373; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-area .img-placeholder { background: #f5f5f5; border: 2px dashed #a5d6a7; border-radius: 8px; padding: 20px; text-align: left; }
+  .img-area .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 700; color: #388e3c; }
+  .img-area .ph-file { font-size: 0.8em; color: #888; font-family: monospace; }
+  .img-area pre.prompt-text { background: #263238; color: #80cbc4; padding: 12px; border-radius: 6px; font-size: 0.82em; white-space: pre-wrap; margin: 10px 0; }
+  .img-area .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 5px; padding: 7px 16px; cursor: pointer; font-size: 0.85em; }
+  .img-caption { font-size: 0.9em; color: #555; margin-top: 8px; font-style: italic; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = '복사 완료!';
+    btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>안 찾아간 보험금 조회하는 법, 내보험찾아줌으로 숨은 돈 찾기</h1>
+
+<div class="intro-box">
+혹시 모르는 사이에 받지 못한 보험금이 있을 수 있다는 사실, 알고 계셨나요?<br><br>
+보험 만기가 지났는데도 청구를 하지 않았거나, 예전에 가입한 보험을 잊고 있었던 경우 등 다양한 이유로 보험금이 그대로 남아 있는 경우가 생각보다 많습니다.<br><br>
+<strong>내보험찾아줌</strong>(cont.insure.or.kr)은 생명보험협회와 손해보험협회가 공동으로 운영하는 공공 서비스로, 내가 가입한 모든 보험 계약과 찾지 않은 보험금을 한 번에 조회할 수 있습니다.<br><br>
+별도 회원가입 없이 본인인증만 하면 되고, 서비스 이용 요금은 전혀 없습니다. 조회 후 온라인으로 즉시 청구 신청도 가능합니다.<br><br>
+이 글에서는 내보험찾아줌 조회 방법부터 청구 절차, 주의사항까지 순서대로 안내해 드립니다. 출처: 생명보험협회 내보험찾아줌 공식 사이트(cont.insure.or.kr), 금융감독원.
+</div>
+
+<h2>① 숨은 보험금이 발생하는 이유</h2>
+
+보험금을 찾아가지 않는 상황은 다양한 이유로 발생합니다.<br><br>
+가장 흔한 경우는 <strong>보험 만기가 지났는데 청구를 깜빡한 것</strong>입니다. 만기 안내 우편을 받지 못했거나, 이사 후 연락처가 바뀌어 통지가 전달되지 않은 경우가 많습니다.<br><br>
+<strong>보험 계약 자체를 잊어버린 경우</strong>도 흔합니다. 어릴 때 부모님이 가입해 준 보험이나, 직장을 통해 단체로 가입한 보험을 성인이 된 후 잊고 있다가 발견하는 사례가 꾸준히 있습니다.<br><br>
+또한 <strong>사망한 가족의 보험금</strong>을 유족이 청구하지 않고 지나치는 경우도 있습니다. 가족 중 보험 계약을 담당하던 분이 돌아가신 경우, 다른 가족들이 보험 가입 사실 자체를 모를 수 있습니다.<br><br>
+금융감독원에 따르면 보험사에 쌓인 미청구 보험금은 매년 수천억 원 규모에 달합니다. 내보험찾아줌 서비스를 통해 정기적으로 확인하는 것이 좋습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260619/4_insurance_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-1">Korean person sitting at a desk using a smartphone to check insurance information on the official government financial website, documents and an insurance policy booklet on the table, home office setting, focused and satisfied expression, warm natural lighting, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">내보험찾아줌 서비스로 숨은 보험금을 조회하는 모습 — 스마트폰으로도 간편하게 확인 가능 / AI 제작 이미지</div>
+</div>
+
+<h2>② 내보험찾아줌이란 — 어떤 서비스인가</h2>
+
+내보험찾아줌(cont.insure.or.kr)은 생명보험협회와 손해보험협회가 공동으로 구축·운영하는 보험금 통합 조회 서비스입니다.<br><br>
+이 서비스를 이용하면 <strong>현재 유지 중인 모든 보험 계약</strong>은 물론, <strong>만기보험금(아직 소멸시효가 지나지 않은 것)과 휴면보험금(소멸시효가 지난 것)</strong>까지 한 화면에서 확인할 수 있습니다.<br><br>
+서비스 특징은 다음과 같습니다. 첫째, 별도 회원가입이 필요 없어 접근성이 높습니다. 둘째, 휴대폰 본인인증·아이핀·공동인증서(공인인증서) 중 편한 방법으로 인증할 수 있습니다. 셋째, 생명보험사와 손해보험사 모두 조회 가능해 한 번에 전체 보험을 파악할 수 있습니다.<br><br>
+2026년부터는 모든 보험사가 온라인 청구 시스템을 내보험찾아줌과 연계해, 조회 후 바로 온라인 청구 신청까지 가능합니다. 보험사 방문이나 전화 없이도 간편하게 청구를 진행할 수 있게 되었습니다.
+
+<h2>③ 조회 방법 단계별 안내</h2>
+
+내보험찾아줌 서비스 이용 방법을 단계별로 설명해 드립니다.<br><br>
+
+<div class="step-box">
+  <strong>Step 1. 공식 사이트 접속</strong><br>
+  인터넷 브라우저에서 <strong>cont.insure.or.kr</strong>에 접속합니다. 모바일 기기에서도 이용 가능합니다. '내보험찾아줌' 공식 앱(생명보험협회)도 제공됩니다.
+</div>
+
+<div class="step-box">
+  <strong>Step 2. 본인인증</strong><br>
+  화면에 안내되는 대로 본인인증을 진행합니다. 휴대폰 본인인증, 아이핀, 공동인증서 중 하나를 선택합니다. 별도 회원가입은 필요 없습니다.
+</div>
+
+<div class="step-box">
+  <strong>Step 3. 정보 제공 동의</strong><br>
+  개인정보 수집 및 보험사 정보 조회에 대한 동의 절차를 진행합니다. 내용을 확인하고 동의하면 됩니다.
+</div>
+
+<div class="step-box">
+  <strong>Step 4. 보험 계약 조회</strong><br>
+  본인인증과 동의가 완료되면 현재 가입된 보험 계약 목록이 자동으로 조회됩니다. 만기보험금, 휴면보험금이 있는 경우 별도로 표시됩니다.
+</div>
+
+<div class="step-box">
+  <strong>Step 5. 청구 신청 (해당 시)</strong><br>
+  미수령 보험금이 있으면 해당 항목을 클릭해 온라인 청구를 신청합니다. 입금 계좌 정보를 입력하면 보험사 심사 후 보통 1~5 영업일 이내 계좌로 입금됩니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260619/4_insurance_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-2">A Korean insurance policy document and money bills placed on a clean white desk, financial planning concept, person reviewing policy papers, calculator and pen nearby, bright natural window light, organized financial documents, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">보험 서류와 환급금 — 잊고 있던 만기보험금이 내 계좌로 돌아올 수 있습니다 / AI 제작 이미지</div>
+</div>
+
+<h2>④ 만기보험금과 휴면보험금 — 차이가 무엇인가</h2>
+
+내보험찾아줌에서 확인할 수 있는 미수령 보험금은 크게 두 가지로 나뉩니다.<br><br>
+<strong>만기보험금</strong>은 보험 계약 기간이 종료되었지만 아직 보험금 청구권의 소멸시효가 지나지 않은 보험금입니다. 소멸시효는 일반적으로 3년입니다. 만기 후 3년 이내라면 정상적으로 청구해 받을 수 있습니다.<br><br>
+<strong>휴면보험금</strong>은 소멸시효(3년)가 지난 이후에도 찾아가지 않은 보험금입니다. 소멸시효가 지났어도 보험사가 이를 즉시 소멸 처리하지 않고 별도로 보관하는 경우가 있습니다. 내보험찾아줌을 통해 조회한 뒤 청구 신청을 하면 심사 후 지급 여부가 결정됩니다.<br><br>
+<strong>보험계약 대출 미상환 잔금</strong>도 함께 확인하세요. 예전에 보험계약 대출을 받고 상환하지 않은 잔금이 있으면 만기보험금에서 공제되므로, 청구 전 대출 잔금을 먼저 파악해 두는 것이 좋습니다.
+
+<h2>⑤ 청구 후 입금까지 걸리는 시간</h2>
+
+온라인 청구 신청 후 보험사가 서류를 검토하는 데 걸리는 시간은 보험사마다 다르지만, 통상적으로 <strong>1~5 영업일</strong>이 소요됩니다.<br><br>
+단순 만기보험금 청구인 경우 빠르면 당일~다음 날 입금이 되기도 합니다. 반면 복잡한 심사가 필요한 경우(사망보험금, 상해보험금 등)는 더 많은 시간이 걸릴 수 있습니다.<br><br>
+청구 신청 후 시간이 지나도 입금이 되지 않는다면 해당 보험사 고객센터에 직접 문의하시는 것이 가장 정확합니다. 내보험찾아줌 공식 사이트에서도 청구 현황을 조회할 수 있습니다.
+
+<h2>⑥ 조회 시 주의사항</h2>
+
+내보험찾아줌을 이용할 때 몇 가지 주의해야 할 사항이 있습니다.<br><br>
+<strong>공식 사이트 주소 확인</strong>: cont.insure.or.kr이 공식 주소입니다. 검색 광고 등을 통해 유사 사이트로 유도하는 경우가 있으니 주소를 직접 입력하거나, 금융감독원 공식 안내를 통해 접속하세요.<br><br>
+<strong>대리 조회 주의</strong>: 개인정보 보호를 위해 본인 직접 조회가 원칙입니다. 타인에게 개인정보를 제공하며 대리 조회를 맡기는 것은 개인정보 유출 위험이 있습니다.<br><br>
+<strong>상속인 조회</strong>: 사망한 가족의 보험금을 유족이 조회하려면 상속인 조회 절차가 별도로 필요합니다. 생명보험협회 콜센터(02-2262-6600)에 문의하면 안내받을 수 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260619/4_insurance_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-3">Korean family reviewing insurance documents together at a dining table, father and mother looking at papers and a tablet showing financial information, mature adults in their 40s-50s, comfortable home environment, evening warm lighting, serious yet calm discussion, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">가족이 함께 보험 서류를 점검하는 모습 — 정기적인 보험 관리가 숨은 돈을 찾는 첫 걸음 / AI 제작 이미지</div>
+</div>
+
+<h2>⑦ 내보험찾아줌 외 함께 확인하면 좋은 서비스</h2>
+
+보험금 외에도 놓치기 쉬운 금융 자산을 함께 확인할 수 있는 서비스들을 소개합니다.<br><br>
+<strong>금융감독원 파인(fine.fss.or.kr)</strong>: 금융감독원이 운영하는 금융 소비자 정보 포털로, 금융거래정보 조회, 금융사기 신고, 금융분쟁 조정 등의 서비스를 제공합니다. 보험금 외에도 은행·증권·카드 등 다양한 금융 정보를 확인할 수 있습니다.<br><br>
+<strong>정부24 금융 서비스 연계</strong>: 정부24(gov.kr) 로그인 후 금융 서비스 조회 기능을 활용하면 건강보험 환급금, 국세 환급금 등도 함께 조회할 수 있습니다. 한 번의 본인인증으로 여러 서비스를 이용할 수 있어 편리합니다.<br><br>
+<strong>국민건강보험공단(nhis.or.kr)</strong>: 본인부담금 상한제에 따른 건강보험 환급금을 조회할 수 있습니다. 매년 8월경 공단에서 통지가 오지만, 직접 사이트에서 조회하면 더 빠르게 확인할 수 있습니다.
+
+<h2>⑧ 보험 정기 점검 — 1년에 한 번은 꼭 확인하세요</h2>
+
+<table class="info-table">
+  <thead>
+    <tr>
+      <th>확인 항목</th>
+      <th>이용 서비스</th>
+      <th>주기</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="background:#f1faf9;">미수령 보험금</td>
+      <td>내보험찾아줌 (cont.insure.or.kr)</td>
+      <td>연 1회 이상</td>
+    </tr>
+    <tr>
+      <td>건강보험 환급금</td>
+      <td>국민건강보험공단 (nhis.or.kr)</td>
+      <td>연 1회 (8월 통지)</td>
+    </tr>
+    <tr>
+      <td style="background:#f1faf9;">국세 환급금</td>
+      <td>홈택스 (hometax.go.kr)</td>
+      <td>5월 종합소득세 신고 후</td>
+    </tr>
+    <tr>
+      <td>금융거래정보 조회</td>
+      <td>금융감독원 파인 (fine.fss.or.kr)</td>
+      <td>필요 시</td>
+    </tr>
+    <tr>
+      <td style="background:#f1faf9;">상속인 보험 조회</td>
+      <td>생명보험협회 콜센터 (02-2262-6600)</td>
+      <td>필요 시</td>
+    </tr>
+  </tbody>
+</table>
+
+보험은 가입해 두고 잊어버리기 쉬운 금융 상품입니다.<br><br>
+1년에 한 번 정도 내보험찾아줌과 위에 소개한 서비스들을 통해 보험 현황을 점검하는 습관을 가지시면, 미처 챙기지 못한 돈을 돌려받거나 불필요한 보험을 정리하는 데 큰 도움이 됩니다.<br><br>
+특히 오래된 보험 서류가 집에 있다면, 해당 보험사의 고객센터에 연락해 계약 현황을 확인해 보세요.
+
+<h2>⑨ 핵심 정보 정리</h2>
+
+<ul>
+  <li><strong>서비스명</strong>: 내보험찾아줌</li>
+  <li><strong>운영 주체</strong>: 생명보험협회·손해보험협회 공동 운영</li>
+  <li><strong>공식 주소</strong>: cont.insure.or.kr</li>
+  <li><strong>이용 비용</strong>: 무료</li>
+  <li><strong>본인인증 방식</strong>: 휴대폰 인증, 아이핀, 공동인증서</li>
+  <li><strong>조회 가능 항목</strong>: 보험 계약 현황, 만기보험금, 휴면보험금</li>
+  <li><strong>청구 후 입금 소요시간</strong>: 심사 후 통상 1~5 영업일</li>
+  <li><strong>문의</strong>: 생명보험협회 콜센터 02-2262-6600</li>
+</ul>
+
+보험금은 본인이 청구하지 않으면 자동으로 지급되지 않습니다.<br><br>
+내보험찾아줌을 통해 지금 바로 내 보험 현황을 확인해 보시기 바랍니다. 생각보다 큰 금액이 기다리고 있을 수 있습니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260618/local_highway_toll_weekend.html">주말 고속도로 통행료 할인 되나, 경차·전기차·다자녀 감면 조건과 미납 통행료 납부 방법</a></li>
+    <li><a href="../260618/admin_transfer_registration.html">전입신고 인터넷으로 하는 법과 확정일자 동시에 받는 방법</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#숨은보험금</span>
+  <span class="tag">#내보험찾아줌</span>
+  <span class="tag">#보험금조회</span>
+  <span class="tag">#휴면보험금</span>
+  <span class="tag">#만기보험금</span>
+  <span class="tag">#보험환급금</span>
+  <span class="tag">#미청구보험금</span>
+  <span class="tag">#생명보험협회</span>
+  <span class="tag">#금융정보조회</span>
+  <span class="tag">#보험점검</span>
+</div>
+
+</body>
+</html>

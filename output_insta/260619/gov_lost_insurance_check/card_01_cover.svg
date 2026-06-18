@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== G0 COVER : 커버 (생활정보 팔레트 · gov_lost_insurance_check) ===== -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.38"/>
+      <stop offset="0.55" stop-color="#000000" stop-opacity="0.52"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.80"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#1a0e00"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#f57c00"/>
+
+  <!-- 상단 채널 키커 -->
+  <text x="80" y="160" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#ffb74d" letter-spacing="4">생활정보 · 금융</text>
+
+  <!-- 메인 타이틀 -->
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="104" font-weight="800" fill="#ffffff" letter-spacing="-3">
+    <tspan x="80" y="560">안 찾아간</tspan>
+    <tspan x="80" y="680">보험금</tspan>
+    <tspan x="80" y="800">있을 수도</tspan>
+  </text>
+
+  <!-- 구분 바 -->
+  <rect x="80" y="840" width="180" height="10" fill="#f57c00"/>
+
+  <!-- 서브 타이틀 -->
+  <text x="80" y="940" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="46" font-weight="600" fill="#fff3e0">내보험찾아줌으로</text>
+  <text x="80" y="998" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="46" font-weight="600" fill="#fff3e0">지금 바로 확인하세요</text>
+
+  <!-- 보조 칩 -->
+  <rect x="80" y="1070" width="360" height="68" rx="34" fill="#f57c00"/>
+  <text x="260" y="1114" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#ffffff">무료 · 회원가입 불필요</text>
+
+  <!-- 하단 안내 -->
+  <text x="80" y="1260" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="500" fill="#ffcc80">cont.insure.or.kr</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#e65100"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>
