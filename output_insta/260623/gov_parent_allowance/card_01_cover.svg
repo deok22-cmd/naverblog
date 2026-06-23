@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== G0 : 커버 (사진중심 · 하단 스크림 · 훅 헤드라인) =====
+       원고: 부모급여 얼마씩 언제 들어오나, 첫만남이용권 신청 방법과 지급 시기
+       slug: gov_parent_allowance / seed: 2122 -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.30" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="0.70" stop-color="#000000" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.88"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1f1c"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <!-- 상단 채널 태그 -->
+  <text x="80" y="120" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#80cbc4" letter-spacing="3">travelkorea_365</text>
+
+  <!-- 메인 헤드라인 -->
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-weight="800" fill="#ffffff" letter-spacing="-2">
+    <tspan x="80" y="990" font-size="110">부모급여</tspan>
+    <tspan x="80" y="1110" font-size="110">언제·얼마?</tspan>
+  </text>
+
+  <!-- 서브 카피 -->
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="40" font-weight="500" fill="#e0f2f1">
+    <tspan x="80" y="1190">0세 100만 원·1세 50만 원</tspan>
+    <tspan x="80" y="1242">첫만남이용권까지 한 번에 정리</tspan>
+  </text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

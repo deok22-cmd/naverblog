@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== card_03 : info (P1 정보표) =====
+       거제 학동·구조라 핵심 정보 6행 · 국내여행 팔레트 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="270" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">거제 핵심 정보</text>
+  <rect x="82" y="304" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="430" font-size="38" font-weight="600" fill="#ffffff">주요 해변</text>
+    <text x="1000" y="430" font-size="34" font-weight="800" fill="#80cbc4" text-anchor="end">학동(몽돌) · 구조라(모래)</text>
+    <line x1="80" y1="468" x2="1000" y2="468" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="548" font-size="38" font-weight="600" fill="#ffffff">특징</text>
+    <text x="1000" y="548" font-size="34" font-weight="800" fill="#80cbc4" text-anchor="end">천연기념물 동백림 · 팔색조</text>
+    <line x1="80" y1="586" x2="1000" y2="586" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="666" font-size="38" font-weight="600" fill="#ffffff">개장 시기</text>
+    <text x="1000" y="666" font-size="34" font-weight="800" fill="#80cbc4" text-anchor="end">통상 7월 초 전후~8월 중순</text>
+    <line x1="80" y1="704" x2="1000" y2="704" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="784" font-size="38" font-weight="600" fill="#ffffff">가는 법</text>
+    <text x="1000" y="784" font-size="34" font-weight="800" fill="#80cbc4" text-anchor="end">거가대교(부산) · 신거제대교(통영)</text>
+    <line x1="80" y1="822" x2="1000" y2="822" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="902" font-size="38" font-weight="600" fill="#ffffff">주차</text>
+    <text x="1000" y="902" font-size="34" font-weight="800" fill="#80cbc4" text-anchor="end">해변 인근 · 성수기 오전 도착 권장</text>
+    <line x1="80" y1="940" x2="1000" y2="940" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="1020" font-size="38" font-weight="600" fill="#ffffff">주변 코스</text>
+    <text x="1000" y="1020" font-size="34" font-weight="800" fill="#80cbc4" text-anchor="end">바람의언덕 · 신선대 · 외도 보타니아</text>
+  </g>
+
+  <text x="80" y="1150" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="28" font-weight="500" fill="#b2dfdb">방문 전 거제시 공식 공지에서 개장일 재확인 권장.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>
