@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== P1 : 정보 표 (사진중심 · 전면 스크림 워시만, 불투명 박스/보더 없음) =====
+       info 카드 — 목적별 최적 물때 요약 (section ⑦ info-table 6행)
+       생활·정보 카테고리: main=#388e3c, dark=#1b5e20, light=#e8f5e9 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#388e3c"/>
+
+  <text x="80" y="230" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="56" font-weight="800" fill="#ffffff">목적별 최적 물때</text>
+  <rect x="82" y="264" width="140" height="9" fill="#388e3c"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="380" font-size="38" font-weight="600" fill="#ffffff">갯벌 체험·조개 캐기</text>
+    <text x="1000" y="380" font-size="38" font-weight="800" fill="#a5d6a7" text-anchor="end">간조 전후 1~2시간</text>
+    <line x1="80" y1="418" x2="1000" y2="418" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="494" font-size="38" font-weight="600" fill="#ffffff">바닷길 개방 체험</text>
+    <text x="1000" y="494" font-size="38" font-weight="800" fill="#a5d6a7" text-anchor="end">간조 전후 (현지 확인)</text>
+    <line x1="80" y1="532" x2="1000" y2="532" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="608" font-size="38" font-weight="600" fill="#ffffff">해수욕·수영</text>
+    <text x="1000" y="608" font-size="38" font-weight="800" fill="#a5d6a7" text-anchor="end">만조 전후 2시간</text>
+    <line x1="80" y1="646" x2="1000" y2="646" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="722" font-size="38" font-weight="600" fill="#ffffff">낚시</text>
+    <text x="1000" y="722" font-size="38" font-weight="800" fill="#a5d6a7" text-anchor="end">들물·날물 조류 변화 시</text>
+    <line x1="80" y1="760" x2="1000" y2="760" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="836" font-size="38" font-weight="600" fill="#ffffff">일출 감상·촬영</text>
+    <text x="1000" y="836" font-size="38" font-weight="800" fill="#a5d6a7" text-anchor="end">일출 30분 전 도착</text>
+    <line x1="80" y1="874" x2="1000" y2="874" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="950" font-size="38" font-weight="600" fill="#ffffff">일몰 감상·촬영</text>
+    <text x="1000" y="950" font-size="38" font-weight="800" fill="#a5d6a7" text-anchor="end">일몰 30분 전 도착</text>
+  </g>
+
+  <text x="80" y="1080" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="28" font-weight="500" fill="#81c784">사리 때 갯벌 범위 가장 넓음 · 바닷길 현지 안내 필수.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#1b5e20"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

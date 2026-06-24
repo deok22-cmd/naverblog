@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== P2 : course 카드 — 트레킹 코스 동선 (순차 단계 텍스트) ===== -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="270" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">9곡 트레킹 동선</text>
+  <rect x="82" y="304" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="442" font-size="42" font-weight="700" fill="#ffffff">주차장(입구) 출발</text>
+    <text x="80" y="488" font-size="28" font-weight="500" fill="#b2dfdb">내비: 속리산국립공원 화양동 탐방지원센터</text>
+    <text x="1000" y="458" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">출발</text>
+    <line x1="80" y1="540" x2="1000" y2="540" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="612" font-size="42" font-weight="700" fill="#ffffff">제1곡 → 제3곡</text>
+    <text x="80" y="658" font-size="28" font-weight="500" fill="#b2dfdb">경천벽·운영담·읍궁암 — 역사 포인트 집중</text>
+    <text x="1000" y="628" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">약 40분</text>
+    <line x1="80" y1="710" x2="1000" y2="710" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="782" font-size="42" font-weight="700" fill="#ffffff">제4곡 금사담 (핵심)</text>
+    <text x="80" y="828" font-size="28" font-weight="500" fill="#b2dfdb">너른 암반에서 충분히 쉬어가기 추천</text>
+    <text x="1000" y="798" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">여유</text>
+    <line x1="80" y1="880" x2="1000" y2="880" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="952" font-size="42" font-weight="700" fill="#ffffff">제5~9곡 → 파곶</text>
+    <text x="80" y="998" font-size="28" font-weight="500" fill="#b2dfdb">첨성대·능운대·와룡암·학소대·파곶 순</text>
+    <text x="1000" y="968" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">약 60분</text>
+    <line x1="80" y1="1050" x2="1000" y2="1050" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="1122" font-size="42" font-weight="700" fill="#ffffff">왕복 전체 소요</text>
+    <text x="1000" y="1122" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">2시간 30분~3시간</text>
+  </g>
+
+  <text x="80" y="1240" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">단축 코스: 금사담까지 왕복 약 4km · 1~1시간 30분.</text>
+
+  <!-- ===== 브랜드 워터마크 ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

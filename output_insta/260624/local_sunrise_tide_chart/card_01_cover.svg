@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== G0 : 커버 (사진중심 · 하단+상단 스크림 · 브랜드바) =====
+       local_sunrise_tide_chart / 생활·정보 카테고리
+       카테고리 팔레트: main=#388e3c, dark=#1b5e20, light=#e8f5e9, 보조=#a5d6a7/#81c784/#c8e6c9 -->
+  <defs>
+    <linearGradient id="scrimTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.58"/>
+      <stop offset="0.32" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.44" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.88"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1f1c"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimTop)"/>
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#388e3c"/>
+
+  <!-- 상단 채널 워드마크 -->
+  <text x="80" y="108" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="700" fill="#a5d6a7" letter-spacing="3">travelkorea_365</text>
+
+  <!-- 카테고리 키커 -->
+  <text x="80" y="900" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#a5d6a7" letter-spacing="4">바다 여행 필수 정보</text>
+
+  <!-- 구분선 -->
+  <rect x="80" y="924" width="100" height="8" fill="#388e3c"/>
+
+  <!-- 메인 타이틀 -->
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="96" font-weight="800" fill="#ffffff" letter-spacing="-2">
+    <tspan x="80" y="1048">일출·물때표</tspan>
+    <tspan x="80" y="1158">제대로 보는 법</tspan>
+  </text>
+
+  <!-- 서브 카피 -->
+  <text x="80" y="1230" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e8f5e9">타이밍 맞춰야 바다가 보인다</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#1b5e20"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

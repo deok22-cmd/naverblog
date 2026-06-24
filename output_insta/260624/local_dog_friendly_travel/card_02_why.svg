@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- card_02_why · C : 측면 텍스트 · 반려견 여행 왜 사전 확인이 필요한가 -->
+  <defs>
+    <linearGradient id="scrimLeft" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.72"/>
+      <stop offset="0.55" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.70" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.50"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimLeft)"/>
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="300" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#80cbc4" letter-spacing="3">반려견 여행</text>
+
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="78" font-weight="800" fill="#ffffff" letter-spacing="-2">
+    <tspan x="80" y="420">현장에서</tspan>
+    <tspan x="80" y="518">거절당하지</tspan>
+    <tspan x="80" y="616">않으려면</tspan>
+  </text>
+
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e0f2f1">
+    <tspan x="80" y="730">입장 허용 여부, 이동장 조건,</tspan>
+    <tspan x="80" y="782">목줄·배변봉투 규정은</tspan>
+    <tspan x="80" y="834">반드시 사전에 확인해야 합니다.</tspan>
+  </text>
+
+  <text x="80" y="1290" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="600" fill="#e0f2f1">국내 여행지마다 세부 규정이 다릅니다.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

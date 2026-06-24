@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>일출 일몰 시간 정확히 보는 앱과 물때표 읽는 법, 바다 여행 타이밍 맞추기</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1f8f2; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 14px; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #e8f5e9; }
+  .tip-box { background: #fffde7; border-left: 4px solid #f9a825; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .img-placeholder { background: #f4f4f4; border: 2px dashed #ccc; border-radius: 8px; padding: 30px 20px; text-align: center; }
+  .ph-head { font-weight: 700; margin-bottom: 12px; color: #555; display: flex; justify-content: space-between; align-items: center; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 12px; text-align: left; font-size: 0.83em; color: #444; white-space: pre-wrap; line-height: 1.6; font-family: monospace; }
+  .copy-btn { margin-top: 10px; background: #388e3c; color: #fff; border: none; border-radius: 6px; padding: 7px 18px; cursor: pointer; font-size: 0.9em; }
+  .app-box { border: 1px solid #a5d6a7; border-radius: 8px; padding: 14px 18px; margin: 12px 0; background: #f9fdf9; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>일출 일몰 시간 정확히 보는 앱과 물때표 읽는 법, 바다 여행 타이밍 맞추기</h1>
+
+<div class="intro-box">
+<strong>📌 핵심 요약</strong><br><br>
+바다 여행에서 <strong>일출·일몰 시간</strong>과 <strong>물때표</strong>는 여행의 질을 결정하는 핵심 정보입니다. 해돋이를 보러 갔다가 이미 해가 올라온 뒤에 도착하거나, 갯벌 체험을 하러 갔다가 물이 꽉 차 있는 상황을 피하려면 사전 확인이 필수입니다.<br><br>
+이 글에서는 <strong>일출·일몰 시간 정확히 보는 앱</strong>, <strong>물때표 읽는 방법</strong>, 그리고 갯벌 체험·낚시·일출 촬영 등 목적별로 어떤 물때에 방문해야 유리한지 정리했습니다. 스마트폰 하나로 바다 여행 타이밍을 완벽하게 맞춰 보세요.
+</div>
+
+<h2>① 일출·일몰 시간, 왜 직접 확인해야 할까</h2>
+
+일출과 일몰 시간은 날짜와 위치에 따라 매일 달라집니다. 같은 날이라도 동해 정동진과 서해 안면도의 일몰 시간은 수십 분 이상 차이가 납니다. 또한 여름철 일출은 오전 5시 20분대로 매우 이르고, 겨울철 일출은 오전 7시 40분대까지 늦춰집니다.<br><br>
+검색 사이트의 일반 정보나 블로그 글에 기재된 시간은 특정 날짜·특정 지점 기준일 수 있어 내가 방문할 날짜·장소와 정확히 일치하지 않을 수 있습니다. 가장 정확한 정보는 <strong>기상청 천문 계산 서비스</strong>나 전용 앱을 통해 직접 조회하는 것이 최선입니다.<br><br>
+특히 해돋이 명소(정동진·간절곶·호미곶 등)나 일몰 명소(안면도 꽃지해변·변산반도·마라도 등)를 방문할 때는 적어도 30분 전 도착을 목표로 하고, 날씨에 따른 변수(구름·안개)도 감안해야 합니다.
+
+<div class="img-area">
+  <img alt="동해 일출 명소의 해돋이 풍경 / AI 제작 이미지" src="../../images/260624/3_sunrise_tide_1.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+</div>
+
+<h2>② 일출·일몰 시간 정확히 보는 앱과 사이트</h2>
+
+<strong>가장 정확한 공식 방법</strong>은 기상청 국가기상포털(www.weather.go.kr)의 천문(일출·일몰·월출·월몰) 계산 서비스를 이용하는 것입니다. 날짜와 지점(도시명 또는 좌표)을 입력하면 해당 날의 일출·일몰 시간을 분 단위로 확인할 수 있습니다.<br><br>
+<strong>스마트폰 앱</strong>으로는 아래 앱들이 많이 사용됩니다:<br><br>
+
+<div class="app-box">
+<strong>① 기상청 날씨 앱</strong> — 공식 앱으로, 일출·일몰 정보가 오늘의 날씨 요약에 포함되어 있습니다. 위치 기반으로 자동 계산됩니다.
+</div>
+
+<div class="app-box">
+<strong>② Sunrise Sunset (해외 앱)</strong> — GPS 기반으로 일출·일몰·천문 박명(golden hour·blue hour) 시간을 정밀하게 표시해 줍니다. 사진 촬영 목적의 여행자에게 특히 유용합니다.
+</div>
+
+<div class="app-box">
+<strong>③ 네이버 지도 / 카카오맵</strong> — 특정 지점을 검색하면 해당 지역의 일출·일몰 시간이 표시되는 경우가 있습니다. 간단한 확인 용도로 활용할 수 있습니다.
+</div>
+
+<div class="app-box">
+<strong>④ Tide Chart (물때 앱)</strong> — 일출·일몰과 함께 물때(조석) 정보를 통합해서 보여주는 앱입니다. 낚시와 갯벌 체험을 계획하는 분들에게 유용합니다.
+</div>
+
+<h2>③ 물때표란 무엇인가, 조석 기초 지식</h2>
+
+<strong>물때표(조석표)</strong>는 하루 동안 바닷물의 높이가 어떻게 변하는지 예측한 표입니다. 바닷물은 달과 태양의 인력에 의해 하루에 보통 2번씩 높아지고(만조·밀물) 낮아지는(간조·썰물) 주기를 반복합니다.<br><br>
+<strong>주요 용어 정리</strong>:<br><br>
+<ul>
+  <li><strong>만조(高潮·밀물)</strong>: 바닷물이 가장 높은 상태. 해변이 물로 가득 찬 시기.</li>
+  <li><strong>간조(低潮·썰물)</strong>: 바닷물이 가장 낮은 상태. 갯벌이 드러나는 시기.</li>
+  <li><strong>조차(潮差)</strong>: 만조와 간조의 수위 차이. 조차가 클수록 갯벌이 더 넓게 드러납니다.</li>
+  <li><strong>사리</strong>: 조차가 가장 큰 시기(보름·그믐 전후). 갯벌 체험에 최적.</li>
+  <li><strong>조금</strong>: 조차가 가장 작은 시기. 갯벌 체험에 불리.</li>
+</ul>
+<br><br>
+물때는 음력과 연동되어 있으며, 우리나라 서해안은 조차가 8~10m에 달해 세계적으로도 큰 편에 속합니다. 남해와 동해는 서해보다 조차가 훨씬 작습니다.
+
+<h2>④ 물때표 읽는 법 단계별 가이드</h2>
+
+물때표를 읽는 것이 처음에는 어렵게 느껴질 수 있지만, 핵심만 파악하면 간단합니다.<br><br>
+<strong>Step 1 — 방문 지점 선택</strong>: 물때는 지역마다 다릅니다. 인천, 목포, 여수, 부산, 속초 등 방문할 지역에 해당하는 조석 정보를 선택해야 합니다.<br><br>
+<strong>Step 2 — 날짜 확인</strong>: 오늘 또는 방문 날짜를 선택합니다.<br><br>
+<strong>Step 3 — 만조·간조 시간 확인</strong>: 표에 표시된 시간(예: 03:42 만조, 09:28 간조, 15:57 만조, 22:10 간조)을 보고 내가 방문할 시간을 비교합니다.<br><br>
+<strong>Step 4 — 목적에 맞는 시간 선택</strong>:<br><br>
+<ul>
+  <li>갯벌 체험·조개 캐기: 간조 시간을 전후로 1~2시간 (갯벌이 가장 넓게 드러남)</li>
+  <li>바닷길 개방(예: 진도·보령 무창포): 간조 전후 특정 시간에 바닷길이 열림 — 현지 공식 일정 확인 필수</li>
+  <li>해수욕·서핑: 만조 전후로 수심이 충분한 시간대</li>
+  <li>낚시: 물때 변화(들물·날물)가 활발한 간조~만조 중간 시간대가 고기 활성이 높음</li>
+</ul>
+
+<div class="img-area">
+  <img alt="서해 갯벌 간조 시 모습과 갯벌 체험 / AI 제작 이미지" src="../../images/260624/3_sunrise_tide_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+</div>
+
+<h2>⑤ 무료로 물때표 확인하는 방법</h2>
+
+<strong>국립해양조사원 바다누리 해양정보 서비스</strong>(www.khoa.go.kr)에서 전국 주요 항구의 조석 예보를 무료로 제공합니다. 날짜와 지점을 선택하면 하루 단위 만조·간조 시간과 수위(cm)를 확인할 수 있습니다.<br><br>
+<strong>스마트폰 앱</strong>으로는 국립해양조사원이 제공하는 <strong>"바다타임"</strong> 앱을 설치하면 위치 기반으로 조석 정보, 일출·일몰, 파고 정보를 한 번에 볼 수 있어 매우 편리합니다. 안드로이드·아이폰 모두 무료로 다운로드할 수 있습니다.<br><br>
+<strong>낚시 관련 앱</strong>: "물때와 날씨"(안드로이드/iOS) 앱은 낚시인들 사이에서 오래전부터 많이 사용되는 앱으로, 조석 정보 외에 물때 등급, 날씨, 바람 방향·속도까지 통합해서 보여줍니다.<br><br>
+이 중 바다타임과 기상청 앱 조합이 가장 정확하고 공식적인 정보를 제공하므로 여행 전 두 앱을 함께 확인하는 것을 권장합니다.
+
+<h2>⑥ 일출·일몰 촬영을 위한 황금 시간대</h2>
+
+사진을 찍거나 감성적인 바다 분위기를 즐기고 싶다면 <strong>골든 아워(golden hour)</strong>와 <strong>블루 아워(blue hour)</strong>를 기억하세요.<br><br>
+<strong>골든 아워</strong>: 일출 직후 약 30~45분, 일몰 직전 약 30~45분. 태양 고도가 낮아 빛이 수평으로 들어오고 색온도가 따뜻해져 사진이 가장 아름답게 나오는 시간입니다.<br><br>
+<strong>블루 아워</strong>: 일출 직전 15~20분, 일몰 직후 15~20분. 하늘이 짙은 파란색으로 물드는 시간으로, 도시 야경과 바다가 함께 담기는 사진을 찍기에 좋습니다.<br><br>
+두 시간대 모두 정확한 시간은 Sunrise Sunset 앱이나 기상청 천문 서비스에서 당일 기준으로 확인할 수 있습니다. 구름이 적당히 있는 날이 아예 맑은 날보다 더 드라마틱한 색감이 나오는 경우가 많습니다.
+
+<h2>⑦ 목적별 바다 여행 최적 물때 요약</h2>
+
+<table class="info-table">
+  <tr>
+    <th>목적</th>
+    <th>최적 물때</th>
+    <th>주의 사항</th>
+  </tr>
+  <tr>
+    <td style="background:#f1f8f2;">갯벌 체험·조개 캐기</td>
+    <td style="background:#f1f8f2;">간조 전후 1~2시간</td>
+    <td style="background:#fff;">사리 때 갯벌 범위 가장 넓음</td>
+  </tr>
+  <tr>
+    <td style="background:#f1f8f2;">바닷길 개방 체험</td>
+    <td style="background:#f1f8f2;">간조 전후 (현지 공식 일정 확인)</td>
+    <td style="background:#fff;">진도·무창포 등 현지 안내 필수</td>
+  </tr>
+  <tr>
+    <td style="background:#f1f8f2;">해수욕·수영</td>
+    <td style="background:#f1f8f2;">만조 전후 2시간</td>
+    <td style="background:#fff;">수심 충분, 이안류 주의</td>
+  </tr>
+  <tr>
+    <td style="background:#f1f8f2;">낚시</td>
+    <td style="background:#f1f8f2;">들물·날물 (조류 변화 시간)</td>
+    <td style="background:#fff;">어종마다 활성 물때 다름</td>
+  </tr>
+  <tr>
+    <td style="background:#f1f8f2;">일출 감상·촬영</td>
+    <td style="background:#f1f8f2;">일출 30분 전 도착</td>
+    <td style="background:#fff;">동해 방향 명소, 날씨 확인 필수</td>
+  </tr>
+  <tr>
+    <td style="background:#f1f8f2;">일몰 감상·촬영</td>
+    <td style="background:#f1f8f2;">일몰 30분 전 도착</td>
+    <td style="background:#fff;">서해·남해 방향 명소 유리</td>
+  </tr>
+</table>
+
+<h2>⑧ 일출·일몰 명소별 최적 방문 시간 예시</h2>
+
+<strong>정동진(강릉)</strong>: 7월 중순 기준 일출 약 오전 5시 10~15분. 열차 여행자는 서울에서 야간 기차를 타고 현지에서 일출을 맞이하는 코스가 인기입니다.<br><br>
+<strong>간절곶(울산)</strong>: 한반도 최동단 지점 중 하나로, 1월 1일 기준 국내에서 가장 이른 일출 명소로 알려져 있습니다. 실제 방문 날짜의 일출 시간은 기상청 또는 바다타임 앱으로 확인하세요.<br><br>
+<strong>안면도 꽃지해변(태안)</strong>: 서해 대표 일몰 명소로, 할미바위와 할아비바위 사이로 해가 지는 풍경이 특히 아름답습니다. 7월 기준 일몰은 오후 7시 40분~50분 내외입니다(방문 시 당일 앱 확인 필수).<br><br>
+<strong>마라도(제주)</strong>: 한반도 최남단 섬으로, 일출·일몰 모두 독특한 경험이 됩니다. 배 시간(운진항 출발)을 물때와 날씨에 맞춰 미리 예약하세요.
+
+<h2>⑨ 스마트하게 바다 여행 타이밍 맞추는 루틴</h2>
+
+바다 여행 계획 시 다음 루틴을 실천하면 실망 없는 여행을 만들 수 있습니다.<br><br>
+<strong>D-3 (여행 3일 전)</strong>: 기상청 중기 예보 확인, 방문 날 날씨·강수 확률 체크.<br><br>
+<strong>D-1 (전날)</strong>: 국립해양조사원 바다누리 또는 바다타임 앱에서 방문 날 만조·간조 시간 확인. 일출·일몰 시간을 기상청 앱으로 확인하고 알람 설정.<br><br>
+<strong>당일 출발 전</strong>: 현지 날씨 최종 확인, 안개·호우 예보 시 계획 수정 고려.<br><br>
+<strong>현장 도착 후</strong>: 현지 안내판이나 관리소에서 금일 조석·갯벌 체험 시간 재확인. 특히 바닷길 개방 같은 현상은 기상 조건에 따라 변동이 있을 수 있습니다.<br><br>
+이 루틴을 습관화하면 "갔더니 아무것도 못 봤어"라는 아쉬운 후기 없이 바다 여행의 하이라이트를 제대로 즐길 수 있습니다.
+
+<div class="img-area">
+  <img alt="서해 꽃지해변 스타일의 일몰 풍경 / AI 제작 이미지" src="../../images/260624/3_sunrise_tide_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+</div>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260623/travel_geoje_hakdong_gujora.html">거제 학동 흑진주몽돌해변 파도소리와 구조라해수욕장 가는 길, 남해 섬 여름 피서</a></li>
+    <li><a href="../260623/travel_namhae_sangju_eunmorae.html">남해 상주은모래비치 백사장과 금산 보리암, 가족 여름 휴가 당일 코스</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#일출시간</span>
+  <span class="tag">#일몰시간</span>
+  <span class="tag">#물때표</span>
+  <span class="tag">#조석표</span>
+  <span class="tag">#바다여행</span>
+  <span class="tag">#갯벌체험</span>
+  <span class="tag">#바다타임앱</span>
+  <span class="tag">#낚시물때</span>
+  <span class="tag">#해돋이명소</span>
+  <span class="tag">#일몰명소</span>
+</div>
+
+</body>
+</html>

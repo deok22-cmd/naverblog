@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== G0 커버 : 화양구곡 (국내여행 팔레트 #00796b/#004d40/#e0f2f1) ===== -->
+  <defs>
+    <linearGradient id="scrimCover" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.30"/>
+      <stop offset="0.45" stop-color="#000000" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.82"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1f1c"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimCover)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <!-- 상단 채널 키커 -->
+  <text x="80" y="120" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#80cbc4" letter-spacing="4">충청북도 계곡 피서</text>
+
+  <!-- 메인 타이틀 -->
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="108" font-weight="800" fill="#ffffff" letter-spacing="-3">
+    <tspan x="80" y="820">화양구곡</tspan>
+    <tspan x="80" y="940">완전정복</tspan>
+  </text>
+
+  <!-- 구분선 -->
+  <rect x="80" y="972" width="160" height="10" fill="#00796b"/>
+
+  <!-- 서브타이틀 -->
+  <text x="80" y="1050" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="42" font-weight="600" fill="#e0f2f1">9곡 트레킹 코스 · 입장료 · 가는 법</text>
+
+  <!-- 로케이션 칩 -->
+  <rect x="80" y="1100" width="380" height="68" rx="34" fill="#00796b"/>
+  <text x="270" y="1145" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#ffffff">괴산 · 속리산국립공원</text>
+
+  <!-- 하단 캐치카피 -->
+  <text x="80" y="1260" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="500" fill="#b2dfdb">청정 계곡 + 조선시대 명승지 한 코스에</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

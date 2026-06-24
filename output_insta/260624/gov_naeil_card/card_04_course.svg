@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== P2 : 코스 단계 — COURSE : 발급 절차 5단계 =====
+       카테고리: 생활·정보 / 팔레트: main=#00796b dark=#004d40 light=#e0f2f1 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="270" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">발급 절차</text>
+  <rect x="82" y="304" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="442" font-size="42" font-weight="700" fill="#ffffff">발급 자격 확인</text>
+    <text x="80" y="488" font-size="28" font-weight="500" fill="#b2dfdb">1350 상담 또는 고용센터 방문</text>
+    <text x="1000" y="458" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">Step 1</text>
+    <line x1="80" y1="540" x2="1000" y2="540" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="612" font-size="42" font-weight="700" fill="#ffffff">HRD-Net 회원가입 및 신청</text>
+    <text x="80" y="658" font-size="28" font-weight="500" fill="#b2dfdb">www.hrd.go.kr 접속 후 온라인 서류 제출</text>
+    <text x="1000" y="628" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">Step 2</text>
+    <line x1="80" y1="710" x2="1000" y2="710" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="782" font-size="42" font-weight="700" fill="#ffffff">카드 발급 심사</text>
+    <text x="80" y="828" font-size="28" font-weight="500" fill="#b2dfdb">약 5~10 영업일 이내 심사 결과 통보</text>
+    <text x="1000" y="798" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">Step 3</text>
+    <line x1="80" y1="880" x2="1000" y2="880" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="952" font-size="42" font-weight="700" fill="#ffffff">카드 수령</text>
+    <text x="80" y="998" font-size="28" font-weight="500" fill="#b2dfdb">은행 앱 발급 또는 실물 카드 우편 발송</text>
+    <text x="1000" y="968" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">Step 4</text>
+    <line x1="80" y1="1050" x2="1000" y2="1050" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="1122" font-size="42" font-weight="700" fill="#ffffff">훈련 과정 수강 신청</text>
+    <text x="80" y="1168" font-size="28" font-weight="500" fill="#b2dfdb">HRD-Net에서 원하는 과정 검색 후 신청</text>
+    <text x="1000" y="1138" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">Step 5</text>
+  </g>
+
+  <text x="80" y="1286" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">상세 가이드는 프로필 블로그에서 확인하세요.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>
