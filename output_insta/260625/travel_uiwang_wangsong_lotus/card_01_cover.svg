@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== G0 커버 : travel_uiwang_wangsong_lotus (2026-06-25) =====
+       국내여행 팔레트: primary #00796b / dark #004d40 / light #e0f2f1
+       seed=3025 / 8장 세트 card_01 of 08 -->
+  <defs>
+    <linearGradient id="scrimCover" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.30"/>
+      <stop offset="0.45" stop-color="#000000" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.78"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d2420"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimCover)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <!-- 상단 채널 태그 -->
+  <text x="80" y="114" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#80cbc4" letter-spacing="3">travelkorea_365</text>
+
+  <!-- 키커 -->
+  <text x="80" y="800" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="700" fill="#80cbc4" letter-spacing="3">경기 의왕</text>
+
+  <!-- 구분 틱 -->
+  <rect x="80" y="824" width="60" height="8" fill="#00796b"/>
+
+  <!-- 메인 타이틀 -->
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="96" font-weight="800" fill="#ffffff" letter-spacing="-3">
+    <tspan x="80" y="940">왕송호수</tspan>
+    <tspan x="80" y="1046">레일바이크</tspan>
+  </text>
+
+  <!-- 서브타이틀 -->
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="42" font-weight="500" fill="#b2dfdb">
+    <tspan x="80" y="1130">연꽃 · 레일바이크 · 조류관찰</tspan>
+    <tspan x="80" y="1184">수도권 당일치기 완벽 코스</tspan>
+  </text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== card_06 : info — P1 (정보 표, label↔value 6행 → P1 강제) =====
+       카테고리: 생활·정보  팔레트: primary=#388e3c / dark=#1b5e20 / light=#e8f5e9
+       소스: h2 "05 사용 가능한 곳과 불가 업종" — 6행 대비 표 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#1a2318"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#388e3c"/>
+
+  <text x="80" y="200" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="56" font-weight="800" fill="#ffffff">사용처 vs 불가 업종</text>
+  <rect x="82" y="234" width="140" height="9" fill="#388e3c"/>
+
+  <!-- 헤더 행 -->
+  <text x="80" y="320" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#a5d6a7" letter-spacing="1">사용 가능</text>
+  <text x="1000" y="320" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#e57373" text-anchor="end" letter-spacing="1">사용 불가</text>
+  <line x1="80" y1="338" x2="1000" y2="338" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="410" font-size="38" font-weight="600" fill="#ffffff">전통시장·동네마트·슈퍼</text>
+    <text x="1000" y="410" font-size="38" font-weight="800" fill="#a5d6a7" text-anchor="end">대형마트</text>
+    <line x1="80" y1="450" x2="1000" y2="450" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="530" font-size="38" font-weight="600" fill="#ffffff">음식점·카페</text>
+    <text x="1000" y="530" font-size="38" font-weight="800" fill="#a5d6a7" text-anchor="end">백화점·아울렛</text>
+    <line x1="80" y1="570" x2="1000" y2="570" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="650" font-size="38" font-weight="600" fill="#ffffff">미용실·세탁소</text>
+    <text x="1000" y="650" font-size="38" font-weight="800" fill="#a5d6a7" text-anchor="end">온라인 쇼핑몰</text>
+    <line x1="80" y1="690" x2="1000" y2="690" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="770" font-size="38" font-weight="600" fill="#ffffff">약국·의원</text>
+    <text x="1000" y="770" font-size="38" font-weight="800" fill="#a5d6a7" text-anchor="end">유흥·사행 업종</text>
+    <line x1="80" y1="810" x2="1000" y2="810" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="890" font-size="38" font-weight="600" fill="#ffffff">문화·예술 시설(지역 극장)</text>
+    <text x="1000" y="890" font-size="38" font-weight="800" fill="#a5d6a7" text-anchor="end">세금·공과금</text>
+    <line x1="80" y1="930" x2="1000" y2="930" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="1010" font-size="38" font-weight="600" fill="#ffffff">주유소(일부 지역)</text>
+    <text x="1000" y="1010" font-size="38" font-weight="800" fill="#a5d6a7" text-anchor="end">보험료·통신요금</text>
+  </g>
+
+  <text x="80" y="1110" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#c8e6c9">연 매출 30억 원 이하 가맹점에서 사용 가능.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#1b5e20"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

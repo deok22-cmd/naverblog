@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== card_05 : course — F (텍스트 3포인트 리스트, 콘텐츠 형태 강제) =====
+       카테고리: 생활·정보  팔레트: primary=#388e3c / dark=#1b5e20 / light=#e8f5e9
+       소스: h2 "04 신청 방법 (3가지 경로)" — 정확히 3개 병렬 step-box → F 강제 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.64"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#1a2318"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#388e3c"/>
+
+  <text x="80" y="250" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">신청 방법 3가지</text>
+  <rect x="82" y="284" width="140" height="9" fill="#388e3c"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <rect x="80" y="452" width="34" height="8" fill="#a5d6a7"/>
+    <text x="80" y="520" font-size="46" font-weight="700" fill="#ffffff">카드사 앱 신청</text>
+    <text x="80" y="574" font-size="30" font-weight="500" fill="#c8e6c9">신한카드·KB국민카드 앱 → 민생회복 메뉴 선택</text>
+    <line x1="80" y1="636" x2="1000" y2="636" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="700" width="34" height="8" fill="#a5d6a7"/>
+    <text x="80" y="768" font-size="46" font-weight="700" fill="#ffffff">간편결제 플랫폼</text>
+    <text x="80" y="822" font-size="30" font-weight="500" fill="#c8e6c9">네이버페이·카카오페이·페이코 '정부 지원금' 메뉴</text>
+    <line x1="80" y1="884" x2="1000" y2="884" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="948" width="34" height="8" fill="#a5d6a7"/>
+    <text x="80" y="1016" font-size="46" font-weight="700" fill="#ffffff">행정복지센터 방문</text>
+    <text x="80" y="1070" font-size="30" font-weight="500" fill="#c8e6c9">주소지 관할 읍·면·동 주민센터 방문 신청</text>
+  </g>
+
+  <text x="80" y="1240" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#dcedc8">방문 시 지역사랑상품권·선불카드로 수령 가능.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#1b5e20"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

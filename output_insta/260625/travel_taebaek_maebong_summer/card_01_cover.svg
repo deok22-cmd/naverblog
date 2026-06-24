@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== G0 커버 : 태백 매봉산 바람의언덕 =====
+       카테고리: 국내여행  primary #00796b / dark #004d40 / light #e0f2f1
+       seed = 3050  총 9장 세트 card_01 ~  card_09 -->
+  <defs>
+    <linearGradient id="scrimCover" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"    stop-color="#000000" stop-opacity="0.30"/>
+      <stop offset="0.45" stop-color="#000000" stop-opacity="0.10"/>
+      <stop offset="1"    stop-color="#000000" stop-opacity="0.80"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d2420"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimCover)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <!-- 상단 채널 워드마크 -->
+  <text x="80" y="108" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif"
+        font-size="30" font-weight="700" fill="#80cbc4" letter-spacing="3">travelkorea_365</text>
+
+  <!-- 서브 키커 -->
+  <text x="80" y="980" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif"
+        font-size="32" font-weight="700" fill="#80cbc4" letter-spacing="4">강원도 태백  ·  해발 1,303m</text>
+
+  <!-- 메인 타이틀 2줄 -->
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif"
+        font-size="104" font-weight="800" fill="#ffffff" letter-spacing="-3">
+    <tspan x="80" y="1108">바람의언덕</tspan>
+    <tspan x="80" y="1222">여름 드라이브</tspan>
+  </text>
+
+  <!-- 하단 요약 한 줄 -->
+  <text x="80" y="1282" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif"
+        font-size="36" font-weight="500" fill="#e0f2f1">입장 무료  ·  주차 무료  ·  고랭지 배추밭 절정</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif"
+          font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

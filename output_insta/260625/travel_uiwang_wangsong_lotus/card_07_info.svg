@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== P1 : 정보 표 — info (의왕레일파크 운영 정보표) =====
+       card_07 of 08 / seed=3025 / P1 (7행 → ≥5 충족) / 국내여행 팔레트 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d2420"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="270" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">레일파크 정보</text>
+  <rect x="82" y="304" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="420" font-size="38" font-weight="600" fill="#ffffff">정기 휴무</text>
+    <text x="1000" y="420" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">매주 월요일</text>
+    <line x1="80" y1="458" x2="1000" y2="458" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="538" font-size="38" font-weight="600" fill="#ffffff">평일 운행 회차</text>
+    <text x="1000" y="538" font-size="32" font-weight="800" fill="#80cbc4" text-anchor="end">09:30 ~ 16:00 (7회)</text>
+    <line x1="80" y1="578" x2="1000" y2="578" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="658" font-size="38" font-weight="600" fill="#ffffff">주말 추가 회차</text>
+    <text x="1000" y="658" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">17:00 / 18:00</text>
+    <line x1="80" y1="698" x2="1000" y2="698" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="778" font-size="38" font-weight="600" fill="#ffffff">4인승 요금</text>
+    <text x="1000" y="778" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">평일 36,000 / 주말 40,000</text>
+    <line x1="80" y1="818" x2="1000" y2="818" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="898" font-size="38" font-weight="600" fill="#ffffff">2인승 요금</text>
+    <text x="1000" y="898" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">평일 28,000 / 주말 30,000</text>
+    <line x1="80" y1="938" x2="1000" y2="938" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="1018" font-size="38" font-weight="600" fill="#ffffff">코스</text>
+    <text x="1000" y="1018" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">왕복 3.9km · 30~40분</text>
+  </g>
+
+  <text x="80" y="1130" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">2026년 기준 · 방문 전 홈페이지(uwrailpark.com) 재확인 권장.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>
