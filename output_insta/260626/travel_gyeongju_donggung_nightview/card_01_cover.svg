@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== G0 커버 : 경주 동궁과 월지 야경 =====
+       국내여행 팔레트 #00796b / #004d40 / #e0f2f1 -->
+  <defs>
+    <linearGradient id="scrimTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.62"/>
+      <stop offset="0.38" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.52" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.82"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1f1c"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimTop)"/>
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <!-- 상단 채널 키커 -->
+  <text x="80" y="110" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#80cbc4" letter-spacing="3">국내여행 · 경주</text>
+
+  <!-- 메인 타이틀 -->
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="102" font-weight="800" fill="#ffffff" letter-spacing="-3">
+    <tspan x="80" y="1010">동궁과</tspan>
+    <tspan x="80" y="1128">월지 야경</tspan>
+  </text>
+
+  <!-- 구분 틱 -->
+  <rect x="82" y="1158" width="140" height="10" fill="#00796b"/>
+
+  <!-- 서브타이틀 -->
+  <text x="80" y="1220" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e0f2f1">1,300년 신라 야경 · 수면 반영 감동</text>
+
+  <!-- 정보 칩 -->
+  <rect x="80" y="1260" width="640" height="60" rx="30" fill="#00796b" fill-opacity="0.82"/>
+  <text x="400" y="1299" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#ffffff">성인 3,000원 · 입장 마감 21:30</text>
+
+  <!-- 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막) -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

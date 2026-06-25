@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f9fdf9; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 14px; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #eee; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #f9fdf9; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border-left: 5px solid #f9a825; padding: 18px 20px; margin: 25px 0; border-radius: 0 8px 8px 0; }
+  .caution-box { background: #fce4ec; border-left: 5px solid #e57373; padding: 18px 20px; margin: 25px 0; border-radius: 0 8px 8px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #bdbdbd; border-radius: 8px; padding: 20px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: bold; color: #555; }
+  .ph-file { font-size: 0.85em; color: #388e3c; font-family: monospace; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 12px; font-size: 0.85em; line-height: 1.6; color: #333; white-space: pre-wrap; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.85em; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>K-패스 카드 어디서 발급하나, 2026 카드사별 혜택 비교와 신청 방법</h1>
+
+<div class="intro-box">
+<strong>✅ 이 글의 핵심 요약</strong><br><br>
+K-패스는 대중교통을 이용할 때마다 일정 금액을 환급해 주는 교통카드 시스템으로, 2026년부터 일반 30%·청년 30%·저소득 53% 환급 체계로 개편됐습니다.<br><br>
+현재 19개 카드사에서 K-패스 전용 카드를 발급하고 있으며, 카드사마다 대중교통 환급 외 추가 혜택이 다릅니다.<br><br>
+이 글에서는 주요 카드사별 혜택을 정리하고, K-패스 카드 발급부터 앱 등록까지 순서대로 안내합니다. 단, 카드 혜택과 요건은 수시로 변경될 수 있으니 발급 전 각 카드사 공식 채널에서 최신 혜택을 재확인하시길 권합니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260626/3_kpass_card_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-1">Clean flat-lay product photograph of multiple Korean K-Pass transit credit cards and debit cards from various Korean banks (Shinhan, KB, Toss, Kakao, etc.) arranged neatly on a white background. Modern card designs with green and blue color schemes. Small K-Pass logo visible on cards. Smartphone showing K-Pass app interface placed beside the cards. Clean, professional product photography style. Photorealistic, ultra high detail, 1:1 aspect ratio, soft studio lighting.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">K-패스 참여 카드사 카드 비교 / AI 제작 이미지</div>
+</div>
+
+<h2>01. K-패스란 무엇이고 2026년 무엇이 달라졌나</h2>
+
+<p>K-패스(K-Pass)는 정부가 운영하는 대중교통 이용 환급 제도입니다.<br><br>
+대중교통(버스·지하철·광역버스 등)을 이용한 금액의 일정 비율을 매달 환급해 주는 방식으로, 이전의 '알뜰교통카드' 제도를 2024년에 개선·확대한 형태입니다. 알뜰교통카드는 정류장까지 걷거나 자전거로 이동한 거리를 별도로 기록해야 하는 번거로움이 있었는데, K-패스는 그런 절차 없이 교통카드 태그만 하면 자동으로 환급 실적이 적립됩니다.</p>
+
+<p>2026년부터 K-패스의 여러 조건이 개편되어 혜택이 더 늘어났습니다.<br><br>
+주요 변화는 크게 세 가지입니다. 첫째, <strong>1일 2회·월 60회 이용 제한이 폐지</strong>되어 이용 횟수에 관계없이 모든 교통비에 환급이 적용됩니다. 둘째, <strong>고령층 기본 환급률이 20%에서 30%로 상향</strong>됐습니다. 셋째, '모두의 카드'라는 정액형 환급 패스가 신설되었습니다. 이 변화들로 인해 출퇴근이나 통학에 대중교통을 자주 이용하는 분들에게 실질적인 혜택이 더 커졌습니다.</p>
+
+<h2>02. K-패스 환급률 — 내 나이와 소득 수준에 따라 얼마나 받나</h2>
+
+<table class="info-table">
+  <tr>
+    <th>유형</th>
+    <th>환급률</th>
+    <th>대상</th>
+  </tr>
+  <tr>
+    <td style="background:#f9fdf9;"><strong>일반</strong></td>
+    <td style="background:#f9fdf9;">이용 금액의 20%</td>
+    <td style="background:#f9fdf9;">만 35세 이상 일반 성인</td>
+  </tr>
+  <tr>
+    <td style="background:#fff;"><strong>고령층</strong></td>
+    <td style="background:#fff;">이용 금액의 30%</td>
+    <td style="background:#fff;">2026년 신규 — 만 65세 이상(공고 확인)</td>
+  </tr>
+  <tr>
+    <td style="background:#f9fdf9;"><strong>청년</strong></td>
+    <td style="background:#f9fdf9;">이용 금액의 30%</td>
+    <td style="background:#f9fdf9;">만 19세~34세</td>
+  </tr>
+  <tr>
+    <td style="background:#fff;"><strong>저소득</strong></td>
+    <td style="background:#fff;">이용 금액의 53%</td>
+    <td style="background:#fff;">기초생활수급자·차상위계층</td>
+  </tr>
+</table>
+
+<p>환급 금액은 매달 대중교통 이용 금액에 환급률을 곱한 금액이 다음 달에 지급됩니다.<br><br>
+예를 들어 청년이 한 달에 대중교통비로 6만 원을 사용하면 30%인 1만 8,000원을 환급받는 방식입니다. 환급 방식은 카드사마다 다소 차이가 있으며, 카드 포인트로 적립되거나 청구 금액에서 차감하는 형태가 대부분입니다.</p>
+
+<div class="caution-box">
+<strong>⚠️ 확인 필요 사항</strong><br><br>
+정확한 대상 연령 기준·환급률·적용 제외 교통수단은 개편 시점에 따라 달라질 수 있습니다.<br>
+발급 전 K-패스 공식 홈페이지(kpass.go.kr) 또는 카드사 공식 채널에서 최신 요건을 재확인하세요.
+</div>
+
+<h2>03. K-패스 참여 카드사 목록 — 어디서 발급하나</h2>
+
+<p>2026년 기준 총 <strong>19개 카드사</strong>에서 K-패스 전용 카드를 발급하고 있습니다.<br><br>
+신용카드와 체크카드 모두 선택 가능하며, 본인의 생활 패턴에 맞는 카드사와 상품을 고르는 것이 핵심입니다. 대표적인 참여 카드사로는 신한카드, KB국민카드, 우리카드, 하나카드, 삼성카드, 현대카드, 롯데카드 등 시중 대형 카드사 외에도 카카오뱅크, 케이뱅크, 토스뱅크 등 인터넷 은행 계열이 포함됩니다.</p>
+
+<p>K-패스 카드를 처음 발급할 때는 본인이 주로 쓰는 은행의 카드로 발급하면 앱 통합 관리가 편리합니다.<br><br>
+반면 기존에 사용하던 카드와 다른 카드사의 K-패스를 따로 발급해 혜택을 극대화하는 방법도 있습니다. 현재 어떤 카드사가 참여 중인지, 그리고 신규 참여 카드사가 있는지는 K-패스 공식 홈페이지에서 최신 목록을 확인하시길 권장합니다.</p>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260626/3_kpass_card_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-2">Korean person using smartphone to register K-Pass transit card on K-Pass mobile app. Clean interface showing card registration screen on smartphone. Person's hand holding a green K-Pass card near the phone. Modern minimalist home interior background. Step-by-step registration flow visible on the screen. Photorealistic, ultra high detail, 1:1 aspect ratio, soft natural lighting, lifestyle photography style.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">스마트폰으로 K-패스 앱에 카드를 등록하는 과정 / AI 제작 이미지</div>
+</div>
+
+<h2>04. 신용카드 vs 체크카드 — K-패스는 어느 쪽이 유리한가</h2>
+
+<p>K-패스는 신용카드와 체크카드 모두에서 발급할 수 있습니다.<br><br>
+두 유형 각각의 장단점이 있어 본인의 소비 패턴과 신용 상황에 맞는 선택이 필요합니다.</p>
+
+<div class="step-box">
+<strong>신용카드의 장점</strong><br>
+— 카드사 혜택이 더 다양(편의점·마트·통신비 할인 등)<br>
+— 일정 실적 달성 시 추가 혜택 제공<br>
+— 후불 교통카드로 편의성 높음
+</div>
+<div class="step-box">
+<strong>체크카드의 장점</strong><br>
+— 신용 심사 없이 은행 계좌만 있으면 발급 가능<br>
+— 과소비 걱정 없이 통장 잔액 내에서만 사용<br>
+— 인터넷 은행 계열은 연회비 없이 기본 혜택 제공
+</div>
+
+<p>실적 조건이 부담스럽거나 신용카드 발급이 어려운 경우에는 카카오뱅크·케이뱅크·토스뱅크 등 인터넷 은행 계열의 체크카드가 무난한 선택입니다.<br><br>
+이들 카드는 별도 실적 조건 없이 K-패스 환급이 기본으로 적용되는 경우가 많아 간편합니다. 반면 신한카드나 KB국민카드 등 대형 카드사의 신용카드는 편의점·통신비·쇼핑 등 생활 밀착 혜택이 추가로 있어 대중교통 외 혜택도 같이 챙기고 싶다면 고려해볼 만합니다.</p>
+
+<h2>05. 주요 카드사별 추가 혜택 요약</h2>
+
+<p>K-패스 환급 외에 카드사가 제공하는 추가 혜택은 카드마다 다릅니다.<br><br>
+아래는 2026년 기준 대표 카드사들의 특징을 정리한 내용이지만, 카드 혜택은 수시로 변경될 수 있으므로 실제 혜택은 각 카드사 공식 홈페이지나 앱에서 반드시 재확인하시길 권장합니다.</p>
+
+<table class="info-table">
+  <tr>
+    <th>카드사</th>
+    <th>카드 유형</th>
+    <th>추가 혜택 특징 (공식 채널 재확인 필수)</th>
+  </tr>
+  <tr>
+    <td style="background:#f9fdf9;">신한카드</td>
+    <td style="background:#f9fdf9;">신용·체크</td>
+    <td style="background:#f9fdf9;">편의점·카페·통신비 할인 포함 생활 밀착형</td>
+  </tr>
+  <tr>
+    <td style="background:#fff;">KB국민카드</td>
+    <td style="background:#fff;">신용·체크</td>
+    <td style="background:#fff;">마트·생활 혜택 중심, 포인트 적립 다양</td>
+  </tr>
+  <tr>
+    <td style="background:#f9fdf9;">카카오뱅크</td>
+    <td style="background:#f9fdf9;">체크</td>
+    <td style="background:#f9fdf9;">실적 부담 없음, 카카오페이 연동 편리</td>
+  </tr>
+  <tr>
+    <td style="background:#fff;">토스뱅크</td>
+    <td style="background:#fff;">체크</td>
+    <td style="background:#fff;">2026년 2월 출시, 조건 없이 교통 혜택 제공</td>
+  </tr>
+  <tr>
+    <td style="background:#f9fdf9;">케이뱅크</td>
+    <td style="background:#f9fdf9;">체크</td>
+    <td style="background:#f9fdf9;">인터넷 은행 중 발급 간편, 해외 여행 추가 혜택</td>
+  </tr>
+  <tr>
+    <td style="background:#fff;">우리카드</td>
+    <td style="background:#fff;">신용·체크</td>
+    <td style="background:#fff;">주유·자동차 관련 혜택 포함 가능</td>
+  </tr>
+</table>
+
+<p>위 내용은 2026년 6월 시점의 일반적인 특징을 정리한 것으로, 세부 혜택과 적립 조건은 시기에 따라 달라집니다.<br><br>
+카드를 최종 선택하기 전, 반드시 각 카드사의 공식 홈페이지나 앱에서 현재 유효한 혜택을 확인하고 비교하세요. 또한 연회비가 있는 신용카드는 연회비 대비 혜택이 실질적으로 득인지 먼저 계산해 보는 것이 좋습니다.</p>
+
+<h2>06. 모두의 카드(대중교통 정액패스) — K-패스 2026 신설 상품</h2>
+
+<p>2026년 K-패스의 가장 큰 변화 중 하나는 <strong>모두의 카드(대중교통 정액패스)</strong> 도입입니다.<br><br>
+기존 K-패스는 교통비의 일정 비율을 환급해 주는 방식이었다면, 모두의 카드는 정액형으로 운영됩니다. 매달 일정 금액(패스 금액) 이상 대중교통을 이용하면, 초과 사용분을 전액 환급해 주는 구조입니다. 월 대중교통 이용 금액이 많은 분들에게 특히 유리할 수 있습니다.</p>
+
+<p>모두의 카드가 일반 K-패스보다 유리한지는 본인의 월 교통비 지출액에 따라 달라집니다.<br><br>
+매달 대중교통을 많이 이용하는 직장인·학생이라면 정액패스가 오히려 실질 환급액이 더 클 수 있고, 이용 횟수가 적은 분들은 기존 비율형 환급이 맞을 수 있습니다. 정확한 패스 금액 기준과 환급 구조는 K-패스 공식 홈페이지나 카드사를 통해 확인하시길 권장합니다.</p>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260626/3_kpass_card_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-3">Korean commuter tapping K-Pass transit card on bus card reader in Seoul. Modern city bus interior with passengers. Person's hand holding green K-Pass card near orange card reader terminal. Display showing successful payment. Blurred city street view through bus window. Natural daylight. Photorealistic, ultra high detail, 1:1 aspect ratio, candid lifestyle photography style, warm tone.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">대중교통 탑승 시 K-패스 카드 태그 / AI 제작 이미지</div>
+</div>
+
+<h2>07. K-패스 카드 발급 신청 방법 — 단계별 안내</h2>
+
+<div class="step-box">
+<strong>1단계: 카드사 선택</strong><br>
+본인의 소비 패턴과 혜택을 비교해 원하는 카드사와 상품(신용·체크)을 선택합니다.
+</div>
+<div class="step-box">
+<strong>2단계: 카드 발급 신청</strong><br>
+선택한 카드사의 공식 홈페이지나 앱(App)에서 K-패스 전용 카드를 신청합니다. 신용카드는 신용 심사가 있고, 체크카드는 해당 은행 계좌 개설이 필요합니다.
+</div>
+<div class="step-box">
+<strong>3단계: 카드 수령</strong><br>
+카드 발급에는 보통 3~7 영업일이 소요됩니다. 일부 카드사는 모바일 발급(앱 카드)으로 빠르게 사용 시작이 가능합니다.
+</div>
+<div class="step-box">
+<strong>4단계: K-패스 앱 설치 및 회원 가입</strong><br>
+'K-패스' 공식 앱을 설치하고 회원 가입을 진행합니다. 본인 인증(휴대폰 인증 등)이 필요합니다.
+</div>
+<div class="step-box">
+<strong>5단계: 카드 번호 등록</strong><br>
+K-패스 앱에서 발급받은 카드를 등록합니다. 카드사와 카드 번호를 입력하면 연동이 완료됩니다.
+</div>
+<div class="step-box">
+<strong>6단계: 유형 설정</strong><br>
+청년·저소득·일반 중 해당하는 유형을 선택하고 필요 서류(청년증명서, 수급자증명서 등)를 제출합니다. 서류 심사 후 해당 유형의 환급률이 적용됩니다.
+</div>
+
+<p>등록이 완료된 후 대중교통을 이용하면 자동으로 실적이 쌓이고, 다음 달에 환급금이 카드 포인트 또는 청구 차감 형태로 지급됩니다.<br><br>
+카드사마다 환급 지급 방식과 일정이 다르므로 이 부분도 카드 선택 전 미리 확인해 두세요.</p>
+
+<h2>08. K-패스 이용 시 주의할 점</h2>
+
+<p>K-패스를 이용할 때 몇 가지 주의해야 할 점이 있습니다.<br><br>
+첫째, <strong>모든 대중교통에 환급이 적용되는 것은 아닙니다.</strong> 광역버스, 신분당선, 일부 공항철도 등 별도 요금제를 사용하는 노선은 K-패스 적용에서 제외될 수 있습니다. 자주 이용하는 노선이 적용 대상인지 K-패스 공식 홈페이지에서 확인하세요.</p>
+
+<p>둘째, 카드 실적 조건을 확인해야 합니다.<br><br>
+일부 신용카드는 K-패스 환급 외 추가 혜택을 받기 위해 월 일정 금액 이상 사용 실적이 필요합니다. 실적 조건을 채우지 못하면 추가 혜택이 적용되지 않으므로, 본인이 실제로 조건을 맞출 수 있는지 판단한 후 카드를 선택하세요.<br><br>
+셋째, K-패스 앱 등록 없이는 환급이 되지 않습니다. 카드만 발급받고 앱 등록을 안 한 상태로 사용하면 환급이 전혀 적용되지 않으므로, 카드 수령 후 반드시 K-패스 앱에 카드 등록까지 완료해야 합니다.</p>
+
+<h2>09. K-패스 vs 기후동행카드 — 어느 쪽이 내게 맞나</h2>
+
+<p>서울·수도권 거주자라면 K-패스와 기후동행카드 중 어느 것이 유리한지 고민하시는 분들이 많습니다.<br><br>
+두 제도는 구조가 다릅니다. K-패스는 이용 금액에 따라 환급받는 방식이고, 기후동행카드는 월 정액 요금을 내고 대중교통을 무제한으로 이용하는 방식입니다.</p>
+
+<table class="info-table">
+  <tr>
+    <th>구분</th>
+    <th>K-패스</th>
+    <th>기후동행카드</th>
+  </tr>
+  <tr>
+    <td style="background:#f9fdf9;">운영 방식</td>
+    <td style="background:#f9fdf9;">이용 금액 비율 환급</td>
+    <td style="background:#f9fdf9;">월 정액 무제한 이용</td>
+  </tr>
+  <tr>
+    <td style="background:#fff;">사용 지역</td>
+    <td style="background:#fff;">전국 대중교통</td>
+    <td style="background:#fff;">서울 시내 대중교통 위주</td>
+  </tr>
+  <tr>
+    <td style="background:#f9fdf9;">유리한 경우</td>
+    <td style="background:#f9fdf9;">지방·수도권 광역 이동 많은 분</td>
+    <td style="background:#f9fdf9;">서울 내 이동이 매우 많은 분</td>
+  </tr>
+  <tr>
+    <td style="background:#fff;">카드 제한</td>
+    <td style="background:#fff;">전용 카드 발급 필요</td>
+    <td style="background:#fff;">별도 기후동행카드 구매</td>
+  </tr>
+</table>
+
+<p>서울 시내에서만 주로 이동하고 대중교통 이용 횟수가 매우 많다면 기후동행카드가 더 유리할 수 있습니다.<br><br>
+반면 서울 외 지역을 포함한 광역 이동이 많거나, 청년·저소득 환급률이 적용되는 분들은 K-패스가 실질 절감액이 더 클 수 있습니다. 두 제도를 병행 사용하는 것은 어렵기 때문에, 본인의 월 대중교통 이용 패턴을 기준으로 더 유리한 쪽을 선택하시길 권장합니다. 구체적인 비교 계산은 K-패스 및 기후동행카드 각 공식 홈페이지의 혜택 계산기를 활용해 보세요.</p>
+
+<div class="tip-box">
+<strong>💡 K-패스 카드 선택 체크리스트</strong><br><br>
+✔ 월 대중교통 이용 금액은 얼마인가<br>
+✔ 청년(19~34세)·저소득·일반 중 어느 유형에 해당하나<br>
+✔ 신용카드 실적 조건을 맞출 수 있나, 아니면 체크카드가 더 편한가<br>
+✔ 기존 주거래 카드사에서 발급하면 앱 통합 관리가 편리<br>
+✔ 카드 혜택은 최종 발급 전 공식 채널에서 재확인
+</div>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260625/travel_muju_deogyu_summer.html">무주 구천동 계곡 33경과 설천봉 곤돌라 요금, 여름 피서 코스 추천</a></li>
+    <li><a href="../260625/travel_uiwang_wangsong_lotus.html">의왕 왕송호수 레일바이크 예약 방법과 7월 연꽃, 조류생태과학관 당일 코스</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#K패스</span>
+  <span class="tag">#K패스카드</span>
+  <span class="tag">#대중교통환급</span>
+  <span class="tag">#교통비절약</span>
+  <span class="tag">#K패스발급</span>
+  <span class="tag">#카드사비교</span>
+  <span class="tag">#교통카드</span>
+  <span class="tag">#K패스모두의카드</span>
+  <span class="tag">#청년교통비</span>
+  <span class="tag">#교통비지원</span>
+</div>
+
+</body>
+</html>
