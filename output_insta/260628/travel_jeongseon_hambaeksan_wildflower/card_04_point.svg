@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== F : 텍스트 리스트 — card_04 point (7월 대표 야생화 3종) =====
+       원고 §02 야생화 종류 3개 병렬. 레이아웃 F 차용. -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.64"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="250" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">7월 대표 야생화</text>
+  <rect x="82" y="284" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <rect x="80" y="452" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="520" font-size="46" font-weight="700" fill="#ffffff">원추리</text>
+    <text x="80" y="574" font-size="30" font-weight="500" fill="#b2dfdb">황금빛 나팔 꽃 군락 · 7월 중순 절정</text>
+    <line x1="80" y1="636" x2="1000" y2="636" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="700" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="768" font-size="46" font-weight="700" fill="#ffffff">금강초롱꽃</text>
+    <text x="80" y="822" font-size="30" font-weight="500" fill="#b2dfdb">한국 특산 고산 식물 · 연보라 종 모양</text>
+    <line x1="80" y1="884" x2="1000" y2="884" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="948" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="1016" font-size="46" font-weight="700" fill="#ffffff">야생달맞이꽃</text>
+    <text x="80" y="1070" font-size="30" font-weight="500" fill="#b2dfdb">노란 꽃 · 야생화 축제 주인공 · 8월까지</text>
+  </g>
+
+  <text x="80" y="1240" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#cfd8d6">외 쑥부쟁이·용담화·구름패랭이꽃 등 100여 종 자생.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

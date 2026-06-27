@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== G0 Cover : 커버 훅 (생활정보 팔레트 #388e3c/#1b5e20/#e8f5e9) ===== -->
+  <defs>
+    <linearGradient id="scrimCover" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.30"/>
+      <stop offset="0.45" stop-color="#000000" stop-opacity="0.52"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.88"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1a0e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimCover)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#388e3c"/>
+
+  <!-- 키커 -->
+  <text x="80" y="840" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="700" fill="#a5d6a7" letter-spacing="4">해외여행 환전 가이드</text>
+
+  <!-- 메인 타이틀 -->
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="108" font-weight="800" fill="#ffffff" letter-spacing="-3">
+    <tspan x="80" y="980">수수료 0원</tspan>
+    <tspan x="80" y="1100">환전 비법</tspan>
+  </text>
+
+  <!-- 강조 틱 -->
+  <rect x="80" y="1128" width="80" height="8" fill="#388e3c"/>
+
+  <!-- 서브라인 -->
+  <text x="80" y="1200" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#c5e1a5">트래블월렛 vs 트래블로그 완전 비교</text>
+  <text x="80" y="1256" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#c5e1a5">46개 통화 · 수수료 직접 비교</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#1b5e20"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1f8e9; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 14px; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #e8f5e9; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #f9fdf9; border: 1px solid #e8f5e9; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border-left: 5px solid #f9a825; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #a5d6a7; background: #f1f8e9; border-radius: 8px; padding: 20px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 700; color: #388e3c; }
+  .ph-file { font-size: 0.85em; color: #888; font-family: monospace; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 14px; border-radius: 6px; font-size: 0.8em; white-space: pre-wrap; line-height: 1.6; }
+  .copy-btn { margin-top: 10px; background: #388e3c; color: #fff; border: none; padding: 8px 18px; border-radius: 5px; cursor: pointer; font-size: 0.88em; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>해외여행 환전 싸게 하는 법, 트래블월렛과 트래블로그 수수료 직접 비교</h1>
+
+<div class="intro-box">
+여름 휴가 시즌이 다가오면 가장 먼저 검색하게 되는 것 중 하나가 바로 <strong>해외여행 환전</strong>입니다.<br><br>
+예전에는 은행 창구나 공항 환전소를 이용했지만, 이제는 트래블카드(충전식 해외 결제 카드)를 이용하면 수수료를 크게 아낄 수 있습니다.<br><br>
+이 글에서는 2026년 기준으로 가장 많이 쓰이는 트래블월렛과 트래블로그를 중심으로 각 카드의 수수료, 장단점, 실전 사용 전략을 꼼꼼하게 정리해 드립니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260628/3_overseas_exchange_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-1">A flat lay photo of travel essentials for overseas travel: a smartphone displaying a currency exchange app, two travel prepaid cards (one green, one blue), foreign currency bills in dollars and euros, a passport, and a plane ticket. Clean white background, soft natural lighting. Photorealistic, top-down view, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">해외여행 환전 준비물 — 트래블카드와 외화 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 해외여행 환전, 아직도 공항에서 하시나요?</h2>
+
+과거에는 해외여행 전 은행 창구에서 환전하거나, 공항 환전소에서 출국 직전 환전하는 것이 일반적이었습니다. 환전 우대율을 받기 위해 은행 앱을 미리 확인하고 예약 환전을 진행하기도 했지요.<br><br>
+하지만 이제는 <strong>트래블카드(여행 특화 충전식 카드)</strong>를 이용하면 환전 수수료를 대폭 줄이거나 아예 없앨 수 있습니다. 달러, 유로, 엔화 같은 주요 통화는 수수료가 아예 없는 카드도 있습니다.<br><br>
+트래블카드의 작동 원리는 간단합니다. 앱에서 원하는 외화를 원화로 미리 충전해 두면, 해외에서 해당 외화로 결제할 때 추가 수수료 없이 사용할 수 있습니다. 카드는 체크카드나 신용카드 형태로 발급되어 현지 매장에서 일반 카드처럼 사용하면 됩니다.<br><br>
+현재 국내에서 가장 많이 사용되는 트래블카드는 <strong>트래블월렛</strong>과 <strong>트래블로그</strong>입니다. 두 카드 모두 환전 수수료 0원을 내세우지만, 세부적인 조건과 특성에서 차이가 있습니다.
+
+<h2>02 | 트래블카드란? 충전식 해외 결제 카드의 핵심 특징</h2>
+
+트래블카드는 선불 충전식으로, 사용 전에 앱이나 계좌를 통해 원화를 외화로 환전해 충전하는 구조입니다.<br><br>
+<strong>트래블카드의 장점</strong>:<br>
+• 주요 통화(달러·유로·엔화 등) 환전 수수료 무료 또는 최소화<br>
+• 해외 가맹점 결제 시 국제 브랜드 수수료 면제(카드사에 따라 상이)<br>
+• 해외 ATM 출금도 일정 한도 내 무료<br>
+• 남은 외화를 다시 원화로 환불 가능<br>
+• 결제 즉시 앱 알림으로 지출 내역 확인<br><br>
+<strong>트래블카드의 단점</strong>:<br>
+• 사전 충전이 필요하므로 급하게 현지에서 환전이 어려움<br>
+• 일부 소액 통화는 충전 단위 제한이 있음<br>
+• 국내 사용 시 추가 혜택 없음<br><br>
+대부분의 트래블카드는 Visa 또는 Mastercard 기반으로 발급되어 전 세계 가맹점에서 사용 가능합니다. 앱 설치 후 본인 인증과 연결 계좌 등록만 하면 당일 신청 및 발급이 가능한 경우가 많습니다.
+
+<h2>03 | 트래블월렛 수수료와 특징</h2>
+
+<strong>트래블월렛</strong>은 국내 핀테크 기업이 운영하는 외화 충전 결제 서비스로, Visa 계열 카드 발급 방식으로 운영됩니다.<br><br>
+<table class="info-table">
+  <tr><th>항목</th><th>내용</th></tr>
+  <tr><td>지원 통화 수</td><td>46개 통화</td></tr>
+  <tr><td>주요 통화 환전 수수료</td><td>달러(USD), 유로(EUR), 엔화(JPY): 0원</td></tr>
+  <tr><td>기타 통화 수수료</td><td>0.5%~2.5% (통화별 상이)</td></tr>
+  <tr><td>해외 결제 추가 수수료</td><td>없음</td></tr>
+  <tr><td>ATM 출금</td><td>월 2,000달러 이하, 제휴 ATM 이용 시 무료</td></tr>
+  <tr><td>남은 외화 환불</td><td>즉시 가능 (원화로 환불)</td></tr>
+  <tr><td>연결 계좌</td><td>은행 제한 없음</td></tr>
+</table>
+
+트래블월렛의 가장 큰 장점은 <strong>은행 계좌 제한이 없다</strong>는 점입니다. 어느 은행 계좌와도 연동이 가능해 접근성이 높습니다.<br><br>
+또한 46개 통화를 지원해 동남아, 중동, 남미 등 비주류 통화도 커버합니다. 다양한 국가를 여행하는 분께 특히 유리합니다.<br><br>
+충전 후 남은 외화를 즉시 원화로 환불할 수 있어, 귀국 후 잔여 외화 처리가 간편합니다.
+
+<h2>04 | 트래블로그 수수료와 특징</h2>
+
+<strong>트래블로그</strong>는 하나카드와 하나은행이 연계해 제공하는 해외여행 특화 체크카드입니다.<br><br>
+<table class="info-table">
+  <tr><th>항목</th><th>내용</th></tr>
+  <tr><td>수수료 0원 통화</td><td>달러(USD), 유로(EUR), 엔화(JPY), 파운드(GBP)</td></tr>
+  <tr><td>해외 가맹점 수수료</td><td>없음 (국제 브랜드 수수료 면제)</td></tr>
+  <tr><td>ATM 출금</td><td>제휴 ATM 무료 (월 일정 횟수 제한)</td></tr>
+  <tr><td>연결 계좌</td><td>하나은행 계좌 필요 (비하나은행 고객 불리)</td></tr>
+  <tr><td>환전 방식</td><td>앱 또는 하나은행 창구·ATM 충전</td></tr>
+  <tr><td>추가 혜택</td><td>하나은행 외화 환전 우대율 적용</td></tr>
+</table>
+
+트래블로그는 <strong>하나은행 계좌 보유자</strong>에게 특히 유리합니다. 하나은행 외화 우대 환율이 적용되어 환전 시점의 환율이 더 유리할 수 있습니다.<br><br>
+수수료 0원 통화에 영국 파운드(GBP)가 포함된 점도 유럽 여행자에게 강점입니다. 영국 여행 비율이 높은 분이라면 트래블로그가 더 유리할 수 있습니다.<br><br>
+다만 하나은행 계좌가 없는 경우 계좌 개설 절차가 필요하며, 이 점에서 접근성이 상대적으로 낮습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260628/3_overseas_exchange_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-2">A smartphone screen showing a currency exchange app with dollar and yen exchange rates. The screen shows zero fees highlighted in green. Background has a blurred travel scene — airplane window view or airport terminal. Clean, modern fintech UI style, photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">트래블카드 앱에서 수수료 0원으로 외화 환전 충전하는 화면 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 두 카드 핵심 비교 — 어떤 상황에 무엇이 유리한가?</h2>
+
+<table class="info-table">
+  <tr><th>비교 항목</th><th>트래블월렛</th><th>트래블로그</th></tr>
+  <tr><td>수수료 0원 통화</td><td>USD, EUR, JPY 3개</td><td>USD, EUR, JPY, GBP 4개</td></tr>
+  <tr><td>지원 통화 수</td><td>46개 (광범위)</td><td>30개 내외</td></tr>
+  <tr><td>연결 계좌 제한</td><td>제한 없음</td><td>하나은행 계좌 필요</td></tr>
+  <tr><td>영국 여행</td><td>GBP 수수료 있음</td><td>GBP 수수료 없음</td></tr>
+  <tr><td>ATM 출금 무료</td><td>월 2,000달러까지</td><td>제휴 ATM 월 횟수 제한</td></tr>
+  <tr><td>잔여 외화 환불</td><td>즉시 원화 환불</td><td>가능 (앱 처리)</td></tr>
+  <tr><td>적합한 여행자</td><td>다양한 국가 여행자, 비하나은행 고객</td><td>하나은행 계좌 보유자, 영국 여행자</td></tr>
+</table>
+
+결론적으로, <strong>하나은행 계좌가 있고 달러·유로·엔화·파운드 중심으로 사용한다면 트래블로그</strong>가 유리합니다.<br><br>
+반면 <strong>하나은행 계좌가 없거나, 동남아·중동 등 다양한 국가를 여행하는 경우에는 트래블월렛</strong>이 더 편리합니다.<br><br>
+두 카드를 함께 발급해 상황에 따라 나눠 쓰는 것도 좋은 전략입니다. 발급 비용이 없거나 적으므로 부담이 크지 않습니다.
+
+<h2>06 | ATM 출금 수수료 비교와 현지 현금 전략</h2>
+
+해외에서는 카드 결제가 안 되는 상황(전통 시장, 소형 식당, 교통 등)을 위해 약간의 현금을 준비해야 합니다. 현지 ATM에서 트래블카드로 출금하는 방법이 가장 경제적입니다.<br><br>
+<strong>ATM 출금 시 주의사항</strong>:<br>
+• 트래블카드 제휴 ATM을 사용하면 카드사 수수료가 면제됩니다. 단, 현지 ATM 운영사가 별도 수수료를 부과하는 경우가 있습니다.<br>
+• 'Dynamic Currency Conversion(DCC)' 기능은 반드시 거부해야 합니다. ATM 화면에서 "현지 통화(현지화폐)로 출금" 옵션을 선택하세요. DCC는 환율이 불리하게 적용되는 방식입니다.<br>
+• 소액 여러 번보다 한 번에 충분히 출금하는 것이 효율적입니다. ATM 1회 수수료가 있는 경우 소액 반복 출금 시 더 큰 비용이 발생합니다.
+
+<h2>07 | 토스뱅크·신한 SOL트래블 등 다른 선택지</h2>
+
+트래블월렛과 트래블로그 외에도 해외 수수료를 아낄 수 있는 카드들이 있습니다.<br><br>
+<strong>토스뱅크 체크카드</strong>: 해외 결제 시 국제 브랜드 수수료(일반적으로 1~1.5%)가 면제됩니다. 별도 충전 없이 토스뱅크 잔액에서 바로 결제되어 편리합니다. 다만 환전 개념이 아니라 원화 잔액이 실시간으로 외화로 변환되므로, 환율이 불리할 때 결제하면 손해가 생길 수 있습니다.<br><br>
+<strong>신한 SOL트래블 체크카드</strong>: 신한은행에서 출시한 해외여행 특화 카드로, 달러·엔화 등 주요 통화 환전 수수료 면제와 해외 결제 추가 수수료 면제가 적용됩니다. 신한은행 계좌 보유자라면 신청이 간편합니다.<br><br>
+<strong>어떤 카드가 맞는지 모르겠다면?</strong><br>
+현재 이용 중인 주거래 은행의 해외 특화 카드를 먼저 확인해 보세요. 대부분의 시중 은행이 유사한 여행 카드를 출시하고 있으며, 기존 계좌와 연동해 편리하게 사용할 수 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260628/3_overseas_exchange_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-3">A person using a travel prepaid card at an overseas ATM machine to withdraw local currency. The ATM screen shows options for local currency withdrawal. European or Japanese street background, blurred. Hand holding a green card, confident expression. Photorealistic, natural lighting, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">해외 현지 ATM에서 트래블카드로 현금 출금하는 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>08 | 환전 실전 전략 — 언제 얼마나 충전해야 할까?</h2>
+
+환전 타이밍과 금액도 중요합니다. 무작정 많이 충전하면 남은 외화 처리가 번거롭고, 너무 적으면 현지에서 불편합니다.<br><br>
+<strong>환전 타이밍</strong>:<br>
+트래블카드를 이용하면 앱에서 실시간으로 환율을 확인하며 충전 시점을 선택할 수 있습니다. 주요 통화(달러·엔화·유로)는 출발 2~3일 전 환율을 모니터링하다가 유리한 시점에 충전하는 것이 일반적입니다.<br><br>
+<strong>적정 충전 금액</strong>:<br>
+• 1인 기준, 여행 일수 × 하루 예상 사용액(식비·교통·쇼핑 포함)으로 계산합니다.<br>
+• 예비 금액 10~20%를 추가로 충전해 두면 예상치 못한 지출에 대비할 수 있습니다.<br>
+• 현지 현금이 필요한 일본·동남아 등은 ATM 출금용으로 여유 있게 충전합니다.<br><br>
+<div class="tip-box">
+<strong>💡 팁</strong>: 신용카드 기반 트래블카드와 달리 충전식은 잔액이 0원이 되면 결제가 안 됩니다. 갑자기 카드가 거절되는 당혹스러운 상황을 피하기 위해 충전 금액은 여유 있게 넣어두세요.
+</div>
+
+<h2>09 | 남은 외화 처리 방법</h2>
+
+귀국 후 남은 외화를 처리하는 방법은 카드별로 다소 다릅니다.<br><br>
+<strong>트래블월렛</strong>: 앱에서 남은 외화를 즉시 원화로 환불 가능합니다. 별도 환전 수수료 없이 현재 환율로 정산됩니다.<br><br>
+<strong>트래블로그</strong>: 앱 또는 하나은행 창구에서 환불 처리 가능합니다. 잔여 외화를 다음 여행을 위해 그대로 보유할 수도 있습니다.<br><br>
+남은 외화가 소액이라면 카드에 그대로 두었다가 다음 해외여행 시 사용하는 것도 합리적입니다. 대부분의 트래블카드는 외화 잔액의 유효기간이 있으므로 확인 후 관리하세요.
+
+<h2>10 | 자주 묻는 질문</h2>
+
+<div class="step-box">
+<strong>Q. 공항 환전소보다 트래블카드가 얼마나 더 유리한가요?</strong><br>
+A. 일반적으로 공항 환전소는 환전 수수료가 1.5~3% 수준인 반면, 주요 통화 기준 트래블카드는 수수료가 0%입니다. 100만 원 환전 기준 최대 3만 원까지 차이가 날 수 있습니다.
+</div>
+<div class="step-box">
+<strong>Q. 트래블카드로 현지에서 결제하면 원화로 빠져나가나요?</strong><br>
+A. 미리 충전한 외화로 결제됩니다. 충전된 외화 잔액이 없으면 결제가 거절될 수 있으니 충전 상태를 확인하세요.
+</div>
+<div class="step-box">
+<strong>Q. 트래블월렛과 트래블로그를 함께 써도 되나요?</strong><br>
+A. 네, 두 카드를 모두 발급해 상황에 맞게 사용하는 분들도 많습니다. 통화에 따라 유리한 카드가 다를 수 있어 병행 사용이 합리적입니다.
+</div>
+<div class="step-box">
+<strong>Q. 트래블카드를 해외에서 분실하면 어떻게 하나요?</strong><br>
+A. 앱에서 즉시 카드 사용 정지 처리가 가능합니다. 분실 즉시 앱을 열어 카드를 잠금하고, 귀국 후 재발급 신청을 진행하세요.
+</div>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260627/gov_kpass_refund_schedule.html">K-패스 환급금 언제 들어오나, 이용 다음 달 정산 구조와 지급일 확인법</a></li>
+    <li><a href="../260627/gov_gyeonggi_pass_vs_kpass.html">더경기패스 K-패스와 차이, 경기도민은 얼마나 더 환급받나</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#해외여행환전</span>
+  <span class="tag">#트래블월렛</span>
+  <span class="tag">#트래블로그</span>
+  <span class="tag">#환전수수료</span>
+  <span class="tag">#트래블카드</span>
+  <span class="tag">#여름휴가준비</span>
+  <span class="tag">#해외여행팁</span>
+  <span class="tag">#해외결제카드</span>
+  <span class="tag">#환전앱</span>
+  <span class="tag">#여행준비물</span>
+</div>
+
+</body>
+</html>

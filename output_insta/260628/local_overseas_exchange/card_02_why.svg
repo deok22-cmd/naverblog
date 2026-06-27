@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== E : 하단 텍스트 (why 역할 · 생활정보 팔레트 #388e3c/#1b5e20) ===== -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.52" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.80"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1a0e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#388e3c"/>
+
+  <text x="80" y="1000" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="28" font-weight="700" fill="#a5d6a7" letter-spacing="3">아직도 공항에서?</text>
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="72" font-weight="800" fill="#ffffff" letter-spacing="-2">
+    <tspan x="80" y="1100">수수료 최대</tspan>
+    <tspan x="80" y="1186">3만 원 차이</tspan>
+  </text>
+  <text x="80" y="1254" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="500" fill="#e8f5e9">100만 원 환전 기준, 공항 vs 트래블카드</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#1b5e20"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

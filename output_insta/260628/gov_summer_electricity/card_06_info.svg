@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== P1 : 정보 표 — card_06 info (생활정보 팔레트 · gov_summer_electricity) ===== -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1a0e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#388e3c"/>
+
+  <text x="80" y="200" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">복지할인 대상</text>
+  <rect x="82" y="234" width="140" height="9" fill="#388e3c"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="360" font-size="38" font-weight="600" fill="#ffffff">장애인 (복지법 등록)</text>
+    <text x="1000" y="360" font-size="38" font-weight="800" fill="#a5d6a7" text-anchor="end">30% · 월 16,000원</text>
+    <line x1="80" y1="400" x2="1000" y2="400" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="468" font-size="38" font-weight="600" fill="#ffffff">국가유공자</text>
+    <text x="1000" y="468" font-size="38" font-weight="800" fill="#a5d6a7" text-anchor="end">30% · 월 16,000원</text>
+    <line x1="80" y1="508" x2="1000" y2="508" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="576" font-size="38" font-weight="600" fill="#ffffff">기초생활수급자</text>
+    <text x="1000" y="576" font-size="38" font-weight="800" fill="#a5d6a7" text-anchor="end">30% · 월 16,000원</text>
+    <line x1="80" y1="616" x2="1000" y2="616" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="684" font-size="38" font-weight="600" fill="#ffffff">차상위계층</text>
+    <text x="1000" y="684" font-size="38" font-weight="800" fill="#a5d6a7" text-anchor="end">30% · 월 16,000원</text>
+    <line x1="80" y1="724" x2="1000" y2="724" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="792" font-size="38" font-weight="600" fill="#ffffff">3자녀 이상 다자녀 가구</text>
+    <text x="1000" y="792" font-size="38" font-weight="800" fill="#a5d6a7" text-anchor="end">30% · 월 16,000원</text>
+    <line x1="80" y1="832" x2="1000" y2="832" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="900" font-size="38" font-weight="600" fill="#ffffff">가구원 5인 이상 대가족</text>
+    <text x="1000" y="900" font-size="38" font-weight="800" fill="#a5d6a7" text-anchor="end">30% · 월 16,000원</text>
+    <line x1="80" y1="940" x2="1000" y2="940" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="1008" font-size="38" font-weight="600" fill="#ffffff">출생 3년 미만 영아 가구</text>
+    <text x="1000" y="1008" font-size="38" font-weight="800" fill="#a5d6a7" text-anchor="end">30% · 월 16,000원</text>
+  </g>
+
+  <text x="80" y="1110" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#a5d6a7">2026년 기준 · 중복 대상도 최대 30%·16,000원 단일 적용. 소급 환급 가능.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#1b5e20"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

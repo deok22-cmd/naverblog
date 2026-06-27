@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== P1 : 정보 표 (트래블월렛 수수료 · 생활정보 팔레트 #388e3c/#1b5e20) ===== -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1a0e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#388e3c"/>
+
+  <text x="80" y="200" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#a5d6a7" letter-spacing="3">트래블월렛</text>
+  <text x="80" y="290" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">수수료 한눈에</text>
+  <rect x="82" y="322" width="140" height="9" fill="#388e3c"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="440" font-size="40" font-weight="600" fill="#ffffff">지원 통화</text>
+    <text x="1000" y="440" font-size="40" font-weight="800" fill="#a5d6a7" text-anchor="end">46개</text>
+    <line x1="80" y1="478" x2="1000" y2="478" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="560" font-size="40" font-weight="600" fill="#ffffff">USD·EUR·JPY 환전</text>
+    <text x="1000" y="560" font-size="40" font-weight="800" fill="#a5d6a7" text-anchor="end">수수료 0원</text>
+    <line x1="80" y1="598" x2="1000" y2="598" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="680" font-size="40" font-weight="600" fill="#ffffff">기타 통화 수수료</text>
+    <text x="1000" y="680" font-size="40" font-weight="800" fill="#a5d6a7" text-anchor="end">0.5~2.5%</text>
+    <line x1="80" y1="718" x2="1000" y2="718" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="800" font-size="40" font-weight="600" fill="#ffffff">ATM 출금</text>
+    <text x="1000" y="800" font-size="40" font-weight="800" fill="#a5d6a7" text-anchor="end">월 2,000달러 무료</text>
+    <line x1="80" y1="838" x2="1000" y2="838" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="920" font-size="40" font-weight="600" fill="#ffffff">연결 계좌</text>
+    <text x="1000" y="920" font-size="40" font-weight="800" fill="#a5d6a7" text-anchor="end">은행 제한 없음</text>
+    <line x1="80" y1="958" x2="1000" y2="958" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="1040" font-size="40" font-weight="600" fill="#ffffff">잔여 외화 환불</text>
+    <text x="1000" y="1040" font-size="40" font-weight="800" fill="#a5d6a7" text-anchor="end">즉시 원화 환불</text>
+  </g>
+
+  <text x="80" y="1160" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#a5d6a7">2026년 기준 · Visa 계열 카드 발급</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#1b5e20"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px 14px; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #e0f2f1; }
+  .step-box { border-left: 4px solid #00796b; padding: 15px 20px; background: #f9fdf9; border: 1px solid #e0f2f1; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border-left: 5px solid #f9a825; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .caution-box { background: #fce4ec; border-left: 5px solid #e57373; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #b2dfdb; background: #f1faf9; border-radius: 8px; padding: 20px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 700; color: #00796b; }
+  .ph-file { font-size: 0.85em; color: #888; font-family: monospace; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 14px; border-radius: 6px; font-size: 0.8em; white-space: pre-wrap; line-height: 1.6; }
+  .copy-btn { margin-top: 10px; background: #00796b; color: #fff; border: none; padding: 8px 18px; border-radius: 5px; cursor: pointer; font-size: 0.88em; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>인제 곰배령 탐방 예약 방법과 7월 야생화 코스, 동자꽃·금강초롱꽃 절정 시기</h1>
+
+<div class="intro-box">
+강원도 인제에 자리한 점봉산 곰배령은 해발 1,000m가 넘는 고산 초원에 수백 종의 야생화가 펼쳐지는 곳으로, '천상의 화원'이라는 별칭이 전혀 과장이 아닙니다.<br><br>
+특히 7월은 동자꽃, 노루오줌, 물봉선, 금강초롱꽃 같은 고산 야생화가 동시에 절정을 이루는 최고의 시기입니다.<br><br>
+이 글에서는 곰배령 탐방 예약 방법부터 코스, 준비물, 주의사항까지 2026년 기준으로 꼼꼼하게 정리해 드립니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260628/1_gombaryeong_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-1">A sweeping aerial view of Gombaryeong alpine meadow in Inje, Gangwon, South Korea, in peak July wildflower season. Vast open highland plateau at 1000m elevation covered with dense wildflower clusters — pink Dianthus, orange Lychnis fulgens (campion), purple Campanula punctata (bellflower), white Filipendula. Misty blue mountains in the background, lush green forest edges, soft morning sunlight. Photorealistic, ultra high detail, vibrant colors, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">점봉산 곰배령 고산 초원의 7월 야생화 군락 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 곰배령이란? 점봉산 천상의 화원 소개</h2>
+
+점봉산(1,424m)은 강원도 인제군 기린면과 양양군 서면의 경계에 걸쳐 있는 백두대간 줄기의 고봉입니다.<br><br>
+그 동쪽 능선에 자리한 곰배령(1,164m)은 산정 가까이 드넓은 초원 지대가 펼쳐지는 독특한 지형으로, 봄부터 가을까지 수백 종의 야생화가 릴레이처럼 피어납니다.<br><br>
+산림청은 이곳을 <strong>산림유전자원보호구역</strong>으로 지정해 엄격히 관리하고 있습니다. 하루 입산 인원이 450명으로 제한되고, 예약제(숲나들e)를 통해서만 방문이 가능합니다.<br><br>
+강원도의 일반 등산지와 달리 보호구역 내 취사, 야영이 완전 금지되며, 탐방로 이탈도 허용되지 않습니다. 덕분에 원시림 상태가 잘 보전되어 있어 야생화 군락의 밀도와 다양성이 타의 추종을 불허합니다.<br><br>
+가을 단풍도 빼어나지만, 여름 야생화 시즌은 특히 사진작가와 식물 애호가 사이에서 일 년 중 가장 인기 높은 기간입니다.<br><br>
+국립 숲체험원 강원(점봉산산림생태탐방원) 측의 설명에 따르면, 점봉산에 확인된 식물만 854종이 넘고 그중 멸종위기 식물 15종이 포함되어 있을 만큼 생태적 가치가 독보적입니다.
+
+<h2>02 | 7월 야생화 절정 시기와 꽃 종류</h2>
+
+곰배령의 야생화 시즌은 4월 얼레지부터 10월 쑥부쟁이까지 이어지지만, <strong>7월은 가장 화려한 전성기</strong>입니다.<br><br>
+5~6월 봄꽃(얼레지, 괭이눈, 바람꽃 등)이 물러가면, 7월에는 초원 전체가 다채로운 색깔의 여름 야생화로 뒤덮입니다.<br><br>
+<strong>7월에 볼 수 있는 대표 야생화</strong>:<br>
+• <strong>동자꽃</strong> — 진홍빛 별 모양 꽃이 군락을 이루며, 고산 야생화 중 가장 강렬한 색채를 자랑합니다.<br>
+• <strong>노루오줌</strong> — 연분홍 솜털 같은 꽃이 촘촘히 달려 흔들리는 모습이 인상적입니다.<br>
+• <strong>물봉선</strong> — 자주·분홍·흰색이 섞인 입술 모양 꽃으로 습기 있는 계곡 옆에 군락을 이룹니다.<br>
+• <strong>금강초롱꽃</strong> — 한국 특산종으로, 연보라 종 모양 꽃이 청순하게 고개를 숙이며 피어납니다.<br>
+• <strong>원추리</strong> — 황금빛 나팔 모양 꽃이 햇살을 받으면 더욱 선명하게 빛납니다.<br>
+• <strong>짚신나물</strong>, <strong>투구꽃</strong> — 7월 말에 차례로 피어나며 여름 야생화 시즌을 마무리합니다.<br><br>
+7월 초순은 동자꽃과 노루오줌이 극성기이고, 7월 중하순부터는 금강초롱꽃이 가세하며 더욱 다채로운 풍경이 펼쳐집니다.<br><br>
+방문 전 산림청 탐방원 측에 현재 개화 상황을 문의하면 더욱 정확한 시기를 파악할 수 있습니다.
+
+<h2>03 | 탐방 예약 방법 — 숲나들e 이용 절차</h2>
+
+곰배령 방문은 <strong>숲나들e(foresttrip.go.kr)</strong>를 통한 사전 예약이 필수입니다. 현장 접수나 당일 방문은 불가능합니다.<br><br>
+<strong>예약 기본 정보</strong>:
+<table class="info-table">
+  <tr><th>항목</th><th>내용</th></tr>
+  <tr><td>예약 사이트</td><td>숲나들e (foresttrip.go.kr)</td></tr>
+  <tr><td>예약 오픈</td><td>매주 수요일 오전 9시 (4주 뒤 일주일치)</td></tr>
+  <tr><td>하루 최대 입산</td><td>450명</td></tr>
+  <tr><td>입산 시간</td><td>오전 9시 ~ 11시 (30분 단위)</td></tr>
+  <tr><td>1인 예약 가능 인원</td><td>본인 포함 최대 4명</td></tr>
+  <tr><td>입장료</td><td>무료 (탐방 자체는 무료)</td></tr>
+  <tr><td>신분증 지참</td><td>필수 (본인 및 동행자 전원)</td></tr>
+</table>
+
+예약 절차는 숲나들e 사이트 접속 → 회원가입 → '점봉산 곰배령 산림생태탐방' 선택 → 희망 날짜·시간 선택 → 동행자 정보 입력 → 예약 완료 순으로 진행됩니다.<br><br>
+<strong>주의사항</strong>: 예약 취소는 탐방 이틀 전까지만 가능하며, 당일 취소는 되지 않습니다. 예약자 본인이 반드시 참여해야 하며, 신분증 미지참 시 입산이 거부됩니다.<br><br>
+예약 전 계절별 개방 기간을 반드시 확인하세요. 곰배령은 연중 8개월(4월 말~11월 초 내외)만 개방하며, 겨울철에는 탐방 자체가 불가능합니다.
+
+<h2>04 | 취소표 잡는 법과 예약 꿀팁</h2>
+
+곰배령은 특히 봄·여름 시즌에 예약이 빠르게 마감됩니다. 수요일 오전 9시 오픈 직후 몇 분 만에 인기 시간대가 사라지는 경우가 많습니다.<br><br>
+<strong>예약 꿀팁 4가지</strong>:<br><br>
+<div class="tip-box">
+<strong>꿀팁 1 — 수요일 알람 설정</strong><br>
+매주 수요일 오전 8시 50분에 알람을 맞추고 숲나들e 앱을 미리 열어두세요. 오전 9시 정각에 로그인 상태로 빠르게 선택해야 합니다.
+</div>
+<div class="tip-box">
+<strong>꿀팁 2 — 비인기 시간대 공략</strong><br>
+오전 11시 30분 또는 오후 시간대(곰배령은 당일 하산 기준이므로 이른 시간이 유리하지만)를 노리면 상대적으로 여유가 있습니다.
+</div>
+<div class="tip-box">
+<strong>꿀팁 3 — 평일 방문 전략</strong><br>
+주말은 금방 마감되지만, 평일은 오픈 후 며칠이 지나도 여석이 남는 경우가 있습니다. 일정 유연성이 있다면 평일을 택하세요.
+</div>
+<div class="tip-box">
+<strong>꿀팁 4 — 취소표 모니터링</strong><br>
+탐방 2~3일 전 오후에 취소표가 나오는 경우가 있습니다. 숲나들e 앱에서 '알림' 기능을 켜두거나 수시로 확인하면 좋습니다.
+</div>
+
+<h2>05 | 접근 방법 — 주차와 교통편</h2>
+
+곰배령 탐방 시작점은 강원도 인제군 기린면에 있는 <strong>점봉산산림생태탐방원</strong>입니다. 주소는 강원도 인제군 기린면 방동리 875입니다.<br><br>
+<strong>자가용</strong>: 서울 기준 약 2시간 30분~3시간 소요. 내비게이션에 '점봉산산림생태탐방원'으로 검색하시면 됩니다. 국도 31호선을 이용해 기린면 방향으로 진입합니다.<br><br>
+탐방원 인근에 <strong>무료 주차장</strong>이 마련되어 있습니다. 주차 공간이 제한적이므로 방문 당일 일찍 도착하는 것이 좋습니다. 특히 여름 성수기에는 주차장이 빠르게 찰 수 있습니다.<br><br>
+<strong>대중교통</strong>: 서울 동서울터미널 → 인제 or 기린까지 버스 이용 후 택시 이동. 탐방원까지 직행하는 대중교통이 없어 자가용이 훨씬 편리합니다. 인제읍에서 택시를 이용할 경우 편도 약 1시간이 소요됩니다.<br><br>
+인근에 편의점이나 식당이 없으므로 출발 전 인제읍에서 식사와 간식을 준비해 가시는 것이 좋습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260628/1_gombaryeong_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-2">A narrow forest trail winding through dense green forest in Jeonbongsan mountain, Gangwon, South Korea, in July. Hikers on the path surrounded by tall old-growth trees. Wildflowers along the trail — pink and orange Lychnis campion, purple bellflowers. Dappled sunlight through canopy, cool atmosphere, fresh mountain air feel. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">곰배령 등산로 구간의 동자꽃과 노루오줌 군락 / AI 제작 이미지</div>
+</div>
+
+<h2>06 | 탐방 코스와 소요 시간</h2>
+
+곰배령 탐방은 <strong>탐방원 → 단목령(하늘목장 갈림길) → 곰배령 정상부 초원 → 하산</strong>의 단일 왕복 루트로 운영됩니다. 탐방로 이탈은 엄격히 금지됩니다.<br><br>
+<strong>거리와 소요 시간</strong>:
+<table class="info-table">
+  <tr><th>구간</th><th>거리</th><th>소요 시간</th></tr>
+  <tr><td>탐방원 → 곰배령 정상부</td><td>약 5.2km</td><td>약 2시간 30분~3시간</td></tr>
+  <tr><td>곰배령 정상부 체류</td><td>—</td><td>30분~1시간</td></tr>
+  <tr><td>하산</td><td>약 5.2km</td><td>약 2시간~2시간 30분</td></tr>
+  <tr><td>총 소요 시간</td><td>약 10.4km</td><td>약 5~7시간</td></tr>
+</table>
+
+탐방로는 전반적으로 완만하지만, 일부 구간에 경사가 있습니다. 등산 경험이 많지 않은 분도 충분한 시간을 두면 완주할 수 있는 난이도입니다.<br><br>
+상행 시 <strong>첫 1.5km 구간</strong>은 완만한 임도가 이어지며 계곡을 따라 걸어 시원합니다. 이후 3km 내외부터 본격적인 산길이 시작됩니다.<br><br>
+곰배령 정상부 초원에서는 360도 파노라마 뷰를 감상할 수 있으며, 맑은 날에는 설악산 대청봉까지 보입니다. 초원에서의 체류 시간을 충분히 확보하기 위해 9시 첫 타임에 입산하는 것이 이상적입니다.
+
+<h2>07 | 준비물과 복장 가이드</h2>
+
+곰배령 탐방은 본격적인 산행에 가깝습니다. 가벼운 산책 수준으로 생각하고 방문하면 체력적으로 힘들 수 있습니다.<br><br>
+<strong>필수 준비물</strong>:<br>
+• 등산화 (미끄러지지 않는 밑창 필수, 운동화는 하산 시 발목 부상 위험)<br>
+• 예약 확인증 출력 또는 모바일 화면 준비<br>
+• 신분증 (본인 및 동행자 전원)<br>
+• 충분한 식수 (1인 최소 1.5L 이상 권장)<br>
+• 간식 및 점심 도시락 (산 위에서 취사 불가, 탐방원 주변에도 식당 없음)<br>
+• 방수 재킷 (7월 산악 지역은 갑작스러운 소나기가 잦음)<br>
+• 썬크림 및 모자 (정상 초원은 그늘 없음)<br>
+• 스틱 (선택, 하산 시 무릎 보호에 도움)<br><br>
+<strong>복장</strong>: 7월이라도 해발 1,000m 이상의 산 위는 서울보다 5~10℃ 낮고 바람이 강합니다. 얇은 긴팔 겉옷을 꼭 챙기세요. 면 소재보다는 기능성 소재 등산복이 땀 배출과 체온 조절에 유리합니다.<br><br>
+<div class="caution-box">
+<strong>⚠️ 주의</strong>: 곰배령 탐방로에는 화장실이 없습니다. 탐방원 출발 전 화장실을 미리 이용하고, 탐방 중 쓰레기는 반드시 되가져와야 합니다.
+</div>
+
+<h2>08 | 현장 주의사항과 금지 행위</h2>
+
+산림유전자원보호구역 내 탐방이므로 일반 등산지보다 규정이 엄격합니다.<br><br>
+<strong>절대 금지 사항</strong>:<br>
+• 탐방로 이탈 (식물 훼손 방지, 위반 시 즉시 퇴장 조치)<br>
+• 취사 및 야영 (화기 반입 자체가 금지)<br>
+• 반려동물 동반<br>
+• 야생식물 채취 (뿌리 뽑기, 씨앗 채집 포함)<br>
+• 음주 상태 입산<br>
+• 드론 비행<br><br>
+<strong>폭우·기상 악화 시</strong>: 현장 관리인의 안내에 따라 탐방이 중단될 수 있습니다. 기상 악화로 탐방이 취소될 경우 환불 처리됩니다(입장료가 무료이므로 별도 환불 절차는 없으나 예약 취소 처리). 탐방 전날 기상청 날씨와 탐방원 공지를 반드시 확인하세요.<br><br>
+탐방원 전화번호: 033-463-8590(점봉산산림생태탐방원)으로 개방 상황과 주의사항을 문의할 수 있습니다.
+
+<h2>09 | 인근 연계 여행 — 내린천 래프팅·방동약수</h2>
+
+곰배령 탐방 후 인근 여행지를 함께 즐기면 알찬 강원도 여행이 됩니다.<br><br>
+<strong>내린천 래프팅</strong>: 인제군 내린천은 강원도 대표 래프팅 명소입니다. 곰배령에서 차로 약 30~40분 거리에 있으며, 7월은 수량이 풍부해 래프팅 최적 시기입니다. 다양한 업체가 운영 중이며 2~3시간 코스가 일반적입니다.<br><br>
+<strong>방동약수</strong>: 탐방원에서 차로 5분 거리에 있는 탄산수 약수터입니다. 시원하고 독특한 맛의 약수를 무료로 즐길 수 있으며, 탐방 후 목을 축이기에 안성맞춤입니다.<br><br>
+<strong>합강정</strong>: 인제 읍내에 있는 조선시대 정자로, 내린천과 소양강이 합류하는 지점에 자리해 풍경이 빼어납니다. 산행 후 휴식하며 들르기 좋습니다.<br><br>
+<strong>당일 일정 예시</strong>: 탐방원 오전 9시 입산 → 곰배령 정상 12시~13시 → 하산 15시~16시 → 방동약수 → 내린천 래프팅(당일 예약 가능 시) → 인제 읍내 황태요리 저녁 식사.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260628/1_gombaryeong_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-3">Panoramic view from the summit of Gombaryeong alpine meadow in Jeonbongsan, Gangwon, South Korea. Rolling highland meadow with wildflowers stretching to the horizon. Distant blue ridges of Seoraksan mountain range visible. Hikers resting and taking photos on the grassy summit plateau. Clear blue sky with light clouds. Photorealistic, golden afternoon light, ultra high detail, wide landscape, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">곰배령 정상 전망대에서 바라본 점봉산 능선 / AI 제작 이미지</div>
+</div>
+
+<h2>10 | 자주 묻는 질문 (FAQ)</h2>
+
+<div class="step-box">
+<strong>Q. 어린이도 탐방이 가능한가요?</strong><br>
+A. 만 6세 이상이면 예약이 가능합니다. 다만 총 10km 이상의 산행이므로 초등 저학년이라면 체력적으로 힘들 수 있습니다. 유아는 동반이 어렵습니다.
+</div>
+<div class="step-box">
+<strong>Q. 예약 없이 현장 방문이 가능한가요?</strong><br>
+A. 불가능합니다. 예약자와 신분증을 대조하므로 예약 없이는 입산이 되지 않습니다.
+</div>
+<div class="step-box">
+<strong>Q. 탐방원에 화장실, 매점이 있나요?</strong><br>
+A. 탐방원 출발지에는 화장실이 있습니다. 매점은 없으며 산 위에도 편의시설이 없습니다. 식수와 간식은 반드시 직접 챙겨가야 합니다.
+</div>
+<div class="step-box">
+<strong>Q. 여름에도 추운가요?</strong><br>
+A. 7월 기준 정상부는 서울보다 5~10℃ 낮고 바람이 있습니다. 땀이 식으면 생각보다 서늘하게 느껴지므로 얇은 긴팔 겉옷을 꼭 준비하세요.
+</div>
+<div class="step-box">
+<strong>Q. 당일 우천 시 어떻게 하나요?</strong><br>
+A. 가벼운 비라면 탐방이 진행되나, 폭우나 낙뢰 위험 시 현장 관리인이 탐방을 중단시킵니다. 방수 재킷은 필수입니다.
+</div>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260627/gov_kpass_refund_schedule.html">K-패스 환급금 언제 들어오나, 이용 다음 달 정산 구조와 지급일 확인법</a></li>
+    <li><a href="../260627/gov_gyeonggi_pass_vs_kpass.html">더경기패스 K-패스와 차이, 경기도민은 얼마나 더 환급받나</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#곰배령</span>
+  <span class="tag">#인제여행</span>
+  <span class="tag">#점봉산</span>
+  <span class="tag">#야생화</span>
+  <span class="tag">#7월여행</span>
+  <span class="tag">#강원도여행</span>
+  <span class="tag">#동자꽃</span>
+  <span class="tag">#금강초롱꽃</span>
+  <span class="tag">#숲나들e예약</span>
+  <span class="tag">#천상의화원</span>
+</div>
+
+</body>
+</html>

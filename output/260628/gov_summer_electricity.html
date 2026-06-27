@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1f8e9; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 14px; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #e8f5e9; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #f9fdf9; border: 1px solid #e8f5e9; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border-left: 5px solid #f9a825; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .caution-box { background: #fce4ec; border-left: 5px solid #e57373; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #a5d6a7; background: #f1f8e9; border-radius: 8px; padding: 20px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 700; color: #388e3c; }
+  .ph-file { font-size: 0.85em; color: #888; font-family: monospace; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 14px; border-radius: 6px; font-size: 0.8em; white-space: pre-wrap; line-height: 1.6; }
+  .copy-btn { margin-top: 10px; background: #388e3c; color: #fff; border: none; padding: 8px 18px; border-radius: 5px; cursor: pointer; font-size: 0.88em; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>여름 전기요금 누진제 어떻게 계산되나, 7·8월 구간 완화와 복지할인 대상</h1>
+
+<div class="intro-box">
+에어컨을 마음껏 켜고 싶지만 전기요금 고지서가 두렵다면, 누진제 구조를 먼저 이해하는 것이 도움이 됩니다.<br><br>
+2026년 기준 주택용 전기요금은 3단계 누진제가 적용되며, 7월과 8월에는 구간이 완화되어 여름철 요금 부담이 다소 줄어듭니다.<br><br>
+또한 장애인, 기초생활수급자, 다자녀 가구 등 복지할인 대상자라면 매월 최대 30%까지 전기요금을 감면받을 수 있습니다. 이 글에서 계산법부터 복지할인 신청 방법까지 정리해 드립니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260628/5_electricity_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-1">A Korean household electricity bill document showing progressive rate tiers (누진제), with a person's hand holding it next to a running air conditioner indoors. Summer atmosphere, warm indoor lighting. Calculator and pen on the table. Infographic-style layout visible on bill. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">여름 전기요금 고지서와 누진제 구조 확인 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 여름에 전기요금이 갑자기 뛰는 이유</h2>
+
+7월과 8월 전기요금이 갑자기 많이 나왔다는 분들이 많습니다. 그 핵심 원인은 바로 <strong>누진제</strong>입니다.<br><br>
+누진제란 사용량이 늘어날수록 단가가 단계적으로 높아지는 요금 체계입니다. 100kWh를 쓸 때는 저렴하지만, 300kWh, 400kWh를 넘어가면 단가 자체가 달라지기 때문에 총 요금이 급격히 올라갑니다.<br><br>
+여름철에는 에어컨 사용으로 월 사용량이 200~400kWh를 쉽게 초과합니다. 바로 이 구간 변화가 '전기요금 폭탄'의 원인입니다.<br><br>
+에어컨 1대를 하루 8시간 사용한다고 가정하면, 에어컨 1대(약 1~1.5kW)만으로 한 달에 240~360kWh가 추가됩니다. 평소 100kWh 사용 가구라면 340~460kWh까지 치솟아 요금 단가가 2~3단계로 뛰게 됩니다.<br><br>
+이를 이해하면 절약 방법도 훨씬 명확해집니다. 핵심은 <strong>사용량을 어떤 단계에서 묶어놓느냐</strong>입니다.
+
+<h2>02 | 누진제 3단계 구간 완전히 이해하기</h2>
+
+2026년 기준 주택용 전기요금 누진제 단가는 다음과 같습니다(한전 기준, 기본요금 별도).<br><br>
+<table class="info-table">
+  <tr><th>구간</th><th>사용량</th><th>단가(원/kWh)</th></tr>
+  <tr><td>1단계</td><td>200kWh 이하</td><td>약 120원</td></tr>
+  <tr><td>2단계</td><td>201~400kWh</td><td>약 214.6원</td></tr>
+  <tr><td>3단계</td><td>401kWh 이상</td><td>약 307.3원</td></tr>
+</table>
+
+중요한 것은 <strong>초과분에만 높은 단가가 적용된다</strong>는 점입니다. 350kWh를 사용했다면 처음 200kWh는 1단계 단가(120원), 나머지 150kWh는 2단계 단가(214.6원)가 각각 적용됩니다. 350kWh 전체에 2단계가 적용되는 방식이 아닙니다.<br><br>
+이를 계산하면 (200 × 120) + (150 × 214.6) = 24,000 + 32,190 = 56,190원이 전력량 요금입니다. 여기에 기본요금, 기후환경요금, 연료비조정액 등이 추가됩니다.<br><br>
+<strong>기본요금</strong>은 계약 종별에 따라 다르며, 주택용 저압 기준 1단계(200kWh 이하 해당 시 910원), 2단계(1,600원), 3단계(7,300원)가 적용됩니다. 기본요금도 사용 구간에 따라 달라지므로 총 요금 차이는 더 커질 수 있습니다.
+
+<h2>03 | 7·8월 여름 구간 완화 내용</h2>
+
+정부는 여름철 에어컨 사용이 급증하는 7월과 8월 사용분에 한해 <strong>누진제 구간을 완화</strong>합니다.<br><br>
+<table class="info-table">
+  <tr><th>구간</th><th>일반(1~6월, 9~12월)</th><th>여름 완화(7~8월)</th></tr>
+  <tr><td>1단계 상한</td><td>200kWh</td><td>300kWh</td></tr>
+  <tr><td>2단계 상한</td><td>400kWh</td><td>450kWh</td></tr>
+  <tr><td>3단계 시작</td><td>401kWh 이상</td><td>451kWh 이상</td></tr>
+</table>
+
+예를 들어 8월에 350kWh를 사용한 경우, <strong>일반 기준</strong>이라면 1단계(200kWh)+2단계(150kWh)로 계산되지만, <strong>여름 완화 기준</strong>에서는 전부 1단계(300kWh 이하)에 해당되어 단가가 낮은 1단계 요금만 부과됩니다.<br><br>
+이 구간 완화는 매년 7~8월 사용분(청구서 기준은 8~9월 고지서)에 자동 적용됩니다. 별도 신청이 필요하지 않습니다.<br><br>
+다만 구간 완화가 있어도 에어컨 사용이 많으면 450kWh를 넘어 3단계에 진입할 수 있습니다. 절약 노력을 병행하는 것이 중요합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260628/5_electricity_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-2">An infographic-style diagram showing Korea's three-tier progressive electricity rate system (누진제). Bar chart showing usage in kWh on X-axis and cost per kWh on Y-axis, with 3 colored tiers — green (1st tier 0-300kWh summer), yellow (2nd tier), red (3rd tier). Summer relaxed rates highlighted. Clean data visualization, white background, professional design. Photorealistic rendering, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">여름철 전기요금 누진제 3단계 구간 완화 다이어그램 / AI 제작 이미지</div>
+</div>
+
+<h2>04 | 누진제 계산 실전 예시</h2>
+
+실제 계산 예시로 이해를 도와드립니다.<br><br>
+<strong>예시 1 — 8월 300kWh 사용 (여름 완화 기준)</strong>:<br>
+• 1단계(300kWh × 120원) = 36,000원<br>
+• 기본요금 910원 (1단계 기준)<br>
+• 기후환경요금 + 연료비조정액 별도<br>
+• 합계 약 40,000~45,000원 내외<br><br>
+<strong>예시 2 — 8월 500kWh 사용 (여름 완화 기준)</strong>:<br>
+• 1단계(300kWh × 120원) = 36,000원<br>
+• 2단계(150kWh × 214.6원) = 32,190원<br>
+• 3단계(50kWh × 307.3원) = 15,365원<br>
+• 기본요금 7,300원 (3단계 기준)<br>
+• 합계 약 95,000~100,000원 내외<br><br>
+200kWh 차이(300kWh vs 500kWh)인데 요금은 2배 이상 차이 납니다. 이것이 누진제의 특성입니다.<br><br>
+<strong>정확한 계산</strong>은 한전 사이버지점(cyber.kepco.co.kr)의 공식 전기요금 계산기를 이용하시기 바랍니다. 기본요금, 기후환경요금, 연료비조정액이 포함된 실제 요금을 정확하게 확인할 수 있습니다.
+
+<h2>05 | 복지할인 대상자는 누구?</h2>
+
+취약계층이나 특수 가구는 매월 전기요금을 최대 30%(월 최대 16,000원 한도)까지 감면받을 수 있습니다.<br><br>
+<strong>복지할인 적용 대상 (2026년 기준)</strong>:<br>
+<table class="info-table">
+  <tr><th>대상 유형</th><th>감면율</th><th>월 한도</th></tr>
+  <tr><td>장애인 (장애인복지법 등록)</td><td>30%</td><td>월 16,000원</td></tr>
+  <tr><td>국가유공자</td><td>30%</td><td>월 16,000원</td></tr>
+  <tr><td>기초생활수급자</td><td>30%</td><td>월 16,000원</td></tr>
+  <tr><td>차상위계층</td><td>30%</td><td>월 16,000원</td></tr>
+  <tr><td>3자녀 이상 다자녀 가구</td><td>30%</td><td>월 16,000원</td></tr>
+  <tr><td>가구원 5인 이상 대가족</td><td>30%</td><td>월 16,000원</td></tr>
+  <tr><td>출생 3년 미만 영아 가구</td><td>30%</td><td>월 16,000원</td></tr>
+</table>
+
+복지할인은 해당 가구당 1개의 계약에만 적용되며, 중복 대상(예: 장애인이면서 기초수급자)이라도 할인율이 중첩되지 않고 최대 30%·월 16,000원 한도로 단일 적용됩니다.<br><br>
+만약 대상자임에도 아직 신청하지 않았다면, 과거에 냈던 전기요금에 대한 소급 적용도 가능합니다. 한전에 문의해 보시기 바랍니다.
+
+<h2>06 | 복지할인 신청 방법</h2>
+
+복지할인 신청은 온라인 또는 한전 방문 두 가지 방법으로 가능합니다.<br><br>
+<strong>온라인 신청</strong>:<br>
+1. 한전 사이버지점(cyber.kepco.co.kr) 접속<br>
+2. 회원 로그인(또는 공동인증서)<br>
+3. 고객서비스 → 복지할인 신청<br>
+4. 대상 유형 선택 후 관련 증빙서류 첨부(복지카드, 수급자 증명서 등)<br>
+5. 신청 완료 → 심사 후 적용<br><br>
+<strong>한전 방문 신청</strong>: 가까운 한전 지사·한전ON 센터를 방문해 신청서 작성 후 제출. 증빙서류를 지참해야 합니다.<br><br>
+신청 후 심사를 거쳐 통상 다음 달 고지서부터 할인이 적용됩니다. 적용 여부는 사이버지점에서 확인 가능합니다.<br><br>
+<div class="tip-box">
+<strong>💡 팁</strong>: 복지카드(장애인증) 또는 수급자 증명서 등 관련 서류를 스캔 또는 사진 파일로 미리 준비하면 온라인 신청 시 편리합니다.
+</div>
+
+<h2>07 | 에어컨 전기요금 줄이는 실전 절약법</h2>
+
+에어컨을 전혀 안 쓸 수는 없지만, 사용 방법을 조금만 바꿔도 요금 차이가 납니다.<br><br>
+<strong>절약 방법 7가지</strong>:<br><br>
+1. <strong>설정 온도 26~28℃ 유지</strong> — 1℃ 높일 때마다 전기 사용량이 약 7% 줄어듭니다.<br>
+2. <strong>선풍기와 병용</strong> — 에어컨+선풍기 조합은 에어컨 단독보다 체감 온도를 낮추면서 전력 소모를 줄입니다.<br>
+3. <strong>타이머 설정</strong> — 취침 시 1~2시간 타이머를 설정하면 밤새 켜두는 것보다 훨씬 절약됩니다.<br>
+4. <strong>필터 청소</strong> — 에어컨 필터가 막히면 냉각 효율이 떨어져 전력 소모가 늘어납니다. 2주에 한 번 청소를 권장합니다.<br>
+5. <strong>틈새 차단</strong> — 문틈, 창문 틈으로 냉기가 새면 에어컨이 더 오래 작동합니다. 문풍지나 커튼으로 차단하세요.<br>
+6. <strong>낮에는 블라인드·커튼 활용</strong> — 햇빛이 직접 들어오면 실내 온도가 3~5℃ 높아집니다. 차열 커튼이 효과적입니다.<br>
+7. <strong>대기 전력 차단</strong> — 에어컨 외 냉장고 외엔 사용 안 하는 전자제품 플러그를 뽑아두세요.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260628/5_electricity_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-3">A Korean living room interior with an air conditioner set to 27 degrees Celsius shown on its display. A smart power strip with energy monitoring is plugged into the outlet. Curtains drawn to block sunlight. Fan running alongside air conditioner. Cool, comfortable summer atmosphere indoors. Photorealistic, natural lighting, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">에어컨 설정 온도 최적화와 절전 실천으로 여름 전기요금 절약 / AI 제작 이미지</div>
+</div>
+
+<h2>08 | 우리 집 전기요금 미리 계산하는 법</h2>
+
+다음 달 전기요금이 얼마나 나올지 미리 확인하고 싶다면 한전 공식 계산기를 이용하세요.<br><br>
+<strong>한전 공식 전기요금 계산기</strong>: cyber.kepco.co.kr → 전기요금 안내 → 요금 계산기<br><br>
+계산기에 이번 달 예상 사용량을 입력하면 1단계~3단계 누진 적용 내역과 총 요금이 자동 계산됩니다. 기본요금, 기후환경요금, 연료비조정액이 모두 포함된 실제 요금에 가까운 금액을 확인할 수 있습니다.<br><br>
+스마트 홈 에너지 관리 시스템(HEMS)을 이용하면 실시간 사용량 모니터링도 가능합니다. 한전 앱(한전ON)에서도 월별 사용량과 예상 요금을 확인할 수 있어 관리에 도움이 됩니다.
+
+<h2>09 | 에너지캐시백 절약 환급 제도</h2>
+
+전기요금을 일정 비율 이상 줄이면 한전에서 절감분의 일부를 현금으로 돌려주는 <strong>에너지캐시백 제도</strong>도 있습니다.<br><br>
+<strong>에너지캐시백 개요</strong>:<br>
+• 전월 또는 동기 대비 사용량을 일정 이상 감축하면 절감량에 비례한 캐시백을 제공<br>
+• 캐시백은 전기요금 청구서에서 차감 형태로 지급<br>
+• 신청: 한전 사이버지점 또는 한전ON 앱에서 신청 가능<br><br>
+정확한 신청 기준과 환급률은 한전 홈페이지(kepco.co.kr) 또는 고객센터(123)에서 최신 내용을 확인하세요. 제도 세부 조건은 변동될 수 있으므로 발행 시점 이후 내용이 바뀔 수 있습니다.
+
+<h2>10 | 자주 묻는 질문</h2>
+
+<div class="step-box">
+<strong>Q. 여름 구간 완화는 신청해야 받을 수 있나요?</strong><br>
+A. 아닙니다. 7월과 8월 사용분에는 자동으로 완화된 구간이 적용됩니다. 별도 신청 없이 적용됩니다.
+</div>
+<div class="step-box">
+<strong>Q. 복지할인 대상자인데 아직 신청을 안 했어요. 과거 요금도 돌려받을 수 있나요?</strong><br>
+A. 소급 환급이 가능한 경우가 있습니다. 한전 고객센터(123) 또는 사이버지점에 문의하면 소급 가능 기간과 절차를 안내받을 수 있습니다.
+</div>
+<div class="step-box">
+<strong>Q. 에어컨을 쓰지 않았는데도 여름 요금이 많이 나왔어요.</strong><br>
+A. 냉장고, TV, 컴퓨터 등 대기 전력도 합산됩니다. 여름철에는 냉장고 효율이 떨어지기도 합니다. 한전 앱에서 월별 사용량을 확인해 갑작스러운 증가 원인을 파악해 보세요.
+</div>
+<div class="step-box">
+<strong>Q. 누진제 적용 요금 계산, 어디서 확인하나요?</strong><br>
+A. 한전 사이버지점(cyber.kepco.co.kr) 전기요금 계산기를 이용하시면 가장 정확합니다. 기본요금·기후환경요금을 포함한 실제 요금과 가깝습니다.
+</div>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260627/gov_kpass_refund_schedule.html">K-패스 환급금 언제 들어오나, 이용 다음 달 정산 구조와 지급일 확인법</a></li>
+    <li><a href="../260627/gov_gyeonggi_pass_vs_kpass.html">더경기패스 K-패스와 차이, 경기도민은 얼마나 더 환급받나</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#전기요금누진제</span>
+  <span class="tag">#여름전기요금</span>
+  <span class="tag">#에어컨전기세</span>
+  <span class="tag">#전기복지할인</span>
+  <span class="tag">#전기요금절약</span>
+  <span class="tag">#한전복지할인</span>
+  <span class="tag">#누진제계산</span>
+  <span class="tag">#여름구간완화</span>
+  <span class="tag">#에너지캐시백</span>
+  <span class="tag">#전기요금계산기</span>
+</div>
+
+</body>
+</html>

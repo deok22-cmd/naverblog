@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== G0 COVER : 정선 함백산 만항재 야생화 (커버 — 고정 아키타입) =====
+       구조: 배경 슬롯 + 전체 스크림(상+하) + brand-bar + 워드마크 + 키커 + 메인 타이틀 + 칩 + 서브 -->
+  <defs>
+    <linearGradient id="scrimTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.55"/>
+      <stop offset="0.30" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.42" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.88"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1f1c"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimTop)"/>
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <!-- 채널 워드마크 (상단) -->
+  <text x="80" y="110" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="700" fill="#80cbc4" letter-spacing="4">travelkorea_365</text>
+  <rect x="80" y="122" width="340" height="4" fill="#00796b"/>
+
+  <!-- 키커 -->
+  <text x="80" y="700" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#80cbc4" letter-spacing="4">강원도 여름 피서</text>
+
+  <!-- 메인 타이틀 -->
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="104" font-weight="800" fill="#ffffff" letter-spacing="-3">
+    <tspan x="80" y="820">차로 오르는</tspan>
+    <tspan x="80" y="934">만항재 야생화</tspan>
+  </text>
+
+  <!-- 서브 타이틀 -->
+  <text x="80" y="1010" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="40" font-weight="500" fill="#e0f2f1">해발 1,330m 국내 최고도 고개 드라이브</text>
+
+  <!-- 핵심 팩트 칩 -->
+  <rect x="80" y="1066" width="260" height="68" rx="34" fill="#00796b"/>
+  <text x="210" y="1109" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="700" fill="#ffffff">7월 야생화 절정</text>
+
+  <rect x="358" y="1066" width="260" height="68" rx="34" fill="#00796b"/>
+  <text x="488" y="1109" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="700" fill="#ffffff">입장료 무료</text>
+
+  <!-- 서브 캡션 -->
+  <text x="80" y="1220" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="500" fill="#b2dfdb">원추리 · 금강초롱꽃 · 100여 종 야생화</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>
