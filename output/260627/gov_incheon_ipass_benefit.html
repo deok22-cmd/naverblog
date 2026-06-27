@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0 auto; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1f8e9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 25px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 14px; text-align: left; font-size: 0.95em; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #e0e0e0; }
+  .step-box { border-left: 4px solid #388e3c; padding: 14px 18px; background: #f9f9f9; border-top: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border-left: 4px solid #f9a825; padding: 14px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .recommend-area a { color: #388e3c; text-decoration: none; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #ccc; border-radius: 8px; padding: 28px 20px; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; color: #555; flex-wrap: wrap; gap: 6px; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; padding: 12px; border-radius: 4px; font-size: 0.8em; color: #444; white-space: pre-wrap; word-break: break-all; text-align: left; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 7px 14px; border-radius: 4px; cursor: pointer; margin-top: 10px; font-size: 0.83em; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>인천 I-패스 혜택과 신청 방법, K-패스보다 유리한 점은</h1>
+
+<div class="intro-box">
+인천에 사신다면 K-패스 그냥 쓰지 마시고, <strong>인천 I-패스(아이패스)</strong>가 적용되는지 먼저 확인해 보세요.<br><br>
+같은 K-패스 카드를 사용하더라도 인천시민이라면 더 넓은 청년 나이 기준과 무제한 환급, 2자녀 이상 가정의 추가 혜택을 받을 수 있습니다.<br><br>
+이번 글에서는 <strong>인천 I-패스의 혜택 내용, K-패스와의 차이, 그리고 신청 방법</strong>을 2026년 기준으로 정리해 드립니다.
+</div>
+
+<h2>01. 인천 I-패스란 무엇인가요?</h2>
+
+인천 I-패스(아이패스)는 <strong>정부의 K-패스를 기반으로 인천시가 추가 예산을 투입해 운영하는 인천시민 전용 대중교통비 지원 사업</strong>입니다.<br><br>
+인천시 공식 명칭은 '인천 i-패스'이며, 인천시 교통 페이지(incheon.go.kr/traffic)에서 공식 안내를 확인하실 수 있습니다.<br><br>
+만 19세 이상 인천시민이라면 누구나 신청할 수 있으며, 기본 K-패스보다 더 넓은 혜택을 받을 수 있습니다.<br><br>
+특히 청년 나이 기준 확대, 무제한 환급, 다자녀 가정 최대 70% 환급이라는 세 가지 핵심 차별점이 인천 I-패스를 돋보이게 합니다.<br><br>
+(출처: 인천시 공식 홈페이지 incheon.go.kr, 한국교통안전공단 K-패스 공식 안내, 2026년 6월 기준)
+
+<div class="img-area">
+<img alt="인천 I-패스(아이패스) — 인천시민 전용 교통비 지원 사업 안내 / AI 제작 이미지" src="../../images/260627/5_incheon_ipass_1.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+</div>
+
+<h2>02. 인천 I-패스 vs K-패스, 무엇이 다른가요?</h2>
+
+K-패스와 인천 I-패스의 핵심 차이를 비교표로 정리했습니다.
+
+<table class="info-table">
+<tr><th>항목</th><th>K-패스 (기본)</th><th>인천 I-패스</th></tr>
+<tr><td style="background:#f1faf9;">가입 대상</td><td style="background:#f1faf9;">전국 만 19세 이상</td><td style="background:#f1faf9;">인천시 거주 만 19세 이상</td></tr>
+<tr><td>청년 기준 나이</td><td>만 19~34세</td><td>만 19~39세 (5년 확대)</td></tr>
+<tr><td style="background:#f1faf9;">환급 횟수 상한</td><td style="background:#f1faf9;">월 60회</td><td style="background:#f1faf9;">무제한</td></tr>
+<tr><td>일반 환급률</td><td>20%</td><td>20% (동일)</td></tr>
+<tr><td style="background:#f1faf9;">청년 환급률</td><td style="background:#f1faf9;">30%</td><td style="background:#f1faf9;">30% (동일)</td></tr>
+<tr><td>저소득층 환급률</td><td>53.3%</td><td>최대 53% (유사)</td></tr>
+<tr><td style="background:#f1faf9;">다자녀 (2명 이상)</td><td style="background:#f1faf9;">30%</td><td style="background:#f1faf9;">최대 70%</td></tr>
+</table>
+
+청년 기준 5년 확대, 무제한 환급, 2자녀 이상 최대 70% 환급이 인천 I-패스의 가장 큰 차별점입니다.
+
+<h2>03. 청년 기준 만 39세까지 — 만 35~39세 인천시민에게 중요합니다</h2>
+
+K-패스 기본형에서 청년 환급률(30%)이 적용되는 나이는 <strong>만 34세까지</strong>입니다. 만 35세부터는 일반(20%)으로 전환됩니다.<br><br>
+반면 인천 I-패스는 <strong>인천시 청년기본조례에 따라 만 39세까지 청년으로 인정</strong>하여 30% 환급률을 적용합니다.<br><br>
+즉, 인천에 사는 만 35~39세 분들은 K-패스만 사용하면 20%를 환급받지만, 인천 I-패스 혜택이 적용되면 30%를 환급받을 수 있습니다.<br><br>
+월 교통비 60,000원 기준으로 20%는 12,000원, 30%는 18,000원입니다. 매달 6,000원, 연간 72,000원의 차이가 납니다.<br><br>
+인천에 거주하는 만 35~39세 직장인이라면 반드시 인천 I-패스 혜택 적용 여부를 K-패스 앱에서 확인하세요.
+
+<h2>04. 2자녀 이상 인천 가정 — 최대 70% 환급</h2>
+
+인천 I-패스의 가장 파격적인 혜택 중 하나는 <strong>다자녀(2자녀 이상) 가정에 최대 70% 환급</strong>을 지원한다는 점입니다.<br><br>
+K-패스 기본형에서 2자녀 다자녀 환급률은 30%이고, 3자녀 이상은 50%입니다.<br><br>
+인천 I-패스에서는 2자녀 이상의 출산 가정에 최대 70% 환급을 지원합니다.<br><br>
+월 교통비 60,000원 기준으로 K-패스 2자녀(30%) = 18,000원 환급, 인천 I-패스 2자녀(최대 70%) = 42,000원 환급입니다. 같은 상황에서 월 24,000원, 연간 288,000원의 차이가 납니다.<br><br>
+인천시 거주 다자녀 가정이라면 인천 I-패스 혜택이 매우 유리하므로, 반드시 적용 여부를 확인하고 이용하시기 바랍니다. (정확한 환급률과 조건은 인천시청 공식 채널에서 재확인 필요)
+
+<div class="img-area">
+<img alt="인천 지하철역 — 인천 I-패스 무제한 환급 적용 대중교통 / AI 제작 이미지" src="../../images/260627/5_incheon_ipass_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+</div>
+
+<h2>05. 무제한 환급 — K-패스 60회 상한과의 차이</h2>
+
+K-패스 기본형은 <strong>월 60회까지만 환급이 인정</strong>됩니다. 이용이 많은 분들에게는 이 상한이 아쉬울 수 있습니다.<br><br>
+인천 I-패스는 이용 횟수에 <strong>상한이 없이 무제한으로 환급</strong>이 적용됩니다.<br><br>
+일반 출퇴근 직장인은 월 40회 내외라 60회 상한에 걸리지 않지만, 대중교통을 하루 4번 이상 이용하시는 분들은 금방 60회를 넘어섭니다.<br><br>
+예를 들어 인천에서 서울로 출퇴근 왕복 2회에 더해 점심 외출 왕복 2회를 하루에 한다면, 하루 4회 × 22일 = 88회가 됩니다. K-패스 기본형이라면 60회만 환급되지만, 인천 I-패스라면 88회 전부 환급 대상이 됩니다.
+
+<h2>06. 인천 I-패스 신청 방법</h2>
+
+인천 I-패스는 별도의 전용 카드가 없습니다. 다음 절차만 완료하면 자동으로 혜택이 적용됩니다.<br><br>
+
+<div class="step-box"><strong>① K-패스 카드 발급</strong><br>신한, 우리, 하나, 삼성, KB국민 등 K-패스 제휴 카드사에서 K-패스 카드를 발급받습니다.</div>
+<div class="step-box"><strong>② K-패스 앱 가입 및 카드 등록</strong><br>공식 앱(K-패스) 또는 홈페이지(korea-pass.kr)에 가입하고 본인 카드를 등록합니다.</div>
+<div class="step-box"><strong>③ 주소지 인증</strong><br>주소지가 인천광역시임이 확인되면 인천 I-패스 혜택이 자동으로 적용됩니다. 별도의 인천시 전용 신청 창구는 없습니다.</div>
+<div class="step-box"><strong>④ 이용 시작</strong><br>인증 완료 이후 이용하는 대중교통에 인천 I-패스 환급률이 자동 적용됩니다.</div>
+
+신청이 매우 간단한 것이 인천 I-패스의 장점입니다. K-패스 카드를 이미 발급받으셨다면 앱에서 주소지 인증만 완료하시면 됩니다.
+
+<h2>07. 인천 I-패스 적용 교통수단은 K-패스와 동일합니다</h2>
+
+인천 I-패스는 K-패스 기반이므로 <strong>적용 대상 교통수단은 K-패스와 동일</strong>합니다.<br><br>
+수도권 지하철, 인천 도시철도(1호선·2호선), 인천 버스(시내버스·광역버스), 광역버스(M버스), 신분당선, GTX 등 교통카드 단말기로 이용하는 대중교통이 모두 포함됩니다.<br><br>
+시외버스, 고속버스, KTX, SRT 등 별도 발권 방식의 교통수단은 제외됩니다.<br><br>
+인천에서 서울까지 광역버스로 출퇴근하시는 분들은 광역버스 요금이 높은 만큼 환급 금액도 크고, 인천 I-패스 무제한 혜택까지 더해져 실질적인 혜택이 매우 큽니다.
+
+<h2>08. 인천 I-패스 혜택이 적용되는지 확인하는 방법</h2>
+
+K-패스 앱에서 현재 적용 중인 이용자 유형을 확인하시면 됩니다.<br><br>
+<strong>① 앱 실행 → '마이페이지' 또는 '카드 정보' 메뉴</strong>에서 현재 적용 유형을 확인하세요.<br><br>
+<strong>② 인천 I-패스 혜택 적용</strong>으로 표시되면 정상 적용 상태입니다.<br><br>
+<strong>③ 적용되지 않는 경우</strong>에는 주소지 업데이트가 필요하거나 인증이 지연 중일 수 있습니다.<br><br>
+전입신고 후 주소 반영에 수일이 걸릴 수 있으므로, 이사 후 일주일 이상 기다려도 반영되지 않는다면 K-패스 고객센터(1588-5959)나 인천시 교통 부서에 문의하시기 바랍니다.
+
+<div class="img-area">
+<img alt="K-패스 앱에서 인천 I-패스 혜택 적용 여부 확인 화면 / AI 제작 이미지" src="../../images/260627/5_incheon_ipass_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+</div>
+
+<h2>09. 인천 I-패스 자주 묻는 질문</h2>
+
+<strong>Q. 인천에 이사 왔는데 기존 K-패스 카드 그대로 써도 되나요?</strong><br>
+네, 기존 카드를 계속 사용하되 K-패스 앱에서 주소지 업데이트를 하시면 됩니다. 카드를 새로 발급받을 필요는 없습니다.<br><br>
+
+<strong>Q. 인천에 살지만 서울 직장 통근이 많은데 혜택이 적용되나요?</strong><br>
+적용됩니다. 인천시 주소지 거주자면 서울·경기 어디서 이용하든 인천 I-패스 혜택이 적용됩니다.<br><br>
+
+<strong>Q. 인천 I-패스 전용 카드가 따로 있나요?</strong><br>
+전용 카드는 없습니다. 일반 K-패스 카드를 발급받고 인천 주소를 인증하면 됩니다.<br><br>
+
+<strong>Q. 경기도에서 인천으로 이사하면 더경기패스에서 인천 I-패스로 자동 전환되나요?</strong><br>
+K-패스 앱에서 주소지 정보가 업데이트되면 자동으로 전환됩니다. 이사 후 전입신고와 함께 앱에서 주소 인증을 완료하세요.<br><br>
+
+<strong>Q. 인천 I-패스와 K-패스 중 하나를 선택해야 하나요?</strong><br>
+선택할 필요가 없습니다. 인천 거주자라면 K-패스를 이용하면 자동으로 인천 I-패스 혜택이 상위 적용됩니다.<br><br>
+
+인천 I-패스의 최신 혜택 내용과 정책 변경 사항은 인천시 공식 홈페이지(incheon.go.kr) 교통 메뉴에서 재확인하세요. 본 글은 2026년 6월 기준으로 작성되었습니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260626/gov_kpass_card_issuance.html">K-패스 카드 어디서 발급하나, 카드사별 혜택 비교</a></li>
+<li><a href="../260626/travel_gimje_chungunsa_baekryeon.html">김제 청운사 하소백련 7월 백련 — 새벽 개화와 연계 여행 코스</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<span class="tag">#인천I패스</span>
+<span class="tag">#인천아이패스</span>
+<span class="tag">#K패스인천</span>
+<span class="tag">#인천교통비</span>
+<span class="tag">#교통비환급</span>
+<span class="tag">#인천시민혜택</span>
+<span class="tag">#대중교통지원</span>
+<span class="tag">#교통비절약</span>
+<span class="tag">#인천I패스신청</span>
+<span class="tag">#K패스차이</span>
+</div>
+
+</body>
+</html>

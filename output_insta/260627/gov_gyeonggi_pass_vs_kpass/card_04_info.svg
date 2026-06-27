@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== P1 : 정보 표 — info 카드 (더경기패스 vs K-패스 핵심 비교) =====
+       슬러그: gov_gyeonggi_pass_vs_kpass · 역할: info · 타입: P1 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="210" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">두 패스 핵심 비교</text>
+  <rect x="82" y="244" width="140" height="9" fill="#00796b"/>
+
+  <!-- 헤더 라벨 행 -->
+  <text x="80" y="320" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="28" font-weight="600" fill="#80cbc4">항목</text>
+  <text x="580" y="320" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="28" font-weight="600" fill="#80cbc4">K-패스</text>
+  <text x="860" y="320" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="28" font-weight="600" fill="#80cbc4">더경기패스</text>
+  <line x1="80" y1="340" x2="1000" y2="340" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <!-- 행 1: 가입 대상 -->
+    <text x="80" y="418" font-size="36" font-weight="600" fill="#ffffff">가입 대상</text>
+    <text x="580" y="418" font-size="34" font-weight="700" fill="#b2dfdb">전국 만 19세↑</text>
+    <text x="860" y="418" font-size="34" font-weight="700" fill="#80cbc4">경기도 거주</text>
+    <line x1="80" y1="450" x2="1000" y2="450" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <!-- 행 2: 청년 기준 -->
+    <text x="80" y="528" font-size="36" font-weight="600" fill="#ffffff">청년 기준</text>
+    <text x="580" y="528" font-size="34" font-weight="700" fill="#b2dfdb">만 19~34세</text>
+    <text x="860" y="528" font-size="34" font-weight="700" fill="#80cbc4">만 19~39세</text>
+    <line x1="80" y1="560" x2="1000" y2="560" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <!-- 행 3: 환급 횟수 -->
+    <text x="80" y="638" font-size="36" font-weight="600" fill="#ffffff">환급 횟수</text>
+    <text x="580" y="638" font-size="34" font-weight="700" fill="#b2dfdb">월 60회 상한</text>
+    <text x="860" y="638" font-size="34" font-weight="700" fill="#80cbc4">무제한</text>
+    <line x1="80" y1="670" x2="1000" y2="670" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <!-- 행 4: 청년 환급률 -->
+    <text x="80" y="748" font-size="36" font-weight="600" fill="#ffffff">청년 환급률</text>
+    <text x="580" y="748" font-size="34" font-weight="700" fill="#b2dfdb">30%</text>
+    <text x="860" y="748" font-size="34" font-weight="700" fill="#80cbc4">30%</text>
+    <line x1="80" y1="780" x2="1000" y2="780" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <!-- 행 5: 일반 환급률 -->
+    <text x="80" y="858" font-size="36" font-weight="600" fill="#ffffff">일반 환급률</text>
+    <text x="580" y="858" font-size="34" font-weight="700" fill="#b2dfdb">20%</text>
+    <text x="860" y="858" font-size="34" font-weight="700" fill="#80cbc4">20%</text>
+    <line x1="80" y1="890" x2="1000" y2="890" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <!-- 행 6: 취약계층 -->
+    <text x="80" y="968" font-size="36" font-weight="600" fill="#ffffff">취약계층</text>
+    <text x="580" y="968" font-size="34" font-weight="700" fill="#b2dfdb">53.3%</text>
+    <text x="860" y="968" font-size="34" font-weight="700" fill="#80cbc4">53%</text>
+    <line x1="80" y1="1000" x2="1000" y2="1000" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <!-- 행 7: 고양시 -->
+    <text x="80" y="1078" font-size="36" font-weight="600" fill="#ffffff">고양시 거주</text>
+    <text x="580" y="1078" font-size="34" font-weight="700" fill="#b2dfdb">K-패스 적용</text>
+    <text x="860" y="1078" font-size="34" font-weight="700" fill="#e57373">2026년 제외</text>
+  </g>
+
+  <text x="80" y="1170" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">2026년 기준 · 경기도청 gg.go.kr 공식 자료.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>260627 일일 발행 대시보드</title>
+<style>
+  body { font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 15px; background: #f4f4f4; color: #222; padding: 20px; }
+  h1 { background: #388e3c; color: #fff; padding: 16px 20px; border-radius: 8px; font-size: 1.3em; margin-bottom: 20px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+  th { background: #1b5e20; color: #fff; padding: 12px 14px; text-align: left; }
+  td { padding: 12px 14px; border-bottom: 1px solid #e8e8e8; vertical-align: middle; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: #f9fdf9; }
+  .status-wait { color: #e65100; font-weight: 700; }
+  .status-done { color: #388e3c; font-weight: 700; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; background: #e8f5e9; color: #1b5e20; border: 1px solid #a5d6a7; margin-left: 6px; }
+  .note { margin-top: 20px; background: #fff3e0; border: 1px solid #ffcc02; border-radius: 6px; padding: 12px 16px; font-size: 0.92em; color: #555; }
+</style>
+</head>
+<body>
+<h1>📋 2026-06-27 일일 발행 대시보드 (네이버)</h1>
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>슬러그 / 제목</th>
+      <th>카테고리</th>
+      <th>상태</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><a href="gov_kpass_refund_schedule.html">K-패스 환급금 언제 들어오나, 이용 다음 달 정산 구조와 지급일 확인법</a></td>
+      <td><span class="badge">신규도메인</span> gov_</td>
+      <td class="status-done">✔️ 작성 완료</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><a href="gov_kpass_metro_coverage.html">K-패스 광역버스·신분당선도 환급되나, 적용 가능한 교통수단과 제외 노선</a></td>
+      <td><span class="badge">신규도메인</span> gov_</td>
+      <td class="status-done">✔️ 작성 완료</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><a href="gov_kpass_multitype_rate.html">K-패스 다자녀·저소득 환급률 얼마, 2026년 달라진 지원 내용</a></td>
+      <td><span class="badge">신규도메인</span> gov_</td>
+      <td class="status-done">✔️ 작성 완료</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><a href="gov_gyeonggi_pass_vs_kpass.html">더경기패스 K-패스와 차이, 경기도민은 얼마나 더 환급받나</a></td>
+      <td><span class="badge">신규도메인</span> gov_</td>
+      <td class="status-done">✔️ 작성 완료</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><a href="gov_incheon_ipass_benefit.html">인천 I-패스 혜택과 신청 방법, K-패스보다 유리한 점은</a></td>
+      <td><span class="badge">신규도메인</span> gov_</td>
+      <td class="status-done">✔️ 작성 완료</td>
+    </tr>
+  </tbody>
+</table>
+<div class="note">
+  ⚠️ <strong>큐 부족 플래그</strong><br>
+  [QUEUE LOW travel: 0] — 여행 §02 작성대기중 0건. 치트시트에서 다음 2~3주 시즌 기반 10~15건 리필 필요.<br>
+  [QUEUE LOW local: 1 / 시즌게이트 탈락] — §01 Row22(7월 말~8월)는 7월 7일 이후 발행 대상. 치트시트 리필 권장.<br>
+  [QUEUE LOW pilot: 0] — 행정 파일럿 P1~P5 소진 완료. 2주 회고(2026-06-25경) 성숙 조회수 확인 후 승격/차기 버티컬 판정 필요.
+</div>
+</body>
+</html>

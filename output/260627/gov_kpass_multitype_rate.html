@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0 auto; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1f8e9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 25px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 14px; text-align: left; font-size: 0.95em; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #e0e0e0; }
+  .step-box { border-left: 4px solid #388e3c; padding: 14px 18px; background: #f9f9f9; border-top: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border-left: 4px solid #f9a825; padding: 14px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .recommend-area a { color: #388e3c; text-decoration: none; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #ccc; border-radius: 8px; padding: 28px 20px; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; color: #555; flex-wrap: wrap; gap: 6px; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; padding: 12px; border-radius: 4px; font-size: 0.8em; color: #444; white-space: pre-wrap; word-break: break-all; text-align: left; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 7px 14px; border-radius: 4px; cursor: pointer; margin-top: 10px; font-size: 0.83em; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>K-패스 다자녀·저소득 환급률 얼마, 2026년 달라진 지원 내용</h1>
+
+<div class="intro-box">
+K-패스는 단순히 교통비를 할인해 주는 제도가 아닙니다. <strong>이용자의 상황에 따라 환급률이 크게 달라지는 맞춤형 지원 제도</strong>입니다.<br><br>
+일반 이용자와 청년이 다르고, 다자녀 가정과 저소득층이 또 다릅니다. 본인이 어떤 유형에 해당하는지 정확히 알면 더 많은 혜택을 받으실 수 있습니다.<br><br>
+이번 글에서는 2026년 기준 <strong>K-패스 유형별 환급률, 다자녀·저소득 지원 내용, 그리고 올해 달라진 점</strong>을 한눈에 정리해 드립니다.
+</div>
+
+<h2>01. K-패스 유형별 환급률 한눈에 보기</h2>
+
+2026년 기준 K-패스 이용자 유형별 기본 환급률은 다음과 같습니다.<br><br>
+(출처: 한국교통안전공단 K-패스 공식 안내 / 2026년 6월 기준, 정책 변경 시 재확인 필요)
+
+<table class="info-table">
+<tr><th>이용자 유형</th><th>환급률</th><th>주요 기준</th></tr>
+<tr><td style="background:#f1faf9;">일반</td><td style="background:#f1faf9;">20%</td><td style="background:#f1faf9;">만 19세 이상 성인</td></tr>
+<tr><td>청년</td><td>30%</td><td>만 19~34세</td></tr>
+<tr><td style="background:#f1faf9;">어르신</td><td style="background:#f1faf9;">30%</td><td style="background:#f1faf9;">만 65세 이상</td></tr>
+<tr><td>다자녀 (2명)</td><td>30%</td><td>18세 미만 자녀 2명</td></tr>
+<tr><td style="background:#f1faf9;">다자녀 (3명 이상)</td><td style="background:#f1faf9;">50%</td><td style="background:#f1faf9;">18세 미만 자녀 3명 이상</td></tr>
+<tr><td>저소득층</td><td>53.3%</td><td>기초·차상위 등</td></tr>
+</table>
+
+월 15회 이상 이용이 공통 조건이며, 복수 유형에 해당하는 경우 <strong>더 높은 환급률 하나만 적용</strong>됩니다. 예를 들어 청년(30%)이면서 2자녀(30%)인 경우 환급률은 중복 합산이 아니라 30%만 적용됩니다.
+
+<div class="img-area">
+<img alt="K-패스 이용자 유형별 환급률 비교표 / AI 제작 이미지" src="../../images/260627/3_kpass_multitype_1.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+</div>
+
+<h2>02. 저소득층 환급률 53.3%, 어떻게 산정되나요?</h2>
+
+저소득층에게 적용되는 53.3%라는 환급률은 얼핏 이상하게 보입니다.<br><br>
+이는 <strong>이용 요금의 53.3%를 환급</strong>해 준다는 의미로, 일반(20%)의 약 2.7배에 달하는 혜택입니다.<br><br>
+53.3%로 설정된 이유는 기존 복지 교통카드(통합복지카드) 수준의 할인율을 K-패스 체계 내에서 반영하기 위한 것입니다.<br><br>
+저소득층 대상 K-패스는 <strong>기초생활수급자 및 차상위계층</strong>이 해당됩니다.<br><br>
+신청 시 주민센터 또는 복지로(www.bokjiro.go.kr)에서 수급자격 확인서를 받아 K-패스 앱에 등록하면 저소득층 환급률이 자동으로 적용됩니다.<br><br>
+저소득층 이용자는 환급금이 크기 때문에, 매달 교통비의 절반 이상을 돌려받는 실질적 효과를 누리실 수 있습니다.
+
+<h2>03. 다자녀 가정 — 2자녀와 3자녀 이상이 다른 이유</h2>
+
+다자녀 환급률이 자녀 수에 따라 30%와 50%로 나뉘는 것은 출산 장려를 위한 정책적 설계입니다.<br><br>
+<strong>자녀가 2명인 경우</strong>에는 청년이나 어르신과 같은 30% 환급률이 적용됩니다.<br><br>
+<strong>자녀가 3명 이상인 경우</strong>에는 50% 환급률이 적용되어 저소득층 다음으로 높은 혜택을 받습니다.<br><br>
+여기서 자녀 기준은 <strong>만 18세 미만의 자녀</strong>를 말합니다. 자녀가 성인이 되면 해당 자녀는 카운트에서 제외됩니다.<br><br>
+다자녀 여부는 K-패스 앱에서 가족관계증명서 등 서류를 제출하거나, 행정 데이터와 연계를 통해 자동으로 인정받을 수 있습니다. 자세한 서류 제출 방법은 K-패스 공식 홈페이지(korea-pass.kr) 또는 고객센터에서 확인하세요.
+
+<div class="img-area">
+<img alt="다자녀 가정 K-패스 이용 — 3자녀 이상은 50% 환급 / AI 제작 이미지" src="../../images/260627/3_kpass_multitype_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+</div>
+
+<h2>04. 청년 기준 만 34세까지, 나는 해당되나요?</h2>
+
+K-패스에서 청년 환급률(30%)이 적용되는 기준은 <strong>만 19세 이상 만 34세 이하</strong>입니다.<br><br>
+만 35세가 되는 생일 이후에는 청년 환급률 대신 일반 환급률(20%)이 적용됩니다.<br><br>
+주의할 점은 만 나이 기준이라는 것입니다. 우리나라에서 만 나이 제도가 공식화된 이후, K-패스도 만 나이 기준을 따릅니다.<br><br>
+<strong>참고로 더경기패스(경기도민 전용)와 인천I-패스(인천시민 전용)는 청년 기준이 만 39세까지</strong>로 확대되어 있습니다. K-패스에서 30% 환급이 안 되는 만 35~39세 경기·인천 거주자라면 지자체 패스를 반드시 확인해 보세요.<br><br>
+어르신 기준은 만 65세 이상이며, 이 경우도 30% 환급률이 적용됩니다. 청년과 어르신이 같은 환급률이라는 점도 기억해 두세요.
+
+<h2>05. 2026년 K-패스 달라진 점 — 모두의 카드(정액형) 도입</h2>
+
+2026년 K-패스의 가장 큰 변화는 <strong>'모두의 카드(정액형)'</strong> 도입입니다.<br><br>
+기존의 K-패스(환급형)은 사용 금액의 일정 비율을 나중에 환급해 주는 방식입니다. 이에 더해 2026년 4월부터 <strong>월 교통비가 일정 기준금액을 초과하면 초과분 100%를 환급</strong>해 주는 정액형이 추가되었습니다.<br><br>
+수도권 기준으로 월 약 62,000원(정확한 금액은 한국교통안전공단 공식 발표 확인 필요)을 초과하는 교통비에 대해 100%를 돌려받는 구조입니다.<br><br>
+단, 이 정액형 혜택은 <strong>2026년 4월부터 9월까지 6개월 한시 운영</strong>으로 도입되었습니다. 연장 여부는 정부 발표를 확인하세요.<br><br>
+다자녀·저소득 이용자에게는 기본 환급형 혜택이 더 유리할 수 있으므로, 본인의 월 교통비와 환급률을 비교해 어느 쪽이 유리한지 계산해보시는 것이 좋습니다.
+
+<div class="tip-box">💡 <strong>계산 예시 (저소득층 기준)</strong><br>
+월 교통비 50,000원 사용 시 기본 환급형 53.3% 적용 → 환급금 약 26,650원<br>
+월 교통비 80,000원 사용 시: 기본형 53.3% → 42,640원 vs 정액형 초과분(80,000-62,000=18,000원) 100% → 18,000원<br>
+이 경우 기본형(53.3%)이 훨씬 유리합니다. (수치는 예시이며 실제 적용금액은 공식 채널에서 재확인 필요)
+</div>
+
+<h2>06. 환급 유형 등록 방법 — 처음 신청 시 주의 사항</h2>
+
+이용자 유형(일반/청년/다자녀/저소득 등)은 K-패스 앱 가입 시 자동으로 확인되는 경우도 있지만, 일부는 <strong>별도 서류 제출이 필요</strong>합니다.<br><br>
+<strong>청년·어르신</strong>은 생년월일 기반으로 자동 판별됩니다. 별도 서류가 필요 없습니다.<br><br>
+<strong>다자녀</strong>는 가족관계증명서 또는 행정 데이터 연계를 통해 확인합니다. 앱 가입 후 '유형 변경' 메뉴에서 신청하세요.<br><br>
+<strong>저소득층</strong>은 수급자격 확인이 필요합니다. 주민센터 발급 서류 또는 복지로 연계 데이터로 확인합니다.<br><br>
+유형 변경 신청 후 확인에는 수일이 소요될 수 있으며, 승인 완료 이후 이용분부터 변경된 환급률이 적용됩니다. 이전 이용분은 소급 적용되지 않으므로 가능한 빨리 등록하는 것이 유리합니다.
+
+<h2>07. 중복 유형에 해당하면 어떻게 되나요?</h2>
+
+K-패스 환급 유형이 여러 개에 해당되는 경우, <strong>중복 적용은 되지 않고 유리한 쪽 하나만 적용</strong>됩니다.<br><br>
+예를 들어 만 33세 청년이면서 기초수급자인 경우, 청년(30%)과 저소득층(53.3%) 중 더 높은 53.3%가 적용됩니다.<br><br>
+만 30세 청년이면서 자녀가 2명인 경우, 청년(30%)과 다자녀2명(30%)은 동일하므로 30% 적용.<br><br>
+만 29세 청년이면서 자녀가 3명인 경우, 청년(30%)과 다자녀3명(50%) 중 50%가 적용됩니다.<br><br>
+본인의 상황에 맞는 환급률이 정확히 적용되고 있는지는 K-패스 앱 '마이페이지'에서 현재 적용 유형을 반드시 확인해 두세요.
+
+<h2>08. K-패스 다자녀·저소득 환급으로 실질적으로 얼마나 아낄 수 있나요?</h2>
+
+월 교통비를 60,000원으로 가정하면 유형별 환급 금액은 다음과 같습니다.<br><br>
+<strong>일반(20%)</strong>: 월 12,000원 환급 → 연간 약 144,000원<br>
+<strong>청년(30%)</strong>: 월 18,000원 환급 → 연간 약 216,000원<br>
+<strong>다자녀 3명 이상(50%)</strong>: 월 30,000원 환급 → 연간 약 360,000원<br>
+<strong>저소득층(53.3%)</strong>: 월 31,980원 환급 → 연간 약 383,760원<br><br>
+특히 다자녀 가정과 저소득층의 경우, 연간 기준으로 36만~38만 원 상당의 교통비를 절약할 수 있습니다.<br><br>
+이는 월 교통비를 60,000원으로 가정한 예시이며, 실제 환급 금액은 이용 패턴과 요금에 따라 달라집니다.
+
+<h2>09. 환급 유형 변경이 필요한 상황 정리</h2>
+
+다음 상황에서는 K-패스 앱에서 유형 변경을 신청해야 합니다.<br><br>
+<strong>결혼 또는 출산으로 자녀가 생긴 경우</strong> — 다자녀 혜택을 받으려면 자녀 정보를 업데이트해야 합니다.<br><br>
+<strong>자녀가 만 18세 성인이 된 경우</strong> — 다자녀 카운트에서 해당 자녀가 제외되어 유형이 변경될 수 있습니다.<br><br>
+<strong>기초수급자 자격을 취득하거나 상실한 경우</strong> — 저소득층 유형 등록 또는 해제 신청이 필요합니다.<br><br>
+<strong>만 35세가 되어 청년 기준을 벗어난 경우</strong> — 자동으로 일반으로 전환되지만, 앱에서 확인을 권장합니다.<br><br>
+유형 변경 후에는 반드시 앱에서 변경이 반영되었는지 확인하세요. 잘못된 유형이 적용되어 낮은 환급률을 받고 있는 경우 소급 환급이 어렵습니다. 본 글의 내용은 2026년 6월 기준으로 작성되었으며 정책 변경 시 공식 채널을 재확인하세요.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260626/gov_kpass_card_issuance.html">K-패스 카드 어디서 발급하나, 카드사별 혜택 비교</a></li>
+<li><a href="../260626/travel_gimje_chungunsa_baekryeon.html">김제 청운사 하소백련 7월 백련 — 새벽 개화와 연계 여행 코스</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<span class="tag">#K패스</span>
+<span class="tag">#K패스다자녀</span>
+<span class="tag">#K패스저소득</span>
+<span class="tag">#K패스환급률</span>
+<span class="tag">#교통비지원</span>
+<span class="tag">#대중교통환급</span>
+<span class="tag">#다자녀혜택</span>
+<span class="tag">#저소득층교통비</span>
+<span class="tag">#교통비절약</span>
+<span class="tag">#K패스2026</span>
+</div>
+
+</body>
+</html>

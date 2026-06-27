@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== G0 Cover : 인천 I-패스 혜택과 신청 방법 =====
+       슬러그: gov_incheon_ipass_benefit / seed: 2634 / 카테고리: 생활정보(gov_) → #00796b 팔레트 -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.30" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.88"/>
+    </linearGradient>
+    <linearGradient id="scrimTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.52"/>
+      <stop offset="0.28" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d2420"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimTop)"/>
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <!-- 상단 채널 워드마크 -->
+  <text x="80" y="108" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#80cbc4" letter-spacing="3">travelkorea_365</text>
+
+  <!-- 카테고리 칩 -->
+  <rect x="80" y="132" width="200" height="52" rx="26" fill="#00796b"/>
+  <text x="180" y="166" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="26" font-weight="700" fill="#ffffff" letter-spacing="1">생활 정보</text>
+
+  <!-- 메인 헤드라인 -->
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="96" font-weight="800" fill="#ffffff" letter-spacing="-3">
+    <tspan x="80" y="900">인천 I-패스</tspan>
+    <tspan x="80" y="1010">혜택 총정리</tspan>
+  </text>
+
+  <!-- 강조 언더라인 -->
+  <rect x="80" y="1040" width="88" height="10" fill="#00796b"/>
+
+  <!-- 서브 카피 -->
+  <text x="80" y="1116" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="42" font-weight="500" fill="#b2dfdb">K-패스보다 유리한 점,</text>
+  <text x="80" y="1168" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="42" font-weight="500" fill="#b2dfdb">인천시민이라면 꼭 확인하세요.</text>
+
+  <!-- 하단 수치 칩 -->
+  <rect x="80" y="1224" width="260" height="64" rx="32" fill="#00796b" fill-opacity="0.85"/>
+  <text x="210" y="1264" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#ffffff">최대 70% 환급</text>
+  <rect x="362" y="1224" width="300" height="64" rx="32" fill="#00796b" fill-opacity="0.85"/>
+  <text x="512" y="1264" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#ffffff">무제한 환급 횟수</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

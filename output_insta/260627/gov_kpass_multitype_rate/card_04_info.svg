@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== card_04 : INFO — P1 레이아웃 (정보 표, 6행) =====
+       소스: info-table — 유형별 환급률 표 (일반/청년/어르신/다자녀2/다자녀3/저소득) -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="220" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">환급률 한눈에</text>
+  <rect x="82" y="254" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="378" font-size="38" font-weight="600" fill="#ffffff">일반 (만 19세 이상)</text>
+    <text x="1000" y="378" font-size="42" font-weight="800" fill="#80cbc4" text-anchor="end">20%</text>
+    <line x1="80" y1="408" x2="1000" y2="408" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="488" font-size="38" font-weight="600" fill="#ffffff">청년 (만 19~34세)</text>
+    <text x="1000" y="488" font-size="42" font-weight="800" fill="#80cbc4" text-anchor="end">30%</text>
+    <line x1="80" y1="518" x2="1000" y2="518" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="598" font-size="38" font-weight="600" fill="#ffffff">어르신 (만 65세 이상)</text>
+    <text x="1000" y="598" font-size="42" font-weight="800" fill="#80cbc4" text-anchor="end">30%</text>
+    <line x1="80" y1="628" x2="1000" y2="628" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="708" font-size="38" font-weight="600" fill="#ffffff">다자녀 (18세 미만 2명)</text>
+    <text x="1000" y="708" font-size="42" font-weight="800" fill="#80cbc4" text-anchor="end">30%</text>
+    <line x1="80" y1="738" x2="1000" y2="738" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="818" font-size="38" font-weight="600" fill="#ffffff">다자녀 (18세 미만 3명 이상)</text>
+    <text x="1000" y="818" font-size="42" font-weight="800" fill="#80cbc4" text-anchor="end">50%</text>
+    <line x1="80" y1="848" x2="1000" y2="848" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="928" font-size="38" font-weight="600" fill="#ffffff">저소득 (기초·차상위)</text>
+    <text x="1000" y="928" font-size="42" font-weight="800" fill="#80cbc4" text-anchor="end">53.3%</text>
+  </g>
+
+  <text x="80" y="1050" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">2026년 6월 기준 · 월 15회 이상 이용 공통 조건</text>
+  <text x="80" y="1100" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="28" font-weight="500" fill="#b2dfdb">중복 유형은 더 높은 환급률 하나만 적용</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

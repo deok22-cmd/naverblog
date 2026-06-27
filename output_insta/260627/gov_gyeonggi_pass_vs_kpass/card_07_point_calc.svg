@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== F : 텍스트 리스트 — point 카드 (환급 계산 3 케이스) =====
+       슬러그: gov_gyeonggi_pass_vs_kpass · 역할: point · 타입: F -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.64"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="250" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">실제 환급 계산</text>
+  <rect x="82" y="284" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <!-- 케이스 1 -->
+    <rect x="80" y="430" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="500" font-size="44" font-weight="700" fill="#ffffff">만 37세 직장인, 월 70,000원</text>
+    <text x="80" y="554" font-size="30" font-weight="500" fill="#b2dfdb">K-패스 14,000원 → 더경기패스 21,000원 (월 +7,000원)</text>
+    <line x1="80" y1="616" x2="1000" y2="616" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <!-- 케이스 2 -->
+    <rect x="80" y="680" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="750" font-size="44" font-weight="700" fill="#ffffff">만 30세 영업직, 월 80회 이용</text>
+    <text x="80" y="804" font-size="30" font-weight="500" fill="#b2dfdb">K-패스 27,000원 → 더경기패스 36,000원 (월 +9,000원)</text>
+    <line x1="80" y1="866" x2="1000" y2="866" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <!-- 연간 절약 요약 -->
+    <rect x="80" y="930" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="1000" font-size="44" font-weight="700" fill="#ffffff">연간 절약 효과</text>
+    <text x="80" y="1054" font-size="30" font-weight="500" fill="#b2dfdb">나이·이용 횟수에 따라 연 72,000~108,000원 추가 절약</text>
+  </g>
+
+  <text x="80" y="1230" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#cfd8d6">단순 계산 예시 · 실제 금액은 정산 방식에 따라 다를 수 있음.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

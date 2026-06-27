@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== card_05 : TIPS — P3 레이아웃 (체크리스트 4항목 + 저장 유도) =====
+       소스: tip-box + h2 06·09 — 유형 등록 및 변경 시 주의사항 체크리스트 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.48"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="270" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="60" font-weight="800" fill="#ffffff">유형 등록 전 꼭 확인</text>
+  <rect x="82" y="304" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <rect x="80" y="430" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="500" font-size="42" font-weight="600" fill="#ffffff">청년·어르신은 자동 판별 — 서류 불필요</text>
+    <line x1="80" y1="555" x2="1000" y2="555" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="608" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="678" font-size="42" font-weight="600" fill="#ffffff">다자녀는 앱 '유형 변경'에서 서류 제출</text>
+    <line x1="80" y1="733" x2="1000" y2="733" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="786" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="856" font-size="42" font-weight="600" fill="#ffffff">저소득은 수급자격 확인서 필요</text>
+    <line x1="80" y1="911" x2="1000" y2="911" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="964" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="1034" font-size="42" font-weight="600" fill="#ffffff">승인 전 이용분은 소급 적용 안 됨</text>
+  </g>
+
+  <text x="80" y="1150" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="40" font-weight="800" fill="#80cbc4">저장해두고 등록할 때 꺼내 보세요  ↓</text>
+  <text x="80" y="1230" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">자세한 등록 가이드는 프로필 블로그에서.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

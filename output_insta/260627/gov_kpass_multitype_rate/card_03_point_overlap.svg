@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== card_03 : POINT — D 레이아웃 (중앙 강조 문장) =====
+       소스: h2 07 — 중복 유형에 해당하면 유리한 쪽 하나만 적용, 단일 핵심 메시지 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.46"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.60"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="540" y="440" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="700" fill="#80cbc4" text-anchor="middle" letter-spacing="3">중복 유형 핵심 규칙</text>
+
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="88" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="-2">
+    <tspan x="540" y="620">여러 유형 해당돼도</tspan>
+    <tspan x="540" y="726">중복 합산 없이</tspan>
+    <tspan x="540" y="832">가장 높은 쪽 하나만</tspan>
+  </text>
+
+  <rect x="490" y="886" width="100" height="6" fill="#00796b"/>
+
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="36" font-weight="500" fill="#e0f2f1" text-anchor="middle">
+    <tspan x="540" y="972">예) 청년(30%) + 저소득(53.3%) → 53.3% 적용</tspan>
+    <tspan x="540" y="1020">예) 청년(30%) + 다자녀3명(50%) → 50% 적용</tspan>
+  </text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0 auto; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1f8e9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 25px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 14px; text-align: left; font-size: 0.95em; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #e0e0e0; }
+  .tip-box { background: #fffde7; border-left: 4px solid #f9a825; padding: 14px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .caution-box { background: #fce4ec; border-left: 4px solid #e57373; padding: 14px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .recommend-area a { color: #388e3c; text-decoration: none; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #ccc; border-radius: 8px; padding: 28px 20px; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; color: #555; flex-wrap: wrap; gap: 6px; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; padding: 12px; border-radius: 4px; font-size: 0.8em; color: #444; white-space: pre-wrap; word-break: break-all; text-align: left; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 7px 14px; border-radius: 4px; cursor: pointer; margin-top: 10px; font-size: 0.83em; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>더경기패스 K-패스와 차이, 경기도민은 얼마나 더 환급받나</h1>
+
+<div class="intro-box">
+경기도에 살고 계시다면 <strong>더경기패스(The 경기패스)</strong>라는 이름을 한 번쯤 들어보셨을 겁니다.<br><br>
+K-패스를 그냥 쓰면 될 것 같은데 왜 더경기패스가 따로 있는 건지, 두 제도의 차이가 뭔지, 경기도민이라면 어느 쪽이 더 유리한지 헷갈리시는 분들이 많습니다.<br><br>
+이번 글에서는 <strong>더경기패스와 K-패스의 핵심 차이, 경기도민이 실제로 얼마나 더 환급받는지</strong>를 2026년 기준으로 정리해 드립니다.
+</div>
+
+<h2>01. 더경기패스(The 경기패스)란 무엇인가요?</h2>
+
+더경기패스는 <strong>K-패스를 기반으로 경기도가 별도 예산을 투입해 운영하는 경기도민 전용 교통비 지원 사업</strong>입니다.<br><br>
+2024년 5월 1일부터 시작되었으며, K-패스의 혜택에 경기도 차원의 추가 지원을 얹은 형태입니다.<br><br>
+K-패스 카드를 발급받고, 주소지가 경기도로 확인되면 자동으로 더경기패스 혜택이 적용됩니다. 별도의 경기도 전용 카드를 발급받을 필요는 없습니다.<br><br>
+운영 주체는 경기도이며, 실제 혜택 적용과 정산은 K-패스 시스템을 공유합니다. 따라서 K-패스 앱에서 더경기패스 혜택 현황도 함께 확인하실 수 있습니다.<br><br>
+(출처: 경기도청 공식 홈페이지 gg.go.kr, 2026년 6월 기준)
+
+<div class="img-area">
+<img alt="더경기패스 — 경기도민 전용 K-패스 기반 교통비 지원 카드 / AI 제작 이미지" src="../../images/260627/4_gyeonggi_pass_1.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+</div>
+
+<h2>02. 더경기패스 vs K-패스, 핵심 차이 비교</h2>
+
+두 제도의 핵심 차이를 표로 정리했습니다.
+
+<table class="info-table">
+<tr><th>항목</th><th>K-패스 (기본)</th><th>더경기패스</th></tr>
+<tr><td style="background:#f1faf9;">가입 대상</td><td style="background:#f1faf9;">전국 만 19세 이상</td><td style="background:#f1faf9;">경기도 거주 만 19세 이상</td></tr>
+<tr><td>청년 기준 나이</td><td>만 19~34세</td><td>만 19~39세 (5년 확대)</td></tr>
+<tr><td style="background:#f1faf9;">환급 횟수 상한</td><td style="background:#f1faf9;">월 60회</td><td style="background:#f1faf9;">무제한</td></tr>
+<tr><td>환급률 (청년)</td><td>30%</td><td>30% (동일)</td></tr>
+<tr><td style="background:#f1faf9;">환급률 (일반)</td><td style="background:#f1faf9;">20%</td><td style="background:#f1faf9;">20% (동일)</td></tr>
+<tr><td>환급률 (취약계층)</td><td>53.3%</td><td>53% (유사)</td></tr>
+<tr><td style="background:#f1faf9;">고양시 주민</td><td style="background:#f1faf9;">K-패스 적용</td><td style="background:#f1faf9;">2026년부터 제외</td></tr>
+</table>
+
+환급률 자체는 K-패스와 더경기패스가 비슷하지만, <strong>청년 나이 기준 확대(만 34세→39세)와 환급 횟수 무제한</strong>이 더경기패스의 핵심 추가 혜택입니다.
+
+<h2>03. 만 35~39세 경기도민이라면 더경기패스가 필수입니다</h2>
+
+K-패스의 청년 기준은 만 34세까지입니다. 만 35세가 넘으면 일반 환급률(20%)로 내려갑니다.<br><br>
+그런데 더경기패스는 청년 기준이 <strong>만 39세까지</strong>로 5년 더 넓습니다.<br><br>
+따라서 경기도에 거주하는 <strong>만 35세~39세</strong> 분들은 K-패스만 사용하면 일반(20%)로 처리되지만, 더경기패스 혜택이 인정되면 청년(30%) 환급률을 받을 수 있습니다.<br><br>
+이 차이는 실제 환급 금액으로 환산하면 상당합니다. 월 교통비 60,000원 기준으로 20%는 12,000원, 30%는 18,000원 환급 → 매달 6,000원, 연간 72,000원 차이가 납니다.<br><br>
+만 35~39세 경기도민 직장인이라면 K-패스 카드를 발급받고 경기도 주소지 인증만 완료되면 자동으로 더경기패스 청년 혜택이 적용됩니다.
+
+<div class="img-area">
+<img alt="경기도 광역버스 — 더경기패스로 무제한 환급 가능 / AI 제작 이미지" src="../../images/260627/4_gyeonggi_pass_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+</div>
+
+<h2>04. 무제한 환급이란? K-패스와 환급 상한 차이</h2>
+
+K-패스 기본형은 <strong>월 최대 60회까지만 환급이 적용</strong>됩니다. 60회를 초과하는 이용분은 환급이 되지 않습니다.<br><br>
+반면 더경기패스는 이용 횟수에 <strong>상한이 없이 무제한</strong>으로 환급됩니다.<br><br>
+일반 직장인이 하루 왕복 이용을 기준으로 한 달에 약 40~44회 이용한다면 60회 상한에 걸릴 일이 없습니다. 하지만 <strong>택배 기사나 영업직 등 대중교통을 하루 4~6회 이상 이용하는 분</strong>들은 60회를 쉽게 초과할 수 있습니다.<br><br>
+이런 경우 K-패스 기본형에서는 초과분에 대한 환급이 없지만, 더경기패스에서는 모든 이용분이 환급 대상이 됩니다.<br><br>
+대중교통을 하루에 3~4회 이상 이용하시는 경기도 거주 분들은 더경기패스의 무제한 환급 혜택을 특히 주목하실 필요가 있습니다.
+
+<h2>05. 2026년 더경기패스 달라진 점 — 고양시 제외</h2>
+
+2026년 1월 1일부터 <strong>주소지가 고양시인 경기도민은 더경기패스 혜택에서 제외</strong>되었습니다.<br><br>
+고양시는 수도권 환승 체계에서 별도의 지자체 패스 적용 방식을 채택하면서 더경기패스 대상에서 빠지게 되었습니다.<br><br>
+고양시 거주자라면 K-패스 기본형 혜택은 그대로 받으실 수 있으며, 고양시 자체적인 교통비 지원 정책이 있는지 고양시청 홈페이지에서 별도로 확인하시기 바랍니다.<br><br>
+경기도 내 다른 지역(수원, 성남, 용인, 안양 등) 거주자는 기존과 동일하게 더경기패스 혜택이 유지됩니다.
+
+<h2>06. 더경기패스 혜택 받는 방법</h2>
+
+더경기패스 혜택을 받기 위한 절차는 생각보다 간단합니다.<br><br>
+<strong>① K-패스 카드 발급</strong> — 신한, 우리, 하나, 삼성, KB국민 등 K-패스 제휴 카드사에서 카드를 발급받습니다.<br><br>
+<strong>② K-패스 앱에 카드 등록</strong> — 공식 앱(K-패스) 또는 홈페이지(korea-pass.kr)에서 카드를 등록합니다.<br><br>
+<strong>③ 주소지 인증</strong> — 경기도 주소로 인증이 완료되면 더경기패스 혜택이 자동으로 적용됩니다. 이주 또는 전입 시 주소 변경이 반영되는 데 수일이 소요될 수 있습니다.<br><br>
+<strong>④ 이용 시작</strong> — 이후 이용하는 대중교통에 더경기패스 환급률이 자동 적용됩니다.<br><br>
+별도의 더경기패스 전용 창구나 신청 절차는 없습니다. K-패스 앱 하나로 관리됩니다.
+
+<h2>07. 경기도민이 선택해야 할 K-패스 카드는?</h2>
+
+경기도민은 더경기패스 혜택을 받기 위해 특정 카드사를 선택해야 한다거나 별도 조건을 충족해야 하는 것은 아닙니다.<br><br>
+다만, <strong>카드사별로 더경기패스에 최적화된 추가 혜택</strong>을 제공하는 경우가 있으니 비교해 보시는 것이 좋습니다.<br><br>
+예를 들어 신한카드 더경기패스 전용 상품이 있으며, 특정 카드사는 더경기패스 적용 외에도 추가 적립이나 할인 혜택을 제공하기도 합니다.<br><br>
+카드 선택 시에는 <strong>카드 연회비, 추가 혜택, 지급 방식(캐시백 vs 포인트 vs 청구 차감)</strong>을 함께 고려하세요.<br><br>
+더경기패스 제휴 카드 목록은 경기도청 홈페이지(gg.go.kr) 또는 K-패스 앱 내 '카드 발급' 안내에서 최신 정보를 확인하실 수 있습니다.
+
+<h2>08. 더경기패스 환급 계산 예시</h2>
+
+더경기패스의 실질적 혜택을 계산 예시로 확인해 보겠습니다.<br><br>
+<strong>[사례 1] 만 37세 경기도 직장인, 월 교통비 70,000원</strong><br>
+K-패스 기본형: 일반 20% → 월 14,000원 환급<br>
+더경기패스: 청년 30% (만 39세 이하이므로 적용) → 월 21,000원 환급<br>
+차이: 월 7,000원 → 연간 84,000원 추가 절약<br><br>
+<strong>[사례 2] 만 30세 경기도 영업직, 월 교통비 120,000원, 월 80회 이용</strong><br>
+K-패스 기본형: 청년 30%, 60회 상한 → 약 120,000원 × (60/80) × 30% = 27,000원<br>
+더경기패스: 청년 30%, 무제한 → 120,000원 × 30% = 36,000원<br>
+차이: 월 9,000원 → 연간 108,000원 추가 절약<br><br>
+위 예시는 이해를 돕기 위한 단순 계산이며, 실제 환급 금액은 요금 체계와 정산 방식에 따라 다를 수 있습니다.
+
+<h2>09. 더경기패스 추가 정보와 최신 안내 확인처</h2>
+
+더경기패스 관련 최신 정보는 다음 공식 채널에서 확인하실 수 있습니다.<br><br>
+<strong>경기도청 공식 홈페이지</strong>(gg.go.kr) — '교통·건설·환경 > 더경기패스' 메뉴<br><br>
+<strong>K-패스 공식 홈페이지</strong>(korea-pass.kr) — 지자체별 패스 안내 메뉴<br><br>
+<strong>K-패스 앱</strong> — 더경기패스 혜택 적용 여부 및 환급 내역 확인<br><br>
+정책은 수시로 변경될 수 있으므로, 중요한 결정을 내리기 전에는 반드시 공식 채널에서 최신 내용을 재확인하시기 바랍니다.<br><br>
+특히 이사나 전입신고로 주소지가 바뀌는 경우, K-패스 앱에서 주소 업데이트가 빠르게 반영될 수 있도록 전입신고 직후 앱 로그인 후 확인해 두세요.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260626/gov_kpass_card_issuance.html">K-패스 카드 어디서 발급하나, 카드사별 혜택 비교</a></li>
+<li><a href="../260626/travel_gyeongju_donggung_nightview.html">경주 동궁과 월지·첨성대 여름 야경 — 신라 야경 명소와 연꽃 반영</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<span class="tag">#더경기패스</span>
+<span class="tag">#경기패스</span>
+<span class="tag">#K패스경기도</span>
+<span class="tag">#경기도교통비</span>
+<span class="tag">#교통비환급</span>
+<span class="tag">#K패스차이</span>
+<span class="tag">#경기도민혜택</span>
+<span class="tag">#대중교통지원</span>
+<span class="tag">#교통비절약</span>
+<span class="tag">#더경기패스신청</span>
+</div>
+
+</body>
+</html>
