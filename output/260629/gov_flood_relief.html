@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #f57f17; padding-bottom: 12px; color: #e65100; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #fff8e1; padding: 12px 15px; border-left: 6px solid #f57f17; margin-top: 50px; color: #bf360c; }
+  .intro-box { background: #fff8e1; border: 2px solid #ffcc02; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #f57f17; color: #fff; padding: 10px 14px; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #fff8e1; }
+  .tip-box { background: #e8f5e9; border-left: 5px solid #43a047; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .caution-box { background: #fce4ec; border-left: 5px solid #e57373; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #ffcc02; background: #fff8e1; border-radius: 8px; padding: 20px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 700; color: #f57f17; }
+  .ph-file { font-size: 0.85em; color: #888; font-family: monospace; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 14px; border-radius: 6px; font-size: 0.8em; white-space: pre-wrap; line-height: 1.6; }
+  .copy-btn { margin-top: 10px; background: #f57f17; color: #fff; border: none; padding: 8px 18px; border-radius: 5px; cursor: pointer; font-size: 0.88em; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#f57f17"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>수해·침수 피해 재난지원금 신청 방법과 풍수해보험 가입 절차, 장마철 대비</h1>
+
+<div class="intro-box">
+장마철 집중호우로 주택·차량 침수 피해를 입었을 때 어디에 신청해야 하는지, 정부 지원금은 얼마나 받을 수 있는지 모르는 분이 많습니다.<br><br>
+이 글에서는 재해구호법에 따른 이재민 구호 지원 절차, 지자체별 수해 복구 지원금 신청 방법, 풍수해보험 가입 대상과 보험료, 침수 피해 발생 직후 대처 순서까지 정리했습니다.<br><br>
+※ 이 글에 기재된 지원 금액·자격 기준은 2026년 6월 행정안전부·지자체 공고 기준입니다. 지원 조건은 피해 규모와 지자체에 따라 달라지므로 신청 전 행정안전부(www.mois.go.kr) 또는 주민센터에서 최신 공고를 반드시 확인하세요.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260629/5_flood_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-1">Emergency workers in bright orange vests helping evacuate residents during a heavy rain flood in a Korean residential neighborhood. Water-filled street, sandbags around doorways, rescue boat in background, worried homeowners watching from their doorstep. Rainy overcast sky, documentary-style realism, photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">집중호우 수해 대응 현장 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 수해 재난지원금이란 — 재해구호법 기반 지원 체계</h2>
+
+자연재해(태풍·호우·홍수 등)로 인한 주택·재산 피해가 발생하면 정부와 지방자치단체가 이재민을 지원합니다. 이 지원 체계는 크게 세 층위로 구성됩니다.<br><br>
+<strong>① 재해구호 지원 (행정안전부·지자체)</strong><br>
+재해구호법에 따라 이재민에게 임시 주거시설(대피소), 식품·의복·침구 제공, 심리적 안정 지원 등을 제공합니다. 피해 정도가 심한 이재민에게는 임시주거비(응급 주거 지원금)가 지급됩니다.<br><br>
+<strong>② 자연재난 피해 복구 지원금 (행정안전부)</strong><br>
+피해 주택·농작물·어업 시설 등에 대한 복구비를 국가가 일부 지원합니다. 피해 실사 후 지원 여부와 금액이 결정되며, 지원금 수준은 피해 규모와 가구 소득 등에 따라 달라집니다.<br><br>
+<strong>③ 지자체 별도 지원금</strong><br>
+각 광역시·도 및 시·군·구는 자체 예산으로 추가 지원금을 편성하는 경우가 있습니다. 중앙정부 지원과 별도로 받을 수 있으니 반드시 주소지 주민센터에 문의하세요.<br><br>
+<strong>중요</strong>: 재난 지원금은 신청 기한이 있습니다. 피해 발생 후 빠르게 신고·신청하는 것이 원칙입니다.
+
+<h2>02 | 재난지원금 지급 기준 — 주택 침수 피해 기준</h2>
+
+주택 침수 피해에 대한 재난지원금은 피해 정도에 따라 달라집니다. 행정안전부 자연재난 구호 및 복구 지원 기준을 바탕으로 한 일반적인 항목은 다음과 같습니다.<br><br>
+
+<table class="info-table">
+  <tr><th>피해 유형</th><th>지원 항목</th><th>지원 기준</th></tr>
+  <tr><td>주택 전파(완전 붕괴)</td><td>주거 안정 지원금 / 임시 주거 지원</td><td>가구 소득·피해 인정 기준에 따라 결정</td></tr>
+  <tr><td>주택 반파(절반 이상 손상)</td><td>주거 안정 지원금 (전파 대비 감액)</td><td>피해 실사 후 결정</td></tr>
+  <tr><td>침수 (바닥 기준 1m 이상)</td><td>생활 안정 지원금</td><td>피해 실사 후 지자체 기준 적용</td></tr>
+  <tr><td>침수 (바닥 기준 1m 미만)</td><td>생활 안정 지원금 (소액 또는 해당 없을 수 있음)</td><td>지자체 재량</td></tr>
+  <tr><td>차량 침수 피해</td><td>재난지원금 비해당 (자동차보험 처리)</td><td>자동차보험 자기차량손해 담보 사용</td></tr>
+</table>
+
+<strong>참고</strong>: 위 금액 기준은 매년 행정안전부 고시로 개정됩니다. 2026년 기준 정확한 지원 금액은 재난 발생 후 주민센터 또는 행정안전부 공식 공고를 확인하세요.<br><br>
+
+<div class="caution-box">
+<strong>차량 침수는 재난지원금 대상 아님</strong><br>
+차량 침수 피해는 자연재난 구호 지원금 대상이 아닙니다. 자동차보험의 '자기차량손해' 담보에 가입되어 있으면 보험 처리가 가능합니다. 가입 여부를 사전에 확인해 두세요.
+</div>
+
+<h2>03 | 재난지원금 신청 방법과 절차</h2>
+
+수해 재난지원금 신청 절차는 다음과 같습니다.<br><br>
+<strong>1단계 — 피해 신고</strong><br>
+재난이 발생하면 즉시 읍·면·동 주민센터 또는 시·군·구청 재난 담당 부서에 피해 신고를 해야 합니다. 행정안전부 재난안전포털(www.safekorea.go.kr) 또는 각 지자체 앱을 통해 온라인 신고도 가능합니다.<br><br>
+<strong>2단계 — 피해 조사</strong><br>
+주민센터 담당 공무원 또는 행정안전부 피해 조사팀이 현장을 방문해 피해 규모를 실사합니다. 이때 피해 상황을 사진·영상으로 기록해 두면 유리합니다.<br><br>
+<strong>3단계 — 지원금 결정 및 지급</strong><br>
+피해 조사 결과를 바탕으로 지원 여부와 금액이 결정됩니다. 지급은 신청자 계좌로 직접 이체됩니다.<br><br>
+
+<table class="info-table">
+  <tr><th>신고 방법</th><th>연락처</th></tr>
+  <tr><td>읍·면·동 주민센터</td><td>해당 주소지 주민센터 방문 또는 전화</td></tr>
+  <tr><td>재난신고 전화</td><td>119 (긴급 상황) / 120 (지자체 민원)</td></tr>
+  <tr><td>행정안전부 재난안전포털</td><td>www.safekorea.go.kr</td></tr>
+  <tr><td>온라인 피해 신고</td><td>정부24 (www.gov.kr) 또는 지자체 앱</td></tr>
+</table>
+
+신청 기한은 재난 선포 이후 지자체마다 다르게 설정되는 경우가 많습니다. 행정안전부 또는 주민센터의 공고를 즉시 확인하고, 기한 내에 신청하세요.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260629/5_flood_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-2">Korean citizen filling out a disaster relief application form at a local community center counter. Helpful government official assisting across the desk, stacks of documents visible, posters about disaster relief support on the wall. Bright fluorescent lights, clean and orderly government office setting. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">주민센터 재난지원금 신청 장면 / AI 제작 이미지</div>
+</div>
+
+<h2>04 | 지자체별 추가 지원금 확인법</h2>
+
+중앙정부 재난지원금 외에도 피해 지역 광역시·도와 시·군·구가 자체 예산으로 추가 지원금을 편성하는 경우가 있습니다. 이 지원금은 중앙정부 지원과 별도로 신청 가능합니다.<br><br>
+<strong>확인 방법</strong>:<br>
+• 주소지 시·군·구청 재난안전 담당 부서 전화 문의<br>
+• 해당 지자체 홈페이지 재난·안전 공지사항 확인<br>
+• 카카오톡 채널 또는 문자 알림 서비스 신청(지자체에 따라 운영)<br><br>
+과거 사례를 보면, 대규모 수해 발생 시 일부 지자체는 1가구당 수십만 원에서 수백만 원까지 추가 복구비를 지원하기도 했습니다. 다만 지원 여부와 금액은 재난 규모, 해당 연도 예산, 피해 가구 수에 따라 달라지므로 확인 없이 수령을 기대하기는 어렵습니다.<br><br>
+
+<div class="tip-box">
+<strong>복지로 추가 확인 권장</strong><br>
+복지로(www.bokjiro.go.kr)에서 재난 관련 지원 사업을 검색하면 중앙·지방 지원 사업을 한 번에 확인할 수 있습니다. '재해', '수해', '이재민' 등 키워드로 검색해보세요.
+</div>
+
+<h2>05 | 풍수해보험이란? 가입 대상과 보장 범위</h2>
+
+<strong>풍수해보험</strong>은 행정안전부가 운영하는 정책 보험으로, 태풍·홍수·호우·강풍·대설·지진 등 자연재해로 발생하는 주택·온실 등 시설 피해를 보상합니다.<br><br>
+일반 화재보험이나 재물보험과 달리 <strong>자연재해로 인한 침수·바람·눈 피해를 집중적으로 보장</strong>하며, 보험료의 50~92%를 국가와 지방자치단체가 지원하는 저렴한 정책 보험입니다.<br><br>
+<strong>가입 대상</strong>:<br>
+• 주택 (단독주택·연립·다세대 등, 아파트도 일부 적용)<br>
+• 온실 (비닐하우스·유리온실 등 농업 시설)<br><br>
+<strong>보장 재난 유형</strong>:<br>
+• 태풍·강풍·풍랑<br>
+• 호우·홍수 (집중호우·하천 범람)<br>
+• 대설 (폭설로 인한 붕괴)<br>
+• 지진 (건물 피해)<br>
+• 해일<br><br>
+<strong>보장 한도</strong>: 주택 유형과 건물 가액에 따라 다르며, 보통 가입 금액의 70~80%까지 보상합니다. 가입 전 설계서를 반드시 확인하세요.
+
+<h2>06 | 풍수해보험 가입 방법과 보험료 지원</h2>
+
+<strong>가입 방법</strong>:<br>
+풍수해보험은 삼성화재, 현대해상, DB손해보험, KB손해보험, NH농협손해보험 등 민영 보험사를 통해 가입할 수 있습니다. 주소지 주민센터 또는 각 보험사 대리점·홈페이지에서 가입 신청이 가능합니다.<br><br>
+<strong>보험료 국가 지원 비율</strong>:<br>
+국가가 전체 보험료의 55%를 지원하고, 광역지자체가 추가 지원합니다. 지역·소득 수준에 따라 개인 부담 보험료는 전체의 <strong>8~45% 수준</strong>으로 낮아집니다. 차상위 이하 가구나 기초생활수급자는 더 높은 지원율이 적용될 수 있습니다.<br><br>
+
+<table class="info-table">
+  <tr><th>구분</th><th>국비 지원</th><th>지방비 지원</th><th>개인 부담</th></tr>
+  <tr><td>일반 가구</td><td>55%</td><td>지자체별 상이 (0~37%)</td><td>8~45%</td></tr>
+  <tr><td>취약계층 (차상위 이하)</td><td>56.25~67.5%</td><td>지자체별 추가 지원</td><td>더 낮아짐</td></tr>
+</table>
+
+예를 들어 단독주택 보험료가 연 10만 원이라면, 국비+지방비 지원 후 개인 실 부담은 연 1~4만 원대 수준이 될 수 있습니다(지자체별 상이, 가입 전 실제 보험료 확인 필요).<br><br>
+
+<div class="tip-box">
+<strong>지금 당장 가입해야 하는 이유</strong><br>
+풍수해보험은 <strong>재난 발생 후 가입 불가</strong>입니다. 침수가 시작된 뒤에는 가입 신청을 해도 해당 사고에 대한 보상을 받을 수 없습니다. 장마가 시작되기 전, 또는 태풍 예보가 없는 지금 미리 가입해 두는 것이 현명합니다.
+</div>
+
+<h2>07 | 주택 침수 피해 발생 시 즉시 대처 순서</h2>
+
+침수가 발생하면 패닉하지 말고 순서에 따라 행동하면 피해를 최소화할 수 있습니다.<br><br>
+<strong>침수 진행 중 행동 요령</strong>:<br>
+① <strong>전기 차단기 내림</strong>: 침수 전·초기에 반드시 누전차단기를 내리세요. 감전 사고를 막는 가장 중요한 조치입니다.<br>
+② <strong>귀중품·서류 고지대 이동</strong>: 침수가 진행되면 통장·신분증·보험증권 등 중요 서류를 비닐백에 넣어 높은 곳으로 옮기세요.<br>
+③ <strong>대피 우선</strong>: 생명 안전이 최우선입니다. 지자체 대피 명령이 내려지면 즉시 지정 대피소로 이동하세요.<br><br>
+<strong>침수 후 피해 기록</strong>:<br>
+④ <strong>사진·동영상 촬영</strong>: 물이 빠지기 전에 침수 수위, 피해 가구·가전 상태를 사진과 동영상으로 기록하세요. 보험금 청구와 재난지원금 신청에 결정적 증거가 됩니다.<br>
+⑤ <strong>피해 목록 작성</strong>: 피해 물품(가구·가전·의류 등) 종류와 구입 시기·금액을 최대한 상세히 메모해 두세요.<br>
+⑥ <strong>피해 신고</strong>: 주민센터와 풍수해보험사에 즉시 신고합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260629/5_flood_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-3">Korean homeowner preparing for flood season — placing sandbags in front of the house entrance, checking the circuit breaker box, and photographing household items with a smartphone as part of flood damage documentation. Overcast rainy sky visible through the window, urgent but calm atmosphere. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">침수 피해 대비 및 피해 기록 촬영 장면 / AI 제작 이미지</div>
+</div>
+
+<h2>08 | 풍수해보험금 청구 절차</h2>
+
+풍수해보험에 가입했다면, 피해 발생 시 다음 절차로 보험금을 청구합니다.<br><br>
+<strong>보험금 청구 순서</strong>:<br>
+1. <strong>보험사 재해 신고</strong>: 가입한 보험사 고객센터 또는 앱에 재해 발생을 신고합니다(피해 발생 즉시 또는 피해 인지 후 즉시).<br>
+2. <strong>현장 손해 사정</strong>: 보험사 담당자 또는 손해사정인이 현장을 방문해 피해를 확인합니다.<br>
+3. <strong>보험금 산정</strong>: 피해 범위와 보험 가입 금액을 바탕으로 보험금이 산정됩니다.<br>
+4. <strong>보험금 지급</strong>: 가입자 계좌로 보험금이 이체됩니다.<br><br>
+<strong>필요 서류 (일반적)</strong>: 보험증권, 피해 사진·동영상, 재난 피해 확인서(주민센터 발급), 수리 견적서 또는 영수증.<br><br>
+보험금 산정에 이의가 있을 경우 독립 손해사정사에게 재사정을 의뢰하거나 금융감독원(www.fss.or.kr) 또는 금융소비자포털에 분쟁 조정을 신청할 수 있습니다.
+
+<h2>09 | 장마철 전 미리 챙겨야 할 사항</h2>
+
+수해를 입은 후 지원을 받는 것도 중요하지만, 피해 자체를 줄이기 위한 사전 준비가 더 중요합니다.<br><br>
+<strong>주택 사전 점검 체크리스트</strong>:<br>
+• <strong>배수구 점검</strong>: 지붕·베란다·옥상 배수구에 쌓인 낙엽·이물질을 장마 전에 청소하세요. 막힌 배수구는 역류 침수의 원인이 됩니다.<br>
+• <strong>창문·문틀 방수 처리</strong>: 오래된 창문 틀 방수 실리콘이 갈라지거나 떨어진 부분은 장마 전에 보수하세요.<br>
+• <strong>하수구·맨홀 주변 확인</strong>: 집 주변 하수구 그레이팅(철망)에 이물질이 쌓이지 않도록 청소하세요.<br>
+• <strong>모래주머니(샌드백) 준비</strong>: 침수 위험 지역은 장마 전에 모래주머니를 준비해 두면 긴급 상황에서 유용합니다.<br>
+• <strong>비상 용품 준비</strong>: 손전등, 건전지, 식수, 비상 식품, 구급약, 중요 서류 사본을 고지대에 보관하세요.<br><br>
+<strong>재난 대비 앱 설치</strong>: 행정안전부 '안전디딤돌' 앱을 설치하면 재난 문자, 대피소 위치, 재난 상황 실시간 알림을 받을 수 있습니다.
+
+<div style="background:#eef5f4;border:1px dashed #80cbc4;padding:18px 20px;margin:30px 0;border-radius:8px;font-size:0.95em;color:#444;">
+<strong>📝 작성자 메모</strong><br><br>
+이 글을 쓰게 된 계기는 주변에서 장마철 침수 피해를 입고 어디에 신청해야 하는지 몰라 지원을 놓치는 경우를 여럿 목격했기 때문입니다. 재난지원금 제도와 풍수해보험 내용은 꾸준히 다루는 주제입니다.<br><br>
+<strong>정보 기준일: 2026-06-29</strong>. 재난지원금 지원 금액·자격 기준·보험료는 매년 행정안전부 고시와 지자체 예산에 따라 변동됩니다. 실제 신청 전 행정안전부(www.mois.go.kr), 재난안전포털(www.safekorea.go.kr), 복지로(www.bokjiro.go.kr), 풍수해보험 가입 보험사 공식 채널을 반드시 재확인하세요.
+</div>
+
+<div class="recommend-area">
+  <strong>📌 함께 읽으면 좋은 글</strong><br><br>
+  • <a href="../260628/travel_inje_gombaryeong_wildflower.html">인제 곰배령 탐방 예약 방법과 7월 야생화 코스, 동자꽃·금강초롱꽃 절정 시기</a><br>
+  • <a href="../260628/gov_summer_electricity.html">여름 전기요금 누진제 어떻게 계산되나, 7·8월 구간 완화와 복지할인 대상</a>
+</div>
+
+<div>
+  <span class="tag">#수해재난지원금</span>
+  <span class="tag">#침수피해지원금</span>
+  <span class="tag">#풍수해보험</span>
+  <span class="tag">#재난지원금신청방법</span>
+  <span class="tag">#장마철대비</span>
+  <span class="tag">#이재민지원</span>
+  <span class="tag">#자연재해보험</span>
+  <span class="tag">#행정안전부지원</span>
+  <span class="tag">#침수대처법</span>
+  <span class="tag">#재해구호법</span>
+</div>
+
+</body>
+</html>

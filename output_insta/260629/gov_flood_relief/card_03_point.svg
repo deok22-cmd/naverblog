@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== F : 텍스트 3포인트 리스트 / point1 — 지원 체계 3층위 =====
+       카테고리: 생활·정보(행정) — 팔레트 primary:#4527a0 dark:#1a0072 light:#ede7f6 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.64"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d0a1f"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#1a0072"/>
+
+  <text x="80" y="250" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">지원 체계 3층위</text>
+  <rect x="82" y="284" width="140" height="9" fill="#4527a0"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <rect x="80" y="452" width="34" height="8" fill="#b39ddb"/>
+    <text x="80" y="520" font-size="46" font-weight="700" fill="#ffffff">재해구호 지원</text>
+    <text x="80" y="574" font-size="30" font-weight="500" fill="#b39ddb">임시 주거·식품·심리 안정 지원 (행정안전부·지자체)</text>
+    <line x1="80" y1="636" x2="1000" y2="636" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="700" width="34" height="8" fill="#b39ddb"/>
+    <text x="80" y="768" font-size="46" font-weight="700" fill="#ffffff">자연재난 복구 지원금</text>
+    <text x="80" y="822" font-size="30" font-weight="500" fill="#b39ddb">주택·농작물·어업 시설 복구비 일부 국가 지원</text>
+    <line x1="80" y1="884" x2="1000" y2="884" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="948" width="34" height="8" fill="#b39ddb"/>
+    <text x="80" y="1016" font-size="46" font-weight="700" fill="#ffffff">지자체 별도 지원금</text>
+    <text x="80" y="1070" font-size="30" font-weight="500" fill="#b39ddb">광역·기초 자체 예산 추가 편성 — 주민센터 확인 필수</text>
+  </g>
+
+  <text x="80" y="1240" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#ede7f6">세 층위 중복 수령 가능 · 빠른 신청이 핵심.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#1a0072"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

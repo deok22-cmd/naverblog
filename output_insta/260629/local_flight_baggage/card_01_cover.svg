@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== G0 COVER : 기내 반입·수하물 규정 카드뉴스 커버 =====
+       카테고리: 생활정보 · 팔레트: #1565c0/#0d47a1/#e3f2fd
+       BG슬롯 1개 · brand-bar · brand-watermark 포함 -->
+  <defs>
+    <linearGradient id="scrimCover" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.30"/>
+      <stop offset="0.50" stop-color="#000000" stop-opacity="0.52"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.88"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0a1a2e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimCover)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#0d47a1"/>
+
+  <!-- 상단 채널 키커 -->
+  <text x="80" y="132" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#64b5f6" letter-spacing="4">항공 수하물 가이드</text>
+
+  <!-- 구분선 -->
+  <rect x="80" y="154" width="920" height="3" fill="#1565c0"/>
+
+  <!-- 메인 타이틀 -->
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="110" font-weight="800" fill="#ffffff" letter-spacing="-3">
+    <tspan x="80" y="340">기내 반입</tspan>
+    <tspan x="80" y="470">규정 정리</tspan>
+  </text>
+
+  <!-- 서브 타이틀 -->
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="48" font-weight="600" fill="#90caf9" letter-spacing="-1">
+    <tspan x="80" y="580">보조배터리 · 액체류 · 위탁 무게</tspan>
+  </text>
+
+  <!-- 구분 틱 -->
+  <rect x="80" y="632" width="100" height="7" fill="#1565c0"/>
+
+  <!-- 인트로 한 줄 훅 -->
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e3f2fd">
+    <tspan x="80" y="718">공항에서 뺏기기 전에</tspan>
+    <tspan x="80" y="768">한 번만 읽어두세요</tspan>
+  </text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#0d47a1"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

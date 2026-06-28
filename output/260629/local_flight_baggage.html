@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1f8f4; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 14px; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #e8f5e9; }
+  .tip-box { background: #fffde7; border-left: 5px solid #f9a825; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .caution-box { background: #fce4ec; border-left: 5px solid #e57373; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #a5d6a7; background: #f1f8f4; border-radius: 8px; padding: 20px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 700; color: #388e3c; }
+  .ph-file { font-size: 0.85em; color: #888; font-family: monospace; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 14px; border-radius: 6px; font-size: 0.8em; white-space: pre-wrap; line-height: 1.6; }
+  .copy-btn { margin-top: 10px; background: #388e3c; color: #fff; border: none; padding: 8px 18px; border-radius: 5px; cursor: pointer; font-size: 0.88em; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>비행기 보조배터리와 액체 기내 반입 규정, 위탁 수하물 무게 얼마까지 되나</h1>
+
+<div class="intro-box">
+여름 휴가철마다 공항에서 보조배터리를 뺏기거나 물·화장품을 버려야 하는 일이 반복됩니다. 규정을 미리 알고 포장만 제대로 해도 이런 불상사를 완전히 피할 수 있습니다.<br><br>
+이 글에서는 국제선·국내선 기내 반입 가능한 보조배터리 용량, 액체류 100mL 규칙의 정확한 적용 범위, 항공사별 위탁 수하물 무게 제한까지 헷갈리기 쉬운 항공 수하물 규정을 항목별로 정리했습니다.<br><br>
+2026년 여름 해외 또는 국내 여행을 계획 중이라면 출발 전 한 번만 읽어두면 공항에서 불필요한 낭패를 막을 수 있습니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260629/3_flight_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-1">Organized travel packing flatlay on a white background. Items include a portable power bank, zip-lock bag with small toiletry bottles under 100ml, passport, boarding pass, earphones, folded clothes. Clear and clean product-style photography, bright natural lighting, photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">기내 반입 허용 아이템 구성 예시 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 기내 반입과 위탁 수하물 기본 구분</h2>
+
+항공 여행 수하물은 크게 두 종류로 나뉩니다. <strong>기내 반입 수하물</strong>은 본인이 직접 기내에 가지고 탑승하는 짐이고, <strong>위탁 수하물</strong>은 체크인 카운터에서 맡겨 화물칸에 실리는 짐입니다.<br><br>
+둘의 규정이 다르므로 각각 어느 쪽에 해당하는지 구분하는 것이 우선입니다. 특히 <strong>보조배터리(파워뱅크)와 라이터·성냥 등 발화성 물질</strong>은 위탁 수하물에는 넣을 수 없고 기내에만 가지고 탈 수 있다는 점을 많은 분이 반대로 알고 있어 공항에서 혼선이 생깁니다.<br><br>
+기내 반입 물품 보안 검색은 이륙 전 보안 게이트를 통과하면서 이루어집니다. 금지 물품이 적발되면 버리거나 위탁 수하물로 전환해야 합니다(위탁 전환도 안 되는 품목은 즉시 폐기).<br><br>
+아래에서 카테고리별로 구체적인 규정을 살펴보겠습니다.
+
+<h2>02 | 위탁 수하물 무게 제한 — 항공사별 기준</h2>
+
+위탁 수하물의 무게 허용량은 항공사와 구매한 항공권 등급에 따라 다릅니다. 일반적으로 이코노미 클래스 기준으로 정리하면 다음과 같습니다.<br><br>
+
+<table class="info-table">
+  <tr><th>항공사</th><th>이코노미 기본 허용량</th><th>비고</th></tr>
+  <tr><td>대한항공 (KE)</td><td>23kg × 1개 또는 2개 (노선별 상이)</td><td>미주·유럽 노선은 2개 허용</td></tr>
+  <tr><td>아시아나항공 (OZ)</td><td>23kg × 1개 또는 2개 (노선별 상이)</td><td>장거리 노선 2개 허용</td></tr>
+  <tr><td>제주항공 (7C)</td><td>15kg (기본, 추가 구매 가능)</td><td>국제선 기본 포함, 구매 옵션 다양</td></tr>
+  <tr><td>진에어 (LJ)</td><td>15kg 또는 20kg (요금제별)</td><td>요금제에 따라 상이</td></tr>
+  <tr><td>티웨이항공 (TW)</td><td>15kg (기본)</td><td>추가 구매 시 최대 30kg</td></tr>
+  <tr><td>에어서울 (RS)</td><td>15kg (기본)</td><td>추가 구매 옵션 있음</td></tr>
+</table>
+
+<strong>중요</strong>: 위의 정보는 대략적인 기준이며, 노선·요금제·프로모션에 따라 달라집니다. 실제 허용량은 예약 시 항공사 공식 홈페이지에서 반드시 확인하세요.<br><br>
+<strong>위탁 수하물 초과 요금</strong>은 항공사와 노선에 따라 kg당 5,000원~5만 원 이상으로 천차만별입니다. 짐이 많다면 미리 추가 수하물을 구매하는 것이 현장 초과 요금보다 훨씬 저렴합니다.<br><br>
+
+<div class="tip-box">
+<strong>짐 줄이는 팁</strong><br>
+여행 출발 전 집에서 수하물 저울로 짐 무게를 확인하면 초과 요금을 예방할 수 있습니다. 조금 무겁다 싶으면 책·무거운 신발 등을 기내 반입 가방으로 옮기면 됩니다(기내 가방 무게 기준 내에서).
+</div>
+
+<h2>03 | 기내 반입 가방 크기와 무게 제한</h2>
+
+기내 반입 수하물(기내용 캐리어·백팩)의 크기와 무게도 항공사마다 다릅니다. 일반적으로 허용되는 기준은 다음과 같습니다.<br><br>
+
+<table class="info-table">
+  <tr><th>구분</th><th>일반 기준</th><th>저비용 항공사(LCC) 주의</th></tr>
+  <tr><td>크기</td><td>55×40×20cm 이내 (3변의 합 115cm)</td><td>항공사별 상이, 실측 검사 있음</td></tr>
+  <tr><td>무게</td><td>10kg 이내 (대형 항공사), 10kg (LCC)</td><td>일부 LCC는 7~10kg 엄격 제한</td></tr>
+  <tr><td>개수</td><td>1개 + 소형 개인용 짐(핸드백·노트북 가방 등) 1개</td><td>소형 짐도 1개로 보는 곳 있음</td></tr>
+</table>
+
+저비용 항공사(LCC)는 기내 수하물 무게 규정을 비교적 엄격하게 적용하는 추세입니다. 탑승 게이트에서 가방 크기를 실측하는 경우도 있으므로 사이즈를 초과하지 않도록 주의하세요.<br><br>
+무게 초과 시 위탁 수하물로 전환해야 하며, 추가 요금이 발생할 수 있습니다. 기내 반입 가방 무게는 집에서 미리 체크하는 것이 가장 좋습니다.
+
+<h2>04 | 액체류 기내 반입 규정 — 100mL 룰 정확히 이해하기</h2>
+
+국제선 기내에 반입할 수 있는 액체류는 <strong>용기당 100mL 이하</strong>이며, <strong>1L 이하의 투명 지퍼백 1개</strong>에 담아야 합니다. 이것이 일반적으로 '100mL 룰' 또는 '3-1-1 룰'이라 부르는 규정입니다.<br><br>
+<strong>적용 대상</strong>:<br>
+• 음료수·물·주스·와인 등 음료류<br>
+• 크림·로션·선크림·샴푸·린스 등 화장품<br>
+• 치약·면도 크림·헤어젤 등 세면도구<br>
+• 향수·데오도란트 등<br><br>
+<strong>예외(반입 가능한 경우)</strong>:<br>
+• 영유아 식품·이유식: 탑승 당일 필요한 양은 100mL 초과해도 반입 가능(보안 검색 시 신고 필요)<br>
+• 처방 의약품: 의사 처방전 등 서류 지참 시 허용<br>
+• 체크인 완료 후 면세점에서 구입한 액체류: 별도 규정 적용(밀봉 포장 확인 요청)<br><br>
+
+<div class="caution-box">
+<strong>흔한 실수 — 100mL vs 용기 100mL</strong><br>
+200mL짜리 병에 내용물이 50mL 남아 있어도 병 자체가 100mL 초과면 반입 불가입니다. 규정은 <strong>용기 용량 기준</strong>입니다. 여행용 소분 용기(100mL 이하)에 옮겨 담아야 합니다.
+</div>
+
+<strong>국내선 액체 반입</strong>: 국내선은 국제선에 비해 규정이 완화되어 있어 일반 음료수는 대부분 반입 가능합니다. 다만 화염·날카로운 물건 등 보안 위험 물질 규정은 국내선도 동일하게 적용됩니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260629/3_flight_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-2">Close-up of a traveler's transparent zip-lock bag containing multiple small 100ml travel-size bottles of shampoo, lotion, and sunscreen, placed on an airport security conveyor belt. Bright airport interior background, clear plastic bag clearly showing items inside, TSA-style security tray. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">투명 지퍼백에 담긴 100mL 이하 액체류 준비 예시 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 보조배터리 기내 반입 규정</h2>
+
+보조배터리(휴대용 충전기)는 <strong>기내 반입 전용 물품</strong>입니다. 화재 위험 때문에 위탁 수하물(화물칸)에는 절대 넣을 수 없습니다. 반드시 기내 가방에 직접 들고 탑승해야 합니다.<br><br>
+<strong>기내 반입 허용 용량 기준</strong> (국제항공운송협회 IATA 및 국토교통부 기준):<br>
+• 100Wh 이하: 별도 신고 없이 반입 가능 (개인용 기기에 내장된 배터리 포함)<br>
+• 100Wh 초과 ~ 160Wh 이하: 항공사 사전 승인 필요, 1인 최대 2개<br>
+• 160Wh 초과: 기내 반입 전면 금지<br><br>
+<strong>Wh(와트시) 계산법</strong>: Wh = mAh × 전압(V) ÷ 1,000<br>
+예시: 20,000mAh × 3.7V ÷ 1,000 = <strong>74Wh</strong> → 반입 가능
+
+<table class="info-table">
+  <tr><th>배터리 용량</th><th>반입 가능 여부</th><th>개수 제한</th></tr>
+  <tr><td>100Wh 이하 (약 27,000mAh 이하 × 3.7V)</td><td>반입 가능</td><td>제한 없음 (합리적 범위 내)</td></tr>
+  <tr><td>100Wh 초과 ~ 160Wh 이하</td><td>항공사 사전 승인 시 가능</td><td>1인 최대 2개</td></tr>
+  <tr><td>160Wh 초과</td><td>반입 불가</td><td>—</td></tr>
+</table>
+
+일반 시중에서 많이 사용하는 20,000mAh 보조배터리(3.7V 기준 약 74Wh)는 대부분 반입 가능합니다. 다만 <strong>대용량 30,000mAh 이상 제품</strong>은 Wh를 직접 계산해 확인하거나, 보조배터리 본체에 기재된 Wh 수치를 확인하세요.
+
+<h2>06 | 항공사별 보조배터리 추가 규정</h2>
+
+기본 IATA 기준 외에 항공사별로 추가 규정이 있을 수 있습니다. 특히 저비용 항공사와 중국·일본계 항공사는 규정이 다른 경우가 있으니 탑승 항공사 공식 홈페이지를 반드시 확인하세요.<br><br>
+<strong>국내 주요 항공사 보조배터리 규정 요약</strong>:<br>
+• <strong>대한항공·아시아나</strong>: IATA 기준 동일 적용. 160Wh 초과 제품은 승무원 보관 불가, 사전 승인도 불가.<br>
+• <strong>제주항공·진에어·티웨이·에어서울</strong>: IATA 기준 동일. 다만 100Wh 초과 제품은 반드시 사전 신고 및 승인을 받아야 합니다.<br><br>
+<strong>주의사항</strong>: 보조배터리는 반드시 <strong>단말(충전 포트)을 덮고 스파크를 방지하는 보호 케이스</strong>에 넣거나, 포트를 테이프로 막아 단락(쇼트)을 방지하세요. 파손된 보조배터리는 반입 금지입니다.<br><br>
+
+<div class="tip-box">
+<strong>보조배터리 탑승 전 체크리스트</strong><br>
+① 제품 본체 또는 포장에서 Wh 수치 확인 (없으면 mAh × V ÷ 1,000으로 계산)<br>
+② 기내 가방에 넣기 (위탁 가방 절대 금지)<br>
+③ 충전 포트 보호 테이프 또는 케이스 장착<br>
+④ 100Wh 초과 시 항공사 고객센터에 사전 문의·승인 요청
+</div>
+
+<h2>07 | 반입 절대 금지 물품 목록</h2>
+
+아래 물품은 기내 반입·위탁 수하물 모두 금지입니다. 적발되면 압수되고 경우에 따라 법적 책임도 질 수 있으니 주의하세요.<br><br>
+• <strong>폭발물·화약류</strong>: 불꽃놀이, 뇌관, 폭죽 등 일체<br>
+• <strong>인화성 액체</strong>: 신나·등유·라이터 오일 등 (단, 라이터·성냥은 기내 1개 허용, 위탁 금지)<br>
+• <strong>독성 물질</strong>: 살충제, 제초제, 독극물 등<br>
+• <strong>고압 가스 용기</strong>: 부탄가스 캔, LPG 캠핑 가스 (캠핑용 가스버너 연료 포함)<br>
+• <strong>산화성·부식성 물질</strong>: 표백제, 강산·강알칼리 등<br><br>
+<strong>기내 반입만 금지(위탁은 가능)한 물품</strong>:<br>
+• 날카로운 물건: 칼(날 6cm 초과), 가위(날 6cm 초과), 아이스픽, 면도칼 등<br>
+• 스포츠용 배트·골프채·당구 큐 등<br>
+• 주삿바늘(단, 당뇨 등 의학적 필요 시 처방전 지참하면 허용)<br><br>
+공항 보안 검색대에서 적발되어 버리게 되면 안타깝습니다. 출발 전 짐을 싸면서 위 목록을 한 번 점검하는 습관을 들이세요.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260629/3_flight_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-3">Airport security checkpoint at a modern international airport in South Korea. Travelers placing laptops, shoes, and transparent bags with liquid items into gray security trays on a conveyor belt. Security officers visible in background, clear signage about 100ml liquid rule and electronics removal. Bright airport lighting, photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">공항 보안 검색대 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>08 | 위탁 수하물 초과 요금과 절약 방법</h2>
+
+위탁 수하물이 허용 중량을 초과하면 kg당 추가 요금이 발생합니다. 이 요금은 공항 체크인 카운터에서 부과하며, 온라인 사전 구매보다 훨씬 비싼 경우가 많습니다.<br><br>
+<strong>초과 요금 예시(항공사·노선마다 다름)</strong>:<br>
+• 국내선: kg당 약 4,000~8,000원<br>
+• 일본·중국 등 단거리 국제선: kg당 약 1만~3만 원<br>
+• 미주·유럽 장거리: kg당 약 3만~8만 원 이상<br><br>
+<strong>절약 방법 3가지</strong>:<br>
+1. <strong>온라인 사전 추가 구매</strong>: 항공사 홈페이지 또는 앱에서 탑승 전 미리 추가 수하물을 구매하면 현장 요금의 30~70% 수준으로 저렴합니다.<br>
+2. <strong>무게 분산</strong>: 무거운 물건(책, 신발, 노트북 등)을 기내 반입 가방으로 옮겨 위탁 수하물 무게를 줄입니다.<br>
+3. <strong>선물·쇼핑 계획 축소</strong>: 귀국 시 짐이 늘 것을 감안해 출발 짐은 여유 있게 싸고, 면세점 구매를 줄이거나 배송 서비스를 이용하세요.
+
+<h2>09 | 수하물 분실·파손 시 대처법</h2>
+
+위탁 수하물 분실이나 파손은 해외 공항에서 발생하면 당황스러울 수 있지만, 절차대로 신고하면 보상을 받을 수 있습니다.<br><br>
+<strong>분실 발생 시 즉시 해야 할 일</strong>:<br>
+1. 도착 공항 수하물 수취대(Baggage Claim) 근처 항공사 수하물 데스크(Lost and Found) 방문<br>
+2. 여권과 탑승권, 수하물 꼬리표(Baggage Tag)를 제시하고 분실 신고서(PIR: Property Irregularity Report) 작성<br>
+3. 신고 접수 번호(Claim Reference Number) 받아두기<br><br>
+<strong>수하물 파손 시</strong>:<br>
+1. 공항 수하물 데스크에서 파손 신고 (도착 직후 신고 — 공항을 떠나면 불리)<br>
+2. 파손 부위 사진 촬영 (증거 보존)<br>
+3. 항공사 파손 신고서 작성 및 접수 번호 확보<br><br>
+
+<div class="tip-box">
+<strong>여행자보험 활용</strong><br>
+출발 전 여행자보험에 가입하면 수하물 분실·지연·파손에 대해 보상을 받을 수 있습니다. 항공사의 몬트리올 협약 기준 보상은 한도가 있어 고가 물품은 여행자보험을 통해 추가 보장을 받는 것이 유리합니다.
+</div>
+
+<div class="recommend-area">
+  <strong>📌 함께 읽으면 좋은 글</strong><br><br>
+  • <a href="../260628/travel_inje_gombaryeong_wildflower.html">인제 곰배령 탐방 예약 방법과 7월 야생화 코스, 동자꽃·금강초롱꽃 절정 시기</a><br>
+  • <a href="../260628/local_overseas_exchange.html">해외여행 환전 싸게 하는 법, 트래블월렛과 트래블로그 수수료 직접 비교</a>
+</div>
+
+<div>
+  <span class="tag">#기내반입규정</span>
+  <span class="tag">#보조배터리기내반입</span>
+  <span class="tag">#액체기내반입</span>
+  <span class="tag">#수하물무게제한</span>
+  <span class="tag">#해외여행준비</span>
+  <span class="tag">#항공수하물규정</span>
+  <span class="tag">#100ml규칙</span>
+  <span class="tag">#위탁수하물</span>
+  <span class="tag">#여름휴가준비</span>
+  <span class="tag">#공항팁</span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== P1 : 정보 표 / info — 피해 유형별 지원 항목 =====
+       카테고리: 생활·정보(행정) — 팔레트 primary:#4527a0 dark:#1a0072 light:#ede7f6 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d0a1f"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#1a0072"/>
+
+  <text x="80" y="270" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">피해 유형별 지원</text>
+  <rect x="82" y="304" width="140" height="9" fill="#4527a0"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="450" font-size="42" font-weight="600" fill="#ffffff">주택 전파</text>
+    <text x="1000" y="450" font-size="38" font-weight="800" fill="#b39ddb" text-anchor="end">주거 안정 지원금</text>
+    <line x1="80" y1="492" x2="1000" y2="492" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="582" font-size="42" font-weight="600" fill="#ffffff">주택 반파</text>
+    <text x="1000" y="582" font-size="38" font-weight="800" fill="#b39ddb" text-anchor="end">지원금 (전파 대비 감액)</text>
+    <line x1="80" y1="624" x2="1000" y2="624" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="714" font-size="42" font-weight="600" fill="#ffffff">침수 1m 이상</text>
+    <text x="1000" y="714" font-size="38" font-weight="800" fill="#b39ddb" text-anchor="end">생활 안정 지원금</text>
+    <line x1="80" y1="756" x2="1000" y2="756" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="846" font-size="42" font-weight="600" fill="#ffffff">침수 1m 미만</text>
+    <text x="1000" y="846" font-size="38" font-weight="800" fill="#b39ddb" text-anchor="end">소액 또는 지자체 재량</text>
+    <line x1="80" y1="888" x2="1000" y2="888" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="978" font-size="42" font-weight="600" fill="#ffffff">차량 침수</text>
+    <text x="1000" y="978" font-size="38" font-weight="800" fill="#b39ddb" text-anchor="end">재난지원금 비해당</text>
+  </g>
+
+  <text x="80" y="1110" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b39ddb">2026년 행정안전부 기준 · 피해 실사 후 결정.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#1a0072"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1f8f4; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 14px; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #e8f5e9; }
+  .tip-box { background: #fffde7; border-left: 5px solid #f9a825; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .caution-box { background: #fce4ec; border-left: 5px solid #e57373; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #a5d6a7; background: #f1f8f4; border-radius: 8px; padding: 20px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 700; color: #388e3c; }
+  .ph-file { font-size: 0.85em; color: #888; font-family: monospace; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 14px; border-radius: 6px; font-size: 0.8em; white-space: pre-wrap; line-height: 1.6; }
+  .copy-btn { margin-top: 10px; background: #388e3c; color: #fff; border: none; padding: 8px 18px; border-radius: 5px; cursor: pointer; font-size: 0.88em; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>펜션·숙소 여름 성수기 취소 위약금 기준과 환불 규정, 분쟁 없이 해결하는 법</h1>
+
+<div class="intro-box">
+여름 성수기 펜션을 예약해 놓고 사정이 생겨 취소할 때, 위약금 때문에 예상치 못한 큰돈이 나가는 경우가 있습니다. "예약 확인서에 취소 불가라고 쓰여 있어서 환불이 안 된다"는 말에 어떻게 대응해야 할지 막막한 경험, 많이들 겪어보셨을 겁니다.<br><br>
+이 글에서는 공정거래위원회 소비자분쟁해결기준에 따른 숙박 취소 위약금 법정 기준, 플랫폼별 환불 정책, 숙소 귀책으로 취소될 때 받을 수 있는 환불, 분쟁 발생 시 신고 경로까지 정리했습니다.<br><br>
+예약 전에 미리 파악해 두면 취소 상황에서 당황하지 않고 권리를 지킬 수 있습니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260629/4_pension_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-1">A cozy Korean pension resort with a private pool surrounded by mountains in summer. Wooden deck, outdoor furniture, lush greenery, a couple relaxing by the pool with drinks. Warm golden afternoon light, vacation atmosphere, photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">여름 성수기 인기 펜션 풀빌라 예시 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 숙박 취소 위약금, 왜 이렇게 복잡한가</h2>
+
+숙박 취소 위약금 규정이 복잡하게 느껴지는 이유는 <strong>법정 기준(공정거래위원회 소비자분쟁해결기준)</strong>과 <strong>숙소별·플랫폼별 자체 약관</strong>이 혼재하기 때문입니다.<br><br>
+원칙적으로는 법정 기준이 우선이지만, 숙박업은 소비자분쟁해결기준이 적용되는 범주이면서도 양 당사자의 합의(약관)도 일부 인정됩니다. 다만 소비자에게 지나치게 불리한 약관은 공정거래위원회가 시정 조치를 내릴 수 있습니다.<br><br>
+실제로 "입금 후 취소 불가" 또는 "성수기 환불 0원" 식의 극단적 약관은 공정위 소비자분쟁해결기준과 상충할 수 있으며, 분쟁 발생 시 소비자원 중재나 법원 판단에서 숙소 측이 불리한 경우가 많습니다.<br><br>
+그러므로 예약 전에 해당 숙소의 취소 환불 약관을 반드시 확인하고, 표준 약관과 크게 다른 조건이라면 예약 전 문의로 명확히 해두는 것이 현명합니다.<br><br>
+<strong>핵심 원칙</strong>: 숙소 측이 먼저 정하더라도, 공정거래위원회 소비자분쟁해결기준보다 소비자에게 불리한 내용은 법적으로 주장하기 어렵습니다.
+
+<h2>02 | 공정거래위원회 소비자분쟁해결기준 — 숙박 부문</h2>
+
+공정거래위원회의 <strong>소비자분쟁해결기준(숙박업)</strong>에 따른 취소 위약금 기준은 다음과 같습니다. 이 기준은 소비자와 사업자 간 분쟁 발생 시 한국소비자원 중재의 기준이 됩니다.<br><br>
+<strong>소비자 귀책 사유로 취소하는 경우 (계약금·예약금 기준)</strong>:
+
+<table class="info-table">
+  <tr><th>취소 시점</th><th>환불 금액</th></tr>
+  <tr><td>이용 10일 이전 취소</td><td>계약금 전액 환불</td></tr>
+  <tr><td>이용 7일 이전 취소</td><td>계약금 전액 환불</td></tr>
+  <tr><td>이용 4일 이전 취소</td><td>계약금 전액 환불 (일부 약관에 따라 50% 공제)</td></tr>
+  <tr><td>이용 3일 이전 취소</td><td>계약금의 50% 공제 후 환불</td></tr>
+  <tr><td>이용 1일 이전 취소</td><td>계약금의 80% 공제 후 환불 (또는 전액 위약금)</td></tr>
+  <tr><td>당일 취소 및 노쇼</td><td>계약금 전액 위약금 (환불 없음)</td></tr>
+</table>
+
+<strong>주의</strong>: 위 기준은 참고용이며, 실제 적용 여부는 숙소와의 계약 내용에 따라 달라질 수 있습니다. 성수기와 비수기, 풀빌라 등 고급 시설 여부에 따라 약관이 다를 수 있습니다.<br><br>
+
+<div class="caution-box">
+<strong>성수기 특별 약관 주의</strong><br>
+7~8월 성수기나 명절 전후에는 숙소들이 "성수기 취소 위약금 강화" 특별 약관을 별도로 운영하는 경우가 많습니다. 일반 시기보다 훨씬 엄격하게 적용될 수 있으니 예약 전 꼭 확인하세요.
+</div>
+
+<h2>03 | 성수기·비수기 취소 위약금 기준 비교</h2>
+
+많은 펜션과 리조트가 성수기와 비수기 취소 정책을 다르게 운영합니다. 아래는 일반적인 패턴을 정리한 것으로, 실제 약관은 숙소마다 다를 수 있습니다.<br><br>
+
+<table class="info-table">
+  <tr><th>구분</th><th>비수기 취소 환불</th><th>성수기 취소 환불</th></tr>
+  <tr><td>7일 이상 전</td><td>전액 환불</td><td>전액 환불 (숙소에 따라 예약금 공제)</td></tr>
+  <tr><td>4~6일 전</td><td>전액 환불 또는 소액 공제</td><td>30~50% 공제 후 환불</td></tr>
+  <tr><td>2~3일 전</td><td>50% 공제 후 환불</td><td>50~70% 공제 또는 전액 위약금</td></tr>
+  <tr><td>1일 전</td><td>70~80% 공제</td><td>전액 위약금</td></tr>
+  <tr><td>당일·노쇼</td><td>전액 위약금</td><td>전액 위약금</td></tr>
+</table>
+
+풀빌라나 독채 펜션은 1박 금액 자체가 크기 때문에, 취소 위약금도 상당한 금액이 됩니다. <strong>성수기 주말 독채 1박 50만 원짜리를 3일 전 취소하면 25만~50만 원의 위약금이 발생할 수 있습니다.</strong><br><br>
+
+<div class="tip-box">
+<strong>예약 전 확인해야 할 3가지</strong><br>
+① 취소·환불 정책 (날짜별 환불 비율)<br>
+② 성수기 특별 약관 적용 기간 (7/15~8/15 등)<br>
+③ 부분 환불 가능 여부 (2박 중 1박 취소 등)
+</div>
+
+<h2>04 | 숙소 유형별 환불 정책 차이</h2>
+
+숙소 유형에 따라 환불 정책의 성격이 다를 수 있습니다.<br><br>
+<strong>호텔·리조트</strong>: 대형 체인 호텔은 공정위 기준에 가까운 약관을 운영하는 경우가 많으며, 대부분 <strong>예약 취소 기한(Free Cancellation Deadline)</strong>을 명확히 표시합니다. 이 기한 내 취소 시 전액 환불, 이후에는 1박 또는 전체 위약금 부과.<br><br>
+<strong>펜션·게스트하우스</strong>: 개인 사업자가 운영하는 경우 약관이 더 다양합니다. "입금 후 취소 불가"처럼 소비자에게 불리한 약관을 걸어두는 곳도 있으니 주의가 필요합니다.<br><br>
+<strong>글램핑·카라반</strong>: 날씨 영향을 많이 받는 특성상 우천·태풍 등 날씨로 인한 취소 정책이 별도로 있는 곳이 많습니다. 예약 전 이 부분을 특히 확인하세요.<br><br>
+<strong>에어비앤비</strong>: 호스트가 Flexible(유연), Moderate(보통), Strict(엄격) 중 하나를 선택하며, 플랫폼 정책이 기준이 됩니다. 아래 플랫폼별 항목에서 상세 정리합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260629/4_pension_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-2">Person sitting at a desk looking at a smartphone showing a Korean accommodation booking app cancellation policy page. Calculator, calendar, and credit cards visible on desk beside the phone. Concerned but focused expression, home office setting, soft warm lighting. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">숙소 예약 취소 환불 규정 확인 장면 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 플랫폼별 환불 정책 — 야놀자·여기어때·에어비앤비</h2>
+
+OTA(온라인 여행사) 플랫폼을 통해 예약한 경우 플랫폼 자체 환불 정책이 적용됩니다.<br><br>
+<strong>야놀자</strong>: 숙소별 취소 환불 규정이 상이하며, 예약 완료 화면에서 확인 가능합니다. 야놀자에서 결제 시 "야놀자 취소 보호 서비스"를 별도 구매하면 갑작스러운 사정으로도 환불이 가능한 경우가 있습니다(서비스 조건 확인 필요).<br><br>
+<strong>여기어때</strong>: 상품 유형에 따라 "취소 불가", "부분 환불", "전액 환불" 상품이 분리되어 있습니다. 가격이 저렴한 취소 불가 상품은 어떤 사유로도 환불이 어려우니 선택 시 주의가 필요합니다.<br><br>
+<strong>에어비앤비</strong>: 호스트가 설정한 취소 정책(유연/보통/엄격/특별 조건)에 따라 환불이 결정됩니다. 유연 정책은 체크인 24시간 전까지 전액 환불, 엄격 정책은 예약 후 48시간 내 또는 14일 이상 전 취소 시에만 전액 환불됩니다.<br><br>
+<strong>공통 주의사항</strong>: OTA를 통해 예약했더라도 분쟁 발생 시 플랫폼 측 고객센터에 먼저 중재를 요청할 수 있습니다. 플랫폼이 중재자 역할을 하는 경우 숙소 직접 예약보다 소비자 보호가 강화되는 경우가 있습니다.
+
+<h2>06 | 숙소 귀책 사유 취소 시 환불 권리</h2>
+
+숙소 측의 사정으로 예약이 취소되거나 변경된 경우, 소비자는 더 강력한 환불 권리를 가집니다.<br><br>
+<strong>숙소 귀책 예시</strong>:<br>
+• 숙소 측이 일방적으로 예약을 취소한 경우<br>
+• 예약 당시 설명과 달리 시설이 현저히 부족하거나 광고와 다른 경우<br>
+• 예약한 객실(타입·위치)이 무단으로 변경된 경우<br>
+• 화재·수해 등으로 시설을 사용하지 못하게 된 경우<br><br>
+이 경우 소비자분쟁해결기준에 따라 <strong>예약금 전액 환불 + 추가 배상</strong>을 청구할 수 있습니다. 특히 소비자가 대안 숙소를 당일에 급하게 구해야 하는 불편이 발생했다면 그 비용 차액도 청구 대상이 됩니다.<br><br>
+숙소 귀책 사유 취소 시 대응 순서: ① 숙소에 서면(문자·이메일)으로 전액 환불 요청 → ② 환불 거부 시 OTA 고객센터 중재 요청 → ③ 한국소비자원 또는 1372 소비자상담센터 신고 → ④ 소액 심판 청구(소송).
+
+<h2>07 | 자연재해·불가항력 취소 시 환불 가능한가</h2>
+
+태풍, 대설, 지진 같은 자연재해로 여행 자체가 불가능한 상황에서도 위약금 없이 환불을 요구할 수 있는지 궁금해하시는 분이 많습니다.<br><br>
+<strong>결론</strong>: 법적으로 보장된 전액 환불 권리는 아닙니다. 다만 기상재해·정부의 여행 자제 권고 등 불가항력적 상황이 인정되면 숙소에 사정을 설명해 위약금 감면을 협의할 수 있고, 여행자보험에서 보상을 받을 수도 있습니다.<br><br>
+실제로 태풍 경보·호우 경보가 발령된 상황에서 소비자원은 숙소에 위약금 감면 권고를 내리는 경우가 있습니다. 소비자원에 중재를 신청하면 "사실상 여행이 불가능한 상황"에 대한 판단을 받을 수 있습니다.<br><br>
+
+<div class="tip-box">
+<strong>여행자보험 가입 강력 권장</strong><br>
+여름 성수기 고가 숙박 예약 시 여행자보험(국내 여행) 가입을 검토하세요. 여행자보험의 '국내 여행 중 불가항력적 취소' 특약은 천재지변·사고·질병 등으로 여행 자체가 불가능해진 경우 예약금 손해를 일부 보상합니다(보험사·상품별 조건 다름).
+</div>
+
+<h2>08 | 숙박 분쟁 발생 시 신고 및 해결 경로</h2>
+
+숙소 측과 직접 협의해도 환불이 해결되지 않는 경우, 아래 기관에 도움을 요청할 수 있습니다.<br><br>
+<strong>① 한국소비자원 피해구제 신청</strong><br>
+• 홈페이지: www.kca.go.kr<br>
+• 전화: 1372 (소비자상담센터)<br>
+• 신청 방법: 온라인 또는 방문 접수. 피해 사실 및 증빙 자료(예약 내역, 취소 문자, 계좌 내역 등) 제출<br>
+• 처리 기간: 약 30~90일 (분쟁 조정 또는 합의 권고)<br><br>
+<strong>② 공정거래위원회 신고</strong><br>
+• 홈페이지: www.ftc.go.kr<br>
+• 불공정 약관(취소 불가·과도한 위약금 등)을 시정하도록 신고 가능<br><br>
+<strong>③ 소액 민사 심판 청구</strong><br>
+• 분쟁 금액이 소액(3,000만 원 이하)인 경우 법원 소액 사건 심판 제도 이용 가능<br>
+• 변호사 없이도 본인이 직접 접수 가능<br><br>
+<strong>증거 보존 중요성</strong>: 분쟁 발생 전부터 예약 확인 캡처, 취소 요청 문자·카카오톡 기록, 입금 이체 내역 등을 보관해 두면 훨씬 유리합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260629/4_pension_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-3">Summer vacation planning scene with a young Korean couple surrounded by travel items — laptop showing travel booking site, sunglasses, suitcase, travel journal, and two airline tickets on a wooden table. Happy and relaxed atmosphere, warm summer morning light. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">여름 휴가 숙소 예약 계획 장면 / AI 제작 이미지</div>
+</div>
+
+<h2>09 | 성수기 숙박 예약 분쟁 없이 잘 하는 법</h2>
+
+가장 좋은 방법은 분쟁이 생기지 않도록 예약 전에 꼼꼼히 확인하는 것입니다.<br><br>
+<strong>예약 전 체크리스트 5가지</strong>:<br><br>
+<strong>① 취소·환불 약관 반드시 확인</strong><br>
+예약 버튼을 누르기 전 취소 환불 규정 탭을 끝까지 읽으세요. 특히 "성수기 위약금 강화" 문구가 있는지 확인하세요.<br><br>
+<strong>② 카드 결제 우선</strong><br>
+계좌이체(무통장 입금)보다 신용카드·체크카드 결제를 선택하면 분쟁 시 카드사에 이의 제기(차지백)를 할 수 있어 유리합니다.<br><br>
+<strong>③ 확인 전화 필수</strong><br>
+대형 플랫폼보다 개인 사업자 펜션에 직접 예약할 때는 예약 후 전화로 예약 내용을 확인하고, 취소 위약금 기준을 다시 한번 물어두세요.<br><br>
+<strong>④ 여행자보험 가입</strong><br>
+국내 여행도 여행자보험을 들어두면 예기치 못한 취소 상황에서 위약금 손해를 일부 보전할 수 있습니다.<br><br>
+<strong>⑤ 부분 환불 가능 숙소 선택</strong><br>
+불확실한 일정이라면 "무료 취소(Free Cancellation)" 또는 "부분 환불 가능" 상품을 선택하세요. 가격이 조금 더 비쌀 수 있지만 만약의 상황을 대비하는 보험 역할을 합니다.
+
+<div class="recommend-area">
+  <strong>📌 함께 읽으면 좋은 글</strong><br><br>
+  • <a href="../260628/travel_inje_gombaryeong_wildflower.html">인제 곰배령 탐방 예약 방법과 7월 야생화 코스, 동자꽃·금강초롱꽃 절정 시기</a><br>
+  • <a href="../260628/local_overseas_exchange.html">해외여행 환전 싸게 하는 법, 트래블월렛과 트래블로그 수수료 직접 비교</a>
+</div>
+
+<div>
+  <span class="tag">#펜션취소위약금</span>
+  <span class="tag">#숙소환불규정</span>
+  <span class="tag">#성수기취소</span>
+  <span class="tag">#여름휴가예약</span>
+  <span class="tag">#숙박분쟁해결</span>
+  <span class="tag">#소비자분쟁해결기준</span>
+  <span class="tag">#야놀자환불</span>
+  <span class="tag">#에어비앤비취소</span>
+  <span class="tag">#여행자보험</span>
+  <span class="tag">#숙소예약팁</span>
+</div>
+
+</body>
+</html>

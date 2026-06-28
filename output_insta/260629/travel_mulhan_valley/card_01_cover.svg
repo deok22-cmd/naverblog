@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== G0 COVER : 물한계곡 커버 카드 ===== -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.30" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.88"/>
+    </linearGradient>
+    <linearGradient id="scrimTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="0.22" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1f1c"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimTop)"/>
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#004d40"/>
+
+  <!-- 상단 채널 워드마크 -->
+  <text x="540" y="108" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#80cbc4" letter-spacing="4">travelkorea_365</text>
+
+  <!-- 카테고리 키커 -->
+  <text x="80" y="820" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="28" font-weight="700" fill="#80cbc4" letter-spacing="4">충북 국내여행</text>
+
+  <!-- 타이틀 메인 -->
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="100" font-weight="800" fill="#ffffff" letter-spacing="-3">
+    <tspan x="80" y="952">물한계곡</tspan>
+  </text>
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="72" font-weight="800" fill="#e0f2f1" letter-spacing="-2">
+    <tspan x="80" y="1044">원시림 계곡 피서</tspan>
+  </text>
+
+  <!-- 구분선 -->
+  <rect x="80" y="1076" width="120" height="8" fill="#00796b"/>
+
+  <!-- 서브 카피 -->
+  <text x="80" y="1148" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#b2dfdb">한여름 수온 15℃, 충북 숨은 피서지</text>
+
+  <!-- 칩 -->
+  <rect x="80" y="1200" width="270" height="64" rx="32" fill="#00796b"/>
+  <text x="215" y="1241" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#ffffff">민주지산 1,242m</text>
+  <rect x="368" y="1200" width="220" height="64" rx="32" fill="#004d40"/>
+  <text x="478" y="1241" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#e0f2f1">영동군 상촌면</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>
