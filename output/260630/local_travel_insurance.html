@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 14px; text-align: left; font-size: 0.95em; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #e8f5e9; font-size: 0.95em; }
+  .info-table tr:nth-child(even) td { background: #f1faf9; }
+  .tip-box { background: #fffde7; border-left: 5px solid #f9a825; padding: 18px 20px; margin: 25px 0; border-radius: 0 8px 8px 0; }
+  .warn-box { background: #fce4ec; border-left: 5px solid #e57373; padding: 18px 20px; margin: 25px 0; border-radius: 0 8px 8px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-caption { font-size: 0.88em; color: #888; margin-top: 8px; font-style: italic; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #bbb; border-radius: 8px; padding: 24px 20px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; color: #555; }
+  .ph-file { font-size: 0.82em; color: #888; font-weight: 400; font-family: monospace; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 14px; border-radius: 6px; font-size: 0.82em; line-height: 1.6; white-space: pre-wrap; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 7px 16px; border-radius: 5px; cursor: pointer; font-size: 0.88em; margin-top: 6px; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>해외여행 여행자보험 꼭 필요한가, 보장 항목과 비교 가입으로 저렴하게 드는 법</h1>
+
+<div class="intro-box">
+"해외여행 갈 때 여행자보험 꼭 들어야 하나요?" — 가장 많이 받는 질문 중 하나입니다.<br><br>
+결론부터 말씀드리면, <strong>반드시 가입하는 것을 권장</strong>합니다. 특히 국내 건강보험은 해외에서 발생한 의료비를 보장하지 않습니다. 해외 병원은 입원 하루에 수백만 원, 응급 이송 시 수천만 원까지 청구되는 경우가 있습니다.<br><br>
+그런데 보험사마다 상품 구성이 달라 제대로 비교하지 않으면 필요 없는 항목에 과도한 보험료를 내거나, 정작 중요한 보장이 빠진 상품에 가입하는 실수를 할 수 있습니다. 핵심 보장 항목부터 비교 가입 방법, 현지 병원 이용 절차까지 꼼꼼하게 정리했습니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+  <div class="ph-head">
+    <span>📷 AI 이미지 생성 영역</span>
+    <span class="ph-file">images/260630/4_travelinsurance_1.png</span>
+  </div>
+  <pre class="prompt-text" id="prompt-4-1">Photorealistic image of a person using a smartphone to purchase travel insurance online before an overseas trip, passport and airplane boarding pass visible on the desk beside the phone, travel accessories in the background, calm and organized atmosphere, natural desk lighting, ultra high detail, 1:1 aspect ratio, professional lifestyle photography</pre>
+  <button class="copy-btn" onclick="copyPrompt('prompt-4-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">해외 출발 전 스마트폰으로 여행자보험에 가입하는 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 여행자보험이 필요한 이유 — 해외 의료비 현실</h2>
+
+해외 의료비가 얼마나 비쌀 수 있는지 실제 사례로 이해하면 보험의 필요성이 바로 와닿습니다.<br><br>
+미국에서 맹장 수술을 받으면 수술·입원·회복까지 포함해 수천만 원의 비용이 발생할 수 있습니다. 태국 방콕의 국제 병원도 입원 하루 기준으로 수십만 원 수준입니다. 유럽에서 교통사고를 당해 현지 헬리콥터 후송이 필요해진 경우, 이송 비용만 수천만 원이 청구되기도 합니다.<br><br>
+국내 건강보험은 해외에서 발생한 의료비를 기본적으로 보장하지 않습니다. 귀국 후 건강보험공단에 요양비로 일부 청구할 수 있는 경우도 있으나 상한이 있어 큰 금액을 커버하기 어렵습니다.<br><br>
+반면 여행자보험 1~2만 원대 상품만 들어도 해외 응급 의료비 1~3억 원, 항공기 납치·지연·수하물 분실까지 포함한 종합 보장을 받을 수 있습니다. <strong>보험료 대비 보장 효율이 가장 높은 금융 상품 중 하나</strong>가 여행자보험입니다.
+
+<h2>02 | 여행자보험 핵심 보장 항목 5가지</h2>
+
+여행자보험을 고를 때 반드시 확인해야 할 핵심 항목은 다음 5가지입니다.<br><br>
+<strong>① 해외 의료비(상해·질병)</strong>가 가장 중요합니다. 상해(사고)와 질병(몸이 아파서 병원 방문)을 모두 포함하는 상품을 선택하세요. 보장 한도는 최소 1억 원 이상, 미국·캐나다 방문 시에는 2~3억 원 이상을 권장합니다.<br><br>
+<strong>② 긴급 이송·후송 비용</strong>은 여행지에서 중증 부상이나 질환으로 인해 현지 전문 병원이나 한국으로 이송이 필요할 때 지원하는 항목입니다. 헬기·항공기 이송 비용은 별도 보험이 없으면 전액 자부담이므로 반드시 포함 여부를 확인하세요.<br><br>
+<strong>③ 항공기·여행 관련 손해</strong>는 항공기 연착·결항 시 대체 항공권 비용, 수하물 분실·파손 보상, 여권 분실 재발급 비용 등을 포함합니다. 단순 여행 불편에 대한 보장이지만 실생활에서 의외로 자주 해당됩니다.<br><br>
+<strong>④ 배상책임</strong>은 여행 중 타인에게 피해를 입혔을 때 법적 배상 책임을 부담하는 항목입니다. 렌터카 이용·스키·스노보드·스쿠버다이빙 같은 레저 활동 시 특히 유용합니다.<br><br>
+<strong>⑤ 사망·후유장애</strong>는 최악의 상황에 대비한 기본 보장입니다. 가족 동반 여행 시에는 특히 중요합니다.<br><br>
+
+<table class="info-table">
+  <tr><th>항목</th><th>권장 보장 한도</th><th>주의 사항</th></tr>
+  <tr><td>해외 의료비(상해)</td><td>1억 원 이상(미국 2~3억)</td><td>질병 의료비 별도 확인</td></tr>
+  <tr><td>해외 의료비(질병)</td><td>1억 원 이상</td><td>상해와 별도 항목</td></tr>
+  <tr><td>긴급 이송·후송</td><td>별도 한도 확인</td><td>미포함 상품 있음 주의</td></tr>
+  <tr><td>수하물 분실·파손</td><td>50만~100만 원</td><td>전자기기 별도 특약 가능</td></tr>
+  <tr><td>항공기 지연</td><td>6~12시간 이상 지연 시</td><td>지연 인정 기준 확인</td></tr>
+</table>
+
+<h2>03 | 꼭 확인해야 할 제외 항목(면책 조항)</h2>
+
+보험 약관에는 보장하지 않는 제외 항목이 반드시 있습니다. 가입 전 아래 항목을 꼭 확인하세요.<br><br>
+<strong>기존 질병(既往症)</strong>은 대부분의 여행자보험에서 보장하지 않습니다. 당뇨·심장질환·고혈압 등 기저 질환이 있는 경우, 해당 질환 악화로 인한 의료비는 보상받지 못할 수 있습니다. 일부 보험사는 '기존 질병 특약'을 유료로 추가할 수 있으니 별도 확인하세요.<br><br>
+<strong>음주·무면허 운전</strong> 등 본인 과실이 명백한 경우는 보장이 제한됩니다.<br><br>
+<strong>스카이다이빙·번지점프·암벽등반·레이싱</strong> 등 고위험 스포츠는 기본 상품에서 제외되는 경우가 많습니다. 해당 활동이 예정되어 있다면 별도 특약 추가 여부를 보험사에 확인하세요.<br><br>
+<strong>전쟁·분쟁 지역 발생 사고</strong>는 보장에서 제외됩니다. 외교부 여행경보 발령 지역 방문 시에는 보험 자체가 아예 효력을 잃을 수 있으니 반드시 사전 확인이 필요합니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+  <div class="ph-head">
+    <span>📷 AI 이미지 생성 영역</span>
+    <span class="ph-file">images/260630/4_travelinsurance_2.png</span>
+  </div>
+  <pre class="prompt-text" id="prompt-4-2">Photorealistic image of a traveler at an overseas international hospital reception desk with a nurse or receptionist, presenting travel insurance documents, modern hospital interior with clean white walls, Southeast Asian or European setting, calm and professional atmosphere, natural indoor lighting, ultra high detail, 1:1 aspect ratio, professional documentary photography</pre>
+  <button class="copy-btn" onclick="copyPrompt('prompt-4-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">해외 병원에서 여행자보험 서류를 제출하는 여행자 / AI 제작 이미지</div>
+</div>
+
+<h2>04 | 비교 가입으로 저렴하게 드는 법</h2>
+
+여행자보험은 동일한 보장 내용이라도 보험사마다 가격 차이가 있습니다. 비교 가입 사이트를 활용하면 최저가로 원하는 보장을 찾을 수 있습니다.<br><br>
+<strong>보험다모아(www.e-insmarket.or.kr)</strong>는 금융감독원이 운영하는 공식 보험 비교 사이트입니다. 여행자보험을 포함해 다양한 보험을 보험사별로 비교할 수 있으며, 광고 없이 객관적인 정보를 제공합니다.<br><br>
+<strong>민간 보험 비교 사이트</strong>(인슈어테크 플랫폼 등)도 활용할 수 있습니다. 출국일·귀국일·목적지·여행자 나이를 입력하면 수십 개 상품을 한 번에 비교할 수 있어 편리합니다.<br><br>
+<strong>항공권·숙소 예약 시 패키지 할인</strong>도 확인하세요. 일부 항공사나 여행사는 항공권 구매 시 여행자보험을 함께 저렴하게 제공하는 경우가 있습니다. 단, 이 경우 보장 내용이 단순한 경우가 많으므로 핵심 항목이 포함됐는지 확인하는 것이 우선입니다.<br><br>
+<strong>출국 당일 공항에서 가입</strong>도 가능하나 가격이 상대적으로 높습니다. 여유 있게 출국 2~3일 전에 온라인으로 비교·가입하는 것이 가장 합리적입니다.
+
+<h2>05 | 현지 병원 이용과 보험금 청구 절차</h2>
+
+여행 중 아파서 현지 병원에 갔을 때 보험금을 제대로 받으려면 몇 가지 절차를 알아두어야 합니다.<br><br>
+<strong>병원 방문 전</strong> 가입한 보험사의 24시간 해외 지원 센터에 먼저 연락하세요. 보험증권에 기재된 긴급 연락처로 연락하면 인근 제휴 병원 안내, 보험금 직접 청구(캐시리스) 가능 여부, 필요 서류 등을 안내해 줍니다.<br><br>
+<strong>현지에서 비용을 먼저 결제한 경우</strong>에는 영수증(명세서), 진단서, 처방전 원본을 반드시 챙겨 오세요. 이 서류들이 없으면 귀국 후 보험금 청구가 어렵습니다. 가능하면 현지에서 사진으로도 찍어 클라우드에 백업해 두면 분실 위험을 줄일 수 있습니다.<br><br>
+<strong>귀국 후 청구</strong>는 보험사 앱·홈페이지·고객센터를 통해 서류를 제출합니다. 청구 기한이 있으므로(보통 3년) 귀국 직후 처리하는 것이 좋습니다.
+
+<h2>06 | 신용카드 부가 여행보험 — 믿을 수 있나</h2>
+
+일부 프리미엄 신용카드는 여행자보험이 자동 포함되어 있는 경우가 있습니다. 활용하면 보험료를 절감할 수 있지만, 몇 가지를 반드시 확인해야 합니다.<br><br>
+<strong>발동 조건</strong>을 확인하세요. 대부분의 카드 부가 여행보험은 해당 카드로 항공권·숙박을 결제해야 보험이 활성화됩니다. 모든 사용에 자동 적용되는 것이 아닙니다.<br><br>
+<strong>보장 한도</strong>를 확인하세요. 카드 부가 여행보험은 보장 한도가 낮거나 질병 의료비가 제외된 경우가 많습니다. 해외 의료비 보장 한도가 1,000만 원 미만인 카드 보험만으로는 충분하지 않을 수 있습니다.<br><br>
+카드 부가 보험으로 기본 보장을 충족하고, 부족한 항목만 별도 여행자보험으로 보완하는 방식도 현명한 선택입니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+  <div class="ph-head">
+    <span>📷 AI 이미지 생성 영역</span>
+    <span class="ph-file">images/260630/4_travelinsurance_3.png</span>
+  </div>
+  <pre class="prompt-text" id="prompt-4-3">Photorealistic flat lay of travel essentials including a Korean passport, airplane ticket boarding pass, credit card, travel insurance policy documents, medical kit, and smartphone on a clean white wooden desk, summer travel preparation concept, natural overhead light, ultra high detail, 1:1 aspect ratio, professional product photography</pre>
+  <button class="copy-btn" onclick="copyPrompt('prompt-4-3')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">여권·항공권·여행자보험 서류·응급키트 등 해외여행 준비 필수품 / AI 제작 이미지</div>
+</div>
+
+<h2>07 | 목적지별 여행자보험 중점 확인 사항</h2>
+
+여행 목적지에 따라 중점적으로 확인해야 할 보장 항목이 다릅니다.<br><br>
+<strong>미국·캐나다</strong>는 의료비가 세계에서 가장 높은 수준입니다. 의료비 보장 한도 최소 2억 원 이상, 응급 이송 포함 상품을 선택하세요.<br><br>
+<strong>동남아</strong>는 의료 인프라가 지역별로 큰 차이가 있어 현지 병원에서 한국·서구 수준의 치료를 받으려면 큰 비용이 필요할 수 있습니다. 치료 후 한국 이송을 원한다면 긴급 후송 항목이 필수입니다.<br><br>
+<strong>유럽</strong>은 여행 스케줄이 많고 이동이 복잡해 수하물 분실·항공기 지연 등 여행 손해 보장이 특히 유용합니다.<br><br>
+<strong>일본</strong>은 의료 수준이 높지만 비용도 상당합니다. 1억 원 이상 의료비 보장과 여행 손해 보장을 함께 갖춘 상품을 권장합니다.
+
+<h2>08 | 알아두면 유용한 추가 정보</h2>
+
+<strong>해외 여행 중 외교부 영사콜센터(+82-2-3210-0404, 24시간)</strong>를 저장해 두세요. 여행 중 긴급 상황 발생 시 보험과 별개로 영사관 도움을 받을 수 있습니다.<br><br>
+<strong>외교부 해외안전여행 앱</strong>을 설치하면 목적지의 여행경보 단계·안전 공지를 실시간으로 확인할 수 있습니다. 여행 전 목적지 국가의 위험 수준을 반드시 확인하세요.<br><br>
+<strong>여행자보험 증권</strong>은 출력하거나 스마트폰에 저장해 여행 중 항상 접근 가능하게 하세요. 보험사 긴급 연락처도 함께 메모해 두면 현지에서 당황하지 않고 신속하게 대처할 수 있습니다.
+
+<h2>09 | 여행자보험 요약 — 이것만 기억하세요</h2>
+
+여행자보험은 선택이 아닌 필수입니다. 특히 해외에서 의료 사고 발생 시 보험이 없으면 수천만 원의 자기 부담이 생길 수 있습니다.<br><br>
+핵심은 <strong>해외 의료비(상해+질병) 보장 한도</strong>와 <strong>긴급 이송 포함 여부</strong>를 먼저 확인하는 것입니다. 이 두 항목이 충족되면 나머지 부가 보장은 여행 성격에 맞게 선택하면 됩니다.<br><br>
+보험다모아나 비교 사이트에서 5~10분만 투자해 비교하면 같은 보장을 훨씬 저렴하게 가입할 수 있습니다. 출발 2~3일 전 온라인 가입이 가장 합리적인 선택입니다.<br><br>
+즐거운 해외여행을 위한 마지막 준비, 여행자보험으로 안심하고 떠나세요.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260629/local_flight_baggage.html">비행기 보조배터리와 액체 기내 반입 규정, 위탁 수하물 무게 얼마까지 되나</a></li>
+    <li><a href="../260629/local_pension_refund.html">펜션·숙소 여름 성수기 취소 위약금 기준과 환불 규정, 분쟁 없이 해결하는 법</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#여행자보험</span>
+  <span class="tag">#해외여행보험</span>
+  <span class="tag">#여행보험비교</span>
+  <span class="tag">#해외의료비</span>
+  <span class="tag">#보험다모아</span>
+  <span class="tag">#여름휴가준비</span>
+  <span class="tag">#해외여행준비</span>
+  <span class="tag">#긴급이송보험</span>
+  <span class="tag">#여행자보험가입</span>
+  <span class="tag">#해외안전여행</span>
+</div>
+
+</body>
+</html>

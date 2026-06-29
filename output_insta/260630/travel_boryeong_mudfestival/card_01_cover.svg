@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== G0 COVER : 보령 머드축제 2026 커버 =====
+       구조: A_headline_bottom 기반, 커버 전용 확장(키커+대형 타이틀+서브+칩) -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.30" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.88"/>
+    </linearGradient>
+    <linearGradient id="scrimTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.40"/>
+      <stop offset="0.25" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimTop)"/>
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <!-- 상단 채널 워드마크 -->
+  <text x="80" y="90" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#80cbc4" letter-spacing="4">travelkorea_365</text>
+
+  <!-- 키커 강조 틱 + 카테고리 -->
+  <rect x="80" y="860" width="64" height="10" fill="#00796b"/>
+  <text x="80" y="910" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#80cbc4" letter-spacing="3">충남 보령 · 여름 축제</text>
+
+  <!-- 메인 타이틀 -->
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="108" font-weight="800" fill="#ffffff" letter-spacing="-3">
+    <tspan x="80" y="1040">머드축제</tspan>
+    <tspan x="80" y="1158">완전정복</tspan>
+  </text>
+
+  <!-- 서브 설명 -->
+  <text x="80" y="1230" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e0f2f1">7.24~8.9 · 대천해수욕장 머드엑스포광장</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

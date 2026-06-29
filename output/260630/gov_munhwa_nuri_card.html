@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 14px; text-align: left; font-size: 0.95em; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #e8f5e9; font-size: 0.95em; }
+  .info-table tr:nth-child(even) td { background: #f1faf9; }
+  .tip-box { background: #fffde7; border-left: 5px solid #f9a825; padding: 18px 20px; margin: 25px 0; border-radius: 0 8px 8px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-caption { font-size: 0.88em; color: #888; margin-top: 8px; font-style: italic; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #bbb; border-radius: 8px; padding: 24px 20px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; color: #555; }
+  .ph-file { font-size: 0.82em; color: #888; font-weight: 400; font-family: monospace; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 14px; border-radius: 6px; font-size: 0.82em; line-height: 1.6; white-space: pre-wrap; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 7px 16px; border-radius: 5px; cursor: pointer; font-size: 0.88em; margin-top: 6px; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>문화누리카드 잔액 조회와 사용처, 2026년 15만 원 지원금 신청 방법</h1>
+
+<div class="intro-box">
+기초생활수급자와 차상위계층을 위한 문화 복지 카드인 <strong>문화누리카드</strong>를 받을 수 있는데 잘 모르고 있는 분들이 많습니다.<br><br>
+2026년에는 1인당 연간 <strong>15만 원(청소년·준고령기는 16만 원)</strong>의 문화 생활비를 지원합니다. 공연·영화·여행·체육시설·책 구매까지 생활 속 다양한 문화 활동에 쓸 수 있는 카드입니다.<br><br>
+잔액 조회 방법, 사용 가능한 가맹점 확인, 신규 발급 절차까지 꼼꼼하게 안내합니다. 이미 카드를 갖고 계신 분도 남은 잔액을 확인하고 이번 여름 문화 활동에 적극 활용하세요.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+  <div class="ph-head">
+    <span>📷 AI 이미지 생성 영역</span>
+    <span class="ph-file">images/260630/5_munhwanuri_1.png</span>
+  </div>
+  <pre class="prompt-text" id="prompt-5-1">Photorealistic image of a Korean culture welfare card (Munhwa Nuri Card) being held by a person in front of a cinema or theater entrance, cultural activities concept, bright modern setting, people in background buying tickets, joyful atmosphere, cultural life support, ultra high detail, 1:1 aspect ratio, professional lifestyle photography</pre>
+  <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">문화누리카드로 영화관·공연장 등 다양한 문화 시설을 이용하는 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 문화누리카드란 — 지원 목적과 대상</h2>
+
+문화누리카드는 문화체육관광부와 한국문화예술위원회가 운영하는 <strong>문화 복지 지원 사업</strong>입니다. 경제적 어려움으로 문화 생활에 제한이 있는 취약계층이 공연·영화·여행·스포츠 등 다양한 문화 활동을 누릴 수 있도록 연간 지원금을 제공합니다.<br><br>
+<strong>지원 대상</strong>은 만 6세 이상(2020년 12월 31일 이전 출생)인 기초생활수급자와 차상위계층입니다. 주민센터나 사회복지 기관에서 해당 자격 여부를 확인할 수 있으며, 동주민센터나 복지로(www.bokjiro.go.kr) 홈페이지에서도 조회 가능합니다.<br><br>
+2026년 기준 <strong>지원 금액</strong>은 기본 1인당 연간 15만 원입니다. 여기에 생애주기별 추가 지원이 있습니다. 청소년기(13~18세, 2008~2013년 출생)와 준고령기(60~64세, 1962~1966년 출생)는 1만 원을 추가 지원해 최대 <strong>16만 원</strong>을 받을 수 있습니다.
+
+<table class="info-table">
+  <tr><th>항목</th><th>내용</th></tr>
+  <tr><td>지원 대상</td><td>만 6세 이상 기초생활수급자 및 차상위계층</td></tr>
+  <tr><td>기본 지원금</td><td>1인당 연간 15만 원</td></tr>
+  <tr><td>추가 지원(청소년)</td><td>13~18세(2008~2013년생) +1만 원 = 16만 원</td></tr>
+  <tr><td>추가 지원(준고령)</td><td>60~64세(1962~1966년생) +1만 원 = 16만 원</td></tr>
+  <tr><td>발급 기간</td><td>2026년 2월 2일 ~ 11월 30일</td></tr>
+  <tr><td>사용 기한</td><td>2026년 12월 31일까지</td></tr>
+  <tr><td>공식 홈페이지</td><td>www.mnuri.kr</td></tr>
+</table>
+
+<h2>02 | 2026년 신규 발급 방법 — 어디서 어떻게</h2>
+
+문화누리카드 신규 발급은 <strong>온라인</strong>과 <strong>오프라인</strong> 두 가지 방법으로 가능합니다.<br><br>
+<strong>온라인 신청</strong>은 문화누리카드 공식 홈페이지(www.mnuri.kr)에서 가능합니다. 공인인증서(공동인증서) 또는 휴대폰 인증 후 신청하면 카드가 발송됩니다.<br><br>
+<strong>오프라인 신청</strong>은 거주지 주민센터(행정복지센터)를 방문하면 됩니다. 신분증을 지참하면 현장에서 자격 확인 후 카드를 신청할 수 있으며, 신청 후 우편으로 카드가 배송됩니다.<br><br>
+<strong>자동 재충전</strong>을 받을 수 있는 경우도 있습니다. 2025년에 문화누리카드를 3만 원 이상 사용했고 2026년에도 수급 자격을 유지하고 있다면, 별도 신청 없이 기존 카드로 2026년 지원금이 자동 충전됩니다. 단, 생애주기별 추가 지원금은 별도 신청이 필요한 경우가 있으니 홈페이지에서 확인하세요.<br><br>
+카드 수령 후에는 반드시 카드 뒷면에 서명한 뒤 사용하세요.
+
+<h2>03 | 잔액 조회 방법 — 3가지 채널</h2>
+
+문화누리카드 잔액은 다음 세 가지 방법으로 손쉽게 확인할 수 있습니다.<br><br>
+<strong>① 공식 홈페이지(www.mnuri.kr)</strong>: 로그인 후 '카드 잔액 조회' 메뉴에서 실시간으로 확인할 수 있습니다. 이용 내역과 사용 가능 금액을 함께 확인할 수 있어 가장 상세한 정보를 제공합니다.<br><br>
+<strong>② 문화누리 모바일 앱</strong>: 스마트폰에 '문화누리' 앱을 설치하면 언제 어디서나 잔액 조회와 가맹점 검색을 할 수 있습니다. 앱 내에서 가맹점 지도 검색도 가능합니다.<br><br>
+<strong>③ 고객센터 전화</strong>: 문화누리카드 고객센터(1544-3412)에 전화하면 ARS 또는 상담원 연결로 잔액을 안내받을 수 있습니다.<br><br>
+잔액이 남아 있더라도 <strong>사용 기한(2026년 12월 31일)</strong>이 지나면 소멸됩니다. 연말 전에 잔액을 확인하고 남은 금액을 모두 사용하는 것이 중요합니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+  <div class="ph-head">
+    <span>📷 AI 이미지 생성 영역</span>
+    <span class="ph-file">images/260630/5_munhwanuri_2.png</span>
+  </div>
+  <pre class="prompt-text" id="prompt-5-2">Photorealistic image of a person checking card balance on a smartphone app, welfare card balance inquiry interface on screen, indoor home setting with soft natural light, relaxed casual atmosphere, reading glasses nearby, simple modern interior, ultra high detail, 1:1 aspect ratio, professional lifestyle photography</pre>
+  <button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">문화누리카드 모바일 앱으로 잔액을 조회하는 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>04 | 문화누리카드 사용처 — 어디서 쓸 수 있나</h2>
+
+문화누리카드는 생각보다 다양한 곳에서 사용할 수 있습니다. 크게 6개 분야로 나뉩니다.<br><br>
+<strong>공연·전시</strong> 분야는 뮤지컬·연극·오페라·클래식 공연·미술관·박물관·전시관 등 문화 예술 시설에서 사용 가능합니다. 유명 공연의 경우 가격이 높지만 문화누리카드로 전액 또는 일부를 결제할 수 있습니다.<br><br>
+<strong>영화</strong> 분야는 CGV·롯데시네마·메가박스 등 주요 영화관에서 사용 가능합니다. 다만 일부 영화관은 특정 좌석(프리미엄 등)이나 특별관(4DX·IMAX 등)에서는 사용이 제한될 수 있으므로 결제 전 확인하세요.<br><br>
+<strong>스포츠·체육시설</strong> 분야는 프로스포츠 관람(야구·축구·농구 등)과 체육시설 이용에 쓸 수 있습니다.<br><br>
+<strong>관광·여행</strong> 분야는 국내 여행 패키지·테마파크·국립공원·관광지 입장료 등에 사용 가능합니다. 특히 <strong>한국관광공사 가맹 여행사</strong>와 제휴 테마파크에서 활용도가 높습니다.<br><br>
+<strong>독서·교육</strong> 분야는 서점·온라인 도서 구매(교보문고·예스24 등)와 일부 교육 기관에서 사용 가능합니다.<br><br>
+<strong>음악</strong> 분야는 악기 구매·악기 교습 기관에서 활용할 수 있습니다.
+
+<h2>05 | 사용 가능 가맹점 확인하는 법</h2>
+
+모든 가맹점이 문화누리카드를 받는 것은 아닙니다. 가맹점 여부를 미리 확인하는 방법을 알아두세요.<br><br>
+<strong>공식 홈페이지 가맹점 검색(www.mnuri.kr)</strong>에서 분야·지역·업체명으로 검색할 수 있습니다. 전국 수만 개의 가맹점 정보가 등록되어 있어 방문 전 미리 확인 가능합니다.<br><br>
+<strong>모바일 앱 지도 검색</strong>을 이용하면 현재 위치 기반으로 주변 가맹점을 지도에서 찾을 수 있어 외출 시 편리합니다.<br><br>
+결제 시 현장에서도 <strong>카드 단말기에 가맹 여부 표시</strong>가 됩니다. 단, 일부 소규모 가맹점은 시스템 오류나 직원 미숙으로 결제가 안 될 수 있으니 중요한 구매 전에는 미리 전화 확인을 권장합니다.<br><br>
+
+<div class="tip-box">
+<strong>💡 잔액 소진 전 활용 꿀팁</strong><br><br>
+사용 기한 만료(12월 31일)가 다가오면 잔액 소멸 위기가 옵니다. <strong>연말 전에 공연 예매나 도서 구매에 활용</strong>하거나, 국내 여행 패키지를 예약하면 가장 효과적으로 사용할 수 있습니다. 잔액 알림 기능(앱 설정)을 켜두면 연말에 소멸 위기를 미리 방지할 수 있습니다.
+</div>
+
+<h2>06 | 재발급 방법 — 카드 분실·파손 시</h2>
+
+문화누리카드를 분실하거나 파손한 경우 재발급을 신청할 수 있습니다.<br><br>
+<strong>재발급 절차</strong>는 기존 발급과 동일합니다. 공식 홈페이지(www.mnuri.kr) 또는 주민센터에서 신청하면 됩니다. 분실 신고 후 기존 카드는 즉시 사용이 정지되고, 새 카드에는 기존 잔액이 이전됩니다.<br><br>
+재발급 기간 중에는 카드 사용이 불가하므로, 재발급 후 카드를 수령하면 즉시 서명 후 사용하세요. 카드 수령 전 분실·도용으로 인한 부정 사용 피해가 발생한 경우 고객센터(1544-3412)에 즉시 신고하세요.<br><br>
+카드 비밀번호 설정도 중요합니다. 카드 수령 후 카드사 앱 또는 ATM에서 비밀번호를 변경해 두면 부정 사용 위험을 줄일 수 있습니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+  <div class="ph-head">
+    <span>📷 AI 이미지 생성 영역</span>
+    <span class="ph-file">images/260630/5_munhwanuri_3.png</span>
+  </div>
+  <pre class="prompt-text" id="prompt-5-3">Photorealistic image of a Korean family enjoying a cultural experience together, parents and children watching a theater performance or musical at a modern concert hall, happy expressions, well-lit auditorium with stage visible, cultural enrichment and welfare concept, ultra high detail, 1:1 aspect ratio, professional photography</pre>
+  <button class="copy-btn" onclick="copyPrompt('prompt-5-3')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">문화누리카드로 공연을 관람하는 가족의 즐거운 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>07 | 문화누리카드 사용 시 주의사항</h2>
+
+카드를 사용할 때 알아두면 좋은 주의사항들을 정리했습니다.<br><br>
+<strong>현금 인출(ATM 출금)은 불가능</strong>합니다. 문화누리카드는 지정 가맹점에서의 결제에만 사용할 수 있으며, 현금으로 전환하거나 계좌 이체는 불가합니다.<br><br>
+<strong>타인 양도 금지</strong>입니다. 카드에는 본인 명의가 등록되어 있으며, 가족이나 타인에게 빌려주거나 양도하는 행위는 제재 대상이 됩니다. 적발 시 지원 자격이 박탈될 수 있습니다.<br><br>
+<strong>일부 결제 수단 병용 제한</strong>이 있을 수 있습니다. 가맹점에 따라 문화누리카드와 다른 할인 쿠폰·포인트의 중복 사용이 제한되는 경우가 있으니 결제 전 가맹점에 확인하세요.<br><br>
+<strong>포인트 적립은 불가</strong>합니다. 신용카드처럼 포인트나 캐시백 혜택이 쌓이지 않습니다.
+
+<h2>08 | 자주 묻는 질문</h2>
+
+<strong>Q. 가족이 여러 명인 경우 합산해서 사용할 수 있나요?</strong><br><br>
+아닙니다. 문화누리카드는 개인별로 발급됩니다. 가족 구성원이 각각 자격 대상이라면 각자 신청해 개별 카드를 받을 수 있으며, 카드는 본인만 사용해야 합니다.<br><br>
+<strong>Q. 이미 자동 재충전을 받았는지 어떻게 확인하나요?</strong><br><br>
+공식 홈페이지(www.mnuri.kr)에 로그인하면 카드 잔액과 충전 내역을 확인할 수 있습니다. 자동 재충전이 완료되면 등록된 휴대폰으로 문자 알림이 발송됩니다.<br><br>
+<strong>Q. 지원금을 못 다 쓰면 어떻게 되나요?</strong><br><br>
+2026년 12월 31일 이후 사용하지 않은 잔액은 소멸됩니다. 이월되지 않으므로 연말 전에 남은 잔액을 반드시 활용하세요.<br><br>
+<strong>Q. 2025년에 카드를 받지 않았는데 2026년에 신규 발급이 가능한가요?</strong><br><br>
+가능합니다. 매년 신규 발급이 가능하며, 2026년 발급 기간(2월 2일~11월 30일) 안에 홈페이지 또는 주민센터에서 신청하면 됩니다. 단, 발급 기한이 지나면 그해 카드 발급은 불가합니다.
+
+<h2>09 | 문화누리카드 활용을 극대화하는 방법</h2>
+
+문화누리카드를 똑똑하게 활용하면 여름 내내 알찬 문화 생활을 즐길 수 있습니다.<br><br>
+여름 시즌에는 <strong>야외 공연·뮤지컬·클래식</strong> 공연이 많은 계절입니다. 미리 가맹점 검색으로 지역 내 공연 티켓을 문화누리카드로 결제할 수 있는지 확인하고 예매하세요. 일부 대형 공연은 조기 예매 시 좌석 선택의 폭이 넓어 유리합니다.<br><br>
+<strong>국내 여행 연계</strong>도 적극 활용하세요. 가족과 함께 국내 여행 패키지나 테마파크를 방문할 때 문화누리카드를 활용하면 실질적인 혜택이 큽니다.<br><br>
+도서 구입에 활용하면 교보문고·예스24 같은 온라인 서점에서도 결제가 가능해 집에서도 편리하게 잔액을 사용할 수 있습니다.<br><br>
+정보 기준일: 2026-06-30. 지원 금액·사용처·발급 기간은 정책에 따라 변동될 수 있으므로 반드시 문화누리카드 공식 홈페이지(www.mnuri.kr) 또는 고객센터(1544-3412)에서 최신 정보를 재확인하세요. 출처: 문화누리 공식 홈페이지(www.mnuri.kr), 2026 카드 발급 안내.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260629/gov_flood_relief.html">수해·침수 피해 재난지원금 신청 방법과 풍수해보험 가입 절차, 장마철 대비</a></li>
+    <li><a href="../260629/travel_cheongoksan_byeol.html">평창 청옥산 육백마지기 여름 별 보기와 풍력단지 드라이브, 안반데기 연계 코스</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#문화누리카드</span>
+  <span class="tag">#문화누리카드잔액조회</span>
+  <span class="tag">#문화누리카드사용처</span>
+  <span class="tag">#문화누리카드2026</span>
+  <span class="tag">#기초생활수급자혜택</span>
+  <span class="tag">#차상위계층지원</span>
+  <span class="tag">#문화복지</span>
+  <span class="tag">#15만원지원금</span>
+  <span class="tag">#문화생활지원</span>
+  <span class="tag">#복지카드</span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px 14px; text-align: left; font-size: 0.95em; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #e0f2f1; font-size: 0.95em; }
+  .info-table tr:nth-child(even) td { background: #f1faf9; }
+  .tip-box { background: #fffde7; border-left: 5px solid #f9a825; padding: 18px 20px; margin: 25px 0; border-radius: 0 8px 8px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-area img { width: 100%; border-radius: 8px; display: block; margin: 0 auto; }
+  .img-caption { font-size: 0.88em; color: #888; margin-top: 8px; font-style: italic; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #bbb; border-radius: 8px; padding: 24px 20px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; color: #555; }
+  .ph-file { font-size: 0.82em; color: #888; font-weight: 400; font-family: monospace; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 14px; border-radius: 6px; font-size: 0.82em; line-height: 1.6; white-space: pre-wrap; margin: 10px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 7px 16px; border-radius: 5px; cursor: pointer; font-size: 0.88em; margin-top: 6px; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>청송 주왕산 여름 용추폭포 코스와 주산지 왕버들 물안개, 국립공원 당일치기 정보</h1>
+
+<div class="intro-box">
+경북 청송에 자리한 주왕산국립공원은 여름이면 특별한 얼굴을 보여줍니다.<br><br>
+기암괴석으로 유명한 암봉들 사이로 폭포가 시원스럽게 쏟아지고, 계곡을 따라 걷는 내내 서늘한 바람이 불어옵니다. 더불어 새벽이면 주산지 수면 위로 물안개가 피어올라 300년 된 왕버들 고목이 幻想的인 풍경을 연출합니다.<br><br>
+이 글에서는 <strong>여름 주왕산을 당일 코스로 알차게 즐기는 방법</strong>을 동선·입장료·주차·주산지 방문 타이밍까지 꼼꼼하게 안내합니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+  <div class="ph-head">
+    <span>📷 AI 이미지 생성 영역</span>
+    <span class="ph-file">images/260630/2_juwangsan_1.png</span>
+  </div>
+  <pre class="prompt-text" id="prompt-2-1">Photorealistic summer scene of Yongchu Falls waterfall inside Juwangsan National Park South Korea, crystal clear water cascading down ancient volcanic rock cliffs surrounded by lush green summer foliage, hikers on a trail beside the falls, misty atmosphere, cool forest lighting, ultra high detail, 1:1 aspect ratio, professional nature photography</pre>
+  <button class="copy-btn" onclick="copyPrompt('prompt-2-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">청송 주왕산 용추폭포의 여름 풍경, 암벽 사이로 쏟아지는 시원한 물줄기 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 주왕산국립공원 기본 정보와 여름 매력</h2>
+
+주왕산(周王山)은 경북 청송군에 위치한 국립공원으로, 높이는 720m로 그리 높지 않지만 <strong>기암절벽과 계곡, 폭포의 조화</strong>가 어우러진 독특한 산입니다.<br><br>
+지질학적으로는 약 7,000만 년 전 화산 활동으로 형성된 응회암 지대로, 수직으로 깎아지른 암봉들이 장관을 이룹니다. 덕분에 유네스코 세계지질공원으로도 지정되어 있습니다.<br><br>
+여름 주왕산의 가장 큰 매력은 <strong>선선함</strong>입니다. 주왕계곡을 따라 이어지는 탐방로는 짙은 수목 그늘 아래 시원한 계곡 바람이 불어, 한여름에도 상쾌하게 걸을 수 있습니다. 해가 떠 있는 시간에도 계곡 안은 기온이 바깥보다 3~5℃ 낮게 유지됩니다.<br><br>
+
+<table class="info-table">
+  <tr><th>항목</th><th>내용</th></tr>
+  <tr><td>위치</td><td>경북 청송군 주왕산면 공원길 169-7</td></tr>
+  <tr><td>입장료</td><td>성인 3,500원 / 청소년·어린이 1,000원 / 만 6세 이하·만 65세 이상 무료</td></tr>
+  <tr><td>주차료</td><td>소형차 1,500원 / 중·대형차 3,000원</td></tr>
+  <tr><td>탐방 안내소</td><td>054-870-5300 (주왕산국립공원사무소)</td></tr>
+  <tr><td>주산지 입장료</td><td>무료</td></tr>
+</table>
+
+<h2>02 | 여름 추천 코스 — 대전사에서 용추폭포까지</h2>
+
+주왕산의 대표 탐방 코스는 <strong>대전사 입구 → 주왕계곡 → 용추폭포(1폭) → 절구폭포(2폭) → 용연폭포(3폭)</strong> 구간입니다. 왕복 약 7km, 소요 시간은 휴식 포함 약 3~4시간이며 난이도는 평이해 가족 나들이로도 좋습니다.<br><br>
+탐방로는 평탄하고 정비가 잘 되어 있습니다. 계곡을 따라 걸으며 바위벽 위로 솟은 기암과 빽빽한 활엽수림이 터널처럼 이어져, 걸음마다 새로운 경치가 펼쳐집니다.<br><br>
+<strong>용추폭포(1폭)</strong>는 높이 약 7m로 3단으로 흘러내리는 주왕산 최고 폭포입니다. 여름에는 수량이 충분해 물보라를 직접 맞을 만큼 가까이 접근할 수 있습니다. 폭포 주변은 온도가 한층 낮아 자연 에어컨 효과를 느낄 수 있는 최고의 쉬어가기 포인트입니다.<br><br>
+<strong>절구폭포(2폭)</strong>와 <strong>용연폭포(3폭)</strong>는 규모는 작지만 계곡 깊숙이 위치해 한적한 분위기입니다. 3폭까지 이어지는 구간은 경사가 약간 있으나 어렵지 않게 오를 수 있습니다.
+
+<div class="tip-box">
+<strong>💡 여름 주왕산 탐방 팁</strong><br><br>
+<strong>절골계곡</strong>은 9월~11월 중에만 개방되므로 7~8월에는 이용이 제한됩니다. 여름에는 <strong>주왕계곡 코스(대전사~3폭)</strong>를 이용하고, 절골 대신 주산지 방문을 추가하면 다양한 풍경을 즐길 수 있습니다. 자하성(紫霞城) 방면 능선길은 여름 녹음과 전망이 빼어나 여력이 있으면 추가해 보세요.
+</div>
+
+<h2>03 | 주산지 왕버들 물안개 — 새벽이 최고인 이유</h2>
+
+주산지(注山池)는 조선 숙종 때(1720년) 축조된 인공 저수지로, 주왕산 자락의 작은 계곡 안에 자리합니다. 입장료는 무료이며 주왕산국립공원 주차장에서 도보 약 40분 거리입니다.<br><br>
+주산지를 유명하게 만든 주인공은 수면 위로 뿌리를 드러낸 <strong>수령 100~300년 왕버들 고목들</strong>입니다. 이른 아침이나 해 질 무렵 물안개가 피어오를 때 왕버들이 안개 사이에 솟아 있는 장면은 한 폭의 묵화(墨畫)처럼 아름다워 많은 사진가들이 즐겨 찾는 명소입니다.<br><br>
+<strong>최고의 방문 시간은 일출 직후 이른 오전</strong>입니다. 여름에는 오전 5시 30분~7시 사이에 물안개가 가장 짙게 형성됩니다. 전날 주변에 숙박한 뒤 새벽 일찍 방문하면 물안개와 왕버들이 어우러진 몽환적인 풍경을 만날 수 있습니다. 한낮에는 안개가 걷혀 수면의 물색이 맑게 빛나는 다른 매력이 있습니다.<br><br>
+주산지 주변 탐방로는 저수지를 한 바퀴 도는 짧은 코스입니다. 조용하고 인적이 적어 새소리와 물소리에 귀 기울이며 느릿하게 산책하기에 딱 좋습니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+  <div class="ph-head">
+    <span>📷 AI 이미지 생성 영역</span>
+    <span class="ph-file">images/260630/2_juwangsan_2.png</span>
+  </div>
+  <pre class="prompt-text" id="prompt-2-2">Photorealistic misty dawn scene at Jusanji Pond in Cheongsong South Korea, ancient twisted willow trees with roots submerged in still water, thick morning fog rising from the surface creating a dreamlike atmosphere, soft golden early morning light filtering through mist, reflection of trees on the glassy water, ultra high detail, 1:1 aspect ratio, fine art nature photography</pre>
+  <button class="copy-btn" onclick="copyPrompt('prompt-2-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">청송 주산지 이른 아침 물안개와 수령 300년 왕버들 고목 / AI 제작 이미지</div>
+</div>
+
+<h2>04 | 대전사와 주왕산의 역사 이야기</h2>
+
+주왕산 탐방로 입구에 자리한 <strong>대전사(大典寺)</strong>는 신라 때 창건된 고찰입니다. 경내로 들어서면 주왕산의 거대한 암벽이 배경처럼 펼쳐져 있어, 절집과 자연이 어우러지는 독특한 풍경을 감상할 수 있습니다.<br><br>
+주왕산이라는 이름에는 전설이 담겨 있습니다. 중국 당나라 때 주왕(周王)이 난을 피해 이 산에 숨었다가 신라 군사에게 쫓겨 죽었다는 이야기에서 유래했다고 전해집니다. 실제로 대전사 뒤편 기암 구간에는 이 전설과 관련된 지명들이 곳곳에 남아 있습니다.<br><br>
+대전사 경내 보광전(普光殿)은 조선 후기 건축물로 단아한 아름다움이 있습니다. 탐방 전 잠시 대전사를 둘러보면 주왕산의 역사적 층위를 한층 깊이 이해할 수 있습니다.
+
+<h2>05 | 주왕산 당일치기 추천 동선</h2>
+
+하루 일정으로 주왕산을 즐기는 추천 동선을 정리하면 다음과 같습니다.<br><br>
+<strong>오전 코스(~오후 1시)</strong>: 주왕산국립공원 주차장 도착 → 대전사 관람(30분) → 주왕계곡 탐방로 진입 → 용추폭포(1폭)·절구폭포(2폭)·용연폭포(3폭) 차례로 방문 → 주차장 복귀(왕복 약 3~4시간)<br><br>
+<strong>오후 코스(오후 2시~4시)</strong>: 청송 읍내 식당에서 점심 식사 → 주산지 방문(왕복 도보 약 1시간 30분). 오후 주산지는 물안개는 없지만 맑고 조용한 수면이 또 다른 매력을 줍니다.<br><br>
+<strong>저녁(오후 4시 이후)</strong>: 청송 읍내 주변에서 사과·닭갈비 등 지역 먹거리 체험 후 귀가. 청송 사과는 전국 최고 품질로 인정받으니 사과 주스·한과 등 관련 먹거리를 꼭 맛보세요.<br><br>
+주산지를 새벽에 방문하고 싶다면 인근 청송군이나 진보면의 숙박 시설을 이용하는 1박 일정이 훨씬 알찬 경험을 줍니다.
+
+<h2>06 | 교통 및 주차 정보</h2>
+
+청송은 대중교통이 다소 불편한 지역이라 <strong>승용차 방문을 권장</strong>합니다.<br><br>
+서울 출발 기준으로는 중앙고속도로 서안동IC 또는 경북고속도로 청송IC를 이용하면 됩니다. 소요 시간은 약 3시간~3시간 30분입니다.<br><br>
+대구에서는 약 1시간 30분, 부산에서는 약 2시간 30분 거리입니다.<br><br>
+주왕산 주차장은 상의지구(대전사 입구)와 달기약수터 방면 두 곳이 있습니다. 성수기 주말에는 오전 10시 이전에 도착해야 주차 공간을 확보하기 수월합니다. 주차 후 탐방로까지 도보 5~10분 거리입니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+  <div class="ph-head">
+    <span>📷 AI 이미지 생성 영역</span>
+    <span class="ph-file">images/260630/2_juwangsan_3.png</span>
+  </div>
+  <pre class="prompt-text" id="prompt-2-3">Photorealistic summer landscape of Juwangsan National Park in South Korea, towering volcanic tuff rock cliffs rising dramatically above a lush green valley with a clear mountain stream winding through, hikers on a well-maintained trail beside the creek, filtered summer light through dense forest canopy, cool atmosphere, ultra high detail, 1:1 aspect ratio, professional landscape photography</pre>
+  <button class="copy-btn" onclick="copyPrompt('prompt-2-3')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">청송 주왕산 기암절벽과 여름 계곡, 탐방로 풍경 / AI 제작 이미지</div>
+</div>
+
+<h2>07 | 청송 지역 먹거리 추천</h2>
+
+청송 방문 시 빠질 수 없는 먹거리가 있습니다.<br><br>
+<strong>청송 닭갈비</strong>는 청송읍 시내 곳곳에 전문점이 모여 있습니다. 경양식 닭갈비와 다른 두툼하고 양념이 진한 청송식 닭갈비는 현지인들에게도 인기가 높습니다. 1인분 가격은 1만 원대 중후반 수준입니다.<br><br>
+<strong>달기약수탕 닭백숙</strong>은 청송의 또 다른 명물입니다. 달기약수는 탄산이 풍부한 천연 약수로, 이 물로 끓인 닭백숙은 육질이 부드럽고 잡내가 없는 것으로 유명합니다. 달기약수터 인근 식당에서 즐길 수 있습니다.<br><br>
+<strong>청송 사과</strong>는 국내 최고 품질로 손꼽히는 특산품입니다. 7~8월은 출하 전이라 직접 구매는 어렵지만, 지역 마트나 관광 기념품점에서 사과 주스·사과 한과·사과 막걸리 등 다양한 가공품을 구입할 수 있습니다.
+
+<h2>08 | 여름 주왕산 탐방 시 주의사항</h2>
+
+주왕산 탐방 시 몇 가지 주의사항을 미리 확인해 두세요.<br><br>
+<strong>입산 제한 시간</strong>이 있습니다. 탐방로마다 입산 마감 시간이 있으며, 여름 하절기에는 오후 4~5시 이후 탐방로 진입이 제한될 수 있습니다. 반드시 당일 국립공원 안내소에서 확인하세요.<br><br>
+<strong>계곡 내 취사·물놀이</strong>는 국립공원 내에서 전면 금지입니다. 계곡물에 발을 담그는 행위도 불가하므로 탐방로를 따라 걷는 것이 원칙입니다. 위반 시 과태료가 부과됩니다.<br><br>
+<strong>여름철 갑작스러운 소나기</strong>가 내리면 계곡 수위가 급격히 올라갈 수 있습니다. 먹구름이 짙어지면 서둘러 탐방로에서 이동하고, 비 예보가 있는 날에는 유연하게 일정을 조정하세요.<br><br>
+모자·선크림·생수는 필수 지참 아이템입니다. 탐방로 내 매점은 제한적이므로 출발 전 충분한 준비를 해두세요.
+
+<h2>09 | 주왕산과 함께 묶으면 좋은 청송 명소</h2>
+
+청송군에는 주왕산 외에도 매력적인 여행지가 있습니다.<br><br>
+<strong>청송 얼음골</strong>은 여름에 얼음이 어는 신기한 자연현상으로 유명합니다. 백석탄(白石灘) 계곡의 기암과 함께 청송의 독특한 지질 특성을 체감할 수 있습니다.<br><br>
+<strong>송소 고택</strong>은 조선시대 99칸 규모의 전통 고택으로 청송읍 인근에 있습니다. 역사와 건축에 관심 있는 분이라면 놓치지 말아야 할 문화유적입니다.<br><br>
+<strong>청송 유네스코 세계지질공원</strong>은 주왕산을 포함한 청송 곳곳의 지질 명소를 연계한 프로그램입니다. 지질공원 안내센터에서 해설 서비스를 신청하면 단순 트레킹을 넘어 자연과학적 관점에서 청송의 지형을 이해할 수 있습니다.<br><br>
+주왕산 당일 방문과 청송 주변 명소를 결합하면 경북 청송이 단순한 '국립공원 산행지'가 아닌 풍성한 여행 목적지로 느껴질 것입니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260629/travel_cheongoksan_byeol.html">평창 청옥산 육백마지기 여름 별 보기와 풍력단지 드라이브, 안반데기 연계 코스</a></li>
+    <li><a href="../260629/travel_mulhan_valley.html">영동 물한계곡 여름 계곡 트레킹과 민주지산 원시림 피서, 충북 숨은 명소</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#주왕산</span>
+  <span class="tag">#청송여행</span>
+  <span class="tag">#주왕산국립공원</span>
+  <span class="tag">#주산지</span>
+  <span class="tag">#왕버들</span>
+  <span class="tag">#용추폭포</span>
+  <span class="tag">#여름국립공원</span>
+  <span class="tag">#경북여행</span>
+  <span class="tag">#여름계곡</span>
+  <span class="tag">#당일치기여행</span>
+</div>
+
+</body>
+</html>

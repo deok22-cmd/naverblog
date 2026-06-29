@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- card_03_point1 · F : 텍스트 리스트 · 용추폭포 3폭 코스 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.64"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="250" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">3폭 연속 폭포 코스</text>
+  <rect x="82" y="284" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <rect x="80" y="452" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="520" font-size="46" font-weight="700" fill="#ffffff">용추폭포 — 1폭</text>
+    <text x="80" y="574" font-size="30" font-weight="500" fill="#b2dfdb">높이 약 7m · 3단 · 여름 수량 최고, 물보라 접근 가능</text>
+    <line x1="80" y1="636" x2="1000" y2="636" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="700" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="768" font-size="46" font-weight="700" fill="#ffffff">절구폭포 — 2폭</text>
+    <text x="80" y="822" font-size="30" font-weight="500" fill="#b2dfdb">계곡 깊숙이, 한적한 분위기의 작은 폭포</text>
+    <line x1="80" y1="884" x2="1000" y2="884" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <rect x="80" y="948" width="34" height="8" fill="#80cbc4"/>
+    <text x="80" y="1016" font-size="46" font-weight="700" fill="#ffffff">용연폭포 — 3폭</text>
+    <text x="80" y="1070" font-size="30" font-weight="500" fill="#b2dfdb">약간의 경사 구간, 왕복 총 7km · 3~4시간</text>
+  </g>
+
+  <text x="80" y="1240" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#cfd8d6">대전사 입구 → 주왕계곡 → 3폭 순서, 평이한 탐방로.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== P1 : 정보 표 (사진중심 · 전면 스크림 워시만) =====
+       역할: info / 2026년 문화누리카드 기본 정보 / gov_munhwa_nuri_card card_04 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="220" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">2026 기본 정보</text>
+  <rect x="82" y="254" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="390" font-size="38" font-weight="600" fill="#ffffff">지원 대상</text>
+    <text x="1000" y="390" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">만 6세 이상 수급·차상위</text>
+    <line x1="80" y1="424" x2="1000" y2="424" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="510" font-size="38" font-weight="600" fill="#ffffff">기본 지원금</text>
+    <text x="1000" y="510" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">연 15만 원</text>
+    <line x1="80" y1="544" x2="1000" y2="544" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="630" font-size="38" font-weight="600" fill="#ffffff">청소년·준고령 추가</text>
+    <text x="1000" y="630" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">+1만 원 = 최대 16만 원</text>
+    <line x1="80" y1="664" x2="1000" y2="664" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="750" font-size="38" font-weight="600" fill="#ffffff">발급 기간</text>
+    <text x="1000" y="750" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">2026년 2월 2일~11월 30일</text>
+    <line x1="80" y1="784" x2="1000" y2="784" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="870" font-size="38" font-weight="600" fill="#ffffff">사용 기한</text>
+    <text x="1000" y="870" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">2026년 12월 31일까지</text>
+    <line x1="80" y1="904" x2="1000" y2="904" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="990" font-size="38" font-weight="600" fill="#ffffff">공식 홈페이지</text>
+    <text x="1000" y="990" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">www.mnuri.kr</text>
+    <line x1="80" y1="1024" x2="1000" y2="1024" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+
+    <text x="80" y="1110" font-size="38" font-weight="600" fill="#ffffff">고객센터</text>
+    <text x="1000" y="1110" font-size="38" font-weight="800" fill="#80cbc4" text-anchor="end">1544-3412</text>
+  </g>
+
+  <text x="80" y="1200" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="28" font-weight="500" fill="#b2dfdb">2026년 기준 · 정책 변동 시 공식 홈페이지 재확인.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>
