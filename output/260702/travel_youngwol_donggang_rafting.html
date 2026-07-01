@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px 12px; text-align: left; font-weight: 700; }
+  .info-table td { padding: 10px 12px; border-bottom: 1px solid #e0f2f1; }
+  .info-table tr:nth-child(even) td { background: #f1faf9; }
+  .step-box { border-left: 4px solid #00796b; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border-left: 5px solid #f9a825; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .caution-box { background: #fce4ec; border-left: 5px solid #e57373; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #b2dfdb; border-radius: 8px; padding: 20px; background: #f1faf9; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; font-weight: 700; color: #00796b; margin-bottom: 10px; flex-wrap: wrap; gap: 8px; }
+  .ph-file { font-size: 0.85em; color: #546e7a; font-weight: 400; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 14px; border-radius: 6px; font-size: 0.82em; line-height: 1.6; white-space: pre-wrap; margin: 10px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 8px 18px; border-radius: 5px; cursor: pointer; font-size: 0.88em; margin-top: 6px; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; text-align: center; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>영월 동강 래프팅 코스 어라연과 한반도지형 전망대, 별마로천문대 은하수까지 여름 하루</h1>
+
+<div class="intro-box">
+<strong>💡 핵심 요약</strong><br><br>
+강원도 영월은 여름 한 철 가장 바쁜 여행지 중 하나입니다.<br><br>
+동강의 스릴 넘치는 래프팅, 강 가운데 떠 있는 듯한 한반도지형 조망, 그리고 밤이 되면 국내 최고 수준의 별을 볼 수 있는 별마로천문대까지, 하루 동선으로 이 모든 걸 묶을 수 있는 여름 특화 코스를 정리해 드립니다.<br><br>
+수도권에서 2시간 30분~3시간 거리이며, 당일치기도 무리 없이 가능합니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260702/1_donggang_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-1">Aerial view of the Donggang River in Yeongwol, Gangwon-do, South Korea during summer. White-water rafting boats with colorful helmeted paddlers navigating emerald-green rapids surrounded by limestone cliffs and dense green forest. Crystal clear turquoise water, dramatic rocky canyon walls, bright summer sunlight reflecting off the water surface. Lush vegetation, birds-eye perspective showing the winding river course through the valley. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">동강 어라연 구간 래프팅 전경 / AI 제작 이미지</div>
+</div>
+
+<h2>01. 영월 동강 래프팅, 어디서 타야 가장 짜릿할까</h2>
+
+동강 래프팅의 핵심 구간은 <strong>정선군 가수리에서 영월 어라연까지</strong>이지만, 당일치기 여행자에게는 영월 거운리를 출발해 어라연을 통과하는 코스가 가장 접근성이 좋습니다.<br><br>
+
+어라연(魚羅淵)은 동강에서 가장 유명한 경관 구간으로, 강물이 3개의 여울을 만들며 석회암 절벽 사이를 굽이치는 곳입니다. 수면 위로 솟아오른 기암절벽과 에메랄드빛 물색이 만나는 장면은 눈을 뗄 수 없을 만큼 인상적입니다.<br><br>
+
+<strong>래프팅 코스 선택 기준:</strong>
+
+<table class="info-table">
+  <tr><th>코스</th><th>거리/시간</th><th>난이도</th><th>특징</th></tr>
+  <tr><td>어라연 단축 코스</td><td>약 10km / 2시간</td><td>중</td><td>어라연 핵심 구간 집중</td></tr>
+  <tr><td>어라연 표준 코스</td><td>약 15km / 3시간</td><td>중상</td><td>어라연+하류 포함, 가장 인기</td></tr>
+  <tr><td>풀 코스</td><td>약 22km / 4~5시간</td><td>상</td><td>동강 전체 구간, 체력 소모 큼</td></tr>
+</table>
+
+여름 성수기(7~8월)에는 예약이 빠르게 찰 수 있으므로 적어도 1~2주 전에 업체에 예약하는 것이 좋습니다.<br><br>
+
+요금은 코스와 업체마다 다르지만 보통 성인 1인 기준 3만 원~5만 원 안팎이며, 구명조끼·헬멧·패들 장비 일체가 포함됩니다.
+
+<h2>02. 래프팅 전 반드시 챙겨야 할 준비물과 주의사항</h2>
+
+래프팅은 신체적 활동이 많고 물에 완전히 젖는 특성상 준비가 중요합니다.<br><br>
+
+<strong>필수 준비물:</strong>
+<ul>
+  <li>방수 파우치 (스마트폰·지갑 보관)</li>
+  <li>착화감 좋은 아쿠아슈즈 또는 샌달 (맨발 금지)</li>
+  <li>갈아입을 여벌 옷 최소 1벌</li>
+  <li>자외선 차단제 (방수 제품 권장)</li>
+  <li>수건 2장 이상</li>
+</ul>
+
+<div class="caution-box">
+⚠️ <strong>주의사항</strong>: 음주 후 래프팅은 절대 금지입니다. 격류 구간에서 보트가 뒤집힐 수 있으며, 수영 능력과 관계없이 구명조끼를 반드시 착용해야 합니다. 7~8세 이하 어린이나 노약자는 사전에 업체에 탑승 가능 여부를 확인하세요.
+</div>
+
+오전 9시~10시 사이에 출발하는 오전 타임을 선택하면, 래프팅 종료 후 오후 일정(한반도지형, 별마로천문대)을 여유 있게 즐길 수 있습니다.
+
+<h2>03. 한반도지형 전망대 — 강 가운데 떠 있는 우리나라 지도</h2>
+
+래프팅을 마치고 차량으로 20분 거리에 위치한 <strong>선암마을 한반도지형 전망대</strong>로 이동합니다.<br><br>
+
+이곳은 서강(西江)이 크게 굽어지며 실제 한반도 지형과 놀랍도록 닮은 모양의 육지를 감싸는 경관으로 유명합니다. 위에서 내려다보면 동해·서해·남해·독도까지 거의 완벽하게 재현된 듯한 지형이 눈앞에 펼쳐집니다.<br><br>
+
+<strong>전망대 이용 안내:</strong>
+
+<table class="info-table">
+  <tr><th>항목</th><th>내용</th></tr>
+  <tr><td>위치</td><td>강원도 영월군 한반도면 옹정리 산97</td></tr>
+  <tr><td>주차</td><td>선암마을 입구 공용 주차장 (무료)</td></tr>
+  <tr><td>소요 시간</td><td>주차장에서 전망대까지 도보 약 20~25분</td></tr>
+  <tr><td>입장료</td><td>무료</td></tr>
+  <tr><td>최적 관람 시간</td><td>오전 10시~오후 3시 (태양이 정면에서 비출 때)</td></tr>
+</table>
+
+오르막 경사가 꽤 있으므로 편한 신발을 신는 것이 좋습니다. 래프팅 후 아쿠아슈즈에서 갈아신고 올라가는 방문자가 많습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260702/1_donggang_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-2">Aerial photograph of Hanban Island terrain (한반도지형) in Yeongwol, Gangwon-do, South Korea. A river bends dramatically to create a peninsula shaped exactly like the Korean peninsula map, surrounded by clear blue-green water. Dense green summer forest covering the peninsula, dramatic bird's-eye view from a high observation deck, dramatic cloud shadows, morning mist over water. The unique natural wonder that resembles the Korean peninsula from above. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">선암마을에서 내려다본 한반도지형 전경 / AI 제작 이미지</div>
+</div>
+
+<h2>04. 선암마을 한반도지형까지 걸어 내려가기 — 지형 안으로 들어가는 코스</h2>
+
+전망대에서 조망을 즐겼다면, 선암마을 농로를 따라 실제 한반도지형 안쪽으로 내려가는 코스도 추천합니다.<br><br>
+
+마을 어귀에서부터 서강을 따라 논밭 사잇길을 걷다 보면 마을 주민들의 일상과 강변 풍경이 어우러져 독특한 분위기를 느낄 수 있습니다. 한반도 형태의 '동해 쪽'에 해당하는 강변 너럭바위까지 내려가면 강물에 발을 담그거나 스트레칭을 하기 좋습니다.<br><br>
+
+왕복 코스로 넉넉히 1시간을 잡으면 무리 없습니다.
+
+<h2>05. 영월 청령포 — 단종 유배지에서 만나는 조선 역사</h2>
+
+한반도지형에서 15분 거리인 <strong>청령포</strong>는 조선 6대 왕 단종이 유배되었던 곳입니다. 서강이 청령포를 3면으로 감싸고 있어 나룻배(노선선)를 타고 건너야만 들어갈 수 있어, 외딴 섬 같은 분위기가 고스란히 남아 있습니다.<br><br>
+
+<strong>청령포 이용 안내:</strong>
+
+<table class="info-table">
+  <tr><th>항목</th><th>내용</th></tr>
+  <tr><td>위치</td><td>강원도 영월군 영월읍 청령포로 133</td></tr>
+  <tr><td>입장료</td><td>성인 3,000원 / 청소년 2,000원 / 어린이 1,000원 (나룻배 요금 포함)</td></tr>
+  <tr><td>운영 시간</td><td>09:00~18:00 (동절기 단축 운영)</td></tr>
+  <tr><td>소요 시간</td><td>약 40~60분</td></tr>
+</table>
+
+울창한 소나무 숲 사이로 단종의 어소(御所)와 관음송(천연기념물 제349호)이 보존되어 있습니다. 관음송은 수령이 600년을 넘으며, 두 그루처럼 보이지만 실제로는 한 그루입니다.
+
+<h2>06. 영월 읍내 식당가 — 점심·저녁 먹을 곳</h2>
+
+영월 읍내에는 한우·곤드레밥·메밀 국수 등 강원도 특산 음식을 내놓는 식당이 모여 있습니다.<br><br>
+
+<strong>주요 먹거리:</strong>
+<ul>
+  <li><strong>곤드레밥</strong>: 강원도 특산 곤드레나물을 넣어 지은 솥밥으로, 영월 읍내 곳곳에서 맛볼 수 있습니다.</li>
+  <li><strong>한우</strong>: 인근 한우 타운에서 합리적인 가격으로 즐길 수 있으며, 등심·꽃등심 등을 취급합니다.</li>
+  <li><strong>메밀 국수·메밀전</strong>: 강원도 여행에서 빠질 수 없는 메밀 요리도 다양하게 즐길 수 있습니다.</li>
+</ul>
+
+한 끼 식비는 1인 기준 1만 원 초중반 안팎으로, 일반 외식과 비교해 크게 부담스럽지 않습니다.
+
+<h2>07. 별마로천문대 — 국내 최고 수준의 시민 천문대</h2>
+
+해가 지고 나면 영월의 밤이 시작됩니다. 봉래산(799.8m) 정상에 자리한 <strong>별마로천문대</strong>는 국내에서 도심 인근으로는 보기 드문 맑은 하늘을 자랑하는 시민 천문대입니다.<br><br>
+
+'별마로'는 '별을 보는 고개'라는 뜻으로, 2001년 개관 이래 매년 수십만 명이 찾는 영월의 대표 야간 명소로 자리매김했습니다.<br><br>
+
+<strong>별마로천문대 이용 안내:</strong>
+
+<table class="info-table">
+  <tr><th>항목</th><th>내용</th></tr>
+  <tr><td>위치</td><td>강원도 영월군 영월읍 천문대길 397</td></tr>
+  <tr><td>입장료</td><td>성인 8,000원 / 청소년 6,000원 / 어린이 5,000원 (공식 채널 재확인 권장)</td></tr>
+  <tr><td>야간 운영</td><td>화~일 20:00~24:00 (계절별 일부 변동, 월요일 휴관)</td></tr>
+  <tr><td>주요 시설</td><td>주망원경(800mm 반사), 보조망원경 10대, 4D 영상관, 전시실</td></tr>
+  <tr><td>주의</td><td>비·구름 많은 날은 관측 불가, 방문 전 기상 확인 필수</td></tr>
+</table>
+
+<div class="tip-box">
+💡 <strong>꿀팁</strong>: 별마로천문대는 주말에는 방문객이 몰리니, 평일 방문 시 더 쾌적하게 망원경을 이용할 수 있습니다. 여름 7~8월은 은하수가 가장 선명하게 보이는 계절로, 맑은 날 밤이라면 육안으로도 은하수를 볼 수 있을 정도입니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260702/1_donggang_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-3">Night photography of Yeongwol Byeolmaro Observatory on top of Bongnaesan Mountain, Gangwon-do, South Korea. Modern observatory dome silhouetted against a breathtaking Milky Way galaxy stretching across the dark summer sky. Thousands of stars visible, purple and blue nebulae, star trails, city lights of Yeongwol town faintly visible below in the valley. Long exposure astrophotography style, dramatic cosmos, deep space atmosphere. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">별마로천문대 은하수 야경 / AI 제작 이미지</div>
+</div>
+
+<h2>08. 영월 당일치기 추천 동선 — 시간대별 플랜</h2>
+
+아래는 수도권 기준 당일치기 코스입니다. 물론 여유 있게 1박을 더하면 한결 느긋하게 즐길 수 있습니다.<br><br>
+
+<div class="step-box">
+<strong>📋 영월 여름 당일치기 플랜 (예시)</strong><br><br>
+06:00 — 서울 출발 (고속도로 이용, 중앙고속도로 → 영월 IC)<br>
+09:00 — 거운리 도착, 래프팅 업체 집결·장비 착용<br>
+09:30 — 동강 어라연 래프팅 출발<br>
+12:30 — 래프팅 종료, 샤워·환복<br>
+13:00 — 영월 읍내 식당에서 점심 (곤드레밥 추천)<br>
+14:30 — 선암마을 한반도지형 전망대 방문<br>
+16:00 — 청령포 나룻배 탑승·관람<br>
+17:30 — 숙소 체크인 또는 휴식<br>
+19:30 — 별마로천문대 이동 (봉래산 드라이브)<br>
+20:00 — 별마로천문대 야간 관람 시작<br>
+22:00 — 관람 종료 후 귀가 또는 숙소
+</div>
+
+<h2>09. 영월 교통 정보 — 자차·대중교통 모두 OK</h2>
+
+<strong>자차 이용:</strong> 중앙고속도로 영월 IC 또는 제천 IC 이용. 수도권에서 약 2시간 30분~3시간 소요.<br><br>
+
+<strong>대중교통 이용:</strong> 청량리역에서 영월행 무궁화·새마을 열차 이용 가능(약 2시간 40분). 영월역 하차 후 택시·렌터카로 주요 명소 이동. 다만, 래프팅 업체·한반도지형·청령포·별마로천문대가 서로 상당히 분산되어 있어 대중교통만으로는 이동이 번거로울 수 있습니다. 가능하면 자차나 렌터카 이용이 훨씬 편리합니다.<br><br>
+
+<strong>주차 팁:</strong> 래프팅 업체는 자체 주차장을 운영하며, 한반도지형·청령포·별마로천문대 모두 전용 주차장이 마련되어 있습니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260701/travel_bangdaesan_valley_summer.html">인제 방태산 자연휴양림 적가리골 계곡 트레킹, 이단폭포 코스와 여름 피서 준비물</a></li>
+    <li><a href="../260701/travel_ulleungdo_summer.html">울릉도 여름 여행 행남해안산책로 코스와 독도 배편 예약 방법, 성수기 준비 가이드</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#영월</span>
+  <span class="tag">#동강래프팅</span>
+  <span class="tag">#어라연</span>
+  <span class="tag">#한반도지형</span>
+  <span class="tag">#별마로천문대</span>
+  <span class="tag">#강원도여름여행</span>
+  <span class="tag">#영월당일치기</span>
+  <span class="tag">#은하수</span>
+  <span class="tag">#청령포</span>
+  <span class="tag">#여름계곡</span>
+</div>
+</body>
+</html>

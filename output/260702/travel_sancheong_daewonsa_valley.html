@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px 12px; text-align: left; font-weight: 700; }
+  .info-table td { padding: 10px 12px; border-bottom: 1px solid #e0f2f1; }
+  .info-table tr:nth-child(even) td { background: #f1faf9; }
+  .step-box { border-left: 4px solid #00796b; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border-left: 5px solid #f9a825; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .caution-box { background: #fce4ec; border-left: 5px solid #e57373; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #b2dfdb; border-radius: 8px; padding: 20px; background: #f1faf9; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; font-weight: 700; color: #00796b; margin-bottom: 10px; flex-wrap: wrap; gap: 8px; }
+  .ph-file { font-size: 0.85em; color: #546e7a; font-weight: 400; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 14px; border-radius: 6px; font-size: 0.82em; line-height: 1.6; white-space: pre-wrap; margin: 10px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 8px 18px; border-radius: 5px; cursor: pointer; font-size: 0.88em; margin-top: 6px; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; text-align: center; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>산청 대원사계곡 무장애 데크길 걷기와 지리산 동부 청정 계곡 여름 피서</h1>
+
+<div class="intro-box">
+<strong>💡 핵심 요약</strong><br><br>
+경남 산청의 대원사계곡은 지리산 국립공원 동부 지역에서 가장 접근성이 좋은 청정 계곡입니다.<br><br>
+계곡을 따라 조성된 <strong>무장애 데크길</strong> 덕분에 유모차나 휠체어를 이용하는 방문객도 안전하게 계곡 경관을 즐길 수 있으며, 계곡 상류에 자리한 <strong>대원사</strong>는 신라 시대에 창건된 천년 고찰로 고즈넉한 분위기를 더합니다.<br><br>
+더위가 절정에 달하는 7~8월, 지리산이 품은 청정 계곡에서 진짜 피서를 경험해 보세요.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260702/3_daewonsa_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-1">A wooden barrier-free walking deck trail alongside a pristine mountain stream in Daewonsa Valley (대원사계곡), Sancheong, South Gyeongsang Province, South Korea. Crystal-clear shallow stream with smooth river rocks, lush green summer forest canopy overhead. The wooden boardwalk weaves gently along the crystal-clear water, wildflowers along the edges, a traditional Buddhist temple roof visible in the distance through the trees. Summer morning mist over the water. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">대원사계곡 무장애 데크길과 청정 계곡 / AI 제작 이미지</div>
+</div>
+
+<h2>01. 대원사계곡이 특별한 이유 — 무장애 데크길과 국립공원의 만남</h2>
+
+많은 계곡 여행에서 아쉬운 점은 바위와 경사면을 타고 이동해야 하는 험로가 많아 어르신이나 어린 아이 동반 시 불편하다는 점입니다. 대원사계곡은 이 문제를 <strong>무장애 데크길</strong>로 해결했습니다.<br><br>
+
+계곡 입구에서 대원사까지 약 1km 구간에 조성된 데크길은 경사가 완만하고 난간이 설치되어 있어, 유모차를 끌거나 거동이 불편한 분들도 계곡의 핵심 구간을 편안하게 걸을 수 있습니다.<br><br>
+
+데크길 옆으로는 계곡물 소리가 끊이지 않고, 물속을 들여다보면 맑은 물고기 떼가 보일 만큼 수질이 깨끗합니다. 지리산 국립공원 안에 있는 만큼 취사·음주는 엄격히 금지되어 있어 자연 그대로의 청정함이 유지됩니다.
+
+<h2>02. 대원사 — 신라 진흥왕 때 창건된 천년 고찰</h2>
+
+데크길 끝에 자리한 <strong>대원사(大源寺)</strong>는 548년(신라 진흥왕 9년)에 창건된 유서 깊은 사찰입니다.<br><br>
+
+임진왜란과 한국전쟁을 거치며 전소되었다가 복원된 건물들이지만, 경내에 들어서면 지리산의 울창한 숲이 사방을 에워싸 고요한 사찰 분위기를 충분히 느낄 수 있습니다.<br><br>
+
+<strong>대원사 볼거리:</strong>
+<ul>
+  <li><strong>다층석탑</strong>: 경내에 있는 석탑으로 역사적 가치가 있습니다.</li>
+  <li><strong>계곡 조망 누각</strong>: 대원사 경내에서 계곡 아래로 내려다보이는 전망이 아름답습니다.</li>
+  <li><strong>편백나무 산책로</strong>: 사찰 주변으로 편백나무 숲이 조성되어 있어 피톤치드를 흡입하며 쉴 수 있습니다.</li>
+</ul>
+
+<h2>03. 대원사계곡 이용 안내</h2>
+
+<table class="info-table">
+  <tr><th>항목</th><th>내용</th></tr>
+  <tr><td>위치</td><td>경남 산청군 삼장면 대원사길 일대</td></tr>
+  <tr><td>주차장</td><td>계곡 입구 공용 주차장 (성수기 유료 운영 가능, 현장 확인)</td></tr>
+  <tr><td>입장료</td><td>지리산 국립공원 구역 탐방 시 공원 이용료 확인 권장</td></tr>
+  <tr><td>무장애 데크길 길이</td><td>계곡 입구~대원사 약 1km</td></tr>
+  <tr><td>편의시설</td><td>화장실, 안내소</td></tr>
+  <tr><td>금지 사항</td><td>취사, 음주, 야영(국립공원 내)</td></tr>
+</table>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260702/3_daewonsa_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-2">Interior courtyard of Daewonsa Temple (대원사) nestled deep in Jirisan National Park, South Korea. Ancient stone pagoda surrounded by tall green pine and cedar trees in summer. Serene Buddhist temple with traditional tiled roofs, moss-covered stone steps, prayer flags, and incense smoke drifting upward. Peaceful atmosphere, dappled summer sunlight filtering through ancient trees. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">대원사 경내 석탑과 여름 신록 / AI 제작 이미지</div>
+</div>
+
+<h2>04. 물놀이 가능 구간과 수영 포인트</h2>
+
+대원사계곡은 국립공원 내에 위치하므로 모든 구간에서 자유 수영이 허용되지는 않습니다. 지정된 물놀이 구역을 이용해야 합니다.<br><br>
+
+<strong>물놀이 가능 구역</strong>은 계곡 입구 쪽 지정 구간이며, 매년 여름 성수기에는 지리산 국립공원 공원관리소에서 안전 요원을 배치합니다. 방문 전 지리산 국립공원(공식 홈페이지 또는 055-970-1000)에 물놀이 가능 구역과 안전 현황을 확인하는 것이 좋습니다.<br><br>
+
+수온은 한여름에도 매우 낮아 20℃ 안팎을 유지하므로, 오랫동안 물속에 있으면 저체온 위험이 있습니다. 특히 어린 아이는 30분 단위로 물에서 나와 체온을 유지하도록 지도해 주세요.
+
+<h2>05. 지리산 동부 계곡 피서의 장점 — 청정·한적·선선함</h2>
+
+지리산 동부 지역은 서부 노고단·뱀사골 권역에 비해 방문객이 적어 비교적 한적한 편입니다.<br><br>
+
+덕분에 대원사계곡은 성수기에도 오전 일찍 방문하면 자리 경쟁 없이 여유 있는 피서를 즐길 수 있습니다. 해발 400~600m 지점에 위치해 있어 한여름 낮에도 기온이 평지보다 5~7℃ 정도 낮고, 계곡 바람이 지속적으로 불어 체감 온도가 훨씬 시원하게 느껴집니다.
+
+<h2>06. 산청 인근 연계 명소</h2>
+
+<table class="info-table">
+  <tr><th>명소</th><th>거리</th><th>특징</th></tr>
+  <tr><td>황매산 철쭉 & 억새 고원</td><td>차로 40분</td><td>봄철쭉·가을억새 절경, 1,108m 고원</td></tr>
+  <tr><td>동의보감촌</td><td>차로 30분</td><td>한의학 테마파크, 약초 체험</td></tr>
+  <tr><td>지리산 천왕봉 등산로</td><td>대원사에서 도보 시작</td><td>지리산 최고봉 1,915m 등산 출발점</td></tr>
+  <tr><td>남명 조식 선생 유적지</td><td>차로 20분</td><td>조선 성리학 대가 산천재 탐방</td></tr>
+</table>
+
+<h2>07. 산청 먹거리 — 한방 음식과 산청 한우</h2>
+
+산청은 <strong>동의보감(東醫寶鑑)</strong>의 고장인 만큼 한방 관련 특산물이 풍부합니다.<br><br>
+
+<strong>추천 먹거리:</strong>
+<ul>
+  <li><strong>한방 오리·한방 삼계탕</strong>: 한약재를 넣은 보양식으로 여름 보양에 적합합니다.</li>
+  <li><strong>산청 한우</strong>: 청정 산간 지역에서 자란 한우로, 근처 산청 한우 타운에서 즐길 수 있습니다.</li>
+  <li><strong>민물 매운탕</strong>: 지리산 계곡에서 잡은 민물 생선을 재료로 한 매운탕집이 계곡 인근에 있습니다.</li>
+</ul>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260702/3_daewonsa_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-3">Close-up of a traditional Korean herbal medicinal chicken soup (한방 삼계탕) served in an earthenware pot at a restaurant in Sancheong, South Korea. The soup contains whole chicken stuffed with glutinous rice, ginseng root, jujube, and garlic, surrounded by a rich golden broth. Side dishes of kimchi, pickled vegetables, salt. Cozy restaurant interior with wooden accents, steam rising from the hot soup. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">산청 한방 삼계탕 보양식 / AI 제작 이미지</div>
+</div>
+
+<h2>08. 자차·대중교통 이용 방법</h2>
+
+<strong>자차 이용:</strong> 대전-통영고속도로 단성 IC 또는 시천 IC에서 하차 후 국도 이용. 대구에서 약 1시간 30분, 서울에서 약 3시간 40분~4시간 거리입니다.<br><br>
+
+<strong>대중교통 이용:</strong> 산청버스터미널까지 고속버스 이용 후 삼장면 방면 군내버스 환승. 배차 간격이 길기 때문에 미리 시간표를 확인하는 것이 필수입니다. 가능하면 자차 또는 렌터카 이용이 편리합니다.
+
+<h2>09. 방문 전 확인 사항 체크리스트</h2>
+
+<div class="step-box">
+<strong>📋 대원사계곡 방문 전 체크리스트</strong><br><br>
+☑ 지리산 국립공원 물놀이 허용 구역 최신 정보 확인 (공식 홈페이지)<br>
+☑ 기상청 강원·경남 지역 날씨 예보 확인 (장마철 급류 위험)<br>
+☑ 아쿠아슈즈·구명조끼 준비 (어린이 동반 필수)<br>
+☑ 음주·취사 금지 인지 (국립공원 과태료 부과)<br>
+☑ 주차 공간 여유 확인 (성수기 조기 마감 가능)
+</div>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260701/travel_bangdaesan_valley_summer.html">인제 방태산 자연휴양림 적가리골 계곡 트레킹, 이단폭포 코스와 여름 피서 준비물</a></li>
+    <li><a href="../260701/travel_jeongseon_cave_rail.html">정선 화암동굴 11℃ 동굴 피서와 아우라지 레일바이크, 여름 정선 당일치기 코스</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#산청</span>
+  <span class="tag">#대원사계곡</span>
+  <span class="tag">#무장애데크길</span>
+  <span class="tag">#지리산계곡</span>
+  <span class="tag">#경남여름여행</span>
+  <span class="tag">#계곡피서</span>
+  <span class="tag">#대원사</span>
+  <span class="tag">#가족여행</span>
+  <span class="tag">#청정계곡</span>
+  <span class="tag">#여름피서</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1fdf4; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 12px; text-align: left; font-weight: 700; }
+  .info-table td { padding: 10px 12px; border-bottom: 1px solid #e8f5e9; }
+  .info-table tr:nth-child(even) td { background: #f1fdf4; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border-left: 5px solid #f9a825; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .caution-box { background: #fce4ec; border-left: 5px solid #e57373; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #a5d6a7; border-radius: 8px; padding: 20px; background: #f1fdf4; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; font-weight: 700; color: #388e3c; margin-bottom: 10px; flex-wrap: wrap; gap: 8px; }
+  .ph-file { font-size: 0.85em; color: #546e7a; font-weight: 400; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 14px; border-radius: 6px; font-size: 0.82em; line-height: 1.6; white-space: pre-wrap; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 8px 18px; border-radius: 5px; cursor: pointer; font-size: 0.88em; margin-top: 6px; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; text-align: center; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>장마철 집 제습 방법과 곰팡이 예방, 빨래 빨리 말리는 꿀팁</h1>
+
+<div class="intro-box">
+<strong>💡 핵심 요약</strong><br><br>
+장마철이 시작되면 집 안 습도가 70~80%를 넘어서면서 곰팡이 냄새, 빨래 눅눅함, 결로 문제가 한꺼번에 찾아옵니다.<br><br>
+실내 상대습도를 <strong>50~60% 수준으로 유지</strong>하는 것이 핵심이며, 제습기·에어컨·환기를 상황에 맞게 조합하면 전기요금을 아끼면서도 효과적으로 습도를 관리할 수 있습니다.<br><br>
+이 글에서는 제습기 효율적인 사용법부터 곰팡이 예방 청소법, 실내 빨래 건조 속도를 높이는 방법까지 실용적인 정보를 정리해 드립니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260702/5_dehumidify_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-1">A modern home dehumidifier running in a cozy Korean apartment living room during the rainy monsoon season. The dehumidifier is collecting water, humidity level displayed on the digital panel at around 55%. Rain visible through the window outside, condensation on the glass. Clean and organized living space with laundry hanging on an indoor drying rack nearby. Warm indoor lighting, practical household scene. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">장마철 실내 제습기 가동 / AI 제작 이미지</div>
+</div>
+
+<h2>01. 장마철 실내 습도, 왜 위험한가</h2>
+
+실내 습도가 <strong>60% 이상</strong>으로 지속되면 다음과 같은 문제가 연쇄적으로 발생합니다.<br><br>
+
+<table class="info-table">
+  <tr><th>습도 수준</th><th>주요 문제</th></tr>
+  <tr><td>50~60%</td><td>쾌적한 생활 환경 (권장 범위)</td></tr>
+  <tr><td>60~70%</td><td>눅눅함 시작, 옷·이불에 습기 배임</td></tr>
+  <tr><td>70~80%</td><td>곰팡이 번식 활성화, 집먼지진드기 급증</td></tr>
+  <tr><td>80% 이상</td><td>결로 발생, 가구·벽 손상, 악취</td></tr>
+</table>
+
+특히 곰팡이(Mold)는 실내 습도가 70% 이상, 온도 20~35℃ 환경에서 24~48시간 내에 급격히 번식합니다. 한번 피어오른 곰팡이는 포자를 통해 공기 중으로 퍼지므로, 호흡기 질환(기침·비염·천식 악화)의 원인이 될 수 있습니다.<br><br>
+
+집먼지진드기 역시 고온·다습한 환경을 좋아해 침구·소파·카펫에서 급증합니다. 알레르기 비염·아토피 피부염 환자에게 특히 주의가 필요합니다.
+
+<h2>02. 제습기 효과적으로 사용하는 법</h2>
+
+제습기는 장마철 습도 관리의 핵심 도구입니다. 다만 잘못 사용하면 효과가 반감되거나 전기요금이 불필요하게 늘어납니다.<br><br>
+
+<strong>제습기 사용 핵심 팁:</strong>
+
+<ul>
+  <li><strong>목표 습도 설정</strong>: 55~60%로 설정하고 도달하면 자동 정지되도록 합니다. 무작정 가동하면 과도한 건조로 피부·점막이 건조해질 수 있습니다.</li>
+  <li><strong>공간 중앙에 배치</strong>: 벽 구석에 두면 주변 공기만 순환합니다. 가능하면 방 중앙이나 공기 흐름이 있는 곳에 배치하세요.</li>
+  <li><strong>문과 창문 닫고 가동</strong>: 외부 습기가 계속 유입되면 제습 효율이 크게 떨어집니다. 밀폐된 공간에서 가동하는 것이 효과적입니다.</li>
+  <li><strong>물통 자주 비우기</strong>: 물통이 가득 차면 자동으로 정지하는 제품이 많습니다. 특히 장마 피크기에는 하루 2~3회 비워줘야 연속 가동이 가능합니다.</li>
+  <li><strong>필터 청소</strong>: 2주에 1회 이상 필터를 청소해 성능 유지. 먼지 낀 필터는 냉각 효율을 크게 떨어뜨립니다.</li>
+</ul>
+
+<h2>03. 에어컨으로 제습하는 법 — 냉방 없이도 가능</h2>
+
+별도 제습기가 없을 때 <strong>에어컨의 '제습(드라이) 모드'</strong>를 활용하면 비슷한 효과를 얻을 수 있습니다.<br><br>
+
+에어컨 제습 모드는 냉각 코일에서 수분을 응결시켜 실외로 배출하는 원리로, 냉방 모드보다 소비 전력이 낮은 편입니다. 다만 에어컨 제습은 냉각 코일 온도를 낮추기 위해 일부 냉방이 함께 발생해, 외부 기온이 낮은 날(25℃ 이하)에는 오히려 실내 온도가 너무 떨어질 수 있습니다.<br><br>
+
+<div class="tip-box">
+💡 <strong>기온별 선택 기준</strong>: 외부 기온 28℃ 이상이면 에어컨 제습 모드가 효과적. 25℃ 이하의 선선한 장마 날씨에는 제습기 단독 사용이 더 경제적입니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260702/5_dehumidify_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-2">Close-up of black mold (곰팡이) growing in the corner of a Korean apartment bathroom wall and ceiling junction, with condensation droplets on white tiles. The image shows the serious problem of moisture and mold during the summer monsoon season. Adjacent photo area showing clean bleach-cleaned white tiles after proper treatment, representing before-and-after comparison. Natural bathroom lighting. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">장마철 화장실 모서리 결로·곰팡이 발생 / AI 제작 이미지</div>
+</div>
+
+<h2>04. 곰팡이 자주 생기는 곳과 예방 방법</h2>
+
+집 안에서 곰팡이가 가장 잘 생기는 취약 구역을 먼저 파악하고, 선제적으로 관리하는 것이 중요합니다.<br><br>
+
+<strong>주요 곰팡이 취약 구역:</strong>
+
+<table class="info-table">
+  <tr><th>구역</th><th>원인</th><th>예방 방법</th></tr>
+  <tr><td>화장실 모서리·실리콘</td><td>물기 잔류, 환기 부족</td><td>사용 후 환기팬 30분 이상 가동, 물기 닦기</td></tr>
+  <tr><td>창문 결로 주변</td><td>내외부 온도 차</td><td>결로 즉시 닦기, 이중창·단열 필름 활용</td></tr>
+  <tr><td>침대 매트리스 뒷면</td><td>체온+습기 밀폐</td><td>주 1회 매트리스 세워 통풍, 방습 패드 사용</td></tr>
+  <tr><td>신발장 내부</td><td>젖은 신발 수납</td><td>신발 완전 건조 후 수납, 제습제 배치</td></tr>
+  <tr><td>옷장 구석</td><td>습기 차단 없음</td><td>제습제·숯·신문지 배치, 과포장 줄이기</td></tr>
+</table>
+
+이미 발생한 곰팡이는 <strong>에탄올(알코올) 70% 희석액</strong> 또는 시중 곰팡이 제거제를 사용해 닦아냅니다. 표백제(락스)는 살균 효과가 강하지만 색상 변색 위험이 있으니 타일·실리콘에만 사용하세요.
+
+<h2>05. 실내 빨래 빨리 말리는 방법 5가지</h2>
+
+장마철 실외 건조가 불가능한 날, 빨래가 오래 걸려 있으면 쉰내(먹쇠 냄새)가 나기 쉽습니다. 실내 건조 속도를 높이는 방법을 알아두세요.<br><br>
+
+<strong>1. 제습기 앞에 빨래 거치:</strong> 제습기 출구(배출구) 쪽에 건조대를 놓으면 건조된 따뜻한 바람이 빨래를 향해 직접 불어 건조 속도가 빨라집니다.<br><br>
+
+<strong>2. 에어컨 제습+선풍기 조합:</strong> 에어컨 제습으로 실내 습도를 낮추고, 선풍기로 빨래에 직접 바람을 쐬면 건조 시간이 크게 단축됩니다.<br><br>
+
+<strong>3. 탈수 한 번 더:</strong> 세탁 후 '탈수만' 기능으로 1~2분 추가 탈수하면 수분 함량이 줄어 건조 시간이 30~40% 빨라집니다.<br><br>
+
+<strong>4. 옷 간격 넓히기:</strong> 건조대에 빨래를 빽빽이 걸면 옷과 옷 사이 공기 순환이 막혀 건조가 느려집니다. 최소 5~7cm 간격을 유지하세요.<br><br>
+
+<strong>5. 두꺼운 옷은 뒤집어 걸기:</strong> 두꺼운 면 소재나 청바지는 뒤집어 걸면 두꺼운 솔기 부분이 바깥에 위치해 더 잘 마릅니다.
+
+<h2>06. 장마철 실내 환기 — 언제, 어떻게 해야 효과적일까</h2>
+
+"비가 오는 날엔 창문 꼭 닫고 있어야 한다"고 알고 있는 분들이 많지만, 이건 반만 맞는 이야기입니다.<br><br>
+
+<strong>환기 가능한 시간대:</strong> 비가 잠시 멈추거나 가랑비일 때, 외부 습도가 실내 습도보다 낮을 때(주로 오전 10시~12시 맑게 개인 틈)는 10~15분 짧게 환기해 오염 공기를 내보내야 합니다.<br><br>
+
+단, 외부 습도가 80% 이상인 폭우 시에는 창문을 열면 오히려 습기가 더 유입됩니다. 이때는 환기 대신 제습기·에어컨으로 실내 공기를 순환시키는 것이 낫습니다.<br><br>
+
+<strong>화장실·부엌 환기팬은 상시 가동:</strong> 조리·샤워 후에는 최소 30분 이상 환기팬을 켜두세요. 장마철에는 평소보다 2~3배 오래 켜두는 것이 좋습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260702/5_dehumidify_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-3">An indoor laundry drying rack in a Korean apartment during the rainy season, with clothes hanging at proper intervals. A household dehumidifier and fan positioned nearby to speed up drying. A hygrometer on the wall showing 58% humidity. Cozy and organized domestic scene, rainy day visible through the window, warm ambient lighting. Practical home management scene for the summer monsoon season in Korea. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">장마철 실내 빨래 건조 환경 세팅 / AI 제작 이미지</div>
+</div>
+
+<h2>07. 침구와 소파 관리 — 집먼지진드기 잡는 법</h2>
+
+장마철에 급증하는 집먼지진드기는 눈에 보이지 않아서 더 골치 아픈 존재입니다.<br><br>
+
+<strong>침구 관리:</strong>
+<ul>
+  <li>이불·베개 커버는 주 1회 이상 60℃ 이상 고온 세탁 (진드기 사멸 온도)</li>
+  <li>세탁 후 햇볕 건조가 가장 효과적 (가능한 날 활용)</li>
+  <li>매트리스는 주 2회 이상 청소기로 표면 흡입</li>
+</ul>
+
+<strong>소파·카펫 관리:</strong>
+<ul>
+  <li>방수 커버 또는 소파 커버를 씌워 습기 차단</li>
+  <li>카펫은 장마철에는 가급적 걷어두거나 제습제·신문지 아래에 깔기</li>
+</ul>
+
+<h2>08. 신발장·옷장·현관 제습제 활용법</h2>
+
+시중에서 파는 <strong>염화칼슘 제습제</strong>는 좁은 밀폐 공간(신발장·옷장)에서 효과적입니다.<br><br>
+
+<table class="info-table">
+  <tr><th>제품 종류</th><th>적합한 공간</th><th>교체 주기</th></tr>
+  <tr><td>염화칼슘 제습제 (물 형)</td><td>신발장, 옷장, 서랍</td><td>물이 가득 찰 때 (2~4주)</td></tr>
+  <tr><td>실리카겔 제습제 (알갱이 형)</td><td>소형 수납함, 신발 속</td><td>햇볕에 말려 재사용 가능</td></tr>
+  <tr><td>숯 (활성탄)</td><td>넓은 공간, 냉장고 안</td><td>3~6개월마다 햇볕에 건조</td></tr>
+</table>
+
+장마철에는 제습제 교체 주기가 평소의 2배 이상 빨라집니다. 물이 넘치지 않도록 주기적으로 확인하세요.
+
+<h2>09. 전기요금 아끼는 제습 루틴 정리</h2>
+
+<div class="step-box">
+<strong>📋 장마철 제습 경제 루틴 (예시)</strong><br><br>
+오전 8~10시 → 외부 습도 확인, 낮아지면 10~15분 환기<br>
+오전 10시~오후 4시 → 제습기 가동 (목표 습도 55~60% 도달 시 자동 정지)<br>
+오후 4~6시 → 에어컨 제습 모드 겸용 (더운 날 기준)<br>
+저녁 취침 전 → 빨래 건조대 제습기 앞 배치, 선풍기 약풍 추가<br>
+취침 중 → 제습기 취침 모드 또는 타이머 2~3시간 설정<br>
+아침 기상 후 → 물통 비우기, 필터 상태 확인
+</div>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260701/travel_bangdaesan_valley_summer.html">인제 방태산 자연휴양림 적가리골 계곡 트레킹, 이단폭포 코스와 여름 피서 준비물</a></li>
+    <li><a href="../260701/travel_ulleungdo_summer.html">울릉도 여름 여행 행남해안산책로 코스와 독도 배편 예약 방법, 성수기 준비 가이드</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#장마철제습</span>
+  <span class="tag">#제습기사용법</span>
+  <span class="tag">#곰팡이예방</span>
+  <span class="tag">#실내빨래</span>
+  <span class="tag">#빨래빨리말리기</span>
+  <span class="tag">#장마대비</span>
+  <span class="tag">#집먼지진드기</span>
+  <span class="tag">#에어컨제습</span>
+  <span class="tag">#여름습도관리</span>
+  <span class="tag">#생활꿀팁</span>
+</div>
+</body>
+</html>

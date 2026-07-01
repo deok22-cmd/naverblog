@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px 12px; text-align: left; font-weight: 700; }
+  .info-table td { padding: 10px 12px; border-bottom: 1px solid #e0f2f1; }
+  .info-table tr:nth-child(even) td { background: #f1faf9; }
+  .step-box { border-left: 4px solid #00796b; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border-left: 5px solid #f9a825; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .caution-box { background: #fce4ec; border-left: 5px solid #e57373; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #b2dfdb; border-radius: 8px; padding: 20px; background: #f1faf9; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; font-weight: 700; color: #00796b; margin-bottom: 10px; flex-wrap: wrap; gap: 8px; }
+  .ph-file { font-size: 0.85em; color: #546e7a; font-weight: 400; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 14px; border-radius: 6px; font-size: 0.82em; line-height: 1.6; white-space: pre-wrap; margin: 10px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 8px 18px; border-radius: 5px; cursor: pointer; font-size: 0.88em; margin-top: 6px; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; text-align: center; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>영양 밤하늘보호공원 은하수 보는 법과 수비계곡 당일치기 여름밤 코스</h1>
+
+<div class="intro-box">
+<strong>💡 핵심 요약</strong><br><br>
+경북 영양군 수비면은 <strong>아시아 최초의 국제밤하늘보호공원</strong>으로 지정된 곳입니다. 국제밤하늘협회(IDA)의 엄격한 기준을 통과한 이 지역은 국내에서 도심 빛 공해의 영향을 가장 적게 받는 하늘 중 하나를 자랑합니다.<br><br>
+낮에는 수비계곡에서 청정 물놀이를 즐기고, 밤이 되면 맨눈으로 은하수를 감상할 수 있는 이 코스는 7~8월 여름이 최적 시즌입니다.<br><br>
+단, 도심에서 꽤 거리가 있는 오지(奧地)인 만큼 충분한 사전 준비가 필요합니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260702/4_yeongyang_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-1">Spectacular Milky Way galaxy stretching across the dark night sky over Yeongyang Dark Sky Park (영양 밤하늘보호공원) in North Gyeongsang Province, South Korea. Asia's first International Dark Sky Park. Thousands of stars, vibrant purple and blue cosmic nebulae, star trails, the dense core of the Milky Way visible in breathtaking detail. Silhouette of traditional Korean thatched-roof building and mountains in the foreground. Completely dark surroundings with no light pollution. Long exposure astrophotography. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">영양 밤하늘보호공원의 맑은 은하수 / AI 제작 이미지</div>
+</div>
+
+<h2>01. 영양 밤하늘보호공원이란 — 아시아 최초 국제 인증</h2>
+
+<strong>국제밤하늘협회(International Dark-Sky Association, IDA)</strong>는 빛 공해 없는 어두운 밤하늘을 보호하기 위한 국제 비영리 단체로, 전 세계에서 기준을 충족하는 지역에 '국제밤하늘보호공원(International Dark Sky Park)' 인증을 부여합니다.<br><br>
+
+영양군 수비면은 2015년 아시아 최초로 이 인증을 획득했습니다. 사방으로 산이 둘러싸여 도심의 인공 조명이 거의 들어오지 않고, 대기도 청정해 관측 환경이 탁월합니다.<br><br>
+
+실제로 맑은 날 밤에는 <strong>육안으로 은하수를 볼 수 있을 뿐만 아니라</strong>, 쌍안경이나 소형 망원경만 있어도 성운·성단·행성 등을 비교적 선명하게 관측할 수 있습니다.
+
+<h2>02. 별 관측 최적 조건 — 언제, 어떤 날씨에 가야 하나</h2>
+
+<strong>시기:</strong> 7월~8월은 은하수의 중심부(궁수자리 방향)가 남쪽 하늘에서 가장 높이 뜨는 시기로, 은하수 관측의 황금 시즌입니다. 자정 전후가 가장 선명하게 보입니다.<br><br>
+
+<strong>날씨·달 위상 확인이 핵심:</strong>
+
+<table class="info-table">
+  <tr><th>조건</th><th>권장 여부</th><th>이유</th></tr>
+  <tr><td>구름 없는 맑은 밤</td><td>✅ 최적</td><td>구름이 조금만 있어도 은하수가 가려짐</td></tr>
+  <tr><td>초승달~그믐달 기간</td><td>✅ 최적</td><td>달빛이 약해 어두운 하늘 확보</td></tr>
+  <tr><td>보름달 전후 3~4일</td><td>❌ 비권장</td><td>달빛이 너무 밝아 은하수 희미하게 보임</td></tr>
+  <tr><td>여름 장마 기간</td><td>❌ 비권장</td><td>구름·습도로 관측 불가 가능성 높음</td></tr>
+</table>
+
+<div class="tip-box">
+💡 <strong>꿀팁</strong>: 방문 전 기상청 '영양군' 일기예보와 달 위상 캘린더를 함께 확인하세요. 맑은 날 그믐 전후 2~3일이 최고 조건입니다.
+</div>
+
+<h2>03. 영양 밤하늘공원 위치와 관측 포인트</h2>
+
+<table class="info-table">
+  <tr><th>항목</th><th>내용</th></tr>
+  <tr><td>위치</td><td>경북 영양군 수비면 반딧불이천문대 일대</td></tr>
+  <tr><td>주요 시설</td><td>반딧불이천문대(공개 망원경), 생태학교, 주차장</td></tr>
+  <tr><td>천문대 운영</td><td>기상·일정에 따라 변동 — 방문 전 영양군 또는 반딧불이천문대 직접 문의 권장</td></tr>
+  <tr><td>야외 관측 포인트</td><td>천문대 인근 개활지, 수비면 도로변 어둔 곳</td></tr>
+  <tr><td>주의</td><td>가로등·차량 헤드라이트가 관측을 방해하므로 주차 후 헤드라이트 즉시 소등</td></tr>
+</table>
+
+<h2>04. 수비계곡 — 낮에는 청정 물놀이</h2>
+
+밤하늘 관측 전, 낮에는 <strong>수비계곡</strong>에서 피서를 즐길 수 있습니다.<br><br>
+
+수비계곡은 수비면 내 청정 계곡으로, 인근 마을의 공식 지정 물놀이 구역에서 맑은 계곡물에 발을 담그거나 물놀이를 할 수 있습니다. 영양군 전체가 빛 공해 최소 구역인 만큼 계곡 주변에도 상업시설이 거의 없어 자연 그대로의 환경을 경험할 수 있습니다.<br><br>
+
+수비계곡은 험한 절벽보다는 완만한 계류(溪流) 형태가 주를 이루어, 가족 단위 피서지로 안전한 편입니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260702/4_yeongyang_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-2">A peaceful mountain stream in Subi Valley (수비계곡), Yeongyang, North Gyeongsang Province, South Korea, in summer. Crystal-clear shallow water flowing over smooth rounded stones, surrounded by dense green deciduous forest. A family with children wading in the cold, pristine water, building small stone cairns on the bank. Natural and unspoiled wilderness, afternoon sunlight dancing on the water surface. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">영양 수비계곡 청정 계류 물놀이 / AI 제작 이미지</div>
+</div>
+
+<h2>05. 반딧불이 서식지 — 밤하늘과 함께 보는 자연의 빛</h2>
+
+영양 수비면은 반딧불이 서식지로도 유명합니다. 7월~8월 밤에는 계곡가 풀숲에서 반딧불이가 반짝이는 장면을 운 좋게 목격할 수 있습니다.<br><br>
+
+반딧불이는 수질·토양이 오염되지 않은 청정 환경에서만 살기 때문에 영양군 수비면의 생태 건강성을 보여주는 지표입니다. 빛 공해가 없는 이곳에서 머리 위로는 은하수, 발아래에서는 반딧불이가 빛나는 경험은 한국 어디에서도 쉽게 할 수 없는 특별한 추억이 됩니다.
+
+<h2>06. 영양 여름 당일치기 추천 동선</h2>
+
+<div class="step-box">
+<strong>📋 영양 밤하늘 + 계곡 당일치기 플랜 (예시)</strong><br><br>
+05:30 — 대구·안동 출발 (영양까지 약 2~2.5시간, 수도권은 4시간 이상)<br>
+09:00 — 영양 읍내 도착, 아침 식사<br>
+10:00 — 수비면 이동 (영양 읍내에서 수비면까지 약 40분)<br>
+11:00 — 수비계곡 물놀이<br>
+14:00 — 점심 후 영양 주변 탐방<br>
+17:00 — 숙박 체크인 (오지 특성상 당일치기보다 1박 강력 권장)<br>
+21:00 — 반딧불이천문대 또는 개활지 이동<br>
+21:30 — 별 관측 시작 (달 없는 날 기준 은하수 가장 선명)<br>
+23:30 — 관측 마무리
+</div>
+
+<div class="caution-box">
+⚠️ <strong>강력 권장 — 1박 여행</strong>: 영양은 도심에서 상당히 먼 오지입니다. 서울·수도권에서 당일치기로 방문하면 왕복 8시간 이상의 운전으로 피로가 극심합니다. 밤 운전은 낯선 산악 도로에서 특히 위험하니, 가급적 1박을 계획하세요.
+</div>
+
+<h2>07. 영양 숙박과 편의시설</h2>
+
+영양군은 인구가 적은 청정 산간 지역이라 대형 숙박 시설이 거의 없습니다.<br><br>
+
+<strong>숙박 옵션:</strong>
+<ul>
+  <li><strong>영양 읍내 모텔·여관</strong>: 기본적인 숙박 시설이 있습니다.</li>
+  <li><strong>수비면 민박</strong>: 수비면 마을 내 민박집을 이용하면 별 관측 포인트와 가까워 편리합니다.</li>
+  <li><strong>캠핑·차박</strong>: 지정 캠핑장 또는 허용된 구역에서 텐트·차박도 가능합니다.</li>
+</ul>
+
+숙박 시설이 한정적이므로 주말 방문 시에는 최소 2주 전에 예약하는 것이 좋습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260702/4_yeongyang_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-3">Magical summer night scene with fireflies (반딧불이) glowing in a dark forest clearing near a mountain stream in Yeongyang, North Gyeongsang Province, South Korea. Multiple fireflies creating tiny points of warm yellow-green light among tall dark grass and trees. The Milky Way faintly visible through gaps in the forest canopy above. Extremely dark rural environment, no light pollution, magical natural atmosphere. Long exposure photography capturing both fireflies and stars. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">영양 수비면 반딧불이와 밤하늘 / AI 제작 이미지</div>
+</div>
+
+<h2>08. 별 관측에 필요한 준비물</h2>
+
+<ul>
+  <li><strong>붉은 빛 헤드랜턴</strong>: 야간 이동 시 필수. 흰 빛은 눈의 암순응(暗順應)을 방해하므로 붉은 빛 또는 조도를 낮춘 것을 사용.</li>
+  <li><strong>두꺼운 겉옷</strong>: 산간 지역 밤은 한여름에도 기온이 15~20℃로 내려갑니다.</li>
+  <li><strong>돗자리·캠핑 체어</strong>: 누워서 하늘을 보기 위한 기본 아이템.</li>
+  <li><strong>스마트폰 별자리 앱</strong>: Sky Map, Star Walk 등 무료 앱으로 별자리 이름을 실시간 확인할 수 있습니다.</li>
+  <li><strong>방충제</strong>: 계곡과 숲 근처 밤에는 모기가 많습니다.</li>
+</ul>
+
+<h2>09. 영양 인근 연계 명소</h2>
+
+<table class="info-table">
+  <tr><th>명소</th><th>거리</th><th>특징</th></tr>
+  <tr><td>일월산 자생화공원</td><td>차로 30분</td><td>해발 1,219m, 야생화 군락지</td></tr>
+  <tr><td>주실마을 (조지훈 시인 생가)</td><td>차로 15분</td><td>청록파 시인 조지훈 생가 문학 기행</td></tr>
+  <tr><td>영양 선바위관광지</td><td>차로 20분</td><td>반변천 기암절벽 드라이브</td></tr>
+  <tr><td>안동 하회마을</td><td>차로 1시간 30분</td><td>유네스코 세계유산, 연계 1박 코스</td></tr>
+</table>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260701/travel_bangdaesan_valley_summer.html">인제 방태산 자연휴양림 적가리골 계곡 트레킹, 이단폭포 코스와 여름 피서 준비물</a></li>
+    <li><a href="../260701/travel_danyang_skywalk_summer.html">단양 만천하스카이워크 요금과 잔도길 걷기 코스, 여름 단양 액티비티 하루 정리</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#영양</span>
+  <span class="tag">#밤하늘보호공원</span>
+  <span class="tag">#은하수</span>
+  <span class="tag">#수비계곡</span>
+  <span class="tag">#반딧불이</span>
+  <span class="tag">#경북여름여행</span>
+  <span class="tag">#별보러가기</span>
+  <span class="tag">#국제밤하늘보호공원</span>
+  <span class="tag">#오지여행</span>
+  <span class="tag">#여름밤</span>
+</div>
+</body>
+</html>

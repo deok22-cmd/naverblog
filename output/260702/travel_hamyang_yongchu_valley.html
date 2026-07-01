@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px 12px; text-align: left; font-weight: 700; }
+  .info-table td { padding: 10px 12px; border-bottom: 1px solid #e0f2f1; }
+  .info-table tr:nth-child(even) td { background: #f1faf9; }
+  .step-box { border-left: 4px solid #00796b; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border-left: 5px solid #f9a825; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .caution-box { background: #fce4ec; border-left: 5px solid #e57373; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #b2dfdb; border-radius: 8px; padding: 20px; background: #f1faf9; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; font-weight: 700; color: #00796b; margin-bottom: 10px; flex-wrap: wrap; gap: 8px; }
+  .ph-file { font-size: 0.85em; color: #546e7a; font-weight: 400; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 14px; border-radius: 6px; font-size: 0.82em; line-height: 1.6; white-space: pre-wrap; margin: 10px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 8px 18px; border-radius: 5px; cursor: pointer; font-size: 0.88em; margin-top: 6px; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; text-align: center; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>함양 용추계곡 물놀이 포인트와 주차, 1100년 상림숲 신록 산책 코스</h1>
+
+<div class="intro-box">
+<strong>💡 핵심 요약</strong><br><br>
+경남 함양은 한여름 피서지로 손꼽히는 용추계곡과, 신라 시대에 조성된 1100년 역사의 상림숲을 품고 있는 고장입니다.<br><br>
+지리산 서부 자락에서 흘러내리는 용추계곡은 수질이 뛰어나고 수온도 낮아 진정한 피서가 가능하며, 마을 어귀의 상림숲은 느티나무·서어나무 등이 만들어낸 초록 터널 아래서 산책하기 좋습니다.<br><br>
+두 곳을 함께 묶으면 남쪽 경남의 여름 당일치기 코스로 부족함이 없습니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260702/2_hamyang_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-1">Crystal clear emerald green stream flowing through Yongchu Valley (용추계곡) in Hamyang, South Gyeongsang Province, South Korea, in summer. Families and children playing in shallow crystal-clear water among smooth granite boulders. Tall green forest trees covering both sides of the narrow valley. A beautiful waterfall visible in the background tumbling down moss-covered rocks. Summer afternoon with dappled sunlight through leaves. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">함양 용추계곡 여름 물놀이 풍경 / AI 제작 이미지</div>
+</div>
+
+<h2>01. 함양 용추계곡, 어떤 계곡인가</h2>
+
+함양 용추계곡은 지리산 국립공원 경계 안쪽인 <strong>안의면 용추사 일대</strong>를 중심으로 형성된 계곡입니다. 화강암 반석 위를 맑은 계곡물이 흐르며 중간중간 자연 풀장 같은 소(沼)를 형성하는 것이 특징입니다.<br><br>
+
+계곡의 이름이 된 <strong>용추폭포</strong>는 높이 약 20m의 2단 폭포로, 깊고 시원한 웅덩이가 아래에 펼쳐집니다. 폭포 소리만으로도 더위가 가시는 느낌입니다.<br><br>
+
+수질 등급은 꾸준히 1급 수준을 유지하고 있으며, 수온이 낮아 한여름에도 오랫동안 물에 있으면 몸이 시릴 정도입니다. 어린 아이가 있는 가족 단위 방문객에게도 인기가 높습니다.
+
+<h2>02. 용추계곡 물놀이 포인트별 특징</h2>
+
+계곡 전체 길이가 상당하기 때문에, 어느 구간을 선택하느냐에 따라 체험이 달라집니다.<br><br>
+
+<table class="info-table">
+  <tr><th>구간</th><th>특징</th><th>추천 대상</th></tr>
+  <tr><td>용추사 앞 광장 구역</td><td>넓은 반석·자연 수영장, 가장 혼잡</td><td>가족·단체</td></tr>
+  <tr><td>용추폭포 하단 소(沼)</td><td>깊이 1.5~2m, 수온 최저, 스릴 있음</td><td>성인·수영 가능자</td></tr>
+  <tr><td>계곡 상류 (용추사 위)</td><td>한적, 소규모 풀, 원시 자연</td><td>조용한 피서 선호자</td></tr>
+</table>
+
+<div class="tip-box">
+💡 <strong>꿀팁</strong>: 성수기(7월 말~8월)에는 계곡 입구에서 통제가 이루어질 수 있으며 주차 공간이 빠르게 찹니다. 오전 8시~9시에 도착하면 비교적 한산하게 자리를 잡을 수 있습니다.
+</div>
+
+<h2>03. 용추계곡 주차·입장 정보와 편의시설</h2>
+
+<table class="info-table">
+  <tr><th>항목</th><th>내용</th></tr>
+  <tr><td>주소</td><td>경남 함양군 안의면 용추계곡길 (용추사 입구)</td></tr>
+  <tr><td>주차장</td><td>계곡 입구 공용 주차장 (성수기 유료 운영·현장 확인 권장)</td></tr>
+  <tr><td>입장료</td><td>지리산 국립공원 구역 포함 시 공원 이용료 별도 (공식 채널 재확인 권장)</td></tr>
+  <tr><td>편의시설</td><td>화장실, 탈의실, 식당·편의점 일부 운영</td></tr>
+  <tr><td>주의</td><td>취사 및 음주는 국립공원 구역 내 금지</td></tr>
+</table>
+
+<h2>04. 함양 상림숲 — 천연기념물 제154호, 1100년의 숲</h2>
+
+용추계곡에서 차로 20~25분 거리인 함양 읍내에 <strong>상림숲(上林)</strong>이 자리합니다.<br><br>
+
+상림숲은 신라 시대 고운(孤雲) 최치원 선생이 <strong>함양 태수(지방 장관)로 부임</strong>해 홍수 피해를 막기 위해 위천(渭川) 가에 인공으로 조성한 숲입니다. 천 년 이상의 세월이 흐르면서 자연 천이가 이루어져 오늘날엔 느티나무·서어나무·개서어나무·오리나무 등 120여 종의 수목이 어우러진 울창한 도심 숲으로 자랐습니다.<br><br>
+
+숲의 길이는 약 1.6km, 너비는 80~200m로 선형 숲의 형태를 띱니다. 위천을 따라 걷다 보면 나무 그늘 아래로 시원한 강바람이 불어와, 에어컨 없이도 땀이 식는 느낌을 받을 수 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260702/2_hamyang_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-2">A peaceful summer walk path through Sangrim Forest (상림숲) in Hamyang, South Gyeongsang Province, South Korea. Ancient giant zelkova and hornbeam trees with massive trunks creating a dense green canopy tunnel overhead. Dappled afternoon sunlight filtering through lush summer leaves, a meandering forest trail with a small river (Wicheon) visible through the trees. People leisurely walking in the shade. Historic atmosphere of a 1,100-year-old man-made forest. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">1100년 역사 함양 상림숲 여름 산책로 / AI 제작 이미지</div>
+</div>
+
+<h2>05. 상림숲 산책 코스와 볼거리</h2>
+
+상림숲 내에는 단순히 숲길 걷기 외에도 여러 볼거리가 있습니다.<br><br>
+
+<strong>주요 포인트:</strong>
+<ul>
+  <li><strong>최치원 신도비·역사인물공원</strong>: 숲 남쪽 입구 인근에 위치. 최치원을 비롯한 함양 출신 역사 인물들의 비석이 모여 있습니다.</li>
+  <li><strong>연꽃단지</strong>: 숲 안쪽 습지에 연꽃이 자라며, 7월 중하순이 절정입니다.</li>
+  <li><strong>위천 강변 산책로</strong>: 숲 옆 강변 데크를 따라 걸으면 강바람이 시원합니다.</li>
+  <li><strong>함화루(涵和樓)</strong>: 조선 시대 누각이 복원되어 있어 사진 포인트로 인기입니다.</li>
+</ul>
+
+숲 전체를 한 바퀴 도는 데 걸어서 약 40~50분이 소요됩니다. 벤치가 곳곳에 있어 중간중간 쉬어 가기도 좋습니다.
+
+<h2>06. 상림숲 이용 정보</h2>
+
+<table class="info-table">
+  <tr><th>항목</th><th>내용</th></tr>
+  <tr><td>위치</td><td>경남 함양군 함양읍 운림리 일대 (함양중앙초등학교 맞은편)</td></tr>
+  <tr><td>입장료</td><td>무료</td></tr>
+  <tr><td>주차</td><td>상림숲 인근 공용 주차장 (무료)</td></tr>
+  <tr><td>운영 시간</td><td>연중 개방 (야간도 산책 가능)</td></tr>
+  <tr><td>편의시설</td><td>화장실, 벤치, 음수대</td></tr>
+</table>
+
+<h2>07. 함양 맛집 추천 — 흑돼지·한우·산채비빔밥</h2>
+
+함양 읍내에는 지리산 인근에서 자란 산채를 활용한 음식들이 많습니다.<br><br>
+
+<strong>추천 먹거리:</strong>
+<ul>
+  <li><strong>산채비빔밥</strong>: 지리산 자락에서 채취한 나물로 차린 비빔밥은 함양의 대표 음식입니다. 상림숲 입구 식당가에서 쉽게 찾을 수 있습니다.</li>
+  <li><strong>흑돼지</strong>: 경남 지역 특산 흑돼지 구이를 즐길 수 있는 집이 함양 읍내에 여럿 있습니다.</li>
+  <li><strong>추어탕·민물매운탕</strong>: 함양군 위천 지류에서 잡은 민물 생선으로 끓인 매운탕 집이 계곡 인근에 많습니다.</li>
+</ul>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260702/2_hamyang_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-3">Traditional Korean bibimbap with mountain herbs (산채비빔밥) served in a stone pot at a restaurant near Sangrim Forest, Hamyang, Korea. Colorful assortment of fresh mountain vegetables and namul (Korean seasoned vegetables) arranged artfully on top of rice. Side dishes of kimchi and soup. Rustic wooden table, natural lighting, warm and appetizing food photography style. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">함양 산채비빔밥 상차림 / AI 제작 이미지</div>
+</div>
+
+<h2>08. 함양 여행 교통 및 인근 연계 코스</h2>
+
+<strong>교통:</strong> 자차 기준 대구에서 약 1시간 30분, 부산에서 약 2시간, 서울에서는 약 3시간 30분~4시간 거리입니다. 광주대구고속도로 함양 IC 또는 서울-부산 간 통영대전고속도로를 이용합니다.<br><br>
+
+대중교통의 경우 함양공용버스터미널까지 고속버스로 이동 후, 시내버스 또는 택시로 용추계곡·상림숲에 접근할 수 있습니다.<br><br>
+
+<strong>함양 인근 연계 코스:</strong>
+<ul>
+  <li><strong>지리산 뱀사골 계곡</strong>: 함양에서 차로 40분 거리. 국내 최장 계곡 트레킹 코스로 여름 피서의 메카.</li>
+  <li><strong>지리산 노고단 일출</strong>: 성삼재 하차 후 도보 40분. 새벽 출발 시 일출 명소.</li>
+  <li><strong>남원 광한루원</strong>: 함양에서 40분 거리. 춘향전 배경, 연꽃 연못 산책.</li>
+</ul>
+
+<h2>09. 여름 함양 방문 시 체크 사항</h2>
+
+<div class="caution-box">
+⚠️ <strong>안전 안내</strong>: 용추계곡의 일부 구간은 수심이 깊고 급류가 있습니다. 안내판의 수영 금지 구역을 반드시 지키고, 어린 아이는 구명조끼 착용을 권장합니다. 7월 장마철에는 계곡 수위가 갑자기 오를 수 있으니, 기상청 예보를 반드시 확인하고 우천 시에는 계곡 진입을 삼가세요.
+</div>
+
+함양군 공식 홈페이지 또는 함양군 관광과(055-960-5114)를 통해 현재 계곡 운영 현황을 확인하고 방문하면 더욱 안전합니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260701/travel_bangdaesan_valley_summer.html">인제 방태산 자연휴양림 적가리골 계곡 트레킹, 이단폭포 코스와 여름 피서 준비물</a></li>
+    <li><a href="../260701/travel_danyang_skywalk_summer.html">단양 만천하스카이워크 요금과 잔도길 걷기 코스, 여름 단양 액티비티 하루 정리</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#함양</span>
+  <span class="tag">#용추계곡</span>
+  <span class="tag">#상림숲</span>
+  <span class="tag">#경남여름여행</span>
+  <span class="tag">#계곡피서</span>
+  <span class="tag">#지리산계곡</span>
+  <span class="tag">#함양당일치기</span>
+  <span class="tag">#산채비빔밥</span>
+  <span class="tag">#용추폭포</span>
+  <span class="tag">#여름계곡</span>
+</div>
+</body>
+</html>

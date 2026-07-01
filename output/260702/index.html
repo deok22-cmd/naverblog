@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>260702 일일 발행 대시보드</title>
+<style>
+  body { font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 15px; background: #f4f4f4; color: #222; padding: 20px; }
+  h1 { background: #388e3c; color: #fff; padding: 16px 20px; border-radius: 8px; font-size: 1.3em; margin-bottom: 20px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+  th { background: #1b5e20; color: #fff; padding: 12px 14px; text-align: left; }
+  td { padding: 12px 14px; border-bottom: 1px solid #e8e8e8; vertical-align: middle; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: #f9fdf9; }
+  .status-wait { color: #e65100; font-weight: 700; }
+  .status-done { color: #388e3c; font-weight: 700; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; background: #e8f5e9; color: #1b5e20; border: 1px solid #a5d6a7; margin-left: 6px; }
+  .badge-local { background: #e3f2fd; color: #1565c0; border-color: #90caf9; }
+  .note { margin-top: 20px; background: #fff3e0; border: 1px solid #ffcc02; border-radius: 6px; padding: 12px 16px; font-size: 0.92em; color: #555; }
+</style>
+</head>
+<body>
+<h1>📋 2026-07-02 일일 발행 대시보드 (네이버)</h1>
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>슬러그 / 제목</th>
+      <th>카테고리</th>
+      <th>상태</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><a href="travel_youngwol_donggang_rafting.html">영월 동강 래프팅 코스 어라연과 한반도지형 전망대, 별마로천문대 은하수까지 여름 하루</a></td>
+      <td><span class="badge">여행</span> travel_</td>
+      <td class="status-done">✔️ 작성 완료</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><a href="travel_hamyang_yongchu_valley.html">함양 용추계곡 물놀이 포인트와 주차, 1100년 상림숲 신록 산책 코스</a></td>
+      <td><span class="badge">여행</span> travel_</td>
+      <td class="status-done">✔️ 작성 완료</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><a href="travel_sancheong_daewonsa_valley.html">산청 대원사계곡 무장애 데크길 걷기와 지리산 동부 청정 계곡 여름 피서</a></td>
+      <td><span class="badge">여행</span> travel_</td>
+      <td class="status-done">✔️ 작성 완료</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><a href="travel_yeongyang_starpark_night.html">영양 밤하늘보호공원 은하수 보는 법과 수비계곡 당일치기 여름밤 코스</a></td>
+      <td><span class="badge">여행</span> travel_</td>
+      <td class="status-done">✔️ 작성 완료</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><a href="local_dehumidify_mold_rainy.html">장마철 집 제습 방법과 곰팡이 예방, 빨래 빨리 말리는 꿀팁</a></td>
+      <td><span class="badge badge-local">인접</span> local_</td>
+      <td class="status-done">✔️ 작성 완료</td>
+    </tr>
+  </tbody>
+</table>
+<div class="note">
+  ⚠️ <strong>큐 부족 플래그</strong><br>
+  [QUEUE LOW travel: 13] — 여행 §02 작성대기중 13건(임계 15건 미만). 치트시트에서 7~8월 시즌 항목 보충 권장.<br>
+  [QUEUE LOW local: 8] — 인접 롱테일 §01 작성대기중 8건(임계 10건 미만). 여름 시즌 항목 보충 권장.<br>
+  [QUEUE LOW pilot: 0] — 행정 파일럿 P1~P5 소진. 2주 성숙 회고 후 차기 버티컬 판정 필요.<br><br>
+  <strong>주제 선정 게이트 로그</strong>: 7월 성수기·파일럿 0건 → 표 B 여행4/인접1/신규0.
+  여행: #63(7월 말~8월, 시즌게이트 탈락)·#64(7월 말~8월, 탈락) → #74 동강래프팅·#75 함양용추계곡·#76 산청대원사·#77 영양밤하늘 선정.
+  인접: #22(7월 말~8월 고속도로, 시즌게이트 탈락) → #31 장마철 제습(6~7월 장마 적기) 선정.
+</div>
+</body>
+</html>
