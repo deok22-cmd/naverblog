@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #cde9e6; padding: 10px 12px; }
+  .step-box { border-left: 4px solid #00796b; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #bbb; border-radius: 8px; padding: 30px 20px; text-align: center; }
+  .ph-head { display: flex; justify-content: space-between; font-size: 0.9em; color: #555; margin-bottom: 12px; flex-wrap: wrap; gap: 6px; }
+  .ph-file { font-family: monospace; background: #e8e8e8; padding: 2px 6px; border-radius: 3px; font-size: 0.85em; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 14px; border-radius: 6px; font-size: 0.82em; text-align: left; white-space: pre-wrap; word-break: break-word; margin: 10px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 8px 18px; border-radius: 5px; cursor: pointer; font-size: 0.9em; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  script { display: none; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>안반데기 운유길 은하수와 7월 배추밭 일출, 강원 고원 드라이브 코스</h1>
+
+<div class="intro-box">
+  <strong>📌 핵심 요약</strong><br><br>
+  강원도 강릉시 왕산면에 위치한 <strong>안반데기</strong>는 해발 약 1,100m 고원 위에 끝없는 고랭지 배추밭이 펼쳐지는 강원도 대표 은하수·일출 명소입니다.<br><br>
+  7월에는 배추가 초록빛으로 물들기 시작하고, 맑은 날이면 육안으로 은하수를 볼 수 있을 만큼 빛 공해가 적어 사진가와 별 관측 마니아들이 즐겨 찾습니다.<br><br>
+  안반데기 주변을 걷는 <strong>운유길 트레킹 코스</strong>는 고원의 바람을 맞으며 가볍게 산책하기에 좋고, 일출 포인트와 은하수 포인트가 같은 구역 안에 있어 당일 드라이브로 두 가지를 모두 즐길 수 있습니다.
+</div>
+
+<h2>01 안반데기란 — 해발 1,100m 강원 고원의 여름 성지</h2>
+
+안반데기는 강원도 강릉시 왕산면 대기리에 자리한 고원 지대로, 행정구역상 강릉에 속하지만 평창과 경계를 맞댄 곳입니다.<br><br>
+'안반데기'라는 지명은 떡메로 찰떡을 치는 받침대인 '안반'처럼 평평하게 생긴 산꼭대기에서 유래했습니다.<br><br>
+해발 약 1,100m에 달하는 고원 위로 수백만 평에 이르는 고랭지 배추밭이 펼쳐져 있어, 서울보다 기온이 7~8℃ 낮아 한여름에도 서늘한 바람이 불어옵니다.<br><br>
+7월은 배추가 한창 자라는 시기로, 짙은 초록빛 이랑이 끝없이 이어지는 장관 속에서 풍력발전기가 천천히 돌아가는 모습이 압도적입니다.<br><br>
+빛 공해가 극히 적어 여름 맑은 밤에는 육안으로 은하수 핵인 궁수자리 방향 별빛을 뚜렷하게 볼 수 있으며, 전국에서 손꼽히는 야경 명소로 알려져 있습니다.<br><br>
+입장료와 주차비 모두 무료이며, 24시간 언제나 개방되어 있어 차박과 새벽 일출 촬영 목적으로 전날 밤에 도착하는 방문객도 많습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260703/1_anbandegi_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-1">Aerial drone view of Anbandegi highland in South Korea, vast green cabbage fields stretching to the horizon at sunrise, misty morning fog rolling between rows of cabbages, wind turbines spinning slowly against golden sky, elevation 1100m mountain plateau in Gangneung, photorealistic, ultra high detail, cinematic lighting, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">안반데기 배추밭 전경과 여름 일출 / AI 제작 이미지</div>
+</div>
+
+<h2>02 7월 은하수 관측 타이밍과 날씨 체크 포인트</h2>
+
+7월의 안반데기 은하수 관측에서 가장 중요한 두 가지 변수는 <strong>월령과 날씨</strong>입니다.<br><br>
+신월(그믐) 전후 사흘이 가장 이상적이며, 달이 반달 이상이면 달빛 때문에 은하수 핵이 흐려 보일 수 있습니다. 출발 전 기상청 날씨 앱으로 운량 0~2(맑음)를 확인하는 것이 필수입니다.<br><br>
+7월 은하수는 밤 11시~새벽 2시 사이에 남쪽 하늘에서 가장 선명하게 보입니다. 이 시간대에 궁수자리(사수자리) 방향으로 카메라를 향하면 은하수 중심부가 떠오릅니다.<br><br>
+산 위라 날씨가 급변할 수 있으므로, 출발 당일 오후에 한 번 더 기상 확인을 권해드립니다. 7월은 장마철과 겹치는 시기이기도 해서, 일기예보의 강수확률이 20% 이하인 날을 골라 방문하는 것이 좋습니다.<br><br>
+카메라 설정 팁을 말씀드리면, ISO 3200~6400, 셔터 속도 15~25초, 조리개 f/2.8 내외로 시작하면 됩니다. 꼭 DSLR이 아니어도 최근 스마트폰의 야간 모드나 프로 모드로도 은하수를 담을 수 있습니다.<br><br>
+육안 관측을 원하시는 분은 별도의 장비 없이도 15~20분 정도 눈을 어둠에 적응시키면 뿌연 띠 형태의 은하수가 보이기 시작합니다.
+
+<h2>03 운유길 트레킹 코스 완전 분석</h2>
+
+안반데기의 트레킹 코스인 <strong>운유길</strong>(雲遊길)은 문자 그대로 '구름 사이를 유유히 걷는 길'이라는 뜻입니다.<br><br>
+배추밭 사이를 지나는 평탄하고 완만한 구간이 주를 이루어 등산 경험이 없어도 무리 없이 걸을 수 있습니다. 주차장 주변부터 멍에전망대까지 왕복 약 2~3km 구간을 걷는 것이 일반적인 코스입니다.<br><br>
+멍에전망대에서는 사방 360도로 탁 트인 고원 풍경을 감상할 수 있으며, 날씨가 맑으면 동쪽으로 동해 바다가 실루엣으로 보이기도 합니다.<br><br>
+코스 자체는 포장·비포장이 혼재하지만 경사가 급하지 않고, 바람이 강한 날에는 오히려 시원함을 느낄 수 있습니다. 다만 운동화 이상의 신발을 신어야 발목 부상 위험을 줄일 수 있습니다.<br><br>
+소요 시간은 여유롭게 걷고 전망대에서 충분히 쉰다면 왕복 1시간 30분~2시간이면 충분합니다. 전날 밤 은하수 관측 후 텐트나 차에서 쉬다가 일출 전에 기상해 운유길을 걷는 루틴이 안반데기 마니아들 사이에서 정착된 코스입니다.
+
+<h2>04 배추밭 일출 명당과 황금 시간대</h2>
+
+7월 강원 고원의 일출 시각은 오전 5시 10~20분대입니다. 일출 30~40분 전에는 동쪽 하늘이 붉게 물들기 시작하므로 늦어도 오전 4시 30분에는 일출 포인트에 도착하는 것을 권장합니다.<br><br>
+안반데기에서 가장 유명한 일출 명당은 <strong>멍에전망대 인근</strong>과 배추밭 이랑 위로 직접 올라가는 지점입니다. 배추밭 이랑 안으로 들어가면 행인데기(농로) 위에서 배추밭이 계단식으로 내려다보이는 멋진 구도를 잡을 수 있습니다.<br><br>
+7월에는 새벽에도 구름이 생기는 경우가 많아, 일출 직전 구름 사이로 햇살이 갈라지는 극적인 빛기둥 장면을 촬영할 수 있기도 합니다.<br><br>
+전망대 위에는 조망용 테라스가 있어 사람이 많아도 여러 각도에서 넓게 찍을 수 있습니다. 삼각대는 필수 아이템이며, 맞바람이 강할 때는 삼각대에 가방을 매달아 흔들림을 줄이세요.<br><br>
+일출 후 안개가 배추밭 사이로 흘러내리는 운해 장면은 안반데기에서만 볼 수 있는 독특한 볼거리입니다. 대기가 불안정한 여름 아침일수록 이 장면의 확률이 높으니, 흐린 아침이라고 실망하기 전에 잠시 기다려 보시기 바랍니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260703/1_anbandegi_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-2">A person standing at the edge of Anbandegi highland plateau viewing deck at dawn, vast terraced cabbage fields glowing in golden sunrise light, low mist rolling between rows, wind turbines silhouetted against orange-pink sky, Korean highland landscape, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">안반데기 운유길 전망대에서 바라본 배추밭 일출 / AI 제작 이미지</div>
+</div>
+
+<h2>05 안반데기 가는 법과 내비 설정 팁</h2>
+
+안반데기는 대중교통으로 접근하기 어렵기 때문에 <strong>자가용 이용을 강력히 권장</strong>합니다.<br><br>
+내비게이션에는 <strong>"강릉 안반데기"</strong> 또는 <strong>"강릉시 왕산면 대기리 안반데기주차장"</strong>을 입력하면 됩니다. 일부 내비에서 목적지가 잘 뜨지 않을 경우 "강릉시 왕산면 대기1리"로 설정하면 됩니다.<br><br>
+서울 출발 기준으로 영동고속도로 → 강릉IC 진출 후 내비를 따라 약 50km, 총 소요 시간 약 2시간 30분~3시간을 예상하시면 됩니다.<br><br>
+마지막 구간은 왕산면 소재지를 지나 산길로 접어드는데, 도로가 좁고 급경사·헤어핀 커브가 연속됩니다. 야간 진입 시에는 대향차를 특히 주의해야 하며, 가급적 사전에 내려오는 차량과 교신할 수 있는 라이트 신호 예절을 지켜 주세요.<br><br>
+대전·청주 방면에서는 중부내륙고속도로 → 충주IC → 제천·영월 → 정선 방면 국도를 이용해도 접근할 수 있지만, 강릉 방면 경로보다 약 20~30분 더 소요됩니다.<br><br>
+주유는 강릉 시내에서 미리 채워 두시기 바랍니다. 안반데기 인근에는 주유소가 없습니다.
+
+<h2>06 주차장·야간 진입과 현장 안전 정보</h2>
+
+안반데기 주차장은 무료이며 넓은 편이지만, 여름 성수기 주말 새벽에는 은하수·일출 관측객이 몰려 만차가 되는 경우도 있습니다.<br><br>
+주차장 내 화장실이 마련되어 있으나 심야에는 조명이 어두우므로 손전등을 지참하는 것이 좋습니다. 화장실 이외의 기본 편의시설(매점·카페 등)은 없으므로 음식과 물은 미리 준비해 가세요.<br><br>
+야간에 배추밭 사이로 걸어 들어갈 때는 발목이 비포장 이랑 사이로 빠질 수 있으므로 밝은 손전등이나 헤드랜턴을 착용하고, 가급적 혼자 밭 깊숙이 들어가지 않도록 합니다.<br><br>
+고원 특성상 여름에도 새벽 최저기온이 10~15℃까지 내려갈 수 있습니다. 특히 자정 이후에는 체감 온도가 더 낮아지므로 얇은 바람막이 또는 긴팔 겉옷을 반드시 챙겨 가세요.<br><br>
+강풍 주의보가 발령된 날에는 고원 위에서 강한 바람으로 인한 위험이 있으므로, 기상 특보를 사전에 확인하시기 바랍니다.<br><br>
+야간 촬영 후 하산 시에는 졸음 운전 위험이 높습니다. 충분히 쉰 후 이동하거나, 여럿이 동행해 교대 운전 체계를 갖추는 것을 권해드립니다.
+
+<h2>07 7월 고원 날씨와 필수 준비물</h2>
+
+안반데기가 있는 해발 1,100m 고원은 7월에도 낮 최고 기온이 20~24℃ 수준에 머물러 서울보다 훨씬 서늘합니다. 다만 낮에는 자외선이 강하고 바람이 거셉니다.<br><br>
+<strong>기상 체크 필수 앱</strong>: 기상청 날씨 앱 또는 '애플 날씨' — 강릉시 왕산면 날씨를 기준으로 확인하세요. 내린 빗물이 빠르게 안개로 전환되는 지역 특성상 오전과 오후 예보가 크게 다를 수 있습니다.<br><br>
+필수 준비물 체크리스트:<br><br>
+▪ 긴팔 겉옷 또는 얇은 패딩 (새벽 저온 대비)<br><br>
+▪ 헤드랜턴 또는 손전등 (야간 이동용)<br><br>
+▪ 방수 기능이 있는 트레킹화 (비포장 이랑 대비)<br><br>
+▪ 보조배터리 (야간 촬영 시 배터리 소모 빠름)<br><br>
+▪ 충분한 물과 간식 (주변 편의시설 없음)<br><br>
+▪ 모기 기피제 (여름 산속 모기 있음)<br><br>
+▪ 카메라·스마트폰 (삼각대 권장)<br><br>
+여름 장마철에는 산속 안개와 구름 발생이 잦으니, 날씨 창이 뜨는 당일 오전에 실시간 위성사진을 확인하고 출발 여부를 결정하는 것이 좋습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260703/1_anbandegi_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-3">Night sky above Anbandegi highland in South Korea, brilliant Milky Way galaxy arching over green cabbage fields, wind turbines silhouetted against star-filled sky, one solo traveler with camera on tripod in foreground, deep dark sky with no light pollution, photorealistic astrophotography style, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">안반데기 밤하늘과 은하수, 풍력발전기 실루엣 / AI 제작 이미지</div>
+</div>
+
+<h2>08 연계 코스 — 정선·대관령·오대산 드라이브</h2>
+
+안반데기 한 곳만으로도 충분한 여행이 되지만, 강원 내륙을 드라이브하며 인근 명소를 엮으면 알찬 1박 2일 코스가 됩니다.<br><br>
+<strong>안반데기 → 정선 방면</strong>: 안반데기에서 북서 방향 국도를 따라 30~40분을 달리면 정선읍이 나옵니다. 정선 5일장(2·7·12·17·22·27일)이 서는 날이면 시장 구경과 콧등치기국수, 강원찰옥수수를 즐길 수 있습니다.<br><br>
+<strong>안반데기 → 대관령 방면</strong>: 강릉IC 방향으로 돌아오다가 대관령 양떼목장이나 하늘목장(예약제)에 들르는 것도 훌륭한 선택입니다. 맑은 날 사방으로 열리는 산악 전망이 일품입니다.<br><br>
+<strong>안반데기 → 오대산 방면</strong>: 평창 방향으로 이동해 오대산 선재길 트레킹이나 월정사 전나무숲길을 걷는 코스도 인기입니다. 1박을 진부면이나 평창 읍내에서 하고 이튿날 오대산을 들르면 됩니다.<br><br>
+당일 치기로 방문하는 경우라면 안반데기 → 정선 아우라지 레일바이크 → 귀가 코스가 무리 없는 하루 동선입니다.
+
+<h2>09 캠핑·차박 환경과 주변 숙박 안내</h2>
+
+안반데기 주차장은 야간 개방 상태로 유지되어 있어 <strong>차박(차량 숙박)</strong>이 사실상 허용되는 분위기입니다. 다만 공식 캠핑장으로 지정된 공간은 아니므로, 쓰레기 및 음식물은 반드시 되가져가야 합니다.<br><br>
+여름 야간 기온이 10℃ 초반까지 내려가는 경우도 있으므로 침낭이나 담요가 필수입니다. 모기가 있으므로 창문 틈새를 완전히 닫아두는 것을 권해드립니다.<br><br>
+정식 펜션·게스트하우스를 원하신다면 강릉 왕산면 소재지 인근이나 정선읍에 소규모 펜션들이 있습니다. 여름 성수기에는 사전 예약이 필수입니다.<br><br>
+숙박 후 새벽 4시에 일어나 10~15분 드라이브로 안반데기에 도착하는 루트로 계획하시면, 충분한 휴식을 취하면서도 일출 시간에 맞춰 도착할 수 있습니다.<br><br>
+인근 음식점은 왕산면 소재지 주변에 몇 군데 있으며, 강릉 옥수수막걸리와 감자전이 이 지역 별미입니다.
+
+<h2>10 방문 전 최종 체크리스트와 꿀팁 정리</h2>
+
+안반데기 방문 전 반드시 확인해야 할 사항들을 정리해 드립니다.<br><br>
+<strong>날씨·월령 체크</strong>: 발행 당일 기상청 앱과 스텔라리움(별자리 앱) 등으로 운량·달 위상을 동시에 확인하세요. 신월(그믐) 전후 + 맑음이 가장 이상적인 조합입니다.<br><br>
+<strong>연료 확보</strong>: 안반데기 주변 주유소 없음. 강릉 시내에서 반드시 주유 후 출발하세요.<br><br>
+<strong>출발 시간</strong>: 은하수 관측 목적이라면 자정 전후 도착, 일출 목적이라면 일출 40분 전 도착 기준으로 역산해 출발 시간을 계획하세요.<br><br>
+<strong>복장</strong>: 낮에는 반팔이라도 새벽에는 가벼운 겉옷이 반드시 필요합니다. 고원 바람 때문에 체감온도가 실제보다 낮게 느껴집니다.<br><br>
+<strong>기록 남기기</strong>: 안반데기에서는 와이파이나 휴대전화 신호가 약할 수 있으니 오프라인 지도와 사진 저장 공간을 미리 확보해 두시기 바랍니다.<br><br>
+한 번 방문하면 꼭 다시 찾게 되는 곳이 안반데기입니다. 별빛과 새벽 냉기, 초록 배추밭 위로 퍼지는 주황빛 일출은 사진으로는 전부 담기 어려운 감동이 있습니다. 올여름 강원 드라이브 계획에 안반데기를 꼭 넣어 보시길 추천드립니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260702/travel_yeongyang_starpark_night.html">영양 밤하늘보호공원 은하수·수비계곡 여름밤 — 아시아 첫 국제밤하늘보호공원</a></li>
+    <li><a href="../260702/travel_youngwol_donggang_rafting.html">영월 동강 래프팅·한반도지형·별마로천문대 여름 — 강원 여름밤 별 여행</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#안반데기</span>
+  <span class="tag">#안반데기은하수</span>
+  <span class="tag">#운유길</span>
+  <span class="tag">#강원고원드라이브</span>
+  <span class="tag">#7월별여행</span>
+  <span class="tag">#배추밭일출</span>
+  <span class="tag">#강릉여름여행</span>
+  <span class="tag">#고원차박</span>
+  <span class="tag">#국내여행</span>
+  <span class="tag">#강원도여행</span>
+</div>
+
+</body>
+</html>

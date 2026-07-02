@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== card_07 : Info (P4 layout) — local_camping_mosquito_checklist =====
+       카테고리: 생활·정보  팔레트: #388e3c / #1b5e20 / #e8f5e9 / #a5d6a7 / #c8e6c9
+       소스: h2 04 info-table — 캠핑장별 벌레 종류와 맞춤 대책(4행) -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.48"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.64"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1a10"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#388e3c"/>
+
+  <text x="80" y="270" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">캠핑 환경별 벌레 대책</text>
+  <rect x="82" y="304" width="140" height="9" fill="#388e3c"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="450" font-size="30" font-weight="600" fill="#c8e6c9">계곡·수변</text>
+    <text x="80" y="512" font-size="52" font-weight="800" fill="#ffffff">UV 포충기 + 이중 텐트</text>
+    <line x1="80" y1="566" x2="1000" y2="566" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="650" font-size="30" font-weight="600" fill="#c8e6c9">산속·낙엽 지역</text>
+    <text x="80" y="712" font-size="52" font-weight="800" fill="#ffffff">진드기 기피제 필수</text>
+    <line x1="80" y1="766" x2="1000" y2="766" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="850" font-size="30" font-weight="600" fill="#c8e6c9">해변·서해안</text>
+    <text x="80" y="912" font-size="52" font-weight="800" fill="#ffffff">낮 시간 긴 소매 착용</text>
+    <line x1="80" y1="966" x2="1000" y2="966" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="1050" font-size="30" font-weight="600" fill="#c8e6c9">고원·산 위</text>
+    <text x="80" y="1112" font-size="52" font-weight="800" fill="#ffffff">헤드랜턴 켜지 않기</text>
+  </g>
+
+  <text x="80" y="1240" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#c8e6c9">귀가 후 진드기 전신 확인 필수 · 2026년 기준</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#1b5e20"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

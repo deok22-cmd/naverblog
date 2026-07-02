@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- card_06_course · P2 · 강진 당일 코스 -->
+  <defs>
+    <linearGradient id="scrimFull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimFull)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="270" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="62" font-weight="800" fill="#ffffff">강진 당일 코스</text>
+  <rect x="82" y="304" width="140" height="9" fill="#00796b"/>
+
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="442" font-size="42" font-weight="700" fill="#ffffff">백련지 새벽 백련 감상</text>
+    <text x="80" y="488" font-size="28" font-weight="500" fill="#b2dfdb">꽃봉오리 가장 선명한 시간</text>
+    <text x="1000" y="458" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">오전 7시</text>
+    <line x1="80" y1="540" x2="1000" y2="540" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="612" font-size="42" font-weight="700" fill="#ffffff">백련사 경내·동백숲 산책</text>
+    <text x="80" y="658" font-size="28" font-weight="500" fill="#b2dfdb">천연기념물 동백나무 1,500여 그루</text>
+    <text x="1000" y="628" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">오전 8시</text>
+    <line x1="80" y1="710" x2="1000" y2="710" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="782" font-size="42" font-weight="700" fill="#ffffff">다산초당 숲길 걷기</text>
+    <text x="80" y="828" font-size="28" font-weight="500" fill="#b2dfdb">왕복 약 40분~1시간, 700m 거리</text>
+    <text x="1000" y="798" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">오전 9~10시</text>
+    <line x1="80" y1="880" x2="1000" y2="880" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="952" font-size="42" font-weight="700" fill="#ffffff">강진 읍내 점심 식사</text>
+    <text x="80" y="998" font-size="28" font-weight="500" fill="#b2dfdb">짱뚱어탕·게장백반·한우 선택</text>
+    <text x="1000" y="968" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">11시~낮12시</text>
+    <line x1="80" y1="1050" x2="1000" y2="1050" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+    <text x="80" y="1122" font-size="42" font-weight="700" fill="#ffffff">가우도 출렁다리·둘레길</text>
+    <text x="1000" y="1122" font-size="36" font-weight="800" fill="#80cbc4" text-anchor="end">오후 1~3시</text>
+  </g>
+
+  <text x="80" y="1240" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="500" fill="#b2dfdb">전체 코스는 프로필 블로그에서.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

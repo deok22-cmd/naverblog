@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== E : 하단 텍스트 · card_06_caution · travel_somaemuldo_lighthouse =====
+       카테고리: 국내여행 / 팔레트: #00796b / #004d40 / #e0f2f1
+       역할: caution — 여름 결항·노두길 파도 주의 (h2-09) -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.52" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.80"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <text x="80" y="1066" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="28" font-weight="700" fill="#80cbc4" letter-spacing="3">여름 남해안 주의</text>
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="72" font-weight="800" fill="#ffffff" letter-spacing="-2">
+    <tspan x="80" y="1160">결항·파도</tspan>
+    <tspan x="80" y="1242">당일 재확인 필수</tspan>
+  </text>
+  <text x="80" y="1296" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="500" fill="#e0f2f1">출발 2~3시간 전 운항사 확인 · 노두길 파도 주의.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

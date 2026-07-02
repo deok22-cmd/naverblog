@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== card_05 : Point2 (A layout) — local_camping_mosquito_checklist =====
+       카테고리: 생활·정보  팔레트: #388e3c / #1b5e20 / #e8f5e9 / #a5d6a7 / #c8e6c9
+       소스: h2 07 — 여름 캠핑장 선택 시 모기 적은 곳 고르는 법 -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.40" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.82"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1a10"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#388e3c"/>
+
+  <rect x="80" y="820" width="64" height="10" fill="#388e3c"/>
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="80" font-weight="800" fill="#ffffff" letter-spacing="-2">
+    <tspan x="80" y="920">모기 적은 곳</tspan>
+    <tspan x="80" y="1010">고르는 법</tspan>
+  </text>
+
+  <g id="chips">
+    <rect x="80" y="1050" width="310" height="74" rx="37" fill="#388e3c"/>
+    <text x="235" y="1098" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="700" fill="#ffffff" text-anchor="middle">능선·고지대</text>
+    <rect x="410" y="1050" width="350" height="74" rx="37" fill="#388e3c"/>
+    <text x="585" y="1098" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="700" fill="#ffffff" text-anchor="middle">고인 물 없는 곳</text>
+  </g>
+
+  <text x="80" y="1196" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e8f5e9">낙엽 쌓인 숲속보다 잔디·자갈밭 사이트.</text>
+  <text x="80" y="1248" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e8f5e9">예약 전 리뷰에서 "모기" 검색으로 확인.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#1b5e20"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

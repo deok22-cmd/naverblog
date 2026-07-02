@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1faf3; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #c8e6c9; padding: 10px 12px; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #f9fff9; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #bbb; border-radius: 8px; padding: 30px 20px; text-align: center; }
+  .ph-head { display: flex; justify-content: space-between; font-size: 0.9em; color: #555; margin-bottom: 12px; flex-wrap: wrap; gap: 6px; }
+  .ph-file { font-family: monospace; background: #e8e8e8; padding: 2px 6px; border-radius: 3px; font-size: 0.85em; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 14px; border-radius: 6px; font-size: 0.82em; text-align: left; white-space: pre-wrap; word-break: break-word; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 8px 18px; border-radius: 5px; cursor: pointer; font-size: 0.9em; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>여름 캠핑 모기·벌레 퇴치법과 빠뜨리기 쉬운 준비물, 체크리스트로 확인</h1>
+
+<div class="intro-box">
+  <strong>📌 핵심 요약</strong><br><br>
+  7~8월 여름 캠핑의 가장 큰 적 중 하나가 <strong>모기와 벌레</strong>입니다. 아무리 좋은 장소를 골라도 모기 대책이 없으면 캠핑의 즐거움이 반감됩니다.<br><br>
+  이 글에서는 <strong>캠핑장별 모기 특성</strong>부터 <strong>효과적인 퇴치 제품 조합</strong>, 그리고 많은 분들이 여름 캠핑 때 깜빡 놓치고 가는 <strong>준비물 체크리스트</strong>까지 한 번에 정리해 드립니다.<br><br>
+  계곡 캠핑과 산 캠핑은 모기의 종류와 특성이 다르고, 그에 맞는 대비법도 조금씩 달라집니다.
+</div>
+
+<h2>01 여름 캠핑장 모기의 종류와 특성</h2>
+
+여름 캠핑에서 만나는 모기는 크게 두 가지입니다. <strong>일반 집모기</strong>와 <strong>숲모기(산모기)</strong>입니다.<br><br>
+<strong>집모기</strong>는 오후 늦게부터 새벽까지 활동하며 느리고 잡기 쉽습니다. 반면 <strong>숲모기</strong>는 낮에도 활동하고 빠르며, 계곡 인근이나 낙엽 쌓인 숲 속 캠핑장에서 주로 출몰합니다.<br><br>
+계곡 캠핑장은 물이 고이는 곳이 많아 모기 번식에 유리한 환경입니다. 특히 장마 직후에는 물웅덩이가 곳곳에 생겨 모기가 폭발적으로 늘어납니다.<br><br>
+산 위나 해발이 높은 글램핑·캠핑장은 바람이 불어 모기가 상대적으로 적은 편이지만, 각다귀(큰 모기처럼 생긴 벌레)나 하루살이 등 다른 벌레가 등장할 수 있습니다.<br><br>
+해변·서해안 캠핑장은 갯벌 파리(왕눈이·등에)가 낮 동안 특히 성가십니다. 모기보다 더 끈질기게 달려드는 경우도 있으니 별도 대비가 필요합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260703/5_camping_mosquito_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-1">A cozy summer camping setup in a Korean forest campsite, two tents with a canopy, a family enjoying outdoor dinner at a table, mosquito coils and electric mosquito repellent devices visible, lush green trees surrounding, evening golden light, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">여름 캠핑장의 모기 퇴치 설비 / AI 제작 이미지</div>
+</div>
+
+<h2>02 가장 효과적인 모기 퇴치 제품 조합</h2>
+
+캠핑 전문가들 사이에서 가장 효과가 검증된 퇴치 방법은 단일 제품에 의존하지 않고 <strong>여러 방어선을 중첩</strong>하는 것입니다.<br><br>
+<strong>1차 방어: 모기 기피제(바르는 제품)</strong><br><br>
+피부에 직접 바르는 기피제(DEET 또는 이카리딘 성분)가 가장 확실한 1차 방어선입니다. DEET 20~30% 농도 제품이 6~8시간 지속 효과를 내며, 어린이용은 이카리딘 성분 제품(DEET-free)을 따로 구매하세요.<br><br>
+<strong>2차 방어: 모기향 또는 훈증기</strong><br><br>
+사이트 주변에 모기향을 피우면 넓은 범위의 모기를 쫓을 수 있습니다. 전기를 사용할 수 있는 캠핑장이라면 액상 모기향 훈증기(버너형)가 연기 없이 더 쾌적하게 사용할 수 있습니다. USB 충전식 모기향도 보조배터리와 연결해 사용할 수 있어 편리합니다.<br><br>
+<strong>3차 방어: 전기 모기채</strong><br><br>
+이미 들어온 모기를 잡는 데는 전기 모기채가 효과적입니다. 텐트 내부에 들어온 모기를 자기 전에 잡아두면 숙면에 도움이 됩니다.<br><br>
+<strong>4차 방어: 이중 텐트 또는 모기장</strong><br><br>
+이너텐트가 있는 이중 구조 텐트는 메쉬(망사) 창으로 환기하면서도 모기 진입을 차단할 수 있습니다. 별도 모기장을 타프 아래에 설치하는 방법도 효과적입니다.
+
+<h2>03 모기 기피제 올바른 사용법과 주의사항</h2>
+
+모기 기피제는 어디에, 어떻게 바르느냐에 따라 효과가 크게 달라집니다.<br><br>
+<strong>도포 부위</strong>: 모기가 잘 무는 발목·정강이·팔뚝·목덜미에 집중적으로 바릅니다. 특히 발목과 발등은 모기가 접근하기 쉬운 부위이므로 놓치기 쉽습니다.<br><br>
+<strong>재도포 시점</strong>: DEET 20% 제품은 약 6시간마다, 이카리딘 제품은 4~6시간마다 재도포합니다. 땀이 많이 날 경우 더 자주 발라야 합니다.<br><br>
+<strong>얼굴 도포 방법</strong>: 기피제를 손에 덜어 얼굴 전체에 바르되, 눈·입·코 주변은 피합니다. 스프레이 타입은 얼굴에 직접 분사하지 않고 손에 뿌린 뒤 바르세요.<br><br>
+<strong>어린이 사용 주의사항</strong>: 생후 6개월 미만 영아에게는 DEET 기피제를 사용하지 않습니다. 6개월 이상의 영유아에게는 이카리딘 10% 이하 제품 또는 천연 성분 제품을 사용하고, 손에 닿지 않는 부위에만 바릅니다.<br><br>
+귀가 후에는 기피제를 물과 비누로 충분히 씻어냅니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260703/5_camping_mosquito_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-2">Close-up of various mosquito repellent products laid out on a wooden camping table, including spray bottles, electric repellent device, mosquito coils, patches, and a small electric swatter, camping gear in background, summer outdoor setting, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">여름 캠핑 모기 퇴치 제품 구성 / AI 제작 이미지</div>
+</div>
+
+<h2>04 캠핑장별 벌레 종류와 맞춤 대책</h2>
+
+<table class="info-table">
+  <tr>
+    <th>캠핑 환경</th><th>주요 벌레</th><th>추가 대책</th>
+  </tr>
+  <tr>
+    <td style="background:#f1faf3;">계곡·수변</td>
+    <td style="background:#f1faf3;">숲모기·각다귀·하루살이</td>
+    <td style="background:#f1faf3;">UV 포충기 병행, 이중 텐트 필수</td>
+  </tr>
+  <tr>
+    <td>산속·낙엽 지역</td>
+    <td>숲모기·진드기·모기</td>
+    <td>긴 옷 + 진드기 기피제 필수, 귀가 후 몸 전체 확인</td>
+  </tr>
+  <tr>
+    <td style="background:#f1faf3;">해변·서해안</td>
+    <td style="background:#f1faf3;">갯벌 파리·등에</td>
+    <td style="background:#f1faf3;">낮 시간대 긴 소매, 그늘 타프 설치</td>
+  </tr>
+  <tr>
+    <td>고원·산 위</td>
+    <td>각다귀·날벌레</td>
+    <td>바람 이용(텐트 창 방향 조절), 헤드랜턴 켜지 않기</td>
+  </tr>
+</table>
+
+진드기(참진드기) 대책은 특히 중요합니다. 산 속 풀밭에서 활동 후 반드시 목·머리카락 뒤·겨드랑이·무릎 뒤편을 살피고, 귀가 후 샤워하면서 전신 확인하세요.<br><br>
+DEET 성분 기피제는 진드기에도 어느 정도 효과가 있으므로, 산 속 캠핑 때는 기피제를 바지 밑단과 양말 위까지 꼼꼼히 발라주세요.
+
+<h2>05 여름 캠핑 빠뜨리기 쉬운 준비물 — 모기 대비 중심</h2>
+
+캠핑 경험자들이 자주 말하는 "이것만큼은 꼭 챙겨라"는 모기 관련 아이템들을 정리했습니다.<br><br>
+<strong>많이 빠뜨리는 TOP 7</strong><br><br>
+① <strong>모기 패치</strong> — 아이가 있을 때 특히 유용합니다. 패치 하나로 수 시간 넓은 구역의 모기를 쫓아주므로 바르는 기피제를 싫어하는 아이에게 대안이 됩니다.<br><br>
+② <strong>전기 모기채</strong> — 텐트 안에서 자기 전 한 번만 써도 숙면에 큰 도움이 됩니다.<br><br>
+③ <strong>벌레 물린 데 바르는 약(버물리·알레르기 크림)</strong> — 이미 물렸을 때 빠르게 가려움을 잡아줍니다.<br><br>
+④ <strong>텐트 창 보수 테이프</strong> — 메쉬 창에 작은 구멍이 생기면 모기가 들어옵니다.<br><br>
+⑤ <strong>긴 소매·긴 바지 여분 세트</strong> — 저녁에 기온이 내려갈 때 모기 방어와 체온 유지를 동시에 해결합니다.<br><br>
+⑥ <strong>USB 타입 모기향 훈증기</strong> — 보조배터리로 사용 가능해 전기 없는 캠핑장에서도 유용합니다.<br><br>
+⑦ <strong>핸드 선풍기</strong> — 야외 식사 때 테이블 위에 놓아두면 모기가 접근하기 어렵게 만들어 줍니다.
+
+<h2>06 여름 캠핑 전체 준비물 체크리스트</h2>
+
+아래 체크리스트를 인쇄하거나 스크린샷으로 저장해 활용하세요.<br><br>
+
+<strong>[모기·벌레 대비]</strong><br><br>
+□ 모기 기피제 (바르는 타입, 스프레이 타입 각 1개)<br><br>
+□ 어린이용 기피제 (이카리딘 성분, 아이 동행 시)<br><br>
+□ 모기향 또는 USB 훈증기<br><br>
+□ 전기 모기채<br><br>
+□ 모기 패치<br><br>
+□ 진드기 기피제 (산속 캠핑 시 추가)<br><br>
+□ 벌레 물린 데 바르는 약<br><br>
+□ 모기장 또는 이중 구조 텐트<br><br>
+
+<strong>[캠핑 기본 준비물]</strong><br><br>
+□ 텐트 + 폴대 + 팩 + 망치<br><br>
+□ 타프(그늘막)<br><br>
+□ 침낭·매트<br><br>
+□ 캠핑 의자·테이블<br><br>
+□ 버너·가스 카트리지<br><br>
+□ 코펠·식기<br><br>
+□ 아이스박스 + 아이스팩<br><br>
+□ 물(최소 1인 2L 이상)<br><br>
+□ 긴 소매·긴 바지·얇은 겉옷<br><br>
+□ 헤드랜턴·배터리<br><br>
+□ 보조배터리<br><br>
+□ 쓰레기봉투<br><br>
+□ 개인 세면도구·상비약<br><br>
+□ 자외선 차단제
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260703/5_camping_mosquito_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-3">Organized camping checklist items neatly laid out on a table before a trip, including insect repellent sprays, mosquito coil, camping lantern, sleeping bag, folded clothes, food containers, ice pack, first aid kit, portable charger, all in warm natural light, flat lay photography, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">여름 캠핑 출발 전 준비물 체크리스트 / AI 제작 이미지</div>
+</div>
+
+<h2>07 여름 캠핑장 선택 시 모기 적은 곳 고르는 법</h2>
+
+캠핑장을 예약하기 전에 모기가 덜한 환경인지 체크하는 요령을 알아두면 좋습니다.<br><br>
+<strong>바람이 통하는 능선 또는 해발이 높은 곳</strong>: 모기는 바람에 약합니다. 계곡 바닥보다 능선 위, 평지보다 산 중턱이 모기가 적습니다.<br><br>
+<strong>물웅덩이·고인 물이 없는 곳</strong>: 캠핑장 근처에 개울이 흘러도 물이 빨리 빠지는 계곡물은 괜찮지만, 논·웅덩이·습지 옆 캠핑장은 모기 밀도가 높습니다.<br><br>
+<strong>넓고 탁 트인 사이트</strong>: 낙엽이 쌓인 좁은 숲속 사이트보다 잔디밭이나 자갈밭 사이트가 벌레가 적은 편입니다.<br><br>
+<strong>리뷰 확인</strong>: 캠핑 예약 사이트(캠핏·네이버 스마트플레이스 등)의 이용 후기에서 "모기"를 검색해 보면 해당 캠핑장의 벌레 정도를 가늠할 수 있습니다.
+
+<h2>08 잠 못 자게 하는 모기, 텐트 안 퇴치 전략</h2>
+
+밤에 텐트 안으로 모기 한 마리가 들어오면 수면을 완전히 망칠 수 있습니다. 다음 전략을 쓰면 숙면 확률을 높일 수 있습니다.<br><br>
+<strong>텐트 진입 전 점검</strong>: 메쉬 창을 전부 닫고 지퍼를 끝까지 올린 상태인지 확인합니다. 특히 지퍼 교차 부분에 틈이 생기지 않도록 주의합니다.<br><br>
+<strong>잠들기 전 5분 소탕</strong>: 전기 모기채나 손바닥으로 텐트 안을 한 번 훑어 모기를 잡아둡니다. 모기가 앉아 있는 텐트 천장·측면을 손전등으로 비추면 쉽게 발견됩니다.<br><br>
+<strong>전기 모기향 상시 가동</strong>: 전기가 있는 캠핑장이라면 텐트 내부에 액상 훈증기를 켜두면 진입하는 모기를 잡아줍니다. 단, 환기에 유의하고 장시간 밀폐된 텐트 안에서 사용할 때는 창문을 약간 열어 두세요.<br><br>
+<strong>몸 전체 덮기</strong>: 반팔 반바지보다 얇은 긴 옷을 입고 자면 모기에게 노출되는 피부 면적을 줄일 수 있습니다.
+
+<h2>09 어린이와 함께하는 여름 캠핑, 벌레 대책 특이사항</h2>
+
+어린이는 어른보다 피부가 민감하고, 모기에 물리면 어른보다 더 크게 붓는 경우가 많습니다. 특별히 주의해야 할 사항들을 정리합니다.<br><br>
+▪ <strong>기피제 연령 제한 확인</strong>: DEET 기피제는 생후 6개월 미만 사용 금지, 어린이에게는 농도 30% 이하 제품 사용. 이카리딘 제품은 영아에게도 비교적 안전합니다.<br><br>
+▪ <strong>피부 테스트 선행</strong>: 처음 사용하는 기피제는 팔꿈치 안쪽 작은 부위에 바르고 30분 기다린 뒤 이상이 없으면 전신에 바릅니다.<br><br>
+▪ <strong>긁지 않도록 주의</strong>: 아이가 모기에 물렸을 때 긁으면 2차 감염 위험이 있습니다. 가려움증을 빠르게 완화하는 쿨링 패치나 히드로코르티손 1% 크림을 바르세요.<br><br>
+▪ <strong>밝은 색 옷 착용</strong>: 어두운 색 옷은 모기를 유인한다는 연구가 있습니다. 아이에게는 밝은 색 옷을 입히는 것이 좋습니다.
+
+<h2>10 방문 전 최종 모기·벌레 대비 점검</h2>
+
+여름 캠핑 출발 전 마지막으로 확인해야 할 모기·벌레 대비 사항을 정리합니다.<br><br>
+▪ 모기 기피제 (유효기간 확인, 충분한 양 준비)<br><br>
+▪ 모기향·USB 훈증기 + 보조배터리<br><br>
+▪ 전기 모기채 (배터리 충전 상태 확인)<br><br>
+▪ 이중 텐트 또는 모기장<br><br>
+▪ 벌레 물린 데 바르는 약 (소아·성인 각각)<br><br>
+▪ 긴 소매·긴 바지 여분 (저녁 착용용)<br><br>
+▪ 캠핑장 리뷰에서 모기 정도 사전 확인<br><br>
+철저한 준비만 있으면 여름 캠핑에서 모기와의 전쟁에서 이길 수 있습니다. 올여름 가족과 함께하는 캠핑 여행, 미리 준비해서 한 번도 물리지 않고 돌아오시길 바랍니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260702/travel_hamyang_yongchu_valley.html">함양 용추계곡·상림숲 여름 트레킹 — 계곡 캠핑 연계 여행</a></li>
+    <li><a href="../260702/local_dehumidify_mold_rainy.html">장마철 제습과 곰팡이 없애는 법 — 여름 생활 습기 대처</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#여름캠핑모기</span>
+  <span class="tag">#캠핑모기퇴치</span>
+  <span class="tag">#캠핑준비물</span>
+  <span class="tag">#모기기피제</span>
+  <span class="tag">#여름캠핑준비</span>
+  <span class="tag">#벌레퇴치</span>
+  <span class="tag">#캠핑체크리스트</span>
+  <span class="tag">#여름캠핑팁</span>
+  <span class="tag">#캠핑</span>
+  <span class="tag">#생활정보</span>
+</div>
+
+</body>
+</html>
