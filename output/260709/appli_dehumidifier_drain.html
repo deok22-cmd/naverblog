@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #f57f17; padding-bottom: 12px; color: #e65100; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #fff8e1; padding: 12px 15px; border-left: 6px solid #f57f17; margin-top: 50px; color: #e65100; }
+  .intro-box { background: #fffde7; border: 2px solid #ffe082; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .step-box { border-left: 4px solid #f57f17; padding: 15px 20px; background: #fafafa; border: 1px solid #e0e0e0; border-left-width: 4px; margin-bottom: 15px; border-radius: 0 8px 8px 0; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #ffe082; border-radius: 10px; padding: 24px 20px; background: #fffde7; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; color: #f57f17; }
+  .ph-file { font-size: .8em; color: #888; font-family: monospace; }
+  .prompt-text { background: #fff; border: 1px solid #ccc; border-radius: 6px; padding: 12px; font-size: .82em; color: #444; white-space: pre-wrap; line-height: 1.6; margin: 0 0 10px 0; }
+  .copy-btn { background: #f57f17; color: #fff; border: none; padding: 7px 16px; border-radius: 5px; cursor: pointer; font-size: .85em; }
+  .img-caption { font-size: .88em; color: #555; margin-top: 10px; font-style: italic; text-align: center; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: .85em; color: #666; border: 1px solid #ddd; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #f57f17; padding: 14px 18px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#f57f17"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>제습기 연속배수 세팅으로 물통 안 비우는 법과 곰팡이 냄새 제거하기</h1>
+
+<div class="intro-box">
+<strong>📍 핵심 요약</strong><br><br>
+장마철 제습기를 24시간 가동하면 물통이 2~3시간마다 가득 찹니다. 연속배수 기능을 설정하면 물통을 비우지 않아도 제습기가 멈추지 않습니다. 또한 제습기에서 나는 곰팡이 냄새의 원인과 없애는 방법도 함께 소개합니다.
+</div>
+
+<h2>01. 장마철 제습기 물통, 왜 이렇게 빨리 차나</h2>
+
+7월 장마철에 제습기를 가동하면 물통이 놀랄 만큼 빠르게 채워집니다. 장마철 실내 상대습도가 80~90%까지 치솟는 날에는 20리터짜리 물통도 몇 시간이면 가득 찹니다. 물통이 가득 차면 제습기가 자동으로 멈추도록 설계돼 있어, 자는 동안이나 외출 중에 제습기가 꺼져버리는 경험을 하신 분들이 많습니다.<br><br>
+이 문제를 해결하는 방법이 바로 <strong>연속배수(連續排水) 기능</strong>입니다. 제습기 뒷면이나 측면에 있는 배수구에 호스를 연결해 제습된 물을 욕실 하수구나 세면대로 바로 흘려보내는 방식입니다. 이렇게 하면 물통을 비울 필요 없이 제습기가 계속 가동됩니다.<br><br>
+연속배수 기능은 대부분의 가정용 제습기에 기본으로 탑재돼 있지만, 설정 방법을 모르거나 사용 설명서를 잃어버린 분들이 많습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260709/6_dehumidifier_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-1">Home dehumidifier showing continuous drain hose connection at back panel, gray flexible drain hose attached to drain port, leading toward bathroom floor drain, rainy summer day visible through window, Korean residential interior. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">제습기 연속배수 호스 연결 방법 / AI 제작 이미지</div>
+</div>
+
+<h2>02. 연속배수 설정 방법 — 기종별 공통 절차</h2>
+
+연속배수 설정은 기종마다 다소 차이가 있지만, 일반적인 방법은 다음과 같습니다.<br><br>
+<div class="step-box">
+<strong>Step 1: 물통 제거</strong><br>
+제습기 전원을 끄고 물통을 꺼냅니다. 물통이 있는 자리 안쪽 또는 제습기 뒷면에 배수구가 있습니다.
+</div>
+<div class="step-box">
+<strong>Step 2: 배수 호스 준비</strong><br>
+제습기 구매 시 동봉된 배수 호스를 꺼냅니다. 없으면 제조사 호환 호스를 별도 구매하거나, 배수구 지름(일반적으로 16~18mm)에 맞는 호스를 구매합니다.
+</div>
+<div class="step-box">
+<strong>Step 3: 호스 연결</strong><br>
+배수 호스의 한쪽 끝을 제습기 배수구에 끼워 넣습니다. 돌려서 잠그는 방식(나사형)이거나 끼워 넣는 방식 중 하나입니다. 연결 후 살짝 당겨봐서 빠지지 않으면 정상입니다.
+</div>
+<div class="step-box">
+<strong>Step 4: 배수 경로 설정</strong><br>
+호스의 반대쪽 끝을 욕실 바닥 하수구 또는 세면대 배수구로 연결합니다. 호스가 꺾이거나 올라가는 구간이 없도록 경로를 잡아야 자연스럽게 물이 흐릅니다.
+</div>
+<div class="step-box">
+<strong>Step 5: 물통 자리에 물통 뚜껑이나 캡 막기</strong><br>
+일부 제습기는 연속배수 사용 시 물통 자리를 열어두거나 특별한 캡을 닫아야 합니다. 사용 설명서나 제조사 앱에서 모델명 검색 후 확인하세요.
+</div>
+
+<h2>03. 연속배수 시 물이 바닥으로 새는 이유와 해결법</h2>
+
+연속배수를 설정했는데도 물이 제습기 아래로 새어 나오는 경우가 있습니다. 원인과 해결 방법을 알아보겠습니다.<br><br>
+<strong>원인 1: 호스 경로에 역배수 구간</strong><br>
+호스가 어느 구간에서 올라갔다 내려가는 'U자 형태'가 되면 물이 역류합니다. 호스 전체 경로가 제습기 배수구에서 하수구로 내리막을 이루도록 설치해야 합니다. 호스 고정 클립을 사용해 호스가 처지지 않도록 고정하는 것도 방법입니다.<br><br>
+<strong>원인 2: 호스 연결 불량</strong><br>
+배수구와 호스 사이가 헐겁게 연결돼 있으면 물이 새어나옵니다. 방수 테이프로 연결 부위를 한 번 감아주거나, 호스 직경이 정확히 맞는 것을 구매해야 합니다.<br><br>
+<strong>원인 3: 호스 막힘</strong><br>
+장기간 사용하면 호스 내부에 물때나 이물질이 낄 수 있습니다. 주기적으로 호스를 분리해 세척해 주세요.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260709/6_dehumidifier_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-2">Dehumidifier continuous drain hose properly connected and draining into bathroom floor drain, clean transparent hose with water flowing, Korean bathroom setting, tile floor, dehumidifier running, no water spill around base. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">제습기 연속배수 정상 작동 상태 / AI 제작 이미지</div>
+</div>
+
+<h2>04. 제습기 곰팡이 냄새 — 원인은 어디서 오나</h2>
+
+제습기를 켤 때 퀴퀴한 곰팡이 냄새가 나는 분들이 많습니다. 이 냄새의 주요 원인 세 가지를 설명합니다.<br><br>
+<strong>원인 1: 필터의 곰팡이</strong><br>
+제습기는 공기 중 수분을 빨아들이는 과정에서 먼지·이물질도 함께 흡수합니다. 이 이물질이 필터에 쌓이고 습기와 함께 곰팡이가 번식하면 불쾌한 냄새가 납니다. 가장 흔한 원인입니다.<br><br>
+<strong>원인 2: 물통 내부 슬라임·물때</strong><br>
+물통에 고인 물이 오래 방치되면 슬라임(점액성 물질)이 생기고 여기서 곰팡이와 세균이 번식합니다. 연속배수를 사용하더라도 물통 내부에 잔여 수분이 남아 있으면 냄새가 생깁니다.<br><br>
+<strong>원인 3: 열교환기(증발기) 오염</strong><br>
+제습기 내부의 열교환기는 공기 중 수분을 응결시키는 핵심 부품입니다. 이 부분에 먼지와 수분이 함께 쌓이면 세균과 곰팡이가 번식해 냄새의 근원이 됩니다.
+
+<h2>05. 곰팡이 냄새 없애는 법 — 단계별 청소</h2>
+
+제습기 곰팡이 냄새를 없애는 청소 방법을 소개합니다.<br><br>
+<strong>필터 청소 (월 1회 이상)</strong>:<br>
+필터를 꺼내 미지근한 물로 헹구거나 부드러운 솔로 먼지를 털어냅니다. 심한 경우 식초물(물: 식초 = 10:1 비율)에 10~20분 담갔다가 헹구면 곰팡이균을 억제하는 데 효과적입니다. 완전히 건조한 후 재장착해야 합니다. 젖은 상태로 끼우면 오히려 역효과가 납니다.<br><br>
+<strong>물통 청소 (주 1회 이상)</strong>:<br>
+물통을 꺼내 남은 물을 비우고 세제로 깨끗이 씻습니다. 구석까지 닦을 수 있는 병솔이나 스펀지를 활용하세요. 세척 후 완전 건조시킵니다. 물통 청소용으로 락스를 희석한 물(락스: 물 = 1:100)을 사용하면 더 효과적이지만, 이후 물로 충분히 헹궈야 합니다.<br><br>
+<strong>냄새 중화 운전</strong>:<br>
+일부 제습기는 '세정 운전' 또는 '건조 운전' 모드가 있습니다. 없으면 제습기를 빈 방에서 창문을 열고 2~3시간 운전하면 내부 잔여 수분이 마르면서 냄새가 줄어듭니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260709/6_dehumidifier_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-3">Person cleaning dehumidifier air filter, removing dusty filter panel from dehumidifier unit, cleaning with soft brush under running water in sink, Korean home setting, before and after comparison of dirty and clean filter. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">제습기 필터 청소 과정 / AI 제작 이미지</div>
+</div>
+
+<h2>06. 제습기 적정 습도 설정과 전기 절약법</h2>
+
+제습기를 올바르게 사용하면 전기 요금도 절약할 수 있습니다.<br><br>
+<strong>적정 실내 습도는 50~60%</strong>입니다. 습도 50% 미만으로 너무 건조하면 피부 건조·호흡기 불편을 유발할 수 있습니다. 제습기 목표 습도를 55% 전후로 설정하고, 도달하면 자동 꺼짐이 되도록 설정하면 불필요한 운전을 줄일 수 있습니다.<br><br>
+<strong>문을 닫고 운전</strong>: 제습기를 운전할 때 창문과 문을 닫으면 외부 습기 유입을 줄여 제습 효율이 크게 올라갑니다. 환기는 제습기를 잠시 끄고 짧게 하는 것이 효율적입니다.<br><br>
+<div class="tip-box">💡 <strong>전기 절약 팁</strong>: 제습기는 에어컨보다 전력 소모가 적습니다. 하지만 24시간 내내 돌리면 월 전기요금이 수만 원 오를 수 있습니다. 습도 센서 자동 모드를 사용하면 목표 습도 도달 시 자동 정지→재가동을 반복해 전기를 아낄 수 있습니다.</div>
+
+<h2>07. 제습기 보관 전 관리 — 장마 끝나면 어떻게 하나</h2>
+
+장마가 끝나고 제습기를 보관할 때도 올바른 절차가 필요합니다. 그냥 창고에 넣어두면 이듬해 꺼낼 때 냄새가 더 심해질 수 있습니다.<br><br>
+① 마지막 사용 후 물통을 완전히 비우고 세척해 건조시킵니다.<br>
+② 필터를 청소하고 완전히 건조시킨 후 재장착합니다.<br>
+③ 제습기 전원을 켜고 30분~1시간 내부 건조 운전을 합니다.<br>
+④ 전원을 끈 후 충분히 식힌 뒤 커버나 비닐봉지로 먼지가 들어가지 않게 씌워 보관합니다.<br>
+⑤ 직사광선이 들지 않는 서늘하고 건조한 장소에 세워서 보관합니다. (눕혀 보관 시 냉매액이 흘러 고장 원인이 될 수 있습니다.)
+
+<h2>08. 제습기 추천 사용 꿀팁 모음</h2>
+
+제습기를 더 효과적으로 사용하기 위한 팁을 모았습니다.<br><br>
+① <strong>제습기 위치</strong>: 공기 흐름이 좋은 방 중앙 또는 습기가 많은 구석(화장실 근처, 베란다 입구)에 두면 효율이 좋습니다. 벽에서 30cm 이상 띄워 공기 순환이 되게 하세요.<br><br>
+② <strong>빨래 건조와 함께</strong>: 실내에서 빨래를 말릴 때 제습기와 함께 운전하면 빨래 건조 속도가 빨라지고 빨래 특유의 퀴퀴한 냄새도 줄어듭니다.<br><br>
+③ <strong>여름 이불·의류 보관</strong>: 옷장이나 이불장 앞에 제습기를 두고 주기적으로 작동시키면 의류 곰팡이와 눅눅함을 방지할 수 있습니다.<br><br>
+④ <strong>연속배수 호스 길이</strong>: 연속배수 호스는 너무 길면 물이 잘 흐르지 않습니다. 제습기에서 하수구까지 최대한 짧고 직선으로 연결하는 것이 이상적입니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260708/appli_aircon_mold_cleaning.html">에어컨 곰팡이 셀프청소 순서와 냄새 없애는 법</a></li>
+    <li><a href="../260708/cert_registry_internet.html">등기부등본 인터넷 발급 5분 셀프, 열람과 발급 차이와 수수료</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#제습기연속배수</span>
+  <span class="tag">#제습기설정</span>
+  <span class="tag">#제습기곰팡이냄새</span>
+  <span class="tag">#제습기청소</span>
+  <span class="tag">#장마철제습</span>
+  <span class="tag">#제습기관리</span>
+  <span class="tag">#물통안비우기</span>
+  <span class="tag">#여름가전관리</span>
+  <span class="tag">#제습기필터청소</span>
+  <span class="tag">#실내습도관리</span>
+</div>
+
+</body>
+</html>

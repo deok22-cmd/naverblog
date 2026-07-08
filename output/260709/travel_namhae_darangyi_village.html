@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f9fdf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px 12px; font-size: .9em; }
+  .info-table td { border: 1px solid #ddd; padding: 10px 12px; font-size: .9em; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #b2dfdb; border-radius: 10px; padding: 24px 20px; background: #f0fffe; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; color: #00796b; }
+  .ph-file { font-size: .8em; color: #888; font-family: monospace; }
+  .prompt-text { background: #fff; border: 1px solid #ccc; border-radius: 6px; padding: 12px; font-size: .82em; color: #444; white-space: pre-wrap; line-height: 1.6; margin: 0 0 10px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 7px 16px; border-radius: 5px; cursor: pointer; font-size: .85em; }
+  .img-caption { font-size: .88em; color: #555; margin-top: 10px; font-style: italic; text-align: center; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: .85em; color: #666; border: 1px solid #ddd; }
+  .tip-box { background: #e8f5e9; border-left: 4px solid #388e3c; padding: 14px 18px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>남해 가천다랭이마을 해안 드라이브와 독일마을 여름 코스</h1>
+
+<div class="intro-box">
+<strong>📍 핵심 요약</strong><br><br>
+남해 가천다랭이마을은 설흘산 자락의 108계단 논이 바다로 이어지는 절경으로 유명한 명승지입니다. 남해 독일마을과 함께 묶으면 이국적인 유럽 정취와 한국의 전통 농촌 경관을 하루에 모두 만날 수 있습니다. 여름 성수기에도 남해군 특유의 여유로운 분위기가 유지되어 피서지로도 손색이 없습니다.
+</div>
+
+<h2>01. 가천다랭이마을, 왜 여름에 가야 할까</h2>
+
+남해 가천다랭이마을은 국가 명승 제15호로 지정된 곳입니다. 설흘산(481m)에서 바다로 급격하게 떨어지는 경사면에 108개 계단 논이 펼쳐지는 풍경은 남한에서도 손꼽히는 독특한 농촌 경관입니다.<br><br>
+여름에 다랭이마을을 찾는 이유는 무엇보다 <strong>초록빛 벼가 가득한 계단 논</strong> 때문입니다. 봄에는 유채꽃, 가을에는 황금 벼이삭으로 각각 다른 매력을 보여주지만, 7월의 초록 논밭과 남해 쪽빛 바다가 만드는 색의 대비는 여름에만 볼 수 있는 특별한 풍경입니다.<br><br>
+마을 자체가 경사로 인해 성수기에도 방문객이 넓게 퍼지는 구조라 붐비지 않고 여유롭게 사진을 찍고 산책을 즐길 수 있습니다. 설흘산 등반과 함께 연계하면 반나절에서 하루 코스가 완성됩니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260709/2_darangyi_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-1">Gacheon Darangyi Village in Namhae, South Korea, summer. Terraced rice paddies in 108 steps cascading down steep hillside to the blue sea, bright green rice fields in July, traditional Korean village houses among terraces, turquoise South Sea in background. Photorealistic, ultra high detail, wide angle, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">가천다랭이마을 108계단 논과 남해 바다 / AI 제작 이미지</div>
+</div>
+
+<h2>02. 다랭이마을 관람 포인트와 베스트 사진 명당</h2>
+
+다랭이마을에서 가장 많이 검색되는 질문은 <strong>"어디서 찍어야 예쁘게 나오나"</strong>입니다. 결론부터 말씀드리면, 마을 상단에 위치한 <strong>설흘산 전망대</strong>로 올라가는 것이 정답입니다. 전망대에서 내려다보면 108계단 논 전체와 쪽빛 남해 바다가 한 프레임에 들어오는 압도적인 풍경을 담을 수 있습니다.<br><br>
+마을 내부를 걸어 다니며 논 바로 옆에서 찍는 근접 사진도 매력적입니다. 굽이굽이 좁은 골목길을 따라 걷다 보면 할머니들이 텃밭을 가꾸는 소박한 농촌 풍경과 마주치기도 합니다.<br><br>
+<div class="tip-box">💡 <strong>사진 팁</strong>: 오전 10시 이전이나 오후 4시 이후 방문 시 햇살 각도가 낮아 계단 논의 입체감이 훨씬 살아납니다. 정오 무렵은 역광과 강한 직사광선으로 사진이 평면적으로 나올 수 있으니 참고하세요.</div>
+
+<h2>03. 다랭이마을 미역바위와 암수바위</h2>
+
+다랭이마을에는 논과 바다 외에도 독특한 볼거리가 있습니다. 마을 하단 해안가에는 <strong>미역바위</strong>가 있어, 마을 주민들이 오래전부터 바위에 붙은 미역을 채취해 온 생활 문화를 엿볼 수 있습니다. 바위 위에서 바다로 이어지는 지형 자체도 사진 명소입니다.<br><br>
+마을 초입에는 <strong>암수바위</strong>가 있습니다. 남해안 어촌마을에 전통적으로 내려오는 마을 신앙의 상징으로, 풍어와 풍작을 기원하는 돌탑 옆에 자리 잡은 이 바위는 단순한 관광 자원을 넘어 마을의 역사와 문화를 이야기해 주는 공간입니다.
+
+<h2>04. 남해 독일마을 — 이국적 정취와 맥주</h2>
+
+다랭이마을에서 차로 약 20분 거리에는 <strong>남해 독일마을</strong>이 있습니다. 1960~70년대 서독으로 파견된 광부·간호사 출신 교포들이 노년에 귀국해 정착한 마을로, 남해군이 지원해 독일풍 건축물과 정원을 조성했습니다. 독일식 2층 주택들이 즐비한 마을 풍경은 한국 어디서도 보기 힘든 이국적 분위기를 자아냅니다.<br><br>
+독일마을의 여름 명물은 단연 <strong>맥주와 소시지</strong>입니다. 마을 내 독일식 레스토랑과 브루어리에서는 수제 맥주와 독일 요리를 즐길 수 있습니다. 가격은 1만 5천~2만 5천 원대면 음식 한 끼를 해결할 수 있습니다. 바이에른 축제 분위기의 야외 테라스에서 마시는 생맥주 한 잔은 여름 드라이브의 최고 마무리가 됩니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260709/2_darangyi_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-2">German Village in Namhae, South Korea, summer. European-style two-story houses with red and white facades, window flower boxes with colorful blooms, paved village street, South Sea visible in background, outdoor terrace dining area. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">남해 독일마을 이국적 풍경 / AI 제작 이미지</div>
+</div>
+
+<h2>05. 독일마을 인근 물건방조어부림과 바다</h2>
+
+독일마을 바로 옆에는 천연기념물 제150호로 지정된 <strong>물건방조어부림</strong>이 있습니다. 마을을 바람과 파도로부터 보호하기 위해 200여 년 전 조성된 울창한 방풍림으로, 해안선을 따라 약 750m 이어지는 초록 숲이 바다와 극적인 대비를 이룹니다.<br><br>
+숲 안으로 들어서면 느티나무·팽나무·후박나무 등 수백 년 된 고목들이 하늘을 덮어 한여름 더위를 가려줍니다. 이 그늘 속을 걸으면서 파도 소리를 들으면 자연의 청량감이 온몸을 감쌉니다. 숲 끝에서 내다보이는 남해 쪽빛 바다와 독일마을의 조화가 또 다른 인생샷 포인트입니다.
+
+<h2>06. 남해 드라이브 코스 — 19번 국도와 해안선</h2>
+
+남해는 드라이브 자체만으로도 충분한 여행입니다. <strong>19번 국도를 따라 남해 서부 해안선을 달리는 드라이브</strong>는 쪽빛 바다와 초록 산이 번갈아 나타나는 절경의 연속입니다.<br><br>
+추천 드라이브 루트: 남해대교 → 독일마을 → 물건방조어부림 → 가천다랭이마을 → 상주은모래비치 방향.<br><br>
+전체 구간이 약 30km 내외이며 멈추지 않으면 1시간이면 주파하지만, 곳곳에 전망 포인트와 작은 카페들이 있어 여유롭게 즐기면 반나절도 부족합니다. 특히 다랭이마을 직전 굽이진 해안도로에서 보이는 바다 풍경은 서두르지 말고 차를 세워 감상하시기를 권합니다.
+
+<h2>07. 남해 여름 맛집과 먹거리</h2>
+
+남해는 해산물 천국입니다. 여름에 특히 맛있는 음식 몇 가지를 정리했습니다.<br><br>
+<strong>멸치 요리</strong>: 남해는 국내 최대 죽방렴 멸치 산지입니다. 죽방렴(대나무 발 어업)으로 잡은 멸치는 스트레스를 덜 받아 살이 통통하고 특별히 고소합니다. 멸치쌈밥, 멸치회, 멸치조림 등 다양한 요리로 즐길 수 있으며 남해 시내와 독일마을 인근 식당에서 맛볼 수 있습니다.<br><br>
+<strong>마늘·시금치</strong>: 남해 마늘은 전국적으로 유명합니다. 마늘을 넣은 닭백숙이나 삼겹살 구이, 마늘막걸리 등이 별미입니다. 시금치도 남해 특산물로, 봄·여름 남해 시금치 비빔밥을 내는 식당이 여럿 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260709/2_darangyi_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-3">Coastal drive road along Namhae Island, South Korea, summer. Winding coastal highway with guardrails, deep blue South Sea on one side, green hillside on the other, white summer clouds, scattered fishing villages visible below, clear sunny day. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">남해 19번 국도 해안 드라이브 풍경 / AI 제작 이미지</div>
+</div>
+
+<h2>08. 남해 교통편과 주차 정보</h2>
+
+<strong>승용차 이용</strong>: 남해는 남해대교(창선-삼천포대교 루트) 또는 남해고속도로를 통해 접근합니다. 남해IC에서 독일마을까지 약 25분, 다랭이마을까지 약 35분 거리입니다. 두 곳 모두 전용 주차장이 갖춰져 있으며 성수기 주말에는 혼잡하므로 오전 일찍 도착을 권장합니다.<br><br>
+<strong>대중교통</strong>: 남해군은 대중교통이 불편한 편입니다. 남해시외버스터미널에서 군내버스가 운행되지만, 배차 간격이 길어 렌터카나 자가용 이용을 강력 권장합니다. 통영이나 진주에서 당일 렌터카를 빌려 남해를 도는 방식도 많이 활용됩니다.<br><br>
+<strong>숙소</strong>: 독일마을 내 또는 인근에 민박과 펜션이 다수 있으며, 남해 시내에도 다양한 숙박 옵션이 있습니다.
+
+<h2>09. 남해 여름 여행 꿀팁과 주의사항</h2>
+
+남해 여름 여행을 더 잘 즐기기 위한 팁을 공유합니다.<br><br>
+① <strong>다랭이마을 오전 방문</strong>: 오전 10시 이전에 도착하면 단체 버스 관광객이 오기 전이라 한결 여유롭습니다. 전망대 오르는 길도 아침 이슬로 촉촉해 걷기 좋습니다.<br><br>
+② <strong>독일마을 예약 필수</strong>: 성수기에는 독일식 레스토랑이 금방 자리가 차므로 방문 전 전화 예약을 권장합니다.<br><br>
+③ <strong>남해대교 vs 창선-삼천포대교</strong>: 갈 때와 올 때 서로 다른 다리를 이용하면 다양한 풍경을 즐길 수 있습니다. 창선-삼천포대교 코스는 작은 섬들 사이를 연결하는 여러 개의 다리가 이어져 드라이브 자체가 관광입니다.<br><br>
+④ <strong>물건방조어부림 낙조</strong>: 오후 5~7시 사이 물건방조어부림에서 바라보는 낙조가 매우 아름답습니다. 서쪽 하늘이 붉게 물드는 남해 노을을 감상하며 하루를 마무리해 보세요.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260708/travel_muju_firefly_festival.html">무주 반딧불이축제 일정과 관람 명당, 적상산 드라이브 코스</a></li>
+    <li><a href="../260708/travel_songnisan_beopjusa_summer.html">속리산 세조길·법주사 여름 트레킹 코스와 주차장 이용 방법</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#남해다랭이마을</span>
+  <span class="tag">#가천다랭이마을</span>
+  <span class="tag">#남해독일마을</span>
+  <span class="tag">#남해여행</span>
+  <span class="tag">#남해드라이브</span>
+  <span class="tag">#물건방조어부림</span>
+  <span class="tag">#남해당일치기</span>
+  <span class="tag">#경남여름여행</span>
+  <span class="tag">#계단식논</span>
+  <span class="tag">#남해맛집</span>
+</div>
+
+</body>
+</html>
