@@ -69,10 +69,12 @@ function watermark(handle) {
 }
 
 // 후킹 헤드라인(외곽선 + 그림자). anchor: 'start'|'middle'
+// stroke: 외곽선 두께(px). 0이면 외곽선 없이 부드러운 그림자만(Type4식 — 배경이 차분할 때).
 function hookText(lines, { x, lastBaseline, size, weight = 750, anchor = "start", stroke = 6 }) {
   const lineH = size * 1.14;
   const topBaseline = lastBaseline - (lines.length - 1) * lineH;
-  let out = `<text x="${x}" y="${topBaseline}" text-anchor="${anchor}" font-family="${FONT}" font-weight="${weight}" font-size="${size}" fill="${INK}" paint-order="stroke" stroke="#1a0d06" stroke-width="${stroke}" stroke-linejoin="round" filter="url(#sh)">`;
+  const strokeAttr = stroke > 0 ? ` paint-order="stroke" stroke="#1a0d06" stroke-width="${stroke}" stroke-linejoin="round"` : "";
+  let out = `<text x="${x}" y="${topBaseline}" text-anchor="${anchor}" font-family="${FONT}" font-weight="${weight}" font-size="${size}" fill="${INK}"${strokeAttr} filter="url(#sh)">`;
   lines.forEach((ln, i) => { out += `<tspan x="${x}" dy="${i === 0 ? 0 : lineH}">${esc(ln)}</tspan>`; });
   out += `</text>`;
   return { svg: out, topBaseline, lineH };
@@ -80,15 +82,17 @@ function hookText(lines, { x, lastBaseline, size, weight = 750, anchor = "start"
 
 function coverCard(card) {
   const size = card.size || 92;
+  const st = card.stroke ?? 6;   // 0이면 소프트섀도만(Type4식)
+  const nameStroke = st > 0 ? ` paint-order="stroke" stroke="#1a0d06" stroke-width="5" stroke-linejoin="round"` : "";
   const B = 1188;
   let cursor = B;
   let body = "";
   // name(상호) — 큰 텍스트 아래 크림색 강조
   if (card.name) {
-    body += `<text x="72" y="${cursor}" font-family="${FONT}" font-weight="800" font-size="52" fill="${ACCENT}" paint-order="stroke" stroke="#1a0d06" stroke-width="5" stroke-linejoin="round" filter="url(#sh)">${esc(card.name)}</text>`;
+    body += `<text x="72" y="${cursor}" font-family="${FONT}" font-weight="800" font-size="52" fill="${ACCENT}"${nameStroke} filter="url(#sh)">${esc(card.name)}</text>`;
     cursor -= (52 + 26);
   }
-  const hk = hookText(card.lines || [], { x: 72, lastBaseline: cursor, size });
+  const hk = hookText(card.lines || [], { x: 72, lastBaseline: cursor, size, stroke: st });
   body += hk.svg;
   // kicker(작은 라벨) — 후킹 위
   if (card.kicker) {

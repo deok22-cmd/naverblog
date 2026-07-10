@@ -25,3 +25,6 @@ output_insta/**/_backup_pre_recompose/
 
 # 로컬 아카이브(옛 실험·백업 — 원격 푸시 제외, 대용량)
 _archive/
+
+# 벤치마킹 캡처(참고용, 저장소에 불필요 - 2026-07-10)
+adsense_src/benchmarking/
