@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>과태료와 범칙금 차이점, 안 내고 방치하면 생기는 불이익</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1f8f1; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 14px; text-align: left; }
+  .info-table td { border-bottom: 1px solid #eee; padding: 10px 14px; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #f9fdf9; border: 1px solid #e8f5e9; border-left-width: 4px; margin-bottom: 15px; border-radius: 0 8px 8px 0; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; border-radius: 8px; padding: 15px 20px; margin: 20px 0; }
+  .warn-box { background: #fce4ec; border: 1px solid #e57373; border-radius: 8px; padding: 15px 20px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; }
+  .img-placeholder { background: #f4f4f4; border: 2px dashed #a5d6a7; border-radius: 8px; padding: 20px; text-align: center; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.9em; color: #555; flex-wrap: wrap; gap: 8px; }
+  .ph-file { color: #888; font-size: 0.85em; }
+  .prompt-text { text-align: left; background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 12px; font-size: 0.85em; color: #333; white-space: pre-wrap; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 5px; padding: 8px 16px; cursor: pointer; font-size: 0.9em; margin-top: 8px; }
+  .img-caption { text-align: center; color: #666; font-size: 0.9em; margin-top: 8px; font-style: italic; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>과태료와 범칙금 차이점, 안 내고 방치하면 생기는 불이익</h1>
+
+<div class="intro-box">
+주차 위반 딱지를 받았는데 <strong>과태료인지 범칙금인지</strong> 헷갈린다는 분이 많습니다.<br><br>
+이 둘은 비슷해 보이지만 부과 방식, 금액, 벌점 처리, 미납 시 결과까지 다릅니다. 잘 모르고 방치했다가 가산금·번호판 영치로 이어지는 경우도 있어 정확히 알아두는 것이 중요합니다.<br><br>
+이 글에서는 과태료와 범칙금의 개념 차이, 어떤 상황에 어떤 처분이 내려지는지, 이파인(efine.go.kr)에서 조회·납부하는 방법, 이의신청 절차, 방치 시 불이익까지 한번에 정리합니다.
+</div>
+
+<h2>01. 과태료와 범칙금 — 기본 개념부터 다르다</h2>
+
+<strong>범칙금(犯則金)</strong>은 경찰이 운전자를 현장에서 직접 적발했을 때 부과하는 처분입니다. 범칙금은 운전자 개인에게 부과되므로, 납부하면 <strong>운전면허 벌점</strong>이 함께 처리됩니다. 벌점이 쌓이면 면허 정지·취소로 이어질 수 있습니다.<br><br>
+<strong>과태료(過怠料)</strong>는 무인 단속 카메라나 주차 단속원 등 <strong>현장 적발 없이</strong> 차량 번호를 기준으로 부과되는 처분입니다. 운전자를 특정하기 어렵기 때문에 <strong>차량 소유자에게 부과</strong>됩니다. 과태료는 벌점이 없지만, 금액이 범칙금보다 높게 책정되어 있는 경우가 많습니다.<br><br>
+쉽게 정리하면 이렇습니다.<br><br>
+<table class="info-table">
+  <tr>
+    <th>구분</th>
+    <th>범칙금</th>
+    <th>과태료</th>
+  </tr>
+  <tr>
+    <td style="background:#f1f8f1;">부과 방식</td>
+    <td>경찰 현장 적발</td>
+    <td>무인 카메라·주차 단속원</td>
+  </tr>
+  <tr>
+    <td style="background:#fff;">부과 대상</td>
+    <td>운전자 본인</td>
+    <td>차량 소유자</td>
+  </tr>
+  <tr>
+    <td style="background:#f1f8f1;">면허 벌점</td>
+    <td>있음</td>
+    <td>없음</td>
+  </tr>
+  <tr>
+    <td style="background:#fff;">금액 수준</td>
+    <td>상대적으로 낮음</td>
+    <td>상대적으로 높음</td>
+  </tr>
+  <tr>
+    <td style="background:#f1f8f1;">납부 기한</td>
+    <td>고지서 기준</td>
+    <td>고지서 기준</td>
+  </tr>
+</table>
+
+<h2>02. 어떤 상황에 과태료, 어떤 상황에 범칙금이 부과되나</h2>
+
+같은 위반이더라도 어떻게 적발되었느냐에 따라 과태료와 범칙금으로 나뉩니다.<br><br>
+<strong>범칙금이 부과되는 경우</strong>:<br><br>
+<div class="step-box">
+• 경찰관이 신호 위반을 현장에서 직접 목격하고 정차시킨 경우<br>
+• 음주 측정 결과 범칙금 부과 기준 초과<br>
+• 이동 중 경찰 단속에 적발된 속도 위반<br>
+• 경찰관 앞에서의 불법 주정차 현장 적발
+</div>
+
+<strong>과태료가 부과되는 경우</strong>:<br><br>
+<div class="step-box">
+• 신호위반 카메라(단속 카메라)에 촬영된 경우<br>
+• 과속 단속 카메라에 차량이 찍힌 경우<br>
+• 불법 주정차 단속원이 차량 번호를 찍고 고지서를 발부한 경우<br>
+• 버스전용차로 위반 카메라에 적발된 경우
+</div>
+
+<strong>본인 또는 타인이 운전했는지 불분명한 경우</strong>에는 과태료 대상이 되며, 이 경우 실제 운전자가 자신이 아님을 신고하면 실제 운전자에게 범칙금으로 전환되는 제도가 있습니다(도로교통법상 규정).
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260711/5_fine_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-1">Korean traffic fine penalty notice document on desk, official Korean government administrative penalty notice paper with red penalty amount circled, blurred car and traffic camera in soft background, modern minimal composition, official document photography style, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">교통 과태료 고지서 예시 / AI 제작 이미지</div>
+</div>
+
+<h2>03. 과태료 금액 산정 기준과 조기 납부 감경</h2>
+
+과태료 금액은 위반 종류·위반 정도·차종에 따라 다릅니다. 신호위반이나 속도 위반은 초과 속도에 따라 금액이 달라지며, 불법 주정차는 지역과 위반 장소(어린이보호구역·소화전 앞 등)에 따라 차이가 납니다.<br><br>
+<strong>조기 납부 감경 혜택</strong>이 중요합니다. 과태료는 고지서를 받은 뒤 <strong>납부기한 이전에 자진 납부</strong>하면 20% 감경을 받을 수 있습니다(경우에 따라 다름). 이파인 또는 위택스에서 납부 시 감경 여부가 자동으로 안내됩니다.<br><br>
+<strong>범칙금</strong>의 경우, 고지서 수령 후 10일 이내에 납부하면 최초 금액을 그대로 내고, 10일이 지나면 가산 없이 이후 기간 내 납부할 수 있습니다(즉결심판 기간 제외). 벌점 처리는 납부와 동시에 이루어집니다.<br><br>
+<div class="tip-box">
+<strong>💡 절약 팁</strong>: 과태료 고지서를 받으면 납부기한 마지막 날까지 기다리지 말고, 조기 납부 감경 기한(보통 납부기한 종료 며칠 전)을 확인해 그 전에 납부하는 것이 유리합니다.
+</div>
+
+<h2>04. 안 내고 방치하면 생기는 단계별 불이익</h2>
+
+과태료나 범칙금을 납부기한 내에 내지 않으면 단계적으로 불이익이 커집니다.<br><br>
+<div class="warn-box">
+<strong>⚠️ 미납 시 진행 단계</strong><br><br>
+<strong>1단계 — 가산금 부과</strong>: 납부기한 경과 후 3~5% 가산금이 즉시 붙습니다. 이후 매달 1.2% 중가산금이 추가됩니다(최대 75% 한도, 과태료 규모에 따라 다름).<br><br>
+<strong>2단계 — 독촉장 발부</strong>: 체납 상태가 지속되면 지자체 또는 경찰청에서 납부 독촉장을 발송합니다.<br><br>
+<strong>3단계 — 자동차 등록 제한</strong>: 과태료 누적 체납이 있으면 차량 매매·명의 이전 등 자동차 등록 업무가 제한됩니다.<br><br>
+<strong>4단계 — 번호판 영치</strong>: 일정 금액 이상 체납이 지속되면 번호판을 영치(회수)당합니다. 번호판이 없으면 운행이 불가능합니다.<br><br>
+<strong>5단계 — 차량 압류 및 강제 징수</strong>: 극단적인 경우 차량 자체가 압류되거나 재산이 압류될 수 있습니다.
+</div>
+
+<h2>05. 이파인(efine.go.kr)에서 5분 만에 조회·납부하는 방법</h2>
+
+<strong>이파인(efine.go.kr)</strong>은 경찰청이 운영하는 교통 범칙금·과태료 통합 조회·납부 사이트입니다. PC와 모바일 모두에서 이용 가능합니다.<br><br>
+<div class="step-box">
+<strong>이파인 조회·납부 절차</strong><br>
+1. efine.go.kr 접속<br>
+2. 본인 인증 (공동인증서 또는 간편인증)<br>
+3. 메인화면 → [미납 조회] 클릭<br>
+4. 본인 차량 등록 또는 차량번호 입력<br>
+5. 미납 내역 목록 확인<br>
+6. 납부하려는 항목 선택 → 결제 수단 선택 (카드/계좌이체)<br>
+7. 납부 완료 후 영수증 저장
+</div>
+
+<strong>모바일에서도 동일한 절차</strong>로 이용 가능합니다. '이파인' 앱을 설치하면 더욱 편리하게 조회·납부할 수 있습니다.<br><br>
+<strong>위택스(wetax.go.kr)</strong>에서도 지방세 과태료(주차 위반 등)를 납부할 수 있습니다. 경찰청 과태료는 이파인, 지자체 과태료는 위택스를 통해 납부하는 것이 일반적입니다.<br><br>
+<strong>주의</strong>: 인터넷 검색에서 "이파인"을 검색할 때 유사 사이트를 주의하세요. 주소창에 efine.go.kr을 직접 입력하는 것이 가장 안전합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260711/5_fine_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-2">Korean government efine website on laptop screen showing vehicle fine lookup page with Korean text, person typing vehicle plate number into search field, list of unpaid traffic fines visible on screen, payment button highlighted in red, modern home office desk with keyboard and coffee mug, photorealistic interface representation, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">이파인(efine.go.kr) 미납 과태료 조회 화면 예시 / AI 제작 이미지</div>
+</div>
+
+<h2>06. 이의신청 절차 — 억울한 과태료에 대처하는 법</h2>
+
+단속이 잘못됐거나 억울한 사정이 있다면 <strong>이의신청(이의제기)</strong>을 통해 다툴 수 있습니다. 과태료 고지서를 받은 날부터 일정 기간(통상 60일) 이내에 이의신청을 해야 합니다.<br><br>
+<strong>이의신청 방법</strong>:<br><br>
+<div class="step-box">
+• 고지서에 명시된 이의신청 기관(지자체·경찰서) 방문 또는 우편·온라인 접수<br>
+• 이의신청서에 사유와 증거 첨부 (목격자 진술서, CCTV 요청, 당시 상황 사진 등)<br>
+• 처리 결과 통보 대기 (통상 수주 이내)
+</div>
+
+이의신청이 받아들여지면 과태료가 취소 또는 감경됩니다. 기각되면 추가로 <strong>비송사건 절차(법원)로 이의제기</strong>할 수도 있으나, 비용과 시간이 소요됩니다.<br><br>
+<strong>범칙금에 대해 이의가 있는 경우</strong>에는 즉결심판을 청구할 수 있습니다. 경찰서에 즉결심판 청구서를 제출하면 법원에서 심판을 받을 기회가 생깁니다.
+
+<h2>07. 번호판 영치 — 어떤 상황에서, 어떻게 되나</h2>
+
+<strong>번호판 영치</strong>는 과태료를 장기간 납부하지 않을 때 단속 차량이 해당 차량의 번호판을 직접 떼어 가져가는 강제 처분입니다. 번호판이 없는 차량은 도로 주행이 불가능합니다.<br><br>
+번호판 영치 기준은 지자체마다 다르지만, 일반적으로 <strong>체납 과태료 총액이 수십만 원 이상</strong>이거나 <strong>체납 건수가 일정 수를 초과</strong>하는 경우 실시됩니다.<br><br>
+번호판을 되찾으려면 <strong>체납된 과태료 전액과 가산금을 납부</strong>한 뒤 영치 기관에 납부 증명을 제시해야 합니다. 번호판을 돌려받기까지 시간이 소요될 수 있으니, 체납 상황이 생기지 않도록 주의하는 것이 최선입니다.
+
+<h2>08. 자주 묻는 질문 — Q&A</h2>
+
+<strong>Q. 카메라에 찍혔는데 고지서가 아직 안 왔다면 어떻게 해야 하나요?</strong><br>
+A. 이파인에서 미납 내역을 조회하면 고지서가 발송되지 않은 경우에도 확인할 수 있습니다. 주소 변경 등으로 고지서를 못 받은 경우에도 납부 의무는 그대로 있으니 이파인에서 주기적으로 확인하세요.<br><br>
+<strong>Q. 타인이 내 차를 운전하다가 카메라에 찍혔는데, 과태료는 내가 내야 하나요?</strong><br>
+A. 차량 소유자에게 과태료가 부과됩니다. 실제 운전자가 따로 있다면, 이파인에서 '운전자 확인' 신청을 하면 실제 운전자에게 범칙금으로 전환될 수 있습니다.<br><br>
+<strong>Q. 과태료와 범칙금을 동시에 체납하면 어떻게 되나요?</strong><br>
+A. 각각 개별적으로 가산금이 붙습니다. 우선순위 없이 각 건별로 처리되며, 합산하면 상당한 금액이 될 수 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260711/5_fine_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-3">Traffic enforcement officer in South Korea removing license plate from an illegally parked vehicle in a city street, official uniform with yellow reflective vest, car parked in no-parking zone on busy urban street, warning cones visible nearby, realistic urban Seoul street setting with Korean signage visible, daytime, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">번호판 영치 단속 상황 예시 / AI 제작 이미지</div>
+</div>
+
+<h2>09. 한 줄 정리 — 놓치지 말아야 할 핵심</h2>
+
+과태료와 범칙금의 차이를 알고, 고지서를 받는 즉시 조기 납부 기한 내에 납부하는 것이 가장 현명한 대처입니다.<br><br>
+<strong>핵심 정리</strong>:<br><br>
+<div class="step-box">
+✔ 범칙금 = 현장 적발 + 벌점 부과<br>
+✔ 과태료 = 카메라/무인 적발 + 벌점 없음 + 금액 더 높음<br>
+✔ 조기 납부 시 20% 감경 혜택 놓치지 마세요<br>
+✔ 방치하면 가산금 → 등록 제한 → 번호판 영치 순으로 불이익 심화<br>
+✔ 억울하면 이의신청 — 고지서 수령 후 60일 이내
+</div>
+
+과태료·범칙금 조회는 이파인(efine.go.kr)에서 1분이면 됩니다. 잊지 말고 주기적으로 확인하는 습관을 들이세요.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260710/travel_chungju_lake_cruise.html">충주호 유람선 코스와 월악산 여름 드라이브 — 온달산성 연계</a></li>
+    <li><a href="../260710/travel_morningcalm_night.html">가평 아침고요수목원 여름 야간개장 별빛정원 시간과 예약 방법</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#과태료</span>
+  <span class="tag">#범칙금</span>
+  <span class="tag">#과태료범칙금차이</span>
+  <span class="tag">#이파인</span>
+  <span class="tag">#번호판영치</span>
+  <span class="tag">#교통위반</span>
+  <span class="tag">#미납불이익</span>
+  <span class="tag">#이의신청</span>
+  <span class="tag">#efine</span>
+  <span class="tag">#자동차법규</span>
+</div>
+
+</body>
+</html>

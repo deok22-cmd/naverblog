@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>여름 태풍 오면 항공·여객선 결항 조회하는 법과 환불 방법, 태풍 대비 체크리스트</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1f8f1; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 14px; text-align: left; }
+  .info-table td { border-bottom: 1px solid #eee; padding: 10px 14px; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #f9fdf9; border: 1px solid #e8f5e9; border-left-width: 4px; margin-bottom: 15px; border-radius: 0 8px 8px 0; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; border-radius: 8px; padding: 15px 20px; margin: 20px 0; }
+  .warn-box { background: #fce4ec; border: 1px solid #e57373; border-radius: 8px; padding: 15px 20px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; }
+  .img-placeholder { background: #f4f4f4; border: 2px dashed #a5d6a7; border-radius: 8px; padding: 20px; text-align: center; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.9em; color: #555; flex-wrap: wrap; gap: 8px; }
+  .ph-file { color: #888; font-size: 0.85em; }
+  .prompt-text { text-align: left; background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 12px; font-size: 0.85em; color: #333; white-space: pre-wrap; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 5px; padding: 8px 16px; cursor: pointer; font-size: 0.9em; margin-top: 8px; }
+  .img-caption { text-align: center; color: #666; font-size: 0.9em; margin-top: 8px; font-style: italic; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>여름 태풍 오면 항공·여객선 결항 조회하는 법과 환불 방법, 태풍 대비 체크리스트</h1>
+
+<div class="intro-box">
+여름 휴가철, 태풍이 접근하면 가장 먼저 떠오르는 걱정이 바로 <strong>항공편·여객선이 결항되지 않을까</strong>입니다.<br><br>
+태풍 결항은 갑작스럽게 발표되는 경우가 많고, 환불·변경 처리 방법이 회사마다 다르기 때문에 미리 알아두지 않으면 당황하기 쉽습니다.<br><br>
+이 글에서는 태풍 예보 확인 방법, 항공편·여객선 결항 조회 방법, 결항 시 환불·변경 절차, 태풍 대비 체크리스트까지 여름 여행 중 태풍을 만났을 때 필요한 모든 정보를 정리합니다.
+</div>
+
+<h2>01. 태풍 예보 실시간 확인 — 기상청 공식 채널 활용법</h2>
+
+태풍 정보를 가장 정확하게 확인할 수 있는 공식 채널은 <strong>기상청 공식 홈페이지(kma.go.kr)</strong>와 <strong>기상청 날씨 앱(날씨 ON)</strong>입니다. 태풍 특보(태풍 주의보·경보)가 발령된 지역과 예상 진로를 실시간으로 확인할 수 있습니다.<br><br>
+태풍 예상 진로도(트랙 맵)를 보면 태풍 중심이 어디를 지나갈지, 영향권이 어디까지인지 파악할 수 있습니다. 태풍 강도와 예상 상륙 시간도 함께 확인하세요.<br><br>
+<strong>일본 기상청(jma.go.jp)</strong>도 태풍 분석에 유용합니다. 한반도에 영향을 주는 태풍은 일본을 먼저 통과하거나 동시에 영향을 주는 경우가 많아, 일본 기상청 정보를 함께 보면 진로 예측 정확도를 높일 수 있습니다.<br><br>
+스마트폰 날씨 앱(기상청 날씨 ON, KWeather, AccuWeather)에서는 <strong>태풍 알림 설정</strong>을 활성화해 두면 새로운 태풍 발생 또는 특보 발령 시 즉시 알림을 받을 수 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260711/4_typhoon_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-1">Weather forecast app screen on smartphone showing typhoon tracking map of the Korean Peninsula and surrounding Pacific Ocean, typhoon spiral cloud system visible approaching from the south, red and orange warning zones marked on map, Korean text weather alert notification visible, airport departure board with cancellations visible in background, photorealistic UI representation, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">태풍 예보 조회 화면 예시 / AI 제작 이미지</div>
+</div>
+
+<h2>02. 항공편 결항 여부 조회하는 방법</h2>
+
+항공편 결항 여부를 확인하는 가장 빠른 방법은 <strong>항공사 공식 앱 또는 홈페이지</strong>에서 본인 예약 조회를 하는 것입니다. 결항이 결정되면 항공사는 등록된 이메일·문자로 안내를 발송합니다.<br><br>
+<strong>항공정보포털시스템(airportal.go.kr)</strong>에서는 국내 주요 공항의 출발·도착 실시간 정보를 확인할 수 있습니다. 결항 또는 지연 정보가 반영됩니다.<br><br>
+인천공항, 김포공항 등 주요 공항의 공식 앱 또는 홈페이지에서도 <strong>출발·도착 현황 탭</strong>에서 결항 여부를 확인할 수 있습니다. 공항 내 전광판도 실시간으로 업데이트됩니다.<br><br>
+<strong>주의사항</strong>: 태풍 상황에서 결항 발표는 보통 항공기 출발 예정 24~48시간 전에 이루어지는 경우가 많지만, 태풍 진로 변화에 따라 단 몇 시간 전에 결정되기도 합니다. 출발일이 가까워질수록 더 자주 확인하세요.
+
+<h2>03. 항공편 결항 시 환불·변경 규정</h2>
+
+태풍, 기상 악화 등 <strong>불가항력(항공사 귀책 없는 결항)</strong>으로 항공편이 결항될 경우, 대부분의 항공사는 <strong>위약금 없이 전액 환불</strong> 또는 <strong>무료 날짜 변경</strong>을 허용합니다. 단, 이 규정은 항공사마다 세부 내용이 다를 수 있습니다.<br><br>
+<div class="step-box">
+<strong>결항 시 일반적인 처리 절차</strong><br>
+1. 항공사 앱 또는 홈페이지에서 예약 조회<br>
+2. 결항 안내 확인 → 환불·변경 선택 화면 진입<br>
+3. 환불 선택 시: 결제 수단으로 3~7 영업일 내 환불<br>
+4. 변경 선택 시: 가능한 날짜 선택 (수수료 면제)<br>
+5. 처리 완료 후 이메일·문자 확인
+</div>
+
+<strong>체크포인트</strong>: 항공권이 제3자 여행사(OTA)를 통해 구매한 경우, 환불·변경 신청을 해당 여행사를 통해 진행해야 하는 경우가 있습니다. 항공사에 직접 연락해도 안내받을 수 있으나, 최종 처리는 구매처를 통해 이루어질 수 있습니다.<br><br>
+<strong>여행자보험</strong>에 결항 보상 특약이 포함된 경우, 항공사로부터 결항 확인서를 발급받아 보험사에 청구할 수 있습니다. 보상 범위는 보험 약관을 사전에 확인하세요.
+
+<h2>04. 여객선 결항 여부 조회와 환불 절차</h2>
+
+제주도·도서 지역으로 이동하는 <strong>여객선 결항 여부</strong>는 각 선사(해운사) 공식 홈페이지 또는 고객센터에서 확인할 수 있습니다. 제주행 여객선의 경우 한국해운조합(해운조합 홈페이지), 가고 싶은 섬(island.haewoon.co.kr) 등에서도 정보를 얻을 수 있습니다.<br><br>
+<strong>여객선 결항 시 환불</strong>은 일반적으로 해운사가 결항 결정을 내리면 전액 환불이 이루어집니다. 그러나 승객이 자발적으로 취소하는 경우에는 선사의 환불 정책(취소 시기별 수수료 차등)이 적용되므로, 결항 발표를 기다리는 것이 더 유리할 수 있습니다.<br><br>
+<strong>도서 지역에 이미 들어가 있는 상황</strong>에서 태풍으로 여객선이 결항되면, 다음 운항 재개 시까지 섬에서 대기해야 할 수 있습니다. 이런 상황을 대비해 섬 여행 시 여유 일정을 두거나, 여행자보험에 가입해 두는 것을 권장합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260711/4_typhoon_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-2">Korean passenger ferry terminal during a typhoon warning, empty waiting hall with storm shutters partially closed, departure board showing multiple cancellation notices in red, heavy rain visible through large glass windows battering the empty pier, a few stranded passengers sitting with luggage looking at smartphones, dim fluorescent lighting inside the terminal, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">태풍 결항으로 운항이 중단된 여객선 터미널 / AI 제작 이미지</div>
+</div>
+
+<h2>05. 여행 중 태풍을 만났을 때 행동 요령</h2>
+
+여행지에서 태풍을 만난 경우, 가장 먼저 해야 할 것은 <strong>숙소에서 대기하며 상황을 모니터링</strong>하는 것입니다. 야외 관광, 드라이브, 해안가 접근 등은 태풍 특보 발령 중에는 삼가세요.<br><br>
+<strong>행동 원칙</strong>:<br><br>
+<div class="step-box">
+• 숙소 또는 실내에서 대기 — 태풍이 지나갈 때까지 외출 자제<br>
+• 해안·하천 접근 금지 — 파도·급류 위험<br>
+• 창문 잠금·커튼 닫기 — 강풍에 의한 유리 파손 대비<br>
+• 비상용품 준비 — 손전등, 충전 보조배터리, 생수<br>
+• 지역 재난 문자 확인 — 행정안전부·지방자치단체 안내 따르기
+</div>
+
+<strong>차량 이동</strong>은 태풍 강풍 중에는 가능한 한 삼가고, 불가피하게 운전해야 한다면 저속 운행하며 지하 주차장 침수 위험에 유의하세요. 침수 도로 진입은 절대 금지입니다.<br><br>
+야외 캠핑 중이라면 태풍 특보 발령 즉시 주변 실내 시설(캠핑장 관리동, 마을 회관, 근처 숙박시설)로 이동하세요. 텐트는 태풍 바람을 버티기 어렵습니다.
+
+<h2>06. 태풍 실내 대비 체크리스트</h2>
+
+태풍이 예보된 경우, 숙소나 집에서 아래 항목을 미리 점검하세요.<br><br>
+<div class="tip-box">
+<strong>🌀 태풍 대비 실내 체크리스트</strong><br><br>
+☑ 창문·문 잠금 상태 확인 (테이프로 유리 보강 가능)<br>
+☑ 야외 화분·간판 등 날릴 수 있는 물건 실내로 이동<br>
+☑ 스마트폰 배터리 100% 충전 / 보조배터리 충전<br>
+☑ 손전등·양초 준비 (정전 대비)<br>
+☑ 생수 1~2L 이상 확보<br>
+☑ 비상 상비약 확인<br>
+☑ 신발 및 우산 실내 보관<br>
+☑ 차량이 있다면 지하주차장 침수 위험 확인 후 이동
+</div>
+
+<strong>재난안전포털(safekorea.go.kr)</strong>과 <strong>안전신문고 앱</strong>에서도 실시간 재난 정보와 대피소 위치를 확인할 수 있습니다. 행정안전부가 발송하는 <strong>재난 문자</strong>는 절대로 무시하지 마세요.
+
+<h2>07. 여행자보험으로 태풍 피해 보상받는 방법</h2>
+
+여행자보험에 가입한 경우, 태풍으로 인한 결항 손실에 대해 <strong>항공 지연·결항 보상</strong> 특약이 적용될 수 있습니다. 보상 범위는 보험사마다 다르며, 일반적으로 아래 항목이 포함될 수 있습니다.<br><br>
+<div class="step-box">
+• 항공기 결항으로 인한 추가 숙박비<br>
+• 추가 식비·교통비 (영수증 필요)<br>
+• 여행 취소 시 환불 불가 비용 일부<br>
+• 여행 중 수하물 분실·파손 (별도 특약)
+</div>
+
+<strong>보상 청구 시 필요한 서류</strong>로는 결항 확인서(항공사 발급), 추가 비용 영수증, 보험 청구서 등이 있습니다. 여행 중 발생한 비용은 반드시 영수증을 챙겨두세요.<br><br>
+보험사에 따라 결항 인정 기준(몇 시간 이상 지연 등)이 다를 수 있으므로, 출발 전에 본인 보험 약관의 보상 조건을 미리 파악해 두는 것이 중요합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260711/4_typhoon_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-3">Inside a modern Korean airport terminal during a typhoon, large crowds of stranded passengers with luggage waiting on rows of seats, rain lashing against floor-to-ceiling windows showing dark stormy skies outside, departure board showing multiple flight cancellations and delays, some passengers asleep on chairs, airport staff distributing snack boxes, emergency lighting strips visible, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">태풍 결항으로 공항에서 대기 중인 여행객들 / AI 제작 이미지</div>
+</div>
+
+<h2>08. 복귀편·숙소 연장 처리 방법</h2>
+
+태풍으로 귀환 항공편이 결항되어 여행지에 추가로 머물러야 하는 경우, 아래 순서로 처리하세요.<br><br>
+<div class="step-box">
+① 항공사 앱 또는 고객센터 연락 → 대체 항공편 조회 또는 변경 신청<br>
+② 숙소에 연박(체크아웃 연장) 가능 여부 즉시 문의 — 빠를수록 유리<br>
+③ 여행자보험 고객센터에 상황 신고 → 추가 비용 안내<br>
+④ 추가 식사·교통비 영수증 수집 (보험 청구용)
+</div>
+
+<strong>숙소 연박</strong>은 결항 발생 즉시 요청하는 것이 좋습니다. 같은 상황에 처한 여행자가 많아 빠르게 방이 차는 경우가 있기 때문입니다. 현재 숙소에서 연박이 불가능하면 인근 숙소를 빠르게 검색해 예약하세요.<br><br>
+항공사는 결항 시 대체 항공편을 제공하거나 숙박 비용 일부를 지원하는 경우도 있으나, 이는 항공사 정책과 항공권 종류에 따라 다릅니다. 항공사 고객센터에 직접 확인하세요.
+
+<h2>09. 태풍 시즌 여행 꿀팁 — 대비하면 당황하지 않는다</h2>
+
+여름 여행, 특히 제주도·남해·동해·도서 지역으로 향하는 경우 태풍 가능성을 항상 염두에 두는 것이 현명합니다. 대비가 되어 있다면 결항이 발생해도 당황하지 않고 차분하게 대처할 수 있습니다.<br><br>
+<strong>사전 대비 꿀팁</strong>:<br><br>
+<div class="tip-box">
+• 여행자보험은 출발 전날까지 가입 가능 — 늦더라도 꼭 가입하세요<br>
+• 항공권·숙소 예약 시 취소·변경 가능 조건 확인<br>
+• 여행 일정에 여유일(예비일) 1일 추가 — 귀환 결항 시 완충<br>
+• 숙소·항공 예약 이메일 미리 캡처 보관 (오프라인 확인용)<br>
+• 현지 태풍 대피소 위치 미리 파악 (지자체 재난 안내 앱)
+</div>
+
+태풍은 자연재해이므로 누구도 100% 피할 수 없습니다. 하지만 준비된 여행자라면 어떤 상황에서도 안전하게 대처하고, 최소한의 피해로 여행을 마무리할 수 있습니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260710/travel_hallasan_yeongshil.html">제주 한라산 영실·어리목 여름 트레킹 코스와 예약 방법</a></li>
+    <li><a href="../260710/travel_morningcalm_night.html">가평 아침고요수목원 여름 야간개장 별빛정원 시간과 예약 방법</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#태풍결항</span>
+  <span class="tag">#항공결항조회</span>
+  <span class="tag">#여객선결항환불</span>
+  <span class="tag">#태풍대비</span>
+  <span class="tag">#여름여행안전</span>
+  <span class="tag">#여행자보험</span>
+  <span class="tag">#기상청태풍</span>
+  <span class="tag">#결항환불방법</span>
+  <span class="tag">#태풍체크리스트</span>
+  <span class="tag">#여름여행준비</span>
+</div>
+
+</body>
+</html>

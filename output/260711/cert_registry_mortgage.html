@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>등기부등본 을구 근저당 읽는 법과 계약 전 체크리스트</title>
+<style>
+  body { font-family: 'Naver Nanum Gothic', sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; color: #212121; line-height: 1.8; }
+  h1 { font-size: 26px; font-weight: 700; color: #1b5e20; border-left: 5px solid #388e3c; padding-left: 14px; margin-bottom: 24px; }
+  h2 { font-size: 20px; font-weight: 700; color: #388e3c; margin-top: 40px; margin-bottom: 12px; border-bottom: 2px solid #e8f5e9; padding-bottom: 6px; }
+  h3 { font-size: 17px; font-weight: 700; color: #2e7d32; margin-top: 24px; }
+  p { margin: 10px 0; }
+  .highlight-box { background: #e8f5e9; border-left: 4px solid #388e3c; padding: 14px 18px; margin: 20px 0; border-radius: 4px; }
+  .warning-box { background: #fff8e1; border-left: 4px solid #f9a825; padding: 14px 18px; margin: 20px 0; border-radius: 4px; }
+  .info-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 14px; text-align: left; font-size: 14px; }
+  .info-table td { border: 1px solid #c8e6c9; padding: 9px 14px; font-size: 14px; vertical-align: top; }
+  .info-table tr:nth-child(even) td { background: #f1f8e9; }
+  .tag-wrap { margin-top: 36px; }
+  .tag { display: inline-block; background: #e8f5e9; color: #388e3c; border-radius: 20px; padding: 4px 12px; font-size: 13px; margin: 3px 2px; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #bdbdbd; border-radius: 8px; padding: 30px 20px; text-align: center; margin: 20px 0; cursor: pointer; }
+  .img-placeholder p { color: #757575; font-size: 13px; margin: 6px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 12px; cursor: pointer; margin-top: 8px; }
+  .img-caption { text-align: center; font-size: 13px; color: #757575; margin-top: 6px; font-style: italic; }
+  .internal-link-box { background: #f3e5f5; border-left: 4px solid #7b1fa2; padding: 12px 18px; margin: 24px 0; border-radius: 4px; font-size: 14px; }
+  .step-box { background: #e8f5e9; border-radius: 8px; padding: 16px 20px; margin: 16px 0; }
+  .step-box .step-num { display: inline-block; background: #388e3c; color: #fff; border-radius: 50%; width: 26px; height: 26px; text-align: center; line-height: 26px; font-weight: 700; font-size: 14px; margin-right: 8px; }
+</style>
+</head>
+<body>
+
+<h1>등기부등본 을구 근저당 읽는 법과 계약 전 체크리스트</h1>
+
+<p>전·월세 계약을 앞두고 등기부등본을 떼어봤는데, 을구에 '근저당권'이라는 낯선 단어가 가득해서 당황하신 적 있으신가요? 근저당이 있다는 것 자체가 문제는 아니지만, 금액과 순위를 제대로 읽지 못하면 나중에 보증금을 돌려받지 못하는 최악의 상황이 생길 수 있습니다.<br><br>
+이 글에서는 인터넷등기소(iros.go.kr)에서 등기부등본을 발급받는 방법부터, 갑구·을구를 구별하는 법, 근저당 채권최고액의 의미, 안전한 계약을 위한 선순위 검토 공식까지 차근차근 설명드리겠습니다.</p>
+
+<div class="img-placeholder" onclick="copyPrompt(this)">
+  <p><strong>[이미지 1] 등기부등본 을구 근저당 예시 화면</strong></p>
+  <p>인터넷등기소 열람 화면, 을구 근저당권 항목이 강조된 문서 화면. 사무적이고 깔끔한 구성.</p>
+  <button class="copy-btn">프롬프트 복사</button>
+  <input type="hidden" value="Korean real estate registry document showing 'Eul section' (을구) with mortgage (근저당권) entries highlighted, official government document style, clean white background, Korean text visible, informational document layout">
+</div>
+<div class="img-caption">인터넷등기소에서 발급한 등기부등본의 을구(권리사항) 예시 — 근저당권 항목이 핵심입니다.</div>
+
+<h2>1. 등기부등본이란 무엇인가</h2>
+
+<p>등기부등본은 부동산의 위치·면적 같은 물리적 정보부터 소유권·권리관계까지 공적으로 기록한 문서입니다. 크게 <strong>표제부 → 갑구 → 을구</strong> 세 부분으로 나뉩니다.<br><br>
+표제부는 건물·토지의 기본 정보(소재지, 면적, 용도), 갑구는 소유권에 관한 사항(소유자 변동 이력, 가압류·압류), 을구는 소유권 이외의 권리(근저당권·전세권·지상권 등)를 기록합니다.<br><br>
+세입자 입장에서 가장 중요한 부분은 을구입니다. 을구에 등재된 근저당권이 경매 시 먼저 배당을 받아가기 때문에, 이를 모르고 계약하면 보증금이 위험해질 수 있습니다.</p>
+
+<div class="highlight-box">
+<strong>표제부 / 갑구 / 을구 한눈에 정리</strong><br>
+• 표제부: 부동산 기본 정보(주소·면적·용도)<br>
+• 갑구: 소유권 관련(소유자, 가압류, 경매개시결정 등)<br>
+• 을구: 소유권 외 권리(근저당권, 전세권, 지상권 등)
+</div>
+
+<h2>2. 인터넷등기소에서 열람·발급하는 방법</h2>
+
+<p>예전에는 등기소를 직접 방문해야 했지만, 지금은 인터넷등기소(iros.go.kr)에서 24시간 온라인으로 발급이 가능합니다. 발급 수수료는 열람용 700원, 발급용 1,000원으로 매우 저렴합니다.</p>
+
+<div class="step-box">
+  <p><span class="step-num">1</span> iros.go.kr 접속 → [등기열람/발급] 클릭</p>
+  <p><span class="step-num">2</span> 부동산 소재지 주소 또는 고유번호로 검색</p>
+  <p><span class="step-num">3</span> 건물·토지 구분 후 해당 물건 선택</p>
+  <p><span class="step-num">4</span> 출력 여부(열람/발급) 선택 → 결제(카드·계좌이체·간편결제)</p>
+  <p><span class="step-num">5</span> PDF로 저장 또는 화면 열람</p>
+</div>
+
+<p>회원가입 없이도 비회원으로 발급 가능합니다. 주민등록번호 기재 여부를 선택할 수 있으며, 계약 전에는 주민등록번호 미기재본을 요청해 개인정보 노출을 최소화하는 것이 좋습니다.<br><br>
+'현재 유효사항'만 선택하면 말소된 권리를 제외하고 현재 유효한 항목만 볼 수 있어 가독성이 높아집니다. 계약 시에는 반드시 오늘 날짜로 발급한 최신본을 확인하세요.</p>
+
+<h2>3. 을구 근저당권 읽는 법</h2>
+
+<p>을구에서 근저당권 항목을 열면 다음과 같은 정보가 나옵니다.</p>
+
+<table class="info-table">
+  <tr><th>항목</th><th>의미</th></tr>
+  <tr><td>순위번호</td><td>등재된 순서. 번호가 낮을수록 선순위(먼저 변제 받음)</td></tr>
+  <tr><td>등기목적</td><td>근저당권설정(새로 생긴 근저당), 근저당권변경, 말소 등</td></tr>
+  <tr><td>접수일자</td><td>근저당이 설정된 날짜</td></tr>
+  <tr><td>채권최고액</td><td>담보로 잡힌 최대 금액(실제 대출금보다 보통 120~130% 높게 설정)</td></tr>
+  <tr><td>채무자</td><td>대출을 받은 사람(보통 집주인)</td></tr>
+  <tr><td>근저당권자</td><td>돈을 빌려준 기관(은행, 금융기관 등)</td></tr>
+</table>
+
+<p><strong>채권최고액</strong>이 핵심입니다. 예를 들어 채권최고액이 2억 4,000만 원이면 실제 대출 잔액은 약 1억 8,000만~2억 원 수준이지만, 경매 시 은행은 최고 2억 4,000만 원까지 우선 변제받을 수 있습니다. 이 금액이 크면 클수록 세입자 몫이 줄어듭니다.</p>
+
+<div class="warning-box">
+<strong>주의: '말소'되지 않은 근저당만 유효합니다</strong><br>
+을구에 항목이 여러 개 있어도 '등기목적'에 '말소'라고 적혀 있으면 이미 소멸된 근저당입니다. 현재 유효한 근저당만 합산해서 계산하세요.
+</div>
+
+<div class="img-placeholder" onclick="copyPrompt(this)">
+  <p><strong>[이미지 2] 채권최고액·선순위 계산 설명 인포그래픽</strong></p>
+  <p>집값, 선순위 근저당, 보증금 순서를 층 구조로 보여주는 인포그래픽. 한국어 텍스트.</p>
+  <button class="copy-btn">프롬프트 복사</button>
+  <input type="hidden" value="Infographic showing Korean real estate priority system: property value at top, bank mortgage (근저당) in middle, tenant deposit (보증금) at bottom, layered bar chart style, green and red color scheme, Korean labels, clean flat design">
+</div>
+<div class="img-caption">선순위 근저당 채권최고액이 클수록 세입자 보증금이 뒤로 밀립니다. 잔여 담보가치를 반드시 확인하세요.</div>
+
+<h2>4. 선순위 검토 — 안전한 계약 공식</h2>
+
+<p>계약 전 가장 중요한 계산은 바로 <strong>잔여 담보가치</strong>입니다. 경매가 발생했을 때 내 보증금이 돌아올 수 있는지 확인하는 것입니다.</p>
+
+<div class="highlight-box">
+<strong>잔여 담보가치 계산 공식</strong><br>
+잔여 담보가치 = 집 시세의 70~80% − 선순위 근저당 채권최고액 합계<br><br>
+→ 이 값이 <strong>내 보증금보다 커야</strong> 안전합니다.<br><br>
+예) 시세 4억 원 × 70% = 2억 8,000만 원<br>
+선순위 근저당 채권최고액 합계 = 1억 8,000만 원<br>
+잔여 담보가치 = 2억 8,000만 − 1억 8,000만 = 1억 원<br>
+→ 보증금 1억 원 이하면 상대적으로 안전
+</div>
+
+<p>경매 낙찰가가 시세의 100%로 나오는 경우는 드물기 때문에 70~80% 기준으로 보수적으로 계산하는 것이 원칙입니다. 오피스텔은 아파트보다 경매 낙찰가율이 낮아 더 보수적(60~70%)으로 보는 것이 좋습니다.<br><br>
+선순위 근저당뿐 아니라 갑구의 <strong>가압류·압류·경매개시결정</strong>도 함께 확인하세요. 이런 항목이 있으면 이미 분쟁이 진행 중인 물건으로, 계약을 피하는 것이 현명합니다.</p>
+
+<h2>5. 갑구에서 확인해야 할 위험 신호</h2>
+
+<p>을구 못지않게 갑구도 꼼꼼히 봐야 합니다. 다음 항목이 있으면 위험 신호입니다.</p>
+
+<table class="info-table">
+  <tr><th>위험 항목</th><th>내용과 주의점</th></tr>
+  <tr><td>가압류</td><td>채권자가 집주인 재산을 임시로 묶어둔 상태. 경매 가능성 있음</td></tr>
+  <tr><td>압류</td><td>국세·지방세·건강보험료 등 체납으로 국가가 묶어둔 것. 높은 위험</td></tr>
+  <tr><td>경매개시결정</td><td>이미 경매 진행 중. 계약 절대 금지</td></tr>
+  <tr><td>소유권이전청구권가등기</td><td>제3자에게 매각 예약된 상태. 계약 전 해소 여부 확인 필수</td></tr>
+  <tr><td>소유자 잦은 변동</td><td>단기간 여러 번 소유자 바뀐 것은 사기 패턴일 수 있음</td></tr>
+</table>
+
+<p>특히 전세 사기에서 자주 등장하는 패턴은 갑구에 이미 가압류가 걸려 있는 집을 저렴한 전세가로 내놓거나, 소유자 변동 직후 전세 계약을 맺는 경우입니다. 갑구와 을구를 함께 읽어야 전체 그림이 보입니다.</p>
+
+<h2>6. 전입신고·확정일자와의 관계</h2>
+
+<p>등기부등본 확인만으로는 안전이 보장되지 않습니다. <strong>전입신고와 확정일자</strong>도 반드시 받아야 합니다. 이 둘을 갖춰야 대항력과 우선변제권이 생기기 때문입니다.<br><br>
+대항력은 집이 새로운 소유자에게 넘어가도 세입자가 계속 살 수 있는 권리이고, 우선변제권은 경매 시 후순위 채권자보다 먼저 배당받는 권리입니다.<br><br>
+핵심은 <strong>전입신고 익일부터 대항력이 발생</strong>한다는 점입니다. 계약 당일 바로 전입신고해야 하며, 확정일자는 주민센터·법원·공증사무소·인터넷등기소 어디서나 받을 수 있습니다.</p>
+
+<div class="warning-box">
+<strong>전입신고 전날 근저당 추가 등록 사기 주의</strong><br>
+계약 후 전입신고를 하루 미루는 사이, 집주인이 은행에서 추가 대출을 받아 새 근저당을 등록하면 해당 근저당이 내 대항력보다 먼저 잡힙니다. 잔금 납부 당일 바로 전입신고하세요.
+</div>
+
+<h2>7. 전세권 설정과 근저당의 차이</h2>
+
+<p>전세권은 세입자가 직접 등기부에 자신의 권리를 등재하는 것입니다. 이것이 있으면 갑구의 소유자 동의 없이도 경매를 신청할 수 있고, 등기부에서 보이기 때문에 후순위 매수자가 쉽게 알 수 있습니다.<br><br>
+근저당과 전세권이 같이 있을 경우, <strong>접수일자(순위번호) 기준</strong>으로 먼저 등재된 것이 우선 변제를 받습니다. 전세권을 설정할 때도 기존 근저당의 채권최고액을 먼저 확인해야 합니다.<br><br>
+전세권 설정에는 집주인 동의와 인감증명서가 필요하고, 설정 비용(등록세 등)이 발생하지만 보증금 보호 측면에서 훨씬 강력합니다. 2억 원 이상 보증금이라면 전세권 설정을 적극 검토하세요.</p>
+
+<div class="img-placeholder" onclick="copyPrompt(this)">
+  <p><strong>[이미지 3] 계약 전 체크리스트 이미지</strong></p>
+  <p>등기부등본 확인, 전입신고, 확정일자 등 체크리스트를 클립보드 스타일로 정리한 인포그래픽.</p>
+  <button class="copy-btn">프롬프트 복사</button>
+  <input type="hidden" value="Korean rental contract checklist clipboard infographic: registry check (등기부등본), move-in registration (전입신고), confirmed date (확정일자), checkboxes, clean flat design, green color scheme, Korean text labels">
+</div>
+<div class="img-caption">계약 당일 체크리스트: 등기부등본 최신본 확인 → 잔금 납부 → 전입신고 → 확정일자 순서를 지키세요.</div>
+
+<h2>8. 소액임차인 최우선변제권이란</h2>
+
+<p>보증금이 일정 금액 이하인 세입자는 근저당보다 후순위여도 <strong>최우선변제권</strong>으로 일부를 보호받을 수 있습니다. 지역마다 기준이 다르며, 주택임대차보호법 시행령에 따라 주기적으로 개정됩니다.<br><br>
+2024년 기준 서울의 경우, 보증금 1억 6,500만 원 이하인 경우 최우선변제 금액 5,500만 원까지 보호받을 수 있습니다. 다만 최우선변제는 배당 시 마지막 순서에서 남는 금액 중 지급되므로, 완전한 보호는 아닙니다.<br><br>
+구체적인 기준은 법무부나 대한법률구조공단 홈페이지에서 확인하거나, 관할 법원에 문의하는 것이 가장 정확합니다.</p>
+
+<h2>9. 전세보증보험 가입으로 추가 안전망 확보</h2>
+
+<p>등기부등본을 아무리 꼼꼼히 봐도 계약 후 상황이 바뀔 수 있습니다. 집주인이 대출을 추가로 받거나 세금 체납이 생기면 경매로 넘어갈 수도 있기 때문입니다. 이런 위험을 제도적으로 막아주는 것이 <strong>전세보증보험</strong>입니다.<br><br>
+주택도시보증공사(HUG)의 전세보증금반환보증보험에 가입하면, 집주인이 보증금을 돌려주지 않을 때 HUG가 먼저 지급하고 집주인에게 구상권을 행사합니다. 보험료는 보증금 대비 연 0.1~0.2% 수준으로 부담이 크지 않습니다.<br><br>
+단, HUG 전세보증보험 가입 조건으로 선순위 채권(근저당 등)이 집값의 60~70% 이하여야 한다는 심사 기준이 있습니다. 가입 가능 여부가 자동으로 이 집이 안전한지를 걸러주는 지표도 됩니다.</p>
+
+<div class="highlight-box">
+<strong>계약 전 최종 체크리스트 요약</strong><br>
+□ 인터넷등기소에서 오늘 날짜 등기부등본 발급<br>
+□ 갑구: 가압류·압류·경매개시결정 없음 확인<br>
+□ 을구: 유효한 근저당 채권최고액 합계 파악<br>
+□ 잔여 담보가치 계산(시세 70~80% − 근저당 합계 > 내 보증금)<br>
+□ 계약 직후 전입신고·확정일자 받기<br>
+□ 전세보증보험 가입 가능 여부 확인
+</div>
+
+<h2>10. 정리 — 등기부등본, 두 번 확인이 기본</h2>
+
+<p>등기부등본은 계약 전뿐만 아니라 <strong>잔금을 치르는 당일에도 다시 한번 발급</strong>해서 확인하는 것이 원칙입니다. 계약서를 쓰고 잔금 날까지 사이에 새 근저당이 등재될 수 있기 때문입니다.<br><br>
+특히 잔금 당일에는 돈을 보내기 직전 등기부를 다시 떼어보고, 이상이 없으면 이체 → 전입신고 → 확정일자 순으로 진행하세요.<br><br>
+인터넷등기소(iros.go.kr)에서 700원~1,000원으로 발급할 수 있는 이 문서 한 장이 수천만 원짜리 보증금을 지키는 가장 확실한 방법입니다. 번거롭더라도 반드시 직접 확인하는 습관을 들이시기 바랍니다.</p>
+
+<div class="internal-link-box">
+<strong>관련 글 더 보기</strong><br>
+• <a href="../../output/260710/travel_morningcalm_night.html">가평 아침고요수목원 여름 야간개장 별빛정원 시간과 예약 방법</a><br>
+• <a href="../../output/260710/local_ktx_standing_refund.html">KTX·SRT 입석·자유석과 늦었을 때 환불·연착 보상 방법</a>
+</div>
+
+<div class="tag-wrap">
+<span class="tag">#등기부등본</span>
+<span class="tag">#을구근저당</span>
+<span class="tag">#근저당읽는법</span>
+<span class="tag">#전세사기예방</span>
+<span class="tag">#인터넷등기소</span>
+<span class="tag">#채권최고액</span>
+<span class="tag">#전입신고</span>
+<span class="tag">#확정일자</span>
+<span class="tag">#전세보증보험</span>
+<span class="tag">#부동산계약</span>
+<span class="tag">#임대차보호법</span>
+<span class="tag">#보증금보호</span>
+</div>
+
+<script>
+function copyPrompt(el) {
+  const val = el.querySelector('input[type=hidden]').value;
+  navigator.clipboard.writeText(val).then(() => alert('프롬프트 복사 완료'));
+}
+</script>
+
+</body>
+</html>
