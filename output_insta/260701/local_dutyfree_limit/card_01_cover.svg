@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== G0 COVER : local_dutyfree_limit =====
+       국내여행 팔레트: #00796b / #004d40 / #e0f2f1 / #80cbc4 / #b2dfdb / #cfd8d6
+       커버 훅: 면세 한도 완전 정리 -->
+  <defs>
+    <linearGradient id="scrimCover" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.28"/>
+      <stop offset="0.45" stop-color="#000000" stop-opacity="0.40"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.80"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#0d1f1c"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimCover)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <!-- 상단 채널 레이블 -->
+  <text x="80" y="120" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="700" fill="#80cbc4" letter-spacing="4">travelkorea_365</text>
+  <rect x="80" y="138" width="260" height="4" fill="#00796b"/>
+
+  <!-- 키커 -->
+  <text x="80" y="620" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#80cbc4" letter-spacing="3">해외여행 필수 체크</text>
+
+  <!-- 메인 타이틀 -->
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="100" font-weight="800" fill="#ffffff" letter-spacing="-3">
+    <tspan x="80" y="740">면세 한도</tspan>
+    <tspan x="80" y="852">얼마까지?</tspan>
+  </text>
+
+  <rect x="80" y="892" width="200" height="10" fill="#00796b"/>
+
+  <!-- 서브 타이틀 -->
+  <text x="80" y="978" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="40" font-weight="500" fill="#e0f2f1">술·담배·향수 품목별</text>
+  <text x="80" y="1030" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="40" font-weight="500" fill="#e0f2f1">반입 규정 한눈에 정리</text>
+
+  <!-- 수치 칩 -->
+  <rect x="80" y="1090" width="290" height="68" rx="34" fill="#00796b"/>
+  <text x="225" y="1135" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#ffffff">기본 한도 US$800</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

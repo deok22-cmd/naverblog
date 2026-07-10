@@ -135,6 +135,23 @@ node scripts/insta_rasterize.mjs output_insta/<YYMMDD>/<slug> [3,7]
 - 전 카드 SVG는 우하단 코너에 `<g id="brand-watermark">` 배지(불투명 코너 탭 + 흰 `travelkorea_365`)를 가진다. `_layouts/` 전 템플릿 + 커버 템플릿에 내장 — 에이전트는 차용만 한다.
 - 목적: 수동(운영자가 Gemini 앱에서 받은 이미지)·자동 어느 경로든 배경 우하단에 찍히는 Gemini 로고를 불투명하게 가리고, 동시에 채널을 각인. 좌표·구조·표준은 `_layouts/README.md` §0 참조.
 
+### 3.9 수동 슬러그(2~5번) 반자동 클립보드 헬퍼 (2026-05-25)
+- 스크립트: `scripts/insta_clipboard_helper.mjs` — 수동 슬러그의 prompts.md 코드블록을 순차로 클립보드에 자동 복사 → Gemini 컨슈머 웹에 사람이 직접 Ctrl+V·생성·다운로드 → `<slug>/img/NN.png` 출현을 폴링 감지하면 다음 프롬프트 자동 복사.
+- **ToS 안전**: 자동화는 *로컬 OS*(클립보드·브라우저 오픈)만 수행하고 `gemini.google.com` 상의 모든 조작은 *사람이 직접* → Google 컨슈머 약관 "자동화로 서비스 접근 금지" 조항 회피. 컨슈머 무료 티어 사용이라 비용 0(일일 한도 내).
+- 키 입력 (언제든): `Enter`=수동 다음 | `s`=skip | `r`=현재 카드 클립보드 재복사 | `q`=종료.
+- 사용:
+  ```
+  node scripts/insta_clipboard_helper.mjs output_insta/<YYMMDD>/<slug>
+  node scripts/insta_clipboard_helper.mjs output_insta/<YYMMDD>/<slug> 3,7   # 특정 카드만
+  ```
+- 헬퍼 종료 후 후속 단계 (스크립트가 마지막에 두 줄 안내):
+  ```
+  node scripts/insta_render.mjs <slug> --reuse       # img/NN.png 를 SVG에 제자리 주입
+  node scripts/insta_rasterize.mjs <slug>            # 1080×1350 PNG 산출
+  ```
+- 권장 트리거 자연어: "260526 <슬러그> 클립보드 헬퍼 띄워줘" / "수동 카드 만들기 시작".
+- **금지**: 헬퍼를 우회해 Puppeteer 등으로 `gemini.google.com` 자체를 자동 조작하는 것 — 컨슈머 약관 위반·계정 정지 리스크(AdSense 등 동일 Google 계정 전체 영향). API(`generativelanguage.googleapis.com`)는 약관상 자동화 허용이지만 유료 — 본 정책 3.7에 따라 첫 원고에만 사용.
+
 ---
 
 ## 4 | 폴더·명명 규칙

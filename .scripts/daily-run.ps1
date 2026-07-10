@@ -2,11 +2,18 @@
 # Windows 작업 스케줄러가 매일 새벽 4:00 실행
 # 1) Claude CLI로 원고 5건 작성 → 2) 작성 결과만 GitHub에 자동 push
 
-# === 티스토리 자동 발행 플래그 (2026-05-20 재개) ===
-# 2026-05-20 일시 중단 → 2026-05-20 같은 날 사용자 지시로 재개.
-# False(현재): 티스토리 미러 5건 + 게이트 정상 실행.
-# True 로 다시 돌리려면 사용자가 "티스토리 자동작성 중단해줘" 등 명확히 지시.
-$TistorySuspended = $false
+# === 티스토리 자동 발행 플래그 ===
+# 2026-07-09 중단(True): 애드센스 "가치 없는 콘텐츠" 반려 → 네이버 파생 미러 폐기.
+# 티스토리는 이제 사용자 실사진·실경험 기반 '별도' 애드센스 채널로, 대화형 제작(4시 자동 X).
+# daily-run은 티스토리 생성·게이트(Step 1.65/1.7)·스테이징을 스킵. 제작 표준 = 티스토리_애드센스_제작.md.
+# 자동 미러로 되돌리려면 $false (권장 안 함 — 애드센스 반려 사유).
+$TistorySuspended = $true
+
+# === 인스타 자동생성 플래그 (2026-07-08 중단) ===
+# 2026-07-08 사용자 지시로 인스타 카드 자동생성(Step 1.6 Phase C) 중단.
+# 블로그 성장모드(일 7건)로 전환하며 유료 이미지 렌더 예산을 블로그에 집중.
+# 블로그 삽입 이미지는 사용자가 별도 제작. 재개하려면 아래를 $false로.
+$InstaSuspended = $true
 
 $ErrorActionPreference = "Continue"
 $ProjectRoot = "D:\lightsail\naverblog"
@@ -107,7 +114,9 @@ try {
 # 콘텐츠(네이버/티스토리) 성공 시에만 진행. 실패는 비치명적(전체 종료코드 불변).
 Write-Log ""
 Write-Log "=== Insta Card Channel @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="
-if ($exit -ne 0) {
+if ($InstaSuspended) {
+    Write-Log "SKIP Insta: 인스타 자동생성 중단됨(2026-07-08 사용자 지시, `$InstaSuspended). 블로그 이미지는 사용자 별도 제작."
+} elseif ($exit -ne 0) {
     Write-Log "SKIP Insta: Claude content step exit $exit (콘텐츠 실패 시 인스타 생략)."
 } else {
     try {
@@ -207,6 +216,28 @@ if ($exit -ne 0) {
         }
     } catch {
         Write-Log "ERROR (Insta Card Channel): $_"
+    }
+}
+
+# === Step 1.65: 티스토리 구조 결정론적 자동복구 (게이트 직전) ===
+# LLM 생성이 간헐 누락하는 래퍼(F1)/추천박스(F5)/태그칩(F8)을 네이버 원본에서 기계 복구(멱등).
+# 2026-07-08 추가: 게이트 간헐 FAIL(7/4·6·7 push 차단) 근본 대응 → 게이트 전에 수리해 통과율 고정.
+Write-Log ""
+Write-Log "=== Tistory Structure Auto-Fix @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="
+if ($TistorySuspended) {
+    Write-Log "SKIP auto-fix: 티스토리 중단됨."
+} elseif ($exit -ne 0) {
+    Write-Log "SKIP auto-fix: 콘텐츠 단계 exit $exit."
+} else {
+    try {
+        $YMD = Get-Date -Format "yyMMdd"
+        & python "$ProjectRoot\scripts\fix_tistory_violations.py" $YMD 2>&1 | ForEach-Object {
+            $line = "$_"; Write-Host $line
+            [System.IO.File]::AppendAllText($LogFile, "$line`r`n", $utf8NoBom)
+        }
+        Write-Log "Tistory auto-fix exit: $LASTEXITCODE"
+    } catch {
+        Write-Log "WARN (Tistory auto-fix): $_ — 게이트가 최종 판정."
     }
 }
 

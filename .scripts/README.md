@@ -109,7 +109,7 @@ Get-ChildItem D:\lightsail\naverblog\.scripts\logs\daily-20260502*.log | ForEach
 
 1. **04:00 (자동)** — 작업 스케줄러가 `daily-run.ps1` 실행
 2. **04:00~04:15 (자동)** — Claude가 5개 주제 선정, 대시보드, 5개 원고(placeholder 모드) 생성
-3. **04:15 직후 (자동)** — wrapper가 `output/YYMMDD/` 폴더와 트래커 파일(`국내여행지.md`, `sub_topic_tracker.md`, `spreadsheet.md`, `receipt.md`)만 staging 한 뒤 `[Auto] YYYY-MM-DD 일자 원고 자동 발행` 메시지로 commit, 현재 브랜치를 origin으로 push (`https://github.com/deok22-cmd/naverblog`). 그 외의 사전에 변경되어 있던 파일은 staging 하지 않음
+3. **04:15 직후 (자동)** — wrapper가 `output/YYMMDD/` 폴더와 트래커 파일(`국내여행지.md`, `생활정보.md`, `sub_topic_tracker.md`, `spreadsheet.md`, `receipt.md`)만 staging 한 뒤 `[Auto] YYYY-MM-DD 일자 원고 자동 발행` 메시지로 commit, 현재 브랜치를 origin으로 push (`https://github.com/deok22-cmd/naverblog`). 그 외의 사전에 변경되어 있던 파일은 staging 하지 않음
 4. **기상 후 (수동)** — Antigravity에 다음과 같이 지시:
    > `D:\lightsail\naverblog\output\YYMMDD\` 의 모든 HTML 파일을 읽고, 각 `.img-placeholder` 안의 영문 프롬프트와 `.ph-file` 경로를 사용해 이미지 15장을 생성·저장해줘
 5. **이미지 생성 후 (수동)** — `output/YYMMDD/` 의 각 HTML에서 placeholder를 `<img>` 태그로 치환 (Claude에게 "오늘 5개 원고 placeholder를 img 태그로 변환" 요청 또는 직접 작업)

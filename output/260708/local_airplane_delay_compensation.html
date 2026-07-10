@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<title>비행기 연착·결항 보상과 환불, 어떻게 대처하나</title>
+<style>
+  body { margin: 0 auto; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1f8e9; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 14px; text-align: left; font-size: .95em; }
+  .info-table td { border-bottom: 1px solid #eee; padding: 10px 14px; font-size: .93em; }
+  .tip-box { background: #fffde7; border-left: 5px solid #f9a825; padding: 18px 20px; margin: 25px 0; border-radius: 0 8px 8px 0; }
+  .warn-box { background: #fff3e0; border-left: 5px solid #ef6c00; padding: 18px 20px; margin: 25px 0; border-radius: 0 8px 8px 0; }
+  .step-box { background: #e8f5e9; border: 1px solid #a5d6a7; padding: 20px 22px; margin: 20px 0; border-radius: 8px; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #ccc; border-radius: 8px; padding: 20px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; color: #555; }
+  .ph-file { font-size: .8em; color: #388e3c; font-family: monospace; }
+  .prompt-text { background: #263238; color: #a5d6a7; padding: 14px; border-radius: 6px; font-size: .82em; white-space: pre-wrap; line-height: 1.6; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; font-size: .88em; margin-top: 8px; }
+  .img-caption { font-size: .88em; color: #666; margin-top: 10px; font-style: italic; }
+  <script>
+  function copyPrompt(id) {
+    const text = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+      const orig = btn.innerText;
+      btn.innerText = "복사 완료!";
+      btn.style.background = "#27ae60";
+      setTimeout(() => { btn.innerText = orig; btn.style.background = "#388e3c"; }, 2000);
+    });
+  }
+  </script>
+</style>
+</head>
+<body>
+<h1>비행기 연착·결항 보상과 환불, 어떻게 대처하나</h1>
+<div class="intro-box">
+<strong>📍 핵심 요약</strong><br/><br/>
+비행기가 <strong>연착</strong>되거나 <strong>결항</strong>됐을 때 승객에게는 법적 권리가 있습니다. 항공사 귀책 연착의 경우 소비자분쟁해결기준에 따라 운임의 10~20%를 보상받을 수 있으며, 결항 시에는 대체 항공편 또는 전액 환불을 요구할 수 있습니다.<br/><br/>
+단, <strong>기상·자연재해 등 불가항력</strong>에 의한 연착과 결항은 보상 대상이 아니며 환불만 가능합니다. 여행자보험에 가입되어 있다면 연착 조건에 해당할 때 보험금 청구도 별도로 가능합니다.<br/><br/>
+현장에서 당황하지 않으려면 귀책 여부 확인 → 연착 확인서 수령 → 보상 요청 또는 보험 청구 순서를 미리 알아두는 것이 중요합니다. 이 글에서 국내선·국제선 기준과 실무 대처 방법을 단계별로 안내합니다.
+</div>
+<h2>① 비행기 연착과 결항, 어떻게 구분하나</h2>
+
+항공편 문제를 제대로 대처하려면 먼저 용어를 정확히 이해해야 합니다.<br/><br/>
+<strong>연착(遲着, Delay)</strong>은 항공편이 예정 출발 시각보다 늦게 출발하거나, 예정 도착 시각보다 늦게 도착하는 상황을 말합니다. 출발이 늦어진 경우라도 목적지에는 정상 도착 시각에 맞춰 도착할 수 있으면 '연착' 처리가 되지 않는 경우도 있으나, 일반적으로 출발 기준 지연 시간을 기준으로 보상 여부를 따집니다.<br/><br/>
+<strong>결항(缺航, Cancellation)</strong>은 해당 항공편 자체가 취소되는 것입니다. 항공기 기계 결함, 항공사 내부 운영 문제, 기상 악화, 공항 폐쇄 등 다양한 원인으로 발생합니다.<br/><br/>
+<strong>귀환(조기 귀착)</strong>은 출발 후 문제가 생겨 출발지로 돌아오는 경우입니다. 이 역시 결항에 준하는 처리를 받을 수 있습니다.<br/><br/>
+보상 여부와 금액을 결정하는 핵심은 <strong>항공사 귀책 여부</strong>입니다. 항공사 측의 사정(기재 결함, 오버부킹, 승무원 문제 등)으로 인한 지연·결항은 보상 대상이 되지만, 기상·공항 사정·테러 등 불가항력은 보상에서 제외됩니다. 따라서 현장에서 항공사 측에 지연 이유를 반드시 확인해야 합니다.
+
+<div class="img-area">
+<img alt="항공편 연착·결항 안내 전광판 앞에 모인 승객들 — 당황하지 말고 귀책 여부부터 확인하세요 / AI 제작 이미지" src="../../images/260708/4_airplane_1.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+
+</div>
+<h2>② 항공사 귀책과 불가항력(기상)의 차이</h2>
+
+연착·결항 보상에서 가장 중요한 구분이 <strong>항공사 귀책</strong>과 <strong>불가항력</strong>의 차이입니다.<br/><br/>
+<strong>항공사 귀책 사유 (보상 대상)</strong>:
+<ul style="list-style:disc;padding-left:22px;margin:12px 0;">
+<li>항공기 기계 결함 또는 정비 문제</li>
+<li>승무원 인력 부족 또는 편성 착오</li>
+<li>오버부킹(초과 예약)으로 인한 탑승 거부</li>
+<li>항공사 운영 시스템·스케줄 문제</li>
+<li>연료 부족 등 항공사 내부 관리 문제</li>
+</ul>
+<strong>불가항력 사유 (환불만 가능, 보상 제외)</strong>:
+<ul style="list-style:disc;padding-left:22px;margin:12px 0;">
+<li>기상 불량(태풍, 강풍, 폭설, 짙은 안개 등)</li>
+<li>자연재해(지진, 화산 폭발 등)</li>
+<li>공항 폐쇄 또는 운영 중단</li>
+<li>정치적 불안, 테러, 전쟁 등 안보 문제</li>
+<li>항공교통관제(ATC) 지시에 의한 제한</li>
+</ul>
+
+현장에서 항공사가 "기상 문제"라고 안내하더라도, 실제로는 항공사 귀책이 섞여 있는 경우가 있습니다. 특히 <strong>항공기 기계 문제로 정비가 지연된 후 기상 이슈가 겹친 경우</strong>는 귀책 비율 판단이 복잡해질 수 있으므로, 연착 확인서에 기재된 사유를 확인하는 것이 중요합니다.<br/><br/>
+불가항력으로 결항된 경우에도 항공사는 <strong>가능한 대체 편을 안내하거나 전액 환불</strong>을 제공해야 합니다. 보상(추가 금전 지급)은 받을 수 없어도 환불과 대체편 알선은 의무입니다.
+
+<h2>③ 국내선 연착 보상 기준 (소비자분쟁해결기준)</h2>
+
+국내선 항공 보상은 <strong>공정거래위원회 소비자분쟁해결기준(항공 분야)</strong>에 따릅니다. 항공사 귀책이 확인된 경우에 한해 다음 기준이 적용됩니다.<br/><br/>
+<table class="info-table">
+<tr><th>연착 시간</th><th>보상 기준</th></tr>
+<tr><td style="background:#f1f8e9;">60분 미만 연착</td><td style="background:#f1f8e9;">보상 없음</td></tr>
+<tr><td>60분 이상 ~ 90분 미만 연착</td><td>해당 구간 운임의 <strong>10%</strong></td></tr>
+<tr><td style="background:#f1f8e9;">90분 이상 ~ 120분 미만 연착</td><td style="background:#f1f8e9;">해당 구간 운임의 <strong>15%</strong></td></tr>
+<tr><td>120분 이상 연착</td><td>해당 구간 운임의 <strong>20%</strong></td></tr>
+<tr><td style="background:#f1f8e9;">결항 (항공사 귀책)</td><td style="background:#f1f8e9;">대체편 알선 또는 운임 전액 환불 + <strong>운임의 20%</strong> 추가 보상</td></tr>
+</table>
+
+여기서 '해당 구간 운임'은 실제 납부한 항공료를 기준으로 하며, 유류할증료·공항세 등 부대 비용은 제외하는 경우가 일반적입니다. 보상금은 현금 또는 항공사 마일리지·바우처 형태로 지급될 수 있습니다.<br/><br/>
+항공사가 임의로 보상을 거부하거나 기준 미달 보상을 제시하는 경우, <strong>한국소비자원(1372)</strong> 또는 <strong>국토교통부 항공교통서비스포털</strong>에 분쟁 조정을 신청할 수 있습니다.<br/><br/>
+단, 소비자분쟁해결기준은 법적 강제력이 있는 규정이 아닌 권고 기준이라는 점도 알아두세요. 그러나 항공사들이 약관에 이를 반영하거나 분쟁 조정의 근거로 활용되기 때문에 사실상 기준으로 작동합니다.
+
+<h2>④ 국제선 보상은 어떻게 다른가</h2>
+
+국제선 연착·결항 보상은 출발 국가와 항공사에 따라 적용 기준이 크게 다릅니다.<br/><br/>
+<strong>EU 출발편 (EC 261/2004 규정)</strong>: 유럽연합 회원국 공항에서 출발하는 항공편, 또는 EU 항공사가 운항하는 전 세계 모든 노선에는 EU 규정 EC 261/2004가 적용됩니다. 이 규정은 세계에서 가장 강력한 항공 승객 보호 규정으로, 3시간 이상 도착 지연 시 거리에 따라 다음과 같이 보상합니다.
+
+<table class="info-table">
+<tr><th>비행 거리</th><th>지연 시간</th><th>보상액</th></tr>
+<tr><td style="background:#f1f8e9;">1,500km 이하</td><td style="background:#f1f8e9;">2시간+ 도착 지연</td><td style="background:#f1f8e9;">250유로</td></tr>
+<tr><td>1,500~3,500km</td><td>3시간+ 도착 지연</td><td>400유로</td></tr>
+<tr><td style="background:#f1f8e9;">3,500km 이상</td><td style="background:#f1f8e9;">4시간+ 도착 지연</td><td style="background:#f1f8e9;">600유로</td></tr>
+</table>
+<strong>한국 출발 국제선</strong>: 한국 항공사의 경우 공정거래위원회 소비자분쟁해결기준이 적용되며, 국내선보다 복잡합니다. 국제선은 몬트리올 협약을 기반으로 하며, 항공사별 약관도 참고해야 합니다.<br/><br/>
+<strong>4시간 이상 연착 시 식음료 제공 의무</strong>: 항공사 귀책으로 국제선 출발이 4시간 이상 지연된 경우, 항공사는 식사 쿠폰 또는 식사를 제공할 의무가 있습니다. 현장에서 능동적으로 요청하세요.<br/><br/>
+<strong>국제선 결항 시 숙박 제공</strong>: 결항으로 당일 대체편 탑승이 불가한 경우, 항공사 귀책이라면 숙박·식사 제공이 이루어져야 합니다. 항공사 귀책 여부가 불분명할 경우에도 일부 항공사는 서비스 차원에서 제공하기도 합니다.
+
+<div class="img-area">
+<img alt="항공사 고객 서비스 데스크에서 연착 확인서와 보상을 요청하는 승객 / AI 제작 이미지" src="../../images/260708/4_airplane_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+
+</div>
+<h2>⑤ 현장에서 바로 할 수 있는 대처 순서</h2>
+
+연착·결항 상황을 맞닥뜨렸을 때 당황하지 않고 실행할 수 있는 5단계 대처법입니다.<br/><br/>
+<div class="step-box">
+<strong>STEP 1: 항공사 안내 방송 및 전광판 확인</strong><br/>
+연착·결항 정보가 공지되면 즉시 귀책 사유를 확인합니다. "기상 이유"인지 "항공사 사정"인지에 따라 보상 가능 여부가 달라집니다.
+</div>
+<div class="step-box">
+<strong>STEP 2: 항공사 데스크 방문 → 사유 확인서 요청</strong><br/>
+항공사 카운터나 게이트 담당 직원에게 지연 사유를 직접 확인하고, <strong>연착(지연) 확인서(Delay Certificate)</strong>를 발급해 달라고 요청합니다. 이 서류는 보상 청구와 여행자보험 청구 모두에 필요합니다.
+</div>
+<div class="step-box">
+<strong>STEP 3: 식사 쿠폰·숙박 요청</strong><br/>
+항공사 귀책으로 4시간 이상 지연 시 식음료 제공을 요청합니다. 당일 결항으로 숙박이 필요한 경우도 항공사 측에 먼저 요청하세요.
+</div>
+<div class="step-box">
+<strong>STEP 4: 대체편 또는 환불 요청</strong><br/>
+결항 시 항공사는 동일 목적지 대체편을 안내해야 합니다. 대체편 일정이 본인에게 맞지 않거나 불가할 경우 전액 환불을 요청할 수 있습니다.
+</div>
+<div class="step-box">
+<strong>STEP 5: 보상 청구 및 이의 제기</strong><br/>
+보상 기준 이하로 처리되거나 거부당한 경우, 탑승권·연착 확인서·영수증을 보관하고 귀국 후 항공사 고객센터→한국소비자원(1372) 순서로 이의를 제기합니다.
+</div>
+<h2>⑥ 환불 신청 방법과 수수료 면제</h2>
+
+결항된 항공편의 경우 승객에게는 <strong>전액 환불</strong>을 받을 권리가 있습니다. 항공사 귀책이든 불가항력이든 결항이라면 환불은 보장됩니다.<br/><br/>
+<strong>환불 신청 방법</strong>:
+<ul style="list-style:disc;padding-left:22px;margin:12px 0;">
+<li>온라인 예약의 경우: 항공사 홈페이지 또는 앱에서 직접 취소·환불 신청</li>
+<li>여행사·OTA(온라인 여행사)를 통해 구매한 경우: 해당 채널을 통해 환불 요청</li>
+<li>현장 처리: 공항 항공사 카운터에서 직접 처리 가능</li>
+</ul>
+<strong>취소 수수료 면제 범위</strong>: 결항은 항공사 귀책 여부에 무관하게 취소 수수료가 면제되는 것이 일반적입니다. 단, 할인 항공권(특가·비환불 조건)의 경우 약관에 따라 처리가 달라질 수 있으므로 구매 시 약관을 미리 확인해 두는 것이 좋습니다.<br/><br/>
+<strong>환불 소요 기간</strong>: 카드 결제 취소의 경우 통상 7~10 영업일이 소요되며, 카드사 결제 사이클에 따라 다음 달 청구서에 반영되기도 합니다. 현금 환불은 항공사별 규정에 따라 다릅니다.<br/><br/>
+<div class="tip-box">
+💡 <strong>환불 처리 시 주의사항</strong><br/><br/>
+· 여행사 앱이나 OTA에서 구매한 경우, 중간 수수료가 발생할 수 있습니다. 항공사와 직접 환불 처리가 가능한지 먼저 확인하세요.<br/>
+· 마일리지 또는 포인트로 부분 결제한 경우 환불 규정이 복잡해지므로 항공사 고객센터에 직접 문의하세요.<br/>
+· 결항 확인서나 환불 관련 서류는 보험 청구에도 필요하므로 꼭 보관하세요.
+</div>
+<h2>⑦ 여행자보험으로 연착 보험금 청구하기</h2>
+
+여행자보험에 가입한 경우, 항공편 연착으로 인한 <strong>연착 보험금</strong>을 별도로 청구할 수 있습니다. 이는 항공사로부터 받는 보상과는 별개로 중복 수령이 가능한 경우가 많습니다.<br/><br/>
+<strong>연착 보험금 적용 조건</strong>: 통상 <strong>3~6시간 이상</strong> 지연이 확인된 경우 청구 가능합니다. 보험사마다 적용 기준이 다르므로 가입 약관에서 '항공기 지연' 또는 '비행기 연착' 항목을 확인하세요. 귀책 여부(항공사 또는 불가항력)에 상관없이 지급 가능한 경우가 많다는 것이 여행자보험의 장점입니다.<br/><br/>
+<strong>청구 필요 서류</strong>:
+<ul style="list-style:disc;padding-left:22px;margin:12px 0;">
+<li>연착(지연) 확인서 (항공사 발행)</li>
+<li>탑승권 원본 또는 사본</li>
+<li>여행자보험증서</li>
+<li>지연으로 인해 추가 지출한 식사·교통비 영수증 (실비 보상 있는 경우)</li>
+<li>여권 사본</li>
+</ul>
+<strong>보험금 청구 방법</strong>: 귀국 후 보험사 고객센터 또는 앱을 통해 온라인 청구가 가능합니다. 통상 서류 접수 후 7~14 영업일 내에 심사 결과가 통보됩니다.<br/><br/>
+여행자보험 가입 시 '항공기 지연' 특약이 포함된 상품을 선택하면, 연착 상황에서도 실질적인 보호를 받을 수 있습니다.
+
+<div class="img-area">
+<img alt="공항 대기 중 여행자보험 온라인 청구를 진행하는 승객 — 확인서와 서류를 잘 챙겨두면 됩니다 / AI 제작 이미지" src="../../images/260708/4_airplane_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+
+</div>
+<h2>⑧ 항공사가 안 들어줄 때 분쟁 해결 방법</h2>
+
+항공사가 보상을 거부하거나 기준 이하의 처리를 제시할 경우, 다음 채널을 통해 이의를 제기할 수 있습니다.<br/><br/>
+<strong>1단계: 항공사 고객센터 공식 이의 제기</strong><br/>
+먼저 해당 항공사의 고객만족센터나 민원 채널에 서면으로 이의를 제기합니다. 탑승권·연착 확인서·영수증·보상 거부 내용을 포함한 문서를 이메일 또는 우편으로 제출합니다.<br/><br/>
+<strong>2단계: 한국소비자원 (1372)</strong><br/>
+항공사와 직접 합의가 어려운 경우 한국소비자원에 소비자 분쟁 조정을 신청합니다. 전화(1372) 또는 온라인(ccn.go.kr)으로 접수 가능하며, 조정 결과는 법적 효력이 있습니다.<br/><br/>
+<strong>3단계: 국토교통부 항공교통서비스포털</strong><br/>
+국토교통부 항공교통서비스포털(atis.molit.go.kr)을 통해 항공 서비스 민원을 제기할 수 있습니다. 항공사 대상 행정 조치를 요구하는 공식 채널입니다.<br/><br/>
+<strong>EU 노선(EC 261 적용) 분쟁</strong>: 해당 EU 국가의 국가항공안전청(NEB) 또는 유럽소비자센터(ECC)에 불만을 접수할 수 있습니다. 국내에도 유럽소비자센터 한국 네트워크를 통한 지원이 가능합니다.
+
+<h2>⑨ 미리 예방하는 방법과 앱 활용</h2>
+
+연착·결항 상황을 완전히 예방할 수는 없지만, 피해를 줄이는 방법은 있습니다.<br/><br/>
+<strong>항공편 추적 앱 활용</strong>: '플라이트레이더24(Flightradar24)', '플라이트어웨어(FlightAware)', '카카오맵 항공' 등을 이용하면 출발 전부터 해당 항공편의 실시간 현황을 모니터링할 수 있습니다. 탑승 전 이미 기체가 지연되고 있다면 일찍 공항 도착을 조정하거나 다른 계획을 세울 수 있습니다.<br/><br/>
+<strong>항공사 앱 및 알림 등록</strong>: 대부분의 항공사는 예약 번호 기반으로 앱 푸시 알림이나 문자 메시지로 출발 변경·지연 사항을 안내합니다. 예약 후 항공사 앱에 해당 항공편 알림을 설정해 두세요.<br/><br/>
+<strong>일찍 탑승편 선택</strong>: 하루 중 첫 번째 또는 두 번째 출발편은 전날 밤부터 기체가 대기하고 있어 연착 확률이 비교적 낮습니다. 늦은 오후나 저녁 편은 앞선 편들의 연착이 도미노처럼 이어지는 경우가 있습니다.<br/><br/>
+<strong>여행자보험 가입</strong>: 출발 전 반드시 여행자보험에 가입하고 항공 지연 특약 포함 여부를 확인하세요. 보험료 대비 보장이 커서 장거리 여행일수록 효용이 높습니다.<br/><br/>
+<strong>여유 있는 환승 연결 일정</strong>: 경유 항공편이라면 환승 시간을 넉넉히 잡는 것이 중요합니다. 연결편 최소 시간(MCT) 이상으로 2~3시간 여유를 두면 앞 편 지연에도 환승에 성공할 가능성이 높아집니다.
+
+<h2>⑩ 자주 묻는 질문 (Q&amp;A)</h2>
+<strong>Q. 기상 원인 연착에는 정말 보상이 없나요?</strong><br/>
+A. 맞습니다. 기상 불량·자연재해 등 불가항력으로 인한 연착과 결항은 항공사에 책임이 없어 소비자분쟁해결기준상 보상이 없습니다. 단, 결항이라면 환불과 대체편 알선은 받을 수 있습니다. 이 경우 여행자보험이 사실상 유일한 금전적 보완책입니다.<br/><br/>
+<strong>Q. 연착 확인서를 현장에서 발급 안 해준다면?</strong><br/>
+A. "소비자분쟁해결기준에 따라 서류가 필요하다"고 명확하게 요청하세요. 거부하면 항공사 이름, 날짜, 편명, 지연 시간을 스스로 기록하고 탑승권과 문자·앱 알림 캡처 등 모든 증거를 보관하세요. 한국소비자원 분쟁 조정 신청 시 이 자료들이 증거로 활용됩니다.<br/><br/>
+<strong>Q. 마일리지로 끊은 항공권도 보상받을 수 있나요?</strong><br/>
+A. 소비자분쟁해결기준상 보상 기준은 '납부한 운임'이 기준이므로, 마일리지 전액 사용 시 현금 보상이 어렵거나 마일리지 반환 형태로 이루어집니다. 해당 항공사 약관을 확인하거나 고객센터에 문의하세요.<br/><br/>
+<strong>Q. 연착으로 인해 호텔 예약을 놓쳤습니다. 환불받을 수 있나요?</strong><br/>
+A. 항공사 귀책 연착으로 인한 파생 손해(호텔·렌터카 등)는 항공사에 청구하기 어려운 경우가 많습니다. 그러나 여행자보험에 여행 중단 또는 지연 관련 특약이 있다면 실비 청구가 가능할 수 있습니다. 보험 약관을 확인하세요.
+
+<div class="warn-box">
+⚠️ <strong>기억하세요</strong><br/><br/>
+보상 청구에 가장 중요한 것은 <strong>현장 서류 수령</strong>입니다. 탑승권, 연착 확인서, 식사 쿠폰 영수증은 반드시 현장에서 받아 보관하세요. 공항을 떠난 후에는 서류 발급이 어렵거나 불가능해집니다.
+</div>
+<div class="recommend-area">
+<strong>🔗 함께 읽으면 좋은 글</strong><br/><br/>
+▶ <a href="../260707/travel_seongsan_ilchulbong_summer.html" style="color:#388e3c;text-decoration:none;">성산 일출봉 여름 여행 — 제주 항공 이용 시 알아두면 좋은 현지 코스</a><br/>
+▶ <a href="../260707/local_highway_service_area_tips.html" style="color:#388e3c;text-decoration:none;">고속도로 휴게소 알뜰 이용 팁 — 여름 장거리 이동 필수 가이드</a>
+</div>
+<div style="margin:30px 0;">
+<span class="tag">#비행기연착보상</span>
+<span class="tag">#항공결항환불</span>
+<span class="tag">#연착대처</span>
+<span class="tag">#여행자보험</span>
+<span class="tag">#소비자분쟁</span>
+<span class="tag">#항공보상</span>
+<span class="tag">#여름여행팁</span>
+<span class="tag">#국내선보상</span>
+<span class="tag">#국제선보상</span>
+<span class="tag">#항공권환불</span>
+</div>
+</body>
+</html>

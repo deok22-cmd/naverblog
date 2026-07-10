@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#ff9a3c"/><stop offset="0.5" stop-color="#ff5a4e"/><stop offset="1" stop-color="#ff3f74"/>
+</linearGradient>
+<filter id="soft" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="6" stdDeviation="16" flood-color="#7a1420" flood-opacity="0.38"/></filter>
+</defs>
+<rect width="1080" height="1080" fill="url(#bg)"/>
+<circle cx="205" cy="185" r="22" fill="#fff" opacity="0.16"/>
+<circle cx="905" cy="250" r="14" fill="#fff" opacity="0.14"/>
+<circle cx="860" cy="835" r="18" fill="#fff" opacity="0.12"/>
+<circle cx="225" cy="835" r="12" fill="#fff" opacity="0.15"/>
+<circle cx="120" cy="520" r="9" fill="#fff" opacity="0.13"/>
+<circle cx="960" cy="560" r="10" fill="#fff" opacity="0.12"/>
+<circle cx="540" cy="428" r="252" fill="#fff" opacity="0.15"/>
+<text x="540" y="558" font-size="360" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🍲</text>
+<text x="540" y="808" font-size="146" font-weight="800" letter-spacing="-5" fill="#fff" text-anchor="middle" font-family="Pretendard,'Apple SD Gothic Neo',sans-serif" filter="url(#soft)">김포맛집</text>
+<g filter="url(#soft)"><rect x="446" y="854" width="188" height="76" rx="38" fill="#ffffff"/><text x="540" y="907" font-size="47" font-weight="800" letter-spacing="2" fill="#ff5140" text-anchor="middle" font-family="Pretendard,'Apple SD Gothic Neo',sans-serif">노트</text></g>
+</svg>

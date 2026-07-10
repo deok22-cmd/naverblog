@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1f8e9; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { border: 1px solid #c8e6c9; padding: 10px 12px; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #bbb; border-radius: 8px; padding: 30px 20px; text-align: center; }
+  .ph-head { display: flex; justify-content: space-between; font-size: 0.9em; color: #555; margin-bottom: 12px; flex-wrap: wrap; gap: 6px; }
+  .ph-file { font-family: monospace; background: #e8e8e8; padding: 2px 6px; border-radius: 3px; font-size: 0.85em; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 14px; border-radius: 6px; font-size: 0.82em; text-align: left; white-space: pre-wrap; word-break: break-word; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 8px 18px; border-radius: 5px; cursor: pointer; font-size: 0.9em; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .warn-box { background: #fff3e0; border: 2px solid #ffb74d; border-radius: 8px; padding: 20px; margin: 24px 0; }
+  .check-box { background: #e3f2fd; border: 2px solid #64b5f6; border-radius: 8px; padding: 20px; margin: 24px 0; }
+  .tip-box { background: #fce4ec; border-left: 5px solid #e91e63; padding: 16px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>아이와 계곡 물놀이 갈 때 급류·저체온 대처와 여름 안전수칙</h1>
+<div class="intro-box">
+<strong>매년 여름, 계곡 물놀이 사고 뉴스가 끊이지 않습니다.</strong><br/><br/>
+소방청 통계에 따르면 물놀이 익수 사고는 7~8월에 집중되며, 계곡은 바다나 수영장보다 안전 인프라가 부족해 사고 발생 시 대처가 훨씬 어렵습니다.<br/><br/>
+특히 아이를 동반한 경우, 보호자가 잠깐 한눈을 파는 사이에도 예기치 못한 사고가 일어날 수 있습니다. 급류에 휩쓸리거나 수온이 낮은 계곡물에 장시간 노출돼 저체온증이 오는 사례도 해마다 발생합니다.<br/><br/>
+이 글에서는 <strong>계곡 물놀이 사고의 주요 원인부터 급류 대처, 저체온증 응급처치, 현장 안전 수칙</strong>까지 단계별로 정리해 드립니다. 계곡 방문 전 꼭 한 번 숙지해 두세요.
+</div>
+<h2>01. 계곡 물놀이 사고가 많은 이유 — 여름 급류의 특성</h2>
+
+계곡은 강이나 바다와는 다른 독특한 위험 요소를 갖고 있습니다. 겉보기에 잔잔해 보이는 계곡도 상류 상황에 따라 순식간에 수위가 올라가고 유속이 빨라질 수 있기 때문입니다.<br/><br/>
+<strong>여름 계곡이 특히 위험한 이유를 살펴볼까요?</strong><br/><br/>
+
+첫째, <strong>집중호우 후 수위 급변</strong>입니다. 상류에 비가 쏟아지면 하류 계곡에 물이 순식간에 차오릅니다. 맑은 날씨에 계곡에 들어갔다가도 멀리서 내리는 비 때문에 갑자기 물이 불어나는 상황이 발생합니다. 실제로 계곡 사망 사고 중 상당수는 갑작스러운 수위 상승이 원인입니다.<br/><br/>
+
+둘째, <strong>보이지 않는 소용돌이와 와류</strong>입니다. 계곡 바닥의 암석 구조로 인해 물 흐름이 예측 불가능하게 꺾이며, 수면에서는 잘 보이지 않는 소용돌이가 형성되기도 합니다. 어른도 한번 이런 와류에 빠지면 빠져나오기 쉽지 않습니다.<br/><br/>
+
+셋째, <strong>미끄러운 바위와 이끼</strong>입니다. 계곡 바닥과 주변 바위에는 이끼가 자라 있어 매우 미끄럽습니다. 아이들이 뛰거나 점프하다가 미끄러져 머리를 부딪히는 사고도 많습니다.<br/><br/>
+
+넷째, <strong>낮은 수온</strong>입니다. 여름철 계곡 수온은 대개 15℃ 내외에 불과합니다. 이 온도는 장시간 노출 시 저체온증을 유발할 수 있는 위험 수준입니다. 아이들은 체온 손실이 어른보다 빠르기 때문에 더욱 주의가 필요합니다.<br/><br/>
+
+다섯째, <strong>구명 인프라 부재</strong>입니다. 공공 수영장이나 해수욕장에는 안전요원이 상주하고 구조 장비가 갖춰져 있지만, 계곡은 대부분 이런 안전 인프라 없이 개방된 상태입니다.
+
+<div class="img-area">
+<img alt="구명조끼를 착용한 아이들이 안전하게 즐기는 여름 계곡 물놀이 장면" src="../../images/260704/5_valley_1.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+</div>
+<h2>02. 급류 위험 구간 알아보는 법 — 물색·소리로 판단하기</h2>
+
+계곡에서 위험한 구간을 사전에 파악하는 능력은 안전한 물놀이의 첫 번째 조건입니다. 전문 안전요원이 없는 계곡에서는 보호자 스스로 위험 신호를 읽어낼 수 있어야 합니다.<br/><br/>
+<strong>위험 구간을 판별하는 시각적 단서</strong><br/><br/>
+
+물빛이 짙은 초록색이나 검은빛을 띤다면 깊이가 상당하다는 신호입니다. 반면 물이 하얗게 거품을 내며 흐른다면 물살이 빠른 여울 구간입니다. 수면 위에 소용돌이 패턴이 보인다면 그 아래에 강한 와류가 존재할 가능성이 높습니다.<br/><br/>
+<strong>소리로 읽는 위험 신호</strong><br/><br/>
+
+물 소리가 갑자기 커지거나 낮고 쿵쿵거리는 굉음이 들린다면 상류에서 폭포나 급류 구간이 가까이 있다는 뜻입니다. 특히 비가 온 직후에는 상류의 돌덩이와 토사가 함께 내려오기 때문에 소리만으로도 위험을 감지할 수 있습니다.<br/><br/>
+<strong>주변 환경으로 파악하기</strong><br/><br/>
+
+계곡 주변 나무나 바위에 상당히 높은 위치까지 수위 흔적(수초나 이물질이 쌓인 선)이 남아 있다면, 해당 지점까지 물이 찬 이력이 있다는 뜻입니다. 이런 곳은 물놀이 구역에서 제외해야 합니다.<br/><br/>
+
+또한 안전 통제선(로프), 위험 표지판이 설치된 구역에는 절대 진입하지 마세요. 관리 당국이 특별히 위험하다고 판단해 설정한 구역이므로, 물이 잠잠해 보여도 들어가서는 안 됩니다.<br/><br/>
+<strong>아이에게 위험 구간 인식시키기</strong><br/><br/>
+
+아이들은 물이 맑고 얕아 보이면 스스로 판단해 들어가려 합니다. 출발 전 집에서 미리 "이런 곳은 절대 들어가면 안 돼"라는 교육을 해두고, 현장에서도 위험 구간을 함께 확인하며 실습 교육을 진행하는 것이 효과적입니다.
+
+<h2>03. 구명조끼 선택과 올바른 착용 방법</h2>
+
+아이와 계곡을 방문할 때 구명조끼는 선택이 아닌 <strong>필수</strong>입니다. 그런데 구명조끼도 종류와 착용법에 따라 효과가 크게 달라집니다.<br/><br/>
+<strong>구명조끼 종류 비교</strong><br/><br/>
+<table class="info-table">
+<tr>
+<th>종류</th>
+<th>특징</th>
+<th>계곡 적합성</th>
+</tr>
+<tr>
+<td><strong>폼(거품) 타입</strong></td>
+<td>물에 젖어도 부력 유지, 착용 즉시 효과 발휘</td>
+<td>✅ 가장 적합</td>
+</tr>
+<tr>
+<td><strong>CO₂ 자동팽창식</strong></td>
+<td>평상시 부피 작고 가벼움, 충격 시 자동 팽창</td>
+<td>⚠️ 부적합 (바위 긁힘 시 조기 팽창 또는 불발 위험)</td>
+</tr>
+<tr>
+<td><strong>수동 팽창식</strong></td>
+<td>줄을 당겨야 팽창, 보관 용이</td>
+<td>❌ 부적합 (아이 사용 불가)</td>
+</tr>
+</table>
+
+계곡에서는 반드시 <strong>폼 타입(거품 내장형) 구명조끼</strong>를 사용하세요. CO₂ 팽창식은 바위에 긁히거나 강한 충격을 받으면 오작동할 수 있어 계곡에는 맞지 않습니다.<br/><br/>
+<strong>국가검정 인증 제품 확인하기</strong><br/><br/>
+
+구명조끼 구매 시 제품에 한국해양교통안전공단(KOMSA) 또는 선박안전기술공단 인증 마크가 있는지 확인하세요. 저가 완구형 구명조끼는 실제 익수 상황에서 효과를 기대하기 어렵습니다.<br/><br/>
+<strong>올바른 착용 방법</strong><br/><br/>
+
+가장 흔한 실수가 <strong>헐렁하게 착용하는 것</strong>입니다. 어린이 구명조끼는 목 지지대와 가랑이 사이 띠까지 꼭 채워야 합니다. 헐렁하게 착용하면 물에 빠졌을 때 구명조끼가 위로 빠져나가 얼굴이 물속에 잠길 수 있습니다.<br/><br/>
+
+착용 후 확인 방법: 조끼의 어깨 부분을 잡고 위로 당겼을 때 머리가 빠져나오지 않아야 합니다. 만약 귀 위까지 올라온다면 너무 헐렁한 것입니다. 어린이 체중에 맞는 사이즈를 반드시 선택하세요.
+
+<div class="img-area">
+<img alt="계곡 급류 위험 구간을 알리는 안전 표지판과 통제선" src="../../images/260704/5_valley_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+</div>
+<h2>04. 아이와 계곡 물놀이 시 꼭 지켜야 할 수칙</h2>
+
+아이와 함께 계곡에 갈 때는 보호자의 역할이 그 어느 때보다 중요합니다. 아이는 물놀이에 신이 나 안전 감각이 마비되는 경우가 많으므로 보호자가 체계적으로 통제해야 합니다.<br/><br/>
+<strong>출발 전 필수 확인 사항</strong><br/><br/>
+
+• 해당 계곡의 기상 예보 확인 (상류 지역 포함)<br/>
+• 계곡 수위 정보 — 국가하천정보센터(www.river.go.kr) 활용<br/>
+• 아이 몸에 맞는 구명조끼 착용 확인<br/>
+• 응급처치 키트(밴드, 소독약, 담요) 준비<br/>
+• 119 신고용 핸드폰 배터리 충전 상태 확인<br/><br/>
+<strong>현장에서 반드시 지켜야 할 수칙</strong><br/><br/>
+
+① <strong>아이를 혼자 두지 않는다</strong> — 잠깐이라도 시선을 거두지 마세요. 아이는 눈 깜짝할 사이에 깊은 물로 들어갈 수 있습니다.<br/><br/>
+
+② <strong>물놀이 금지 구역은 절대 들어가지 않는다</strong> — 어른 보기에 안전해 보여도, 표지판과 통제선을 무시하는 행동은 금물입니다.<br/><br/>
+
+③ <strong>식사 직후 입수 금지</strong> — 식후 최소 30분~1시간은 쉬었다 입수하세요. 소화 중에는 혈류가 소화기관으로 집중돼 근육 경련이 일어날 수 있습니다.<br/><br/>
+
+④ <strong>물에 들어가기 전 준비운동</strong> — 갑작스러운 입수는 심장에 충격을 줄 수 있습니다. 발, 무릎, 허리 순서로 물을 적신 뒤 천천히 들어가도록 지도하세요.<br/><br/>
+
+⑤ <strong>1~2시간마다 물 밖으로 나와 체온 확인</strong> — 계곡 수온은 낮기 때문에 아이들이 재미에 빠져 추위를 느끼지 못하는 경우가 많습니다. 아이 입술이 파래지거나 떨기 시작하면 즉시 물 밖으로 나와야 합니다.<br/><br/>
+
+⑥ <strong>계곡 깊은 곳에서 다이빙 금지</strong> — 수심을 알 수 없는 곳에서 다이빙하면 바닥의 암석에 머리를 부딪혀 심각한 부상을 입을 수 있습니다.
+
+<div class="tip-box">
+💡 <strong>음주 후 입수는 절대 금지입니다.</strong> 알코올은 혈관을 확장시켜 체온 손실을 가속화하고, 판단력과 반응 속도를 저하시킵니다. 보호자가 음주 상태라면 입수는 물론 아이의 안전 감독도 불가능해집니다.
+</div>
+<h2>05. 저체온증 증상 알아보기와 응급 대처법</h2>
+
+계곡 물놀이에서 저체온증은 생각보다 빠르게 찾아옵니다. 수온 15℃의 물에 오랜 시간 노출되면 성인도 체온이 급격히 떨어질 수 있으며, 아이들은 그 속도가 더 빠릅니다.<br/><br/>
+<strong>저체온증의 3단계 증상</strong><br/><br/>
+<table class="info-table">
+<tr>
+<th>단계</th>
+<th>체온</th>
+<th>주요 증상</th>
+</tr>
+<tr>
+<td><strong>경증</strong></td>
+<td>32~35℃</td>
+<td>떨림, 피부 창백, 입술 파래짐, 맥박 빠름</td>
+</tr>
+<tr>
+<td><strong>중등증</strong></td>
+<td>28~32℃</td>
+<td>근육 경직, 떨림 멈춤, 의식 흐릿, 행동 느려짐</td>
+</tr>
+<tr>
+<td><strong>중증</strong></td>
+<td>28℃ 미만</td>
+<td>의식 저하 또는 소실, 호흡 저하, 심부정맥</td>
+</tr>
+</table>
+<strong>주의:</strong> 떨림이 멈췄다고 회복된 게 아닙니다. 오히려 중등증 이상으로 악화된 신호일 수 있으므로 119에 즉시 신고해야 합니다.<br/><br/>
+<strong>저체온증 응급 대처법 (현장에서 할 수 있는 것)</strong><br/><br/>
+<div class="warn-box">
+⚠️ <strong>아래 내용은 응급처치 참고용이며, 전문 의료인의 지시를 우선합니다. 증상이 의심되면 즉시 119에 신고하세요.</strong>
+</div>
+
+① <strong>물에서 꺼내기</strong> — 최대한 빨리 물 밖으로 나오게 합니다. 저체온 상태에서는 근육 경련이 발생할 수 있으므로 무리한 동작을 삼가세요.<br/><br/>
+
+② <strong>바람 막기</strong> — 바람이 스치면 체온 손실이 가속됩니다. 바람이 없는 그늘이나 텐트 안으로 이동하세요.<br/><br/>
+
+③ <strong>젖은 옷 제거</strong> — 물에 젖은 옷은 체온을 빼앗습니다. 즉시 벗기고 마른 옷이나 담요로 감싸주세요.<br/><br/>
+
+④ <strong>체온 서서히 올리기</strong> — 핫팩이나 따뜻한 물통을 겨드랑이·목·사타구니에 대어 체온을 서서히 올립니다. 뜨거운 물에 갑자기 담그는 것은 심장에 부담을 줄 수 있어 피해야 합니다.<br/><br/>
+
+⑤ <strong>따뜻한 음료 (의식이 있을 때만)</strong> — 의식이 있고 삼킬 수 있다면 따뜻한 물이나 이온음료를 소량 마시게 합니다. 의식이 없거나 혼미하다면 절대 먹이지 마세요.<br/><br/>
+
+⑥ <strong>119 신고</strong> — 경미해 보여도 체온이 32℃ 이하로 의심되거나 아이가 떨림 후 반응이 없어진다면 즉시 신고하세요.
+
+<div class="img-area">
+<img alt="계곡 물놀이 후 저체온증 응급처치 — 따뜻한 담요로 체온을 유지하는 모습" src="../../images/260704/5_valley_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+</div>
+<h2>06. 물놀이 전 날씨·수위 확인하는 법</h2>
+
+계곡 물놀이 사고의 상당 부분은 사전 정보 확인 없이 무작정 방문하는 경우에 발생합니다. 출발 전 간단한 정보 조회만으로도 사고 위험을 크게 줄일 수 있습니다.<br/><br/>
+<strong>날씨 확인 — 계곡 상류까지 체크하기</strong><br/><br/>
+
+기상청 날씨 앱이나 네이버·카카오 날씨 서비스에서 <strong>목적지 계곡의 상류 지역</strong>까지 포함해 확인하세요. 내가 방문하는 하류 지점은 맑아도 상류에 폭우가 내리면 급격한 수위 상승이 발생할 수 있습니다.<br/><br/>
+
+특히 계곡 상류에 있는 산 정상부의 날씨를 확인하는 것이 중요합니다. 기상청 동네예보(weather.go.kr)에서 시·군·구 단위로 세분화된 날씨 정보를 확인할 수 있습니다.<br/><br/>
+<strong>수위 정보 확인하기</strong><br/><br/>
+
+국가하천정보센터(www.river.go.kr)에서는 주요 하천의 실시간 수위 데이터를 제공합니다. 계곡처럼 소규모 지천은 직접 데이터가 없는 경우도 있지만, 인근 본류 하천의 수위를 참고해 전반적인 위험도를 가늠할 수 있습니다.<br/><br/>
+<strong>비 예보 시 물놀이 금지 기준</strong><br/><br/>
+
+소방청과 행정안전부 국민재난안전포털(www.safekorea.go.kr)에서는 강우량에 따른 물놀이 자제 권고 기준을 안내합니다. 당일 강수 예보가 없더라도 최근 이틀 사이에 집중호우가 있었다면 계곡 수위가 아직 높을 수 있으므로 입수를 삼가야 합니다.<br/><br/>
+<strong>현장 도착 후 재확인</strong><br/><br/>
+
+계획을 세우고 출발했더라도 현장에 도착해 보면 상황이 달라질 수 있습니다. 계곡물이 평소보다 탁하거나 수위가 높고 유속이 빠르다면, 아쉽더라도 그날은 계곡 입수를 포기하는 판단이 필요합니다.
+
+<h2>07. 계곡 주변 위험 — 벌 쏘임과 독충 대처</h2>
+
+계곡 물놀이의 위험은 물속에만 있지 않습니다. 산간 지역 계곡 주변에는 벌, 뱀, 독충 등 추가적인 위험 요소가 있습니다.<br/><br/>
+<strong>말벌 쏘임 예방</strong><br/><br/>
+
+여름철 계곡 주변은 말벌이 활동하는 주요 시기입니다. 화려한 색상의 옷, 향수, 달콤한 음료는 벌을 유인합니다. 가능하면 밝은 색 옷을 피하고 달콤한 음식과 음료는 뚜껑을 덮어 보관하세요.<br/><br/>
+
+벌집을 발견하면 즉시 조용히 그 자리를 피하세요. 팔을 휘두르거나 소리를 지르면 벌이 공격성을 높입니다. 벌집 근처 30~50m 이내에는 접근하지 않는 것이 원칙입니다.<br/><br/>
+<strong>벌에 쏘였을 때 대처</strong><br/><br/>
+
+① 신용카드 등 납작한 물건으로 쏘인 부위를 긁어 침 제거 (족집게로 짜면 독이 퍼짐)<br/>
+② 흐르는 물로 세척 후 얼음찜질<br/>
+③ 두드러기, 호흡 곤란, 구토 등 전신 알레르기 반응이 나타나면 즉시 119 신고<br/><br/>
+<strong>뱀 조심</strong><br/><br/>
+
+계곡 주변 바위틈이나 낙엽 더미에는 독사가 있을 수 있습니다. 샌들보다는 운동화를 착용하고, 풀숲을 지날 때는 지팡이나 나뭇가지로 앞길을 확인하며 걷는 것이 좋습니다. 뱀에 물렸을 때는 물린 부위를 심장보다 아래로 유지하고 즉시 119를 부릅니다. 독을 빨아내는 행위는 도움이 되지 않습니다.<br/><br/>
+<strong>여름 캠핑 모기와 벌레 대비도 중요합니다.</strong> 계곡 물놀이와 함께 야외 활동을 즐기신다면, <a href="../260703/local_camping_mosquito_checklist.html">여름 캠핑 모기·벌레 퇴치와 빠뜨리기 쉬운 준비물</a> 글도 함께 읽어보세요.
+
+<h2>08. 갑자기 물이 불어날 때 대피 요령</h2>
+
+계곡 활동 중 가장 순간적인 판단이 필요한 상황이 바로 갑작스러운 수위 상승입니다. 물이 빠르게 차오를 때 올바르게 행동하면 생명을 지킬 수 있습니다.<br/><br/>
+<strong>수위 상승 징조 알아보기</strong><br/><br/>
+
+• 물빛이 갑자기 탁해지며 황토색이나 갈색으로 변할 때<br/>
+• 상류에서 쿵쿵거리는 소리가 들릴 때<br/>
+• 평소보다 물 흐름 속도가 빠르게 느껴질 때<br/>
+• 계곡 가장자리 물풀이나 돌이 잠기기 시작할 때<br/><br/>
+
+이런 징조가 보이면 즉시 계곡에서 나와 <strong>높은 곳으로 이동</strong>하세요. 짐을 챙기는 것보다 안전한 곳으로 피하는 것이 우선입니다.<br/><br/>
+<strong>급류에 휩쓸렸을 때 행동 요령</strong><br/><br/>
+
+만약 급류에 휩쓸렸다면, 소방청과 행정안전부에서 권고하는 기본 생존 자세를 따르세요.<br/><br/>
+
+① <strong>몸을 수면에 눕히듯 눕히기</strong> — 몸을 웅크리거나 수직으로 세우지 말고 등을 대고 물 위에 최대한 수평으로 누운 자세를 유지합니다.<br/><br/>
+
+② <strong>발을 하류 방향으로</strong> — 발이 먼저 장애물에 닿아야 발로 밀며 방향을 조절하고 머리 부상을 피할 수 있습니다.<br/><br/>
+
+③ <strong>강하게 헤엄치지 말 것</strong> — 급류와 정면으로 싸우면 체력이 빨리 소진됩니다. 흐름의 대각선 방향으로 천천히 헤엄쳐 안전한 지점을 찾으세요.<br/><br/>
+
+④ <strong>구조물 잡기</strong> — 나뭇가지, 바위 등 잡을 수 있는 것이 있으면 잡고 버티면서 주변에 소리쳐 구조를 요청하세요.<br/><br/>
+<strong>구조하는 사람의 역할</strong><br/><br/>
+
+물에 빠진 사람을 보았을 때 직접 뛰어드는 것은 매우 위험합니다. 수영에 자신 있는 성인도 급류에서는 함께 사고를 당할 수 있습니다. 로프, 나뭇가지, 수건, 구명환 등 던져줄 수 있는 물건을 활용하면서 동시에 119에 신고하세요.
+
+<h2>09. 119 신고와 응급처치 기본 절차</h2>
+
+사고 발생 시 빠른 신고와 적절한 초기 대응이 골든타임을 살립니다.<br/><br/>
+<strong>119 신고 시 전달해야 할 정보</strong><br/><br/>
+
+① 사고 발생 위치 — 계곡 이름, 최대한 정확한 위치 정보 (주변 표지판, 이정표, 도로명 주소 활용)<br/>
+② 사고 상황 — 익수인지, 저체온인지, 외상인지<br/>
+③ 환자 상태 — 의식이 있는지, 호흡이 있는지, 나이와 성별<br/>
+④ 신고자 연락처<br/><br/>
+
+계곡은 휴대폰 신호가 약한 경우가 많습니다. 사전에 방문 지역의 통신 상황을 파악해두고, 가능하면 무전기나 위성 통신 장치를 갖추는 것도 좋습니다.<br/><br/>
+<strong>익수 환자 응급처치 기본 절차</strong><br/><br/>
+<div class="warn-box">
+⚠️ <strong>아래 내용은 한국 소방청 응급처치 가이드라인을 참고한 것으로, 정확한 응급처치는 반드시 전문 교육을 이수하시기 바랍니다.</strong>
+</div>
+
+① 물에서 꺼낸 후 안전한 장소로 이동<br/>
+② 의식·호흡 확인 — "괜찮아요?" 어깨를 두드리며 반응 확인<br/>
+③ 호흡이 없다면 즉시 119에 신고하고 심폐소생술(CPR) 시작<br/>
+④ CPR: 가슴 압박 30회(분당 100~120회 속도) → 인공호흡 2회 반복<br/>
+⑤ 자동심장충격기(AED)가 있다면 지체 없이 사용<br/><br/>
+
+심폐소생술 방법은 대한심폐소생술협회(www.kacpr.org) 또는 소방청 국민행동요령에서 영상으로 확인할 수 있습니다. 가족 단위로 연 1회 이상 교육을 받아두는 것을 권장합니다.<br/><br/>
+
+여름철 계곡 트레킹을 겸한 안전한 나들이 코스를 찾고 계신다면, <a href="../260703/travel_geumodo_bireonggil.html">여수 금오도 비렁길 여름 해안 트레킹과 1박 2일 코스</a>도 참고해 보세요.
+
+<h2>10. 계곡 물놀이 전 체크리스트</h2>
+
+마지막으로 계곡 방문 전 최종 점검해야 할 체크리스트를 정리합니다. 아이와 함께라면 이 항목들을 출발 전날 밤에 한 번, 당일 출발 전에 한 번 더 확인하세요.<br/><br/>
+<div class="check-box">
+<strong>✅ 계곡 물놀이 출발 전 체크리스트</strong><br/><br/>
+<strong>[ 안전 장비 ]</strong><br/>
+□ 어린이 구명조끼 (국가검정 인증, 체중에 맞는 사이즈)<br/>
+□ 아쿠아슈즈 또는 미끄럼 방지 샌들<br/>
+□ 응급처치 키트 (소독약, 밴드, 탄성붕대, 체온계)<br/>
+□ 보온 담요 또는 큰 수건<br/>
+□ 방수 핸드폰 케이스 (119 신고용)<br/><br/>
+<strong>[ 정보 확인 ]</strong><br/>
+□ 목적지 및 상류 날씨 예보 확인<br/>
+□ 최근 강수량·수위 이상 여부 확인<br/>
+□ 방문 계곡의 안전 관리 여부 확인<br/>
+□ 주변 응급실 위치 파악<br/><br/>
+<strong>[ 건강 상태 ]</strong><br/>
+□ 아이 수면·컨디션 양호 여부<br/>
+□ 보호자 음주 없음 확인<br/>
+□ 고혈압·심장 질환 등 기저질환 있는 경우 의사와 상담 선행<br/><br/>
+<strong>[ 물놀이 중 수칙 숙지 ]</strong><br/>
+□ 입수 전 준비운동 실시<br/>
+□ 1~2시간마다 휴식 및 체온 확인<br/>
+□ 식후 최소 30분 후 입수<br/>
+□ 아이는 항상 시야 안에 두기<br/>
+□ 위험 표지판 구역 진입 금지
+</div>
+
+계곡 물놀이는 가족과 함께하는 여름의 특별한 추억이 될 수 있습니다. 하지만 방심하는 순간 생명을 위협하는 사고로 이어질 수 있습니다. 오늘 정리한 안전 수칙을 꼭 숙지하고, 즐겁고 안전한 여름 계곡 물놀이를 즐기시길 바랍니다.<br/><br/>
+<strong>문의 및 1차 출처:</strong><br/>
+• 소방청: www.nfa.go.kr<br/>
+• 행정안전부 국민재난안전포털: www.safekorea.go.kr<br/>
+• 국가하천정보센터: www.river.go.kr<br/>
+• 기상청: www.weather.go.kr
+
+<div class="recommend-area">
+<strong>함께 읽으면 좋은 글</strong><br/><br/>
+• <a href="../260703/travel_geumodo_bireonggil.html">여수 금오도 비렁길 여름 해안 트레킹과 1박 2일 코스</a><br/>
+• <a href="../260703/local_camping_mosquito_checklist.html">여름 캠핑 모기·벌레 퇴치와 빠뜨리기 쉬운 준비물</a>
+</div>
+<div style="margin-top:40px;">
+<span class="tag">#계곡물놀이</span>
+<span class="tag">#계곡안전</span>
+<span class="tag">#아이와계곡</span>
+<span class="tag">#여름계곡</span>
+<span class="tag">#물놀이안전</span>
+<span class="tag">#저체온증</span>
+<span class="tag">#구명조끼</span>
+<span class="tag">#급류대처</span>
+<span class="tag">#여름안전</span>
+<span class="tag">#물놀이주의사항</span>
+</div>
+</body>
+</html>

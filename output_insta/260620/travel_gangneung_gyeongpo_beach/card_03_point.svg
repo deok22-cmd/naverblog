@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== A : 헤드라인-하단 — point 1: 개장일·운영 정보 (꼭지 ①) =====
+       레이아웃 A_headline_bottom 차용. POOL[0]=A. 하단 스크림 + 헤드라인 + 칩 + 서브라인. -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.40" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.82"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <!-- 강조 틱 -->
+  <rect x="80" y="852" width="64" height="10" fill="#00796b"/>
+
+  <!-- 헤드라인 -->
+  <text x="80" y="960" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="96" font-weight="800" fill="#ffffff" letter-spacing="-2">가족형 해수욕</text>
+  <text x="80" y="1068" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="96" font-weight="800" fill="#ffffff" letter-spacing="-2">완만한 수심</text>
+
+  <!-- 칩 -->
+  <g id="chips">
+    <rect x="80" y="1108" width="298" height="68" rx="34" fill="#00796b"/>
+    <text x="229" y="1151" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="700" fill="#ffffff">백사장 1.8km</text>
+    <rect x="394" y="1108" width="248" height="68" rx="34" fill="#00796b"/>
+    <text x="518" y="1151" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="700" fill="#ffffff">폭 80m</text>
+  </g>
+
+  <!-- 서브라인 -->
+  <text x="80" y="1248" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e0f2f1">안전요원 오전 9시~오후 6시 상주,</text>
+  <text x="80" y="1298" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e0f2f1">입장 무료 · 해변 용품 현장 대여.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

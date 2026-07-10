@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 14px; text-align: left; font-size: .93em; }
+  .info-table td { border-bottom: 1px solid #eee; padding: 10px 14px; font-size: .93em; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #f9fdf9; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border-left: 5px solid #f9a825; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .warn-box { background: #fce4ec; border-left: 5px solid #e57373; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-caption { font-size: 0.88em; color: #777; margin-top: 8px; font-style: italic; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #ccc; padding: 24px; border-radius: 8px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; color: #555; }
+  .ph-file { font-size: .82em; color: #888; font-weight: 400; font-family: monospace; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; padding: 12px; font-size: .82em; line-height: 1.6; color: #444; white-space: pre-wrap; border-radius: 4px; }
+  .copy-btn { margin-top: 10px; background: #388e3c; color: #fff; border: none; padding: 7px 16px; border-radius: 4px; cursor: pointer; font-size: .85em; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>여름 휴가지에서 응급실과 24시 약국 빨리 찾는 법, 상비약과 보험까지</h1>
+<div class="intro-box">
+<strong>📍 핵심 요약</strong><br/><br/>
+여름 휴가철, 낯선 여행지에서 갑작스러운 사고나 질환을 만나면 당황하기 쉽습니다.<br/><br/>
+<strong>응급의료포털 e-gen(www.e-gen.or.kr)</strong>과 <strong>응급의료 전화 1339</strong>를 이용하면 전국 어디서나 가장 가까운 응급실과 24시간 약국을 빠르게 찾을 수 있습니다.<br/><br/>
+이 글에서는 상황별 대처법, 상비약 목록, 여행자보험 청구 방법까지 체계적으로 정리했습니다. 출발 전 한 번 읽어두면 여행지에서 큰 도움이 됩니다.
+</div>
+<h2>① 여행지 응급상황, 당황하지 마세요</h2>
+<p>여름 휴가철 바다, 계곡, 산을 찾는 여행객이 늘면서 해파리 쏘임, 열사병, 익수 사고, 발목 염좌, 식중독 등 응급 상황도 함께 늘어납니다.<br/><br/>
+낯선 곳에서 갑작스러운 부상이나 질환이 발생하면 무엇부터 해야 할지 몰라 당황하게 되는 것이 당연합니다.<br/><br/>
+그러나 <strong>스마트폰 하나만 있으면</strong> 가장 가까운 응급실과 야간 약국을 10초 안에 찾을 수 있습니다.<br/><br/>
+상황의 심각도에 따라 119 신고와 1339 전화 상담, 응급의료포털 검색을 구분해서 사용하면 더욱 신속하게 도움을 받을 수 있습니다.<br/><br/>
+이번 글에서는 그 방법을 단계별로, 누구나 바로 따라 할 수 있도록 정리해 드립니다.<br/><br/>
+특히 어린 자녀와 함께 여행하는 부모님, 어르신을 모시고 다니는 분들께 꼭 필요한 정보입니다.<br/><br/>
+여행 가기 전 이 내용을 미리 스크랩해 두거나 가족과 공유해 두면 실제 상황에서 훨씬 침착하게 대처할 수 있습니다.</p>
+<div class="img-area">
+<img alt="스마트폰 응급의료포털로 가까운 응급실 검색하기 / AI 제작 이미지" src="../../images/260706/2_pharmacy_1.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+
+</div>
+<h2>② 응급의료포털 e-gen — 가장 빠른 응급실 찾기</h2>
+<p>응급의료포털 <strong>e-gen(www.e-gen.or.kr)</strong>은 보건복지부가 운영하는 공식 포털로, 전국의 응급실 위치와 현재 대기 상황, 전문 진료과목 정보를 실시간으로 제공합니다.<br/><br/>
+스마트폰 브라우저에서 'e-gen'을 검색하거나 주소창에 www.e-gen.or.kr을 입력하면 바로 접속할 수 있습니다.<br/><br/>
+<strong>'응급의료기관 찾기'</strong> 버튼을 누르면 내 위치 기준으로 가장 가까운 응급실 목록이 나타나며, 진료과목 필터(소아과, 정형외과 등)를 설정할 수 있어 상황에 맞는 병원을 선택할 수 있습니다.<br/><br/>
+각 병원의 전화번호와 주소도 함께 제공되므로 길 안내와 연락을 동시에 진행할 수 있습니다.<br/><br/>
+또한 응급 키트, 응급처치 방법도 수록되어 있어 현장 대처에 참고할 수 있습니다.<br/><br/>
+모바일에서 사용하기 편한 레이아웃으로 구성되어 있어 서두르는 상황에서도 빠르게 조작 가능합니다.<br/><br/>
+오프라인 대비를 원한다면 여행 전 방문 지역의 주요 응급실 전화번호를 미리 저장해 두는 것도 좋은 방법입니다.</p>
+<h2>③ 119 신고와 1339 의료상담 활용법</h2>
+<p><strong>119</strong>는 즉각적인 위기 상황, 즉 의식을 잃었거나 호흡이 곤란하거나 심한 출혈이 있는 경우에 망설임 없이 전화하는 긴급 구조 번호입니다.<br/><br/>
+신고 후에는 신고자의 위치(도로명 주소 또는 랜드마크), 환자 상태, 인원수를 차분하게 말하면 구조대원이 신속히 출동합니다.<br/><br/>
+<strong>1339(응급의료 전화 상담)</strong>는 응급 여부를 판단하기 어려울 때 유용합니다. 24시간 전문 의료상담사가 연결되어 증상에 따른 대처 방향을 안내해 줍니다.<br/><br/>
+열이 많이 나는데 응급실에 가야 하는지, 아이가 벌에 쏘였는데 어떻게 해야 하는지 등 경계선 상의 상황에서는 1339에 먼저 전화해 보세요.<br/><br/>
+1339 상담은 무료이며, 지역에 따라 연결이 지체될 수도 있지만 일반적으로 빠르게 연결됩니다.<br/><br/>
+외국어 의료 상담이 필요하다면 한국관광공사의 관광불편신고센터(1330)를 이용할 수도 있습니다.<br/><br/>
+이 두 전화번호는 스마트폰 연락처에 미리 저장해 두는 것이 좋으며, 어린이도 알 수 있게 가르쳐 주세요.</p>
+<table class="info-table">
+<tr><th>연락처</th><th>용도</th><th>운영</th></tr>
+<tr><td><strong>119</strong></td><td>즉각 위기(의식불명·심정지·심한 출혈·화재)</td><td>24시간</td></tr>
+<tr><td><strong>1339</strong></td><td>응급 여부 판단, 의료 전화 상담</td><td>24시간</td></tr>
+<tr><td><strong>e-gen.or.kr</strong></td><td>가까운 응급실 검색, 실시간 대기 현황</td><td>24시간 온라인</td></tr>
+<tr><td><strong>1330</strong></td><td>관광불편·외국어 의료 안내</td><td>24시간</td></tr>
+</table>
+<h2>④ 네이버·카카오맵으로 응급실과 약국 찾기</h2>
+<p>인터넷 접속이 느리거나 e-gen 접속이 어려울 때는 <strong>네이버 지도</strong>나 <strong>카카오맵</strong>이 유용합니다.<br/><br/>
+검색창에 <strong>'응급실'</strong>을 입력하면 내 현재 위치 기준으로 가장 가까운 응급의료기관 목록이 거리와 함께 나타납니다.<br/><br/>
+<strong>'24시 약국'</strong> 또는 <strong>'야간 약국'</strong>을 검색하면 심야에도 운영 중인 약국을 찾을 수 있으며, 영업 중 표시가 실시간으로 반영됩니다.<br/><br/>
+카카오맵의 경우 '지금 영업 중' 필터를 켜두면 실제 영업 중인 의료기관만 걸러서 볼 수 있어 편리합니다.<br/><br/>
+별도로 <strong>약학정보원 DUR(ezdrug.mfds.go.kr)</strong> 홈페이지에서는 의약품 정보와 약국 찾기 서비스를 제공합니다.<br/><br/>
+여행지에서의 응급 상황에서 이 앱들을 곧바로 쓸 수 있도록 미리 최신 버전으로 업데이트해 두세요.<br/><br/>
+지도 앱은 와이파이 없이 LTE·5G만으로도 충분히 작동하므로 로밍 설정만 제대로 되어 있다면 해외 여행에서도 적용됩니다.</p>
+<div class="img-area">
+<img alt="24시간 운영 약국 — 여행지에서 야간에도 의약품을 구할 수 있습니다 / AI 제작 이미지" src="../../images/260706/2_pharmacy_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+
+</div>
+<h2>⑤ 24시간 약국 찾는 방법과 이용 팁</h2>
+<p>전국적으로 24시간 약국은 시·군 단위 이상 도시 지역에 1~3곳씩은 운영됩니다.<br/><br/>
+가장 빠른 방법은 <strong>네이버·카카오맵</strong>에서 '24시간 약국' 또는 '야간약국'을 검색하거나, <strong>건강보험심사평가원 홈페이지(www.hira.or.kr)</strong>의 병원·약국 찾기 서비스를 이용하는 것입니다.<br/><br/>
+여행 지역이 인구가 적은 농어촌 지역이라면 24시간 약국이 없을 수 있으니, 이 경우 1339에 전화해 도움을 요청하거나 인근 읍내 약국의 야간 대기 여부를 확인하세요.<br/><br/>
+약국에서 처방전 없이 구입할 수 있는 일반의약품(OTC)의 종류는 한정되어 있으므로, 지병이 있는 분들은 여행 전 담당 의사에게 처방전을 넉넉히 받아두는 것이 좋습니다.<br/><br/>
+약사에게 증상을 설명하고 적합한 일반의약품을 추천받는 것도 가능하므로, 증상을 정확히 말씀해 주세요.<br/><br/>
+여름철 자주 필요한 의약품(해열제, 소화제, 모기 물린 데 바르는 연고 등)은 편의점에서도 구입할 수 있습니다.<br/><br/>
+2023년부터 일부 일반의약품은 편의점 판매가 확대되어, 파스, 해열진통제(아세트아미노펜 계열), 소화제 등을 야간에도 쉽게 구할 수 있습니다.</p>
+<h2>⑥ 여행 상비약 체크리스트</h2>
+<p>여행 전 아래 상비약을 미리 챙겨두면 현지에서 약국을 급하게 찾을 일이 크게 줄어듭니다.<br/><br/>
+<strong>해열진통제</strong>(타이레놀·애드빌 등): 발열, 두통, 근육통에 기본으로 대비할 수 있습니다.<br/><br/>
+<strong>소화제·지사제</strong>: 여행지 음식으로 인한 복통, 설사, 소화불량에 대비해 챙겨두세요.<br/><br/>
+<strong>멀미약</strong>: 차멀미나 배멀미가 있는 가족이 있다면 출발 30분~1시간 전 복용할 것을 준비합니다.<br/><br/>
+<strong>항히스타민제(알레르기약)</strong>: 벌레 물림, 두드러기, 콧물 등에 효과적입니다.<br/><br/>
+<strong>상처 소독·밴드 세트</strong>: 계곡이나 바위 위에서 발생하는 찰과상에 즉각 대처할 수 있습니다.<br/><br/>
+<strong>모기약·해충 기피제</strong>: 여름 야외 활동에는 필수입니다. DEET 성분 또는 이카리딘 성분 기피제가 효과적입니다.<br/><br/>
+<strong>자외선 차단제(SPF50+)</strong>와 <strong>화상 연고</strong>: 강한 여름 햇볕에 의한 일광화상에 대비합니다.
+</p>
+<div class="img-area">
+<img alt="여행 상비약 키트 — 미리 챙기면 여행지 응급약국 방문을 줄일 수 있습니다 / AI 제작 이미지" src="../../images/260706/2_pharmacy_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+
+</div>
+<h2>⑦ 여행자보험 현장 병원비 청구 방법</h2>
+<p>국내 여행 중 다치거나 병원에 가게 되었을 때 여행자보험이 있다면 비용의 일부를 보상받을 수 있습니다.<br/><br/>
+여행자보험은 출발 전 보험사 앱 또는 홈페이지에서 저렴하게(1박 기준 수천 원대) 가입할 수 있습니다.<br/><br/>
+청구를 위해 반드시 챙겨야 할 서류는 <strong>진료 영수증, 진단서(또는 진료확인서), 처방전</strong>입니다. 현장에서 이 서류를 발급받아 두세요.<br/><br/>
+귀가 후 가입 보험사 앱이나 고객센터를 통해 사진 촬영 또는 스캔 서류를 첨부해 청구하면 됩니다.<br/><br/>
+청구 가능 기간은 보험사마다 다르지만 대개 <strong>사고 발생 후 3년 이내</strong>이며, 서류를 잘 보관해 두는 것이 중요합니다.<br/><br/>
+보험 약관에서 면책 조항을 미리 확인해 두면 청구 가능 여부를 사전에 파악하는 데 도움이 됩니다.<br/><br/>
+가족 단위 여행이라면 가족 단체 여행자보험도 있으니 가입 전 비교해 보세요.</p>
+<h2>⑧ 해수욕장·계곡 주변 응급 거점과 안전 요원</h2>
+<p>국가 지정 해수욕장과 주요 관광지 계곡에는 여름 성수기 동안 <strong>안전 요원과 응급처치 거점</strong>이 운영됩니다.<br/><br/>
+해수욕장에서는 이안류, 심한 파도, 해파리 쏘임 등 사고가 발생했을 때 인근 안전 요원 초소에 도움을 요청하는 것이 가장 빠릅니다.<br/><br/>
+초소 내 AED(자동심장충격기)와 기본 응급처치 장비가 비치되어 있으며, 안전 요원이 기본 응급처치를 실시한 뒤 119에 연계합니다.<br/><br/>
+국립공원 탐방로와 주요 계곡에도 산악구조대 거점이 있으며, 국립공원 내 사고 시 국립공원 긴급 전화(054-973-3119 등 지역마다 상이)를 이용할 수 있습니다.<br/><br/>
+인파가 많은 여름철 인기 해수욕장의 경우 응급 이동이 지체될 수 있으므로, 혼잡한 성수기보다 평일 방문을 권장합니다.<br/><br/>
+어린이와 함께라면 반드시 생명조끼를 착용하고, 아이의 손목에 비상 연락처를 적어 둔 팔찌를 채워 두세요.<br/><br/>
+보호자는 아이 시야 범위 밖으로 벗어나지 않는 것이 가장 중요한 예방 수칙입니다.</p>
+<h2>⑨ 응급상황별 초기 대처 요령</h2>
+<p><strong>열사병</strong>: 그늘진 서늘한 곳으로 이동시키고, 차가운 물수건으로 목, 겨드랑이, 사타구니를 식혀 주면서 119에 신고합니다. 의식이 있다면 시원한 물을 조금씩 마시게 합니다.<br/><br/>
+<strong>익수(물에 빠진 경우)</strong>: 구조 후 호흡이 없다면 즉시 심폐소생술(CPR)을 시행하고 119에 신고합니다. 물을 빼내려고 배를 누르거나 거꾸로 들지 않습니다.<br/><br/>
+<strong>발목 염좌·골절 의심</strong>: 환부를 움직이지 않게 고정하고, 냉찜질로 부기를 줄인 후 병원으로 이동합니다.<br/><br/>
+<strong>해파리 쏘임</strong>: 쏘인 부위를 문지르지 말고 바닷물(민물 금지)로 촉수를 제거한 뒤 신용카드 등으로 독침을 긁어냅니다. 증상이 심하면 즉시 119에 신고합니다.<br/><br/>
+<strong>식중독</strong>: 구토 시 옆으로 뉘어 기도 확보, 충분한 수분 보충(이온 음료)을 하고, 설사가 심하거나 혈변이 있으면 즉시 병원을 찾습니다.<br/><br/>
+<strong>벌 쏘임</strong>: 알레르기 반응(두드러기, 호흡 곤란)이 나타나면 지체 없이 119에 신고합니다. 신용카드로 독침을 긁어 제거하되 짜내지 않습니다.<br/><br/>
+이 모든 상황에서 공통적으로 <strong>침착함을 유지하고 전문가의 도움을 구하는 것</strong>이 가장 중요합니다.</p>
+<h2>⑩ 출발 전 미리 확인할 것들</h2>
+<p>여행지 응급 대비는 출발 전부터 시작됩니다.<br/><br/>
+방문 지역의 <strong>가장 가까운 응급실·병원 연락처</strong>를 스마트폰에 미리 저장해 두세요. e-gen 홈페이지에서 지역을 입력하면 바로 확인할 수 있습니다.<br/><br/>
+동행 가족 중 지병이 있는 분(심장병, 당뇨, 고혈압 등)의 복용 약과 <strong>주치의 연락처</strong>를 메모해 두고, 혹시 모를 상황에 대비하세요.<br/><br/>
+여행자보험은 저렴하게 가입할 수 있으니 출발 당일 아침에도 가입 가능합니다. 국내 여행이라도 챙겨두면 마음이 한결 편합니다.<br/><br/>
+어린이와 함께라면 소아과 응급실이 있는 병원을 별도로 확인해 두면 유사시 헤매지 않아도 됩니다.<br/><br/>
+캠핑이나 계곡 방문 시 기상 예보를 꼭 확인하고, 호우 주의보나 경보 발령 시에는 계획을 유연하게 바꿀 준비를 하세요.<br/><br/>
+모든 준비를 완료했다면, 마음 편히 즐거운 여름 여행을 떠나세요. 준비된 여행자는 어떤 상황에서도 당황하지 않습니다.</p>
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260705/travel_hwacheon_tomato_festival.html">화천 토마토축제 토마토 풀장과 황금반지 찾기, 사내천 물놀이 즐기는 법</a></li>
+<li><a href="../260705/travel_geochang_wolseong_valley.html">거창 월성계곡 사선대 너럭바위 물놀이와 수승대 당일치기 드라이브 코스</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#여행지응급실</span>
+<span class="tag">#휴가지병원찾기</span>
+<span class="tag">#응급의료포털egen</span>
+<span class="tag">#24시약국찾기</span>
+<span class="tag">#1339응급상담</span>
+<span class="tag">#여행상비약</span>
+<span class="tag">#여행자보험청구</span>
+<span class="tag">#여름휴가안전</span>
+<span class="tag">#계곡안전</span>
+<span class="tag">#해수욕장응급</span>
+</div>
+</body>
+</html>

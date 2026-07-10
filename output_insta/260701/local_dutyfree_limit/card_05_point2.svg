@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== A : 헤드라인 하단 — card_05 point2 =====
+       point2 레이아웃: A (POOL[(4+2)%6]=POOL[0]=A, 헤드라인 하단·칩)
+       소스: h2 02 주류 면세 한도 — 2병·2L·US$400 (3조건 동시 충족)
+       국내여행 팔레트: #00796b / #004d40 / #e0f2f1 / #80cbc4 -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.40" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.82"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <rect x="80" y="852" width="64" height="10" fill="#00796b"/>
+  <text x="80" y="968" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="92" font-weight="800" fill="#ffffff" letter-spacing="-2">술 면세 기준</text>
+
+  <g id="chips">
+    <rect x="80" y="1020" width="240" height="68" rx="34" fill="#00796b"/>
+    <text x="200" y="1063" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="700" fill="#ffffff" text-anchor="middle">총 2병 이내</text>
+    <rect x="340" y="1020" width="260" height="68" rx="34" fill="#00796b"/>
+    <text x="470" y="1063" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="700" fill="#ffffff" text-anchor="middle">합산 2리터 이하</text>
+    <rect x="620" y="1020" width="300" height="68" rx="34" fill="#00796b"/>
+    <text x="770" y="1063" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="700" fill="#ffffff" text-anchor="middle">US$400 이하</text>
+  </g>
+
+  <text x="80" y="1160" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e0f2f1">세 가지 조건 모두 동시에 충족해야 면세.</text>
+  <text x="80" y="1212" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e0f2f1">만 19세 미만은 주류 면세 혜택 없음.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

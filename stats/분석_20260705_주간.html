@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>주간 조회수 분석 · 2026-06-29~07-05</title>
+<style>
+  :root{
+    --surface:#fcfcfb; --page:#f9f9f7;
+    --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --border:rgba(11,11,11,.10);
+    --s1:#2a78d6; --s2:#1baf7a; --s3:#eda100; --s4:#008300; --s5:#b9b7af;
+    --seqA:#86b6ef; --seqB:#3987e5; --seqC:#1c5cab;
+    --good:#006300; --crit:#d03b3b; --warnbg:#fff5e6;
+    --cardgap:18px;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --surface:#1a1a19; --page:#0d0d0d;
+      --ink:#fff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,.10);
+      --s1:#3987e5; --s2:#199e70; --s3:#c98500; --s4:#008300; --s5:#6f6d66;
+      --seqA:#256abf; --seqB:#3987e5; --seqC:#86b6ef;
+      --good:#0ca30c; --crit:#e66767; --warnbg:#2a2416;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--page);color:var(--ink);
+    font-family:system-ui,-apple-system,"Segoe UI","Apple SD Gothic Neo",sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1040px;margin:0 auto;padding:28px 20px 60px;}
+  header.rpt{border-bottom:2px solid var(--ink);padding-bottom:16px;margin-bottom:8px;}
+  .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;}
+  h1{font-size:clamp(24px,4.4vw,36px);margin:6px 0 6px;letter-spacing:-.02em;line-height:1.15;}
+  .sub{color:var(--ink2);font-size:14px;}
+  .sub b{color:var(--ink);}
+  .metar{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;font-size:12px;color:var(--muted);}
+  .metar span{background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:3px 10px;}
+  section{margin-top:34px;}
+  h2{font-size:19px;margin:0 0 4px;letter-spacing:-.01em;display:flex;align-items:baseline;gap:8px;}
+  h2 .n{color:var(--s1);font-variant-numeric:tabular-nums;}
+  .lead{color:var(--ink2);font-size:14px;margin:0 0 16px;max-width:78ch;}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;}
+  /* stat tiles */
+  .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--cardgap);}
+  @media(max-width:720px){.tiles{grid-template-columns:repeat(2,1fr);}}
+  .tile{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 16px 14px;}
+  .tile .v{font-size:34px;font-weight:750;letter-spacing:-.03em;line-height:1;}
+  .tile .v small{font-size:15px;font-weight:600;color:var(--muted);}
+  .tile .lbl{font-size:12.5px;color:var(--ink2);margin-top:8px;}
+  .tile .d{font-size:12px;font-weight:700;margin-top:6px;}
+  .up{color:var(--good);} .down{color:var(--crit);}
+  /* headline cards */
+  .heads{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--cardgap);}
+  @media(max-width:820px){.heads{grid-template-columns:1fr;}}
+  .head{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--s1);border-radius:12px;padding:16px 18px;}
+  .head:nth-child(2){border-left-color:var(--s2);}
+  .head:nth-child(3){border-left-color:var(--s3);}
+  .head .t{font-weight:750;font-size:15px;margin-bottom:6px;}
+  .head .b{font-size:13.5px;color:var(--ink2);}
+  .head .b b{color:var(--ink);font-variant-numeric:tabular-nums;}
+  /* grouped columns */
+  .cols{display:flex;gap:26px;align-items:flex-end;flex-wrap:wrap;padding-top:14px;}
+  .grp{flex:1 1 0;min-width:150px;}
+  .grpbars{display:flex;gap:8px;align-items:flex-end;height:190px;border-bottom:2px solid var(--axis);}
+  .bar{flex:1;border-radius:5px 5px 0 0;position:relative;min-height:3px;transition:filter .15s;}
+  .bar:hover{filter:brightness(1.08);}
+  .bar .bv{position:absolute;top:-19px;left:0;right:0;text-align:center;font-size:12px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--ink);}
+  .grpname{font-size:13px;font-weight:650;margin-top:10px;}
+  .grpsub{font-size:11.5px;color:var(--muted);}
+  .wklbl{display:flex;gap:8px;margin-top:2px;}
+  .wklbl span{flex:1;text-align:center;font-size:10.5px;color:var(--muted);}
+  .legend{display:flex;flex-wrap:wrap;gap:14px;margin:2px 0 0;font-size:12px;color:var(--ink2);}
+  .legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px;}
+  /* horizontal bars */
+  .hb{display:grid;grid-template-columns:1fr;gap:9px;}
+  .hbrow{display:grid;grid-template-columns:230px 1fr;gap:12px;align-items:center;}
+  @media(max-width:640px){.hbrow{grid-template-columns:150px 1fr;}}
+  .hbname{font-size:13px;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .hbname .chip{font-size:10px;font-weight:700;padding:1px 6px;border-radius:5px;margin-left:6px;vertical-align:1px;}
+  .ch-t{background:rgba(42,120,214,.15);color:var(--s1);}
+  .ch-l{background:rgba(27,175,122,.16);color:var(--s2);}
+  .ch-g{background:rgba(237,161,0,.18);color:#8a6100;}
+  @media(prefers-color-scheme:dark){.ch-g{color:var(--s3);}}
+  .hbtrack{display:flex;align-items:center;gap:8px;}
+  .hbfill{height:20px;border-radius:4px;background:var(--s1);min-width:2px;}
+  .hbval{font-size:12.5px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--ink2);}
+  .evt .hbfill{background:var(--s3);}
+  /* stacked category */
+  .stk{display:grid;gap:12px;}
+  .stkrow{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:center;}
+  .stklab{font-size:12px;color:var(--ink2);font-variant-numeric:tabular-nums;}
+  .stklab b{display:block;color:var(--ink);}
+  .stkbar{display:flex;height:26px;border-radius:5px;overflow:hidden;border:1px solid var(--border);}
+  .seg{position:relative;min-width:0;}
+  .seg span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:10.5px;font-weight:700;color:#fff;overflow:hidden;}
+  /* two-col */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:var(--cardgap);}
+  @media(max-width:760px){.two{grid-template-columns:1fr;}}
+  ul.lst{margin:0;padding-left:0;list-style:none;}
+  ul.lst li{padding:8px 0;border-bottom:1px dashed var(--border);font-size:13.5px;color:var(--ink2);}
+  ul.lst li:last-child{border-bottom:0;}
+  ul.lst b{color:var(--ink);}
+  .pill{font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;}
+  .pill.w{background:rgba(0,99,0,.12);color:var(--good);}
+  .pill.l{background:rgba(208,59,59,.13);color:var(--crit);}
+  .note{background:var(--warnbg);border:1px solid var(--border);border-radius:10px;padding:12px 14px;font-size:12.5px;color:var(--ink2);margin-top:14px;}
+  .note b{color:var(--ink);}
+  ol.act{margin:0;padding-left:0;list-style:none;counter-reset:a;}
+  ol.act li{position:relative;padding:12px 0 12px 40px;border-bottom:1px solid var(--border);font-size:14px;}
+  ol.act li:last-child{border-bottom:0;}
+  ol.act li::before{counter-increment:a;content:counter(a);position:absolute;left:0;top:11px;width:26px;height:26px;border-radius:50%;background:var(--s1);color:#fff;font-size:13px;font-weight:750;display:flex;align-items:center;justify-content:center;}
+  ol.act b{color:var(--ink);}
+  footer.rpt{margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:11.5px;color:var(--muted);}
+  .caption{font-size:12px;color:var(--muted);margin-top:12px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="rpt">
+    <div class="kicker">네이버 블로그 · 주간 조회수 분석</div>
+    <h1>이벤트가 낀 주에 터진다 — 개장·개화 훅의 스파이크</h1>
+    <div class="sub"><b>2026-06-29 ~ 07-05</b> 주간 (4주 시계열 6/8~7/5) · 캡처 2026-07-07 · 방식 전환 첫 회차</div>
+    <div class="metar">
+      <span>metric = 주간 조회수(누적 아님)</span>
+      <span>coverage = top200 (첫 주만 top100)</span>
+      <span>표본 100 · 198 · 199 · 198건</span>
+    </div>
+  </header>
+
+  <!-- STAT TILES -->
+  <section>
+    <div class="tiles">
+      <div class="tile">
+        <div class="v">426</div>
+        <div class="lbl">이번 주 최고 주간 조회수<br/>강릉 경포 · 영동 물한계곡</div>
+      </div>
+      <div class="tile">
+        <div class="v">63 <small>회/주</small></div>
+        <div class="lbl">admin_ ESTA 주간 조회수</div>
+        <div class="d up">▲ 생환 재확인 (10→13→63)</div>
+      </div>
+      <div class="tile">
+        <div class="v">73<small>%</small></div>
+        <div class="lbl">여행 카테고리 점유율</div>
+        <div class="d down">▼ 94% → 73% (하이브리드 반영)</div>
+      </div>
+      <div class="tile">
+        <div class="v">41<small>%</small></div>
+        <div class="lbl">에버그린(발행 21일↑) 트래픽 기여</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HEADLINES -->
+  <section>
+    <h2>핵심 발견 3</h2>
+    <div class="heads">
+      <div class="head">
+        <div class="t">① 개장일 훅 = 이벤트 주 트리거</div>
+        <div class="b">"7월 O일 개장" 글은 발행 후 일수와 무관, <b>개장일이 낀 주에만 3~4배</b> 폭발. 강릉 경포 <b>23→103→426</b>. 일수 기반 성숙곡선의 예외.</div>
+      </div>
+      <div class="head">
+        <div class="t">② admin_ 파일럿 생환 재확인</div>
+        <div class="b">여권 <b>11→7→56</b> · 국제면허 <b>9→11→37</b> · ESTA <b>10→13→63</b>. 주간 데이터도 3주차 반등과 일치. 단 P3·P4는 top200 미진입.</div>
+      </div>
+      <div class="head">
+        <div class="t">③ 연꽃, 명소별 정점 엇갈림</div>
+        <div class="b">전주 덕진 <b>268→72</b>(정점 통과·감쇠) vs 시흥 관곡지 <b>182→310</b>(상승 중). 같은 키워드도 일괄 "시즌 종료" 판단 금지.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENT TRIGGER -->
+  <section>
+    <h2><span class="n">1</span> 이벤트 트리거형(B형) — 개장주 폭발</h2>
+    <p class="lead">해수욕장 개장(7/1~7/4) 3연속 검증. 세 글 모두 개장 전 주까지는 평탄하다가 <b>개장 당일이 포함된 주(7/5주)</b>에만 급등 — 발행 후 경과일이 아니라 "이벤트 발생 주 포함 여부"가 지배 변수.</p>
+    <div class="card">
+      <div class="cols">
+        <div class="grp">
+          <div class="grpbars">
+            <div class="bar" style="height:5.4%;background:var(--seqA)" title="6/15~21주 23회"><span class="bv">23</span></div>
+            <div class="bar" style="height:24.2%;background:var(--seqB)" title="6/22~28주 103회"><span class="bv">103</span></div>
+            <div class="bar" style="height:100%;background:var(--seqC)" title="6/29~7/5주 426회"><span class="bv">426</span></div>
+          </div>
+          <div class="wklbl"><span>6/21주</span><span>6/28주</span><span>개장주</span></div>
+          <div class="grpname">강릉 경포해수욕장</div>
+          <div class="grpsub">7/4 개장 · 발행 6/19</div>
+        </div>
+        <div class="grp">
+          <div class="grpbars">
+            <div class="bar" style="height:6.3%;background:var(--seqA)" title="27회"><span class="bv">27</span></div>
+            <div class="bar" style="height:37.3%;background:var(--seqB)" title="159회"><span class="bv">159</span></div>
+            <div class="bar" style="height:66.7%;background:var(--seqC)" title="284회"><span class="bv">284</span></div>
+          </div>
+          <div class="wklbl"><span>6/21주</span><span>6/28주</span><span>개장주</span></div>
+          <div class="grpname">태안 만리포</div>
+          <div class="grpsub">7/4 개장 · 발행 6/15</div>
+        </div>
+        <div class="grp">
+          <div class="grpbars">
+            <div class="bar" style="height:3.3%;background:var(--seqA)" title="14회"><span class="bv">14</span></div>
+            <div class="bar" style="height:28.4%;background:var(--seqB)" title="121회"><span class="bv">121</span></div>
+            <div class="bar" style="height:86.6%;background:var(--seqC)" title="369회"><span class="bv">369</span></div>
+          </div>
+          <div class="wklbl"><span>6/21주</span><span>6/28주</span><span>개장주</span></div>
+          <div class="grpname">포항 영일대·월포</div>
+          <div class="grpsub">7월 개장 · 발행 6/20</div>
+        </div>
+      </div>
+      <div class="caption">막대 높이 = 주간 조회수(최대 426 기준). 색 진하기 = 주차(연함→진함). → 운영원칙 §F 신설 근거.</div>
+    </div>
+  </section>
+
+  <!-- ADMIN PILOT -->
+  <section>
+    <h2><span class="n">2</span> admin_ 파일럿 — 주간 조회수로 본 생환</h2>
+    <p class="lead">행정 셀프발급 3건이 6/29~7/5주에 일제히 2~5배 반등. 누적 방식 3주차 재판정("생환·상설 편입")과 주간 데이터가 일치. <b>전입신고·주민등록등본(P3·P4)은 4주 내내 top200 미진입 → "확인 불가"로 유보(실패 아님).</b></p>
+    <div class="card">
+      <div class="legend" style="margin-bottom:12px">
+        <span><i style="background:var(--s1)"></i>여권 재발급</span>
+        <span><i style="background:var(--s2)"></i>국제운전면허</span>
+        <span><i style="background:var(--s3)"></i>미국 ESTA</span>
+      </div>
+      <div class="cols">
+        <div class="grp">
+          <div class="grpbars">
+            <div class="bar" style="height:17.5%;background:var(--s1)" title="여권 11"><span class="bv">11</span></div>
+            <div class="bar" style="height:14.3%;background:var(--s2)" title="국제면허 9"><span class="bv">9</span></div>
+            <div class="bar" style="height:15.9%;background:var(--s3)" title="ESTA 10"><span class="bv">10</span></div>
+          </div>
+          <div class="grpname">6/15~21주</div>
+        </div>
+        <div class="grp">
+          <div class="grpbars">
+            <div class="bar" style="height:11.1%;background:var(--s1)" title="여권 7"><span class="bv">7</span></div>
+            <div class="bar" style="height:17.5%;background:var(--s2)" title="국제면허 11"><span class="bv">11</span></div>
+            <div class="bar" style="height:20.6%;background:var(--s3)" title="ESTA 13"><span class="bv">13</span></div>
+          </div>
+          <div class="grpname">6/22~28주</div>
+        </div>
+        <div class="grp">
+          <div class="grpbars">
+            <div class="bar" style="height:88.9%;background:var(--s1)" title="여권 56"><span class="bv">56</span></div>
+            <div class="bar" style="height:58.7%;background:var(--s2)" title="국제면허 37"><span class="bv">37</span></div>
+            <div class="bar" style="height:100%;background:var(--s3)" title="ESTA 63"><span class="bv">63</span></div>
+          </div>
+          <div class="grpname">6/29~7/5주</div>
+        </div>
+      </div>
+      <div class="caption">막대 높이 = 주간 조회수(최대 63 기준). 세 글 모두 3주차에 급반등.</div>
+    </div>
+  </section>
+
+  <!-- CATEGORY SHIFT -->
+  <section>
+    <h2><span class="n">3</span> 카테고리 점유율 이동 — 바닥층이 보이기 시작</h2>
+    <p class="lead">top200으로 넓히자 여행(파랑) 점유율이 <b>94% → 73%</b>로 내려오고 local_(초록)·gov_(노랑)이 시야에 진입. 하이브리드 전략이 실제 트래픽에 반영되는 신호.</p>
+    <div class="card">
+      <div class="legend" style="margin-bottom:14px">
+        <span><i style="background:var(--s1)"></i>travel_</span>
+        <span><i style="background:var(--s2)"></i>local_</span>
+        <span><i style="background:var(--s3)"></i>gov_</span>
+        <span><i style="background:var(--s4)"></i>admin_</span>
+        <span><i style="background:var(--s5)"></i>기타(레거시)</span>
+      </div>
+      <div class="stk">
+        <div class="stkrow">
+          <div class="stklab"><b>6/8~14</b>top100</div>
+          <div class="stkbar">
+            <div class="seg" style="width:94.3%;background:var(--s1)"><span>94.3%</span></div>
+            <div class="seg" style="width:2.5%;background:var(--s3)"></div>
+            <div class="seg" style="width:3.2%;background:var(--s5)"></div>
+          </div>
+        </div>
+        <div class="stkrow">
+          <div class="stklab"><b>6/15~21</b>top200</div>
+          <div class="stkbar">
+            <div class="seg" style="width:88.3%;background:var(--s1)"><span>88.3%</span></div>
+            <div class="seg" style="width:5.1%;background:var(--s2)"><span>5.1</span></div>
+            <div class="seg" style="width:2.1%;background:var(--s3)"></div>
+            <div class="seg" style="width:0.3%;background:var(--s4)"></div>
+            <div class="seg" style="width:4.2%;background:var(--s5)"></div>
+          </div>
+        </div>
+        <div class="stkrow">
+          <div class="stklab"><b>6/22~28</b>top200</div>
+          <div class="stkbar">
+            <div class="seg" style="width:85.3%;background:var(--s1)"><span>85.3%</span></div>
+            <div class="seg" style="width:8.8%;background:var(--s2)"><span>8.8</span></div>
+            <div class="seg" style="width:2.8%;background:var(--s3)"></div>
+            <div class="seg" style="width:0.3%;background:var(--s4)"></div>
+            <div class="seg" style="width:2.8%;background:var(--s5)"></div>
+          </div>
+        </div>
+        <div class="stkrow">
+          <div class="stklab"><b>6/29~7/5</b>top200</div>
+          <div class="stkbar">
+            <div class="seg" style="width:73.2%;background:var(--s1)"><span>73.2%</span></div>
+            <div class="seg" style="width:13.8%;background:var(--s2)"><span>13.8</span></div>
+            <div class="seg" style="width:9.5%;background:var(--s3)"><span>9.5</span></div>
+            <div class="seg" style="width:1.2%;background:var(--s4)"></div>
+            <div class="seg" style="width:2.3%;background:var(--s5)"></div>
+          </div>
+        </div>
+      </div>
+      <div class="note">⚠️ <b>해석 주의</b>: 첫 주(6/8~14)만 top100이라 local_·gov_이 검열 경계 밖 — 이 주의 "여행 94%"는 실제 비중이 아니라 <b>절단면 착시</b>. 순수 트렌드는 top200 고정 이후 몇 주 더 관측해야 확정.</div>
+    </div>
+  </section>
+
+  <!-- LOTUS DIVERGENCE -->
+  <section>
+    <h2><span class="n">4</span> 연꽃 — 같은 키워드, 갈리는 정점</h2>
+    <div class="card">
+      <div class="cols">
+        <div class="grp">
+          <div class="grpbars">
+            <div class="bar" style="height:0;background:transparent" title="미관측"><span class="bv" style="color:var(--muted)">–</span></div>
+            <div class="bar" style="height:7.1%;background:var(--seqA)" title="22"><span class="bv">22</span></div>
+            <div class="bar" style="height:86.5%;background:var(--seqB)" title="268 정점"><span class="bv">268</span></div>
+            <div class="bar" style="height:23.2%;background:var(--crit)" title="72 감쇠"><span class="bv">72</span></div>
+          </div>
+          <div class="wklbl"><span>6/14</span><span>6/21</span><span>6/28</span><span>7/5</span></div>
+          <div class="grpname">전주 덕진공원 <span class="pill l">정점 통과 ▼</span></div>
+          <div class="grpsub">6/28주 정점 후 −73% 감쇠 · 내부링크 정리 대상</div>
+        </div>
+        <div class="grp">
+          <div class="grpbars">
+            <div class="bar" style="height:16.1%;background:var(--seqA)" title="50"><span class="bv">50</span></div>
+            <div class="bar" style="height:17.4%;background:var(--seqA)" title="54"><span class="bv">54</span></div>
+            <div class="bar" style="height:58.7%;background:var(--seqB)" title="182"><span class="bv">182</span></div>
+            <div class="bar" style="height:100%;background:var(--seqC)" title="310 상승중"><span class="bv">310</span></div>
+          </div>
+          <div class="wklbl"><span>6/14</span><span>6/21</span><span>6/28</span><span>7/5</span></div>
+          <div class="grpname">시흥 관곡지 <span class="pill w">상승 중 ▲</span></div>
+          <div class="grpsub">4주째 우상향 · 아직 정점 전 · 유지</div>
+        </div>
+      </div>
+      <div class="caption">막대 높이 = 주간 조회수(최대 310 기준). 붉은 막대 = 감쇠 국면.</div>
+    </div>
+  </section>
+
+  <!-- TOP PERFORMERS -->
+  <section>
+    <h2><span class="n">5</span> 이번 주 톱퍼포머 (6/29~7/5)</h2>
+    <div class="card">
+      <div class="hb">
+        <div class="hbrow"><div class="hbname">강릉 경포해수욕장 <span class="chip ch-t">여행·개장</span></div><div class="hbtrack"><div class="hbfill evt" style="width:100%"></div><div class="hbval">426</div></div></div>
+        <div class="hbrow"><div class="hbname">영동 물한계곡 <span class="chip ch-t">여행</span></div><div class="hbtrack"><div class="hbfill" style="width:100%"></div><div class="hbval">426</div></div></div>
+        <div class="hbrow"><div class="hbname">포항 영일대·월포 <span class="chip ch-t">여행·개장</span></div><div class="hbtrack"><div class="hbfill evt" style="width:86.6%"></div><div class="hbval">369</div></div></div>
+        <div class="hbrow"><div class="hbname">정선 함백산 만항재 <span class="chip ch-t">여행·야생화</span></div><div class="hbtrack"><div class="hbfill" style="width:85.4%"></div><div class="hbval">364</div></div></div>
+        <div class="hbrow"><div class="hbname">가평 용추·포천 백운 비교 <span class="chip ch-l">비교형</span></div><div class="hbtrack"><div class="hbfill" style="width:84%;background:var(--s2)"></div><div class="hbval">358</div></div></div>
+        <div class="hbrow"><div class="hbname">시흥 관곡지 연꽃 <span class="chip ch-l">질의형</span></div><div class="hbtrack"><div class="hbfill" style="width:72.8%;background:var(--s2)"></div><div class="hbval">310</div></div></div>
+        <div class="hbrow"><div class="hbname">괴산 화양구곡 <span class="chip ch-t">여행·계곡</span></div><div class="hbtrack"><div class="hbfill" style="width:68.8%"></div><div class="hbval">293</div></div></div>
+        <div class="hbrow"><div class="hbname">태안 만리포 <span class="chip ch-t">여행·개장</span></div><div class="hbtrack"><div class="hbfill evt" style="width:66.7%"></div><div class="hbval">284</div></div></div>
+        <div class="hbrow"><div class="hbname">인제 곰배령 <span class="chip ch-t">여행·야생화</span></div><div class="hbtrack"><div class="hbfill" style="width:66.7%"></div><div class="hbval">284</div></div></div>
+        <div class="hbrow"><div class="hbname">더경기패스 비교 <span class="chip ch-g">gov·비교</span></div><div class="hbtrack"><div class="hbfill" style="width:65.5%;background:var(--s3)"></div><div class="hbval">279</div></div></div>
+        <div class="hbrow"><div class="hbname">무주 덕유산 구천동 <span class="chip ch-t">에버그린</span></div><div class="hbtrack"><div class="hbfill" style="width:60.6%"></div><div class="hbval">258</div></div></div>
+        <div class="hbrow"><div class="hbname">평창 청옥산 육백마지기 <span class="chip ch-t">여행·신규</span></div><div class="hbtrack"><div class="hbfill" style="width:59.6%"></div><div class="hbval">254</div></div></div>
+      </div>
+      <div class="caption">노란 막대 = 개장 이벤트 훅 · 초록 = local_ · 파랑 = 여행. 막대 최대 426 기준.</div>
+    </div>
+  </section>
+
+  <!-- WINNERS / LOSERS -->
+  <section>
+    <h2><span class="n">6</span> 승자 · 패자 (WoW)</h2>
+    <div class="two">
+      <div class="card">
+        <div style="font-weight:750;margin-bottom:10px"><span class="pill w">급상승 ▲</span></div>
+        <ul class="lst">
+          <li><b>개장 시리즈</b> 강릉·태안·포항 동시 폭발 (이벤트 주)</li>
+          <li><b>야생화</b> 인제 곰배령 15→284 · 정선 함백산 17→364</li>
+          <li><b>비교형</b> 가평·포천 42→358 · K-패스 카드사 21→194</li>
+          <li><b>계곡 피서</b> 괴산 화양구곡 52→293 본격 진입</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div style="font-weight:750;margin-bottom:10px"><span class="pill l">이탈 · 감쇠 ▼</span></div>
+        <ul class="lst">
+          <li><b>전주 덕진 연꽃</b> 268→72 (−73%, 정점 통과)</li>
+          <li><b>장마철 침수도로</b> 10→이탈 (장마 피크 경과·타이밍 소멸)</li>
+          <li><b>니치 지원금</b> 부모급여·청년미래적금 top200 이탈</li>
+          <li><b>철원 한탄강 래프팅</b> 63→이탈</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note">이탈 ≠ 실패: top200 밖으로 밀린 것과 시즌 타이밍 경과를 구분. 특히 6/14주는 top100이라 하락 오판 주의.</div>
+  </section>
+
+  <!-- NEXT ACTIONS -->
+  <section>
+    <h2><span class="n">7</span> 다음 액션</h2>
+    <div class="card">
+      <ol class="act">
+        <li><b>이벤트 날짜형 스코어링 전환</b> — 개장·개화 글은 "발행 후 며칠"이 아니라 "이벤트가 그 주에 포함됐는가"로 회고 판정. (성숙곡선 메모리 B형 추가 제안)</li>
+        <li><b>연꽃 개별 관리</b> — 전주 덕진(감쇠) 내부링크 재배치, 시흥 관곡지(상승)는 유지. 일괄 종료 판단 금지.</li>
+        <li><b>admin_ 유지 + P3/P4 확인</b> — 여권·면허·ESTA 성장 지속. 전입신고·주민등록등본 4주째 미진입 → 6/18 발행분 통계 누락 여부 개별 점검.</li>
+        <li><b>rite_(경조사) 관측 시작</b> — P6·P7(7/6·7/7 발행)은 이번 범위 밖. 다음 주(7/12경) 캡처부터 1주차 관측.</li>
+        <li><b>비교형 앵글 확대</b> — 계곡 비교·카드사 비교·지역 패스 비교가 톱15 안정 → local_·gov_ 큐에 "비교" 신규 항목 증설.</li>
+        <li><b>8월 초 선점 유지</b> — 계곡·해수욕장·야생화·섬 견조. 늦여름 후보 D-14 적재 지속.</li>
+      </ol>
+    </div>
+  </section>
+
+  <footer class="rpt">
+    근거 데이터: stats/weekly/20260614·20260621·20260628·20260705.json (2026-07-07 캡처, 주간 조회수 top100/200) ·
+    상세 분석: stats/분석_20260705_주간.md · 레거시 성숙곡선: 분석_20260627·분석_20260705 · 운영원칙 §F.<br/>
+    ⚠️ top-N 검열: 저조회 롱테일(바닥 트래픽층)은 랭크 밖이라 안 보임 — "실패"가 아니라 "확인 불가". 주간 조회수는 누적 총합이 아님.
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "outDir": "output_insta/260709/haejung",
+  "photosDir": "adsense_src/260709_haejung",
+  "handle": "@gimpo.matjip.note",
+  "palette": { "primary": "#14615a", "dark": "#0c3b37", "accent": "#f4c95d", "hlWeight": 600 },
+  "cards": [
+    { "role": "cover", "photo": "이미지 025.jpg", "scrim": "mid", "baseSize": 82,
+      "kicker": "김포 고촌 · 제주식 해장국", "lines": ["맑고 깔끔한", "제주 소고기", "해장국"], "name": "해정 김포고촌점" },
+    { "role": "point", "photo": "이미지 024.jpg", "scrim": "mid", "baseSize": 62,
+      "kicker": "제주를 그대로", "lines": ["돌하르방이 반기는", "제주식 소고기 해장국", "전문점"] },
+    { "role": "point", "photo": "20250721_174238.jpg", "scrim": "mid", "baseSize": 58,
+      "kicker": "이 집 국물은", "lines": ["매일 새로 우린 맑은 육수", "선지·우거지·콩나물", "비린내 없이 개운하게"] },
+    { "role": "point", "photo": "20250721_174241.jpg", "scrim": "mid", "baseSize": 60,
+      "kicker": "고기는", "lines": ["부드럽게 삶은 소고기", "그득하게 담겨", "흑미밥 말면 속이 확"] },
+    { "role": "point", "photo": "20250721_174846.jpg", "scrim": "mid", "baseSize": 60,
+      "kicker": "별미 하나 더", "lines": ["양과 미나리 부쳐낸", "양미나리전", "술안주로도 딱"] },
+    { "role": "point", "photo": "20250721_174855.jpg", "scrim": "mid", "baseSize": 60,
+      "kicker": "분위기", "lines": ["밝고 넓은 매장", "혼밥도 가족 식사도", "편하게"] },
+    { "role": "point", "photo": "이미지 023.jpg", "scrim": "strong", "baseSize": 54,
+      "kicker": "찾아가는 길", "lines": ["고촌읍 은행영사정로 25", "김포골드라인 고촌역 인근", "김포IC 바로 옆"] },
+    { "role": "info", "photo": "20250721_174851.jpg", "scrim": "strong",
+      "kicker": "메뉴 & 정보",
+      "facts": ["해장국 12,000 · 곰탕 10,000", "수육 15,000~ · 양무침 27,000~", "양미나리전 15,000", "매일 09:30–21:00 · 1인 1식", "주차 O · ☎ 0507-1409-7120"] },
+    { "role": "cta", "photo": "이미지 025.jpg", "scrim": "strong",
+      "lines": ["김포 맛집,", "더 찾고 있다면"], "cta": "저장하고 팔로우 👇", "handle": "@gimpo.matjip.note" }
+  ]
+}

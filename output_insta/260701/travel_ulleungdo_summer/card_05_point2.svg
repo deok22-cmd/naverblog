@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== C : 측면 텍스트 — point2 (독도 배편 예약과 입도 조건) =====
+       카테고리: 국내여행 / 레이아웃: C_side_text
+       seed=2484 → start=0 → POOL[(0+2)%6]=POOL[2]=C -->
+  <defs>
+    <linearGradient id="scrimLeft" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.74"/>
+      <stop offset="0.52" stop-color="#000000" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimLeft)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <!-- 키커 -->
+  <text x="80" y="430" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="28" font-weight="700" fill="#80cbc4" letter-spacing="3">독도 · 저동항 출항</text>
+
+  <!-- 헤드라인 2줄 -->
+  <text font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="78" font-weight="800" fill="#ffffff" letter-spacing="-2">
+    <tspan x="80" y="540">독도 배편</tspan>
+    <tspan x="80" y="630">예약 가이드</tspan>
+  </text>
+
+  <rect x="82" y="688" width="120" height="8" fill="#00796b"/>
+
+  <!-- 본문 3줄 -->
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="36" font-weight="500" fill="#e0f2f1">
+    <text x="80" y="790">일반석 왕복 약 60,000원</text>
+    <text x="80" y="848">우등석 약 66,000원 (유류할증료 별도)</text>
+    <text x="80" y="906">왕복 소요 약 4시간 (이동 포함)</text>
+  </g>
+
+  <!-- 보조 칩 (입도 조건 안내) -->
+  <rect x="80" y="970" width="560" height="68" rx="34" fill="#00796b"/>
+  <text x="360" y="1014" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#ffffff">기상 조건 충족 시 입도관광 가능</text>
+
+  <!-- 하단 주의 안내 -->
+  <text x="80" y="1100" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="500" fill="#b2dfdb">입도 여부는 당일 아침 최종 결정.</text>
+  <text x="80" y="1148" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="32" font-weight="500" fill="#b2dfdb">독도 상륙 목표라면 최소 2박 일정 권장.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>

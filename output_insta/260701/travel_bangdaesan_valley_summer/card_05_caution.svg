@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <!-- ===== A : 헤드라인-하단 (caution 역할) — 여름 계곡 안전 수칙 =====
+       원고 h2 06 + h2 04 주의 포인트 기반. 하단 스크림 구조.
+       seed=3285 → caution=[A,E][3285%2]=[A,E][1]=E 가 원칙이나
+       card_04=D와 인접 비동일 및 card_06=F와 비동일 고려 → A 선택(양쪽 모두 다름). -->
+  <defs>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.40" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.82"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ▼▼▼ Figma/Phase B: 이 사각형 1개만 배경 이미지로 치환 ▼▼▼ -->
+  <rect id="BG__REPLACE_WITH_IMAGE" x="0" y="0" width="1080" height="1350" fill="#16201e"/>
+  <!-- ▲▲▲ 배경 슬롯 ▲▲▲ -->
+
+  <rect x="0" y="0" width="1080" height="1350" fill="url(#scrimBottom)"/>
+  <rect id="brand-bar" x="0" y="0" width="14" height="1350" fill="#00796b"/>
+
+  <!-- 데코 틱 -->
+  <rect x="80" y="852" width="64" height="10" fill="#00796b"/>
+
+  <!-- 헤드라인 -->
+  <text x="80" y="960" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="90" font-weight="800" fill="#ffffff" letter-spacing="-2">계곡 안전 수칙</text>
+
+  <!-- 칩 2개: 원고의 실제 수치 기반 -->
+  <g id="chips">
+    <rect x="80" y="1010" width="370" height="74" rx="37" fill="#00796b"/>
+    <text x="265" y="1058" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle">음주 후 입수 금지</text>
+    <rect x="470" y="1010" width="400" height="74" rx="37" fill="#00796b"/>
+    <text x="670" y="1058" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle">수온 15~17℃ 저체온 주의</text>
+  </g>
+
+  <!-- 서브라인 2줄 -->
+  <text x="80" y="1178" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e0f2f1">계곡 바위 이끼 미끄럼 · 워터슈즈 필수.</text>
+  <text x="80" y="1232" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="500" fill="#e0f2f1">집중호우 예보 시 계곡 심부 진입 자제.</text>
+
+  <!-- ===== 브랜드 워터마크 (우측 하단 고정 · 문서상 마지막 = 항상 최상단) ===== -->
+  <g id="brand-watermark">
+    <path d="M822 1251 H1080 V1350 H792 V1281 A30 30 0 0 1 822 1251 Z" fill="#004d40"/>
+    <text x="936" y="1310" text-anchor="middle" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="27" font-weight="700" fill="#ffffff" letter-spacing="0.5">travelkorea_365</text>
+  </g>
+</svg>
