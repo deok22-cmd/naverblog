@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #e8f5e9; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #fafafa; border: 1px solid #e0e0e0; border-left-width: 4px; margin-bottom: 15px; border-radius: 0 8px 8px 0; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #a5d6a7; border-radius: 10px; padding: 24px 20px; background: #e8f5e9; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; color: #388e3c; }
+  .ph-file { font-size: .8em; color: #888; font-family: monospace; }
+  .prompt-text { background: #fff; border: 1px solid #ccc; border-radius: 6px; padding: 12px; font-size: .82em; color: #444; white-space: pre-wrap; line-height: 1.6; margin: 0 0 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 7px 16px; border-radius: 5px; cursor: pointer; font-size: .85em; }
+  .img-caption { font-size: .88em; color: #555; margin-top: 10px; font-style: italic; text-align: center; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: .85em; color: #666; border: 1px solid #ddd; }
+  .tip-box { background: #e8f5e9; border-left: 4px solid #388e3c; padding: 14px 18px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #e65100; padding: 14px 18px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .table-wrap { overflow-x: auto; margin: 20px 0; }
+  table { border-collapse: collapse; width: 100%; font-size: .93em; }
+  th { background: #388e3c; color: #fff; padding: 10px 12px; text-align: left; }
+  td { border: 1px solid #ddd; padding: 9px 12px; }
+  tr:nth-child(even) td { background: #f5faf5; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>무선청소기 흡입력 약해졌을 때 필터·먼지통 관리법</h1>
+<div class="intro-box">
+<strong>📍 핵심 요약</strong><br/><br/>
+무선청소기 흡입력이 갑자기 약해진 주요 원인은 필터 막힘, 먼지통 가득 참, 흡입구 이물질, 브러시 엉킴, 배터리 노후입니다. 필터 청소는 수세 가능·불가를 먼저 확인해야 하며, 수세 가능 필터는 물로 씻은 뒤 완전히 건조(24시간 이상)한 뒤 재장착해야 합니다. 브러시 헤드 머리카락 제거도 흡입력 회복에 효과적입니다.
+</div>
+
+<h2>01. 무선청소기 흡입력이 갑자기 약해졌다면, 먼저 이것부터 확인하세요</h2>
+
+무선청소기를 사용하다 보면 어느 순간 흡입력이 눈에 띄게 떨어지는 경험을 하게 됩니다. 흡입력 저하는 청소기가 망가졌다는 신호가 아닌 경우가 대부분이며, 간단한 관리만으로 회복할 수 있습니다.<br/><br/>
+흡입력이 약해졌을 때 가장 먼저 확인해야 할 사항은 <strong>필터 상태</strong>와 <strong>먼지통 용량</strong>입니다. 이 두 가지만 점검해도 흡입력 문제의 상당수가 해결됩니다.<br/><br/>
+확인 순서를 간단하게 정리하면 다음과 같습니다.<br/>
+① 먼지통(더스트컵) 확인 — 절반 이상 차 있으면 비우기<br/>
+② 필터 확인 — 먼지·이물질로 막혀 있으면 청소<br/>
+③ 흡입구·노즐 확인 — 이물질로 막혀 있으면 제거<br/>
+④ 브러시 헤드 확인 — 머리카락·실 엉킴 여부 확인<br/>
+⑤ 배터리 상태 확인 — 완충 시에도 흡입력이 짧으면 배터리 노후 의심<br/><br/>
+이 순서대로 점검하면 원인을 빠르게 찾을 수 있습니다. 각 항목별 자세한 처리 방법을 아래에서 설명합니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head">
+<span>📷 AI 이미지 생성 영역</span>
+<span class="ph-file">images/260710/6_vacuum_1.png</span>
+</div>
+<pre class="prompt-text" id="prompt-6-1">Photorealistic close-up of person cleaning a cordless vacuum cleaner HEPA filter, tap filter against white background, dust particles visible, home maintenance activity, clean white setting, ultra high detail, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-6-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">무선청소기 필터를 분리해 청소하는 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>02. 흡입력 저하의 가장 흔한 원인 — 필터 막힘</h2>
+
+무선청소기 흡입력 저하의 <strong>가장 흔한 원인은 필터 막힘</strong>입니다. 청소기는 공기와 함께 먼지·이물질을 빨아들이는데, 이 먼지들이 필터 표면에 쌓이면 공기 흐름이 방해받아 흡입력이 급격히 떨어집니다.<br/><br/>
+필터 막힘의 징후는 다음과 같습니다.<br/>
+- 청소기를 작동했는데 소리는 나지만 먼지가 잘 빨리지 않는다<br/>
+- 배터리는 충분한데 흡입력이 이전보다 현저히 약하다<br/>
+- 청소기 배기구에서 먼지 냄새가 난다<br/>
+- 필터를 육안으로 봤을 때 먼지가 두껍게 달라붙어 있다<br/><br/>
+필터 막힘은 주기적인 청소로 예방할 수 있습니다. 일반적으로 <strong>월 1~2회 이상</strong> 필터를 청소하는 것을 권장합니다. 사용 빈도가 높거나 반려동물 털이 많은 환경이라면 더 자주 청소해야 합니다.<br/><br/>
+필터 종류에 따라 청소 방법이 다르기 때문에, 제조사 설명서에서 필터 종류와 청소 방법을 먼저 확인해야 합니다. 잘못된 방법으로 청소하면 필터가 손상돼 오히려 교체 비용이 발생할 수 있습니다.
+
+<h2>03. 필터 청소 방법 — 수세 가능 vs 불가능 확인부터</h2>
+
+무선청소기 필터는 크게 <strong>수세 가능 필터</strong>와 <strong>수세 불가 필터</strong>로 나뉩니다. 필터 또는 설명서에 '워셔블(Washable)', '수세 가능' 표시가 있으면 물세척이 허용됩니다.<br/><br/>
+<strong>수세 가능 필터 청소 방법</strong>:
+<div class="step-box">
+<strong>Step 1: 필터 분리</strong><br/>
+청소기 전원을 끄고 필터를 분리합니다. 필터 위치는 제조사마다 다르지만, 보통 먼지통 위쪽 또는 청소기 본체 상단에 있습니다.
+</div>
+<div class="step-box">
+<strong>Step 2: 미온수로 가볍게 씻기</strong><br/>
+차가운 물 또는 미온수(미지근한 물)로 필터를 헹굽니다. 너무 뜨거운 물은 필터 소재를 변형시킬 수 있습니다. 세제 사용 여부는 제조사 지침을 따르세요. 비비거나 강하게 문지르면 필터 망이 손상될 수 있습니다.
+</div>
+<div class="step-box">
+<strong>Step 3: 충분히 건조</strong><br/>
+세척 후 통풍이 잘 되는 곳에서 자연 건조합니다. <strong>최소 24시간 이상</strong> 완전히 건조된 것을 확인한 후 재장착합니다. 젖은 상태로 장착하면 청소기 내부에 습기가 차 곰팡이·악취 원인이 됩니다.
+</div>
+
+<strong>수세 불가 필터 청소 방법</strong>:<br/>
+수세가 금지된 필터(HEPA 필터 등 일부)는 물을 사용하면 필터 기능이 손상됩니다. 물 대신 다음 방법을 사용합니다.<br/>
+① 부드러운 솔(칫솔, 청소용 솔)로 먼지를 털어냅니다<br/>
+② 필터를 부드럽게 두드려 안쪽 먼지를 떨어뜨립니다<br/>
+③ 압축 공기(에어 캔)를 이용해 역방향으로 불어내는 방법도 효과적입니다<br/><br/>
+<div class="warn-box">⚠️ <strong>주의</strong>: 수세 가능 여부가 불분명한 필터는 물을 사용하지 마세요. 잘못된 세척으로 필터가 손상되면 새 필터로 교체해야 합니다.</div>
+
+<h2>04. 먼지통(더스트컵) 청소 — 주기와 방법</h2>
+
+먼지통이 가득 차면 청소기가 새 먼지를 받아들일 공간이 없어져 흡입력이 떨어집니다. 먼지통 관리는 필터 청소만큼 중요합니다.<br/><br/>
+<strong>먼지통 비우는 주기</strong>: 제조사별로 다르지만 일반적으로 <strong>절반 이상 차면 즉시 비우는 것</strong>이 원칙입니다. 자주 청소하는 가정이라면 매 사용 후 확인하는 습관이 좋습니다.<br/><br/>
+<strong>먼지통 청소 방법</strong>:
+<div class="step-box">
+<strong>비우기</strong><br/>
+먼지통을 청소기에서 분리해 쓰레기통에 먼지를 비웁니다. 먼지가 날리지 않도록 쓰레기통 안에서 분리하는 것이 좋습니다. 알레르기가 있는 경우 마스크 착용을 권장합니다.
+</div>
+<div class="step-box">
+<strong>세척하기</strong><br/>
+먼지통(더스트컵)은 대부분의 제품에서 물세척이 가능합니다. 미온수와 중성 세제를 사용해 세척하고 충분히 헹굽니다. 세척 가능 여부는 설명서에서 반드시 확인하세요.
+</div>
+<div class="step-box">
+<strong>건조 후 재장착</strong><br/>
+세척한 먼지통은 완전히 건조한 뒤 재장착합니다. 물기가 남은 상태로 필터나 청소기 본체와 결합하면 고장 원인이 됩니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head">
+<span>📷 AI 이미지 생성 영역</span>
+<span class="ph-file">images/260710/6_vacuum_2.png</span>
+</div>
+<pre class="prompt-text" id="prompt-6-2">Photorealistic cordless vacuum cleaner with transparent dust cup being emptied into trash bin, visible dust and debris, domestic cleaning, modern home appliance, white background, ultra high detail, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-6-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">무선청소기 먼지통 비우는 장면 / AI 제작 이미지</div>
+</div>
+
+<h2>05. 흡입구와 노즐 이물질 제거하기</h2>
+
+필터와 먼지통이 깨끗한데도 흡입력이 약하다면, <strong>흡입구나 노즐에 이물질이 막혀 있을 가능성</strong>이 있습니다. 큰 이물질(과자 봉지 조각, 종이, 실 뭉치 등)이 흡입구에 걸려 공기 흐름을 막는 경우입니다.<br/><br/>
+<strong>흡입구 이물질 제거 방법</strong>:<br/>
+① 청소기 전원을 끄고 전원 연결을 해제합니다<br/>
+② 노즐과 흡입구 관을 분리합니다<br/>
+③ 손전등이나 스마트폰 플래시로 흡입구 내부를 비춰 이물질 위치를 확인합니다<br/>
+④ 핀셋·긴 솔·젓가락 등을 사용해 이물질을 꺼냅니다<br/>
+⑤ 제거 후 흡입구를 다시 연결하고 청소기를 작동시켜 흡입력을 확인합니다<br/><br/>
+<strong>주의할 점</strong>: 흡입구 내부에 손가락을 넣는 것은 위험합니다. 반드시 전원을 끄고 도구를 사용해 제거하세요. 고압의 압축 공기를 흡입구 방향으로 불어 이물질을 밀어내는 방법도 효과적입니다.<br/><br/>
+노즐이나 연장관 내부가 막힌 경우, 관을 분리해 긴 솔이나 막대를 이용해 이물질을 밀어내면 됩니다. 물로 씻어도 되는 노즐인지 먼저 설명서를 확인하세요.
+
+<h2>06. 브러시 헤드 엉킨 머리카락 제거법</h2>
+
+무선청소기 브러시 헤드(바닥용 청소 헤드)에 머리카락·반려동물 털·실 등이 감기면 브러시 회전이 방해받아 흡입력이 현저히 떨어집니다. 이 경우 청소기 자체 성능이 저하된 것이 아니므로 브러시를 청소하면 바로 회복됩니다.<br/><br/>
+<strong>머리카락 제거 방법</strong>:
+<div class="step-box">
+<strong>가위를 이용한 제거 (가장 효과적)</strong><br/>
+브러시 헤드를 청소기에서 분리합니다. 브러시 롤에 감긴 머리카락이나 실을 가위로 세로 방향으로 잘라냅니다. 잘라진 머리카락을 핀셋이나 손으로 잡아당겨 제거합니다. 반복 작업으로 브러시 롤이 깨끗해지면 다시 장착합니다.
+</div>
+<div class="step-box">
+<strong>청소용 도구 이용</strong><br/>
+일부 청소기 브랜드는 브러시 헤드 청소 전용 도구(청소 빗)를 함께 제공합니다. 제품 박스에 있는 부속품을 확인해 보세요.
+</div>
+<div class="step-box">
+<strong>브러시 헤드 분리 청소</strong><br/>
+제조사에 따라 브러시 롤 자체를 분리해 세척할 수 있는 제품도 있습니다. 설명서에서 브러시 롤 탈착 방법을 확인하세요.
+</div>
+
+<div class="tip-box">💡 <strong>예방 방법</strong>: 청소 후 간단하게 브러시 헤드의 머리카락 상태를 확인하는 습관을 들이면 엉킴이 심해지기 전에 쉽게 제거할 수 있습니다. 반려동물을 기르는 가정은 매 사용 후 확인을 권장합니다.</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head">
+<span>📷 AI 이미지 생성 영역</span>
+<span class="ph-file">images/260710/6_vacuum_3.png</span>
+</div>
+<pre class="prompt-text" id="prompt-6-3">Photorealistic close-up of removing tangled hair from vacuum cleaner brush roll, scissors cutting hair wrap, cleaning maintenance step, home appliance care, white background, ultra high detail, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-6-3')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">무선청소기 브러시 헤드 헤어 제거 청소 / AI 제작 이미지</div>
+</div>
+
+<h2>07. 배터리 노후로 흡입력이 줄어드는 경우</h2>
+
+필터·먼지통·흡입구·브러시 헤드 모두 깨끗한데 흡입력이 예전 같지 않다면, <strong>배터리 노후</strong>를 의심해 볼 수 있습니다. 리튬이온 배터리는 충·방전 반복에 따라 용량이 서서히 줄어들기 때문에, 완충 상태에서의 작동 시간이 점차 짧아집니다.<br/><br/>
+배터리 노후 징후:<br/>
+- 완충했는데 몇 분 만에 배터리 경고가 뜬다<br/>
+- 작동 초반에는 흡입력이 좋지만 배터리가 줄면서 급격히 약해진다<br/>
+- 사용 연수가 2~3년 이상 되었다<br/><br/>
+배터리는 소모품으로, 일정 사용 기간이 지나면 교체가 필요합니다. 배터리 교체는 제조사 공식 서비스센터 또는 공식 인증 수리점에서 진행하는 것이 안전합니다.<br/><br/>
+<strong>셀프 배터리 교체</strong>가 가능한 제품도 있습니다. 교체형 배터리 팩이 분리 가능한 구조로 돼 있다면, 정품 호환 배터리를 구매해 직접 교체할 수 있습니다. 단, 비정품·호환 배터리 사용은 화재·폭발 위험이 있으므로 <strong>반드시 정품 또는 공식 인증 부품</strong>을 사용해야 합니다.<br/><br/>
+<div class="tip-box">💡 <strong>배터리 수명 늘리는 방법</strong>: 배터리를 완전 방전(0%)된 상태로 장기간 방치하면 배터리 수명이 급격히 줄어듭니다. 장기 보관 시에는 배터리를 50~70% 충전 상태로 유지하는 것이 좋습니다.</div>
+
+<h2>08. 필터 교체 시점과 교체 방법 — 제조사별 가이드</h2>
+
+아무리 잘 청소해도 필터는 영구적으로 사용할 수 없습니다. 일정 기간이 지나면 필터 성능이 저하되므로 교체가 필요합니다.<br/><br/>
+<strong>일반적인 필터 교체 주기</strong>:
+<div class="table-wrap">
+<table>
+<tr><th>브랜드·타입</th><th>권장 교체 주기</th></tr>
+<tr><td>다이슨(Dyson) 세척 필터</td><td>매월 세척, 수명 다할 때까지 교체 없음 (제품별 상이)</td></tr>
+<tr><td>LG 코드제로 필터</td><td>약 6개월~1년 (제품마다 다름)</td></tr>
+<tr><td>삼성 제트 필터</td><td>약 6개월~1년 (제품마다 다름)</td></tr>
+<tr><td>일반 HEPA 필터</td><td>통상 6~12개월, 상태에 따라 조기 교체 가능</td></tr>
+</table>
+</div>
+
+위 교체 주기는 참고 기준이며, <strong>정확한 교체 주기는 해당 제품 설명서 또는 제조사 공식 고객센터를 통해 확인</strong>하는 것이 가장 정확합니다.<br/><br/>
+<strong>교체 신호</strong>: 세척 후에도 흡입력이 회복되지 않거나, 필터에서 불쾌한 냄새가 난다면 교체 시점입니다. 육안으로 필터 망이 손상되거나 변색된 경우에도 교체하세요.<br/><br/>
+필터 구매는 제조사 공식 홈페이지, 공식 판매점, 또는 공신력 있는 오픈마켓에서 모델명을 정확히 입력해 구매합니다. 호환 필터 사용 시 성능이 저하될 수 있으므로 정품 필터 사용을 권장합니다.
+
+<h2>09. 청소기 수명 늘리는 보관과 관리 팁</h2>
+
+올바른 보관과 평소 관리 습관이 청소기 수명을 크게 연장합니다.<br/><br/>
+<strong>보관 방법</strong>:<br/>
+① 충전 거치대에 세워서 보관하는 것이 기본입니다. 눕혀 보관하면 일부 구조에서 배터리 부하가 생길 수 있습니다.<br/>
+② 직사광선이 닿지 않는 서늘하고 건조한 장소에 보관하세요. 고온 환경은 배터리 노후를 빠르게 합니다.<br/>
+③ 배터리를 완전 방전된 상태(0%)로 장기 보관하지 마세요. 배터리 셀이 손상될 수 있습니다.<br/><br/>
+<strong>사용 후 관리 루틴</strong>:<br/>
+① 사용 후 먼지통을 비워두면 청소기 내부 냄새와 세균 번식을 방지할 수 있습니다.<br/>
+② 브러시 헤드의 머리카락·실을 주기적으로 제거하세요.<br/>
+③ 청소기 외관을 마른 천으로 닦아 먼지를 제거합니다. 물을 묻혀 닦을 경우 전자 부품에 습기가 스며들지 않도록 주의합니다.<br/><br/>
+<strong>전문 점검</strong>:<br/>
+구매 후 2년 이상 지났거나, 이상한 소리·냄새가 난다면 제조사 서비스센터에서 점검을 받는 것을 권장합니다. 모터 부분의 이상은 직접 수리하기 어려우므로 전문가에게 맡기는 것이 안전합니다.
+
+<h2>10. 자주 묻는 질문 (FAQ)</h2>
+
+<strong>Q. 필터를 씻었는데 청소기에서 물이 나와요. 왜 그런가요?</strong><br/>
+A. 필터가 완전히 건조되지 않은 상태에서 장착한 경우입니다. 즉시 청소기를 끄고 필터를 꺼내어 충분히 건조(24시간 이상)한 후 재장착하세요.<br/><br/>
+<strong>Q. 청소기에서 타는 냄새가 나요. 계속 써도 되나요?</strong><br/>
+A. 즉시 사용을 멈추세요. 타는 냄새는 모터 과부하 또는 전기적 문제일 수 있습니다. 제조사 서비스센터에 점검을 의뢰하세요.<br/><br/>
+<strong>Q. 필터를 청소했는데도 흡입력이 돌아오지 않아요.</strong><br/>
+A. 필터가 완전히 막히거나 손상된 경우 세척만으로는 회복되지 않을 수 있습니다. 새 필터로 교체해 보세요. 교체 후에도 변화가 없으면 모터 이상을 의심해 서비스센터 점검을 받으세요.<br/><br/>
+<strong>Q. 수세 가능 필터인데 헤어드라이어로 빨리 건조해도 되나요?</strong><br/>
+A. 권장하지 않습니다. 고열은 필터 소재를 변형시킬 수 있습니다. 자연 건조가 원칙이며, 선풍기 바람 정도는 괜찮지만 열풍은 피하세요.<br/><br/>
+<strong>Q. 호환 필터를 사용해도 되나요?</strong><br/>
+A. 호환 필터는 정품보다 여과 성능이 낮을 수 있고, 청소기 내부 구조에 맞지 않아 공기 누설이 생길 수 있습니다. 가능하면 정품 필터를 사용하는 것을 권장합니다.<br/><br/>
+<strong>Q. 배터리를 직접 교체할 수 있나요?</strong><br/>
+A. 제품에 따라 사용자 교체가 가능한 경우도 있습니다. 단, 비정품 배터리 사용은 화재·안전 위험이 있으므로 반드시 정품 또는 제조사 공인 부품을 사용하고, 불안하면 서비스센터에 맡기세요.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260709/appli_dehumidifier_drain.html">제습기 연속배수 세팅으로 물통 안 비우는 법과 곰팡이 냄새 제거하기</a></li>
+<li><a href="../260709/cert_building_register_lookup.html">건축물대장 무료 열람으로 위반건축물 확인하는 법과 전세대출 영향</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#무선청소기흡입력</span>
+<span class="tag">#청소기필터청소</span>
+<span class="tag">#청소기먼지통</span>
+<span class="tag">#무선청소기관리</span>
+<span class="tag">#청소기흡입력저하</span>
+<span class="tag">#HEPA필터교체</span>
+<span class="tag">#청소기브러시청소</span>
+<span class="tag">#청소기배터리</span>
+<span class="tag">#가전관리</span>
+<span class="tag">#청소기수명늘리기</span>
+</div>
+</body>
+</html>

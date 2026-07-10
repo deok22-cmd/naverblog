@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #e8f5e9; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #fafafa; border: 1px solid #e0e0e0; border-left-width: 4px; margin-bottom: 15px; border-radius: 0 8px 8px 0; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #a5d6a7; border-radius: 10px; padding: 24px 20px; background: #e8f5e9; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; color: #388e3c; }
+  .ph-file { font-size: .8em; color: #888; font-family: monospace; }
+  .prompt-text { background: #fff; border: 1px solid #ccc; border-radius: 6px; padding: 12px; font-size: .82em; color: #444; white-space: pre-wrap; line-height: 1.6; margin: 0 0 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 7px 16px; border-radius: 5px; cursor: pointer; font-size: .85em; }
+  .img-caption { font-size: .88em; color: #555; margin-top: 10px; font-style: italic; text-align: center; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: .85em; color: #666; border: 1px solid #ddd; }
+  .tip-box { background: #e8f5e9; border-left: 4px solid #388e3c; padding: 14px 18px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #e65100; padding: 14px 18px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .table-wrap { overflow-x: auto; margin: 20px 0; }
+  table { border-collapse: collapse; width: 100%; font-size: .93em; }
+  th { background: #388e3c; color: #fff; padding: 10px 12px; text-align: left; }
+  td { border: 1px solid #ddd; padding: 9px 12px; }
+  tr:nth-child(even) td { background: #f5faf5; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>차량번호로 하이패스 미납 통행료 조회·납부하는 법</h1>
+<div class="intro-box">
+<strong>📍 핵심 요약</strong><br/><br/>
+하이패스 단말기 오작동, 카드 잔액 부족 등으로 미납 통행료가 발생할 수 있습니다. 차량번호와 소유자 정보만 있으면 하이패스 홈페이지(hipass.co.kr) 또는 정부24에서 비회원도 조회·납부가 가능합니다. 방치하면 가산금이 붙고 장기 미납 시 번호판 영치로 이어질 수 있으니 빠르게 처리하는 것이 중요합니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head">
+<span>📷 AI 이미지 생성 영역</span>
+<span class="ph-file">images/260710/5_hipass_1.png</span>
+</div>
+<pre class="prompt-text" id="prompt-5-1">Photorealistic highway ETC toll gate in South Korea, car passing through hipass toll lane at speed, overhead toll gantry sensors, highway road, dynamic motion, clear sky, ultra high detail, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">고속도로 하이패스 톨게이트 통과 차량 / AI 제작 이미지</div>
+</div>
+
+<h2>01. 하이패스 미납 통행료, 왜 생기는 걸까요</h2>
+
+고속도로를 달리다 보면 나도 모르는 사이에 통행료가 미납되는 경우가 있습니다. 주요 원인을 알아야 대처가 쉽습니다.<br/><br/>
+<strong>원인 1: 하이패스 카드 잔액 부족</strong><br/>
+하이패스 카드 잔액이 통행료보다 적으면 요금이 정상 결제되지 않아 미납이 발생합니다. 선불 하이패스 카드를 사용 중이라면 잔액 관리가 특히 중요합니다.<br/><br/>
+<strong>원인 2: 단말기 미장착 또는 오작동</strong><br/>
+하이패스 단말기가 제대로 장착되지 않았거나 전원이 켜지지 않은 상태에서 하이패스 전용 차로를 통과하면 요금 인식이 실패합니다. 단말기의 LED 점등 여부를 주행 전 확인하는 것이 기본입니다.<br/><br/>
+<strong>원인 3: 통신 오류</strong><br/>
+톨게이트 안테나와 차량 단말기 사이의 통신이 실패하는 경우도 있습니다. 단말기 오류 음이 났다면 통과 후 가능한 빨리 확인하는 것이 좋습니다.<br/><br/>
+<strong>원인 4: 카드 유효기간 만료</strong><br/>
+하이패스 카드의 유효기간이 지났는데 교체하지 않고 계속 사용하면 결제가 거부됩니다.<br/><br/>
+<strong>원인 5: 렌터카·리스 차량 이용</strong><br/>
+렌터카나 리스 차량에 하이패스가 탑재된 경우 요금은 차량 명의자(렌터카 회사 등)에게 청구될 수 있으며, 이후 이용자에게 별도 청구됩니다.
+
+<h2>02. 차량번호로 미납 통행료 조회하는 가장 빠른 방법</h2>
+
+미납 통행료 조회는 하이패스 홈페이지(www.hipass.co.kr)에서 <strong>비회원도 차량번호</strong>만으로 조회가 가능합니다.<br/><br/>
+<div class="step-box">
+<strong>빠른 조회 순서 (비회원)</strong><br/>
+① 웹 브라우저에서 www.hipass.co.kr 접속<br/>
+② 메인 화면 '미납 통행료 조회' 또는 상단 메뉴에서 '미납 요금 조회' 선택<br/>
+③ 차량번호 입력 → 차량 소유자 정보(이름 또는 생년월일) 입력<br/>
+④ 조회 결과에서 미납 내역 및 금액 확인
+</div>
+
+조회 시 본인 인증 방식으로 이름+생년월일 또는 사업자등록번호(법인 차량)를 입력합니다. 조회 결과에는 미납 일자, 통과 요금소, 미납 금액, 가산금 현황이 표시됩니다.<br/><br/>
+<strong>고객센터 전화 조회</strong>도 가능합니다. 한국도로공사 고객센터 <strong>1588-2504</strong>로 전화하면 상담사를 통해 미납 내역 안내와 납부 방법 안내를 받을 수 있습니다. 고령층이나 인터넷 이용이 어려운 분들에게 유용합니다.
+
+<h2>03. 하이패스 홈페이지(hipass.co.kr)에서 조회하기</h2>
+
+한국도로공사가 운영하는 공식 하이패스 홈페이지 www.hipass.co.kr은 미납 통행료 조회·납부의 핵심 창구입니다.<br/><br/>
+<strong>PC에서 조회·납부하기</strong>:<br/>
+<div class="step-box">
+<strong>Step 1: 홈페이지 접속</strong><br/>
+웹 브라우저(크롬·엣지 등)에서 www.hipass.co.kr을 입력해 접속합니다.
+</div>
+<div class="step-box">
+<strong>Step 2: 미납 요금 조회 메뉴 선택</strong><br/>
+메인 화면의 '미납 요금 조회' 배너 또는 상단 메뉴 → '통행료 납부' → '미납 통행료 조회·납부'를 선택합니다.
+</div>
+<div class="step-box">
+<strong>Step 3: 차량 정보 입력</strong><br/>
+차량번호 전체(예: 123가 4567)를 입력하고 소유자 이름과 생년월일(또는 사업자번호)을 입력합니다.
+</div>
+<div class="step-box">
+<strong>Step 4: 납부 방법 선택</strong><br/>
+조회된 미납 내역에서 납부할 항목을 선택하고, 신용카드·체크카드·계좌이체·간편결제(네이버페이·카카오페이·페이코) 등 원하는 결제 방법으로 납부합니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head">
+<span>📷 AI 이미지 생성 영역</span>
+<span class="ph-file">images/260710/5_hipass_2.png</span>
+</div>
+<pre class="prompt-text" id="prompt-5-2">Photorealistic close-up of smartphone screen showing Korean highway toll unpaid fee inquiry website, user entering vehicle number, clean modern UI interface, white background, ultra high detail, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">스마트폰에서 하이패스 미납통행료 조회 화면 / AI 제작 이미지</div>
+</div>
+
+<h2>04. 정부24에서 미납 요금 조회하기</h2>
+
+정부24(www.gov.kr)에서도 하이패스 미납 통행료 조회 서비스를 제공합니다. 정부24 계정으로 로그인해 이용하는 방식으로, 각종 공과금·미납금을 한 곳에서 확인할 때 편리합니다.<br/><br/>
+<strong>정부24 조회 방법</strong>:<br/>
+① 정부24(www.gov.kr) 접속 후 로그인(공동인증서·간편인증·카카오·네이버 등)<br/>
+② 상단 검색창에 "미납 통행료" 또는 "고속도로 통행료" 검색<br/>
+③ 서비스 결과에서 '미납 고속도로 통행료 조회' 선택<br/>
+④ 본인 인증 후 차량번호와 소유자 정보로 조회<br/><br/>
+정부24는 고속도로 공공 구간(한국도로공사 운영 구간)의 미납 내역을 확인하는 데 적합합니다. 민자 고속도로의 미납 통행료는 정부24에서 조회되지 않을 수 있으니, 민자 구간 이용자는 해당 민자도로 운영사 홈페이지를 별도 확인하는 것이 좋습니다.<br/><br/>
+<div class="tip-box">💡 <strong>정부24 vs 하이패스 홈페이지</strong>: 민자 고속도로 미납까지 포함해 한 번에 조회하려면 하이패스 홈페이지(hipass.co.kr)가 더 편리합니다. 2026년 현재 hipass.co.kr에서 민자 고속도로 미납 요금도 통합 조회할 수 있는 서비스가 운영되고 있으나, 정확한 범위는 공식 홈페이지에서 확인하세요.</div>
+
+<h2>05. 미납 통행료 납부 방법 — 온라인과 오프라인</h2>
+
+미납 통행료는 온라인과 오프라인 다양한 방법으로 납부할 수 있습니다.<br/><br/>
+<strong>온라인 납부 방법</strong>:
+<div class="table-wrap">
+<table>
+<tr><th>방법</th><th>경로</th></tr>
+<tr><td>신용·체크카드</td><td>hipass.co.kr 또는 정부24 → 납부 화면에서 카드 결제</td></tr>
+<tr><td>계좌이체</td><td>hipass.co.kr → 납부 화면에서 계좌이체 선택</td></tr>
+<tr><td>가상계좌 납부</td><td>조회 후 발급된 가상계좌로 입금</td></tr>
+<tr><td>간편결제</td><td>네이버페이·카카오페이·페이코 등 간편결제 연동</td></tr>
+</table>
+</div>
+
+<strong>오프라인 납부 방법</strong>:
+<div class="table-wrap">
+<table>
+<tr><th>장소</th><th>방법</th></tr>
+<tr><td>고속도로 영업소</td><td>영업소 창구 방문, 현금 또는 카드 납부</td></tr>
+<tr><td>편의점</td><td>GS25, CU, 세븐일레븐 등 일부 편의점에서 고지서 또는 바코드로 납부</td></tr>
+<tr><td>휴게소</td><td>하이패스 고객센터가 있는 일부 휴게소에서 납부 가능</td></tr>
+<tr><td>금융기관</td><td>은행 창구 또는 ATM에서 공과금 납부 형태로 처리</td></tr>
+</table>
+</div>
+
+가장 빠르고 간편한 방법은 hipass.co.kr에서 카드로 즉시 납부하는 것입니다. 납부 완료 후 납부 확인증이 발급되므로 이를 보관해 두면 분쟁 시 증빙 자료로 활용할 수 있습니다.
+
+<h2>06. 미납을 방치하면 어떻게 되나 — 가산금과 번호판 영치</h2>
+
+하이패스 미납 통행료를 기한 내에 납부하지 않으면 단계별로 불이익이 발생합니다.<br/><br/>
+<strong>1단계: 납부 고지서 발송</strong><br/>
+미납 통행료가 발생하면 차량 등록지 주소로 납부 안내 고지서가 우편 발송됩니다. 고지서에 납부 기한이 명시돼 있습니다.<br/><br/>
+<strong>2단계: 가산금 부과</strong><br/>
+납부 기한이 지나면 미납 통행료에 <strong>가산금</strong>이 붙습니다. 가산금은 기한 경과 일수에 따라 누적될 수 있습니다. 가산금 부과율과 계산 방식은 도로법 및 한국도로공사 규정에 따르며, 정확한 금액은 hipass.co.kr 조회 시 확인됩니다.<br/><br/>
+<strong>3단계: 번호판 영치</strong><br/>
+장기간 미납을 방치하면 관계 법령에 따라 <strong>차량 번호판 영치</strong> 조치를 받을 수 있습니다. 번호판을 영치당하면 차량 운행이 불가하며, 미납 요금 전액과 가산금을 납부해야 반환됩니다.<br/><br/>
+<div class="warn-box">⚠️ <strong>주의</strong>: 이사·주소 변경 후 고지서를 못 받은 경우에도 미납 사실은 남습니다. 주기적으로 hipass.co.kr에서 차량번호 조회를 통해 미납 여부를 직접 확인하는 습관이 필요합니다.</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head">
+<span>📷 AI 이미지 생성 영역</span>
+<span class="ph-file">images/260710/5_hipass_3.png</span>
+</div>
+<pre class="prompt-text" id="prompt-5-3">Photorealistic car interior with hipass ETC transponder device mounted on windshield, dashboard view, modern vehicle interior, Korean highway toll payment device, ultra high detail, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-5-3')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">하이패스 단말기 장착 차량 내부 / AI 제작 이미지</div>
+</div>
+
+<h2>07. 하이패스 카드 잔액 부족으로 미납된 경우</h2>
+
+선불 하이패스 카드의 잔액이 부족해 미납이 발생한 경우, 카드를 충전한다고 해서 자동으로 미납이 해소되지는 않습니다. 미납된 요금은 별도로 납부해야 합니다.<br/><br/>
+<strong>처리 순서</strong>:<br/>
+① hipass.co.kr 또는 고객센터(1588-2504)에서 미납 내역 확인<br/>
+② 미납 통행료를 카드·계좌이체 등으로 별도 납부<br/>
+③ 이후 하이패스 카드 잔액을 충분히 충전해 재발 방지<br/><br/>
+<strong>하이패스 카드 잔액 확인 방법</strong>:<br/>
+- 톨게이트 통과 시 안내 음성으로 잔액 확인<br/>
+- 하이패스 단말기 화면에서 잔액 표시(단말기 종류에 따라 다름)<br/>
+- 카드 발급사 앱 또는 홈페이지에서 잔액 조회<br/>
+- 편의점 단말기에서 카드 조회<br/><br/>
+<div class="tip-box">💡 <strong>자동충전 설정</strong>: 후불제 하이패스 카드(신용카드)로 전환하거나, 선불 카드라면 잔액이 일정 금액 이하로 떨어지면 자동으로 충전되도록 설정하면 미납을 예방할 수 있습니다. 설정 방법은 카드 발급사에 문의하세요.</div>
+
+<h2>08. 민자고속도로 미납 통행료는 어떻게 조회하나요</h2>
+
+전국 고속도로는 크게 <strong>한국도로공사 운영 구간</strong>과 <strong>민자도로 운영 구간</strong>으로 나뉩니다. 민자도로는 민간 기업이 운영하기 때문에 미납 통행료 조회와 납부 경로가 다를 수 있습니다.<br/><br/>
+주요 민자고속도로 운영사 및 문의처는 각 도로마다 다릅니다. 대표적인 민자 고속도로 미납 문의는 해당 도로 운영사 고객센터에 직접 전화하거나, 해당 운영사 홈페이지에서 조회하는 것이 가장 정확합니다.<br/><br/>
+한국도로공사의 하이패스 홈페이지(hipass.co.kr)는 공공 구간 외에도 일부 민자 구간 미납 통행료 통합 조회 서비스를 제공하고 있습니다. 조회 시 민자 구간 미납 여부도 함께 확인되는 경우가 많지만, 모든 민자 구간을 완전히 포함하는지는 공식 안내를 통해 확인하는 것이 좋습니다.<br/><br/>
+민자도로 미납 통행료는 해당 민자 운영사에서 별도로 고지서를 발송하기 때문에, 여러 고속도로를 자주 이용한다면 hipass.co.kr 조회와 함께 이용한 민자도로 운영사 홈페이지도 주기적으로 확인하는 것이 안전합니다.
+
+<h2>09. 명절 무료 통행과 하이패스 — 헷갈리기 쉬운 점</h2>
+
+설·추석 연휴 특정 날짜에 고속도로 일부 구간이 무료로 운영된다는 소식이 있습니다. 이때 하이패스로 통과했는데 미납 안내가 왔다며 문의하는 사례가 간혹 있습니다. 이는 두 가지 상황을 혼동한 경우입니다.<br/><br/>
+<strong>명절 무료 통행 구간</strong>은 정부 정책에 따라 특정 연휴 기간 동안 지정된 구간의 통행료를 면제하는 것입니다. 이 경우 하이패스로 통과해도 요금이 부과되지 않으며, 미납이 발생하지 않습니다.<br/><br/>
+반면 <strong>명절 무료 대상이 아닌 구간</strong>이거나, 무료 운영 시간 외에 통과한 경우에는 정상적으로 통행료가 부과됩니다. 이때 잔액 부족이나 단말기 오류가 있으면 미납이 발생합니다.<br/><br/>
+명절 고속도로 무료 통행 여부는 매년 정부 발표를 통해 공지됩니다. 한국도로공사 홈페이지(www.ex.co.kr) 또는 뉴스를 통해 정확한 무료 구간과 시간을 사전에 확인하는 것이 중요합니다.<br/><br/>
+<div class="tip-box">💡 <strong>확인 방법</strong>: 명절 연휴 후 히패스 홈페이지(hipass.co.kr)에서 차량번호로 조회하면 미납 여부를 바로 확인할 수 있습니다. 명절 이후에는 조회 한 번 해두는 습관이 좋습니다.</div>
+
+<h2>10. 자주 묻는 질문 (FAQ)</h2>
+
+<strong>Q. 차량번호로 조회했더니 미납 내역이 없는데, 고지서는 왔어요. 왜 그런가요?</strong><br/>
+A. 민자도로 미납은 hipass.co.kr에서 조회가 안 되는 경우가 있습니다. 고지서에 명시된 도로 운영사 연락처로 직접 문의해 확인하세요.<br/><br/>
+<strong>Q. 미납 통행료 납부 후 즉시 처리되나요?</strong><br/>
+A. 신용카드나 간편결제는 즉시 처리되는 편이고, 가상계좌 입금은 은행 업무 시간 내에 처리됩니다. 납부 확인증을 보관해 두세요.<br/><br/>
+<strong>Q. 하이패스를 사용하지 않고 일반 차로로 통과했는데 미납이 발생했어요.</strong><br/>
+A. 하이패스 전용 차로를 실수로 통과한 경우 미납이 발생합니다. 바로 hipass.co.kr이나 고객센터(1588-2504)에서 조회 후 납부하면 됩니다.<br/><br/>
+<strong>Q. 번호판이 영치됐는데 어떻게 해야 하나요?</strong><br/>
+A. 미납 통행료 전액과 가산금을 납부하면 번호판 반환 절차가 시작됩니다. 한국도로공사 고객센터(1588-2504)에 연락해 처리 방법을 안내받으세요.<br/><br/>
+<strong>Q. 하이패스 고객센터 전화번호는 무엇인가요?</strong><br/>
+A. 한국도로공사 고객센터는 <strong>1588-2504</strong>입니다. 운영 시간은 공식 홈페이지에서 확인하세요.<br/><br/>
+<strong>Q. 타인 명의 차량의 미납 통행료를 대신 납부할 수 있나요?</strong><br/>
+A. 가상계좌나 온라인 결제는 납부자와 관계없이 차량번호 기준으로 처리되므로 대신 납부가 가능합니다. 단, 조회 시 차량 소유자 정보가 필요합니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260709/car_fine_inquiry_epayne.html">이파인으로 자동차 과태료·범칙금 조회하고 20% 사전납부 감경받는 법</a></li>
+<li><a href="../260709/local_overseas_entry_customs.html">해외 입국 시 반입 금지 물품 목록과 검역 신고 방법, 안 하면 어떻게 되나</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#하이패스미납</span>
+<span class="tag">#통행료미납조회</span>
+<span class="tag">#하이패스조회</span>
+<span class="tag">#미납통행료납부</span>
+<span class="tag">#차량번호조회</span>
+<span class="tag">#고속도로미납</span>
+<span class="tag">#하이패스홈페이지</span>
+<span class="tag">#번호판영치</span>
+<span class="tag">#한국도로공사</span>
+<span class="tag">#정부24통행료</span>
+</div>
+</body>
+</html>
