@@ -25,7 +25,7 @@
 
 - `.scripts/daily-run.ps1` · `daily-prompt.md` · `tistory-gate.ps1` — 자동 발행 + 게이트
 - `국내여행지.md` · `생활정보.md` — 발행 큐 DB(파이프라인이 매일 읽음)
-- `scripts/fix_tistory_violations.py` · `insta_render.mjs` · `insta_rasterize.mjs` · `build_matjip_insta.mjs`
+- `scripts/fix_tistory_violations.py` · `insta_render.mjs` · `insta_rasterize.mjs` · `build_matjip_insta_v2.mjs`(맛집 인스타 표준·photo-first) · `build_profile.mjs`
 - `.claude/agents/*` — 서브에이전트 정의
 - `Naverblog.md` — 원고 템플릿/규칙 원본
 
