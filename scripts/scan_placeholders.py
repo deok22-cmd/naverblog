@@ -11,7 +11,7 @@ if sys.platform.startswith('win'):
 
 def scan_placeholders():
     project_root = r"d:\lightsail\naverblog"
-    day_dir = os.path.join(project_root, "output", "260710")
+    day_dir = os.path.join(project_root, "output", "260711")
     
     if not os.path.exists(day_dir):
         print(f"Error: Directory {day_dir} does not exist.")
