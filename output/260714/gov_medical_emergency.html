@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>재난적의료비 지원 신청 조건과 얼마 받나, 건강보험공단 신청 방법</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f9fdf9; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px; text-align: left; font-size: 0.95em; }
+  .info-table td { padding: 9px 10px; border-bottom: 1px solid #eee; font-size: 0.93em; }
+  .info-table tr:nth-child(even) td { background: #f1faf9; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; border-radius: 0 6px 6px 0; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #a5d6a7; border-radius: 10px; padding: 30px 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; color: #388e3c; }
+  .ph-file { font-size: 0.8em; color: #888; font-family: monospace; }
+  .prompt-text { background: #f0f0f0; padding: 12px; border-radius: 6px; font-size: 0.8em; line-height: 1.5; text-align: left; white-space: pre-wrap; color: #444; }
+  .copy-btn { margin-top: 10px; background: #388e3c; color: #fff; border: none; padding: 8px 18px; border-radius: 5px; cursor: pointer; font-size: 0.85em; }
+  .img-caption { font-size: 0.85em; color: #777; margin-top: 8px; font-style: italic; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .warn-box { background: #fff3e0; border: 1px solid #ffcc02; padding: 16px 20px; border-radius: 8px; margin: 20px 0; }
+  .checklist { background: #f1f8e9; border: 1px solid #c5e1a5; padding: 18px 22px; border-radius: 8px; margin: 20px 0; }
+  .info-memo { background: #eef5f4; border: 1px dashed #80cbc4; padding: 18px 20px; margin: 30px 0; border-radius: 8px; font-size: 0.95em; color: #444; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = orig; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>재난적의료비 지원 신청 조건과 얼마 받나, 건강보험공단 신청 방법</h1>
+
+<div class="intro-box">
+갑작스러운 중증 질환이나 사고로 수백만 원, 많게는 수천만 원에 달하는 의료비 청구서를 받게 되면 경제적으로 큰 타격을 받을 수 있습니다. 이런 상황을 위해 국가가 마련한 제도가 바로 <strong>재난적의료비 지원사업</strong>입니다. 소득에 비해 과중한 의료비가 발생한 가구에게 국민건강보험공단이 의료비 일부를 직접 지원해 주는 제도입니다.<br><br>
+이 글에서는 재난적의료비 지원 대상이 되는 소득 기준과 질환 요건, 지원 금액의 한도, 신청 방법과 제출 서류, 그리고 자주 묻는 질문까지 실제로 신청에 필요한 정보를 한데 정리했습니다. 정확한 지원 금액과 자격 기준은 건강보험공단(공식 사이트 nhis.or.kr)에서 최신 공고를 반드시 재확인하세요.
+</div>
+
+<div class="warn-box">
+  ⚠️ <strong>YMYL 주의사항</strong>: 이 글은 일반적인 제도 안내입니다. 지원 금액·소득 기준·신청 기간은 연도별로 변경될 수 있습니다. 실제 신청 전 반드시 <strong>국민건강보험공단(nhis.or.kr)</strong>의 최신 공고를 확인하세요.
+</div>
+
+<h2>01. 재난적의료비 지원이란? — 제도 개요</h2>
+
+<strong>재난적의료비 지원사업</strong>은 중증 질환 등으로 인해 과도한 의료비를 부담하게 된 가구를 지원하기 위해 보건복지부와 국민건강보험공단이 운영하는 제도입니다. 건강보험이 적용되지 않는 비급여 항목까지 포함하여 가구 소득 대비 의료비 부담률이 일정 수준을 초과할 경우 초과분의 일부를 국가가 지원합니다.<br><br>
+이 제도는 경제적 사정으로 필요한 의료 서비스를 받지 못하는 상황을 예방하고, 의료비로 인한 가계 붕괴를 막기 위한 사회 안전망 역할을 합니다. 특히 암, 심장 질환, 뇌혈관 질환, 희귀 질환 등 장기 치료가 필요한 중증 질환자 가구에 큰 도움이 됩니다.
+
+<h2>02. 지원 대상 — 소득 기준과 질환 요건</h2>
+
+재난적의료비 지원을 받으려면 <strong>소득 기준</strong>과 <strong>의료비 기준</strong>을 모두 충족해야 합니다.
+
+<table class="info-table">
+  <tr><th>구분</th><th>기준</th></tr>
+  <tr><td>소득 기준 (우선 지원)</td><td>기준 중위소득 100% 이하 가구</td></tr>
+  <tr><td>소득 기준 (심사 지원)</td><td>기준 중위소득 100~200% 이하 가구 (위원회 심사 후 지원)</td></tr>
+  <tr><td>의료비 기준</td><td>연간 가구 소득의 15% 이상을 의료비로 지출한 경우</td></tr>
+  <tr><td>대상 질환</td><td>중증 질환(암, 심장, 뇌혈관, 희귀 질환 등) 및 일반 중증 환자</td></tr>
+  <tr><td>지원 범위</td><td>입원 및 외래 치료(비급여 포함)</td></tr>
+</table>
+
+기준 중위소득은 매년 보건복지부에서 고시하며 가구원 수에 따라 금액이 달라집니다. 예를 들어 4인 가구 기준 중위소득 100%는 약 572만 원 수준(2024년 기준)이며, 정확한 금액은 매년 공고를 통해 확인하세요. 소득 기준은 건강보험료를 기반으로 판정합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260714/5_medical_emergency_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-1">Korean patient at a National Health Insurance Service counter, a friendly staff member explaining medical expense support documents, official government office setting with NHIS logo visible, organized desk with application forms and documents, warm professional atmosphere, applicant with concerned expression receiving helpful guidance, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">국민건강보험공단 창구에서 재난적의료비 신청 안내 받는 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>03. 지원 금액과 한도 — 연간 최대 3,000만 원</h2>
+
+재난적의료비 지원은 <strong>가구 소득 대비 의료비 초과분</strong>에 대해 일정 비율을 지원합니다.
+
+<table class="info-table">
+  <tr><th>소득 구간</th><th>지원 비율</th><th>연간 한도</th></tr>
+  <tr><td>기준 중위소득 50% 이하</td><td>의료비 초과분의 80%</td><td>연 최대 3,000만 원</td></tr>
+  <tr><td>기준 중위소득 50~100%</td><td>의료비 초과분의 70%</td><td>연 최대 3,000만 원</td></tr>
+  <tr><td>기준 중위소득 100~200%</td><td>의료비 초과분의 50~60%</td><td>연 최대 3,000만 원 (위원회 심사)</td></tr>
+</table>
+
+예를 들어 연간 소득 3,600만 원인 가구(중위소득 50% 이하)가 치료비로 총 2,000만 원을 지출했고, 소득의 15%인 540만 원을 초과하는 금액이 1,460만 원이라면 이 금액의 80%인 1,168만 원을 지원받을 수 있습니다. 정확한 지원액은 공단 심사 결과에 따라 달라지므로 개인별 상담을 통해 확인하세요.
+
+<h2>04. 신청 방법 — 건강보험공단 창구 vs 온라인</h2>
+
+재난적의료비 지원은 주로 <strong>국민건강보험공단 지사 방문 신청</strong>이 일반적입니다. 전국 각 지역 공단 지사에서 신청할 수 있으며, 가까운 지사는 공단 홈페이지(nhis.or.kr) 또는 고객센터(1577-1000)를 통해 안내받을 수 있습니다.<br><br>
+<strong>신청 시기</strong>: 의료비 발생일로부터 180일 이내에 신청해야 합니다. 기간을 넘기면 지원받기 어려울 수 있으므로 퇴원 후 바로 신청 절차를 알아보는 것이 좋습니다. 입원 중에도 상담은 가능하므로 병원 사회복지사의 도움을 받아 미리 준비하는 것을 권장합니다.<br><br>
+온라인 신청은 아직 제한적이므로 일반적으로 창구 방문이 필요합니다. 서류 준비가 어렵거나 방문이 어려운 경우 공단 고객센터에 먼저 연락해 상담을 받으면 됩니다.
+
+<h2>05. 제출 서류 — 진단서·영수증·소득 증빙 준비</h2>
+
+신청 시 필요한 주요 서류는 다음과 같습니다.
+
+<div class="checklist">
+  <strong>📋 필수 서류</strong><br>
+  □ 재난적의료비 지원 신청서 (공단 지사에서 수령 또는 홈페이지 다운로드)<br>
+  □ 진단서 또는 소견서 (해당 질환임을 확인하는 서류)<br>
+  □ 의료비 영수증 (비급여 포함 진료비 납부 영수증 전체)<br>
+  □ 진료 세부 내역서 (비급여 세부 내역 확인 가능한 서류)<br>
+  □ 신분증 (주민등록증 또는 운전면허증)<br>
+  □ 소득·재산 관련 서류 (건강보험료 납부 확인서, 금융 거래 확인서 등)<br>
+  □ 통장 사본 (지원금 입금 계좌)<br><br>
+  <strong>📋 추가 서류 (해당자)</strong><br>
+  □ 위임장 (대리 신청 시)<br>
+  □ 가족관계증명서 (가구원 확인 필요 시)<br>
+  □ 장애인 등록증 (해당자)
+</div>
+
+서류 목록은 질환 유형과 신청 내용에 따라 달라질 수 있으므로, 방문 전 공단 고객센터에 미리 확인하면 헛걸음을 방지할 수 있습니다.
+
+<h2>06. 심사 절차와 기간 — 결정까지 얼마나 걸리나</h2>
+
+신청 서류를 접수하면 공단에서 소득·재산 및 의료비 발생 내역을 심사합니다. 일반적인 심사 소요 기간은 <strong>접수일로부터 30일 이내</strong>이지만, 서류 보완이 필요하거나 위원회 심사 대상의 경우 더 오래 걸릴 수 있습니다.<br><br>
+심사 결과는 서면(우편) 또는 문자 메시지로 통보되며, 지원 결정이 나면 신청자의 계좌로 직접 입금됩니다. 심사 결과에 이의가 있을 경우 통보받은 날로부터 90일 이내에 이의 신청을 할 수 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260714/5_medical_emergency_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-2">A Korean person carefully organizing medical expense documents on a desk, hospital receipts, diagnosis certificates, insurance forms and passbook copy neatly arranged, reading glasses on the desk, calm home office setting, preparation for government medical expense support application, warm indoor lighting, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">재난적의료비 신청을 위한 서류 준비 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>07. 지원이 안 되는 경우 — 비해당 항목 유의사항</h2>
+
+재난적의료비 지원은 모든 의료비에 적용되지 않습니다. 지원이 제한되거나 제외될 수 있는 경우는 다음과 같습니다.
+
+<table class="info-table">
+  <tr><th>구분</th><th>내용</th></tr>
+  <tr><td>소득 기준 초과</td><td>기준 중위소득 200% 초과 가구는 원칙적으로 제외</td></tr>
+  <tr><td>미용·성형 목적</td><td>치료 목적이 아닌 미용 시술·성형 수술 비용</td></tr>
+  <tr><td>상급병실료 차액</td><td>1~2인실 선택 시 발생하는 초과 차액 (일부 제한)</td></tr>
+  <tr><td>건강기능식품·보조기구</td><td>의료적 필요성 없는 건강보조 제품</td></tr>
+  <tr><td>타 제도 중복 지원분</td><td>의료급여, 차상위 의료비 지원 등 이미 다른 제도로 지원받은 부분</td></tr>
+</table>
+
+<h2>08. 비슷한 제도와 중복 수령 — 의료급여·실손보험과의 관계</h2>
+
+재난적의료비 지원과 다른 의료비 지원 제도와의 중복 수령 여부는 다음과 같습니다.<br><br>
+<strong>의료급여(저소득층 의료보장)</strong>: 의료급여 수급자도 재난적의료비 지원 대상이 될 수 있으나, 의료급여로 지원받은 부분은 제외하고 계산됩니다.<br><br>
+<strong>실손의료보험</strong>: 실손보험으로 보상받은 금액은 의료비에서 차감하고 재난적의료비를 계산합니다. 즉, 실손보험이 있다면 실제 본인이 부담한 금액 기준으로 지원이 이루어집니다.<br><br>
+<strong>국가암환자 의료비 지원 등 개별 사업</strong>: 다른 정부 지원 사업과의 중복 여부는 공단에 직접 문의해 확인하는 것이 가장 정확합니다.
+
+<h2>09. 재난적의료비 신청 체크리스트와 FAQ</h2>
+
+<strong>Q. 암 진단을 받고 치료 중인데 신청할 수 있나요?</strong><br>
+네, 암은 재난적의료비 지원의 우선 대상 질환입니다. 입원 중이라도 사회복지사의 도움을 받아 미리 서류를 준비해 두세요.<br><br>
+<strong>Q. 외래 치료 비용도 포함되나요?</strong><br>
+입원뿐 아니라 외래 치료 비용도 포함됩니다. 다만 외래는 연간 누적 의료비 기준을 충족해야 합니다.<br><br>
+<strong>Q. 이미 납부한 의료비도 소급 지원받을 수 있나요?</strong><br>
+의료비 발생일로부터 180일 이내에 신청하면 지원받을 수 있습니다. 이미 납부한 비용도 기간 내라면 신청 가능합니다.<br><br>
+<strong>Q. 소득이 중위소득 100%를 약간 초과하면 어떻게 되나요?</strong><br>
+100~200% 구간은 '심사 지원 대상'으로 위원회가 개별 심사 후 지원 여부를 결정합니다. 포기하지 말고 신청해 보세요.
+
+<div class="info-memo">
+  <strong>📝 정보 메모</strong><br><br>
+  정보 기준일 2026-07-14 · 출처: 국민건강보험공단(nhis.or.kr), 보건복지부 · 지원 기준·금액·요건은 연도별로 변경될 수 있으니 공식 채널에서 재확인하세요.
+</div>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260713/travel_daegu_chimaek.html">대구 치맥페스티벌 일정과 두류공원 즐기는 법, 여름 축제 코스</a></li>
+    <li><a href="../260713/travel_tongyeong_bijindo.html">통영 비진도 배 시간표와 산호빛 해변, 한려수도 섬 트레킹 코스</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#재난적의료비</span>
+  <span class="tag">#의료비지원</span>
+  <span class="tag">#건강보험공단</span>
+  <span class="tag">#중증질환의료비</span>
+  <span class="tag">#의료비지원신청</span>
+  <span class="tag">#재난적의료비신청방법</span>
+  <span class="tag">#건강보험지원</span>
+  <span class="tag">#의료비부담</span>
+  <span class="tag">#복지혜택</span>
+  <span class="tag">#암치료비지원</span>
+</div>
+
+</body>
+</html>
