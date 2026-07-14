@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 12px; text-align: left; font-size: 0.95em; }
+  .info-table td { padding: 10px 12px; border-bottom: 1px solid #e8f5e9; font-size: 0.95em; }
+  .tip-box { background: #fffde7; border-left: 4px solid #f9a825; padding: 15px 20px; margin: 20px 0; border-radius: 4px; }
+  .caution-box { background: #fce4ec; border-left: 4px solid #e57373; padding: 15px 20px; margin: 20px 0; border-radius: 4px; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 8px; padding: 20px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 700; color: #546e7a; }
+  .ph-file { font-size: 0.8em; color: #90a4ae; font-weight: 400; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 12px; border-radius: 6px; font-size: 0.82em; white-space: pre-wrap; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 7px 14px; border-radius: 5px; cursor: pointer; font-size: 0.85em; }
+  .img-caption { font-size: 0.88em; color: #777; margin-top: 8px; font-style: italic; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #fff; border: 1px solid #e8f5e9; border-left-width: 4px; margin-bottom: 15px; border-radius: 4px; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>냉장고 여름 음식 냄새 없애는 법과 냉동실 성에 안 생기게 관리하는 순서</h1>
+
+<div class="intro-box">
+여름만 되면 냉장고 문을 열 때마다 올라오는 퀴퀴한 냄새, 냉동실에 두껍게 쌓이는 성에.<br><br>
+특히 기온이 높아 음식을 자주 넣고 꺼내는 여름에는 냉장고 내부 상태가 빠르게 나빠지기 쉽습니다.<br><br>
+집에서 바로 할 수 있는 냉장고 냄새 제거법과, 냉동실 성에가 생기지 않도록 관리하는 실용적인 방법을 단계별로 정리했습니다.
+</div>
+
+<h2>① 여름 냉장고 냄새, 왜 더 심해지나</h2>
+
+여름에 냉장고 냄새가 심해지는 이유가 있습니다.<br><br>
+첫째, <strong>온도 차이</strong>입니다. 실내 기온이 올라가면 냉장고 문을 열 때마다 내외부 온도 차이가 커지고, 이로 인해 내부 온도가 잠깐씩 올라가면서 음식이 빨리 상하거나 세균이 번식하기 쉬워집니다.<br><br>
+둘째, <strong>문 개폐 횟수 증가</strong>입니다. 여름에는 시원한 음식과 음료를 자주 꺼내먹기 때문에 냉장고 문을 여닫는 횟수가 늘어납니다. 이때마다 외부의 습하고 따뜻한 공기가 유입되어 내부 위생 상태가 빠르게 저하됩니다.<br><br>
+셋째, <strong>음식 보관 부주의</strong>입니다. 더운 여름에는 식은 줄 알고 덜 식은 음식을 냉장고에 바로 넣거나, 뚜껑을 제대로 닫지 않은 채 보관하는 경우가 생깁니다.<br><br>
+냄새의 원천은 주로 오래된 음식 잔여물, 반찬통 뚜껑 사이로 새는 냄새, 야채·과일 칸의 흙 찌꺼기, 그리고 성에·성에 녹은 물 등입니다.
+
+<h2>② 냉장고 냄새 제거 1단계 — 내부 전체 비우기</h2>
+
+냄새를 근본적으로 없애려면 내부를 한 번 완전히 비우고 닦는 것이 가장 효과적입니다.<br><br>
+<div class="step-box">
+  <strong>STEP 1</strong> — 냉장고 전원을 유지한 상태에서 내용물을 모두 꺼냅니다. 기한이 지난 식품은 이 기회에 정리합니다.
+</div>
+<div class="step-box">
+  <strong>STEP 2</strong> — 선반, 서랍, 문쪽 수납칸을 모두 분리합니다. 분리 후 따뜻한 물과 식기세제로 세척합니다.
+</div>
+<div class="step-box">
+  <strong>STEP 3</strong> — 냉장고 내부 벽면은 식초 희석액(물 1L + 식초 2큰술)을 헝겊에 적셔 닦습니다. 식초의 산성 성분이 세균과 냄새를 잡아줍니다.
+</div>
+<div class="step-box">
+  <strong>STEP 4</strong> — 모든 부품을 완전히 건조한 뒤 다시 조립합니다. 물기가 남으면 곰팡이의 원인이 되므로 건조를 꼼꼼하게 해주세요.
+</div>
+
+<h2>③ 냉장고 냄새 잡는 천연 탈취제 3가지</h2>
+
+냉장고를 닦고 나서도 냄새가 남는다면 탈취제를 활용해 보세요.<br><br>
+<strong>① 베이킹소다</strong>: 가장 간단하고 효과적인 방법입니다. 베이킹소다를 작은 그릇이나 컵에 담아 냉장고 안에 놓아두면 냄새 성분을 흡수합니다. 2~4주마다 새것으로 교체하면 효과가 유지됩니다.<br><br>
+<strong>② 활성탄(숯)</strong>: 미세한 구멍이 많은 활성탄은 냄새 분자를 강력하게 흡착합니다. 시중에서 판매하는 냉장고용 숯 탈취제를 이용하거나, 숯을 거즈에 싸서 냉장고 안에 두면 됩니다.<br><br>
+<strong>③ 커피 찌꺼기</strong>: 에스프레소 머신이나 드립 커피를 마시고 남은 커피 찌꺼기를 그릇에 담아 냉장고에 넣으면 냄새를 잡는 데 도움이 됩니다. 단, 커피 향이 음식에 배는 것이 싫다면 다른 방법을 선택하는 것이 좋습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260715/6_fridge_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-1">Inside view of a clean, well-organized Korean refrigerator with fresh food neatly arranged on shelves. Vegetables in the vegetable drawer, leftovers in clear sealed containers, fruit on middle shelf. A small container of baking soda visible as a natural deodorizer. The refrigerator interior is bright, clean, and odor-free. Summer food storage organization. Photorealistic, ultra high detail, 1:1 aspect ratio, bright interior lighting.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">베이킹소다로 냄새를 잡은 깨끗하게 정리된 냉장고 내부 / AI 제작 이미지</div>
+</div>
+
+<h2>④ 냉동실 성에가 생기는 원인</h2>
+
+냉동실 성에는 왜 생길까요? 원인을 알면 예방이 쉬워집니다.<br><br>
+성에(서리)는 냉동실 안으로 들어온 <strong>수증기가 얼어붙어</strong> 생기는 것입니다. 냉동실 문을 자주 열면 외부의 습한 공기가 유입되고, 이 수분이 냉동실 벽면과 코일에 달라붙어 점점 쌓입니다.<br><br>
+성에가 심해지면 여러 문제가 생깁니다. 냉동 공간이 줄어들고, 냉동실 온도가 제대로 유지되지 않아 냉각 효율이 떨어집니다. 전기요금이 올라가고, 심하면 냉장고 고장의 원인이 되기도 합니다.<br><br>
+성에가 생기는 주된 이유는 다음과 같습니다:<br><br>
+- 냉동실 문을 자주, 오래 열어두는 습관<br>
+- 뜨거운 음식을 식히지 않고 바로 넣는 경우<br>
+- 문 고무 패킹(씰)이 낡아 공기가 새는 경우<br>
+- 음식이 너무 꽉 차 있어 냉기 순환이 안 되는 경우
+
+<h2>⑤ 냉동실 성에 제거하는 올바른 방법</h2>
+
+성에가 두껍게 쌓였다면 주기적으로 제거해야 합니다. 잘못된 방법으로 제거하면 냉동실 내부나 냉각 코일이 손상될 수 있으니 주의하세요.<br><br>
+
+<div class="step-box">
+  <strong>STEP 1</strong> — 냉동실 내용물을 아이스박스나 쿨러에 옮겨 담습니다.
+</div>
+<div class="step-box">
+  <strong>STEP 2</strong> — 냉장고 전원을 끄거나 냉동실 설정을 해동(OFF) 모드로 변경합니다.
+</div>
+<div class="step-box">
+  <strong>STEP 3</strong> — 냉동실 문을 열어두고 자연적으로 성에가 녹을 때까지 기다립니다. 선풍기를 문 앞에 두면 시간을 단축할 수 있습니다. (1~2시간 소요)
+</div>
+<div class="step-box">
+  <strong>STEP 4</strong> — 녹은 물을 수건이나 신문지로 닦아냅니다. 물이 바닥으로 흘러내리지 않도록 냉동실 바닥에 수건을 깔아 두세요.
+</div>
+<div class="step-box">
+  <strong>STEP 5</strong> — 내부를 완전히 건조한 뒤 전원을 다시 켜고 음식을 넣습니다.
+</div>
+
+<br>
+<div class="caution-box">
+❌ <strong>절대 금지</strong>: 성에 제거 시 날카로운 칼이나 드라이버로 긁어내지 마세요. 냉각 코일에 구멍이 생기면 냉매가 누출돼 냉장고를 통째로 교체해야 하는 상황이 발생할 수 있습니다.
+</div>
+
+<h2>⑥ 냉동실 성에 안 생기게 하는 관리 습관</h2>
+
+성에를 애초에 최소화하는 생활 습관을 알아보겠습니다.<br><br>
+<strong>문 빨리 닫기</strong>: 냉동실 문을 열 때는 필요한 것을 미리 파악하고, 짧은 시간 안에 꺼낸 뒤 바로 닫습니다. 30초 이상 열어두는 것만으로도 수분이 대거 유입됩니다.<br><br>
+<strong>음식을 식힌 뒤 넣기</strong>: 뜨거운 음식은 반드시 실온에서 충분히 식힌 뒤 냉동실에 넣어야 합니다. 뜨거운 음식을 바로 넣으면 내부 온도가 올라가 수분과 성에가 급속도로 생깁니다.<br><br>
+<strong>밀폐 용기 사용</strong>: 음식을 랩이나 비닐백에만 담지 말고 뚜껑이 있는 밀폐 용기에 보관하면 수분 유입이 줄어듭니다.<br><br>
+<strong>적정량 유지</strong>: 냉동실이 너무 꽉 찬 상태에서는 냉기가 제대로 순환하지 않아 성에가 더 빨리 생깁니다. 70~80% 채우는 것이 효율적입니다.<br><br>
+<strong>패킹 점검</strong>: 냉동실 문 주변의 고무 패킹(씰)이 낡았거나 이물질이 끼어 있으면 공기가 새어 들어옵니다. 패킹을 깨끗이 닦고, 찢어졌다면 교체해야 합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260715/6_fridge_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-2">Inside view of a heavily frosted freezer compartment in a Korean home refrigerator, showing thick white ice/frost buildup on the walls and shelves. The frost is so thick it reduces storage space. Next to it, a contrasting clean, frost-free organized freezer with labeled containers and no ice buildup. Before-and-after style comparison. Photorealistic, ultra high detail, 1:1 aspect ratio, bright indoor lighting.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">냉동실 성에 심한 상태 vs 관리된 냉동실 비교 / AI 제작 이미지</div>
+</div>
+
+<h2>⑦ 냉장고 여름 적정 온도 설정</h2>
+
+냉장고와 냉동실 온도 설정도 여름에는 한 번 점검할 필요가 있습니다.<br><br>
+<strong>냉장실 적정 온도</strong>: 2~5℃. 여름에 외기 온도가 높아지면 냉장고가 더 열심히 일해야 이 온도를 유지합니다. 만약 평소보다 시원함이 덜 느껴진다면 온도 설정을 한 단계 낮춰보세요.<br><br>
+<strong>냉동실 적정 온도</strong>: -18℃ 내외가 표준입니다. -15℃보다 높으면 식품 보관 기간이 짧아지고 성에가 더 빨리 생길 수 있습니다.<br><br>
+단, 온도를 필요 이상으로 낮추면 전기요금이 올라갑니다. 냉장실 2~5℃, 냉동실 -18~-20℃ 범위 안에서 음식 상태에 따라 조절하시면 됩니다.<br><br>
+냉장고에 온도 표시창이 없는 경우, 냉장고 전용 온도계를 구입해 내부에 놓아두면 실제 온도를 확인할 수 있습니다.
+
+<h2>⑧ 채소·과일 칸 특별 관리</h2>
+
+냉장고 냄새의 상당 부분은 채소·과일 칸에서 나옵니다. 특별 관리가 필요한 영역입니다.<br><br>
+여름에는 채소 표면의 흙이나 습기가 빠르게 부패의 원인이 됩니다. 채소를 넣기 전에 흙을 털고 물기를 제거한 후 신문지나 키친타올에 싸서 보관하면 보관 기간이 늘어납니다.<br><br>
+과일은 에틸렌 가스를 방출하는 것(사과·복숭아)과 에틸렌에 민감한 것(채소류)을 분리해 보관하면 서로 빨리 무르는 것을 막을 수 있습니다.<br><br>
+채소칸 바닥에 키친타올을 깔아두면 흘러내린 물기를 흡수해 냄새 발생을 줄이는 효과가 있습니다. 주 1회 정도 교체하는 것을 권장합니다.
+
+<h2>⑨ 여름 냉장고 관리 주간 체크리스트</h2>
+
+바쁜 여름에도 간단히 지킬 수 있는 주간 냉장고 관리 루틴을 제안합니다.<br><br>
+<strong>매일</strong>: 문 열어두는 시간 최소화 / 뜨거운 음식 식힌 후 보관 / 유통기한 지난 식품 즉시 제거<br><br>
+<strong>매주</strong>: 채소칸 키친타올 교체 / 선반 간단 닦기 / 탈취제 상태 확인<br><br>
+<strong>2~4주마다</strong>: 베이킹소다 또는 활성탄 탈취제 교체 / 냉동실 성에 두께 확인<br><br>
+<strong>분기별(3개월마다)</strong>: 냉장고 전체 비우고 대청소 / 고무 패킹 점검 및 청소 / 냉장고 뒤 방열판 먼지 제거<br><br>
+여름에 냉장고를 잘 관리하면 음식을 신선하게 보관할 수 있고, 냉장고 수명도 늘어나며, 전기요금도 아낄 수 있습니다. 작은 습관 하나가 큰 차이를 만듭니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260714/travel_goheung_namyeol.html">고흥 남열해돋이해수욕장 가는 법과 나로우주센터 전망대, 남해 여름 바다 드라이브 코스</a></li>
+    <li><a href="../260714/travel_seocheon_chunjangdae.html">서천 춘장대해수욕장 가는 법과 동백정 낙조, 솔숲 야영 서해 여름 당일 코스</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#냉장고관리</span>
+  <span class="tag">#냉장고냄새</span>
+  <span class="tag">#냉동실성에</span>
+  <span class="tag">#여름냉장고</span>
+  <span class="tag">#탈취방법</span>
+  <span class="tag">#베이킹소다</span>
+  <span class="tag">#가전관리</span>
+  <span class="tag">#여름가전</span>
+  <span class="tag">#냉장고청소</span>
+  <span class="tag">#절전</span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px 12px; text-align: left; font-size: 0.95em; }
+  .info-table td { padding: 10px 12px; border-bottom: 1px solid #e0f2f1; font-size: 0.95em; }
+  .tip-box { background: #fffde7; border-left: 4px solid #f9a825; padding: 15px 20px; margin: 20px 0; border-radius: 4px; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 8px; padding: 20px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 700; color: #546e7a; }
+  .ph-file { font-size: 0.8em; color: #90a4ae; font-weight: 400; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 12px; border-radius: 6px; font-size: 0.82em; white-space: pre-wrap; margin: 10px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 7px 14px; border-radius: 5px; cursor: pointer; font-size: 0.85em; }
+  .img-caption { font-size: 0.88em; color: #777; margin-top: 8px; font-style: italic; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .step-box { border-left: 4px solid #00796b; padding: 15px 20px; background: #fff; border: 1px solid #e0f2f1; border-left-width: 4px; margin-bottom: 15px; border-radius: 4px; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>보령 원산도 오봉산해수욕장 가는 법과 삽시도 배 시간표, 충남 여름 섬여행 코스</h1>
+
+<div class="intro-box">
+충남 보령 앞바다에는 아직 많은 여행자에게 낯선 섬들이 조용히 기다리고 있습니다.<br><br>
+원산도는 2019년 원산안면대교가 개통되면서 차를 타고 들어갈 수 있게 된 섬이고, 삽시도는 배로만 갈 수 있는 작고 소박한 섬입니다. 두 섬을 하루에 함께 즐기는 충남 여름 섬여행 코스를 소개합니다.<br><br>
+해운대와 경포가 붐비는 여름, 서해의 한적한 섬에서 여유로운 하루를 보내고 싶은 분들께 특히 추천합니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260715/3_boryeong_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-1">Aerial view of Wonsando Island (원산도) in Boryeong, South Chungcheong Province, South Korea. A long elegant cable-stayed bridge (Wonsandan-myeon Bridge) connects the mainland to the island. The West Sea (Yellow Sea) is calm with a silver-blue hue under summer sunlight. Small villages and pine forests dot the island. White sandy beaches visible along the coastline. Photorealistic, ultra high detail, 1:1 aspect ratio, drone perspective.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">보령 원산도와 원산안면대교 항공 전경 / AI 제작 이미지</div>
+</div>
+
+<h2>① 원산도·삽시도, 어떤 섬인가</h2>
+
+<strong>원산도(猿山島)</strong>는 보령시 오천면에 속하는 섬으로 면적 약 7.4㎢, 해안선 길이 약 26km의 제법 큰 섬입니다.<br><br>
+2019년 11월 원산안면대교(왕복 2차로, 총연장 6.8km)가 개통되면서 차를 타고 들어갈 수 있게 되었습니다. 덕분에 접근성이 크게 좋아졌지만 아직 대중에게 많이 알려지지 않아 비교적 한산한 편입니다.<br><br>
+섬 안에는 오봉산(141m)이 있고, 오봉산 아래 자리한 <strong>오봉산해수욕장</strong>(원산도해수욕장)은 경사가 완만하고 물이 맑아 가족 피서지로 인기가 높습니다.<br><br>
+<strong>삽시도(揷矢島)</strong>는 원산도에서 가까운 또 다른 유인도로, 대천항이나 오천항에서 여객선으로 이동합니다. 섬 둘레 약 17km의 작은 섬이지만, 백사장과 섬 트레킹 코스, 맑은 바닷물이 어우러져 소박한 섬 분위기를 즐기기에 좋습니다.
+
+<h2>② 원산도 가는 법 — 원산안면대교 이용</h2>
+
+원산도는 차를 타고 들어갈 수 있습니다. <strong>별도의 도선료나 다리 통행료는 없습니다</strong>.<br><br>
+<strong>자가용 이용 시</strong>: 서해안고속도로 광천 나들목 또는 홍성 나들목에서 보령 방향으로 이동 → 오천항 방향을 지나 원산안면대교 진입. 네비게이션에 '원산도 오봉산해수욕장'을 검색하면 됩니다.<br><br>
+서울 기준 약 2시간 30분 소요이며, 대전에서는 약 1시간 30분 거리입니다.<br><br>
+<strong>대중교통 이용 시</strong>: 서울 센트럴시티터미널에서 보령 대천터미널행 버스를 타고, 대천터미널에서 오천항 방면 시내버스를 이용합니다. 단, 배차가 드물어 렌터카나 자가용이 훨씬 편리합니다.
+
+<h2>③ 오봉산해수욕장 — 원산도의 대표 해변</h2>
+
+원산도 안으로 들어오면 얼마 지나지 않아 오봉산해수욕장이 보입니다.<br><br>
+해수욕장 백사장은 완만한 경사를 이루고 있어 물이 얕고 물살이 세지 않아 아이들이 놀기에 안전합니다. 모래는 고운 편이며, 서해 특유의 넓은 갯벌이 펼쳐지는 대신 이 해변은 바위와 모래가 어우러져 있어 독특한 느낌입니다.<br><br>
+성수기(7~8월)에도 동해안 해수욕장에 비해 한산한 편이라 자리 잡기가 수월합니다. 다만 해변 앞 상업시설은 많지 않으므로, 음료와 간식을 미리 준비해 오시는 것이 좋습니다.<br><br>
+해수욕장 뒤편에는 소나무숲과 야영장이 있어 텐트를 치고 1박하는 야영족들도 많이 찾습니다.
+
+<div class="tip-box">
+💡 <strong>오봉산 트레킹 추천</strong>: 오봉산(141m)은 낮은 산이지만 정상에서 서해 바다와 대천해수욕장, 멀리 안면도까지 조망할 수 있습니다. 왕복 1시간 30분 내외이며 가볍게 즐길 수 있습니다.
+</div>
+
+<h2>④ 삽시도 배 시간표 — 대천항에서 출발</h2>
+
+삽시도는 대천항 또는 오천항에서 여객선을 타고 들어갑니다.<br><br>
+<strong>대천항 출발 기준</strong>(성수기 기준 대략적인 시간표 — 실제 운항 시간은 반드시 선사 또는 보령시 공식 채널에서 재확인하시기 바랍니다):<br><br>
+
+<table class="info-table">
+  <tr>
+    <th>구분</th>
+    <th>대략적 운항 (재검증 필수)</th>
+    <th>소요 시간</th>
+  </tr>
+  <tr>
+    <td style="background:#f1faf9;">대천항 → 삽시도</td>
+    <td style="background:#f1faf9;">1일 2~3회 (성수기 증편 가능)</td>
+    <td style="background:#f1faf9;">약 40~50분</td>
+  </tr>
+  <tr>
+    <td style="background:#fff;">삽시도 → 대천항</td>
+    <td style="background:#fff;">1일 2~3회 (성수기 증편 가능)</td>
+    <td style="background:#fff;">약 40~50분</td>
+  </tr>
+</table>
+
+<strong>⚠️ 운항 시간과 요금은 변동되므로, 방문 전 반드시 대천항 여객터미널(041-934-8500 또는 홈페이지)에서 최신 시간표를 확인하세요.</strong><br><br>
+성수기에는 사전 예약이 필요한 경우도 있습니다. 특히 주말에는 배가 빨리 마감되므로 여유 있게 예약하시기 바랍니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260715/3_boryeong_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-2">Small Korean island ferry boat departing from Daecheon Harbor (대천항) in Boryeong, South Chungcheong Province, toward a small island on the West Sea (Yellow Sea). The ferry carries a few cars and passengers on the upper deck. The harbor has small fishing boats moored nearby. Late morning summer light, calm sea, distant island silhouette visible on the horizon. Traditional Korean island ferry scene. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">대천항에서 삽시도로 향하는 여객선 / AI 제작 이미지</div>
+</div>
+
+<h2>⑤ 삽시도에서 즐기는 것들</h2>
+
+삽시도에 도착하면 소박한 섬 분위기가 먼저 반겨줍니다.<br><br>
+섬 안에는 여러 개의 해변이 있습니다. 대부분 조용하고 아담한 규모라 혼잡 없이 느긋하게 즐길 수 있습니다.<br><br>
+삽시도의 매력 중 하나는 섬 둘레길 트레킹입니다. 파도와 바위가 어우러진 해안길을 따라 걷다 보면 서해 특유의 잔잔한 바다 풍경과 청정 자연을 만납니다. 전 코스 완주는 약 3~4시간이 걸리지만, 일부만 걸어도 충분히 아름답습니다.<br><br>
+삽시도에는 소규모 민박과 식당이 있어 1박하며 쉬어가는 방문객도 많습니다. 특히 조개구이와 바지락찜, 물회 등 서해 바다의 해산물을 저렴하게 맛볼 수 있습니다.
+
+<h2>⑥ 원산도·삽시도 당일 추천 코스</h2>
+
+두 섬을 하루에 즐기는 대략적인 코스입니다.<br><br>
+<div class="step-box">
+  <strong>오전 (09:00~11:00)</strong> — 서울 또는 수도권 출발 → 원산안면대교 통과 → 원산도 오봉산해수욕장 도착 후 물놀이
+</div>
+<div class="step-box">
+  <strong>점심 (11:00~12:30)</strong> — 대천항 또는 원산도 내 식당에서 점심 식사 (해산물 또는 국밥류)
+</div>
+<div class="step-box">
+  <strong>오후 (13:00~16:00)</strong> — 대천항 출발 삽시도행 여객선 탑승 → 삽시도 도착 후 해변 산책 및 해안 트레킹
+</div>
+<div class="step-box">
+  <strong>귀환 (16:00~17:00)</strong> — 삽시도 → 대천항 여객선 귀환 → 귀가
+</div>
+
+<br>
+삽시도 운항 시간에 따라 일정을 조정해야 하므로, 반드시 사전에 선사 시간표를 확인하고 맞춰서 움직이시기 바랍니다.
+
+<h2>⑦ 주변 연계 — 대천해수욕장과 보령 머드</h2>
+
+원산도·삽시도 방문에 대천해수욕장과 보령 머드체험을 연계하면 더욱 풍성한 여행이 됩니다.<br><br>
+대천해수욕장은 보령의 대표 해수욕장으로 넓은 모래사장과 다양한 편의시설을 갖추고 있습니다. 7월 중순 이후에는 <strong>보령 머드축제</strong> 기간과 겹치는 경우가 많아 머드체험까지 함께 즐길 수 있습니다(머드축제 일정은 매년 변경되므로 방문 전 재확인 권장).<br><br>
+보령 시내에는 숙박시설이 다양하므로 1박2일 일정으로 여유 있게 즐기는 것도 좋은 선택입니다.<br><br>
+보령 지역 특산물로는 대천항 주변의 새조개, 꽃게 등 해산물이 유명합니다. 여행 마지막에 대천항 회센터에 들러 신선한 제철 해산물을 즐기고 귀가하면 여행의 마무리가 완벽해집니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260715/3_boryeong_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-3">A quiet sandy beach on Sapsido (삽시도) island near Boryeong, South Korea, in summer. Clear shallow turquoise West Sea water laps against a small white sand beach. Rocky coast visible to one side with wild coastal vegetation. Only a few visitors on the beach enjoying the peaceful atmosphere far from busy tourist spots. Pine trees on hillside above the beach. Summer light, blue sky with some clouds. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">삽시도 한적한 해변과 맑은 서해 바다 / AI 제작 이미지</div>
+</div>
+
+<h2>⑧ 서해 섬여행 시 유의사항</h2>
+
+서해 섬여행은 동해와는 다른 특성이 있으므로 미리 알아두시면 도움이 됩니다.<br><br>
+<strong>조수 간만의 차</strong>가 큰 서해 특성상, 해수욕 가능 시간이 만조 전후 수 시간으로 제한됩니다. 방문 날짜의 물때표를 미리 확인해 두면 더 알차게 즐길 수 있습니다.<br><br>
+원산도와 삽시도 내에는 편의점, 마트 등 편의시설이 제한적입니다. 물, 간식, 선크림, 비상약 등을 미리 챙겨가시기 바랍니다.<br><br>
+여름 성수기에는 도선 예약이 빠르게 마감될 수 있습니다. 귀환 배편을 놓치지 않도록 항상 시간을 여유 있게 잡는 것이 중요합니다.<br><br>
+섬 지역 특성상 응급상황 발생 시 육지로의 이동 시간이 걸립니다. 기저질환이 있는 분은 상비약을 충분히 준비하시고, 어린 자녀 동반 시 안전에 특히 주의하시기 바랍니다.
+
+<h2>⑨ 원산도·삽시도 여행 준비 요약</h2>
+
+두 섬 여행을 위한 핵심 준비사항을 정리합니다.<br><br>
+✅ 삽시도 배편 — 대천항 여객터미널 시간표 사전 확인 필수 (041-934-8500)<br>
+✅ 원산도 진입 — 원산안면대교 통과, 별도 비용 없음<br>
+✅ 성수기 여객선 예약 — 주말 주말 조기 마감 가능, 미리 예약<br>
+✅ 물때 확인 — 서해 조수간만 차 크므로 만조 시간 미리 파악<br>
+✅ 준비물 — 물·간식·선크림·방충제·비상약·현금(카드 안 되는 곳 있음)<br><br>
+동해와는 또 다른 서해의 정서를 품은 원산도와 삽시도. 여름 성수기 붐비는 곳을 피해 조용하고 한적한 섬 여행을 원하신다면 이 두 섬이 좋은 선택이 될 것입니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260714/travel_seocheon_chunjangdae.html">서천 춘장대해수욕장 가는 법과 동백정 낙조, 솔숲 야영 서해 여름 당일 코스</a></li>
+    <li><a href="../260714/travel_mungyeong_ssangnyong.html">문경 쌍룡계곡 물놀이 명당과 주차, 문경새재·에코랄라 여름 가족 당일 코스</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#보령여행</span>
+  <span class="tag">#원산도</span>
+  <span class="tag">#삽시도</span>
+  <span class="tag">#섬여행</span>
+  <span class="tag">#오봉산해수욕장</span>
+  <span class="tag">#충남여행</span>
+  <span class="tag">#여름섬여행</span>
+  <span class="tag">#원산안면대교</span>
+  <span class="tag">#대천항</span>
+  <span class="tag">#서해피서</span>
+</div>
+
+</body>
+</html>
