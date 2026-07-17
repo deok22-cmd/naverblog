@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>2026-07-18 네이버 발행 대시보드</title>
+<style>
+  body { font-family: 'Apple SD Gothic Neo', sans-serif; max-width: 900px; margin: 40px auto; padding: 16px; background: #f5f5f5; }
+  h1 { font-size: 1.4em; border-bottom: 4px solid #00796b; padding-bottom: 10px; color: #00796b; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  th { background: #00796b; color: #fff; padding: 12px 10px; font-size: 0.9em; }
+  td { padding: 11px 10px; border-bottom: 1px solid #eee; font-size: 0.9em; vertical-align: middle; }
+  tr:last-child td { border-bottom: none; }
+  .done { color: #27ae60; font-weight: 700; }
+  .wait { color: #e67e22; font-weight: 700; }
+  .tag-travel { background: #e0f2f1; color: #00796b; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; }
+  .tag-local { background: #e8f5e9; color: #388e3c; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; }
+  .tag-car { background: #fce4ec; color: #c62828; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; }
+  .tag-appli { background: #e3f2fd; color: #1565c0; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; }
+  .tag-cert { background: #f3e5f5; color: #6a1b9a; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; }
+  .queue-warn { background: #fff3e0; border: 1px solid #ff9800; padding: 10px 16px; border-radius: 6px; margin: 20px 0; font-size: 0.9em; color: #e65100; }
+</style>
+</head>
+<body>
+<h1>📋 2026-07-18 네이버 발행 대시보드</h1>
+<p style="color:#666; font-size:0.9em;">총 7건 | 성장모드(일 7건) | 여행 3 + 인접 1 + 신규버티컬(car_·appli_·cert_) 3</p>
+
+<div class="queue-warn">
+  ⚠️ <strong>큐 부족 알림</strong><br>
+  [QUEUE LOW travel: 4] 여행 §02 작성대기중 4건 (임계 15) — 치트시트에서 8~9월 주제 리필 필요<br>
+  [QUEUE LOW local: 9] 인접 §01 작성대기중 9건 (임계 10)<br>
+  [QUEUE LOW vertical:car_ 1] car_ 작성대기중 1건 (임계 2) — 시드 리필 필요<br>
+  [QUEUE LOW vertical:cert_ 1] cert_ 작성대기중 1건 (임계 2) — 시드 리필 필요
+</div>
+
+<table>
+  <tr>
+    <th>#</th><th>slug</th><th>제목</th><th>카테고리</th><th>상태</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>travel_mokpo_cablecar</td>
+    <td><a href="travel_mokpo_cablecar.html">목포 해상케이블카 요금·시간과 유달산 야경, 여름 밤바다 코스</a></td>
+    <td><span class="tag-travel">travel_</span></td>
+    <td class="done">✔️ 작성 완료</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>travel_sacheon_cablecar</td>
+    <td><a href="travel_sacheon_cablecar.html">사천 바다케이블카 타는 법과 실안낙조, 삼천포 여름 밤바다 드라이브</a></td>
+    <td><span class="tag-travel">travel_</span></td>
+    <td class="done">✔️ 작성 완료</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>travel_yeongcheon_astronomy</td>
+    <td><a href="travel_yeongcheon_astronomy.html">영천 보현산천문과학관 별 관측 예약과 여름 은하수 명당, 밤하늘 여행</a></td>
+    <td><span class="tag-travel">travel_</span></td>
+    <td class="done">✔️ 작성 완료</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>local_summer_sunburn</td>
+    <td><a href="local_summer_sunburn.html">여름 자외선·바다 화상 대처와 물놀이 후 피부·눈 관리</a></td>
+    <td><span class="tag-local">local_</span></td>
+    <td class="done">✔️ 작성 완료</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>car_recall_check</td>
+    <td><a href="car_recall_check.html">차량번호만으로 내 차·중고차 리콜 대상인지 5분 조회하는 법</a></td>
+    <td><span class="tag-car">car_</span></td>
+    <td class="done">✔️ 작성 완료</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>appli_aircon_outdoor_drain</td>
+    <td><a href="appli_aircon_outdoor_drain.html">에어컨 실외기에서 물 떨어질 때 정상·고장 구분과 배수 점검하는 법</a></td>
+    <td><span class="tag-appli">appli_</span></td>
+    <td class="done">✔️ 작성 완료</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>cert_tax_cert</td>
+    <td><a href="cert_tax_cert.html">완납증명서(납세증명서) 인터넷 발급, 국세는 홈택스·지방세는 위택스 어디서 떼나</a></td>
+    <td><span class="tag-cert">cert_</span></td>
+    <td class="done">✔️ 작성 완료</td>
+  </tr>
+</table>
+
+<p style="color:#999; font-size:0.8em; margin-top:20px;">생성일: 2026-07-18 | 티스토리: $TistorySuspended=true(스킵) | 인스타: $InstaSuspended=true(스킵)</p>
+</body>
+</html>

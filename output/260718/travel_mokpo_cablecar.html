@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f9fdf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px; font-size: 0.9em; }
+  .info-table td { padding: 10px; border: 1px solid #ddd; font-size: 0.9em; }
+  .step-box { border-left: 4px solid #00796b; padding: 15px 20px; background: #f9fdf9; border: 1px solid #b2dfdb; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fff8e1; border: 1px solid #ffe082; padding: 16px 20px; border-radius: 8px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-area img { width: 100%; border-radius: 8px; display: block; margin: 0 auto; }
+  .img-caption { font-size: 0.88em; color: #777; margin-top: 8px; font-style: italic; }
+  .img-placeholder { background: #f0f4f0; border: 2px dashed #00796b; border-radius: 10px; padding: 24px 20px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; color: #00796b; }
+  .ph-file { font-size: 0.8em; color: #555; font-family: monospace; }
+  .prompt-text { background: #fff; border: 1px solid #c8e6c9; border-radius: 6px; padding: 12px; font-size: 0.82em; color: #333; white-space: pre-wrap; margin: 0 0 10px 0; font-family: monospace; line-height: 1.6; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 7px 16px; border-radius: 5px; cursor: pointer; font-size: 0.85em; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>목포 해상케이블카 요금·시간과 유달산 야경, 여름 밤바다 코스</h1>
+
+<div class="intro-box">
+남도의 항구 도시 목포에 국내 최장 해상케이블카가 있다는 사실, 알고 계셨나요? 총 길이 3.23km에 달하는 <strong>목포 해상케이블카</strong>는 북항 승강장에서 출발해 유달산을 거쳐 고하도까지 이어지는 황홀한 하늘 위 산책로입니다. 특히 여름 해 질 녘이면 목포 앞바다가 붉게 물들며 만들어내는 낙조가 장관을 이루고, 밤이 되면 유달산 야경과 목포대교의 야간 조명이 어우러져 전혀 다른 풍경을 선사합니다. 요금 체계, 운영 시간, 주차 팁, 그리고 케이블카 탑승 후 즐길 수 있는 유달산 산책과 고하도 해안길까지 한 번에 정리해 드리겠습니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260718/1_mokpo_cablecar_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-1">Aerial view of Mokpo ocean cable car gliding over the calm blue sea, connecting Yudalsan mountain to Gohaddo island, photorealistic, ultra high detail. The cable car gondolas are suspended above sparkling turquoise water reflecting the summer sky. Lush green hills on the right, traditional Korean coastal town visible below on the left. Golden summer afternoon light, few white clouds, South Korean coastal scenery. 1:1 aspect ratio, travel photography style.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">목포 해상케이블카 전경 — 바다 위를 나는 국내 최장 케이블카 / AI 제작 이미지</div>
+</div>
+
+<h2>① 목포 해상케이블카, 어떤 곳인가요?</h2>
+
+목포 해상케이블카는 전남 목포시 북항 일대에 자리한 관광 시설로, 2019년 9월 개장 이후 목포 여행의 대표 아이콘으로 자리 잡았습니다. 전국 수십 개의 케이블카 중 해상 구간 기준으로 <strong>국내 최장인 3.23km</strong>를 자랑하며, 바다 위 최고 높이는 약 155m에 달합니다.
+
+<br><br>
+
+승강장은 총 세 곳입니다. 북항 승강장(출발)에서 탑승하면 유달산 중턱을 거쳐(유달산 승강장) 고하도 승강장까지 이어집니다. 유달산 구간에서는 목포 시가지와 다도해 풍경을, 고하도 구간에서는 목포대교와 삼학도 일대 바다 전경을 감상할 수 있어 두 구간의 매력이 확연히 다릅니다.
+
+<br><br>
+
+여름 성수기에는 하루 수천 명이 찾는 인기 명소인 만큼, 주말과 휴가 시즌에는 대기 시간이 30분~1시간까지 길어질 수 있습니다. 평일 오전 일찍 방문하거나 사전에 온라인 예매를 활용하면 대기 없이 탑승할 수 있습니다.
+
+<h2>② 2026년 요금표 — 일반 캐빈 vs 크리스탈 캐빈</h2>
+
+목포 해상케이블카의 캐빈은 두 종류입니다. 바닥이 불투명한 <strong>일반 캐빈(에어캐빈)</strong>과 바닥이 투명 유리로 되어 있어 발아래 바다를 내려다볼 수 있는 <strong>크리스탈 캐빈</strong>입니다.
+
+<br><br>
+
+<table class="info-table">
+  <tr>
+    <th>구분</th><th>왕복(성인)</th><th>왕복(청소년)</th><th>왕복(어린이)</th>
+  </tr>
+  <tr>
+    <td>일반 캐빈(에어캐빈)</td>
+    <td style="background:#f1faf9;">22,000원</td>
+    <td>18,000원</td>
+    <td>15,000원</td>
+  </tr>
+  <tr>
+    <td>크리스탈 캐빈</td>
+    <td style="background:#f1faf9;">28,000원</td>
+    <td>23,000원</td>
+    <td>20,000원</td>
+  </tr>
+</table>
+
+※ 요금은 운영사 정책에 따라 변동될 수 있으니, 방문 전 공식 홈페이지(목포 해상케이블카 공식 사이트)에서 반드시 재확인하세요. 편도 요금도 별도로 운영됩니다.
+
+<br><br>
+
+크리스탈 캐빈은 수량이 제한되어 있어 주말·성수기에는 일찍 소진됩니다. 투명 바닥의 스릴감을 원하신다면 가능하면 오픈 직후에 도착하시거나, 온라인 사전 예매 시 크리스탈 캐빈을 지정 선택하시는 것이 좋습니다.
+
+<h2>③ 운영 시간과 주차 정보</h2>
+
+운영 시간은 계절과 요일에 따라 달라집니다. 여름 성수기(7~8월) 기준 일반적으로 <strong>오전 9시~오후 9시 또는 10시</strong>까지 운영하며, 입장 마감은 종료 1시간 전입니다. 주말 및 공휴일에는 시간이 연장되는 경우가 있으니 방문 당일 공식 홈페이지 공지를 꼭 확인하세요.
+
+<br><br>
+
+주차는 북항 승강장 인근 주차장을 이용하시면 됩니다. 성수기 주말에는 오전 10시 이전에도 주차 공간이 빠르게 차오르므로, 가능하면 <strong>오전 9시 이전 도착</strong>을 권장합니다. 대중교통을 이용하실 경우 목포역 또는 목포버스터미널에서 시내버스나 택시로 북항 방면으로 이동하시면 됩니다.
+
+<br><br>
+
+<div class="tip-box">
+💡 <strong>꿀팁</strong>: 고하도 승강장에는 카페와 전망대가 마련되어 있어 케이블카 탑승 후 잠시 쉬어가기 좋습니다. 유달산 승강장에서 하차해 산책하다가 다시 탑승해 고하도까지 이동하는 방식으로 두 구간을 나눠 즐기는 것이 인기 코스입니다.
+</div>
+
+<h2>④ 유달산 야경 감상 포인트</h2>
+
+유달산 승강장에서 내려 조금만 걷다 보면 <strong>목포 시내 전경</strong>이 한눈에 펼쳐집니다. 해발 228m에 불과하지만 주변이 바다와 평지로 이루어져 있어 탁 트인 조망이 일품입니다. 특히 <strong>일등바위·이등바위</strong> 전망 포인트는 목포 사람들이 오래전부터 즐겨 찾던 야경 명소입니다.
+
+<br><br>
+
+여름 밤에는 목포대교와 항구 불빛이 바다 위에 일렁이는 모습이 장관입니다. 해가 지는 시각(7월 기준 오후 7시 30분 전후)에 맞춰 케이블카를 타면 낙조와 야경을 동시에 즐길 수 있습니다.
+
+<br><br>
+
+유달산 내에는 달성사, 노적봉 등 역사 유적지도 분포해 있습니다. 케이블카 탑승 전후로 여유가 있다면 30~40분 정도 산책하며 목포의 역사와 풍경을 함께 느껴보시길 권합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260718/1_mokpo_cablecar_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-2">Stunning night view from Yudalsan mountain overlooking Mokpo harbor and Mokpo Grand Bridge illuminated with colorful lights. The sea below reflects the warm yellow and orange city lights, cable car gondola visible in the foreground. Serene summer night atmosphere, distant islands silhouettes, photorealistic, ultra high detail. 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">유달산에서 바라본 목포 야경과 목포대교 — 여름 밤 낭만 포인트 / AI 제작 이미지</div>
+</div>
+
+<h2>⑤ 고하도 — 이순신 장군의 숨결이 남은 섬</h2>
+
+케이블카 종점인 고하도는 단순한 관광 포인트가 아닙니다. <strong>이순신 장군이 1597년 명량대첩 이후 106일간 주둔했던 역사적인 섬</strong>입니다. 섬 안에는 이충무공 유허비와 모충각이 보존되어 있어, 케이블카 하차 후 역사 산책을 즐길 수 있습니다.
+
+<br><br>
+
+고하도 둘레길은 약 1.5~2km로 가볍게 걷기 좋습니다. 해안을 따라 조성된 데크 산책로 위에서 목포 앞바다와 삼학도, 멀리 영산강 하구까지 조망할 수 있습니다. 여름에는 시원한 바닷바람을 맞으며 걷는 것만으로도 피서 효과가 있습니다.
+
+<br><br>
+
+섬 내 카페에서는 목포 명물인 낙지 관련 간식과 커피를 즐길 수 있으며, 승강장 근처 매점에서는 간단한 먹거리도 판매합니다.
+
+<h2>⑥ 목포 밤바다 여름 코스 추천 루트</h2>
+
+오후부터 저녁까지 알차게 즐길 수 있는 추천 코스를 안내합니다.
+
+<br><br>
+
+<div class="step-box">
+<strong>① 오후 2~4시 — 북항 승강장 도착·일반 코스 탑승</strong><br>
+북항 → 유달산(하차·30분 산책) → 고하도 이동. 낮의 바다와 다도해 풍경 감상.
+</div>
+
+<div class="step-box">
+<strong>② 오후 4~6시 — 고하도 둘레길 & 역사 탐방</strong><br>
+이충무공 유허비 탐방, 해안 데크 산책, 카페에서 휴식.
+</div>
+
+<div class="step-box">
+<strong>③ 오후 6시 30분 ~ 8시 — 낙조·야경 타이밍 케이블카 재탑승</strong><br>
+해 지기 1시간 전 탑승하면 낙조와 야경을 동시에 경험. 크리스탈 캐빈 추천.
+</div>
+
+<div class="step-box">
+<strong>④ 오후 8시 이후 — 목포 근대역사거리 & 낙지 저녁</strong><br>
+목포 근대역사문화공간(영산동 일대) 야간 산책 후 목포 3대 음식(낙지·홍어·갈치) 저녁 식사.
+</div>
+
+<h2>⑦ 인근 연계 관광지</h2>
+
+목포 해상케이블카만 보기 아깝다면, 걸어서 또는 차로 10~20분 거리의 명소를 함께 묶어 보세요.
+
+<br><br>
+
+<strong>목포 근대역사문화공간</strong>: 일제강점기 건축물이 밀집한 영산동 골목. 오래된 붉은 벽돌 건물 사이를 걷다 보면 마치 근대 도시로 시간 여행을 떠난 듯한 느낌을 받습니다.
+
+<br><br>
+
+<strong>국립해양문화재연구소 해양유물전시관</strong>: 목포 앞바다에서 인양된 고려청자와 조선시대 선박 등 해양 문화재를 전시합니다. 무료 입장이라 가족 방문에 제격입니다.
+
+<br><br>
+
+<strong>삼학도</strong>: 목포항 인근의 소삼학도·중삼학도·대삼학도로 이루어진 섬 단지. 유달산에서 내려다보면 세 마리 학처럼 보인다 하여 붙여진 이름입니다. 야경 명소이기도 합니다.
+
+<h2>⑧ 숙박 — 목포 여름밤을 여유롭게 즐기려면</h2>
+
+케이블카 야경까지 즐기려면 당일치기보다는 1박을 추천합니다. 목포 시내 중심가에는 다양한 가격대의 호텔과 모텔이 있으며, 유달산 아래쪽 지역이나 목포역 근처에 숙소를 잡으면 이동이 편리합니다.
+
+<br><br>
+
+성수기 주말에는 숙박이 빨리 마감되는 경우가 많으므로 <strong>최소 2주 전</strong>에 예약하시길 권장합니다. 목포항 뷰가 보이는 해안가 숙소는 특히 인기가 높아 더 빨리 소진됩니다.
+
+<br><br>
+
+목포 인근 완도·진도 등 남도 섬 여행과 연계할 경우, 목포는 천혜의 거점 도시가 됩니다. 완도 청산도 배편도 완도항에서 출발하므로 전날 완도에서 자고 다음 날 목포로 이동하는 루트도 인기 있습니다.
+
+<h2>⑨ 목포 대표 먹거리와 현지 꿀팁</h2>
+
+목포 하면 빠질 수 없는 먹거리가 있습니다. <strong>세발낙지</strong>는 살아있는 낙지를 통째로 먹는 연포탕이나 낙지탕탕이 형태로 즐길 수 있으며, 가격은 1인분에 약 1만5천~2만 원 안팎입니다.
+
+<br><br>
+
+<strong>홍어 삼합</strong>은 삭힌 홍어, 돼지고기 수육, 묵은지를 함께 먹는 전통 발효 음식입니다. 처음 먹는 분들은 향이 강할 수 있으나, 특유의 톡 쏘는 맛에 반하는 분도 많습니다. 목포 수산시장 주변에 노포 식당들이 모여 있습니다.
+
+<br><br>
+
+여름철 목포 여행 시에는 해 질 녘 목포 갓길 포장마차 거리에서 병어회나 가오리무침으로 가볍게 한잔 즐기는 것도 현지 분위기를 만끽하는 방법입니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260718/1_mokpo_cablecar_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-3">Interior view inside a crystal bottom cable car gondola showing transparent glass floor revealing the deep blue sea below, Mokpo coastal scenery visible outside the windows. Passengers looking down through the glass floor with amazement. Bright summer daylight, photorealistic, vivid colors, ultra high detail. 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">크리스탈 캐빈 투명 바닥 — 발아래 펼쳐지는 목포 앞바다 / AI 제작 이미지</div>
+</div>
+
+<h2>⑩ 방문 전 체크리스트 — 이것만 챙기면 완벽</h2>
+
+케이블카 방문 전 꼭 확인해야 할 사항들을 정리했습니다.
+
+<br><br>
+
+<strong>예약 여부 확인</strong>: 성수기 주말에는 현장 구매 시 대기 시간이 길어집니다. 목포 해상케이블카 공식 홈페이지 또는 앱에서 사전 예매가 가능한지 확인하세요.
+
+<br><br>
+
+<strong>날씨 확인 필수</strong>: 강풍이나 호우 시에는 운행이 중단될 수 있습니다. 여름철 남해안은 갑작스러운 소나기가 잦으므로, 기상청 예보를 꼭 챙기세요.
+
+<br><br>
+
+<strong>복장</strong>: 유달산 정상까지 산책할 예정이라면 운동화와 가벼운 겉옷을 준비하세요. 케이블카 탑승만 할 경우에는 편한 복장이면 충분합니다.
+
+<br><br>
+
+<strong>고하도 체류 시간</strong>: 둘레길을 천천히 걸으면 약 1시간이 소요됩니다. 케이블카 왕복 탑승 시간까지 합하면 전체 2~3시간을 여유 있게 잡으시는 것이 좋습니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260717/travel_wando_cheongsando.html">완도 청산도 슬로길 코스와 배 시간표, 서편제길·구들장논 여름 섬여행</a></li>
+    <li><a href="../260717/travel_gunsan_seonyu.html">군산 선유도 고군산군도 드라이브와 짚라인·해수욕장, 차로 가는 여름 섬 코스</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#목포해상케이블카</span>
+  <span class="tag">#목포여행</span>
+  <span class="tag">#유달산야경</span>
+  <span class="tag">#고하도</span>
+  <span class="tag">#목포밤바다</span>
+  <span class="tag">#여름여행</span>
+  <span class="tag">#남도여행</span>
+  <span class="tag">#케이블카</span>
+  <span class="tag">#목포낙조</span>
+  <span class="tag">#전남여행</span>
+</div>
+
+</body>
+</html>
