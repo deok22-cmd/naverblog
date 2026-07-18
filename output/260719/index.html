@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>2026-07-19 네이버 발행 대시보드</title>
+<style>
+  body { font-family: 'Apple SD Gothic Neo', sans-serif; max-width: 900px; margin: 40px auto; padding: 16px; background: #f5f5f5; }
+  h1 { font-size: 1.4em; border-bottom: 4px solid #388e3c; padding-bottom: 10px; color: #388e3c; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  th { background: #388e3c; color: #fff; padding: 12px 10px; font-size: 0.9em; }
+  td { padding: 11px 10px; border-bottom: 1px solid #eee; font-size: 0.9em; vertical-align: middle; }
+  tr:last-child td { border-bottom: none; }
+  .done { color: #27ae60; font-weight: 700; }
+  .wait { color: #e67e22; font-weight: 700; }
+  .tag-local { background: #e8f5e9; color: #388e3c; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; }
+  .tag-car { background: #fce4ec; color: #c62828; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; }
+  .tag-appli { background: #e3f2fd; color: #1565c0; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; }
+  .tag-cert { background: #f3e5f5; color: #6a1b9a; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; }
+  .tag-gov { background: #fff3e0; color: #e65100; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; }
+  .queue-warn { background: #fff3e0; border: 1px solid #ff9800; padding: 10px 16px; border-radius: 6px; margin: 20px 0; font-size: 0.9em; color: #e65100; }
+  .info-note { background: #e8f5e9; border: 1px solid #a5d6a7; padding: 10px 16px; border-radius: 6px; margin: 10px 0; font-size: 0.88em; color: #1b5e20; }
+</style>
+</head>
+<body>
+<h1>📋 2026-07-19 네이버 발행 대시보드</h1>
+<p style="color:#666; font-size:0.9em;">총 7건 | 성장모드(일 7건) | 여행 0건(시즌게이트 전량 8월↑ 미해당) + 인접 롱테일 2건 + 신규버티컬(car_·appli_·cert_) 3건 + gov_ 보충 2건</p>
+
+<div class="queue-warn">
+  ⚠️ <strong>큐 부족 알림 (발행 후 기준)</strong><br>
+  [QUEUE LOW travel: 4] 여행 §02 잔여 4건 (임계 15) — 8~9월 주제 리필 필요 (7/29 이후 시즌창 열림)<br>
+  [QUEUE LOW local: 7] 인접 §01 잔여 7건 (임계 10) — 가을 시즌 항목 리필 필요<br>
+  [QUEUE LOW gov: 8] 신규도메인 §02 일반 잔여 8건 (임계 10)<br>
+  [QUEUE LOW vertical:car_ 0] car_ Wave 1 소진 — 시드 리필 필요<br>
+  [QUEUE LOW vertical:appli_ 1] appli_ 잔여 A10 1건 — 시드 리필 필요<br>
+  [QUEUE LOW vertical:cert_ 0] cert_ Wave 1 소진 — 시드 리필 필요
+</div>
+
+<div class="info-note">
+  ℹ️ <strong>시즌 게이트 비고</strong>: 여행 §02 잔여 4건(통영 한산대첩 8/12·영동 포도축제 8/27·봉평 메밀꽃 9월초·하동 코스모스 9월초)은 오늘(7/19) 기준 ±2주 시즌창 미달(최단 7/29 개창) → 전량 스킵. 여행 3슬롯은 인접(§01)·gov_(§02) 으로 보충.
+</div>
+
+<table>
+  <tr>
+    <th>#</th><th>slug</th><th>제목</th><th>카테고리</th><th>상태</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>car_vehicle_registration_cert</td>
+    <td><a href="car_vehicle_registration_cert.html">자동차등록원부 갑부·을부 인터넷 무료 열람·발급하는 법과 차이</a></td>
+    <td><span class="tag-car">car_</span></td>
+    <td class="done">✔️ 작성 완료</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>appli_fan_cleaning_storage</td>
+    <td><a href="appli_fan_cleaning_storage.html">선풍기·써큘레이터 여름 뒤 분해 청소와 보관법, 먼지 쌓이면 모터 망가진다</a></td>
+    <td><span class="tag-appli">appli_</span></td>
+    <td class="done">✔️ 작성 완료</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>cert_pension_check</td>
+    <td><a href="cert_pension_check.html">국민연금 예상수령액 조회하는 법과 가입내역·가입증명서 발급</a></td>
+    <td><span class="tag-cert">cert_</span></td>
+    <td class="done">✔️ 작성 완료</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>local_highway_rest_area</td>
+    <td><a href="local_highway_rest_area.html">고속도로 졸음쉼터·수유실·반려동물 쉼터 위치 찾는 법과 이용 팁</a></td>
+    <td><span class="tag-local">local_</span></td>
+    <td class="done">✔️ 작성 완료</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>gov_energy_cashback</td>
+    <td><a href="gov_energy_cashback.html">전기·가스 에너지캐시백 신청과 절약 환급 받는 법, 2026년 기준 정리</a></td>
+    <td><span class="tag-gov">gov_</span></td>
+    <td class="done">✔️ 작성 완료</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>local_highway_fuel_saving</td>
+    <td><a href="local_highway_fuel_saving.html">여름 휴가철 고속도로 기름값 아끼는 알뜰주유소와 셀프주유 찾는 법</a></td>
+    <td><span class="tag-local">local_</span></td>
+    <td class="done">✔️ 작성 완료</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>gov_child_vaccination</td>
+    <td><a href="gov_child_vaccination.html">어린이 국가예방접종 무료 대상과 2026 접종 일정, 예방접종도우미 조회</a></td>
+    <td><span class="tag-gov">gov_</span></td>
+    <td class="done">✔️ 작성 완료</td>
+  </tr>
+</table>
+
+<p style="color:#999; font-size:0.8em; margin-top:20px;">생성일: 2026-07-19 | 티스토리: $TistorySuspended=true(스킵) | 인스타: $InstaSuspended=true(스킵)</p>
+</body>
+</html>

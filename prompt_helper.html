@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 이미지 수동 제작 헬퍼 대시보드 (260719)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&family=Outfit:wght@400;600;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-primary: #0d0f12;
+    --bg-secondary: #16191f;
+    --bg-tertiary: #1f242e;
+    --accent-teal: #00bfa5;
+    --accent-teal-hover: #009688;
+    --accent-blue: #00d2ff;
+    --text-primary: #f3f4f6;
+    --text-secondary: #9ca3af;
+    --border-color: #2a313d;
+    --status-pending: #ffab00;
+    --status-success: #00e676;
+    --accent-chatgpt: #10a37f;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', 'Noto Sans KR', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    padding: 40px 20px;
+  }
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  header {
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-teal));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .date-badge {
+    background: rgba(0, 191, 165, 0.15);
+    color: var(--accent-teal);
+    border: 1px solid var(--accent-teal);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    font-family: 'Outfit', sans-serif;
+  }
+  .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+  .stat-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+  }
+  .stat-label {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+  }
+  .stat-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent-teal);
+  }
+  .stat-value.pending {
+    color: var(--status-pending);
+  }
+  
+  .instruction-section {
+    background-color: #1e1e24;
+    border: 1px solid #332d3d;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+  }
+  .instruction-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #f3e8ff;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .instruction-list {
+    font-size: 0.85rem;
+    color: #c084fc;
+    padding-left: 20px;
+  }
+  .instruction-list li {
+    margin-bottom: 6px;
+  }
+  .code-block {
+    background: #000;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: #a78bfa;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .batch-actions {
+    margin-bottom: 40px;
+    background: rgba(0, 210, 255, 0.05);
+    padding: 18px 24px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 210, 255, 0.2);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .batch-label {
+    font-weight: 700;
+    color: var(--accent-blue);
+    font-size: 0.95rem;
+  }
+
+  .article-section {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 26px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+  .article-header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 14px;
+  }
+  .article-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  .article-meta {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+    font-family: monospace;
+  }
+  
+  .placeholder-card {
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .placeholder-card:last-child {
+    margin-bottom: 0;
+  }
+  .placeholder-card:hover {
+    border-color: #3b4556;
+  }
+  
+  .preview-box {
+    width: 140px;
+    height: 140px;
+    border-radius: 8px;
+    background-color: var(--bg-primary);
+    border: 2px dashed var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .preview-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+  }
+  .preview-box.loaded {
+    border-style: solid;
+    border-color: var(--status-success);
+  }
+  .preview-box.loaded img {
+    display: block;
+  }
+  .preview-box .status-icon {
+    font-size: 1.8rem;
+    color: var(--text-secondary);
+  }
+  .preview-box.loaded .status-icon {
+    display: none;
+  }
+
+  .info-box {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .ph-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .ph-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--accent-blue);
+    font-family: monospace;
+  }
+  .ph-badge {
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background-color: rgba(255, 171, 0, 0.15);
+    color: var(--status-pending);
+    border: 1px solid var(--status-pending);
+  }
+  .ph-badge.loaded {
+    background-color: rgba(0, 230, 118, 0.15);
+    color: var(--status-success);
+    border: 1px solid var(--status-success);
+  }
+  
+  .caption-text {
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+  
+  .prompt-box {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 0.8rem;
+    color: #cbd5e1;
+    font-family: monospace;
+    max-height: 80px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    margin-bottom: 14px;
+  }
+
+  .btn-group {
+    display: flex;
+    gap: 10px;
+  }
+  .btn {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    cursor: pointer;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s;
+    text-decoration: none;
+  }
+  .btn:hover {
+    background-color: var(--bg-secondary);
+    border-color: #4b5563;
+  }
+  .btn.btn-accent {
+    background-color: var(--accent-teal);
+    border-color: var(--accent-teal);
+    color: #000;
+    font-weight: 700;
+  }
+  .btn.btn-accent:hover {
+    background-color: var(--accent-teal-hover);
+    border-color: var(--accent-teal-hover);
+  }
+  .btn.btn-chatgpt {
+    background-color: var(--accent-chatgpt);
+    border-color: var(--accent-chatgpt);
+    color: #fff;
+    font-weight: 600;
+  }
+  .btn.btn-chatgpt:hover {
+    background-color: #0d8a6b;
+    border-color: #0d8a6b;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div>
+      <h1>AI 이미지 수동 제작 헬퍼</h1>
+      <div style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 4px;">블로그 원고에 넣을 AI 이미지를 손쉽고 빠르게 제작하도록 돕습니다.</div>
+    </div>
+    <span class="date-badge">날짜: 260719</span>
+  </header>
+
+  <div class="instruction-section">
+    <div class="instruction-title">💡 초고속 이미지 저장 꿀팁 워크플로우</div>
+    <ul class="instruction-list">
+      <li>1. 아래 카드의 <strong>[📋 프롬프트 복사]</strong> 또는 <strong>[🤖 ChatGPT 열기]</strong>를 통해 브라우저에 여러 탭을 띄웁니다.</li>
+      <li>2. 이미지가 만들어지면 아래 카드의 <strong>[💾 저장 경로 복사]</strong> 버튼을 클릭합니다.</li>
+      <li>3. 다운로드 시, Windows <strong>[다른 이름으로 저장]</strong> 창의 '파일 이름' 칸에 복사한 경로를 <strong>그대로 붙여넣기(Ctrl+V)하고 엔터</strong>를 누릅니다.</li>
+      <li>4. 모든 이미지 저장이 끝나 녹색 <strong>[등록 완료]</strong> 상태가 되면, 아래 명령어를 복사해 터미널에서 실행하여 원고에 자동 매칭합니다.</li>
+    </ul>
+    <div class="code-block">
+      <span id="cmd-text">python scripts/move_and_replace_images.py</span>
+      <button class="btn" style="padding: 4px 10px; font-size: 0.75rem;" onclick="copyCmd()">명령어 복사</button>
+    </div>
+  </div>
+
+  <div class="batch-actions">
+    <span class="batch-label">⚡ 한꺼번에 탭 열기:</span>
+    <button class="btn btn-chatgpt" onclick="openAllTabs('chatgpt')">🤖 남은 이미지 ChatGPT 탭으로 일괄 열기</button>
+    <button class="btn" onclick="openAllTabs('gemini')">♊ 남은 이미지 Gemini 탭으로 일괄 열기</button>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-card">
+      <div class="stat-label">총 이미지 개수</div>
+      <div class="stat-value" id="stat-total">0</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">등록 완료</div>
+      <div class="stat-value" id="stat-completed" style="color: var(--status-success);">0</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">대기 중</div>
+      <div class="stat-value pending" id="stat-pending">0</div>
+    </div>
+  </div>
+
+  <div id="articles-container">
+
+    <div class="article-section">
+      <div class="article-header">
+        <div class="article-title">선풍기·써큘레이터 여름 뒤 분해 청소와 보관법, 먼지 쌓이면 모터 망가진다</div>
+        <div class="article-meta">원고 파일: appli_fan_cleaning_storage.html</div>
+      </div>
+
+      <div class="placeholder-card" data-filename="2_fan_cleaning_1.png">
+        <div class="preview-box" id="preview-prompt_2_fan_cleaning_1_png">
+          <span class="status-icon">📷</span>
+          <img src="images/260719/2_fan_cleaning_1.png" data-original-src="images/260719/2_fan_cleaning_1.png" alt="Preview" onload="imageLoaded('prompt_2_fan_cleaning_1_png')" onerror="imageFailed('prompt_2_fan_cleaning_1_png')">
+        </div>
+        <div class="info-box">
+          <div>
+            <div class="ph-meta">
+              <span class="ph-name">2_fan_cleaning_1.png</span>
+              <span class="ph-badge" id="badge-prompt_2_fan_cleaning_1_png">대기 중</span>
+            </div>
+            <div class="caption-text">설명: 선풍기 앞덮개를 분리해 날개를 청소하는 과정 / AI 제작 이미지</div>
+            <div class="prompt-box" id="prompt_2_fan_cleaning_1_png">A person carefully disassembling a standing electric fan on a bright kitchen table. The fan's front grille is removed and placed beside it, fan blades are visible. Small brushes and cleaning tools on the table. Bright indoor daylight, realistic lifestyle photography, step-by-step cleaning process visible, 1:1 aspect ratio, photorealistic.</div>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-accent" onclick="copyText('prompt_2_fan_cleaning_1_png', this)">📋 프롬프트 복사</button>
+            <button class="btn" onclick="copyPath('d:\\lightsail\\naverblog\\images\\260719\\2_fan_cleaning_1.png', this)">💾 저장 경로 복사</button>
+            <a class="btn btn-chatgpt" href="https://chatgpt.com/?q=A%20person%20carefully%20disassembling%20a%20standing%20electric%20fan%20on%20a%20bright%20kitchen%20table.%20The%20fan%27s%20front%20grille%20is%20removed%20and%20placed%20beside%20it%2C%20fan%20blades%20are%20visible.%20Small%20brushes%20and%20cleaning%20tools%20on%20the%20table.%20Bright%20indoor%20daylight%2C%20realistic%20lifestyle%20photography%2C%20step-by-step%20cleaning%20process%20visible%2C%201%3A1%20aspect%20ratio%2C%20photorealistic." target="_blank">🤖 ChatGPT 열기</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="placeholder-card" data-filename="2_fan_cleaning_2.png">
+        <div class="preview-box" id="preview-prompt_2_fan_cleaning_2_png">
+          <span class="status-icon">📷</span>
+          <img src="images/260719/2_fan_cleaning_2.png" data-original-src="images/260719/2_fan_cleaning_2.png" alt="Preview" onload="imageLoaded('prompt_2_fan_cleaning_2_png')" onerror="imageFailed('prompt_2_fan_cleaning_2_png')">
+        </div>
+        <div class="info-box">
+          <div>
+            <div class="ph-meta">
+              <span class="ph-name">2_fan_cleaning_2.png</span>
+              <span class="ph-badge" id="badge-prompt_2_fan_cleaning_2_png">대기 중</span>
+            </div>
+            <div class="caption-text">설명: 세척 후 건조 중인 선풍기 부품들 / AI 제작 이미지</div>
+            <div class="prompt-box" id="prompt_2_fan_cleaning_2_png">Clean electric fan components laid out neatly on a white sheet of newspaper: front grille, fan blades (3-4 blades), back grille, motor cover. All parts are freshly cleaned and dry, dust-free. Natural indoor lighting, organized flat lay photography style, top-down view, 1:1 aspect ratio, photorealistic.</div>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-accent" onclick="copyText('prompt_2_fan_cleaning_2_png', this)">📋 프롬프트 복사</button>
+            <button class="btn" onclick="copyPath('d:\\lightsail\\naverblog\\images\\260719\\2_fan_cleaning_2.png', this)">💾 저장 경로 복사</button>
+            <a class="btn btn-chatgpt" href="https://chatgpt.com/?q=Clean%20electric%20fan%20components%20laid%20out%20neatly%20on%20a%20white%20sheet%20of%20newspaper%3A%20front%20grille%2C%20fan%20blades%20%283-4%20blades%29%2C%20back%20grille%2C%20motor%20cover.%20All%20parts%20are%20freshly%20cleaned%20and%20dry%2C%20dust-free.%20Natural%20indoor%20lighting%2C%20organized%20flat%20lay%20photography%20style%2C%20top-down%20view%2C%201%3A1%20aspect%20ratio%2C%20photorealistic." target="_blank">🤖 ChatGPT 열기</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="article-section">
+      <div class="article-header">
+        <div class="article-title">자동차등록원부 갑부·을부 인터넷 무료 열람·발급하는 법과 차이</div>
+        <div class="article-meta">원고 파일: car_vehicle_registration_cert.html</div>
+      </div>
+
+      <div class="placeholder-card" data-filename="1_car_registration_1.png">
+        <div class="preview-box" id="preview-prompt_1_car_registration_1_png">
+          <span class="status-icon">📷</span>
+          <img src="images/260719/1_car_registration_1.png" data-original-src="images/260719/1_car_registration_1.png" alt="Preview" onload="imageLoaded('prompt_1_car_registration_1_png')" onerror="imageFailed('prompt_1_car_registration_1_png')">
+        </div>
+        <div class="info-box">
+          <div>
+            <div class="ph-meta">
+              <span class="ph-name">1_car_registration_1.png</span>
+              <span class="ph-badge" id="badge-prompt_1_car_registration_1_png">대기 중</span>
+            </div>
+            <div class="caption-text">설명: 자동차365 포털에서 자동차등록원부 열람하는 모습 / AI 제작 이미지</div>
+            <div class="prompt-box" id="prompt_1_car_registration_1_png">A person using a laptop computer to access the Korean government vehicle civil portal (car365.go.kr), showing a vehicle registration document (자동차등록원부) on screen. Clean modern home office desk, natural daylight. Korean government portal interface visible. Realistic documentary photography style, warm indoor lighting, 1:1 aspect ratio, ultra high detail, photorealistic.</div>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-accent" onclick="copyText('prompt_1_car_registration_1_png', this)">📋 프롬프트 복사</button>
+            <button class="btn" onclick="copyPath('d:\\lightsail\\naverblog\\images\\260719\\1_car_registration_1.png', this)">💾 저장 경로 복사</button>
+            <a class="btn btn-chatgpt" href="https://chatgpt.com/?q=A%20person%20using%20a%20laptop%20computer%20to%20access%20the%20Korean%20government%20vehicle%20civil%20portal%20%28car365.go.kr%29%2C%20showing%20a%20vehicle%20registration%20document%20%28%EC%9E%90%EB%8F%99%EC%B0%A8%EB%93%B1%EB%A1%9D%EC%9B%90%EB%B6%80%29%20on%20screen.%20Clean%20modern%20home%20office%20desk%2C%20natural%20daylight.%20Korean%20government%20portal%20interface%20visible.%20Realistic%20documentary%20photography%20style%2C%20warm%20indoor%20lighting%2C%201%3A1%20aspect%20ratio%2C%20ultra%20high%20detail%2C%20photorealistic." target="_blank">🤖 ChatGPT 열기</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="placeholder-card" data-filename="1_car_registration_2.png">
+        <div class="preview-box" id="preview-prompt_1_car_registration_2_png">
+          <span class="status-icon">📷</span>
+          <img src="images/260719/1_car_registration_2.png" data-original-src="images/260719/1_car_registration_2.png" alt="Preview" onload="imageLoaded('prompt_1_car_registration_2_png')" onerror="imageFailed('prompt_1_car_registration_2_png')">
+        </div>
+        <div class="info-box">
+          <div>
+            <div class="ph-meta">
+              <span class="ph-name">1_car_registration_2.png</span>
+              <span class="ph-badge" id="badge-prompt_1_car_registration_2_png">대기 중</span>
+            </div>
+            <div class="caption-text">설명: 갑부·을부가 나뉜 자동차등록원부 서류 예시 / AI 제작 이미지</div>
+            <div class="prompt-box" id="prompt_1_car_registration_2_png">Close-up view of a printed Korean vehicle registration document showing two sections: 갑부 (ownership section) and 을부 (mortgage section). Official Korean government document with stamps, Korean text readable, organized layout with rows and columns. White desk background, clean documentary photography, natural lighting, 1:1 aspect ratio, photorealistic.</div>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-accent" onclick="copyText('prompt_1_car_registration_2_png', this)">📋 프롬프트 복사</button>
+            <button class="btn" onclick="copyPath('d:\\lightsail\\naverblog\\images\\260719\\1_car_registration_2.png', this)">💾 저장 경로 복사</button>
+            <a class="btn btn-chatgpt" href="https://chatgpt.com/?q=Close-up%20view%20of%20a%20printed%20Korean%20vehicle%20registration%20document%20showing%20two%20sections%3A%20%EA%B0%91%EB%B6%80%20%28ownership%20section%29%20and%20%EC%9D%84%EB%B6%80%20%28mortgage%20section%29.%20Official%20Korean%20government%20document%20with%20stamps%2C%20Korean%20text%20readable%2C%20organized%20layout%20with%20rows%20and%20columns.%20White%20desk%20background%2C%20clean%20documentary%20photography%2C%20natural%20lighting%2C%201%3A1%20aspect%20ratio%2C%20photorealistic." target="_blank">🤖 ChatGPT 열기</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="article-section">
+      <div class="article-header">
+        <div class="article-title">국민연금 예상수령액 조회하는 법과 가입내역·가입증명서 발급</div>
+        <div class="article-meta">원고 파일: cert_pension_check.html</div>
+      </div>
+
+      <div class="placeholder-card" data-filename="3_pension_check_1.png">
+        <div class="preview-box" id="preview-prompt_3_pension_check_1_png">
+          <span class="status-icon">📷</span>
+          <img src="images/260719/3_pension_check_1.png" data-original-src="images/260719/3_pension_check_1.png" alt="Preview" onload="imageLoaded('prompt_3_pension_check_1_png')" onerror="imageFailed('prompt_3_pension_check_1_png')">
+        </div>
+        <div class="info-box">
+          <div>
+            <div class="ph-meta">
+              <span class="ph-name">3_pension_check_1.png</span>
+              <span class="ph-badge" id="badge-prompt_3_pension_check_1_png">대기 중</span>
+            </div>
+            <div class="caption-text">설명: 스마트폰으로 국민연금 예상수령액을 조회하는 모습 / AI 제작 이미지</div>
+            <div class="prompt-box" id="prompt_3_pension_check_1_png">A Korean person in their 40s sitting at a cozy home, holding a smartphone displaying the National Pension Service mobile app (NPS 국민연금) showing an expected pension amount screen in Korean. Modern clean background, natural indoor lighting, relaxed atmosphere. Realistic lifestyle photography style, 1:1 aspect ratio, photorealistic.</div>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-accent" onclick="copyText('prompt_3_pension_check_1_png', this)">📋 프롬프트 복사</button>
+            <button class="btn" onclick="copyPath('d:\\lightsail\\naverblog\\images\\260719\\3_pension_check_1.png', this)">💾 저장 경로 복사</button>
+            <a class="btn btn-chatgpt" href="https://chatgpt.com/?q=A%20Korean%20person%20in%20their%2040s%20sitting%20at%20a%20cozy%20home%2C%20holding%20a%20smartphone%20displaying%20the%20National%20Pension%20Service%20mobile%20app%20%28NPS%20%EA%B5%AD%EB%AF%BC%EC%97%B0%EA%B8%88%29%20showing%20an%20expected%20pension%20amount%20screen%20in%20Korean.%20Modern%20clean%20background%2C%20natural%20indoor%20lighting%2C%20relaxed%20atmosphere.%20Realistic%20lifestyle%20photography%20style%2C%201%3A1%20aspect%20ratio%2C%20photorealistic." target="_blank">🤖 ChatGPT 열기</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="placeholder-card" data-filename="3_pension_check_2.png">
+        <div class="preview-box" id="preview-prompt_3_pension_check_2_png">
+          <span class="status-icon">📷</span>
+          <img src="images/260719/3_pension_check_2.png" data-original-src="images/260719/3_pension_check_2.png" alt="Preview" onload="imageLoaded('prompt_3_pension_check_2_png')" onerror="imageFailed('prompt_3_pension_check_2_png')">
+        </div>
+        <div class="info-box">
+          <div>
+            <div class="ph-meta">
+              <span class="ph-name">3_pension_check_2.png</span>
+              <span class="ph-badge" id="badge-prompt_3_pension_check_2_png">대기 중</span>
+            </div>
+            <div class="caption-text">설명: 국민연금 가입증명서 발급 완료 화면 / AI 제작 이미지</div>
+            <div class="prompt-box" id="prompt_3_pension_check_2_png">A printed Korean National Pension membership certificate (국민연금 가입증명서) document on a clean white desk. Official government document with the NPS blue logo, Korean text, official stamps. Clean professional document photography, natural soft lighting, 1:1 aspect ratio, photorealistic.</div>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-accent" onclick="copyText('prompt_3_pension_check_2_png', this)">📋 프롬프트 복사</button>
+            <button class="btn" onclick="copyPath('d:\\lightsail\\naverblog\\images\\260719\\3_pension_check_2.png', this)">💾 저장 경로 복사</button>
+            <a class="btn btn-chatgpt" href="https://chatgpt.com/?q=A%20printed%20Korean%20National%20Pension%20membership%20certificate%20%28%EA%B5%AD%EB%AF%BC%EC%97%B0%EA%B8%88%20%EA%B0%80%EC%9E%85%EC%A6%9D%EB%AA%85%EC%84%9C%29%20document%20on%20a%20clean%20white%20desk.%20Official%20government%20document%20with%20the%20NPS%20blue%20logo%2C%20Korean%20text%2C%20official%20stamps.%20Clean%20professional%20document%20photography%2C%20natural%20soft%20lighting%2C%201%3A1%20aspect%20ratio%2C%20photorealistic." target="_blank">🤖 ChatGPT 열기</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="article-section">
+      <div class="article-header">
+        <div class="article-title">어린이 국가예방접종 무료 대상과 2026 접종 일정, 예방접종도우미 조회법</div>
+        <div class="article-meta">원고 파일: gov_child_vaccination.html</div>
+      </div>
+
+      <div class="placeholder-card" data-filename="7_child_vaccination_1.png">
+        <div class="preview-box" id="preview-prompt_7_child_vaccination_1_png">
+          <span class="status-icon">📷</span>
+          <img src="images/260719/7_child_vaccination_1.png" data-original-src="images/260719/7_child_vaccination_1.png" alt="Preview" onload="imageLoaded('prompt_7_child_vaccination_1_png')" onerror="imageFailed('prompt_7_child_vaccination_1_png')">
+        </div>
+        <div class="info-box">
+          <div>
+            <div class="ph-meta">
+              <span class="ph-name">7_child_vaccination_1.png</span>
+              <span class="ph-badge" id="badge-prompt_7_child_vaccination_1_png">대기 중</span>
+            </div>
+            <div class="caption-text">설명: 소아과에서 국가예방접종을 맞는 어린이 / AI 제작 이미지</div>
+            <div class="prompt-box" id="prompt_7_child_vaccination_1_png">A friendly Korean pediatric clinic scene: a smiling doctor administering a vaccine injection to a young child (around 3-4 years old) sitting on a parent's lap. Bright clean clinic interior, Korean medical setting, reassuring atmosphere, child is calm. Realistic documentary photography style, warm lighting, 1:1 aspect ratio, photorealistic.</div>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-accent" onclick="copyText('prompt_7_child_vaccination_1_png', this)">📋 프롬프트 복사</button>
+            <button class="btn" onclick="copyPath('d:\\lightsail\\naverblog\\images\\260719\\7_child_vaccination_1.png', this)">💾 저장 경로 복사</button>
+            <a class="btn btn-chatgpt" href="https://chatgpt.com/?q=A%20friendly%20Korean%20pediatric%20clinic%20scene%3A%20a%20smiling%20doctor%20administering%20a%20vaccine%20injection%20to%20a%20young%20child%20%28around%203-4%20years%20old%29%20sitting%20on%20a%20parent%27s%20lap.%20Bright%20clean%20clinic%20interior%2C%20Korean%20medical%20setting%2C%20reassuring%20atmosphere%2C%20child%20is%20calm.%20Realistic%20documentary%20photography%20style%2C%20warm%20lighting%2C%201%3A1%20aspect%20ratio%2C%20photorealistic." target="_blank">🤖 ChatGPT 열기</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="placeholder-card" data-filename="7_child_vaccination_2.png">
+        <div class="preview-box" id="preview-prompt_7_child_vaccination_2_png">
+          <span class="status-icon">📷</span>
+          <img src="images/260719/7_child_vaccination_2.png" data-original-src="images/260719/7_child_vaccination_2.png" alt="Preview" onload="imageLoaded('prompt_7_child_vaccination_2_png')" onerror="imageFailed('prompt_7_child_vaccination_2_png')">
+        </div>
+        <div class="info-box">
+          <div>
+            <div class="ph-meta">
+              <span class="ph-name">7_child_vaccination_2.png</span>
+              <span class="ph-badge" id="badge-prompt_7_child_vaccination_2_png">대기 중</span>
+            </div>
+            <div class="caption-text">설명: 예방접종도우미 앱으로 자녀 접종 이력을 확인하는 부모 / AI 제작 이미지</div>
+            <div class="prompt-box" id="prompt_7_child_vaccination_2_png">A Korean parent viewing their child's vaccination record on a smartphone app (예방접종도우미 - National Immunization Portal). Screen shows a vaccination schedule and check marks for completed vaccines. Cozy home living room, natural daylight, parent looking at phone with gentle expression. Realistic lifestyle photography, 1:1 aspect ratio, photorealistic.</div>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-accent" onclick="copyText('prompt_7_child_vaccination_2_png', this)">📋 프롬프트 복사</button>
+            <button class="btn" onclick="copyPath('d:\\lightsail\\naverblog\\images\\260719\\7_child_vaccination_2.png', this)">💾 저장 경로 복사</button>
+            <a class="btn btn-chatgpt" href="https://chatgpt.com/?q=A%20Korean%20parent%20viewing%20their%20child%27s%20vaccination%20record%20on%20a%20smartphone%20app%20%28%EC%98%88%EB%B0%A9%EC%A0%91%EC%A2%85%EB%8F%84%EC%9A%B0%EB%AF%B8%20-%20National%20Immunization%20Portal%29.%20Screen%20shows%20a%20vaccination%20schedule%20and%20check%20marks%20for%20completed%20vaccines.%20Cozy%20home%20living%20room%2C%20natural%20daylight%2C%20parent%20looking%20at%20phone%20with%20gentle%20expression.%20Realistic%20lifestyle%20photography%2C%201%3A1%20aspect%20ratio%2C%20photorealistic." target="_blank">🤖 ChatGPT 열기</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="article-section">
+      <div class="article-header">
+        <div class="article-title">전기·가스 에너지캐시백 신청과 절약 환급 받는 법, 2026년 기준 정리</div>
+        <div class="article-meta">원고 파일: gov_energy_cashback.html</div>
+      </div>
+
+      <div class="placeholder-card" data-filename="5_energy_cashback_1.png">
+        <div class="preview-box" id="preview-prompt_5_energy_cashback_1_png">
+          <span class="status-icon">📷</span>
+          <img src="images/260719/5_energy_cashback_1.png" data-original-src="images/260719/5_energy_cashback_1.png" alt="Preview" onload="imageLoaded('prompt_5_energy_cashback_1_png')" onerror="imageFailed('prompt_5_energy_cashback_1_png')">
+        </div>
+        <div class="info-box">
+          <div>
+            <div class="ph-meta">
+              <span class="ph-name">5_energy_cashback_1.png</span>
+              <span class="ph-badge" id="badge-prompt_5_energy_cashback_1_png">대기 중</span>
+            </div>
+            <div class="caption-text">설명: 한전 ON 앱에서 에너지캐시백 신청·확인하는 모습 / AI 제작 이미지</div>
+            <div class="prompt-box" id="prompt_5_energy_cashback_1_png">A Korean family in a bright living room, one person using a smartphone to access the KEPCO (한전 ON) energy cashback app. The smartphone screen shows energy savings statistics and cashback amount. Modern clean home interior, natural lighting, happy atmosphere. Realistic lifestyle photography, 1:1 aspect ratio, photorealistic.</div>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-accent" onclick="copyText('prompt_5_energy_cashback_1_png', this)">📋 프롬프트 복사</button>
+            <button class="btn" onclick="copyPath('d:\\lightsail\\naverblog\\images\\260719\\5_energy_cashback_1.png', this)">💾 저장 경로 복사</button>
+            <a class="btn btn-chatgpt" href="https://chatgpt.com/?q=A%20Korean%20family%20in%20a%20bright%20living%20room%2C%20one%20person%20using%20a%20smartphone%20to%20access%20the%20KEPCO%20%28%ED%95%9C%EC%A0%84%20ON%29%20energy%20cashback%20app.%20The%20smartphone%20screen%20shows%20energy%20savings%20statistics%20and%20cashback%20amount.%20Modern%20clean%20home%20interior%2C%20natural%20lighting%2C%20happy%20atmosphere.%20Realistic%20lifestyle%20photography%2C%201%3A1%20aspect%20ratio%2C%20photorealistic." target="_blank">🤖 ChatGPT 열기</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="placeholder-card" data-filename="5_energy_cashback_2.png">
+        <div class="preview-box" id="preview-prompt_5_energy_cashback_2_png">
+          <span class="status-icon">📷</span>
+          <img src="images/260719/5_energy_cashback_2.png" data-original-src="images/260719/5_energy_cashback_2.png" alt="Preview" onload="imageLoaded('prompt_5_energy_cashback_2_png')" onerror="imageFailed('prompt_5_energy_cashback_2_png')">
+        </div>
+        <div class="info-box">
+          <div>
+            <div class="ph-meta">
+              <span class="ph-name">5_energy_cashback_2.png</span>
+              <span class="ph-badge" id="badge-prompt_5_energy_cashback_2_png">대기 중</span>
+            </div>
+            <div class="caption-text">설명: 에너지 사용량 절감 확인 화면과 전기요금 청구서 / AI 제작 이미지</div>
+            <div class="prompt-box" id="prompt_5_energy_cashback_2_png">A modern Korean household energy meter and electricity bill on a table, with a smartphone showing reduced electricity usage graph. Green energy saving concept. Subtle green color tones, natural indoor lighting, clean and minimal composition. Realistic photography style, 1:1 aspect ratio, photorealistic.</div>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-accent" onclick="copyText('prompt_5_energy_cashback_2_png', this)">📋 프롬프트 복사</button>
+            <button class="btn" onclick="copyPath('d:\\lightsail\\naverblog\\images\\260719\\5_energy_cashback_2.png', this)">💾 저장 경로 복사</button>
+            <a class="btn btn-chatgpt" href="https://chatgpt.com/?q=A%20modern%20Korean%20household%20energy%20meter%20and%20electricity%20bill%20on%20a%20table%2C%20with%20a%20smartphone%20showing%20reduced%20electricity%20usage%20graph.%20Green%20energy%20saving%20concept.%20Subtle%20green%20color%20tones%2C%20natural%20indoor%20lighting%2C%20clean%20and%20minimal%20composition.%20Realistic%20photography%20style%2C%201%3A1%20aspect%20ratio%2C%20photorealistic." target="_blank">🤖 ChatGPT 열기</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="article-section">
+      <div class="article-header">
+        <div class="article-title">여름 휴가철 고속도로 기름값 아끼는 알뜰주유소와 셀프주유 찾는 법</div>
+        <div class="article-meta">원고 파일: local_highway_fuel_saving.html</div>
+      </div>
+
+      <div class="placeholder-card" data-filename="6_fuel_saving_1.png">
+        <div class="preview-box" id="preview-prompt_6_fuel_saving_1_png">
+          <span class="status-icon">📷</span>
+          <img src="images/260719/6_fuel_saving_1.png" data-original-src="images/260719/6_fuel_saving_1.png" alt="Preview" onload="imageLoaded('prompt_6_fuel_saving_1_png')" onerror="imageFailed('prompt_6_fuel_saving_1_png')">
+        </div>
+        <div class="info-box">
+          <div>
+            <div class="ph-meta">
+              <span class="ph-name">6_fuel_saving_1.png</span>
+              <span class="ph-badge" id="badge-prompt_6_fuel_saving_1_png">대기 중</span>
+            </div>
+            <div class="caption-text">설명: 오피넷 앱으로 주변 주유소 유가를 비교하는 모습 / AI 제작 이미지</div>
+            <div class="prompt-box" id="prompt_6_fuel_saving_1_png">A person using smartphone to check gas station prices on the Opinet app (오피넷) while sitting in a parked car. The phone screen shows a map with fuel prices displayed at nearby Korean gas stations. Bright daytime light through car window, realistic lifestyle photography style, 1:1 aspect ratio, photorealistic.</div>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-accent" onclick="copyText('prompt_6_fuel_saving_1_png', this)">📋 프롬프트 복사</button>
+            <button class="btn" onclick="copyPath('d:\\lightsail\\naverblog\\images\\260719\\6_fuel_saving_1.png', this)">💾 저장 경로 복사</button>
+            <a class="btn btn-chatgpt" href="https://chatgpt.com/?q=A%20person%20using%20smartphone%20to%20check%20gas%20station%20prices%20on%20the%20Opinet%20app%20%28%EC%98%A4%ED%94%BC%EB%84%B7%29%20while%20sitting%20in%20a%20parked%20car.%20The%20phone%20screen%20shows%20a%20map%20with%20fuel%20prices%20displayed%20at%20nearby%20Korean%20gas%20stations.%20Bright%20daytime%20light%20through%20car%20window%2C%20realistic%20lifestyle%20photography%20style%2C%201%3A1%20aspect%20ratio%2C%20photorealistic." target="_blank">🤖 ChatGPT 열기</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="placeholder-card" data-filename="6_fuel_saving_2.png">
+        <div class="preview-box" id="preview-prompt_6_fuel_saving_2_png">
+          <span class="status-icon">📷</span>
+          <img src="images/260719/6_fuel_saving_2.png" data-original-src="images/260719/6_fuel_saving_2.png" alt="Preview" onload="imageLoaded('prompt_6_fuel_saving_2_png')" onerror="imageFailed('prompt_6_fuel_saving_2_png')">
+        </div>
+        <div class="info-box">
+          <div>
+            <div class="ph-meta">
+              <span class="ph-name">6_fuel_saving_2.png</span>
+              <span class="ph-badge" id="badge-prompt_6_fuel_saving_2_png">대기 중</span>
+            </div>
+            <div class="caption-text">설명: 셀프주유소에서 직접 주유하는 모습 / AI 제작 이미지</div>
+            <div class="prompt-box" id="prompt_6_fuel_saving_2_png">A Korean person refueling their car at a self-service (셀프주유) gas station. Clearly visible self-service pump with digital display, the person holding the fuel nozzle. Sunny summer day, clean modern gas station, bright colors. Realistic documentary photography style, 1:1 aspect ratio, photorealistic.</div>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-accent" onclick="copyText('prompt_6_fuel_saving_2_png', this)">📋 프롬프트 복사</button>
+            <button class="btn" onclick="copyPath('d:\\lightsail\\naverblog\\images\\260719\\6_fuel_saving_2.png', this)">💾 저장 경로 복사</button>
+            <a class="btn btn-chatgpt" href="https://chatgpt.com/?q=A%20Korean%20person%20refueling%20their%20car%20at%20a%20self-service%20%28%EC%85%80%ED%94%84%EC%A3%BC%EC%9C%A0%29%20gas%20station.%20Clearly%20visible%20self-service%20pump%20with%20digital%20display%2C%20the%20person%20holding%20the%20fuel%20nozzle.%20Sunny%20summer%20day%2C%20clean%20modern%20gas%20station%2C%20bright%20colors.%20Realistic%20documentary%20photography%20style%2C%201%3A1%20aspect%20ratio%2C%20photorealistic." target="_blank">🤖 ChatGPT 열기</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="article-section">
+      <div class="article-header">
+        <div class="article-title">고속도로 졸음쉼터·수유실·반려동물 쉼터 위치 찾는 법과 이용 팁</div>
+        <div class="article-meta">원고 파일: local_highway_rest_area.html</div>
+      </div>
+
+      <div class="placeholder-card" data-filename="4_highway_rest_1.png">
+        <div class="preview-box" id="preview-prompt_4_highway_rest_1_png">
+          <span class="status-icon">📷</span>
+          <img src="images/260719/4_highway_rest_1.png" data-original-src="images/260719/4_highway_rest_1.png" alt="Preview" onload="imageLoaded('prompt_4_highway_rest_1_png')" onerror="imageFailed('prompt_4_highway_rest_1_png')">
+        </div>
+        <div class="info-box">
+          <div>
+            <div class="ph-meta">
+              <span class="ph-name">4_highway_rest_1.png</span>
+              <span class="ph-badge" id="badge-prompt_4_highway_rest_1_png">대기 중</span>
+            </div>
+            <div class="caption-text">설명: 고속도로 졸음쉼터 전경 — 간단한 주차공간과 화장실 / AI 제작 이미지</div>
+            <div class="prompt-box" id="prompt_4_highway_rest_1_png">A Korean highway rest area (졸음쉼터) with several cars parked. Small compact parking lot with green trees, wooden benches, simple toilet building, blue signage. Clear summer sky, highway visible in background. Realistic documentary photography style, natural daytime lighting, 1:1 aspect ratio, photorealistic.</div>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-accent" onclick="copyText('prompt_4_highway_rest_1_png', this)">📋 프롬프트 복사</button>
+            <button class="btn" onclick="copyPath('d:\\lightsail\\naverblog\\images\\260719\\4_highway_rest_1.png', this)">💾 저장 경로 복사</button>
+            <a class="btn btn-chatgpt" href="https://chatgpt.com/?q=A%20Korean%20highway%20rest%20area%20%28%EC%A1%B8%EC%9D%8C%EC%89%BC%ED%84%B0%29%20with%20several%20cars%20parked.%20Small%20compact%20parking%20lot%20with%20green%20trees%2C%20wooden%20benches%2C%20simple%20toilet%20building%2C%20blue%20signage.%20Clear%20summer%20sky%2C%20highway%20visible%20in%20background.%20Realistic%20documentary%20photography%20style%2C%20natural%20daytime%20lighting%2C%201%3A1%20aspect%20ratio%2C%20photorealistic." target="_blank">🤖 ChatGPT 열기</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="placeholder-card" data-filename="4_highway_rest_2.png">
+        <div class="preview-box" id="preview-prompt_4_highway_rest_2_png">
+          <span class="status-icon">📷</span>
+          <img src="images/260719/4_highway_rest_2.png" data-original-src="images/260719/4_highway_rest_2.png" alt="Preview" onload="imageLoaded('prompt_4_highway_rest_2_png')" onerror="imageFailed('prompt_4_highway_rest_2_png')">
+        </div>
+        <div class="info-box">
+          <div>
+            <div class="ph-meta">
+              <span class="ph-name">4_highway_rest_2.png</span>
+              <span class="ph-badge" id="badge-prompt_4_highway_rest_2_png">대기 중</span>
+            </div>
+            <div class="caption-text">설명: 고속도로 휴게소 수유실 내부 / AI 제작 이미지</div>
+            <div class="prompt-box" id="prompt_4_highway_rest_2_png">Inside a clean and bright Korean highway service area nursing room (수유실/모유수유실). Comfortable chairs, baby changing table, warm lighting, clean baby-care facilities, Korean signage on the wall. Welcoming family-friendly atmosphere. Realistic interior photography, 1:1 aspect ratio, photorealistic.</div>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-accent" onclick="copyText('prompt_4_highway_rest_2_png', this)">📋 프롬프트 복사</button>
+            <button class="btn" onclick="copyPath('d:\\lightsail\\naverblog\\images\\260719\\4_highway_rest_2.png', this)">💾 저장 경로 복사</button>
+            <a class="btn btn-chatgpt" href="https://chatgpt.com/?q=Inside%20a%20clean%20and%20bright%20Korean%20highway%20service%20area%20nursing%20room%20%28%EC%88%98%EC%9C%A0%EC%8B%A4/%EB%AA%A8%EC%9C%A0%EC%88%98%EC%9C%A0%EC%8B%A4%29.%20Comfortable%20chairs%2C%20baby%20changing%20table%2C%20warm%20lighting%2C%20clean%20baby-care%20facilities%2C%20Korean%20signage%20on%20the%20wall.%20Welcoming%20family-friendly%20atmosphere.%20Realistic%20interior%20photography%2C%201%3A1%20aspect%20ratio%2C%20photorealistic." target="_blank">🤖 ChatGPT 열기</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const totalElements = document.querySelectorAll('.placeholder-card').length;
+  document.getElementById('stat-total').innerText = totalElements;
+  let completedImages = new Set();
+
+  function updateStats() {
+    const completedCount = completedImages.size;
+    document.getElementById('stat-completed').innerText = completedCount;
+    document.getElementById('stat-pending').innerText = totalElements - completedCount;
+  }
+
+  function imageLoaded(phId) {
+    if (completedImages.has(phId)) return;
+    completedImages.add(phId);
+    
+    const preview = document.getElementById('preview-' + phId);
+    preview.classList.add('loaded');
+    
+    const badge = document.getElementById('badge-' + phId);
+    badge.innerText = "등록 완료";
+    badge.classList.add('loaded');
+    
+    updateStats();
+  }
+
+  function imageFailed(phId) {
+    // If it failed and was previously marked loaded (e.g. deleted), remove it
+    if (completedImages.has(phId)) {
+      completedImages.delete(phId);
+      const preview = document.getElementById('preview-' + phId);
+      preview.classList.remove('loaded');
+      const badge = document.getElementById('badge-' + phId);
+      badge.innerText = "대기 중";
+      badge.classList.remove('loaded');
+      updateStats();
+    }
+  }
+
+  // Periodic checker for pending images
+  setInterval(() => {
+    const cards = document.querySelectorAll('.placeholder-card');
+    cards.forEach(card => {
+      const phId = 'prompt_' + card.getAttribute('data-filename').replace('.', '_');
+      if (!completedImages.has(phId)) {
+        const img = card.querySelector('.preview-box img');
+        if (img) {
+          const originalSrc = img.getAttribute('data-original-src') || img.src.split('?')[0];
+          img.src = originalSrc + '?t=' + Date.now();
+        }
+      }
+    });
+  }, 2500); // Check every 2.5 seconds
+
+  function openAllTabs(service) {
+    const pendingCards = Array.from(document.querySelectorAll('.placeholder-card')).filter(card => {
+      const phId = 'prompt_' + card.getAttribute('data-filename').replace('.', '_');
+      return !completedImages.has(phId);
+    });
+    
+    if (pendingCards.length === 0) {
+      alert("대기 중인 이미지가 없습니다!");
+      return;
+    }
+    
+    if (!confirm(`남은 ${pendingCards.length}개의 이미지 제작을 위해 탭을 한꺼번에 여시겠습니까?
+(처음 실행 시 브라우저 상단에서 '팝업 및 리디렉션 허용'을 꼭 눌러주세요)`)) {
+      return;
+    }
+    
+    pendingCards.forEach((card, index) => {
+      const phId = 'prompt_' + card.getAttribute('data-filename').replace('.', '_');
+      const prompt = document.getElementById(phId).innerText;
+      
+      let url = '';
+      if (service === 'chatgpt') {
+        url = 'https://chatgpt.com/?q=' + encodeURIComponent(prompt);
+      } else {
+        url = 'https://gemini.google.com/app';
+      }
+      
+      // Delay tabs slightly to prevent browser blocking or freezing
+      setTimeout(() => {
+        window.open(url, '_blank');
+      }, index * 250);
+    });
+  }
+
+  function copyText(id, btn) {
+    const text = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      const originalText = btn.innerText;
+      btn.innerText = "✔ 프롬프트 복사 완료!";
+      btn.style.background = "#059669";
+      btn.style.color = "#fff";
+      setTimeout(() => {
+        btn.innerText = originalText;
+        btn.style.background = "";
+        btn.style.color = "";
+      }, 1500);
+    });
+  }
+
+  function copyPath(pathStr, btn) {
+    navigator.clipboard.writeText(pathStr).then(() => {
+      const originalText = btn.innerText;
+      btn.innerText = "✔ 경로 복사 완료!";
+      btn.style.background = "#2563eb";
+      btn.style.color = "#fff";
+      setTimeout(() => {
+        btn.innerText = originalText;
+        btn.style.background = "";
+        btn.style.color = "";
+      }, 1500);
+    });
+  }
+
+  function copyCmd() {
+    const text = document.getElementById('cmd-text').innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      alert("명령어가 복사되었습니다. 터미널에 붙여넣어 실행하세요.");
+    });
+  }
+
+  // Initial stats call
+  updateStats();
+</script>
+</body>
+</html>
