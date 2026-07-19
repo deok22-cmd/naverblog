@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>김치냉장고 여름철 쉰내·군내 잡는 온도 설정과 탈취 순서</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #1565c0; padding-bottom: 12px; color: #0d47a1; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e3f2fd; padding: 12px 15px; border-left: 6px solid #1565c0; margin-top: 50px; color: #0d47a1; }
+  .intro-box { background: #e8f4fd; border: 2px solid #90caf9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #1565c0; color: #fff; padding: 10px; font-size: 0.9em; }
+  .info-table td { padding: 10px; border-bottom: 1px solid #eee; font-size: 0.95em; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #ccc; border-radius: 8px; padding: 30px 20px; text-align: center; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: bold; }
+  .ph-file { font-size: 0.8em; color: #999; font-family: monospace; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 12px; border-radius: 6px; font-size: 0.82em; text-align: left; white-space: pre-wrap; margin: 10px 0; }
+  .copy-btn { background: #1565c0; color: #fff; border: none; padding: 8px 20px; border-radius: 5px; cursor: pointer; font-size: 0.9em; }
+  .img-caption { text-align: center; font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText; btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#1565c0'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>김치냉장고 여름철 쉰내·군내 잡는 온도 설정과 탈취 순서</h1>
+
+<div class="intro-box">
+여름이 되면 김치냉장고 안에서 올라오는 <strong>쉰내</strong>나 <strong>군내</strong>로 고민하시는 분들이 많습니다. 기온이 오르면 냉장고 주변 온도도 높아져 냉각 효율이 떨어지고, 그만큼 내부 온도 관리가 어려워집니다. 올바른 <strong>온도 설정</strong>과 체계적인 <strong>탈취 순서</strong>만 알아도 여름철 냄새 문제 대부분을 해결할 수 있습니다. 브랜드(위니아·삼성·LG)별 특성에 맞게 정리했습니다.
+</div>
+
+<h2>01. 여름에 김치냉장고에서 냄새가 나는 이유</h2>
+
+김치냉장고 냄새의 원인은 대부분 <strong>세 가지</strong>입니다. 온도 관리 실패, 내벽·패킹 오염, 그리고 보관 중인 김치 자체의 과숙성입니다.<br><br>
+<strong>첫째, 여름철 냉각 효율 저하</strong>: 실내 기온이 30℃를 넘으면 냉장고 외부와 내부의 온도 차가 커집니다. 이 과정에서 모터에 부하가 걸리고, 냉장고 문을 자주 열면 차가운 공기가 빠져나가 내부 온도가 순간적으로 올라갑니다. 이 반복이 과숙성을 가속합니다.<br><br>
+<strong>둘째, 내벽·고무패킹 오염</strong>: 문짝의 고무 패킹은 김칫국물이나 이물질이 끼기 좋은 구조입니다. 이 부분이 오염된 채 방치되면 세균이 번식하며 특유의 군내를 발생시킵니다. 내벽에 김칫물이 튄 채 굳어도 마찬가지입니다.<br><br>
+<strong>셋째, 김치 상태</strong>: 여름에 급속도로 익은 김치는 시큼한 냄새가 더욱 강해집니다. 냉장고가 정상 작동 중이어도 익는 속도가 빠른 여름에는 냄새가 더 두드러집니다.
+
+<h2>02. 브랜드별 여름 권장 온도 설정</h2>
+
+김치냉장고 온도 설정은 브랜드마다 표기 방식이 다릅니다. 대부분 숫자(℃) 또는 '약·중·강', '1~5단계' 방식으로 표시됩니다.<br><br>
+
+<table class="info-table">
+  <tr><th>브랜드</th><th>여름 권장 설정</th><th>특이사항</th></tr>
+  <tr><td>위니아(딤채)</td><td style="background:#e3f2fd;"><strong>-1~1℃</strong> (김치 보관 모드)</td><td>딤채 고유 발효 모드 활용 가능</td></tr>
+  <tr><td>삼성 비스포크</td><td>-2~0℃</td><td style="background:#e3f2fd;">AI 자동 모드 권장</td></tr>
+  <tr><td>LG 디오스</td><td style="background:#e3f2fd;">-1~0℃</td><td>QuickFreeze 기능으로 초기 냉각</td></tr>
+  <tr><td>공통 원칙</td><td colspan="2" style="background:#fff8e1;">여름에는 평소보다 1~2℃ 낮게 설정하고, 문 개폐 횟수 최소화</td></tr>
+</table>
+<br>
+여름에는 냉장고 주변 환경 온도가 높기 때문에, 설정 온도를 조금 낮게 유지하는 것이 김치 상태 유지에 유리합니다. 단, 너무 낮게 설정(-4℃ 이하)하면 김치가 얼 수 있으니 주의하세요. 제조사마다 명칭이 다르므로 사용설명서의 '여름 사용 안내' 항목을 반드시 확인하세요.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260720/6_fridge_1.png</span></div>
+    <pre class="prompt-text" id="prompt-6-1">Interior of a modern Korean kimchi refrigerator (김치냉장고), opened door showing organized storage containers of kimchi and fermented vegetables, clean white LED lighting inside, organized kimchi containers with labels visible, fresh clean appearance, no bad odors implied by the neat organized state. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">여름 김치냉장고 내부 정리 상태 — 정리 정돈과 온도 관리가 냄새 예방의 핵심 / AI 제작 이미지</div>
+</div>
+
+<h2>03. 냄새 제거 1단계 — 김치 꺼내기와 내부 비우기</h2>
+
+본격 탈취를 시작하기 전, 냉장고를 완전히 비워야 합니다.<br><br>
+① 모든 김치와 내용물을 꺼냅니다. 오래된 김치(6개월 이상)는 이번 기회에 처리 여부를 판단합니다. 지나치게 시어진 김치는 부침개·볶음밥·찌개용으로 활용하거나 정리합니다.<br>
+② 내부 선반·서랍을 모두 분리합니다. 삼성·LG 등 대부분의 제품은 서랍과 선반이 분리됩니다.<br>
+③ 냉장고를 15~20분간 문을 열어 내부 환기합니다. 동시에 내부 온도가 상온으로 올라와야 청소와 탈취가 더 효과적입니다.<br><br>
+이 과정에서 냄새의 원인이 어디에 집중되어 있는지 확인할 수 있습니다. 내벽 전체에서 냄새가 나는지, 아니면 특정 서랍이나 코너에서 집중적으로 나는지 파악해두면 탈취 작업이 수월합니다.
+
+<h2>04. 냄새 제거 2단계 — 내벽과 패킹 청소</h2>
+
+탈취의 핵심은 오염 제거입니다. 냄새 흡착제를 사용하기 전에 오염원 자체를 제거해야 효과가 배가됩니다.<br><br>
+<strong>내벽 청소</strong>: 미지근한 물에 식초 2~3 큰술을 섞어 걸레나 키친타월에 적셔 내벽 전체를 닦습니다. 식초의 아세트산이 김칫물 냄새의 유기산 성분을 중화하는 효과가 있습니다. 구석진 코너와 선반 홈을 면봉으로 꼼꼼히 닦아내세요.<br><br>
+<strong>고무 패킹 청소</strong>: 문 주변 고무 패킹은 냄새의 핵심 온상입니다. 오래된 칫솔에 베이킹소다를 묻혀 패킹 안쪽을 꼼꼼히 문질러 닦으세요. 김칫물이 굳어 있다면 따뜻한 물에 잠시 불린 뒤 닦으면 잘 지워집니다.<br><br>
+<strong>서랍·선반 세척</strong>: 분리된 서랍과 선반은 싱크대에서 중성세제로 세척한 뒤 완전히 말립니다. 물기가 남은 채 다시 넣으면 세균 번식의 원인이 됩니다. 여름 더위를 이용해 그늘에서 30분 이상 건조하면 빠릅니다.
+
+<h2>05. 냄새 제거 3단계 — 탈취제 선택과 배치</h2>
+
+내벽 청소 후 탈취제를 배치합니다. 소재별 효과와 특성이 다릅니다.<br><br>
+<strong>녹차·숯 탈취제</strong>: 김치냉장고 전용으로 가장 많이 쓰이는 방식입니다. 위니아 딤채 정품 탈취 필터나 숯 블록을 냉장고 내 구석에 배치하면 효과가 좋습니다. 3~6개월마다 교체하거나, 숯은 햇빛에 건조해 재사용할 수 있습니다.<br><br>
+<strong>커피 찌꺼기</strong>: 드립 커피를 내리고 남은 찌꺼기를 작은 그릇에 담아 냉장고 안에 넣으면 탈취 효과가 있습니다. 커피의 활성탄 성분이 냄새 분자를 흡착합니다. 2~3일 후 교체합니다.<br><br>
+<strong>베이킹소다</strong>: 개봉한 베이킹소다를 컵에 담아 넣어도 냄새 흡착 효과가 있습니다. 한 달 정도 사용 후 교체하세요. 사용 후의 베이킹소다는 싱크대 탈취나 청소용으로 재활용할 수 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260720/6_fridge_2.png</span></div>
+    <pre class="prompt-text" id="prompt-6-2">Korean household cleaning scene, hands wearing yellow rubber gloves wiping the inside of a white refrigerator with a cloth, visible rubber door seal being cleaned, small container of baking soda nearby, bright kitchen setting, clean and organized home feel. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">고무 패킹과 내벽 청소가 탈취의 핵심 — 베이킹소다·식초가 효과적 / AI 제작 이미지</div>
+</div>
+
+<h2>06. 냄새 재발 방지 — 여름 관리 루틴</h2>
+
+탈취 후 냄새가 다시 생기지 않도록 관리하는 것이 중요합니다. 여름철 김치냉장고 관리 루틴을 정리했습니다.<br><br>
+<strong>월 1회</strong>: 내벽 간단 닦기 + 탈취제 상태 확인. 식초물로 닦아두면 냄새 예방 효과가 있습니다.<br><br>
+<strong>문 개폐 최소화</strong>: 여름에는 문을 열 때마다 차가운 공기가 빠져나가고 따뜻한 공기가 들어와 모터 부하와 내부 온도 상승이 가속됩니다. 필요한 김치는 한 번에 꺼내고 문을 빨리 닫으세요.<br><br>
+<strong>김치 용기 뚜껑 밀폐 확인</strong>: 완벽히 닫히지 않은 용기에서 냄새가 새어 나와 냉장고 전체로 퍼지는 경우가 많습니다. 뚜껑이 헐렁하거나 오래된 용기는 새것으로 교체하거나 속 뚜껑을 추가하세요.<br><br>
+<strong>냉장고 설치 위치</strong>: 김치냉장고는 직사광선이 닿지 않고 통풍이 잘 되는 위치에 두어야 합니다. 냉장고 뒤와 옆면은 최소 10cm 이상 간격을 두어 방열이 원활하게 이루어지도록 하세요.
+
+<h2>07. 제조사별 공식 여름 관리 권장 사항</h2>
+
+각 제조사도 여름철 김치냉장고 관리에 관한 가이드를 제공합니다.<br><br>
+<strong>위니아(딤채)</strong>: 여름(6~8월)에 '냉장 보관' 온도를 -1~0℃로 설정 권장. 딤채 전용 탈취 카트리지(마쿡 정품) 3~6개월마다 교체.<br><br>
+<strong>삼성</strong>: 비스포크 김치냉장고는 AI 에너지 절약 모드를 활성화하면 여름철 자동 온도 최적화가 이루어집니다. 앱(SmartThings)에서 온도 원격 모니터링 가능.<br><br>
+<strong>LG</strong>: 여름에는 '빠른 냉각(Quick Freeze)' 기능을 사용해 내부 온도를 단시간에 낮추는 것을 권장합니다. 문 개폐 후 빠른 냉각 모드를 잠깐 사용하면 온도 회복이 빠릅니다.<br><br>
+제조사별 공식 안내는 각 브랜드 고객 서비스 센터 또는 제품 사용설명서에서 확인하세요.
+
+<h2>08. 여름 장마철 추가 주의사항</h2>
+
+장마철(7~8월)에는 습도가 높아져 냉장고 관리에 추가 주의가 필요합니다.<br><br>
+<strong>내부 결로 발생</strong>: 습도 높은 날 문을 자주 열면 냉장고 내부에 결로가 생길 수 있습니다. 결로로 고인 물이 세균과 곰팡이의 번식 환경을 만듭니다. 특히 서랍 아래 구석 부분을 주기적으로 닦아 물기를 제거하세요.<br><br>
+<strong>외부 제습</strong>: 냉장고를 놓은 공간의 습도가 너무 높으면 냉장고 외부에 물방울이 맺히고 모터에 부담이 됩니다. 제습기나 에어컨으로 실내 습도를 50~60%로 유지하면 냉장고 효율과 수명에도 좋습니다.
+
+<h2>09. 요약 — 여름 김치냉장고 냄새 해결 순서 정리</h2>
+
+쉰내·군내 문제를 단번에 해결하는 실전 순서를 한눈에 정리합니다.<br><br>
+<strong>Step 1. 비우기</strong>: 김치 전체 꺼내기 + 선반·서랍 분리, 15분 문 열어 환기<br>
+<strong>Step 2. 청소</strong>: 식초물로 내벽 닦기 + 베이킹소다 칫솔로 패킹 청소 + 서랍 세척 후 완전 건조<br>
+<strong>Step 3. 탈취제 배치</strong>: 숯·녹차 탈취제 또는 커피 찌꺼기·베이킹소다 배치<br>
+<strong>Step 4. 온도 재설정</strong>: 브랜드별 여름 권장 온도(-1~0℃)로 재설정<br>
+<strong>Step 5. 재발 방지</strong>: 월 1회 내벽 닦기 + 탈취제 교체 + 용기 뚜껑 밀폐 확인<br><br>
+이 순서대로 따라 하면 대부분의 여름 김치냉장고 냄새 문제는 해결됩니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260719/travel_taebaek_geomnyongso.html">태백 검룡소, 한강 발원지 숲길과 여름 냉기 트레킹은 어떤가요?</a></li>
+    <li><a href="../260719/local_highway_rest_area.html">고속도로 휴게소 알뜰 이용법, 인기 먹거리와 편의 시설 총정리</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#김치냉장고냄새</span>
+  <span class="tag">#여름김치냉장고</span>
+  <span class="tag">#쉰내제거</span>
+  <span class="tag">#군내탈취</span>
+  <span class="tag">#김치냉장고온도설정</span>
+  <span class="tag">#딤채여름관리</span>
+  <span class="tag">#냉장고탈취제</span>
+  <span class="tag">#베이킹소다활용</span>
+  <span class="tag">#여름가전관리</span>
+  <span class="tag">#김치냉장고청소</span>
+</div>
+</body>
+</html>
