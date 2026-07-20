@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #1565c0; padding-bottom: 12px; color: #0d47a1; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e3f2fd; padding: 12px 15px; border-left: 6px solid #1565c0; margin-top: 50px; color: #0d47a1; }
+  .intro-box { background: #f0f7ff; border: 2px solid #bbdefb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .step-box { border-left: 4px solid #1565c0; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 18px 20px; border-radius: 8px; margin: 20px 0; }
+  .warn-box { background: #fff3e0; border: 1px solid #fb8c00; padding: 16px 20px; border-radius: 8px; margin: 20px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #1565c0; color: #fff; padding: 10px; font-size: 0.95em; }
+  .info-table td { padding: 10px 12px; border-bottom: 1px solid #e3f2fd; font-size: 0.95em; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f8f8f8; border: 2px dashed #bbdefb; border-radius: 10px; padding: 20px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 700; color: #1565c0; }
+  .ph-file { font-size: 0.8em; color: #999; font-family: monospace; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 12px; font-size: 0.85em; color: #444; white-space: pre-wrap; line-height: 1.6; }
+  .copy-btn { background: #1565c0; color: #fff; border: none; border-radius: 5px; padding: 8px 16px; cursor: pointer; margin-top: 10px; font-size: 0.9em; }
+  .img-caption { font-size: 0.88em; color: #777; margin-top: 8px; font-style: italic; text-align: center; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#1976d2";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#1565c0"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>에어컨 많이 튼 8월, 전기요금 폭탄 미리 조회하고 예상액 계산하는 법</h1>
+
+<div class="intro-box">
+7월 말부터 8월은 에어컨 사용이 집중되는 시기입니다. 문제는 전기요금이 <strong>누진제 구조</strong>로 되어 있어, 사용량이 조금만 늘어도 요금이 급격히 오를 수 있다는 점입니다.<br><br>
+고지서가 날아오기 전에 내 예상 요금을 미리 확인하고 대비할 수 있는 방법이 있습니다. 한국전력(한전) 공식 앱·사이트에서 당월 사용량과 예상 요금을 실시간으로 조회할 수 있으며, 한전에서 제공하는 계산기로 다음 달 예상액도 뽑아볼 수 있습니다.<br><br>
+이 글에서는 전기요금 미리 조회하는 방법, 누진제 구조 이해, 여름철 절전 팁까지 정리해 드립니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260721/6_electric_bill_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-1">Korean household living room in summer with air conditioner running, visible electric meter or smart meter on the wall, smartphone showing electricity bill app, warm yellow ambient light contrasting with cool blue AC airflow, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">여름철 에어컨 가동 중인 가정 — 누진제 전기요금이 얼마나 나올지 미리 확인해야 합니다 / AI 제작 이미지</div>
+</div>
+
+<h2>① 주택용 전기요금 누진제란 무엇인가 — 왜 여름에 폭탄이 되나</h2>
+
+주택용 전기요금은 단순히 사용량×단가가 아니라 <strong>누진제</strong>로 계산됩니다. 사용량이 많을수록 단가가 높아지는 구조입니다.<br><br>
+
+<table class="info-table">
+  <tr><th>월 사용량 구간</th><th>기본요금(원/월)</th><th>전력량요금(원/kWh)</th></tr>
+  <tr><td style="background:#f0f7ff;">200kWh 이하</td><td style="background:#f0f7ff;">910</td><td style="background:#f0f7ff;">120.0</td></tr>
+  <tr><td style="background:#fff;">201~400kWh</td><td style="background:#fff;">1,600</td><td style="background:#fff;">214.6</td></tr>
+  <tr><td style="background:#f0f7ff;">400kWh 초과</td><td style="background:#f0f7ff;">7,300</td><td style="background:#f0f7ff;">307.3</td></tr>
+</table>
+
+※ 상기 요금은 한전 주택용 저압 기준이며, 부가가치세·전력산업기반기금 등이 추가됩니다. 정확한 최신 요금은 한전 공식 사이트(kepco.co.kr)에서 확인하세요.<br><br>
+
+예를 들어 평소 150kWh 사용하다가 에어컨 사용으로 350kWh가 되면, 200kWh까지는 낮은 단가, 그 이상은 높은 단가가 적용되므로 요금이 선형적으로 오르지 않고 급격히 뜁니다. 400kWh를 넘기면 기본요금도 껑충 뜁니다.
+
+<h2>② 한전 앱(한전ON)에서 당월 사용량·예상 요금 실시간 조회</h2>
+
+<div class="step-box">
+<strong>한전ON 앱으로 당월 예상 요금 확인하는 법</strong><br><br>
+1. 앱스토어·구글플레이에서 <strong>「한전ON」</strong> 앱 설치<br>
+2. 고객 번호 또는 주소로 회원가입 또는 간편 조회<br>
+3. 홈 화면에서 <strong>「이번 달 사용 현황」</strong> 또는 「전기요금 미리 보기」 클릭<br>
+4. 당월 누적 사용량(kWh)과 현재까지의 예상 요금 확인<br>
+5. 남은 일수 예측 포함 이번 달 예상 총 요금도 표시됨<br><br>
+※ 원격검침 스마트 계량기 설치 가구는 실시간에 가까운 데이터 제공, 아날로그 계량기는 검침일 기준 데이터
+</div>
+
+한전ON 앱의 가장 유용한 기능은 <strong>일별 사용량 그래프</strong>입니다. 에어컨을 사용한 날과 그렇지 않은 날의 사용량 차이를 직관적으로 비교할 수 있어, 어느 날에 얼마나 소비했는지 파악하기 좋습니다.<br><br>
+
+앱이 불편하다면 <strong>한전 홈페이지(kepco.co.kr)</strong>에서도 동일한 기능을 이용할 수 있습니다. 공인인증서 없이 고객 번호로 간단히 로그인 가능합니다.
+
+<h2>③ 한전 전기요금 계산기 — 다음 달 예상액 직접 뽑아보기</h2>
+
+<div class="step-box">
+<strong>한전 홈페이지 요금 계산기 사용법</strong><br><br>
+1. kepco.co.kr 접속 후 「요금 계산기」 메뉴 선택<br>
+2. <strong>「주택용(저압)」</strong> 또는 「주택용(고압)」 선택 (아파트 단지 전체 고압 계약이면 고압 해당)<br>
+3. 예상 사용량(kWh) 입력<br>
+4. 계산 클릭 → 기본요금·전력량요금·부가세·기반기금 등 세부 내역 포함 총 요금 확인<br><br>
+※ 에어컨 1대 소비전력 약 1kW 기준, 하루 8시간 × 30일 = 240kWh 추가 사용량 예상
+</div>
+
+계산기를 통해 에어컨 사용량을 다르게 넣어 보면서 구간별 요금 차이를 직접 확인해 보세요. <strong>"200kWh를 넘지 않으면 요금이 훨씬 적게 나온다"</strong>는 것을 숫자로 체감하면 절전 의욕이 생깁니다.<br><br>
+
+특히 200kWh 구간과 400kWh 구간의 경계선에서 1kWh 차이가 총 요금에서 큰 차이를 만들 수 있으므로, 이 경계 근처라면 사용량을 조금 줄이는 것만으로도 요금이 크게 달라질 수 있습니다.
+
+<h2>④ 에너지캐시백 — 절전하면 현금으로 돌려받는 제도</h2>
+
+<div class="step-box">
+<strong>한전 에너지캐시백 제도 신청법</strong><br><br>
+• <strong>제도 개요</strong>: 전년도 동월 대비 사용량 감축 시 절감량에 따라 캐시백 환급<br>
+• <strong>신청 방법</strong>: 한전ON 앱 또는 kepco.co.kr에서 「에너지캐시백」 메뉴<br>
+• <strong>환급 조건</strong>: 전년 동월 대비 3% 이상 감소 시 차등 지급<br>
+• <strong>지급 방식</strong>: 다음 달 전기요금 차감 또는 계좌 이체<br><br>
+※ 신청은 매년 필요하므로, 아직 신청 안 하셨다면 지금 바로 신청해 두세요
+</div>
+
+에너지캐시백은 절전 행동에 금전적 보상을 주는 제도입니다. 작년 여름보다 에어컨을 조금만 덜 틀어도 환급이 발생할 수 있으니 신청해 두지 않으면 손해입니다. 한전ON 앱에서 신청까지 3분이면 충분합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260721/6_electric_bill_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-2">Infographic-style illustration showing Korean electricity bill breakdown with tiered pricing structure (누진제), bar chart showing kWh usage vs cost, colorful clean design with Korean utility bill elements, blue and orange color scheme, photorealistic infographic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">전기요금 누진제 구조 — 구간이 올라갈수록 단가가 급격히 높아집니다 / AI 제작 이미지</div>
+</div>
+
+<h2>⑤ 여름철 에어컨 절전 — 실제로 효과 있는 방법만</h2>
+
+요금 조회로 상황을 파악했다면 이제 절전 전략입니다. 효과가 검증된 방법만 정리했습니다.<br><br>
+
+<div class="step-box">
+<strong>절전 효과 높은 순서</strong><br><br>
+① <strong>설정 온도 26~28도 유지</strong>: 1도 올릴 때마다 약 7% 전력 절감. 가장 효과적인 방법<br>
+② <strong>선풍기 같이 틀기</strong>: 에어컨+선풍기 조합으로 체감 온도 낮추면서 에어컨 온도 높일 수 있음<br>
+③ <strong>자기 전 취침 예약 모드</strong>: 수면 중 서서히 온도 올라가게 설정 — 새벽 전력 낭비 줄임<br>
+④ <strong>필터 청소</strong>: 에어컨 필터가 막히면 효율 떨어져 같은 냉방에 전력 더 소모. 2주에 1회 청소 권장<br>
+⑤ <strong>창문·커튼으로 열기 차단</strong>: 햇빛 차단만으로 실내 온도 2~3도 낮추는 효과. 에어컨 부하 감소
+</div>
+
+"에어컨을 잠깐씩 껐다 켰다 하는 것이 절전에 유리하다"는 것은 잘못된 상식입니다. 에어컨은 처음 켤 때 전력 소모가 크므로, 짧은 시간 외출이라면 끄지 않고 온도만 높이는 것이 더 경제적인 경우가 많습니다.
+
+<h2>⑥ 주택 형태별 누진제 적용 방식 — 아파트·빌라·단독 다름</h2>
+
+<strong>아파트(고압 계약)</strong>: 아파트 단지 전체가 고압으로 전기를 공급받아 각 세대로 분배하는 방식입니다. 고압 요금제가 적용되며, 저압과 누진 구간·요금이 다릅니다. 한전 고객센터(123)나 관리사무소에 본인 아파트 계약 종별을 확인하세요.<br><br>
+
+<strong>빌라·다세대(저압 계약)</strong>: 각 세대별 개별 계량기로 저압 요금이 적용되며, 위 표의 누진제가 그대로 적용됩니다.<br><br>
+
+<strong>단독주택(저압 계약)</strong>: 마찬가지로 저압 요금 누진제 적용. 가족 수가 많거나 에어컨이 여러 대라면 400kWh를 초과하기 쉽습니다.
+
+<h2>⑦ 복지 할인 — 받을 수 있는 할인 놓치지 않기</h2>
+
+<div class="step-box">
+<strong>전기요금 복지 할인 대상</strong><br><br>
+• <strong>장애인</strong>: 장애인 등록 세대 월 최대 16,000원 할인<br>
+• <strong>기초생활수급자·차상위계층</strong>: 월 최대 16,000원 할인<br>
+• <strong>대가족(5인 이상)·3자녀 이상</strong>: 30% 할인(월 1만 6천 원 한도)<br>
+• <strong>출산 가구(영아 있는 세대)</strong>: 출생 후 3년간 30% 할인<br>
+• <strong>생명유지장치(의료용 기기)사용 세대</strong>: 별도 할인<br><br>
+※ 신청은 한전ON 앱, kepco.co.kr, 또는 고객센터(123)로 가능
+</div>
+
+복지 할인은 자동으로 적용되지 않고 <strong>직접 신청</strong>해야 합니다. 해당 조건이 된다면 지금 바로 신청해 두세요. 소급 적용은 제한이 있을 수 있습니다.
+
+<h2>⑧ 고지서 청구 방식 — 종이→앱 전환하면 포인트 적립</h2>
+
+현재 종이 고지서를 받고 있다면 <strong>전자 고지서(한전ON 앱·카카오톡 알림톡)</strong>로 전환해 보세요. 요금 조회가 더 간편해지고, 한전 포인트 적립 혜택도 받을 수 있습니다.<br><br>
+
+카카오 알림톡으로 청구서를 받는 경우, 당월 예상 요금이 전달되어 미리 대비할 수 있어 편리합니다. 한전ON 앱에서 「고지서 수신 방법 변경」 메뉴에서 전환 신청이 가능합니다.
+
+<h2>⑨ 전기요금 자동이체·분납 옵션</h2>
+
+폭탄 요금이 나온 경우 분납 신청도 가능합니다. 한전 고객센터(123)에 전화하거나 한전ON 앱을 통해 당월 요금 분납 신청을 할 수 있습니다. 다만 이자나 연체료 없이 분납이 가능한지는 당시 상황에 따라 다를 수 있으므로 고객센터를 통해 확인하세요.<br><br>
+
+<div class="warn-box">
+<strong>⚠️ 전기요금 연체 시 주의사항</strong><br>
+전기요금을 장기 연체하면 단전 조치가 취해질 수 있습니다. 납부가 어려운 상황이라면 단전 전에 반드시 한전 고객센터(123)에 상담을 요청하세요. 복지할인 대상자나 어려운 상황의 가구를 위한 긴급 지원 제도가 있습니다.
+</div>
+
+<h2>⑩ 전기요금 조회·절전 핵심 정리</h2>
+
+<div class="tip-box">
+<strong>⚡ 여름철 전기요금 관리 핵심 요약</strong><br><br>
+• <strong>당월 예상 요금 조회</strong>: 한전ON 앱 → 이번 달 사용량·예상 요금 실시간 확인<br>
+• <strong>요금 계산기</strong>: kepco.co.kr 요금 계산기 → 사용량 입력 후 예상 청구액 계산<br>
+• <strong>에너지캐시백</strong>: 전년 동월 대비 3% 이상 감소 시 캐시백 환급 → 한전ON에서 신청<br>
+• <strong>복지 할인 확인</strong>: 장애인·기초생활수급·대가족·출산 가구 → 미신청 시 혜택 없음<br>
+• <strong>절전 1순위</strong>: 설정 온도 26~28도 + 선풍기 병행<br>
+• <strong>에어컨 필터 청소</strong>: 2주에 1회 → 냉방 효율 유지, 전력 낭비 방지<br>
+• <strong>고지서 전자화</strong>: 종이→한전ON·카카오 전환 시 포인트 적립 + 예상 요금 미리 알림
+</div>
+
+매년 여름마다 반복되는 전기요금 폭탄, 올해는 미리 조회하고 대비해서 최대한 줄여 보세요. 한전ON 앱 하나로 당월 사용량 추적, 요금 예측, 캐시백 신청까지 모두 가능하니 아직 설치 안 하셨다면 지금 바로 설치해 보시기 바랍니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260720/appli_fridge_summer.html">여름 김치냉장고 에어컨 옆에 두면 안 되는 이유와 절전 배치법</a></li>
+    <li><a href="../260720/gov_kpass_transfer.html">K-패스 카드 교통비 환급 신청 방법과 기존 카드 전환하는 법</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#전기요금조회</span>
+  <span class="tag">#한전ON</span>
+  <span class="tag">#전기요금폭탄</span>
+  <span class="tag">#누진제</span>
+  <span class="tag">#에어컨전기요금</span>
+  <span class="tag">#여름전기요금</span>
+  <span class="tag">#에너지캐시백</span>
+  <span class="tag">#전기요금계산기</span>
+  <span class="tag">#한전</span>
+  <span class="tag">#절전팁</span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #c62828; padding-bottom: 12px; color: #b71c1c; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #ffebee; padding: 12px 15px; border-left: 6px solid #c62828; margin-top: 50px; color: #b71c1c; }
+  .intro-box { background: #fff5f5; border: 2px solid #ffcdd2; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .step-box { border-left: 4px solid #c62828; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 18px 20px; border-radius: 8px; margin: 20px 0; }
+  .warn-box { background: #fff3e0; border: 1px solid #fb8c00; padding: 16px 20px; border-radius: 8px; margin: 20px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #c62828; color: #fff; padding: 10px; font-size: 0.95em; }
+  .info-table td { padding: 10px 12px; border-bottom: 1px solid #ffebee; font-size: 0.95em; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f8f8f8; border: 2px dashed #ffcdd2; border-radius: 10px; padding: 20px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 700; color: #c62828; }
+  .ph-file { font-size: 0.8em; color: #999; font-family: monospace; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 12px; font-size: 0.85em; color: #444; white-space: pre-wrap; line-height: 1.6; }
+  .copy-btn { background: #c62828; color: #fff; border: none; border-radius: 5px; padding: 8px 16px; cursor: pointer; margin-top: 10px; font-size: 0.9em; }
+  .img-caption { font-size: 0.88em; color: #777; margin-top: 8px; font-style: italic; text-align: center; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#e53935";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#c62828"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>중고차 살 때 시세 조회하고 성능점검기록부·사고이력 확인하는 법</h1>
+
+<div class="intro-box">
+중고차를 처음 사려는 분들이 가장 많이 걱정하는 것, 바로 "이 차가 적정 시세인지", "사고 이력은 없는지", "숨겨진 결함은 없는지"입니다.<br><br>
+판매자가 아무리 "완전무사고"라고 해도, 공식 데이터를 직접 확인하지 않으면 알 수 없습니다. 다행히 국토교통부와 카히스토리 등 공공·민간 플랫폼을 통해 <strong>차량 이력·사고 기록·성능점검기록부</strong>를 무료 또는 소액으로 확인할 수 있습니다.<br><br>
+이 글에서는 중고차 시세 조회부터 사고 이력 확인, 성능점검기록부 해석법, 현장 점검 포인트까지 한 번에 정리해 드립니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260721/5_usedcar_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-1">Korean used car lot with rows of various second-hand vehicles under bright daytime lighting, Korean price tags displayed on windshields, clean and professional dealership environment, wide-angle view, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">중고차 매장 전경 — 구매 전 시세와 이력 확인이 필수입니다 / AI 제작 이미지</div>
+</div>
+
+<h2>① 중고차 시세 조회, 어디서 해야 가장 정확한가</h2>
+
+중고차 시세는 차종·연식·주행거리·옵션에 따라 천차만별입니다. 공식·공공 데이터를 기준으로 시세를 먼저 파악한 뒤 협상에 나서는 것이 중요합니다.<br><br>
+
+<table class="info-table">
+  <tr><th>플랫폼</th><th>특징</th><th>비고</th></tr>
+  <tr><td style="background:#fff5f5;"><strong>국토교통부 자동차365</strong></td><td style="background:#fff5f5;">차량 등록·이전 이력, 저당·압류 조회</td><td style="background:#fff5f5;">무료, car365.go.kr</td></tr>
+  <tr><td style="background:#fff;"><strong>카히스토리(carhistory.or.kr)</strong></td><td style="background:#fff;">보험사고 이력, 침수·화재 기록</td><td style="background:#fff;">건당 소액 또는 멤버십</td></tr>
+  <tr><td style="background:#fff5f5;"><strong>엔카·KB차차차</strong></td><td style="background:#fff5f5;">시세 통계, 매물 비교</td><td style="background:#fff5f5;">무료, 호가 기준</td></tr>
+  <tr><td style="background:#fff;"><strong>K-car(케이카) 내 차 시세</strong></td><td style="background:#fff;">실거래가 기반 시세 조회</td><td style="background:#fff;">무료</td></tr>
+</table>
+
+시세 조회 시 가장 많이 활용되는 곳은 <strong>엔카(encar.com)</strong>와 <strong>KB차차차(kbchachacha.com)</strong>입니다. 해당 차종의 동일 연식·비슷한 주행거리 매물 10~20건을 비교해 평균 시세를 파악하세요.<br><br>
+
+이때 주의할 점은 매물 호가(판매자가 원하는 가격)와 실제 거래가는 다를 수 있다는 것입니다. 협상을 통해 호가보다 5~10% 낮은 가격에 거래되는 경우가 흔하며, 반대로 급매물은 시세보다 싼 경우도 있습니다.
+
+<h2>② 자동차365 — 무료 공공 데이터로 기본 이력 확인</h2>
+
+<div class="step-box">
+<strong>자동차365(car365.go.kr) 조회 방법</strong><br><br>
+1. 자동차365 사이트(car365.go.kr) 접속<br>
+2. 「자동차 이력 조회」 메뉴 선택<br>
+3. 차대번호(VIN) 또는 차량 번호 입력<br>
+4. 공동인증서(공인인증서) 또는 간편인증으로 로그인<br>
+5. 조회 결과 확인 — 소유자 변경 이력·저당·압류·등록 취소 여부 등<br><br>
+※ 차대번호는 차량 등록증 또는 보닛 내 엔진룸에서 확인 가능
+</div>
+
+자동차365에서 확인해야 할 핵심 항목은 다음과 같습니다.<br><br>
+
+<strong>소유자 이전 횟수</strong>: 이전 횟수가 많을수록 해당 차량에 문제가 있었을 가능성이 높습니다. 3년 이내에 소유자가 2회 이상 바뀐 경우 이유를 꼭 확인하세요.<br><br>
+
+<strong>저당·압류 여부</strong>: 저당이나 압류가 걸린 차량은 구매 후 법적 분쟁에 휘말릴 수 있습니다. 반드시 저당 해지 후 계약서를 작성해야 합니다.<br><br>
+
+<strong>용도 이력</strong>: 렌터카·택시·관용차로 사용된 이력이 있으면 일반 개인 차량보다 소모가 심합니다. 이 이력이 판매자가 설명한 내용과 다르다면 주의가 필요합니다.
+
+<h2>③ 카히스토리 — 보험사고 이력·침수 기록 조회</h2>
+
+<div class="step-box">
+<strong>카히스토리(carhistory.or.kr) 조회 방법</strong><br><br>
+1. 카히스토리 사이트(carhistory.or.kr) 접속<br>
+2. 차량 번호 입력 후 조회<br>
+3. 건당 소액(약 1,000~3,000원) 결제 또는 멤버십 이용<br>
+4. 조회 결과 확인 — 보험사고 접수 이력, 수리 내역, 침수·전손 기록 등<br><br>
+※ 무사고라도 보험 처리 없이 자비로 수리한 경우는 조회되지 않을 수 있음
+</div>
+
+카히스토리는 <strong>보험개발원</strong>이 운영하는 공식 서비스로, 국내 주요 보험사의 보험사고 접수 데이터를 집계하여 제공합니다. 보험처리된 사고 이력이라면 대부분 여기서 확인 가능합니다.<br><br>
+
+조회 결과에서 주목해야 할 항목은 <strong>사고 횟수와 수리 부위</strong>입니다. 특히 <strong>주요 구조 부위(프레임·필러 등) 수리 이력</strong>이 있다면 대형 사고를 겪었을 가능성이 높으므로 신중하게 검토해야 합니다.<br><br>
+
+<div class="warn-box">
+<strong>⚠️ 주의</strong>: 카히스토리는 보험 처리 기록만 보여줍니다. 보험 접수 없이 자비 수리를 한 경우는 조회되지 않습니다. 카히스토리에서 사고 없음이 나와도 현장 점검은 반드시 필요합니다.
+</div>
+
+<h2>④ 성능점검기록부 — 중고차 딜러가 제공해야 하는 법정 서류</h2>
+
+중고차 매매 시 딜러(사업자)는 <strong>자동차관리법에 따라 성능·상태점검기록부(이하 성능점검기록부)</strong>를 의무적으로 제공해야 합니다. 개인 간 직거래의 경우는 해당 없지만, 매매상사를 통한 거래라면 이 서류를 반드시 받아야 합니다.<br><br>
+
+<div class="step-box">
+<strong>성능점검기록부 주요 확인 항목</strong><br><br>
+• <strong>자기진단 코드</strong>: 전기·전자 계통 이상 코드 존재 여부<br>
+• <strong>원동기(엔진) 상태</strong>: 오일 누유, 이상 소음, 공회전 불량 여부<br>
+• <strong>변속기 상태</strong>: 수동·자동 변속 이상 여부<br>
+• <strong>동력전달장치·제동장치</strong>: 클러치, 브레이크 이상 여부<br>
+• <strong>차체 부식·판금 여부</strong>: 주요 패널 교환·부식·도색 이력<br>
+• <strong>침수 여부</strong>: 침수 흔적 유무<br><br>
+※ 점검 기관은 국토교통부 지정 성능점검 업체(공식 자동차 검사소·지정 정비소)
+</div>
+
+성능점검기록부는 점검 후 30일, 주행 거리 2,000km 이내에 유효합니다. 오래된 기록부라면 최신 점검을 다시 요청할 수 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260721/5_usedcar_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-2">Korean car mechanic performing a pre-purchase inspection on a used vehicle, checking under the hood with diagnostic equipment, car lifted on a hydraulic lift showing undercarriage, professional inspection environment, detailed technical setting, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">중고차 구매 전 성능점검 — 지정 점검소에서의 현장 점검은 필수 단계입니다 / AI 제작 이미지</div>
+</div>
+
+<h2>⑤ 성능점검기록부 해석법 — 어떤 항목이 나쁘면 안 되나</h2>
+
+성능점검기록부에서 모든 항목이 "양호"로 표시되어 있어도 맹신하면 안 됩니다. 단, 아래 항목에서 이상이 발견된 경우에는 가격 협상의 근거로 활용하거나 구매 재검토를 해야 합니다.<br><br>
+
+<strong>즉각 재검토 권고 항목</strong>: 엔진 오일 누유 다량, 변속기 오일 누유, 냉각수 누수, 조향장치 이상, 침수 흔적<br><br>
+
+<strong>가격 협상 활용 항목</strong>: 타이어 마모 불균형, 배기가스 기준 초과, 경미한 외관 도색 이상<br><br>
+
+성능점검기록부를 100% 신뢰하기 어려운 이유 중 하나는, 일부 부정직한 딜러와 점검소 간의 유착이 과거 문제가 된 사례가 있기 때문입니다. 가능하면 <strong>제3의 전문 정비소</strong>에 추가 점검을 의뢰하는 것이 가장 확실한 방법입니다. 보통 5~10만 원의 비용으로 전문가 점검을 받을 수 있으며, 수십만~수백만 원의 수리비를 예방하는 투자가 됩니다.
+
+<h2>⑥ 현장 점검 포인트 — 직접 보면서 확인해야 할 것들</h2>
+
+서류 확인 후 실제 차량을 보러 갔을 때 직접 체크해야 할 사항을 정리했습니다.<br><br>
+
+<div class="step-box">
+<strong>외관 점검</strong><br>
+• 패널 갭(문·보닛·트렁크의 틈) 좌우 균일 여부 → 불균일하면 사고 후 판금 가능성<br>
+• 도색 색상 차이 (햇빛 아래에서 보닛·펜더 색상 비교)<br>
+• 하부 녹·부식 — 특히 프레임 연결부, 바퀴 안쪽<br>
+• 실내 매트 아래·트렁크 바닥 물 흔적 (침수 체크)<br><br>
+<strong>주행 테스트</strong><br>
+• 직선 주행 시 핸들 쏠림 여부<br>
+• 급가속·급제동 시 이상 소음<br>
+• 에어컨·히터 작동, 전동창·전동거울 정상 작동<br>
+• 시동 걸 때 잡음, 공회전 불안정 여부
+</div>
+
+현장 점검에서 가장 중요한 것은 <strong>반드시 시험 주행을 해보는 것</strong>입니다. 아무리 서류가 깨끗해 보여도 실제 주행에서 이상이 느껴진다면 구매를 재고해야 합니다.
+
+<h2>⑦ 중고차 직거래 vs 매매상사 — 무엇이 더 안전한가</h2>
+
+<table class="info-table">
+  <tr><th>구분</th><th>장점</th><th>단점</th></tr>
+  <tr><td style="background:#fff5f5;"><strong>직거래</strong></td><td style="background:#fff5f5;">가격 저렴, 중개 수수료 없음</td><td style="background:#fff5f5;">허위 정보 위험, 법적 보호 약함, 성능점검 서류 없음</td></tr>
+  <tr><td style="background:#fff;"><strong>매매상사</strong></td><td style="background:#fff;">성능점검서 법정 의무, 계약서 체결, 사후 클레임 가능</td><td style="background:#fff;">가격 높음, 딜러 마진 포함</td></tr>
+</table>
+
+직거래가 싸 보이지만, 문제 발생 시 법적 보호를 받기 어렵고 사기 피해도 적지 않습니다. 중고차 구매 경험이 적다면 <strong>공식 매매상사나 인증 중고차</strong>를 이용하는 것이 훨씬 안전합니다.<br><br>
+
+국내 완성차 브랜드의 인증 중고차(현대 Hmall, 기아 K-used, 르노 중고차 등)는 브랜드 자체의 점검 기준을 통과한 차량만 판매하며, 일정 기간 보증도 제공합니다. 가격은 일반 중고차보다 높지만 신뢰도가 높다는 장점이 있습니다.
+
+<h2>⑧ 중고차 계약 시 반드시 챙겨야 할 서류</h2>
+
+<div class="step-box">
+<strong>매매 계약 시 필수 수령 서류 체크리스트</strong><br><br>
+✅ 자동차 매매 계약서 (인장 찍힌 정식 계약서)<br>
+✅ 성능·상태점검기록부 (딜러 제공 의무)<br>
+✅ 자동차등록증 사본<br>
+✅ 차량 양도·이전에 필요한 매도자 인감증명서<br>
+✅ 저당 해지 확인 (저당 있는 경우)<br>
+✅ 세금·공과금 미납 여부 확인 (자동차365에서 확인 가능)
+</div>
+
+계약서에는 반드시 <strong>특약사항</strong>을 기재하세요. 예를 들어 "판매자가 고지하지 않은 중대 결함 발견 시 계약 취소 또는 수리비 청구 가능"과 같은 내용을 넣어 두면 분쟁 발생 시 보호받을 수 있습니다.
+
+<h2>⑨ 중고차 구매 사기 유형과 예방법</h2>
+
+<div class="warn-box">
+<strong>⚠️ 자주 발생하는 중고차 사기 패턴</strong><br><br>
+• <strong>허위 시세 부풀리기</strong>: 다른 매물 대비 비싸게 판매하는 경우 — 시세 먼저 확인<br>
+• <strong>침수차 세탁</strong>: 침수 기록을 숨기고 정상차로 판매 — 카히스토리 + 실내 냄새·녹 직접 확인<br>
+• <strong>사고차 '무사고' 허위 고지</strong>: 보험 처리 없이 수리한 사고 숨기기 — 성능점검서 + 독립 정비소 점검<br>
+• <strong>선입금 요구 사기</strong>: 차량 예약금 송금 후 연락 두절 — 차량 직접 확인 전 절대 입금 금지<br>
+• <strong>명의 이전 지연</strong>: 명의 이전을 미루며 세금 떠넘기기 — 계약 후 즉시 이전 완료 확인
+</div>
+
+가장 기본적인 예방법은 <strong>차량을 직접 보기 전 선입금을 절대 하지 않는 것</strong>입니다. 또한 개인 간 직거래를 당근마켓·중고나라 등에서 진행할 때는 특히 사기에 주의해야 합니다.
+
+<h2>⑩ 중고차 구매 체크리스트 총정리</h2>
+
+<div class="tip-box">
+<strong>🚗 중고차 구매 전 필수 체크리스트</strong><br><br>
+① <strong>시세 확인</strong>: 엔카·KB차차차에서 동일 조건 매물 10건 이상 비교<br>
+② <strong>자동차365 조회</strong>: 소유자 이전 이력, 저당·압류, 용도 이력 확인 (무료)<br>
+③ <strong>카히스토리 조회</strong>: 보험사고 이력, 침수·화재 기록 확인 (소액)<br>
+④ <strong>성능점검기록부 수령</strong>: 딜러에게 공식 서류 요청<br>
+⑤ <strong>현장 점검</strong>: 패널 갭·도색·하부·실내 침수 흔적 직접 확인<br>
+⑥ <strong>시험 주행</strong>: 가속·제동·핸들링·에어컨 모두 테스트<br>
+⑦ <strong>제3 정비소 점검</strong>: 의심스러우면 5~10만 원 투자해 독립 점검<br>
+⑧ <strong>계약서 특약 기재</strong>: 결함 발견 시 클레임 조항 삽입<br>
+⑨ <strong>명의 이전 즉시</strong>: 잔금 납부 당일 이전 완료 확인
+</div>
+
+중고차 구매는 정보 비대칭이 큰 시장입니다. 하지만 공공 데이터와 서류를 꼼꼼히 확인하고, 반드시 현장에서 직접 확인하는 절차를 거친다면 상당한 위험을 줄일 수 있습니다. 급하게 결정하지 않는 것도 중요한 전략입니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260720/travel_gangneung_sogumgang.html">강릉 소금강 등산 코스와 가는 법, 여름 계곡 물놀이 명소 총정리</a></li>
+    <li><a href="../260720/gov_kpass_transfer.html">K-패스 카드 교통비 환급 신청 방법과 기존 카드 전환하는 법</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#중고차시세조회</span>
+  <span class="tag">#사고이력확인</span>
+  <span class="tag">#성능점검기록부</span>
+  <span class="tag">#카히스토리</span>
+  <span class="tag">#자동차365</span>
+  <span class="tag">#중고차구매</span>
+  <span class="tag">#중고차사기예방</span>
+  <span class="tag">#중고차체크리스트</span>
+  <span class="tag">#중고차직거래</span>
+  <span class="tag">#중고차매매</span>
+</div>
+
+</body>
+</html>

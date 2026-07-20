@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px; font-size: 0.95em; }
+  .info-table td { padding: 10px 12px; border-bottom: 1px solid #e0f2f1; font-size: 0.95em; }
+  .step-box { border-left: 4px solid #00796b; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 18px 20px; border-radius: 8px; margin: 20px 0; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f8f8f8; border: 2px dashed #b2dfdb; border-radius: 10px; padding: 20px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 700; color: #00796b; }
+  .ph-file { font-size: 0.8em; color: #999; font-family: monospace; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 12px; font-size: 0.85em; color: #444; white-space: pre-wrap; line-height: 1.6; }
+  .copy-btn { background: #00796b; color: #fff; border: none; border-radius: 5px; padding: 8px 16px; cursor: pointer; margin-top: 10px; font-size: 0.9em; }
+  .img-caption { font-size: 0.88em; color: #777; margin-top: 8px; font-style: italic; text-align: center; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>순창 강천산 병풍폭포와 구름다리, 여름 계곡 물놀이·맨발 걷기 코스</h1>
+
+<div class="intro-box">
+전북 순창군에 자리한 강천산 군립공원은 여름마다 수도권 피서객들이 몰려드는 계곡 여행의 숨은 명소입니다.<br><br>
+40미터 높이에서 쏟아지는 병풍폭포, 폭포 위를 가로지르는 75미터 현수교 구름다리, 지압 효과로 소문난 맨발 황톳길까지 — 한 곳에서 다양한 체험이 가능해 가족 단위 여름 나들이로 손색이 없습니다.<br><br>
+강천산의 해발 고도는 585.8미터로 높지 않지만, 입구에서 병풍폭포까지 이어지는 계곡길은 한여름에도 서늘한 공기를 유지하는 것으로 유명합니다. 이 글에서는 강천산 여름 여행의 핵심 정보를 꼼꼼하게 정리해 드리겠습니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260721/1_gangcheonsan_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-1">Majestic waterfall in a Korean mountain gorge, summer scene. 40-meter tall Byeongpung waterfall (병풍폭포) cascading down a granite cliff face surrounded by lush green deciduous forest, crystal clear blue-green water pool at the base with boulders, suspension bridge visible in the upper distance crossing above the falls, warm sunlight filtering through the canopy, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">순창 강천산 병풍폭포 — 40m 높이의 장쾌한 여름 물줄기 / AI 제작 이미지</div>
+</div>
+
+<h2>① 강천산 군립공원, 전북 대표 여름 계곡의 매력</h2>
+
+강천산은 전라북도 순창군 팔덕면에 위치한 군립공원으로, 1981년 군립공원으로 지정된 이래 '호남의 소금강'이라는 별칭을 얻을 만큼 빼어난 경관을 자랑합니다.<br><br>
+
+여름철 강천산의 가장 큰 강점은 바로 계곡 온도입니다. 강천사 입구에서 병풍폭포까지 이어지는 약 2km의 탐방로는 울창한 숲으로 덮여 있어 한낮에도 기온이 20℃ 안팎을 유지합니다. 외부 기온이 35℃를 넘는 폭염 속에서도 계곡 바람은 서늘하게 느껴져 피서지로서의 가치가 탁월합니다.<br><br>
+
+강천산의 또 다른 자랑은 사계절 내내 풍성한 볼거리를 제공한다는 점입니다. 봄에는 벚꽃과 진달래, 가을에는 단풍으로 전국적으로 유명하지만, 여름에는 초록빛 신록과 시원한 계곡이 어우러져 전혀 다른 매력을 발산합니다. 7~8월에는 계곡에서 물놀이를 즐기는 가족 단위 방문객들로 탐방로가 활기를 띱니다.<br><br>
+
+강천사는 887년(신라 진성여왕 원년) 도선국사가 창건한 유서 깊은 사찰로, 경내에 오층석탑과 삼층석탑 등 문화재가 보존되어 있어 역사 탐방과 피서를 동시에 즐길 수 있다는 장점도 있습니다.
+
+<h2>② 병풍폭포 — 40m 장대한 여름 물줄기를 만나다</h2>
+
+강천산의 핵심 명소는 단연 병풍폭포입니다. 높이 40미터, 너비 10여 미터의 규모를 자랑하는 이 폭포는 화강암 절벽을 따라 수직으로 떨어지는 웅장한 모습이 마치 병풍을 펼쳐 놓은 것 같다 하여 '병풍폭포'라는 이름이 붙었습니다.<br><br>
+
+여름 우기에는 수량이 풍부해져 폭포의 물소리가 골짜기를 가득 채울 만큼 우렁찹니다. 폭포 아래 넓게 펼쳐진 너럭바위 위에 앉아 물보라를 맞으면 더위를 단숨에 잊게 됩니다. 폭포수가 흘러내리며 형성한 소(沼)는 에메랄드빛을 띠어 인생샷 명소로도 인기가 높습니다.<br><br>
+
+병풍폭포에서 바라보면 머리 위로 구름다리(현수교)가 아슬아슬하게 걸려 있는 모습을 확인할 수 있습니다. 폭포를 아래에서 올려다보며 감상하는 뷰와, 구름다리 위에서 폭포와 계곡을 내려다보는 뷰가 서로 극명한 대조를 이루어 두 곳 모두 반드시 방문해야 할 포인트입니다.<br><br>
+
+비 온 다음 날 강천산을 찾으면 폭포의 수량이 최고조에 달해 압도적인 장관을 연출합니다. 장마철인 7월에 방문한다면 입구에서 미리 날씨와 안전 안내를 확인하는 것이 좋습니다.
+
+<h2>③ 구름다리 — 현수교 위에서 내려다보는 폭포 파노라마</h2>
+
+병풍폭포 위로 놓인 강천산 구름다리(현수교)는 길이 75미터, 폭 1미터의 철제 현수교입니다. 계곡 양쪽 절벽을 잇는 이 다리는 높이가 상당하여 건너는 내내 스릴감을 느낄 수 있습니다.<br><br>
+
+구름다리 위에 서면 발아래로 병풍폭포의 물줄기가 직접 내려다보이고, 멀리 강천산의 능선과 계곡 전체가 한눈에 펼쳐집니다. 맑은 날에는 폭포수가 햇빛에 반사되어 무지개가 피어나기도 합니다. 이 뷰를 놓치면 강천산의 절반밖에 즐기지 못했다고 할 수 있을 정도로 핵심 포인트입니다.<br><br>
+
+구름다리는 동시 입장 인원이 제한되며, 성수기에는 대기줄이 형성되기도 합니다. 오전 9시 이전이나 오후 4시 이후에 방문하면 대기 없이 여유롭게 감상할 수 있습니다. 다리가 흔들리는 정도가 상당하므로, 고소공포증이 있는 분들은 충분히 고려하신 후 올라가시기 바랍니다.<br><br>
+
+다리를 건너면 전망 데크가 있어 또 다른 각도에서 강천산 계곡 전경을 감상할 수 있습니다. 구름다리 왕복 소요 시간은 대기 포함 약 30~40분 정도로 여유 있게 잡아 두세요.
+
+<h2>④ 맨발 황톳길 — 지압과 힐링의 1km 숲길</h2>
+
+강천사 입구에서 탐방로를 따라 약 1km 구간에 맨발 황톳길이 조성되어 있습니다. 발바닥의 혈점을 자극하는 지압 효과와 함께, 촉촉한 황토의 감촉이 여름 피로를 풀어 주는 힐링 코스로 입소문을 타고 있습니다.<br><br>
+
+황톳길은 계곡 옆을 나란히 달리도록 설계되어 있어, 맨발로 걸으면서 계곡 물소리를 들으며 걸을 수 있습니다. 계곡에서 불어오는 서늘한 바람과 흙의 시원한 촉감이 어우러져 발바닥부터 기분이 상쾌해집니다.<br><br>
+
+맨발 걷기 전에는 입구 쪽에 마련된 발 세척대에서 발을 헹구면 됩니다. 황톳길 이용 후에는 다시 발 세척 시설에서 발을 깨끗이 씻을 수 있도록 준비되어 있어 위생 걱정은 하지 않아도 됩니다. 신발을 담을 비닐봉지를 미리 챙겨 가면 편리합니다.<br><br>
+
+노약자나 아이들도 무리 없이 걸을 수 있는 평탄한 코스로, 걷는 속도에 따라 30~50분이면 왕복이 가능합니다. 물놀이와 황톳길 걷기를 조합하면 강천산 반나절 코스로 충분히 알찬 하루를 보낼 수 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260721/1_gangcheonsan_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-2">Korean hiking trail through lush summer forest, barefoot clay soil path (맨발 황톳길) beside a clear mountain stream in Gangcheonsan, families walking barefoot on reddish-brown clay trail, tall deciduous trees forming a green canopy overhead, dappled sunlight, children playing near water, peaceful atmosphere, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">강천산 맨발 황톳길 — 계곡 따라 걷는 지압 힐링 산책로 / AI 제작 이미지</div>
+</div>
+
+<h2>⑤ 강천사 — 신라 시대 고찰의 여름 풍경</h2>
+
+강천사는 887년 도선국사가 창건한 사찰로, 강천산의 이름도 이 사찰에서 유래했다고 전해집니다. 전라북도 문화재자료로 지정된 강천사오층석탑, 강천사삼층석탑 등 문화재를 경내에서 만날 수 있습니다.<br><br>
+
+여름 강천사는 울창한 나무들이 경내를 감싸 그늘이 짙어 쉬어가기 좋은 장소입니다. 대웅전 앞마당에는 크고 오래된 나무들이 자리 잡고 있어 그 아래에서 잠시 앉아 쉬면 마음이 차분해지는 기분을 느낄 수 있습니다.<br><br>
+
+강천사 경내 진입은 무료입니다. 탐방로를 따라 강천사를 지나 병풍폭포까지 약 1.5km를 걸어가는 길이 강천산의 핵심 코스입니다. 종교적 공간인 만큼 경내에서는 조용히 예의를 갖춰 방문해 주세요.<br><br>
+
+강천사 위쪽으로 계속 오르면 구장군봉(약 685m)까지 이어지는 본격 등산 코스가 있습니다. 다만 여름철 계곡과 폭포 위주의 나들이 목적이라면 강천사~병풍폭포~구름다리 구간만으로도 충분히 만족스러운 코스입니다.
+
+<h2>⑥ 여름 계곡 물놀이 — 어느 구간에서 들어갈까</h2>
+
+강천산 계곡에서의 물놀이는 공식적으로 허용된 구간과 제한 구간이 구분됩니다. 탐방로 입구에서 강천사 앞 구간의 계곡 일부 구간이 물놀이 허용 구역으로 안내됩니다. 방문 전 현장 안내판과 관리사무소(☎ 063-650-1672)를 통해 당해 연도 물놀이 허용 구간을 사전에 확인하는 것이 중요합니다.<br><br>
+
+허용 구간에서의 계곡 수온은 여름에도 15~18℃ 정도를 유지하여 처음 발을 담글 때 차갑게 느껴지는 것이 특징입니다. 아이들이 얕은 물에서 물고기를 쫓거나 물총 놀이를 하기에 적합한 너른 바위 구간도 중간중간 있습니다.<br><br>
+
+물놀이 후 체온이 빠르게 내려갈 수 있으므로, 수건과 여벌 옷을 반드시 챙겨 가세요. 계곡에서 취사는 금지되어 있으나, 공원 내 지정된 취사 구역(매점 근처)에서는 취사가 가능합니다. 아이스박스에 음식을 준비해 오면 피서 분위기를 더욱 즐길 수 있습니다.
+
+<h2>⑦ 입장료·주차·운영 시간 — 방문 전 꼭 확인하세요</h2>
+
+<div class="step-box">
+<strong>입장료 (2026년 기준)</strong><br>
+• 성인: 5,000원 (순창사랑상품권 2,000원 환급 → 실질 3,000원)<br>
+• 청소년(초·중·고·군인): 4,000원<br>
+• 단체(30인 이상) 성인: 4,500원<br>
+• 무료: 만 6세 이하 어린이, 70세 이상 어르신, 순창군민, 국가유공자, 장애인<br><br>
+<strong>운영 시간</strong><br>
+• 하절기(4~10월): 오전 7:00 ~ 오후 6:00<br>
+• 동절기(11~3월): 오전 7:00 ~ 오후 5:00<br><br>
+<strong>주차</strong><br>
+• 제1~제5주차장 운영, 무료<br>
+• 성수기 주말은 조기 만차 → 오전 8시 이전 도착 권장
+</div>
+
+순창사랑상품권 2,000원은 공원 내 매점·음식점에서 사용 가능합니다. 사실상 입장료가 많이 할인되는 셈이므로 꼭 받아 두고 활용하세요.<br><br>
+
+현장 문의는 강천산군립공원 관리사무소(☎ 063-650-1672)로 하시면 됩니다. 성수기 주말에는 주차 공간이 빠르게 차기 때문에 가급적 평일 방문이나 조조 도착을 추천합니다.
+
+<h2>⑧ 순창 강천산 가는 법 — 자가용·대중교통</h2>
+
+<div class="step-box">
+<strong>자가용</strong><br>
+• 서울 출발: 순천완주고속도로 순창IC 진입 → 강천산 방면 약 20분 (총 2시간 40분)<br>
+• 광주 출발: 호남고속도로 순창IC → 약 30분 (총 1시간)<br>
+• 전주 출발: 순창 방면 국도 → 약 1시간 20분<br><br>
+<strong>대중교통</strong><br>
+• 서울 센트럴시티터미널 → 순창터미널 고속버스 (2시간 30분~3시간)<br>
+• 순창터미널 → 강천산 방면 농어촌버스 (30분 내외, 배차 간격 확인 필요)<br>
+• 택시 이용 시 순창터미널~강천산 약 15~20분, 1만 2천 원~1만 5천 원 내외
+</div>
+
+강천산은 순창읍에서 약 7km 거리에 있어 자가용 이용이 가장 편리합니다. 대중교통으로 올 경우 버스 배차 간격이 넓으므로, 출발 전 순창군 농어촌버스 운행 시간표를 미리 확인하시기 바랍니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260721/1_gangcheonsan_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-3">Ancient Korean Buddhist temple (강천사) nestled in a lush green mountain valley in summer, traditional wooden temple buildings with curved tile roofs, ancient stone pagodas in the courtyard, surrounded by towering old-growth deciduous trees with full summer foliage, stone-paved temple grounds, quiet and serene atmosphere, soft natural lighting through the forest canopy, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">강천사 — 887년 창건 신라 고찰과 여름 신록 / AI 제작 이미지</div>
+</div>
+
+<h2>⑨ 순창 연계 코스 — 강천산 이후 어디를 갈까</h2>
+
+강천산 관람 후 순창의 다른 명소들을 함께 둘러보면 하루 일정을 알차게 보낼 수 있습니다.<br><br>
+
+<strong>강천산 + 순창 고추장마을</strong>: 순창읍 순창전통고추장마을은 우리나라 대표 발효 식품의 고장입니다. 고추장 체험관에서 직접 담그는 체험을 하거나, 시장 내 상점에서 순창 고추장을 구매할 수 있습니다. 강천산에서 15분 거리입니다.<br><br>
+
+<strong>강천산 + 쌍치면 쌍치리 계곡</strong>: 더 깊은 계곡 물놀이를 원한다면 순창군 쌍치면 쪽 계곡을 추천합니다. 비교적 알려지지 않아 한산한 편으로, 조용한 피서를 원하는 분들에게 적합합니다.<br><br>
+
+<strong>강천산 + 섬진강 자전거길</strong>: 순창과 인접한 임실군, 곡성군을 통해 섬진강 자전거길이 이어집니다. 강천산 이후 섬진강변 드라이브로 하루를 마무리하면 자연 속 여름 힐링 여행이 완성됩니다.<br><br>
+
+순창읍내에는 순대국밥, 순창 돼지갈비, 발효식품을 활용한 음식점들이 모여 있습니다. 산에서 충분히 걷고 난 뒤 든든한 점심 한 끼로 마무리하는 것이 강천산 여행의 정석 코스입니다.
+
+<h2>⑩ 여름 강천산 방문 팁 — 더 즐겁게, 더 안전하게</h2>
+
+<div class="tip-box">
+<strong>🌿 여름 강천산 방문 핵심 팁</strong><br><br>
+• <strong>방문 최적 시간대</strong>: 오전 9시 이전 또는 오후 4시 이후 → 구름다리 대기 최소화<br>
+• <strong>복장</strong>: 계곡 물놀이 대비 여벌 옷·수건 필수. 황톳길용 비닐봉지 지참<br>
+• <strong>신발</strong>: 발이 젖을 수 있으므로 샌들 또는 아쿠아슈즈 권장<br>
+• <strong>음식</strong>: 공원 내 지정 취사 구역 외 취사 금지. 간식·도시락은 지정 구역 이용<br>
+• <strong>기상 확인</strong>: 장마철 호우 시 계곡 급류 위험 — 방문 당일 날씨 필수 확인<br>
+• <strong>주차</strong>: 제1주차장이 입구와 가장 가깝고 빠르게 찰 수 있음. 제3·4주차장도 걸어서 5~10분<br>
+• <strong>순창사랑상품권</strong>: 입장 시 받는 2,000원 상품권을 내 매점·식당에서 꼭 사용할 것
+</div>
+
+성수기 주말(7월 말~8월 초)에는 주차장과 탐방로 모두 매우 혼잡합니다. 가족 단위 여행이라면 주중 방문이나 이른 아침 출발을 강력히 권장드립니다. 체력 소모가 있는 코스이므로 충분한 물과 간식을 챙겨 가세요. 강천산 여름 계곡과 폭포, 구름다리까지 — 한 곳에서 모두 즐길 수 있는 전북의 보석 같은 피서지를 꼭 한번 방문해 보시기 바랍니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260720/travel_gangneung_sogumgang.html">강릉 소금강계곡 어디서 물놀이하나, 오대산 청학동 소금강 트레킹과 주차</a></li>
+    <li><a href="../260720/travel_uljin_bulyeong.html">울진 불영계곡 여름 드라이브와 불영사, 36번국도 협곡 물놀이 명당</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#강천산</span>
+  <span class="tag">#순창여행</span>
+  <span class="tag">#병풍폭포</span>
+  <span class="tag">#구름다리</span>
+  <span class="tag">#맨발걷기</span>
+  <span class="tag">#강천산군립공원</span>
+  <span class="tag">#여름계곡</span>
+  <span class="tag">#전북여행</span>
+  <span class="tag">#계곡물놀이</span>
+  <span class="tag">#순창관광</span>
+</div>
+
+</body>
+</html>
