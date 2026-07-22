@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px 12px; font-size: 0.95em; }
+  .info-table td { padding: 9px 12px; border: 1px solid #ddd; font-size: 0.95em; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #00796b; border-radius: 10px; padding: 20px; background: #f1faf9; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 700; color: #00796b; }
+  .ph-file { font-size: 0.8em; color: #888; font-weight: 400; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 12px; border-radius: 6px; font-size: 0.82em; line-height: 1.6; white-space: pre-wrap; margin: 10px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; font-size: 0.85em; margin-top: 5px; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; text-align: center; }
+  .tip-box { background: #fffde7; border-left: 4px solid #f9a825; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>부산 바다축제 2026 다대포 일정과 프로그램, 불꽃쇼·물총싸움 제대로 즐기는 법</h1>
+
+<div class="intro-box">
+부산 여름을 대표하는 <strong>부산바다축제</strong>가 2026년 제30주년을 맞이합니다. 올해는 <strong>8월 7일(금)부터 13일(목)까지 7일간</strong>, 부산 사하구 <strong>다대포해수욕장 일원</strong>에서 개최됩니다. 다대불꽃쇼·물총싸움·EDM 야간 공연까지, 여름 무더위를 시원하게 날려줄 프로그램이 가득합니다. 대중교통으로 편하게 갈 수 있어 부산 여름 여행의 필수 코스로 꼽힙니다.
+</div>
+
+<h2>01 | 30주년 맞이한 부산바다축제, 이번 여름 다대포에서</h2>
+
+올해로 꼭 서른 번째를 맞이하는 부산바다축제는 부산광역시가 주관하는 대표적인 여름 문화 축제입니다. 매년 수십만 명의 방문객이 찾는 대형 축제로 자리 잡았으며, 특히 30주년인 2026년에는 규모를 한층 키우고 다양한 특별 프로그램을 추가해 의미 있는 해로 만들 계획이라고 합니다.<br><br>
+행사 장소인 <strong>다대포해수욕장</strong>은 부산 사하구에 위치한 서부산 대표 해수욕장입니다. 백사장 길이 900m, 폭 50m의 넓은 모래사장과 함께 한국에서 노을이 아름다운 곳으로 손꼽히는 꿈의낙조분수가 인근에 있어 낮과 밤 모두 볼거리가 풍성합니다.<br><br>
+해운대나 광안리에 비해 덜 알려진 곳이었던 다대포가 부산바다축제를 통해 여름의 새로운 핫플레이스로 거듭나고 있습니다. 인파는 상대적으로 분산되면서도 축제 분위기는 충분히 즐길 수 있다는 점에서, 처음 부산 여름 축제를 경험하는 분들에게도 훌륭한 선택지입니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260723/1_busan_bada_1.png</span></div>
+    <pre class="prompt-text" id="prompt-1-1">Busan Dadaepo Beach summer festival 2026, aerial view of crowded golden sandy beach at sunset, colorful fireworks exploding over the sea, thousands of people celebrating on the beach, Korean summer festival atmosphere, vivid orange and pink sky, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">다대포해수욕장 여름 불꽃축제 전경 / AI 제작 이미지</div>
+</div>
+
+<h2>02 | 2026 부산바다축제 일정과 기본 정보</h2>
+
+<table class="info-table">
+  <tr><th>항목</th><th>내용</th></tr>
+  <tr><td style="background:#f1faf9;">행사명</td><td style="background:#f1faf9;">제30회 부산바다축제</td></tr>
+  <tr><td>기간</td><td>2026년 8월 7일(금) ~ 8월 13일(목), 7일간</td></tr>
+  <tr><td style="background:#f1faf9;">장소</td><td style="background:#f1faf9;">부산광역시 사하구 다대포해수욕장 일원</td></tr>
+  <tr><td>개막식</td><td>8월 7일(금) 저녁, 다대포 해변</td></tr>
+  <tr><td style="background:#f1faf9;">입장료</td><td style="background:#f1faf9;">무료 (일부 체험 유료)</td></tr>
+  <tr><td>주관</td><td>부산광역시</td></tr>
+</table>
+
+2026 부산바다축제는 <strong>7일간 매일</strong> 프로그램이 진행되며, 주간에는 해양 스포츠·체험 부스·K-팝 버스킹이, 야간에는 EDM 파티와 공연·불꽃쇼가 해변을 가득 채웁니다.<br><br>
+입장은 전 구간 무료이므로 누구든지 자유롭게 방문할 수 있습니다. 단, 현장 유료 체험(바나나보트·웨이크보드·포토 부스 등)은 별도로 비용이 발생하니, 현금과 카드를 미리 챙겨오시기 바랍니다. 축제 세부 프로그램 일정은 공식 홈페이지(festivalbusan.com)에서 사전에 확인하시고, 당일 기상 상황에 따라 변경될 수 있으니 출발 전 한 번 더 체크하는 습관이 필요합니다.
+
+<h2>03 | 개막 하이라이트 — 다대불꽃쇼 관람 명당과 시간</h2>
+
+부산바다축제 최고의 장면을 꼽으라면 단연 <strong>개막 다대불꽃쇼</strong>입니다. 개막식이 열리는 8월 7일 저녁, 다대포 앞바다를 배경으로 하늘을 가득 메우는 대형 불꽃 연출이 시작됩니다. 30주년을 기념해 역대급 규모로 진행될 예정이라는 소식이 전해지면서 기대가 더욱 높습니다.<br><br>
+<strong>불꽃쇼 관람 명당</strong>은 크게 두 곳을 추천드립니다. 첫 번째는 <strong>다대포 백사장 중앙 구역</strong>으로, 정면에서 불꽃을 가장 크고 선명하게 감상할 수 있습니다. 두 번째는 <strong>다대포 노을 전망대(꿈의낙조분수 방향)</strong>로, 노을이 물든 하늘과 불꽃이 어우러지는 사진을 찍기에 최적화된 자리입니다.<br><br>
+불꽃쇼 시작은 통상 오후 9시 이후이며, 1시간 전부터 이미 인파가 가득 찹니다. 개막 당일에는 최소 오후 5~6시에 현장에 도착해 자리를 잡는 것이 좋습니다. <strong>돗자리와 캠핑 의자</strong>를 챙겨가면 대기 시간이 훨씬 편안해집니다. 일몰 시각이 오후 7시 30분 전후이므로, 노을과 불꽃쇼를 모두 즐기려면 오후 7시 이전 도착을 목표로 하세요.
+
+<h2>04 | 핵심 체험 프로그램 — 물총싸움·EDM·해양 스포츠</h2>
+
+부산바다축제에서 두 번째로 인기가 높은 프로그램은 <strong>야외 물총 게릴라 이벤트</strong>입니다. 낮 시간 폭염 속에서 참가자들이 대형 물총을 들고 흠뻑 젖도록 물싸움을 즐기는 이 프로그램은 어린이부터 어른까지 모두에게 인기입니다. 옷이 완전히 젖을 수 있으니, 반드시 <strong>방수 파우치와 여벌 옷 1벌</strong>을 준비하세요.<br><br>
+야간 프로그램으로는 <strong>EDM 파티와 K-팝 버스킹 공연</strong>이 해변 야외 무대에서 이어집니다. DJ 세트와 함께 모래사장 위에서 즐기는 여름밤 파티는 부산만의 독특한 낭만을 만들어줍니다. 특히 젊은 층 여행자들 사이에서 인증샷 명소로 꼽히고 있습니다.<br><br>
+낮 시간에는 <strong>바나나보트·웨이크보드 등 해양 레저 체험</strong>이 별도 유료로 운영됩니다. 체험 신청은 현장 접수가 기본이나, 인기 프로그램은 오전에 일찍 마감될 수 있습니다. 참여 계획이 있다면 가급적 오전 일찍 접수 부스를 찾아가시기 바랍니다. 어린이 전용 워터 슬라이드와 모래 조각 체험 등 가족 단위 프로그램도 별도로 마련됩니다.
+
+<h2>05 | 다대포해수욕장 가는 법 (교통편)</h2>
+
+<strong>지하철 이용이 가장 편리합니다.</strong> 부산도시철도 <strong>1호선 다대포해수욕장역</strong>에서 내리면 해수욕장까지 도보 3~5분이면 충분합니다. 서면역 기준으로 환승 없이 30분 내외이며, 부산역에서도 40분 안에 도착할 수 있습니다.<br><br>
+<strong>버스</strong>로는 사하구청 방면을 지나는 다수의 노선이 다대포를 경유합니다. 부산역·서면에서 직통 버스를 이용하면 약 1시간 내외입니다. 버스 정류장에서 해수욕장까지는 걸어서 5~10분 거리입니다.<br><br>
+<strong>자가용</strong>으로는 남해고속도로 다대IC에서 약 10~15분 거리이나, 축제 기간에는 반경 2~3km 이내 도로가 극도로 혼잡해집니다. 특히 개막일(8/7)과 불꽃쇼 당일 저녁에는 진입 자체가 어려울 수 있으니, <strong>대중교통 이용을 적극 권장</strong>합니다. 부득이하게 차량을 이용할 경우 축제장에서 2~3km 떨어진 주택가 상가 주차장을 활용하고 도보로 이동하는 방법을 택하세요.
+
+<h2>06 | 주차 정보와 혼잡 시간 회피 전략</h2>
+
+다대포해수욕장 인근 공영주차장(해변 주차장, 다대동 주차장 등)은 평상시에도 주말 오전 10시면 만차가 되는 경우가 잦습니다. 축제 기간에는 더욱 어렵습니다. 주차비는 시간당 500~1,000원 수준이며, 일부 상가 주차장은 무료 개방도 있으나 자리 경쟁이 치열합니다.<br><br>
+<strong>현실적인 해법은 지하철 + 도보 조합</strong>입니다. 다대포해수욕장역에서 내려 해변까지 5분이면 닿기 때문에, 차량 걱정 없이 축제를 마음껏 즐길 수 있습니다. 불꽃쇼 종료 후에도 지하철이 연장 운행되는 경우가 많으니, 귀가 걱정도 줄어듭니다.<br><br>
+<strong>방문 피크 타임</strong>은 오후 6~11시입니다. 낮 시간(오전 10시~오후 3시)은 주간 프로그램 위주로 인파가 분산되어 있어 접근이 수월합니다. 불꽃쇼 감상이 주목적이라면 오후 5시 이전 도착 → 저녁 식사 → 자리 확보 순서를 권장합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260723/1_busan_bada_2.png</span></div>
+    <pre class="prompt-text" id="prompt-1-2">Korean summer festival at Dadaepo Beach Busan, night scene, young people having water gun fight on sandy beach, colorful LED lights, food trucks in background, EDM concert stage lit up, festive summer night atmosphere, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">야간 물총싸움과 EDM 공연이 어우러지는 다대포 해변 / AI 제작 이미지</div>
+</div>
+
+<h2>07 | 현장 먹거리와 주변 맛집 추천</h2>
+
+축제 현장에는 <strong>푸드트럭 존</strong>이 해변 곳곳에 운영됩니다. 오징어튀김·어묵꼬치·핫도그·빙수·아이스크림 등 여름 해변 먹거리를 가볍게 즐길 수 있습니다. 가격은 1인당 1만 원 안팎이면 충분하며, 저녁 공연 전후 시간대에 줄이 길어지니 여유롭게 즐기려면 피크 타임을 피하는 게 좋습니다.<br><br>
+다대포해수욕장 인근 해변 상가에는 <strong>조개구이·해산물 횟집</strong>이 여러 곳 있습니다. 제철 조개류와 생선회를 합리적인 가격(1인 2~3만 원 안팎)에 즐길 수 있습니다. 축제 후 저녁 식사를 이쪽에서 해결하면 부산 해물 요리의 진가를 제대로 느낄 수 있습니다.<br><br>
+사하구 명물인 <strong>감천문화마을 인근 카페 거리</strong>도 차로 15분 거리에 있습니다. 축제와 함께 감천문화마을 골목 카페 투어를 병행하면 부산 여행 만족도가 한층 높아집니다.
+
+<h2>08 | 숙박 정보와 연계 여행 코스</h2>
+
+숙박은 <strong>다대포 인근 펜션·모텔(사하구)</strong>을 이용하거나, 부산 시내 서면·해운대 일대 호텔을 베이스캠프로 삼아도 좋습니다. 축제 기간 성수기 가격은 1박 8만~20만 원 수준이므로 7월 중에 미리 예약해두세요.<br><br>
+연계 여행지로는 <strong>꿈의낙조분수</strong>(무료 야간 물빛 분수쇼)와 <strong>을숙도생태공원</strong>(낙동강 하구 철새 서식지, 무료)을 추천합니다. 부산 중심가에서 감천문화마을·자갈치시장·국제시장을 묶어 반나절 코스로 돌아볼 수도 있습니다.<br><br>
+가족 여행이라면 사하구 <strong>다대포 해양 자연사박물관</strong>도 아이와 함께 방문하기 좋은 실내 코스입니다. 만약 2박 3일로 일정을 잡는다면, 첫날 다대포 축제 → 둘째 날 해운대·광안리 → 셋째 날 감천문화마을·용두산공원 코스가 부산을 가장 알차게 즐기는 루트입니다.
+
+<h2>09 | 준비물 체크리스트와 안전 수칙</h2>
+
+<div class="tip-box">
+✅ <strong>필수 준비물</strong><br><br>
+• <strong>방수 파우치 또는 방수 가방</strong> — 물총·파도 대비 스마트폰·지갑 보호<br>
+• <strong>여벌 옷 1~2벌</strong> — 물총싸움·물놀이 후 교체용<br>
+• <strong>선크림 SPF 50 이상·재도포용 스틱</strong> — 해변 강한 자외선 차단<br>
+• <strong>아쿠아슈즈 또는 슬리퍼</strong> — 모래사장·해양 스포츠용<br>
+• <strong>돗자리·캠핑 의자</strong> — 불꽃쇼 대기 시 편의<br>
+• <strong>현금+카드</strong> — 현장 유료 체험·푸드트럭 결제<br>
+• <strong>상비약(두통약·소화제·일회용 밴드)</strong> — 현장에서 약국 찾기 어려울 수 있음
+</div>
+
+안전 수칙을 꼭 지켜주세요. 바다 수영은 안전 요원이 배치된 <strong>지정 구역 안에서만</strong> 해야 합니다. 음주 후 입수는 절대 금물이며, 이안류(역파도)가 발생할 수 있으니 안전 요원의 지시에 따라야 합니다. 어린이는 반드시 구명조끼를 착용하게 하고, 보호자가 한시도 눈을 떼지 않아야 합니다.
+
+<h2>10 | 자주 묻는 질문 (FAQ)</h2>
+
+<strong>Q. 반려동물을 데려갈 수 있나요?</strong><br><br>
+다대포해수욕장은 축제 기간 인파가 많아 반려동물 동반이 어렵습니다. 방문 전 사하구청 공식 공지를 확인하시기 바랍니다.<br><br>
+<strong>Q. 비가 오면 축제가 취소되나요?</strong><br><br>
+기상 상황에 따라 일부 야외 프로그램이 연기·취소될 수 있습니다. 공식 홈페이지(festivalbusan.com)와 부산시 공식 SNS를 통해 당일 공지를 꼭 확인하세요.<br><br>
+<strong>Q. 불꽃쇼는 축제 기간 매일 하나요?</strong><br><br>
+불꽃쇼는 개막식 날(8/7) 진행이 확인되어 있으며, 그 외 날에는 소규모 야간 공연과 EDM이 이어집니다. 대규모 불꽃쇼는 개막 당일을 놓치지 않는 것이 중요합니다.<br><br>
+<strong>Q. 주변에서 기념품을 살 수 있나요?</strong><br><br>
+현장 기념품 부스에서 부산 특산품과 축제 굿즈를 구매할 수 있습니다. 또한 다대포 주변 상가에서 지역 특산 먹거리 기념품도 쇼핑 가능합니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260722/travel_goseong_hwajinpo.html" style="color:#00796b;">강원 고성 화진포해수욕장과 화진포호수 둘레길, 동해 최북단 한적 피서</a></li>
+    <li><a href="../260722/travel_wando_sinjido_beach.html" style="color:#00796b;">완도 신지 명사십리해수욕장 가는 법과 물놀이, 신지도 여름 피서 코스</a></li>
+  </ul>
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260723/1_busan_bada_3.png</span></div>
+    <pre class="prompt-text" id="prompt-1-3">Busan Dadaepo beach sunset panoramic view, golden hour with beautiful orange and red sky, calm sea reflecting the colors, people enjoying summer evening on the sandy beach, coastal cityscape in background, Korea summer travel, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">다대포 황금빛 노을과 여름 저녁 해변 / AI 제작 이미지</div>
+</div>
+
+<div class="tags">
+  <span class="tag">#부산바다축제</span>
+  <span class="tag">#다대포해수욕장</span>
+  <span class="tag">#부산여름축제</span>
+  <span class="tag">#다대불꽃쇼</span>
+  <span class="tag">#부산여름여행</span>
+  <span class="tag">#2026부산축제</span>
+  <span class="tag">#사하구여행</span>
+  <span class="tag">#부산EDM</span>
+  <span class="tag">#물총싸움축제</span>
+  <span class="tag">#부산8월</span>
+</div>
+
+</body>
+</html>
