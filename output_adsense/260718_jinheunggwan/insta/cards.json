@@ -1,0 +1,69 @@
+{
+  "outDir": "output_adsense/260718_jinheunggwan/insta",
+  "photosDir": "adsense_src/260718",
+  "handle": "@gimpo.matjip.note",
+  "accent": "#ffce6a",
+  "cards": [
+    {
+      "role": "cover",
+      "photo": "KakaoTalk_20260718_121907296_06.jpg",
+      "kicker": "송추 진흥관 그 집 🐉",
+      "lines": ["짬뽕 칼칼함은", "여기가 국룰"],
+      "name": "김포 진흥관"
+    },
+    {
+      "role": "caption",
+      "photo": "KakaoTalk_20260718_121907296_02_mosaic.jpg",
+      "lines": ["오후 1시인데", "벌써 만석이라고?"]
+    },
+    {
+      "role": "photo",
+      "photo": "KakaoTalk_20260718_121907296_01.jpg"
+    },
+    {
+      "role": "caption",
+      "photo": "KakaoTalk_20260718_121907296_07.jpg",
+      "lines": ["국물 한 술에", "정신 번쩍 🌶️"]
+    },
+    {
+      "role": "caption",
+      "photo": "KakaoTalk_20260718_121907296_08.jpg",
+      "lines": ["면발 각 잡힌", "간짜장도 옳다"]
+    },
+    {
+      "role": "caption",
+      "photo": "KakaoTalk_20260718_121913061.jpg",
+      "lines": ["탕수육은 그냥…", "옳다 🍖"]
+    },
+    {
+      "role": "collage",
+      "photos": ["KakaoTalk_20260718_121907296_06.jpg", "KakaoTalk_20260718_121907296_08.jpg", "KakaoTalk_20260718_121913061.jpg", "KakaoTalk_20260718_121907296_02_mosaic.jpg"],
+      "badge": "삼대장 총출동",
+      "lines": ["짬뽕·간짜장", "탕수육"]
+    },
+    {
+      "role": "caption",
+      "photo": "KakaoTalk_20260718_121907296_05.jpg",
+      "lines": ["면 따로 소스 따로", "이 맛에 간짜장"]
+    },
+    {
+      "role": "info",
+      "photo": "KakaoTalk_20260718_121907296.jpg",
+      "kicker": "가게 정보 📍",
+      "facts": [
+        "40년 전통 · 송추 진흥관 분점",
+        "대표 짬뽕·간짜장·탕수육",
+        "김포 양촌읍 김포한강4로 365",
+        "031-984-9911",
+        "1시에도 만석 · 주차 OK"
+      ]
+    },
+    {
+      "role": "cta",
+      "photo": "KakaoTalk_20260718_121913061_01.jpg",
+      "lines": ["김포 중화 땡기면", "진흥관 가자"],
+      "cta": "저장 필수 📌",
+      "handle": "@gimpo.matjip.note"
+    }
+  ]
+}

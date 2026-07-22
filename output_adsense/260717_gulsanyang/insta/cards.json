@@ -1,0 +1,68 @@
+{
+  "outDir": "output_adsense/260717_gulsanyang/insta",
+  "photosDir": "adsense_src/260717",
+  "handle": "@gimpo.matjip.note",
+  "accent": "#9fe3e0",
+  "cards": [
+    {
+      "role": "cover",
+      "photo": "KakaoTalk_20260717_111124330_11.jpg",
+      "kicker": "김포 사우동",
+      "lines": ["여름 보양식", "하모 세트"],
+      "name": "굴사냥조개사냥"
+    },
+    {
+      "role": "caption",
+      "photo": "KakaoTalk_20260717_111124330.jpg",
+      "lines": ["굴·조개 전문점의", "여름 별미 갯장어"]
+    },
+    {
+      "role": "photo",
+      "photo": "KakaoTalk_20260717_111124330_01.jpg"
+    },
+    {
+      "role": "caption",
+      "photo": "KakaoTalk_20260717_111124330_11.jpg",
+      "lines": ["뼈째 데친 하모 회", "비린내 없이 담백"]
+    },
+    {
+      "role": "caption",
+      "photo": "KakaoTalk_20260717_111124330_14.jpg",
+      "lines": ["장어튀김은", "겉바속촉"]
+    },
+    {
+      "role": "caption",
+      "photo": "KakaoTalk_20260717_111124330_19.jpg",
+      "lines": ["산낙지까지 넣은", "진한 샤브 육수"]
+    },
+    {
+      "role": "caption",
+      "photo": "KakaoTalk_20260717_111124330_20.jpg",
+      "lines": ["갯장어를 살짝 데쳐", "꽃처럼 말리면 완성"]
+    },
+    {
+      "role": "caption",
+      "photo": "KakaoTalk_20260717_111124330_16.jpg",
+      "lines": ["회·튀김·파전·샤브", "이게 다 한 상에"]
+    },
+    {
+      "role": "info",
+      "photo": "KakaoTalk_20260717_111124330_08.jpg",
+      "kicker": "메뉴 · 가격(변동 가능)",
+      "facts": [
+        "하모 세트(회+샤브) 2인 100,000원",
+        "하모 회 2인 70,000원",
+        "여름 한정 6~9월 자연산",
+        "원래는 굴찜·조개찜 전문",
+        "김포 사우동 · 세트 2인부터"
+      ]
+    },
+    {
+      "role": "cta",
+      "photo": "KakaoTalk_20260717_111124330_25.jpg",
+      "lines": ["여름엔 갯장어 보양식", "김포 사우동에서"],
+      "cta": "저장해두고 여름에 방문각",
+      "handle": "@gimpo.matjip.note"
+    }
+  ]
+}

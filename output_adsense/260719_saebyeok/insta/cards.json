@@ -1,0 +1,67 @@
+{
+  "outDir": "output_adsense/260719_saebyeok/insta",
+  "photosDir": "adsense_src/260719",
+  "handle": "@gimpo.matjip.note",
+  "accent": "#ffcf8a",
+  "cards": [
+    {
+      "role": "cover",
+      "photo": "KakaoTalk_20260719_163210329.jpg",
+      "kicker": "김포 근처 강화",
+      "lines": ["새벽 5시에 여는", "선지우거지해장국"],
+      "name": "강화 새벽해장국"
+    },
+    {
+      "role": "caption",
+      "photo": "KakaoTalk_20260719_163210329_05.jpg",
+      "lines": ["강화섬쌀 밥까지", "든든한 한 상"]
+    },
+    {
+      "role": "photo",
+      "photo": "KakaoTalk_20260719_163210329_04.jpg"
+    },
+    {
+      "role": "caption",
+      "photo": "KakaoTalk_20260719_163210329_06.jpg",
+      "lines": ["얼큰 구수한 국물에", "속이 확 풀려요"]
+    },
+    {
+      "role": "caption",
+      "photo": "순대국.jpg",
+      "lines": ["순대 푸짐한", "순대국도 별미"]
+    },
+    {
+      "role": "photo",
+      "photo": "KakaoTalk_20260719_163234752_01.jpg"
+    },
+    {
+      "role": "caption",
+      "photo": "KakaoTalk_20260719_163210329_07.jpg",
+      "lines": ["밥맛이 다르다", "강화섬쌀 밥"]
+    },
+    {
+      "role": "caption",
+      "photo": "KakaoTalk_20260719_163210329_01.jpg",
+      "lines": ["직접 담근", "김치·밑반찬까지"]
+    },
+    {
+      "role": "info",
+      "photo": "KakaoTalk_20260719_163210329_02.jpg",
+      "kicker": "가게 정보 · 변동 가능",
+      "facts": [
+        "새벽 5시 ~ 오후 7시 매일",
+        "전 메뉴 1만 원대 · 강화섬쌀",
+        "선지우거지해장국 · 순대국",
+        "인천 강화군 강화읍 강화대로 320",
+        "032-934-8882 · 주차 OK"
+      ]
+    },
+    {
+      "role": "cta",
+      "photo": "KakaoTalk_20260719_163210329_05.jpg",
+      "lines": ["김포서 가까운 강화", "해장국 한 그릇"],
+      "cta": "저장해두고 방문각",
+      "handle": "@gimpo.matjip.note"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "outDir": "output_adsense/260720_gimpo_gogikkangdol/insta",
+  "photosDir": "adsense_src/260720",
+  "handle": "@gimpo.matjip.note",
+  "cards": [
+    { "role": "collage", "size": 78, "badge": "김포 구래동",
+      "photos": ["KakaoTalk_20260720_114453627_08.jpg", "KakaoTalk_20260720_114453627_02.jpg", "KakaoTalk_20260720_114453627_06.jpg", "KakaoTalk_20260720_114453627_03.jpg"],
+      "lines": ["김포에서 먹는", "100% 제주고기"], "name": "고기깡돌" },
+    { "role": "photo", "photo": "KakaoTalk_20260720_114453627_08.jpg" },
+    { "role": "caption", "photo": "KakaoTalk_20260720_114453627_02.jpg", "size": 46,
+      "lines": ["제주산 생삼겹살", "160g에 17,000원"] },
+    { "role": "photo", "photo": "KakaoTalk_20260720_114453627_03.jpg" },
+    { "role": "caption", "photo": "KakaoTalk_20260720_114453627_04.jpg", "size": 46,
+      "lines": ["냉동 아니고 생고기", "두께부터 다릅니다"] },
+    { "role": "photo", "photo": "KakaoTalk_20260720_114453627_06.jpg" },
+    { "role": "caption", "photo": "KakaoTalk_20260720_114453627_07.jpg", "size": 46,
+      "lines": ["마무리는 된장술밥", "7,000원 강력추천 🍚"] },
+    { "role": "info", "photo": "KakaoTalk_20260720_114453627.jpg", "kicker": "가기 전 저장",
+      "facts": ["삼겹살·오겹살·목살 각 17,000원(160g)", "항정살 19,000원 / 된장술밥 7,000원", "매일 12:00~다음 날 02:00", "김포시 김포한강9로 95 122호", "메인 주문 시 소주·맥주 3병 10,000원"] },
+    { "role": "cta", "photo": "KakaoTalk_20260720_114453627_08.jpg", "size": 68,
+      "lines": ["구래동 고기 땡길 때", "여기 저장해두세요"], "cta": "저장하고 팔로우 👇", "handle": "@gimpo.matjip.note" }
+  ]
+}

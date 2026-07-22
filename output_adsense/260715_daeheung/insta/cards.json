@@ -1,0 +1,63 @@
+{
+  "outDir": "output_adsense/260715_daeheung/insta",
+  "photosDir": "adsense_src/260715_daeheung",
+  "handle": "@gimpo.matjip.note",
+  "accent": "#ffd39a",
+  "cards": [
+    {
+      "role": "cover",
+      "photo": "KakaoTalk_20260715_184431573_03.jpg",
+      "kicker": "김포 가성비 고깃집",
+      "lines": ["연탄불고기 1인분", "11,000원"],
+      "name": "대흥연탄불고기"
+    },
+    {
+      "role": "caption",
+      "photo": "KakaoTalk_20260715_184536456.jpg",
+      "lines": ["부대 많은 동네", "김포 연탄불고기집"]
+    },
+    {
+      "role": "photo",
+      "photo": "KakaoTalk_20260715_190108601_02.jpg"
+    },
+    {
+      "role": "caption",
+      "photo": "KakaoTalk_20260715_184536456_07.jpg",
+      "lines": ["불향은 진한데", "짜지 않아 밥도둑"]
+    },
+    {
+      "role": "caption",
+      "photo": "KakaoTalk_20260715_190108601_03.jpg",
+      "lines": ["상추에 싸 먹으면", "여기서 완성"]
+    },
+    {
+      "role": "caption",
+      "photo": "KakaoTalk_20260715_184536456_04.jpg",
+      "lines": ["밑반찬도 알차게"]
+    },
+    {
+      "role": "caption",
+      "photo": "KakaoTalk_20260715_184536456_09.jpg",
+      "lines": ["된장찌개에 공기밥까지", "백반 한 상"]
+    },
+    {
+      "role": "info",
+      "photo": "KakaoTalk_20260715_184536456_01.jpg",
+      "kicker": "메뉴 · 가격(변동 가능)",
+      "facts": [
+        "연탄불고기 11,000원 (200g)",
+        "고추장불고기 12,000원",
+        "2인 세트 22,000원",
+        "된장찌개·공기밥 포함",
+        "포장·예약 031-981-1718"
+      ]
+    },
+    {
+      "role": "cta",
+      "photo": "KakaoTalk_20260715_184536456_05.jpg",
+      "lines": ["김포 연탄불고기", "가성비로 배부르게"],
+      "cta": "저장해두고 방문각",
+      "handle": "@gimpo.matjip.note"
+    }
+  ]
+}
