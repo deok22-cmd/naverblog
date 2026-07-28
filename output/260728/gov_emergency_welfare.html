@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #f1f8e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f9fbe7; border: 2px solid #c5e1a5; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 12px; font-size: 0.95em; }
+  .info-table td { padding: 9px 12px; border: 1px solid #ddd; font-size: 0.95em; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #388e3c; border-radius: 10px; padding: 20px; background: #f9fbe7; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 700; color: #388e3c; }
+  .ph-file { font-size: 0.8em; color: #888; font-weight: 400; }
+  .prompt-text { background: #263238; color: #a5d6a7; padding: 12px; border-radius: 6px; font-size: 0.82em; line-height: 1.6; white-space: pre-wrap; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; font-size: 0.85em; margin-top: 5px; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; text-align: center; }
+  .tip-box { background: #fffde7; border-left: 4px solid #f9a825; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .warn-box { background: #fce4ec; border-left: 4px solid #c62828; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>긴급복지지원 위기가구 조건과 신청 방법, 생계지원금 얼마 받나</h1>
+<div class="intro-box">
+갑작스러운 실직이나 큰 병, 휴·폐업, 화재 같은 위기로 당장 생계가 막막해질 때가 있습니다. 이런 <strong>위기가구를 한시적으로 신속하게 돕는 제도가 긴급복지지원</strong>입니다. 소득·재산 조사를 나중에 하더라도 위기 상황이 확인되면 먼저 지원하는 '선지원 후조사'가 핵심입니다. 이 글에서는 지원 대상(위기사유), 소득·재산 기준의 개념, 생계·의료·주거 등 지원 종류, 신청 방법과 처리 절차를 정리했습니다. <strong>구체적인 금액과 기준은 매년 고시로 바뀌므로 복지로(bokjiro.go.kr)와 보건복지상담센터(129)에서 최종 확인</strong>하시기 바랍니다.
+</div>
+<h2>01 | 긴급복지지원제도란 무엇인가</h2>
+
+긴급복지지원은 <strong>긴급복지지원법</strong>에 근거한 제도로, 갑작스러운 위기상황으로 생계유지가 곤란해진 저소득 가구를 한시적으로 신속하게 돕는 안전망입니다. 기초생활보장처럼 장기간 정기적으로 지원하는 제도와 달리, 말 그대로 '긴급'한 순간에 빠르게 개입하는 것이 목적입니다.<br/><br/>
+
+이 제도의 가장 큰 특징은 <strong>선지원 후조사 원칙</strong>입니다. 위기상황이 어느 정도 확인되면 소득·재산에 대한 정밀 조사를 마치기 전이라도 먼저 지원을 시작하고, 이후에 소득·재산을 조사해 지원의 적정성을 판단합니다. 위기 상황에서 서류 심사를 기다리다 골든타임을 놓치는 일을 막기 위한 장치입니다.<br/><br/>
+
+지원 대상은 위기에 처한 <strong>본인뿐 아니라 생계와 주거를 함께하는 가구 구성원</strong>까지 포함합니다. 다만 모든 어려운 상황이 자동으로 지원되는 것은 아니며, 법에서 정한 위기사유에 해당하고 소득·재산 기준을 충족해야 합니다. 자신이 대상인지 애매할 때는 혼자 판단하지 말고 <strong>보건복지상담센터(국번 없이 129)</strong>나 주소지 읍·면·동 주민센터에 먼저 문의하는 것이 좋습니다.
+
+<h2>02 | 지원 대상 — 어떤 위기사유가 해당되나</h2>
+
+긴급복지지원의 '위기사유'는 법령에 구체적으로 정해져 있습니다. 대표적인 사유는 다음과 같습니다.<br/><br/>
+<table class="info-table">
+<tr><th>구분</th><th>주요 위기사유(예시)</th></tr>
+<tr><td style="background:#f9fbe7;"><strong>소득 상실</strong></td><td style="background:#f9fbe7;">주 소득자의 사망·가출·행방불명·구금, 실직, 휴업·폐업</td></tr>
+<tr><td><strong>질병·부상</strong></td><td>중한 질병 또는 부상을 당한 경우</td></tr>
+<tr><td style="background:#f9fbe7;"><strong>재난·사고</strong></td><td>화재·자연재해 등으로 거주지에서 생활하기 곤란한 경우</td></tr>
+<tr><td><strong>가정 내 위기</strong></td><td>가정폭력·성폭력, 방임·유기, 학대 등을 당한 경우</td></tr>
+<tr><td style="background:#f9fbe7;"><strong>기타</strong></td><td>이혼, 단전, 각 지자체 조례로 정한 사유 등</td></tr>
+</table>
+
+위기사유는 <strong>'갑작스럽게' 생계가 곤란해졌다는 점</strong>이 핵심입니다. 오래전부터 이어진 만성적 빈곤보다는, 특정 사건을 계기로 소득이 끊기거나 생활이 어려워진 상황을 빠르게 메워주는 성격입니다.<br/><br/>
+
+또한 위 사유 외에도 지방자치단체장이 위기상황이라고 인정하는 경우 지원이 가능하도록 폭넓게 열려 있습니다. 그래서 "내 상황이 딱 떨어지지 않는데" 싶더라도 일단 상담을 받아보는 것이 중요합니다. 실제 인정 여부는 담당 공무원의 확인과 조사를 거쳐 결정되며, 이 글의 내용만으로 지원 여부를 단정할 수는 없습니다.
+
+<div class="img-area">
+<img alt="읍·면·동 주민센터 긴급복지 상담 창구 / AI 제작 이미지" src="../../images/260728/7_emergency_welfare_1.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">읍·면·동 주민센터 긴급복지 상담 창구 / AI 제작 이미지</div>
+</div>
+<h2>03 | 소득·재산·금융재산 기준</h2>
+
+위기사유에 해당하더라도 지원을 받으려면 소득과 재산 기준도 함께 충족해야 합니다. 세 가지 기준을 모두 살펴봅니다.<br/><br/>
+<strong>소득 기준</strong>은 가구의 소득이 <strong>기준 중위소득의 일정 비율 이하</strong>일 때 충족됩니다. 2026년 안내 기준으로는 대체로 기준 중위소득 75% 이하 수준이 적용되는 것으로 안내되고 있으나, 구체적인 가구원 수별 금액은 매년 고시로 정해지므로 복지로나 129를 통해 최신 수치를 확인하셔야 합니다.<br/><br/>
+<strong>일반재산 기준</strong>은 거주 지역에 따라 다르게 적용됩니다. 대도시·중소도시·농어촌으로 나누어 상한선이 정해지는데, 대도시가 가장 높고 농어촌이 가장 낮은 구조입니다. 예를 들어 대도시는 2억 원대, 농어촌은 1억 원대 초반 수준으로 안내되지만, 이 역시 연도별로 조정되므로 정확한 금액은 확인이 필요합니다.<br/><br/>
+<strong>금융재산 기준</strong>은 예금·적금 등 금융자산에 대한 기준으로, 가구 규모에 따라 수백만 원대 상한이 적용됩니다. 주거지원의 경우 여기에 일정 금액을 더한 기준이 적용되기도 합니다. 세 가지 기준(소득·일반재산·금융재산)을 함께 보므로, 하나만으로 판단하지 마시고 종합적으로 상담받는 것이 정확합니다.
+
+<h2>04 | 지원 종류 — 생계·의료·주거·교육 등</h2>
+
+긴급복지지원은 현금(생계비) 지원 하나만 있는 것이 아닙니다. 위기 유형에 맞춰 여러 갈래로 나뉩니다.<br/><br/>
+<table class="info-table">
+<tr><th>지원 종류</th><th>내용(개념)</th></tr>
+<tr><td style="background:#f9fbe7;"><strong>생계지원</strong></td><td style="background:#f9fbe7;">식료품·의복 등 생계유지에 필요한 비용을 현금으로 지원</td></tr>
+<tr><td><strong>의료지원</strong></td><td>중한 질병·부상 치료를 위한 검사·치료 등 의료서비스 비용 지원</td></tr>
+<tr><td style="background:#f9fbe7;"><strong>주거지원</strong></td><td>임시거소 제공 또는 이에 준하는 주거 비용 지원</td></tr>
+<tr><td><strong>교육지원</strong></td><td>초·중·고 학생의 수업료 등 교육에 필요한 비용 지원</td></tr>
+<tr><td style="background:#f9fbe7;"><strong>그 밖의 지원</strong></td><td>동절기 연료비, 해산·장제비, 전기요금 등 그 밖의 지원</td></tr>
+</table>
+
+이 밖에 <strong>사회복지시설 이용지원</strong>처럼 시설 입소·이용 비용을 돕는 유형도 있습니다. 위기상황에 따라 생계지원과 의료지원을 함께 받는 등 <strong>복수의 지원을 조합</strong>해 받을 수도 있습니다.<br/><br/>
+
+각 지원은 종류마다 지원 횟수와 기간이 정해져 있습니다. 예를 들어 생계지원은 원칙적으로 일정 개월 지원 후, 위기상황이 계속되면 심사를 거쳐 연장될 수 있습니다. 의료지원은 같은 질병에 대해 정해진 횟수 범위 안에서 지원되는 식입니다. 세부 한도와 기간은 종류별로 다르므로 상담 시 반드시 확인하세요.
+
+<h2>05 | 생계지원금, 얼마나 받나</h2>
+
+가장 관심이 많은 부분이 생계지원금 액수입니다. 생계지원금은 <strong>가구원 수에 따라 월 단위로 정해진 금액</strong>이 지급됩니다. 1인 가구가 가장 적고, 가구원이 늘수록 금액이 커지는 구조입니다.<br/><br/>
+
+2026년 안내 기준으로 1인 가구는 월 70만 원대, 4인 가구는 월 180만~190만 원대, 6인 이상 가구는 월 240만 원 안팎 수준으로 안내되고 있습니다. 다만 <strong>정확한 가구원 수별 지급액은 매년 고시로 갱신</strong>되고 자료마다 표기가 조금씩 다를 수 있으므로, 신청 전 반드시 복지로 또는 129에서 당해 연도 확정 금액을 확인하시기 바랍니다.<br/><br/>
+<div class="warn-box">
+⚠️ <strong>"신청하면 무조건 받는다"는 오해에 주의하세요</strong><br/><br/>
+생계지원금은 위기사유와 소득·재산 기준을 함께 충족하고, 담당 기관의 확인·조사를 거쳐 결정됩니다. 이 글의 금액은 이해를 돕기 위한 개략적 수준이며, 실제 지급 여부와 액수는 개별 조사 결과에 따라 달라집니다. 특정 결과를 단정하지 마시고 상담을 통해 확인하세요.
+</div>
+
+생계지원은 원칙적으로 <strong>일정 개월(단기) 지원 후 필요 시 연장</strong>되는 구조입니다. 위기상황이 지속되면 긴급지원심의위원회의 심의를 거쳐 지원 기간이 연장될 수 있으나, 무한정 지속되는 제도는 아닙니다. 장기적 지원이 필요하다면 기초생활보장 등 다른 제도로의 연계를 함께 상담받는 것이 좋습니다.
+
+<h2>06 | 신청 방법 — 주민센터·129·복지로</h2>
+
+긴급복지지원은 여러 경로로 신청할 수 있습니다. 급한 상황일수록 가장 접근하기 쉬운 방법을 택하면 됩니다.<br/><br/>
+<strong>① 주소지 읍·면·동 주민센터(시·군·구청) 방문·전화</strong><br/>
+가장 기본적인 창구입니다. 담당 공무원이 위기상황을 확인하고 접수·조사를 진행합니다.<br/><br/>
+<strong>② 보건복지상담센터 129</strong><br/>
+국번 없이 <strong>129</strong>로 전화하면 24시간 상담과 함께 관할 기관 연계를 안내받을 수 있습니다. 위기상황을 어디에 알려야 할지 막막할 때 가장 먼저 이용하기 좋은 번호입니다.<br/><br/>
+<strong>③ 복지로(bokjiro.go.kr)</strong><br/>
+복지대표포털 복지로에서 제도 내용을 확인하고, 로그인 후 온라인으로 관련 안내와 신청 절차를 진행할 수 있습니다. 다만 긴급성이 큰 사안은 전화나 방문이 더 빠를 수 있습니다.<br/><br/>
+
+본인이 직접 신청하기 어려운 상황이라면 <strong>친족이나 이웃, 사회복지시설 종사자 등 제3자도 위기상황을 신고</strong>할 수 있습니다. 주변에 위기가구가 보인다면 129로 알려 도움을 연결해 줄 수 있습니다.
+
+<div class="img-area">
+<img alt="보건복지상담센터(129)와 복지로를 통한 긴급복지 신청 / AI 제작 이미지" src="../../images/260728/7_emergency_welfare_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">보건복지상담센터(129)와 복지로를 통한 긴급복지 신청 / AI 제작 이미지</div>
+</div>
+<h2>07 | 처리 절차 — 선지원 후조사</h2>
+
+긴급복지지원의 절차는 일반적인 복지 신청과 순서가 다릅니다. 조사를 먼저 끝내고 지원하는 것이 아니라, <strong>지원을 먼저 하고 사후에 조사</strong>하는 흐름입니다.<br/><br/>
+<strong>① 위기상황 신고·접수</strong> → 주민센터·129·복지로 등을 통해 위기상황을 알립니다.<br/>
+<strong>② 현장 확인</strong> → 담당 공무원이 위기상황의 사실 여부를 확인합니다.<br/>
+<strong>③ 선지원 결정</strong> → 위기상황이 확인되면 소득·재산 정밀조사 이전이라도 우선 지원합니다.<br/>
+<strong>④ 사후조사</strong> → 지원 후 소득·재산·금융재산을 조사해 적정성을 판단합니다.<br/>
+<strong>⑤ 적정성 심사</strong> → 긴급지원심의위원회가 지원의 적정성을 심사합니다.<br/><br/>
+
+이 절차에서 유의할 점은, 사후조사 결과 <strong>지원 기준을 초과한 것으로 확인되면 지원비용의 전부 또는 일부를 환수</strong>당할 수 있다는 것입니다. 즉 '선지원'이 곧 '무조건 확정'을 뜻하지는 않습니다.<br/><br/>
+
+따라서 신청 시에는 소득·재산 상황을 사실대로 알리는 것이 중요합니다. 위기 순간에 신속히 돕되, 사후에 형평성을 맞추는 것이 이 제도의 설계 원리라는 점을 이해하면 절차가 한결 명확해집니다.
+
+<h2>08 | 중복 지원 제한과 유의사항</h2>
+
+긴급복지지원은 다른 복지 지원과의 관계에서 몇 가지 제한이 있습니다.<br/><br/>
+
+먼저 <strong>동일한 위기사유로 이미 다른 법령이나 지자체 조례에 따라 동일 내용의 지원을 받고 있는 경우</strong>에는, 긴급복지지원이 중복해서 제공되지 않을 수 있습니다. 국민기초생활보장 등 다른 제도로 이미 지속적 지원을 받고 있다면 긴급지원 대상에서 제외되거나 조정될 수 있습니다.<br/><br/>
+<div class="tip-box">
+💡 <strong>긴급복지 이용 시 알아두면 좋은 점</strong><br/><br/>
+• 위기 순간엔 <strong>완벽한 서류보다 빠른 신고</strong>가 먼저입니다(선지원 후조사).<br/>
+• 애매하면 혼자 판단 말고 <strong>129에 먼저 전화</strong>해 상담받으세요.<br/>
+• 소득·재산은 <strong>사실대로</strong> 알려야 사후 환수 위험을 줄입니다.<br/>
+• 장기 지원이 필요하면 <strong>기초생활보장 등 연계</strong>를 함께 문의하세요.
+</div>
+
+또한 지원에는 <strong>횟수와 기간의 한도</strong>가 있습니다. 같은 위기사유로 재신청하는 경우 일정 기간이 지나야 다시 지원받을 수 있는 등 제한이 있으므로, 반복적인 어려움이 예상된다면 긴급지원과 함께 다른 복지제도를 병행 상담하는 것이 현실적입니다.<br/><br/>
+
+마지막으로, 제도의 세부 기준과 금액은 <strong>매년 보건복지부 고시로 바뀝니다</strong>. 블로그·커뮤니티의 오래된 정보를 그대로 믿기보다, 신청 시점에 복지로와 129를 통해 최신 기준을 확인하는 습관이 안전합니다.
+
+<h2>09 | 자주 묻는 질문 (FAQ)</h2>
+<strong>Q. 실직했는데 실업급여를 받고 있어도 신청할 수 있나요?</strong><br/><br/>
+소득·재산 기준과 위기사유를 종합적으로 판단합니다. 다른 지원을 받고 있다고 해서 무조건 배제되는 것은 아니지만, 중복 여부와 소득 산정에 영향을 줄 수 있으므로 담당 창구나 129에 구체적 상황을 알려 확인하는 것이 정확합니다.<br/><br/>
+<strong>Q. 지원까지 얼마나 걸리나요?</strong><br/><br/>
+긴급성을 전제로 한 제도라 위기상황이 확인되면 비교적 신속하게 선지원이 이뤄지는 구조입니다. 다만 실제 처리 기간은 사안과 지역 여건에 따라 다르므로, 접수 시 담당자에게 예상 일정을 문의하세요.<br/><br/>
+<strong>Q. 서류가 부족한데 일단 신청해도 되나요?</strong><br/><br/>
+선지원 후조사 원칙상 위기상황 확인이 우선입니다. 서류가 완벽하지 않아도 우선 상담·신고하는 것이 중요하며, 부족한 서류는 이후 절차에서 보완하게 됩니다. 완벽을 기다리다 시기를 놓치지 마세요.
+
+<h2>10 | 마무리 — 위기일수록 먼저 손을 내미세요</h2>
+
+긴급복지지원은 <strong>갑작스러운 위기로 생계가 무너질 때, 정밀 심사보다 신속한 도움을 앞세우는 제도</strong>입니다. 실직·질병·휴폐업·재난·가정폭력 등 법에서 정한 위기사유에 해당하고 소득·재산 기준을 충족하면, 생계·의료·주거·교육 등 여러 형태의 지원을 받을 수 있습니다.<br/><br/>
+
+핵심은 세 가지입니다. 첫째, <strong>선지원 후조사</strong>이므로 서류가 완벽하지 않아도 먼저 신고하세요. 둘째, <strong>129·주민센터·복지로</strong> 어디로든 문의가 가능합니다. 셋째, <strong>정확한 금액과 기준은 매년 고시로 바뀌므로</strong> 신청 시점에 복지로와 129에서 최신 정보를 확인해야 합니다.<br/><br/>
+
+어려운 순간일수록 "나는 안 될 것 같다"는 생각으로 문의조차 미루기 쉽습니다. 하지만 대상 여부는 담당 기관의 확인을 거쳐야 알 수 있는 것이지, 스스로 단정할 문제가 아닙니다. 위기 신호가 보인다면 본인이든 이웃이든 <strong>먼저 129로 전화</strong>해 도움을 연결하는 것, 그것이 이 제도를 가장 잘 쓰는 방법입니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260718/travel_mokpo_cablecar.html" style="color:#388e3c;">목포 해상케이블카 요금·시간과 유달산 야경, 여름 밤바다 코스</a></li>
+<li><a href="../260717/travel_wando_cheongsando.html" style="color:#388e3c;">완도 청산도 슬로길 코스와 배 시간표, 서편제길·구들장논 여름 섬여행</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#긴급복지지원</span>
+<span class="tag">#위기가구</span>
+<span class="tag">#생계지원금</span>
+<span class="tag">#복지로</span>
+<span class="tag">#보건복지상담센터129</span>
+<span class="tag">#긴급생계비</span>
+<span class="tag">#복지제도</span>
+<span class="tag">#저소득지원</span>
+<span class="tag">#선지원후조사</span>
+<span class="tag">#긴급복지신청방법</span>
+</div>
+</body>
+</html>

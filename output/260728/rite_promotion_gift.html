@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #f1f8e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f9fbe7; border: 2px solid #c5e1a5; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 12px; font-size: 0.95em; }
+  .info-table td { padding: 9px 12px; border: 1px solid #ddd; font-size: 0.95em; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #388e3c; border-radius: 10px; padding: 20px; background: #f9fbe7; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 700; color: #388e3c; }
+  .ph-file { font-size: 0.8em; color: #888; font-weight: 400; }
+  .prompt-text { background: #263238; color: #a5d6a7; padding: 12px; border-radius: 6px; font-size: 0.82em; line-height: 1.6; white-space: pre-wrap; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; font-size: 0.85em; margin-top: 5px; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; text-align: center; }
+  .tip-box { background: #fffde7; border-left: 4px solid #f9a825; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .warn-box { background: #fce4ec; border-left: 4px solid #c62828; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>승진·개업·집들이 축하 선물과 금액, 관계별로 얼마가 적당한가</h1>
+<div class="intro-box">
+가까운 사람의 <strong>승진, 개업, 집들이</strong> 소식을 들으면 축하하는 마음은 앞서는데 막상 "얼마를, 무엇을 해야 할까" 하는 고민이 시작됩니다. 경조사 선물에는 정해진 정답이 없습니다. 관계의 거리, 지역 분위기, 상황의 격식에 따라 통상적으로 오가는 범위가 다를 뿐입니다. 이 글에서는 상황별·관계별로 사람들이 대체로 참고하는 <strong>통상 범위</strong>와, 현금과 물품 사이에서 고르는 기준, 화분 문구와 축하 메시지 예시, 피해야 할 선물까지 하나씩 정리했습니다. 금액은 규정이 아니라 참고선이라는 점을 먼저 기억해 주세요.
+</div>
+<h2>01 | 경조사 선물, 정답이 아니라 관례입니다</h2>
+
+경조사 축하에서 가장 먼저 내려놓아야 할 것은 "정확한 금액이 있을 것"이라는 생각입니다. 결혼식 축의금처럼 오랜 관례가 쌓인 자리도 지역과 세대에 따라 편차가 큰데, 승진이나 개업, 집들이 같은 경사 축하는 그보다도 형식이 자유롭습니다. 정해진 답은 없고 관계와 상황에 따라 다릅니다.<br/><br/>
+
+그래서 이 글에서 제시하는 숫자는 모두 <strong>통상 범위</strong>일 뿐, 반드시 지켜야 할 기준이 아닙니다. 같은 '직장 동료'라도 매일 함께 일하는 팀원과 얼굴만 아는 타 부서 동료는 무게가 다르고, 같은 개업이라도 작은 카페 오픈과 큰 병원 개원은 성격이 다릅니다. 내가 감당할 수 있는 선에서, 상대와의 실제 거리에 맞춰 정하시는 것이 가장 자연스럽습니다.<br/><br/>
+
+한 가지 마음 편한 기준은 "부담되지 않는 선에서, 진심이 전해지는 방식"입니다. 금액이 크다고 좋은 선물이 아니고, 작다고 성의가 없는 것도 아닙니다. 오히려 상대의 상황과 취향을 읽은 작은 배려가 오래 기억에 남는 경우가 많습니다.
+
+<h2>02 | 승진·영전 축하 — 관계별 통상 금액</h2>
+
+승진과 영전은 대부분 <strong>직장이라는 관계망 안에서</strong> 벌어지는 경사입니다. 그래서 개인 선물보다는 팀·부서 단위로 함께 축하하거나, 가벼운 식사·화분·기프트카드 정도로 마음을 전하는 경우가 많습니다. 지나치게 값비싼 선물은 오히려 상대를 부담스럽게 만들 수 있어 주의가 필요합니다.<br/><br/>
+
+아래는 사람들이 대체로 참고하는 통상 범위입니다. 어디까지나 참고선이며, 팀에서 갹출해 함께 준비하는 경우에는 1인당 부담이 훨씬 가벼워집니다.<br/><br/>
+<table class="info-table">
+<tr><th>관계</th><th>통상 범위(참고)</th><th>주로 고르는 형태</th></tr>
+<tr><td style="background:#f9fbe7;">가까운 직장 동료</td><td style="background:#f9fbe7;">3만~5만 원대</td><td style="background:#f9fbe7;">기프트카드, 식사, 소품</td></tr>
+<tr><td>상사·선배</td><td>개인보다 팀 갹출 권장</td><td>화분, 축하 자리 마련</td></tr>
+<tr><td>친한 친구</td><td>3만~7만 원대</td><td>식사, 취향 선물</td></tr>
+<tr><td style="background:#f9fbe7;">친척·가족</td><td style="background:#f9fbe7;">상황에 따라 자유</td><td style="background:#f9fbe7;">식사, 현금, 실용품</td></tr>
+</table>
+
+특히 공직자나 공공기관 종사자에게 선물할 때는 청탁금지법(김영란법)의 가액 기준을 신경 써야 합니다. 상사에게 개인적으로 고가 선물을 하는 것보다는, 함께 축하하는 자리를 마련하거나 팀 이름으로 화분을 보내는 편이 훨씬 무난합니다.
+
+<div class="img-area">
+<img alt="승진 축하로 자주 오가는 화분과 작은 선물 / AI 제작 이미지" src="../../images/260728/6_promotion_gift_1.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">승진 축하로 자주 오가는 화분과 작은 선물 / AI 제작 이미지</div>
+</div>
+<h2>03 | 개업·개원 축하 — 화분·화환과 금액대</h2>
+
+개업과 개원 축하의 상징은 역시 <strong>화분과 화환</strong>입니다. 매장이나 사무실 입구를 채워 주는 축하 화환은 개업식 분위기를 살려 주고, 오래 두고 키우는 관엽식물 화분은 공간에 생기를 더해 줍니다. 화환은 대체로 10만 원 안팎, 관엽식물 화분은 종류와 크기에 따라 10만~15만 원선에서 준비하는 경우가 많다고 알려져 있으나, 이 역시 매장 규모와 관계에 따라 편차가 큽니다.<br/><br/>
+
+식물을 고를 때는 관리가 쉽고 상징이 좋은 종류가 인기입니다. 공기정화 능력이 있는 뱅갈고무나무·산세베리아, '재물·행운'의 의미를 담은 녹보수, 관리가 수월한 스투키·아레카야자 등이 개업 선물로 자주 선택됩니다. 물을 자주 주기 어려운 매장이라면 손이 덜 가는 종류를 고르는 배려도 좋습니다.<br/><br/>
+
+현금으로 축하하고 싶다면 봉투에 담아 전하는 방식도 자연스럽습니다. 가까운 친구의 가게 개업이라면 화분과 함께 소액의 현금을 곁들이거나, 초기 매출에 보탬이 되도록 '첫 손님'이 되어 주는 것도 실질적인 응원이 됩니다.
+
+<h2>04 | 집들이 축하 — 요즘 트렌드와 실용템</h2>
+
+집들이 선물은 예전부터 <strong>휴지와 세제</strong>가 상징처럼 여겨져 왔습니다. "일이 술술 풀리고 살림이 거품처럼 인다"는 의미가 담겨 있어 지금도 무난한 기본 선물로 사랑받습니다. 다만 요즘은 여기에 그치지 않고, 실제로 새집에서 오래 쓸 수 있는 실용템을 함께 고르는 흐름이 뚜렷합니다.<br/><br/>
+
+인기 있는 실용 선물로는 감각적인 디자인의 디퓨저·캔들, 주방에서 매일 쓰는 좋은 조리도구나 그릇 세트, 무드를 살려 주는 조명, 예쁜 텀블러·머그 세트 등이 있습니다. 집주인의 취향을 알고 있다면 인테리어 톤에 맞춘 소품이, 잘 모른다면 소모품이나 상품권처럼 부담 없는 선택이 안전합니다.<br/><br/>
+
+금액은 관계에 따라 다양합니다. 가까운 친구라면 3만~5만 원대의 실용 선물이 무난하고, 여러 명이 함께 방문한다면 조금 더 여유 있는 선물을 나눠 준비하기도 합니다. 무엇을 고를지 정말 모르겠다면 백화점·대형마트 상품권이 실패 없는 선택이 됩니다.
+
+<h2>05 | 현금 vs 물품, 무엇을 고를까</h2>
+
+축하를 현금으로 할지 물품으로 할지는 많은 분들이 마지막까지 고민하는 지점입니다. 정답은 없지만, <strong>상황의 성격</strong>을 기준으로 삼으면 판단이 쉬워집니다. 초기 비용이 많이 드는 개업이나, 새 살림을 갖춰야 하는 집들이는 현금이나 상품권이 실질적으로 큰 도움이 됩니다.<br/><br/>
+
+반대로 승진처럼 '축하의 의미'가 중심인 자리는 금액보다 마음을 담은 물품이 더 어울립니다. 상대의 취향을 읽은 작은 선물, 함께하는 식사 자리가 오래 기억에 남습니다. 관계가 가깝고 취향을 잘 안다면 물품을, 취향을 모르거나 실용성이 중요하다면 현금·상품권을 택하는 식으로 나누면 됩니다.<br/><br/>
+<div class="tip-box">
+💡 <strong>고르기 어려울 때의 기준</strong><br/><br/>
+• 초기 비용이 큰 상황(개업·이사) → 현금·상품권이 실질적<br/>
+• 마음·격려가 중심인 상황(승진) → 취향 담은 물품·식사<br/>
+• 취향을 모르겠다 → 백화점·마트 상품권이 안전<br/>
+• 여러 명이 함께 → 갹출해 조금 더 좋은 것 하나로
+</div>
+<h2>06 | 개업 화분·난 문구, 이렇게 씁니다</h2>
+
+화분이나 화환을 보낼 때 함께 다는 <strong>리본 문구</strong>는 짧지만 인상을 좌우합니다. 보통 리본에는 '축하 문구 + 보내는 사람'을 적습니다. 개업·개원 상황에 어울리는 무난한 문구 예시를 소개합니다.<br/><br/>
+<strong>개업 축하 문구 예시</strong><br/>
+· 축 개업 / 번창을 기원합니다<br/>
+· 개업을 진심으로 축하드립니다. 늘 손님으로 가득하시길<br/>
+· 새로운 시작을 응원합니다. 대박 나세요<br/><br/>
+<strong>개원·영전·승진 문구 예시</strong><br/>
+· 축 개원 / 지역 주민의 건강을 지켜 주세요<br/>
+· 승진을 축하드립니다. 앞날에 더 큰 발전이 있으시길<br/>
+· 축 영전 / 새로운 자리에서의 활약을 기원합니다<br/><br/>
+
+문구는 화려할 필요가 없습니다. 격식이 필요한 자리라면 정중하게, 친한 사이라면 조금 더 편하고 따뜻하게 쓰면 됩니다. 보내는 사람 이름은 상대가 한눈에 알아볼 수 있도록 소속이나 관계를 함께 적어 주는 것이 좋습니다.
+
+<div class="img-area">
+<img alt="집들이 실용 선물과 축하 화분 / AI 제작 이미지" src="../../images/260728/6_promotion_gift_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">집들이 실용 선물과 축하 화분 / AI 제작 이미지</div>
+</div>
+<h2>07 | 상황별 축하 메시지 예시</h2>
+
+선물에 곁들이는 <strong>카드 한 줄</strong>이 마음을 완성합니다. 길게 쓸 필요 없이, 상황에 맞는 진심 한 문장이면 충분합니다. 부담 없이 옮겨 쓸 수 있는 예시를 상황별로 모았습니다.<br/><br/>
+<strong>승진 축하</strong><br/>
+· 그동안의 노력이 결실을 맺어 정말 기뻐요. 진심으로 축하드립니다.<br/>
+· 새로운 자리에서도 지금처럼 멋지게 해내실 거라 믿어요.<br/><br/>
+<strong>개업 축하</strong><br/>
+· 오랜 준비가 드디어 빛을 보네요. 문전성시 이루시길 응원할게요.<br/>
+· 첫 손님으로 꼭 찾아갈게요. 번창하세요!<br/><br/>
+<strong>집들이 축하</strong><br/>
+· 새 보금자리에서 좋은 일만 가득하길 바라요.<br/>
+· 초대해 주셔서 고마워요. 늘 웃음이 넘치는 집 되세요.<br/><br/>
+
+메시지는 상대의 이름을 넣거나, 함께한 기억을 한 줄 더하면 훨씬 특별해집니다. "지난번 이야기하던 그 가게, 드디어 열었네요"처럼 구체적인 한마디가 형식적인 축하보다 오래 남습니다.
+
+<h2>08 | 피해야 할 선물</h2>
+
+좋은 마음으로 준비한 선물이 오히려 상대를 난처하게 만드는 경우가 있습니다. <strong>상징이나 상황과 어긋나는 선물</strong>은 미리 피하는 것이 좋습니다. 대표적으로 이사·집들이에 시계나 칼, 손수건 같은 물건은 전통적으로 '이별'이나 '인연을 끊는다'는 의미로 여겨져 꺼리는 분들이 있습니다.<br/><br/>
+
+개업 매장에는 공간·업종과 맞지 않는 큰 물건이나, 관리가 까다로워 오히려 짐이 되는 선물은 피하는 것이 좋습니다. 향이 강한 제품은 음식점이라면 부담이 될 수 있고, 취향을 크게 타는 인테리어 소품도 자칫 애물단지가 될 수 있습니다.<br/><br/>
+<div class="warn-box">
+⚠️ <strong>이런 선물은 한 번 더 생각해 주세요</strong><br/><br/>
+• 집들이에 칼·시계·손수건 등 '단절'을 연상시키는 물건<br/>
+• 공직자·공공기관 종사자에게 청탁금지법 가액을 넘는 고가 선물<br/>
+• 매장 업종·공간과 맞지 않거나 관리가 까다로운 물건<br/>
+• 상대의 종교·건강 상태를 고려하지 않은 식품·주류
+</div>
+
+공직자에게 선물할 때는 특히 청탁금지법의 가액 기준을 반드시 확인하고, 애매하면 하지 않는 편이 서로에게 안전합니다.
+
+<h2>09 | 답례·감사 매너와 상황별 요약</h2>
+
+축하를 받은 쪽의 <strong>답례</strong>도 관계를 오래 이어 가는 데 중요합니다. 개업이라면 방문해 준 분들에게 작은 답례품이나 시식·시음을 준비하고, 집들이라면 정성껏 대접하는 것 자체가 답례가 됩니다. 선물을 받은 뒤에는 늦지 않게 감사 인사를 전하는 것이 기본 예의입니다.<br/><br/>
+
+거창할 필요는 없습니다. "덕분에 잘 마쳤어요, 챙겨 주셔서 고마워요"라는 짧은 연락 한 통이면 충분합니다. 받은 마음을 언젠가 비슷한 자리에서 되갚는 것도 자연스러운 관계의 흐름입니다.<br/><br/>
+<table class="info-table">
+<tr><th>상황</th><th>대표 선물</th><th>통상 범위(참고)</th></tr>
+<tr><td style="background:#f9fbe7;">승진·영전</td><td style="background:#f9fbe7;">화분, 기프트카드, 식사</td><td style="background:#f9fbe7;">3만~5만 원대(팀 갹출 무난)</td></tr>
+<tr><td>개업·개원</td><td>화환, 관엽식물 화분, 현금</td><td>화환·화분 10만 원 안팎대</td></tr>
+<tr><td style="background:#f9fbe7;">집들이</td><td style="background:#f9fbe7;">생활 소모품, 실용템, 상품권</td><td style="background:#f9fbe7;">3만~5만 원대</td></tr>
+</table>
+
+표의 금액은 모두 참고선이며, 관계와 지역·상황에 따라 얼마든지 달라질 수 있습니다.
+
+<h2>10 | 자주 묻는 질문 (FAQ)</h2>
+<strong>Q. 직장 상사 승진에 개인적으로 선물해도 될까요?</strong><br/><br/>
+가능하지만, 개인이 고가 선물을 하는 것보다 팀·부서 이름으로 함께 준비하는 편이 서로 부담이 없습니다. 공직자라면 청탁금지법 가액 기준을 꼭 확인하세요.<br/><br/>
+<strong>Q. 개업식에 못 가는데 축하만 전하고 싶어요.</strong><br/><br/>
+화환·화분을 배송으로 보내면서 축하 문구를 리본에 담거나, 축하 메시지와 함께 소액의 현금·상품권을 전하는 방법이 있습니다. 며칠 뒤 첫 손님으로 방문하는 것도 좋은 응원입니다.<br/><br/>
+<strong>Q. 집들이 선물, 정말 뭘 사야 할지 모르겠어요.</strong><br/><br/>
+취향을 모를 때는 백화점·대형마트 상품권이나 생활 소모품이 실패가 없습니다. 집주인이 새로 갖춰야 할 물건이 있는지 슬쩍 물어보고 준비하면 더 실속 있습니다.<br/><br/>
+<strong>Q. 정해진 금액이 정말 없나요?</strong><br/><br/>
+없습니다. 이 글의 숫자는 모두 통상 범위일 뿐, 관계와 상황에 따라 달라집니다. 내가 감당할 수 있는 선에서 진심을 담는 것이 가장 좋은 기준입니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260717/travel_wando_cheongsando.html" style="color:#388e3c;">완도 청산도 슬로길 코스와 배 시간표, 서편제길·구들장논 여름 섬여행</a></li>
+<li><a href="../260717/travel_gunsan_seonyu.html" style="color:#388e3c;">군산 선유도 고군산군도 드라이브와 짚라인·해수욕장, 차로 가는 여름 섬 코스</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#승진선물</span>
+<span class="tag">#개업선물</span>
+<span class="tag">#집들이선물</span>
+<span class="tag">#축하금</span>
+<span class="tag">#개업화분</span>
+<span class="tag">#집들이집</span>
+<span class="tag">#경조사매너</span>
+<span class="tag">#축하메시지</span>
+<span class="tag">#개업화환문구</span>
+<span class="tag">#승진축하</span>
+</div>
+</body>
+</html>

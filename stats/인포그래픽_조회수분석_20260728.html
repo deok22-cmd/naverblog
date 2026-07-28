@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>조회수 분석 인포그래픽 · 2026-07-28</title>
+<style>
+  :root{
+    --travel:#0d9488; --travel-soft:#ccfbf1;
+    --life:#ea580c;   --life-soft:#ffedd5;
+    --ink:#1f2937; --ink2:#4b5563; --muted:#8a94a3;
+    --line:#e7e9ee; --grid:#eef1f5; --surface:#ffffff; --bg:#f4f6f8;
+    --good:#16a34a; --warn:#d97706; --bad:#dc2626;
+    --shadow:0 1px 3px rgba(15,23,42,.06),0 1px 2px rgba(15,23,42,.04);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;
+    line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1080px;margin:0 auto;padding:28px 20px 64px;}
+  header.top{margin-bottom:8px;}
+  .eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.02em;color:var(--travel);text-transform:uppercase;}
+  h1.title{font-size:1.9rem;font-weight:800;margin:6px 0 6px;letter-spacing:-.01em;}
+  .sub{color:var(--ink2);font-size:.95rem;max-width:760px;}
+  .sub b{color:var(--ink);}
+  .src{margin-top:10px;font-size:.8rem;color:var(--muted);}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin:18px 0 4px;font-size:.85rem;font-weight:600;color:var(--ink2);}
+  .lg{display:inline-flex;align-items:center;gap:7px;}
+  .sw{width:13px;height:13px;border-radius:3px;display:inline-block;}
+
+  section{background:var(--surface);border:1px solid var(--line);border-radius:16px;
+    padding:22px 24px;margin:20px 0;box-shadow:var(--shadow);}
+  .sec-h{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:4px;}
+  .sec-n{font-size:.78rem;font-weight:800;color:var(--travel);background:var(--travel-soft);
+    padding:2px 9px;border-radius:20px;}
+  h2{font-size:1.22rem;font-weight:800;margin:0;letter-spacing:-.01em;}
+  .sec-d{color:var(--ink2);font-size:.9rem;margin:8px 0 4px;}
+  .sec-d b{color:var(--ink);}
+  .takeaway{background:#f8fafb;border-left:3px solid var(--travel);border-radius:0 8px 8px 0;
+    padding:11px 15px;margin-top:16px;font-size:.9rem;color:var(--ink2);}
+  .takeaway b{color:var(--ink);}
+
+  /* hero tiles */
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:14px;margin-top:18px;}
+  .tile{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 17px;box-shadow:var(--shadow);}
+  .tile .k{font-size:.76rem;font-weight:700;color:var(--muted);}
+  .tile .v{font-size:1.75rem;font-weight:800;letter-spacing:-.02em;line-height:1.15;margin:4px 0 2px;}
+  .tile .d{font-size:.8rem;color:var(--ink2);}
+  .tile.t-travel .v{color:var(--travel);} .tile.t-life .v{color:var(--life);}
+  .tile.t-good .v{color:var(--good);}
+
+  /* charts */
+  .chart{width:100%;overflow-x:auto;}
+  svg{display:block;max-width:100%;height:auto;font-family:inherit;}
+  .axis text{fill:var(--muted);font-size:11px;}
+  .gridline{stroke:var(--grid);stroke-width:1;}
+  .baseline{stroke:#d5d9e0;stroke-width:1;}
+  .val-lbl{fill:var(--ink);font-size:11.5px;font-weight:700;}
+  .bar-lbl{fill:var(--ink);font-size:12px;font-weight:600;}
+  .bar-sub{fill:var(--muted);font-size:10.5px;}
+  .note{fill:var(--muted);font-size:10.5px;}
+
+  /* life sub-series list */
+  .sublist{display:grid;grid-template-columns:1fr;gap:9px;margin-top:16px;}
+  .subrow{display:grid;grid-template-columns:132px 1fr auto;gap:12px;align-items:center;font-size:.87rem;}
+  .subrow .nm{font-weight:700;}
+  .subrow .track{background:#f0f2f5;border-radius:6px;height:20px;position:relative;overflow:hidden;}
+  .subrow .fill{position:absolute;left:0;top:0;bottom:0;border-radius:6px;}
+  .subrow .rep{font-size:.78rem;color:var(--ink2);}
+  .verdict{font-size:.78rem;font-weight:700;padding:1px 8px;border-radius:20px;white-space:nowrap;}
+  .v-green{background:#dcfce7;color:#15803d;} .v-yellow{background:#fef9c3;color:#a16207;} .v-orange{background:#ffedd5;color:#c2410c;}
+
+  /* conclusion */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-top:16px;}
+  .cc{border:1px solid var(--line);border-radius:12px;padding:15px 17px;background:#fbfcfd;}
+  .cc h3{margin:0 0 6px;font-size:.98rem;}
+  .cc p{margin:0;font-size:.86rem;color:var(--ink2);}
+  .cc.travel{border-top:3px solid var(--travel);} .cc.life{border-top:3px solid var(--life);}
+  .cc.sum{border-top:3px solid var(--ink);}
+
+  /* tooltip */
+  #tip{position:fixed;pointer-events:none;background:#1f2937;color:#fff;font-size:12px;
+    padding:7px 10px;border-radius:7px;opacity:0;transition:opacity .1s;z-index:50;max-width:240px;box-shadow:0 4px 14px rgba(0,0,0,.25);}
+  #tip b{color:#fff;} #tip .tv{font-weight:800;}
+  .hoverable{cursor:default;}
+  .foot{color:var(--muted);font-size:.78rem;text-align:center;margin-top:26px;}
+  @media(max-width:560px){
+    h1.title{font-size:1.5rem;} .subrow{grid-template-columns:96px 1fr auto;}
+    section{padding:18px 16px;}
+  }
+</style>
+</head>
+<body>
+<div id="tip"></div>
+<div class="wrap">
+
+  <header class="top">
+    <div class="eyebrow">Naver Blog · Traffic Analytics</div>
+    <h1 class="title">조회수 분석 인포그래픽</h1>
+    <p class="sub">두 축을 한눈에 봅니다 — <b>① 주간 조회수 순위</b>(7/13~7/19, 6주 시계열)와 <b>② 일자별 올린 글 누적 조회수</b>(최근 200건)의 <b>성숙 추적</b>. 핵심 질문: 지금 정체인가, 새 글은 죽었나, 어디로 진화하나.</p>
+    <div class="src">데이터: <code>stats/weekly/20260719.json</code> · <code>weekly 일자별 전체조회수 20260720 (1~10)</code> · 기준 2026-07-28</div>
+  </header>
+
+  <div class="legend">
+    <span class="lg"><span class="sw" style="background:var(--travel)"></span>여행 (계절 엔진)</span>
+    <span class="lg"><span class="sw" style="background:var(--life)"></span>생활실용 (무감쇠 에버그린)</span>
+    <span class="lg" style="color:var(--muted)">※ 조회수 = 글별 누적, 값은 이미지 판독치</span>
+  </div>
+
+  <!-- HERO TILES -->
+  <div class="tiles">
+    <div class="tile t-travel"><div class="k">최고 조회 글</div><div class="v">2,996</div><div class="d">영동 물한계곡 · 6/29 발행</div></div>
+    <div class="tile"><div class="k">추적 글 수</div><div class="v">200<span style="font-size:1rem;font-weight:700">건</span></div><div class="d">최근 발행 200개 누적조회</div></div>
+    <div class="tile t-good"><div class="k">상단 성장 (WoW)</div><div class="v">+16%</div><div class="d">top20 조회 · 정체 아님</div></div>
+    <div class="tile t-life"><div class="k">애드포스트 월환산</div><div class="v">~13.5만</div><div class="d">일평균 4,496원 (7/1~27)</div></div>
+    <div class="tile"><div class="k">여행 조회 점유</div><div class="v">73%</div><div class="d">발행은 43%(3/7)인데</div></div>
+  </div>
+
+  <!-- SECTION 1: MATURATION -->
+  <section>
+    <div class="sec-h"><span class="sec-n">01</span><h2>성숙 곡선 — "새 글이 죽은 게 아니라 아직 안 익었다"</h2></div>
+    <p class="sec-d">발행일별 <b>코호트 평균 누적조회수</b>. 최근 10일(7/18~) 글은 평균 <b>12~295</b>로 뚝 떨어지지만, 이는 실패가 아니라 <b>조회수가 발행 후 2~3주에 걸쳐 백로딩</b>되기 때문. 성숙 정점은 <b>발행 2~4주차</b>(6/28~7/7, 평균 750~1,136)에서 나타납니다.</p>
+    <div class="chart" id="c-mature"></div>
+    <div class="takeaway">💡 <b>1~3일차 숫자로 신규 글을 판정하지 말 것.</b> 7/25~27 코호트(평균 12~26)는 저품질이 아니라 미성숙 구간입니다. 회고·판정은 최소 2주 성숙 후 동일발행일 상대비교로.</div>
+  </section>
+
+  <!-- SECTION 2: TOP POSTS -->
+  <section>
+    <div class="sec-h"><span class="sec-n">02</span><h2>누적 조회 TOP 15 — 무엇이 트래픽을 만드나</h2></div>
+    <p class="sec-d">여름 <b>계곡·섬·축제 여행글</b>이 상위를 점하지만, <b>정보성 에버그린</b>(부고 1,261·K-패스 1,836·보조배터리 1,391)이 여행 히트와 대등하게 섞여 있습니다.</p>
+    <div class="chart" id="c-top"></div>
+    <div class="takeaway">💡 폭발 공식 = <b>강한 고유명사 + 시즌 훅 + 질의형 제목</b>(여의도 밤도깨비 1,957·삼척 환선굴 961=cool-escape). 무명 소도시 단독 명소는 15~60에서 정체.</div>
+  </section>
+
+  <!-- SECTION 3: CATEGORY SHARE + SUBSERIES -->
+  <section>
+    <div class="sec-h"><span class="sec-n">03</span><h2>카테고리 점유율과 생활실용 하위계열</h2></div>
+    <p class="sec-d">지금(성수기) 여행이 조회의 <b>72~79%</b>. 하지만 여행 몫은 <b>9월에 절벽 감쇠</b>할 계절 수치이고, 생활 27%는 <b>안 죽는 에버그린</b>. 9월 대비 헤지가 이미 심어지는 중입니다.</p>
+    <div class="chart" id="c-share"></div>
+    <p class="sec-d" style="margin-top:18px"><b>생활실용 4칸의 '질' 편차</b> — 계열별 대표 최고 조회와 판정:</p>
+    <div class="sublist" id="c-sub"></div>
+    <div class="takeaway">💡 <b>교통/여행실무 에버그린</b>(KTX·보조배터리·환전·여권)은 여행 검색을 타면서 안 죽는 <b>저평가된 금맥</b> → 비중↑. <b>rite_ 경조사</b>는 파일럿 대성공(부고 1,261) → 상설 편입.</div>
+  </section>
+
+  <!-- SECTION 4: WoW RISERS -->
+  <section>
+    <div class="sec-h"><span class="sec-n">04</span><h2>이번 주 급등 TOP (WoW · 7/13~19)</h2></div>
+    <p class="sec-d">한 주 사이 주간 조회수가 가장 크게 뛴 글. <b>새 히트가 계속 만들어지고 있다</b>는 증거 — 경조사·교통 에버그린과 여름 성수기 여행이 섞여 있습니다.</p>
+    <div class="chart" id="c-wow"></div>
+  </section>
+
+  <!-- SECTION 5: ADPOST -->
+  <section>
+    <div class="sec-h"><span class="sec-n">05</span><h2>애드포스트 수익 — 일자별 추이 (7/1~7/27)</h2></div>
+    <p class="sec-d">일 <b>수입 예정액</b>. 27일 합계 <b>121,384원</b>, 일평균 <b>~4,496원</b>, 최고 <b>8,195원(7/26·토)</b>. 주 후반 상승(7/22 7,410 · 7/26 8,195)은 상단 조회수·주말 트래픽과 동행합니다.</p>
+    <div class="chart" id="c-rev"></div>
+    <div class="tiles" style="margin-top:18px">
+      <div class="tile t-life"><div class="k">27일 수입 합계</div><div class="v">12.1만<span style="font-size:1rem;font-weight:700">원</span></div><div class="d">7/1~7/27 누적</div></div>
+      <div class="tile"><div class="k">일 평균</div><div class="v">4,496<span style="font-size:1rem;font-weight:700">원</span></div><div class="d">1,788~8,195 변동</div></div>
+      <div class="tile t-good"><div class="k">월 환산 (×30)</div><div class="v">~13.5만</div><div class="d">일평균 기준 추정</div></div>
+      <div class="tile"><div class="k">최고일</div><div class="v">8,195<span style="font-size:1rem;font-weight:700">원</span></div><div class="d">7/26 (토)</div></div>
+    </div>
+    <p class="sec-d" style="margin-top:14px;font-size:.84rem;color:var(--muted)">※ 노출수 1,357→3,823(7/1~19)·평균 CTR 0.47%는 <code>분석_20260719</code> 기준. CTR·CPC는 통제 난망 → <b style="color:var(--ink2)">조회수 총량이 유일한 레버</b>.</p>
+    <div class="takeaway">💡 지금 할 일은 광고 최적화가 아니라 <b>무감쇠 조회수 자산을 쌓아 노출 베이스를 계단식으로 올리는 것</b>. 100k 목표·에버그린 전략과 정확히 일치.</div>
+  </section>
+
+  <!-- SECTION 6: CONCLUSION -->
+  <section style="background:linear-gradient(180deg,#ffffff,#f8fafb)">
+    <div class="sec-h"><span class="sec-n">06</span><h2>결론 — "교체율↓, 누적율↑"</h2></div>
+    <p class="sec-d"><b>정체 아님(상단 +16~21% WoW).</b> 성장이 점진적인 이유는 지는 6월 여행글이 새 글 상승분을 상쇄하기 때문. 해법은 <b>에버그린 축적</b>으로 "감쇠→교체"를 "무감쇠→누적"으로 바꾸는 것.</p>
+    <div class="cards">
+      <div class="cc travel"><h3>✈️ 여행 3칸 — 규율만</h3><p>무명 소도시 단독 데뷔↓, 강한 고유명사에 묶기. 도심 이벤트 질의형·cool-escape·비교 허브 정기 배치(여의도 1,957·환선굴 961이 증명).</p></div>
+      <div class="cc life"><h3>🏘️ 생활 4칸 — 무게 이동</h3><p>rite_ 경조사 상설 편입, 교통/여행실무 에버그린 확대(최고 가성비). cert_ 초니치 문서↓, gov_ K-패스류 배제 유지·제도 다변화.</p></div>
+      <div class="cc sum"><h3>📈 총량 돌파</h3><p>병목은 히트 부재가 아니라 지는 계절글의 상쇄. 에버그린 비중을 유지하면 승리가 누적(감쇠 안 함) → 9월 여행 절벽을 넘어 계단식 성장.</p></div>
+    </div>
+  </section>
+
+  <div class="foot">생성 2026-07-28 · 짝꿍 분석 <code>stats/분석_20260719_주간.md</code> · 색상 CVD 검증 통과(ΔE 13.8)</div>
+</div>
+
+<script>
+/* ---------- DATA ---------- */
+const T='#0d9488', L='#ea580c';
+// 성숙: 발행일별 코호트 평균 (chronological old->new)
+const mature=[
+ ['6/12',200,1],['6/13',299,2],['6/14',286,1],['6/15',422,5],['6/16',299,5],['6/17',343,5],
+ ['6/19',260,4],['6/20',515,4],['6/21',477,5],['6/23',239,5],['6/24',674,5],['6/25',369,2],
+ ['6/26',798,3],['6/27',548,5],['6/28',902,5],['6/29',1136,5],['6/30',591,5],
+ ['7/3',436,5],['7/4',423,5],['7/5',385,4],['7/6',751,4],['7/7',773,5],['7/8',354,6],
+ ['7/9',357,7],['7/10',299,10],['7/11',350,8],['7/12',456,7],['7/13',411,7],['7/14',334,7],
+ ['7/15',141,8],['7/16',1957,1],['7/17',460,4],['7/18',252,2],['7/19',80,7],['7/20',295,6],
+ ['7/21',239,7],['7/22',74,7],['7/23',80,7],['7/25',25,3],['7/26',26,3],['7/27',12,3]
+]; // [date, avg, n]
+const immatureFrom='7/19'; // shade recent immature zone
+
+const topPosts=[
+ ['영동 물한계곡',2996,T,'6/29 · 계곡'],['거창 월성계곡',2312,T,'7/6 · 계곡'],
+ ['여의도 밤도깨비 야시장',1957,T,'7/16 · 도심 여름밤'],['K-패스 카드 발급',1836,L,'6/26 · gov'],
+ ['보령 머드축제',1774,T,'6/30 · 축제'],['지리산 뱀사골 계곡',1676,T,'7/7 · 계곡'],
+ ['정선 함백산 만항재',1650,T,'6/28 · 고원'],['가평 용추계곡',1569,T,'6/24 · 계곡'],
+ ['비행기 보조배터리 반입',1391,L,'6/29 · 교통실무'],['봉화 백천계곡',1369,T,'7/4 · 계곡'],
+ ['부고 문자 답장·조의금',1261,L,'7/12 · 경조사'],['인천 펜타포트 락페',1194,T,'7/13 · 축제'],
+ ['통영 비진도',1191,T,'7/13 · 섬'],['홍천 비발디 오션월드',1014,T,'7/11 · 워터파크'],
+ ['삼척 환선굴 (동굴피서)',961,T,'7/9 · cool-escape']
+];
+
+const share=[
+ ['TOP 20',79,21],['TOP 50',72,28],['TOP 100',73,27]
+]; // band, travel%, life%
+
+const sub=[
+ ['교통·여행실무','보조배터리 1,391 · KTX 936 · 환전 738',1391,'🟢','v-green'],
+ ['경조사 rite_','부고 1,261 · 조의금 515 · 축의금 229',1261,'🟢','v-green'],
+ ['gov_ 제도','K-패스 1,836(포화) · 문화누리 387',1836,'🟡','v-yellow'],
+ ['자동차 car_','명의이전 597 · 이파인 347 · 하이패스 329',597,'🟢','v-green'],
+ ['cert_ 증명서','가족관계 486 · 소득금액 302 · 등기부 273',486,'🟠','v-orange'],
+ ['가전 appli_','제습기 362 · 무선청소기 89 · 에어컨 76',362,'🟡','v-yellow']
+];
+
+const wow=[
+ ['부고 문자 답장 (rite_)',539,L],['지리산 뱀사골',485,T],['삼척 환선굴',474,L],
+ ['KTX·SRT 환불·보상',402,L],['홍천 비발디 오션월드',392,T],['거제 외도보타니아',349,T],
+ ['인천 무의도 하나개',251,T],['여수 밤바다 낭만포차',246,T],['가족관계증명서',193,L]
+];
+
+// 애드포스트 일 수입 예정액 (원) 7/1~7/27
+const rev=[
+ ['7/1',1788],['7/2',6510],['7/3',3403],['7/4',2374],['7/5',5471],['7/6',5657],['7/7',6142],
+ ['7/8',4233],['7/9',4416],['7/10',4158],['7/11',2063],['7/12',5157],['7/13',2483],['7/14',5188],
+ ['7/15',2987],['7/16',4128],['7/17',4880],['7/18',5207],['7/19',4759],['7/20',3216],['7/21',5363],
+ ['7/22',7410],['7/23',4980],['7/24',2773],['7/25',4760],['7/26',8195],['7/27',3683]
+];
+const revAvg=4496;
+
+/* ---------- TOOLTIP ---------- */
+const tip=document.getElementById('tip');
+function showTip(html,e){tip.innerHTML=html;tip.style.opacity=1;moveTip(e);}
+function moveTip(e){let x=e.clientX+14,y=e.clientY+14;
+  if(x+240>innerWidth)x=e.clientX-250;tip.style.left=x+'px';tip.style.top=y+'px';}
+function hideTip(){tip.style.opacity=0;}
+function bind(el,html){el.classList.add('hoverable');
+  el.addEventListener('mousemove',e=>{showTip(html,e);});
+  el.addEventListener('mouseleave',hideTip);}
+const SVGNS='http://www.w3.org/2000/svg';
+function el(n,a){const e=document.createElementNS(SVGNS,n);for(const k in a)e.setAttribute(k,a[k]);return e;}
+function fmt(n){return n.toLocaleString('ko-KR');}
+
+/* ---------- CHART: MATURATION (line+area) ---------- */
+function drawMature(){
+  const box=document.getElementById('c-mature');
+  const W=1020,H=340,mL=44,mR=16,mT=22,mB=42;
+  const pw=W-mL-mR,ph=H-mT-mB;
+  const yMax=2000;
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,width:W,height:H,role:'img'});
+  const x=i=>mL+pw*i/(mature.length-1);
+  const y=v=>mT+ph*(1-v/yMax);
+  // gridlines
+  [0,500,1000,1500,2000].forEach(g=>{
+    svg.appendChild(el('line',{x1:mL,x2:W-mR,y1:y(g),y2:y(g),class:'gridline'}));
+    const t=el('text',{x:mL-8,y:y(g)+4,'text-anchor':'end',class:''});t.setAttribute('fill','#8a94a3');t.setAttribute('font-size','11');t.textContent=fmt(g);svg.appendChild(t);
+  });
+  // immature shaded zone
+  const zi=mature.findIndex(d=>d[0]===immatureFrom);
+  if(zi>=0){svg.appendChild(el('rect',{x:x(zi),y:mT,width:(W-mR)-x(zi),height:ph,fill:'#fff4ed',opacity:.7}));
+    const zt=el('text',{x:x(zi)+8,y:mT+16});zt.setAttribute('fill','#c2410c');zt.setAttribute('font-size','11');zt.setAttribute('font-weight','700');zt.textContent='← 미성숙 (발행 2주 내 · 백로딩 중)';svg.appendChild(zt);}
+  // area + line
+  let dp='',ap=`M ${x(0)} ${y(mature[0][1])}`;
+  mature.forEach((d,i)=>{dp+=(i?' L ':'M ')+x(i)+' '+y(d[1]);if(i)ap+=' L '+x(i)+' '+y(d[1]);});
+  ap+=` L ${x(mature.length-1)} ${y(0)} L ${x(0)} ${y(0)} Z`;
+  svg.appendChild(el('path',{d:ap,fill:T,opacity:.09}));
+  svg.appendChild(el('path',{d:dp,fill:'none',stroke:T,'stroke-width':2.4,'stroke-linejoin':'round','stroke-linecap':'round'}));
+  // peak annotation (6/29)
+  const pk=mature.findIndex(d=>d[0]==='6/29');
+  svg.appendChild(el('line',{x1:x(pk),x2:x(pk),y1:y(1136),y2:y(1136)-2,stroke:T}));
+  const pkt=el('text',{x:x(pk),y:y(1136)-8,'text-anchor':'middle'});pkt.setAttribute('fill',T);pkt.setAttribute('font-size','11');pkt.setAttribute('font-weight','800');pkt.textContent='정점 1,136';svg.appendChild(pkt);
+  // markers + x labels (every other)
+  mature.forEach((d,i)=>{
+    const r=d[2]===1?3:4.2;
+    const c=el('circle',{cx:x(i),cy:y(d[1]),r:r,fill:'#fff',stroke:T,'stroke-width':2});
+    bind(c,`<b>${d[0]} 발행</b><br>코호트 평균 <span class="tv">${fmt(d[1])}</span> 조회<br>글 수 ${d[2]}건`);
+    svg.appendChild(c);
+    if(i%2===0||d[0]==='7/27'){const xt=el('text',{x:x(i),y:H-mB+18,'text-anchor':'middle'});xt.setAttribute('fill','#8a94a3');xt.setAttribute('font-size','10');xt.textContent=d[0];svg.appendChild(xt);}
+  });
+  // single-post note for 7/16
+  const so=mature.findIndex(d=>d[0]==='7/16');
+  const snt=el('text',{x:x(so),y:y(1957)-8,'text-anchor':'middle'});snt.setAttribute('fill','#8a94a3');snt.setAttribute('font-size','10');snt.textContent='단일글(여의도)';svg.appendChild(snt);
+  const yl=el('text',{x:mL-30,y:mT-8});yl.setAttribute('fill','#8a94a3');yl.setAttribute('font-size','10.5');yl.textContent='평균 조회수';svg.appendChild(yl);
+  box.appendChild(svg);
+}
+
+/* ---------- CHART: REVENUE (line+area+avg) ---------- */
+function drawRevenue(){
+  const box=document.getElementById('c-rev');
+  const W=1020,H=280,mL=48,mR=16,mT=20,mB=40;
+  const pw=W-mL-mR,ph=H-mT-mB;
+  const yMax=9000;
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,width:W,height:H,role:'img'});
+  const x=i=>mL+pw*i/(rev.length-1);
+  const y=v=>mT+ph*(1-v/yMax);
+  [0,2500,5000,7500,9000].forEach(g=>{
+    svg.appendChild(el('line',{x1:mL,x2:W-mR,y1:y(g),y2:y(g),class:'gridline'}));
+    const t=el('text',{x:mL-8,y:y(g)+4,'text-anchor':'end'});t.setAttribute('fill','#8a94a3');t.setAttribute('font-size','11');t.textContent=fmt(g);svg.appendChild(t);
+  });
+  // avg dashed line
+  svg.appendChild(el('line',{x1:mL,x2:W-mR,y1:y(revAvg),y2:y(revAvg),stroke:L,'stroke-width':1.3,'stroke-dasharray':'5 4',opacity:.7}));
+  const at=el('text',{x:W-mR,y:y(revAvg)-6,'text-anchor':'end'});at.setAttribute('fill',L);at.setAttribute('font-size','10.5');at.setAttribute('font-weight','700');at.textContent='일평균 4,496원';svg.appendChild(at);
+  // area + line
+  let dp='',ap=`M ${x(0)} ${y(rev[0][1])}`;
+  rev.forEach((d,i)=>{dp+=(i?' L ':'M ')+x(i)+' '+y(d[1]);if(i)ap+=' L '+x(i)+' '+y(d[1]);});
+  ap+=` L ${x(rev.length-1)} ${y(0)} L ${x(0)} ${y(0)} Z`;
+  svg.appendChild(el('path',{d:ap,fill:L,opacity:.10}));
+  svg.appendChild(el('path',{d:dp,fill:'none',stroke:L,'stroke-width':2.3,'stroke-linejoin':'round','stroke-linecap':'round'}));
+  // markers
+  let maxV=Math.max(...rev.map(d=>d[1]));
+  rev.forEach((d,i)=>{
+    const isMax=d[1]===maxV;
+    const c=el('circle',{cx:x(i),cy:y(d[1]),r:isMax?5:3.6,fill:isMax?L:'#fff',stroke:L,'stroke-width':2});
+    bind(c,`<b>2026-${d[0]}</b><br>수입 예정 <span class="tv">${fmt(d[1])}원</span>`);
+    svg.appendChild(c);
+    if(isMax){const ml=el('text',{x:x(i),y:y(d[1])-10,'text-anchor':'middle'});ml.setAttribute('fill',L);ml.setAttribute('font-size','11.5');ml.setAttribute('font-weight','800');ml.textContent='8,195';svg.appendChild(ml);}
+    if(i%2===0||d[0]==='7/27'){const xt=el('text',{x:x(i),y:H-mB+18,'text-anchor':'middle'});xt.setAttribute('fill','#8a94a3');xt.setAttribute('font-size','9.5');xt.textContent=d[0];svg.appendChild(xt);}
+  });
+  const yl=el('text',{x:mL-34,y:mT-6});yl.setAttribute('fill','#8a94a3');yl.setAttribute('font-size','10.5');yl.textContent='원/일';svg.appendChild(yl);
+  box.appendChild(svg);
+}
+
+/* ---------- CHART: HBAR generic ---------- */
+function drawHBar(boxId,data,opts){
+  opts=opts||{};
+  const box=document.getElementById(boxId);
+  const rowH=opts.rowH||30, gap=10, labelW=opts.labelW||168;
+  const W=1020,mR=64,mT=6,mB=6;
+  const H=mT+mB+data.length*(rowH+gap)-gap;
+  const pw=W-labelW-mR;
+  const max=Math.max(...data.map(d=>d[1]));
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,width:W,height:H,role:'img'});
+  data.forEach((d,i)=>{
+    const yy=mT+i*(rowH+gap);
+    const bw=Math.max(3,pw*d[1]/max);
+    // label
+    const lb=el('text',{x:labelW-10,y:yy+rowH/2-2,'text-anchor':'end',class:'bar-lbl'});lb.textContent=(i+1)+'. '+d[0];svg.appendChild(lb);
+    if(d[3]){const sb=el('text',{x:labelW-10,y:yy+rowH/2+12,'text-anchor':'end',class:'bar-sub'});sb.textContent=d[3];svg.appendChild(sb);}
+    // track baseline
+    svg.appendChild(el('line',{x1:labelW,x2:labelW,y1:yy+2,y2:yy+rowH-2,class:'baseline'}));
+    // bar (rounded data-end)
+    const bar=el('rect',{x:labelW,y:yy+3,width:bw,height:rowH-6,rx:4,fill:d[2]});
+    bind(bar,`<b>${d[0]}</b><br><span class="tv">${fmt(d[1])}</span> 누적 조회${d[3]?'<br>'+d[3]:''}`);
+    svg.appendChild(bar);
+    // value
+    const vl=el('text',{x:labelW+bw+8,y:yy+rowH/2+4,class:'val-lbl'});vl.textContent=fmt(d[1]);svg.appendChild(vl);
+  });
+  box.appendChild(svg);
+}
+
+/* ---------- CHART: STACKED share ---------- */
+function drawShare(){
+  const box=document.getElementById('c-share');
+  const rowH=38,gap=16,labelW=84,W=1020,mR=16,mT=6;
+  const H=mT+share.length*(rowH+gap);
+  const pw=W-labelW-mR;
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,width:W,height:H,role:'img'});
+  share.forEach((d,i)=>{
+    const yy=mT+i*(rowH+gap);
+    const lb=el('text',{x:labelW-12,y:yy+rowH/2+4,'text-anchor':'end',class:'bar-lbl'});lb.textContent=d[0];svg.appendChild(lb);
+    const tw=pw*d[1]/100;
+    const b1=el('rect',{x:labelW,y:yy,width:tw-2,height:rowH,rx:5,fill:T});
+    bind(b1,`<b>${d[0]} · 여행</b><br><span class="tv">${d[1]}%</span> 조회 점유`);svg.appendChild(b1);
+    const b2=el('rect',{x:labelW+tw+2,y:yy,width:pw-tw-2,height:rowH,rx:5,fill:L});
+    bind(b2,`<b>${d[0]} · 생활실용</b><br><span class="tv">${d[2]}%</span> 조회 점유`);svg.appendChild(b2);
+    const t1=el('text',{x:labelW+10,y:yy+rowH/2+5});t1.setAttribute('fill','#fff');t1.setAttribute('font-size','13');t1.setAttribute('font-weight','800');t1.textContent='여행 '+d[1]+'%';svg.appendChild(t1);
+    const t2=el('text',{x:labelW+tw+12,y:yy+rowH/2+5});t2.setAttribute('fill','#fff');t2.setAttribute('font-size','13');t2.setAttribute('font-weight','800');t2.textContent='생활 '+d[2]+'%';svg.appendChild(t2);
+  });
+  box.appendChild(svg);
+}
+
+/* ---------- life sub-series list ---------- */
+function drawSub(){
+  const box=document.getElementById('c-sub');
+  const max=Math.max(...sub.map(d=>d[2]));
+  sub.forEach(d=>{
+    const row=document.createElement('div');row.className='subrow';
+    const w=(d[2]/max*100).toFixed(1);
+    row.innerHTML=`<div class="nm">${d[0]}</div>
+      <div class="track" title="${d[1]}"><div class="fill" style="width:${w}%;background:${L}"></div></div>
+      <div style="display:flex;gap:8px;align-items:center"><span class="rep">최고 ${fmt(d[2])}</span><span class="verdict ${d[4]}">${d[3]}</span></div>`;
+    row.querySelector('.track').addEventListener('mousemove',e=>showTip(`<b>${d[0]}</b><br>${d[1]}`,e));
+    row.querySelector('.track').addEventListener('mouseleave',hideTip);
+    box.appendChild(row);
+  });
+}
+
+drawMature();
+drawRevenue();
+drawHBar('c-top',topPosts,{labelW:186,rowH:26});
+drawShare();
+drawSub();
+drawHBar('c-wow',wow.map(d=>[d[0],d[1],d[2],null]),{labelW:186,rowH:26});
+</script>
+</body>
+</html>
