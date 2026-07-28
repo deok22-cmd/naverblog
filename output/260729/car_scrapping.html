@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>폐차 말소등록 셀프 절차와 필요서류, 조기폐차 지원금 받는 법</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #f1f8e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f9fbe7; border: 2px solid #c5e1a5; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 12px; text-align: left; font-size: 0.92em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #e0e0e0; font-size: 0.92em; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #fff; border: 1px solid #f1f8e9; border-left-width: 4px; margin-bottom: 15px; border-radius: 4px; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 16px 20px; border-radius: 8px; margin: 20px 0; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #bbb; border-radius: 8px; padding: 28px 20px; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; color: #555; }
+  .ph-file { font-size: 0.8em; color: #999; font-family: monospace; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 12px; font-size: 0.82em; color: #444; white-space: pre-wrap; text-align: left; margin: 0 0 12px; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 5px; padding: 8px 18px; cursor: pointer; font-size: 0.85em; }
+  .img-caption { font-size: 0.88em; color: #777; margin-top: 8px; font-style: italic; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .highlight-box { background: #e8f5e9; border-left: 5px solid #388e3c; padding: 16px 20px; border-radius: 4px; margin: 16px 0; }
+  .warn-box { background: #fff3e0; border: 1px solid #ffb74d; border-radius: 8px; padding: 14px 18px; margin: 16px 0; }
+  .source-note { font-size: 0.82em; color: #888; margin-top: 6px; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText; btn.innerText = "복사 완료!"; btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = orig; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>폐차 말소등록 셀프 절차와 필요서류, 조기폐차 지원금 받는 법</h1>
+
+<div class="intro-box">
+오래된 차를 폐차할 때 절차를 몰라 시간을 낭비하거나, 받을 수 있는 지원금을 놓치는 경우가 많습니다. 폐차 말소등록 절차부터 조기폐차 지원금(최대 800만 원), 환경부 신청 방법까지 단계별로 정리했습니다.
+</div>
+
+<h2>① 폐차 vs 말소등록 — 용어 이해부터</h2>
+
+'폐차'는 차량을 부수거나 압축해 처리하는 물리적 행위이고, '말소등록'은 차량 등록을 공식적으로 지우는 행정 절차입니다. 두 가지가 반드시 함께 이루어져야 폐차 처리가 완료됩니다.<br><br>
+
+폐차 처리 후 말소등록을 하지 않으면 자동차세가 계속 부과되고, 보험료도 낭비됩니다. 반대로 말소등록은 했는데 폐차업체에 실제 차량을 인도하지 않으면 불법 폐차 문제가 생깁니다.<br><br>
+
+<table class="info-table">
+  <tr>
+    <th>구분</th>
+    <th>주체</th>
+    <th>처리 방법</th>
+  </tr>
+  <tr>
+    <td style="background:#f1f8e9;">폐차(해체)</td>
+    <td>폐차업체</td>
+    <td>차량 인도 → 업체 압축·해체 처리</td>
+  </tr>
+  <tr>
+    <td style="background:#f1f8e9;">말소등록</td>
+    <td>소유자 또는 폐차업체 대행</td>
+    <td>관할 시·군·구청 또는 인터넷 신청</td>
+  </tr>
+</table>
+
+<h2>② 폐차 절차 단계별 정리</h2>
+
+<div class="step-box">
+  <strong>Step 1. 폐차업체 선택</strong><br>
+  환경부 자동차 재활용 인증업체(aea.or.kr) 조회 후 선택. 인증업체여야 조기폐차 지원금 신청 가능.
+</div>
+
+<div class="step-box">
+  <strong>Step 2. 차량 인도 및 견적 확인</strong><br>
+  폐차업체에 차량 인도. 차량 상태(사고, 부품 가치)에 따라 폐차 보상금이 달라짐(보통 10~50만 원 수준).
+</div>
+
+<div class="step-box">
+  <strong>Step 3. 말소등록 신청</strong><br>
+  폐차업체에서 말소등록 대행 처리(대부분의 업체에서 무료 대행). 또는 소유자가 직접 관할 구청 교통민원 부서에서 신청.
+</div>
+
+<div class="step-box">
+  <strong>Step 4. 말소등록 완료 확인</strong><br>
+  자동차민원 대국민 서비스(차량조회)에서 말소 처리 확인. 자동차세·보험 해지는 말소 완료 후 처리.
+</div>
+
+<h2>③ 폐차 말소등록 필요 서류</h2>
+
+<table class="info-table">
+  <tr>
+    <th>서류</th>
+    <th>발급처</th>
+    <th>비고</th>
+  </tr>
+  <tr>
+    <td style="background:#f1f8e9;">자동차 등록증</td>
+    <td>차량 보관</td>
+    <td>분실 시 재발급 필요</td>
+  </tr>
+  <tr>
+    <td style="background:#f1f8e9;">자동차 번호판 2장</td>
+    <td>차량 탈거</td>
+    <td>폐차 전 번호판 반납</td>
+  </tr>
+  <tr>
+    <td style="background:#f1f8e9;">신분증</td>
+    <td>소유자 본인</td>
+    <td>주민등록증·운전면허증</td>
+  </tr>
+  <tr>
+    <td style="background:#f1f8e9;">인감도장 또는 서명</td>
+    <td>소유자</td>
+    <td>대리인 신청 시 위임장 필요</td>
+  </tr>
+  <tr>
+    <td style="background:#f1f8e9;">말소등록신청서</td>
+    <td>구청 현장 작성</td>
+    <td>폐차업체 대행 시 불필요</td>
+  </tr>
+</table>
+
+<h2>④ 조기폐차 지원금 — 2026년 등급별 최대 800만 원</h2>
+
+<div class="highlight-box">
+  <strong>2026년 조기폐차 지원금 한도 (환경부 기준)</strong><br>
+  · 4등급 차량: 최대 <strong>800만 원</strong><br>
+  · 5등급 차량: 최대 <strong>300만 원</strong><br>
+  · 저소득층(기초생활수급자·차상위): 추가 <strong>100만 원</strong> 지원<br>
+  <br>
+  ※ 지급 금액은 차량 가액 기준 상한 내에서 산정. 실제 수령액은 차량 종류·가액에 따라 다름.
+</div>
+
+<p class="source-note">※ 출처: 한국자동차환경협회(aea.or.kr), 환경부 저공해차 지원 정책 2026년 현행 기준</p>
+
+조기폐차 지원금은 미세먼지 배출이 많은 노후 경유차(4·5등급)를 조기에 폐차하도록 유도하는 환경부 정책입니다. 자신의 차량 배출가스 등급은 <strong>자동차 배출가스 등급 조회</strong>(emissiongrade.mecar.or.kr)에서 확인할 수 있습니다.<br><br>
+
+<h2>⑤ 조기폐차 지원금 신청 방법 — aea.or.kr</h2>
+
+<div class="step-box">
+  <strong>Step 1. 차량 배출가스 등급 확인</strong><br>
+  emissiongrade.mecar.or.kr → 차량번호 입력 → 4등급 또는 5등급 여부 확인
+</div>
+
+<div class="step-box">
+  <strong>Step 2. 조기폐차 사전 승인 신청</strong><br>
+  한국자동차환경협회(aea.or.kr) → 조기폐차 지원신청 → 차량 정보·소유자 정보 입력<br>
+  ⚠️ 반드시 폐차 전에 사전 승인을 받아야 합니다. 폐차 후 신청은 지원금 수령 불가.
+</div>
+
+<div class="step-box">
+  <strong>Step 3. 승인 후 인증 폐차업체에 차량 인도</strong><br>
+  환경부 인증 조기폐차 참여 업체에만 차량 인도해야 지원금 연계 가능
+</div>
+
+<div class="step-box">
+  <strong>Step 4. 지원금 수령</strong><br>
+  말소등록 완료 확인 후 신청 계좌로 입금 (보통 2~4주 소요)
+</div>
+
+<div class="warn-box">
+  ⚠️ <strong>조기폐차 지원금 주의사항</strong><br>
+  · 폐차 전 사전 승인 필수(사후 신청 불가)<br>
+  · 환경부 인증 업체에만 차량 인도<br>
+  · 지원금 신청 후 말소등록까지 지정 기간 내 완료<br>
+  · 저공해화 의무 이행 조건이 있는 경우 별도 확인
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260729/6_car_scrapping_1.png</span></div>
+    <pre class="prompt-text" id="prompt-6-1">Old diesel car being crushed at a certified Korean auto recycling facility, yellow machinery compressing vehicle, scrap metal yard with cars stacked, environmental recycling concept, photorealistic, ultra high detail, Korean car scrapping center, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">인증 폐차 시설에서 노후 경유차 폐차 처리 장면 / AI 제작 이미지</div>
+</div>
+
+<h2>⑥ 폐차 후 처리 사항 — 보험 해지와 자동차세 환급</h2>
+
+폐차 말소등록이 완료되면 연계 처리해야 할 사항이 있습니다.<br><br>
+
+<strong>자동차 보험 해지</strong>: 말소등록 완료 후 가입 보험사에 연락해 해지 처리합니다. 남은 보험 기간에 해당하는 보험료를 일할 계산하여 환급받을 수 있습니다.<br><br>
+
+<strong>자동차세 환급</strong>: 이미 납부한 자동차세(연납 포함) 중 말소 후 남은 기간분은 환급 신청이 가능합니다. 위택스(witax.go.kr) 또는 관할 구청 세무과에 환급 신청합니다.<br><br>
+
+<strong>하이패스 단말기·번호판 인식 해지</strong>: 하이패스 카드 잔액은 환불 신청, 단말기는 반납하거나 재등록하면 됩니다. 번호판 인식(주차·통행료) 등록이 있다면 함께 해지합니다.<br><br>
+
+<h2>⑦ 폐차 보상금 — 얼마를 받을 수 있나</h2>
+
+폐차업체에서 차량 인도 시 받는 '폐차 보상금'은 조기폐차 지원금과 별개입니다.<br><br>
+
+폐차 보상금은 차량의 고철 가치와 재활용 가능 부품 가치에 따라 다릅니다. 일반적으로 승용차 기준 20~60만 원 수준이며, 사고 차량이나 부품이 많이 빠진 차량은 낮아질 수 있습니다.<br><br>
+
+여러 폐차업체에 견적을 받아보는 것이 유리합니다. 온라인 폐차 견적 비교 서비스를 통해 간편하게 복수 견적을 받을 수 있습니다.<br><br>
+
+<h2>⑧ 셀프 말소등록 vs 폐차업체 대행 — 비교</h2>
+
+<table class="info-table">
+  <tr>
+    <th>방법</th>
+    <th>장점</th>
+    <th>단점</th>
+  </tr>
+  <tr>
+    <td style="background:#f1f8e9;">셀프 말소</td>
+    <td>직접 처리로 확실함</td>
+    <td>구청 방문 필요, 서류 준비</td>
+  </tr>
+  <tr>
+    <td style="background:#f1f8e9;">업체 대행</td>
+    <td>서류·방문 불필요, 대부분 무료</td>
+    <td>처리 완료 여부 직접 확인 필요</td>
+  </tr>
+</table>
+
+대부분의 인증 폐차업체는 말소등록 대행을 무료로 해줍니다. 단, 처리가 완료되었는지 자동차민원 대국민 서비스에서 반드시 본인이 확인해야 합니다.<br><br>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260729/6_car_scrapping_2.png</span></div>
+    <pre class="prompt-text" id="prompt-6-2">Person submitting car deregistration documents at Korean district office counter, government official processing paperwork, Korean administrative office interior, official documents and car registration papers on desk, photorealistic, ultra high detail, bureaucratic process concept, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">자동차 말소등록 서류 제출 장면 / AI 제작 이미지</div>
+</div>
+
+<h2>⑨ 폐차 전 꼭 챙겨야 할 것들</h2>
+
+<div class="tip-box">
+  <strong>💡 폐차 전 체크리스트</strong><br>
+  · 하이패스 단말기 회수 (분실 시 재구매 비용 발생)<br>
+  · 블랙박스 SD카드·본체 회수<br>
+  · 차량 내 개인 소지품 최종 점검<br>
+  · 네비게이션(빌트인) 제거 가능 여부 확인<br>
+  · 귀중 부품(오디오, 튜닝 부품) 탈거 후 별도 판매 고려<br>
+  · 자동차세 연납분 환급 신청 준비
+</div>
+
+<h2>⑩ 마무리 — 폐차·조기폐차 지원금 흐름 한눈에</h2>
+
+폐차는 ①배출가스 등급 확인 → ②조기폐차 사전 승인(aea.or.kr) → ③인증업체 차량 인도 → ④말소등록 → ⑤지원금 수령 → ⑥보험·세금 정리 순으로 진행하면 됩니다. 조기폐차 지원금은 최대 800만 원으로 결코 작지 않은 금액입니다. 4·5등급 노후 경유차를 보유 중이라면 반드시 사전 승인부터 시작해 지원금을 챙기시기 바랍니다.<br><br>
+
+<p class="source-note">※ 조기폐차 지원 한도는 2026년 환경부 예산 및 aea.or.kr 공식 안내 기준이며, 지역 및 예산 소진에 따라 변동될 수 있습니다.</p>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260728/cert_4insurance.html">직장인 4대 보험 가입 확인서 발급, 건강·국민연금·고용·산재 통합 조회법</a></li>
+    <li><a href="../260728/gov_emergency_welfare.html">긴급복지 지원제도 신청 자격과 의료·생계·주거 지원 금액 총정리</a></li>
+  </ul>
+</div>
+
+<div>
+  <span class="tag">#폐차방법</span>
+  <span class="tag">#말소등록</span>
+  <span class="tag">#조기폐차지원금</span>
+  <span class="tag">#폐차지원금</span>
+  <span class="tag">#노후경유차</span>
+  <span class="tag">#폐차절차</span>
+  <span class="tag">#환경부지원금</span>
+  <span class="tag">#폐차보상금</span>
+  <span class="tag">#자동차말소</span>
+  <span class="tag">#aea</span>
+</div>
+
+</body>
+</html>

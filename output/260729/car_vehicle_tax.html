@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>내 자동차세 미리 조회하고 연납 할인 계산하는 법, 위택스 셀프 신청</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #f1f8e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f9fbe7; border: 2px solid #c5e1a5; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 12px; text-align: left; font-size: 0.92em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #e0e0e0; font-size: 0.92em; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #fff; border: 1px solid #f1f8e9; border-left-width: 4px; margin-bottom: 15px; border-radius: 4px; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 16px 20px; border-radius: 8px; margin: 20px 0; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #bbb; border-radius: 8px; padding: 28px 20px; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; color: #555; }
+  .ph-file { font-size: 0.8em; color: #999; font-family: monospace; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 12px; font-size: 0.82em; color: #444; white-space: pre-wrap; text-align: left; margin: 0 0 12px; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 5px; padding: 8px 18px; cursor: pointer; font-size: 0.85em; }
+  .img-caption { font-size: 0.88em; color: #777; margin-top: 8px; font-style: italic; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .highlight-box { background: #e8f5e9; border-left: 5px solid #388e3c; padding: 16px 20px; border-radius: 4px; margin: 16px 0; }
+  .source-note { font-size: 0.82em; color: #888; margin-top: 6px; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText; btn.innerText = "복사 완료!"; btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = orig; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>내 자동차세 미리 조회하고 연납 할인 계산하는 법, 위택스 셀프 신청</h1>
+
+<div class="intro-box">
+자동차세는 매년 6월과 12월, 두 번에 나누어 내는 지방세입니다. 하지만 연초(1월)에 연납 신청을 하면 나머지 11개월분을 한 번에 납부하는 대신 세금을 할인받을 수 있습니다. 차량을 보유하고 있다면 꼭 알아야 할 연납 할인 신청법과 위택스 조회 방법을 정리했습니다.
+</div>
+
+<h2>① 자동차세란 — 부과 기준과 납부 시기</h2>
+
+자동차세는 차량을 보유한 모든 소유자에게 부과되는 지방세입니다. 매년 6월(1기분)과 12월(2기분)에 각각 절반씩 고지서가 발송됩니다.<br><br>
+
+자동차세는 <strong>배기량(cc) × 세율</strong>로 계산합니다. 배기량이 클수록 세금이 높아집니다. 2000cc 이하 비영업용 승용차 기준으로 세율은 cc당 약 91~220원 수준입니다.<br><br>
+
+<table class="info-table">
+  <tr>
+    <th>배기량</th>
+    <th>cc당 세율</th>
+    <th>2000cc 차량 연세액 예시</th>
+  </tr>
+  <tr>
+    <td style="background:#f1f8e9;">1,000cc 이하</td>
+    <td>80원</td>
+    <td>—</td>
+  </tr>
+  <tr>
+    <td style="background:#f1f8e9;">1,001~1,600cc</td>
+    <td>140원</td>
+    <td>약 224,000원</td>
+  </tr>
+  <tr>
+    <td style="background:#f1f8e9;">1,601~2,000cc</td>
+    <td>200원</td>
+    <td>약 400,000원</td>
+  </tr>
+  <tr>
+    <td style="background:#f1f8e9;">2,001cc 초과</td>
+    <td>220원</td>
+    <td>약 528,000원(2,400cc 기준)</td>
+  </tr>
+</table>
+
+<p class="source-note">※ 위 세율은 비영업용 승용차 기준. 차량 연식에 따라 경감 적용(3~12년 차 최대 50% 감면). 1차출처: 지방세법 별표</p>
+
+<h2>② 자동차세 연납 할인 — 2026년 5% 절감</h2>
+
+<div class="highlight-box">
+  <strong>자동차세 연납 2026년 핵심 정보</strong><br>
+  연납 신청 시 <strong>당해 연세액의 약 5% 할인</strong>(정확히는 선납 개월 수 × 연이율 공식 적용)<br>
+  · 1월 연납: 약 4.57% 체감 할인 (가장 유리)<br>
+  · 3월 연납: 약 3.77%<br>
+  · 6월 연납: 약 2.49%<br>
+  · 9월 연납: 약 1.26%
+</div>
+
+1월에 신청할수록 할인율이 높습니다. 2026년 기준 자동차세 연납 공제율은 5%가 적용됩니다(2023년 10%에서 단계적으로 축소된 현행 세율).<br><br>
+
+예를 들어 연세액이 40만 원인 차량이라면 1월 연납 시 약 18,000원가량 절약됩니다. 소액처럼 보이지만 아무것도 안 하면 0원인 절약이라는 점에서 신청하지 않을 이유가 없습니다.<br><br>
+
+<p class="source-note">※ 2026년 자동차세 연납 공제율 5% 적용. 출처: 행정안전부 지방세 정책과, 위택스(witax.go.kr)</p>
+
+<h2>③ 자동차세 조회하는 법 — 위택스와 스마트위택스 앱</h2>
+
+자신의 차량 자동차세를 미리 조회하려면 <strong>위택스(witax.go.kr)</strong>를 이용합니다.<br><br>
+
+위택스 접속 → 로그인(공동인증서 또는 간편인증) → 상단 메뉴 '신고/납부' → '자동차세' → 차량번호 입력으로 조회할 수 있습니다. 연납 신청도 동일 경로에서 진행합니다.<br><br>
+
+<strong>서울 거주자</strong>는 위택스 대신 <strong>ETAX(etax.seoul.go.kr)</strong>에서 별도 신청해야 합니다. 서울시 자동차세는 서울 자체 징수 시스템으로 운영되기 때문입니다.<br><br>
+
+<table class="info-table">
+  <tr>
+    <th>거주지</th>
+    <th>자동차세 납부 사이트</th>
+  </tr>
+  <tr>
+    <td style="background:#f1f8e9;">서울 외 전국</td>
+    <td>위택스(witax.go.kr)</td>
+  </tr>
+  <tr>
+    <td style="background:#f1f8e9;">서울특별시</td>
+    <td>서울 ETAX(etax.seoul.go.kr)</td>
+  </tr>
+</table>
+
+<h2>④ 위택스 자동차세 연납 신청 단계별 방법</h2>
+
+<div class="step-box">
+  <strong>Step 1.</strong> witax.go.kr 접속 → 로그인(공동인증서 또는 간편인증)<br>
+  <strong>Step 2.</strong> 상단 메뉴 → [신고/납부] → [자동차세]<br>
+  <strong>Step 3.</strong> '자동차세 연납 신청' 클릭 → 차량번호 입력<br>
+  <strong>Step 4.</strong> 납부 금액 확인(할인 후 금액) → 결제 수단 선택(카드/계좌이체/간편결제)<br>
+  <strong>Step 5.</strong> 납부 완료 후 영수증 저장
+</div>
+
+연납 신청 기간은 매년 1월 16일~31일이 가장 유리한 1월 연납 기간입니다. 이 기간을 놓쳤다면 3월(3.16~3.31), 6월(6.16~6.30), 9월(9.16~9.30)에도 신청 가능합니다.<br><br>
+
+<h2>⑤ 자동차세 감면 혜택 — 차령 경감과 장애인·국가유공자</h2>
+
+자동차세에는 몇 가지 감면 혜택이 있습니다.<br><br>
+
+<strong>차령 경감(연식 경감)</strong>: 차량 최초 등록일로부터 3년이 지나면 5% 감면을 시작으로 매년 5%씩 추가 감면되어 최대 50%까지 감면됩니다. 12년 이상 된 차량은 원칙적으로 50% 경감 상한 적용.<br><br>
+
+<strong>장애인·국가유공자</strong>: 장애인이 직접 사용하는 차량 또는 국가유공자 명의 차량은 자동차세 전액 면제 혜택이 있습니다. 관할 구청 세무과에 신청하면 됩니다.<br><br>
+
+<strong>전기차·수소차</strong>: 친환경 차량은 자동차세 적용 방식이 다릅니다. 현재 전기차는 배기량이 없어 비영업용 승용차 기준 연 13만 원 정액 부과(지방세법 개정 논의 중)입니다.<br><br>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260729/5_car_tax_1.png</span></div>
+    <pre class="prompt-text" id="prompt-5-1">Korean government tax payment website on laptop screen showing car tax registration form, Korean text interface with vehicle number input and payment amount displayed, clean modern UI, professional government portal, photorealistic, ultra high detail, South Korea local tax portal, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">위택스(witax.go.kr) 자동차세 연납 신청 화면 예시 / AI 제작 이미지</div>
+</div>
+
+<h2>⑥ 자동차세 분납 제도와 납기 후 가산세</h2>
+
+연납을 하지 않는 경우 1기(6월)와 2기(12월)에 각각 고지서가 발송됩니다. 고지서 납부 기한은 보통 6월 30일과 12월 31일입니다.<br><br>
+
+<strong>납기 후 가산세</strong>: 납부 기한을 넘기면 매일 0.025%의 가산세가 부과됩니다. 1달 연체 시 약 0.75%의 추가 부담이 생깁니다. 소액이지만 불필요한 가산세를 피하려면 납부 기한 전 처리를 권장합니다.<br><br>
+
+<strong>자동 이체 신청</strong>: 위택스에서 자동차세 자동 이체(자동납부) 신청을 하면 매년 6월과 12월 납부 기한에 계좌에서 자동 출금됩니다. 가산세 걱정을 덜 수 있는 방법입니다.<br><br>
+
+<h2>⑦ 자동차세 관련 자주 묻는 질문</h2>
+
+<strong>차를 중간에 팔면 자동차세는?</strong><br>
+차량 소유 기간에 해당하는 세금만 납부합니다. 중도 매도 시 남은 기간 세금은 반환되거나, 매수자에게 이전됩니다. 위택스에서 환급 신청 가능합니다.<br><br>
+
+<strong>연납했는데 중간에 차를 팔면?</strong><br>
+이미 납부한 연납 세금 중 남은 개월분은 환급 신청할 수 있습니다. 관할 지자체 세무과 또는 위택스 전자 신청으로 처리합니다.<br><br>
+
+<strong>할부로 구매한 차, 자동차세는 누가 내나?</strong><br>
+자동차 등록증에 명의가 기재된 소유자가 납부 의무자입니다. 할부 구매라도 등록 명의가 내 이름이면 내가 납부해야 합니다.<br><br>
+
+<h2>⑧ 2026년 자동차세 연납 핵심 정리</h2>
+
+<div class="step-box">
+  ✅ 연납 할인율: 2026년 5% 공제<br>
+  ✅ 1월 신청이 가장 유리(체감 4.57% 할인)<br>
+  ✅ 서울은 ETAX, 그 외 전국은 위택스<br>
+  ✅ 전기차는 정액 연 13만 원 / 일반 승용차는 배기량×세율<br>
+  ✅ 3년 이상 된 차량은 차령 경감(최대 50%) 자동 적용<br>
+  ✅ 납기 초과 시 일 0.025% 가산세 → 자동납부 신청 추천
+</div>
+
+자동차세 연납은 별도의 서류 없이 위택스 로그인만으로 5분 안에 신청 완료할 수 있습니다. 매년 1월이 지나기 전에 습관처럼 연납 신청을 해두면 아무 노력 없이 세금을 절약할 수 있습니다.<br><br>
+
+<p class="source-note">※ 이 글의 세율·공제율 정보는 2026년 현행 지방세법 및 위택스(witax.go.kr) 공식 안내 기준입니다.</p>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260729/5_car_tax_2.png</span></div>
+    <pre class="prompt-text" id="prompt-5-2">Korean car owner checking vehicle tax documents on smartphone with car keys on desk, annual vehicle tax payment notice paper, calculator showing savings amount, Korean won currency, clean modern home desk setup, photorealistic, ultra high detail, financial planning concept, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">자동차세 연납 절감 계산 개념도 / AI 제작 이미지</div>
+</div>
+
+<h2>⑨ 자동차세 절약 꿀팁 추가 — 카드 포인트와 간편결제 활용</h2>
+
+자동차세를 결제할 때 카드 종류에 따라 포인트 적립이나 캐시백 혜택을 받을 수 있습니다.<br><br>
+
+<strong>체크카드 결제</strong>: 일부 은행 체크카드는 지방세 납부 시 캐시백 혜택이 있습니다(은행별 상이, 월 납부 한도 내에서 적용). 납부 전 내 카드의 혜택 조건을 확인해두면 좋습니다.<br><br>
+
+<strong>간편결제 캐시백</strong>: 네이버페이·카카오페이·토스페이 등 간편결제 서비스에서 지방세 납부 이벤트 기간에 결제하면 추가 포인트 또는 캐시백을 제공하는 경우가 있습니다. 타이밍을 잘 맞추면 연납 할인에 더해 캐시백 혜택도 누릴 수 있습니다.<br><br>
+
+<h2>⑩ 마무리 — 매년 1월 5분으로 절약하는 습관</h2>
+
+자동차세 연납은 어렵지 않습니다. 매년 1월 셋째 주, 위택스에 접속해 5분만 투자하면 됩니다. 할인율 5%가 크게 느껴지지 않을 수도 있지만, 아무것도 하지 않으면 0원인 절약입니다. 차량을 보유하고 있다면 이번 겨울이 지나기 전, 연납 신청 일정을 달력에 등록해두시길 권합니다.<br><br>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260728/cert_4insurance.html">직장인 4대 보험 가입 확인서 발급, 건강·국민연금·고용·산재 통합 조회법</a></li>
+    <li><a href="../260728/travel_ulsan_daewangam.html">울산 대왕암공원·일산해수욕장과 언양 불고기 당일 코스, 여름 드라이브</a></li>
+  </ul>
+</div>
+
+<div>
+  <span class="tag">#자동차세</span>
+  <span class="tag">#자동차세연납</span>
+  <span class="tag">#위택스</span>
+  <span class="tag">#자동차세조회</span>
+  <span class="tag">#자동차세할인</span>
+  <span class="tag">#지방세</span>
+  <span class="tag">#자동차세경감</span>
+  <span class="tag">#연납신청방법</span>
+  <span class="tag">#witax</span>
+  <span class="tag">#절세팁</span>
+</div>
+
+</body>
+</html>
