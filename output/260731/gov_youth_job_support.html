@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1f8e9; border: 2px solid #c5e1a5; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 14px; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #e8f5e9; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border-left: 4px solid #f9a825; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c5e1a5; border-radius: 10px; padding: 24px; background: #f1f8e9; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; color: #388e3c; }
+  .ph-file { font-size: 0.82em; color: #888; }
+  .prompt-text { background: #263238; color: #a5d6a7; padding: 14px; border-radius: 6px; font-size: 0.82em; white-space: pre-wrap; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 7px 18px; border-radius: 5px; cursor: pointer; font-size: 0.88em; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .highlight-box { background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 8px; padding: 18px 20px; margin: 20px 0; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>청년 취업·일자리 지원금 종류와 신청 방법, 고용24로 한번에 확인하는 법</h1>
+
+<div class="intro-box">
+취업을 준비 중이거나 첫 직장에 발을 내디딘 청년이라면 반드시 알아야 할 <strong>청년 취업·일자리 지원금</strong>이 있습니다.<br><br>
+정부와 지자체가 운영하는 청년 지원 사업은 종류가 다양해 어디서부터 시작해야 할지 막막하게 느껴지기도 합니다. 이 글에서는 대표적인 청년 일자리 지원금의 종류와 신청 자격, 그리고 <strong>고용24 포털에서 한 번에 확인하고 신청하는 방법</strong>을 단계별로 안내합니다.
+</div>
+
+<h2>01. 청년 취업·일자리 지원금이란</h2>
+
+청년 취업 지원금은 정부가 청년(일반적으로 만 15~34세)의 취업과 경력 개발을 돕기 위해 운영하는 재정 지원 제도입니다. 구직 중인 청년에게 직접 현금을 지원하거나, 취업 후 일정 기간 고용 유지 시 추가 지원금을 지급하는 방식 등 다양한 형태로 운영됩니다.<br><br>
+지원금의 종류는 크게 세 가지로 구분할 수 있습니다.<br><br>
+
+<div class="step-box">
+<strong>① 구직 활동 지원형</strong>: 미취업 청년이 적극적으로 구직 활동을 하는 동안 생활비를 지원 (예: 국민취업지원제도 청년 특례)<br><br>
+<strong>② 취업 인센티브형</strong>: 취업 후 일정 기간 고용 유지 시 인센티브 지급 (예: 청년내일채움공제)<br><br>
+<strong>③ 직업 훈련 지원형</strong>: 직업훈련 수강비 지원 및 훈련 중 생활비 지원 (예: 국민내일배움카드)
+</div>
+
+각 제도마다 지원 자격, 신청 기간, 지원 금액이 다르므로 본인의 상황에 맞는 제도를 파악하는 것이 먼저입니다.
+
+<h2>02. 국민취업지원제도 — 월 최대 50만 원 구직촉진수당</h2>
+
+<strong>국민취업지원제도</strong>는 취업 취약 계층과 청년 구직자를 위한 종합 취업 지원 서비스입니다. I유형과 II유형으로 나뉘며, 특히 I유형 청년 특례를 통해 만 15~34세 청년에게 혜택이 집중됩니다.<br><br>
+
+<table class="info-table">
+  <tr><th>구분</th><th>I유형 (청년 특례)</th><th>II유형</th></tr>
+  <tr>
+    <td style="padding:10px 14px;">대상</td>
+    <td style="padding:10px 14px;">만 15~34세 청년</td>
+    <td style="padding:10px 14px;">특정 요건 충족 구직자</td>
+  </tr>
+  <tr>
+    <td style="padding:10px 14px; background:#f1f8e9;">소득 요건</td>
+    <td style="padding:10px 14px; background:#f1f8e9;">가구 중위소득 120% 이하</td>
+    <td style="padding:10px 14px; background:#f1f8e9;">가구 중위소득 100% 이하</td>
+  </tr>
+  <tr>
+    <td style="padding:10px 14px;">구직촉진수당</td>
+    <td style="padding:10px 14px;">월 50만 원 × 6개월</td>
+    <td style="padding:10px 14px;">비현금 서비스 중심</td>
+  </tr>
+  <tr>
+    <td style="padding:10px 14px; background:#f1f8e9;">신청처</td>
+    <td style="padding:10px 14px; background:#f1f8e9;">고용24 포털 또는 고용센터 방문</td>
+    <td style="padding:10px 14px; background:#f1f8e9;">고용24 포털 또는 고용센터 방문</td>
+  </tr>
+</table>
+
+I유형에 선정되면 월 50만 원씩 최대 6개월(총 300만 원)의 구직촉진수당을 받으면서 취업활동계획에 따른 취업 지원 서비스를 제공받습니다. 취업에 성공하면 조기취업성공수당(50만 원)도 추가 지급됩니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+  <div class="ph-head">
+    <span>📷 AI 이미지 생성 영역</span>
+    <span class="ph-file">images/260731/4_youth_job_1.png</span>
+  </div>
+  <pre class="prompt-text" id="prompt-4-1">South Korean government employment support center interior, clean modern office environment, young Korean person in their mid-20s sitting across from a counselor at a desk, reviewing documents and a laptop screen showing a job portal website, warm professional lighting, bright and hopeful atmosphere. The scene conveys career guidance and youth job support. Clean minimalist design with green and white color scheme. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+  <button class="copy-btn" onclick="copyPrompt('prompt-4-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">청년 취업 지원 상담 및 구직 활동 지원 서비스 / AI 제작 이미지</div>
+</div>
+
+<h2>03. 청년내일채움공제 — 2년 만기 1,200만 원 목돈 마련</h2>
+
+<strong>청년내일채움공제</strong>는 청년의 장기 근속을 유도하고 목돈 마련을 돕는 제도입니다. 청년이 중소·중견기업에 취업 후 일정 기간 재직하면 청년·기업·정부가 함께 적립한 금액을 지급합니다.<br><br>
+
+<div class="highlight-box">
+<strong>📋 청년내일채움공제 요약 (최신 사업 기준 참고)</strong><br><br>
+· 가입 자격: 취업일 기준 만 15~34세 청년, 중소·중견기업 정규직 취업자<br>
+· 적립 구조: 청년(본인) + 기업 + 정부 3자 공동 적립<br>
+· 만기 수령: 2년 가입 기준 약 1,200만 원 수준(정확한 금액은 사업 연도별 상이)<br>
+· 신청 방법: 취업일로부터 일정 기간(보통 6개월) 이내 신청 필수<br>
+· 신청처: 고용24 포털 (www.work24.go.kr)
+</div>
+
+중요한 점은 반드시 취업 후 일정 기간(사업 기준에 따라 상이) 내에 신청해야 한다는 것입니다. 취업 후 시간이 지나면 자격이 소멸될 수 있으므로, 취업 후 즉시 고용24를 확인하는 습관이 필요합니다.
+
+<h2>04. 국민내일배움카드 — 직업훈련비 최대 500만 원 지원</h2>
+
+취업을 위해 기술을 배우려는 청년이라면 <strong>국민내일배움카드</strong>를 우선 발급받아 두세요.<br><br>
+국민내일배움카드는 5년간 최대 500만 원의 훈련비를 지원합니다. 청년(만 15~34세)의 경우 자부담 비율이 일반 성인보다 낮아 실질적으로 더 큰 혜택을 누릴 수 있습니다.<br><br>
+
+<table class="info-table">
+  <tr><th>항목</th><th>내용</th></tr>
+  <tr>
+    <td style="padding:10px 14px;">지원 한도</td>
+    <td style="padding:10px 14px;">5년간 최대 500만 원 훈련비 지원</td>
+  </tr>
+  <tr>
+    <td style="padding:10px 14px; background:#f1f8e9;">자부담</td>
+    <td style="padding:10px 14px; background:#f1f8e9;">훈련비의 15~85% (훈련 종류·대상에 따라 상이)</td>
+  </tr>
+  <tr>
+    <td style="padding:10px 14px;">훈련 종류</td>
+    <td style="padding:10px 14px;">IT, 요리, 뷰티, 제조, 서비스 등 수천 개 훈련 과정</td>
+  </tr>
+  <tr>
+    <td style="padding:10px 14px; background:#f1f8e9;">훈련 중 수당</td>
+    <td style="padding:10px 14px; background:#f1f8e9;">장기 훈련(140시간 이상) 시 월 최대 11.6만 원 훈련장려금</td>
+  </tr>
+  <tr>
+    <td style="padding:10px 14px;">신청처</td>
+    <td style="padding:10px 14px;">고용24 포털 또는 고용센터 방문</td>
+  </tr>
+</table>
+
+IT 개발, UI/UX 디자인, 회계 실무, 커피 바리스타, 미용 등 다양한 분야의 훈련 과정을 수강할 수 있으며, 훈련 이수 후 취업까지 연계되는 과정도 많습니다.
+
+<h2>05. 지자체 청년 지원금 — 놓치기 쉬운 추가 혜택</h2>
+
+중앙정부 외에도 각 시·도·군·구에서 자체적으로 운영하는 청년 취업 지원금이 있습니다. 지자체마다 운영 여부와 지원 금액이 다르므로 본인 거주지의 청년 지원 사업을 별도로 확인해야 합니다.<br><br>
+
+<div class="step-box">
+<strong>지자체 청년 지원금 확인 방법</strong><br><br>
+1. '복지로(bokjiro.go.kr)' 접속 → 복지서비스 찾기 → 지역 선택<br>
+2. 각 지자체 공식 홈페이지 → 청년지원/일자리 메뉴<br>
+3. 고용24 '지자체 일자리' 탭 검색
+</div>
+
+예를 들어 서울시의 경우 '청년 취업 사관학교' 등 독자적인 훈련 과정을 운영하며, 경기도는 '청년 기본소득' 제도를 운영하고 있습니다. 중앙정부 지원과 중복 수령이 가능한 경우도 있으므로 반드시 확인해 보시기 바랍니다.
+
+<h2>06. 고용24 포털 — 청년 지원금 한눈에 찾기</h2>
+
+<strong>고용24(www.work24.go.kr)</strong>는 고용노동부가 운영하는 취업 지원 포털로, 여러 취업 지원 서비스가 통합된 원스톱 플랫폼입니다.<br><br>
+
+<div class="step-box">
+<strong>고용24에서 청년 지원금 찾는 단계별 방법</strong><br><br>
+Step 1. 고용24 접속 → 회원가입(공동인증서 또는 간편 로그인)<br>
+Step 2. 메인 화면 상단 '취업지원' 메뉴 클릭<br>
+Step 3. '나에게 맞는 서비스 찾기' → 연령·고용 상태 입력<br>
+Step 4. 맞춤형 지원 제도 목록 확인 및 신청
+</div>
+
+고용24에서 국민취업지원제도, 청년내일채움공제, 국민내일배움카드 신청이 모두 가능하며, 신청 현황 확인도 한 곳에서 할 수 있습니다.<br><br>
+모바일 앱 '고용24'도 운영 중으로, 스마트폰에서도 동일하게 지원 현황 확인과 서류 제출이 가능합니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+  <div class="ph-head">
+    <span>📷 AI 이미지 생성 영역</span>
+    <span class="ph-file">images/260731/4_youth_job_2.png</span>
+  </div>
+  <pre class="prompt-text" id="prompt-4-2">Korean young adult using laptop and smartphone simultaneously to access government employment support website, sitting at a bright modern café or home desk, the screen shows a clean government portal interface with green accents, documents and resume on the desk, confident and focused expression, warm natural daylight from a window. Productive and optimistic scene conveying successful government benefit enrollment process. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+  <button class="copy-btn" onclick="copyPrompt('prompt-4-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">고용24 포털에서 청년 취업 지원금 조회 및 신청 / AI 제작 이미지</div>
+</div>
+
+<h2>07. 신청 시 자주 묻는 질문 (FAQ)</h2>
+
+<strong>Q. 여러 지원금을 동시에 신청할 수 있나요?</strong><br>
+A. 제도마다 다릅니다. 국민내일배움카드는 국민취업지원제도와 병행 가능하나, 청년내일채움공제는 취업 상태를 전제로 하므로 구직 중 신청은 불가합니다. 각 제도의 중복 수령 가능 여부를 고용24에서 사전 확인하세요.<br><br>
+
+<strong>Q. 알바·프리랜서도 신청 가능한가요?</strong><br>
+A. 대부분의 취업 인센티브형 지원금(청년내일채움공제 등)은 정규직 취업자 대상입니다. 구직촉진수당(국민취업지원제도 I유형)은 비취업 상태 구직자도 신청 가능하므로 알바 중이더라도 해당 조건을 충족하면 신청할 수 있습니다.<br><br>
+
+<strong>Q. 취업 후 얼마 만에 신청해야 하나요?</strong><br>
+A. 청년내일채움공제는 취업일로부터 보통 6개월 이내에 신청해야 하며, 기간을 초과하면 자격이 소멸됩니다. 취업과 동시에 고용24를 확인하는 습관이 중요합니다.<br><br>
+
+<strong>Q. 지원금 수령 중 이직하면 어떻게 되나요?</strong><br>
+A. 청년내일채움공제는 중도 해지 시 청년 납입분만 반환되며 기업·정부 지원분은 환수될 수 있습니다. 이직 전에 반드시 담당 기관에 문의하세요.
+
+<h2>08. 신청 전 꼭 확인할 서류 목록</h2>
+
+청년 취업 지원금 신청 시 일반적으로 필요한 서류 목록입니다. 제도에 따라 추가 서류가 필요할 수 있으므로 고용24에서 구체적으로 확인하세요.<br><br>
+
+<table class="info-table">
+  <tr><th>서류 종류</th><th>발급처</th><th>유효기간</th></tr>
+  <tr>
+    <td style="padding:10px 14px;">주민등록등본</td>
+    <td style="padding:10px 14px;">정부24 또는 주민센터</td>
+    <td style="padding:10px 14px;">발급 후 3개월</td>
+  </tr>
+  <tr>
+    <td style="padding:10px 14px; background:#f1f8e9;">건강보험료 납부확인서</td>
+    <td style="padding:10px 14px; background:#f1f8e9;">국민건강보험공단(nhis.or.kr)</td>
+    <td style="padding:10px 14px; background:#f1f8e9;">발급 후 1개월</td>
+  </tr>
+  <tr>
+    <td style="padding:10px 14px;">근로계약서 사본</td>
+    <td style="padding:10px 14px;">고용 회사</td>
+    <td style="padding:10px 14px;">해당 없음</td>
+  </tr>
+  <tr>
+    <td style="padding:10px 14px; background:#f1f8e9;">고용보험 가입이력</td>
+    <td style="padding:10px 14px; background:#f1f8e9;">고용24 조회</td>
+    <td style="padding:10px 14px; background:#f1f8e9;">해당 없음</td>
+  </tr>
+</table>
+
+<h2>09. 지원금 유지 조건과 주의사항</h2>
+
+지원금을 수령하기 시작했더라도 유지 조건을 지키지 않으면 환수될 수 있습니다.<br><br>
+
+<div class="step-box">
+<strong>주요 주의사항</strong><br><br>
+· 취업 활동 계획 성실 이행 (국민취업지원제도): 월 1~2회 고용센터 상담 이행<br>
+· 고용 유지 (청년내일채움공제): 중도 퇴직 시 지원금 일부 환수<br>
+· 허위 정보 제공 금지: 소득·고용 상태 허위 신고 시 전액 환수 + 부정수급 제재<br>
+· 이중 수혜 주의: 동일 유형 지원금 중복 신청 불가
+</div>
+
+<h2>10. 빠르게 챙기는 청년 지원금 체크리스트</h2>
+
+<div class="highlight-box">
+<strong>✅ 청년 취업 지원금 체크리스트</strong><br><br>
+□ 고용24 회원가입 완료<br>
+□ 나에게 맞는 서비스 찾기 조회<br>
+□ 국민취업지원제도 I유형 자격 확인(미취업 상태 필수)<br>
+□ 국민내일배움카드 발급 신청<br>
+□ 취업 즉시 청년내일채움공제 신청 가능 여부 확인<br>
+□ 거주 지자체 청년 지원 사업 별도 확인<br>
+□ 필요 서류(주민등록등본, 건강보험료 납부확인서) 미리 발급
+</div>
+
+<div class="tip-box">
+<strong>💡 알아두면 좋은 꿀팁</strong><br><br>
+고용24의 '나에게 맞는 서비스 찾기' 기능을 활용하면 내 연령·고용 상태·거주 지역을 입력하는 것만으로 현재 신청 가능한 모든 청년 지원 제도 목록을 자동으로 불러옵니다. 각 제도별 신청 기간과 잔여 예산 현황도 확인되므로, 예산 소진 전 빠르게 신청하는 데 유용합니다.
+</div>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260730/travel_gapyeong_yangpyeong_waterleisure.html">가평·양평 여름 계곡 vs 수상레저 어디 갈까, 수도권 당일 물놀이 비교</a></li>
+    <li><a href="../260730/local_rentcar_fullcover.html">렌터카 완전자차 보험 뭐가 다른가, 자기부담금·반납 체크리스트와 사고 시 대처</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#청년취업지원금</span>
+  <span class="tag">#국민취업지원제도</span>
+  <span class="tag">#청년내일채움공제</span>
+  <span class="tag">#국민내일배움카드</span>
+  <span class="tag">#고용24</span>
+  <span class="tag">#청년일자리</span>
+  <span class="tag">#취업지원</span>
+  <span class="tag">#청년지원금신청</span>
+  <span class="tag">#고용노동부</span>
+  <span class="tag">#취업준비</span>
+</div>
+</body>
+</html>

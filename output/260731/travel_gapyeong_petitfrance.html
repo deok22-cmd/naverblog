@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px 14px; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #e0f2f1; }
+  .step-box { border-left: 4px solid #00796b; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border-left: 4px solid #f9a825; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #b2dfdb; border-radius: 10px; padding: 24px; background: #f1faf9; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; color: #00796b; }
+  .ph-file { font-size: 0.82em; color: #888; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 14px; border-radius: 6px; font-size: 0.82em; white-space: pre-wrap; margin: 10px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 7px 18px; border-radius: 5px; cursor: pointer; font-size: 0.88em; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>가평 쁘띠프랑스·이탈리아마을 여름 야간과 자라섬, 수도권 이색 당일 코스</h1>
+
+<div class="intro-box">
+청평호반을 따라 유럽의 이국적 풍경이 펼쳐지는 <strong>가평 쁘띠프랑스</strong>와 <strong>이탈리아마을</strong>은 여름 주말 수도권 당일 여행의 인기 스팟입니다.<br><br>
+낮에는 지중해·프로방스 감성의 이국적 건축과 자연 속 산책을, 해가 지면 조명이 켜지는 <strong>야간 풍경</strong>으로 완전히 다른 매력을 발산합니다. 여기에 북한강 생태 섬 <strong>자라섬</strong>의 수변 캠핑·피크닉까지 묶으면 하루가 꽉 찬 가평 여름 코스가 완성됩니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+  <div class="ph-head">
+    <span>📷 AI 이미지 생성 영역</span>
+    <span class="ph-file">images/260731/7_petitfrance_1.png</span>
+  </div>
+  <pre class="prompt-text" id="prompt-7-1">Petit France theme park in Gapyeong, Gyeonggi-do, South Korea, summer daytime. Colorful Provençal French-style village buildings with terracotta roofs, yellow and blue facades, flower-adorned balconies, cobblestone pathways, Little Prince character statues and artwork visible throughout, lush green trees and climbing vines, blue sky with white clouds, visitors strolling in summer clothes. Charming European village atmosphere in Korean countryside with Cheongpyeong lake visible in the background. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+  <button class="copy-btn" onclick="copyPrompt('prompt-7-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">가평 쁘띠프랑스의 프로방스 감성 이국 마을 풍경 / AI 제작 이미지</div>
+</div>
+
+<h2>01. 쁘띠프랑스 — 어린왕자와 프로방스의 만남</h2>
+
+<strong>쁘띠프랑스(Petit France)</strong>는 경기도 가평군 청평면 호반로에 위치한 프랑스 문화 테마파크입니다. '어린왕자'를 테마로 프랑스 프로방스 지방의 건축을 재현해 조성한 곳으로, 북한강 청평호반을 배경으로 유럽 풍경이 펼쳐지는 독특한 공간입니다.<br><br>
+쁘띠프랑스는 수십 채의 알록달록한 유럽식 건물들이 경사진 언덕을 따라 자리 잡고 있으며, 각 건물 내부에는 프랑스 생활 문화, 마리오네트(인형극), 어린왕자 작품 세계를 소개하는 전시관이 있습니다.<br><br>
+포토 스팟이 많아 인스타그램 감성 사진을 찍으려는 20~30대 방문객에게 특히 인기입니다. 어린 자녀와 함께라면 어린왕자 관련 전시와 공연이 아이들에게 좋은 경험이 됩니다.<br><br>
+운영 시간과 입장료는 시즌별로 다를 수 있으므로 방문 전 쁘띠프랑스 공식 홈페이지에서 확인하시기 바랍니다.
+
+<h2>02. 이탈리아마을(피노키오와 다빈치) — 토스카나 감성</h2>
+
+쁘띠프랑스 맞은편 또는 인근에 위치한 <strong>이탈리아마을</strong>은 토스카나 스타일의 이탈리아 건축을 재현한 또 다른 유럽 테마 공간입니다.<br><br>
+이탈리아마을의 콘셉트는 피노키오와 레오나르도 다빈치입니다. 이탈리아 전통 건축 양식의 붉은 벽돌 건물들과 아치형 회랑, 광장 분수가 구성되어 있습니다. 쁘띠프랑스와는 또 다른 유럽의 분위기를 연출하며, 두 곳을 함께 방문하면 한나절 만에 '프랑스+이탈리아'를 모두 경험하는 셈입니다.<br><br>
+
+<div class="step-box">
+<strong>쁘띠프랑스 vs 이탈리아마을 비교</strong><br><br>
+쁘띠프랑스: 어린왕자 테마, 프로방스 파스텔 색감, 언덕 지형, 마리오네트 공연<br>
+이탈리아마을: 피노키오·다빈치 테마, 토스카나 붉은 벽돌, 광장형 구조, 음식 체험 공간
+</div>
+
+두 공간이 청평호 도로변에 나란히 위치해 있어 대부분의 방문객이 함께 묶어서 방문합니다. 통합 관람권을 구입하면 개별 입장보다 저렴한 경우가 많습니다.
+
+<h2>03. 여름 야간 — 조명이 켜지면 완전히 달라진다</h2>
+
+쁘띠프랑스와 이탈리아마을의 진짜 묘미는 <strong>야간</strong>입니다. 해가 지고 조명이 켜지면 낮과는 완전히 다른 로맨틱한 분위기로 변신합니다.<br><br>
+여름 시즌(7~8월)에는 야간 개장 행사가 열리는 경우가 많습니다. 각 건물에 설치된 조명, 광장 조명, 청평호 수면에 반사되는 불빛이 어우러져 마치 유럽 야경 명소에 와 있는 듯한 느낌을 선사합니다.<br><br>
+
+<table class="info-table">
+  <tr><th>시간대</th><th>분위기</th><th>추천 이유</th></tr>
+  <tr>
+    <td style="padding:10px 14px;">오전(10~12시)</td>
+    <td style="padding:10px 14px;">한적·채광 좋음</td>
+    <td style="padding:10px 14px;">사진 찍기 좋음, 인파 적음</td>
+  </tr>
+  <tr>
+    <td style="padding:10px 14px; background:#f1faf9;">오후(13~17시)</td>
+    <td style="padding:10px 14px; background:#f1faf9;">붐빔·직사광</td>
+    <td style="padding:10px 14px; background:#f1faf9;">공연·전시 집중</td>
+  </tr>
+  <tr>
+    <td style="padding:10px 14px;">저녁(17~19시)</td>
+    <td style="padding:10px 14px;">황금빛 채광</td>
+    <td style="padding:10px 14px;">인생샷 타임, 매직아워</td>
+  </tr>
+  <tr>
+    <td style="padding:10px 14px; background:#f1faf9;">야간(19시~)</td>
+    <td style="padding:10px 14px; background:#f1faf9;">조명 점등, 로맨틱</td>
+    <td style="padding:10px 14px; background:#f1faf9;">야간 행사·커플 코스</td>
+  </tr>
+</table>
+
+야간 운영 여부와 마감 시간은 시즌·요일별로 다를 수 있으므로 사전 확인 필수입니다.
+
+<h2>04. 자라섬 — 북한강 수변 피크닉과 캠핑</h2>
+
+가평읍 북한강 위에 자리 잡은 <strong>자라섬</strong>은 크게 남이섬과 혼동하기 쉽지만 완전히 다른 곳입니다. 자라섬은 캠핑과 수변 피크닉의 성지로 불립니다.<br><br>
+자라섬은 여러 개의 작은 섬(중도·동도·서도)으로 구성되어 있으며, 가평군이 조성한 캠핑장과 오토캠핑장이 위치해 있습니다. 북한강을 조망하며 텐트를 치고 1박 하는 경험은 여름 캠핑족들에게 최고의 추억이 됩니다.<br><br>
+
+<div class="step-box">
+<strong>자라섬 당일 피크닉 즐기기</strong><br><br>
+· 가평역에서 자라섬까지: 도보 약 10~15분 또는 셔틀버스 이용<br>
+· 서도 피크닉 공간: 강변에 넓은 잔디밭·그늘막 설치 구간<br>
+· 자라섬재즈페스티벌: 매년 10월 개최 (여름엔 미개최이므로 주의)<br>
+· 수상레저: 카약·보트 대여 업체 인근 운영
+</div>
+
+여름 낮에 자라섬 잔디밭에서 돗자리 피크닉을 즐기다가 저녁에 쁘띠프랑스로 이동해 야간 조명을 감상하는 코스가 가평 여름 당일치기의 황금 루트입니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+  <div class="ph-head">
+    <span>📷 AI 이미지 생성 영역</span>
+    <span class="ph-file">images/260731/7_petitfrance_2.png</span>
+  </div>
+  <pre class="prompt-text" id="prompt-7-2">Jaraseom island picnic area in Gapyeong, Gyeonggi-do, South Korea, summer afternoon. Wide green grassy riverbank with the Bukhan River (North Han River) glistening in the background, families sitting on picnic mats under large trees providing shade, children playing near the water's edge, distant mountains covered in lush summer forest, some people kayaking on the calm river, bright blue sky with scattered clouds. Peaceful, relaxed, and summery outdoor leisure atmosphere. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+  <button class="copy-btn" onclick="copyPrompt('prompt-7-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">자라섬 북한강 수변 여름 피크닉 / AI 제작 이미지</div>
+</div>
+
+<h2>05. 가평 당일 코스 추천 일정</h2>
+
+<table class="info-table">
+  <tr><th>시간</th><th>장소</th><th>내용</th></tr>
+  <tr>
+    <td style="padding:10px 14px;">09:30~11:00</td>
+    <td style="padding:10px 14px;">가평역 도착·점심 준비</td>
+    <td style="padding:10px 14px;">가평 닭갈비·막국수 거리 점심</td>
+  </tr>
+  <tr>
+    <td style="padding:10px 14px; background:#f1faf9;">11:00~13:30</td>
+    <td style="padding:10px 14px; background:#f1faf9;">자라섬</td>
+    <td style="padding:10px 14px; background:#f1faf9;">수변 피크닉·카약·산책</td>
+  </tr>
+  <tr>
+    <td style="padding:10px 14px;">14:00~17:00</td>
+    <td style="padding:10px 14px;">쁘띠프랑스</td>
+    <td style="padding:10px 14px;">관람·전시·포토 스팟</td>
+  </tr>
+  <tr>
+    <td style="padding:10px 14px; background:#f1faf9;">17:00~18:30</td>
+    <td style="padding:10px 14px; background:#f1faf9;">이탈리아마을</td>
+    <td style="padding:10px 14px; background:#f1faf9;">토스카나 광장 산책·카페</td>
+  </tr>
+  <tr>
+    <td style="padding:10px 14px;">19:00~</td>
+    <td style="padding:10px 14px;">쁘띠프랑스 야간</td>
+    <td style="padding:10px 14px;">야간 조명 감상 (운영 확인 필수)</td>
+  </tr>
+</table>
+
+<h2>06. 교통 정보 — 서울에서 가평 가는 법</h2>
+
+<strong>ITX 청춘</strong>을 이용하면 서울 용산역에서 가평역까지 약 50~60분이면 도달할 수 있습니다. 배차 간격이 1~2시간이므로 사전에 시간을 확인하고 예약(코레일 앱)해 두는 것이 좋습니다.<br><br>
+<strong>자가용</strong>으로는 서울→경춘로→가평 방면으로 약 1~1.5시간(주말 교통량에 따라 상이). 자가용의 경우 귀경 시간대(일요일 오후 3~7시) 경춘로 정체가 심하므로 여유 있게 출발 시간을 계획하세요.<br><br>
+
+<div class="step-box">
+<strong>가평역에서 쁘띠프랑스까지</strong><br><br>
+· 택시: 가평역 앞에서 택시 이용, 약 15~20분, 15,000~20,000원 내외<br>
+· 셔틀버스: 가평역 앞 관광버스 정류장에서 쁘띠프랑스 방면 셔틀(시즌·요일별 운행 여부 확인)<br>
+· 자전거 대여: 가평역 앞 자전거 대여소 이용, 호반도로 따라 약 5~7km
+</div>
+
+<h2>07. 가평 닭갈비 — 여행 전후 필수 코스</h2>
+
+가평 여행에서 빠질 수 없는 먹거리가 <strong>가평 닭갈비</strong>입니다. 춘천 닭갈비와 함께 경춘선 라인의 명물 먹거리로, 가평읍내와 청평 지역에 닭갈비·막국수 전문 식당들이 밀집해 있습니다.<br><br>
+가평 닭갈비는 철판보다 숯불에 굽는 방식을 선호하는 식당들이 많습니다. 춘천 닭갈비보다 묵직한 불향이 특징이며, 막국수와 세트로 먹는 것이 현지 방식입니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+  <div class="ph-head">
+    <span>📷 AI 이미지 생성 영역</span>
+    <span class="ph-file">images/260731/7_petitfrance_3.png</span>
+  </div>
+  <pre class="prompt-text" id="prompt-7-3">Petit France and Italian Village in Gapyeong at night, romantic summer evening. Warm string lights and lanterns illuminating the colorful European-style buildings, terracotta-roofed French Provençal cottages glowing with golden light, cobblestone paths lit by soft lamp posts, a couple walking hand-in-hand through the illuminated village, Cheongpyeong lake faintly visible in the dark background reflecting the lights, magical and dreamy atmosphere. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+  <button class="copy-btn" onclick="copyPrompt('prompt-7-3')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">쁘띠프랑스 야간 조명 로맨틱 풍경 / AI 제작 이미지</div>
+</div>
+
+<h2>08. 남이섬과 비교 — 어디가 더 좋은가</html2>
+
+가평 여행에서 자주 비교되는 것이 남이섬과 쁘띠프랑스입니다.<br><br>
+
+<table class="info-table">
+  <tr><th>구분</th><th>쁘띠프랑스+이탈리아마을</th><th>남이섬</th></tr>
+  <tr>
+    <td style="padding:10px 14px;">콘셉트</td>
+    <td style="padding:10px 14px;">유럽 테마 건축</td>
+    <td style="padding:10px 14px;">자연 경관·문화 축제</td>
+  </tr>
+  <tr>
+    <td style="padding:10px 14px; background:#f1faf9;">사진 분위기</td>
+    <td style="padding:10px 14px; background:#f1faf9;">이국적·인스타 감성</td>
+    <td style="padding:10px 14px; background:#f1faf9;">자연 + 계절감</td>
+  </tr>
+  <tr>
+    <td style="padding:10px 14px;">이동</td>
+    <td style="padding:10px 14px;">차·택시 (역에서 멀음)</td>
+    <td style="padding:10px 14px;">가평역→배 (선착장 도보)</td>
+  </tr>
+  <tr>
+    <td style="padding:10px 14px; background:#f1faf9;">인파</td>
+    <td style="padding:10px 14px; background:#f1faf9;">상대적으로 덜 혼잡</td>
+    <td style="padding:10px 14px; background:#f1faf9;">외국 관광객 많음</td>
+  </tr>
+  <tr>
+    <td style="padding:10px 14px;">야간</td>
+    <td style="padding:10px 14px;">야간 조명 행사 강점</td>
+    <td style="padding:10px 14px;">야간 조명 이벤트 있음</td>
+  </tr>
+</table>
+
+자연보다는 이국적 건축과 포토 스팟을 원하는 분이라면 쁘띠프랑스·이탈리아마을이, 자연경관과 넓은 공간을 원하는 분이라면 남이섬이 더 잘 맞습니다.
+
+<h2>09. 숙박 — 청평호반 펜션과 캠핑</h2>
+
+가평에서 1박을 더한다면 청평호반 주변 펜션과 자라섬 캠핑장이 인기입니다.<br><br>
+<strong>청평·가평 펜션</strong>은 호반 뷰를 자랑하는 곳들이 많으며, 바비큐 시설을 갖춘 풀빌라 펜션도 다수 운영됩니다. 여름 성수기(7~8월)에는 최소 2~4주 전 예약이 필요하므로 서두르세요.<br><br>
+<strong>자라섬 캠핑장</strong>은 수변에 캠핑이 가능한 오토캠핑장으로, 예약은 가평군 자라섬 캠핑장 공식 예약 시스템을 통해 진행됩니다. 성수기에는 1~2개월 전부터 예약이 마감되는 경우가 많으므로 서둘러 예약하는 것이 중요합니다.
+
+<h2>10. 가평 기념품 — 잣 제품과 지역 특산물</h2>
+
+가평은 잣 산지로 유명합니다. 귀경길에 가평역 근처 또는 지역 농협 직판장에서 가평 잣을 구입하는 것도 좋습니다.<br><br>
+잣 외에도 <strong>가평 유기농 사과</strong>와 <strong>막국수 면 제품</strong>이 지역 특산물로 판매됩니다. 가평 장터(가평읍 전통시장)는 2·7일 열리는 5일장으로, 일정이 맞으면 장터에서 현지 먹거리와 지역 농산물을 저렴하게 구입할 수 있습니다.
+
+<div class="tip-box">
+<strong>💡 가평 주말 꿀팁</strong><br><br>
+여름 주말 가평·청평 일대는 경춘로 교통 정체가 심합니다. 서울→가평 방향은 토요일 오전 8시 이전, 가평→서울 방향은 일요일 오후 6시 이후를 피하는 것이 좋습니다. ITX 청춘 기차를 이용하면 교통 정체 걱정 없이 빠르게 이동할 수 있으며, 앉아서 이동하는 즐거움도 여행의 일부가 됩니다.
+</div>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260730/travel_gapyeong_yangpyeong_waterleisure.html">가평·양평 여름 계곡 vs 수상레저 어디 갈까, 수도권 당일 물놀이 비교</a></li>
+    <li><a href="../260730/local_rentcar_fullcover.html">렌터카 완전자차 보험 뭐가 다른가, 자기부담금·반납 체크리스트와 사고 시 대처</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#가평쁘띠프랑스</span>
+  <span class="tag">#이탈리아마을가평</span>
+  <span class="tag">#자라섬</span>
+  <span class="tag">#가평당일코스</span>
+  <span class="tag">#수도권이색여행</span>
+  <span class="tag">#경춘선여행</span>
+  <span class="tag">#가평여름</span>
+  <span class="tag">#청평호반</span>
+  <span class="tag">#유럽테마파크</span>
+  <span class="tag">#야간조명</span>
+</div>
+</body>
+</html>
