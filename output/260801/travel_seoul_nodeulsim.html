@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px 14px; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #e0f2f1; }
+  .info-table tr:nth-child(even) td { background: #f1faf9; }
+  .step-box { border-left: 4px solid #00796b; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; text-align: center; font-style: italic; }
+  .img-placeholder { background: #f0f4f8; border: 2px dashed #90a4ae; border-radius: 10px; padding: 20px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; color: #546e7a; }
+  .ph-file { font-size: 0.85em; color: #90a4ae; font-weight: 400; font-family: monospace; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 14px; border-radius: 6px; font-size: 0.82em; line-height: 1.6; white-space: pre-wrap; margin: 10px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 7px 16px; border-radius: 5px; cursor: pointer; font-size: 0.88em; margin-top: 6px; }
+  .copy-btn:hover { background: #004d40; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>서울 노들섬·달빛노들과 잠수교 여름밤 산책, 한강 도심 야간 코스</h1>
+
+<div class="intro-box">
+서울 한강 위에 떠 있는 작은 섬, <strong>노들섬</strong>은 도심 한복판에서 자연과 문화를 동시에 즐길 수 있는 복합문화공간입니다.<br><br>
+여름밤이면 강바람이 불어오는 이 섬에서 음악을 듣고, 책을 읽고, 야경을 즐기며 도심의 열기를 식힐 수 있습니다. 잠수교 보행로와 연계하면 한강 물 위를 걷는 낭만적인 야간 산책까지 즐길 수 있는, 서울 한여름 밤의 완벽한 코스입니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260801/6_seoul_nodeulsim_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-1">Nodeul Island complex on Han River Seoul at night, modern cultural building with warm interior lights reflected in calm river water, Seoul city skyline in background with glittering lights, summer night atmosphere, couples and visitors strolling along riverbank, photorealistic, ultra high detail, 1:1 aspect ratio, urban night scene</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">노들섬 복합문화공간의 여름 밤 야경 — 한강 위에 빛나는 도심의 섬 / AI 제작 이미지</div>
+</div>
+
+<h2>01. 노들섬이란? — 한강 위 문화 섬의 탄생</h2>
+
+<strong>노들섬</strong>은 서울시 용산구 이촌동과 동작구 노량진동 사이 한강에 위치한 작은 섬입니다.<br><br>
+원래 '중지도(中之島)'라 불리던 이 섬은 수십 년간 한강 개발 계획의 부지로만 남겨져 있다가 2019년 9월 서울시가 복합문화공간으로 개장하면서 본격적으로 시민들에게 개방되었습니다.<br><br>
+섬 안에는 라이브 공연장, 소규모 뮤직 스튜디오, 책방, 카페, 레스토랑, 텃밭 정원 등 다양한 시설이 들어서 있어 단순한 공원을 넘어선 복합 문화 허브 역할을 합니다. 서울에서 진정 독특한 경험을 원하는 분들이 즐겨 찾는 이색 명소입니다.
+
+<h2>02. 달빛노들 — 여름밤 특별 이벤트</h2>
+
+노들섬은 낮보다 밤이 더 아름다운 곳입니다. 특히 여름 기간에는 <strong>달빛노들</strong>이라는 이름으로 야간 프로그램이 운영됩니다.<br><br>
+선선한 한강 바람이 부는 여름밤, 야외 공연장에서 열리는 버스킹 공연, 소규모 라이브 콘서트, 영화 상영 등이 방문객을 맞이합니다. 프로그램과 일정은 노들섬 공식 홈페이지 또는 SNS에서 확인할 수 있습니다.<br><br>
+이벤트가 없는 날에도 노들섬 야경 자체가 충분히 아름답습니다. 섬 사방으로 한강과 서울 도심의 빌딩 야경이 펼쳐지며, 한강대교·반포대교의 불빛이 강물에 반사되는 풍경이 인상적입니다.<br><br>
+카페에서 음료를 한 잔 들고 야외 테이블에 앉아 한강 바람을 맞는 것만으로도 충분히 낭만적인 여름밤을 보낼 수 있습니다.
+
+<h2>03. 노들섬 주요 시설 및 운영 정보</h2>
+
+<table class="info-table">
+  <tr><th>시설</th><th>내용</th></tr>
+  <tr><td>라이브하우스</td><td>다목적 공연장 (예약 필요, 공연별 입장료 상이)</td></tr>
+  <tr><td>서점 겸 카페</td><td>음악 테마 서점·음반 판매, 음료 판매</td></tr>
+  <tr><td>레스토랑</td><td>한강 뷰 식음료 공간 다수</td></tr>
+  <tr><td>텃밭정원</td><td>시민 텃밭·식물 정원, 자유 관람</td></tr>
+  <tr><td>옥상 뷰포인트</td><td>한강 파노라마 전망 가능 (무료)</td></tr>
+  <tr><td>운영 시간</td><td>노들섬 전체: 24시간 개방 / 일부 시설: 별도 운영시간</td></tr>
+  <tr><td>입장료</td><td>섬 자체 무료 / 일부 공연·이벤트 별도</td></tr>
+</table>
+
+<h2>04. 잠수교 보행로 — 한강 물 위를 걷다</h2>
+
+노들섬 방문과 함께 반드시 경험해야 할 것이 <strong>잠수교 보행로</strong>입니다.<br><br>
+잠수교는 반포대교 아래에 나란히 놓인 낮은 다리로, 한강 수위가 높아지면 물에 잠기는 특이한 구조를 가집니다. 이 다리의 차도 옆으로 보행자 전용 산책로가 마련되어 있어 강바람을 맞으며 한강 위를 걸을 수 있습니다.<br><br>
+잠수교 보행로는 반포한강공원 쪽에서 출발해 노들섬 방향으로 이어지며, 다리 위에서 내려다보이는 한강과 서울 도심 야경이 압도적입니다. 여름 저녁 선선한 바람을 맞으며 이 다리를 걷는 경험은 서울에서 쉽게 찾기 힘든 특별한 추억이 됩니다.<br><br>
+주말 저녁에는 연인, 가족, 러닝 동호회원들로 북적이지만, 다리 폭이 넉넉해 여유롭게 이동할 수 있습니다. 단 한강 수위가 높아지면 보행로가 통제될 수 있으니, 장마철에는 방문 전 서울시 한강사업본부 홈페이지에서 개방 여부를 확인하세요.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260801/6_seoul_nodeulsim_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-2">Jamsugyo bridge pedestrian walkway over Han River Seoul at night, low flat bridge with people walking, sparkling city lights reflection in dark calm river water, summer evening, Seoul skyline including Banpo bridge fountain lights in distance, photorealistic, ultra high detail, 1:1 aspect ratio, urban night walk atmosphere</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">잠수교 보행로 — 한강 물 위를 걸으며 즐기는 서울 야경 / AI 제작 이미지</div>
+</div>
+
+<h2>05. 반포 한강공원 — 야간 피크닉의 성지</h2>
+
+노들섬·잠수교와 함께 반드시 들러야 할 곳이 <strong>반포한강공원</strong>입니다.<br><br>
+반포대교 아래로 펼쳐지는 세빛섬, 반포대교 무지개 달빛 분수, 잔디밭 피크닉 존이 서울 한강공원 중 가장 인기 있는 야간 명소입니다. 특히 <strong>달빛무지개분수</strong>는 저녁 시간에 반포대교 교각에서 물을 내뿜으며 형형색색의 조명을 비추는 야경 명물입니다(운영 시간·기간은 서울시 홈페이지 확인).<br><br>
+피크닉 매트를 펼치고 편의점 음료와 간식을 챙겨 앉으면 인기 명소지만 가격 부담 없이 서울 야경을 즐길 수 있습니다. 치킨, 피자, 편의점 도시락 등 간편식을 들고 오는 방문객들로 여름밤 내내 활기찹니다.
+
+<h2>06. 노들섬 가는 법 — 대중교통·자가용</h2>
+
+<table class="info-table">
+  <tr><th>방법</th><th>내용</th></tr>
+  <tr><td>지하철</td><td>9호선 노들역 1번 출구 → 노들대교 이용해 도보 약 10분</td></tr>
+  <tr><td>버스</td><td>한강대교, 노들로 경유 노선 다수 → 노들섬 정류장 하차</td></tr>
+  <tr><td>자가용</td><td>노들섬 주차장 이용 (유료, 공간 제한 있음)</td></tr>
+  <tr><td>자전거</td><td>한강변 자전거도로 이용, 섬 내 자전거 보관대 있음</td></tr>
+  <tr><td>잠수교 연결</td><td>반포한강공원에서 도보로 잠수교 → 노들섬 방향 이동 가능</td></tr>
+</table>
+
+<h2>07. 여름밤 야간 코스 추천 동선</h2>
+
+<div class="step-box">
+<strong>저녁 18:00 — 반포한강공원</strong><br>
+편의점 또는 배달 음식으로 피크닉 준비 → 달빛무지개분수 감상 (운영시간 확인 필수)
+</div>
+<div class="step-box">
+<strong>19:30 — 잠수교 보행 산책</strong><br>
+반포한강공원 → 잠수교 보행로 → 한강 위 야경 감상 (왕복 30~40분)
+</div>
+<div class="step-box">
+<strong>21:00 — 노들섬</strong><br>
+노들섬 도착 → 카페 음료·야외 공연 감상 → 옥상 전망 포인트 → 야경 포토
+</div>
+<div class="step-box">
+<strong>22:30 — 귀가</strong><br>
+노들역 또는 한강대교 버스 이용 귀가
+</div>
+
+<h2>08. 여름밤 방문 시 준비물 및 주의사항</h2>
+
+<div class="tip-box">
+✅ <strong>모기 기피제</strong>: 한강변 특히 야간에는 모기가 많으므로 필수<br>
+✅ <strong>가벼운 겉옷</strong>: 강바람으로 의외로 서늘할 수 있음 (특히 늦은 밤)<br>
+✅ <strong>피크닉 매트</strong>: 잔디 위 좌석 확보 필수<br>
+✅ <strong>개인 음료·간식</strong>: 노들섬·한강공원 카페는 다소 비쌀 수 있음<br>
+✅ <strong>충전기</strong>: 사진·영상 촬영으로 배터리 소모가 많음<br>
+✅ <strong>장마 기간 확인</strong>: 잠수교 통제 여부 방문 전 확인
+</div>
+
+<h2>09. 노들섬 주변 한강 공원 비교</h2>
+
+<table class="info-table">
+  <tr><th>공원</th><th>특징</th><th>야간 하이라이트</th></tr>
+  <tr><td>반포한강공원</td><td>달빛무지개분수, 세빛섬</td><td>분수 쇼, 피크닉</td></tr>
+  <tr><td>여의도한강공원</td><td>넓은 잔디, 야시장</td><td>불꽃축제, 야시장</td></tr>
+  <tr><td>뚝섬한강공원</td><td>수영장, 자전거</td><td>음악 분수</td></tr>
+  <tr><td>노들섬</td><td>라이브 공연, 서점</td><td>공연·야경</td></tr>
+</table>
+
+<h2>10. 서울 노들섬 야간 코스 총정리</h2>
+
+노들섬은 무더운 여름밤, 서울을 벗어나지 않고도 충분히 청량하고 낭만적인 저녁을 보낼 수 있는 숨은 명소입니다.<br><br>
+반포한강공원의 달빛무지개분수로 시작해 잠수교 보행로를 걸으며 한강 야경을 감상하고, 노들섬의 라이브 음악과 강바람으로 마무리하는 이 코스는 서울의 여름밤을 가장 잘 즐기는 방법 중 하나입니다.<br><br>
+입장료 없이 즐길 수 있는 무료 공간이 대부분이라 경제적인 부담도 없습니다. 이번 주말 저녁, 가족이나 친구·연인과 함께 서울 한강 야간 코스에 도전해 보시기 바랍니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260801/6_seoul_nodeulsim_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-3">Nodeul Island Seoul panoramic view from rooftop, Han River stretching in both directions, Hangang bridge illuminated at night, Seoul city buildings glittering in background, moonlit summer sky, visitors enjoying outdoor space, photorealistic, ultra high detail, 1:1 aspect ratio, romantic urban evening, wide angle cityscape</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">노들섬 옥상에서 바라본 한강 야경 파노라마 / AI 제작 이미지</div>
+</div>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260731/travel_busan_youngdo_whitevil.html">부산 영도 흰여울문화마을과 송도해상케이블카·스카이워크 여름 밤바다 코스</a></li>
+    <li><a href="../260731/travel_donghae_mureung_valley.html">동해 무릉계곡과 베틀바위산성길 여름 트레킹, 삼화사·촛대바위 피서 코스</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#노들섬</span>
+  <span class="tag">#달빛노들</span>
+  <span class="tag">#잠수교보행</span>
+  <span class="tag">#서울야경</span>
+  <span class="tag">#한강야간</span>
+  <span class="tag">#반포한강공원</span>
+  <span class="tag">#서울여름밤</span>
+  <span class="tag">#한강피크닉</span>
+  <span class="tag">#서울당일코스</span>
+  <span class="tag">#도심야간산책</span>
+</div>
+
+</body>
+</html>

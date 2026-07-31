@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px 14px; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #e0f2f1; }
+  .info-table tr:nth-child(even) td { background: #f1faf9; }
+  .step-box { border-left: 4px solid #00796b; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; text-align: center; font-style: italic; }
+  .img-placeholder { background: #f0f4f8; border: 2px dashed #90a4ae; border-radius: 10px; padding: 20px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; color: #546e7a; }
+  .ph-file { font-size: 0.85em; color: #90a4ae; font-weight: 400; font-family: monospace; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 14px; border-radius: 6px; font-size: 0.82em; line-height: 1.6; white-space: pre-wrap; margin: 10px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 7px 16px; border-radius: 5px; cursor: pointer; font-size: 0.88em; margin-top: 6px; }
+  .copy-btn:hover { background: #004d40; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>문경 단산 모노레일 타는 법과 에코월드 짚라인, 문경새재 여름 고원 나들이 코스</h1>
+
+<div class="intro-box">
+경북 문경은 예로부터 한양으로 가는 길목인 문경새재로 유명했지만, 최근에는 <strong>단산 모노레일</strong>과 <strong>문경에코월드 짚라인</strong>이 여름 액티비티 명소로 새롭게 주목받고 있습니다.<br><br>
+해발 894m 단산의 능선을 따라 운행하는 모노레일은 경북의 드넓은 산세를 감상할 수 있는 최고의 방법입니다. 숲속을 빠르게 날아가는 짚라인과 함께, 문경새재의 역사 탐방까지 더하면 가족 여행지로 하루가 완벽하게 채워집니다. 이번 여름, 문경으로 떠나 보세요.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260801/7_mungyeong_dansan_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-7-1">Dansan monorail in Mungyeong North Gyeongsang Korea, small red cable car gondola traveling along mountain ridge at high altitude, lush green summer forest below, panoramic mountain range visible in distance, blue sky with scattered clouds, photorealistic, ultra high detail, 1:1 aspect ratio, Korean mountain tourism, adventure activity</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-7-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">단산 모노레일 — 해발 894m 산 능선을 따라 달리는 하늘 위 탑승 코스 / AI 제작 이미지</div>
+</div>
+
+<h2>01. 문경 단산 모노레일이란?</h2>
+
+<strong>단산 모노레일</strong>은 경북 문경시 가은읍에 위치한 레일 바이크·모노레일 복합 어트랙션입니다.<br><br>
+단산(丹山)은 해발 894m의 산으로, 이 산의 능선과 계곡을 따라 약 4km 구간을 왕복 운행하는 모노레일이 설치되어 있습니다. 탁 트인 능선에서 내려다보이는 문경 분지와 원경의 산세는 가히 장관입니다.<br><br>
+레일 바이크는 두 명이 마주 앉아 직접 페달을 밟는 방식이며, 평지와 완만한 경사로로 구성되어 어린아이도 어렵지 않게 즐길 수 있습니다. 모노레일과 레일 바이크를 세트로 운영하는 경우가 많으므로 방문 전 홈페이지에서 현재 운영 프로그램을 확인하는 것이 좋습니다.
+
+<h2>02. 운영 정보 및 요금</h2>
+
+<table class="info-table">
+  <tr><th>항목</th><th>내용</th></tr>
+  <tr><td>위치</td><td>경북 문경시 가은읍 (정확한 주소는 방문 전 네이버 지도 검색 권장)</td></tr>
+  <tr><td>운영 시간</td><td>09:00~18:00 (하절기 기준, 시즌 변동 있음)</td></tr>
+  <tr><td>휴무</td><td>월요일 (성수기 연중무휴 운영 가능성 있음 — 홈페이지 확인)</td></tr>
+  <tr><td>이용 요금</td><td>성인·청소년·아동 별도 요금 / 현장 또는 온라인 예매</td></tr>
+  <tr><td>주차</td><td>무료 주차장 운영</td></tr>
+  <tr><td>소요 시간</td><td>모노레일 왕복 약 40분~1시간</td></tr>
+</table>
+
+<div class="tip-box">
+⚠️ <strong>요금·운영 정보 사전 확인 필수</strong><br>
+단산 모노레일은 시즌에 따라 운영 시간·요금·프로그램이 달라질 수 있습니다. 방문 전 반드시 공식 채널(네이버 지도·홈페이지)을 통해 최신 정보를 확인하세요. 여름 성수기에는 대기가 길어질 수 있으므로 오전 일찍 도착하는 것이 좋습니다.
+</div>
+
+<h2>03. 문경에코월드 짚라인 — 숲을 가로지르는 스릴</h2>
+
+문경 지역의 또 다른 여름 액티비티 명소가 <strong>문경에코월드</strong>입니다.<br><br>
+문경에코월드는 산림 어드벤처 테마파크로, 짚라인(Zip-line)이 대표 액티비티입니다. 짚라인은 높은 지점에서 와이어에 매달려 아래 목표 지점까지 빠른 속도로 활강하는 액티비티로, 숲 위를 날아가는 듯한 짜릿한 속도감을 경험할 수 있습니다.<br><br>
+국내 짚라인 중에서도 코스 길이와 높낮이 차이가 큰 편이어서 스릴을 즐기는 분들에게 특히 인기입니다. 안전 장비를 완벽히 착용하고 전문 가이드의 안내에 따라 진행하므로 안전에는 크게 우려하지 않아도 됩니다. 다만 심장 질환·고혈압·임산부 등 건강상 제한이 있는 분은 사전에 반드시 확인이 필요합니다.
+
+<h2>04. 문경에코월드 주요 시설</h2>
+
+<table class="info-table">
+  <tr><th>시설</th><th>내용</th></tr>
+  <tr><td>짚라인</td><td>복수 코스 운영, 총 길이 수백~1,000m 이상 (코스별 상이)</td></tr>
+  <tr><td>어드벤처 코스</td><td>숲속 로프 어드벤처, 튜브 슬라이딩 등</td></tr>
+  <tr><td>캠핑·글램핑</td><td>자연 속 숙박 가능 (사전 예약 필수)</td></tr>
+  <tr><td>식당·카페</td><td>현장 식사 가능, 야외 피크닉 공간 있음</td></tr>
+  <tr><td>이용 연령</td><td>짚라인: 일정 신장·체중 제한 있음 (홈페이지 확인)</td></tr>
+</table>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260801/7_mungyeong_dansan_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-7-2">Zipline adventure over lush green summer forest in Korean mountain resort, person in safety harness gliding fast along long steel wire between tall trees, sunlight filtering through forest canopy, thrilling outdoor activity, photorealistic, ultra high detail, 1:1 aspect ratio, adventure sports, forest zip line Korea</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-7-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">문경에코월드 짚라인 — 울창한 여름 숲을 가로질러 날아가는 스릴 액티비티 / AI 제작 이미지</div>
+</div>
+
+<h2>05. 문경새재 — 역사와 자연을 동시에</h2>
+
+액티비티 이후에는 인근의 <strong>문경새재 도립공원</strong>으로 발길을 옮겨 보세요.<br><br>
+문경새재는 조선시대 한양(서울)으로 가는 대표적인 고갯길로, '새(鳥)도 날기 힘들다'는 뜻의 험한 산길이었습니다. 조선 시대 과거를 보러 가던 선비들, 보부상들이 이 길을 걸었고, 그 역사가 고스란히 보존된 곳입니다.<br><br>
+제1~제3관문까지 이어지는 탐방로는 왕복 약 7~8km로 완만한 흙길이어서 어린이도 무난히 걸을 수 있습니다. 여름에는 계곡물이 흐르는 그늘진 숲길이어서 한낮의 더위도 크게 느껴지지 않습니다. 관문(성문) 앞에서의 기념 사진은 문경새재 방문의 필수 코스입니다.
+
+<h2>06. 문경새재 탐방 핵심 정보</h2>
+
+<table class="info-table">
+  <tr><th>항목</th><th>내용</th></tr>
+  <tr><td>위치</td><td>경북 문경시 문경읍 새재로 932</td></tr>
+  <tr><td>입장료</td><td>성인 기준 소정의 입장료 (세부 요금은 변동 가능, 현장 확인)</td></tr>
+  <tr><td>탐방 거리</td><td>제1관문~제3관문 왕복 약 7~8km</td></tr>
+  <tr><td>소요 시간</td><td>왕복 약 2~3시간 (관람 포함)</td></tr>
+  <tr><td>주차</td><td>문경새재 주차장 이용 (유료)</td></tr>
+  <tr><td>추천 시즌</td><td>여름 (그늘진 숲길로 더위 피하기 좋음)</td></tr>
+</table>
+
+<h2>07. 문경 여름 당일 코스 추천 동선</h2>
+
+<div class="step-box">
+<strong>09:00 — 단산 모노레일</strong><br>
+성수기 대기 방지를 위해 오전 일찍 도착 → 모노레일 탑승 → 능선 파노라마 감상 (약 1시간)
+</div>
+<div class="step-box">
+<strong>11:00 — 문경에코월드 짚라인</strong><br>
+짚라인 및 어드벤처 코스 체험 → 현장 식당 점심 (약 2시간)
+</div>
+<div class="step-box">
+<strong>13:30 — 문경새재 탐방</strong><br>
+제1관문 → 제2관문 → (시간 여유 시) 제3관문까지 → 계곡 물놀이
+</div>
+<div class="step-box">
+<strong>16:30 — 문경시내</strong><br>
+문경 오미자 음료·특산품 구입 → 귀가
+</div>
+
+<h2>08. 문경 특산물 — 오미자로 여름 마무리</h2>
+
+문경은 전국 최대 오미자 산지입니다. 시내 곳곳에서 <strong>오미자 음료, 오미자 막걸리, 오미자 아이스크림</strong> 등 다양한 오미자 기반 먹거리를 판매합니다.<br><br>
+오미자는 단·신·쓴·짠·매운 다섯 가지 맛이 난다고 해서 '오미(五味)자'라 불리며, 새빨간 빛깔의 오미자 에이드는 인스타그램 핫플 음료로도 유명합니다. 여름의 더위를 식혀 줄 시원한 오미자 음료 한 잔을 꼭 맛보세요.<br><br>
+문경새재 입구 상가나 문경시내 로컬 카페에서 저렴하게 구입할 수 있으며, 오미자 원액·청을 선물용으로 구매하기도 좋습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260801/7_mungyeong_dansan_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-7-3">Mungyeongsaejae historic mountain pass trail in summer, stone fortress gate (gwanmun) standing in forest, lush green deciduous trees on both sides of dirt path, soft dappled sunlight, Korean tourists walking through ancient gate, photorealistic, ultra high detail, 1:1 aspect ratio, historic Korean landscape, summer forest trail</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-7-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">문경새재 제1관문(주흘관) — 조선시대 한양 가는 길, 여름 숲길 탐방 / AI 제작 이미지</div>
+</div>
+
+<h2>09. 문경 여행 실용 정보</h2>
+
+<table class="info-table">
+  <tr><th>항목</th><th>내용</th></tr>
+  <tr><td>서울 출발</td><td>중부내륙고속도로 → 문경새재IC (약 2시간 30분)</td></tr>
+  <tr><td>대전 출발</td><td>당진영덕고속도로 → 문경IC (약 1시간 40분)</td></tr>
+  <tr><td>대중교통</td><td>점촌·문경행 버스·기차 + 현지 택시 or 렌터카 조합 권장</td></tr>
+  <tr><td>숙박</td><td>문경시내 모텔·펜션 / 에코월드 글램핑 (예약 필수)</td></tr>
+  <tr><td>여름 옷차림</td><td>산길 트레킹 시 긴바지·운동화 추천, 모자·선크림 필수</td></tr>
+</table>
+
+<h2>10. 문경 단산 모노레일·새재 여름 코스 총정리</h2>
+
+문경은 역사(새재)·자연(단산 모노레일)·스릴(짚라인)·미식(오미자)이 한 공간에 모여 있는 경북의 숨은 여름 여행지입니다.<br><br>
+무더운 도시를 벗어나 서늘한 고원의 바람을 맞으며 모노레일을 타고, 짚라인으로 숲을 날아가고, 조선시대 고갯길을 거닐다 오미자 에이드로 마무리하는 당일 코스는 남녀노소 모두가 만족할 수 있는 완성도 높은 여행 루트입니다.<br><br>
+올 여름 경북 여행 계획 중이라면 문경을 첫 번째 목적지로 고려해 보시기 바랍니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260731/travel_busan_youngdo_whitevil.html">부산 영도 흰여울문화마을과 송도해상케이블카·스카이워크 여름 밤바다 코스</a></li>
+    <li><a href="../260731/travel_donghae_mureung_valley.html">동해 무릉계곡과 베틀바위산성길 여름 트레킹, 삼화사·촛대바위 피서 코스</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#문경모노레일</span>
+  <span class="tag">#단산모노레일</span>
+  <span class="tag">#문경에코월드</span>
+  <span class="tag">#문경짚라인</span>
+  <span class="tag">#문경새재</span>
+  <span class="tag">#문경여행</span>
+  <span class="tag">#경북여행</span>
+  <span class="tag">#여름가족여행</span>
+  <span class="tag">#산악액티비티</span>
+  <span class="tag">#문경오미자</span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px 14px; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #e0f2f1; }
+  .info-table tr:nth-child(even) td { background: #f1faf9; }
+  .step-box { border-left: 4px solid #00796b; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; text-align: center; font-style: italic; }
+  .img-placeholder { background: #f0f4f8; border: 2px dashed #90a4ae; border-radius: 10px; padding: 20px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: 700; color: #546e7a; }
+  .ph-file { font-size: 0.85em; color: #90a4ae; font-weight: 400; font-family: monospace; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 14px; border-radius: 6px; font-size: 0.82em; line-height: 1.6; white-space: pre-wrap; margin: 10px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 7px 16px; border-radius: 5px; cursor: pointer; font-size: 0.88em; margin-top: 6px; }
+  .copy-btn:hover { background: #004d40; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>당진 왜목마을 일출·일몰 동시 명소와 삽교호 함상공원 서해 드라이브 코스</h1>
+
+<div class="intro-box">
+충청남도 당진의 작은 어촌 마을 <strong>왜목마을</strong>은 대한민국 서해안에서 유일하게 일출과 일몰을 <strong>같은 장소</strong>에서 모두 감상할 수 있는 신비로운 곳입니다.<br><br>
+서쪽을 향한 서해안에서 어떻게 일출을 볼 수 있을까요? 바로 왜목마을의 독특한 지형 덕분입니다. 닭 부리 모양으로 삼면이 바다에 둘러싸인 이 작은 반도에서는 해가 바다 위로 솟아오르는 장면과 바다 속으로 가라앉는 장면을 모두 포착할 수 있습니다.<br><br>
+근처 <strong>삽교호 함상공원</strong>까지 더하면 역사 체험까지 완성되는 충남 서해 당일 드라이브 코스가 완성됩니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260801/4_dangjin_waemok_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-1">Spectacular sunrise over West Sea in South Korea, Dangjin Waemok Village tidal flat, golden orange sun rising from the horizon of the Yellow Sea, silhouette of fishing boats and wooden piers in calm water, reflection of dawn colors on wet sand, photorealistic, ultra high detail, 1:1 aspect ratio, majestic dawn atmosphere</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">왜목마을에서 바라본 서해 일출 — 서해안 유일의 해돋이 명소 / AI 제작 이미지</div>
+</div>
+
+<h2>01. 왜목마을의 지리적 비밀 — 왜 서해에서 일출이 보이나</h2>
+
+왜목마을은 충청남도 당진시 석문면 교로리에 위치합니다.<br><br>
+지도를 보면 이 지역이 서해 쪽으로 길쭉하게 튀어나온 반도 형태임을 알 수 있습니다. '왜목'이라는 이름 자체가 닭의 목처럼 가늘고 길게 튀어나왔다는 의미에서 유래했습니다. 이 마을의 끝에는 동쪽, 서쪽, 북쪽 세 방향이 모두 바다로 열려 있습니다.<br><br>
+<strong>일출은 동쪽 바다</strong>(서해 가로림만 방향)에서, <strong>일몰은 서쪽 바다</strong>에서 감상할 수 있습니다. 보통 서해안의 다른 지점에서는 일몰만 볼 수 있지만, 왜목마을의 독특한 반도 지형이 이 두 가지를 모두 가능하게 합니다.<br><br>
+이 때문에 사진작가들 사이에서 왜목마을은 오래전부터 성지로 꼽혀 왔으며, 특히 겨울 일출은 전국에서 손꼽히는 명소로 알려져 있습니다.
+
+<h2>02. 일출 시간과 최적 포인트 — 여름 일출은 언제·어디서</h2>
+
+여름철 왜목마을 일출 시간은 오전 5시 30분~5시 50분 사이입니다(날짜에 따라 다소 차이 있음). 정확한 일출 시간은 기상청 홈페이지 또는 '해시계' 앱을 통해 방문 전날 확인하세요.<br><br>
+<strong>일출 감상 최적 포인트</strong>는 왜목마을 방파제 끝 쪽과 선착장 주변입니다. 방파제 위에 서면 왼쪽으로는 일출 방향, 오른쪽으로는 이후 일몰을 볼 수 있는 서쪽 바다가 모두 시야에 들어옵니다.<br><br>
+일출을 보기 위해서는 적어도 일출 30분 전에 도착해 자리를 잡는 것이 좋습니다. 맑은 날에는 주황빛 태양이 잔잔한 바다 위로 솟아오르는 장면이 장관입니다. 구름이 끼어도 운해(雲海)와 함께 펼쳐지는 일출이 나름의 신비로운 분위기를 연출합니다.<br><br>
+일출 이후에는 마을 어판장에서 갓 잡은 싱싱한 생선과 조개류를 구입할 수도 있습니다. 이른 아침 어선에서 내려지는 당일 물고기를 저렴하게 살 수 있는 것도 왜목마을 방문의 큰 즐거움입니다.
+
+<h2>03. 일몰 — 황금빛으로 타오르는 저녁</h2>
+
+왜목마을의 일몰 역시 일출 못지않은 장관입니다.<br><br>
+서쪽 바다로 떨어지는 해가 하늘과 수면을 황금빛, 붉은빛, 보랏빛으로 물들이는 광경은 동해안 일몰과는 또 다른 서해만의 묘한 서정미를 발산합니다.<br><br>
+8월 기준 일몰은 오후 7시 40분~8시 사이입니다. 일몰 직전 1시간이 이른바 '골든 아워'로, 빛이 황금빛으로 변하면서 마을 어선과 방파제, 갯벌이 모두 황금빛으로 빛납니다.<br><br>
+일몰 후 서서히 어두워지는 밤하늘에 별이 뜨면 도시에서는 볼 수 없는 맑은 밤하늘도 감상할 수 있습니다. 왜목마을 일대는 빛 공해가 적어 별 관측 부업 명소이기도 합니다.
+
+<h2>04. 삽교호 함상공원 — 군함 위에서 역사 체험</h2>
+
+왜목마을에서 차로 30분 거리에 위치한 <strong>삽교호 함상공원</strong>은 당진 서해 코스의 또 다른 하이라이트입니다.<br><br>
+삽교호 방조제 끝에 실제 군함이 육상에 전시된 이색 공원입니다. 퇴역 군함을 그대로 육지로 끌어올려 전시·체험 시설로 개방한 것으로, 아이들과 함께라면 매우 흥미로운 경험을 제공합니다.<br><br>
+군함 내부에 들어가 조타실, 함교, 무기고, 병실 등을 직접 둘러보며 해군 함정의 구조를 이해할 수 있습니다. 일부 체험 시설에서는 함포를 만지거나 해군 모자를 쓰고 사진을 찍는 것도 가능합니다.<br><br>
+입장료는 성인 기준 소정의 요금이 있으며(정확한 요금은 방문 전 당진시 홈페이지 확인 권장), 주차는 무료입니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260801/4_dangjin_waemok_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-2">Breathtaking West Sea sunset at Waemok Village Dangjin Korea, orange and crimson blazing sky over calm tidal flat, silhouette of fishing boats in harbor, golden hour reflection on water, layered clouds catching last light, photorealistic, ultra high detail, 1:1 aspect ratio, atmospheric dusk, dramatic seascape</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">왜목마을 저녁, 서해 일몰이 수평선을 황금빛으로 물들이다 / AI 제작 이미지</div>
+</div>
+
+<h2>05. 석문방조제·삽교호 드라이브 — 서해 바다 위를 달리다</h2>
+
+당진 여행의 또 다른 묘미는 바다 위를 달리는 드라이브입니다.<br><br>
+<strong>석문방조제</strong>는 서해 바다를 가로지르며 이어진 방조제로, 양쪽으로 바다가 펼쳐져 마치 물 위를 달리는 듯한 청량한 기분을 줍니다. 이 방조제를 따라 달리다 보면 바람이 시원하고 탁 트인 뷰가 드라이브의 즐거움을 극대화합니다.<br><br>
+<strong>삽교호 방조제</strong>도 함상공원과 연계해 드라이브하기 좋은 코스입니다. 방조제 주변으로 낚시를 즐기는 분들이 많으며, 삽교호 유원지 일대는 가족 단위 나들이객으로 여름철 내내 활기찹니다.
+
+<h2>06. 당진 먹거리 — 서해 신선 해산물</h2>
+
+당진은 서해안 대표 수산물 집산지입니다. 방문 시 놓치면 아쉬운 먹거리를 소개합니다.<br><br>
+<strong>대하·꽃게</strong>: 당진은 대하와 꽃게로 유명합니다. 특히 왜목마을 인근 어판장에서는 싱싱한 꽃게를 현장에서 구입해 근처 식당에 갖고 가 요리해 먹는 것도 가능합니다.<br><br>
+<strong>꽃게탕·간장게장</strong>: 당진 석문면 일대 식당에서 꽃게탕이나 간장게장 정식을 1~2만 원대에 즐길 수 있습니다.<br><br>
+<strong>조개구이</strong>: 석문 방조제 주변의 조개구이 식당들은 당진 방문객들이 즐겨 찾는 저렴한 서해 먹거리입니다.
+
+<h2>07. 접근 방법 및 주차</h2>
+
+<table class="info-table">
+  <tr><th>구분</th><th>내용</th></tr>
+  <tr><td>주소</td><td>충청남도 당진시 석문면 교로리 1-2 (왜목마을)</td></tr>
+  <tr><td>서울에서</td><td>서해안고속도로 → 당진IC → 약 90분 소요</td></tr>
+  <tr><td>대전에서</td><td>당진-대전 간 고속도로 → 약 1시간</td></tr>
+  <tr><td>주차</td><td>왜목마을 공영주차장(무료), 삽교호 함상공원(무료)</td></tr>
+  <tr><td>대중교통</td><td>당진종합터미널에서 석문면행 버스 이용 후 도보 이동 (불편 — 자가용 권장)</td></tr>
+</table>
+
+<h2>08. 왜목마을·삽교호 당일 코스 동선</h2>
+
+<div class="step-box">
+<strong>이른 새벽 5:00~6:00</strong><br>
+왜목마을 방파제에서 일출 감상 → 어판장 싱싱 해산물 구경
+</div>
+<div class="step-box">
+<strong>오전 9:00~11:00</strong><br>
+석문방조제 드라이브 → 삽교호 방조제 → 함상공원 체험
+</div>
+<div class="step-box">
+<strong>점심 12:00~13:30</strong><br>
+당진 석문면 일대 꽃게탕 또는 조개구이 식사
+</div>
+<div class="step-box">
+<strong>오후 14:00~17:00</strong><br>
+자유시간 (해변 산책 또는 근처 삽교호 유원지 나들이)
+</div>
+<div class="step-box">
+<strong>저녁 18:00~20:00</strong><br>
+왜목마을 일몰 감상 후 귀가 (1박 숙박 시에는 별 관측도 가능)
+</div>
+
+<h2>09. 계절별 방문 포인트 — 여름 vs 겨울</h2>
+
+<div class="tip-box">
+🌞 <strong>여름(7~8월)</strong>: 일출·일몰 모두 감상 가능, 해산물 제철(꽃게·우럭), 드라이브 최적 시즌. 단 오전 일출이 이르므로 전날 현지 숙박 권장.<br><br>
+❄️ <strong>겨울(12~2월)</strong>: 일출 명소로 더 유명한 시즌. 눈 덮인 갯벌과 일출의 조합이 절경. 단 추위 대비 필수.
+</div>
+
+<h2>10. 왜목마을 여행 총정리</h2>
+
+<table class="info-table">
+  <tr><th>항목</th><th>내용</th></tr>
+  <tr><td>핵심 매력</td><td>서해 유일 일출·일몰 동시 감상</td></tr>
+  <tr><td>위치</td><td>충청남도 당진시 석문면 교로리</td></tr>
+  <tr><td>연계 명소</td><td>삽교호 함상공원, 석문방조제</td></tr>
+  <tr><td>여름 일출 시간</td><td>오전 5:30~5:50 (기상청 확인 권장)</td></tr>
+  <tr><td>여름 일몰 시간</td><td>오후 7:40~8:00 (날짜별 상이)</td></tr>
+  <tr><td>주차</td><td>무료</td></tr>
+</table>
+
+새벽 일출의 황홀함과 저녁 일몰의 낭만을 한 곳에서 모두 경험할 수 있는 왜목마을, 서해 서쪽 끝에서 보내는 하루는 분명 오래 기억될 것입니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260801/4_dangjin_waemok_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-3">Retired Korean Navy warship displayed on land at Sapgyo Lake park in Dangjin, gray military vessel hull visible above concrete ground, naval guns and equipment on deck, coastal park setting with blue sky and summer clouds, photorealistic, ultra high detail, 1:1 aspect ratio, military history museum atmosphere</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">삽교호 함상공원 — 퇴역 군함이 육지에 전시된 이색 체험 명소 / AI 제작 이미지</div>
+</div>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260731/travel_busan_youngdo_whitevil.html">부산 영도 흰여울문화마을과 송도해상케이블카·스카이워크 여름 밤바다 코스</a></li>
+    <li><a href="../260731/travel_donghae_mureung_valley.html">동해 무릉계곡과 베틀바위산성길 여름 트레킹, 삼화사·촛대바위 피서 코스</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#당진왜목마을</span>
+  <span class="tag">#서해일출</span>
+  <span class="tag">#서해일몰</span>
+  <span class="tag">#삽교호함상공원</span>
+  <span class="tag">#당진여행</span>
+  <span class="tag">#충남서해</span>
+  <span class="tag">#석문방조제</span>
+  <span class="tag">#서해드라이브</span>
+  <span class="tag">#일출명소</span>
+  <span class="tag">#당일치기</span>
+</div>
+
+</body>
+</html>

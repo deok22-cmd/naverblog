@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>2026-08-01 발행 대시보드</title>
+<style>
+  body { font-family: 'Apple SD Gothic Neo', sans-serif; background: #f5f5f5; margin: 0; padding: 20px; color: #222; }
+  h1 { font-size: 1.5em; text-align: center; margin-bottom: 5px; color: #333; }
+  .date-badge { text-align: center; color: #888; font-size: 0.9em; margin-bottom: 30px; }
+  .section-title { font-size: 1.1em; font-weight: 700; margin: 28px 0 12px; color: #555; border-left: 4px solid #aaa; padding-left: 10px; }
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .card { background: #fff; border-radius: 12px; padding: 18px 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); border-left: 5px solid #ccc; }
+  .card.travel { border-left-color: #00796b; }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+  .card-cat { font-size: 0.78em; font-weight: 700; padding: 2px 8px; border-radius: 4px; }
+  .cat-travel { background: #e0f2f1; color: #00796b; }
+  .card-seq { font-size: 0.78em; color: #bbb; font-weight: 400; }
+  .card-title { font-size: 0.97em; font-weight: 700; margin-bottom: 8px; line-height: 1.5; }
+  .card-title a { color: #222; text-decoration: none; }
+  .card-title a:hover { color: #00796b; }
+  .card-meta { font-size: 0.82em; color: #888; }
+  .status-ok { color: #2e7d32; font-weight: 700; }
+  .status-wait { color: #e65100; font-weight: 700; }
+  .summary-box { background: #fff; border-radius: 12px; padding: 18px 22px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); margin-bottom: 24px; }
+  .summary-row { display: flex; gap: 30px; flex-wrap: wrap; }
+  .summary-item { text-align: center; }
+  .summary-num { font-size: 2em; font-weight: 800; color: #00796b; }
+  .summary-label { font-size: 0.8em; color: #888; }
+  .queue-alert { background: #fff3e0; border: 1px solid #ffb74d; border-radius: 8px; padding: 12px 16px; margin-top: 20px; font-size: 0.88em; color: #e65100; }
+  .flag-tag { display: inline-block; background: #ffecb3; color: #e65100; font-size: 0.82em; border-radius: 4px; padding: 1px 8px; margin: 2px; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<h1>네이버 블로그 일일 발행 대시보드</h1>
+<div class="date-badge">2026년 08월 01일 (토) · 총 7건 발행 예정 · Tistory 중단 · Insta 중단</div>
+
+<div class="summary-box">
+  <div class="summary-row">
+    <div class="summary-item"><div class="summary-num">7</div><div class="summary-label">네이버 발행</div></div>
+    <div class="summary-item"><div class="summary-num">7</div><div class="summary-label">여행(보충 포함)</div></div>
+    <div class="summary-item"><div class="summary-num">0</div><div class="summary-label">인접 롱테일</div></div>
+    <div class="summary-item"><div class="summary-num">0</div><div class="summary-label">신규·버티컬</div></div>
+    <div class="summary-item"><div class="summary-num" style="color:#c62828;">0</div><div class="summary-label">티스토리</div></div>
+    <div class="summary-item"><div class="summary-num" style="color:#c62828;">0</div><div class="summary-label">인스타</div></div>
+  </div>
+</div>
+
+<div class="section-title">✈️ 여행 (7건 · #154~160 · 8월 성수기 — vertical/local 전량 소진으로 보충)</div>
+<div class="card-grid">
+
+  <div class="card travel">
+    <div class="card-top">
+      <span class="card-cat cat-travel">travel_</span>
+      <span class="card-seq">seq:1</span>
+    </div>
+    <div class="card-title"><a href="travel_goesan_sanmaki.html">괴산 산막이옛길 유람선 타는 법과 여름 트레킹 코스, 괴산호 연하협 구름다리</a></div>
+    <div class="card-meta">slug: travel_goesan_sanmaki · <span class="status-ok">✔️ 작성 완료</span></div>
+  </div>
+
+  <div class="card travel">
+    <div class="card-top">
+      <span class="card-cat cat-travel">travel_</span>
+      <span class="card-seq">seq:2</span>
+    </div>
+    <div class="card-title"><a href="travel_ganghwa_dongmak.html">강화 여름 갯벌체험과 동막해변 낙조, 광성보·초지진 수도권 섬 당일 코스</a></div>
+    <div class="card-meta">slug: travel_ganghwa_dongmak · <span class="status-ok">✔️ 작성 완료</span></div>
+  </div>
+
+  <div class="card travel">
+    <div class="card-top">
+      <span class="card-cat cat-travel">travel_</span>
+      <span class="card-seq">seq:3</span>
+    </div>
+    <div class="card-title"><a href="travel_incheon_chinatown.html">인천 차이나타운·송월동 동화마을과 월미도 여름밤, 개항장 당일 코스</a></div>
+    <div class="card-meta">slug: travel_incheon_chinatown · <span class="status-ok">✔️ 작성 완료</span></div>
+  </div>
+
+  <div class="card travel">
+    <div class="card-top">
+      <span class="card-cat cat-travel">travel_</span>
+      <span class="card-seq">seq:4</span>
+    </div>
+    <div class="card-title"><a href="travel_dangjin_waemok.html">당진 왜목마을 일출·일몰 동시 명소와 삽교호 함상공원 서해 드라이브 코스</a></div>
+    <div class="card-meta">slug: travel_dangjin_waemok · <span class="status-ok">✔️ 작성 완료</span></div>
+  </div>
+
+  <div class="card travel">
+    <div class="card-top">
+      <span class="card-cat cat-travel">travel_</span>
+      <span class="card-seq">seq:5</span>
+    </div>
+    <div class="card-title"><a href="travel_geoje_windhill.html">거제 바람의언덕·신선대와 도장포·여차몽돌 여름 드라이브 일주</a></div>
+    <div class="card-meta">slug: travel_geoje_windhill · <span class="status-ok">✔️ 작성 완료</span></div>
+  </div>
+
+  <div class="card travel">
+    <div class="card-top">
+      <span class="card-cat cat-travel">travel_</span>
+      <span class="card-seq">seq:6</span>
+    </div>
+    <div class="card-title"><a href="travel_seoul_nodeulsim.html">서울 노들섬·달빛노들과 잠수교 여름밤 산책, 한강 도심 야간 코스</a></div>
+    <div class="card-meta">slug: travel_seoul_nodeulsim · <span class="status-ok">✔️ 작성 완료</span></div>
+  </div>
+
+  <div class="card travel">
+    <div class="card-top">
+      <span class="card-cat cat-travel">travel_</span>
+      <span class="card-seq">seq:7</span>
+    </div>
+    <div class="card-title"><a href="travel_mungyeong_dansan.html">문경 단산 모노레일과 에코월드 짚라인, 문경새재 여름 고원 나들이 코스</a></div>
+    <div class="card-meta">slug: travel_mungyeong_dansan · <span class="status-ok">✔️ 작성 완료</span></div>
+  </div>
+
+</div>
+
+<div class="queue-alert">
+  <strong>⚠️ 큐 부족 플래그 (2026-08-01 기준)</strong><br>
+  <span class="flag-tag">[QUEUE LOW travel: 4]</span>
+  <span class="flag-tag">[QUEUE LOW local: 6]</span>
+  <span class="flag-tag">[QUEUE LOW gov: 1]</span>
+  <span class="flag-tag">[QUEUE LOW vertical:rite_ 0]</span>
+  <span class="flag-tag">[QUEUE LOW vertical:car_ 0]</span>
+  <span class="flag-tag">[QUEUE LOW vertical:appli_ 1]</span>
+  <span class="flag-tag">[QUEUE LOW vertical:cert_ 0]</span>
+  <br><br>
+  오늘 여행 7건(#154~160) 소진 후 잔여: travel #126·127·161·162(모두 9월 적기). local_ 6건 전부 9~10월. gov_ 1건(#34 자녀장려금 5월skip). rite_·car_·cert_ 전량 소진. appli_ 1건(A13 보일러 9~10월). <strong>전 계열 리필 긴급 필요.</strong>
+</div>
+
+</body>
+</html>
