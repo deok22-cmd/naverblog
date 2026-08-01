@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .route-box { background: #f8f9fa; border: 1px solid #ccc; border-left: 5px solid #00796b; padding: 16px 20px; margin: 18px 0; border-radius: 4px; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 16px 18px; border-radius: 8px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .img-area { margin: 28px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #b2dfdb; background: #f1faf9; border-radius: 8px; padding: 22px 18px; margin-bottom: 0; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 600; color: #00796b; }
+  .ph-file { font-size: 0.82em; color: #777; font-weight: normal; font-family: monospace; }
+  .prompt-text { font-size: 0.83em; color: #444; background: #fff; border: 1px solid #ddd; border-radius: 5px; padding: 10px; white-space: pre-wrap; line-height: 1.6; margin: 8px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; border-radius: 5px; padding: 6px 14px; cursor: pointer; font-size: 0.85em; margin-top: 6px; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!';
+    btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#00796b'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>여수 해상케이블카와 낭만포차·오동도 밤바다, 남해 여름밤 1박 코스</h1>
+
+<div class="intro-box">
+여수에는 사계절 내내 사람이 몰리지만, <strong>여름밤의 여수</strong>는 또 다른 매력이 있습니다.<br><br>
+돌산대교 불빛이 잔잔한 여수 앞바다에 흔들리고, 해상케이블카 아래로 야경이 펼쳐지는 순간은 어느 도시 야경과도 비교하기 어렵습니다. 이순신광장 앞 낭만포차 거리에서 간장게장·서대회·굴전을 먹으며 밤바다를 바라보는 것, 오동도 방파제를 따라 야간 산책하는 것까지 더하면 1박으로도 빠듯할 만큼 볼거리와 먹거리가 넘칩니다.<br><br>
+이 글은 <strong>여수 해상케이블카 → 낭만포차 → 오동도</strong>를 중심으로 한 남해 여름밤 1박 황금 코스와 실용 정보를 정리했습니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260802/3_yeosu_cablecar_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-1">Photorealistic night shot of Yeosu ocean cable car in South Korea, illuminated gondola cabins gliding over sparkling sea at night, city lights of Yeosu reflecting on calm water below, summer evening atmosphere, warm golden harbor lights, ultra high detail photography, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">여수 해상케이블카 야경 / AI 제작 이미지</div>
+</div>
+
+<h2>01. 여수 해상케이블카 — 낮과 밤, 어느 타이밍이 더 좋을까</h2>
+
+여수 해상케이블카는 <strong>돌산공원(하부 정류장)에서 자산공원(상부 정류장)까지 총 1.5km</strong>를 왕복 운행합니다. 케이블카 안에서 여수 앞바다, 돌산도, 돌산대교를 내려다보는 조망이 핵심입니다.<br><br>
+낮에는 쪽빛 여수 앞바다의 수평선과 돌산도의 초록 능선이 선명하게 보입니다. 맑은 날에는 거제도까지 조망되기도 합니다. 반면 밤에는 여수 도심 야경과 돌산대교 조명이 바다에 투영되는 또 다른 아름다움이 있습니다.<br><br>
+<strong>추천은 야간(일몰 이후)</strong>입니다. 기다리는 시간을 고려해도 야경 케이블카는 한번쯤 꼭 경험해볼 가치가 있습니다. 크리스털 캐빈(바닥 투명 유리)은 추가 요금이 있으며, 고소공포증이 없다면 주간에 타는 것을 추천합니다. 야간에는 내부 조명이 반사되어 바닥이 잘 보이지 않을 수 있습니다.<br><br>
+운영 시간은 시즌에 따라 다르며, 성수기에는 연장 운영됩니다. 방문 전 공식 홈페이지나 전화로 당일 운영 종료 시간을 반드시 확인하세요.
+
+<h2>02. 케이블카 예약과 대기줄 회피법</h2>
+
+여수 해상케이블카는 성수기(7~8월) 주말에는 <strong>1시간~2시간 대기</strong>가 일반적입니다. 무작정 찾아가면 긴 대기에 지쳐 낭만이 반감될 수 있습니다.<br><br>
+<strong>현장 대기 최소화 팁</strong>을 알려드립니다.<br><br>
+첫째, 인터넷 사전 예약을 활용하세요. 공식 홈페이지에서 시간대 예약이 가능하며, 예약자 전용 줄이 따로 운영됩니다. 시간대를 골라야 하므로 일정이 확정된 뒤 최소 3~5일 전에 예약하는 것이 좋습니다.<br><br>
+둘째, 평일에 방문하거나 개장 직후(오전 첫 타임)를 노리면 비교적 짧은 대기로 탑승할 수 있습니다.<br><br>
+셋째, 케이블카를 포기하고 자산공원에서 도보로 야경을 즐기는 것도 대안입니다. 자산공원 전망대에서 보이는 여수 야경도 케이블카 조망 못지않은 수준입니다. 주차는 자산공원 주차장을 이용하면 됩니다.
+
+<h2>03. 낭만포차 거리 제대로 즐기는 법</h2>
+
+여수 낭만포차는 이순신광장 일대 해안가에 늘어선 <strong>포장마차 거리</strong>입니다. 저녁부터 심야까지 운영하며, 서대회·간장게장·굴전·꼼장어·해산물 한상 등 여수 대표 음식을 포차 분위기로 즐길 수 있습니다.<br><br>
+포차마다 메뉴가 조금씩 다르고 가격도 상이합니다. 먼저 한 바퀴 둘러보고 마음에 드는 곳에 자리를 잡는 것이 좋습니다. 현지 주민들이 많이 찾는 곳일수록 가성비가 좋은 편입니다.<br><br>
+<strong>서대회</strong>는 여수 특산 생선 서대를 날것으로 먹는 회로, 특유의 쫄깃한 식감이 있습니다. 처음 접하는 분은 회무침 형태로 먹어보는 것을 권장합니다. <strong>간장게장</strong>은 양념게장보다 담백하고 갯벌 냄새가 강한 여수산이 명물입니다.<br><br>
+밤바다 뷰와 함께 먹는 맥주 한잔은 여수 낭만포차 경험의 하이라이트입니다. 테이블마다 분위기가 다르므로 바다 방향 자리를 먼저 점령하는 것이 요령입니다. 저녁 6~7시경이면 이미 자리가 꽉 차기 시작합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260802/3_yeosu_cablecar_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-2">Photorealistic vibrant Korean pojangmacha street food stalls at night in Yeosu harbor, warm glowing lanterns, street vendors with fresh seafood, people dining and drinking with ocean view, summer night ambiance, colorful pocha tents, ultra detail urban food photography, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">여수 낭만포차 거리의 여름밤 / AI 제작 이미지</div>
+</div>
+
+<h2>04. 오동도 여름밤 산책 — 방파제와 동백 숲 야간 분위기</h2>
+
+오동도는 여수항에서 768m의 방파제(오동도 다리)로 연결된 작은 섬입니다. 걸어서 들어갈 수도 있고, 섬 입구에서 동백열차(소형 열차)를 이용할 수도 있습니다. 입장료는 무료입니다.<br><br>
+낮에는 동백나무 군락지와 해안 절경이 볼거리지만, <strong>여름밤에는 방파제 산책</strong>이 특히 좋습니다. 방파제 양옆으로 잔잔한 여수 앞바다와 도심 야경이 동시에 펼쳐지며, 여름 바닷바람을 맞으며 걷는 경험은 어떤 야경 포인트와도 다른 매력이 있습니다.<br><br>
+오동도 내부 산책로는 야간에도 일부 구간이 개방됩니다(운영 시간 방문 전 확인). 등대가 있는 전망 포인트에서 바라보는 여수만 야경은 케이블카 조망과는 또 다른 각도의 아름다움을 선물합니다.<br><br>
+오동도 방파제 입구 주변에는 조각상과 포토존이 있어 사진 찍기 좋습니다. 연인과 함께라면 방파제를 천천히 걸으며 야경을 감상하는 것만으로도 충분히 낭만적인 시간이 됩니다.
+
+<h2>05. 여수 밤바다 야경 명당 TOP 3 비교</h2>
+
+여수의 야경을 즐기는 방법은 한 가지가 아닙니다.<br><br>
+<strong>① 해상케이블카 (상부·하부 조망)</strong>: 공중에서 내려다보는 야경. 돌산대교 불빛과 여수 도심을 조감하는 느낌. 가장 화려하지만 대기 시간이 큰 변수.<br><br>
+<strong>② 돌산공원 전망대</strong>: 케이블카 하부 정류장 인근에 위치. 도보로 쉽게 오를 수 있으며, 여수 도심과 앞바다 조망이 좋음. 무료, 대기 없음.<br><br>
+<strong>③ 자산공원 전망대</strong>: 케이블카 상부 정류장에서 걸어서 접근 가능. 여수항과 이순신광장 방향 야경이 정면으로 펼쳐짐. 해상케이블카를 타지 않아도 자산공원 주차장에서 걸어 올라갈 수 있음.<br><br>
+시간이 부족하다면 자산공원 전망대(무료·단시간)를 먼저 들른 뒤 낭만포차로 이동하는 동선이 가장 효율적입니다.
+
+<h2>06. 여수 해상케이블카→낭만포차→오동도 1박 황금 동선</h2>
+
+<div class="route-box">
+  <strong>도착 당일 (오후 코스)</strong><br>
+  오후 2시 여수 도착 → 이순신광장·벽화거리 산책(1시간) → 오동도 방파제 낮 탐방 → 숙소 체크인 및 휴식<br><br>
+  <strong>저녁 코스</strong><br>
+  오후 6시 낭만포차 자리 선점 → 서대회·간장게장·굴전으로 저녁 식사(1시간 30분)<br>
+  오후 8시 해상케이블카 야간 탑승(예약 시간 맞춰) → 케이블카 조망 → 자산공원 전망대<br>
+  밤 10시 오동도 방파제 야간 산책 → 숙소 귀환<br><br>
+  <strong>다음 날 (오전 코스)</strong><br>
+  오전 7시 돌산대교 방향 일출 조망(선택) → 오전 9시 돌산도 방면 카페·식당 →<br>
+  귀가 전 향일암(돌산도) 방문(30분 추가)
+</div>
+
+<h2>07. 여수 가는 법 — KTX·자동차·고속버스 비교</h2>
+
+<strong>KTX</strong>: 서울 용산역에서 KTX 탑승 → 여수엑스포역 도착, 약 2시간 30분~3시간. 성수기 주말에는 2~3주 전부터 매진되므로 일정 확정 즉시 예매하세요. 여수엑스포역에서 이순신광장·오동도까지 버스나 택시로 이동.<br><br>
+<strong>자동차</strong>: 서울에서 남해고속도로를 타고 약 3시간 30분~4시간(정체 시 5시간 이상). 성수기 금요일 오후 출발 시 심각한 정체가 예상됩니다. 주차는 이순신광장 인근 공영주차장 또는 오동도 주차장이 편리합니다.<br><br>
+<strong>고속버스</strong>: 서울남부터미널에서 여수까지 우등버스 약 3시간 30분~4시간. KTX보다 저렴하며 좌석이 여유로운 편. 여수 버스터미널 도착 후 시내버스·택시로 이동.
+
+<h2>08. 여름 성수기 여수 숙소 확보 전략</h2>
+
+8월 여수는 국내 여름 여행지 중 수요가 가장 높은 지역 중 하나입니다. 이순신광장·오동도 도보권 숙소는 1~2개월 전에도 빠르게 마감됩니다.<br><br>
+<strong>추천 숙소 지역</strong>: 이순신광장·오동도 도보권(편의성 최고, 가격 최고) → 돌산도(한적하며 뷰 좋은 펜션 많음, 차 필수) → 여수 시내 외곽(가격 합리적, 이동 불편).<br><br>
+예산이 충분하다면 바다 뷰 풀빌라나 호텔 오션뷰 객실이 여수 숙박 경험의 정점입니다. 합리적인 예산이라면 게스트하우스나 모텔 중 리뷰 좋은 곳을 선택하세요. 어느 숙소든 성수기 주말은 D-30 이전 예약이 기본입니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260802/3_yeosu_cablecar_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-3">Photorealistic night panorama of Yeosu harbor South Korea, Dolsandaegyo bridge lit up in blue and green reflecting on calm water, city lights of downtown Yeosu, Odongdo island silhouette in the background, warm summer night atmosphere, ultra high detail photography, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">여수 돌산대교와 앞바다 야경 파노라마 / AI 제작 이미지</div>
+</div>
+
+<h2>09. 여수 1박 후 돌아오는 길에 들를 명소</h2>
+
+귀가 동선에서 한두 군데를 추가해 여행의 여운을 늘릴 수 있습니다.<br><br>
+<strong>향일암(돌산도)</strong>: 여수 돌산도 남단 금오산 중턱의 해안 절벽 암자. 일출 명소로 유명하지만 낮에도 해안 절경과 암자 분위기가 독특합니다. 이순신광장에서 차로 20~25분.<br><br>
+<strong>순천만국가정원·갈대숲</strong>: 여수에서 순천으로 이동(30분 내외). 갈대밭 규모로는 국내 최대급이며 연인 산책 코스로 유명합니다. 가을(10~11월)이 최성기지만 여름 녹색 갈대도 싱그럽습니다.<br><br>
+<strong>보성 녹차밭</strong>: 여수에서 보성까지 50~60분. 짙푸른 녹차밭 능선이 독특한 풍경을 연출하며, 녹차 아이스크림·녹차 라떼 등 체험 거리도 있습니다. 한 방향 귀가 루트에 포함하기 좋습니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260801/travel_geoje_windhill.html">거제 바람의언덕·신선대와 도장포·여차몽돌, 남해 여름 드라이브 일주</a></li>
+    <li><a href="../260801/travel_dangjin_waemok.html">당진 왜목마을 일출·일몰과 삽교호 함상공원, 서해 여름 드라이브 코스</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#여수해상케이블카</span>
+  <span class="tag">#여수낭만포차</span>
+  <span class="tag">#오동도</span>
+  <span class="tag">#여수야경</span>
+  <span class="tag">#여수1박2일</span>
+  <span class="tag">#여수여름여행</span>
+  <span class="tag">#남해여행</span>
+  <span class="tag">#여수밤바다</span>
+  <span class="tag">#여수맛집</span>
+  <span class="tag">#여수서대회</span>
+</div>
+
+</body>
+</html>

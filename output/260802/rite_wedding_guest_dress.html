@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #7b1fa2; padding-bottom: 12px; color: #4a148c; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #f3e5f5; padding: 12px 15px; border-left: 6px solid #7b1fa2; margin-top: 50px; color: #4a148c; }
+  .intro-box { background: #f9f0ff; border: 2px solid #ce93d8; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .do-box { background: #e8f5e9; border: 1px solid #a5d6a7; padding: 16px 18px; border-radius: 8px; margin: 16px 0; }
+  .dont-box { background: #ffebee; border: 1px solid #ef9a9a; padding: 16px 18px; border-radius: 8px; margin: 16px 0; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 16px 18px; border-radius: 8px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .img-area { margin: 28px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #ce93d8; background: #f9f0ff; border-radius: 8px; padding: 22px 18px; margin-bottom: 0; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 600; color: #7b1fa2; }
+  .ph-file { font-size: 0.82em; color: #777; font-weight: normal; font-family: monospace; }
+  .prompt-text { font-size: 0.83em; color: #444; background: #fff; border: 1px solid #ddd; border-radius: 5px; padding: 10px; white-space: pre-wrap; line-height: 1.6; margin: 8px 0; }
+  .copy-btn { background: #7b1fa2; color: #fff; border: none; border-radius: 5px; padding: 6px 14px; cursor: pointer; font-size: 0.85em; margin-top: 6px; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!';
+    btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#7b1fa2'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>결혼식 하객 뭐 입고 가나, 계절별·관계별 복장과 피해야 할 옷</h1>
+
+<div class="intro-box">
+결혼식 초대장을 받았을 때 가장 먼저 드는 고민 중 하나가 바로 "뭐 입고 가지?"입니다.<br><br>
+하객 복장에는 불문율이 있습니다. 신랑·신부보다 화려하면 안 되고, 너무 캐주얼하면 예의 없어 보이고, 검정은 안 된다는 말도 있고, 흰색은 금기라는 말도 있습니다. 어디까지가 사실일까요?<br><br>
+이 글에서는 <strong>계절별·관계별·성별</strong>로 결혼식 하객 복장 기준을 정리하고, 실제로 피해야 할 옷차림과 센스 있는 코디 팁까지 실용적으로 안내해 드립니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260802/5_wedding_dress_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-1">Photorealistic fashion flat lay of elegant Korean wedding guest outfit options for summer, pastel-toned dress, modest blouse and skirt, light blazer, small clutch bag, heels on white marble surface, soft natural light, ultra high detail clothing photography, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">여름 결혼식 하객 복장 예시 / AI 제작 이미지</div>
+</div>
+
+<h2>01. 결혼식 하객 복장의 가장 중요한 원칙 하나</h2>
+
+복장 규칙이 많아 보이지만, 사실 가장 중요한 원칙은 하나입니다.<br><br>
+<strong>주인공은 신랑과 신부입니다.</strong><br><br>
+하객의 옷차림이 신랑·신부보다 눈에 띄어서는 안 됩니다. 색깔로는 신부의 흰 드레스보다 화려하지 않게, 소재와 장식으로는 신부 예복과 경쟁하지 않게. 이 하나의 원칙만 지켜도 복장 실수의 70%는 예방됩니다.<br><br>
+그 외에 기억할 원칙을 덧붙이면, 과한 노출을 피하고, 캐주얼(청바지·운동화)은 삼가고, 자신의 관계와 자리에 어울리는 격식을 갖추는 것입니다. 결혼식 장소(호텔 예식장 vs 야외 가든 웨딩 vs 소규모 하우스 웨딩)에 따라 요구되는 격식 수준도 달라집니다.
+
+<h2>02. 여름 결혼식 하객룩 — 더위와 격식 사이 균형</h2>
+
+8월 여름 결혼식은 하객 복장에서 가장 고민이 많은 계절입니다. 덥지만 지나치게 노출 있는 옷은 예의에 어긋나고, 정장을 완전히 갖추면 땀으로 민망한 상황이 생깁니다.<br><br>
+<strong>여성 하객</strong>: 소재가 중요합니다. 린넨·폴리 시폰·얇은 크레이프 등 여름 소재의 원피스나 미디 스커트+블라우스 조합이 적합합니다. 색은 파스텔·코럴·베이지·소프트 그린·더스티 핑크처럼 고운 색이 좋습니다. 소매가 없는 경우 얇은 가디건이나 볼레로를 준비하세요(예식 중 에어컨이 강한 홀에서도 필요합니다).<br><br>
+<strong>남성 하객</strong>: 여름에는 얇은 소재의 정장이나 세미포멀 차림이 적합합니다. 화이트·라이트그레이·라이트네이비 계열 셔츠에 슬랙스, 로퍼나 가죽 구두 조합이 무난합니다. 반팔 셔츠에 슬랙스는 격식이 낮지만 야외 웨딩이나 소규모 스몰웨딩에서는 허용되기도 합니다. 다만 반바지는 어떤 경우에도 부적절합니다.
+
+<h2>03. 흰색·검정 전면 금기가 아닌 이유 — 정확한 기준</h2>
+
+흰색 하객복은 금기라는 인식이 강하지만, 이건 절반만 맞는 말입니다.<br><br>
+<strong>흰색 전체 착장(올화이트)</strong>은 신부 드레스와 혼동될 수 있어 피해야 합니다. 그러나 흰색이 일부 포함된 패턴 원피스, 화이트 포인트 액세서리, 흰색과 다른 색이 섞인 조합은 괜찮습니다.<br><br>
+<strong>검정</strong>의 경우, 국내 결혼식에서 하객이 검정 상하 풀착장을 하는 것은 장례식 연상으로 보기 좋지 않다는 인식이 있습니다. 그러나 검정 원피스 하나는 전혀 문제없습니다. 현대 결혼식에서 검정 드레스·블레이저는 흔한 하객 복장 중 하나입니다. 다만 검정 상하 정장+검정 슈즈+검정 가방처럼 전신이 검정인 경우는 피하는 것이 예의입니다.
+
+<h2>04. 남성 하객 복장 가이드 — 정장 vs 세미포멀</h2>
+
+남성 하객 복장은 크게 <strong>정장(수트)과 세미포멀</strong>로 나뉩니다.<br><br>
+<strong>호텔·웨딩홀 결혼식</strong>: 정장(재킷+슬랙스+타이 또는 보우타이)이 가장 적합합니다. 컬러는 네이비·차콜·다크그레이가 무난하며, 밝은 컬러 수트도 여름 예식에서는 잘 어울립니다.<br><br>
+<strong>야외 가든 웨딩·소규모 예식</strong>: 재킷 없이 셔츠+슬랙스 조합의 세미포멀이 허용됩니다. 리넨 셔츠나 니트 폴로도 깔끔하게 입으면 무방합니다.<br><br>
+구두는 어떤 스타일이든 가죽 계열이 기본입니다. 운동화는 소규모 웨딩 외에는 피하세요. 머리는 단정히 정리하고, 지나친 향수는 삼가는 것이 예의입니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260802/5_wedding_dress_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-2">Photorealistic fashion flat lay of elegant Korean wedding guest outfit for men, light navy slim suit jacket, white dress shirt, pastel tie, dress shoes, pocket square, on white marble surface, soft natural light studio photography, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">남성 결혼식 하객 세미포멀 코디 / AI 제작 이미지</div>
+</div>
+
+<h2>05. 여성 하객 복장 가이드 — 드레스·원피스·스커트 선택법</h2>
+
+여성 하객 복장은 선택지가 훨씬 넓지만 그만큼 실수하기도 쉽습니다.<br><br>
+<strong>추천 스타일</strong>: 미디 길이 원피스(무릎 또는 종아리 길이), 블라우스+A라인 스커트, 세미포멀 재킷 세트. 색상은 파스텔·베이지·코럴·소프트 블루·모브 계열이 무난합니다.<br><br>
+<strong>주의할 점</strong>: 미니 원피스(과한 노출), 밴드 원단처럼 몸에 지나치게 달라붙는 소재, 과한 글리터·시퀸 장식(신부보다 화려하게 보일 수 있음), 캐주얼 청바지·운동화는 피하세요.<br><br>
+슈즈는 힐이 가장 격식에 맞지만, 웨지힐·플랫슈즈도 드레스 스타일에 따라 자연스럽습니다. 에나멜·가죽 소재 플랫슈즈는 정장 원피스와 잘 어울립니다. 슬리퍼·샌들은 캐주얼한 야외 웨딩 외에는 적합하지 않습니다.<br><br>
+액세서리는 귀걸이·목걸이·팔찌 중 한두 가지만 포인트로 사용하는 절제된 스타일이 세련됩니다. 티아라나 헤어밴드처럼 신부 느낌이 나는 아이템은 피하세요.
+
+<h2>06. 혼주(부모님) 가족이라면 달라지는 격식</h2>
+
+신랑·신부의 형제자매나 사촌, 가까운 친척처럼 <strong>혼주 가족으로 분류될 경우</strong>에는 일반 하객보다 격식을 한 단계 높이는 것이 예의입니다.<br><br>
+<strong>여성</strong>: 한복이 가장 격식 있는 선택입니다. 화려한 색의 한복 또는 한복 스타일 드레스를 입는 가족이 많습니다. 한복이 불편하다면 드레스 정장(앙상블)이나 팬츠 수트도 격식에 맞습니다.<br><br>
+<strong>남성</strong>: 진한 색 정장(다크 네이비·차콜·블랙 수트)에 타이 착용이 기본입니다. 가족의 존재감을 보이는 자리이므로 지나친 캐주얼은 삼가야 합니다.<br><br>
+혼주 가족이라면 드레스코드를 미리 신랑·신부측과 맞추는 것이 좋습니다. 특히 색을 통일하거나 코르사주·부토니에 착용 여부를 가족끼리 조율하는 경우가 많습니다.
+
+<h2>07. 피해야 할 디자인과 소재 — 실수 유형 TOP 5</h2>
+
+<div class="dont-box">
+<strong>❌ 결혼식 하객 복장 피해야 할 것들</strong><br>
+1. 올화이트·아이보리·크림 전체 착장 (신부 드레스 연상)<br>
+2. 전신 블랙 착장 (장례식 연상)<br>
+3. 청바지+운동화 (지나친 캐주얼, 무례하게 보임)<br>
+4. 과한 노출 (슬링 상의, 초미니스커트, 등 전체 개방 드레스)<br>
+5. 화려한 시퀸·반짝이 과다 (신부보다 눈에 띌 수 있음)
+</div>
+
+<div class="do-box">
+<strong>✅ 결혼식 하객 복장 추천 방향</strong><br>
+1. 파스텔·고운 색의 미디 원피스 또는 세미포멀 세트<br>
+2. 가죽 소재 구두·플랫슈즈·힐 (슬리퍼 제외)<br>
+3. 절제된 액세서리 1~2가지<br>
+4. 자신의 관계(친구·직장·가족)에 맞는 격식 수준<br>
+5. 에어컨 대비 얇은 가디건·볼레로 준비
+</div>
+
+<h2>08. 결혼식장 드레스코드 안내가 있을 때 해석법</h2>
+
+최근에는 초대장에 드레스코드를 명시하는 경우가 늘고 있습니다. 대표적인 드레스코드와 해석을 정리했습니다.<br><br>
+<strong>블랙타이(Black Tie)</strong>: 남성은 턱시도, 여성은 이브닝 드레스. 호텔 연회장급 웨딩에서 사용.<br><br>
+<strong>포멀(Formal)</strong>: 남성은 다크 수트+타이, 여성은 드레스 정장 또는 품격 있는 원피스.<br><br>
+<strong>세미포멀(Semi-Formal)</strong>: 남성은 재킷+슬랙스(타이 선택), 여성은 원피스·블라우스+스커트.<br><br>
+<strong>스마트 캐주얼(Smart Casual)</strong>: 청바지 가능하지만 깔끔하게. 여성은 캐주얼 원피스·셔츠 블라우스+팬츠. 야외 웨딩이나 소규모 웨딩에서 사용.<br><br>
+드레스코드가 없다면 예식장 형태에 맞춰 스스로 판단하세요. 호텔 예식장이라면 세미포멀 이상, 야외나 소규모라면 스마트 캐주얼도 무방합니다.
+
+<h2>09. 촌스럽지 않게, 과하지 않게 — 실전 하객 코디 팁</h2>
+
+<div class="tip-box">
+<strong>💡 실전 하객 코디 팁</strong><br>
+▸ 평소 자신의 베스트룩을 기준으로, 격식을 한 단계 올린 버전을 선택하세요.<br>
+▸ 유행을 따르기보다 자신에게 잘 맞고 편안한 옷을 우선합니다. 결혼식은 오래 있어야 하는 자리입니다.<br>
+▸ 향수는 은은하게만 사용하세요. 예식장에서 강한 향수는 불쾌감을 줄 수 있습니다.<br>
+▸ 장시간 서거나 이동해야 하므로, 발이 편한 신발을 고르는 것도 중요합니다.<br>
+▸ 당일 날씨를 확인하고 야외 이동을 고려해 소재를 선택하세요.
+</div>
+
+결혼식 하객 복장에 정답은 없지만, 주인공인 신랑·신부를 배려하는 마음이 모든 선택의 기준이 됩니다. 격식을 갖추되 자신답게 입는 것이 가장 센스 있는 하객 코디입니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260801/travel_incheon_chinatown.html">인천 차이나타운·송월동 동화마을과 월미도 여름밤, 개항장 당일 코스</a></li>
+    <li><a href="../260801/travel_dangjin_waemok.html">당진 왜목마을 일출·일몰과 삽교호 함상공원, 서해 여름 드라이브 코스</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#결혼식하객복장</span>
+  <span class="tag">#하객룩</span>
+  <span class="tag">#결혼식뭐입어</span>
+  <span class="tag">#여름결혼식하객</span>
+  <span class="tag">#하객드레스</span>
+  <span class="tag">#결혼식복장남자</span>
+  <span class="tag">#결혼식복장여자</span>
+  <span class="tag">#드레스코드</span>
+  <span class="tag">#하객코디</span>
+  <span class="tag">#결혼식금지복장</span>
+</div>
+
+</body>
+</html>

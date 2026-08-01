@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.95em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #ddd; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 16px 18px; border-radius: 8px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .img-area { margin: 28px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #b2dfdb; background: #f1faf9; border-radius: 8px; padding: 22px 18px; margin-bottom: 0; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 600; color: #00796b; }
+  .ph-file { font-size: 0.82em; color: #777; font-weight: normal; font-family: monospace; }
+  .prompt-text { font-size: 0.83em; color: #444; background: #fff; border: 1px solid #ddd; border-radius: 5px; padding: 10px; white-space: pre-wrap; line-height: 1.6; margin: 8px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; border-radius: 5px; padding: 6px 14px; cursor: pointer; font-size: 0.85em; margin-top: 6px; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 8px; font-style: italic; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!';
+    btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#00796b'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>평창 안반데기 고랭지 배추밭 언제 초록 절정, 은하수 보는 밤 드라이브 코스</h1>
+
+<div class="intro-box">
+강원도 평창군 도암면 해발 1,100m 고원에 펼쳐지는 <strong>안반데기</strong>는 국내 최대 고랭지 채소밭 중 하나입니다.<br><br>
+'안반데기'라는 이름은 떡을 칠 때 쓰는 넓적한 받침인 '안반'처럼 평평하게 펼쳐진 지형에서 유래했습니다. 사방이 탁 트인 고원 위에 들어서면 서울의 빌딩 숲과는 전혀 다른 세계가 펼쳐집니다.<br><br>
+8월 초~중순은 <strong>고랭지 배추가 짙고 싱그러운 초록색으로 절정</strong>을 이루는 시기입니다. 낮에는 초록 배추밭이 물결치는 풍경을, 밤에는 빛 공해 없는 하늘에 쏟아지는 은하수를 한 번에 경험할 수 있어 여름 드라이브 성지로 손꼽힙니다.<br><br>
+이 글에서는 안반데기 방문 최적 시기, 가는 길, 은하수 포인트, 그리고 주변 연계 코스까지 알려드립니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260802/2_anbandegi_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-1">Photorealistic aerial view of Anbandegi highland plateau in South Korea during summer, vast green cabbage fields in rows stretching to the horizon, rolling highland hills, morning mist filling valleys below, bright summer sunshine, lush Korean summer landscape, ultra high detail photography, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">8월 초록 절정기의 평창 안반데기 고랭지 배추밭 전경 / AI 제작 이미지</div>
+</div>
+
+<h2>01. 안반데기 고랭지 배추밭 초록 절정 시기 — 8월이 왜 최고인가</h2>
+
+고랭지 배추는 여름 더위를 피해 해발 600~1,200m 산간지대에서 재배합니다. 심는 시기는 5월 하순~6월 초이며, 8월부터 9월 초가 수확 직전 <strong>배추가 가장 탐스럽게 자라는 초록 절정기</strong>입니다.<br><br>
+안반데기 기준으로 7월에는 배추 포기가 아직 작고, 9월 중순 이후에는 수확이 진행되어 밭이 비어갑니다. 따라서 <strong>8월 초~중순이 사진 찍기에 가장 좋은 시기</strong>입니다. 8월 말에도 아직 충분히 초록이지만, 수확 시점에 따라 밭 일부가 비어있을 수 있습니다.<br><br>
+해발이 높은 만큼 서울보다 5~7°C 정도 기온이 낮아 폭염이 심한 여름에도 시원하게 산책할 수 있습니다. 낮 최고기온이 25°C 내외인 경우가 많아 '천연 에어컨'이라는 별명도 있습니다.<br><br>
+한 가지 주의할 점은 안반데기가 <strong>농사짓는 사유지와 인접</strong>해 있다는 것입니다. 배추밭 안으로 들어가는 행위는 삼가고, 지정 관람 구역과 도로에서만 감상하는 것이 원칙입니다. 농부들의 삶의 터전을 존중하는 성숙한 방문 문화가 이 아름다운 공간을 지속적으로 유지시킵니다.
+
+<h2>02. 해발 1,100m 운유길 트레킹 코스 — 어디서 어디까지</h2>
+
+안반데기에는 <strong>운유길(雲遊길)</strong>이라는 이름의 트레킹 코스가 있습니다. '구름 속을 노닌다'는 뜻으로, 고원을 가로지르는 완만한 산책로입니다. 전체 코스 약 4.5km, 소요 시간은 1시간 30분~2시간 내외로 무난한 난이도입니다.<br><br>
+출발점은 안반데기 주차장(삼거리 주차장) 기준으로 운유길 이정표를 따라 출발합니다. 배추밭 사이 포장·비포장 구간을 교차하며 고원 능선을 걷습니다. 최고점 전망대에 서면 사방으로 탁 트인 파노라마 뷰가 펼쳐집니다. 맑은 날에는 멀리 정선·강릉 방향 산맥도 조망됩니다.<br><br>
+트레킹 코스 중간에 급경사 구간은 없으나, 고원 바람이 강할 수 있으므로 얇은 바람막이 하나는 챙기는 것이 좋습니다. 시작과 끝이 같은 주차장으로 연결되는 루프형이라 초보 트레커도 부담 없이 걸을 수 있습니다. 운동화 수준이면 충분하며, 비가 온 뒤에는 진흙이 있을 수 있으니 여벌 신발을 챙기거나 등산화를 권장합니다.
+
+<h2>03. 안반데기 은하수 관측 포인트와 최적 시간</h2>
+
+안반데기는 강원 고원 지대 중 가장 접근하기 쉬운 <strong>은하수 관측 명소</strong> 중 하나입니다. 사방에 큰 도시가 없어 빛 공해가 상대적으로 낮고, 해발 1,100m의 고도 덕분에 대기층이 얇아 별빛이 선명합니다.<br><br>
+은하수를 보기 가장 좋은 시간은 <strong>자정 전후(오전 1시~3시)</strong>입니다. 여름 은하수(궁수자리~전갈자리 방향)는 남쪽 하늘에서 관측되며, 8월에는 자정 무렵 남쪽 하늘 상당히 높게 떠 있습니다.<br><br>
+달빛이 없는 그믐 무렵 맑은 날이 최고의 조건입니다. 8월 초에는 달이 완전히 지는 시간대를 앱(천문우주기상정보, Stellarium 등)으로 미리 확인하세요. 달이 하늘에 있어도 어두운 편이라면 도전해볼 만합니다.<br><br>
+은하수 주요 관측 포인트는 주차장 인근 공터와 운유길 능선 정상 전망대입니다. 삼각대를 사용한 장노출 사진 촬영자가 많이 몰리는 곳이기도 합니다. 야간에는 다른 관측자의 암적응을 배려해 헤드램프를 붉은 빛 모드로 사용하세요.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260802/2_anbandegi_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-2">Photorealistic night photography at Korean highland plateau, Milky Way galaxy core blazing above vast green cabbage fields, silhouette of farm structures in background, ultra clear starfield, bioluminescent-blue Milky Way reflection on dewy cabbage leaves, summer night atmosphere, long exposure photography style, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">안반데기 배추밭 위 쏟아지는 여름 은하수 / AI 제작 이미지</div>
+</div>
+
+<h2>04. 안반데기 가는 길 — 정선·강릉·평창 어느 방향이 빠른가</h2>
+
+안반데기는 강원도 평창군 도암면에 위치하지만, 행정 구역상으로는 접근로가 여러 방향에서 연결됩니다.<br><br>
+<strong>서울 방향(동서울·강릉고속도로)</strong>으로 오는 경우, 강릉 방향으로 진입 후 안인 IC에서 내려 대관령~안반데기 방향으로 진행하거나, 횡계 IC에서 내려 평창 방향 국도를 타는 루트가 있습니다. 서울에서 약 2시간 30분~3시간 내외가 소요됩니다.<br><br>
+<strong>강릉 방향</strong>에서 접근할 경우, 강릉에서 대관령면을 거쳐 약 40분이면 도착합니다. 강릉 여름 여행과 연계하기 좋습니다.<br><br>
+<strong>정선 방향</strong>에서는 정선~화암동굴 방향 국도를 따라 약 50분 내외입니다. 정선 아우라지·레일바이크와 연계할 수 있습니다.<br><br>
+내비게이션에 '안반데기 주차장' 또는 '평창 도암면 운유길'을 검색하면 정확히 안내됩니다. 마지막 구간은 굽이치는 산길이므로 야간 운전 시 서행하고, 대형 차량은 교행이 어려운 구간에 주의해야 합니다.
+
+<h2>05. 주차장 위치와 야간 드라이브 주의사항</h2>
+
+안반데기에는 삼거리 주차장(무료)이 마련되어 있습니다. 성수기 낮 시간대에는 차량이 몰릴 수 있으며, 특히 주말 오전~오후에는 조기 만차가 발생하기도 합니다.<br><br>
+야간 드라이브로 방문하는 경우, 올라오는 산길에 교행 구간과 급커브가 있습니다. 전조등을 항상 켜고 충분한 속도를 줄여 안전하게 진입하세요. 밤에는 농기계나 동물이 도로에 출현할 수 있으므로 주의가 필요합니다.<br><br>
+귀가 시 연료 확인도 필수입니다. 안반데기 인근에는 주유소가 없으며, 아래 평지로 내려와야 주유가 가능합니다. 산 위에서 연료가 떨어지는 상황을 예방하기 위해 출발 전에 반드시 주유를 마치고 오르세요.<br><br>
+안개가 자주 발생하는 고원 지형입니다. 특히 새벽녘에는 시야가 급격히 나빠질 수 있으니, 안개 발생 시 무리한 운전을 피하고 안전한 장소에 잠시 정차하는 것이 좋습니다.
+
+<h2>06. 배추밭 절정기 인생샷 명당과 촬영 에티켓</h2>
+
+안반데기 인생샷의 핵심은 <strong>배추밭의 줄지어 심어진 질감과 고원의 광활함</strong>을 동시에 담는 것입니다. 다음 포인트를 참고하세요.<br><br>
+<strong>운유길 능선 전망대</strong>: 배추밭과 산 능선이 겹치는 구도. 광각 렌즈로 탁 트인 전경을 담기에 최적.<br><br>
+<strong>주차장 인근 언덕</strong>: 낮은 시점에서 배추 포기가 가득 찬 전경을 담을 수 있으며, 사람과 배추밭을 함께 담기 좋음.<br><br>
+<strong>아침 골든아워(일출 후 30분~1시간)</strong>: 안반데기 특유의 새벽안개와 역광이 어우러지는 몽환적인 풍경 연출 가능.<br><br>
+촬영 에티켓: 배추밭 안으로 무단 진입하지 않습니다. 밭 이랑 사이에 발을 올리거나 배추를 밟는 행위는 농가에 직접적인 피해를 줍니다. 드론은 농가 작업을 방해할 수 있으므로 사전 허가 여부를 확인하세요.
+
+<h2>07. 안반데기와 함께 묶는 반나절 연계 코스</h2>
+
+안반데기만 들러도 반나절은 충분히 알차지만, 인근 명소를 연계하면 하루 코스로 꽉 찰 수 있습니다.<br><br>
+<strong>강릉 방향 연계</strong>: 안반데기 → 대관령 양떼목장(약 15분) → 오죽헌(약 30분) → 강릉 중앙시장에서 회 또는 순두부. 대관령 양떼목장도 고원 초지 분위기라 안반데기와 이어지는 녹색 풍경을 즐길 수 있습니다.<br><br>
+<strong>정선 방향 연계</strong>: 안반데기 → 화암동굴(약 30분) → 정선 레일바이크 → 아우라지 강변. 자연 동굴과 레일바이크라는 이색 체험이 더해집니다.<br><br>
+<strong>영월 방향 연계</strong>: 안반데기 → 영월 별마로천문대(약 1시간). 낮에 안반데기, 밤에 별마로천문대에서 은하수를 관측하는 '하이라이트 이중 별여행' 코스입니다. 다만 총 이동 시간이 길기 때문에 1박을 포함하는 계획이 적합합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260802/2_anbandegi_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-3">Photorealistic sunrise golden hour at Korean highland farm plateau, sea of clouds filling the valleys below, green cabbage fields glowing in warm morning light, mist rolling between mountain peaks, serene and ethereal atmosphere, ultra high detail landscape photography, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">안반데기 새벽 운해와 배추밭 골든아워 / AI 제작 이미지</div>
+</div>
+
+<h2>08. 8월 고원 날씨 특성과 준비물 체크리스트</h2>
+
+안반데기는 해발 1,100m 고원이라 서울보다 평균 기온이 5~7°C 낮습니다. 8월 낮 기온은 20~24°C, 새벽에는 15°C 아래로 내려가기도 합니다. 한여름에도 <strong>긴 소매 바람막이 또는 얇은 재킷</strong>은 필수입니다.<br><br>
+여름 고원 날씨는 오전에 맑다가 오후에 소나기가 내리는 패턴이 잦습니다. 당일 기상 예보를 꼭 확인하고, 우비나 우산을 챙기세요. 안개는 새벽·저녁에 자주 발생합니다.<br><br>
+
+<div class="tip-box">
+<strong>📋 안반데기 방문 준비물</strong><br>
+▸ 바람막이·얇은 겉옷 (새벽·저녁 체온 관리)<br>
+▸ 우비 또는 우산 (여름 소나기 대비)<br>
+▸ 방충제 (산간 지대 모기·날벌레)<br>
+▸ 간식·음료 (인근 매점 없음 — 아래에서 충전)<br>
+▸ 붉은 빛 손전등 (야간 관측용)<br>
+▸ 카메라 삼각대 (은하수 촬영 희망 시)<br>
+▸ 충분한 연료 (산 위에 주유소 없음)
+</div>
+
+<h2>09. 숙박 없이 당일치기 가능한가 — 타임 시뮬레이션</h2>
+
+서울 기준 당일치기 은하수 드라이브도 가능하지만, 체력 소모가 상당합니다. 새벽 1시에 은하수를 보고 귀가하면 서울 도착은 새벽 4~5시가 됩니다.<br><br>
+<strong>권장 일정</strong>: 오후 2시 출발 → 오후 5시 안반데기 도착 → 운유길 트레킹(1시간 30분) → 저녁 식사(아래 마을 식당) → 밤 9시 재방문·어둠 적응 → 자정~오전 1시 은하수 절정 관측 → 새벽 2시 귀가 출발.<br><br>
+인근 횡계·대관령에는 펜션·게스트하우스·콘도가 있어 1박 추가가 여유롭습니다. 이 경우 다음 날 아침 골든아워 촬영도 덤으로 즐길 수 있습니다. 휴가 시즌에는 주말 1박 숙소가 조기 마감되므로 D-14 이전 예약이 안전합니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260801/travel_goesan_sanmaki.html">괴산 산막이옛길 유람선과 여름 트레킹 코스, 괴산호 연하협 구름다리</a></li>
+    <li><a href="../260801/travel_mungyeong_dansan.html">문경 단산 모노레일과 에코월드 짚라인, 문경새재 여름 고원 나들이 코스</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#안반데기</span>
+  <span class="tag">#평창안반데기</span>
+  <span class="tag">#고랭지배추밭</span>
+  <span class="tag">#은하수명소</span>
+  <span class="tag">#운유길트레킹</span>
+  <span class="tag">#강원드라이브</span>
+  <span class="tag">#8월여행</span>
+  <span class="tag">#별여행</span>
+  <span class="tag">#평창여행</span>
+  <span class="tag">#한국은하수</span>
+</div>
+
+</body>
+</html>
