@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #f1f8e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f9fbe7; border: 2px solid #c5e1a5; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #ddd; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .warn-box { background: #fce4ec; border: 1px solid #e91e63; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #ccc; padding: 20px; border-radius: 8px; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.9em; color: #666; }
+  .ph-file { font-family: monospace; }
+  .prompt-text { background: #263238; color: #a5d6a7; padding: 12px; border-radius: 6px; font-size: 0.85em; text-align: left; white-space: pre-wrap; word-break: break-all; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; margin-top: 10px; font-size: 0.9em; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>봉투에 이름 어디 쓰나, 축의금·부의금 봉투 쓰는 법과 한자 표기</h1>
+
+<div class="intro-box">
+결혼식 앞두고 급하게 봉투를 꺼냈는데, 이름을 어디에 써야 하는지, 한자를 써야 하는지 한글을 써도 되는지 — 막막했던 경험 한 번쯤 있으실 겁니다.<br><br>
+축의금 봉투와 부의금 봉투는 쓰는 위치와 문구, 봉투 방향이 각각 다릅니다. 잘 모르고 아무 데나 쓰거나 봉투 방향을 거꾸로 넣는 실수가 의외로 흔합니다.<br><br>
+이 글에서는 <strong>결혼식 축의금 봉투</strong>와 <strong>조문 부의금 봉투</strong>에 이름과 금액을 어떻게 쓰는지, 한자는 어떤 것을 쓰는지 헷갈리지 않도록 상황별로 정리해 드리겠습니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260803/5_rite_envelope_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-1">Photorealistic flat lay of Korean wedding congratulatory money envelopes (축의금 봉투) on a clean white surface. White formal envelopes with traditional Korean calligraphy characters (祝 結婚 in Chinese characters) printed on the front. One envelope is open showing crisp new Korean banknotes neatly arranged inside. A pen placed beside the envelope. Soft natural lighting. Ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">축의금 봉투와 한자 표기 / AI 제작 이미지</div>
+</div>
+
+<h2>① 봉투 앞면과 뒷면 — 무엇을 어디에 쓰나</h2>
+
+봉투를 열었을 때 돈이 들어 있는 면이 <strong>앞면</strong>입니다. 봉투를 닫으면 입구(접히는 부분)가 위를 향하게 됩니다.<br><br>
+<strong>앞면 중앙</strong>에는 '祝 結婚(축 결혼)' 또는 '謹弔(근조)' 같은 축하·조의 문구를 씁니다. 요즘은 봉투 자체에 문구가 인쇄되어 있는 경우가 많아 따로 쓰지 않아도 됩니다.<br><br>
+<strong>뒷면 왼쪽 하단</strong>에 본인의 이름(보내는 사람)을 씁니다. 일부 봉투는 뒷면에 이름을 쓰는 칸이 별도로 인쇄되어 있기도 합니다. 금액은 봉투 뒷면 이름 아래에 적는 경우도 있고 생략하기도 합니다.<br><br>
+
+<table class="info-table">
+  <tr>
+    <th>위치</th><th>내용</th>
+  </tr>
+  <tr>
+    <td style="background:#f9fbe7;">앞면 중앙</td>
+    <td style="background:#f9fbe7;">축하·조의 문구 (축의금: 祝 結婚 등 / 부의금: 謹弔 등)</td>
+  </tr>
+  <tr>
+    <td>뒷면 왼쪽 하단</td>
+    <td>보내는 사람 이름</td>
+  </tr>
+  <tr>
+    <td style="background:#f9fbe7;">뒷면 (선택)</td>
+    <td style="background:#f9fbe7;">금액 표기 (한자 또는 숫자)</td>
+  </tr>
+</table>
+
+<h2>② 축의금 봉투 쓰는 법 — 결혼·돌잔치·생일</h2>
+
+<strong>결혼식 축의금</strong> 봉투에는 앞면에 다음 중 하나를 씁니다. 한자를 모르신다면 한글로 써도 무방합니다.<br><br>
+
+<table class="info-table">
+  <tr>
+    <th>경우</th><th>한자</th><th>한글 표기</th>
+  </tr>
+  <tr>
+    <td style="background:#f9fbe7;">결혼 축하</td>
+    <td style="background:#f9fbe7;">祝 結婚</td>
+    <td style="background:#f9fbe7;">축 결혼</td>
+  </tr>
+  <tr>
+    <td>화혼(연세 있는 분)</td>
+    <td>祝 華婚</td>
+    <td>축 화혼</td>
+  </tr>
+  <tr>
+    <td style="background:#f9fbe7;">돌잔치</td>
+    <td style="background:#f9fbe7;">祝 周歲 또는 祝 初度</td>
+    <td style="background:#f9fbe7;">축 주세 또는 축 초도</td>
+  </tr>
+  <tr>
+    <td>생일 축하</td>
+    <td>祝 生辰 또는 祝 誕辰</td>
+    <td>축 생일 (간단히)</td>
+  </tr>
+</table>
+
+봉투 앞면에 이미 '祝 結婚' 문구가 인쇄된 기성 봉투를 쓴다면 앞면에 이름을 따로 쓰지 않아도 됩니다. 뒷면 좌하단에만 이름을 적어도 충분합니다.
+
+<h2>③ 부의금 봉투 쓰는 법 — 조문 기본 원칙</h2>
+
+조문 시 사용하는 부의금 봉투는 축의금과 분위기가 다릅니다. 봉투 색은 흰색이나 무채색이 원칙이며, 화려한 디자인의 봉투는 사용하지 않습니다.<br><br>
+
+<table class="info-table">
+  <tr>
+    <th>문구</th><th>한자</th><th>의미 및 쓰임</th>
+  </tr>
+  <tr>
+    <td style="background:#f9fbe7;">근조</td>
+    <td style="background:#f9fbe7;">謹弔</td>
+    <td style="background:#f9fbe7;">삼가 조의를 표한다는 가장 일반적인 표현</td>
+  </tr>
+  <tr>
+    <td>부의</td>
+    <td>賻儀</td>
+    <td>부조금(도움을 보내는 돈)을 전달하는 봉투에 씀</td>
+  </tr>
+  <tr>
+    <td style="background:#f9fbe7;">향촉대</td>
+    <td style="background:#f9fbe7;">香燭代</td>
+    <td style="background:#f9fbe7;">향과 촛불 대신 보내는 돈이라는 의미</td>
+  </tr>
+</table>
+
+가장 무난하고 널리 쓰이는 표현은 <strong>謹弔(근조)</strong>입니다. '부의(賻儀)'도 많이 사용되며 두 표현 모두 예의에 맞습니다. '향촉대'는 종교적 배경이 있는 표현으로 상황에 따라 선택하시면 됩니다.<br><br>
+<strong>종교별 유의사항</strong>: 기독교·천주교 장례식은 향을 피우지 않으므로 '香燭代(향촉대)' 문구보다 '謹弔'가 더 적절합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260803/5_rite_envelope_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-2">Photorealistic close-up of Korean condolence money envelope (부의금 봉투) on a white background. Plain white envelope with formal Chinese characters '謹弔' written in calligraphic brush stroke style on the front. A name written in Korean characters in the lower left area of the back. Simple, solemn design with no decorations. Natural soft lighting. Ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">부의금 봉투 謹弔 한자 표기 / AI 제작 이미지</div>
+</div>
+
+<h2>④ 봉투 이름이 두 명·세 명 이상일 때</h2>
+
+동료들과 함께 추렴해 한 봉투에 넣을 때 이름 표기가 고민될 수 있습니다.<br><br>
+<strong>두 명</strong>이 함께 낼 때는 뒷면에 두 이름을 나란히 씁니다. 주로 오른쪽 이름이 주가 되므로 관계상 선임·나이가 많은 사람 이름을 먼저(오른쪽) 씁니다.<br><br>
+<strong>세 명 이상</strong>일 때는 대표자 이름 뒤에 '외 2인', '외 일동', '○○ 부서 일동'처럼 표기하는 것이 일반적입니다. 별도로 명단을 적은 종이를 봉투 안에 함께 넣는 방법도 있습니다.<br><br>
+<strong>회사 이름으로 낼 때</strong>는 뒷면에 회사명 또는 팀명을 적고, 그 아래에 대표자 이름을 쓰거나 '○○팀 일동'으로 마무리합니다.
+
+<h2>⑤ 봉투 안 지폐 넣는 방향과 금액 표기</h2>
+
+지폐를 봉투에 넣을 때는 <strong>지폐의 앞면(인물 그림 면)이 봉투 앞면을 향하도록</strong> 넣는 것이 기본 예절입니다. 새 지폐를 사용하는 것이 예의 바른 모습이며, 특히 결혼 축의금에서는 구겨진 구권보다 새 지폐가 좋습니다.<br><br>
+봉투 뒷면에 금액을 기재할 때는 한자 또는 한글로 쓸 수 있습니다. 예: 金 五萬圓 整(금 오만원 정) 또는 5만 원. 요즘은 한글 표기도 충분히 격식 있게 통용됩니다.<br><br>
+
+<div class="tip-box">
+<strong>💡 금액 관련 팁</strong><br><br>
+축의금·부의금 금액은 홀수가 좋다는 전통적 관념이 있습니다(3만·5만·10만 등). 짝수 중에서는 10만 원처럼 '완전한 숫자'는 괜찮지만, 4는 '죽을 사(死)'와 발음이 같아 피하는 것이 관습입니다. 지역·가족 문화에 따라 다를 수 있으니 참고만 하세요.
+</div>
+
+<h2>⑥ 온라인 계좌이체로 낼 때 인사말 문자</h2>
+
+요즘은 현장에 가지 못하거나 멀리서 마음을 전할 때 계좌이체로 축의금·부의금을 보내는 경우도 많습니다. 이때 문자나 카카오톡 메시지를 함께 보내는 것이 예의 있는 방법입니다.<br><br>
+<strong>결혼식 계좌이체 예시 문자</strong>:<br>
+"[이름] 오빠(언니), 결혼 진심으로 축하해요. 멀리서나마 마음을 전합니다. 두 분 늘 행복하세요 :-)"<br><br>
+<strong>조문 계좌이체 예시 문자</strong>:<br>
+"삼가 고인의 명복을 빕니다. 참석하지 못해 죄송합니다. 작은 마음 전달드립니다."<br><br>
+이체 후 문자를 보낼 때 금액을 명시하지 않아도 됩니다. 상대방이 이체 내역에서 확인할 수 있기 때문입니다.
+
+<h2>⑦ 기혼 여성 이름·부부 봉투 쓰는 법</h2>
+
+<strong>기혼 여성이 혼자 낼 때</strong>: 결혼 후 성이 바뀌지 않은 한국 관습상 본인 이름 그대로 쓰면 됩니다. 일부에서는 '남편 이름 + (妻)' 형태로 쓰기도 했지만, 현재는 본인 이름을 쓰는 것이 더 자연스러운 방식으로 자리 잡았습니다.<br><br>
+<strong>부부가 함께 낼 때</strong>: 남편 이름을 먼저 쓰고 오른쪽에, 아내 이름을 왼쪽에 나란히 쓰는 것이 전통적 방식입니다. 최근에는 순서에 크게 구애받지 않는 분위기입니다.<br><br>
+
+<div class="warn-box">
+<strong>⚠️ 이것만은 피하세요</strong><br><br>
+· 볼펜보다는 <strong>검은색 붓펜·만년필</strong>로 쓰는 것이 격식에 맞습니다 (특히 부의금 봉투)<br>
+· 봉투 앞면에 이름을 쓰는 것은 실례입니다 — 이름은 반드시 뒷면 하단에<br>
+· 구겨진 헌 지폐를 그대로 넣는 것은 인상이 좋지 않습니다
+</div>
+
+<h2>⑧ 한자 문구 외우기 귀찮다면 — 기성 봉투 활용</h2>
+
+한자를 직접 쓰는 것이 부담스럽다면 편의점이나 문구점에서 파는 <strong>기성 봉투</strong>를 활용하는 것이 가장 편리합니다. '축의금용', '부의금용' 두 종류가 별도로 판매되며, 앞면에 이미 적절한 한자 문구가 인쇄되어 있어 본인 이름만 뒷면에 쓰면 됩니다.<br><br>
+온라인 쇼핑몰에서는 더 다양한 디자인의 봉투를 저렴한 가격에 구입할 수 있습니다. 결혼·돌잔치·조문이 예정되어 있다면 미리 두어 장씩 준비해 두는 것이 좋습니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260802/rite_wedding_guest_dress.html">결혼식 하객 뭐 입고 가나, 계절별·관계별 복장과 피해야 할 옷</a></li>
+    <li><a href="../260802/local_typhoon_cancel_refund.html">태풍으로 여행 취소하면 환불되나, 숙소 위약금과 여행자보험 처리</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#봉투쓰는법</span>
+  <span class="tag">#축의금봉투</span>
+  <span class="tag">#부의금봉투</span>
+  <span class="tag">#한자표기</span>
+  <span class="tag">#결혼식예절</span>
+  <span class="tag">#조문예절</span>
+  <span class="tag">#근조한자</span>
+  <span class="tag">#축의금이름</span>
+  <span class="tag">#경조사봉투</span>
+  <span class="tag">#봉투이름위치</span>
+</div>
+
+</body>
+</html>

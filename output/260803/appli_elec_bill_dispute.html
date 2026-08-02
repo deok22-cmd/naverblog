@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #f1f8e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f9fbe7; border: 2px solid #c5e1a5; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #ddd; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .warn-box { background: #fce4ec; border: 1px solid #e91e63; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #ccc; padding: 20px; border-radius: 8px; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.9em; color: #666; }
+  .ph-file { font-family: monospace; }
+  .prompt-text { background: #263238; color: #a5d6a7; padding: 12px; border-radius: 6px; font-size: 0.85em; text-align: left; white-space: pre-wrap; word-break: break-all; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; margin-top: 10px; font-size: 0.9em; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>에어컨 전기요금 고지서 왔을 때 이의신청과 세대 분리 청구 방법</h1>
+
+<div class="intro-box">
+8월 전기요금 고지서를 열어봤다가 숫자에 놀라는 분들이 많습니다.<br><br>
+7~8월 폭염이 계속되면서 에어컨 사용량이 늘어나고, 누진세 구간을 넘어서면 요금이 급격히 오르기 때문입니다. 고지서 금액이 지난달보다 2~3배 이상 뛰어도 단순히 많이 썼기 때문이라면 이의신청 대상이 아닐 수 있습니다.<br><br>
+하지만 <strong>계량기 오작동, 검침 오류, 이웃 세대와 혼선된 청구</strong> 등의 경우라면 이의신청을 통해 정정받을 수 있습니다.<br><br>
+이 글에서는 8월 전기요금 이의신청이 가능한 경우와 신청 방법, 그리고 한 지붕 두 세대가 함께 사는 경우 유리한 <strong>세대 분리 청구 신청법</strong>까지 정리해 드리겠습니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260803/7_appli_elecbill_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-7-1">Photorealistic close-up of a Korean electricity bill (전기요금 고지서) on a table. Official KEPCO (한국전력) document with Korean text showing billing period, usage in kWh, and total amount due in Korean won. A calculator and pen placed beside the document. An air conditioner remote control is also visible. Bright natural lighting on a clean home desk. Ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-7-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">8월 에어컨 전기요금 고지서 확인 / AI 제작 이미지</div>
+</div>
+
+<h2>① 8월 전기요금이 갑자기 많이 나오는 이유 — 누진세 구조</h2>
+
+한국의 가정용 전기요금은 <strong>누진 요금제</strong>로 운영됩니다. 사용량이 일정 구간을 넘어서면 그 초과분에 더 높은 단가가 적용되어 요금이 가파르게 올라갑니다.<br><br>
+기본 구간 구조(주택용 저압 기준, 제도 변경에 따라 달라질 수 있음):
+
+<table class="info-table">
+  <tr>
+    <th>사용량 구간</th><th>적용 단가</th>
+  </tr>
+  <tr>
+    <td style="background:#f9fbe7;">300kWh 이하</td>
+    <td style="background:#f9fbe7;">낮은 기본 단가</td>
+  </tr>
+  <tr>
+    <td>300kWh 초과 ~ 450kWh 이하</td>
+    <td>중간 단가</td>
+  </tr>
+  <tr>
+    <td style="background:#f9fbe7;">450kWh 초과</td>
+    <td style="background:#f9fbe7;">가장 높은 단가</td>
+  </tr>
+</table>
+
+에어컨을 하루 10~12시간 이상 틀면 한 달 사용량이 300~450kWh를 쉽게 넘길 수 있습니다. 이 경우 높은 단가 구간이 적용되어 전체 요금이 크게 뛰는 것입니다.<br><br>
+정확한 최신 단가와 구간 기준은 <strong>한국전력공사(KEPCO) 홈페이지</strong> 또는 한전 고객센터(123)에서 확인하시기 바랍니다. 정부 정책에 따라 요금 체계가 변경될 수 있습니다.
+
+<h2>② 정말로 이의신청이 가능한 경우는 언제인가</h2>
+
+단순히 요금이 많이 나왔다는 이유만으로는 이의신청이 받아들여지지 않습니다. 이의신청은 다음과 같은 <strong>객관적 오류나 분쟁</strong>이 있을 때 유효합니다.
+
+<table class="info-table">
+  <tr>
+    <th>이의신청 가능 사유</th><th>설명</th>
+  </tr>
+  <tr>
+    <td style="background:#f9fbe7;">계량기 오작동·고장</td>
+    <td style="background:#f9fbe7;">계량기 자체의 불량으로 과대 계량된 경우</td>
+  </tr>
+  <tr>
+    <td>검침 오류</td>
+    <td>검침원이 다른 세대 사용량을 잘못 읽은 경우</td>
+  </tr>
+  <tr>
+    <td style="background:#f9fbe7;">이웃 세대·공용전기 혼선</td>
+    <td style="background:#f9fbe7;">공용 조명·엘리베이터 전기가 개인 세대로 청구된 경우</td>
+  </tr>
+  <tr>
+    <td>장기 부재 기간 중 과다 청구</td>
+    <td>해외 출국·입원 등으로 집을 비웠는데 사용량이 과도한 경우</td>
+  </tr>
+</table>
+
+<strong>이의신청이 어려운 경우</strong>: 에어컨을 많이 써서 요금이 올라간 것, 냉장고·세탁기 등 다수 가전을 동시 사용한 경우는 이의신청 대상이 아닙니다. 사용량 자체가 많다면 누진 요금이 그대로 적용됩니다.
+
+<h2>③ 이의신청 방법 — 한전 고객센터와 한전 앱</h2>
+
+이의신청은 다음 세 가지 방법으로 할 수 있습니다.
+
+<table class="info-table">
+  <tr>
+    <th>방법</th><th>절차</th>
+  </tr>
+  <tr>
+    <td style="background:#f9fbe7;">전화 신청</td>
+    <td style="background:#f9fbe7;">한국전력 고객센터 ☎ 123 (24시간 운영), 상황 설명 후 이의신청 접수</td>
+  </tr>
+  <tr>
+    <td>온라인 신청</td>
+    <td>한전 홈페이지(kepco.co.kr) 접속 → 로그인 → 고객서비스 → 전기 사용 민원 접수</td>
+  </tr>
+  <tr>
+    <td style="background:#f9fbe7;">앱 신청</td>
+    <td style="background:#f9fbe7;">한전 '스마트한전' 앱 → 사용 내역 조회 후 이의 내용 접수</td>
+  </tr>
+</table>
+
+이의신청 시에는 <strong>고지서 번호, 청구 기간, 이의 사유</strong>를 명확히 말씀해 주시면 됩니다. 한전 담당자가 계량기 점검을 위한 현장 방문 일정을 잡아줄 수 있습니다.<br><br>
+계량기 점검 결과 오류가 확인되면 정정 청구서가 발행됩니다. 이미 납부한 초과 금액은 다음 달 요금에서 차감하거나 환불해 드립니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260803/7_appli_elecbill_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-7-2">Photorealistic interior of a Korean apartment in summer showing two distinct living areas separated by a door. Left side: elderly parents' living room with traditional furniture and an older air conditioner. Right side: young couple's bedroom with modern air conditioner and interior. The image illustrates the concept of 세대 분리 (household separation for utility billing). Clean residential interior, summer atmosphere. Ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-7-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">한 지붕 두 세대 분리 청구 개념 / AI 제작 이미지</div>
+</div>
+
+<h2>④ 세대 분리 청구란 — 어떤 경우에 유리한가</h2>
+
+부모님과 한 건물에 함께 살거나, 다가구 주택에서 한 건물 내 여러 가구가 거주하는 경우, 전기 계량기가 하나로 합산되면 누진 구간에서 불리해집니다.<br><br>
+예를 들어 한 건물 안에 두 가구가 살면서 각각 200kWh씩 사용했을 때, 계량기가 합산되면 400kWh로 높은 누진 구간이 적용됩니다. 반면 계량기를 분리하면 각 가구가 200kWh씩 낮은 구간 요금을 납부하게 됩니다.<br><br>
+<strong>세대 분리 청구가 유리한 상황</strong>:
+- 다가구 주택에서 층별로 독립된 가구가 거주하는 경우
+- 부모님과 자녀 가구가 한 건물에 동거하는 경우
+- 주택 내 독립적인 임대 공간이 있는 경우<br><br>
+
+<strong>아파트는 이미 세대별 계량기 분리</strong>가 기본이므로 대부분 해당 사항이 없습니다. 주로 단독·다가구 주택이 해당됩니다.
+
+<h2>⑤ 세대 분리 청구 신청 방법과 조건</h2>
+
+세대 분리 청구는 한전에 <strong>세대별 계량기 신규 설치 또는 분리 설치</strong>를 신청하는 것입니다.<br><br>
+
+<table class="info-table">
+  <tr>
+    <th>조건</th><th>설명</th>
+  </tr>
+  <tr>
+    <td style="background:#f9fbe7;">물리적 구분</td>
+    <td style="background:#f9fbe7;">각 세대의 주거 공간이 독립적으로 구분되어야 함</td>
+  </tr>
+  <tr>
+    <td>별도 계량기 필요</td>
+    <td>세대별 전력 사용량을 측정할 계량기 각각 설치</td>
+  </tr>
+  <tr>
+    <td style="background:#f9fbe7;">공사 비용</td>
+    <td style="background:#f9fbe7;">계량기 분리 공사 비용은 신청자 부담 (공사 사양에 따라 다름)</td>
+  </tr>
+</table>
+
+신청 절차:
+1. 한전 고객센터(123) 또는 가까운 한전 지사에 문의
+2. 현장 조사 예약 후 담당자 방문
+3. 분리 가능 여부 확인 및 공사 견적 안내
+4. 공사 완료 후 세대별 독립 청구 시작<br><br>
+
+단기 절약 목적보다는 <strong>장기 거주 및 독립적인 가구 운영</strong>을 전제로 한 경우에 투자 대비 효과가 있습니다.
+
+<h2>⑥ 에어컨 전기요금 줄이는 실용 팁</h2>
+
+이의신청이나 세대 분리 외에도, 일상 속 에어컨 사용 습관으로 누진 구간 진입을 늦출 수 있습니다.
+
+<table class="info-table">
+  <tr>
+    <th>방법</th><th>효과</th>
+  </tr>
+  <tr>
+    <td style="background:#f9fbe7;">냉방 온도 26~28도 유지</td>
+    <td style="background:#f9fbe7;">1도 올릴 때마다 소비전력 약 7% 감소</td>
+  </tr>
+  <tr>
+    <td>취침 예약 기능 활용</td>
+    <td>자는 동안 1~2시간 후 자동 꺼짐 설정, 무의식 과냉 방지</td>
+  </tr>
+  <tr>
+    <td style="background:#f9fbe7;">에너지 소비효율 1등급 제품 사용</td>
+    <td style="background:#f9fbe7;">구형 에어컨 대비 전기 소모 30~40% 절감</td>
+  </tr>
+  <tr>
+    <td>정기 필터 청소</td>
+    <td>막힌 필터는 냉각 효율 떨어뜨려 전기 소모 증가</td>
+  </tr>
+  <tr>
+    <td style="background:#f9fbe7;">선풍기 함께 사용</td>
+    <td style="background:#f9fbe7;">에어컨+선풍기 조합으로 체감 온도 낮춰 에어컨 온도 높여도 됨</td>
+  </tr>
+</table>
+
+<h2>⑦ 전기요금 복지 할인 — 취약계층 감면 제도</h2>
+
+저소득층·장애인·국가유공자·차상위계층 등 취약계층은 한전의 <strong>전기요금 복지 할인 제도</strong>를 통해 요금 감면 혜택을 받을 수 있습니다.<br><br>
+감면 금액은 대상별로 다르며, 기본요금 면제 또는 월 사용 요금의 일정 비율을 감면해 드립니다. 신청은 한전 홈페이지, 스마트한전 앱, 한전 고객센터(123), 또는 가까운 한전 지사 방문으로 하실 수 있습니다.<br><br>
+신청 시 주민등록증과 복지 대상 증명 서류(수급자 증명서, 장애인 등록증 등)를 준비해 가시면 됩니다. 이미 해당 조건이 되시는데 신청을 안 하고 계신 분들이 의외로 많으니, 주변 가족이나 이웃에게 알려드리는 것도 좋습니다.
+
+<h2>⑧ 전기요금 이의신청 흐름 한눈에 보기</h2>
+
+<table class="info-table">
+  <tr>
+    <th>단계</th><th>내용</th>
+  </tr>
+  <tr>
+    <td style="background:#f9fbe7;">1단계</td>
+    <td style="background:#f9fbe7;">고지서 확인 — 사용 kWh와 청구 기간 이상 여부 파악</td>
+  </tr>
+  <tr>
+    <td>2단계</td>
+    <td>한전 123 전화 또는 홈페이지·앱으로 이의신청 접수</td>
+  </tr>
+  <tr>
+    <td style="background:#f9fbe7;">3단계</td>
+    <td style="background:#f9fbe7;">한전 담당자 현장 방문·계량기 점검</td>
+  </tr>
+  <tr>
+    <td>4단계</td>
+    <td>점검 결과 통보 — 오류 확인 시 정정 청구 또는 환불</td>
+  </tr>
+  <tr>
+    <td style="background:#f9fbe7;">5단계</td>
+    <td style="background:#f9fbe7;">정상 청구 확인 — 오류 없음 시 납부 진행</td>
+  </tr>
+</table>
+
+여름 전기요금 고지서가 낯설 정도로 높게 나왔다면 당황하지 말고 고지서의 사용량(kWh)을 먼저 확인해 보세요. 실제 사용에 비해 이상하게 높은 경우라면 한전에 꼭 문의해 보시기 바랍니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260802/car_license_penalty_points.html">운전면허 벌점 조회하고 소멸시키는 법, 착한운전 마일리지 신청</a></li>
+    <li><a href="../260802/gov_reserve_training_delay.html">예비군·민방위 훈련 연기 신청과 통지서 인터넷으로 조회하는 법</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#전기요금이의신청</span>
+  <span class="tag">#에어컨전기요금</span>
+  <span class="tag">#여름전기요금</span>
+  <span class="tag">#누진세전기요금</span>
+  <span class="tag">#세대분리청구</span>
+  <span class="tag">#한전이의신청</span>
+  <span class="tag">#전기요금절약</span>
+  <span class="tag">#전기요금복지할인</span>
+  <span class="tag">#에어컨누진세</span>
+  <span class="tag">#8월전기요금</span>
+</div>
+
+</body>
+</html>

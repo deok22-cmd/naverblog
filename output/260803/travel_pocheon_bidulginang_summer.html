@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #ddd; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #ccc; padding: 20px; border-radius: 8px; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.9em; color: #666; }
+  .ph-file { font-family: monospace; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 12px; border-radius: 6px; font-size: 0.85em; text-align: left; white-space: pre-wrap; word-break: break-all; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; margin-top: 10px; font-size: 0.9em; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>포천 비둘기낭폭포 주차와 아트밸리·산정호수, 수도권 협곡 피서 당일 코스</h1>
+
+<div class="intro-box">
+서울에서 1시간 30분, 포천은 수도권 근교 여행지 중 자연 경관의 밀도가 가장 높은 곳 중 하나입니다.<br><br>
+특히 <strong>비둘기낭폭포</strong>는 국내에서 유일하게 현무암 협곡 위로 폭포가 쏟아지는 독특한 지형으로, 영화·드라마 촬영지로도 여러 차례 소개된 명소입니다. 영화 '늑대소년' 로케이션으로 알려지면서 젊은 층에서 특히 인기가 높습니다.<br><br>
+여기에 폐 채석장을 문화 예술 공간으로 탈바꿈시킨 <strong>포천 아트밸리</strong>와 북한산 국립공원 권역의 조용한 산악 호수 <strong>산정호수</strong>를 더하면, 자연·예술·피서를 한 번에 즐길 수 있는 포천 당일 코스가 완성됩니다.<br><br>
+무더운 8월, 협곡의 시원한 기운과 폭포 물보라를 온몸으로 느끼고 싶다면 지금이 바로 포천을 방문할 최적의 시기입니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260803/3_pocheon_bidulginang_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-1">Photorealistic view of Bidulginang Waterfall in Pocheon, South Korea. A dramatic waterfall cascading into a deep basalt rock gorge with dark hexagonal columnar joint walls. The water forms a turquoise pool at the bottom. Lush green summer vegetation clings to the cliff walls. Visitors standing on a wooden observation deck looking down into the gorge. Misty atmosphere with afternoon sunlight filtering through trees. Ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">포천 비둘기낭폭포 현무암 협곡 / AI 제작 이미지</div>
+</div>
+
+<h2>① 비둘기낭폭포란 — 한국의 숨겨진 현무암 협곡</h2>
+
+경기도 포천시 영북면에 위치한 비둘기낭폭포는 한탄강 일대의 현무암 지대에 형성된 폭포입니다. 천연기념물 제537호 '포천 한탄강 현무암 협곡과 비둘기낭'으로 지정된 국가 보호 지형이기도 합니다.<br><br>
+이름의 유래는 폭포 주변 절벽에 야생 비둘기가 많이 서식하여 '비둘기의 둥지(낭)'라는 데서 왔습니다. 폭포 아래에 형성된 짙은 청록색 소(沼)와, 까만 현무암 절벽이 이루는 대비는 국내 어디에서도 보기 어려운 특별한 풍경입니다.<br><br>
+<strong>주상절리</strong>라 불리는 다각형 돌기둥이 절벽 면을 빼곡히 채운 모습은 마치 외계 행성의 지형처럼 보일 만큼 인상적입니다. 현무암 협곡은 약 50만 년 전 화산 활동에 의해 형성된 것으로 추정됩니다.
+
+<h2>② 비둘기낭폭포 주차와 탐방로 안내</h2>
+
+비둘기낭폭포의 탐방 시작점은 <strong>포천시 영북면 대회산리</strong>입니다. 내비게이션에 '비둘기낭폭포' 또는 '비둘기낭 한탄강'으로 검색하면 됩니다.<br><br>
+폭포 입구 근처에 공영주차장이 있으며, 성수기 주말에는 만차가 자주 발생합니다. <strong>오전 9시 이전</strong> 도착을 권장하며, 주차장이 꽉 찼을 경우 인근 도로변 임시 주차 공간을 이용하는 경우도 있습니다.<br><br>
+탐방로는 주차장에서 폭포 전망 데크까지 약 600m(편도 약 10분)으로 짧은 편입니다. 다만 마지막 구간은 계단이 있어 어린 아이나 노약자와 함께라면 약간 주의가 필요합니다. 전망 데크에서 폭포 전체를 조망할 수 있으며, 폭포 아래 소 근처까지 내려가는 길은 안전상 통제되는 경우가 많습니다.
+
+<div class="tip-box">
+<strong>💡 비둘기낭폭포 방문 팁</strong><br><br>
+폭포 주변에는 모기와 벌레가 많습니다. 긴 바지와 모기 기피제를 준비하세요. 비가 온 다음 날이면 폭포 수량이 늘어나 장관을 연출하지만, 반대로 탐방로 바닥이 미끄러워 주의해야 합니다. 데크 바깥 절벽으로 내려가는 행위는 절대 금지입니다.
+</div>
+
+<h2>③ 포천 아트밸리 — 채석장이 예술 공간으로</h2>
+
+비둘기낭폭포에서 차로 약 20~25분 거리에 있는 <strong>포천 아트밸리</strong>는 1990년대까지 실제로 운영하던 화강암 채석장을 문화 예술 공간으로 재탄생시킨 포천의 대표 복합 문화 시설입니다.<br><br>
+채석 과정에서 생긴 거대한 웅덩이에 맑은 물이 차오르며 형성된 <strong>천주호</strong>는 에메랄드빛 물색이 아름다워 '포천의 숨겨진 보석'이라 불립니다. 화강암 절벽을 배경으로 한 이 호수에서의 사진은 SNS에서 꾸준히 인기를 끌고 있습니다.<br><br>
+아트밸리 입구에서 천주호까지는 모노레일을 이용하거나 도보로 올라갈 수 있습니다. 모노레일을 이용하면 이동이 편리하지만 대기 시간이 길 수 있으니 성수기에는 도보 코스도 고려해 보세요. 입장료와 모노레일 요금은 별도입니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260803/3_pocheon_bidulginang_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-2">Photorealistic view of Pocheon Art Valley Chunjuho Lake in South Korea. A stunning emerald-green quarry lake surrounded by sheer granite cliff walls. The reflection of the cliffs mirrors perfectly on the still water surface. An outdoor sculpture is visible on the rocky shore. Summer afternoon lighting creates dramatic shadows on the granite walls. Visitors admiring the scenery from a wooden deck. Ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">포천 아트밸리 천주호 에메랄드 채석 호수 / AI 제작 이미지</div>
+</div>
+
+<h2>④ 아트밸리 조각 공원과 천문과학관</h2>
+
+아트밸리 내부에는 조각 공원과 <strong>천문과학관</strong>이 함께 운영됩니다. 조각 공원에는 국내외 작가들의 작품이 채석장 암반 위에 설치되어 독특한 예술·자연 융합 경관을 만들어 냅니다.<br><br>
+천문과학관은 낮에도 돔 영상관에서 별자리 해설 프로그램을 운영합니다. 천문대 망원경을 이용한 태양 관측 프로그램도 있어 아이들과 함께 방문하는 가족 여행객에게 인기입니다. 야간 별 관측 프로그램은 사전 예약이 필요하므로 포천 아트밸리 공식 홈페이지에서 일정을 확인하세요.<br><br>
+채석 구덩이 안에 울려 퍼지는 소리의 독특한 울림 덕분에 아트밸리는 야외 음악 공연장으로도 자주 활용됩니다. 방문 시 진행 중인 공연·전시 일정을 확인해 두면 여행이 더 풍요로워집니다.
+
+<h2>⑤ 산정호수 — 경기 북부 고요한 산악 호수</h2>
+
+아트밸리에서 차로 약 20분 거리에 있는 <strong>산정호수</strong>는 명성산 아래 자리한 인공 저수지로, '경기 북부의 알프스'라는 별명답게 사방이 산으로 둘러싸인 조용하고 아늑한 호수입니다.<br><br>
+호수 둘레로 약 5km의 산책로가 조성되어 있어 가볍게 걷기에 좋습니다. 호수 위로 내려다보이는 명성산 능선과 함께 담기는 호수 전경은 사진 촬영 명소로 유명합니다.<br><br>
+산정호수 주변에는 레스토랑·카페·펜션이 밀집해 있어 식사와 휴식을 취하기에 편리합니다. 특히 호수 뷰 카페에 앉아 한낮의 더위를 피하며 커피를 마시는 시간이 여름 포천 여행의 하이라이트 중 하나가 될 수 있습니다.<br><br>
+가을 단풍 시즌에도 인기 명소이지만, 여름에는 비교적 여유롭게 즐길 수 있어 더 매력적입니다.
+
+<h2>⑥ 포천 먹거리 — 이동갈비와 포천 막걸리</h2>
+
+포천 여행의 미식 하이라이트는 단연 <strong>이동갈비</strong>입니다. 포천 이동면 일대에서 발달한 이동갈비는 국내산 돼지갈비를 오랜 시간 양념에 재워 숯불에 구워 먹는 방식으로, 부드러운 육질과 깊은 양념 맛이 특징입니다.<br><br>
+이동갈비 골목은 포천 이동면 사거리 일대에 형성되어 있습니다. 넓찍한 식당들이 줄지어 있어 대기 시간 없이 입장하기 쉬운 편입니다. 갈비와 함께 나오는 된장찌개와 반찬 구성도 알차서 식사 만족도가 높습니다.<br><br>
+식사 후에는 <strong>포천 막걸리</strong>를 한 병 사서 가는 것을 추천합니다. 포천은 맑은 물 덕분에 좋은 막걸리 산지로 알려져 있으며, 마트나 편의점보다 현지 양조장 직판장에서 구입하면 더 신선한 막걸리를 맛볼 수 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260803/3_pocheon_bidulginang_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-3">Photorealistic summer panorama of Sanjeonghoso Lake in Pocheon, South Korea. A calm lake surrounded by green mountains (Myeongseongsan) reflected on the still water surface. A well-maintained lakeside walking path with visitors leisurely strolling. Traditional Korean-style pavilion at the edge of the water. Blue summer sky with scattered clouds. Ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">포천 산정호수 명성산 아래 고요한 풍경 / AI 제작 이미지</div>
+</div>
+
+<h2>⑦ 포천 가는 법 — 서울에서 대중교통과 자가용</h2>
+
+<strong>자가용</strong>으로는 서울 동북 방향 경기도 포천까지 약 1시간~1시간 30분이 소요됩니다. 서울 외곽순환도로를 이용해 의정부를 경유하거나 남양주를 통하는 경로를 선택할 수 있습니다. 내비게이션에 목적지를 입력하면 최적 경로를 안내해 줍니다.<br><br>
+<strong>대중교통</strong>으로는 의정부역에서 포천행 버스를 이용하는 방법이 일반적입니다. 다만 비둘기낭폭포나 아트밸리까지 버스로 이동한 뒤 다음 명소로 이동하려면 환승이 불편할 수 있어 렌터카나 자가용이 훨씬 편리합니다.<br><br>
+<strong>전세버스·여행사 투어</strong>를 이용하면 운전 피로 없이 포천의 명소를 편안하게 돌아볼 수도 있습니다. 1~2인 여행이 아닌 단체나 가족 여행이라면 이 방법도 고려해 보세요.
+
+<h2>⑧ 포천 협곡 피서 당일 코스 동선 요약</h2>
+
+<table class="info-table">
+  <tr>
+    <th>시간</th><th>장소</th><th>내용</th>
+  </tr>
+  <tr>
+    <td style="background:#f1faf9;">오전 9시</td>
+    <td style="background:#f1faf9;">비둘기낭폭포</td>
+    <td style="background:#f1faf9;">인파 없는 이른 아침 협곡 탐방 (30~40분)</td>
+  </tr>
+  <tr>
+    <td>오전 10~12시</td>
+    <td>포천 아트밸리</td>
+    <td>천주호·조각공원·천문과학관 관람</td>
+  </tr>
+  <tr>
+    <td style="background:#f1faf9;">낮 12~1시</td>
+    <td style="background:#f1faf9;">이동갈비 골목</td>
+    <td style="background:#f1faf9;">이동갈비 점심</td>
+  </tr>
+  <tr>
+    <td>오후 2~4시</td>
+    <td>산정호수</td>
+    <td>호수 산책로 걷기, 뷰 카페 휴식</td>
+  </tr>
+  <tr>
+    <td style="background:#f1faf9;">오후 4~5시</td>
+    <td style="background:#f1faf9;">귀가</td>
+    <td style="background:#f1faf9;">포천 막걸리 사서 귀가</td>
+  </tr>
+</table>
+
+서울 근교임에도 이렇게 다양한 자연 체험을 즐길 수 있는 포천은, 멀리 가지 않고 제대로 된 여름 피서를 원하는 분들께 강력히 추천드리는 당일 코스입니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260802/travel_hwacheon_meteor_shower.html">화천 조경철천문대 유성우 관측 예약과 준비물, 8월 페르세우스 유성우 완벽 가이드</a></li>
+    <li><a href="../260802/travel_yeosu_cablecar_nightsea.html">여수 해상케이블카와 낭만포차·오동도 밤바다, 남해 여름밤 1박 코스</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#포천여행</span>
+  <span class="tag">#비둘기낭폭포</span>
+  <span class="tag">#포천아트밸리</span>
+  <span class="tag">#산정호수</span>
+  <span class="tag">#한탄강협곡</span>
+  <span class="tag">#수도권당일치기</span>
+  <span class="tag">#경기북부여행</span>
+  <span class="tag">#이동갈비</span>
+  <span class="tag">#포천피서</span>
+  <span class="tag">#천주호</span>
+</div>
+
+</body>
+</html>

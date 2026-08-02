@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #ddd; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #ccc; padding: 20px; border-radius: 8px; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.9em; color: #666; }
+  .ph-file { font-family: monospace; }
+  .prompt-text { background: #263238; color: #80cbc4; padding: 12px; border-radius: 6px; font-size: 0.85em; text-align: left; white-space: pre-wrap; word-break: break-all; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; margin-top: 10px; font-size: 0.9em; }
+  .img-caption { font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>단양 만천하스카이워크 요금과 도담삼봉·고수동굴, 남한강 여름 피서 당일 코스</h1>
+
+<div class="intro-box">
+충북 단양은 '단양 8경'이라는 이름처럼 한 곳에 자연 명소가 밀집한 드문 여행지입니다.<br><br>
+그중에서도 최근 가장 주목받는 곳이 <strong>만천하스카이워크</strong>입니다. 남한강을 내려다보는 해발 328m 절벽 끝에 설치된 유리 바닥 전망대로, 발아래로 강이 휘감아 도는 절경을 가슴 떨리는 긴장감과 함께 감상할 수 있는 곳입니다.<br><br>
+여기에 고려 시대부터 이름을 떨쳐온 <strong>도담삼봉</strong>의 신비로운 풍경, 동굴 탐험의 짜릿함이 있는 <strong>고수동굴</strong>을 더하면 하루 종일 즐길 수 있는 일정이 완성됩니다.<br><br>
+여름 더위를 피해 동굴 속 서늘함을 맛보고, 남한강 절벽 위에서 시원한 바람을 맞으며 경치를 즐기는 단양 여름 피서 코스를 자세히 안내해 드리겠습니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260803/2_danyang_mancheonha_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-1">Photorealistic aerial view of Mancheonha Skywalk in Danyang, South Korea. A transparent glass-floored observation deck jutting out from a steep cliff 328 meters above the Namhan River. The river curves dramatically below in a lush green valley. Summer sky with light clouds. Visitors looking down through the glass floor with awe. Ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">단양 만천하스카이워크 남한강 절벽 전망 / AI 제작 이미지</div>
+</div>
+
+<h2>① 만천하스카이워크란 — 남한강 절벽 위 유리 전망대</h2>
+
+만천하스카이워크는 충청북도 단양군 적성면 애곡리의 해발 328m 절벽 위에 설치된 전망 시설입니다. '만천하(萬天下)'라는 이름은 '온 세상을 굽어본다'는 뜻으로, 그 이름에 걸맞게 발아래 펼쳐지는 남한강의 굽이굽이 흐름이 압도적입니다.<br><br>
+가장 스릴 넘치는 포인트는 투명한 유리 바닥으로 이루어진 <strong>스카이워크 구간</strong>입니다. 유리 발판 아래로 수백 미터 절벽이 보이는 구간을 걷는 순간, 강한 고도감과 함께 심장이 두근거리는 경험을 하게 됩니다.<br><br>
+전망 구역까지는 짚라인(집와이어)을 타고 이동하는 방법도 있어 어드벤처를 좋아하는 분들에게 더욱 인기입니다. 전망대 주변으로는 단양 시내와 소백산 능선, 남한강 물줄기가 한눈에 들어오는 파노라마 뷰가 펼쳐집니다.<br><br>
+더위가 심한 7~8월에도 절벽 위에 불어오는 바람이 시원해 야외 피서지로도 손색이 없습니다.
+
+<h2>② 만천하스카이워크 이용 요금과 운영 정보</h2>
+
+만천하스카이워크는 <strong>단양군에서 운영</strong>하는 공공 관광시설로, 입장 요금이 있습니다. 일반 입장권(전망대 관람)과 짚라인 이용권이 별도로 운영되므로 어떤 체험을 원하는지에 따라 선택하면 됩니다.<br><br>
+
+<table class="info-table">
+  <tr>
+    <th>구분</th><th>내용</th>
+  </tr>
+  <tr>
+    <td style="background:#f1faf9;">위치</td>
+    <td style="background:#f1faf9;">충청북도 단양군 적성면 애곡리 (내비: 만천하스카이워크)</td>
+  </tr>
+  <tr>
+    <td>운영 시간</td>
+    <td>계절에 따라 다르므로 단양군 공식 홈페이지 확인 필수</td>
+  </tr>
+  <tr>
+    <td style="background:#f1faf9;">입장료</td>
+    <td style="background:#f1faf9;">성인·청소년·어린이별 차등, 짚라인 별도 요금</td>
+  </tr>
+  <tr>
+    <td>주차</td>
+    <td>매표소 인근 공영주차장 (성수기 혼잡, 이른 방문 권장)</td>
+  </tr>
+</table>
+
+요금 및 운영 시간은 시즌과 기상 조건에 따라 변동될 수 있으니, 방문 전 <strong>단양군청 관광과(043-422-1146)</strong>나 만천하스카이워크 공식 홈페이지에서 최신 정보를 확인하시기 바랍니다. 짚라인은 날씨에 따라 운영이 중단되는 경우가 있으니 미리 전화로 확인하는 것이 안전합니다.
+
+<h2>③ 도담삼봉 — 단양의 상징, 삼봉과 정도전의 이야기</h2>
+
+만천하스카이워크에서 차로 약 15분 거리에 있는 <strong>도담삼봉</strong>은 단양 8경 중 제1경으로 꼽히는 명소입니다. 남한강 한가운데 솟아오른 세 개의 봉우리가 물 위에 떠 있는 듯한 형상을 연출하며, 그 주변을 유유히 흐르는 강물과 어우러져 동양화 같은 풍경을 만들어 냅니다.<br><br>
+도담삼봉에는 역사적 이야기도 있습니다. 조선 건국의 설계자인 <strong>정도전</strong>이 젊은 시절 이곳에 머물며 자신의 호 '삼봉(三峰)'을 도담삼봉에서 따왔다는 기록이 전해집니다. 가운데 봉우리에는 작은 정자가 세워져 있어 시적인 분위기를 더합니다.<br><br>
+도담삼봉은 강변 주차장에 차를 세우고 도보로 5분이면 전망 포인트에 도달합니다. 특히 <strong>새벽 안개가 낀 아침</strong>이나 <strong>해 질 무렵</strong>의 풍경이 압도적으로 아름다우며, 사진 동호인들이 즐겨 찾는 포인트입니다. 입장은 무료이며, 주변에 산책로도 잘 조성되어 있습니다.
+
+<h2>④ 고수동굴 — 여름 피서지로 완벽한 천연 동굴</h2>
+
+단양 중심에서 차로 약 5분 거리에 있는 <strong>고수동굴</strong>은 천연기념물 제256호로 지정된 석회암 동굴입니다. 연중 온도가 약 12~13°C로 일정해, 여름 더위를 피하기에 이보다 좋은 장소는 없습니다. 동굴 안으로 들어서는 순간 에어컨이 필요 없을 정도의 서늘함이 온몸을 감싸는 느낌은 경험해 봐야 알 수 있습니다.<br><br>
+총 길이 1.7km의 동굴 내부에는 종유석·석순·석주 등 다양한 동굴 생성물이 가득합니다. 조명 연출이 잘 되어 있어 사진을 찍기에도 좋습니다. 탐방 코스는 왕복 약 40~50분 소요됩니다.<br><br>
+<div class="tip-box">
+<strong>🌡️ 여름 동굴 탐방 주의사항</strong><br><br>
+동굴 내부와 외부의 온도 차이가 20~25°C 이상 날 수 있습니다. 짧은 소매로 들어가면 금방 한기를 느끼므로 가벼운 긴 소매 겉옷을 챙기는 것을 권장합니다. 바닥이 젖어 있는 구간이 많으니 미끄럼 방지 신발을 신고 입장하세요.
+</div>
+입장료는 성인·청소년·어린이 구분으로 운영됩니다. 단양읍 고수리 고수동굴(043-422-3072)에 문의하시면 운영 시간과 현장 대기 여부를 확인하실 수 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260803/2_danyang_mancheonha_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-2">Photorealistic view of Dodam Sambong in Danyang, South Korea. Three rocky peaks rising dramatically from the middle of the Namhan River, with a small traditional Korean pavilion on the central peak. The clear blue-green water surrounds the peaks. Lush summer green mountains in the background. Early morning light with soft mist on the water. Ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">단양 도담삼봉 남한강 위에 솟은 세 봉우리 / AI 제작 이미지</div>
+</div>
+
+<h2>⑤ 단양 8경 연계 — 하선암·중선암·상선암</h2>
+
+시간이 허락한다면 단양의 또 다른 8경인 <strong>하선암·중선암·상선암</strong>을 연계하는 것도 좋습니다. 세 명소는 단양 시내에서 북쪽 소백산 방향으로 이어지는 계곡에 위치하며, 각각의 거대한 바위 위로 흘러내리는 물줄기가 여름 피서지로서의 가치를 높여줍니다.<br><br>
+하선암에서 중선암·상선암으로 올라갈수록 계곡이 좁아지며 경치가 깊어집니다. 각 암 사이의 거리는 도보로 이동하기에는 조금 멀기 때문에 차를 이용하는 것이 편리합니다. 계곡 물에 발을 담그고 쉬어갈 수 있는 피서지로도 현지인들이 즐겨 찾습니다.<br><br>
+단양 8경 전체를 당일에 모두 보는 것은 무리입니다. 만천하스카이워크·도담삼봉·고수동굴에 하선암 정도를 더하는 일정이 여유 있게 즐기기에 적당합니다.
+
+<h2>⑥ 단양 먹거리 — 마늘 정식과 쏘가리 매운탕</h2>
+
+단양은 전국적으로 유명한 <strong>단양 마늘</strong>의 주산지입니다. 단양 마늘은 토양과 기후 덕에 일반 마늘보다 향이 진하고 단맛이 강한 것으로 알려져 있습니다. 단양 시내 음식점에서는 마늘을 활용한 마늘 정식·마늘빵·마늘 소시지 등을 맛볼 수 있습니다.<br><br>
+남한강에서 잡히는 민물고기를 재료로 한 <strong>쏘가리 매운탕</strong>도 단양 여행에서 빠뜨리면 아쉬운 음식입니다. 기름진 쏘가리 살이 매콤한 국물에 어우러진 맛은 처음 접하는 분도 금방 좋아하게 됩니다. 단양 시내 강변 식당가에서 어렵지 않게 찾으실 수 있습니다.<br><br>
+단양 시내 중심에 위치한 <strong>단양시장(구 단양오일장)</strong>도 들러볼 만합니다. 직접 재배한 마늘과 고추, 각종 건나물을 판매하는 상인들을 만날 수 있으며, 시장 안 순대국밥집은 현지인도 줄을 서서 먹는 명소입니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260803/2_danyang_mancheonha_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-3">Photorealistic interior of Gosu Cave (limestone cave) in Danyang, South Korea. Dramatic stalactites and stalagmites illuminated by colorful lighting in blues and greens. The cave passage is wide with a well-paved walking path. The cave walls show detailed mineral textures. Cool misty atmosphere. Visitors walking through the cave looking amazed. Ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">단양 고수동굴 내부 종유석과 석순 / AI 제작 이미지</div>
+</div>
+
+<h2>⑦ 단양 가는 법과 주차 안내</h2>
+
+<strong>자가용</strong>을 이용하는 경우 중부내륙고속도로 단양 IC에서 진입하면 시내까지 약 10분입니다. 서울 출발 기준 약 2시간 30분~3시간이 소요됩니다. 주말에는 단양 시내로 진입하는 도로가 막히는 경우가 있으므로 오전 일찍 출발하는 것을 권장합니다.<br><br>
+<strong>대중교통</strong>으로는 서울 동서울터미널 또는 서울 남부터미널에서 단양행 시외버스를 이용하거나, 청량리역에서 기차(무궁화호)를 타고 단양역에 내리는 방법이 있습니다. 단양역에서 시내와 주요 명소까지는 택시를 이용하거나 단양군 농어촌버스를 이용하실 수 있습니다.<br><br>
+명소별 주차는 만천하스카이워크 전용 주차장, 도담삼봉 강변 주차장, 고수동굴 입구 주차장을 각각 이용하면 됩니다. 세 명소가 차로 10~20분 거리에 분산되어 있으므로 자가용 여행이 훨씬 편리합니다.
+
+<h2>⑧ 단양 숙박 — 남한강 뷰 리조트와 펜션</h2>
+
+단양에는 남한강을 바라보는 리버뷰 리조트·펜션이 여럿 있습니다. 단양 호텔, 단양 리조트, 도담삼봉 인근 펜션 등 다양한 가격대의 숙소를 여행 플랫폼에서 찾아보실 수 있습니다.<br><br>
+단양 시내에 위치한 숙소는 이동이 편리하고 저녁에 단양 구경과 식사를 즐기기에 좋습니다. 조용하고 프라이빗한 분위기를 원한다면 도담삼봉이나 고수동굴 인근의 소규모 펜션을 선택하는 것을 권장합니다.<br><br>
+여름 성수기(7~8월)에는 주말 예약이 빠르게 마감되므로, 1~2주 전에 미리 예약해 두시는 것이 좋습니다. 평일 방문 시 요금이 상당히 저렴해질 수 있으니 일정이 유연하다면 평일을 노려보세요.
+
+<h2>⑨ 단양 여름 피서 당일 코스 동선 정리</h2>
+
+<table class="info-table">
+  <tr>
+    <th>시간</th><th>장소</th><th>내용</th>
+  </tr>
+  <tr>
+    <td style="background:#f1faf9;">오전 9~10시</td>
+    <td style="background:#f1faf9;">도담삼봉</td>
+    <td style="background:#f1faf9;">아침 안개 걷힌 직후, 강물 위 삼봉 감상</td>
+  </tr>
+  <tr>
+    <td>오전 10~11시</td>
+    <td>고수동굴</td>
+    <td>서늘한 동굴 안에서 더위 식히기</td>
+  </tr>
+  <tr>
+    <td style="background:#f1faf9;">오후 12~1시</td>
+    <td style="background:#f1faf9;">단양 시내 식당</td>
+    <td style="background:#f1faf9;">마늘 정식·쏘가리 매운탕 점심</td>
+  </tr>
+  <tr>
+    <td>오후 2~4시</td>
+    <td>만천하스카이워크</td>
+    <td>절벽 전망대, 짚라인 탑승 (선택)</td>
+  </tr>
+  <tr>
+    <td style="background:#f1faf9;">오후 4~5시</td>
+    <td style="background:#f1faf9;">단양 시장·구경</td>
+    <td style="background:#f1faf9;">마늘·건나물 구입 후 귀가</td>
+  </tr>
+</table>
+
+남한강의 풍경, 천연 동굴의 서늘함, 절벽 위의 아찔한 스카이워크까지 — 단양 하루 코스는 자연·역사·어드벤처가 모두 담긴 여름 피서 여행으로 충분한 만족감을 드릴 것입니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260802/travel_hwacheon_meteor_shower.html">화천 조경철천문대 유성우 관측 예약과 준비물, 8월 페르세우스 유성우 완벽 가이드</a></li>
+    <li><a href="../260802/travel_anbandegi_galaxy_drive.html">평창 안반데기 고랭지 배추밭 언제 초록 절정, 은하수 보는 밤 드라이브 코스</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#단양여행</span>
+  <span class="tag">#만천하스카이워크</span>
+  <span class="tag">#도담삼봉</span>
+  <span class="tag">#고수동굴</span>
+  <span class="tag">#단양8경</span>
+  <span class="tag">#남한강여행</span>
+  <span class="tag">#단양여름피서</span>
+  <span class="tag">#단양당일치기</span>
+  <span class="tag">#충북여행</span>
+  <span class="tag">#단양드라이브코스</span>
+</div>
+
+</body>
+</html>
