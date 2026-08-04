@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>담양 메타세쿼이아길과 죽녹원·관방제림, 한여름 숲 그늘 걷기 코스</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #00695c; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #00695c; }
+  .intro-box { background: #f9fdf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table td { padding: 10px 12px; border: 1px solid #ddd; font-size: 0.95em; }
+  .info-table tr:nth-child(odd) td { background: #f1faf9; }
+  .info-table tr:nth-child(even) td { background: #fff; }
+  .step-box { border-left: 4px solid #00796b; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; border-radius: 0 6px 6px 0; }
+  .tip-box { background: #e8f5e9; border: 1px solid #a5d6a7; padding: 16px 20px; border-radius: 8px; margin: 20px 0; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #bdbdbd; border-radius: 8px; padding: 24px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 0.9em; color: #555; flex-wrap: wrap; gap: 8px; }
+  .ph-file { font-family: monospace; font-size: 0.82em; color: #00796b; background: #e0f2f1; padding: 2px 8px; border-radius: 4px; }
+  .prompt-text { background: #fff; border: 1px solid #e0e0e0; border-radius: 4px; padding: 12px; font-size: 0.83em; color: #444; white-space: pre-wrap; margin: 0 0 12px 0; line-height: 1.6; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 8px 18px; border-radius: 5px; cursor: pointer; font-size: 0.88em; }
+  .copy-btn:hover { background: #005a4e; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 10px; font-style: italic; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tags { margin: 20px 0; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>담양 메타세쿼이아길과 죽녹원·관방제림, 한여름 숲 그늘 걷기 코스</h1>
+
+<div class="intro-box">
+  8월 폭염이 절정을 이루는 이 시기, 30도를 훌쩍 넘는 더위 속에서도 시원한 숲길을 걸을 수 있는 곳이 있습니다. 전남 담양은 <strong>메타세쿼이아 가로수길</strong>과 <strong>죽녹원 대나무 숲</strong>, 그리고 천연기념물 <strong>관방제림</strong>이 한데 모여 있어 한여름 cool-escape 명소로 손꼽힙니다. 높이 30m 이상 메타세쿼이아 나무들이 만드는 하늘을 가리는 초록 터널, 죽죽 뻗은 대나무 사이로 스며드는 청량한 바람, 수백 년 된 제방 나무들의 그늘까지 — 도심의 찜통 더위를 잊게 해 줄 담양 여름 숲길 코스를 안내해 드립니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260805/1_damyang_metasequoia_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-1">A stunning summer scene in Damyang, South Korea, featuring a long avenue of towering metasequoia trees forming a green tunnel overhead. The trees, reaching 30 meters tall, create a cathedral-like canopy with dappled sunlight filtering through the lush foliage. A paved walking path stretches into the distance with visitors strolling underneath. The air feels cool and refreshing despite the summer heat. Rich emerald greens, deep forest shadows and shafts of golden light create a magical atmosphere. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">하늘을 뒤덮은 담양 메타세쿼이아 가로수길의 여름 풍경 / AI 제작 이미지</div>
+</div>
+
+<h2>01. 담양 메타세쿼이아길, 8월에 가야 하는 이유</h2>
+
+담양의 메타세쿼이아 가로수길은 봄·가을에 유독 많이 알려져 있지만, 사실 <strong>여름이야말로 이 길의 진가가 드러나는 계절</strong>입니다. 나뭇잎이 가장 풍성하게 자라 하늘을 완전히 가려 주는 시기가 바로 7~8월이기 때문입니다.<br><br>
+
+실제로 메타세쿼이아 가로수길 아래 기온은 인근 담양 시내보다 평균 4~5도 낮다고 알려져 있습니다. 수십 그루의 메타세쿼이아가 만드는 그늘이 자연 에어컨 역할을 해 주기 때문입니다. 그늘 속 산책로에서는 시원한 바람이 느껴지고, 눈을 들면 초록빛 터널이 끝없이 이어지는 장관이 펼쳐집니다.<br><br>
+
+죽녹원 대나무 숲 역시 여름에 방문할 때 체감 온도 차이가 큽니다. 촘촘하게 자란 대나무들 사이로 들어서면 직사광선이 차단되고, 대나무 고유의 수분 증산 효과로 인해 일반 야외보다 시원한 느낌을 줍니다. 모든 것이 초록색인 대나무 숲 속을 걸으면 눈의 피로도 풀리고, 여름 불쾌지수도 한결 낮아집니다.<br><br>
+
+관방제림의 오래된 수목들도 마찬가지입니다. 200~400년 된 팽나무와 개서어나무, 느티나무 등이 담양천 제방을 따라 늘어서 자연스러운 터널 그늘을 만들어 줍니다. 이 세 곳을 하루에 묶어 걷는 코스를 소개합니다.
+
+<h2>02. 메타세쿼이아 수목원 기본 정보와 입장료</h2>
+
+담양 메타세쿼이아 관련 명소는 크게 두 곳으로 나뉩니다. 하나는 <strong>메타세쿼이아 수목원(메타프로방스 인근)</strong>이고, 다른 하나는 국도변의 <strong>메타세쿼이아 가로수길</strong>입니다.<br><br>
+
+<table class="info-table">
+  <tr><td style="font-weight:700; width:35%">위치</td><td>전남 담양군 담양읍 메타세쿼이아로 12 일대</td></tr>
+  <tr><td style="font-weight:700">입장료</td><td>성인 2,000원 / 청소년·어린이 1,000원 (공식 홈 재확인 권장)</td></tr>
+  <tr><td style="font-weight:700">운영시간</td><td>09:00~18:00 (계절별 변동 — 방문 전 담양군청 공식 홈 확인)</td></tr>
+  <tr><td style="font-weight:700">주차</td><td>수목원 인근 공영주차장 이용 (유료, 소형 시간당 약 1,000원)</td></tr>
+  <tr><td style="font-weight:700">소요 시간</td><td>가로수길 왕복 약 60~90분, 수목원 내부 30분</td></tr>
+</table>
+
+메타세쿼이아 <strong>가로수길 구간</strong>은 국도 24호선 변에 위치하며, 전체 길이가 약 8.5km에 달합니다. 이 중 대부분이 걸을 수 있는 산책로와 자전거길로 정비되어 있습니다. 걷는 것이 부담스럽다면 가로수길 초입부만 왕복해도 충분한 사진 명소를 즐길 수 있습니다.<br><br>
+
+봄가을에는 인파가 몰려 주차 전쟁이 벌어지지만, 여름에는 상대적으로 방문객이 적어 여유롭게 즐길 수 있다는 것도 8월 방문의 장점 중 하나입니다. 주말에도 비교적 붐비지 않아 천천히 나만의 사진을 담을 수 있습니다.
+
+<h2>03. 죽녹원 대나무 숲 — 무더위를 피하는 최고의 산책</h2>
+
+죽녹원은 담양을 대표하는 관광 명소로, 약 31만㎡ 부지에 울창한 대나무 숲이 조성되어 있습니다. <strong>담양천 제방을 따라 이어지는 산책로</strong>와 대나무 숲길이 총 2.2km 코스로 연결되어 있어 약 1시간 정도면 여유롭게 한 바퀴를 돌 수 있습니다.<br><br>
+
+<table class="info-table">
+  <tr><td style="font-weight:700; width:35%">위치</td><td>전남 담양군 담양읍 죽향로 316</td></tr>
+  <tr><td style="font-weight:700">입장료</td><td>성인 3,000원 / 청소년 1,500원 / 어린이 1,000원 (공식 홈 재확인)</td></tr>
+  <tr><td style="font-weight:700">운영시간</td><td>09:00~18:00 (하절기 연장 가능 — 공식 홈 확인)</td></tr>
+  <tr><td style="font-weight:700">산책 코스</td><td>운수대통길·죽마고우길·철학자의길 등 8개 테마길</td></tr>
+  <tr><td style="font-weight:700">주차</td><td>죽녹원 제1·2주차장 이용</td></tr>
+</table>
+
+죽녹원 내부의 8개 테마길 중 <strong>운수대통길</strong>이 가장 인기 있습니다. 대나무가 가장 촘촘하게 우거진 구간으로, 살랑거리는 대나무 잎 소리와 서늘한 기운이 함께 느껴집니다. 아침 일찍 방문하면 대나무 잎 사이로 스며드는 빛줄기가 아름다운 사진 연출이 가능합니다.<br><br>
+
+대나무는 증산 작용이 활발해 주변 공기를 냉각시키는 효과가 있습니다. 한여름에도 죽녹원 내부 온도는 외부보다 체감상 3~4도 낮게 느껴진다는 방문객이 많습니다. 에어컨 없이도 시원한 자연의 쉼터를 경험하고 싶으신 분께 강력히 추천합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260805/1_damyang_metasequoia_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-2">A serene bamboo forest walkway inside Juknokwon (Bamboo Garden) in Damyang, South Korea, photographed in summer. Towering bamboo stalks create a dense green canopy overhead, filtering soft morning light into a cool, tranquil atmosphere. The narrow stone pathway winds through the bamboo, with dappled shadows and patches of sunlight on the ground. Visitors enjoy a peaceful stroll through the living green tunnel. Fresh, lush and naturally cool ambiance with sounds of rustling bamboo leaves. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">죽녹원 대나무 숲 산책로의 시원한 여름 풍경 / AI 제작 이미지</div>
+</div>
+
+<h2>04. 관방제림 2km 제방 숲길 — 천연기념물 그늘 아래 걷기</h2>
+
+관방제림은 죽녹원에서 도보 10분 거리에 있는 <strong>천연기념물 제366호</strong>의 역사적인 제방 숲입니다. 담양천을 따라 약 2km 구간에 수령 200~400년 된 나무들이 늘어서 있어 거대한 자연 터널을 이루고 있습니다.<br><br>
+
+총 185그루의 팽나무, 개서어나무, 느티나무, 벚나무, 갈참나무 등이 제방을 따라 자연스럽게 성장해 있습니다. 이 나무들은 조선 인조 26년(1648년) 홍수 피해를 막기 위해 제방을 쌓고 심은 것으로, 그 역사가 약 370여 년에 달합니다.<br><br>
+
+관방제림 산책은 별도 입장료 없이 무료로 이용할 수 있습니다. 담양천 수변과 함께 이어지는 제방길을 걸으면서 거대한 고목들이 만들어내는 짙은 그늘 아래를 산책할 수 있습니다. 나무 사이 벤치에 앉아 담양천 물소리를 들으며 쉬어가는 것도 여름 여행의 낭만입니다.<br><br>
+
+관방제림 산책로는 포장이 잘 되어 있어 유모차나 휠체어도 접근하기 쉽습니다. 죽녹원 → 관방제림을 연결해 걷는 코스는 총 3~4km 수준으로, 가볍게 2~3시간이면 충분히 여유롭게 즐길 수 있습니다.
+
+<h2>05. 담양 세 곳 묶어 하루 코스 짜는 법</h2>
+
+담양의 메타세쿼이아길, 죽녹원, 관방제림을 하루에 모두 즐기려면 이동 동선을 잘 짜는 것이 중요합니다. 아래 추천 동선을 참고해 보세요.<br><br>
+
+<div class="step-box">
+  <strong>📍 추천 당일 코스 (약 5~6시간)</strong><br><br>
+  오전 9시 — 메타세쿼이아 가로수길 도착 (아침 방문 시 빛이 아름다워 사진 최적)<br>
+  → 약 60~90분 산책 및 사진 촬영<br>
+  오전 10시 30분 — 죽녹원 입장 (약 1~1.5시간 산책)<br>
+  정오 — 담양 맛집에서 점심 (대통밥·떡갈비 추천)<br>
+  오후 1시 30분 — 관방제림 산책 (약 40~60분, 무료)<br>
+  오후 2시 30분 이후 — 귀가 또는 담양 시내 카페 휴식
+</div>
+
+세 명소가 모두 담양읍 중심부에 모여 있어 자동차 이동 시 5~10분 내에 이동이 가능합니다. 주차는 각 명소 별 공영주차장을 이용하거나, 관방제림 근처 무료 주차 공간을 먼저 확보한 뒤 도보 이동하는 것도 방법입니다.<br><br>
+
+여름 방문 시 오전 일찍 출발하는 것을 권장합니다. 오후 1~3시는 햇볕이 가장 강한 시간대라 숲길이어도 체력 소모가 큽니다. 오전 9~11시 사이에 메타세쿼이아길과 죽녹원을 끝내고, 가장 그늘이 짙은 관방제림에서 한낮의 더위를 식히는 패턴이 이상적입니다.
+
+<h2>06. 담양 맛집 — 대통밥과 떡갈비의 성지</h2>
+
+담양은 대나무 음식과 떡갈비로 유명한 미식의 고장이기도 합니다. 죽녹원 근처와 담양읍 중심부에 수십 년 전통을 이어온 맛집들이 밀집해 있습니다.<br><br>
+
+<strong>대통밥</strong>은 대나무 통 속에 쌀과 잡곡, 은행, 밤, 대추, 잣 등을 넣어 찐 담양의 대표 향토 음식입니다. 대나무 향이 은은하게 배어 일반 쌀밥과는 다른 풍미가 느껴집니다. 죽녹원 입구 주변 식당들에서 대부분 취급하고 있습니다.<br><br>
+
+<strong>떡갈비</strong>는 담양이 발원지로 꼽히는 향토 음식입니다. 소고기를 갈아 갈비뼈에 붙여 구운 것으로, 부드러운 식감과 진한 간장 양념이 특징입니다. 죽녹원 인근의 여러 식당에서 1만 원대 초중반 수준의 가격으로 즐길 수 있습니다.<br><br>
+
+점심 시간대에는 방문객이 몰려 대기가 생길 수 있으므로, 오전 11시 30분 전후로 미리 식당을 방문하거나, 관방제림 산책 후 오후 1시 이후 방문하는 것이 쾌적합니다.
+
+<h2>07. 담양 주차장과 교통 이용법</h2>
+
+<strong>자가용 이용 시:</strong><br>
+광주광역시에서 담양까지는 약 30분 내외로 접근이 쉽습니다. 서울에서는 고속도로를 이용해 약 2시간 30분~3시간이 소요됩니다. 광주-담양 간 국도를 이용하면 메타세쿼이아 가로수길 구간이 바로 이어지기 때문에 드라이브 코스로도 인기입니다.<br><br>
+
+<strong>대중교통 이용 시:</strong><br>
+광주 버스터미널에서 담양행 농어촌버스를 이용할 수 있습니다. 약 40~50분 소요되며 배차 간격은 약 20~30분입니다. 담양군 교통정보 홈페이지에서 최신 버스 시간표를 확인하는 것을 추천합니다.<br><br>
+
+<strong>주차 팁:</strong><br>
+주말에는 죽녹원 제1주차장이 일찍 만차가 됩니다. 제2주차장이나 관방제림 인근 공영주차장을 이용하면 도보 10분 이내로 이동이 가능합니다. 성수기에는 주차 요원의 안내를 따라 주차장을 배정받는 방식으로 운영되기도 합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260805/1_damyang_metasequoia_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-3">Gwanbangjerim historic riparian forest in Damyang, South Korea, showing ancient zelkova and hackberry trees hundreds of years old lining a traditional embankment path along the Damyang stream. The massive gnarled trunks with sprawling canopy create deep natural shade over the stone walkway. A peaceful summer afternoon with golden-green light filtering through the dense foliage, families and couples strolling leisurely beneath the historic trees. Lush riverbank vegetation and reflections on the calm water visible through the trees. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">담양 관방제림의 수백 년 된 고목들이 만드는 천연 그늘 산책로 / AI 제작 이미지</div>
+</div>
+
+<h2>08. 여름 담양 방문 전 알아두면 좋은 팁</h2>
+
+<div class="tip-box">
+  <strong>✅ 담양 여름 방문 체크리스트</strong><br><br>
+  🌿 <strong>복장</strong>: 편한 운동화 필수. 죽녹원 내부는 돌길이 있어 슬리퍼는 불편합니다.<br>
+  💧 <strong>물</strong>: 충분한 음료 준비. 죽녹원과 관방제림 내부에 매점이 없거나 제한적입니다.<br>
+  ☀️ <strong>시간</strong>: 오전 일찍 방문 추천 (오후 1~3시 피크 시간대 회피).<br>
+  🦟 <strong>모기</strong>: 숲길 특성상 모기가 많을 수 있으니 기피제 준비를 권장합니다.<br>
+  📸 <strong>사진</strong>: 역광이 아름다운 아침 8~9시, 또는 오후 5시 이후 방문 시 빛이 좋습니다.<br>
+  🅿️ <strong>주차</strong>: 주말·연휴에는 오전 9시 이전 도착이 여유로운 주차를 보장합니다.
+</div>
+
+담양 방문 시 하루 코스가 물리적으로 여유롭다면 <strong>메타프로방스 쇼핑 아울렛</strong>도 함께 들르는 관광객이 많습니다. 메타세쿼이아 수목원과 인접해 있어 쇼핑과 자연 산책을 한 번에 즐길 수 있습니다.<br><br>
+
+또한 담양은 전남의 중심부에 위치해 순천, 나주, 광주와 인접합니다. 담양을 베이스캠프로 삼아 인근 지역을 함께 여행하는 2박 3일 코스도 인기입니다. 특히 여름철 담양→보성 녹차밭→광양 방문을 묶는 전남 서부 투어도 고려해 볼 만합니다.
+
+<h2>09. 담양의 여름 날씨와 준비물 총정리</h2>
+
+8월 담양의 평균 최고 기온은 30~33도 수준입니다. 내륙 분지 지형 특성상 도심은 꽤 덥지만, 메타세쿼이아길·죽녹원·관방제림은 숲 내부 기온이 체감상 4~5도 낮아 시원하게 산책을 즐길 수 있습니다.<br><br>
+
+단, 숲길 구간 외 이동 중에는 뙤약볕을 피하기 어렵습니다. 이동 시 모자, 자외선 차단제, 충분한 수분 섭취를 챙기는 것이 중요합니다. 특히 어르신이나 어린이와 함께 방문할 경우, 충분한 휴식 시간과 그늘 확보를 미리 계획해 두는 것이 좋습니다.<br><br>
+
+가끔 8월에는 남쪽에서 오는 열대 폭우가 짧게 지나가기도 합니다. 간단한 우산이나 우비를 챙기면 갑작스러운 소나기에도 대응할 수 있습니다. 담양 공식 관광 홈페이지나 기상청 앱을 통해 방문 전날 날씨를 미리 확인해 두세요.
+
+<h2>10. 담양을 더 깊이 즐기는 이색 코스</h2>
+
+담양에는 유명한 세 명소 외에도 숨은 볼거리가 있습니다. 시간 여유가 생기면 아래 장소들도 함께 고려해 보세요.<br><br>
+
+<strong>소쇄원(瀟灑園)</strong>: 조선 중기의 대표적 민간 원림. 계절별로 다른 매력이 있고 여름에는 초록빛이 절정을 이룹니다. 담양읍에서 차로 약 15분 거리에 있습니다.<br><br>
+
+<strong>식영정·환벽당</strong>: 담양호 인근에 위치한 정자들로, 호수와 산이 어우러진 풍경이 아름답습니다. 소쇄원과 묶어 방문하는 코스가 일반적입니다.<br><br>
+
+<strong>추월산 편백숲</strong>: 담양군 용면에 있는 편백 조림지로, 피톤치드가 풍부한 여름 트레킹 코스입니다. 죽녹원과 분위기가 다른 또 다른 숲 체험이 가능합니다.<br><br>
+
+담양은 한 번 방문으로 끝내기보다 계절을 바꿔가며 오는 재방문율이 높은 곳입니다. 봄의 벚꽃과 유채, 가을의 단풍과 억새, 그리고 여름의 초록 숲터널까지 — 사계절 모두 다른 담양을 만날 수 있습니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260804/travel_waterpark_summer_compare.html">캐리비안베이·오션월드·스파랜드 여름 워터파크 어디 갈까</a></li>
+    <li><a href="../260804/local_luggage_storage_travel.html">여행 중 짐 맡기기 — 기차역·버스터미널·스마트락커 요금과 이용법</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#담양여행</span>
+  <span class="tag">#메타세쿼이아길</span>
+  <span class="tag">#죽녹원</span>
+  <span class="tag">#관방제림</span>
+  <span class="tag">#담양당일치기</span>
+  <span class="tag">#여름여행</span>
+  <span class="tag">#전남여행</span>
+  <span class="tag">#담양맛집</span>
+  <span class="tag">#숲그늘산책</span>
+  <span class="tag">#여름폭염피서</span>
+</div>
+
+</body>
+</html>

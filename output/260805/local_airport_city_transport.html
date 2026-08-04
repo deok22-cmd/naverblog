@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>공항에서 시내까지 — 인천·김포·김해·제주 공항별 교통 총정리</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #2e7d32; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #2e7d32; }
+  .intro-box { background: #f9fdf9; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table td { padding: 10px 12px; border: 1px solid #ddd; font-size: 0.95em; vertical-align: top; }
+  .info-table th { padding: 10px 12px; border: 1px solid #ddd; font-size: 0.9em; background: #388e3c; color: #fff; text-align: left; }
+  .info-table tr:nth-child(odd) td { background: #f1faf3; }
+  .info-table tr:nth-child(even) td { background: #fff; }
+  .tip-box { background: #e8f5e9; border: 1px solid #a5d6a7; padding: 16px 20px; border-radius: 8px; margin: 20px 0; }
+  .warn-box { background: #fff8e1; border: 1px solid #ffe082; padding: 16px 20px; border-radius: 8px; margin: 20px 0; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #bdbdbd; border-radius: 8px; padding: 24px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 0.9em; color: #555; flex-wrap: wrap; gap: 8px; }
+  .ph-file { font-family: monospace; font-size: 0.82em; color: #388e3c; background: #e8f5e9; padding: 2px 8px; border-radius: 4px; }
+  .prompt-text { background: #fff; border: 1px solid #e0e0e0; border-radius: 4px; padding: 12px; font-size: 0.83em; color: #444; white-space: pre-wrap; margin: 0 0 12px 0; line-height: 1.6; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 8px 18px; border-radius: 5px; cursor: pointer; font-size: 0.88em; }
+  .copy-btn:hover { background: #1b5e20; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 10px; font-style: italic; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tags { margin: 20px 0; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .airport-section { background: #f9fdf9; border: 1px solid #c8e6c9; padding: 16px 20px; border-radius: 8px; margin: 20px 0; }
+  .badge { display: inline-block; font-size: 0.78em; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-right: 6px; }
+  .badge-fast { background: #e3f2fd; color: #0d47a1; }
+  .badge-cheap { background: #f3e5f5; color: #6a1b9a; }
+  .badge-luggage { background: #fff3e0; color: #e65100; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>공항에서 시내까지 — 인천·김포·김해·제주 공항별 교통 총정리</h1>
+
+<div class="intro-box">
+  비행기에서 내린 다음 낯선 공항에서 짐을 끌고 어디로 가야 할지 몰라 당황한 적 있으신가요? <strong>인천공항, 김포공항, 김해공항, 제주공항</strong>별로 시내까지 연결되는 교통수단과 실제 소요 시간, 요금, 장단점을 한 곳에 정리했습니다. 짐이 많을 때, 새벽 도착일 때, 일행이 여럿일 때 어떤 교통수단이 유리한지도 함께 안내해드립니다.
+</div>
+
+<h2>01. 인천국제공항 → 서울 시내</h2>
+
+인천공항에서 서울 도심까지는 약 50~70km 거리입니다. 교통 수단이 다양하지만 목적지와 짐 양에 따라 최적 선택이 달라집니다.
+
+<div class="airport-section">
+  <strong>🚄 공항철도(AREX) — 가장 많이 쓰는 방법</strong><br><br>
+  <table class="info-table">
+    <tr><th>구분</th><th>직통 열차</th><th>일반 열차</th></tr>
+    <tr><td>소요 시간</td><td>서울역까지 약 43분</td><td>서울역까지 약 66분</td></tr>
+    <tr><td>요금</td><td>약 9,500원 (공식 홈 확인)</td><td>약 4,150원 (공식 홈 확인)</td></tr>
+    <tr><td>출발 간격</td><td>30~60분 간격</td><td>5~10분 간격</td></tr>
+    <tr><td>장점</td><td>빠름, 짐 칸 넉넉</td><td>저렴, 환승 가능</td></tr>
+    <tr><td>단점</td><td>출발 시각 맞추기 필요</td><td>승환乘 수가 많을 수 있음</td></tr>
+  </table>
+  서울역에서 1호선·4호선 환승 가능. 연착이 잦은 비행 후에는 일반 열차 쪽이 간격이 짧아 대기가 덜합니다.
+</div>
+
+<div class="airport-section">
+  <strong>🚌 공항 리무진 버스 — 짐 많을 때 편리</strong><br><br>
+  서울 각지(강남, 강서, 홍대, 잠실 등)로 직행하는 리무진 버스가 운행됩니다. 짐을 버스 하부 트렁크에 실을 수 있어 대형 캐리어를 가진 여행자에게 유리합니다. 요금은 노선마다 다르며 보통 1만5천~2만원 내외입니다. 소요 시간은 교통 상황에 따라 1시간30분~2시간 이상 걸릴 수 있습니다.<br><br>
+  <span class="badge badge-luggage">짐 많을 때 추천</span> 단, 출퇴근 시간대 교통 정체 구간이 있어 저녁 귀국 시 예상보다 늦어질 수 있습니다.
+</div>
+
+<div class="airport-section">
+  <strong>🚕 택시·카카오T</strong><br><br>
+  인천공항 → 서울 도심 기준 일반 택시 약 6~8만원, 카카오T 또는 UT 앱으로 예상 요금 확인 후 예약 가능합니다. 인원이 3~4명일 경우 철도보다 비용 차이가 줄어들어 현실적인 선택이 됩니다. 심야·새벽 시간대에는 할증이 적용됩니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260805/4_airport_transport_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-1">Incheon International Airport interior, South Korea. A wide, modern concourse with high ceilings and large windows showing aircraft outside. Travelers with luggage walk toward signage pointing to the AREX (Airport Railroad) exit and bus terminal. Clear directional signs in Korean and English overhead. The atmosphere is busy but organized, with natural light streaming through the terminal. Photorealistic, ultra high detail, wide-angle view, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">인천국제공항 철도·버스 안내 표지판 / AI 제작 이미지</div>
+</div>
+
+<h2>02. 김포국제공항 → 서울 시내</h2>
+
+김포공항은 서울 강서구에 위치해 인천공항보다 시내 접근이 훨씬 빠릅니다. 제주·부산·광주·김해 등 국내선을 이용했을 때 도착하는 공항입니다.
+
+<div class="airport-section">
+  <strong>🚇 지하철 5호선·9호선·공항철도</strong><br><br>
+  김포공항역은 지하철 5호선, 9호선, 공항철도(AREX)가 모두 정차하는 편리한 교통 거점입니다.<br><br>
+  <table class="info-table">
+    <tr><th>노선</th><th>방향</th><th>소요 시간</th></tr>
+    <tr><td>5호선</td><td>여의도·광화문 방면</td><td>여의도까지 약 20분</td></tr>
+    <tr><td>9호선</td><td>강남·잠실 방면</td><td>고속터미널까지 약 30분</td></tr>
+    <tr><td>공항철도</td><td>홍대입구·서울역 방면</td><td>서울역까지 약 30분</td></tr>
+  </table>
+  <span class="badge badge-cheap">저렴하게 이동</span> 대부분 30분 이내로 시내 핵심 지점에 닿을 수 있어 짐이 적다면 지하철이 가장 효율적입니다.
+</div>
+
+<h2>03. 김해국제공항 → 부산 시내</h2>
+
+부산 여행의 시작점인 김해공항은 부산 강서구에 위치합니다. 가볍게 보이지만 부산역까지 직행 교통수단 연결이 잘 되어 있습니다.
+
+<div class="airport-section">
+  <strong>🚄 부산김해경전철(BGL)</strong><br><br>
+  김해공항에서 사상역까지 경전철로 약 20분 소요. 사상역에서 지하철 2호선 환승 후 서면·해운대 방면 이동이 가능합니다. 사상역에서 지하철로 서면까지 추가 약 10분. 총 30~40분이면 부산 시내 주요 지점 도달 가능.<br><br>
+  요금은 경전철+지하철 환승 합산 기준으로 교통카드 이용 시 약 2,000원대입니다.
+</div>
+
+<div class="airport-section">
+  <strong>🚌 공항버스 / 택시</strong><br><br>
+  해운대·광안리 방면 직행 공항 리무진 버스가 운행됩니다. 해운대까지 버스 약 50분~1시간 소요. 택시는 해운대 기준 약 3~4만원대 (미터 요금, 공식 운임 확인 필수).
+</div>
+
+<h2>04. 제주국제공항 → 제주 시내·주요 관광지</h2>
+
+제주공항은 제주시에 위치합니다. 제주에는 지하철이 없어 버스나 렌터카·택시가 주요 이동 수단입니다.
+
+<div class="airport-section">
+  <strong>🚌 시내버스(100번·110번·111번 등) — 가장 저렴</strong><br><br>
+  제주공항 1층 버스 정류장에서 제주 시내 및 서귀포 방면 버스가 출발합니다. 요금은 버스 종류에 따라 1,300원~5,000원 수준(교통카드 기준). 제주 시내(탑동·제주항)까지는 약 20분 내외입니다.<br><br>
+  서귀포까지 리무진 버스(600번대)는 약 1시간 소요. 렌터카 없이 제주 여행 시 버스 노선을 미리 파악하는 것이 중요합니다.
+</div>
+
+<div class="airport-section">
+  <strong>🚗 렌터카 — 제주 여행의 표준</strong><br><br>
+  제주는 대중교통이 불편한 곳이 많아 렌터카를 이용하는 여행자가 대다수입니다. 공항 인근 렌터카 업체들이 공항 셔틀을 운영합니다. 성수기에는 사전 예약이 필수이며, 여름 휴가철(7~8월) 주말에는 렌터카 수요가 급증해 당일 현장 예약이 어려울 수 있습니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260805/4_airport_transport_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-2">Jeju International Airport exterior bus terminal area in South Korea. A row of colorful local buses and airport limousine buses lined up at a modern bus stop area. Travelers with luggage boards buses in warm summer sunshine. Distinctive Jeju landscape with volcanic rock walls and palm trees visible in the background. Clean, well-organized transportation hub with bilingual Korean and English signs. Photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">제주국제공항 버스 정류장 / AI 제작 이미지</div>
+</div>
+
+<h2>05. 상황별 교통수단 선택 기준</h2>
+
+<table class="info-table">
+  <tr>
+    <th>상황</th>
+    <th>추천 교통수단</th>
+    <th>이유</th>
+  </tr>
+  <tr>
+    <td>짐이 캐리어 2개 이상</td>
+    <td>리무진 버스 또는 택시</td>
+    <td>하부 짐칸 적재, 이동 편의성</td>
+  </tr>
+  <tr>
+    <td>비용을 최대한 줄이고 싶을 때</td>
+    <td>지하철·일반 공항철도</td>
+    <td>가장 저렴한 고정 요금</td>
+  </tr>
+  <tr>
+    <td>3~4인 일행</td>
+    <td>택시 또는 카카오T</td>
+    <td>인원 나누면 1인당 비용이 철도와 비슷</td>
+  </tr>
+  <tr>
+    <td>새벽 또는 심야 도착</td>
+    <td>택시 (심야 할증 주의) 또는 공항철도</td>
+    <td>리무진 버스 막차 이후 시간대</td>
+  </tr>
+  <tr>
+    <td>목적지가 지하철과 멀 때</td>
+    <td>리무진 버스 (직행 노선) 또는 택시</td>
+    <td>환승 없이 목적지 근처 하차</td>
+  </tr>
+</table>
+
+<h2>06. 각 공항 교통수단 한눈에 비교</h2>
+
+<table class="info-table">
+  <tr>
+    <th>공항</th>
+    <th>최빠른 방법</th>
+    <th>최저렴 방법</th>
+    <th>짐 많을 때</th>
+  </tr>
+  <tr>
+    <td><strong>인천</strong></td>
+    <td>AREX 직통 (43분)</td>
+    <td>AREX 일반 (4,150원)</td>
+    <td>리무진 버스·택시</td>
+  </tr>
+  <tr>
+    <td><strong>김포</strong></td>
+    <td>9호선 급행 (30분)</td>
+    <td>지하철 (1,500원대)</td>
+    <td>택시 (시내 가까워 부담 적음)</td>
+  </tr>
+  <tr>
+    <td><strong>김해</strong></td>
+    <td>경전철+2호선 (30~40분)</td>
+    <td>경전철+지하철 (2,000원대)</td>
+    <td>해운대 방면 직행 버스</td>
+  </tr>
+  <tr>
+    <td><strong>제주</strong></td>
+    <td>택시 (제주 시내 15분)</td>
+    <td>시내버스 (1,300원~)</td>
+    <td>렌터카 또는 택시</td>
+  </tr>
+</table>
+
+<h2>07. 공항버스 노선 확인하는 법</h2>
+
+공항 리무진 버스 노선과 시간표는 아래 방법으로 확인할 수 있습니다.<br><br>
+
+<strong>인천공항:</strong> 공항버스 안내 홈페이지(airportlimousine.co.kr)에서 목적지 입력 시 노선 조회 가능. 1층(T1) 또는 B1층(T2) 버스 정류장에서 직접 탑승.<br><br>
+
+<strong>김포공항:</strong> 1층 국내선 버스 정류장. 서울 각 구 방면 버스 노선이 다양하게 있습니다.<br><br>
+
+<strong>김해공항:</strong> 1층 국제선 도착 로비 앞 버스 정류장. 해운대·경주 방면 직행 버스 운행.<br><br>
+
+<strong>제주공항:</strong> 1층 버스 정류장. 서귀포 방면 리무진 600번, 동부(성산) 방면 800번 등이 주요 노선입니다.
+
+<h2>08. 대중교통 앱과 사전 준비</h2>
+
+<div class="tip-box">
+  <strong>✅ 공항 교통 사전 준비 체크리스트</strong><br><br>
+  📱 <strong>교통카드 충전</strong>: T머니·캐시비 등 선불 교통카드 미리 충전. 티머니는 편의점에서도 충전 가능.<br>
+  🗺 <strong>네이버 지도·카카오맵</strong>: 목적지 입력 시 대중교통 경로 안내 기능 활용.<br>
+  🚕 <strong>카카오T 앱</strong>: 도착 전 앱 설치·로그인 완료 후 공항 도착 즉시 호출 가능.<br>
+  🌙 <strong>심야 도착 시</strong>: 리무진 버스 막차 시각 사전 확인 필수 (보통 자정 전후).<br>
+  🧳 <strong>캐리어 무인 위탁 서비스</strong>: 인천공항 서울역에서 탑승 전 짐 체크인 가능 (항공사 확인).
+</div>
+
+<h2>09. 환전과 교통카드, 공항에서 뭘 먼저 해야 할까</h2>
+
+국내 여행자의 경우 공항 교통 이용에 교통카드(T머니, 캐시비)나 신용카드 교통 기능이 있다면 별도 환전 없이 바로 탑승이 가능합니다. 지하철·공항철도는 대부분 신용카드 직접 태그 결제가 가능합니다.<br><br>
+
+공항 리무진 버스는 교통카드 또는 현금 결제가 가능하나, 운전기사에게 목적지를 말하고 탑승하는 방식입니다. 잔돈을 거슬러주지 않는 버스 노선도 있으므로 잔돈 걱정이 없는 교통카드 이용을 추천합니다.<br><br>
+
+인천공항 내 환전소는 1층(도착층), 3층(출발층) 모두 있으나 환율은 시내 은행보다 불리할 수 있습니다. 해외 입국자의 경우 외화 환전 필요 시 출국 전 시내에서 환전하는 것이 유리합니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260804/local_luggage_storage_travel.html">기차역·버스터미널·공항 여행용 짐 보관 꿀팁</a></li>
+    <li><a href="../260805/travel_damyang_metasequoia.html">담양 메타세쿼이아길과 죽녹원·관방제림, 한여름 숲 그늘 걷기 코스</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#공항교통</span>
+  <span class="tag">#인천공항가는법</span>
+  <span class="tag">#김포공항지하철</span>
+  <span class="tag">#김해공항교통</span>
+  <span class="tag">#제주공항버스</span>
+  <span class="tag">#공항리무진</span>
+  <span class="tag">#AREX공항철도</span>
+  <span class="tag">#여행교통정보</span>
+  <span class="tag">#공항에서시내</span>
+  <span class="tag">#공항교통카드</span>
+</div>
+
+</body>
+</html>
