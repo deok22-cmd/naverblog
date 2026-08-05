@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1f8f1; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { padding: 10px 12px; border-bottom: 1px solid #e8f5e9; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #f9fdf9; border-radius: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .warn-box { background: #fff3e0; border: 1px solid #fb8c00; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #ccc; padding: 20px; border-radius: 8px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: .9em; color: #555; font-weight: 600; }
+  .ph-file { font-size: .8em; color: #888; font-family: monospace; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; padding: 12px; border-radius: 4px; font-size: .82em; color: #444; white-space: pre-wrap; line-height: 1.6; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; font-size: .85em; }
+  .img-caption { font-size: .9em; color: #666; margin-top: 10px; font-style: italic; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>자동차 번호판 재발급과 기호식 번호판 신청 절차, 필요서류 5분 정리</h1>
+
+<div class="intro-box">
+자동차 번호판이 파손되거나 도난당한 경우, 또는 새 번호 체계인 '기호식 번호판'으로 교체하고 싶을 때 어떻게 해야 할까요?<br><br>
+번호판 재발급은 많은 분들이 절차를 잘 몰라 막막해하는 행정 업무 중 하나입니다. 하지만 실제로는 필요 서류만 챙기면 자동차등록사업소(이전 명칭: 차량등록사업소)에서 당일 처리가 가능합니다.<br><br>
+이 글에서는 번호판 재발급이 필요한 주요 상황별 절차, 기호식 번호판 신청 방법, 필요 서류와 비용을 깔끔하게 정리합니다.
+</div>
+
+<h2>① 번호판 재발급이 필요한 경우</h2>
+
+자동차 번호판 재발급을 신청해야 하는 상황은 크게 다음과 같습니다.<br><br>
+<strong>파손·훼손</strong>: 번호판이 구겨지거나 글자가 식별되지 않을 정도로 손상된 경우입니다. 번호판 숫자나 한글이 육안으로 불분명하면 법적으로 운행이 어렵습니다.<br><br>
+<strong>도난·분실</strong>: 주차 중 번호판이 도난당한 경우입니다. 이 경우는 반드시 경찰서에 도난 신고부터 해야 하며, 도난 신고서(접수 확인증)가 재발급 필수 서류가 됩니다.<br><br>
+<strong>기호식 번호판으로 교체</strong>: 2019년 이후 신규 등록 차량에는 새 번호 체계(기호식, 예: 123가 4567 형식)가 적용되고 있으나, 구형 번호판 차량도 희망에 따라 신청 후 기호식으로 교체할 수 있습니다.<br><br>
+<strong>차량 이전·이사</strong>: 이사로 인해 거주지가 변경된 경우, 같은 지역 내에서는 번호판 변경 의무가 없지만, 이전 지역번호(예: 서울→경기)가 찍힌 번호판을 유지하는 것이 불편하다면 교체 신청도 가능합니다.
+
+<h2>② 일반 번호판 재발급 절차 (파손·훼손)</h2>
+
+<div class="step-box">
+<strong>Step 1. 사전 준비 서류</strong><br>
+• 자동차 등록증<br>
+• 신분증(운전면허증 또는 주민등록증)<br>
+• 기존 번호판 (파손된 번호판을 반납해야 하므로 반드시 지참)<br>
+• 본인 외 대리 신청 시: 위임장 + 위임자 및 대리인 신분증 사본
+</div>
+
+<div class="step-box">
+<strong>Step 2. 방문 장소</strong><br>
+거주지 관할 또는 차량 등록지 관할 <strong>자동차등록사업소</strong> 또는 <strong>차량등록서비스센터</strong><br>
+일부 지역은 전국 어느 등록 사업소에서도 처리 가능(전국 처리 여부는 사전 확인 필요)
+</div>
+
+<div class="step-box">
+<strong>Step 3. 현장 신청</strong><br>
+번호판 재교부 신청서 작성 → 서류 제출 → 수수료 납부 → 번호판 즉시 발급(당일)
+</div>
+
+<div class="step-box">
+<strong>Step 4. 번호판 부착</strong><br>
+현장에서 번호판을 부착해 주는 경우도 있고, 본인이 가져가서 직접 부착하는 경우도 있습니다. 볼트 조임 상태를 확인하고 운행 중 탈락하지 않도록 단단히 고정하세요.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260806/6_license_plate_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-1">Close-up of a Korean car license plate (번호판) in the new format "123가 4567" mounted on a white car bumper. Clean, crisp background, focus on the green-bordered reflective license plate with Korean characters and numbers clearly visible. Korean vehicle registration office building visible in the blurred background. Photorealistic, bright daylight, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">새 기호식 번호판이 부착된 차량 예시 / AI 제작 이미지</div>
+</div>
+
+<h2>③ 도난·분실 번호판 재발급 절차</h2>
+
+번호판이 도난당했다면 반드시 다음 순서로 진행해야 합니다.<br><br>
+<strong>①경찰서 도난 신고 (최우선)</strong>: 번호판 도난은 범죄 악용 가능성이 있으므로 즉시 경찰서 또는 지구대에 신고합니다. 신고 후 '도난 신고 접수 확인증(또는 도난 신고서)'을 발급받습니다.<br><br>
+<strong>②자동차등록사업소 방문</strong>: 도난 신고서, 자동차 등록증, 신분증을 지참해 방문합니다. 도난의 경우 기존 번호판을 반납하지 않아도 되므로 번호판 없이 방문해도 됩니다.<br><br>
+<strong>③재발급 신청 및 수령</strong>: 절차는 일반 재발급과 동일합니다. 도난 신고서를 제출하면 되며, 수수료가 일부 다를 수 있습니다.<br><br>
+
+<div class="warn-box">
+⚠️ 번호판 도난 후 신고 없이 운행하면 번호판 미부착 차량으로 단속 대상이 됩니다. 도난을 인지한 즉시 운행을 중단하고 신고 후 재발급을 받는 것이 원칙입니다.
+</div>
+
+<h2>④ 기호식 번호판이란</h2>
+
+기존 번호판은 '서울 12가 3456' 형식으로 지역명이 앞에 붙는 방식이었습니다. 2019년 9월부터는 지역명이 없는 <strong>'기호식 번호판'</strong>이 도입되어, 신규 등록 차량에는 '123가 4567' 형식의 번호판이 부여됩니다.<br><br>
+기호식 번호판의 특징:<br>
+• 지역명 표기 없음 → 이사 후 번호판 교체 불필요<br>
+• 세 자리 숫자 + 한글 + 네 자리 숫자 체계<br>
+• 도입 초기 흰색 바탕에 초록 테두리가 특징<br><br>
+구형 번호판 차량도 원할 경우 기호식으로 교체 신청이 가능합니다. 다만, 번호 자체가 바뀌므로 보험·차량등록 서류 등의 갱신이 필요합니다.
+
+<h2>⑤ 기호식 번호판 교체 신청 절차</h2>
+
+<div class="step-box">
+<strong>준비 서류</strong><br>
+• 자동차 등록증<br>
+• 신분증<br>
+• 기존 번호판(반납)<br>
+• 자동차 번호판 영치 해제 확인서 (해당되는 경우만)
+</div>
+
+<div class="step-box">
+<strong>신청 방법</strong><br>
+자동차등록사업소 방문 → 번호판 교체 신청서 작성 → 구형 번호판 반납 → 새 기호식 번호판 발급 및 부착
+</div>
+
+<div class="step-box">
+<strong>교체 후 처리 사항</strong><br>
+• 자동차 등록증의 번호 변경 반영(사업소에서 동시 처리)<br>
+• 자동차 보험 회사에 번호 변경 통보(중요 — 보험 번호 불일치 시 사고 처리 문제)<br>
+• 하이패스(Hi-Pass) 단말기 번호 갱신(영업소 방문 또는 앱에서 변경 가능)<br>
+• 건물 주차 등록, 공동주택 차량 등록 등 번호 갱신
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260806/6_license_plate_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-2">Korean vehicle registration office interior, government service counter with staff member helping a car owner. Documents spread on counter including car registration certificate. Clean, well-lit government office with Korean signage. Queue number display boards visible. Helpful civil servant assisting a customer with license plate renewal paperwork. Photorealistic, modern office environment, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">자동차등록사업소에서 번호판 재발급 신청 중인 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>⑥ 재발급 비용(수수료)</h2>
+
+번호판 재발급 수수료는 차량 종류와 재발급 사유에 따라 다릅니다. 아래는 일반적인 기준이며, 정확한 금액은 방문 전 관할 자동차등록사업소에 전화 확인하거나 정부24(www.gov.kr)에서 조회하는 것이 가장 정확합니다.<br><br>
+<strong>일반적인 수수료 범위</strong>: 번호판 1장당 약 6,000원~15,000원 수준으로 알려져 있습니다(앞판·뒷판 각각 별도 청구). 도난·분실의 경우 별도 사유 확인 수수료가 추가될 수 있습니다.<br><br>
+수수료는 현금 또는 카드로 납부할 수 있으며, 사업소별로 차이가 있을 수 있습니다.
+
+<h2>⑦ 온라인 처리 가능 여부</h2>
+
+번호판 재발급은 현재 온라인 전산 처리가 불가하며, 반드시 자동차등록사업소(또는 지정 서비스센터)를 <strong>직접 방문</strong>해야 합니다.<br><br>
+단, 다음 사전 작업은 온라인에서 가능합니다:<br>
+• 정부24(www.gov.kr)에서 관할 자동차등록사업소 위치 및 운영 시간 확인<br>
+• 일부 지역 자동차등록사업소의 경우 방문 예약 시스템 운영(확인 필요)<br><br>
+방문 전 필요 서류를 미리 확인하고 준비해 가는 것만으로도 방문 시간을 크게 줄일 수 있습니다.
+
+<h2>⑧ 번호판 재발급 FAQ</h2>
+
+<strong>Q. 번호판 한쪽만 파손됐어도 두 장 다 교체해야 하나요?</strong><br>
+A. 앞·뒤 번호판은 각각 독립적으로 교체 신청이 가능합니다. 한쪽만 파손된 경우 해당 번호판만 재발급받으면 됩니다.<br><br>
+<strong>Q. 다른 지역 자동차등록사업소에서도 신청 가능한가요?</strong><br>
+A. 일부 자동차등록사업소는 전국 처리가 가능하지만, 방문 전 전화로 확인하는 것이 안전합니다.<br><br>
+<strong>Q. 번호판이 없는 상태로 대중교통으로 이동해 사업소에 가도 되나요?</strong><br>
+A. 번호판이 없는 차량은 운행이 불가합니다. 렉카(견인차) 또는 임시번호판(시·군·구청 발급)을 받아 이동하는 방법을 검토하세요.<br><br>
+<strong>Q. 기호식 번호판으로 교체하면 보험료가 달라지나요?</strong><br>
+A. 번호 변경이 보험료 자체에 영향을 미치지는 않습니다. 다만 보험사에 번호 변경 통보는 반드시 해야 하며, 이 과정에서 계약 정보 업데이트만 이루어집니다.
+
+<h2>⑨ 핵심 요약 정리</h2>
+
+<div class="tip-box">
+✅ 파손·도난 시 → 자동차등록사업소 방문, 서류 지참, 당일 처리<br>
+✅ 도난 시 → 경찰서 신고 먼저, 도난 신고서 지참 필수<br>
+✅ 기호식 교체 → 구형 번호판 반납 + 보험·하이패스 번호 갱신 필수<br>
+✅ 수수료 → 사업소별 차이, 방문 전 전화 확인 권장<br>
+✅ 온라인 처리 불가 → 사업소 직접 방문만 가능
+</div>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260805/travel_cheongsong_juwangsan.html">청송 주왕산 폭포길과 주산지·달기약수탕, 늦여름 경북 계곡 트레킹</a></li>
+    <li><a href="../260805/travel_damyang_metasequoia.html">담양 메타세쿼이아길과 죽녹원·소쇄원, 전남 여름 초록 명소 하루 코스</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#번호판재발급</span>
+  <span class="tag">#자동차번호판교체</span>
+  <span class="tag">#기호식번호판</span>
+  <span class="tag">#번호판파손</span>
+  <span class="tag">#번호판도난</span>
+  <span class="tag">#자동차등록사업소</span>
+  <span class="tag">#번호판신청절차</span>
+  <span class="tag">#번호판재교부</span>
+  <span class="tag">#차량번호판변경</span>
+  <span class="tag">#번호판수수료</span>
+</div>
+
+</body>
+</html>

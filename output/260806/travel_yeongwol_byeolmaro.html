@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px 12px; text-align: left; font-size: .95em; }
+  .info-table td { padding: 10px 12px; border-bottom: 1px solid #e0f2f1; }
+  .step-box { border-left: 4px solid #00796b; padding: 15px 20px; background: #fff; border: 1px solid #e0f2f1; border-left-width: 4px; margin-bottom: 15px; border-radius: 4px; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #ccc; padding: 20px; border-radius: 8px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: .9em; color: #555; font-weight: 600; }
+  .ph-file { font-size: .8em; color: #888; font-family: monospace; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; padding: 12px; border-radius: 4px; font-size: .82em; color: #444; white-space: pre-wrap; line-height: 1.6; margin: 10px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; font-size: .85em; }
+  .img-caption { font-size: .9em; color: #666; margin-top: 10px; font-style: italic; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>영월 별마로천문대 야간관측 예약 방법과 한반도지형·청령포, 늦여름 강원 별밤 코스</h1>
+
+<div class="intro-box">
+강원도 영월은 국내에서 가장 별이 잘 보이는 지역으로 손꼽히는 곳입니다.<br><br>
+해발 799m 봉래산 정상에 자리한 <strong>별마로천문대</strong>는 도시의 불빛과 멀리 떨어진 청정한 환경 덕분에 은하수까지 육안으로 관찰할 수 있는 국내 최고 수준의 공공 천문대입니다.<br><br>
+낮에는 한반도 지형과 청령포에서 역사와 절경을 즐기고, 밤에는 은하수 아래 망원경으로 목성의 줄무늬까지 선명하게 바라보는 1박 2일 코스를 소개합니다.<br><br>
+야간관측은 예약 없이는 입장이 어려우니 미리 준비하고 떠나세요.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260806/1_yeongwol_byeolmaro_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-1">Aerial view of Byeolmaro Observatory on top of Bongnae Mountain in Yeongwol, South Korea, at night. Large dome-shaped telescope building glowing with interior light, surrounded by dense forest on a mountain ridge. The Milky Way stretches brilliantly across the dark sky above, with thousands of stars visible. A winding mountain road leads up to the observatory. Soft ambient lighting from the facility, photorealistic, ultra high detail, 1:1 aspect ratio, cinematic night photography.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">봉래산 정상의 별마로천문대와 은하수 / AI 제작 이미지</div>
+</div>
+
+<h2>① 별마로천문대란 어떤 곳인가요</h2>
+
+<strong>별마로천문대</strong>는 2001년 개관한 영월군립천문대로, 강원도 영월군 성산면 봉래산(해발 799m) 정상에 위치해 있습니다.<br><br>
+'별마로'라는 이름은 '별에 이르는 마루(꼭대기)'라는 뜻으로, 하늘과 가장 가까운 곳에서 별을 만난다는 의미를 담고 있습니다.<br><br>
+주관측실에는 지름 80cm 반사망원경이 설치되어 있으며, 이는 국내 공공 천문대 가운데 최대급에 속합니다. 이 망원경을 통해 목성의 줄무늬, 토성의 고리, 달의 분화구를 선명하게 볼 수 있습니다.<br><br>
+보조관측실에는 굴절·반사 등 다양한 보조 망원경이 배치되어 있어 다양한 천체를 동시에 관측할 수 있습니다. 관측을 도와주는 전문 해설사가 상주하여 행성의 이름, 별자리의 신화, 우주의 스케일을 친절하게 설명해 줍니다.<br><br>
+영월은 주변 50km 이내에 큰 도시가 없고 지형상 분지도 아니어서 인공 불빛의 영향이 최소화됩니다. 맑은 날이면 맨눈으로도 은하수가 뚜렷하게 관측될 만큼 밤하늘 환경이 탁월합니다.
+
+<h2>② 야간관측 예약하는 방법</h2>
+
+별마로천문대의 야간관측 프로그램은 <strong>사전 예약이 필수</strong>입니다. 주말과 방학 시즌에는 예약이 매우 빠르게 마감되므로 방문 2~3주 전에 예약을 완료하는 것이 좋습니다.<br><br>
+<strong>예약 방법</strong>은 공식 홈페이지(yao.or.kr)에서 온라인으로 진행합니다. 예약 오픈은 방문일 기준 2주 전 일요일 오전 10시에 열립니다. 예를 들어 8월 22일(토) 방문을 원한다면, 8월 9일(일) 오전 10시 정각에 접속해 예약을 시도하세요.<br><br>
+<strong>운영 요일</strong>: 화요일~일요일 (월요일 및 법정 공휴일 다음 날 휴관)<br><br>
+<strong>야간 프로그램</strong>은 저녁 8시부터 시작하며, 약 1~2시간 동안 진행됩니다. 관람 인원이 회차별로 제한되어 있어 빈자리가 생기는 경우가 드뭅니다.<br><br>
+<strong>입장 요금</strong>: 성인 10,000원, 청소년·군인 8,000원, 어린이 7,000원 수준입니다(공식 홈페이지에서 최신 요금 확인 필수). 주차장은 무료로 이용 가능합니다.<br><br>
+예약 후에는 방문 당일 최소 30분 전에 도착하는 것이 좋습니다. 산 정상까지 올라가는 산길이 좁아 서행이 필요하며, 해가 진 뒤에는 가로등이 거의 없어 밤 운전에 주의가 필요합니다.
+
+<h2>③ 낮 프로그램 — 천체투영실과 전시관</h2>
+
+별마로천문대는 야간관측만 있는 것이 아닙니다. 낮 시간에도 즐길 수 있는 다양한 프로그램이 운영되고 있습니다.<br><br>
+<strong>천체투영실</strong>은 반구형 스크린에 가상의 밤하늘을 투영해 실제 하늘에서 볼 수 없는 별자리와 은하를 실내에서 체험할 수 있는 공간입니다. 낮이나 흐린 날에도 풍성한 천문 경험을 할 수 있어 아이와 함께 방문한 가족 단위 여행객에게 특히 인기가 높습니다.<br><br>
+<strong>천문 전시관</strong>에는 태양계 모형, 우주 탐사 역사, 천체 사진 등이 전시되어 있으며 우주에 관한 다양한 퀴즈와 체험 시설도 마련되어 있습니다.<br><br>
+낮 프로그램 시간은 매시 정각부터 시작되며, 별마로천문대 공식 홈페이지에서 당일 운영 일정을 확인할 수 있습니다. 날씨가 흐리거나 비가 오는 날에는 야간관측이 취소될 수 있으므로, 방문 전날 기상 예보와 천문대 공지를 반드시 확인하세요.
+
+<h2>④ 한반도지형 — 기형적으로 닮은 절경</h2>
+
+영월 여행에서 빼놓을 수 없는 명소가 바로 <strong>한반도지형</strong>입니다. 행정 지명은 강원도 영월군 한반도면 선암리이며, 한반도 모양을 빼닮은 지형이 하늘에서 내려다보듯 펼쳐지는 곳입니다.<br><br>
+평창강이 S자로 굽이치며 만들어 낸 이 지형은 동해, 서해, 남해의 해안선을 연상케 하며 백두산, 태백산맥, 한라산까지 유사하게 이어지는 모습이 놀랍습니다. 지형지물이 한반도와 일치하는 정도가 80% 이상으로 알려져 있어, KBS·MBC 등 주요 방송에서도 여러 차례 소개된 바 있습니다.<br><br>
+<strong>전망대까지 가는 방법</strong>: 한반도지형 입구 주차장에 차를 세우고 약 15~20분 걷습니다. 포장된 오솔길이어서 슬리퍼보다는 운동화를 권장합니다.<br><br>
+전망대에서는 선암마을 아래로 시원하게 펼쳐지는 한반도 지형 전체를 한눈에 내려다볼 수 있습니다. 맑은 날 오전에는 물안개가 피어올라 더욱 몽환적인 풍경을 볼 수 있습니다. 일출 무렵 방문이 사진 촬영에 가장 유리합니다.<br><br>
+입장료는 무료이며, 주차요금은 별도 부과됩니다(현장 확인 필요).
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260806/1_yeongwol_byeolmaro_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-2">Aerial view of Korean peninsula-shaped terrain (Hanbando Jiyeong) in Yeongwol, South Korea. Pyongchang River curves in an S-shape around a peninsula of green forested hills that perfectly resembles the shape of the Korean Peninsula. Morning mist rises from the river, golden sunlight illuminating the landscape. Observation deck visible on a hilltop, photorealistic, ultra high detail, bird's eye view, drone photography style, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">평창강이 한반도 형태로 감싸 흐르는 영월 한반도지형 전망 / AI 제작 이미지</div>
+</div>
+
+<h2>⑤ 청령포 — 단종의 유배지를 걷다</h2>
+
+영월에서 빼놓을 수 없는 역사 명소가 바로 <strong>청령포</strong>입니다. 삼면이 강(서강)으로 둘러싸이고 한 면은 깎아지른 절벽으로 막혀 있어, 섬처럼 고립된 이 땅이 바로 조선 6대 임금 단종이 유배된 곳입니다.<br><br>
+단종은 1457년(세조 3년) 17세의 나이에 이곳으로 유배되어, 몇 달 후 관풍헌에서 짧은 생을 마감했습니다. 그 슬픈 역사 때문인지 청령포의 소나무들은 모두 고개를 서울(임금이 있는 곳) 방향으로 기울어 자라고 있다는 이야기가 전해집니다.<br><br>
+<strong>관람 방법</strong>: 청령포는 강 건너에 있어 나룻배를 타고 들어가야 합니다. 선착장에서 배를 타면 불과 2~3분이면 도착합니다. 나룻배는 오전 9시부터 오후 5~6시(계절별 상이)까지 운행합니다.<br><br>
+<strong>입장 요금</strong>: 성인 3,000원, 청소년·군인 2,000원, 어린이 1,000원 수준(공식 안내 재확인 필요).<br><br>
+안으로 들어가면 단종 어소, 관음송(수령 600년 이상의 소나무), 노산군적거유지비 등 유배 시절의 흔적이 잘 보존되어 있습니다. 소나무 숲길을 천천히 걷다 보면 단종의 외로움과 고독함이 자연스레 느껴집니다.
+
+<h2>⑥ 고씨동굴 — 무더위를 피하는 여름 피서지</h2>
+
+영월의 또 다른 명소로 <strong>고씨동굴</strong>이 있습니다. 임진왜란 때 고씨 일가가 피신해 살았다는 이야기에서 이름이 붙여진 석회암 동굴입니다.<br><br>
+동굴 내부는 연중 섭씨 12~15℃를 유지하여 한여름에도 서늘한 냉기를 즐길 수 있습니다. 전체 길이는 약 3.5km이며, 탐방 구간은 약 1.3km로 약 40분 정도 소요됩니다.<br><br>
+동굴 내부에서는 거대한 종유석, 석순, 석주 등 다양한 동굴 생성물을 감상할 수 있으며, 박쥐 서식지이기도 합니다. 천연기념물 제219호로 지정되어 있으며, 입장료는 성인 4,000원 수준입니다(현장 확인 필요).<br><br>
+고씨동굴 앞으로는 동강이 흐르고 있어 동강 래프팅의 출발지로도 많이 활용됩니다. 물이 빠져나간 여름 계곡에서 시원한 물놀이를 즐기기도 좋습니다.
+
+<h2>⑦ 영월 먹거리와 맛집</h2>
+
+영월에는 거리를 걷다 보면 쉽게 찾을 수 있는 향토 음식들이 있습니다. 특히 <strong>곤드레 음식</strong>은 영월과 정선 일대의 대표 향토 음식으로, 곤드레나물밥과 곤드레나물국이 세트로 나오는 정식이 인기입니다.<br><br>
+또한 영월 시내 곳곳에 자리한 <strong>한우 식당</strong>에서 강원도산 신선한 한우를 비교적 합리적인 가격에 즐길 수 있습니다. 영월시장 주변 골목에는 두부 요리, 메밀전, 도토리묵 등 강원 정통 먹거리를 파는 소박한 식당들이 늘어서 있습니다.<br><br>
+별마로천문대 방문 후에는 영월읍내로 내려와 저녁 식사를 하고, 하룻밤 머무른 뒤 다음 날 한반도지형·청령포를 돌아보는 일정이 무리 없이 여유롭습니다.
+
+<h2>⑧ 교통 및 주차 정보</h2>
+
+<strong>자동차 이용</strong>: 서울에서 영월까지는 고속도로를 통해 약 2시간~2시간 30분 소요됩니다. 영동고속도로→중앙고속도로 이용 또는 중부내륙고속도로 이용 경로로 진입할 수 있습니다.<br><br>
+<strong>별마로천문대 주차장</strong>: 천문대 입구 도로는 차폭이 좁아 대형 버스는 진입이 제한됩니다. 승용차는 정상 부근 주차장까지 올라갈 수 있으며 주차는 무료입니다. 산길이 꽤 가파르고 야간에는 조명이 거의 없으므로 서행 운전이 필수입니다.<br><br>
+<strong>대중교통</strong>: 서울 청량리역에서 영월행 무궁화호 기차를 타면 약 2시간 30분 소요됩니다. 영월역에서 별마로천문대까지는 택시로 약 15분 거리이며, 천문대 방문 후 야간에 영월읍으로 돌아오는 대중교통은 없으므로 차량 이용 또는 택시 왕복을 권장합니다.<br><br>
+<strong>1박 2일 추천 일정</strong>: 첫째 날 → 고씨동굴 오전 방문 → 영월 점심 → 청령포 오후 → 저녁 식사 → 별마로천문대 야간관측 → 영월읍 숙박. 둘째 날 → 한반도지형 아침 산책 → 영월 아침 식사 후 귀가.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260806/1_yeongwol_byeolmaro_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-3">Traditional Korean wooden royal exile site (Cheongnyeongpo) in Yeongwol, surrounded by the Seogang River on three sides and cliffs on one side. Ancient 600-year-old pine trees leaning toward Seoul, well-preserved historical site buildings, a small ferry boat approaching the dock. Late summer greenery reflected in the calm river water, photorealistic, wide angle, golden hour light, 1:1 aspect ratio, travel photography style.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">삼면이 강으로 둘러싸인 단종의 유배지 청령포 / AI 제작 이미지</div>
+</div>
+
+<h2>⑨ 별 관측 전 필수 준비물과 주의사항</h2>
+
+여름 밤산에서의 천문 관측은 낭만적이지만 준비 없이 나서면 불편할 수 있습니다.<br><br>
+<strong>복장</strong>: 해발 800m 가까이 올라가면 한여름에도 밤에는 기온이 15~20℃ 아래로 떨어집니다. 얇은 긴소매 재킷이나 가디건을 반드시 챙기세요. 산 정상은 바람도 강하므로 바람막이 윗옷도 유용합니다.<br><br>
+<strong>빛 관리</strong>: 천문대 주변에서는 스마트폰 화면 밝기를 최소로 낮추고, 플래시 사용을 자제해야 합니다. 밝은 빛에 눈이 적응하면 어두운 별이 안 보이게 됩니다. 붉은 빛 손전등(적색 LED)을 준비하면 주변 어둠을 지키면서 안전하게 이동할 수 있습니다.<br><br>
+<strong>카메라</strong>: 은하수 사진을 찍으려면 삼각대와 수동 설정이 가능한 카메라가 필요합니다. ISO 1600~6400, 조리개 f/2.8 이하, 셔터속도 20초 전후로 설정하면 맑은 날 은하수를 촬영할 수 있습니다.<br><br>
+<strong>날씨 확인</strong>: 흐리거나 비가 오면 야간관측이 취소될 수 있습니다. 방문 전날 기상청 예보와 함께 별마로천문대 공식 홈페이지의 관측 가능 여부 공지를 꼭 확인하세요. 취소될 경우 예약금은 환불됩니다.
+
+<div class="tip-box">
+💡 <strong>별마로천문대 핵심 팁</strong><br><br>
+예약 오픈은 방문일 2주 전 일요일 오전 10시 (yao.or.kr)<br>
+야간관측 시작: 저녁 8시 (계절별 상이)<br>
+월요일 및 법정공휴일 다음날 휴관<br>
+날씨 흐리면 취소 가능 → 방문 전날 공식 홈페이지 공지 확인 필수<br>
+산 정상은 여름 밤에도 서늘 → 얇은 재킷 필지
+</div>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260805/travel_cheongsong_juwangsan.html">청송 주왕산 폭포길과 주산지·달기약수탕, 늦여름 경북 계곡 트레킹</a></li>
+    <li><a href="../260805/travel_damyang_metasequoia.html">담양 메타세쿼이아길과 죽녹원·관방제림, 한여름 숲 그늘 걷기 코스</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#영월별마로천문대</span>
+  <span class="tag">#별마로천문대예약</span>
+  <span class="tag">#강원도은하수</span>
+  <span class="tag">#영월여행</span>
+  <span class="tag">#한반도지형</span>
+  <span class="tag">#청령포</span>
+  <span class="tag">#강원도별밤</span>
+  <span class="tag">#고씨동굴</span>
+  <span class="tag">#영월1박2일</span>
+  <span class="tag">#늦여름여행</span>
+</div>
+
+</body>
+</html>

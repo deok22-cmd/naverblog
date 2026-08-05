@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { padding: 10px 12px; border-bottom: 1px solid #e0f2f1; }
+  .step-box { border-left: 4px solid #00796b; padding: 15px 20px; background: #f9fdf9; border-radius: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #ccc; padding: 20px; border-radius: 8px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: .9em; color: #555; font-weight: 600; }
+  .ph-file { font-size: .8em; color: #888; font-family: monospace; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; padding: 12px; border-radius: 4px; font-size: .82em; color: #444; white-space: pre-wrap; line-height: 1.6; margin: 10px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; font-size: .85em; }
+  .img-caption { font-size: .9em; color: #666; margin-top: 10px; font-style: italic; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>광복절 연휴 서울 역사 나들이, 서대문형무소역사관과 독립문·효창공원 코스</h1>
+
+<div class="intro-box">
+2026년 8월 15일은 광복 81주년이 되는 날입니다.<br><br>
+광복절 연휴에는 가족, 연인, 혼자서도 가볍게 걸으며 역사를 느낄 수 있는 서울 서대문 일대와 효창공원 코스를 추천합니다.<br><br>
+서대문형무소역사관에서 일제강점기 독립운동가들의 삶을 직접 마주하고, 독립문과 서대문독립공원을 거닐며 그 정신을 되새긴 뒤, 효창공원에서 김구 선생을 비롯한 독립 영웅들의 묘소 앞에 서는 하루는 어떤 교과서보다 깊은 울림을 남깁니다.<br><br>
+이 코스는 지하철역에서 도보로 이동 가능하고, 대부분 무료 또는 소액 입장료로 즐길 수 있는 부담 없는 역사 산책 코스입니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260806/2_gwangbokjeol_seoul_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-1">Historic Seodaemun Prison History Hall in Seoul, South Korea. Red brick prison building with watchtowers, surrounded by lush green summer trees in August. Korean flag hanging at the entrance gate, a few respectful visitors walking the grounds. Clear blue sky, solemn and historically significant atmosphere, photorealistic, wide-angle exterior shot, ultra high detail, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">여름 녹음 속 서대문형무소역사관 정문과 옥사 건물 / AI 제작 이미지</div>
+</div>
+
+<h2>① 서대문형무소역사관 — 독립운동가들의 발자취</h2>
+
+<strong>서대문형무소역사관</strong>은 일제가 1908년 대한제국 시절에 설치한 경성감옥(뒤에 서대문형무소로 개칭)이 있던 자리로, 해방 이후에도 한동안 사용되다가 1987년 폐소, 이후 역사공원으로 조성되어 1998년부터 일반에 개방되고 있습니다.<br><br>
+<strong>위치</strong>: 서울 서대문구 통일로 251 (지하철 3호선 독립문역 5번 출구에서 도보 5분).<br><br>
+<strong>운영 시간</strong>: 3~10월 오전 9시 30분~오후 6시, 11~2월 오전 9시 30분~오후 5시 (매주 월요일 휴관, 설·추석 당일 휴관).<br><br>
+<strong>입장 요금</strong>: 성인 3,000원, 청소년 1,500원, 어린이 1,000원 (광복절 당일 무료 여부는 공식 사이트 또는 전화 02-360-8590으로 사전 확인 바랍니다).<br><br>
+내부에는 옥사 건물, 사형장, 여옥사, 추모관 등이 잘 복원·보존되어 있습니다. 당시 독립운동가들이 수감되었던 좁고 어두운 감방 안에 들어서면 그 세월의 무게가 온몸으로 전해집니다. 유관순 열사, 안창호 선생, 이재명 의사 등 수많은 독립투사가 이곳을 거쳐 갔습니다.<br><br>
+유아·어린이를 위한 역사 교육 프로그램도 별도로 운영되므로 홈페이지에서 사전 신청할 수 있습니다.
+
+<h2>② 독립문과 서대문독립공원</h2>
+
+서대문형무소역사관 바로 옆에는 <strong>서대문독립공원</strong>이 조성되어 있습니다. 공원 한가운데 우뚝 선 <strong>독립문</strong>은 1896년 독립협회가 청나라 사신을 맞이하던 영은문을 허물고 그 자리에 세운 문으로, 자주독립의 상징입니다.<br><br>
+프랑스 파리의 개선문을 본떠 설계된 이 문은 높이 약 14.28m, 너비 11.48m의 화강암 구조물로, 최상단에 태극기 문양이 새겨져 있고 양 기둥에는 태극기 문양이 부조되어 있습니다. 현재는 원래 자리에서 약 70m 떨어진 위치로 이전해 보존되고 있습니다.<br><br>
+공원 내에는 순국선열추념탑, 독립관, 독립협회 기념비 등이 있으며, 한여름에도 울창한 나무 그늘이 있어 벤치에 앉아 쉬어가기 좋습니다. 입장료 없이 누구나 자유롭게 방문할 수 있습니다.
+
+<h2>③ 효창공원 — 독립 영웅들의 안식처</h2>
+
+서대문에서 지하철을 이용해 약 20분이면 <strong>효창공원</strong>에 도착합니다 (5호선 애오개역 1번 출구 또는 6호선 효창공원앞역 1번 출구에서 도보 5분).<br><br>
+효창공원은 일제강점기 독립운동에 헌신한 선열들의 유해가 안장된 의미 깊은 곳입니다.<br><br>
+이곳에는 백범 <strong>김구 선생 묘소</strong>를 비롯해, 이봉창·윤봉길·백정기 의사의 묘(삼의사묘), 임시정부 요인 이동녕·차이석·조성환 선생의 묘소가 함께 있습니다. 또한 안중근 의사의 가묘도 마련되어 있으며, 향후 유해 봉환 시 이 자리에 안장하기 위해 비워 두고 있습니다.<br><br>
+공원 내에는 <strong>백범기념관</strong>도 자리하여 김구 선생의 일생과 독립운동 역사를 체계적으로 전시하고 있습니다. 입장료는 무료입니다. 공원 자체도 무료로 개방되어 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260806/2_gwangbokjeol_seoul_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-2">Independence Gate (Dongnimmun) in Seoul, a granite arch monument built in 1896 symbolizing Korean independence. Majestic arch with Korean flag emblem carved in stone, surrounded by lush summer trees and park benches. Clear blue sky, historical monument, patriotic atmosphere, visitors taking respectful photos, photorealistic, wide angle, 1:1 aspect ratio, travel photography.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">자주독립의 상징, 서대문독립공원 독립문 / AI 제작 이미지</div>
+</div>
+
+<h2>④ 안중근의사기념관 — 숭고한 삶을 기리며</h2>
+
+효창공원 인근에는 <strong>안중근의사기념관</strong>이 있습니다 (서울 중구 소공동 소재 — 별도 방문 또는 코스 조정 가능). 이토 히로부미를 저격하고 여순 감옥에서 순국한 안중근 의사의 생애와 독립 정신을 기리는 전시관입니다.<br><br>
+기념관에는 의사의 유품, 재판 기록, 당시의 역사 자료가 체계적으로 전시되어 있으며, 의사가 직접 남긴 유묵(글씨)도 볼 수 있습니다. 위국헌신 군인본분(爲國獻身 軍人本分)이라는 글귀는 많은 이들의 마음을 움직입니다. 입장료는 무료입니다.
+
+<h2>⑤ 광복절 당일 행사 정보</h2>
+
+매년 광복절에는 서울 광화문광장에서 정부 주관 기념식이 열립니다. 오전 10시부터 시작되는 이 행사에는 대통령 연설과 독립유공자 포상이 진행됩니다. 행사 이후에는 광화문 일대에서 다양한 시민 참여 프로그램도 운영됩니다.<br><br>
+서대문형무소역사관에서도 광복절 특별 프로그램(독립운동가 특별 강연, 체험 프로그램 등)을 운영하는 경우가 많으므로, 방문 전 공식 누리집에서 당일 프로그램 일정을 확인하세요.<br><br>
+2026년 광복절은 8월 15일(토)입니다. 토요일이므로 별도의 대체 공휴일은 없습니다. 다만 방문객이 집중되는 날이기도 하므로 오전 일찍 움직이는 것이 쾌적하게 관람하는 방법입니다.
+
+<h2>⑥ 반나절·하루 추천 동선</h2>
+
+<div class="step-box">
+<strong>반나절 코스 (약 4~5시간)</strong><br>
+독립문역 → 서대문형무소역사관 (1시간 30분) → 독립문·서대문독립공원 산책 (30분) → 인근 식사 → 마무리
+</div>
+
+<div class="step-box">
+<strong>하루 코스 (약 7~8시간)</strong><br>
+독립문역 → 서대문형무소역사관 (1시간 30분) → 독립문·서대문독립공원 (30분) → 점심 식사 → 효창공원(앞역) → 효창공원 산책·삼의사묘·김구 선생 묘 (1시간) → 백범기념관 (1시간) → 귀가
+</div>
+
+연계 방문지로 경복궁, 청와대 개방 구간, 서촌(통인시장 주변)과 이어지는 일정도 가능합니다.
+
+<h2>⑦ 주변 식당과 카페</h2>
+
+서대문형무소 인근에는 일반적인 식당가가 많지 않아, 신촌이나 마포 방면으로 이동하여 식사하는 분이 많습니다. 형무소역사관 근처 현저동 일대에는 소박한 한식 분식집이 있으니 참고하세요.<br><br>
+효창공원 주변은 마포·공덕 상권과 가까워 다양한 식당과 카페를 이용할 수 있습니다. 효창공원앞역 주변에 한식, 분식, 카페 등이 골목 곳곳에 자리해 있습니다.<br><br>
+광복절 연휴에는 음식점 일부가 문을 닫을 수 있으므로, 방문 전날 예약하거나 운영 여부를 확인하는 것이 좋습니다.
+
+<h2>⑧ 교통 가이드 — 대중교통 이용이 편리</h2>
+
+서울 도심에 위치한 만큼 이 코스 전체를 대중교통으로 쾌적하게 이동할 수 있습니다.<br><br>
+<strong>서대문형무소역사관</strong>: 지하철 3호선 독립문역 5번 출구 도보 5분<br><br>
+<strong>효창공원</strong>: 지하철 5호선 애오개역 1번 출구 도보 5분, 또는 6호선 효창공원앞역 1번 출구 도보 5분<br><br>
+주차는 서대문독립공원 인근 공영 주차장을 이용할 수 있으나 광복절 당일에는 매우 혼잡합니다. 대중교통 이용을 강력히 추천합니다.<br><br>
+서울 시내버스도 두 명소 모두 경유하므로, 버스 노선 앱으로 현 위치에서 가장 편리한 버스를 검색해 보세요.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260806/2_gwangbokjeol_seoul_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-3">Hyochang Park in Seoul, South Korea, a historical park containing the tombs of Korean independence movement heroes. Tree-lined pathways with Korean pine trees, traditional stone grave markers, Korean flags placed respectfully near the tombs of Kim Koo and independence fighters. Summer greenery, solemn and peaceful atmosphere, a few visitors paying their respects, photorealistic, landscape orientation, 1:1 aspect ratio, documentary photography style.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">독립운동 선열들이 안장된 효창공원 묘역 / AI 제작 이미지</div>
+</div>
+
+<h2>⑨ 이 코스를 통해 얻어가는 것</h2>
+
+서대문형무소, 독립문, 효창공원을 잇는 이 코스는 단순한 관광이 아닙니다. 일제강점기의 어두운 역사와 그 속에서도 꺾이지 않은 독립 의지를 온몸으로 체감하는 경험입니다.<br><br>
+좁은 감방에 서는 것, 사형장 앞에 발을 멈추는 것, 백범 선생의 묘 앞에 고개를 숙이는 것 — 이 모든 행위가 단순한 '구경'이 아니라, 그분들의 희생에 대한 작은 경의 표시입니다.<br><br>
+아이와 함께라면 더욱 의미 있는 현장 역사 수업이 될 것이며, 어른들에게는 오늘 우리가 누리는 자유와 평화가 결코 당연하지 않았음을 다시금 깨닫게 해 주는 소중한 시간이 될 것입니다.<br><br>
+2026년 광복절, 서울의 역사 현장에서 81년 전 그 날의 의미를 되새겨 보시기 바랍니다.
+
+<div class="tip-box">
+💡 <strong>광복절 서울 역사 코스 핵심 정보</strong><br><br>
+서대문형무소역사관: 독립문역 5번 출구 도보 5분 / 성인 3,000원 / 월 휴관<br>
+독립문·서대문독립공원: 무료 / 연중 개방<br>
+효창공원·백범기념관: 무료 / 지하철 애오개역·효창공원앞역<br>
+광복절 당일 무료 입장 여부 → 서대문형무소 공식 사이트(sphh.co.kr) 사전 확인
+</div>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260805/travel_damyang_metasequoia.html">담양 메타세쿼이아길과 죽녹원·관방제림, 한여름 숲 그늘 걷기 코스</a></li>
+    <li><a href="../260805/travel_jecheon_cheongpungho.html">제천 청풍호 케이블카와 옥순봉 출렁다리·의림지, 충북 여름 호수 코스</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#광복절서울</span>
+  <span class="tag">#서대문형무소역사관</span>
+  <span class="tag">#독립문</span>
+  <span class="tag">#효창공원</span>
+  <span class="tag">#광복절나들이</span>
+  <span class="tag">#서울역사여행</span>
+  <span class="tag">#김구선생묘</span>
+  <span class="tag">#백범기념관</span>
+  <span class="tag">#광복절연휴</span>
+  <span class="tag">#8월15일</span>
+</div>
+
+</body>
+</html>

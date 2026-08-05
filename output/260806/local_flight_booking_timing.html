@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1f8f1; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 30px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 12px; text-align: left; }
+  .info-table td { padding: 10px 12px; border-bottom: 1px solid #e8f5e9; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #f9fdf9; border-radius: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .warn-box { background: #fff3e0; border: 1px solid #fb8c00; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #ccc; padding: 20px; border-radius: 8px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: .9em; color: #555; font-weight: 600; }
+  .ph-file { font-size: .8em; color: #888; font-family: monospace; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; padding: 12px; border-radius: 4px; font-size: .82em; color: #444; white-space: pre-wrap; line-height: 1.6; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; font-size: .85em; }
+  .img-caption { font-size: .9em; color: #666; margin-top: 10px; font-style: italic; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>스카이스캐너·네이버 항공권 최저가 언제 뜨나, 국내외 예매 타이밍 패턴</h1>
+
+<div class="intro-box">
+같은 항공편도 언제 예매하느냐에 따라 요금이 크게 달라집니다.<br><br>
+국제선은 출발 45~60일 전, 국내선은 출발 30~45일 전에 최저가 구간이 나타나는 경향이 있다는 이야기를 들어본 적 있으실 것입니다.<br><br>
+하지만 이 '공식'은 항상 맞는 것이 아닙니다. 항공사 프로모션, 탑승 요일, 성수기 여부에 따라 오히려 2~3일 전 특가가 더 저렴한 경우도 있습니다.<br><br>
+이 글에서는 스카이스캐너, 네이버 항공권, 카약(Kayak) 등 주요 최저가 조회 도구의 활용법과 함께, 국내선·국제선 예매 타이밍 패턴을 구체적으로 정리합니다.
+</div>
+
+<h2>① 항공권 요금은 왜 계속 변하나</h2>
+
+항공권 가격이 수시로 바뀌는 이유는 항공사가 <strong>수익 관리(Revenue Management)</strong> 시스템을 운용하기 때문입니다. 판매 좌석 수와 남은 시간에 따라 알고리즘이 실시간으로 가격을 조정합니다.<br><br>
+<strong>좌석 등급별 가격</strong>: 항공사는 이코노미 클래스를 내부적으로 여러 단계(클래스 Y, B, M, H, Q 등)로 쪼개 각기 다른 가격으로 팝니다. 저렴한 클래스 좌석이 먼저 채워지면 그 다음 가격대 좌석이 열리는 방식입니다.<br><br>
+이 때문에 같은 시간·같은 편명이라도 내가 조회하는 시점과 전날 조회한 시점의 가격이 다를 수 있습니다. 주말보다 화요일·수요일 오전에 가격이 낮아진다는 경험적 패턴도 이 구조에서 비롯됩니다.<br><br>
+항공사 자체 할인 프로모션이 적용되면 특정 날짜에 갑자기 최저가가 나타났다가 하루 만에 사라지는 이유도 여기에 있습니다.
+
+<h2>② 국제선 최저가 예매 타이밍</h2>
+
+일반적으로 국제선 항공권의 최저가 구간은 다음과 같습니다.<br><br>
+<strong>성수기가 아닌 경우(비수기·어깨시즌)</strong>: 출발 45~90일 전이 가장 저렴한 경향입니다. 항공사들이 비어 있는 좌석을 채우기 위해 이 시기에 낮은 운임 클래스를 더 많이 열어두기 때문입니다.<br><br>
+<strong>성수기(여름 휴가·추석·설·크리스마스 시즌)</strong>: 이 시기는 좌석 자체가 귀합니다. 성수기 항공권은 출발 3~6개월 전부터 예매해야 좋은 가격을 잡을 수 있습니다. 막판 특가를 기대하기 어렵습니다.<br><br>
+<strong>동남아 단거리 노선</strong>: 방콕, 다낭, 세부 등 단거리 노선은 LCC(저비용항공사)가 경쟁이 치열해 출발 1~2주 전에도 특가 프로모션이 뜨는 경우가 있습니다. 단, 이 타이밍을 노리려면 일정이 유연해야 합니다.<br><br>
+<strong>유럽·미주 장거리 노선</strong>: 최소 2~3개월 전 예매가 원칙입니다. 좌석이 빠르게 차는 데다 요금도 가파르게 오릅니다.
+
+<h2>③ 국내선 최저가 예매 타이밍</h2>
+
+국내선은 국제선과 조금 다른 패턴을 보입니다.<br><br>
+<strong>제주 노선</strong>: 국내에서 가장 수요가 많은 노선인 만큼, 주말 성수기는 출발 1~2개월 전 예매가 이상적입니다. 특히 연휴 직전 주말은 2~3개월 전에 매진되기도 합니다.<br><br>
+<strong>비수기 제주·기타 노선</strong>: 출발 3~4주 전에도 합리적인 가격이 남아 있는 경우가 많습니다. 제주항공, 진에어, 에어서울 등 LCC가 주기적으로 특가 프로모션을 진행하므로 항공사 공식 앱 알림을 설정해 두면 좋습니다.<br><br>
+<strong>막판 특가</strong>: 국내선 역시 출발 2~3일 전에 빈 좌석을 채우기 위한 특가가 뜨기도 합니다. 단, 이는 운이 필요하며 연휴 기간에는 기대하기 어렵습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260806/4_flight_booking_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-1">Clean flat design infographic showing domestic and international flight ticket booking timing strategies. Central airplane icon with timeline arrows pointing to key booking windows: "D-90 days" for peak season international, "D-45~60 days" for off-peak international, "D-30~45 days" for domestic. Calendar and price tag icons. Green and blue color palette, Korean travel booking concept, modern minimalist style, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">국내선·국제선 항공권 최저가 예매 타이밍 한눈에 보기 / AI 제작 이미지</div>
+</div>
+
+<h2>④ 스카이스캐너 200% 활용법</h2>
+
+스카이스캐너(Skyscanner)는 수백 개 항공사와 여행사의 요금을 한 번에 비교할 수 있는 메타서치 엔진입니다. 단순 요금 비교 외에도 최저가를 잡는 데 유용한 기능들이 있습니다.<br><br>
+<strong>전체 달 보기(Whole Month View)</strong>: 특정 달의 날짜별 최저가를 한눈에 표시해 줍니다. 일정이 유연하다면 이 기능으로 가장 저렴한 날을 고를 수 있습니다.<br><br>
+<strong>가격 알림(Price Alert)</strong>: 원하는 구간·날짜를 설정해 두면, 요금이 일정 수준 이하로 내려갈 때 앱 알림이나 이메일로 알려줍니다. 특가를 놓치지 않는 가장 효율적인 방법입니다.<br><br>
+<strong>'어디든' 검색</strong>: 목적지를 정하지 않고 출발지만 입력하면, 전 세계·국내 주요 도시 중 현재 가장 저렴한 노선 순서로 보여줍니다. 색다른 목적지를 발견하는 재미도 있습니다.<br><br>
+<strong>최저가 달력(Cheapest Month)</strong>: 여행 시기 자체가 유연하다면, 어떤 달에 떠나는 것이 가장 저렴한지 월별 최저가 비교를 통해 볼 수 있습니다.<br><br>
+스카이스캐너 검색 결과에서 최저가가 표시되더라도 실제 예매는 해당 항공사 공식 사이트 또는 개별 여행사 사이트에서 이루어집니다. 가격이 연동 지연으로 다를 수 있으므로 최종 결제 전 재확인이 필요합니다.
+
+<h2>⑤ 네이버 항공권 활용 포인트</h2>
+
+네이버 항공권은 국내 사용자가 많이 활용하는 비교 플랫폼으로, 스카이스캐너와 비슷하지만 한국 출발 노선에 특화되어 있습니다.<br><br>
+<strong>특가 필터</strong>: 검색 결과 상단의 '특가 항공권' 탭을 활용하면 실시간 특가를 모아볼 수 있습니다.<br><br>
+<strong>요금 변동 그래프</strong>: 일부 구간에서 해당 항공편의 최근 30일 요금 변동 추이를 그래프로 표시해 줍니다. 현재 가격이 평균 대비 높은지 낮은지 확인할 수 있어 유용합니다.<br><br>
+<strong>항공사 직접 구매 링크</strong>: 네이버 항공권은 여행사 중개를 거치지 않고 항공사 공식 페이지로 연결하는 경우도 있어, 취소·변경 정책이 명확하다는 장점이 있습니다.<br><br>
+<strong>카드사 할인 연계</strong>: 특정 카드사와 연계된 할인이 적용될 때는 같은 항공편도 네이버 항공권이 더 저렴하게 뜨기도 합니다. 카드 특가 배너를 주의깊게 확인하세요.
+
+<h2>⑥ 가격 알림 설정과 인코그니토 조회 팁</h2>
+
+항공권 조회 시 관련 사이트 쿠키가 쌓이면 알고리즘이 '이 사람은 반복 조회 중이니 사려는 의향이 높다'고 판단해 요금을 올린다는 속설이 있습니다.<br><br>
+실제로 항공사나 OTA(온라인 여행사)가 IP·쿠키 기반 동적 가격제를 적용한다는 증거가 일부 있으며, 이를 방지하기 위해 <strong>시크릿 모드(인코그니토 모드)</strong>로 조회하는 방법이 권장됩니다.<br><br>
+모든 사이트가 이런 방식으로 가격을 올리는 것은 아니며, 효과의 차이가 미미한 경우도 있습니다. 그러나 습관적으로 시크릿 모드에서 최종 가격을 재확인하는 것이 안전합니다.<br><br>
+<strong>가격 알림 앱</strong>: 스카이스캐너 앱의 가격 알림 외에도, 카약(Kayak)·구글 플라이트(Google Flights)도 가격 변동 알림 기능을 제공합니다. 구글 플라이트의 경우 특정 구간의 '가격 추이'와 '가격이 오를지 내릴지' 예측 인디케이터도 제공해 참고할 수 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260806/4_flight_booking_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-2">Person using smartphone to check Skyscanner flight prices, incognito mode browser icon visible on screen. Price comparison charts showing lowest fare calendar with highlighted best day in green. Coffee cup beside the phone on a wooden desk, travel planning concept. Clean, modern lifestyle photography style, soft natural lighting, 1:1 aspect ratio, photorealistic.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">스마트폰 앱으로 항공권 최저가 타이밍을 확인하는 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>⑦ 요일별 항공권 가격 차이</h2>
+
+<strong>출발 요일</strong>에 따라 항공권 가격이 달라집니다. 일반적으로 화요일·수요일·목요일 출발이 금요일·토요일·일요일 출발보다 저렴한 경향이 있습니다.<br><br>
+국내 여행의 경우 금요일 저녁·토요일 아침 출발은 수요가 몰려 요금이 높고, 월요일 오전·화요일 이른 비행기는 상대적으로 저렴합니다.<br><br>
+국제선도 마찬가지입니다. 주말 출발은 비즈니스 수요와 관광 수요가 겹쳐 비싸고, 화·수·목은 수요가 적어 더 저렴한 클래스 좌석이 남아 있는 경우가 많습니다.<br><br>
+<strong>예약 요일</strong>의 영향에 대해서는 "화요일에 예매하면 싸다"는 이야기가 있으나, 이는 과거 미국 항공 시장 패턴에서 나온 이야기로 국내 시장과 반드시 일치하지는 않습니다. 다만 항공사 프로모션이 월요일 밤이나 화요일 아침에 공개되는 경우가 많아 요일에 따른 체감 차이가 생기는 것입니다.
+
+<h2>⑧ LCC 프로모션 타이밍 잡는 법</h2>
+
+제주항공·진에어·에어서울·티웨이항공·에어부산 등 국내 LCC는 주기적으로 <strong>특가 항공권 프로모션</strong>을 진행합니다. 이 프로모션을 잡으면 국내선 편도 1만 원대, 동남아 편도 4~6만 원대 항공권을 구매할 수 있습니다.<br><br>
+<strong>공식 앱 알림 설정</strong>: 각 항공사 공식 앱을 설치하고 알림을 켜두면 특가 출시 시 알림이 옵니다.<br><br>
+<strong>카카오톡 채널 구독</strong>: 대부분의 LCC가 카카오톡 공식 채널을 운영하며, 특가 소식을 채널 메시지로 전송합니다.<br><br>
+<strong>항공사 뉴스레터 구독</strong>: 이메일 뉴스레터를 구독하면 회원 전용 선착순 특가 정보를 먼저 받을 수 있습니다.<br><br>
+단, LCC 특가는 판매 기간이 짧고 좌석 수가 한정되어 있어, 알림을 받은 당일 빠르게 결정해야 합니다.
+
+<h2>⑨ 항공권 최저가 정리 — 핵심 체크리스트</h2>
+
+<div class="step-box">
+✅ <strong>국제선 비수기</strong>: 출발 45~90일 전 예매 목표<br>
+✅ <strong>국제선 성수기</strong>: 출발 90~180일 전 예매 (특히 여름 휴가·추석·설)<br>
+✅ <strong>국내선 비수기</strong>: 출발 30~45일 전도 합리적 요금 가능<br>
+✅ <strong>국내선 성수기(제주 주말)</strong>: 출발 1~2개월 전 필수<br>
+✅ 스카이스캐너 <strong>전체 달 보기</strong>로 가장 저렴한 날짜 확인<br>
+✅ <strong>가격 알림</strong> 설정 후 알림 오면 즉시 구매 결정<br>
+✅ 최종 결제는 <strong>시크릿(인코그니토) 모드</strong>에서 재확인<br>
+✅ LCC 공식 앱·카카오톡 채널 구독으로 <strong>특가 프로모션</strong> 즉시 수신
+</div>
+
+<div class="tip-box">
+💡 <strong>이런 분들께 추천합니다</strong><br><br>
+• 일정이 유연한 분: 스카이스캐너 '전체 달 보기' + 가격 알림으로 최저가 잡기<br>
+• 날짜가 고정된 분: 목표 출발일이 정해졌다면 성수기 여부 확인 후 일정 초기에 예매<br>
+• 막판 특가 노리는 분: 일정·숙소 유연, 동남아 등 단거리 한정, LCC 우선
+</div>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260805/travel_cheongsong_juwangsan.html">청송 주왕산 폭포길과 주산지·달기약수탕, 늦여름 경북 계곡 트레킹</a></li>
+    <li><a href="../260805/travel_damyang_metasequoia.html">담양 메타세쿼이아길과 죽녹원·소쇄원, 전남 여름 초록 명소 하루 코스</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#항공권최저가</span>
+  <span class="tag">#스카이스캐너사용법</span>
+  <span class="tag">#항공권예매타이밍</span>
+  <span class="tag">#네이버항공권</span>
+  <span class="tag">#국내선최저가</span>
+  <span class="tag">#국제선예매팁</span>
+  <span class="tag">#LCC특가</span>
+  <span class="tag">#항공권싸게사는법</span>
+  <span class="tag">#가격알림설정</span>
+  <span class="tag">#항공권비교사이트</span>
+</div>
+
+</body>
+</html>

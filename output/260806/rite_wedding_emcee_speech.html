@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1f8f1; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .script-box { background: #f3f8ff; border: 1px solid #90caf9; padding: 18px 22px; border-radius: 8px; margin: 20px 0; font-size: .95em; line-height: 2; }
+  .step-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #f9fdf9; border-radius: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .warn-box { background: #fff3e0; border: 1px solid #fb8c00; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #ccc; padding: 20px; border-radius: 8px; text-align: left; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: .9em; color: #555; font-weight: 600; }
+  .ph-file { font-size: .8em; color: #888; font-family: monospace; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; padding: 12px; border-radius: 4px; font-size: .82em; color: #444; white-space: pre-wrap; line-height: 1.6; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; font-size: .85em; }
+  .img-caption { font-size: .9em; color: #666; margin-top: 10px; font-style: italic; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>결혼식 사회 부탁받았을 때 멘트와 준비 순서, 당일 진행 흐름 완성하기</h1>
+
+<div class="intro-box">
+"나 결혼식에서 사회 좀 봐줄 수 있어?" 이 한마디를 듣고 무거운 마음이 드셨다면, 지금 이 글이 딱 필요합니다.<br><br>
+결혼식 사회는 전체 식의 흐름을 이끄는 역할로, 준비 없이 나서면 실수가 생기기 쉽습니다. 그렇다고 전문 사회자처럼 매끄럽게 진행해야 할 필요도 없습니다.<br><br>
+진심 어린 자연스러운 진행이 오히려 하객들에게 더 따뜻하게 전달될 때가 많습니다.<br><br>
+이 글에서는 결혼식 사회를 맡게 됐을 때 준비해야 할 사항, 식 순서별 멘트, 돌발 상황 대처법까지 순서대로 정리해 드립니다.
+</div>
+
+<h2>① 사회 수락 전 꼭 확인해야 할 것들</h2>
+
+사회를 부탁받았다면, 바로 수락하기 전에 신랑·신부와 몇 가지 사항을 먼저 확인하세요.<br><br>
+<strong>식 형태</strong>: 일반 예식장인지, 야외 결혼식인지, 레스토랑 웨딩인지에 따라 식 순서와 마이크 환경이 다릅니다. 예식장 종류에 따라 식 순서가 다를 수 있으므로 식장 담당자와도 소통이 필요합니다.<br><br>
+<strong>식 순서 확인</strong>: 신랑 입장 → 신부 입장 → 혼인 서약 → 성혼 선언문 → 주례 말씀 → 축가 → 행진 → 폐백 순이 일반적이지만, 축가가 생략되거나 주례 없는 결혼식, 하이라이트 영상 상영이 포함되는 경우도 많습니다.<br><br>
+<strong>주례 유무</strong>: 주례가 없는 결혼식에서는 사회자가 혼인 서약과 성혼 선언까지 진행하는 경우도 있습니다. 이 경우 별도 스크립트 준비가 필요합니다.<br><br>
+<strong>신랑·신부 이름, 나이, 직업, 만남 스토리</strong>: 오프닝 멘트에 두 사람 이야기를 짧게 넣으면 더 풍성한 식이 됩니다. 틀릴 수 있으니 미리 메모해 두세요.<br><br>
+<strong>마이크 시험 시간 확인</strong>: 식 당일 최소 30분 전에 현장에 도착해 마이크 볼륨과 울림을 체크해야 합니다.
+
+<h2>② 사회 멘트 기본 구성과 준비 방법</h2>
+
+식 전체 사회 멘트를 전부 외울 필요는 없습니다. 핵심 멘트만 종이 또는 스마트폰 메모에 작성해 손에 쥐고 진행하면 됩니다.<br><br>
+<strong>스크립트 분량</strong>: A4 한 장 분량이면 충분합니다. 각 단계 시작 멘트와 끝 멘트만 준비하고, 사이는 자연스럽게 이어가세요.<br><br>
+<strong>리허설</strong>: 식 전날 밤 소리를 내어 읽어보는 연습을 최소 2번 하세요. 머릿속으로만 읽는 것과 실제 말하는 속도는 다릅니다.<br><br>
+<strong>발성과 속도</strong>: 결혼식 예식장은 울림이 강한 경우가 많습니다. 평소보다 천천히, 또박또박 말하는 연습이 중요합니다. 특히 이름과 장소명은 더욱 천천히 발음하세요.
+
+<h2>③ 오프닝 멘트 예시</h2>
+
+<div class="script-box">
+[오프닝 멘트 예시]<br><br>
+"안녕하십니까, 내빈 여러분. 오늘 이 자리에서 사회를 맡게 된 ○○○입니다. 바쁘신 중에도 신랑 ○○○ 씨와 신부 ○○○ 씨의 아름다운 결혼을 축하해 주시기 위해 귀한 발걸음을 해주신 하객 여러분께 깊은 감사의 말씀을 드립니다.<br><br>
+두 분이 처음 만난 것은 ○○에서 ○○년 ○월의 일이었습니다. (간단한 만남 스토리 1~2문장) 오랜 인연이 이렇게 아름다운 결실을 맺게 되었습니다.<br><br>
+지금부터 신랑 ○○○ 씨와 신부 ○○○ 씨의 결혼식을 시작하겠습니다. 잠시 자리에 앉아 주시기 바랍니다."
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260806/5_wedding_emcee_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-1">Korean wedding ceremony hall interior with elegant floral decorations, aisle lined with white flowers and ribbon chairs, warm soft lighting, altar at the end with flower arch. MC stand with microphone visible at the side. Guests seated on both sides, formal wedding atmosphere. Photorealistic, warm golden light, 1:1 aspect ratio, ultra high detail.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">단아하고 아름다운 예식장 전경 / AI 제작 이미지</div>
+</div>
+
+<h2>④ 신랑·신부 입장 멘트</h2>
+
+<div class="script-box">
+[신랑 입장]<br>
+"내빈 여러분, 지금부터 신랑 ○○○ 씨가 입장하겠습니다. 박수로 맞이해 주시기 바랍니다."<br><br>
+(신랑이 자리에 서면)<br>
+"신랑 ○○○ 씨, 감사합니다."<br><br>
+[신부 입장]<br>
+"이어서 오늘의 주인공, 신부 ○○○ 씨가 입장하겠습니다. 기다리는 설렘 속에 신부를 맞이하여 주십시오."<br><br>
+(신부가 입장하면 잠시 기다린 후)<br>
+"아름다운 신부 ○○○ 씨가 입장하였습니다. 두 분의 만남에 따뜻한 박수를 부탁드립니다."
+</div>
+
+<h2>⑤ 혼인 서약과 성혼 선언문 멘트</h2>
+
+<div class="script-box">
+[혼인 서약 안내]<br>
+"지금부터 신랑 신부 두 분의 혼인 서약이 있겠습니다. (주례 선생님, 혼인 서약을 부탁드립니다. — 주례 있는 경우)<br><br>
+[주례 없는 경우 직접 진행]<br>
+신랑 ○○○ 씨, 신부 ○○○ 씨를 아내로 맞이하여 평생 사랑하고 존중하며 함께하기로 서약하십니까?<br>
+(신랑: 서약합니다)<br>
+신부 ○○○ 씨, 신랑 ○○○ 씨를 남편으로 맞이하여 평생 사랑하고 존중하며 함께하기로 서약하십니까?<br>
+(신부: 서약합니다)<br><br>
+이에 두 분이 혼인을 서약하였으므로, 여기 모인 모든 분들의 증인 아래 두 분이 부부가 되었음을 성혼 선언합니다."
+</div>
+
+<h2>⑥ 축가·축사 진행 멘트</h2>
+
+<div class="script-box">
+[축가 진행 — 친구 1인 혹은 팀이 부르는 경우]<br>
+"이어서 신랑(신부)의 친구 ○○○ 씨가 두 분의 행복한 출발을 위해 축가를 불러 주시겠습니다. 따뜻한 박수 부탁드립니다."<br><br>
+(축가 종료 후)<br>
+"○○○ 씨, 아름다운 노래 감사합니다."<br><br>
+[축사 — 양가 부모님 혹은 지인]<br>
+"이어서 ○○○ 선생님(○○○ 씨)께서 두 분을 위한 축사를 해주시겠습니다."
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260806/5_wedding_emcee_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-2">Young Korean male MC holding microphone at a wedding ceremony, wearing a formal dark suit and tie, smiling warmly as he reads from a small paper script. Wedding hall background with soft bokeh floral decorations. Professional yet approachable demeanor. Photorealistic, indoor wedding venue lighting, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">식 진행 중인 결혼식 사회자 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>⑦ 행진·마무리 멘트</h2>
+
+<div class="script-box">
+[행진 안내]<br>
+"내빈 여러분, 이제 두 분의 행진이 있겠습니다. 신랑 신부 두 분이 새 출발의 첫 걸음을 내딛겠습니다. 큰 박수 부탁드립니다."<br><br>
+(신랑 신부 행진 후)<br>
+"감사합니다. 이로써 ○○○ 씨와 ○○○ 씨의 아름다운 결혼식이 마무리되었습니다.<br><br>
+두 분의 앞날에 행복과 건강이 가득하시길 온 마음으로 축원합니다.<br><br>
+오늘 귀한 발걸음을 해 주신 하객 여러분께 다시 한번 진심으로 감사드립니다. 피로연 및 기념 촬영은 ○○○에서 진행될 예정이오니 참고하시기 바랍니다. 감사합니다."
+</div>
+
+<h2>⑧ 돌발 상황 대처법</h2>
+
+아무리 준비를 철저히 해도 예상치 못한 상황이 생길 수 있습니다.<br><br>
+<strong>마이크 불량</strong>: 마이크에 문제가 생기면 당황하지 말고 "잠시 기다려 주십시오"라고 차분히 안내하고 진행 요원을 부르세요. 조용한 예식장이라면 마이크 없이 큰 소리로 진행할 수도 있습니다.<br><br>
+<strong>주례 선생님 또는 하객 늦게 도착</strong>: "잠시 후 ○○ 순서를 진행하겠습니다. 잠시만 기다려 주십시오"라고 자연스럽게 넘깁니다.<br><br>
+<strong>신부 입장 타이밍 놓침</strong>: 음악이 시작되었는데 신부 입장이 지연되면, 음향 담당자에게 신호를 보내 잠시 음악을 이어가도록 하고, "아름다운 신부를 맞이하기 위해 잠시 기다려 주십시오"라고 하면 됩니다.<br><br>
+<strong>이름을 잘못 말했을 때</strong>: 바로 정정하세요. "죄송합니다, 정확히는 ○○○ 씨입니다"라고 솔직하게 정정하면 오히려 인간적인 모습으로 하객들이 웃어 넘깁니다.
+
+<h2>⑨ 당일 준비물과 최종 체크리스트</h2>
+
+<div class="step-box">
+📋 <strong>당일 준비물</strong><br>
+스크립트 인쇄본(손에 쥘 수 있는 크기로 접기) + 스마트폰 메모 백업<br>
+무릎까지 오는 포멀한 정장(너무 화려하면 신랑신부를 압도)<br>
+물 한 병(목 마를 수 있음)<br>
+여분의 구두약 또는 구두 닦는 티슈
+</div>
+
+<div class="step-box">
+📋 <strong>당일 타임라인</strong><br>
+식 1시간 전: 도착, 신랑신부 측 연락처 재확인<br>
+식 30분 전: 마이크 테스트, 음향 담당자 얼굴 익히기<br>
+식 15분 전: 진행 스크립트 최종 확인, 화장실 다녀오기<br>
+식 5분 전: 사회 시작 위치 대기
+</div>
+
+<div class="tip-box">
+💡 <strong>핵심 조언 한 줄</strong><br><br>
+너무 완벽하게 하려고 부담 갖지 마세요. 신랑신부를 진심으로 축하하는 마음이 전달되면, 멘트 한두 마디가 어색하더라도 하객 누구도 기억하지 않습니다.
+</div>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260805/travel_cheongsong_juwangsan.html">청송 주왕산 폭포길과 주산지·달기약수탕, 늦여름 경북 계곡 트레킹</a></li>
+    <li><a href="../260805/travel_damyang_metasequoia.html">담양 메타세쿼이아길과 죽녹원·소쇄원, 전남 여름 초록 명소 하루 코스</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#결혼식사회멘트</span>
+  <span class="tag">#결혼식사회보는법</span>
+  <span class="tag">#주례없는결혼식</span>
+  <span class="tag">#결혼식진행순서</span>
+  <span class="tag">#결혼식사회준비</span>
+  <span class="tag">#혼인서약멘트</span>
+  <span class="tag">#신랑신부입장멘트</span>
+  <span class="tag">#결혼식사회자대본</span>
+  <span class="tag">#결혼식축하</span>
+  <span class="tag">#결혼식하객</span>
+</div>
+
+</body>
+</html>
