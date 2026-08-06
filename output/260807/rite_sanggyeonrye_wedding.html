@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 14px; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #eee; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .point-box { border-left: 4px solid #388e3c; padding: 15px 20px; background: #f9fdf9; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #bbb; padding: 20px; border-radius: 8px; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.9em; color: #666; }
+  .ph-file { font-family: monospace; color: #888; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; padding: 12px; border-radius: 6px; font-size: 0.82em; color: #555; text-align: left; white-space: pre-wrap; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; font-size: 0.9em; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>상견례 자리와 비용 누가 내나, 요즘 예단·예물은 어떻게 하나</h1>
+
+<div class="intro-box">
+상견례를 앞두고 가장 많이 검색하는 질문 두 가지가 있습니다. "상견례 밥값 누가 내요?" 그리고 "예단·예물은 요즘 어떻게 해요?"<br><br>
+결혼 문화가 빠르게 변하고 있어 부모님 세대와 자녀 세대 사이에서 혼선이 생기는 경우가 많습니다. 예단·예물을 생략하는 커플도 늘고 있지만, 여전히 양가 부모님의 기대가 다를 수 있어 미리 정리해두는 것이 갈등을 예방하는 방법입니다.<br><br>
+이 글에서는 2026년 현재 상견례 밥값 관행, 예단·예물 생략 추세, 현금 예단의 현실적인 범위까지 실용적으로 정리합니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260807/5_sanggyeonrye_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-1">Korean family meeting for Sanggyeonrye formal first meeting before wedding, two families sitting across from each other at elegant Korean restaurant private room, formal attire, warm lighting, traditional yet modern setting, exchanging greetings, photorealistic, ultra high detail, 1:1 aspect ratio, polite and warm atmosphere, food on table</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">상견례 자리 — 양가 가족이 처음 공식적으로 만나는 결혼 준비의 첫 단계 / AI 제작 이미지</div>
+</div>
+
+<h2>① 상견례 식사 비용, 누가 내야 할까</h2>
+
+상견례 밥값 지불 방식에는 세 가지 패턴이 있습니다.<br><br>
+<div class="point-box">
+<strong>패턴 A — 남자 측이 전액 부담</strong><br>
+과거 가장 일반적이었던 방식입니다. 남성 쪽에서 먼저 청혼하고 결혼을 제안하는 문화적 관습에서 비롯됐습니다. 지금도 보수적인 집안에서 선호하는 방식입니다.
+</div>
+<div class="point-box">
+<strong>패턴 B — 각자 부담 (더치페이)</strong><br>
+최근 젊은 커플 사이에서 가장 많이 논의되는 방식입니다. 양가가 각자 자기 가족의 식비를 냅니다. 합리적으로 보이지만 부모님 세대에서 어색함을 느끼는 경우가 있습니다.
+</div>
+<div class="point-box">
+<strong>패턴 C — 협의 후 절충</strong><br>
+상견례 식사는 남자 측이, 2차(카페·음료)는 여자 측이 내는 방식이 가장 원만하게 받아들여지는 편입니다. 또는 첫 상견례는 남자 측이, 추후 추가 모임에서는 여자 측이 내는 방식도 있습니다.
+</div>
+
+결론적으로 정해진 답은 없습니다. 중요한 것은 <strong>커플 두 사람이 미리 양가 의중을 파악하고 합의된 방식으로 진행하는 것</strong>입니다. 상견례 당일 계산대에서 즉석으로 결정하면 어색함이 생깁니다.
+
+<h2>② 상견례 장소 선정 — 격에 맞는 식당 고르기</h2>
+
+상견례 장소는 조용한 개인 룸이 있는 한식 레스토랑이 가장 무난합니다.<br><br>
+<strong>선택 기준</strong>:
+<ul>
+<li>독립 개인실 — 프라이버시 확보, 대화에 집중 가능</li>
+<li>비교적 조용한 분위기 — 소음이 많으면 어른들이 불편해하심</li>
+<li>주차 편의성 — 양가 모두 차를 가지고 오는 경우 주차 공간 필수</li>
+<li>메뉴 다양성 — 세대 간 취향 차이를 고려해 한식 코스 또는 한정식 추천</li>
+</ul>
+
+가격대는 1인 5~8만 원 수준의 한정식 또는 고급 한식 레스토랑이 일반적입니다. 4~6인 식사 기준 총 20~50만 원 선이 됩니다. 너무 고급스럽거나 너무 캐주얼하면 양쪽 모두 불편할 수 있으니 '격식 있되 지나치지 않은' 수준을 목표로 하세요.
+
+<h2>③ 예단·예물, 2026년 현재 어떻게 하나</h2>
+
+예단과 예물에 대한 문화가 빠르게 변화하고 있습니다.<br><br>
+<strong>예단(禮緞)</strong>은 전통적으로 신부 측에서 신랑 집에 혼수와 함께 보내던 비단류를 의미하지만, 현재는 현금 예단으로 대체된 경우가 대부분입니다.<br><br>
+<strong>2026년 현재 주요 트렌드</strong>:
+<ul>
+<li><strong>예단 생략</strong>: 간소화를 원하는 커플은 예단 자체를 생략하거나, 현금 예단을 소액으로 간소화합니다.</li>
+<li><strong>현금 예단</strong>: 생략하지 않는 경우 신부 측에서 50만~200만 원 선의 현금을 예단함에 넣어 전달하는 것이 현실적입니다. 과거 수백만 원 규모의 예단 문화는 줄어드는 추세입니다.</li>
+<li><strong>예물(禮物)</strong>: 신랑 측에서 신부에게 전달하는 예물은 시계, 반지, 패물 등이 전통적입니다. 현재는 신부 취향에 맞는 주얼리(반지, 귀걸이, 목걸이)를 선택하거나, 서로 협의해 커플 시계를 교환하는 형태가 많아졌습니다.</li>
+</ul>
+
+<h2>④ 예단·예물 생략 시 — 양가 대화 방법</h2>
+
+예단·예물을 생략하고 싶다면 커플이 먼저 합의한 뒤, 양가 부모님께 말씀드리는 순서가 중요합니다.<br><br>
+<strong>대화 포인트</strong>:
+<ul>
+<li>"예단·예물 비용을 결혼 후 신혼집 마련이나 생활 안정에 쓰고 싶다"는 실용적 이유를 함께 말씀드리면 부모님도 이해하기 쉽습니다.</li>
+<li>생략을 원하지 않는 쪽 부모님이 계신다면 작은 예의 표시(소액 현금 예단, 패물 한 가지)로 형식을 유지하면서 규모를 줄이는 절충안도 있습니다.</li>
+<li>가장 중요한 것은 양가 모두 서운하지 않도록 <strong>충분히 이야기를 나누는 과정</strong> 자체입니다.</li>
+</ul>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260807/5_sanggyeonrye_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-2">Korean traditional wedding gifts preparation concept, elegant wooden jewelry box with rings, pearl necklace and cash envelope arranged on white cloth, traditional Korean gift wrapping aesthetic with modern minimal style, photorealistic, ultra high detail, 1:1 aspect ratio, soft warm lighting, refined and tasteful composition</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">예단·예물 준비 — 전통과 현대 사이에서 양가 합의가 가장 중요하다 / AI 제작 이미지</div>
+</div>
+
+<h2>⑤ 상견례 당일 복장과 태도 — 부모님 세대가 보는 포인트</h2>
+
+상견례는 공식적인 첫 만남인 만큼 인상 관리가 중요합니다.<br><br>
+<strong>복장</strong>: 정장 또는 깔끔한 비즈니스 캐주얼이 기본입니다. 너무 화려하거나 캐주얼한 복장은 상대방 부모님께 성의가 없어 보일 수 있습니다. 색상은 차분한 톤(네이비, 그레이, 블랙, 베이지)이 안전합니다.<br><br>
+<strong>당일 태도 포인트</strong>:
+<ul>
+<li>먼저 인사 — 연장자(상대방 부모님)께 먼저 인사하고 자리를 권해드린다</li>
+<li>휴대폰 — 식사 중 휴대폰을 테이블 위에 올려두거나 자주 확인하지 않는다</li>
+<li>경청 — 상대방 부모님이 말씀하실 때는 고개를 끄덕이며 경청하는 모습을 보여준다</li>
+<li>과도한 음주 자제 — 상견례 자리에서 술을 권유받더라도 과도하게 마시는 것은 삼간다</li>
+</ul>
+
+<h2>⑥ 상견례 선물 — 가져가야 하나, 뭘 가져가나</h2>
+
+상견례에 선물을 가져가는 것은 의무는 아니지만 성의 표현이 됩니다.<br><br>
+<strong>적합한 선물</strong>:
+<ul>
+<li>홍삼·건강기능식품 세트 (5~10만 원 선)</li>
+<li>과일 또는 전통 과자 선물 세트 (5~10만 원 선)</li>
+<li>와인 또는 전통주 (상대방 부모님 주류 선호 여부 확인 후)</li>
+<li>지역 특산품 선물 세트 (고향이 유명 지역인 경우)</li>
+</ul>
+
+선물의 포장은 깔끔하게, 가격대는 너무 비싸거나 너무 저렴하지 않은 5~15만 원 선이 적당합니다. 상대방을 압박하거나 과도한 부담을 주는 선물은 피하는 것이 좋습니다.
+
+<h2>⑦ 혼수 논의 — 상견례에서 꺼내는 게 맞나</h2>
+
+상견례 자리에서 혼수(신랑·신부 측 각자가 준비하는 물건)를 직접 논의하는 것이 맞는지 고민하시는 분이 많습니다.<br><br>
+일반적으로 상견례는 첫 만남 자리인 만큼 혼수, 집, 비용 배분 같은 세부 사항을 처음 만남에서 바로 꺼내는 것은 부담스럽게 느껴질 수 있습니다. 상견례 후 2~3번 추가 만남(식사 자리)을 통해 자연스럽게 논의하는 것이 더 일반적입니다.<br><br>
+단, 양가 부모님 중 어느 쪽이 먼저 혼수 이야기를 꺼내신다면 자연스럽게 대화를 이어나가면 됩니다.
+
+<h2>⑧ 상견례 이후 — 연락 예절과 다음 단계</h2>
+
+상견례가 잘 끝났다면 이후에도 마음을 표현하는 예절이 있습니다.<br><br>
+<strong>당일 저녁 또는 다음 날</strong>: 상대방 부모님께 감사 연락(전화 또는 문자)을 드리는 것이 예의입니다. 연락은 파트너가 직접 드리거나, 커플이 함께 메시지를 보내는 방식 모두 괜찮습니다.<br><br>
+<strong>다음 단계</strong>: 상견례 이후 본격적인 결혼 준비(예식장·스드메·신혼집·혼수) 논의가 시작됩니다. 이 과정에서도 양가 부모님의 의견을 수시로 공유하고 소통하는 것이 갈등을 예방하는 가장 좋은 방법입니다.
+
+<div class="tip-box">
+💡 <strong>상견례 전 커플이 미리 맞춰야 할 사항</strong><br>
+① 식사 비용 부담 방식 합의<br>
+② 예단·예물 규모 또는 생략 여부 합의<br>
+③ 선물 품목 조율 (양가가 비슷한 수준 선물 가져오면 자연스러움)<br>
+④ 대화 주제 (직업·거주지·취미 정도는 편하게 이야기 나눌 수 있도록 준비)
+</div>
+
+<h2>⑨ 요즘 결혼 문화 — 상견례부터 혼수까지 달라진 것들</h2>
+
+2020년대 중반 이후 결혼 문화의 변화를 정리합니다.<br><br>
+
+<table class="info-table">
+  <tr>
+    <th>항목</th>
+    <th>과거 관행</th>
+    <th>2026년 현재</th>
+  </tr>
+  <tr>
+    <td>상견례 비용</td>
+    <td style="background:#f9fdf9;">남자 측 전액</td>
+    <td>각자 부담 또는 협의 증가</td>
+  </tr>
+  <tr>
+    <td>예단</td>
+    <td>비단·혼수 대량</td>
+    <td style="background:#f9fdf9;">소액 현금 또는 생략 증가</td>
+  </tr>
+  <tr>
+    <td>예물</td>
+    <td>패물 세트 (금반지·목걸이)</td>
+    <td>취향 맞춤 주얼리, 커플 시계</td>
+  </tr>
+  <tr>
+    <td>혼수 분담</td>
+    <td style="background:#f9fdf9;">남자 집, 여자 가전·살림</td>
+    <td style="background:#f9fdf9;">반반 또는 각자 능력껏 분담</td>
+  </tr>
+  <tr>
+    <td>결혼 규모</td>
+    <td>대규모 하객 잔치</td>
+    <td>소규모 스몰웨딩 증가</td>
+  </tr>
+</table>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260806/rite_wedding_emcee_speech.html">결혼식 사회자 멘트 모음과 진행 순서, 직접 사회 볼 때 준비하는 법</a></li>
+    <li><a href="../260806/travel_yeongwol_byeolmaro.html">영월 별마로천문대 야간관측 예약 방법과 한반도지형·청령포, 늦여름 강원 별밤 코스</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#상견례</span>
+  <span class="tag">#상견례비용</span>
+  <span class="tag">#예단예물</span>
+  <span class="tag">#결혼준비</span>
+  <span class="tag">#상견례식사</span>
+  <span class="tag">#예단생략</span>
+  <span class="tag">#결혼문화</span>
+  <span class="tag">#상견례선물</span>
+  <span class="tag">#예물반지</span>
+  <span class="tag">#결혼혼수</span>
+</div>
+
+</body>
+</html>

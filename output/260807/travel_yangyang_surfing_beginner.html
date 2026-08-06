@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px 14px; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #eee; }
+  .step-box { border-left: 4px solid #00796b; padding: 15px 20px; background: #f9fdf9; border: 1px solid #eee; border-left-width: 4px; margin-bottom: 15px; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 15px 20px; border-radius: 8px; margin: 20px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { background: #f5f5f5; border: 2px dashed #bbb; padding: 20px; border-radius: 8px; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.9em; color: #666; }
+  .ph-file { font-family: monospace; color: #888; }
+  .prompt-text { background: #fff; border: 1px solid #ddd; padding: 12px; border-radius: 6px; font-size: 0.82em; color: #555; text-align: left; white-space: pre-wrap; margin: 10px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; font-size: 0.9em; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>양양 서핑 초보 강습 어디서 받나, 죽도해변·하조대 늦여름 서핑 입문</h1>
+
+<div class="intro-box">
+서핑을 한 번이라도 해보고 싶다는 생각, 해본 적 있으신가요?<br><br>
+양양은 이제 한국 서핑의 성지로 자리 잡았습니다. 죽도해변과 인구해변, 기사문해변은 물론 하조대까지 이어지는 양양 해안선은 서핑에 적합한 파도 환경을 갖추고 있어 국내 서핑 인구의 상당수가 이 지역으로 몰립니다.<br><br>
+8월 말~9월 초는 서핑 시즌의 황금기입니다. 파도 높이가 안정적으로 유지되고 수온도 따뜻하며, 7~8월 성수기처럼 지나치게 붐비지 않아 강습 집중도도 올라갑니다. 이 글에서는 <strong>서핑 강습을 처음 받으려는 분</strong>을 위해 양양에서 강습받는 방법, 비용, 서핑샵 고르는 기준, 하조대 연계 코스까지 상세히 안내합니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260807/2_yangyang_surfing_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-1">Beginner surfers taking surf lesson on Jukdo Beach Yangyang Korea, instructor guiding students on shallow waves, colorful surfboards lined up on sandy beach, late summer blue sky with light clouds, East Sea Korea, photorealistic, ultra high detail, 1:1 aspect ratio, vibrant ocean colors, dynamic action shot</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">죽도해변 서핑 강습 — 초보자도 안전하게 파도를 탈 수 있는 양양 서핑 입문 현장 / AI 제작 이미지</div>
+</div>
+
+<h2>① 양양 서핑, 어느 해변에서 받을까</h2>
+
+양양의 주요 서핑 해변은 크게 세 곳으로 나뉩니다.<br><br>
+<strong>죽도해변</strong>은 양양읍 남쪽에 위치하며, 양양 서핑의 메카라 불립니다. 서핑샵이 밀집해 있고 접근이 편리해 초보자 강습이 가장 활발합니다. 파도 방향이 비교적 규칙적이고 완만한 편이라 입문자에게 알맞습니다.<br><br>
+<strong>인구해변</strong>은 죽도 바로 북쪽에 위치하며 파도가 조금 더 강합니다. 중급 이상 서퍼들이 선호하는 편입니다. 초보자 강습도 일부 제공되지만 주로 경험자 위주입니다.<br><br>
+<strong>기사문해변</strong>은 소규모 로컬 서핑 문화가 강하게 남아있는 해변으로 조용하고 자연 그대로의 분위기가 살아있습니다. 강습 인프라는 죽도보다 적습니다.<br><br>
+초보자 강습이 목적이라면 <strong>죽도해변</strong>이 가장 적합합니다. 서핑샵 수가 많아 비교 예약이 가능하고, 강습 전후 편의시설(샤워, 락커, 식당)도 잘 갖춰져 있습니다.
+
+<h2>② 서핑 강습 비용과 프로그램 구성</h2>
+
+양양 죽도해변 기준 서핑 강습 비용은 2026년 현재 다음과 같습니다.<br><br>
+
+<table class="info-table">
+  <tr>
+    <th>프로그램</th>
+    <th>소요 시간</th>
+    <th>비용 (1인)</th>
+    <th>포함 내용</th>
+  </tr>
+  <tr>
+    <td>입문 강습 (단일 회)</td>
+    <td>2시간</td>
+    <td style="background:#f1faf9;">5~6만 원</td>
+    <td>이론 30분 + 실습 90분, 보드·슈트 렌탈 포함</td>
+  </tr>
+  <tr>
+    <td>3회 패키지</td>
+    <td>회당 2시간</td>
+    <td style="background:#fff;">12~15만 원</td>
+    <td>연속 3일 또는 당일 3회, 장비 포함</td>
+  </tr>
+  <tr>
+    <td>자유 렌탈 (강습 제외)</td>
+    <td>2시간</td>
+    <td style="background:#f1faf9;">2~3만 원</td>
+    <td>보드+슈트만, 경험자 대상</td>
+  </tr>
+</table>
+
+비용은 샵마다 조금씩 다르며, 성수기(7~8월 중순)보다 8월 말~9월에는 10~15% 할인 이벤트를 진행하는 곳도 있습니다. 사전 예약 시 할인을 주는 샵도 많으니 SNS나 네이버 예약을 통해 미리 확인하는 것이 좋습니다.
+
+<h2>③ 서핑샵 고르는 기준 — 초보자에게 중요한 항목</h2>
+
+죽도해변에는 수십 개의 서핑샵이 운영되고 있어 선택이 쉽지 않습니다.<br><br>
+초보자가 서핑샵을 고를 때 확인해야 할 핵심 기준을 정리합니다.<br><br>
+<strong>1. 강사 자격증 보유 여부</strong>: 대한서핑협회(KSA) 또는 국제서핑협회(ISA) 공인 자격을 갖춘 강사가 있는지 확인하세요. 자격증 없는 서퍼가 강습을 진행하는 경우 안전사고 위험이 높습니다.<br><br>
+<strong>2. 강습 비율</strong>: 강사 1명당 수강생 수가 4~5명 이하인 소규모 강습을 선택하세요. 10명 이상 단체 강습은 개인 피드백이 부족할 수 있습니다.<br><br>
+<strong>3. 슈트·보드 품질</strong>: 여름이라도 동해 수온이 낮을 수 있으니 3mm 이상 웻슈트를 제공하는 샵을 선택하세요. 초보용 폼보드(소프트탑) 여부도 확인합니다.<br><br>
+<strong>4. 후기 확인</strong>: 네이버 예약이나 구글 지도 리뷰를 통해 최근 3개월 이내 후기를 확인하는 것이 가장 신뢰할 수 있는 방법입니다.
+
+<h2>④ 강습 당일 — 이렇게 진행됩니다</h2>
+
+처음 서핑 강습을 받으면 어떤 순서로 진행될까요?<br><br>
+<div class="step-box">
+<strong>Step 1 (0~30분) — 이론·준비운동</strong><br>
+서핑 기초 이론(파도 읽기, 패들링 자세, 팝업 동작)을 육상에서 먼저 연습합니다. 슈트 입는 법, 보드 운반법, 안전 수칙도 이 시간에 안내받습니다.
+</div>
+<div class="step-box">
+<strong>Step 2 (30~90분) — 얕은 파도 실습</strong><br>
+무릎~허리 높이의 얕은 파도에서 패들링 연습을 시작합니다. 보드 위에서 균형을 잡는 팝업(Pop-up)을 반복 연습하며, 성공하면 점차 깊은 구역으로 이동합니다.
+</div>
+<div class="step-box">
+<strong>Step 3 (90~120분) — 파도 타기 도전</strong><br>
+실제 파도를 타는 연습을 합니다. 강사가 뒤에서 보드를 밀어주며 파도 타이밍을 맞춰주기도 하고, 혼자 파도를 읽어 패들링하는 훈련도 병행합니다.
+</div>
+
+2시간 강습 이후에는 1시간~2시간 자유 서핑 시간을 추가로 구매하거나, 충분히 쉬면서 다음 강습을 예약할 수 있습니다.
+
+<h2>⑤ 초보 서퍼가 알아야 할 안전 수칙</h2>
+
+서핑은 파도와 함께하는 스포츠인 만큼 안전이 최우선입니다.<br><br>
+<strong>이안류(립커런트) 주의</strong>: 해변에서 바다 쪽으로 흐르는 강한 조류가 생길 수 있습니다. 이안류에 휩쓸렸을 때는 해변 방향으로 헤엄치지 말고, 해류 방향과 직각으로 이동하며 빠져나와야 합니다. 강습 시작 전 강사에게 이안류 피하는 법을 반드시 확인하세요.<br><br>
+<strong>보드 컨트롤</strong>: 파도에 쓸려 보드가 다른 사람에게 날아가는 사고가 빈번합니다. 보드 줄(리쉬)을 반드시 발목에 연결하고 보드를 놓치지 않도록 주의합니다.<br><br>
+<strong>컨디션 확인</strong>: 서핑은 생각보다 체력 소모가 크므로, 음주 후나 컨디션 저하 상태에서는 절대 입수하지 않습니다. 심장 질환, 고혈압 등 기저질환이 있으신 분은 사전에 의사와 상담 후 참여하세요.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260807/2_yangyang_surfing_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-2">Hajodae lighthouse and coastal scenery in Yangyang Korea, late summer, rocky cliff with white lighthouse overlooking the East Sea, golden afternoon light, gentle waves, people walking on observation deck, photorealistic, ultra high detail, 1:1 aspect ratio, scenic coastal landscape, blue sky</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">하조대 등대와 해안 절벽 — 양양 서핑 이후 둘러볼 수 있는 자연 경관 명소 / AI 제작 이미지</div>
+</div>
+
+<h2>⑥ 하조대 — 서핑 후 들르기 좋은 양양 명소</h2>
+
+죽도해변에서 서핑을 마친 뒤, 차로 10분 거리의 하조대를 들러보는 것을 추천합니다.<br><br>
+하조대는 기암절벽 위에 세워진 하조대 정자와 등대가 어우러진 경승지입니다. 조선 시대 유학자 하륜과 조준이 은둔했던 곳이라는 이야기가 전해지며, 동해 바다 조망이 탁 트여 있어 일출·일몰 명소로도 유명합니다.<br><br>
+하조대 해수욕장은 죽도·인구해변보다 한적한 편입니다. 서핑 후 지친 몸을 쉬게 하면서 바다를 바라볼 수 있는 카페와 음식점이 해안도로를 따라 있습니다. 하조대 해안 산책로(약 1km)를 걸으면 기암절벽과 파도가 어우러진 장관을 볼 수 있습니다.
+
+<h2>⑦ 양양 서핑 시 알아두면 좋은 정보</h2>
+
+양양 방문 전 미리 알아두면 편리한 실용 정보를 정리했습니다.<br><br>
+<strong>교통</strong>: 서울-양양 고속도로를 이용하면 서울에서 약 1시간 50분~2시간 20분 소요됩니다. 대중교통은 동서울~양양 고속버스(약 2시간 40분)가 있으며, 양양 시내에서 죽도해변까지 시내버스나 택시로 이동할 수 있습니다.<br><br>
+<strong>주차</strong>: 죽도해변 인근 공영주차장(유료, 성수기 이후 할인)이 있습니다. 8월 말~9월에는 해변 주변 노상 주차 공간도 여유가 생깁니다.<br><br>
+<strong>숙박</strong>: 죽도~인구해변 일대에 서핑샵과 연계된 게스트하우스와 펜션이 많습니다. 서핑 강습을 연속으로 받고 싶다면 1~2박 패키지를 제공하는 곳도 있습니다.<br><br>
+<strong>먹거리</strong>: 양양 읍내에는 연어 요리 전문점과 곰치국 등 지역 특색 음식을 맛볼 수 있습니다. 서핑 후 허기를 달래기 좋은 분식·김밥 가게도 해변 근처에 다수 운영됩니다.
+
+<div class="tip-box">
+💡 <strong>양양 서핑 강습 예약 꿀팁</strong><br>
+① 네이버 예약 또는 각 서핑샵 SNS(인스타그램)를 통해 미리 예약하면 현장 예약보다 10~15% 저렴한 경우가 많습니다.<br>
+② 8월 말~9월에는 평일 강습이 더 한산하고 개인 피드백을 받기 좋습니다.<br>
+③ 갈아입을 속옷, 여벌 옷, 수건, 물은 반드시 챙기세요. 샤워 후 착용할 드라이한 옷이 없으면 불편합니다.
+</div>
+
+<h2>⑧ 서핑 레벨업 — 한 번 배운 이후 어떻게 실력을 쌓나</h2>
+
+입문 강습 2시간만으로 파도를 자유롭게 타긴 어렵습니다.<br><br>
+일반적으로 서핑의 기본기를 익히려면 최소 5~10회 이상의 반복 연습이 필요합니다. 처음 몇 번은 패들링과 균형 잡기에 집중하고, 서서히 파도를 읽는 능력과 방향 전환 기술을 익히게 됩니다.<br><br>
+서울이나 수도권에 거주하신다면 양양까지 자주 오기 어렵겠지만, 인천 을왕리해변이나 태안 쪽에도 서핑 강습 업체가 생겨나고 있습니다. 유튜브나 서핑 커뮤니티(코리아서핑클럽 등)를 통해 육상 훈련(스케이트보드·밸런스보드)으로 기초를 다지는 것도 좋은 방법입니다.
+
+<h2>⑨ 양양 서핑 시즌 정리 — 언제가 가장 좋을까</h2>
+
+양양 서핑 시즌은 6월 말~10월 초까지가 메인입니다.<br><br>
+
+<table class="info-table">
+  <tr>
+    <th>시기</th>
+    <th>특징</th>
+    <th>추천 대상</th>
+  </tr>
+  <tr>
+    <td>7~8월 초</td>
+    <td style="background:#f1faf9;">성수기, 인파 집중, 가격 최고</td>
+    <td>경험자, 축제 분위기 선호</td>
+  </tr>
+  <tr>
+    <td>8월 말~9월 초</td>
+    <td style="background:#fff;">한산, 수온 따뜻, 파도 안정</td>
+    <td><strong>초보자 강습 최적</strong></td>
+  </tr>
+  <tr>
+    <td>9월 중~10월 초</td>
+    <td style="background:#f1faf9;">태풍 시즌 파도 커질 수 있음</td>
+    <td>중급 이상 서퍼</td>
+  </tr>
+</table>
+
+<br>
+8월 말은 수온이 아직 22~24℃로 따뜻하고 파도가 안정적이며, 사람이 줄어들어 강습 집중도가 높아집니다. 늦여름 서핑 첫 경험을 계획 중이라면 지금이 정말 좋은 타이밍입니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260806/travel_gwangbokjeol_seoul.html">광복절 연휴 서울 역사 나들이, 서대문형무소역사관과 독립문·효창공원 코스</a></li>
+    <li><a href="../260806/travel_yeongwol_byeolmaro.html">영월 별마로천문대 야간관측 예약 방법과 한반도지형·청령포, 늦여름 강원 별밤 코스</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#양양서핑</span>
+  <span class="tag">#서핑강습</span>
+  <span class="tag">#죽도해변</span>
+  <span class="tag">#하조대</span>
+  <span class="tag">#서핑입문</span>
+  <span class="tag">#양양여행</span>
+  <span class="tag">#늦여름서핑</span>
+  <span class="tag">#동해서핑</span>
+  <span class="tag">#서핑초보</span>
+  <span class="tag">#인구해변</span>
+</div>
+
+</body>
+</html>
