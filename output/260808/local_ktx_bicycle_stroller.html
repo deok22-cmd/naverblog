@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1f8f1; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 14px; font-size: .95em; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #eee; font-size: .93em; vertical-align: top; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 18px 20px; border-radius: 8px; margin: 20px 0; }
+  .caution-box { background: #fce4ec; border: 1px solid #e57373; padding: 18px 20px; border-radius: 8px; margin: 20px 0; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #388e3c; border-radius: 10px; padding: 24px; background: #f1f8f1; margin-bottom: 8px; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: bold; color: #1b5e20; font-size: .9em; flex-wrap: wrap; gap: 8px; }
+  .ph-file { font-family: monospace; font-size: .82em; color: #555; }
+  .prompt-text { white-space: pre-wrap; font-size: .82em; color: #444; background: #fff; padding: 12px; border-radius: 6px; border: 1px solid #a5d6a7; text-align: left; margin: 8px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 8px 18px; border-radius: 6px; cursor: pointer; font-size: .88em; }
+  .img-caption { font-size: .9em; color: #555; margin-top: 8px; font-style: italic; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: .85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>KTX 자전거·유아차 기차에 가져가는 법과 추가요금, 무임 기준</h1>
+
+<div class="intro-box">
+기차 여행을 계획하면서 자전거를 가져갈 수 있는지, 유아차는 어떻게 싣는지 고민해 본 적 있으신가요?<br><br>
+코레일 기차(KTX·ITX·새마을호·무궁화호)에 자전거와 유아차를 가져가는 규정이 열차 종류마다 다르고 예약 방법도 까다로워 모르고 가면 낭패를 보기 쉽습니다.<br><br>
+이 글에서는 자전거 탑재 가능 열차와 예약 방법, 유아차 탑승 규정, 그리고 어린이 무임 기준까지 실용적인 정보를 한 번에 정리합니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260808/4_ktx_bicycle_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-1">KTX high-speed train interior bicycle storage compartment, folded bicycles secured vertically in dedicated luggage rack area, Korean railway interior with modern design, practical travel equipment storage, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">KTX 자전거 거치 공간 — 접이식 자전거 탑재가 가능한 수하물 칸 / AI 제작 이미지</div>
+</div>
+
+<h2>① 자전거 가지고 기차여행, 가능할까</h2>
+
+결론부터 말하면 가능합니다. 단, <strong>접이식 자전거</strong>와 <strong>일반 자전거(분해 포장 포함)</strong>에 따라 규정이 다릅니다.<br><br>
+코레일에서는 자전거를 열차 내 수하물로 취급하며, 열차 종류와 공간 여건에 따라 탑재 가능 여부와 방법이 달라집니다.<br><br>
+가장 중요한 포인트는 일반 KTX 편성에는 자전거 전용 거치 공간이 없기 때문에, 자전거를 접거나 분해·포장해야 한다는 점입니다.<br><br>
+KTX 또는 ITX 열차에 자전거를 싣고 싶다면 반드시 사전에 코레일 앱(코레일톡)이나 홈페이지에서 수하물 공간 예약이 가능한지 확인하고 좌석 예약 시 함께 처리해야 합니다.<br><br>
+무작정 자전거를 들고 가면 승차를 거부당할 수 있으니, 출발 전 코레일 고객센터(1544-7788)에 탑재 가능 여부를 미리 문의하는 것이 가장 안전합니다.<br><br>
+관련 규정은 코레일 공식 홈페이지(letskorail.com) 수하물 규정 페이지에서 최신 내용을 확인하세요.
+
+<h2>② KTX·일반 열차의 자전거 탑재 규정</h2>
+
+<table class="info-table">
+  <tr><th>열차 종류</th><th>자전거 탑재 방식</th><th>비고</th></tr>
+  <tr><td style="background:#f1f8f1;">KTX (일반)</td><td>접이식 자전거: 접은 후 짐칸에 반입 가능<br>일반 자전거: 분해 후 전용 포장 필요</td><td>별도 운임 없이 수하물로 취급<br>(공간 한정, 사전 확인 필요)</td></tr>
+  <tr><td style="background:#fff;">ITX-청춘·새마을</td><td>접이식·일반 자전거 모두 수하물칸 반입 가능</td><td>운임 별도 (코레일 수하물 요금 적용)</td></tr>
+  <tr><td style="background:#f1f8f1;">무궁화호</td><td>자전거 탑재 가능 구간 별도 운영</td><td>일부 노선 자전거 거치 전용 칸 존재</td></tr>
+  <tr><td style="background:#fff;">자전거 전용 열차</td><td>코레일이 운영하는 자전거 특화 노선 존재</td><td>예: 경의·중앙선, 춘천선 일부 구간</td></tr>
+</table>
+
+<strong>핵심 규정 (코레일 기준, 변경 가능성 있으니 최신 정보 확인 요망)</strong>:<br><br>
+접이식 자전거는 접었을 때 최대 규격(세 변의 합 250cm 이내, 무게 30kg 이하) 범위 내에서 수하물로 취급됩니다.<br><br>
+일반 자전거를 분해·포장해서 가져갈 경우에도 포장 후 규격이 위 기준을 넘지 않아야 합니다.<br><br>
+자전거를 보조 수하물로 신청하면 추가 요금(일반적으로 수하물 규격에 따른 별도 운임)이 발생합니다.<br><br>
+정확한 요금과 최신 규정은 코레일 홈페이지 '여행자 수하물' 안내 또는 고객센터(1544-7788)를 통해 직접 확인하세요.
+
+<h2>③ 자전거 예약 방법 — 코레일톡 앱에서</h2>
+
+자전거를 기차에 싣고 싶다면 좌석 예약과 함께 수하물 예약을 함께 진행해야 합니다.<br><br>
+<strong>1단계</strong>: 코레일 앱(코레일톡) 또는 홈페이지(letskorail.com) 접속<br><br>
+<strong>2단계</strong>: 원하는 열차 조회 후 좌석 선택<br><br>
+<strong>3단계</strong>: 결제 전 '수하물 신청' 또는 '자전거 탑승 신청' 여부 확인<br><br>
+<strong>4단계</strong>: 수하물 신청이 가능한 열차 선택 후 자전거 규격·중량 입력<br><br>
+<strong>5단계</strong>: 결제 후 수하물 확인증 수령<br><br>
+모든 열차에 자전거 탑재 예약이 가능한 것은 아닙니다.<br><br>
+특히 주말·연휴에는 자전거 탑재 가능 열차가 빠르게 매진될 수 있으니 여행 계획이 확정되면 최대한 빨리 예약하세요.
+
+<h2>④ 자전거를 들고 탈 때 주의사항</h2>
+
+자전거를 기차에 반입할 때는 승강장에서 승무원에게 자전거 수하물 확인증을 제시해야 합니다.<br><br>
+자전거는 짐칸에 개인이 직접 탑재하며, 이동 중 자전거가 움직이지 않도록 고정하는 것도 본인 책임입니다.<br><br>
+자전거를 통로나 좌석 사이에 방치하면 다른 승객에게 불편을 주고 안전 문제가 발생할 수 있어 주의가 필요합니다.<br><br>
+귀중품이나 파손 우려가 있는 물품은 자전거에 달아두지 말고 직접 소지하세요.<br><br>
+자전거 반입 거부 사례가 간혹 발생하므로 예약 확인증을 반드시 프린트하거나 앱에 저장해 두세요.
+
+<h2>⑤ 유아차(유모차) 기차 탑승 규정</h2>
+
+유아차는 자전거와 달리 별도 예약 없이도 기차에 탑승할 수 있습니다.<br><br>
+단, 열차 내에서의 유아차 이용 방식은 차량 종류에 따라 다릅니다.<br><br>
+<strong>접이식 유아차</strong>: 접어서 좌석 위 짐칸에 올리거나 발밑에 놓을 수 있습니다. 대부분의 KTX에서 가능합니다.<br><br>
+<strong>접기 어려운 대형 유아차</strong>: 열차 끝 칸의 수하물 공간에 세워 두거나, 승무원에게 요청해 빈 공간을 확인하는 방법을 활용합니다.<br><br>
+유아차를 펼친 채 통로에 두는 것은 다른 승객 이동을 방해할 수 있어 자제해 주세요.<br><br>
+KTX 특실(1등석)에는 좌석 간격이 넓어 유아차 수납이 상대적으로 쉽습니다.<br><br>
+아이와 함께 탑승 시 장애인·임산부·영유아 동반 가족 우선 칸(KTX 1·2호차)을 이용하면 더욱 편리합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260808/4_ktx_bicycle_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-2">Korean family with baby stroller boarding KTX high-speed train at modern train station platform, mother folding compact stroller while father assists, practical family travel moment, bright station atmosphere, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">KTX 탑승 시 유아차 이용 — 가족 여행에서 유아차를 스마트하게 활용하는 법 / AI 제작 이미지</div>
+</div>
+
+<h2>⑥ 어린이 기차 무임 기준 — 나이와 인원별 정리</h2>
+
+코레일 기차의 어린이 무임(무료 탑승) 기준은 다음과 같습니다(2026년 기준, 변경 가능).<br><br>
+
+<table class="info-table">
+  <tr><th>나이</th><th>운임</th><th>조건</th></tr>
+  <tr><td style="background:#f1f8f1;">만 6세 미만</td><td>무료</td><td>동반 성인 1명당 2명까지 무료 (초과 시 소인 운임 적용)</td></tr>
+  <tr><td style="background:#fff;">만 6세~만 12세 이하</td><td>소인 운임 (성인의 50%)</td><td>별도 좌석 배정 시 소인 요금 지불</td></tr>
+  <tr><td style="background:#f1f8f1;">만 13세 이상</td><td>성인 운임</td><td>청소년 할인 카드 사용 가능</td></tr>
+</table>
+
+만 6세 미만 어린이 2명이 성인 1명과 동반 시 어린이 2명까지 무료이지만, 어린이가 별도 좌석을 차지하는 경우에는 소인 운임을 내야 합니다.<br><br>
+즉, 어린 아이를 무릎에 앉혀 이동하는 경우에만 완전 무임이 적용되며, 좌석을 따로 배정받으면 요금이 발생합니다.<br><br>
+유아(만 6세 미만)와 함께 기차 여행을 계획한다면 예약 시 어린이 좌석 여부를 결제 전에 잘 확인하세요.
+
+<h2>⑦ 자전거 여행에 좋은 기차 노선 추천</h2>
+
+자전거와 함께 기차 여행을 즐기기 좋은 대표 코스를 소개합니다.<br><br>
+<strong>경의·중앙선 자전거 코스</strong>: 수도권 광역 전철인 경의·중앙선은 자전거를 접지 않아도 탑승 가능한 공간을 보유하고 있습니다. 임진각, 춘천 등을 자전거와 함께 당일치기로 여행하기 좋습니다.<br><br>
+<strong>춘천선(ITX-청춘)</strong>: 춘천역 하차 후 의암호 자전거길이나 남이섬까지 자전거로 이동하는 코스가 인기입니다.<br><br>
+<strong>코레일 자전거 전용 기차 상품</strong>: 코레일이 계절별로 운영하는 자전거 투어 패키지는 자전거 탑재 걱정 없이 기차+자전거 여행을 즐길 수 있는 방법입니다. 코레일 홈페이지에서 정기적으로 확인하세요.
+
+<h2>⑧ 기차+자전거 여행 체크리스트</h2>
+
+출발 전 다음 사항을 반드시 확인하세요.<br><br>
+✅ 탑승할 열차에 자전거 수하물 예약이 가능한지 코레일 앱 또는 고객센터(1544-7788) 확인<br><br>
+✅ 자전거 규격(세 변의 합 250cm 이내, 무게 30kg 이하) 초과 여부 확인<br><br>
+✅ 접이식 자전거라면 완전히 접었을 때 규격 측정<br><br>
+✅ 수하물 예약 확인증 출력 또는 앱 저장<br><br>
+✅ 자전거 체인 오일 기름이 다른 승객 짐을 오염시키지 않도록 천이나 비닐로 감싸기<br><br>
+✅ 헬멧, 자물쇠, 공구, 펌프 등 필수 장비 확인<br><br>
+✅ 목적지 역 주변 자전거 도로 또는 자전거 대여소 사전 조사
+
+<h2>⑨ 자주 묻는 질문</h2>
+
+<strong>Q. 전동킥보드도 기차에 가져갈 수 있나요?</strong><br>
+전동킥보드는 배터리 용량이나 위험물 분류에 따라 탑재 기준이 다를 수 있습니다. 코레일 고객센터에 직접 문의하세요.<br><br>
+<strong>Q. 자전거 분실이나 파손 시 보상은?</strong><br>
+탁송 수하물로 신청한 경우 코레일의 수하물 배상 규정이 적용되지만, 직접 반입한 수하물은 보상이 제한될 수 있습니다. 고가 자전거는 별도 보험 가입을 권장합니다.<br><br>
+<strong>Q. 유아차는 예약이 필요한가요?</strong><br>
+일반적으로 별도 예약 없이 탑승할 수 있으나, 접이식이 어려운 대형 유모차는 사전에 코레일 고객센터에 문의하는 것이 좋습니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260807/travel_yangyang_surfing_beginner.html">양양 서핑 초보 강습 어디서 받나, 죽도해변·하조대 늦여름 서핑 입문</a></li>
+    <li><a href="../260807/local_chuseok_flight_accommodation.html">추석 연휴 항공권·숙소 언제 풀리나, 예매 오픈 시점과 취소표 잡는 법</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#KTX자전거</span>
+  <span class="tag">#기차자전거탑재</span>
+  <span class="tag">#유아차기차</span>
+  <span class="tag">#코레일자전거</span>
+  <span class="tag">#기차여행준비</span>
+  <span class="tag">#어린이무임</span>
+  <span class="tag">#자전거여행</span>
+  <span class="tag">#KTX여행팁</span>
+  <span class="tag">#코레일규정</span>
+  <span class="tag">#기차수하물</span>
+</div>
+
+</body>
+</html>

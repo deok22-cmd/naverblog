@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1f8f1; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 14px; font-size: .95em; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #eee; font-size: .93em; vertical-align: top; }
+  .caution-box { background: #fce4ec; border: 1px solid #e57373; padding: 18px 20px; border-radius: 8px; margin: 20px 0; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 18px 20px; border-radius: 8px; margin: 20px 0; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #388e3c; border-radius: 10px; padding: 24px; background: #f1f8f1; margin-bottom: 8px; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: bold; color: #1b5e20; font-size: .9em; flex-wrap: wrap; gap: 8px; }
+  .ph-file { font-family: monospace; font-size: .82em; color: #555; }
+  .prompt-text { white-space: pre-wrap; font-size: .82em; color: #444; background: #fff; padding: 12px; border-radius: 6px; border: 1px solid #a5d6a7; text-align: left; margin: 8px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 8px 18px; border-radius: 6px; cursor: pointer; font-size: .88em; }
+  .img-caption { font-size: .9em; color: #555; margin-top: 8px; font-style: italic; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: .85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>운전면허 취소 후 재취득 절차와 결격기간 — 음주·사망사고 기준</h1>
+
+<div class="intro-box">
+음주운전, 교통사고, 벌점 초과 등으로 운전면허가 취소된 뒤 다시 면허를 취득하려면 결격기간이 끝난 후 새로 시험을 봐야 합니다.<br><br>
+결격기간은 취소 사유에 따라 1년부터 영구적으로 다양하게 달라집니다.<br><br>
+이 글에서는 운전면허 취소 사유별 결격기간, 재취득 절차, 그리고 꼭 알아야 할 주의사항을 정리합니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260808/6_license_revoke_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-1">Korean driver's license card with official seal, person holding license with serious expression representing re-acquisition after suspension, official government documentation context, clean background, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">운전면허 재취득 — 취소 후 결격기간을 지나 다시 받는 면허증 / AI 제작 이미지</div>
+</div>
+
+<h2>① 운전면허 취소와 정지, 무엇이 다른가</h2>
+
+운전면허 행정처분에는 <strong>취소</strong>와 <strong>정지</strong> 두 종류가 있습니다.<br><br>
+<strong>면허 정지</strong>는 일정 기간 동안 면허 사용이 정지되는 것으로, 정지 기간이 끝나면 별도 시험 없이 기존 면허로 다시 운전할 수 있습니다.<br><br>
+<strong>면허 취소</strong>는 면허 자체가 무효화되는 것으로, 결격기간이 끝난 후 처음부터 면허를 다시 취득해야 합니다. 기존에 취득한 면허는 사라집니다.<br><br>
+면허 취소 후에는 단순히 결격기간만 기다리는 것이 아니라, 필기시험·기능시험·도로주행시험을 모두 새로 통과해야 합니다.<br><br>
+따라서 운전면허가 취소된 경우 재취득 준비를 결격기간 만료에 맞춰 미리 계획하는 것이 중요합니다.
+
+<h2>② 면허 취소 주요 사유</h2>
+
+<table class="info-table">
+  <tr><th>취소 사유</th><th>주요 내용</th></tr>
+  <tr><td style="background:#f1f8f1;">음주운전 (혈중알코올 0.08% 이상)</td><td>1회 적발 시 취소, 결격기간 1년</td></tr>
+  <tr><td style="background:#fff;">음주운전 (혈중알코올 0.03~0.08% 미만, 2회 이상)</td><td>면허 취소, 결격기간 1년</td></tr>
+  <tr><td style="background:#f1f8f1;">음주측정 거부</td><td>면허 취소, 결격기간 1~2년</td></tr>
+  <tr><td style="background:#fff;">사망사고 유발 후 도주</td><td>면허 취소, 결격기간 5년 이상</td></tr>
+  <tr><td style="background:#f1f8f1;">벌점 누산 초과 (1년간 121점 이상)</td><td>면허 취소, 결격기간 1년</td></tr>
+  <tr><td style="background:#fff;">무면허 운전 (3회 이상)</td><td>면허 취소, 결격기간 2년</td></tr>
+  <tr><td style="background:#f1f8f1;">마약·약물 운전</td><td>면허 취소, 결격기간 1년 이상</td></tr>
+</table>
+
+위 기준은 도로교통법에 따른 일반 기준이며, 법원 판결·처분 내용에 따라 결격기간이 가중될 수 있습니다.<br><br>
+정확한 결격기간은 처분 통지서에 명시되므로 반드시 서류를 확인하세요.
+
+<h2>③ 음주운전 면허 취소 결격기간 상세</h2>
+
+음주운전은 혈중알코올농도(BAC)와 위반 횟수에 따라 결격기간이 달라집니다.<br><br>
+
+<table class="info-table">
+  <tr><th>음주 수준</th><th>위반 횟수</th><th>결격기간</th></tr>
+  <tr><td style="background:#f1f8f1;">혈중 0.08% 이상</td><td>1회</td><td>1년</td></tr>
+  <tr><td style="background:#fff;">혈중 0.03~0.08% 미만</td><td>2회 이상</td><td>1년</td></tr>
+  <tr><td style="background:#f1f8f1;">음주측정 거부</td><td>1회</td><td>1년</td></tr>
+  <tr><td style="background:#fff;">음주측정 거부 (재범)</td><td>2회 이상</td><td>2년</td></tr>
+  <tr><td style="background:#f1f8f1;">음주운전 사망사고</td><td>-</td><td>5년 이상 (법원 판결에 따름)</td></tr>
+</table>
+
+결격기간은 면허 취소 처분일로부터 계산되며, 기간 중 운전은 무면허 운전으로 추가 처벌을 받을 수 있습니다.<br><br>
+결격기간 중에는 운전면허시험 응시 자체가 불가합니다.
+
+<h2>④ 사망사고 시 결격기간과 형사처벌</h2>
+
+교통사고로 사람이 사망한 경우에는 면허 취소와 함께 형사처벌이 별도로 부과됩니다.<br><br>
+<strong>일반 사망사고(과실)</strong>: 사고 내용에 따라 결격기간이 달라지며, 재판 결과에 따라 집행유예·금고형이 결정됩니다.<br><br>
+<strong>음주 상태 사망사고</strong>: 위험운전치사상죄(특정범죄가중처벌법) 적용 가능. 결격기간 5년 이상, 형사처벌 가중.<br><br>
+<strong>뺑소니(도주차량)</strong>: 특정범죄가중처벌법 적용으로 가중처벌. 결격기간 5년 이상 또는 영구 결격 가능성도 있습니다.<br><br>
+영구 결격이란 말 그대로 평생 면허를 취득할 수 없음을 의미합니다.<br><br>
+<strong>사망사고 또는 뺑소니 관련 면허 취소는 반드시 교통 전문 법률 상담을 받는 것을 권장합니다.</strong>
+
+<div class="caution-box">
+⚠️ <strong>주의</strong>: 이 글은 일반적인 정보 안내 목적입니다. 취소 사유·결격기간·재취득 자격 여부는 개인별로 처분 내용이 다를 수 있으므로, 반드시 경찰청 면허시험 콜센터(1577-1120) 또는 가까운 운전면허시험장에서 본인의 현황을 확인하세요.
+</div>
+
+<h2>⑤ 결격기간 확인 방법</h2>
+
+본인의 결격기간 만료일은 다음 방법으로 확인할 수 있습니다.<br><br>
+<strong>경찰청 교통민원24(이파인)</strong>: www.efine.go.kr → 로그인 후 '면허 처분 조회' 메뉴<br><br>
+<strong>도로교통공단 안전운전 통합민원</strong>: www.safedriving.or.kr → 면허 적성검사·처분이력 조회<br><br>
+<strong>운전면허시험장 방문</strong>: 신분증 지참 후 직접 방문해 처분 내용 확인 가능<br><br>
+결격기간 만료일을 정확히 확인한 후 시험 일정을 계획하세요. 기간이 1일이라도 남아 있으면 시험에 응시할 수 없습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260808/6_license_revoke_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-2">Korean driving license test center examination hall, applicants sitting at computer terminals taking written test, modern government facility interior, official exam room atmosphere, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">운전면허 필기시험장 — 취소 후 재취득 시 처음부터 시험을 다시 봐야 합니다 / AI 제작 이미지</div>
+</div>
+
+<h2>⑥ 면허 재취득 절차 — 단계별 정리</h2>
+
+결격기간이 끝나면 일반 신규 면허 취득과 동일한 절차로 재취득합니다.<br><br>
+<strong>1단계 — 교통안전교육 이수</strong><br>
+면허 취소자는 재취득 전 교통안전교육(도로교통공단 운영, 1~3시간)을 이수해야 합니다. 음주운전 취소자는 별도 교육 프로그램 이수가 추가로 요구됩니다.<br><br>
+<strong>2단계 — 신체검사</strong><br>
+지정 병원 또는 운전면허시험장 내 신체검사실에서 시력·청력 등 기본 신체검사를 받습니다. (비용: 약 6,000원)<br><br>
+<strong>3단계 — 학과(필기) 시험</strong><br>
+도로교통법 관련 40문항 (1종 기준). 합격선: 1종 70점 이상 / 2종 60점 이상<br><br>
+<strong>4단계 — 기능 시험</strong><br>
+운전면허시험장 내 코스에서 차량 조작 능력 평가. 1종 보통 기준 60점 이상 합격.<br><br>
+<strong>5단계 — 도로주행 시험</strong><br>
+실제 도로에서 감독관 동승 하에 주행 테스트. 1종 70점 이상 합격.<br><br>
+<strong>6단계 — 면허증 수령</strong><br>
+합격 후 2~3 영업일 내 면허증 발급. 즉시 발급 서비스를 신청하면 당일 수령도 가능합니다.
+
+<h2>⑦ 재취득 시 주의사항 — 자주 묻는 것</h2>
+
+<strong>Q. 결격기간 중 면허 취득이 가능한 나라에서 외국 면허를 받으면?</strong><br>
+해당 외국 면허는 결격기간이 끝나야 국내에서 인정·교환이 가능합니다. 편법으로 활용이 불가합니다.<br><br>
+<strong>Q. 결격기간이 끝나면 이전에 보유했던 면허 종류를 그대로 재취득할 수 있나요?</strong><br>
+네, 기존에 1종 보통을 갖고 있었다면 결격기간 후 1종 보통으로 재취득 시험에 응시할 수 있습니다. 다만 이전 취득 이력과 무관하게 신규 취득 절차를 처음부터 밟아야 합니다.<br><br>
+<strong>Q. 면허 재취득 후 보험료 변화는?</strong><br>
+운전면허 취소 이력이 있는 경우 자동차 보험료에 영향을 줄 수 있습니다. 보험 가입 전 각 보험사에 문의하거나 비교 사이트를 통해 최적 상품을 선택하세요.
+
+<h2>⑧ 재취득 관련 비용 안내</h2>
+
+<table class="info-table">
+  <tr><th>항목</th><th>비용(1종 보통 기준, 2026년 기준)</th></tr>
+  <tr><td style="background:#f1f8f1;">신체검사</td><td>약 6,000원</td></tr>
+  <tr><td style="background:#fff;">학과시험 수수료</td><td>11,500원</td></tr>
+  <tr><td style="background:#f1f8f1;">기능시험 수수료</td><td>25,000원</td></tr>
+  <tr><td style="background:#fff;">도로주행 수수료</td><td>25,000원</td></tr>
+  <tr><td style="background:#f1f8f1;">면허증 발급</td><td>10,000원 내외</td></tr>
+  <tr><td style="background:#fff;">합계(시험 1회 통과 기준)</td><td>약 7~8만 원 내외</td></tr>
+</table>
+
+학원 수강 시 추가 비용(50~80만 원 수준)이 발생하며, 학원 없이 독학으로 준비해도 합격 가능합니다.
+
+<h2>⑨ 면허 취소 예방을 위한 핵심 정보</h2>
+
+면허 정지는 받더라도 취소는 피하는 것이 최선입니다.<br><br>
+<strong>음주 후 대리운전·택시 이용</strong>: 음주운전 단속 시 혈중알코올농도 0.08% 이상이면 1회만으로 취소됩니다.<br><br>
+<strong>벌점 관리</strong>: 교통민원24(이파인)에서 본인의 누산 벌점을 상시 확인하고 특별교육 수강으로 벌점 감경 기회를 활용하세요.<br><br>
+<strong>사고 후 의무조치 준수</strong>: 사고 발생 시 반드시 경찰 신고와 피해자 구호 조치를 해야 하며, 도주 시 취소·가중처벌 대상이 됩니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260807/car_insurance_direct_vs_agent.html">자동차 보험 다이렉트 vs 설계사, 실제로 얼마나 차이 나는지 비교</a></li>
+    <li><a href="../260807/local_chuseok_flight_accommodation.html">추석 연휴 항공권·숙소 언제 풀리나, 예매 오픈 시점과 취소표 잡는 법</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#운전면허취소</span>
+  <span class="tag">#면허재취득</span>
+  <span class="tag">#음주운전면허취소</span>
+  <span class="tag">#결격기간</span>
+  <span class="tag">#면허취소후재취득</span>
+  <span class="tag">#사망사고면허</span>
+  <span class="tag">#운전면허시험</span>
+  <span class="tag">#도로교통법</span>
+  <span class="tag">#면허취소절차</span>
+  <span class="tag">#운전면허정보</span>
+</div>
+
+</body>
+</html>
