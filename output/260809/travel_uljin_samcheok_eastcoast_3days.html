@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  .intro-box { background: #f1faf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 10px 14px; font-size: .95em; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #eee; font-size: .93em; vertical-align: top; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 18px 20px; border-radius: 8px; margin: 20px 0; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #00796b; border-radius: 10px; padding: 24px; background: #f1faf9; margin-bottom: 8px; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: bold; color: #004d40; font-size: .9em; flex-wrap: wrap; gap: 8px; }
+  .ph-file { font-family: monospace; font-size: .82em; color: #555; }
+  .prompt-text { white-space: pre-wrap; font-size: .82em; color: #444; background: #fff; padding: 12px; border-radius: 6px; border: 1px solid #b2dfdb; text-align: left; margin: 8px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; padding: 8px 18px; border-radius: 6px; cursor: pointer; font-size: .88em; }
+  .img-caption { font-size: .9em; color: #555; margin-top: 8px; font-style: italic; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: .85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#00796b"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>경북 울진·삼척 동해안 2박3일 드라이브 코스 — 불영계곡·죽서루·대게 루트</h1>
+
+<div class="intro-box">
+동해안의 보석 두 곳, 경북 울진과 강원 삼척을 묶는 2박3일 드라이브 코스를 소개합니다.<br><br>
+서울에서 자차로 출발해 울진의 불영계곡과 후포항 대게로 1일차를 마무리하고, 이튿날 등기산 스카이워크·망양정을 거쳐 삼척 죽서루의 관동팔경 절경을 즐기다가, 마지막 날 연중 10℃의 환선굴에서 동굴 피서로 마무리하는 알찬 여정입니다.<br><br>
+총 왕복 주행 거리는 약 700~800km 내외로, 7번 국도를 따라 달리는 해안 드라이브 자체가 여행의 즐거움이 되는 코스입니다.
+</div>
+
+<h2>① 울진·삼척 동해안 2박3일 — 이 코스를 선택해야 하는 이유</h2>
+
+경북 북부 끝자락 울진부터 강원 삼척까지 이어지는 동해안 구간은 국내 드라이브 여행자들 사이에서도 손꼽히는 황금 루트입니다.<br><br>
+7번 국도가 해안선을 따라 길게 뻗어 있어 창문 너머로 동해 바다를 바라보며 운전할 수 있고, 울진의 불영계곡처럼 내륙 협곡을 품고 있어 바다·산·강 세 가지 자연을 한 여행에서 즐길 수 있다는 것이 큰 매력입니다.<br><br>
+서울 기준으로 울진까지 자차로 약 3시간 30분~4시간(중부내륙·영동 고속도로 경유), 삼척까지는 약 2시간 30분~3시간 정도 소요됩니다.<br><br>
+여름 성수기에는 강릉·속초에 비해 상대적으로 덜 붐비는 편이라 여유로운 여행을 즐길 수 있다는 점도 포인트입니다.<br><br>
+2박3일 전체 동선은 크게 세 파트로 나뉩니다.<br>
+<strong>1일차</strong> — 서울 출발 → 불영계곡 탐방 → 후포항 대게 저녁 → 죽변항 숙박<br>
+<strong>2일차</strong> — 죽변항 아침 → 등기산 스카이워크 → 망양정 → 삼척 이동 → 죽서루 관람 → 삼척 숙박<br>
+<strong>3일차</strong> — 환선굴 동굴 피서 → 이사부사자공원 → 귀경<br><br>
+순서상 '울진을 먼저 방문하고 삼척에서 마무리'하는 남하 방식이 이동 효율이 가장 좋습니다.<br><br>
+대중교통을 이용한다면 KTX로 동해역 또는 삼척역에 도착한 뒤 렌터카를 활용하는 방법도 있습니다(자세한 내용은 마지막 꼭지에서 다룹니다).
+
+<h2>② 1일차 — 서울에서 울진, 불영계곡 드라이브 시작</h2>
+
+서울에서 울진으로 향하는 가장 일반적인 경로는 중부내륙고속도로 → 중앙고속도로 → 서안동IC → 36번 국도를 타고 울진 방향으로 진입하는 루트입니다.<br><br>
+내비게이션 기준 3시간 30분~4시간을 예상하면 되며, 오전 7시에 서울을 출발하면 낮 12시 전후로 울진에 도착해 점심 식사 후 불영계곡 탐방을 시작하기에 딱 좋습니다.<br><br>
+불영계곡으로 향하는 36번 국도는 울진읍에서 서쪽 내륙 방향으로 이어집니다.<br><br>
+국도에 진입하면서부터 도로 양쪽으로 산세가 깊어지고, 계곡물이 도로와 나란히 흐르기 시작합니다.<br><br>
+불영계곡로 전체 길이는 약 15km로, 협곡이 워낙 좁고 구불구불하므로 속도를 낮추고 천천히 달려야 안전하고 경치도 더 잘 즐길 수 있습니다.<br><br>
+중간중간 설치된 전망대와 쉼터에서 차를 세우고 에메랄드빛 계곡을 내려다보는 것이 이 드라이브의 핵심입니다.<br><br>
+불영계곡 진입 전 울진읍내 식당이나 편의점에서 간식과 음료를 챙겨두면 드라이브 중 간식 타임을 즐기기 편합니다.
+
+<h2>③ 불영계곡 핵심 — 에메랄드 협곡과 불영사</h2>
+
+불영계곡은 <strong>천연기념물 제6호</strong>로 지정된 경북 울진군 서면 일대의 협곡 지대입니다.<br><br>
+'불영(佛影)'이라는 이름은 협곡 안쪽 연못에 뒤편 기암괴석이 부처의 그림자(佛影)처럼 비친다는 데서 유래했습니다.<br><br>
+계곡물은 수심이 얕은 곳에서도 짙은 에메랄드빛을 띠며, 여름철 수량이 풍부할 때는 협곡 전체가 비취색으로 물드는 장관을 연출합니다.<br><br>
+계곡 안쪽 끝에 위치한 불영사(佛影寺)는 신라 진덕여왕 5년(651년)에 창건된 유서 깊은 고찰로, 대웅전 앞 삼층석탑과 고요한 사찰 분위기가 여행객의 발길을 멈추게 합니다.<br><br>
+절 주변으로 계곡물 소리가 울려 퍼지고 산새 소리가 가득해, 한여름에도 청량한 기운이 느껴집니다.<br><br>
+불영계곡 내 주요 정차 포인트로는 <strong>선유정, 의상대, 신선계곡 전망대</strong> 등이 있으며, 각 포인트에서 10~15분씩 여유롭게 구경하는 것이 좋습니다.<br><br>
+불영계곡로 처음부터 끝까지 드라이브하고 불영사 경내까지 둘러보면 약 2~3시간이 소요됩니다.
+
+<table class="info-table">
+  <tr><th>항목</th><th>내용</th></tr>
+  <tr><td style="background:#f1faf9;">지정 현황</td><td>천연기념물 제6호</td></tr>
+  <tr><td style="background:#fff;">위치</td><td>경북 울진군 서면 하원리 일원</td></tr>
+  <tr><td style="background:#f1faf9;">계곡 길이</td><td>약 15km</td></tr>
+  <tr><td style="background:#fff;">주요 포인트</td><td>의상대, 신선계곡 전망대, 불영사</td></tr>
+  <tr><td style="background:#f1faf9;">불영사 입장</td><td>무료 (주차료 별도, 현장 확인 권장)</td></tr>
+</table>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260809/3_uljin_samcheok_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-1">Buryeong Valley in Uljin, North Gyeongsang Province, South Korea, dramatic narrow gorge with emerald green crystal-clear river winding between towering rocky cliffs covered in lush green forest, dappled summer sunlight reflecting on the turquoise water, ancient Buddhist temple Buryeongsa visible among trees, narrow mountain road along the gorge, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">불영계곡 — 천연기념물 제6호, 에메랄드빛 계곡물과 기암절벽이 어우러진 15km 협곡 / AI 제작 이미지</div>
+</div>
+
+<h2>④ 1일차 저녁 — 후포항 울진대게, 제대로 즐기는 법</h2>
+
+불영계곡 드라이브를 마치면 서면에서 해안 방향으로 빠져나와 후포항으로 이동합니다.<br><br>
+후포항은 울진군 남쪽에 위치한 어항으로, 울진 대게를 가장 신선하게 맛볼 수 있는 산지 항구로 알려져 있습니다.<br><br>
+울진대게는 게살이 꽉 차고 단맛이 강한 것이 특징이며, 제철은 12월~5월이지만 냉동 보관 기술의 발달로 여름에도 비교적 신선한 대게를 맛볼 수 있습니다.<br><br>
+후포항 주변에는 대게 전문 식당들이 밀집해 있으며, 대부분 수조에서 꺼낸 대게를 그 자리에서 쪄내는 방식으로 운영합니다.<br><br>
+가격은 크기와 시기에 따라 달라지지만, 1인분(600~800g 한 마리 기준) 기준 <strong>4~6만 원대</strong>를 예상하면 됩니다.<br><br>
+방문 전 네이버 지도나 카카오맵에서 최신 시세와 후기를 확인하고, 수조의 활어 상태와 식당 청결도를 직접 눈으로 확인한 후 선택하는 것이 좋습니다.<br><br>
+대게 외에도 후포항 인근 횟집에서는 가자미·방어·오징어 등 동해 특산 생선도 함께 즐길 수 있어 다양한 입맛을 충족시켜 줍니다.<br><br>
+저녁 식사 후 후포항 방파제를 산책하며 밤바다 분위기를 즐기는 것으로 1일차를 마무리해 보세요.
+
+<h2>⑤ 1박 — 죽변항 숙소 선택과 예약 팁</h2>
+
+1박 거점으로는 울진군 죽변면에 위치한 <strong>죽변항 일대</strong>가 적합합니다.<br><br>
+죽변항은 후포항에서 북쪽으로 약 30km 거리에 있으며, 이튿날 등기산 스카이워크(후포면)와 망양정 방향으로 남하하기 전 거점으로 활용하기 좋은 위치입니다.<br><br>
+죽변항 주변에는 펜션·모텔·소규모 게스트하우스가 다수 운영 중이며, 항구 조망을 갖춘 숙소도 여럿 있습니다.<br><br>
+성수기(7~8월) 기준 2인실 1박에 약 7~12만 원 내외의 숙소를 찾아볼 수 있으나, 7월 말~8월 초 극성수기에는 예약 경쟁이 치열하므로 출발 최소 2~3주 전에 예약하는 것을 권장합니다.<br><br>
+<strong>네이버 예약, 야놀자, 여기어때</strong> 등에서 '울진 죽변' 또는 '울진 동해안 숙소'로 검색하면 가격 비교가 편합니다.<br><br>
+아이를 동반한 가족 여행이라면 취사 가능한 펜션을 선택해 마트에서 장을 봐 간식과 아침 식사를 직접 준비하면 비용 절감에 도움이 됩니다.<br><br>
+죽변등대와 죽변항 선착장은 새벽이나 이른 아침에 고요하게 산책하기 좋은 장소로, 체크인 후 또는 다음 날 출발 전 가볍게 둘러보세요.<br><br>
+체크아웃 후 조식은 항구 주변 생선구이 백반 식당에서 해결하는 것이 가성비도 좋고 현지 분위기도 느낄 수 있어 추천합니다.
+
+<h2>⑥ 2일차 — 등기산 스카이워크→망양정→삼척 이동</h2>
+
+2일차는 죽변항 조식 후 오전 9시경 체크아웃을 목표로 남쪽 후포 방향으로 이동합니다.<br><br>
+첫 번째 목적지인 <strong>등기산 스카이워크</strong>는 울진군 후포면 등기산 정상부에 설치된 유리 바닥 전망대입니다.<br><br>
+발 아래로 동해 바다가 내려다보이는 짜릿한 체험을 할 수 있으며, 전망대에서는 후포항과 후포해수욕장, 탁 트인 동해 수평선이 한눈에 들어옵니다.<br><br>
+입장료 및 운영 정보는 방문 전 울진군 공식 홈페이지에서 확인하시고, 관람 소요 시간은 30~40분 정도면 충분합니다.<br><br>
+등기산에서 남쪽으로 약 10km를 더 이동하면 <strong>망양정(望洋亭)</strong>에 도착합니다.<br><br>
+망양정은 울진군 근남면 산포리 언덕 위에 서서 광활한 동해 바다를 조망할 수 있는 정자로, 관동팔경 중 하나로 꼽히는 명승지입니다.<br><br>
+조선 시대 문인들이 관동 유람길에 반드시 들렀던 곳으로, 정자에서 바라보는 수평선의 탁 트임이 강한 인상을 남깁니다.<br><br>
+망양정 감상 후 7번 국도를 타고 삼척 방향으로 남하합니다.<br><br>
+죽변항 기준 삼척 시내까지는 약 70~80km 거리로, 해안도로를 따라 달리면 1시간 30분~2시간 내외가 소요됩니다.<br><br>
+삼척 도착 후 점심으로 삼척 물회나 곰치국 등 향토 음식을 즐긴 뒤 죽서루로 이동하면 오후 시간이 딱 맞습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260809/3_uljin_samcheok_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-2">Jugeoru pavilion in Samcheok, South Korea, elegant traditional Korean wooden pavilion perched dramatically on a sheer cliff above the winding Osipcheon River, lush green trees surrounding the rocky bluff, clear summer sky, river reflecting the forested cliffs below, historic architecture with wooden pillars of varying heights matching natural rock, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">죽서루 — 국보 제213호, 오십천 벼랑 위에 세워진 관동팔경 제일루의 절경 / AI 제작 이미지</div>
+</div>
+
+<h2>⑦ 죽서루 — 관동팔경의 절정, 오십천 벼랑 위 누각</h2>
+
+죽서루(竹西樓)는 강원도 삼척시 성내동 오십천 강가의 벼랑 위에 세워진 누각으로, <strong>국보 제213호</strong>이자 관동팔경 중 으뜸으로 손꼽히는 명승입니다.<br><br>
+누각 아래로는 오십천이 굽이치며 흐르고, 그 위의 절벽에 자리 잡은 죽서루의 자태는 보는 이로 하여금 절로 감탄을 자아냅니다.<br><br>
+창건 연대는 정확히 전해지지 않으나 고려 공민왕 때의 기록이 남아 있으며, 조선 초기 이전부터 명승으로 이름을 날렸습니다.<br><br>
+건물은 <strong>자연 암반 위에 기둥을 세운 형태</strong>로, 암반 모양에 따라 기둥 높이가 각각 다른 것이 구조적으로 독특한 특징입니다.<br><br>
+누각에 오르면 오십천의 초록빛 강물과 백사장, 주변 솔숲이 어우러진 풍경이 한 폭의 그림처럼 펼쳐집니다.<br><br>
+조선 시대 율곡 이이, 허목, 정철 등 수많은 문인이 이곳에서 시문을 남겼으며, 누각 안에는 그들의 현판 글씨가 지금도 걸려 있어 문학적 감흥을 더합니다.<br><br>
+겸재 정선의 관동팔경 화첩에도 죽서루가 포함되어 있어 미술사적으로도 가치가 높습니다.<br><br>
+<strong>관람료는 무료</strong>이며, 주변 산책로와 오십천 강변을 함께 돌아보면 1시간~1시간 30분 정도 소요됩니다.
+
+<table class="info-table">
+  <tr><th>항목</th><th>내용</th></tr>
+  <tr><td style="background:#f1faf9;">지정 현황</td><td>국보 제213호</td></tr>
+  <tr><td style="background:#fff;">위치</td><td>강원 삼척시 성내동 9-1</td></tr>
+  <tr><td style="background:#f1faf9;">관람료</td><td>무료</td></tr>
+  <tr><td style="background:#fff;">운영시간</td><td>상시 개방 (관리 시간 내)</td></tr>
+  <tr><td style="background:#f1faf9;">주차</td><td>인근 공영주차장 이용 가능</td></tr>
+</table>
+
+<h2>⑧ 2박 — 삼척 숙소 선택과 성수기 예약 전략</h2>
+
+죽서루 관람 후 삼척 시내에서 저녁 식사를 즐기며 2박 숙소에 체크인합니다.<br><br>
+삼척의 대표적인 숙박 지역은 <strong>삼척 시내권</strong>과 <strong>삼척해수욕장(삼척해변) 주변 펜션 단지</strong>로 나뉩니다.<br><br>
+삼척 시내권 숙소는 이튿날 환선굴 방문 시 접근성이 좋고, 편의점과 식당이 가까워 편리합니다.<br><br>
+삼척해수욕장 주변 펜션은 바다 조망을 즐길 수 있고 바비큐 시설이 갖춰진 곳이 많아 가족 여행객에게 특히 인기가 높습니다.<br><br>
+성수기(7~8월) 기준 2인 기준 1박에 약 8~15만 원 내외로 형성되며, 7월 말~8월 초 극성수기에는 2개월 전부터 예약이 찰 수 있으므로 일찍 예약하는 것이 안전합니다.<br><br>
+<strong>네이버 예약, 야놀자, 여기어때, 에어비앤비</strong>를 동시에 검색해 가격을 비교해 보세요.<br><br>
+캠핑을 즐기신다면 삼척 인근 캠핑장도 좋은 선택지가 됩니다(사전 예약 필수).<br><br>
+체크인 전 여유 시간이 있다면 <strong>삼척 맹방해수욕장</strong>이나 삼척해수욕장에 들러 석양을 감상해 보세요.<br><br>
+동해안의 저녁노을은 넓게 트인 바다 수평선을 배경으로 오렌지빛 그라데이션을 연출하며, 하루 여행의 피로를 말끔히 풀어줍니다.
+
+<h2>⑨ 3일차 — 환선굴 동굴 피서와 이사부사자공원</h2>
+
+3일차 메인 목적지는 강원 삼척시 신기면에 위치한 <strong>환선굴(幻仙窟)</strong>입니다.<br><br>
+환선굴은 국내에서 가장 큰 석회암 동굴 중 하나로, 연중 내부 온도가 <strong>약 10℃</strong>를 유지하는 천연 냉장고입니다.<br><br>
+한여름에 동굴 입구에 가까워질수록 서늘한 기운이 느껴지기 시작해, 내부에 들어서면 에어컨보다 시원한 동굴 바람을 체감할 수 있습니다.<br><br>
+공개 구간은 약 1.6km로, 형형색색의 조명이 설치된 종유석·석순·석주가 주요 볼거리입니다.<br><br>
+입장료는 성인 기준 약 5,000원대로 알려져 있으나, <strong>방문 전 삼척시 공식 홈페이지 또는 환선굴 관리사무소에서 최신 요금을 반드시 확인</strong>하시기 바랍니다.<br><br>
+환선굴까지는 모노레일 또는 도보 탐방로를 이용할 수 있으며, 모노레일은 별도 요금이 적용됩니다.<br><br>
+환선굴 탐방 후 귀경길에 <strong>이사부사자공원</strong>을 들르는 것을 추천합니다.<br><br>
+이사부사자공원은 삼척시 정라동 해안가에 위치하며, 신라 장군 이사부의 우산국 정복 역사를 주제로 한 해양 테마파크입니다.<br><br>
+공원 내 전망대에서 동해 바다를 조망할 수 있고, 나무 사자를 이용해 우산국을 복속시킨 이사부의 전략을 재현한 대형 조형물이 인상적입니다.<br><br>
+귀경 전 삼척항 수산시장에서 건어물이나 간단한 횟감을 구입해 가는 것도 이 지역 여행의 소소한 즐거움입니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260809/3_uljin_samcheok_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-3">Hwanseon Cave interior in Samcheok South Korea, massive limestone cave with dramatic stalactites and stalagmites illuminated in colorful lights, tourists walking along a well-lit pathway through enormous cavern formations, cool misty atmosphere inside the giant cave, South Korean natural heritage site, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">환선굴 내부 — 연중 10℃를 유지하는 삼척의 석회암 동굴, 한여름 최고의 동굴 피서지 / AI 제작 이미지</div>
+</div>
+
+<h2>⑩ 자차 vs 대중교통·총 예상 비용 정리</h2>
+
+<strong>자차 이용</strong>이 이 여행 코스에서는 압도적으로 유리합니다.<br><br>
+불영계곡 드라이브 자체가 여행의 핵심 콘텐츠이고, 죽변항→후포→망양정→삼척으로 이어지는 동해안 이동이 짧은 거리가 아닌 데다, 대중교통만으로는 환선굴까지 접근하기가 번거롭기 때문입니다.<br><br>
+<strong>KTX+렌터카 조합</strong>도 가능합니다. 서울→동해역 KTX 소요 시간은 약 2시간 10분 내외이며, 동해역에서 삼척을 시작으로 역순(삼척→울진)으로 여행한 뒤 동해역 또는 강릉역에서 차를 반납하는 방식이 현실적입니다.<br><br>
+다만 성수기 렌터카 요금 상승과 사전 예약 필요성을 감안하면 자차 대비 비용이 높아질 수 있습니다.<br><br>
+<strong>총 예상 비용(2인 기준)</strong>은 아래와 같이 정리할 수 있습니다.
+
+<table class="info-table">
+  <tr><th>항목</th><th>예상 범위</th></tr>
+  <tr><td style="background:#f1faf9;">숙박 2박</td><td>약 15~25만 원 (1박 7~12만 원 × 2, 숙소 유형에 따라 차이)</td></tr>
+  <tr><td style="background:#fff;">식비 (대게 포함)</td><td>약 15~20만 원 (후포 대게 1회 + 기타 식사)</td></tr>
+  <tr><td style="background:#f1faf9;">입장료·모노레일</td><td>약 2~4만 원 (환선굴 등 유료 시설 기준)</td></tr>
+  <tr><td style="background:#fff;">유류비·주차·기타</td><td>약 8~12만 원 (왕복 700~800km 기준)</td></tr>
+  <tr><td style="background:#f1faf9;"><strong>합계</strong></td><td><strong>약 40~61만 원 내외</strong> (선택에 따라 크게 달라질 수 있음)</td></tr>
+</table>
+
+성수기(7~8월)에는 숙박·식음 전반에서 비용이 높아지므로, 가능하다면 8월 중순 이후 또는 주말을 피한 평일 방문을 고려해 보세요.<br><br>
+대게는 12월~5월이 제철이지만 여름 방문 시 냉동 활어 대게 또는 동해 여름 특산물인 <strong>성게·오징어·문어</strong>로 식비를 합리적으로 조절할 수 있습니다.<br><br>
+울진과 삼척은 코스가 잘 정비된 국내 드라이브 여행지 중 하나로, 자연·역사·먹거리 세 박자가 고루 갖춰진 동해안 2박3일의 정석 코스라 할 수 있습니다.
+
+<div class="tip-box">
+<strong>💡 성수기 예약 체크리스트</strong><br><br>
+- 숙소: 출발 2~3주 전 예약 (극성수기는 2개월 전)<br>
+- 렌터카(KTX 이용 시): 출발 최소 2주 전<br>
+- 환선굴 현장: 여름 성수기 오전 이른 방문 권장 (오후 혼잡)<br>
+- 불영계곡: 좁은 도로이므로 대형 SUV·캠핑카 진입 시 회전 주의
+</div>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260808/travel_jeju_manjanggul_bijarim.html">제주 만장굴 천장터널과 비자림 숲 여름 cool-escape, 동쪽 드라이브 코스</a></li>
+    <li><a href="../260808/travel_seoul_indoor_heatwave.html">여름 폭염 도심 피서 — 서울 지하철 바로 가는 실내 명소 큐레이션</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#울진여행</span>
+  <span class="tag">#삼척여행</span>
+  <span class="tag">#동해안드라이브</span>
+  <span class="tag">#불영계곡</span>
+  <span class="tag">#죽서루</span>
+  <span class="tag">#울진대게</span>
+  <span class="tag">#2박3일코스</span>
+  <span class="tag">#경북여행</span>
+  <span class="tag">#동해여행</span>
+  <span class="tag">#여름드라이브</span>
+</div>
+
+</body>
+</html>

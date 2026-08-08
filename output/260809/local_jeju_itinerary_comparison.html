@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f1f8f1; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 10px 14px; font-size: .95em; text-align: left; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid #eee; font-size: .93em; vertical-align: top; }
+  .tip-box { background: #fffde7; border: 1px solid #f9a825; padding: 18px 20px; border-radius: 8px; margin: 20px 0; }
+  .caution-box { background: #fce4ec; border: 1px solid #e57373; padding: 18px 20px; border-radius: 8px; margin: 20px 0; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #388e3c; border-radius: 10px; padding: 24px; background: #f1f8f1; margin-bottom: 8px; }
+  .ph-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: bold; color: #1b5e20; font-size: .9em; flex-wrap: wrap; gap: 8px; }
+  .ph-file { font-family: monospace; font-size: .82em; color: #555; }
+  .prompt-text { white-space: pre-wrap; font-size: .82em; color: #444; background: #fff; padding: 12px; border-radius: 6px; border: 1px solid #a5d6a7; text-align: left; margin: 8px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; padding: 8px 18px; border-radius: 6px; cursor: pointer; font-size: .88em; }
+  .img-caption { font-size: .9em; color: #555; margin-top: 8px; font-style: italic; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: .85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const originalText = btn.innerText;
+    btn.innerText = "복사 완료!";
+    btn.style.background = "#27ae60";
+    setTimeout(() => { btn.innerText = originalText; btn.style.background = "#388e3c"; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>제주 1박2일 vs 2박3일 — 비용 차이와 코스 효율, 어느 일정이 더 쌀까</h1>
+
+<div class="intro-box">
+제주 여행을 계획할 때 가장 먼저 부딪히는 질문이 바로 "1박2일로 갈까, 2박3일로 갈까"입니다.<br><br>
+연차가 부족하면 1박2일이 현실적이지만 "이틀에 제주를 다 볼 수 있을까" 걱정이 생기고, 2박3일은 여유롭지만 비용이 얼마나 더 드는지 막연하게 느껴집니다.<br><br>
+이 글에서는 항공·렌터카·숙박·식비·입장료를 항목별로 나눠 1인 기준 실질 비용 범위를 비교하고, 각 일정에서 실제로 돌 수 있는 코스 효율까지 솔직하게 정리했습니다. 어느 일정이 더 합리적인지 고민 중이라면 이 글 하나로 결론을 내릴 수 있습니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260809/4_jeju_itinerary_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-1">Aerial view of Jeju Island coastline with turquoise ocean, Seongsan Ilchulbong volcanic crater peak on the right, lush green fields and orange citrus orchards in foreground, dramatic morning light, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">제주도 전경 — 성산일출봉과 청록빛 해안이 어우러진 제주의 대표 풍경 / AI 제작 이미지</div>
+</div>
+
+<h2>① 제주 여행 일정 선택, 가장 많이 하는 고민</h2>
+
+제주도는 섬 전체를 돌려면 최소 3박4일이 필요하다는 말이 있지만, 실제로 여행자 대부분은 1박2일이나 2박3일 일정으로 제주를 찾습니다.<br><br>
+핵심 차이는 단순히 하루가 더 있느냐 없느냐가 아닙니다. <strong>이동 밀도, 경험의 깊이, 그리고 지갑에 미치는 영향</strong>이 체감상 크게 달라집니다.<br><br>
+1박2일은 이른 아침 제주로 날아가 저녁 늦게 돌아오는 일정을 기준으로, 실질적인 관광 시간은 약 26~30시간입니다. 주요 명소를 빠르게 훑는 방식이며, 이동이 많고 체력 소모가 상당합니다.<br><br>
+2박3일은 첫날 오후 도착부터 마지막 날 오전 출발을 기준으로 약 48~52시간의 체류 시간을 확보할 수 있습니다. 동쪽·중산간·서쪽을 지역별로 나눠 여유 있게 탐방하는 것이 가능합니다.<br><br>
+어느 쪽을 선택하든 장단점이 분명하므로, 먼저 비용 현실을 파악하고 본인의 여행 스타일과 예산에 맞춰 결정하는 것이 가장 현명한 방법입니다.
+
+<h2>② 항목별 비용 비교 — 1인 기준 실질 범위</h2>
+
+아래 표는 2인 기준으로 여행할 때 1인이 부담하는 대략적인 비용 범위입니다. 성수기(7~8월, 추석·설 연휴)에는 전 항목이 20~40% 높아질 수 있으며, 비수기(11~2월)에는 다소 낮아집니다.<br><br>
+
+<table class="info-table">
+  <tr><th>비용 항목</th><th>1박2일 (1인)</th><th>2박3일 (1인)</th><th>비고</th></tr>
+  <tr><td style="background:#f1f8f1;"><strong>항공 왕복</strong></td><td>4~10만원</td><td>4~10만원</td><td>동일 (일정 길이와 무관)</td></tr>
+  <tr><td style="background:#fff;"><strong>렌터카</strong></td><td>3~6만원<br>(2인 분담, 1일)</td><td>5~12만원<br>(2인 분담, 2일)</td><td>완전자차 포함 기준</td></tr>
+  <tr><td style="background:#f1f8f1;"><strong>숙박</strong></td><td>3~7만원<br>(2인실 1박 분담)</td><td>6~14만원<br>(2인실 2박 분담)</td><td>게스트하우스~펜션 기준</td></tr>
+  <tr><td style="background:#fff;"><strong>식비</strong></td><td>3~5만원</td><td>5~9만원</td><td>흑돼지·해산물 포함 시 높아짐</td></tr>
+  <tr><td style="background:#f1f8f1;"><strong>입장료 등</strong></td><td>1~2만원</td><td>2~4만원</td><td>성산일출봉·한라산 입장료 등</td></tr>
+  <tr><td style="background:#e8f5e9;"><strong>합계 (1인)</strong></td><td><strong>약 14~30만원</strong></td><td><strong>약 22~49만원</strong></td><td>항공 포함 기준</td></tr>
+</table>
+
+<strong>비용 차이의 핵심은 숙박과 렌터카</strong>입니다. 항공권은 일정 길이와 무관하게 동일하게 들지만, 렌터카와 숙박은 하루가 더 생기면서 각각 1일·1박이 추가됩니다.<br><br>
+결론적으로 1박2일 대비 2박3일은 <strong>1인 기준으로 약 8~20만원 정도가 추가로 필요</strong>합니다. 2인 커플 기준으로 16~40만원의 차이가 나는 셈입니다.<br><br>
+한 가지 중요한 변수는 항공권입니다. 비수기에 얼리버드로 잡으면 편도 1~2만원대도 가능하지만, 성수기 주말 출발 기준으로는 왕복 15~20만원이 넘는 경우도 있습니다. 항공권 가격이 전체 예산에서 차지하는 비율이 크므로, 언제 예약하느냐에 따라 총비용 차이가 크게 벌어집니다.
+
+<h2>③ 1박2일 추천 코스 — 핵심 명소를 빠르게</h2>
+
+1박2일은 이동 거리를 최소화하면서 임팩트 있는 명소를 선별하는 것이 핵심입니다. 제주 전체를 동시에 보려 하면 이동만 하다가 하루가 끝나므로, <strong>동쪽 중심 루트</strong>나 <strong>서쪽 중심 루트</strong> 중 하나를 선택하는 것이 좋습니다.<br><br>
+
+<strong>동쪽 집중 코스 (추천)</strong><br><br>
+DAY 1<br>
+오전 — 김포·김해 등에서 제주 공항 도착 → 렌터카 픽업 → 성산일출봉 (1~1.5시간 소요, 입장료 성인 5,000원) → 섭지코지 해안 산책 (무료, 30~40분)<br>
+점심 — 성산 근처 고등어회·갈치조림 식당 (1만~1.5만원/인)<br>
+오후 — 우도 페리 탑승 (성산항 기준 왕복 약 13,600원, 자전거 대여 포함 시 추가) → 우도 땅콩아이스크림·해녀촌 탐방 (2~3시간)<br>
+저녁 — 제주시 또는 서귀포 숙소 체크인 → 제주 흑돼지 구이 저녁 식사<br><br>
+
+DAY 2<br>
+오전 — 만장굴 (세계자연유산, 입장료 4,000원, 1시간 소요) → 비자림 숲길 산책 (입장료 3,000원, 40분~1시간)<br>
+점심 — 성읍 민속마을 근처 고기국수 또는 순대국<br>
+오후 — 제주 공항 이동 (동쪽 출발 기준 약 50~60분 소요) → 탑승 수속 → 귀가<br><br>
+
+이 코스로 이동하면 하루 평균 렌터카 주행 거리가 80~120km 수준으로, 제주 드라이브의 부담 없이 핵심 명소를 소화할 수 있습니다.
+
+<h2>④ 2박3일 추천 코스 — 동·중산간·서쪽 분할 탐방</h2>
+
+2박3일은 제주를 지역별로 나눠 각 권역의 특색을 충분히 즐기는 방식이 효율적입니다. 매일 이동 거리를 줄이고 숙소도 동쪽·서쪽으로 분산 배치하면 피로도가 확 낮아집니다.<br><br>
+
+<strong>DAY 1 — 동쪽 권역</strong><br>
+제주 공항 도착 → 렌터카 픽업 → 만장굴 or 비자림 → 성산일출봉 → 섭지코지 → 우도 (택 1 또는 2) → 성산·표선 근처 숙소 체크인<br>
+동쪽 숙소에 머물면 다음 날 이동이 크게 줄어듭니다.<br><br>
+
+<strong>DAY 2 — 중산간 권역</strong><br>
+사려니숲길 트레킹 (무료, 약 1.5시간) → 한라산 영실 코스 (왕복 약 3~4시간, 입장료 없음) 또는 1100고지 습지 산책 → 오설록 티뮤지엄 → 저녁 협재 또는 애월 도착<br>
+중산간은 도로가 한적하고 오름과 숲의 풍경이 압도적으로 아름다운 구간입니다.<br><br>
+
+<strong>DAY 3 — 서쪽 권역</strong><br>
+협재해변 아침 산책 (무료) → 한림공원 (입장료 12,000원, 1시간) → 애월 카페거리 브런치 → 공항 귀환 (서쪽 출발 기준 20~30분)<br><br>
+
+이 구성으로 이동하면 하루 평균 렌터카 주행 거리가 60~90km 수준으로 1박2일보다 오히려 적어지며, 각 명소에서 더 오래 머물 수 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260809/4_jeju_itinerary_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-2">Jeju Island Hyeopjae Beach with crystal clear turquoise shallow water, white sand beach, lush green forest behind the beach, peaceful summer morning, few visitors, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">협재해변 — 제주 서쪽을 대표하는 에메랄드빛 바다, 2박3일 코스에서 여유롭게 즐기기 좋은 곳 / AI 제작 이미지</div>
+</div>
+
+<h2>⑤ 1박2일이 더 유리한 경우</h2>
+
+1박2일이 답인 상황은 생각보다 명확합니다. 다음 조건에 해당한다면 1박2일이 더 합리적인 선택입니다.<br><br>
+
+<strong>예산이 30만원 이하로 빠듯한 경우</strong>: 1박2일은 항공·렌터카·숙박·식비를 모두 포함해도 1인 기준 14~30만원 내외로 조절이 가능합니다. 2박3일로 늘리면 최소 8만원 이상이 추가로 필요합니다.<br><br>
+<strong>연차가 2~3일밖에 없는 직장인</strong>: 월요일 아침 복귀가 필요하다면 일요일 당일 귀환 또는 금·토 1박2일이 현실적입니다. 무리하게 2박3일로 잡으면 마지막 날 피로감이 오히려 더 클 수 있습니다.<br><br>
+<strong>제주가 처음이라 핵심만 보고 싶은 경우</strong>: 성산일출봉, 우도, 협재해변처럼 "제주 하면 떠오르는" 명소 3~4개를 집중 공략하는 방식으로도 충분히 만족스러운 여행이 됩니다.<br><br>
+<strong>단기 충전이 목적인 솔로 또는 커플 여행</strong>: 관광보다 제주의 공기와 바다를 느끼는 것이 목적이라면 하루 이틀도 충분합니다.<br><br>
+
+<div class="tip-box">
+<strong>TIP</strong>: 1박2일은 이른 아침 출발(첫 비행기 탑승)이 핵심입니다. 오전 7~8시대 비행기로 제주에 도착하면 실질 관광 시간이 1박2일 기준 최대 30시간까지 확보됩니다. 늦은 오전에 출발하면 첫날 오후 절반을 이동으로 소비하게 됩니다.
+</div>
+
+<h2>⑥ 2박3일이 더 유리한 경우</h2>
+
+반대로 다음 조건에 해당한다면 2박3일이 훨씬 더 나은 선택입니다.<br><br>
+
+<strong>아이를 동반한 가족 여행</strong>: 아이가 있을 때 하루에 여러 명소를 빠르게 이동하는 방식은 체력적으로도, 정서적으로도 무리입니다. 2박3일로 여유 시간을 확보해야 아이도 어른도 즐거운 여행이 됩니다. 제주 에코랜드, 신화월드, 아쿠아플라넷 같은 아이 맞춤 명소를 추가하려면 최소 2박3일이 필요합니다.<br><br>
+<strong>제주를 여러 번 와본 여행자</strong>: 성산·협재·우도처럼 유명 명소를 이미 다 가봤다면 중산간 오름, 사려니숲, 가파도, 추자도처럼 알려지지 않은 곳을 천천히 탐방하는 일정이 맞습니다. 이런 여행은 이동 시간이 길어지므로 2박3일이 필수입니다.<br><br>
+<strong>렌터카 없이 대중교통·자전거 여행을 계획하는 경우</strong>: 제주는 대중교통이 불편하므로 이동 시간이 렌터카 대비 훨씬 길어집니다. 1박2일로 대중교통 여행을 하면 이동에만 하루의 절반을 쓰게 됩니다.<br><br>
+<strong>제주 음식·카페·로컬 문화를 충분히 즐기고 싶은 경우</strong>: 흑돼지 구이, 해산물 한 상, 제주 향토 음식, 개성 있는 카페를 모두 경험하려면 2박3일 이상이 필요합니다. 1박2일은 이동에 쫓겨 식당 선택의 여지가 좁아집니다.
+
+<h2>⑦ 항공권 가장 싸게 잡는 시점과 요령</h2>
+
+제주 항공권 비용은 일정 길이와 무관하게 동일하게 발생하지만, 언제 예약하느냐에 따라 전체 여행 비용이 크게 달라집니다.<br><br>
+
+<strong>최적 예약 시점은 출발 3~5주 전</strong>입니다. 국내선 항공권은 국제선과 달리 너무 일찍(2~3개월 전) 예약해도 가격이 드라마틱하게 싸지 않습니다. 성수기 기준으로도 3~5주 전에 예약하면 얼리버드 특가를 노릴 수 있고, 좌석 선택 폭도 넓습니다.<br><br>
+<strong>화요일·수요일 출발 편이 상대적으로 저렴</strong>합니다. 주말(금·토·일) 출발 편은 수요가 몰려 가격이 높고, 주중 출발은 할인 요금이 적용되는 경우가 많습니다. 일정이 유연하다면 화·수 출발로 맞추면 항공권만 수만 원을 아낄 수 있습니다.<br><br>
+<strong>항공사 앱 알림 설정</strong>을 적극 활용하세요. 제주항공·진에어·에어서울 등 LCC(저비용 항공사) 앱에서 원하는 노선을 즐겨찾기 해두면 특가 프로모션 알림을 받을 수 있습니다.<br><br>
+<strong>성수기(7~8월, 추석·설 연휴)에는 예외 없이 일찍 예약</strong>해야 합니다. 아무리 화·수 출발을 선택해도 성수기에는 조기 품절이 발생하므로 최소 6~8주 전에는 예약을 완료하는 것이 안전합니다.<br><br>
+
+<div class="tip-box">
+<strong>TIP</strong>: 서울 기준 제주 왕복 항공권 최저가는 비수기 기준 약 4~5만원대(공항이용료 포함)이지만, 성수기 주말에는 15~20만원을 넘기도 합니다. 항공권 예약 타이밍이 전체 여행 예산의 가장 큰 변수입니다.
+</div>
+
+<h2>⑧ 렌터카 예약 팁 — 완전자차와 성수기 대응</h2>
+
+제주 여행에서 렌터카는 사실상 필수입니다. 대중교통만으로 이동하면 버스 대기 시간이 길고 야간에는 거의 끊기기 때문에, 렌터카 없는 제주 여행은 일정이 2배 이상 늘어난다고 봐야 합니다.<br><br>
+
+<strong>완전자차보험(CDW + 자기차량손해 풀 커버)은 반드시 가입</strong>하세요. 추가 비용이 하루 1~3만원 더 들지만, 제주 도로는 관광객들이 많아 접촉사고 위험이 높고, 사고 발생 시 자차 미가입이면 수백만 원의 수리비를 본인이 부담해야 합니다.<br><br>
+<strong>성수기에는 최소 2달 전 예약</strong>을 권장합니다. 7~8월에는 렌터카 재고가 조기 소진되고, 막판에 빌리면 차종 선택 폭이 좁아지며 가격도 급등합니다.<br><br>
+<strong>렌터카 픽업·반납 위치 확인</strong>: 제주 공항에서 픽업할 경우 공항 리무진 버스나 셔틀로 렌터카 사무소까지 이동하는 경우가 많습니다. 공항 주차장 내 직접 픽업이 가능한 업체를 선택하면 시간을 절약할 수 있습니다.<br><br>
+<strong>1박2일은 24시간 기준, 2박3일은 48시간 기준</strong>으로 요금이 책정됩니다. 반납 시간을 1시간만 초과해도 추가 요금이 발생하므로 비행기 출발 시간을 역산해 반납 시간을 넉넉하게 설정하세요.
+
+<h2>⑨ 숙소 선택 팁 — 위치와 동·서 분산 배치</h2>
+
+제주 숙소 선택에서 가장 중요한 기준은 <strong>다음 날 첫 일정과의 거리</strong>입니다. 제주시 숙소에 묵으면서 서귀포 명소부터 탐방하는 방식은 아침마다 1시간 이상 이동을 반복하게 됩니다.<br><br>
+
+<strong>1박2일 숙소 선택</strong>: 첫날 저녁 도착하는 지역 근처에 숙소를 잡는 것이 좋습니다. 동쪽 코스를 탄다면 성산·표선·세화 근처 게스트하우스나 펜션이 효율적입니다.<br><br>
+<strong>2박3일 숙소 분산 배치</strong>: 가장 스마트한 방법은 1박은 동쪽(성산·표선), 2박은 서쪽(협재·애월)으로 나누는 것입니다. 매일 숙소에서 가까운 지역을 탐방하면 이동 피로도가 크게 줄고, 두 번의 서로 다른 분위기 숙소를 경험할 수 있습니다.<br><br>
+<strong>예산별 숙소 유형</strong>:<br>
+게스트하우스(도미토리): 1인 2~4만원, 솔로 여행자·배낭 여행자에게 적합<br>
+게스트하우스(2인실): 2인 기준 1박 5~8만원<br>
+펜션·풀빌라: 2인 기준 1박 10~20만원, 성수기에는 20만원 이상<br>
+호텔(3성급): 2인 기준 1박 8~15만원<br><br>
+
+<div class="caution-box">
+<strong>주의</strong>: 제주 풀빌라나 감성 펜션은 소셜 미디어에서 인기가 높아 성수기에 3~6개월 전에 예약이 마감되는 곳도 있습니다. 2박3일 일정으로 특정 숙소를 목표로 한다면 항공권보다 숙소부터 예약하세요.
+</div>
+
+<h2>⑩ 제주 1박2일 vs 2박3일 최종 추천 정리</h2>
+
+지금까지 비용과 코스 효율을 모두 살펴봤습니다. 결론을 한 줄로 요약하면 이렇습니다.<br><br>
+<strong>예산이 30만원 이하이거나 연차가 이틀뿐이라면 1박2일이 정답</strong>이고, <strong>아이 동반·여유 탐방·로컬 경험이 목적이라면 2박3일이 훨씬 만족스럽습니다.</strong><br><br>
+코스 효율만 보면 2박3일이 분명히 낫습니다. 하루 평균 이동 명소 수가 늘어나는 것이 아니라 오히려 줄어들면서 각 명소에서의 체류 시간이 늘어나기 때문입니다. "많이 보는 여행"보다 "제대로 느끼는 여행"을 원한다면 하루를 더 투자할 가치가 있습니다.<br><br>
+반면 1박2일은 가성비 여행의 정석입니다. 항공권은 어차피 동일하게 들고, 렌터카와 숙박에서 8~15만원(1인 기준)을 절약하면서 성산일출봉·우도·협재처럼 제주의 상징적인 명소를 모두 경험할 수 있습니다.<br><br>
+
+<table class="info-table">
+  <tr><th>구분</th><th>1박2일</th><th>2박3일</th></tr>
+  <tr><td style="background:#f1f8f1;"><strong>총비용 (1인)</strong></td><td>약 14~30만원</td><td>약 22~49만원</td></tr>
+  <tr><td style="background:#fff;"><strong>관광 시간</strong></td><td>약 26~30시간</td><td>약 48~52시간</td></tr>
+  <tr><td style="background:#f1f8f1;"><strong>하루 명소 수</strong></td><td>3~5개 (빠른 이동)</td><td>2~4개 (여유 있는 탐방)</td></tr>
+  <tr><td style="background:#fff;"><strong>추천 대상</strong></td><td>예산 절약·짧은 연차·첫 제주</td><td>아이 동반·재방문·로컬 탐방</td></tr>
+  <tr><td style="background:#f1f8f1;"><strong>항공 예약 시점</strong></td><td>출발 3~5주 전</td><td>출발 4~8주 전 (숙소 선 예약)</td></tr>
+</table>
+
+제주 여행은 일정보다 타이밍이 먼저입니다. 항공권과 숙소를 먼저 잡은 뒤 코스를 채우는 방식이 예산도 절약하고 선택폭도 넓습니다. 어느 일정을 선택하든 제주의 검은 돌담길과 에메랄드빛 바다는 충분히 당신을 반겨줄 것입니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260808/travel_jeju_manjanggul_bijarim.html">제주 만장굴 천장터널과 비자림 숲 여름 cool-escape, 동쪽 드라이브 코스</a></li>
+    <li><a href="../260808/local_ktx_bicycle_stroller.html">KTX 자전거·유아차 기차에 가져가는 법과 추가요금, 무임 기준</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#제주여행</span>
+  <span class="tag">#제주1박2일</span>
+  <span class="tag">#제주2박3일</span>
+  <span class="tag">#제주비용</span>
+  <span class="tag">#제주일정비교</span>
+  <span class="tag">#제주항공권</span>
+  <span class="tag">#제주렌터카</span>
+  <span class="tag">#여름휴가</span>
+  <span class="tag">#제주코스</span>
+  <span class="tag">#제주여행준비</span>
+</div>
+
+</body>
+</html>
