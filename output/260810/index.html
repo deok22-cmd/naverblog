@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026-08-10 일일 발행 대시보드</title>
+<style>
+  body { margin: 0; padding: 20px; background: #f5f5f5; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 15px; color: #333; }
+  h1 { font-size: 1.4em; color: #00796b; border-bottom: 3px solid #00796b; padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+  th { background: #00796b; color: #fff; padding: 10px 14px; text-align: left; font-size: 0.9em; }
+  td { padding: 10px 14px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  tr:last-child td { border-bottom: none; }
+  .done { color: #2e7d32; font-weight: bold; }
+  .wait { color: #e65100; }
+  .tag-travel { background: #e0f2f1; color: #00796b; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; }
+  .tag-local  { background: #f3e5f5; color: #6a1b9a; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; }
+  .tag-rite   { background: #fce4ec; color: #880e4f; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; }
+  .tag-car    { background: #e8eaf6; color: #283593; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; }
+  .tag-recipe { background: #fff9c4; color: #f57f17; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; }
+  .queue-warn { background: #fff3e0; border: 1px solid #ffb300; border-radius: 6px; padding: 12px 16px; margin-top: 20px; font-size: 0.88em; color: #e65100; }
+</style>
+</head>
+<body>
+<h1>📋 2026-08-10 일일 발행 대시보드</h1>
+<table>
+  <thead>
+    <tr>
+      <th>#</th><th>카테고리</th><th>제목</th><th>슬러그</th><th>상태</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><span class="tag-travel">여행</span></td>
+      <td><a href="travel_seoul_haneul_park_silvergrass.html">서울 하늘공원 억새 언제 절정이나, 월드컵공원 9월 은빛 물결 가을 전초 코스</a></td>
+      <td>travel_seoul_haneul_park_silvergrass</td>
+      <td class="done">✔️ 작성 완료</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><span class="tag-travel">여행</span></td>
+      <td><a href="travel_andong_hahoe_earlyfall.html">안동 하회마을 월영교·부용대 뱅놀이, 초가을 경북 고택 여행 코스와 주차</a></td>
+      <td>travel_andong_hahoe_earlyfall</td>
+      <td class="done">✔️ 작성 완료</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><span class="tag-travel">여행</span></td>
+      <td><a href="travel_eastcoast_5days_roadtrip.html">동해·강릉·속초·고성 동해안 5일 여름 로드트립 코스와 숙소 기준점</a></td>
+      <td>travel_eastcoast_5days_roadtrip</td>
+      <td class="done">✔️ 작성 완료</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><span class="tag-local">인접 롱테일</span></td>
+      <td><a href="local_airline_booking_ota_comparison.html">해외여행 국내 항공사 발권 vs OTA·해외발권 — 환불 쉽고 싼 곳 어디인가</a></td>
+      <td>local_airline_booking_ota_comparison</td>
+      <td class="done">✔️ 작성 완료</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><span class="tag-rite">경조사</span></td>
+      <td><a href="rite_funeral_home_cost_estimate.html">장례식장 비용 현실 — 빈소·화장·납골당 총 얼마 드나, 통상 범위</a></td>
+      <td>rite_funeral_home_cost_estimate</td>
+      <td class="done">✔️ 작성 완료</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><span class="tag-car">자동차</span></td>
+      <td><a href="car_annual_maintenance_cost.html">내 차 1년 유지비 얼마나 드나 — 보험·세금·주유·정기검사·소모품 실제 계산</a></td>
+      <td>car_annual_maintenance_cost</td>
+      <td class="done">✔️ 작성 완료</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><span class="tag-recipe">레시피</span></td>
+      <td><a href="recipe_yeolmu_kimchi_crispy.html">열무김치 아삭하게 담그는 법 — 소금 농도와 국물 비율</a></td>
+      <td>recipe_yeolmu_kimchi_crispy</td>
+      <td class="done">✔️ 작성 완료</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="queue-warn">
+  ⚠️ <strong>G3 큐 부족 플래그 (Step 0.5 월요일 자동 리필 대상):</strong><br>
+  [QUEUE LOW travel: 11 / 임계 25] &nbsp;|&nbsp;
+  [QUEUE LOW local: 4 / 임계 14] &nbsp;|&nbsp;
+  [QUEUE LOW vertical:rite_ 7 / 임계 14] &nbsp;|&nbsp;
+  [QUEUE LOW vertical:car_ 7 / 임계 14] &nbsp;|&nbsp;
+  [QUEUE LOW vertical:recipe_ 5 / 임계 8] &nbsp;|&nbsp;
+  [QUEUE LOW vertical:house_ 2 / 임계 8]
+</div>
+</body>
+</html>
