@@ -1,4 +1,4 @@
-# Naverblog 일일 자동 발행 PowerShell 래퍼
+﻿# Naverblog 일일 자동 발행 PowerShell 래퍼
 # Windows 작업 스케줄러가 매일 새벽 4:00 실행
 # 1) Claude CLI로 원고 5건 작성 → 2) 작성 결과만 GitHub에 자동 push
 
@@ -44,6 +44,48 @@ Write-Log "Model      : claude-sonnet-4-6"
 Write-Log ""
 
 $exit = 1
+
+# === Step 0.5: 주간 큐 리필 (2026-08-01 정례화 — 사용자 지시) ===
+# 계기: 8/1 실행에서 여행 외 큐가 전부 고갈(시즌게이트 통과 0건) → 7건 전부 travel_ 발행.
+# 매주 월요일 실행분에서만 가동, 임계 미달 큐만 채운다. 임계표 = daily-prompt.md §2 G3.
+# 실패해도 $exit를 건드리지 않아 본 발행(Step 1)은 그대로 진행된다.
+# ⚠️ 2026-08-10: 예산 $3 → $5. 04:00 실행이 "Exceeded USD budget (3)"로 죽어 리필이 건너뛰어졌고,
+#    그 상태로 Step 1이 발행해 travel 큐가 9까지 떨어졌다. 큐가 많이 비면 적재 행이 늘고
+#    중복 대조(작성완료 전수 대조, 190KB) 비용도 커져 $3으로는 부족하다. Step 1은 $7.
+#    로그에 "Exceeded USD budget"이 보이면 리필은 수행되지 않은 것이다 — 수동으로 다시 돌려야 한다.
+# 임시로 다른 날 강제 실행하려면 $ForceRefill = $true.
+$ForceRefill  = $false
+$RefillDay    = 'Monday'
+$RefillPrompt = Join-Path $ScriptsDir "refill-prompt.md"
+$today        = (Get-Date).DayOfWeek.ToString()
+
+if ((($today -eq $RefillDay) -or $ForceRefill) -and (Test-Path -LiteralPath $RefillPrompt)) {
+    Write-Log "=== Step 0.5: Weekly Queue Refill @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="
+    try {
+        $rp = Get-Content -LiteralPath $RefillPrompt -Raw -Encoding utf8
+
+        $rp | & claude `
+            -p `
+            --model claude-sonnet-4-6 `
+            --permission-mode bypassPermissions `
+            --max-budget-usd 5 `
+            --output-format text `
+            --add-dir $ProjectRoot 2>&1 |
+        ForEach-Object {
+            $line = "$_"
+            Write-Host $line
+            [System.IO.File]::AppendAllText($LogFile, "$line`r`n", $utf8NoBom)
+        }
+        Write-Log "=== Refill exit code: $LASTEXITCODE ==="
+    } catch {
+        Write-Log "ERROR (Refill step, 무시하고 발행 진행): $_"
+    }
+} elseif (-not (Test-Path -LiteralPath $RefillPrompt)) {
+    Write-Log "WARN: $RefillPrompt 없음 - Step 0.5 스킵."
+} else {
+    Write-Log "SKIP Step 0.5: 주간 리필일($RefillDay) 아님 - 오늘 $today."
+}
+Write-Log ""
 
 # === Step 1: Claude CLI로 원고 작성 ===
 try {
@@ -108,6 +150,21 @@ try {
     }
 } catch {
     Write-Log "ERROR (Dashboard rebuild): $_"
+}
+
+# === Step 1.55: 수동 이미지 헬퍼 대시보드 재빌드 ===
+Write-Log ""
+Write-Log "=== Prompt Helper Dashboard Rebuild @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="
+try {
+    $YYMMDD = Get-Date -Format "yyMMdd"
+    & python "$ProjectRoot\scripts\build_prompt_dashboard.py" $YYMMDD 2>&1 | ForEach-Object {
+        $line = "$_"
+        Write-Host $line
+        [System.IO.File]::AppendAllText($LogFile, "$line`r`n", $utf8NoBom)
+    }
+    Write-Log "Prompt helper dashboard rebuild complete."
+} catch {
+    Write-Log "ERROR (Prompt helper dashboard rebuild): $_"
 }
 
 # === Step 1.6: 인스타 카드 채널 (Phase C) ===
@@ -367,6 +424,13 @@ try {
     if (Test-Path $DashboardAbsPath) {
         $out = & git add -- "dashboard.html" 2>&1
         if ($out) { $out | ForEach-Object { Write-Log "git add dashboard.html: $_" } }
+    }
+
+    # 수동 이미지 헬퍼 대시보드 stage
+    $PromptHelperAbsPath = Join-Path $ProjectRoot "prompt_helper.html"
+    if (Test-Path $PromptHelperAbsPath) {
+        $out = & git add -- "prompt_helper.html" 2>&1
+        if ($out) { $out | ForEach-Object { Write-Log "git add prompt_helper.html: $_" } }
     }
 
     # 트래커 파일 stage (변경된 것만 자동으로 잡힘)

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>주간 성과 인포그래픽 · 2026-08-02</title>
+<style>
+  :root{
+    --travel:#0d9488; --travel-soft:#ccfbf1;
+    --life:#ea580c;   --life-soft:#ffedd5;
+    --traf:#6366f1;   --traf-soft:#e0e7ff;
+    --ink:#1f2937; --ink2:#4b5563; --muted:#8a94a3;
+    --line:#e7e9ee; --grid:#eef1f5; --surface:#ffffff; --bg:#f4f6f8;
+    --good:#16a34a; --warn:#d97706; --bad:#dc2626;
+    --tint:#f8fafb; --tint2:#fbfcfd; --track:#f0f2f5;
+    --shadow:0 1px 3px rgba(15,23,42,.06),0 1px 2px rgba(15,23,42,.04);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --travel-soft:#0f3b36; --life-soft:#43210c; --traf-soft:#232449;
+      --ink:#e8eaed; --ink2:#b6bcc6; --muted:#8a94a3;
+      --line:#2b2e33; --grid:#26282d; --surface:#1a1a19; --bg:#121212;
+      --tint:#1f2020; --tint2:#1d1e1e; --track:#2a2c30;
+      --shadow:0 1px 3px rgba(0,0,0,.4);
+    }
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;
+    line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1080px;margin:0 auto;padding:28px 20px 64px;}
+  header.top{margin-bottom:8px;}
+  .eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.02em;color:var(--travel);text-transform:uppercase;}
+  h1.title{font-size:1.9rem;font-weight:800;margin:6px 0 6px;letter-spacing:-.01em;}
+  .sub{color:var(--ink2);font-size:.95rem;max-width:790px;}
+  .sub b{color:var(--ink);}
+  .src{margin-top:10px;font-size:.8rem;color:var(--muted);}
+  .src code{background:var(--track);padding:1px 5px;border-radius:4px;}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin:18px 0 4px;font-size:.85rem;font-weight:600;color:var(--ink2);}
+  .lg{display:inline-flex;align-items:center;gap:7px;}
+  .sw{width:13px;height:13px;border-radius:3px;display:inline-block;}
+
+  section{background:var(--surface);border:1px solid var(--line);border-radius:16px;
+    padding:22px 24px;margin:20px 0;box-shadow:var(--shadow);}
+  .sec-h{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:4px;}
+  .sec-n{font-size:.78rem;font-weight:800;color:var(--travel);background:var(--travel-soft);
+    padding:2px 9px;border-radius:20px;}
+  h2{font-size:1.22rem;font-weight:800;margin:0;letter-spacing:-.01em;}
+  .sec-d{color:var(--ink2);font-size:.9rem;margin:8px 0 4px;}
+  .sec-d b{color:var(--ink);}
+  .takeaway{background:var(--tint);border-left:3px solid var(--travel);border-radius:0 8px 8px 0;
+    padding:11px 15px;margin-top:16px;font-size:.9rem;color:var(--ink2);}
+  .takeaway b{color:var(--ink);}
+  .takeaway.warn{border-left-color:var(--warn);}
+  .takeaway.bad{border-left-color:var(--bad);}
+
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:14px;margin-top:18px;}
+  .tile{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 17px;box-shadow:var(--shadow);}
+  .tile .k{font-size:.76rem;font-weight:700;color:var(--muted);}
+  .tile .v{font-size:1.75rem;font-weight:800;letter-spacing:-.02em;line-height:1.15;margin:4px 0 2px;}
+  .tile .d{font-size:.8rem;color:var(--ink2);}
+  .tile .u{font-size:1rem;font-weight:700;}
+  .tile.t-travel .v{color:var(--travel);} .tile.t-life .v{color:var(--life);}
+  .tile.t-good .v{color:var(--good);} .tile.t-warn .v{color:var(--warn);} .tile.t-bad .v{color:var(--bad);}
+
+  .chart{width:100%;overflow-x:auto;}
+  svg{display:block;max-width:100%;height:auto;font-family:inherit;}
+  .hoverable{cursor:default;}
+
+  table.tb{width:100%;border-collapse:collapse;font-size:.87rem;margin-top:16px;}
+  table.tb th,table.tb td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:right;}
+  table.tb th:first-child,table.tb td:first-child{text-align:left;}
+  table.tb th{font-size:.78rem;color:var(--muted);font-weight:700;border-bottom:1px solid var(--line);}
+  table.tb tr:last-child td{border-bottom:none;}
+  table.tb tr.hi td{background:var(--tint);font-weight:700;}
+  .up{color:var(--good);font-weight:700;} .dn{color:var(--bad);font-weight:700;}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px;margin-top:16px;}
+  .cc{border:1px solid var(--line);border-radius:12px;padding:15px 17px;background:var(--tint2);}
+  .cc h3{margin:0 0 6px;font-size:.98rem;}
+  .cc p{margin:0;font-size:.86rem;color:var(--ink2);}
+  .cc.travel{border-top:3px solid var(--travel);} .cc.life{border-top:3px solid var(--life);}
+  .cc.traf{border-top:3px solid var(--traf);} .cc.sum{border-top:3px solid var(--ink);}
+  .cc .num{font-size:.78rem;font-weight:800;color:var(--muted);}
+
+  .lever{display:grid;grid-template-columns:110px 1fr auto auto;gap:12px;align-items:center;font-size:.88rem;margin-top:10px;}
+  .lever .nm{font-weight:700;}
+  .lever .track{background:var(--track);border-radius:6px;height:22px;position:relative;overflow:hidden;}
+  .lever .fill{position:absolute;left:0;top:0;bottom:0;border-radius:6px;}
+  .lever .need{font-variant-numeric:tabular-nums;color:var(--ink2);white-space:nowrap;}
+  .verdict{font-size:.76rem;font-weight:700;padding:1px 9px;border-radius:20px;white-space:nowrap;}
+  .v-no{background:var(--life-soft);color:var(--life);} .v-hard{background:#fef9c3;color:#a16207;}
+  .v-ok{background:var(--travel-soft);color:var(--travel);}
+  @media (prefers-color-scheme: dark){ .v-hard{background:#3a3410;color:#e3c04a;} }
+
+  #tip{position:fixed;pointer-events:none;background:#1f2937;color:#fff;font-size:12px;
+    padding:7px 10px;border-radius:7px;opacity:0;transition:opacity .1s;z-index:50;max-width:250px;box-shadow:0 4px 14px rgba(0,0,0,.25);}
+  #tip b{color:#fff;} #tip .tv{font-weight:800;}
+  .foot{color:var(--muted);font-size:.78rem;text-align:center;margin-top:26px;}
+  details.tbl{margin-top:14px;font-size:.85rem;color:var(--ink2);}
+  details.tbl summary{cursor:pointer;font-weight:700;color:var(--ink2);}
+  @media(max-width:560px){
+    h1.title{font-size:1.5rem;} section{padding:18px 16px;}
+    .lever{grid-template-columns:82px 1fr auto;} .lever .verdict{grid-column:3;}
+  }
+</style>
+</head>
+<body>
+<div id="tip"></div>
+<div class="wrap">
+
+  <header class="top">
+    <div class="eyebrow">Naver Blog · Revenue &amp; Traffic Analytics</div>
+    <h1 class="title">주간 성과 인포그래픽 <span style="color:var(--muted);font-weight:700">· 2026-08-02</span></h1>
+    <p class="sub">수익은 <b>사상 최고(일 5,478원)</b>인데 그 엔진인 트래픽은 <b>이번 주 처음 꺾였습니다(−3.5%)</b>. 노출 정점은 <b>7/27</b>이었고, 여름 한정 소재가 트래픽의 <b>45.3%</b>라 9월 절벽이 산술적으로 예정되어 있습니다. 그리고 하루 3만원은 <b>5.5배</b>를 뜻합니다.</p>
+    <div class="src">데이터: <code>weekly/20260802.json</code>(top240) · <code>애드포스트 20260803.png</code>(7/1~8/2, 33일 · 검산 일치) · 발행 믹스 <code>output/260728~260802</code></div>
+  </header>
+
+  <div class="legend">
+    <span class="lg"><span class="sw" style="background:var(--travel)"></span>여행 — 계절 스파이크</span>
+    <span class="lg"><span class="sw" style="background:var(--life)"></span>실용 — 에버그린 기저부하</span>
+    <span class="lg"><span class="sw" style="background:var(--traf)"></span>트래픽(광고 노출)</span>
+  </div>
+
+  <!-- HERO -->
+  <div class="tiles">
+    <div class="tile t-good"><div class="k">일평균 수익 (이번 주)</div><div class="v">5,478<span class="u">원</span></div><div class="d">WoW +4.5% · 사상 최고</div></div>
+    <div class="tile t-warn"><div class="k">노출 정점 대비</div><div class="v">73%</div><div class="d">정점 7/27 5,487 → 8/2 3,985</div></div>
+    <div class="tile t-travel"><div class="k">여행 조회 점유</div><div class="v">81.2%</div><div class="d">2주전 68.5% (+12.7%p)</div></div>
+    <div class="tile t-bad"><div class="k">여름 한정 소재 비중</div><div class="v">45.3%</div><div class="d">69건 · 9월 감쇠 예정</div></div>
+    <div class="tile"><div class="k">하루 3만원까지</div><div class="v">5.5<span class="u">배</span></div><div class="d">트래픽 단독으론 2년+</div></div>
+  </div>
+
+  <!-- 01 REVENUE STRUCTURE -->
+  <section>
+    <div class="sec-h"><span class="sec-n">01</span><h2>수익 구조 — 트래픽이 앞서 달렸고, 이번 주 꺾였다</h2></div>
+    <p class="sec-d">첫 주(7/06~12)를 <b>100</b>으로 지수화. 노출은 3주간 +48%까지 달렸다가 <b>−3.5%로 반전</b>했고, 그 사이 수입은 한 주 뒤처졌다가 따라붙어 <b>120.5</b>가 됐습니다. 두 지표를 같은 축에서 보려고 지수화했습니다(원 단위가 달라 이중축은 쓰지 않습니다).</p>
+    <div class="chart" id="c-index"></div>
+    <table class="tb">
+      <tr><th>주간</th><th>노출</th><th>클릭</th><th>CTR</th><th>수입</th><th>일평균</th><th>RPM/1k</th><th>CPC</th></tr>
+      <tr><td>7/06~7/12</td><td>21,830</td><td>114</td><td>0.52%</td><td>31,826</td><td>4,547</td><td>1,458</td><td>279</td></tr>
+      <tr><td>7/13~7/19</td><td>26,141</td><td>105</td><td>0.40%</td><td>29,632</td><td>4,233</td><td>1,134</td><td>282</td></tr>
+      <tr><td>7/20~7/26</td><td>32,315</td><td>149</td><td>0.46%</td><td>36,697</td><td>5,242</td><td>1,136</td><td>246</td></tr>
+      <tr class="hi"><td>7/27~8/02</td><td>31,185</td><td>147</td><td>0.47%</td><td>38,344</td><td>5,478</td><td>1,230</td><td>261</td></tr>
+      <tr><td>WoW</td><td class="dn">−3.5%</td><td class="dn">−1.3%</td><td class="up">+0.01p</td><td class="up">+4.5%</td><td class="up">+4.5%</td><td class="up">+8.3%</td><td class="up">+6.1%</td></tr>
+    </table>
+    <div class="takeaway">💡 앞선 두 주의 <b>+19.7% · +23.6%</b> 성장은 구조적 성장이 아니라 <b>여름 성수기 램프</b>였습니다. 수입이 +4.5%로 버틴 건 RPM이 8.3% 회복해준 덕이고, <b>트래픽 자체는 정점을 통과</b>했습니다.</div>
+  </section>
+
+  <!-- 02 PEAK -->
+  <section>
+    <div class="sec-h"><span class="sec-n">02</span><h2>정점은 7월 27일이었다</h2></div>
+    <p class="sec-d">일별 광고 노출 최근 14일. <b>7/27 5,487</b>에서 꺾여 8/2은 <b>3,985(정점의 73%)</b>. 7월 중순 수준으로 되돌아갔습니다.</p>
+    <div class="chart" id="c-daily"></div>
+    <div class="takeaway warn">⚠️ 일별 클릭이 14~39건이라 <b>포아송 노이즈만 ±22%</b>입니다. 일별 CTR 0.34~0.62% 진폭은 대부분 노이즈이고 요일 패턴도 유의하지 않습니다. <b>일 단위로 원인을 찾지 말고 주간 집계로만 판단</b>하세요.</div>
+  </section>
+
+  <!-- 03 DRIVER -->
+  <section>
+    <div class="sec-h"><span class="sec-n">03</span><h2>수익 동인 — 노출보다 클릭이 2배 이상 중요하다</h2></div>
+    <p class="sec-d">33일 일별 데이터의 상관계수. 수입은 <b>클릭수와 강하게(r=0.754)</b>, 노출수와는 <b>약하게(r=0.342)</b> 움직입니다. 최고 수입일 3개가 전부 클릭 급증일이고 CPC가 튄 날이 아닙니다.</p>
+    <div class="chart" id="c-corr"></div>
+    <div class="takeaway">💡 <b>트래픽을 늘리는 것보다 "클릭하는 트래픽"을 늘리는 게 2배 이상 효율적입니다.</b> CTR 0.47% → 0.59%면 그것만으로 +25% — 글을 더 쓰지 않고 얻는 유일한 개선입니다.</div>
+  </section>
+
+  <!-- 04 DECAY ★ -->
+  <section>
+    <div class="sec-h"><span class="sec-n">04</span><h2>⭐ 여행글은 3개월 뒤 80%가 죽는다</h2></div>
+    <p class="sec-d">발행월별로 <b>이번 주</b> 조회수를 갈라 감쇠 곡선을 실측했습니다. 여행글은 7월분 224 → 5월분 44로 <b>생존율 20%</b>, 실용글은 77 → 45로 <b>58%</b>. <b>실용이 2.9배 오래 삽니다.</b></p>
+    <div class="chart" id="c-decay"></div>
+    <p class="sec-d" style="margin-top:16px">주간 스냅샷만 보면 여행이 압도적(224 vs 77)이지만, <b>1년으로 환산하면 순위가 뒤집힙니다</b>:</p>
+    <table class="tb">
+      <tr><th>유형</th><th>성수기 8주</th><th>비성수기 44주</th><th>연간 합계</th></tr>
+      <tr><td>여행글 1건</td><td>224 × 8 = 1,792</td><td>44 × 44 = 1,936</td><td>3,728</td></tr>
+      <tr class="hi"><td>실용글 1건</td><td>77 × 8 = 616</td><td>77 × 44 = 3,388</td><td>4,004</td></tr>
+    </table>
+    <div class="takeaway">💡 <b>"여행이 잘 터진다"는 인식은 여름 주간 스냅샷의 착시였습니다.</b> 게다가 실용은 5월분(45)→7월분(77)로 아직 성숙 중이라 위 수치는 과소평가입니다. 여행 = 계절 스파이크(현금흐름 불안정) / 실용 = 기저부하(안정). <b>하루 3만원을 <em>매일</em> 달성하려면 기저부하가 필요합니다.</b></div>
+    <details class="tbl"><summary>가정 열기</summary>비성수기 44는 <em>여름인 지금 관측된 5월 여행글 값</em>입니다. 진짜 비수기(11월)엔 더 낮을 가능성이 있어 여행글의 연간 기여는 3,728보다 낮을 것입니다. 반대로 실용은 감쇠 요인이 없습니다.</details>
+  </section>
+
+  <!-- 05 CLIFF -->
+  <section>
+    <div class="sec-h"><span class="sec-n">05</span><h2>9월 절벽 — 산술적으로 예정되어 있다</h2></div>
+    <p class="sec-d">여름 한정 소재(계곡·물놀이·해수욕장·워터파크·피서·물축제) = <b>69건 / 12,593 views / 전체의 45.3%</b>. §04의 실측 생존율(여행 20% = <b>80% 감쇠</b>)을 대입하면 9월 일수입은 <b>약 3,500원</b>입니다.</p>
+    <div class="chart" id="c-cliff"></div>
+    <div class="takeaway bad">🚨 <b>지금이 정점이고, 아무것도 안 하면 9월에 7월 초 수준으로 되돌아갑니다(−36%).</b> 여행글이 7월분 224 / 6월분 82 / 5월분 44인 이유는 단순합니다 — <b>발행 타이밍이 시즌과 맞았는가.</b> 백로딩 2~3주를 감안하면 가을 소재는 <b>8월 말~9월 초 발행이 마지노선</b>입니다.</div>
+  </section>
+
+  <!-- 06 CATEGORY SHIFT -->
+  <section>
+    <div class="sec-h"><span class="sec-n">06</span><h2>카테고리 점유 변화 — 실용이 절대값으로도 −29.6%</h2></div>
+    <p class="sec-d">2주 전(7/13~19) 대비 점유율 변화(%p). 여행이 <b>+12.7%p</b> 늘고 실용이 <b>−12.1%p</b> 줄었습니다. 실용은 점유율만이 아니라 <b>절대값도 6,988 → 4,920 views로 −29.6%</b> 빠졌습니다 — 희석이 아니라 실제 감소입니다.</p>
+    <div class="chart" id="c-shift"></div>
+    <p class="sec-d" style="margin-top:14px">한편 <b>발행 믹스는 이미 반반</b>입니다(7/28~8/2 실측 42건: 여행 22 / 실용 20). 방향은 나쁘지 않고, 문제는 <b>여름 여행글만 즉시 터지고 실용은 천천히 익는다</b>는 시차입니다. 실제로 이번 주 <b>신규 발행 1위는 여행이 아니라 「노인 기초연금」 214</b>(7/30, gov_)였습니다.</p>
+    <div class="takeaway">💡 신규 발행분 전체 기여는 <b>867 views = 전체의 3.1%</b>뿐입니다. <b>트래픽의 97%는 과거 글의 누적</b>이라, 발행량을 늘려 이번 주 수익을 올리는 건 불가능합니다. <b>축적만이 작동합니다.</b></div>
+  </section>
+
+  <!-- 07 GOAL -->
+  <section>
+    <div class="sec-h"><span class="sec-n">07</span><h2>하루 3만원 — 정직한 역산</h2></div>
+    <p class="sec-d">현재 <b>일 5,478원 → 목표 30,000원 = 5.48배</b>. 수입 = 노출 × CTR × CPC로 분해하면, <b>단일 레버는 전부 막혀 있습니다.</b></p>
+
+    <div class="lever"><span class="nm">노출만</span><span class="track"><span class="fill" style="width:100%;background:var(--traf);opacity:.55"></span></span><span class="need">일 24,399 노출 (×5.5)</span><span class="verdict v-no">약 2년</span></div>
+    <div class="lever"><span class="nm">CTR만</span><span class="track"><span class="fill" style="width:100%;background:var(--traf);opacity:.78"></span></span><span class="need">2.58% (통상 0.3~0.8%)</span><span class="verdict v-no">불가능</span></div>
+    <div class="lever"><span class="nm">CPC만</span><span class="track"><span class="fill" style="width:100%;background:var(--traf)"></span></span><span class="need">1,429원 (현재 261원)</span><span class="verdict v-hard">단독 불가</span></div>
+
+    <p class="sec-d" style="margin-top:20px"><b>3축 동시가 유일한 경로입니다.</b> 그리고 <b style="color:var(--travel)">CPC를 1.7배로 올리면 필요 조회수가 5.5배 → 3.2배로 줄어듭니다</b> — 지렛대가 가장 길고, 지금까지 한 번도 손대지 않은 축입니다.</p>
+    <div class="chart" id="c-scen"></div>
+
+    <p class="sec-d" style="margin-top:18px">글 단위로 환산하면 부족분이 <b>주 124,373 views</b>. 현재 top10 평균이 830뷰/주이니 <b>top10급 글을 150개 더 쌓는 규모</b>입니다. 그래서 목표를 이렇게 재설정하시길 권합니다:</p>
+    <div class="tiles">
+      <div class="tile t-good"><div class="k">6개월 내 · 현실 목표</div><div class="v">10,000<span class="u">원/일</span></div><div class="d">1.8배 — 노출×1.4 · CTR×1.1 · CPC×1.2</div></div>
+      <div class="tile"><div class="k">12개월</div><div class="v">20,000<span class="u">원/일</span></div><div class="d">3.7배 — 노출×2.0 · CTR×1.2 · CPC×1.5</div></div>
+      <div class="tile t-warn"><div class="k">12~18개월 · 목표</div><div class="v">30,000<span class="u">원/일</span></div><div class="d">5.5배 = 월 90만원</div></div>
+    </div>
+    <div class="takeaway warn">💡 하루 3만원은 <b>6개월 과제가 아니라 12~18개월 과제</b>입니다. 대신 <b>6개월 내 1만원/일은 충분히 잡히는 목표</b>이고, 그 경로가 3만원 경로와 정확히 같은 방향입니다.</div>
+  </section>
+
+  <!-- 08 ACTIONS -->
+  <section style="background:linear-gradient(180deg,var(--surface),var(--tint))">
+    <div class="sec-h"><span class="sec-n">08</span><h2>실행 — 우선순위 순</h2></div>
+    <div class="cards">
+      <div class="cc travel"><div class="num">① 최우선 · 8월 안에</div><h3>💰 CPC 축을 처음 건드린다</h3><p>261원 → 400원대면 필요 트래픽이 40% 준다. 이미 하는 계열의 고단가 확장이라 새 분야 리스크 없음 — <b>car_</b>→자동차보험 갱신·사고처리·수리견적, <b>rite_</b>→상조 가입·해지·장례비용. <b>측정법</b>: 2주간 car_·rite_ 비중을 2배로 올려 주간 CPC가 261→320 이상 움직이는지 확인(클릭 147건이면 표준오차 ~8%).</p></div>
+      <div class="cc traf"><div class="num">② 8월 중순까지</div><h3>🍂 9월 절벽 방어 — 가을 선점</h3><p>백로딩 2~3주 감안 시 <b>8월 말~9월 초 발행이 마지노선</b>. <code>국내여행지.md §02</code> 큐를 지금 단풍·억새·가을축제로 리필. 8/1에 큐 고갈로 7건 전부 여행이 나간 일이 반복되면 절벽을 그대로 맞는다.</p></div>
+      <div class="cc life"><div class="num">③ 상시</div><h3>🏘️ 발행 믹스 실용 60%로</h3><p>현재 여행 52% / 실용 48%. §04의 연간 기여 계산에 따라 실용 60% / 여행 40%로. 여행 40%는 줄이는 게 아니라 <b>가을 시즌 선점에 집중 투입</b>하는 것. 실용 절대값이 −29.6% 빠진 건 경고다.</p></div>
+      <div class="cc sum"><div class="num">④ 점검</div><h3>🖱️ CTR — 글을 안 쓰고 얻는 개선</h3><p>수입의 주 동인이 클릭(r=0.754). 0.47%→0.59%면 그것만으로 +25%. 광고 노출 위치·개수, 본문 중간 삽입 여부, 글 길이 대비 광고 수를 점검할 것.</p></div>
+    </div>
+    <div class="takeaway" style="border-left-color:var(--bad)">⚠️ <b>①은 가설입니다.</b> 주제별 CPC 실측 데이터가 우리에게 없습니다(애드포스트는 글별 수익을 주지 않음). 위 측정 설계를 먼저 돌려 확인한 뒤 확대할 것.</div>
+  </section>
+
+  <div class="foot">
+    생성 2026-08-03 · 짝꿍 분석 <code>stats/분석_20260802_주간.md</code> · 데이터 <code>stats/weekly/20260802.json</code><br>
+    색상 CVD 검증: teal/indigo/orange 라이트·다크 전 검사 PASS (protan ΔE 13.8 / 최소 인접 tritan 6.3 → 실선·점선 + 직접 라벨로 2차 인코딩)<br>
+    ⚠️ 7/20~7/26 주간 JSON 미생성 → 콘텐츠 비교는 2주 전 대비, 수익 비교는 애드포스트 일별로 정확한 WoW
+  </div>
+</div>
+
+<script>
+/* ---------- TOKENS ---------- */
+const cs = getComputedStyle(document.documentElement);
+const C = {
+  travel: cs.getPropertyValue('--travel').trim() || '#0d9488',
+  life:   cs.getPropertyValue('--life').trim()   || '#ea580c',
+  traf:   cs.getPropertyValue('--traf').trim()   || '#6366f1',
+  ink:    cs.getPropertyValue('--ink').trim(),
+  ink2:   cs.getPropertyValue('--ink2').trim(),
+  muted:  cs.getPropertyValue('--muted').trim(),
+  grid:   cs.getPropertyValue('--grid').trim(),
+  surface:cs.getPropertyValue('--surface').trim(),
+  good:   cs.getPropertyValue('--good').trim(),
+  warn:   cs.getPropertyValue('--warn').trim(),
+  bad:    cs.getPropertyValue('--bad').trim(),
+};
+
+/* ---------- DATA ---------- */
+const WEEKS = [
+  {lbl:'7/06~12', n:21830, c:114, r:31826},
+  {lbl:'7/13~19', n:26141, c:105, r:29632},
+  {lbl:'7/20~26', n:32315, c:149, r:36697},
+  {lbl:'7/27~8/2',n:31185, c:147, r:38344},
+];
+const DAILY = [
+  ['07-20',4103],['07-21',4368],['07-22',4442],['07-23',4521],['07-24',4702],
+  ['07-25',5007],['07-26',5172],['07-27',5487],['07-28',4716],['07-29',4455],
+  ['07-30',4551],['07-31',3653],['08-01',4338],['08-02',3985]
+];
+const PEAK = '07-27';
+const CORR = [['수입 ~ 클릭수',0.754],['클릭 ~ 노출수',0.606],['수입 ~ 노출수',0.342]];
+const DECAY = [ // [발행월, 여행 글당, 실용 글당, 여행n, 실용n]
+  ['5월 발행',44,45,35,3],['6월 발행',82,57,47,15],['7월 발행',224,77,76,49]
+];
+const CLIFF = [
+  ['현재 (8/2)',27794,5478,C.traf],
+  ['70% 감쇠',18979,3741,C.warn],
+  ['80% 감쇠',17720,3492,C.warn],
+  ['90% 감쇠',16460,3244,C.bad]
+];
+const SCEN = [
+  ['A',2.5,1.25,1.7,29100],['B',3.0,1.2,1.5,29580],['C',2.0,1.3,2.1,29908]
+];
+
+/* ---------- HELPERS ---------- */
+const NS='http://www.w3.org/2000/svg';
+function el(n,a){const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);return e;}
+function txt(x,y,s,o={}){const t=el('text',{x,y,...o});t.textContent=s;return t;}
+const fmt=n=>n.toLocaleString('ko-KR');
+const tip=document.getElementById('tip');
+function bind(e,html){e.classList.add('hoverable');
+  e.addEventListener('mousemove',ev=>{tip.innerHTML=html;tip.style.opacity=1;
+    let x=ev.clientX+14,y=ev.clientY+14; if(x+250>innerWidth)x=ev.clientX-258;
+    tip.style.left=x+'px';tip.style.top=y+'px';});
+  e.addEventListener('mouseleave',()=>tip.style.opacity=0);}
+function svgBox(id,W,H){const s=el('svg',{viewBox:`0 0 ${W} ${H}`,width:W,height:H,role:'img'});
+  document.getElementById(id).appendChild(s);return s;}
+function gridY(s,vals,y,x0,x1,f=fmt){vals.forEach(g=>{
+  s.appendChild(el('line',{x1:x0,x2:x1,y1:y(g),y2:y(g),stroke:C.grid,'stroke-width':1}));
+  s.appendChild(txt(x0-8,y(g)+4,f(g),{fill:C.muted,'font-size':11,'text-anchor':'end'}));});}
+
+/* ---------- 01 INDEX (line, 2 series, solid vs dashed + end labels) ---------- */
+(function(){
+  const W=1020,H=320,mL=48,mR=118,mT=26,mB=44,pw=W-mL-mR,ph=H-mT-mB;
+  const s=svgBox('c-index',W,H);
+  const base=WEEKS[0];
+  const series=[
+    {nm:'수입', col:C.travel, dash:null, v:WEEKS.map(w=>w.r/base.r*100), raw:WEEKS.map(w=>fmt(w.r)+'원')},
+    {nm:'노출', col:C.traf,   dash:'6 4', v:WEEKS.map(w=>w.n/base.n*100), raw:WEEKS.map(w=>fmt(w.n))},
+  ];
+  const yMax=160,yMin=80;
+  const x=i=>mL+pw*i/(WEEKS.length-1);
+  const y=v=>mT+ph*(1-(v-yMin)/(yMax-yMin));
+  gridY(s,[80,100,120,140,160],y,mL,W-mR);
+  // 100 baseline emphasis
+  s.appendChild(el('line',{x1:mL,x2:W-mR,y1:y(100),y2:y(100),stroke:C.muted,'stroke-width':1,'stroke-dasharray':'2 3',opacity:.7}));
+  WEEKS.forEach((w,i)=>s.appendChild(txt(x(i),H-16,w.lbl,{fill:C.muted,'font-size':11.5,'text-anchor':'middle'})));
+  series.forEach(se=>{
+    let d='';se.v.forEach((v,i)=>d+=(i?' L ':'M ')+x(i)+' '+y(v));
+    const p=el('path',{d,fill:'none',stroke:se.col,'stroke-width':2.5,'stroke-linejoin':'round','stroke-linecap':'round'});
+    if(se.dash)p.setAttribute('stroke-dasharray',se.dash);
+    s.appendChild(p);
+    se.v.forEach((v,i)=>{
+      const g=el('g',{});
+      g.appendChild(el('circle',{cx:x(i),cy:y(v),r:5.5,fill:se.col,stroke:C.surface,'stroke-width':2}));
+      bind(g,`<b>${WEEKS[i].lbl}</b><br>${se.nm} 지수 <span class="tv">${v.toFixed(1)}</span><br>실측 ${se.raw[i]}`);
+      s.appendChild(g);
+      if(i===0||i===se.v.length-1)
+        s.appendChild(txt(x(i),y(v)-13,v.toFixed(0),{fill:se.col,'font-size':12,'font-weight':800,'text-anchor':'middle'}));
+    });
+    // direct end label (secondary encoding)
+    const last=se.v.length-1;
+    s.appendChild(txt(x(last)+14,y(se.v[last])+4,se.nm,{fill:se.col,'font-size':13,'font-weight':800}));
+  });
+  s.appendChild(txt(mL,16,'첫 주 = 100 지수',{fill:C.muted,'font-size':11}));
+  // reversal marker
+  s.appendChild(txt(x(2)+4,mT+14,'← 노출 정점 통과',{fill:C.bad,'font-size':11,'font-weight':700}));
+})();
+
+/* ---------- 02 DAILY BARS (single series) ---------- */
+(function(){
+  const W=1020,H=280,mL=48,mR=16,mT=26,mB=46,pw=W-mL-mR,ph=H-mT-mB;
+  const s=svgBox('c-daily',W,H);
+  const yMax=6000, bw=pw/DAILY.length;
+  const y=v=>mT+ph*(1-v/yMax);
+  gridY(s,[0,2000,4000,6000],y,mL,W-mR);
+  DAILY.forEach(([d,v],i)=>{
+    const isPeak=d===PEAK, bx=mL+bw*i+bw*0.16, w=bw*0.68;
+    const g=el('g',{});
+    g.appendChild(el('rect',{x:bx,y:y(v),width:w,height:y(0)-y(v),rx:4,
+      fill:isPeak?C.bad:C.traf,opacity:isPeak?1:.85}));
+    bind(g,`<b>${d}</b><br>노출 <span class="tv">${fmt(v)}</span>${isPeak?'<br>← 정점':''}`);
+    s.appendChild(g);
+    s.appendChild(txt(bx+w/2,H-26,d.slice(3),{fill:C.muted,'font-size':10.5,'text-anchor':'middle'}));
+    if(isPeak||i===DAILY.length-1)
+      s.appendChild(txt(bx+w/2,y(v)-8,fmt(v),{fill:isPeak?C.bad:C.ink,'font-size':11.5,'font-weight':800,'text-anchor':'middle'}));
+  });
+  const pi=DAILY.findIndex(d=>d[0]===PEAK);
+  s.appendChild(txt(mL+bw*pi+bw/2,mT-10,'정점 7/27',{fill:C.bad,'font-size':11.5,'font-weight':800,'text-anchor':'middle'}));
+  s.appendChild(txt(W-mR,H-8,'8/2 = 정점의 73%',{fill:C.muted,'font-size':11,'text-anchor':'end'}));
+})();
+
+/* ---------- 03 CORRELATION (horizontal bars) ---------- */
+(function(){
+  const W=1020,H=170,mL=150,mR=90,mT=14,mB=28,pw=W-mL-mR;
+  const s=svgBox('c-corr',W,H);
+  const bh=30,gap=14;
+  CORR.forEach(([nm,r],i)=>{
+    const yy=mT+i*(bh+gap);
+    s.appendChild(txt(mL-12,yy+bh/2+5,nm,{fill:C.ink,'font-size':12.5,'font-weight':700,'text-anchor':'end'}));
+    s.appendChild(el('rect',{x:mL,y:yy,width:pw,height:bh,rx:5,fill:C.grid}));
+    const col=i===0?C.travel:(i===1?C.traf:C.muted);
+    const g=el('g',{});
+    g.appendChild(el('rect',{x:mL,y:yy,width:pw*r,height:bh,rx:5,fill:col}));
+    bind(g,`<b>${nm}</b><br>r = <span class="tv">${r}</span>`);
+    s.appendChild(g);
+    s.appendChild(txt(mL+pw*r+10,yy+bh/2+5,'r = '+r.toFixed(3),{fill:C.ink,'font-size':12.5,'font-weight':800}));
+  });
+  s.appendChild(txt(mL,H-8,'0',{fill:C.muted,'font-size':11}));
+  s.appendChild(txt(mL+pw,H-8,'1.0',{fill:C.muted,'font-size':11,'text-anchor':'end'}));
+})();
+
+/* ---------- 04 DECAY (grouped bars) ---------- */
+(function(){
+  const W=1020,H=340,mL=52,mR=20,mT=30,mB=58,pw=W-mL-mR,ph=H-mT-mB;
+  const s=svgBox('c-decay',W,H);
+  const yMax=240, gw=pw/DECAY.length;
+  const y=v=>mT+ph*(1-v/yMax);
+  gridY(s,[0,60,120,180,240],y,mL,W-mR);
+  DECAY.forEach(([lbl,tv,lv,tn,ln],i)=>{
+    const cx=mL+gw*i+gw/2, bw=Math.min(76,gw*0.3), gapPx=2;
+    [[tv,C.travel,'여행',tn,-1],[lv,C.life,'실용',ln,1]].forEach(([v,col,nm,n,side])=>{
+      const bx=cx+(side<0? -bw-gapPx/2 : gapPx/2);
+      const g=el('g',{});
+      g.appendChild(el('rect',{x:bx,y:y(v),width:bw,height:y(0)-y(v),rx:4,fill:col}));
+      bind(g,`<b>${lbl} · ${nm}</b><br>글당 <span class="tv">${v}</span> views/주<br>${n}건 기준`);
+      s.appendChild(g);
+      s.appendChild(txt(bx+bw/2,y(v)-8,v,{fill:col,'font-size':13,'font-weight':800,'text-anchor':'middle'}));
+    });
+    s.appendChild(txt(cx,H-32,lbl,{fill:C.ink,'font-size':12.5,'font-weight':700,'text-anchor':'middle'}));
+    s.appendChild(txt(cx,H-16,`여행 ${tn}건 · 실용 ${ln}건`,{fill:C.muted,'font-size':10.5,'text-anchor':'middle'}));
+  });
+  s.appendChild(txt(mL,18,'이번 주 조회수 · 글당 평균',{fill:C.muted,'font-size':11}));
+  // 생존율 주석 — 5월 그룹 위에 직접 표기 (곡선 대신, 방향 오해 방지)
+  const cx5=mL+gw*0+gw/2;
+  s.appendChild(txt(cx5,y(45)-58,'7월분 대비 생존율',{fill:C.muted,'font-size':11,'text-anchor':'middle'}));
+  s.appendChild(txt(cx5-24,y(45)-38,'여행 20%',{fill:C.travel,'font-size':12.5,'font-weight':800,'text-anchor':'end'}));
+  s.appendChild(txt(cx5+24,y(45)-38,'실용 58%',{fill:C.life,'font-size':12.5,'font-weight':800,'text-anchor':'start'}));
+  s.appendChild(txt(cx5,y(45)-22,'▼',{fill:C.muted,'font-size':10,'text-anchor':'middle'}));
+})();
+
+/* ---------- 05 CLIFF ---------- */
+(function(){
+  const W=1020,H=290,mL=52,mR=20,mT=26,mB=62,pw=W-mL-mR,ph=H-mT-mB;
+  const s=svgBox('c-cliff',W,H);
+  const yMax=34000, gw=pw/CLIFF.length;
+  const y=v=>mT+ph*(1-v/yMax);
+  gridY(s,[0,10000,20000,30000],y,mL,W-mR,v=>v/1000+'k');
+  CLIFF.forEach(([lbl,views,rev,col],i)=>{
+    const bx=mL+gw*i+gw*0.22, bw=gw*0.56;
+    const g=el('g',{});
+    g.appendChild(el('rect',{x:bx,y:y(views),width:bw,height:y(0)-y(views),rx:4,fill:col,opacity:i?.9:1}));
+    bind(g,`<b>${lbl}</b><br>주간 조회 <span class="tv">${fmt(views)}</span><br>일수입 추정 ${fmt(rev)}원`);
+    s.appendChild(g);
+    s.appendChild(txt(bx+bw/2,y(views)-24,fmt(views),{fill:C.ink,'font-size':12.5,'font-weight':800,'text-anchor':'middle'}));
+    s.appendChild(txt(bx+bw/2,y(views)-8,fmt(rev)+'원/일',{fill:col,'font-size':12,'font-weight':800,'text-anchor':'middle'}));
+    s.appendChild(txt(bx+bw/2,H-38,lbl,{fill:C.ink,'font-size':12.5,'font-weight':700,'text-anchor':'middle'}));
+    if(i>0)s.appendChild(txt(bx+bw/2,H-22,`현재의 ${Math.round(views/CLIFF[0][1]*100)}%`,{fill:C.muted,'font-size':10.5,'text-anchor':'middle'}));
+  });
+  s.appendChild(txt(mL,16,'주간 조회수 (top240)',{fill:C.muted,'font-size':11}));
+  s.appendChild(txt(W-mR,H-6,'※ 실측 생존율 대입 시 80% 감쇠 = 9월 일수입 약 3,500원',{fill:C.muted,'font-size':10.5,'text-anchor':'end'}));
+})();
+
+/* ---------- 06 CATEGORY SHIFT (diverging) ---------- */
+(function(){
+  const SHIFT=[
+    ['여행_축제행사',5.8],['여행_계곡물놀이',4.4],['여행_해변섬',3.6],['여행_도심야간',2.5],
+    ['생활_정부지원',0.5],['생활_자동차',0.2],['여행_산숲전망',-0.7],['생활_가전',-1.3],
+    ['경조사',-1.6],['생활_교통카드',-1.6],['생활_증명서부동산',-2.4],['여행_드라이브기타',-2.8],
+    ['여행실무_교통숙박',-3.6]
+  ];
+  const W=1020,H=430,mL=150,mR=60,mT=26,mB=34,pw=W-mL-mR;
+  const s=svgBox('c-shift',W,H);
+  const max=6, zx=mL+pw/2, half=pw/2-10;
+  const x=v=>zx+half*v/max;
+  const bh=22,gap=6;
+  s.appendChild(el('line',{x1:zx,x2:zx,y1:mT-6,y2:mT+SHIFT.length*(bh+gap),stroke:C.muted,'stroke-width':1.5}));
+  s.appendChild(txt(zx,H-14,'0 %p',{fill:C.muted,'font-size':11,'text-anchor':'middle'}));
+  s.appendChild(txt(zx-half,H-14,'−6',{fill:C.muted,'font-size':11,'text-anchor':'middle'}));
+  s.appendChild(txt(zx+half,H-14,'+6',{fill:C.muted,'font-size':11,'text-anchor':'middle'}));
+  SHIFT.forEach(([nm,v],i)=>{
+    const yy=mT+i*(bh+gap);
+    const isTr=nm.startsWith('여행');
+    const col=v>=0?C.travel:C.life;
+    s.appendChild(txt(mL-12,yy+bh/2+4,nm,{fill:C.ink,'font-size':11.5,'font-weight':isTr?700:600,'text-anchor':'end'}));
+    const g=el('g',{});
+    const x0=v>=0?zx:x(v), w=Math.abs(x(v)-zx);
+    g.appendChild(el('rect',{x:x0,y:yy,width:Math.max(w,1.5),height:bh,rx:3.5,fill:col}));
+    bind(g,`<b>${nm}</b><br>점유 변화 <span class="tv">${v>=0?'+':''}${v}%p</span><br>(2주 전 대비)`);
+    s.appendChild(g);
+    s.appendChild(txt(v>=0?x(v)+8:x(v)-8,yy+bh/2+4,(v>=0?'+':'')+v,
+      {fill:col,'font-size':11.5,'font-weight':800,'text-anchor':v>=0?'start':'end'}));
+  });
+  s.appendChild(txt(mL,16,'점유율 변화 (%p) · 2주 전(7/13~19) 대비',{fill:C.muted,'font-size':11}));
+})();
+
+/* ---------- 07 SCENARIOS (stacked multiplier) ---------- */
+(function(){
+  const W=1020,H=260,mL=52,mR=130,mT=30,mB=62,pw=W-mL-mR,ph=H-mT-mB;
+  const s=svgBox('c-scen',W,H);
+  const gw=pw/SCEN.length, yMax=3;
+  const y=v=>mT+ph*(1-v/yMax);
+  gridY(s,[0,1,2,3],y,mL,W-mR,v=>'×'+v);
+  s.appendChild(el('line',{x1:mL,x2:W-mR,y1:y(1),y2:y(1),stroke:C.muted,'stroke-width':1.5,'stroke-dasharray':'3 3',opacity:.8}));
+  s.appendChild(txt(W-mR+8,y(1)+4,'×1 = 현재',{fill:C.muted,'font-size':11.5,'font-weight':700}));
+  SCEN.forEach(([nm,a,b,c,res],i)=>{
+    const cx=mL+gw*i+gw/2, bw=Math.min(52,gw*0.2), gapPx=6;
+    // 세 레버를 나란히 — 단일 색(트래픽 인디고 계열 단계) + 직접 라벨. 문서 범례와 의미 충돌 없음.
+    const parts=[[a,'노출',.55],[b,'CTR',.78],[c,'CPC',1]];
+    parts.forEach(([m,lab,op],j)=>{
+      const bx=cx+(j-1)*(bw+gapPx)-bw/2;
+      const g=el('g',{});
+      g.appendChild(el('rect',{x:bx,y:y(m),width:bw,height:y(0)-y(m),rx:4,fill:C.traf,opacity:op}));
+      bind(g,`<b>시나리오 ${nm} · ${lab}</b><br>필요 배수 <span class="tv">×${m}</span>`);
+      s.appendChild(g);
+      s.appendChild(txt(bx+bw/2,y(m)-8,'×'+m,{fill:C.ink,'font-size':12,'font-weight':800,'text-anchor':'middle'}));
+      s.appendChild(txt(bx+bw/2,H-32,lab,{fill:C.ink2,'font-size':11,'font-weight':700,'text-anchor':'middle'}));
+    });
+    const tot=a*b*c;
+    s.appendChild(txt(cx,H-16,`시나리오 ${nm} — 곱 ×${tot.toFixed(1)} · ${fmt(res)}원/일`,{fill:C.muted,'font-size':11,'text-anchor':'middle'}));
+  });
+  s.appendChild(txt(mL,18,'각 레버에 필요한 배수 (세 값의 곱 = 5.5배)',{fill:C.muted,'font-size':11}));
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>메인 에이전트 · 서브 에이전트 운영 인사이트</title>
+<style>
+:root{
+  --bg:#f6f7f9; --surface:#fff; --sunk:#fafbfc; --ink:#111827; --ink2:#4b5563; --ink3:#9ca3af;
+  --line:#e5e7eb; --line2:#f1f2f4;
+  --main:#0891B2; --sub:#DB2777; --ok:#047857; --okbg:#ecfdf5;
+  --no:#b91c1c; --nobg:#fef2f2; --warn:#b45309; --warnbg:#fffbeb;
+}
+@media (prefers-color-scheme:dark){
+  :root{ --bg:#0f1115; --surface:#171a21; --sunk:#12151b; --ink:#e9eaee; --ink2:#a8adb8; --ink3:#6b7280;
+    --line:#2a2f3a; --line2:#20242e;
+    --main:#22d3ee; --sub:#f472b6; --ok:#34d399; --okbg:#052e23;
+    --no:#f87171; --nobg:#3d1414; --warn:#fbbf24; --warnbg:#3a2a06; }
+}
+:root[data-theme="dark"]{ --bg:#0f1115; --surface:#171a21; --sunk:#12151b; --ink:#e9eaee; --ink2:#a8adb8; --ink3:#6b7280;
+  --line:#2a2f3a; --line2:#20242e; --main:#22d3ee; --sub:#f472b6; --ok:#34d399; --okbg:#052e23;
+  --no:#f87171; --nobg:#3d1414; --warn:#fbbf24; --warnbg:#3a2a06; }
+:root[data-theme="light"]{ --bg:#f6f7f9; --surface:#fff; --sunk:#fafbfc; --ink:#111827; --ink2:#4b5563; --ink3:#9ca3af;
+  --line:#e5e7eb; --line2:#f1f2f4; --main:#0891B2; --sub:#DB2777; --ok:#047857; --okbg:#ecfdf5;
+  --no:#b91c1c; --nobg:#fef2f2; --warn:#b45309; --warnbg:#fffbeb; }
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Malgun Gothic","Segoe UI",system-ui,sans-serif;
+  font-size:15px;line-height:1.78;-webkit-font-smoothing:antialiased}
+.wrap{max-width:880px;margin:0 auto;padding:36px 22px 70px}
+code{font-family:Consolas,monospace;font-size:.86em;background:var(--line2);
+  padding:1px 5px;border-radius:4px;color:var(--ink2)}
+
+header{border-bottom:2px solid var(--ink);padding-bottom:18px;margin-bottom:8px}
+h1{margin:0 0 6px;font-size:1.62rem;letter-spacing:-.025em;line-height:1.35}
+.hsub{color:var(--ink2);font-size:.9rem}
+.tldr{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--main);
+  border-radius:0 10px 10px 0;padding:18px 22px;margin:26px 0 34px}
+.tldr .t{font-size:.76rem;font-weight:700;letter-spacing:.08em;color:var(--main);margin-bottom:7px}
+.tldr p{margin:0 0 8px}
+.tldr p:last-child{margin-bottom:0}
+
+section{margin-bottom:40px}
+h2{font-size:1.14rem;letter-spacing:-.015em;margin:0 0 4px;padding-bottom:9px;
+  border-bottom:1px solid var(--line)}
+h2 .n{color:var(--ink3);font-weight:600;margin-right:9px;font-size:.9em}
+h3{font-size:.98rem;margin:24px 0 6px;letter-spacing:-.01em}
+p{margin:12px 0}
+.lead{color:var(--ink2);font-size:.9rem;margin:10px 0 20px}
+strong{font-weight:700}
+mark{background:color-mix(in srgb,var(--warn) 20%,transparent);color:inherit;padding:0 3px;border-radius:3px}
+
+/* 다이어그램 */
+.diag{background:var(--sunk);border:1px solid var(--line);border-radius:12px;padding:24px 20px;margin:22px 0}
+.drow{display:flex;align-items:stretch;gap:14px;flex-wrap:wrap}
+.dbox{flex:1 1 190px;background:var(--surface);border:1px solid var(--line);border-radius:9px;padding:13px 15px}
+.dbox.m{border-top:3px solid var(--main)}
+.dbox.s{border-top:3px solid var(--sub)}
+.dbox .bt{font-weight:700;font-size:.9rem;margin-bottom:4px}
+.dbox .bd{font-size:.8rem;color:var(--ink2);line-height:1.6}
+.darrow{align-self:center;color:var(--ink3);font-size:1.3rem;flex:0 0 auto}
+.dcap{font-size:.8rem;color:var(--ink3);margin-top:14px;text-align:center}
+.subs{display:flex;flex-direction:column;gap:8px;flex:1 1 240px}
+.subs .dbox{flex:0 0 auto}
+
+/* 2단 판정 카드 */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+@media(max-width:700px){.two{grid-template-columns:1fr}}
+.card{border:1px solid var(--line);border-radius:10px;padding:16px 18px;background:var(--surface)}
+.card.yes{border-left:4px solid var(--ok)}
+.card.no{border-left:4px solid var(--no)}
+.card .h{font-weight:700;font-size:.95rem;margin-bottom:10px}
+.card.yes .h{color:var(--ok)}
+.card.no .h{color:var(--no)}
+.card ul{margin:0;padding-left:19px;font-size:.87rem;color:var(--ink2)}
+.card li{margin-bottom:9px}
+.card li b{color:var(--ink)}
+
+.scroll{overflow-x:auto;margin:20px 0}
+table{width:100%;border-collapse:collapse;font-size:.85rem;min-width:800px}
+th,td{padding:9px 11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line2)}
+th:nth-child(2),td:nth-child(2),th:nth-child(3),td:nth-child(3),
+th:nth-child(4),td:nth-child(4),th:nth-child(5),td:nth-child(5){white-space:nowrap}
+thead th{font-size:.76rem;font-weight:600;color:var(--ink2);border-bottom:1px solid var(--line);white-space:nowrap}
+tbody tr:hover{background:var(--sunk)}
+td.v{white-space:nowrap;font-weight:700;font-size:.8rem}
+td.v.s{color:var(--sub)}
+td.v.m{color:var(--main)}
+td.v.x{color:var(--ink3)}
+td.why{color:var(--ink2)}
+
+pre{background:var(--sunk);border:1px solid var(--line);border-radius:9px;
+  padding:15px 17px;overflow-x:auto;font-family:Consolas,monospace;
+  font-size:.8rem;line-height:1.72;margin:14px 0;color:var(--ink)}
+pre .c{color:var(--ink3)}
+pre code{background:none;padding:0;font-size:1em;color:inherit}
+
+.trap{border:1px solid var(--line);border-left:4px solid var(--warn);border-radius:0 9px 9px 0;
+  padding:14px 18px;margin:14px 0;background:var(--surface)}
+.trap .th{font-weight:700;font-size:.92rem;margin-bottom:5px}
+.trap p{margin:6px 0 0;font-size:.87rem;color:var(--ink2)}
+
+.steps{counter-reset:st;padding:0;margin:20px 0;list-style:none}
+.steps li{position:relative;padding:15px 18px 15px 60px;border:1px solid var(--line);
+  border-radius:10px;margin-bottom:11px;background:var(--surface)}
+.steps li::before{counter-increment:st;content:counter(st);position:absolute;left:17px;top:15px;
+  width:26px;height:26px;border-radius:50%;background:var(--main);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700}
+.steps .sh{font-weight:700;font-size:.94rem;margin-bottom:3px}
+.steps .sd{font-size:.86rem;color:var(--ink2)}
+.steps .sw{font-size:.8rem;color:var(--ink3);margin-top:5px}
+
+.exists{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin:20px 0}
+@media(max-width:700px){.exists{grid-template-columns:1fr}}
+.ag{border:1px solid var(--line);border-radius:10px;padding:15px 17px;background:var(--surface);
+  border-top:3px solid var(--sub)}
+.ag .an{font-family:Consolas,monospace;font-weight:700;font-size:.88rem;color:var(--sub)}
+.ag .ad{font-size:.84rem;color:var(--ink2);margin-top:6px}
+.ag .am{font-size:.77rem;color:var(--ink3);margin-top:8px;border-top:1px solid var(--line2);padding-top:7px}
+
+.foot{border-top:1px solid var(--line);margin-top:44px;padding-top:18px;
+  font-size:.82rem;color:var(--ink3)}
+.foot b{color:var(--ink2)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>메인 에이전트 · 서브 에이전트<br>— 이 프로젝트에 정말 도움이 되나</h1>
+  <div class="hsub">개념 설명 + 이 폴더의 실제 업무에 대입한 판정 · 2026-08-09 작성 · <b>실행하지 않은 검토 문서</b></div>
+</header>
+
+<div class="tldr">
+  <div class="t">한 장 요약</div>
+  <p><strong>서브 에이전트는 「읽을 건 많고 결론은 짧은 일」에만 이득이 있습니다.</strong>
+  이 프로젝트에서 그건 <em>통계 분석 · 캡처 분석 · 큐 리필 · 사이트 점검</em>입니다. 이미 만들어 둔 두 개가 있는데 거의 안 쓰고 있습니다.</p>
+  <p><strong>반대로 원고 작성은 넘기면 품질이 떨어집니다.</strong>
+  「가격 접근 폐기」·「쓰레드는 블로그 요약이 아니다」·「닭갈비는 원래 직원이 볶는다」 — 최근의 중요한 개선은 전부
+  <mark>대화 중 사장님의 한마디</mark>에서 나왔습니다. 서브 에이전트는 그 대화 자리에 없습니다.</p>
+  <p style="color:var(--ink2);font-size:.9rem">결론: 전면 도입이 아니라 <strong>분석·점검 계열만 4개 정도</strong>를 서브로 떼는 것이 맞습니다.</p>
+</div>
+
+<section>
+  <h2><span class="n">01</span>먼저 개념 — 편집장과 임시 직원</h2>
+  <p class="lead">어려운 말 없이 갑니다. 회사 하나를 상상하면 됩니다.</p>
+
+  <p><strong>메인 에이전트</strong>는 사장님과 계속 대화하는 <strong>담당 편집장 한 명</strong>입니다.
+  지금 이 대화 상대가 그 편집장이고, 사장님이 지난달에 한 지시, 오늘 고친 어투, 사진에 대한 판단 — 다 기억하고 있습니다.</p>
+
+  <p><strong>서브 에이전트</strong>는 그 편집장이 필요할 때 부르는 <strong>임시 직원</strong>입니다. 중요한 특징이 세 가지 있습니다.</p>
+
+  <div class="diag">
+    <div class="drow">
+      <div class="dbox m">
+        <div class="bt">메인 에이전트 (편집장)</div>
+        <div class="bd">사장님과 대화 · 프로젝트 맥락 전부 보유 · 최종 판단과 보고</div>
+      </div>
+      <div class="darrow">&rarr;</div>
+      <div class="subs">
+        <div class="dbox s">
+          <div class="bt">임시 직원 A</div>
+          <div class="bd">"통계 8주분 읽고 결론만 가져와"</div>
+        </div>
+        <div class="dbox s">
+          <div class="bt">임시 직원 B</div>
+          <div class="bd">"URL 27개 살아있나 확인해와"</div>
+        </div>
+      </div>
+      <div class="darrow">&rarr;</div>
+      <div class="dbox m" style="flex:0 1 150px">
+        <div class="bt">결론만 복귀</div>
+        <div class="bd">읽은 내용은 버려지고 <b>요약 한 장</b>만 편집장에게 돌아온다</div>
+      </div>
+    </div>
+    <div class="dcap">임시 직원은 일이 끝나면 사라집니다. 기억도 같이 사라집니다.</div>
+  </div>
+
+  <h3>특징 1 &mdash; 우리 대화를 못 봅니다</h3>
+  <p>임시 직원은 출근하면서 <strong>지시서 한 장만</strong> 받습니다. 사장님과 편집장이 몇 달간 쌓은 규칙은 모릅니다.
+  그래서 지시서에 필요한 규칙을 다 적어줘야 하고, 그게 바로 이 폴더의 <code>.md</code> 지침 파일들이 하는 일입니다.
+  <code>daily-prompt.md</code>가 두꺼워진 이유가 여기 있습니다.</p>
+
+  <h3>특징 2 &mdash; 중간에 사장님께 물어볼 수 없습니다</h3>
+  <p>임시 직원은 <strong>끝까지 혼자 하고 결과만 냅니다.</strong> "이거 이렇게 해도 되나요?" 하고 멈추지 못합니다.
+  그래서 <mark>물어봐야 하는 일에는 근본적으로 안 맞습니다.</mark></p>
+
+  <h3>특징 3 &mdash; 자기가 읽은 건 자기가 다 안고 갑니다</h3>
+  <p>이게 진짜 이득입니다. 다음 장에서 따로 설명합니다.</p>
+</section>
+
+<section>
+  <h2><span class="n">02</span>왜 이득인가 — 「기억 공간」이 유한하기 때문</h2>
+  <p>편집장의 머릿속(대화 하나에 담기는 양)에는 <strong>한계가 있습니다.</strong>
+  통계 JSON 8주분, 원고 333건, 캡처 수십 장을 다 펼쳐 읽으면 공간이 꽉 차고,
+  정작 판단할 시점에는 <em>앞에서 사장님이 한 지시를 흐릿하게</em> 기억합니다.</p>
+
+  <p>실제로 <strong>지금 이 대화도 이미 한 번 요약되어 압축됐습니다.</strong> 그게 이 한계의 증거입니다.</p>
+
+  <p>서브 에이전트는 이 문제를 <strong>물리적으로</strong> 풉니다. 임시 직원이 자기 머릿속에서 240줄짜리 JSON을 다 읽고,
+  편집장에게는 <em>"이번 주 1위는 A, 여행 비중 73%, 지원금 계열은 감쇠 중"</em> 열 줄만 넘깁니다.
+  편집장 머릿속에는 열 줄만 들어옵니다. 남은 공간은 사장님과의 대화에 씁니다.</p>
+
+  <p style="font-size:.9rem;color:var(--ink2)"><strong>비용 관점</strong>: 대신 임시 직원도 토큰을 씁니다.
+  읽는 양이 큰 일이면 이득(공간 절약 &gt; 추가 비용)이고, 파일 하나 열어보면 되는 일이면 손해입니다. 판정 기준이 곧 이것입니다.</p>
+</section>
+
+<section>
+  <h2><span class="n">03</span>넘겨야 할 일 / 넘기면 안 되는 일</h2>
+  <p class="lead">세 가지만 자문하면 갈립니다. ① 읽을 게 많은가 ② 결론이 짧은가 ③ 도중에 사장님께 물어볼 일이 있는가</p>
+
+  <div class="two">
+    <div class="card yes">
+      <div class="h">✅ 넘기면 이득</div>
+      <ul>
+        <li><b>읽을 건 많고 결론은 짧다</b><br>주간 통계 240행 → 판정 열 줄</li>
+        <li><b>여러 갈래를 동시에 봐야 한다</b><br>URL 27개 상태 확인 같은 반복 검사</li>
+        <li><b>매번 같은 틀로 반복된다</b><br>지시서를 한 번 잘 써두면 계속 재사용</li>
+        <li><b>중간에 물어볼 게 없다</b><br>규칙이 이미 문서에 다 있다</li>
+      </ul>
+    </div>
+    <div class="card no">
+      <div class="h">❌ 넘기면 손해</div>
+      <ul>
+        <li><b>사장님과 주고받아야 한다</b><br>원고 어투·소재 판단 — 물어볼 수 없으니 어긋난 채 완성된다</li>
+        <li><b>암묵적 맥락이 필요하다</b><br>"이 집 김치는 직접 담근다" 같은 정보는 대화에만 있다</li>
+        <li><b>읽을 게 별로 없다</b><br>파일 하나 고치는 일 — 부르는 값이 더 든다</li>
+        <li><b>사장님이 결정할 사안이다</b><br>믹스 개정, 전략 전환</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">04</span>이 폴더의 실제 업무에 대입하면</h2>
+  <p class="lead">지금 이 프로젝트에서 돌아가는 일을 위 기준으로 하나씩 판정했습니다. 이게 이 문서의 핵심입니다.</p>
+  <div class="scroll">
+  <table>
+    <thead><tr>
+      <th>업무</th><th>주기</th><th>읽을 양</th><th>대화 필요</th><th>판정</th><th>이유</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td>네이버 7건 자동 발행</td><td>매일</td><td>큼</td><td>없음</td>
+        <td class="v x">현행 유지</td>
+        <td class="why">이미 <code>daily-run.ps1</code> 스크립트가 처리. 에이전트로 바꿀 이유가 없다.</td>
+      </tr>
+      <tr>
+        <td><b>주간 통계 분석</b></td><td>주 1회</td><td>매우 큼</td><td>결론만</td>
+        <td class="v s">서브 ⭐</td>
+        <td class="why">8주 × 최대 240행. 딱 이 용도로 <code>naver-stats-analyst</code>를 이미 만들어 뒀다.</td>
+      </tr>
+      <tr>
+        <td><b>카테고리 캡처 분석</b></td><td>월 1회</td><td>큼</td><td>결론만</td>
+        <td class="v s">서브 ⭐</td>
+        <td class="why">캡처 수십 장을 읽어 표로 만드는 일. 읽는 부담을 밖으로 빼는 전형.</td>
+      </tr>
+      <tr>
+        <td><b>큐 리필 (월요일)</b></td><td>주 1회</td><td>중간</td><td>거의 없음</td>
+        <td class="v s">서브 신설 ⭐</td>
+        <td class="why">규칙이 <code>refill-prompt.md</code>에 이미 문서화됨 = 지시서가 준비된 상태. 남은 큐를 세고 시즌 게이트를 걸러 채우는 기계적 작업.</td>
+      </tr>
+      <tr>
+        <td><b>사이트 애드센스 점검</b></td><td>필요 시</td><td>큼</td><td>없음</td>
+        <td class="v s">서브 신설 ⭐</td>
+        <td class="why">사이트맵 URL 전수 응답 확인, 빈 카테고리 탐지. 판단이 아니라 검사라 위임에 적합.</td>
+      </tr>
+      <tr>
+        <td>티스토리 · 인스타 · 쓰레드 원고</td><td>매일</td><td>작음</td><td><b>매우 많음</b></td>
+        <td class="v m">메인 유지</td>
+        <td class="why">최근 품질 개선은 전부 대화에서 나왔다(가격 프레이밍 폐기, 쓰레드 성격 재정의, 닭갈비 전제 오류). 넘기면 그 교정 고리가 끊긴다.</td>
+      </tr>
+      <tr>
+        <td>사진 회전 · 크롭 · 모자이크</td><td>매일</td><td>작음</td><td>조금</td>
+        <td class="v x">스크립트 + 메인</td>
+        <td class="why">EXIF 회전은 스크립트 일. 다만 "누구 얼굴을 가릴지"는 사람 판단이라 메인이 본다.</td>
+      </tr>
+      <tr>
+        <td>지침 · 전략 개정</td><td>수시</td><td>중간</td><td><b>결정 사항</b></td>
+        <td class="v m">메인 유지</td>
+        <td class="why">사장님이 정하는 일. 위임 대상이 아니다.</td>
+      </tr>
+      <tr>
+        <td>대시보드 · 스크립트 수정</td><td>드묾</td><td>작음</td><td>조금</td>
+        <td class="v m">메인 유지</td>
+        <td class="why">파일 한두 개를 고치는 일. 부르는 비용이 이득보다 크다.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p style="font-size:.88rem"><strong>정리하면 서브로 뗄 것은 4개</strong>(통계 · 캡처 · 리필 · 점검)이고,
+  <strong>매일 하는 원고 작업은 그대로 두는 것</strong>이 맞습니다. 전체 업무의 성격이 그렇게 갈립니다.</p>
+</section>
+
+<section>
+  <h2><span class="n">05</span>이미 만들어 둔 서브 에이전트가 두 개 있습니다</h2>
+  <p class="lead"><code>.claude/agents/</code> 폴더에 있습니다. 만들어만 두고 최근에는 거의 부르지 않았습니다.</p>
+  <div class="exists">
+    <div class="ag">
+      <div class="an">naver-stats-analyst</div>
+      <div class="ad">주간 조회수 JSON을 읽어 톱퍼포머 · 전주 대비 흐름 · 성숙/감쇠 궤적 · 파일럿 승격 판정을 낸다.
+      결과를 <code>stats/분석_YYYYMMDD_주간.md</code>로 남긴다.</div>
+      <div class="am">2026-07-07 갱신 · 도구 = 읽기·쓰기·검색·명령 · 모델 sonnet</div>
+    </div>
+    <div class="ag">
+      <div class="an">insta-card-builder</div>
+      <div class="ad">완성된 원고 HTML 1건을 받아 인스타 카드뉴스 한 세트(카드 + 캡션)를 만든다.
+      새로 조사하지 않고 원고에 있는 사실만 쓴다.</div>
+      <div class="am">2026-05-22 작성 · <b>주의</b>: 자동 여행 인스타 중단(7/8) 이후 실제 인스타는 사진 기반 <code>build_matjip_insta_v2.mjs</code>로 만들고 있어 <b>이 에이전트는 현행과 어긋납니다</b>. 쓰려면 지시서를 사진 기반으로 고쳐야 합니다.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">06</span>어떻게 부르나 &mdash; 세 가지 방법</h2>
+
+  <h3>방법 1. 그냥 평소처럼 말한다 (가장 쉬움)</h3>
+  <p>"이번 주 통계 분석해줘"라고만 하면 됩니다. 편집장이 <em>이 일은 임시 직원이 낫다</em>고 판단하면 알아서 부릅니다.
+  사장님이 에이전트를 의식할 필요가 없습니다.</p>
+
+  <h3>방법 2. 이름을 지정한다 (확실함)</h3>
+  <p>"<strong>naver-stats-analyst로</strong> 이번 주 분석해줘"처럼 이름을 말하면 반드시 그 직원이 붑니다.
+  지시서를 공들여 써 둔 일에는 이쪽이 안전합니다.</p>
+
+  <h3>방법 3. 매일 자동으로 부른다</h3>
+  <p><code>daily-run.ps1</code>이 지금 <code>daily-prompt.md</code>를 읽어 발행하는 것과 같은 방식입니다.
+  월요일 리필 단계(Step 0.5)를 서브 에이전트 호출로 바꾸면, 사장님이 아무 말 안 해도 매주 리필이 돕니다.</p>
+</section>
+
+<section>
+  <h2><span class="n">07</span>새로 만드는 건 파일 한 장입니다</h2>
+  <p><code>.claude/agents/</code> 안에 <code>&lt;이름&gt;.md</code> 파일 하나를 만들면 그게 곧 새 직원입니다.
+  위쪽 네 줄이 인사기록카드, 아래가 지시서입니다.</p>
+  <pre><code><span class="c">--- 여기부터 네 줄이 인사기록카드 ---</span>
+name: queue-refiller
+description: 국내여행지.md 02조와 생활정보.md 02·04조의 남은 큐를
+             세어 임계 미달 계열을 시즌 게이트에 맞게 채운다
+tools: Read, Write, Edit, Glob, Grep     <span class="c">← 줄 수 있는 권한만</span>
+model: sonnet                            <span class="c">← 기계적인 일은 저렴한 모델로</span>
+---
+
+<span class="c">아래는 지시서. 우리 대화를 못 보니 규칙을 다 적어야 한다.</span>
+당신은 발행 큐 관리자입니다.
+1. 각 계열의 「작성대기중」 행 수를 센다.
+2. 임계(여행 25 / 인접·경조사·자동차 14 / 신규 8) 미달 계열만 채운다.
+3. <span class="c">시즌 게이트</span> — 발행 시점과 안 맞는 소재는 넣지 않는다.
+4. 무명 단독 여행지·교차지역 라운드업은 넣지 않는다(성과 낮음).
+5. 결과는 「계열별 추가 건수 + 임계 충족 여부」만 보고한다.</code></pre>
+  <p style="font-size:.88rem;color:var(--ink2)">보시면 알 수 있듯 <strong>어려운 건 문법이 아니라 지시서 내용</strong>입니다.
+  다행히 이 프로젝트는 규칙이 이미 <code>.md</code>에 정리돼 있어서, 그 문서를 가리키기만 해도 지시서가 거의 완성됩니다.</p>
+</section>
+
+<section>
+  <h2><span class="n">08</span>함정 네 가지 (도입 전에 알고 계셔야 할 것)</h2>
+
+  <div class="trap">
+    <div class="th">1. 지시서에 안 적힌 규칙은 지켜지지 않습니다</div>
+    <p>임시 직원은 <code>MEMORY.md</code>에 쌓인 사장님 취향, 어제 고친 어투를 모릅니다.
+    「제목에 2026·완전가이드 금지」처럼 대화로 정한 규칙이 지시서에 없으면 태연히 위반합니다.
+    <b>서브 에이전트를 늘리려면 지침 문서화가 먼저입니다.</b></p>
+  </div>
+
+  <div class="trap">
+    <div class="th">2. 결과를 그대로 믿으면 안 됩니다</div>
+    <p>실제 사례가 있습니다. 이번 카테고리 분석에서 <b>커버리지 대역을 섞어 계산해 나온 수치(122 대 78)를 제가 보고했다가 철회</b>했습니다.
+    임시 직원도 같은 착오를 합니다. 다만 그쪽은 <em>철회할 사람이 없습니다.</em>
+    숫자가 결정을 바꿀 만한 크기면 메인이 검산해야 합니다.</p>
+  </div>
+
+  <div class="trap">
+    <div class="th">3. 많이 부르면 비용이 늘어납니다</div>
+    <p>직원마다 자기 몫의 파일을 다시 읽습니다. 다섯 명을 동시에 돌리면 다섯 배 읽습니다.
+    「읽을 게 많고 결론이 짧은 일」이라는 조건을 지킬 때만 남는 장사입니다.</p>
+  </div>
+
+  <div class="trap">
+    <div class="th">4. 원고를 넘기면 티가 납니다</div>
+    <p>가장 중요한 함정입니다. 임시 직원은 사장님이 그 식당에서 무엇을 느꼈는지 모르니
+    결국 <em>어디서 본 듯한 글</em>을 씁니다. 그게 애드센스가 반려한 「가치 없는 콘텐츠」와 같은 방향입니다.
+    <b>이 채널의 유일한 무기가 실제 경험이라면, 그 부분은 위임할 수 없습니다.</b></p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">09</span>추천 &mdash; 이 순서로만 하시면 됩니다</h2>
+  <ol class="steps">
+    <li>
+      <div class="sh">이미 있는 걸 실제로 쓰기 (이번 주, 비용 0)</div>
+      <div class="sd">8/3~8/9 주간 통계가 들어오면 <b>"naver-stats-analyst로 분석해줘"</b>라고 이름을 지정해 보십시오.
+      직접 하는 것과 결과를 비교하면 이 방식이 맞는지 한 번에 감이 옵니다.</div>
+      <div class="sw">얻는 것: 판단 근거. 잃는 것: 없음.</div>
+    </li>
+    <li>
+      <div class="sh">큐 리필을 서브로 떼기 (2주 내)</div>
+      <div class="sd"><code>queue-refiller</code> 하나를 만들어 월요일 자동 실행에 겁니다.
+      리필은 규칙이 이미 문서화되어 있고 사장님께 물어볼 게 없는, <b>가장 위임하기 쉬운 일</b>입니다.</div>
+      <div class="sw">기대 효과: 8/1 큐 고갈로 7건이 전부 여행으로 나간 사고의 구조적 재발 방지.</div>
+    </li>
+    <li>
+      <div class="sh">사이트 점검을 서브로 떼기 (애드센스 재심사 전)</div>
+      <div class="sd">사이트맵 URL 전수 응답, 빈 카테고리, 얇은 글을 훑는 <code>site-auditor</code>.
+      재심사 직전에 한 번 돌려 사람이 놓친 구멍을 찾는 용도입니다.</div>
+      <div class="sw">근거: 이번 반려 원인은 원고가 아니라 사이트 껍데기(빈 카테고리·구 소개 페이지)였습니다.</div>
+    </li>
+    <li>
+      <div class="sh">여기서 멈추기</div>
+      <div class="sd">여러 직원을 한꺼번에 돌리는 방식은 <b>지금 규모에서는 필요하지 않습니다.</b>
+      하루 7건 발행에 애드센스 1건이면 메인 한 명이 충분히 감당합니다.
+      필요해지는 시점은 "원고 300건을 전수 점검" 같은 <em>한 번에 대량</em> 작업이 생길 때입니다.</div>
+      <div class="sw">권장하지 않는 것: 원고 작성 위임, 지침 개정 위임.</div>
+    </li>
+  </ol>
+</section>
+
+<div class="foot">
+  <p><b>이 문서는 검토용이며 아무것도 실행하지 않았습니다.</b>
+  새 서브 에이전트를 만들지도, 기존 것을 호출하지도 않았습니다. 진행 여부는 사장님이 결정하시면 됩니다.</p>
+  <p>관련 파일 &mdash; <code>.claude/agents/naver-stats-analyst.md</code> · <code>.claude/agents/insta-card-builder.md</code> ·
+  <code>.scripts/refill-prompt.md</code> · <code>.scripts/daily-prompt.md</code></p>
+</div>
+
+</div>
+</body>
+</html>
