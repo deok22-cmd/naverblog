@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026-08-12 발행 대시보드</title>
+<style>
+body { font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; background: #f0f4f8; margin: 0; padding: 20px; }
+.dashboard { max-width: 900px; margin: 0 auto; }
+h1 { font-size: 1.3em; color: #1a1a1a; border-bottom: 3px solid #2e86c1; padding-bottom: 10px; }
+table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 6px rgba(0,0,0,0.08); }
+th { background: #2e86c1; color: #fff; padding: 10px 14px; text-align: left; font-size: 0.92em; }
+td { padding: 10px 14px; border-bottom: 1px solid #eee; font-size: 0.9em; vertical-align: middle; }
+tr:last-child td { border-bottom: none; }
+.status-ok { color: #27ae60; font-weight: 700; }
+.status-wait { color: #e67e22; font-weight: 700; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.8em; font-weight: 700; }
+.badge-travel { background: #d4efff; color: #1a6fa0; }
+.badge-local { background: #d5f5e3; color: #1e8449; }
+.badge-rite { background: #fde8d8; color: #b7580d; }
+.badge-car { background: #e8daef; color: #7d3c98; }
+.badge-tech { background: #fef9e7; color: #9a7d0a; }
+a { color: #2e86c1; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.meta { color: #888; font-size: 0.85em; margin-top: 16px; }
+</style>
+</head>
+<body>
+<div class="dashboard">
+<h1>📋 2026-08-12 (수) 발행 대시보드 — 일 7건</h1>
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>카테고리</th>
+      <th>제목</th>
+      <th>슬러그</th>
+      <th>상태</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><span class="badge badge-travel">여행</span></td>
+      <td><a href="travel_seoul_forest_summer.html">서울숲·올림픽공원 여름 야외 공연과 야경, 8월 무료 행사 큐레이션</a></td>
+      <td>travel_seoul_forest_summer</td>
+      <td class="status-ok">✔️ 작성 완료</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><span class="badge badge-travel">여행</span></td>
+      <td><a href="travel_taebaek_sunflower.html">태백 구와우마을 해바라기 축제 언제 절정인가, 매봉산 바람의언덕 연계 늦여름 나들이</a></td>
+      <td>travel_taebaek_sunflower</td>
+      <td class="status-ok">✔️ 작성 완료</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><span class="badge badge-travel">여행</span></td>
+      <td><a href="travel_gochang_sunflower.html">고창 학원농장 해바라기 언제 볼 수 있나, 청보리밭 이어 여름 노란 물결 드라이브</a></td>
+      <td>travel_gochang_sunflower</td>
+      <td class="status-ok">✔️ 작성 완료</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><span class="badge badge-local">인접§01</span></td>
+      <td><a href="local_chuseok_tollway.html">추석 고속도로 통행료 면제 기간과 연휴 정체 구간, 덜 막히는 출발 타이밍</a></td>
+      <td>local_chuseok_tollway</td>
+      <td class="status-ok">✔️ 작성 완료</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><span class="badge badge-rite">rite_</span></td>
+      <td><a href="rite_baekil_dress.html">돌잔치·백일잔치 드레스코드와 카카오톡 온라인 선물 보내는 예절</a></td>
+      <td>rite_baekil_dress</td>
+      <td class="status-ok">✔️ 작성 완료</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><span class="badge badge-car">car_</span></td>
+      <td><a href="car_ev_charging.html">전기차 충전기 종류와 급속·완속 요금 비교, 카드 없이 충전하는 법</a></td>
+      <td>car_ev_charging</td>
+      <td class="status-ok">✔️ 작성 완료</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><span class="badge badge-tech">tech_</span></td>
+      <td><a href="tech_phone_milkyway.html">스마트폰으로 은하수 찍는 법 — 프로 모드 ISO·셔터와 삼각대 세팅</a></td>
+      <td>tech_phone_milkyway</td>
+      <td class="status-ok">✔️ 작성 완료</td>
+    </tr>
+  </tbody>
+</table>
+<p class="meta">
+  믹스: 여행 3 · §01 인접 1 (교통실무 — 추석 고속도로) · rite_ 1 · car_ 1 · tech_ 1 (수요일=tech_)<br>
+  큐 소스: 국내여행지.md §02 #192·193·194 / 생활정보.md §01 #77 / §02 P24 / §02 C28 / §04 T1<br>
+  어제 폴더: output/260811/ (내부링크 소스)
+</p>
+</div>
+</body>
+</html>
