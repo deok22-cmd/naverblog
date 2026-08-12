@@ -16,7 +16,7 @@ $TistorySuspended = $true
 $InstaSuspended = $true
 
 $ErrorActionPreference = "Continue"
-$ProjectRoot = "D:\lightsail\naverblog"
+$ProjectRoot = (Get-Item $PSScriptRoot).Parent.FullName
 $ScriptsDir  = Join-Path $ProjectRoot ".scripts"
 $LogsDir     = Join-Path $ScriptsDir "logs"
 $PromptFile  = Join-Path $ScriptsDir "daily-prompt.md"
