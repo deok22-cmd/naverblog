@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026-08-15 발행 대시보드</title>
+<style>
+body { font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; background: #f0f4f8; margin: 0; padding: 20px; }
+.dashboard { max-width: 900px; margin: 0 auto; }
+h1 { font-size: 1.3em; color: #1a1a1a; border-bottom: 3px solid #00796b; padding-bottom: 10px; }
+table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 6px rgba(0,0,0,0.08); }
+th { background: #00796b; color: #fff; padding: 10px 14px; text-align: left; font-size: 0.92em; }
+td { padding: 10px 14px; border-bottom: 1px solid #eee; font-size: 0.9em; vertical-align: middle; }
+tr:last-child td { border-bottom: none; }
+.status-ok { color: #27ae60; font-weight: 700; }
+.status-wait { color: #e67e22; font-weight: 700; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.8em; font-weight: 700; }
+.badge-travel { background: #d4f0eb; color: #00796b; }
+.badge-local { background: #d5f5e3; color: #1e8449; }
+.badge-rite { background: #fde8d8; color: #b7580d; }
+.badge-car { background: #e8daef; color: #7d3c98; }
+.badge-tech { background: #e3f2fd; color: #1565c0; }
+a { color: #00796b; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.meta { color: #888; font-size: 0.85em; margin-top: 16px; }
+.flag { background: #fff3cd; border: 1px solid #ffc107; border-radius: 6px; padding: 10px 14px; margin-top: 16px; font-size: 0.88em; color: #856404; }
+</style>
+</head>
+<body>
+<div class="dashboard">
+<h1>📋 2026-08-15 (토) 발행 대시보드 — 일 7건</h1>
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>카테고리</th>
+      <th>제목</th>
+      <th>슬러그</th>
+      <th>상태</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><span class="badge badge-travel">여행</span></td>
+      <td><a href="travel_hadong_bukcheon.html">하동 북천 코스모스·메밀꽃축제 일정과 북천역 레일바이크, 남도 가을 전초 코스</a></td>
+      <td>travel_hadong_bukcheon</td>
+      <td class="status-ok">✔️ 작성 완료</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><span class="badge badge-travel">여행</span></td>
+      <td><a href="travel_ulju_sinbul.html">울주 신불산·영취산 9월 억새 언제 절정인가, 영남알프스 케이블카 타는 법</a></td>
+      <td>travel_ulju_sinbul</td>
+      <td class="status-ok">✔️ 작성 완료</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><span class="badge badge-travel">여행</span></td>
+      <td><a href="travel_busan_gamcheon.html">부산 감천문화마을 벽화골목 포토존과 야경, 늦여름 이색 코스 어떻게 즐길까</a></td>
+      <td>travel_busan_gamcheon</td>
+      <td class="status-ok">✔️ 작성 완료</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><span class="badge badge-local">인접</span></td>
+      <td><a href="local_car_maintenance_fall.html">명절·가을 장거리 운전 전 타이어·배터리 점검, 정비소 예약하는 법</a></td>
+      <td>local_car_maintenance_fall</td>
+      <td class="status-ok">✔️ 작성 완료</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><span class="badge badge-rite">경조사</span></td>
+      <td><a href="rite_wedding_checklist.html">결혼 준비 단계별 순서 체크리스트 — 상견례부터 청첩장·예식장 계약까지</a></td>
+      <td>rite_wedding_checklist</td>
+      <td class="status-ok">✔️ 작성 완료</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><span class="badge badge-car">자동차</span></td>
+      <td><a href="car_tax_exemption.html">경차·국가유공자·장애인 자동차 취득세 감면 조건과 채권 매입 면제 신청법</a></td>
+      <td>car_tax_exemption</td>
+      <td class="status-ok">✔️ 작성 완료</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><span class="badge badge-tech">IT실무</span></td>
+      <td><a href="tech_phone_storage.html">폰 저장공간 부족할 때 해결법 — 카톡 캐시·사진 중복 삭제 순서</a></td>
+      <td>tech_phone_storage</td>
+      <td class="status-ok">✔️ 작성 완료</td>
+    </tr>
+  </tbody>
+</table>
+<div class="flag">
+⚠️ <strong>큐 LOW 플래그</strong><br>
+[QUEUE LOW travel: 6] — 여행 §02 유효 대기 6건 &lt; 임계 25 (월요일 Step 0.5 자동 리필)<br>
+[QUEUE LOW local: 12] — §01 유효 대기 12건 &lt; 임계 14<br>
+[QUEUE LOW vertical:rite_ 10] — rite_ 대기 10건 &lt; 임계 14<br>
+[QUEUE LOW vertical:car_ 9] — car_ 대기 9건 &lt; 임계 14<br>
+[QUEUE LOW vertical:tech_ 6] — tech_ 유효 대기 6건 &lt; 임계 8
+</div>
+<div class="meta">🗓 발행일: 2026-08-15 토 | 믹스: 여행3 + 인접1 + rite_1 + car_1 + tech_1(토=tech_ 로테이션)</div>
+</div>
+</body>
+</html>

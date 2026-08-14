@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>결혼 준비 단계별 순서 체크리스트 — 상견례부터 청첩장·예식장 계약까지</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .check-list { list-style: none; padding: 0; }
+  .check-list li { padding: 6px 0 6px 24px; position: relative; border-bottom: 1px dashed #eee; }
+  .check-list li::before { content: '□'; position: absolute; left: 0; color: #388e3c; font-weight: 700; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>결혼 준비 단계별 순서 체크리스트 — 상견례부터 청첩장·예식장 계약까지</h1>
+
+<div class="intro-box">
+결혼 준비는 처음 하는 일이라 어디서부터 시작해야 할지 막막한 경우가 많습니다. 평균적으로 결혼식 날짜로부터 <strong>6~12개월 전부터</strong> 준비를 시작하면 여유가 있지만, 인기 예식장은 1년 이상 전부터 예약이 마감되는 경우도 있습니다. 이 글에서는 <strong>상견례 → 예식장·스드메 계약 → 혼수 → 청첩장 발송</strong>까지 단계별 순서와 각 단계에서 놓치기 쉬운 포인트를 정리했습니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260815/5_weddingcheck_1.png</span></div>
+    <pre class="prompt-text" id="prompt-5-1">Wedding planning checklist on clipboard with wedding rings, flowers and calendar, organized preparation documents, bridal concept, warm and elegant atmosphere, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">결혼 준비 단계별 체크리스트 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 전체 타임라인 한눈에</h2>
+
+<table class="info-table">
+  <tr><th>시기</th><th>해야 할 일</th></tr>
+  <tr><td>D-12개월 이상</td><td>결혼 의사 확인·상견례·예식장 견적 비교 시작</td></tr>
+  <tr><td>D-10~12개월</td><td>예식장 계약·날짜 확정</td></tr>
+  <tr><td>D-8~10개월</td><td>스드메(스튜디오·드레스·메이크업) 패키지 계약</td></tr>
+  <tr><td>D-6~8개월</td><td>혼수(가전·가구) 쇼핑 시작, 신혼여행 계획</td></tr>
+  <tr><td>D-4~6개월</td><td>신혼집 계약, 예물·예단 준비</td></tr>
+  <tr><td>D-2~3개월</td><td>청첩장 제작·발송, 하객 명단 정리</td></tr>
+  <tr><td>D-1~2개월</td><td>식권·답례품 준비, 신혼여행 예약 확정</td></tr>
+  <tr><td>D-2주</td><td>최종 드레스 피팅·메이크업 리허설·혼인신고 서류 준비</td></tr>
+  <tr><td>D-day</td><td>결혼식·혼인신고</td></tr>
+</table>
+
+<h2>02 | 상견례 — 장소 선정과 진행 순서</h2>
+
+상견례는 두 집안이 처음 만나는 자리이므로 분위기를 좌우하는 <strong>장소 선정</strong>이 중요합니다. 일반적으로 한식 코스요리 레스토랑(한식 → 고급 한정식, 한우 코스)을 선호하며, 양측 부모님이 모두 이동하기 편한 중간 위치에 잡는 것이 예의입니다.<br><br>
+
+<strong>진행 순서</strong>: ① 인사 및 착석 → ② 식사 중 양측 가족 소개 → ③ 자녀 결혼 의사 표명 → ④ 결혼 날짜 및 준비 방향 협의 → ⑤ 계산(일반적으로 남성 측이 먼저 제안, 합의 없으면 각자 부담)<br><br>
+
+<div class="tip-box">
+💡 <strong>상견례 실수 줄이는 팁</strong><br>
+• 예약 시 "상견례 자리"임을 알리면 룸 배치·서비스 배려를 받을 수 있음<br>
+• 양측 부모님 식성(채식·알레르기)을 미리 파악해 메뉴 조율<br>
+• 술 권하는 문화는 상대 가족 분위기 파악 후 맞춤 대응
+</div>
+
+<h2>03 | 예식장 계약 — 비교해야 할 항목</h2>
+
+예식장 계약은 결혼 준비의 첫 번째 대형 계약입니다. 단순히 가격만 비교하지 말고 아래 항목을 꼼꼼히 따져야 합니다.
+
+<table class="info-table">
+  <tr><th>항목</th><th>확인 포인트</th></tr>
+  <tr><td>홀 규모</td><td>예상 하객 수 대비 적정 수용 인원인지</td></tr>
+  <tr><td>식사 유형</td><td>뷔페·한정식·도시락 중 선택, 식사 단가·최소 보장 인원</td></tr>
+  <tr><td>부속 서비스</td><td>주차·웨딩카·폐백실 포함 여부</td></tr>
+  <tr><td>예약 가능 날짜</td><td>원하는 시즌(봄·가을 성수기) 잔여 날짜 확인</td></tr>
+  <tr><td>계약금·취소 환불 규정</td><td>취소 시 위약금 비율 반드시 확인(날짜 가까울수록 위약금 ↑)</td></tr>
+  <tr><td>외부 업체 반입 가능 여부</td><td>케이크·꽃장식·스드메 업체 자유 선택 가능 여부</td></tr>
+</table>
+
+예식장 비교는 <strong>최소 3~5곳</strong>을 직접 방문해 보는 것을 권장합니다. 사진과 실물이 다른 경우가 많고, 담당 직원의 서비스 태도도 예식 당일 분위기에 영향을 줍니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260815/5_weddingcheck_2.png</span></div>
+    <pre class="prompt-text" id="prompt-5-2">Elegant Korean wedding hall interior, white floral arch, aisle with ribbon-tied chairs, beautiful chandelier lighting, romantic atmosphere, no people, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">웨딩홀 실내 장식 — 아치 꽃장식·아일 / AI 제작 이미지</div>
+</div>
+
+<h2>04 | 스드메 계약 — 패키지 vs 개별 계약</h2>
+
+스드메(스튜디오·드레스·메이크업)는 결혼 준비 비용에서 상당한 비중을 차지합니다. <strong>패키지 계약</strong>과 <strong>개별 계약</strong>의 장단점을 비교해 보세요.
+
+<table class="info-table">
+  <tr><th>구분</th><th>패키지 계약</th><th>개별 계약</th></tr>
+  <tr><td>가격</td><td>전체 비용 절감 가능(번들 할인)</td><td>업체별 가격 비교로 더 저렴할 수 있음</td></tr>
+  <tr><td>선택 폭</td><td>패키지 내 제한적</td><td>각 분야 최고 업체 자유 선택 가능</td></tr>
+  <tr><td>편의성</td><td>한 곳에서 조율 → 편리</td><td>일정 조율·커뮤니케이션 직접 해야 함</td></tr>
+  <tr><td>분쟁 시</td><td>패키지 업체가 책임 → 간편</td><td>개별 업체와 개별 분쟁 처리 필요</td></tr>
+</table>
+
+드레스는 특히 <strong>사이즈 수선 기간</strong>(보통 2~4주)을 고려해 식 2~3개월 전까지 확정해야 합니다. 수입 드레스는 주문~도착까지 3~4개월이 필요한 경우도 있습니다.
+
+<h2>05 | 청첩장 — 제작·발송 시기와 주의사항</h2>
+
+청첩장은 <strong>식 2개월 전</strong>에 제작하고 <strong>1.5개월 전</strong>까지 모든 하객에게 발송하는 것이 표준입니다. 특히 지방에 거주하는 친지나 먼 지인에게는 더 일찍(2개월 전) 발송해 일정 조정을 도와주세요.<br><br>
+
+최근에는 <strong>모바일 청첩장</strong>을 병행 또는 대체하는 커플이 늘고 있습니다. 카카오톡 청첩장, 청첩장 전문 앱(청첩장닷컴, 하이웨딩 등)을 통해 맞춤 제작이 가능하며 종이 청첩장 대비 비용이 낮습니다.<br><br>
+
+<div class="tip-box">
+💡 <strong>청첩장 발송 체크포인트</strong><br>
+• 하객 명단 엑셀 정리 → 주소·연락처 미리 업데이트<br>
+• 부모님 지인 명단은 부모님께 직접 확인 후 발송<br>
+• 청첩장 받은 분 중 직접 전화 드릴 분·모바일만 보낼 분 구분<br>
+• 결혼식장 오시는 길·주차 안내 QR코드를 청첩장에 포함
+</div>
+
+<h2>06 | 혼수 준비 — 가전·가구 우선순위</h2>
+
+혼수는 예산과 신혼집 면적에 따라 달라지지만, 일반적인 우선순위는 아래와 같습니다.<br><br>
+
+<strong>1순위(이사 전 필수)</strong>: 냉장고, 세탁기, 에어컨(이사 후 설치)<br>
+<strong>2순위(생활 직후 필요)</strong>: 침대·매트리스, 식탁, 소파, TV<br>
+<strong>3순위(여유 되면 추가)</strong>: 건조기, 청소기(로봇청소기), 식기세척기, 전자레인지<br><br>
+
+가전은 <strong>6개월 이내 신형 모델 출시 예정</strong>인지 확인하고 구매 시기를 조율하면 구형 재고 할인 혜택을 받을 수 있습니다. 가구는 배송·설치에 2~4주 소요되므로 입주 날짜를 기준으로 역산해 주문하세요.
+
+<h2>07 | 예물·예단 — 생략 가능한 시대</h2>
+
+예물(신랑→신부 귀금속)과 예단(신부 측→신랑 측 옷감·이불)은 전통적인 혼례 문화이지만, 최근에는 <strong>양가 합의 하에 생략하거나 간소화</strong>하는 커플이 많습니다. 예물은 다이아몬드 반지 1~2개로 대체하거나, 서로 시계를 교환하는 방식이 일반적입니다.<br><br>
+
+예단은 양측 부모님과 솔직하게 이야기해 형식보다는 실용(여행·현금)으로 대체하는 합의를 도출하는 것이 현실적입니다.
+
+<h2>08 | 혼인신고 — 결혼식과 별개로 진행</h2>
+
+한국에서 혼인신고는 <strong>결혼식과 별도로 주민센터에 서류 제출</strong>로 이루어집니다. 결혼식 당일 해도 되고, 이후 원하는 날짜에 해도 됩니다.<br><br>
+
+필요 서류: 혼인신고서(주민센터 비치 또는 온라인 다운로드), 양측 신분증, 가족관계증명서(각 1통). 증인 2명의 서명·날인도 필요합니다. 온라인 정부24를 통한 방문 없이 신청도 가능합니다.
+
+<h2>09 | 절대 놓치면 안 되는 체크리스트</h2>
+
+<ul class="check-list">
+  <li>예식장 취소 환불 규정 계약서 받아 보관</li>
+  <li>스드메 계약서 특약 사항(추가 의상 컷 수·앨범 크기) 서면 확인</li>
+  <li>신혼집 입주 날짜 ↔ 가구·가전 배송 날짜 역산 확인</li>
+  <li>신혼여행 항공·호텔 예약 확정증 이메일 저장</li>
+  <li>식 당일 포함한 주변 주차 가능 장소 사전 파악</li>
+  <li>답례품·답례 떡 수량을 예상 하객 수 대비 10% 여유분 포함해 주문</li>
+  <li>식 후 연회비(식권 정산) 지급 방식 예식장 측과 사전 협의</li>
+  <li>부케·부케토스·폐백 진행 순서 사회자·예식 담당자와 사전 공유</li>
+  <li>혼인신고 서류(증인 서명) 사전 준비</li>
+</ul>
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260814/rite_jipdeuri_delivery.html">집들이 선물 배달 주문 추천 — 브랜드별 가격·배송 비교</a></li>
+    <li><a href="../260814/travel_jeonju_hanok_night.html">전주 한옥마을 야경 산책 코스 — 오목대·자만벽화마을·경기전 야간 개장</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#결혼준비순서</span>
+  <span class="tag">#결혼준비체크리스트</span>
+  <span class="tag">#예식장계약</span>
+  <span class="tag">#스드메패키지</span>
+  <span class="tag">#청첩장발송</span>
+  <span class="tag">#상견례장소</span>
+  <span class="tag">#혼수준비</span>
+  <span class="tag">#예물예단</span>
+  <span class="tag">#혼인신고</span>
+  <span class="tag">#결혼준비타임라인</span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>폰 저장공간 부족할 때 해결법 — 카톡 캐시·사진 중복 삭제 순서</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #e8f5e9; border-radius: 8px; padding: 15px 18px; margin: 18px 0; }
+  .step-num { font-weight: 800; color: #1b5e20; font-size: 1.05em; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>폰 저장공간 부족할 때 해결법 — 카톡 캐시·사진 중복 삭제 순서</h1>
+
+<div class="intro-box">
+"저장공간이 부족합니다"라는 알림이 뜨는 순간, 새 사진도 못 찍고 앱 업데이트도 안 되는 불편이 시작됩니다. 128GB 폰을 써도 어느새 꽉 차 버리는 이유는 <strong>카카오톡 캐시·사진 중복 저장·앱 데이터</strong>가 눈에 띄지 않게 쌓이기 때문입니다. 돈 안 들이고 5~20GB를 확보할 수 있는 순서와 방법을 안드로이드·아이폰 양쪽 기준으로 정리했습니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260815/7_phonestorage_1.png</span></div>
+    <pre class="prompt-text" id="prompt-7-1">Smartphone storage management screen showing storage full warning, hands organizing files on touchscreen, clean UI design, modern smartphone, digital data management concept, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-7-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">스마트폰 저장공간 부족 경고 화면 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 공간 얼마나 남았는지 먼저 파악하기</h2>
+
+해결책을 쓰기 전에 현재 저장 상태를 먼저 확인해야 어디를 비울지 알 수 있습니다.<br><br>
+
+<strong>안드로이드</strong>: 설정 → 배터리 및 디바이스 케어(또는 저장공간) → 저장공간 탭에서 사진·동영상·앱·시스템·기타 항목별 용량 확인<br><br>
+
+<strong>아이폰(iOS)</strong>: 설정 → 일반 → iPhone 저장 공간 → 각 앱별 사용 용량 리스트 확인. 상단 '권장 사항'에 iOS가 자동 제안하는 정리 방법이 표시됩니다.<br><br>
+
+공간을 가장 많이 차지하는 카테고리가 무엇인지 확인한 후, 그 순서대로 아래 방법을 적용하세요.
+
+<h2>02 | 카카오톡 캐시 삭제 — 가장 먼저</h2>
+
+카카오톡은 대화 중 공유된 사진·동영상·GIF·파일을 기기에 자동 캐시(임시 저장)합니다. 오랫동안 쌓이면 <strong>1~5GB</strong>를 차지하는 경우가 흔합니다.<br><br>
+
+<div class="step-box">
+<span class="step-num">카카오톡 캐시 삭제 방법</span><br>
+카카오톡 앱 → 하단 우측 더보기(≡) 탭 → 설정(톱니바퀴) → 개인정보 보호 → 캐시 데이터 삭제<br>
+또는: 설정 → 채팅 → 대화 저장 공간 관리 → 캐시 삭제
+</div>
+
+주의: 캐시 삭제는 대화 내용·연락처를 지우지 않습니다. 다만 대화방에서 공유했던 사진·파일의 미리 보기가 삭제되어 재다운로드가 필요합니다. 꼭 필요한 파일은 미리 기기 갤러리나 클라우드에 저장한 뒤 삭제하세요.<br><br>
+
+파일 저장 폴더도 확인하세요. 카카오톡 → 더보기 → 설정 → 채팅 → 파일 저장 폴더에서 수동 다운로드한 파일이 남아 있는 경우 직접 삭제가 필요합니다.
+
+<h2>03 | 사진·동영상 중복 삭제</h2>
+
+같은 사진을 여러 번 찍거나, SNS에서 저장한 사진이 갤러리에 중복으로 쌓이는 경우가 많습니다. 특히 <strong>카톡 갤러리 자동저장 설정이 켜져 있으면</strong> 대화방 사진이 기기 갤러리에 계속 쌓입니다.
+
+<table class="info-table">
+  <tr><th>방법</th><th>안드로이드</th><th>아이폰</th></tr>
+  <tr><td>중복 사진 찾기</td><td>갤러리 앱 내 '정리 제안' 또는 Google Photos의 '중복 항목' 기능</td><td>사진 앱 → 앨범 → 기타 → 중복 항목</td></tr>
+  <tr><td>자동 삭제 도구</td><td>Google Photos '용량 확보' → 클라우드 백업된 원본 삭제</td><td>iOS '권장 사항' → 자동 최적화</td></tr>
+  <tr><td>카톡 사진 자동저장 끄기</td><td>카카오톡 → 설정 → 채팅 → 사진 동영상 자동저장 → OFF</td><td>동일</td></tr>
+</table>
+
+<div class="tip-box">
+💡 <strong>동영상을 먼저 정리하세요</strong><br>
+동영상 1건은 수백 MB~수 GB에 달합니다. 사진 수백 장보다 동영상 수 편을 지우는 것이 훨씬 효과적입니다. 갤러리에서 용량 큰 순으로 정렬해 필요 없는 동영상을 우선 삭제하세요.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260815/7_phonestorage_2.png</span></div>
+    <pre class="prompt-text" id="prompt-7-2">Smartphone photo gallery showing duplicate photos with delete button, screen showing storage cleanup process, modern phone UI, hands selecting photos to delete, clean minimalist design, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-7-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">갤러리 중복 사진 삭제 과정 / AI 제작 이미지</div>
+</div>
+
+<h2>04 | 앱 데이터·캐시 일괄 정리</h2>
+
+앱을 오랫동안 쓰면 캐시(임시 저장 파일)가 쌓입니다. 캐시는 삭제해도 앱 자체나 데이터(계정·설정)는 유지됩니다.<br><br>
+
+<strong>안드로이드 앱 캐시 삭제</strong>:
+설정 → 앱 → 앱 전체 목록 → 용량 큰 앱 선택 → 저장공간 → 캐시 지우기<br><br>
+
+<strong>아이폰 앱 캐시</strong>:
+iOS는 앱별 캐시 직접 삭제가 제한적입니다. 가장 확실한 방법은 앱 삭제 후 재설치입니다. 앱 오프로드 기능(설정 → 일반 → iPhone 저장 공간 → 해당 앱 → 앱 오프로드)을 쓰면 앱 데이터는 남기고 앱만 삭제해 공간을 확보할 수 있습니다.<br><br>
+
+대용량 캐시 앱 예시: 유튜브(오프라인 저장 영상), 넷플릭스(다운로드 콘텐츠), 네이버 지도(오프라인 지도), 멜론·지니(오프라인 음악)
+
+<h2>05 | 구글 포토·아이클라우드로 사진 이전 후 원본 삭제</h2>
+
+사진을 클라우드에 백업한 뒤 기기 원본을 지우면 공간을 대폭 확보할 수 있습니다.
+
+<table class="info-table">
+  <tr><th>플랫폼</th><th>무료 용량</th><th>방법</th></tr>
+  <tr><td>구글 포토</td><td>구글 계정 15GB 무료(Google One 유료 확장 가능)</td><td>백업 완료 후 '기기 저장공간 확보' 탭에서 원본 삭제</td></tr>
+  <tr><td>아이클라우드</td><td>5GB 무료(유료 업그레이드 권장)</td><td>사진 → iCloud 사진 ON → 기기 최적화 설정</td></tr>
+  <tr><td>네이버 MYBOX</td><td>30GB 무료(네이버 계정 보유자)</td><td>MYBOX 앱 설치 후 자동 백업 설정</td></tr>
+</table>
+
+백업이 완료되었는지 반드시 확인한 뒤 원본을 삭제하세요. 삭제 후 30일 이내에는 휴지통에서 복원할 수 있습니다.
+
+<h2>06 | 쓰지 않는 앱 삭제</h2>
+
+설치해 두고 한 번도 안 쓰거나 거의 쓰지 않는 앱이 상당한 공간을 차지하는 경우가 많습니다.
+
+<div class="step-box">
+<span class="step-num">잘 안 쓰는 앱 찾는 법</span><br>
+안드로이드: 설정 → 디지털 웰빙 → 앱 사용 시간 확인 → 사용 안 한 앱 삭제<br>
+아이폰: 설정 → 스크린 타임 → 앱별 사용 시간 확인 → 0분인 앱 정리
+</div>
+
+게임 앱은 특히 고용량인 경우가 많습니다. 한 게임이 3~5GB를 차지하는 경우도 흔하므로, 더 이상 안 하는 게임은 과감히 삭제하세요.
+
+<h2>07 | 안드로이드 SD카드 활용</h2>
+
+SD카드를 지원하는 안드로이드 기기라면 SD카드로 사진·파일을 이동해 내부 저장공간을 확보할 수 있습니다. 삼성 갤럭시 일부 모델, LG 구형 모델 등에서 지원하며, 최근 플래그십 모델은 SD카드 슬롯을 제거한 경우가 많습니다.<br><br>
+
+SD카드 추천 규격: 사진·동영상 저장용은 UHS-I U3 이상(4K 동영상 저장 가능), 용량은 128~256GB가 실용적입니다.
+
+<h2>08 | 공간 정리 후 유지 습관 — 월 1회 루틴</h2>
+
+<table class="info-table">
+  <tr><th>주기</th><th>할 일</th></tr>
+  <tr><td>매달 1일</td><td>카카오톡 캐시 삭제</td></tr>
+  <tr><td>매달 1일</td><td>구글 포토·아이클라우드 백업 완료 확인 → 원본 정리</td></tr>
+  <tr><td>분기 1회</td><td>앱 캐시 일괄 정리, 안 쓰는 앱 삭제</td></tr>
+  <tr><td>수시</td><td>카톡 사진 갤러리 자동저장 OFF 유지</td></tr>
+</table>
+
+정기적으로 정리하면 "저장공간 부족" 알림 없이 쾌적하게 사용할 수 있습니다. 특히 여행이나 가족 행사 전에는 미리 공간을 확보해 두는 습관이 도움이 됩니다.
+
+<h2>09 | 그래도 부족하다면 — 클라우드 업그레이드 vs 기기 교체</h2>
+
+위 방법을 다 해도 여전히 공간이 부족하다면 두 가지 선택지가 있습니다.<br><br>
+
+<strong>클라우드 저장 업그레이드</strong>: 구글 One(100GB 월 2,900원, 2TB 월 11,900원), 아이클라우드(50GB 월 1,100원, 200GB 월 3,300원). 사진 용량이 문제라면 클라우드 확장이 가장 경제적입니다.<br><br>
+
+<strong>기기 교체 고려</strong>: 기존 폰이 64GB 이하이고 장기간 사용 중이라면 256GB 이상 새 모델로 교체를 검토할 시점일 수 있습니다. 최신 폰은 기본 128~256GB가 많아 같은 상황이 반복될 가능성이 낮습니다.
+
+<div class="recommend-area">
+  <strong>🔗 같이 볼만한 글</strong>
+  <ul>
+    <li><a href="../260814/travel_pyeongchang_bongpyeong_meemilkkot.html">봉평 메밀꽃 개화 시기와 이효석문화제 — 9월 평창 여행 코스와 주차</a></li>
+    <li><a href="../260814/travel_yesan_yedangho_bridge.html">예산 예당호 출렁다리 산책로·수상카페, 충남 드라이브 코스</a></li>
+  </ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#폰저장공간</span>
+  <span class="tag">#카카오톡캐시삭제</span>
+  <span class="tag">#사진중복삭제</span>
+  <span class="tag">#안드로이드저장공간</span>
+  <span class="tag">#아이폰저장공간</span>
+  <span class="tag">#구글포토정리</span>
+  <span class="tag">#스마트폰정리</span>
+  <span class="tag">#저장공간부족</span>
+  <span class="tag">#앱캐시삭제</span>
+  <span class="tag">#폰용량늘리기</span>
+</div>
+
+</body>
+</html>
