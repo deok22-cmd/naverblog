@@ -1,0 +1,25 @@
+{
+  "outDir": "output_adsense/260727_meoktae_jinsim/insta",
+  "photosDir": "adsense_src/260727/rot",
+  "handle": "@gimpo.matjip.note",
+  "cards": [
+    { "role": "cover", "size": 88, "photo": "20260719_195815.jpg",
+      "kicker": "김포 구래동 · 연탄불 건어물구이",
+      "lines": ["모둠포 한 접시에", "생맥주 두 잔,", "둘이서 32,000원"],
+      "name": "먹태에진심 · 구래동" },
+    { "role": "photo", "photo": "20260719_195828.jpg" },
+    { "role": "caption", "photo": "20260719_195824.jpg", "size": 46,
+      "lines": ["줄노가리에 쥐포, 육포,", "먹태까지 다섯 가지가", "한 접시에 나와요"] },
+    { "role": "photo", "photo": "20260719_195818.jpg" },
+    { "role": "caption", "photo": "20260719_195610.jpg", "size": 46,
+      "lines": ["생맥 두 잔 시켰더니", "강냉이가 먼저 나와요"] },
+    { "role": "photo", "photo": "20260719_200658.jpg" },
+    { "role": "caption", "photo": "20260719_195543.jpg", "size": 44,
+      "lines": ["쥐포·아귀포·문어다리·한치…", "마른안주만 열두 가지"] },
+    { "role": "photo", "photo": "20260719_195531.jpg" },
+    { "role": "info", "photo": "20260719_200833.jpg", "kicker": "가기 전 딱 이것만",
+      "facts": ["모둠포 22,000 · 바삭 먹태 19,000", "간맥 세트 20,000 (먹태 반+생맥 2잔)", "카스 생맥주 500cc 5,000", "김포한강9로75번길 158 · 203호(2층)", "18:00 오픈 · ☎ 0507-1345-0423"] },
+    { "role": "cta", "photo": "20260719_195619.jpg", "size": 62,
+      "lines": ["가볍게 맥주 한잔", "생각날 때 여기"], "cta": "저장하고 팔로우 👇", "handle": "@gimpo.matjip.note" }
+  ]
+}

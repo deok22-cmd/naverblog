@@ -12,7 +12,7 @@
 # daily-run.ps1이 매일 호출하며, 수동 단독 실행도 가능:  .\.scripts\build-dashboard.ps1
 
 $ErrorActionPreference = "Continue"
-$ProjectRoot   = "D:\lightsail\naverblog"
+$ProjectRoot   = (Get-Item $PSScriptRoot).Parent.FullName
 $OutputDir     = Join-Path $ProjectRoot "output"
 $AdsenseDir    = Join-Path $ProjectRoot "output_adsense"
 $TistoryDir    = Join-Path $ProjectRoot "output_tistory"
