@@ -1,0 +1,33 @@
+{
+  "outDir": "output_adsense/260813_mokgumung/insta",
+  "photosDir": "adsense_src/260813/rot",
+  "handle": "@gimpo.matjip.note",
+  "cards": [
+    { "role": "cover", "size": 96, "photo": "20260812_183641.jpg",
+      "lines": ["고기 못 구워?", "손대지마"],
+      "sub": "김포 구래동 목구멍 🔥" },
+
+    { "role": "photo", "photo": "20260812_193039.jpg" },
+
+    { "role": "caption", "photo": "20260812_182648.jpg", "size": 46,
+      "lines": ["껍데기가 붙어 있는", "미박삼겹살이야"] },
+
+    { "role": "photo", "photo": "20260812_183032.jpg" },
+
+    { "role": "caption", "photo": "20260812_183026.jpg", "size": 46,
+      "lines": ["김치랑 콩나물도", "판에서 같이 구워줘"] },
+
+    { "role": "photo", "photo": "20260812_183636.jpg" },
+
+    { "role": "caption", "photo": "20260812_183849.jpg", "size": 46,
+      "lines": ["앞접시에 파채 깔고", "한 점 올려서 줘"] },
+
+    { "role": "photo", "photo": "20260812_182555.jpg" },
+
+    { "role": "info", "photo": "20260812_182340.jpg", "kicker": "모르고 가면 멈춤",
+      "facts": ["첫 주문은 3인분부터야", "섞어서 3인분 OK · 추가는 1인분씩", "영업시간 동안 고기담당이 붙어 있어", "미박 = 껍데기 안 벗긴 삼겹살", "주차 2시간 무료 (카운터 문의)", "구래역 4번 출구 도보 8분"] },
+
+    { "role": "cta", "photo": "20260812_193008.jpg", "size": 62,
+      "lines": ["오늘은 목구멍에", "기름칠 하는 날"], "cta": "저장하고 팔로우 👇", "handle": "@gimpo.matjip.note" }
+  ]
+}

@@ -87,6 +87,32 @@ if ((($today -eq $RefillDay) -or $ForceRefill) -and (Test-Path -LiteralPath $Ref
 }
 Write-Log ""
 
+# === Step 0.6: 주간 아카이브 정리 (2026-08-15 신설 - 사용자 지시) ===
+# output/ · images/ 의 오래된 날짜 폴더를 매주 월요일 정리한다. 최근 7일만 보존.
+# 순서가 중요: prune-archives.ps1 이 **발행이력.md 를 먼저 갱신하고** 실패 시 삭제를 중단한다.
+# images/ 가 하루 ~8MB씩 쌓여 2026-08-15 기준 621MB였던 것이 계기.
+# 발행 이력(주제 중복 판정 백데이터)은 발행이력.md 에만 남으므로 그 파일은 삭제 금지.
+$PruneScript = Join-Path $ScriptsDir "prune-archives.ps1"
+if ((($today -eq $RefillDay) -or $ForceRefill) -and (Test-Path -LiteralPath $PruneScript)) {
+    Write-Log "=== Step 0.6: Weekly Archive Prune @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="
+    try {
+        & powershell -NoProfile -ExecutionPolicy Bypass -File $PruneScript -KeepDays 7 2>&1 |
+        ForEach-Object {
+            $line = "$_"
+            Write-Host $line
+            [System.IO.File]::AppendAllText($LogFile, "$line`r`n", $utf8NoBom)
+        }
+        Write-Log "=== Prune exit code: $LASTEXITCODE ==="
+    } catch {
+        Write-Log "ERROR (Prune step, 무시하고 발행 진행): $_"
+    }
+} elseif (-not (Test-Path -LiteralPath $PruneScript)) {
+    Write-Log "WARN: $PruneScript 없음 - Step 0.6 스킵."
+} else {
+    Write-Log "SKIP Step 0.6: 주간 정리일($RefillDay) 아님 - 오늘 $today."
+}
+Write-Log ""
+
 # === Step 1: Claude CLI로 원고 작성 ===
 try {
     $prompt = Get-Content -LiteralPath $PromptFile -Raw -Encoding utf8
