@@ -107,43 +107,53 @@ function Days-Since([string]$d) {
 }
 
 # ============================================================
-# 1. 채널 1 — 네이버 블로그 스캔
+# 1. 채널 1 — 네이버 블로그
+#
+# ⚠️ 소스는 `발행이력.md`다(output/ 스캔이 아님). 2026-08-15부터 output/ 은 매주
+#    최근 7일만 남기고 정리되므로(daily-run Step 0.6), output/ 을 스캔하면 대시보드
+#    이력이 7일치로 쪼그라들고 계열 누적 집계가 붕괴한다. 이력 파일이 전 기간을 갖는다.
+#    output/ 폴더는 "아직 남아 있는 날짜"의 index·이미지·링크 확인용으로만 쓴다.
 # ============================================================
+$HistoryFile = Join-Path $ProjectRoot "발행이력.md"
 $naverDays = @()
-if (Test-Path $OutputDir) {
-    $dateDirs = Get-ChildItem -Path $OutputDir -Directory -ErrorAction SilentlyContinue |
-        Where-Object { $_.Name -match '^\d{6}$' } |
-        Sort-Object Name -Descending
+$byDate = New-Object 'System.Collections.Specialized.OrderedDictionary'
 
-    foreach ($dd in $dateDirs) {
-        $files = @(Get-ChildItem -Path $dd.FullName -Filter "*.html" -File -ErrorAction SilentlyContinue |
-            Where-Object { $_.Name -ne "index.html" } | Sort-Object Name)
-        if ($files.Count -eq 0) { continue }
+if (Test-Path -LiteralPath $HistoryFile) {
+    foreach ($line in [System.IO.File]::ReadAllLines($HistoryFile, [System.Text.Encoding]::UTF8)) {
+        # | 26.08.15 | 국내여행 | `travel_xxx` | 제목 |
+        $m = [regex]::Match($line, '^\|\s*(\d{2})\.(\d{2})\.(\d{2})\s*\|\s*([^|]*?)\s*\|\s*`([^`]+)`\s*\|\s*(.*?)\s*\|\s*$')
+        if (-not $m.Success) { continue }
+        $d = $m.Groups[1].Value + $m.Groups[2].Value + $m.Groups[3].Value
+        $slug = $m.Groups[5].Value
+        $title = $m.Groups[6].Value
+        $prefix = ($slug -split '_')[0]
+        if ($Cat.ContainsKey($prefix)) { $slot = $Cat[$prefix][0]; $label = $Cat[$prefix][1] }
+        else { $slot = "보충"; $label = $prefix }
+        if (-not $byDate.Contains($d)) { $byDate[$d] = New-Object System.Collections.ArrayList }
+        $null = $byDate[$d].Add([PSCustomObject]@{
+            File = "$slug.html"; Prefix = $prefix; Slot = $slot; Label = $label; Title = $title
+        })
+    }
+}
 
-        $posts = @()
-        foreach ($f in $files) {
-            $prefix = ($f.BaseName -split '_')[0]
-            if ($Cat.ContainsKey($prefix)) { $slot = $Cat[$prefix][0]; $label = $Cat[$prefix][1] }
-            else { $slot = "보충"; $label = $prefix }
-            $posts += [PSCustomObject]@{
-                File = $f.Name; Prefix = $prefix; Slot = $slot; Label = $label
-                Title = (Get-H1 $f.FullName)
-            }
-        }
-
-        $imgPath = Join-Path $ImagesDir $dd.Name
+foreach ($d in ($byDate.Keys | Sort-Object -Descending)) {
+    $dir = Join-Path $OutputDir $d
+    $exists = Test-Path -LiteralPath $dir
+    $imgPath = Join-Path $ImagesDir $d
+    $imgCount = -1   # -1 = 정리되어 셀 수 없음
+    if (Test-Path -LiteralPath $imgPath) {
+        $imgCount = @(Get-ChildItem -LiteralPath $imgPath -File -ErrorAction SilentlyContinue).Count
+    } elseif ($exists) {
         $imgCount = 0
-        if (Test-Path $imgPath) {
-            $imgCount = @(Get-ChildItem -Path $imgPath -File -ErrorAction SilentlyContinue).Count
-        }
-
-        $naverDays += [PSCustomObject]@{
-            Date     = $dd.Name
-            Posts    = $posts
-            Count    = $posts.Count
-            HasIndex = (Test-Path (Join-Path $dd.FullName "index.html"))
-            Images   = $imgCount
-        }
+    }
+    $posts = @($byDate[$d] | Sort-Object File)
+    $naverDays += [PSCustomObject]@{
+        Date     = $d
+        Posts    = $posts
+        Count    = $posts.Count
+        HasIndex = ($exists -and (Test-Path -LiteralPath (Join-Path $dir "index.html")))
+        Images   = $imgCount
+        Pruned   = (-not $exists)
     }
 }
 
@@ -261,8 +271,11 @@ foreach ($day in $naverDays) {
     $rowIdx++
     $label = Format-DateLabel $day.Date
     $dow = Get-Dow $day.Date
-    $hidden = ""
-    if ($rowIdx -gt 21) { $hidden = " class=`"folded`"" }
+    # ⚠️ class 속성을 두 번 쓰면 브라우저가 뒤쪽을 무시한다(상세행의 det 스타일이 죽었던 버그).
+    #    접힘 여부를 클래스 목록으로 합쳐서 넘긴다.
+    $rowCls = ""
+    $detCls = "det"
+    if ($rowIdx -gt 21) { $rowCls = " class=`"folded`""; $detCls = "det folded" }
 
     # 슬롯별 집계
     $bySlot = @{}
@@ -313,21 +326,32 @@ foreach ($day in $naverDays) {
         $got = @($day.Posts | Where-Object { $_.Prefix -eq $want }).Count
         if ($got -eq 0) { $flags += "<span class=`"badge warn`">$want 누락</span>" }
     }
-    if (-not $day.HasIndex) { $flags += "<span class=`"badge warn`">index 없음</span>" }
+    # 정리된 날짜는 index·이미지가 없는 게 정상이므로 경보를 띄우지 않는다
+    if ($day.Pruned) {
+        $flags += "<span class=`"badge`" style=`"background:var(--line2);color:var(--ink3)`" title=`"주간 정리로 output 폴더가 비워짐 — 기록은 발행이력.md에 있음`">정리됨</span>"
+    } elseif (-not $day.HasIndex) {
+        $flags += "<span class=`"badge warn`">index 없음</span>"
+    }
 
     $imgTxt = "-"
     if ($day.Images -gt 0) { $imgTxt = "$($day.Images)" }
+    elseif ($day.Images -lt 0) { $imgTxt = "&middot;" }
 
-    $null = $sbMatrix.Append("<tr$hidden><th class=`"dcell`"><a href=`"output/$($day.Date)/index.html`">$label</a><span class=`"dow`">$dow</span></th>$cells<td class=`"num`">$imgTxt</td><td class=`"flags`">$flags</td></tr>")
+    $dateCell = "$label"
+    if (-not $day.Pruned) { $dateCell = "<a href=`"output/$($day.Date)/index.html`">$label</a>" }
+
+    $null = $sbMatrix.Append("<tr$rowCls><th class=`"dcell`">$dateCell<span class=`"dow`">$dow</span></th>$cells<td class=`"num`">$imgTxt</td><td class=`"flags`">$flags</td></tr>")
 
     # 제목 상세 행
     $lis = ""
     foreach ($p in ($day.Posts | Sort-Object @{Expression = { $SlotOrder.IndexOf($_.Slot) } }, Label)) {
         $t = $p.Title
         if ($t -eq "") { $t = $p.File }
-        $lis += "<li><span class=`"dot`" style=`"--c:$($SlotColor[$p.Slot])`"></span><span class=`"lb`">$(Enc $p.Label)</span> <a href=`"output/$($day.Date)/$($p.File)`">$(Enc $t)</a></li>"
+        $titleCell = "$(Enc $t)"
+        if (-not $day.Pruned) { $titleCell = "<a href=`"output/$($day.Date)/$($p.File)`">$(Enc $t)</a>" }
+        $lis += "<li><span class=`"dot`" style=`"--c:$($SlotColor[$p.Slot])`"></span><span class=`"lb`">$(Enc $p.Label)</span> $titleCell</li>"
     }
-    $null = $sbMatrix.Append("<tr$hidden class=`"det`"><td colspan=`"8`"><details><summary>원고 $($day.Count)건 제목 보기</summary><ul class=`"tlist`">$lis</ul></details></td></tr>")
+    $null = $sbMatrix.Append("<tr class=`"$detCls`"><td colspan=`"8`"><details><summary>원고 $($day.Count)건 제목 보기</summary><ul class=`"tlist`">$lis</ul></details></td></tr>")
 }
 
 # ============================================================
@@ -602,13 +626,18 @@ $($sbSets.ToString())
     <div class="stopcard">
       <div class="t">자동 티스토리 미러</div>
       <div class="d">2026-07-09 중단 &mdash; 애드센스 &quot;가치 없는 콘텐츠&quot; 반려로 미러 양산 폐기.<br>
-      보존: $($legTistory[0])일 / 파일 $($legTistory[1])개 · 마지막 $(Format-DateLabel $legTistory[2])</div>
+      로컬 잔존: $($legTistory[0])일 / 파일 $($legTistory[1])개$(if ($legTistory[0] -eq 0) { " <b>(정리 완료)</b>" } else { " · 마지막 " + (Format-DateLabel $legTistory[2]) })</div>
     </div>
     <div class="stopcard">
       <div class="t">자동 여행 인스타</div>
       <div class="d">2026-07-08 중단 &mdash; 이미지 생성 과금 절감.<br>
       현재 인스타는 <b>애드센스 소재 수동 제작만</b>(위 03) 가동.<br>
-      보존: $($legInsta[0])일 / 파일 $($legInsta[1])개 · 마지막 $(Format-DateLabel $legInsta[2])</div>
+      로컬 잔존: $($legInsta[0])일 / 파일 $($legInsta[1])개$(if ($legInsta[0] -eq 0) { " <b>(정리 완료)</b>" } else { " · 마지막 " + (Format-DateLabel $legInsta[2]) })</div>
+    </div>
+    <div class="stopcard">
+      <div class="t">주간 아카이브 정리</div>
+      <div class="d">매주 월요일 <code>daily-run.ps1</code> Step 0.6이 <code>output</code>·<code>images</code>·<code>output_tistory</code>·<code>output_insta</code>의 날짜 폴더를 <b>최근 7일만 남기고</b> 정리합니다.<br>
+      삭제 전 <code>발행이력.md</code>를 먼저 갱신하며, 그게 실패하면 삭제를 중단합니다.</div>
     </div>
   </div>
 </section>

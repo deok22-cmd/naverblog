@@ -18,9 +18,17 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
-$ProjectRoot = "D:\lightsail\naverblog"
+$ProjectRoot = (Get-Item $PSScriptRoot).Parent.FullName
 $HistoryFile = Join-Path $ProjectRoot "발행이력.md"
 $Builder     = Join-Path $ProjectRoot "scripts\build_publish_history.py"
+
+# 정리 대상 — 전부 `<YYMMDD>` 날짜 폴더 구조다.
+#   output         네이버 원고 (이력은 발행이력.md 에 보존됨)
+#   images         네이버 삽입 이미지 (재생성 불가 · 발행분은 네이버에 이미 올라가 있음)
+#   output_tistory 자동 티스토리 미러 — 2026-07-09 채널 중단. 전량 레거시
+#   output_insta   자동 여행 인스타 — 2026-07-08 채널 중단. 전량 레거시
+# ⚠️ output_adsense 는 대상이 아니다(수동 애드센스 채널의 현행 자산 · 날짜 폴더 구조도 다름)
+$Targets = @("output", "images", "output_tistory", "output_insta")
 
 function Log($m) { Write-Host "[prune] $m" }
 
@@ -64,7 +72,7 @@ $totalDirs = 0
 $totalFiles = 0
 $totalBytes = 0
 
-foreach ($base in @("output", "images")) {
+foreach ($base in $Targets) {
     $baseDir = Join-Path $ProjectRoot $base
     if (-not (Test-Path -LiteralPath $baseDir)) { continue }
 
