@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>자동차 리스와 장기렌트 뭐가 더 싼가 — 월비용·인수·반납 조건 실제 비교</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>자동차 리스와 장기렌트 뭐가 더 싼가 — 월비용·인수·반납 조건 실제 비교</h1>
+<div class="intro-box">
+자동차를 살 여유가 부담스럽거나, 차를 소유하는 것보다 이용하는 방식을 선호하는 경우 리스와 장기렌트를 고려하게 된다. 두 방식 모두 월 요금을 내고 차를 이용하는 구조지만, 법적 성격과 비용 구조, 인수·반납 조건이 다르다.<br><br>
+어느 쪽이 더 싸냐는 질문에 대한 답은 "상황에 따라 다르다"이지만, 구체적인 조건을 알고 나면 내 상황에 어떤 방식이 더 유리한지 판단할 수 있다. 이 글에서는 리스와 장기렌트의 차이를 실생활 기준으로 정리한다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 1 / 2</span><button class="copy-btn" onclick="copyPrompt('p6_1')">프롬프트 복사</button></div>
+<div class="ph-file">../../images/260817/6_lease_1.png</div>
+<div class="prompt-text" id="p6_1">Two modern Korean cars side by side at a car dealership showroom, one with a lease sign and one with a rental sign, clean interior lighting, comparison concept, photorealistic</div>
+</div>
+<div class="img-caption">자동차 리스 vs 장기렌트 — 월비용과 계약 조건이 다르다 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 리스와 장기렌트의 근본 차이</h2>
+
+<strong>리스(Lease)</strong>는 리스사가 차를 구매해 이용자에게 일정 기간 빌려주는 방식이다. 차의 소유권은 리스사에 있지만, 이용자 명의로 등록되어 번호판이 일반 번호판(가나다...)이다. 보험도 이용자가 직접 가입한다.<br><br>
+
+<strong>장기렌트</strong>는 렌터카 회사의 차를 장기로 빌리는 방식이다. 차의 소유권과 등록 모두 렌터카사 명의이며, 번호판에 하(허·호) 문자가 붙는다. 보험은 렌터카사가 일괄 가입하고 보험료를 월 요금에 포함한다.<br><br>
+
+<table class="info-table">
+<thead>
+<tr><th>항목</th><th>리스</th><th>장기렌트</th></tr>
+</thead>
+<tbody>
+<tr><td>차 소유권</td><td>리스사</td><td>렌터카사</td></tr>
+<tr><td>등록 명의</td><td>이용자 명의</td><td>렌터카사 명의</td></tr>
+<tr><td>번호판</td><td>일반 번호판</td><td>하·허·호 번호판</td></tr>
+<tr><td>보험</td><td>이용자가 직접 가입</td><td>렌터카사 포함</td></tr>
+<tr><td>취득세</td><td>없음 (리스사가 납부)</td><td>없음</td></tr>
+</tbody>
+</table>
+
+<h2>02 | 월 비용 — 어느 쪽이 더 싼가</h2>
+
+단순 월 납입 금액만 비교하면 일반적으로 <strong>리스가 장기렌트보다 약간 저렴</strong>하다. 리스는 보험료가 포함되지 않기 때문이다.<br><br>
+
+다만, 리스 이용자가 별도로 자동차 보험에 가입해야 하므로 보험료를 합산하면 두 방식의 실 비용 차이는 크지 않다. 이용자의 나이, 운전 경력, 보험 이력에 따라 보험료가 달라지므로 리스가 유리한 경우와 장기렌트가 유리한 경우가 갈린다.<br><br>
+
+<strong>리스가 유리한 경우:</strong> 보험 무사고 이력이 좋아 보험료가 낮은 경우, 개인사업자로 비용 처리가 필요한 경우<br>
+<strong>장기렌트가 유리한 경우:</strong> 보험 이력이 짧거나 신규 운전자(보험료 높은 경우), 보험 관리가 번거로운 경우<br><br>
+
+<div class="tip-box">
+<strong>💡 개인사업자·법인이라면 리스가 유리</strong><br>
+리스 월 납입금은 사업 비용으로 처리(손금 산입)가 가능하다. 개인사업자나 법인이라면 리스가 절세 효과를 줄 수 있어 실질 비용이 더 낮아질 수 있다.
+</div>
+
+<h2>03 | 계약 기간과 중도 해지</h2>
+
+리스와 장기렌트 모두 보통 <strong>24~60개월</strong> 계약 기간으로 운영된다. 36개월이 가장 흔한 계약 기간이다.<br><br>
+
+중도 해지는 두 방식 모두 <strong>상당한 위약금</strong>이 발생한다. 계약 초기에 해지할수록 위약금이 크다. 중도 해지는 불가피한 상황이 아니면 피하는 것이 좋으며, 계약 전에 위약금 계산 방식을 반드시 확인해야 한다.<br><br>
+
+특히 직장 이직, 해외 이주 등의 상황에서 중도 해지가 발생하는 경우가 많으므로, 계약 기간 동안 안정적인 사용이 가능한지 충분히 고려하자.
+
+<h2>04 | 만기 후 인수 조건 — 중요한 차이</h2>
+
+계약 만기 후 차를 살 수 있는지(인수) 여부는 리스와 장기렌트의 중요한 차이점이다.<br><br>
+
+<strong>리스 인수:</strong> 계약 만기 시 미리 정해진 잔존 가치(잔가)에 차를 살 수 있다. 잔존 가치는 계약 초기에 설정하며, 시장 시세보다 낮게 잡히면 유리하게 인수할 수 있다.<br><br>
+
+<strong>장기렌트 인수:</strong> 계약 만기 시 시장 중고차 시세로 우선 구매 기회를 제공받는 경우가 많지만, 잔존 가치 방식이 아니라 시세 기준이라 리스보다 인수 조건이 불리한 경우가 많다.<br><br>
+
+<div class="info-box">
+<strong>💡 인수를 목적으로 한다면 리스가 유리</strong><br>
+계약 만기 후 차를 인수할 계획이라면, 잔가 설정을 통해 인수가를 미리 고정할 수 있는 리스가 더 유리하다. 다만, 잔존 가치 설정이 높을수록 월 납입금이 낮아지고 인수가가 높아지는 구조이므로, 초기 계약 시 잔가 설정을 신중하게 해야 한다.
+</div>
+
+<h2>05 | 반납 조건 — 주행거리 초과와 스크래치</h2>
+
+계약 만기 시 반납하는 경우, 두 방식 모두 <strong>주행거리 초과</strong>와 <strong>차량 상태</strong>에 따른 추가 요금이 발생한다.<br><br>
+
+<strong>주행거리:</strong> 계약 시 약정 주행거리(보통 연 2만 km 전후)를 초과하면 km당 추가 요금이 붙는다. 장거리 출퇴근자는 계약 전 충분한 주행거리를 설정해야 한다.<br><br>
+
+<strong>차량 상태:</strong> 반납 시 일반 마모 이상의 흠집이나 사고 이력이 있으면 감가 비용이 청구된다. 특히 장기렌트사는 반납 전 차량 상태를 꼼꼼히 체크하는 경향이 있다.<br><br>
+
+<div class="warn-box">
+⚠️ 반납 전 차량 점검을 위해 사전 타 업체 견적을 받아보거나, 렌터카사와 입회 점검 일정을 잡는 것을 권장한다. 일방적인 감가 청구에 이의를 제기하려면 증거 사진이 중요하다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 2 / 2</span><button class="copy-btn" onclick="copyPrompt('p6_2')">프롬프트 복사</button></div>
+<div class="ph-file">../../images/260817/6_lease_2.png</div>
+<div class="prompt-text" id="p6_2">Car contract signing at a dealership desk, Korean businessman reviewing lease paperwork, pen in hand, blurred car showroom in background, professional finance consultation atmosphere, photorealistic</div>
+</div>
+<div class="img-caption">리스·장기렌트 계약 — 인수·반납 조건을 꼼꼼히 확인해야 한다 / AI 제작 이미지</div>
+</div>
+
+<h2>06 | 번호판 하·허·호의 실생활 영향</h2>
+
+장기렌트 차량의 하·허·호 번호판은 사회적 인식 차이가 존재한다. 일부 주차장이나 시설에서 렌터카를 별도 취급하는 경우가 있으며, 주차 단속이나 과속 카메라 단속에서도 렌터카 번호판은 처리 방식이 다를 수 있다.<br><br>
+
+반면, 회사 차량이나 사업자용으로 활용하는 경우에는 하 번호판에 대한 사회적 인식이 덜 중요하다. 개인 용도로 사용하면서 번호판 종류를 신경 쓰는 분이라면 리스를 선택하는 것이 낫다.
+
+<h2>07 | 신용등급과 계약 조건의 관계</h2>
+
+리스와 장기렌트 모두 신용 조회가 이루어지며, 신용등급이 낮으면 계약 거절이나 불리한 조건(높은 선납금 요구 등)이 붙을 수 있다.<br><br>
+
+리스의 경우 금융업 성격이 강해 신용 조건이 더 엄격하다. 반면 장기렌트는 렌터카 업체 정책에 따라 조건이 다양해, 신용이 낮아도 가입 가능한 상품이 있기도 하다. 단, 그런 경우 보증금이 높아지거나 월 요금이 올라갈 수 있다.
+
+<h2>08 | 어떤 상황에서 어떤 방식이 맞나</h2>
+
+<table class="info-table">
+<thead>
+<tr><th>상황</th><th>추천</th><th>이유</th></tr>
+</thead>
+<tbody>
+<tr><td>개인사업자·법인</td><td>리스</td><td>비용 처리 가능, 절세 효과</td></tr>
+<tr><td>만기 후 차 인수 계획</td><td>리스</td><td>잔가 설정으로 인수가 고정</td></tr>
+<tr><td>번호판 신경 쓰는 경우</td><td>리스</td><td>일반 번호판 사용</td></tr>
+<tr><td>보험 관리 귀찮은 경우</td><td>장기렌트</td><td>보험 포함 올인원</td></tr>
+<tr><td>신규 운전자·보험료 높은 경우</td><td>장기렌트</td><td>단체 보험으로 비용 절감</td></tr>
+<tr><td>만기 후 반납 계획</td><td>장기렌트</td><td>상대적으로 단순한 반납</td></tr>
+</tbody>
+</table>
+
+<h2>09 | 계약 전 꼭 확인해야 할 체크리스트</h2>
+
+<div class="step-box">
+<strong>리스·장기렌트 계약 전 확인 사항</strong><br>
+□ 계약 기간 (36개월? 48개월?)<br>
+□ 약정 주행거리와 초과 시 km당 요금<br>
+□ 선납금 유무와 금액<br>
+□ 보증금 유무와 만기 반환 조건<br>
+□ 중도 해지 위약금 계산 방식<br>
+□ 만기 후 인수 가격 또는 조건<br>
+□ 반납 시 차량 상태 기준(일반 마모 범위 정의)<br>
+□ 사고 시 처리 방식과 이용자 부담금
+</div>
+
+계약서 상의 작은 글씨 조항이 나중에 큰 비용으로 돌아오는 경우가 많다. 가능하면 계약서를 하루이틀 검토한 뒤 서명하고, 불명확한 조항은 서면으로 확인 받는 것이 좋다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260816/car_cctv_dispute.html">자동차 번호판 CCTV 단속 이의신청 방법과 분쟁 해결</a></li>
+<li><a href="../260816/travel_daegu_suseongmot.html">대구 수성못 야경 — 유람선과 수변 카페 저녁 나들이</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#자동차리스</span>
+<span class="tag">#장기렌트</span>
+<span class="tag">#리스장기렌트비교</span>
+<span class="tag">#자동차할부대안</span>
+<span class="tag">#차량인수조건</span>
+<span class="tag">#월납입금비교</span>
+<span class="tag">#하번호판</span>
+</div>
+</body>
+</html>

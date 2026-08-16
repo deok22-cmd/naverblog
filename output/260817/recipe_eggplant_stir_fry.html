@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>가지볶음 물러지지 않게 — 소금 절임 시간과 기름 온도 황금 기준</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #e64a19; padding-bottom: 12px; color: #bf360c; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #fbe9e7; padding: 12px 15px; border-left: 6px solid #e64a19; margin-top: 50px; color: #bf360c; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #bf360c; margin: 24px 0 8px; }
+  .intro-box { background: #fffaf8; border: 2px solid #ffccbc; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #e64a19; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #fff5f2; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #ffccbc; border-radius: 8px; padding: 20px; background: #fffaf8; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #e64a19; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #e64a19; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #fffaf8; border: 1px solid #ffccbc; border-left: 4px solid #e64a19; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #e64a19; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#e64a19'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>가지볶음 물러지지 않게 — 소금 절임 시간과 기름 온도 황금 기준</h1>
+<div class="intro-box">
+가지볶음이 맛있게 완성되지 않는 가장 흔한 이유는 두 가지다. 너무 물러지거나, 반대로 기름을 너무 많이 먹거나. 둘 다 잘못된 방법 탓이다.<br><br>
+가지는 수분이 많고 스폰지처럼 기름을 흡수하는 구조라, 볶는 방법을 조금만 바꿔도 결과가 크게 달라진다. 소금 절임으로 수분을 제거하고 기름 온도를 충분히 높인 뒤 센 불에서 빠르게 볶는 것이 핵심이다. 이 두 가지 원리를 이해하면 집에서도 탱글하고 맛있는 가지볶음을 만들 수 있다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 1 / 2</span><button class="copy-btn" onclick="copyPrompt('p7_1')">프롬프트 복사</button></div>
+<div class="ph-file">../../images/260817/7_eggplant_1.png</div>
+<div class="prompt-text" id="p7_1">Korean eggplant stir-fry dish beautifully plated, glossy dark purple eggplant pieces with sesame seeds and green onion garnish, gochugaru red pepper flakes, soy sauce glaze, traditional Korean banchan side dish, appetite-inducing food photography, photorealistic</div>
+</div>
+<div class="img-caption">가지볶음 — 탱글하게 완성된 한식 반찬의 핵심은 수분 제거와 기름 온도 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 가지가 물러지는 진짜 이유</h2>
+
+가지의 90% 이상은 수분이다. 이 수분이 가열 중에 빠져나오면서 볶음 요리가 찜 요리로 바뀌는 것이 가지볶음이 물러지는 핵심 원인이다.<br><br>
+
+가지를 잘라 바로 팬에 넣으면, 가열 초반에 수분이 쏟아지며 팬 온도가 급격히 떨어진다. 수분이 증발하는 동안 가지는 기름을 흡수하고 흐물거리게 된다. 이 상태에서 오래 볶을수록 물러짐이 심해진다.<br><br>
+
+해결책은 두 가지다. 첫째, <strong>소금 절임</strong>으로 볶기 전에 수분을 미리 제거한다. 둘째, <strong>센 불과 충분히 달군 기름</strong>으로 가지 표면을 순간 고온으로 익혀 수분 방출을 최소화한다.
+
+<h2>02 | 소금 절임 — 시간과 양</h2>
+
+가지를 원하는 크기로 썬 뒤 소금을 뿌려 15~20분 절인다. 이 과정에서 가지 표면으로 수분이 배어 나온다.<br><br>
+
+<strong>소금 양:</strong> 가지 1개(약 200g) 기준 소금 1/3 티스푼(약 2g) 정도면 충분하다. 너무 많이 넣으면 짜진다.<br><br>
+
+<strong>절임 시간:</strong> 최소 15분, 20분이 이상적이다. 10분 이하는 효과가 미미하고, 30분 이상은 가지가 너무 짜지고 조직이 물러질 수 있다.<br><br>
+
+절임 후에는 키친타월이나 면포로 가지 표면의 수분을 꾹 눌러 제거한다. 이때 너무 세게 짜면 가지 조직이 손상되므로 살짝 눌러 흡수시키는 정도면 된다.<br><br>
+
+<div class="step-box">
+<strong>소금 절임 순서</strong><br>
+① 가지를 원하는 모양으로 썬다 (반달 또는 길쭉하게)<br>
+② 소금을 뿌리고 골고루 버무린다<br>
+③ 15~20분 그대로 둔다<br>
+④ 키친타월로 수분을 꾹 눌러 제거한다<br>
+⑤ 바로 볶기 시작한다
+</div>
+
+<h2>03 | 기름 온도 — 얼마나 달궈야 하나</h2>
+
+소금 절임 후에도 기름 온도가 낮으면 가지가 기름을 흡수하고 물러진다. 가지볶음에서 기름 온도는 <strong>강불에 팬이 달궈진 상태, 연기가 살짝 올라오기 직전</strong>이 적당하다.<br><br>
+
+구체적인 판단 방법: 팬에 기름을 두르고 30초~1분 강불로 달군 뒤, 가지 한 조각을 넣었을 때 <strong>지글지글 큰 소리</strong>가 나면 OK다. 소리가 작으면 더 달궈야 한다.<br><br>
+
+<div class="warn-box">
+⚠️ 기름이 너무 뜨거워 연기가 많이 나면 발연점을 넘긴 것이므로, 팬을 잠깐 불에서 내려 온도를 조금 낮춘 뒤 재가열한다.
+</div>
+
+기름 선택도 중요하다. <strong>들기름</strong>은 향은 좋지만 발연점이 낮아 고온 조리에 불리하다. 가지를 먼저 식용유(또는 콩기름)로 센 불에 볶아 표면을 익힌 다음, 마지막에 들기름을 조금 넣어 향을 더하는 방법이 좋다.
+
+<h2>04 | 볶는 순서 — 센 불에서 빠르게</h2>
+
+<div class="step-box">
+<strong>볶음 순서 (2인분 기준)</strong><br>
+① 달군 팬에 식용유 2큰술을 두른다<br>
+② 강불 유지 상태에서 절임한 가지를 넣는다<br>
+③ 뒤집지 않고 30초 기다린다 (표면 먼저 구워야 색이 나온다)<br>
+④ 뒤적이며 1분 더 볶는다 (전체 볶음 시간 1분 30초~2분 이내)<br>
+⑤ 다진 마늘 1/2 큰술을 넣고 30초 볶는다<br>
+⑥ 간장 1큰술, 참기름 1/2 큰술을 넣고 불을 중불로 줄인다<br>
+⑦ 양념을 빠르게 버무리며 10초 내에 완성<br>
+⑧ 불 끄고 깨소금과 쪽파(선택)를 뿌린다
+</div>
+
+전체 볶는 시간을 2분 이내로 끝내는 것이 핵심이다. 가지가 오래 불을 받을수록 물러진다.
+
+<h2>05 | 양념 비율 — 기본 간장 양념</h2>
+
+<table class="info-table">
+<thead>
+<tr><th>재료</th><th>2인분 기준</th><th>메모</th></tr>
+</thead>
+<tbody>
+<tr><td>가지</td><td>2개 (약 400g)</td><td>국산 가지 권장</td></tr>
+<tr><td>식용유</td><td>2큰술</td><td>고온용 (들기름 제외)</td></tr>
+<tr><td>간장</td><td>1~1.5큰술</td><td>국간장 또는 진간장 모두 가능</td></tr>
+<tr><td>다진 마늘</td><td>1/2큰술</td><td>너무 많으면 쓴맛</td></tr>
+<tr><td>참기름</td><td>1/2큰술</td><td>마무리용</td></tr>
+<tr><td>깨소금</td><td>1작은술</td><td>완성 후 뿌리기</td></tr>
+<tr><td>들기름(선택)</td><td>1/2큰술</td><td>마지막에 향 추가용</td></tr>
+</tbody>
+</table>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 2 / 2</span><button class="copy-btn" onclick="copyPrompt('p7_2')">프롬프트 복사</button></div>
+<div class="ph-file">../../images/260817/7_eggplant_2.png</div>
+<div class="prompt-text" id="p7_2">Sliced eggplant on kitchen paper towels with salt crystals, moisture being drawn out, Korean home cooking preparation step, close-up food photography, light background, fresh vegetables, photorealistic</div>
+</div>
+<div class="img-caption">가지 소금 절임 — 15~20분 절여 수분을 제거해야 탱글하게 볶인다 / AI 제작 이미지</div>
+</div>
+
+<h2>06 | 가지 써는 방법 — 반달 vs 길쭉하게</h2>
+
+가지를 어떻게 써느냐에 따라 식감과 볶음 시간이 달라진다.<br><br>
+
+<strong>반달 모양 (두께 1cm):</strong> 단면이 넓어 양념이 잘 배고 표면이 빠르게 익는다. 가장 일반적인 방법으로 초보자에게 추천한다.<br><br>
+
+<strong>길쭉하게 (4~5cm 길이 / 두께 1cm):</strong> 젓가락으로 집어 먹기 좋고 볶음 반찬 느낌이 강하다. 단, 크기가 크면 속까지 익히는 데 시간이 더 걸린다.<br><br>
+
+어떤 모양이든 <strong>두께는 1cm 안팎</strong>으로 맞추는 것이 중요하다. 두꺼우면 속이 익기 전 표면이 타고, 얇으면 수분이 과하게 빠져 흐물해진다.
+
+<h2>07 | 덜 짜게, 덜 기름지게 만들려면</h2>
+
+가지볶음이 너무 짜거나 기름진 경우의 조절 방법이다.<br><br>
+
+<strong>덜 짜게:</strong> 소금 절임 후 가지를 찬물에 가볍게 헹궈 소금기를 조금 씻어 낸다. 단, 이 경우 다시 키친타월로 수분을 완전히 제거해야 한다.<br><br>
+
+<strong>덜 기름지게:</strong> 기름의 양을 줄이면 가지 표면이 고르게 익지 않는다. 기름 양보다 <strong>기름 온도를 충분히 높이는 것</strong>이 기름 흡수를 줄이는 더 효과적인 방법이다. 고온에서 빠르게 익히면 가지 표면이 먼저 굳어 내부로 기름이 덜 스민다.<br><br>
+
+<div class="tip-box">
+<strong>💡 들기름 마무리 활용법</strong><br>
+볶음 마지막에 불을 끄고 들기름 1/2큰술을 더하면 향이 살아나고 반찬다운 깊은 맛이 완성된다. 들기름은 가열하면 향이 날아가므로, 반드시 불을 끈 뒤에 넣자.
+</div>
+
+<h2>08 | 고추장 양념 버전 — 칼칼한 가지볶음</h2>
+
+기본 간장 버전 외에 고추장이나 고춧가루를 활용한 칼칼한 가지볶음도 인기 있다.<br><br>
+
+기본 양념에서 간장을 반으로 줄이고, 고춧가루 1큰술 또는 고추장 1/2큰술을 추가하면 된다. 고추장은 볶음 초반보다 마늘이 익은 뒤에 넣어야 타지 않는다.<br><br>
+
+매운맛을 원하지 않는 경우 청양고추 대신 홍고추를 얇게 썰어 색감 역할로만 넣어도 시각적 완성도가 높아진다.
+
+<h2>09 | 가지볶음 보관과 데우기</h2>
+
+가지볶음은 만든 당일이 가장 맛있다. 냉장 보관 시 하루 이틀 안에 먹는 것을 권한다. 가지는 시간이 지나면 수분이 추가로 배어나와 보관 중에도 식감이 변한다.<br><br>
+
+보관할 때는 밀폐 용기에 담아 냉장한다. 데울 때는 전자레인지보다 팬에 다시 한번 가볍게 볶아 수분을 날리는 것이 식감을 살리는 방법이다. 30초~1분 정도 강불에서 빠르게 데우면 처음 만든 것과 가까운 식감을 회복할 수 있다.<br><br>
+
+여름 제철 가지(6~8월)는 수분이 많고 껍질이 부드러워 가지볶음에 최적이다. 8월 하순까지는 질 좋은 여름 가지를 만날 수 있다. 제철 재료로 만드는 반찬이 결국 가장 맛있다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260816/recipe_kongguksu_ratio.html">콩국수 콩물 황금비율 — 집에서 만드는 진하고 고소한 콩국수</a></li>
+<li><a href="../260816/travel_sokcho_abai.html">속초 아바이마을 갯배 — 영금정까지 속초 반나절 코스</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#가지볶음</span>
+<span class="tag">#가지요리</span>
+<span class="tag">#가지볶음황금레시피</span>
+<span class="tag">#소금절임</span>
+<span class="tag">#한식반찬</span>
+<span class="tag">#여름가지</span>
+<span class="tag">#집밥레시피</span>
+</div>
+</body>
+</html>
