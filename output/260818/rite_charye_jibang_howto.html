@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>차례상 차리는 법과 지방 쓰는 법 — 추석 간소화 상차림과 현대식 변형</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>차례상 차리는 법과 지방 쓰는 법 — 추석 간소화 상차림과 현대식 변형</h1>
+
+<div class="intro-box">
+추석이 다가오면 매년 가장 많이 검색되는 주제 중 하나가 바로 <strong>차례상 차리는 법</strong>입니다. 집집마다 방식이 조금씩 달라서 "우리 집 방법이 맞나?" 하고 헷갈리기 쉽습니다. 홍동백서·어동육서·조율이시 같은 원칙들은 지역마다, 가문마다 다르게 전해지는 <strong>관례</strong>이지 법으로 정해진 규칙이 아닙니다. 이 글에서는 전통 차례 진설의 기본 구성부터 2026년 성균관 간소화 권고 흐름, 지방(紙榜) 쓰는 법, 차례 순서까지 순서대로 안내합니다. 정답이 하나가 아니라는 점을 먼저 기억해 두세요.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">../../images/260818/5_charye_1.png</span></div>
+<pre class="prompt-text" id="prompt-5-1">Traditional Korean Chuseok ancestral rite table (charye-sang) set up indoors, overhead shot showing neatly arranged bowls of rice, soup, tteok, fruits, and side dishes on a low wooden table with white cloth, warm autumn light, photorealistic, high detail</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">추석 차례상 전통 진설 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 차례상의 의미와 기본 원칙</h2>
+
+차례(茶禮)는 조상의 기일이 아닌 명절(설·추석)에 간략하게 드리는 제사 형식입니다. 기제사보다 형식이 가볍고 술 대신 차를 올린다는 뜻에서 유래했지만, 오늘날에는 술을 올리는 것이 일반적입니다.<br><br>
+
+차례상에는 보통 제철 음식을 올립니다. 추석에는 햅쌀로 만든 송편, 햇과일, 나물, 전, 적 등이 기본이 됩니다. 음식의 종류와 수는 가정마다 차이가 있으며, 지역에 따라 구성이 크게 달라지기도 합니다.<br><br>
+
+차례상에는 조상의 신위(神位)를 상의 북쪽에 모시고, 제관은 남쪽에 서서 제례를 진행하는 것이 일반적인 방향 원칙입니다. 상 위의 음식 배치에는 몇 가지 전통적인 관례가 전해지는데, 이를 참고는 할 수 있지만 가문 전통을 우선합니다.<br><br>
+
+대표적인 배치 관례는 다음과 같습니다. <strong>홍동백서(紅東白西)</strong>는 붉은 과일은 동쪽, 흰 과일은 서쪽에 놓는 원칙입니다. <strong>조율이시(棗栗梨枾)</strong>는 대추·밤·배·감의 배치 순서입니다. <strong>어동육서(魚東肉西)</strong>는 생선은 동쪽, 육류는 서쪽에 놓는 원칙입니다. <strong>두동미서(頭東尾西)</strong>는 생선의 머리가 동쪽을 향하도록 배치하는 것입니다.<br><br>
+
+이 원칙들은 지역마다 해석이 다르고, 심지어 반대로 알고 있는 집안도 있습니다. 중요한 것은 집안 어른들이 내려오는 방식을 먼저 확인하는 것입니다. 없는 경우 아래 안내를 참고하면 됩니다.
+
+<h2>02 | 차례상 열별 음식 배치 구성</h2>
+
+차례상은 일반적으로 5열로 구성하며, 신위에서 가장 가까운 열을 1열로 봅니다. 각 열에 놓이는 음식의 구성은 다음과 같습니다.<br><br>
+
+<strong>1열 (신위와 가장 가까운 줄)</strong>은 밥(메)·국(갱)·수저를 올립니다. 술잔과 시접(수저그릇)도 이 열에 함께 놓습니다. 추석에는 밥 대신 송편을 올리는 집안도 있습니다.<br><br>
+
+<strong>2열</strong>에는 전(부침개)·적(꼬치구이)·생선 등 주된 찬을 올립니다. 육적·소적·어적을 함께 놓으며, 생선은 어동육서 원칙에 따라 동쪽(제관이 바라볼 때 왼쪽)에 배치합니다.<br><br>
+
+<strong>3열</strong>에는 탕(국물 요리)을 올립니다. 육탕·소탕·어탕 등 세 가지를 놓기도 하며, 간소화 상차림에서는 한 가지로 줄이기도 합니다.<br><br>
+
+<strong>4열</strong>에는 나물·김치·포·식혜 등 반찬류를 놓습니다. 나물은 보통 세 가지(고사리·도라지·시금치 등)를 준비합니다.<br><br>
+
+<strong>5열 (신위에서 가장 먼 줄)</strong>에는 과일과 과자류를 놓습니다. 과일 배치에 홍동백서·조율이시 원칙을 적용합니다. 제관의 위치에서 바라볼 때 왼쪽이 동쪽(붉은 과일), 오른쪽이 서쪽(흰 과일)이 됩니다.
+
+<h2>03 | 2026년 간소화 차례상 권고 흐름</h2>
+
+성균관(成均館)은 수년 전부터 명절 차례 간소화를 지속적으로 권고해 왔습니다. 핵심 메시지는 <strong>"차례상은 정성이 중요하지, 음식의 가짓수가 중요한 것이 아니다"</strong>라는 것입니다.<br><br>
+
+간소화 권고안의 주요 방향은 다음과 같습니다. 우선 음식 가짓수를 줄이되 신선하고 정성스럽게 준비하는 것을 강조합니다. 예로부터 내려온 복잡한 배치 원칙보다 가족이 함께 준비하는 과정 자체에 의미를 두도록 합니다.<br><br>
+
+실제 간소화 상차림 예시로는 송편(또는 밥·국)·전 2~3가지·나물 2가지·과일 3~4종·포·식혜 정도가 있습니다. 음식 수를 절반 이하로 줄이고, 시간과 비용 부담을 낮추는 방향입니다.<br><br>
+
+직접 만들기 어려운 음식은 구매해도 됩니다. 차례상에 올리는 음식이 반드시 직접 만든 것이어야 한다는 규정은 없습니다. 가족의 상황에 맞게 조절하는 것이 현실적입니다.<br><br>
+
+현대적 변형도 점차 받아들여지고 있습니다. 피자·치킨 같은 음식으로 차례상을 차리는 가정도 언론에 소개될 만큼, 형식보다 조상을 기억하는 마음이 더 중요하다는 인식이 확산되고 있습니다. 물론 어른들과 사전에 충분히 이야기를 나눠 공감대를 형성하는 것이 중요합니다.
+
+<h2>04 | 지방 쓰는 법 — 한자 표기 예시</h2>
+
+지방(紙榜)은 제사나 차례 때 조상의 신위(神位)를 임시로 적어 모시는 종이입니다. 신주(神主)가 없는 가정에서 지방으로 대신합니다. 한지(韓紙)에 먹으로 쓰는 것이 전통이지만, 일반 흰 종이에 검은 펜으로 써도 됩니다.<br><br>
+
+지방은 일반적으로 가로 6cm, 세로 22cm 정도의 종이에 씁니다. 위쪽에 <strong>顯(현)</strong>으로 시작하며, 고인과 제관(제사 지내는 사람)의 관계를 나타내는 글자가 이어집니다.<br><br>
+
+<strong>아버지 지방</strong> 쓰는 법: 顯考學生府君神位 (현고학생부군신위)<br>
+해석: 나타나소서, 아버님, 학생(벼슬 없는 경우), 부군(아버지에 대한 경칭), 신위<br><br>
+
+<strong>어머니 지방</strong> 쓰는 법: 顯妣孺人○○氏神位 (현비유인○○씨신위)<br>
+해석: 나타나소서, 어머님, 유인(일반 부인에 대한 경칭), 본관 성씨, 신위<br>
+○○에는 어머니의 성씨(예: 金, 李, 朴)를 넣습니다.<br><br>
+
+<strong>할아버지 지방</strong>: 顯祖考學生府君神位 (현조고학생부군신위)<br>
+<strong>할머니 지방</strong>: 顯祖妣孺人○○氏神位 (현조비유인○○씨신위)<br><br>
+
+부모님을 함께 모시는 경우 지방을 2장 써서 나란히 모시는 것이 원칙이며, 남성(아버지·할아버지) 신위를 오른쪽(서쪽), 여성(어머니·할머니) 신위를 왼쪽(동쪽)에 배치합니다. 차례가 끝나면 지방은 불에 태우는 것이 관례입니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">../../images/260818/5_charye_2.png</span></div>
+<pre class="prompt-text" id="prompt-5-2">Close-up of traditional Korean hanji paper with handwritten Chinese characters (jibang) for ancestral rites, calligraphy brush and ink stone beside it, soft natural lighting, clean white background, detailed texture of Korean paper, photorealistic</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">지방 쓰는 한지와 붓, 한자 표기 예시 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 차례 순서 — 단계별 안내</h2>
+
+차례를 지내는 순서는 지역과 가문마다 차이가 있으나, 유교식 전통 절차를 기반으로 한 일반적인 순서를 소개합니다. 제관은 제사를 주관하는 사람으로, 보통 장남 또는 장손이 맡습니다.<br><br>
+
+<strong>1단계 강신(降神)</strong>: 조상신을 맞이하는 절차입니다. 제관이 향을 피우고 술잔에 술을 따라 모삿그릇(모래그릇)에 세 번 기울여 붓습니다. 이후 제관이 두 번 절합니다.<br><br>
+
+<strong>2단계 참신(參神)</strong>: 제관을 포함한 참례자 전원이 함께 두 번 절합니다. 조상에게 인사를 드리는 순서입니다.<br><br>
+
+<strong>3단계 헌작(獻酌)</strong>: 술을 올리는 순서입니다. 초헌(첫 번째 잔)·아헌(두 번째 잔)·종헌(세 번째 잔)을 차례로 올립니다. 차례(茶禮)에서는 간략히 초헌만 올리거나 한 번만 올리는 경우도 많습니다.<br><br>
+
+<strong>4단계 유식(侑食)</strong>: 조상이 음식을 드시도록 권하는 순서입니다. 밥그릇 뚜껑을 열고 숟가락을 밥 위에 꽂습니다.<br><br>
+
+<strong>5단계 합문(闔門)</strong>: 문을 닫거나 제관들이 잠시 자리를 피해 조상이 음식을 드시도록 기다립니다. 보통 2~3분간 기다립니다.<br><br>
+
+<strong>6단계 계문(啓門)</strong>: 문을 다시 열거나 자리로 돌아옵니다. 숭늉(숭늉이 없으면 물)을 올리는 절차도 있습니다.<br><br>
+
+<strong>7단계 사신(辭神)</strong>: 조상을 보내드리는 절차입니다. 모두 두 번 절합니다. 지방을 태웁니다.<br><br>
+
+<strong>8단계 철상(撤床)</strong>: 제사상을 거두는 순서입니다.<br><br>
+
+<strong>9단계 음복(飮福)</strong>: 차례 음식을 가족이 함께 나누어 먹으며 복을 나누는 순서입니다.
+
+<h2>06 | 요즘 세대가 많이 묻는 질문</h2>
+
+<strong>Q. 과일은 반드시 짝수로 올려야 하나요?</strong><br>
+전통적으로 제사상에는 짝수로 올리지 않는다는 관례가 있습니다. 그러나 이것 역시 지역마다 다르고, 현대에는 크게 구애받지 않는 가정도 많습니다. 가족 내 어른들의 방식을 우선합니다.<br><br>
+
+<strong>Q. 식혜 대신 음료수를 올려도 되나요?</strong><br>
+전통적으로는 식혜나 수정과를 올리지만, 가족 합의 하에 다른 음료로 대체하는 경우도 늘고 있습니다. 조상이 좋아하셨던 음료를 올리는 것도 의미 있는 방법입니다.<br><br>
+
+<strong>Q. 고춧가루와 마늘은 쓰면 안 되나요?</strong><br>
+제사 음식에 고춧가루와 마늘을 사용하지 않는다는 관례가 있습니다. 귀신이 빨간색을 싫어한다는 민간 신앙에서 비롯된 것으로, 반드시 지켜야 하는 규칙은 아닙니다. 가문 전통에 따라 판단하면 됩니다.<br><br>
+
+<strong>Q. 생선 머리 방향은 어느 쪽인가요?</strong><br>
+두동미서(頭東尾西), 즉 머리를 동쪽(제관 기준 왼쪽)으로 향하게 하는 것이 일반적입니다. 그러나 지역에 따라 반대로 하는 경우도 있어, 집안 어른께 확인하는 것이 가장 확실합니다.<br><br>
+
+<strong>Q. 차례상에 사진을 놓아도 되나요?</strong><br>
+지방 대신 고인의 사진을 놓는 것은 현대적인 방식으로, 많은 가정에서 이미 실천하고 있습니다. 공식적인 예법에는 없지만 가족의 합의가 있다면 충분히 가능한 방법입니다.
+
+<h2>07 | 지역별 차례 문화 차이</h2>
+
+우리나라는 지역마다 차례 문화가 다양하게 발달해 왔습니다. 같은 원칙을 이야기해도 경상도·전라도·충청도·경기도 등 지역에 따라 음식 구성과 배치가 크게 다를 수 있습니다.<br><br>
+
+<strong>경상도</strong>는 전반적으로 음식 수가 많고 상차림이 푸짐한 편입니다. 돔베기(상어)나 문어를 올리는 것이 특징이며, 지역 특산물이 차례상에 반영됩니다. 특히 동해안 지역에서는 대게나 오징어를 올리기도 합니다.<br><br>
+
+<strong>전라도</strong>는 음식의 가짓수와 정성이 두드러지며, 홍어나 조기 등 지역 특산 생선이 올라오는 경우가 많습니다. 나물도 다양하게 준비하는 전통이 있습니다.<br><br>
+
+<strong>충청도</strong>는 비교적 간소하게 차리는 편이며, 음식 배치 원칙보다 정성을 더 강조하는 경향이 있습니다.<br><br>
+
+<strong>경기·서울</strong> 지역은 도시화의 영향으로 상대적으로 간소화된 차례를 지내는 경우가 많으며, 현대식 변형도 가장 빠르게 수용되는 편입니다.<br><br>
+
+이처럼 지역별 차이가 크기 때문에, 특정 방식이 옳고 그름을 판단하기보다는 각 가문에서 이어온 방식을 존중하는 것이 바람직합니다.
+
+<h2>08 | 현대식 변형과 가족 합의 방법</h2>
+
+명절 차례 문화는 시대에 따라 계속 변화해 왔습니다. 핵가족화와 맞벌이 가구의 증가, 1인 가구의 확산으로 예전과 같은 방식의 차례상 준비가 어려워진 것이 현실입니다.<br><br>
+
+현대식 변형의 첫 번째 방향은 <strong>음식 간소화</strong>입니다. 전 3~4가지에서 1~2가지로 줄이고, 직접 만들기 어려운 음식은 완제품을 활용합니다. 시간과 노력을 절약하면서도 정성은 유지하는 방식입니다.<br><br>
+
+두 번째 방향은 <strong>역할 분담</strong>입니다. 예전에는 여성이 음식 준비를 도맡는 경우가 많았지만, 최근에는 가족 모두가 함께 준비하는 방향으로 바뀌고 있습니다. 장보기·음식 만들기·상 차리기를 역할별로 나누면 부담이 줄어듭니다.<br><br>
+
+세 번째는 <strong>비대면·온라인 차례</strong>입니다. 멀리 사는 가족이 화상통화로 함께 차례에 참여하거나, 온라인 제사 서비스를 이용하는 경우도 늘고 있습니다. 코로나 이후 확산된 문화로, 이제는 낯설지 않게 받아들여집니다.<br><br>
+
+가족 합의가 가장 중요합니다. 어른들과 미리 이야기를 나눠 어떤 방식으로 차례를 지낼지 함께 결정하면, 한쪽의 부담이 과중해지는 문제를 예방할 수 있습니다. 명절의 의미는 조상을 기억하고 가족이 함께 모이는 것에 있습니다.
+
+<h2>09 | 차례상 준비 체크리스트</h2>
+
+추석 차례를 앞두고 미리 준비하면 당일 당황하지 않을 수 있습니다. 다음 체크리스트를 참고하세요.<br><br>
+
+<table class="info-table">
+<tr><th>준비 항목</th><th>내용</th><th>확인</th></tr>
+<tr><td>음식 목록 확정</td><td>집안 어른께 여쭤보거나 전년도 방식 확인</td><td>□</td></tr>
+<tr><td>장보기</td><td>추석 직전에는 가격이 오를 수 있으므로 1~2일 전에 구매</td><td>□</td></tr>
+<tr><td>지방 준비</td><td>한지 또는 흰 종이, 먹 또는 검은 펜 준비</td><td>□</td></tr>
+<tr><td>제기(祭器) 점검</td><td>그릇·수저·향로·향·모삿그릇·술잔 등 확인</td><td>□</td></tr>
+<tr><td>향과 초 준비</td><td>강신 절차에 필요한 향과 초(또는 양초) 준비</td><td>□</td></tr>
+<tr><td>차례 순서 숙지</td><td>처음 지내는 경우 순서를 미리 메모해 두기</td><td>□</td></tr>
+<tr><td>음복 준비</td><td>차례 후 가족이 함께 나눌 음식과 자리 준비</td><td>□</td></tr>
+</table>
+
+차례상을 차리기 전에 상(床)을 깨끗이 닦고, 흰 식보(食褓)를 덮어두는 것도 예의입니다. 음식은 차례 당일 아침에 만들거나 전날 준비해 두는 것이 일반적입니다.<br><br>
+
+<div class="tip-box">
+<strong>꿀팁</strong>: 가족 단체 채팅방에 차례상 사진을 남겨 두면, 다음 해 준비할 때 큰 도움이 됩니다. "우리 집 방식"을 사진으로 기록해 두는 것을 추천합니다.
+</div>
+
+<h2>10 | 한 번 더 정리 — 헷갈리기 쉬운 핵심 포인트</h2>
+
+차례상 준비에서 가장 많이 헷갈리는 포인트들을 한 번 더 정리합니다.<br><br>
+
+<strong>홍동백서는 제관 기준 왼쪽이 동쪽</strong>입니다. 제관(제사를 지내는 사람)이 신위를 바라보고 서 있을 때, 제관의 왼쪽이 동쪽(붉은 과일), 오른쪽이 서쪽(흰 과일)입니다. 단, 이 원칙 자체가 지역마다 다르게 전해지는 관례임을 기억해야 합니다.<br><br>
+
+<strong>지방은 차례가 끝나면 반드시 태웁니다.</strong> 신위를 불태워 하늘로 보내드리는 의미입니다. 태우지 않고 보관하거나 버리는 것은 예법에 맞지 않습니다.<br><br>
+
+<strong>차례 음식에 복숭아는 올리지 않는 것이 전통</strong>입니다. 복숭아가 귀신을 쫓는 과일로 여겨졌기 때문입니다. 다만 이 역시 관례이며 가문에 따라 다릅니다.<br><br>
+
+<strong>술은 밥 왼쪽, 국은 밥 오른쪽</strong>에 놓는 것이 기본 원칙(飯左羹右)입니다. 일상에서 밥과 국을 놓는 위치와 반대이므로 주의가 필요합니다.<br><br>
+
+<strong>차례는 제관이 모든 것을 혼자 준비할 필요가 없습니다.</strong> 가족이 함께 역할을 나누어 준비하는 것이 오늘날의 바람직한 방식입니다. 중요한 것은 형식보다 마음입니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260817/rite_mourning_condolence_words.html">초상집 조문 위로 말씀 — 상황별 올바른 표현과 피해야 할 말</a></li>
+<li><a href="../260817/car_lease_vs_longterm_rent.html">자동차 리스와 장기렌트 비교 — 명절 전 신차 계약 전 꼭 확인하세요</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<span class="tag">#차례상차리는법</span>
+<span class="tag">#추석차례</span>
+<span class="tag">#지방쓰는법</span>
+<span class="tag">#홍동백서</span>
+<span class="tag">#추석간소화</span>
+<span class="tag">#차례순서</span>
+<span class="tag">#어동육서</span>
+<span class="tag">#지방쓰기</span>
+<span class="tag">#추석제사</span>
+</div>
+</body>
+</html>
