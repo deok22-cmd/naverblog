@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>렌터카 반납할 때 스크래치 분쟁 해결법 — 사전 촬영 체크리스트와 자차보험 적용 범위</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>렌터카 반납할 때 스크래치 분쟁 해결법 — 사전 촬영 체크리스트와 자차보험 적용 범위</h1>
+<div class="intro-box">
+렌터카를 반납할 때 "이 스크래치는 어디서 난 것이냐"는 분쟁은 매년 수천 건에 달합니다. 렌터카 업체가 기존에 있던 스크래치를 새로 생긴 것처럼 청구하거나, 반대로 실제로 낸 긁힘을 인지하지 못하고 반납해 뒤늦게 청구서를 받는 경우가 있습니다.<br><br>
+이 글에서는 <strong>인수 전 사전 촬영 요령, 반납 시 확인 절차, 자차보험 적용 범위와 면책금</strong>을 정리합니다. 렌터카를 빌리기 전에 한 번 읽어두면 불필요한 분쟁을 예방할 수 있습니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260819/6_rentalcar_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-1">Person photographing a rental car exterior before pickup, documenting pre-existing scratches and dents with smartphone, careful inspection of car body panels, rental car company logo visible in background, bright sunny day, Korean rental car lot, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">렌터카 인수 전 스마트폰으로 차량 상태 촬영 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 렌터카 스크래치 분쟁이 생기는 이유</h2>
+
+렌터카는 불특정 다수가 번갈아 사용하므로 사소한 스크래치가 늘 생길 수밖에 없습니다. 문제는 <strong>어떤 스크래치가 언제, 누가 낸 것인지 증명하기 어렵다</strong>는 점입니다.<br><br>
+
+분쟁의 대부분은 두 가지 상황에서 발생합니다.<br><br>
+
+<strong>① 기존 스크래치를 새로운 손상으로 청구</strong>: 인수 서류에 기재되지 않은 기존 스크래치를 반납 시 새 손상으로 주장하는 경우.<br><br>
+
+<strong>② 이용자가 실제 손상을 인지하지 못하고 반납</strong>: 주차 중 긁혔거나 문을 열 때 살짝 닿은 경우를 모르고 반납했다가 뒤늦게 청구서를 받는 경우.<br><br>
+
+두 상황 모두 <strong>인수 시 촬영 기록</strong>이 분쟁 해결의 핵심 증거가 됩니다.<br><br>
+
+<h2>02 | 인수 전 반드시 해야 할 사전 촬영</h2>
+
+렌터카를 받는 순간이 분쟁 예방의 골든타임입니다. 다음 순서로 촬영하세요.<br><br>
+
+<strong>촬영 체크리스트</strong>:
+<ul>
+<li>차량 전체(전면, 후면, 좌측면, 우측면) — 차 번호판이 한 장에 보이도록</li>
+<li>각 모서리와 범퍼 끝부분 — 가장 스크래치가 생기기 쉬운 곳</li>
+<li>앞뒤 범퍼 세부 — 긁힘·찌그러짐 여부</li>
+<li>사이드미러, 도어 하단 몰딩</li>
+<li>휠과 타이어 측면</li>
+<li>인수 서류(손상 기재 여부 포함)</li>
+</ul>
+
+사진은 <strong>타임스탬프(날짜·시간)가 남도록</strong> 촬영합니다. 대부분의 스마트폰 카메라는 자동으로 메타데이터에 일시가 기록됩니다. 영상으로 한 바퀴 천천히 돌아가며 녹화하는 것도 좋습니다.<br><br>
+
+<div class="tip-box">
+💡 촬영 후 사진을 카카오톡 '나와의 채팅'이나 클라우드에 즉시 백업하세요. 분쟁 발생 시 전송 시간이 남아 있는 클라우드 기록이 증거 효력을 높여줍니다.
+</div>
+
+<h2>03 | 인수 서류 작성 시 주의할 점</h2>
+
+렌터카 업체 직원이 기존 손상을 서류에 기재하는지 반드시 확인합니다. 기재되지 않은 손상이 있다면 현장에서 직원에게 추가 기재를 요청하고, 직원이 "이 정도는 기재 안 해도 됩니다"라고 하더라도 <strong>문서에 남기거나 본인이 사진을 찍어 두는 것</strong>이 원칙입니다.<br><br>
+
+서류에 서명하기 전에 기재 내용을 꼼꼼히 확인합니다. 손상 기재란이 비어 있다면 "이상 없음"으로 서명하는 것은 기존 손상에 대한 이의를 포기하는 의미일 수 있습니다.<br><br>
+
+<h2>04 | 자차보험(자기차량손해담보)이란</h2>
+
+렌터카를 예약할 때 선택하는 <strong>자차보험(자기차량손해담보, CDW)</strong>은 차량에 발생한 손상을 보험으로 처리하는 상품입니다.<br><br>
+
+<strong>자차보험 가입 시</strong>: 사고나 스크래치가 발생해도 면책금(보통 10만~30만 원) 이상은 본인 부담이 없습니다. 면책금 금액은 업체와 차량 등급에 따라 다릅니다.<br><br>
+
+<strong>자차보험 미가입 시</strong>: 손상된 부위 수리비 전액을 본인이 부담해야 합니다. 범퍼 교체 비용이 수십만~수백만 원에 달할 수 있습니다.<br><br>
+
+<table class="info-table">
+<tr><th>구분</th><th>자차보험 가입</th><th>자차보험 미가입</th></tr>
+<tr><td>스크래치 발생</td><td>면책금만 부담(10~30만 원)</td><td>수리비 전액 부담</td></tr>
+<tr><td>범퍼 파손</td><td>면책금까지만 부담</td><td>수리비 + 대차료 부담</td></tr>
+<tr><td>전손(전파)</td><td>면책금까지만 부담</td><td>차량 가액 전액 부담</td></tr>
+</table>
+
+<div class="warn-box">
+⚠️ 자차보험의 면책 범위에서 제외되는 항목이 있습니다: 타이어 단독 손상, 차량 하부 손상, 음주·무면허 운전, 계약 외 운전자가 운전한 경우 등. 약관을 반드시 확인하세요.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260819/6_rentalcar_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-2">Rental car return inspection, rental company employee and customer examining car exterior together, pointing at car body panel, clipboard with inspection checklist, daytime at rental car return area, professional documentation process, South Korea rental car service, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">렌터카 반납 시 직원과 함께하는 외관 확인 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 반납 시 스크래치 분쟁 대처법</h2>
+
+반납 후 업체로부터 손상 청구를 받았을 때 대처 방법입니다.<br><br>
+
+<strong>① 인수 시 촬영한 사진 제시</strong>: 인수 당시 찍어 둔 사진에 해당 손상이 이미 존재했음을 보여줍니다. 타임스탬프가 인수 시간보다 앞서면 강력한 증거가 됩니다.<br><br>
+
+<strong>② 인수 서류 손상 기재 여부 확인</strong>: 인수 서류에 해당 부위 손상이 기재되어 있다면 분쟁을 종결할 수 있습니다.<br><br>
+
+<strong>③ 즉시 인정하지 말 것</strong>: 현장에서 업체 직원이 청구를 주장하더라도 즉시 인정하지 마세요. "확인해 보겠다"고 한 뒤 인수 시 사진을 검토합니다.<br><br>
+
+<strong>④ 소비자원 신고</strong>: 부당 청구라고 판단될 경우 한국소비자원(www.kca.go.kr, 전화 1372)에 신고할 수 있습니다. 렌터카 관련 분쟁은 소비자원 처리 실적이 높은 편입니다.<br><br>
+
+<h2>06 | 렌터카 업체별 손상 청구 프로세스</h2>
+
+대형 렌터카 업체(롯데렌터카, SK렌터카, 제주렌터카 등)는 손상 발생 시 공식 프로세스가 있습니다. 영수증이나 청구서가 반드시 발행되어야 하며, 구두로만 요구하는 것은 부당합니다.<br><br>
+
+<strong>공식 청구 절차</strong>: 수리비 견적서 또는 청구서 발행 → 이용자에게 통지 → 이의 신청 기간 부여. 이 절차 없이 카드에서 바로 결제하거나 현금을 요구하는 행위는 소비자 권리 침해입니다.<br><br>
+
+<h2>07 | 흔한 부당 청구 사례와 예방법</h2>
+
+<strong>① 기존 손상 이중 청구</strong>: 같은 손상에 대해 여러 이용자에게 반복 청구. 예방법: 인수 시 서류 사진 촬영.<br><br>
+
+<strong>② 수리비 부풀리기</strong>: 가벼운 스크래치를 범퍼 교체로 청구. 예방법: 독립 정비소 견적 비교 요청 가능.<br><br>
+
+<strong>③ 사전 고지 없는 면책금 청구</strong>: 자차보험 가입에도 면책금을 따로 받는 행위. 예방법: 계약서에서 면책금 금액 확인.<br><br>
+
+<div class="tip-box">
+💡 렌터카 계약서와 영수증은 반납 후 최소 3개월은 보관하세요. 뒤늦게 청구서가 올 수도 있습니다.
+</div>
+
+<h2>08 | 제주 렌터카 특이 사항</h2>
+
+제주도 렌터카는 본토보다 분쟁 사례가 많습니다. 이유는 이용자 수가 많고 차량 교체 주기가 빠르기 때문입니다.<br><br>
+
+제주에서는 특히 <strong>야간 반납 시 분쟁</strong>이 빈번합니다. 직원 없이 차 키를 반납함에 넣는 방식으로 반납할 때, 반납 후 발생한 손상도 이용자 책임으로 돌리는 사례가 있습니다. 야간 반납 전에 충분한 사진을 찍고 반납 시간을 기록해 두세요.<br><br>
+
+<h2>09 | 해외 렌터카 이용 시 추가 주의 사항</html>
+
+해외 렌터카는 국내보다 분쟁 해결이 훨씬 복잡합니다. 현지 법률과 보험 약관이 다르기 때문입니다.<br><br>
+
+<strong>해외 자차보험</strong>: 신용카드의 렌터카 보험 혜택을 활용하면 추가 자차보험 가입 비용을 줄일 수 있습니다. 단, 해당 카드사 혜택 약관을 미리 확인해야 합니다.<br><br>
+
+해외 렌터카도 인수 시 전방위 촬영은 필수입니다. 현지 직원과 함께 손상 부위를 확인하는 과정을 영상으로 찍어두면 귀국 후 분쟁 시 유용합니다.<br><br>
+
+<h2>10 | 자주 묻는 질문</h2>
+
+<strong>Q. 자차보험에 가입했는데도 스크래치로 청구를 받았습니다. 어떻게 해야 하나요?</strong><br>
+계약서에서 면책금 금액과 자차보험 면책 범위를 확인하세요. 면책금 이내의 금액이라면 본인 부담이 맞습니다. 면책금 초과분을 청구하거나 면책 범위 내 손상을 청구한다면 이의 신청이 가능합니다.<br><br>
+
+<strong>Q. 렌터카 반납함에 키를 넣은 뒤 업체가 연락해 왔습니다. 이후 발생한 손상도 제 책임인가요?</strong><br>
+반납 당시 촬영한 사진이 있다면 반납 후 발생한 손상이 아님을 입증할 수 있습니다. 반납함 투입 직전 사진 촬영이 중요한 이유입니다.<br><br>
+
+<strong>Q. 소비자원에 신고하면 얼마나 걸리나요?</strong><br>
+사안에 따라 다르지만 조정 처리까지 통상 30~60일 정도 소요됩니다. 서면 증거가 충분할수록 해결이 빠릅니다.<br><br>
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260818/car_hipass_device_register.html">하이패스 단말기 등록 안 하면 어떻게 되나 — 미등록 통행료 자동 징수와 재등록 절차</a></li>
+<li><a href="../260818/local_national_park_parking_fall.html">국립공원 단풍철 주차장 만차 피하는 시간 — 설악·내장·지리 주차요금과 어디 대나</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#렌터카스크래치</span>
+<span class="tag">#렌터카분쟁</span>
+<span class="tag">#렌터카반납</span>
+<span class="tag">#자차보험</span>
+<span class="tag">#렌터카주의사항</span>
+<span class="tag">#렌터카촬영</span>
+<span class="tag">#부당청구</span>
+<span class="tag">#제주렌터카</span>
+<span class="tag">#렌터카보험</span>
+<span class="tag">#소비자원신고</span>
+</div>
+</body>
+</html>

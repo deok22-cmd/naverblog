@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>장례식 조문 갈 때 복장 꼭 검은색 아니어도 되나 — 남녀 상복 기준과 흔한 실수 사례</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>장례식 조문 갈 때 복장 꼭 검은색 아니어도 되나 — 남녀 상복 기준과 흔한 실수 사례</h1>
+<div class="intro-box">
+갑작스럽게 조문 소식을 들으면 "지금 입고 있는 옷으로 가도 되나" 하는 걱정이 앞섭니다. 장례식 복장은 <strong>검은색이 기본</strong>이지만, 현장 상황에 따라 현실적인 대안이 허용되는 범위가 있습니다.<br><br>
+이 글에서는 남성·여성별 조문 복장 기준, 직장에서 바로 가야 할 때의 대처법, 그리고 흔하게 저지르는 실수 사례를 정리합니다. 장례식장에서 실례를 범하지 않도록 기본 원칙을 숙지해 두세요.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260819/5_funeraldress_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-1">Korean funeral home condolence visitors in respectful formal black attire, men in black suits with black ties, women in black dresses, solemn respectful atmosphere, flower offerings at Korean funeral hall, clean dignified interior, photorealistic, tasteful representation of Korean mourning customs, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">장례식장 조문객의 정장 복장 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 조문 복장의 기본 원칙</h2>
+
+장례식 조문 복장의 핵심 원칙은 <strong>"고인과 유족에 대한 예의를 갖추는 것"</strong>입니다. 화려하거나 밝은 색상을 피하고, 단정하고 절제된 차림이 기본입니다.<br><br>
+
+<strong>가장 이상적인 복장</strong>: 검은색 정장(남성), 검은색 원피스나 정장(여성). 여기에 흰색 와이셔츠(남성), 검은 스타킹(여성)을 기본으로 합니다.<br><br>
+
+<strong>핵심 금지 색상</strong>: 빨강, 주황, 노랑, 핑크 등 밝고 화려한 색상. 화려한 프린트 패턴도 피합니다.<br><br>
+
+<strong>검은색이 아니어도 되는 경우</strong>: 현실적으로 검은 정장을 구하기 어려운 상황이라면, <strong>남색(네이비), 짙은 회색, 어두운 갈색</strong>도 허용 범위입니다. 단, 색상이 어둡고 절제된 스타일이어야 합니다.<br><br>
+
+<h2>02 | 남성 조문 복장 기준</h2>
+
+<strong>기본</strong>: 검은색 양복 + 흰 와이셔츠 + 검은 넥타이 + 검은 구두.<br><br>
+
+<strong>현실적 대안</strong>: 검은 양복이 없다면 짙은 남색 또는 짙은 회색 양복도 가능합니다. 넥타이는 검은색이나 무채색(짙은 회색, 짙은 남색)이면 됩니다. 화려한 패턴 넥타이는 피합니다.<br><br>
+
+<strong>구두</strong>: 검은색 가죽 구두가 기본입니다. 운동화는 가급적 피하지만, 급하게 직장에서 출발한 경우라면 단색 검은 운동화 정도는 이해받을 수 있습니다.<br><br>
+
+<strong>계절 고려</strong>: 여름에는 검은 슬랙스 + 흰 와이셔츠만으로도 기본 예의를 갖출 수 있습니다. 재킷이 없어도 사과드리며 조문하면 됩니다.<br><br>
+
+<table class="info-table">
+<tr><th>항목</th><th>기본(최선)</th><th>현실적 대안</th><th>금지</th></tr>
+<tr><td>상의</td><td>검은 양복 재킷</td><td>짙은 남색·회색 재킷</td><td>밝은 색, 캐주얼 점퍼</td></tr>
+<tr><td>하의</td><td>검은 슬랙스</td><td>짙은 회색·남색 슬랙스</td><td>청바지, 밝은 색</td></tr>
+<tr><td>셔츠</td><td>흰 와이셔츠</td><td>연한 회색·흰색</td><td>줄무늬, 체크, 밝은 색</td></tr>
+<tr><td>넥타이</td><td>검은 무지</td><td>짙은 회색·남색 무지</td><td>화려한 패턴, 붉은 계열</td></tr>
+<tr><td>구두</td><td>검은 가죽 구두</td><td>검은 단화</td><td>밝은 색, 슬리퍼</td></tr>
+</table>
+
+<h2>03 | 여성 조문 복장 기준</h2>
+
+<strong>기본</strong>: 검은색 원피스 또는 검은 블라우스 + 검은 스커트(또는 슬랙스) + 검은 스타킹 + 검은 단화.<br><br>
+
+<strong>노출 기준</strong>: 노출이 심한 복장은 금지입니다. 어깨를 드러내는 민소매는 재킷이나 카디건으로 덮어주세요. 치마 길이는 무릎 아래가 기본입니다.<br><br>
+
+<strong>액세서리</strong>: 진주 목걸이는 조문 복장에서 허용되는 유일한 액세서리로 여기는 경우가 많습니다. 금·은 귀걸이, 밝은 색 액세서리는 피합니다.<br><br>
+
+<strong>화장</strong>: 진한 화장은 삼갑니다. 붉은 립스틱 대신 베이지·누드 계열을 사용하고, 화려한 아이메이크업은 피합니다.<br><br>
+
+<strong>스타킹</strong>: 검은 스타킹이 기본입니다. 살색 스타킹도 허용되지만, 맨다리는 피하는 것이 예의입니다.<br><br>
+
+<h2>04 | 직장에서 바로 갈 때 대처법</h2>
+
+근무 중에 갑작스러운 부고를 받으면 복장을 바꿀 여유가 없는 경우가 있습니다.<br><br>
+
+<strong>① 검은 옷 한 가지만 추가</strong>: 밝은 옷을 입고 있다면, 근처 편의점이나 할인마트에서 검은 가디건이나 재킷을 구입해 겉에 걸치는 것만으로도 기본 예의를 갖출 수 있습니다.<br><br>
+
+<strong>② 유족에게 미리 양해 구하기</strong>: "직장에서 바로 달려왔다"고 전하면 유족도 이해합니다. 중요한 것은 예의를 갖추려는 진정성입니다.<br><br>
+
+<strong>③ 화려한 액세서리 제거</strong>: 밝은 색 목걸이, 화려한 브로치 등은 제거합니다. 가방은 어두운 색이면 더 좋습니다.<br><br>
+
+<div class="tip-box">
+💡 <strong>비상 대처 키트</strong>: 차 트렁크나 책상 서랍에 검은 넥타이(남성) 또는 검은 카디건(여성) 하나를 상시 보관해 두면 급작스러운 조문에 당황하지 않습니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260819/5_funeraldress_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-2">Close-up flat lay of Korean funeral condolence clothing essentials on white background: black suit jacket, white dress shirt, black tie, black women's cardigan, black low heels, simple pearl necklace, clean minimalist styling, product photography style, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">조문 필수 복장 구성 — 검은 정장 세트 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 자주 저지르는 복장 실수</h2>
+
+<strong>① 청바지 착용</strong>: 청바지는 색상이 어둡더라도 조문 복장으로 부적절합니다. 짙은 남색 청바지도 마찬가지입니다.<br><br>
+
+<strong>② 밝은 색 가방</strong>: 복장은 검은색으로 갖춰도 밝은 색 가방을 들고 오는 경우가 있습니다. 가방도 검은색이나 어두운 색으로 맞추세요.<br><br>
+
+<strong>③ 향수 과다 사용</strong>: 장례식장은 폐쇄된 공간이 많습니다. 강한 향수는 삼가세요.<br><br>
+
+<strong>④ 운동화 착용</strong>: 완전히 금지라고 할 수 없지만, 형광색이나 밝은 색 운동화는 부적절합니다. 불가피하다면 흰색 또는 밝은 색 부분을 최소화한 검은 운동화가 낫습니다.<br><br>
+
+<strong>⑤ 슬리퍼 착용</strong>: 집에서 급하게 출발하더라도 슬리퍼 착용은 절대 금지입니다.<br><br>
+
+<h2>06 | 계절별 조문 복장 가이드</h2>
+
+<strong>여름 조문</strong>: 검은 반소매 셔츠나 블라우스도 허용됩니다. 남성은 얇은 검은 슬랙스, 여성은 검은 얇은 원피스가 실용적입니다. 재킷은 입장 시 걸치고 실내에서 벗어도 됩니다.<br><br>
+
+<strong>겨울 조문</strong>: 두꺼운 외투를 입더라도 장례식장 실내 진입 후에는 코트를 벗습니다. 코트는 로비나 카운터에 맡기거나 팔에 걸치면 됩니다. 겨울 패딩은 장례식장 내 착용이 예의 없어 보일 수 있으니 두꺼운 코트 안에 정장을 받쳐 입는 것이 좋습니다.<br><br>
+
+<h2>07 | 자녀와 함께 갈 때 어린이 복장</h2>
+
+영유아나 초등학생 자녀를 동반할 때는 완벽한 검은색 복장을 갖추기 어렵습니다. 이 경우 <strong>밝은 색상만 피하면</strong> 큰 실례가 되지 않습니다.<br><br>
+
+검은색이 없다면 짙은 남색, 짙은 회색의 단정한 옷도 무방합니다. 화려한 프린트 옷이나 밝은 파스텔 톤만 피하면 됩니다. 유족도 어린 아이의 경우 이해해 줍니다.<br><br>
+
+<h2>08 | 조문 시 기타 예절</h2>
+
+복장 외에도 조문 예절을 함께 알아두면 도움이 됩니다.<br><br>
+
+<strong>방명록 작성</strong>: 조문 후 방명록에 이름을 남깁니다. 회사 동료 여럿이 함께 왔을 때는 대표자 이름만 쓰거나, 각자 이름을 모두 기재해도 됩니다.<br><br>
+
+<strong>묵례와 절</strong>: 분향 후 영정 앞에 두 번 절을 하고, 유족에게 한 번 절합니다(종교에 따라 다를 수 있음). 망인이 기독교인이면 절 대신 묵례를 하는 경우도 있습니다.<br><br>
+
+<strong>위로 말씀</strong>: 과도한 위로보다는 "삼가 고인의 명복을 빕니다" 또는 "얼마나 슬프세요"처럼 짧고 진심 어린 말이 적합합니다.<br><br>
+
+<strong>장례식장 내 휴대폰</strong>: 소리를 무음으로 설정하고 통화는 밖에서 합니다.<br><br>
+
+<h2>09 | 종교별 조문 복장과 예절 차이</h2>
+
+<strong>불교식 장례</strong>: 일반적인 검은 정장 복장으로 조문합니다. 향 피우기, 두 번 절이 기본입니다.<br><br>
+
+<strong>기독교식 장례</strong>: 절 대신 묵례를 합니다. 찬송이나 기도가 이루어질 수 있으며, 복장은 동일하게 단정한 어두운 색으로 합니다.<br><br>
+
+<strong>천주교식 장례</strong>: 묵주기도와 성호경 등 천주교 예식이 포함됩니다. 복장은 기독교식과 동일합니다.<br><br>
+
+<strong>무교 또는 관습식</strong>: 전통 유교식 절차에 따르는 가정도 있습니다. 이 경우에도 검은 정장 복장이 기본입니다.<br><br>
+
+<h2>10 | 자주 묻는 질문</h2>
+
+<strong>Q. 검은 티셔츠에 검은 바지는 조문 복장으로 괜찮나요?</strong><br>
+단정하다면 허용됩니다. 로고나 프린트가 없는 민자 검은 티셔츠라면 급한 상황에서는 이해받을 수 있습니다. 가능하다면 그 위에 검은 카디건이나 재킷을 걸치세요.<br><br>
+
+<strong>Q. 남색(네이비) 정장으로 조문해도 되나요?</strong><br>
+네, 됩니다. 짙은 남색은 검은색에 준하는 조문 복장으로 인정됩니다. 셔츠와 넥타이는 흰색·검은색 계열을 맞추세요.<br><br>
+
+<strong>Q. 장례식장에 캐리어나 큰 가방을 들고 가도 되나요?</strong><br>
+출장이나 여행 중에 소식을 듣고 바로 가는 경우라면 이해받을 수 있습니다. 입구에 보관할 수 있는지 확인하거나, 가능하면 차 안에 두고 가세요.<br><br>
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260818/rite_charye_jibang_howto.html">차례 지방 쓰는 법 순서대로 — 부모·조부모·제사 지방 양식과 붓 없을 때 대처</a></li>
+<li><a href="../260818/travel_boryeong_daehamu_season_restaurant.html">보령·홍성 대하 제철 맛집 어디서 먹나 — 남당항 드라이브와 서해 가을 먹거리 코스</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#장례식복장</span>
+<span class="tag">#조문복장</span>
+<span class="tag">#상복기준</span>
+<span class="tag">#장례식예절</span>
+<span class="tag">#조문예의</span>
+<span class="tag">#검은정장</span>
+<span class="tag">#조문갈때</span>
+<span class="tag">#남성조문복장</span>
+<span class="tag">#여성조문복장</span>
+<span class="tag">#장례예절</span>
+</div>
+</body>
+</html>

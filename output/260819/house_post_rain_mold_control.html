@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>장마 후 전원주택 습기·곰팡이 관리 순서 — 계절 환기와 재발 방지 체크리스트</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>장마 후 전원주택 습기·곰팡이 관리 순서 — 계절 환기와 재발 방지 체크리스트</h1>
+<div class="intro-box">
+장마가 끝난 직후는 전원주택 관리의 최대 고비입니다. 3~4주 지속된 고습도 환경이 목재 구조와 단열재 틈새에 수분을 머금게 하고, 그 수분이 빠져나가지 못하면 곰팡이 번식으로 이어집니다.<br><br>
+<strong>8월 장마 후~초가을(8월 말~9월 초)</strong>은 건조한 날씨가 찾아오기 전 마지막 환기 기회입니다. 이 시기를 잘 활용하면 이후 가을·겨울의 결로와 곰팡이 문제를 크게 줄일 수 있습니다.<br><br>
+이 글에서는 장마 직후 전원주택 습기·곰팡이 관리의 <strong>순서별 실천법</strong>과 재발 방지를 위한 구조적 대책을 정리합니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260819/7_moldcontrol_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-7-1">Korean rural countryside house after summer monsoon season, homeowner opening all windows for ventilation, humid summer air being expelled, wooden floor and walls being dried, sunlight streaming into interior, traditional Korean rural house, post-rainy-season home maintenance scene, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-7-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">장마 후 전원주택 전면 환기 작업 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 장마 후 전원주택이 위험한 이유</h2>
+
+전원주택은 도심 아파트보다 기후에 직접 노출되는 표면적이 넓습니다. 특히 <strong>목조 구조, 황토 벽, 돌 기초</strong>는 습기를 흡수하는 성질이 있어 장마가 끝난 뒤에도 내부 수분이 빠져나가지 않으면 여러 문제가 생깁니다.<br><br>
+
+<strong>주요 발생 문제</strong>:<br>
+① 곰팡이 — 목재, 벽지, 가구 뒷면에 번식<br>
+② 결로 — 창문·벽 표면에 이슬이 맺힘<br>
+③ 목재 뒤틀림 — 마루, 문틀, 목조 구조 변형<br>
+④ 악취 — 습기를 먹은 섬유·단열재에서 발생<br><br>
+
+장마 후 2~3주가 이 모든 문제의 분기점입니다. 장마가 끝나자마자 신속하게 환기와 점검을 시작하면 대부분의 문제를 예방할 수 있습니다.<br><br>
+
+<h2>02 | 1단계: 장마 종료 즉시 전면 환기</h2>
+
+장마가 끝나고 맑은 날이 이틀 이상 이어지면 즉시 전면 환기를 시작합니다.<br><br>
+
+<strong>환기 요령</strong>:<br>
+① 모든 창문과 문을 열어 맞바람이 치도록 합니다. 바람이 통과하는 방향(대각선 방향 창문·문)을 활용하면 환기 효율이 높아집니다.<br>
+② 옷장·신발장·이불장 등 밀폐 가구의 문을 모두 엽니다. 가구 내부가 습기 집적소가 되기 쉽습니다.<br>
+③ 침대 매트리스를 세워두거나, 매트리스를 들어 아래쪽을 환기합니다.<br>
+④ 지하실이나 반지하 공간은 선풍기·환풍기를 추가로 가동합니다.<br><br>
+
+<strong>환기 지속 시간</strong>: 맑고 바람 있는 날 오전 10시~오후 3시를 중심으로, 연속 2~3일 진행합니다.<br><br>
+
+<div class="tip-box">
+💡 맑은 날이지만 습도가 70% 이상이면 환기 효과가 떨어집니다. 스마트폰 날씨 앱에서 습도를 확인하고, 습도 60% 이하인 시간대에 집중 환기하세요.
+</div>
+
+<h2>03 | 2단계: 곰팡이 발생 부위 점검</h2>
+
+환기를 시작한 뒤 집 안 곰팡이 발생 부위를 체계적으로 점검합니다.<br><br>
+
+<strong>우선 점검 부위</strong>:
+<ul>
+<li>욕실 및 세면대 주변 타일 줄눈</li>
+<li>외벽 코너(두 벽이 만나는 안쪽 구석)</li>
+<li>창문 하단 창틀과 벽 접합부</li>
+<li>옷장·신발장 뒷면 및 밑면</li>
+<li>에어컨 배관이 벽을 통과하는 주변</li>
+<li>지붕과 외벽 만나는 처마 안쪽</li>
+</ul>
+
+점검 시 손전등을 사용하면 어두운 구석의 곰팡이를 더 잘 발견할 수 있습니다. 코로 냄새를 맡아보는 것도 중요합니다. 곰팡이 특유의 흙냄새·쾌쾌한 냄새가 나는 구역은 눈에 보이지 않더라도 의심해야 합니다.<br><br>
+
+<h2>04 | 3단계: 곰팡이 제거와 처리</h2>
+
+발견된 곰팡이 범위에 따라 처리 방법이 다릅니다.<br><br>
+
+<strong>표면 곰팡이 (벽지, 타일 줄눈 표면)</strong>:<br>
+시중에서 구할 수 있는 곰팡이 제거 스프레이(락스 희석액 포함)를 해당 부위에 분사하고 10~20분 후 닦아냅니다. 환기를 충분히 하면서 작업하고, 고무장갑과 마스크를 착용합니다.<br><br>
+
+<strong>구조 내부 곰팡이 (단열재, 목재 내부)</strong>:<br>
+표면 처리만으로는 재발합니다. 단열재를 일부 뜯어내고 교체하거나, 목재 부위는 방균 처리 후 재시공이 필요합니다. 심각한 경우 전문 시공 업체에 의뢰하는 것이 안전합니다.<br><br>
+
+<strong>곰팡이 제거 후 마감</strong>:<br>
+제거 후 해당 부위를 완전히 건조한 뒤 방곰팡이 코팅제나 방습 실란트로 마감합니다. 욕실 줄눈은 방수 코킹제로 다시 처리하면 재발률이 크게 낮아집니다.<br><br>
+
+<div class="warn-box">
+⚠️ 락스(염소계 제거제)는 목재와 천에는 표백이 일어납니다. 목재 표면에는 알코올계 항균 스프레이를 사용하거나 전용 목재 방균제를 선택하세요.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260819/7_moldcontrol_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-7-2">Close-up of home dehumidifier operating in a room with moisture-damaged walls, condensation visible on window, modern white dehumidifier collecting water in tray, Korean rural home interior, summer humidity management, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-7-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">전원주택 실내 제습기 가동으로 습도 관리 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 제습기 활용법과 적정 습도 기준</h2>
+
+자연 환기만으로 부족하면 제습기를 활용합니다. 특히 지하실이나 반지하 공간, 채광이 부족한 북향 방은 제습기가 효과적입니다.<br><br>
+
+<strong>실내 적정 습도</strong>: 여름철 40~60%. 60%를 초과하면 곰팡이 번식이 빨라집니다.<br><br>
+
+<strong>제습기 사용 팁</strong>:<br>
+① 가장 습도가 높은 공간(욕실 근처, 북향 방, 지하)에 우선 배치합니다.<br>
+② 제습기 물통은 하루에 한 번 이상 비워야 계속 작동합니다.<br>
+③ 창문을 닫고 운영하면 효율이 높아지지만, 환기 후 닫고 운영하는 것이 원칙입니다.<br>
+④ 소비 전력이 높으므로 전용 콘센트 사용을 권장합니다.<br><br>
+
+<table class="info-table">
+<tr><th>습도 범위</th><th>상태</th><th>대처</th></tr>
+<tr><td>40% 이하</td><td>건조 (피부·호흡기 영향)</td><td>가습기 사용</td></tr>
+<tr><td>40~60%</td><td>쾌적 (권장 범위)</td><td>유지</td></tr>
+<tr><td>60~70%</td><td>약간 습함 (곰팡이 주의)</td><td>제습기 간헐 가동</td></tr>
+<tr><td>70% 이상</td><td>높은 습도 (곰팡이 위험)</td><td>제습기 지속 가동 + 환기</td></tr>
+</table>
+
+<h2>06 | 창문·문틀 결로 방지 처리</h2>
+
+결로는 차가운 면과 따뜻하고 습한 공기가 만날 때 생깁니다. 여름 장마 후에는 낮과 밤의 기온 차가 커지기 시작하므로 창문 결로가 생기기 쉽습니다.<br><br>
+
+<strong>결로 방지 요령</strong>:<br>
+① 이중창이나 로이유리로 교체하면 결로를 크게 줄일 수 있습니다(장기 대책).<br>
+② 단기 대책으로는 창문 결로 흡수 테이프(가전 매장·인터넷 구매)를 창틀 하단에 붙여둡니다.<br>
+③ 창문 근처에 서큘레이터(공기 순환 팬)를 두면 공기가 순환되어 결로 발생을 줄일 수 있습니다.<br><br>
+
+<h2>07 | 외벽·지붕 점검 포인트</h2>
+
+장마 후에는 외벽 크랙(균열)과 지붕 방수층 손상을 점검해야 합니다. 외부에서 유입된 수분이 내부 결로·곰팡이의 원인이 되기 때문입니다.<br><br>
+
+<strong>외벽 점검</strong>: 벽면 크랙, 창틀 코킹(실란트) 노화, 벽 색 변화(물길 흔적)를 눈으로 확인합니다. 크랙이 있으면 방수 코킹제로 채우거나 외벽 방수 페인트 재도장이 필요합니다.<br><br>
+
+<strong>지붕 점검</strong>: 기와 지붕은 기와 파손·미끄러짐, 금속 지붕은 접합부 녹·실리콘 노화 여부를 확인합니다. 누수가 의심되면 내부 천장 점검구를 열어 목재 상태를 확인하세요.<br><br>
+
+<div class="tip-box">
+💡 지붕 올라가기가 부담스러우면 쌍안경으로 지상에서 대략적인 점검이 가능합니다. 이상이 보이면 전문 업체를 불러 점검받는 것이 안전합니다.
+</div>
+
+<h2>08 | 가을 환기 루틴 세팅</h2>
+
+9~10월은 습도가 낮아지고 기온이 쾌적해지는 시기입니다. 이 시기를 최대한 활용해 집 안 구석구석을 말리는 것이 가을·겨울 결로 예방의 핵심입니다.<br><br>
+
+<strong>가을 환기 루틴 (매주 1~2회)</strong>:<br>
+① 오전 10시~오후 2시, 습도 60% 이하인 날 선택<br>
+② 전면 창문·문 개방, 맞바람 환기 2~3시간<br>
+③ 가구·옷장 내부 환기 함께 진행<br>
+④ 환기 후 제습기로 잔여 습기 제거<br><br>
+
+11월 이후 기온이 10°C 이하로 내려가면 환기 효율이 떨어지고 외부에서 찬 공기가 유입되어 오히려 결로 위험이 높아집니다. 10월 말까지 집중적으로 환기를 완료하는 것이 목표입니다.<br><br>
+
+<h2>09 | 장마 후 체크리스트 요약</h2>
+
+<table class="info-table">
+<tr><th>항목</th><th>조치</th><th>시기</th></tr>
+<tr><td>전면 환기</td><td>창·문 개방, 가구 내부 개방</td><td>장마 종료 즉시</td></tr>
+<tr><td>곰팡이 점검</td><td>욕실·창틀·옷장 뒷면 등 확인</td><td>환기 2~3일 후</td></tr>
+<tr><td>곰팡이 제거</td><td>전용 스프레이 처리 + 건조</td><td>발견 즉시</td></tr>
+<tr><td>제습기 가동</td><td>북향 방·지하·욕실 근처</td><td>고습도 지속 시</td></tr>
+<tr><td>외벽·지붕 점검</td><td>크랙·코킹 노화 확인</td><td>9월 중</td></tr>
+<tr><td>창틀 결로 방지</td><td>흡수 테이프·서큘레이터</td><td>기온 차 커지기 전</td></tr>
+<tr><td>가을 환기 루틴</td><td>주 1~2회, 오전 집중 환기</td><td>9~10월</td></tr>
+</table>
+
+<h2>10 | 자주 묻는 질문</h2>
+
+<strong>Q. 이미 곰팡이가 눈에 보이는데 직접 제거하면 되나요?</strong><br>
+범위가 작고 표면에 국한된 경우(타일 줄눈, 벽지 표면)라면 직접 처리가 가능합니다. 곰팡이가 벽지 전체나 단열재 안쪽까지 퍼진 경우는 전문 업체 의뢰를 권장합니다. 반복적으로 재발하는 곰팡이는 구조적 문제일 가능성이 높습니다.<br><br>
+
+<strong>Q. 제습기 없이도 관리가 가능한가요?</strong><br>
+네, 자연 환기만으로도 충분한 경우가 많습니다. 다만 북향 방이나 지하 공간은 자연 환기 효율이 낮으므로 제습기가 효과적입니다. 없다면 숯·제습제 팩을 옷장·신발장에 넣어두는 것도 보조 수단이 됩니다.<br><br>
+
+<strong>Q. 목재 마루에 곰팡이가 생겼는데 어떻게 하나요?</strong><br>
+마루 표면은 70% 이상의 알코올 또는 목재용 방균 스프레이로 처리합니다. 마루 아래에서 올라오는 곰팡이라면 바닥재 하부 구조 점검이 필요합니다. 마루 시공 전문 업체에 문의하는 것이 좋습니다.<br><br>
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260818/house_lawn_fall_maintenance.html">전원주택 가을 잔디 관리 시기와 월동 준비 — 직파·비료 주는 순서와 제초 타이밍</a></li>
+<li><a href="../260818/travel_suncheonman_reeds_season.html">순천만 갈대밭 언제 절정인가 — 가을 생태탐방 코스와 국가정원 연계 일정</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#전원주택곰팡이</span>
+<span class="tag">#장마후관리</span>
+<span class="tag">#전원주택습기</span>
+<span class="tag">#곰팡이제거</span>
+<span class="tag">#전원주택관리</span>
+<span class="tag">#실내결로</span>
+<span class="tag">#환기방법</span>
+<span class="tag">#제습기활용</span>
+<span class="tag">#여름후관리</span>
+<span class="tag">#전원주택체크리스트</span>
+</div>
+</body>
+</html>
