@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>여행 사진 정리하는 법 — 스마트폰·구글포토·앨범 자동화까지 실전 가이드</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>여행 사진 정리하는 법 — 스마트폰·구글포토·앨범 자동화까지 실전 가이드</h1>
+<div class="intro-box">
+여행을 다녀오면 수백 장의 사진이 쌓이지만, 정작 나중에 찾아보기가 힘들고 저장 공간만 차지합니다. 귀찮아서 미루다 보면 어느새 몇 년 치 사진이 뒤섞여 버리는 경험, 다들 한 번쯤 있으실 겁니다. 이 글에서는 여행 직후 바로 실천할 수 있는 사진 정리법 — 스마트폰 앨범 구성, 구글포토 활용, 불필요한 사진 빠르게 삭제하는 방법, 장기 보관 전략까지 단계별로 정리합니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260820/7_photosort_1.png</span></div>
+<pre class="prompt-text" id="prompt-7-1">Person sitting comfortably at home organizing travel photos on a smartphone, Google Photos app visible on screen, smiling while sorting beautiful travel images. Warm home atmosphere. Photorealistic, 1:1 aspect ratio.</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-7-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">구글포토로 여행 사진을 정리하는 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 여행 사진 정리가 늦어지는 이유</h2>
+
+여행 직후 사진 정리를 미루는 가장 큰 이유는 <strong>'나중에 한꺼번에 하겠다'는 생각</strong>입니다. 하지만 시간이 지날수록 어디서 찍은 사진인지 기억이 흐려지고, 정리 부담은 더 커집니다. 사진 관련 앱들의 자동 백업과 AI 분류 기능을 활용하면 수작업 부담을 크게 줄일 수 있습니다.<br><br>
+
+사진 정리의 핵심은 완벽하게 분류하는 것보다 <strong>'나중에 쉽게 찾을 수 있는 구조'</strong>를 만드는 것입니다. 촬영 날짜·장소 기반 폴더 구조와 앨범 이름 규칙만 정해도 훨씬 편리해집니다.
+
+<h2>02 | 여행 직후 30분 안에 해야 할 것</h2>
+
+<div class="step-box">
+<strong>Step 1. 명백한 실패 사진 즉시 삭제</strong><br>
+흔들린 사진, 눈 감은 사진, 손가락이 렌즈를 가린 사진은 보는 즉시 삭제합니다. 동일한 구도로 연속으로 찍은 사진은 가장 잘 나온 1~2장만 남기고 나머지는 삭제하세요.
+</div>
+
+<div class="step-box">
+<strong>Step 2. 앨범 이름 정하기</strong><br>
+스마트폰 앨범에 '2026_08_제주도' 또는 '260812_강릉_경포대' 형식으로 앨범을 만들어 두면 나중에 찾기 쉽습니다. 날짜를 앞에 붙이면 자동으로 시간순 정렬이 됩니다.
+</div>
+
+<div class="step-box">
+<strong>Step 3. 구글포토 백업 확인</strong><br>
+Wi-Fi 연결 상태에서 구글포토 자동 백업이 완료되었는지 확인합니다. 백업이 완료되면 스마트폰 내부 저장공간의 원본을 삭제하거나 이동해도 사진은 클라우드에 안전하게 보관됩니다.
+</div>
+
+<h2>03 | 구글포토 100% 활용법</h2>
+
+구글포토는 여행 사진 관리에 가장 편리한 앱 중 하나입니다. 주요 기능과 활용 팁을 정리합니다.<br><br>
+
+<strong>① 자동 백업</strong>: 설정 → 백업 → '백업 켜기'를 활성화합니다. 충전 중·Wi-Fi 연결 시에만 백업하도록 설정하면 데이터와 배터리를 아낄 수 있습니다. 고화질 백업은 구글 계정 저장 용량(기본 15GB)을 소모하므로, 100GB 이상 유료 플랜이나 무손실 대신 '저장 용량 절약 화질' 설정을 선택하는 것도 방법입니다.<br><br>
+
+<strong>② AI 앨범 자동 생성</strong>: 구글포토는 얼굴·장소·날짜별로 자동 앨범을 만들어 줍니다. '추억' 기능에서는 1년 전·5년 전 여행 사진을 자동으로 보여주어 추억을 되살리게 합니다.<br><br>
+
+<strong>③ 검색 기능</strong>: 구글포토 검색창에 '바다', '산', '강릉', '개' 등 키워드를 입력하면 해당 장면의 사진을 자동으로 걸러줍니다. 별도 태그를 달지 않아도 AI가 피사체를 인식합니다.
+
+<h2>04 | 중복·유사 사진 대량 정리 앱</h2>
+
+비슷한 구도로 수십 장씩 찍은 사진을 일일이 지우기 번거로울 때는 유사 사진 자동 선별 앱을 활용하면 편리합니다.<br><br>
+
+<table class="info-table">
+<tr><th>앱 이름</th><th>플랫폼</th><th>특징</th></tr>
+<tr><td>Google Photos</td><td>iOS/Android</td><td>유사 사진 그룹화, AI 선별</td></tr>
+<tr><td>Gemini in Photos</td><td>Android</td><td>버스트 사진 자동 정리</td></tr>
+<tr><td>Cleaner for Photos</td><td>iOS</td><td>중복·스크린샷 일괄 삭제</td></tr>
+<tr><td>Remo Duplicate Photos</td><td>iOS/Android</td><td>유사도 기준 그룹 삭제</td></tr>
+</table>
+
+앱을 사용할 때는 삭제 전 반드시 구글포토 등 클라우드 백업이 완료되었는지 확인하세요. 한 번 삭제된 사진은 복구가 어렵습니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260820/7_photosort_2.png</span></div>
+<pre class="prompt-text" id="prompt-7-2">Photo album or photo book printed from travel photos, laid open on a wooden table showing beautiful Korean travel destination photos. Making memories tangible, scrapbook aesthetic. Photorealistic, warm tones, 1:1 aspect ratio.</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-7-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">여행 사진으로 만든 포토북 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 장기 보관 전략</h2>
+
+클라우드 백업 외에 <strong>외장 SSD나 NAS(가정용 서버)</strong>에도 원본을 보관하면 이중 안전망이 됩니다. 구글·애플 계정 해킹이나 서비스 종료 같은 예기치 못한 상황에 대비할 수 있습니다.<br><br>
+
+연도별 폴더 구조(예: 2026 > 02_강원 > 0815_정선민둥산)를 외장 드라이브에 만들어 두면 PC에서도 빠르게 탐색할 수 있습니다. 외장 SSD 가격은 1TB 기준 6만~10만원 수준으로 부담이 낮습니다.
+
+<h2>06 | 사진 정리 후 활용하기</h2>
+
+정리한 여행 사진을 그냥 앨범에 두기 아쉽다면 다양하게 활용할 수 있습니다.<br><br>
+
+<strong>① 포토북 제작</strong>: 스냅스·포토몬·핀즐 등에서 디지털 사진을 인화해 책으로 만들어 줍니다. 가족 여행 포토북은 좋은 기념품이 됩니다.<br><br>
+
+<strong>② SNS 업로드</strong>: 인스타그램·카카오스토리에 선별한 Best 10장만 올리는 것이 피드를 깔끔하게 유지하는 요령입니다.<br><br>
+
+<strong>③ 배경화면·캘린더</strong>: 가장 잘 나온 사진 1장을 스마트폰 배경화면으로 설정하거나, 사진 캘린더(월별로 사진이 들어가는 탁상 캘린더)를 연말에 제작해 선물용으로 사용할 수 있습니다.
+
+<div class="tip-box">
+💡 <strong>사진 정리 루틴 만들기:</strong> 여행에서 돌아온 당일 저녁 30분을 '사진 정리 시간'으로 고정해 두면 부담 없이 습관을 만들 수 있습니다. 완벽하게 정리하려 하지 말고, 먼저 명백한 실패 사진만 지우고 앨범 이름만 붙이는 것에서 시작하세요.
+</div>
+
+<h2>07 | 용량 관리 — 스마트폰 저장 공간 확보하기</h2>
+
+구글포토 백업이 완료된 사진은 스마트폰에서 삭제해 저장 공간을 확보할 수 있습니다. 구글포토 앱 → '더보기' → '기기 공간 확보' 기능을 사용하면 클라우드에 이미 백업된 사진을 한 번에 기기에서 삭제해 줍니다. 이 기능을 활용하면 스마트폰 내부 저장 공간을 수 GB씩 확보할 수 있습니다.<br><br>
+
+애플 아이폰 사용자는 '설정 → Apple ID → iCloud → 사진 → iCloud 사진 켜기'로 아이클라우드 자동 백업을 설정하고, '저장 공간 최적화' 옵션을 활성화하면 기기에는 저해상도 미리보기만 남기고 원본은 클라우드에서 불러오는 방식으로 공간을 절약할 수 있습니다.
+
+<div class="info-box">
+📷 <strong>여행 사진 정리 핵심 루틴</strong><br><br>
+① 귀가 직후: 명백한 실패 사진 즉시 삭제<br>
+② 앨범 이름 규칙: YYYYMM_지역명 형식 통일<br>
+③ 구글포토/아이클라우드 백업 완료 확인<br>
+④ 중복 사진 정리 앱으로 유사 사진 일괄 정리<br>
+⑤ 장기 보관: 외장 SSD 이중 백업 추천<br>
+⑥ 기기 공간 확보: 구글포토 '기기 공간 확보' 주기적 실행
+</div>
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260820/travel_paju_imjingang_cosmos.html">파주 임진강변 코스모스 & 율곡습지공원 가을 나들이 완전 정리</a></li>
+<li><a href="../260820/travel_gangneung_ojukheon_fall.html">강릉 오죽헌·경포호·안목커피거리 가을 여행 — 초가을 당일치기 완전 정리</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#여행사진정리</span>
+<span class="tag">#구글포토활용</span>
+<span class="tag">#스마트폰사진정리</span>
+<span class="tag">#사진백업</span>
+<span class="tag">#중복사진삭제</span>
+<span class="tag">#저장공간확보</span>
+<span class="tag">#포토북만들기</span>
+<span class="tag">#여행사진보관</span>
+<span class="tag">#아이클라우드</span>
+<span class="tag">#구글포토팁</span>
+</div>
+</body>
+</html>

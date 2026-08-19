@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>신차 최초 정기검사 언제 받나 — 시기·비용·검사항목 완전 정리</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>신차 최초 정기검사 언제 받나 — 시기·비용·검사항목 완전 정리</h1>
+<div class="intro-box">
+신차를 구입하면 언제 처음 정기검사를 받아야 하는지 잘 모르는 경우가 많습니다. 최초 검사 기간을 넘기면 과태료가 부과되고, 자동차보험 갱신에도 영향을 줄 수 있습니다. 이 글에서는 신차 최초 정기검사 시기, 검사 유효기간, 검사 비용, 주요 검사항목, 편리하게 예약하는 법까지 실무 중심으로 정리합니다.
+</div>
+
+<h2>01 | 신차 최초 정기검사 시기</h2>
+
+자동차 정기검사 주기는 차량 용도에 따라 다릅니다. 일반 비사업용 승용차(개인 승용)는 최초 검사를 <strong>신규 등록일로부터 4년 이내</strong>에 받아야 합니다. 이후 2년마다 정기검사를 받아야 합니다.<br><br>
+
+<table class="info-table">
+<tr><th>차량 종류</th><th>최초 검사 시기</th><th>이후 주기</th></tr>
+<tr><td>비사업용 승용차</td><td>신규 등록 후 4년 이내</td><td>2년마다</td></tr>
+<tr><td>사업용 승용차(택시 등)</td><td>신규 등록 후 2년 이내</td><td>1년마다</td></tr>
+<tr><td>화물차·특수차</td><td>신규 등록 후 2년 이내</td><td>1년마다</td></tr>
+<tr><td>이륜차</td><td>신규 등록 후 3년 이내</td><td>2년마다</td></tr>
+</table>
+
+정확한 검사 유효기간은 차량등록증(자동차등록증)의 '검사 유효기간' 란에 명시되어 있습니다. 차량등록증을 분실한 경우 교통안전공단 자동차검사 예약 시스템(www.safecar.go.kr)에서 차량번호로 조회할 수 있습니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260820/6_inspection_1.png</span></div>
+<pre class="prompt-text" id="prompt-6-1">Korean car inspection center (자동차 검사소), technician checking a car on a lift, modern garage facility with inspection equipment. Clean professional automotive inspection scene. Photorealistic, 1:1 aspect ratio.</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-6-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">자동차 검사소에서 차량을 점검하는 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>02 | 검사 유효기간과 검사 기간</h2>
+
+검사 유효기간은 '검사를 받아야 하는 만료일'입니다. 이 만료일 <strong>전 31일~만료일 당일까지</strong>가 정기검사를 받을 수 있는 검사 기간입니다. 즉 만료일 한 달 전부터 미리 받을 수 있습니다.<br><br>
+
+<div class="warn-box">
+⚠️ <strong>기간 초과 과태료 주의:</strong> 검사 기간이 지난 후에도 미수검 상태로 운행하면 과태료가 부과됩니다. 3개월 이하 초과 시 2만원, 3개월 초과~6개월 이하 4만원, 그 이상은 가산되는 구조입니다(법 개정 시 변경될 수 있으므로 교통안전공단 공지 확인).
+</div>
+
+검사 기간 이전(만료 31일 초과)에 받은 검사는 '정기검사 조기 수검'으로 처리되지 않으므로 반드시 검사 기간 안에 받아야 합니다. 만료일이 공휴일인 경우 다음 영업일까지 연장됩니다.
+
+<h2>03 | 정기검사 비용</h2>
+
+정기검사 수수료는 교통안전공단 직영 검사소와 지정 정비사업자(사업자 검사소)에 따라 다릅니다.<br><br>
+
+<strong>교통안전공단 직영 검사소 기준(비사업용 승용차):</strong><br>
+• 배기가스 검사 포함 정기검사: 약 25,000~30,000원 (차종·검사 항목에 따라 상이)<br>
+• 이 외에 검사소에 따라 예약비·부가세가 포함되기도 합니다.<br><br>
+
+정확한 수수료는 교통안전공단 자동차검사 예약 시스템(safecar.go.kr)에서 차량번호를 입력하면 사전에 확인할 수 있습니다. 불합격 시 재검사(3시간 이내 재수검)는 추가 비용 없이 가능하나, 재검사 기간(10일)이 지나면 수수료를 다시 납부해야 합니다.
+
+<h2>04 | 주요 검사항목</h2>
+
+정기검사에서 점검하는 주요 항목은 아래와 같습니다.<br><br>
+
+<strong>① 동일성 확인</strong>: 차대번호, 원동기형식, 차량 외형 등이 등록 정보와 일치하는지 확인.<br><br>
+<strong>② 제동 장치</strong>: 제동력, 브레이크 편차 점검. 제동 불량은 가장 흔한 불합격 원인 중 하나.<br><br>
+<strong>③ 배출가스</strong>: CO, HC, PM 등 오염물질 배출량 측정. 경유차는 매연 농도 검사.<br><br>
+<strong>④ 등화 장치</strong>: 전조등 광도 및 방향 점검.<br><br>
+<strong>⑤ 기타</strong>: 타이어 상태, 창유리 선팅 농도, 소음 등.
+
+<div class="tip-box">
+💡 <strong>합격률 높이는 팁:</strong> 검사 전날 타이어 공기압 점검, 엔진오일 교환(이미 교환 주기 지난 경우), 워셔액·냉각수 보충 등을 미리 해두면 불합격 확률을 낮출 수 있습니다. 배출가스 검사는 엔진이 충분히 워밍업된 상태에서 측정이 더 유리합니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260820/6_inspection_2.png</span></div>
+<pre class="prompt-text" id="prompt-6-2">Korean car registration certificate (자동차등록증) close-up showing inspection validity date fields, placed on a car dashboard. Document showing vehicle inspection expiry date clearly. Clean documentary photography, 1:1 aspect ratio.</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-6-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">자동차등록증의 검사 유효기간 확인 방법 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 정기검사 예약 방법</h2>
+
+정기검사는 예약 없이 검사소를 직접 방문할 수도 있지만, 대기 시간을 줄이려면 사전 예약이 유리합니다.<br><br>
+
+<strong>온라인 예약</strong>: 교통안전공단 자동차검사 예약(safecar.go.kr) → 차량번호·검사소·날짜 선택 → 예약 완료. 회원 가입 없이도 비회원 예약 가능.<br><br>
+
+<strong>전화 예약</strong>: 교통안전공단 콜센터(1588-3800). 검사소마다 직통 전화도 있음.<br><br>
+
+<strong>방문 당일</strong>: 차량등록증, 신분증(차량 명의자 방문 시), 자동차보험 가입증명서(일부 검사소)를 지참합니다. 차량 명의자 외 대리인이 방문 시에는 위임장과 명의자 신분증 사본이 필요한 경우도 있으니 사전 확인이 필요합니다.
+
+<h2>06 | 불합격 시 처리 방법</h2>
+
+검사 불합격 시 검사소에서 불합격 사유를 명시한 '검사 결과 통지서'를 발급받습니다. 이를 가지고 정비 업체에서 해당 부분을 수리 후 검사소에 재수검을 받아야 합니다.<br><br>
+
+재수검은 불합격일로부터 <strong>10일 이내</strong>에 같은 검사소 또는 다른 검사소에서 받을 수 있습니다. 10일 이내 재수검은 불합격 항목만 재검사하며, 10일이 지나면 전체 항목을 처음부터 다시 검사해야 합니다.
+
+<div class="info-box">
+🚗 <strong>신차 정기검사 핵심 요약</strong><br><br>
+• 비사업용 승용차: 신규 등록 후 <strong>4년 이내</strong> 최초 검사, 이후 2년마다<br>
+• 검사 기간: 유효기간 만료 <strong>전 31일~만료일 당일</strong><br>
+• 비용: 약 25,000~30,000원 (차종·검사소별 상이)<br>
+• 예약: safecar.go.kr 또는 1588-3800<br>
+• 불합격 시: 10일 이내 재수검(불합격 항목만)
+</div>
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260819/car_rental_scratch_dispute.html">렌터카 반납 시 흠집 분쟁 대처법 — 억울한 수리비 청구 거부하는 법</a></li>
+<li><a href="../260820/local_chuseok_highway_traffic.html">추석 귀성·귀경 고속도로 정체 예측 — 막히는 시간대와 피하는 법</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#신차정기검사</span>
+<span class="tag">#자동차검사시기</span>
+<span class="tag">#최초정기검사</span>
+<span class="tag">#자동차검사비용</span>
+<span class="tag">#자동차검사예약</span>
+<span class="tag">#검사유효기간</span>
+<span class="tag">#자동차검사항목</span>
+<span class="tag">#safecar</span>
+<span class="tag">#교통안전공단</span>
+<span class="tag">#자동차검사불합격</span>
+</div>
+</body>
+</html>
