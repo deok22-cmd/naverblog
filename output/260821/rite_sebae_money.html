@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>세뱃돈 얼마가 적당한가 — 나이별·조카 기준과 봉투 쓰는 법</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>세뱃돈 얼마가 적당한가 — 나이별·조카 기준과 봉투 쓰는 법</h1>
+<div class="intro-box">
+명절 때마다 "올해 세뱃돈을 얼마 줘야 하지?"라는 고민이 생깁니다. 너무 적으면 인색해 보이고, 너무 많으면 부담스럽습니다. 주변 어른과 비교해도 금액이 제각각이라 기준을 잡기 어렵습니다.<br><br>
+이 글에서는 나이별·관계별 일반적인 기준금액과 세뱃돈 봉투 쓰는 법, 주의할 에티켓을 정리합니다. 법이나 공식 규정이 있는 것이 아니라 사회적 관례이므로, 상황과 관계에 따라 유연하게 참고하세요.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260821/4_sebae_money_1.png</span></div>
+<pre class="prompt-text" id="prompt-4-1">Korean New Year traditional scene, child in hanbok receiving white envelope sebae money from grandparents, warm family living room, traditional Korean lunar new year atmosphere, photorealistic, ultra high detail, soft natural light, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-4-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">한복 입은 아이가 어른에게 세배 후 세뱃돈을 받는 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 세뱃돈이란? 언제, 누가 주나?</h2>
+
+세뱃돈은 설날에 어른에게 세배를 드린 후 어른이 아이에게 주는 덕담과 함께 건네는 돈입니다. 본래 복과 덕담을 전하는 의미가 있으며, 금액 자체보다 <strong>마음과 인사가 중심</strong>입니다.<br><br>
+
+<strong>주는 주체</strong>는 일반적으로 <strong>미혼이거나 자녀가 없는 성인 이상</strong>이 조카나 어린 친척에게 줍니다. 결혼한 부모라면 다른 어른에게 받은 세뱃돈을 자녀에게 전달하는 방식이 많습니다. 조부모·외조부모는 손자녀에게, 삼촌·이모·고모·외삼촌은 조카에게 주는 것이 일반적입니다.<br><br>
+
+<strong>받는 대상</strong>은 보통 초등학생 이하가 주요 대상이며, 중학생·고등학생까지 주는 경우도 많습니다. 대학생·성인은 가정마다 차이가 있으며, 취업 전까지 주는 경우도 있습니다.
+
+<h2>02 | 나이별 세뱃돈 기준 금액 — 일반적인 관례</h2>
+
+아래 금액은 법적 기준이 없는 <strong>일반적 관례</strong>이며, 지역·가정·소득 수준에 따라 크게 다를 수 있습니다.<br><br>
+
+<table class="info-table">
+<tr><th>나이대</th><th>일반 기준 (참고용)</th><th>비고</th></tr>
+<tr><td>미취학 (6세 이하)</td><td>1만 원</td><td>금액보다 행위가 중심. 용돈 개념</td></tr>
+<tr><td>초등 저학년 (7~9세)</td><td>1~3만 원</td><td>대부분 1~2만 원 선</td></tr>
+<tr><td>초등 고학년 (10~12세)</td><td>3~5만 원</td><td>용돈 감각이 생기는 시기</td></tr>
+<tr><td>중학생 (13~15세)</td><td>5~10만 원</td><td>가정·관계에 따라 편차 큼</td></tr>
+<tr><td>고등학생 (16~18세)</td><td>5~10만 원</td><td>일부는 종료하기도 함</td></tr>
+<tr><td>대학생~미취업 성인</td><td>주지 않거나 5~10만 원</td><td>가정마다 상이, 관례 없음</td></tr>
+</table>
+
+<div class="tip-box">
+💡 세뱃돈 금액은 꼭 위 기준에 맞출 필요가 없습니다. 형편에 맞게, 관계의 친밀도에 맞게 조절하는 것이 자연스럽습니다. 조카가 많거나 가정 형편이 어렵다면 1만 원도 충분합니다. 금액보다 따뜻한 덕담 한마디가 기억에 오래 남습니다.
+</div>
+
+<h2>03 | 조카 기준으로 얼마가 적당한가</h2>
+
+삼촌·이모·고모 입장에서 조카에게 주는 세뱃돈은 <strong>관계의 친밀도와 형편</strong>이 기준이 됩니다.<br><br>
+
+조카가 1~2명이라면 초등학생 기준 3~5만 원이 무난합니다. 조카가 4~5명으로 많다면 1~2만 원으로 낮추거나, 각 가정과 미리 상의해 일괄 기준을 정하는 것이 서로 편합니다.<br><br>
+
+형제자매 사이에서 내 조카와 상대방 조카를 교환하는 형태라면, 비슷한 금액으로 맞추는 것이 불필요한 불편함을 방지합니다. 특히 형제자매 간에 아이 나이가 비슷하면, 미리 금액을 정해두는 게 가장 깔끔합니다.<br><br>
+
+<strong>사례</strong>: 초등학생 조카 3명이 있고 미혼인 삼촌 입장이라면, 각 3만 원씩 = 9만 원이 현실적인 선입니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260821/4_sebae_money_2.png</span></div>
+<pre class="prompt-text" id="prompt-4-2">Traditional Korean white envelopes (sebae money envelopes) with Korean calligraphy on a wooden table, new year's preparation, clean minimal composition, folded crisp bills inside visible envelope, photorealistic, soft warm light, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-4-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">세뱃돈 봉투와 지폐 준비 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>04 | 세뱃돈 봉투 쓰는 법 — 겉봉·내지 작성 요령</h2>
+
+세뱃돈을 그냥 건네도 되지만, 흰색 봉투에 담아 건네는 것이 격식 있는 방식입니다.<br><br>
+
+<strong>봉투 앞면</strong>: "세뱃돈" 또는 "복돈"이라고 씁니다. 받는 사람 이름을 쓰는 경우도 있습니다.<br>
+<strong>봉투 뒷면</strong>: 이름을 쓰거나 "삼촌이" "이모가" 등 관계를 간단히 씁니다.<br>
+<strong>지폐 방향</strong>: 지폐가 봉투를 열었을 때 숫자가 보이도록 넣는 것이 관례입니다. 구겨진 지폐보다 새 지폐를 미리 은행에서 교환해두면 더욱 정성스럽습니다.<br><br>
+
+<div class="info-box">
+📌 세뱃돈 봉투는 문구점이나 대형마트에서 '세뱃돈 봉투' 또는 '복돈 봉투'로 구매할 수 있습니다. 명절 2~3주 전부터 판매합니다. 은행 신권 교환은 설 직전 2~3주 전에 창구에서 가능하지만 빨리 소진되므로 미리 가세요.
+</div>
+
+<h2>05 | 세뱃돈 대신 다른 방법으로 주는 경우</h2>
+
+현금 대신 다른 형태로 세뱃돈을 전하는 방법도 있습니다.<br><br>
+
+<strong>계좌이체</strong>: 비대면 명절 상황이나 멀리 사는 조카에게는 계좌로 이체하면서 문자 메시지로 "세뱃돈이야"라고 전달합니다. 카카오페이·토스로 즉시 전송도 가능합니다.<br><br>
+<strong>저금통 or 저축 선물</strong>: 어린 아이에게 돼지저금통과 현금을 함께 주거나, 아이 명의 저축 상품에 넣어주는 부모도 있습니다.<br><br>
+<strong>문화상품권·기프티콘</strong>: 청소년 조카라면 문화상품권, 게임 상품권, 편의점 기프티콘으로 대체하는 것도 실용적이어서 좋아합니다.
+
+<h2>06 | 세뱃돈 주지 않아도 되는 상황은?</h2>
+
+세뱃돈은 의무가 아닙니다. 다음 상황에서는 주지 않거나 줄여도 사회적으로 이해되는 경우가 많습니다.<br><br>
+
+① <strong>경제적으로 어려운 상황</strong>: 솔직하게 형제자매에게 미리 이야기하면 갈등을 줄일 수 있습니다.<br>
+② <strong>상대방 아이가 성인이 된 경우</strong>: 취업한 조카에게는 역으로 조카가 주는 것이 자연스럽습니다.<br>
+③ <strong>형제자매 간 합의로 생략하기로 한 경우</strong>: 서로 부담스럽다면 미리 "올해부터 우리 세뱃돈 없애자"고 합의하면 됩니다.
+
+<h2>07 | 추석 용돈과 세뱃돈의 차이 — 추석에도 주나?</h2>
+
+설날 세뱃돈과 달리, <strong>추석에는 세배 풍습이 없어 세뱃돈의 관례도 없습니다.</strong> 그러나 일부 가정에서는 추석에도 조카에게 용돈을 건네는 경우가 있습니다.<br><br>
+
+추석 용돈은 금액이나 방식에 관례가 없으므로 완전히 가정 사정에 따릅니다. 주고 싶다면 주고, 그렇지 않아도 전혀 이상하지 않습니다. 설날 세뱃돈과 같은 사회적 기대가 없으므로 부담 가질 필요가 없습니다.
+
+<h2>08 | 세뱃돈 받은 아이 교육 — 어떻게 활용하나</h2>
+
+아이들이 받은 세뱃돈을 어떻게 활용하느냐도 부모의 고민입니다.<br><br>
+
+<strong>전액 저축 방식</strong>: 세뱃돈 전액을 아이 명의 통장에 넣어주는 가정이 많습니다. 아이가 나중에 크면 목돈이 됩니다.<br>
+<strong>일부 자유·일부 저축</strong>: 예를 들어 5만 원 중 1만 원은 아이가 쓰고 4만 원은 저축하는 방식. 용돈 관리 습관을 기르는 데 효과적입니다.<br>
+<strong>아이에게 결정권 주기</strong>: 초등 고학년이라면 "어떻게 쓸지 직접 계획 세워봐"라고 하면 금융교육이 됩니다.
+
+<h2>09 | 정리 — 세뱃돈 핵심 체크리스트</h2>
+
+<div class="step-box">
+<strong>✅ 세뱃돈 준비 체크리스트</strong><br><br>
+① 금액은 나이·관계·형편에 맞게 (미취학 1만, 초등 1~5만, 중고생 5~10만 참고)<br><br>
+② 조카가 여럿이면 형제자매와 미리 금액 기준 합의<br><br>
+③ 새 지폐를 명절 2~3주 전 은행에서 교환<br><br>
+④ 봉투는 '세뱃돈'·'복돈' 흰 봉투, 지폐 방향 숫자 보이게<br><br>
+⑤ 비대면이면 계좌이체 + 문자로 "세뱃돈이야" 전달<br><br>
+⑥ 금액보다 덕담 한마디가 더 기억에 남는다
+</div>
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260820/rite_birthday_parents_gift.html">부모님 생신 선물 고르는 법 — 연령·취향별 추천과 예산 기준</a></li>
+<li><a href="../260820/local_chuseok_highway_traffic.html">추석 귀성·귀경 고속도로 정체 예측 — 2026 추석 연휴 막히는 시간대와 피하는 법</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#세뱃돈</span>
+<span class="tag">#세뱃돈얼마</span>
+<span class="tag">#세뱃돈기준</span>
+<span class="tag">#설날세뱃돈</span>
+<span class="tag">#조카세뱃돈</span>
+<span class="tag">#세뱃돈봉투</span>
+<span class="tag">#명절용돈</span>
+<span class="tag">#세배</span>
+<span class="tag">#설날준비</span>
+<span class="tag">#경조사에티켓</span>
+</div>
+</body>
+</html>

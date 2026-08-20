@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>무생채 물 안 나오게 무치는 순서 — 소금 절임 시간과 양념 넣는 타이밍</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #e64a19; padding-bottom: 12px; color: #bf360c; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #fbe9e7; padding: 12px 15px; border-left: 6px solid #e64a19; margin-top: 50px; color: #bf360c; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #bf360c; margin: 24px 0 8px; }
+  .intro-box { background: #fffaf8; border: 2px solid #ffccbc; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #e64a19; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #fff5f2; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #ffccbc; border-radius: 8px; padding: 20px; background: #fffaf8; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #e64a19; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #e64a19; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #fffaf8; border: 1px solid #ffccbc; border-left: 4px solid #e64a19; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #e64a19; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#c0392b';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#e64a19'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>무생채 물 안 나오게 무치는 순서 — 소금 절임 시간과 양념 넣는 타이밍</h1>
+<div class="intro-box">
+무생채를 담그면 얼마 지나지 않아 물이 잔뜩 생겨 양념이 묽어지는 경험, 한 번쯤 해보셨을 겁니다. 무는 수분이 많은 채소라 조건이 맞지 않으면 물이 빠지는 것은 당연합니다. 그런데 <strong>소금 절임 시간·짜기 방법·양념 순서</strong>를 제대로 지키면 훨씬 덜 물이 나오는 무생채를 만들 수 있습니다.<br><br>
+이 글에서는 무생채에서 물이 나오는 이유와, 물을 최소화하는 재료 손질·양념 순서를 단계별로 정리합니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260821/6_radish_salad_1.png</span></div>
+<pre class="prompt-text" id="prompt-6-1">Korean white radish (daikon) being julienned into thin strips on a wooden cutting board, fresh radish, kitchen preparation, close-up food photography, photorealistic, ultra high detail, natural soft light, appetizing, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-6-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">채 썬 무를 소금에 절이기 위해 준비하는 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 무생채에서 물이 나오는 이유</h2>
+
+무는 약 94%가 수분으로 이루어진 채소입니다. 소금이나 설탕 같은 <strong>삼투압 물질</strong>이 닿으면 세포 안의 수분이 빠져나오는 삼투 현상이 일어납니다. 이것이 무에서 물이 나오는 근본적인 이유입니다.<br><br>
+
+문제는 <strong>양념 자체도 삼투 작용을 일으킨다</strong>는 점입니다. 고춧가루·설탕·매실청 등 양념을 넣으면 무에서 다시 수분이 더 빠집니다.<br><br>
+
+따라서 물을 최소화하려면 두 가지가 핵심입니다:<br>
+① 양념 전에 소금 절임으로 수분을 미리 충분히 뺀다<br>
+② 뺀 수분을 완전히 짜낸 뒤 양념을 넣는다
+
+<h2>02 | 재료 준비 — 채 써는 굵기와 방향</h2>
+
+<strong>채 굵기</strong>: 너무 얇으면 절일 때 뭉개지고, 너무 두꺼우면 절임이 느립니다. <strong>0.3~0.4cm 두께</strong>의 채가 적당합니다.<br><br>
+
+<strong>채 방향</strong>: 무의 결(세로 방향)에 맞춰 써야 식감이 아삭하게 유지됩니다. 무 결을 가로로 끊는 방향으로 썰면 절일 때 쉽게 물러집니다.<br><br>
+
+<strong>무 선택</strong>: 수분이 너무 많은 봄 무보다 <strong>가을·겨울 무</strong>가 단단하고 단맛이 있어 생채에 더 어울립니다. 무르거나 속이 비어 있는 무는 피합니다.
+
+<h2>03 | 소금 절임 시간 — 얼마나 절여야 하나</h2>
+
+소금 절임은 무생채 성패를 가르는 핵심 단계입니다.<br><br>
+
+<strong>소금 양</strong>: 무 500g 기준, 소금 1작은술(약 5g) 정도가 일반적입니다. 너무 많으면 짜지고, 너무 적으면 수분이 덜 빠집니다.<br><br>
+
+<strong>절임 시간</strong>:<br>
+- <strong>최소 10분</strong>: 어느 정도 수분 제거 가능하지만 불완전<br>
+- <strong>15~20분</strong>: 가장 권장되는 시간. 수분이 충분히 빠지되 무가 물러지지 않음<br>
+- <strong>30분 이상</strong>: 수분은 더 빠지지만 무가 지나치게 숨이 죽어 식감 저하<br><br>
+
+<div class="tip-box">
+💡 절임 중간(7~10분)에 한 번 뒤집어주면 소금이 고르게 배어 수분이 골고루 빠집니다.
+</div>
+
+<h2>04 | 수분 짜는 방법 — 이 단계가 제일 중요</h2>
+
+소금에 절인 무에서 나온 물을 완전히 제거해야 합니다. 이 과정이 부족하면 아무리 절임을 잘해도 나중에 물이 생깁니다.<br><br>
+
+<strong>올바른 짜는 방법</strong>:<br>
+① 절인 무를 체에 건져 물기를 뺍니다<br>
+② <strong>두 손으로 힘껏 꽉 짭니다</strong> — 한 번이 아니라 두세 번 반복<br>
+③ 짠 후에는 키친타월이나 면포로 한 번 더 눌러 남은 수분을 제거합니다<br><br>
+
+<strong>틀린 방법</strong>:<br>
+× 물에 씻어서 소금기를 빼는 것 — 절임 효과가 사라지고 더 많은 물이 배어듦<br>
+× 가볍게 눌러만 짜는 것 — 내부 수분이 남아 나중에 물이 나옴
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260821/6_radish_salad_2.png</span></div>
+<pre class="prompt-text" id="prompt-6-2">Beautifully plated Korean radish salad (musaengchae) in a white bowl, bright red from gochugaru seasoning, fresh garnish of sesame seeds and green onions, Korean side dish, food photography, photorealistic, ultra high detail, top-down angle, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-6-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">완성된 무생채 — 양념이 고루 배어 윤기 있는 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 양념 넣는 순서 — 순서가 틀리면 물이 생긴다</h2>
+
+짠 무에 양념을 넣는 순서도 물 생성에 영향을 줍니다.<br><br>
+
+<strong>권장 순서</strong>:<br>
+1. 고춧가루를 먼저 넣고 버무린다 (고춧가루가 무 표면에 코팅을 형성해 수분 이동을 일부 막음)<br>
+2. 마늘·생강(간 것)을 넣고 버무린다<br>
+3. 액젓(멸치액젓 또는 까나리액젓)을 조금씩 넣으며 간을 맞춘다<br>
+4. 설탕·매실청은 <strong>가장 마지막</strong>에 넣는다 (삼투 작용이 강해 일찍 넣으면 물이 더 많이 나옴)<br>
+5. 참기름·깨는 완전히 마지막에<br><br>
+
+<div class="info-box">
+📌 설탕·매실청을 나중에 넣는 이유: 당분은 삼투압이 높아 무에서 수분을 많이 뺍니다. 이미 수분이 빠진 상태에서 마지막에 넣으면 물 생성이 훨씬 줄어듭니다.
+</div>
+
+<h2>06 | 기본 양념 비율 — 무 500g 기준</h2>
+
+<table class="info-table">
+<tr><th>재료</th><th>양 (무 500g 기준)</th><th>비고</th></tr>
+<tr><td>고춧가루</td><td>1.5~2큰술</td><td>기호에 따라 조절</td></tr>
+<tr><td>다진 마늘</td><td>1큰술</td><td></td></tr>
+<tr><td>멸치액젓 (또는 새우젓)</td><td>1큰술</td><td>간 조절용</td></tr>
+<tr><td>설탕</td><td>1/2~1큰술</td><td>마지막에 넣기</td></tr>
+<tr><td>매실청 (선택)</td><td>1큰술</td><td>마지막에 넣기</td></tr>
+<tr><td>참기름</td><td>1작은술</td><td>완성 직전</td></tr>
+<tr><td>깨소금</td><td>적당량</td><td>완성 직전</td></tr>
+<tr><td>파 (선택)</td><td>1/4대</td><td>채 썰어 넣기</td></tr>
+</table>
+
+간은 소금이 아닌 <strong>액젓으로 조절</strong>하는 것이 풍미가 더 풍부합니다.
+
+<h2>07 | 만들고 나서도 물이 생기는 이유 — 보관 팁</h2>
+
+양념을 잘 해도 냉장고에 보관하다 보면 물이 생기는 경우가 있습니다. 이건 어느 정도 자연스러운 현상입니다.<br><br>
+
+<strong>보관 팁</strong>:<br>
+① 완성 직후 먹는 것이 가장 물이 적습니다<br>
+② 냉장 보관 시 밀폐용기에 담아 2~3일 이내 섭취<br>
+③ 보관 중 생긴 물은 쏟아내고 참기름·깨를 다시 조금 넣으면 됩니다<br>
+④ 파나 쪽파를 미리 많이 넣으면 물이 더 생기므로, 먹을 때마다 조금씩 추가하는 방법도 있습니다
+
+<h2>08 | 아삭한 식감을 오래 유지하는 추가 팁</h2>
+
+<strong>얼음물에 담갔다 짜기</strong>: 절임 전에 채 썬 무를 얼음물에 5분 정도 담가두면 세포가 수축되어 아삭함이 더 오래 유지됩니다. 단, 이 경우 이후 소금 절임을 충분히 해야 합니다.<br><br>
+<strong>무침 후 바로 냉장 보관</strong>: 완성 후 상온에 오래 두면 수분이 더 많이 빠집니다. 만들자마자 바로 냉장 보관하세요.<br><br>
+<strong>적은 양 자주 만들기</strong>: 한 번에 대량 만들어 오래 보관하면 물이 많아집니다. 2~3인분씩 자주 만드는 것이 최상의 식감을 유지하는 방법입니다.
+
+<h2>09 | 정리 — 무생채 물 안 나오게 하는 핵심 순서</h2>
+
+<div class="step-box">
+<strong>✅ 무생채 핵심 순서 요약</strong><br><br>
+1️⃣ 무를 0.3~0.4cm 결 방향으로 채 썬다<br><br>
+2️⃣ 소금 1작은술 넣고 15~20분 절임 (7~10분에 한 번 뒤집기)<br><br>
+3️⃣ 두 손으로 꽉 짜서 물기 완전 제거 (두세 번 반복)<br><br>
+4️⃣ 고춧가루 → 마늘·생강 → 액젓 순으로 버무림<br><br>
+5️⃣ 설탕·매실청은 가장 마지막에 (삼투 작용 최소화)<br><br>
+6️⃣ 참기름·깨는 완전히 마지막에 넣고 완성
+</div>
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260820/travel_chungju_apple_harvest.html">충주 사과 수확 체험 농장 — 9월 하순 체험 일정과 예약 방법</a></li>
+<li><a href="../260820/local_chuseok_highway_traffic.html">추석 귀성·귀경 고속도로 정체 예측 — 막히는 시간대와 피하는 법</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#무생채</span>
+<span class="tag">#무생채물안나오게</span>
+<span class="tag">#무생채만들기</span>
+<span class="tag">#무생채레시피</span>
+<span class="tag">#무생채절임</span>
+<span class="tag">#한식반찬</span>
+<span class="tag">#명절음식</span>
+<span class="tag">#무나물</span>
+<span class="tag">#추석음식</span>
+<span class="tag">#요리팁</span>
+</div>
+</body>
+</html>

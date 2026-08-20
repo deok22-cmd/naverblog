@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에어컨 냄새 셀프청소로 안 없어질 때 — 전문 청소 불러야 하는 신호 5가지</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .signal-box { background: #fff; border: 2px solid #388e3c; border-radius: 8px; padding: 20px; margin: 20px 0; }
+  .signal-item { padding: 10px 0; border-bottom: 1px dashed #c8e6c9; }
+  .signal-item:last-child { border-bottom: none; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>에어컨 냄새 셀프청소로 안 없어질 때 — 전문 청소 불러야 하는 신호 5가지</h1>
+<div class="intro-box">
+에어컨에서 퀴퀴한 냄새가 날 때 필터 청소를 해봤는데도 냄새가 계속 난다면, 이미 셀프청소의 한계를 넘어선 것일 수 있습니다. 에어컨 냄새의 원인이 필터가 아니라 <strong>열교환기(핀)·드레인팬·팬 날개 내부</strong>에 있다면, 외부에서 세척하는 셀프청소로는 해결이 어렵습니다.<br><br>
+이 글에서는 에어컨 냄새의 원인별 구분법과 전문 청소를 불러야 하는 신호 5가지를 정리합니다. 폭염이 막바지로 접어드는 이 시기, 에어컨을 정상화해두면 남은 더위도, 내년 여름도 쾌적하게 대비할 수 있습니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260821/7_aircon_smell_1.png</span></div>
+<pre class="prompt-text" id="prompt-7-1">Professional HVAC technician cleaning an indoor air conditioner unit in a Korean apartment, wearing gloves and mask, opening the front panel, specialized cleaning equipment visible, photorealistic, ultra high detail, bright clean room, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-7-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">전문 기사가 에어컨 내부를 분해하여 청소하는 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 에어컨 냄새의 주요 원인 — 어디서 나는가</h2>
+
+에어컨 냄새는 크게 세 가지 구조에서 발생합니다.<br><br>
+
+<strong>① 필터</strong>: 먼지·곰팡이 포자가 쌓여 퀴퀴한 냄새. 셀프청소로 해결 가능한 경우가 많음.<br><br>
+<strong>② 열교환기(핀, Fin)</strong>: 냉각 과정에서 결로수가 생기고, 핀 사이사이에 곰팡이·슬라임이 자라면 강한 곰팡이 냄새가 발생. 핀은 외부에서 직접 닦기 어려워 전문 장비 필요.<br><br>
+<strong>③ 드레인팬·드레인 호스</strong>: 물이 고이는 배수 팬에 슬라임·곰팡이가 번식. 배수 호스가 막히면 물이 고여 썩은 냄새가 심해짐.<br><br>
+<strong>④ 팬 날개(블로우 팬)</strong>: 바람을 만들어내는 원통형 팬에 곰팡이가 피면 냄새가 바람과 함께 직접 방 안으로 퍼짐.
+
+<h2>02 | 셀프청소로 해결 가능한 경우 — 필터와 겉면</h2>
+
+다음 상황은 셀프청소로 충분히 해결 가능합니다.<br><br>
+
+<strong>필터 청소</strong>: 2~4주에 한 번 필터를 꺼내 흐르는 물에 씻고 완전히 건조 후 재장착. 곰팡이가 보이면 희석한 식초나 베이킹소다 물로 세척.<br><br>
+<strong>에어컨 내부 분무형 세제 사용</strong>: 시중에 판매하는 '에어컨 내부 청소 스프레이'를 냉각핀 방향으로 분사하고 에어컨을 가동해 드레인으로 흘려내리는 방식. 냄새가 가벼울 때 단기간 효과적.<br><br>
+<strong>실외기 주변 청소</strong>: 실외기 주변 이물질 제거, 흡기구 막힘 여부 점검.
+
+<h2>03 | 전문 청소를 불러야 하는 신호 5가지</h2>
+
+<div class="signal-box">
+
+<div class="signal-item">
+<strong>🔴 신호 1: 필터를 세척해도 3일 이내에 냄새가 다시 남</strong><br>
+필터가 원인이 아니라 열교환기·드레인팬 내부에 곰팡이가 이미 번식한 상태. 셀프 스프레이로도 해결 안 됨.
+</div>
+
+<div class="signal-item">
+<strong>🔴 신호 2: 켜자마자 강한 곰팡이·퀴퀴한 냄새가 1~2분 이상 지속</strong><br>
+팬 날개 또는 열교환기 전체에 곰팡이가 피어있는 것. 바람이 곰팡이 포자를 방 안으로 직접 날림.
+</div>
+
+<div class="signal-item">
+<strong>🔴 신호 3: 에어컨 가동 중 물이 뚝뚝 떨어짐</strong><br>
+드레인팬이 막혀 배수가 안 되는 것. 물이 고이면 슬라임과 세균이 급속도로 번식하고 냄새가 심해짐. 전문 청소 + 드레인 청소 필수.
+</div>
+
+<div class="signal-item">
+<strong>🔴 신호 4: 에어컨 사용 후 눈이 따갑거나 코가 막히는 증상</strong><br>
+곰팡이 포자나 세균이 공기로 방출되고 있다는 신호. 특히 알레르기·비염·천식 환자에게 위험. 즉시 사용 중단 후 전문 청소.
+</div>
+
+<div class="signal-item">
+<strong>🔴 신호 5: 3년 이상 전문 청소를 받지 않은 경우</strong><br>
+아무런 냄새가 나지 않더라도 3년 이상 전문 청소를 받지 않았다면 내부 오염이 상당히 진행된 상태. 예방 차원에서 전문 청소 권장.
+</div>
+
+</div>
+
+<h2>04 | 셀프 스프레이 vs 전문 청소 — 차이점</h2>
+
+<table class="info-table">
+<tr><th>구분</th><th>셀프 스프레이</th><th>전문 청소 업체</th></tr>
+<tr><td>청소 범위</td><td>핀 표면 일부</td><td>핀·팬·드레인팬·호스 전체 분해</td></tr>
+<tr><td>오염 제거율</td><td>표면 오염 30~50%</td><td>내부 오염 90% 이상</td></tr>
+<tr><td>비용</td><td>5,000~15,000원 (제품비)</td><td>벽걸이 5~8만 원, 스탠드 8~12만 원</td></tr>
+<tr><td>효과 지속</td><td>1~2주</td><td>6개월~1년</td></tr>
+<tr><td>적합한 상황</td><td>냄새가 약하고 필터 오염이 원인일 때</td><td>냄새가 강하거나 이전 신호 해당 시</td></tr>
+</table>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260821/7_aircon_smell_2.png</span></div>
+<pre class="prompt-text" id="prompt-7-2">Close-up of a dirty air conditioner evaporator coil fin covered in black mold and dust in a Korean home, before professional cleaning, dramatic contrast showing contamination, photorealistic, macro photography style, ultra high detail, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-7-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">에어컨 열교환기 핀 사이 곰팡이 오염 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 전문 청소 업체 고르는 법 — 이것만 확인하면 된다</h2>
+
+전문 업체는 많지만 수준 차이가 있습니다. 다음 항목을 확인하고 선택하세요.<br><br>
+
+<strong>분해 청소 여부</strong>: 팬(블로우 팬)을 실제로 분리해서 씻는지 확인. "비분해 청소"는 팬을 제자리에 두고 씻는 방식으로 오염 제거가 불완전할 수 있습니다.<br><br>
+<strong>드레인팬·드레인 호스 청소 포함 여부</strong>: 냄새의 핵심 원인인 드레인팬을 청소하는지 확인하세요.<br><br>
+<strong>사용 세제 확인</strong>: 친환경·항균 세제를 사용하는지, 잔류 세제가 제거되는지.<br><br>
+<strong>후기·가격 투명성</strong>: 네이버·카카오 예약 서비스(네이버 예약, 카카오 홈클린 등)에서 실제 사용자 후기를 확인하고, 추가 비용이 발생하는 조건을 사전에 문의하세요.
+
+<h2>06 | 전문 청소 비용 — 2026년 기준 평균</h2>
+
+업체·지역마다 다르지만 참고용으로 확인하세요.<br><br>
+
+<table class="info-table">
+<tr><th>에어컨 종류</th><th>일반 청소</th><th>분해 청소</th></tr>
+<tr><td>벽걸이 에어컨</td><td>4~6만 원</td><td>7~9만 원</td></tr>
+<tr><td>스탠드 에어컨</td><td>7~10만 원</td><td>11~14만 원</td></tr>
+<tr><td>시스템 에어컨 (천장형)</td><td>10~14만 원</td><td>15만 원 이상</td></tr>
+</table>
+
+다수 에어컨을 한꺼번에 의뢰하면 대당 1~2만 원 할인이 되는 경우도 많습니다.
+
+<h2>07 | 청소 후 관리 — 다음 번 청소 시기 늦추는 방법</h2>
+
+전문 청소를 받은 후에도 관리를 잘 하면 청소 주기를 늘릴 수 있습니다.<br><br>
+
+<strong>에어컨 사용 후 30분 송풍 운전</strong>: 냉방을 끄고 송풍(FAN) 모드로 30분 운전하면 내부 결로수가 건조되어 곰팡이 번식을 억제합니다.<br><br>
+<strong>필터 2~4주마다 세척</strong>: 필터를 자주 세척하면 핀에 도달하는 오염이 줄어듭니다.<br><br>
+<strong>실내 습도 관리</strong>: 제습 기능을 병행하거나, 창문을 자주 환기하면 에어컨 주변 습도가 낮아져 곰팡이 번식 속도가 느려집니다.<br><br>
+<strong>시즌 말 보관 전 청소</strong>: 여름 시즌이 끝날 때(9~10월) 전문 청소를 받고 보관하면 내년 여름 시작 시 쾌적하게 가동할 수 있습니다.
+
+<h2>08 | 신호별 대응 요약 — 한눈에 보기</h2>
+
+<table class="info-table">
+<tr><th>증상</th><th>원인 추정</th><th>권장 조치</th></tr>
+<tr><td>켜자마자 잠깐 냄새, 곧 사라짐</td><td>필터 먼지</td><td>필터 셀프 세척</td></tr>
+<tr><td>냄새가 계속 남, 강도 약함</td><td>핀 표면 초기 오염</td><td>셀프 스프레이 + 필터 세척</td></tr>
+<tr><td>냄새 강하고 지속, 1~2분 이상</td><td>핀·팬 곰팡이 번식</td><td>전문 청소 (분해 포함)</td></tr>
+<tr><td>물이 떨어짐</td><td>드레인 막힘</td><td>전문 청소 + 드레인 확인</td></tr>
+<tr><td>사용 후 눈·코 증상</td><td>포자·세균 방출</td><td>즉시 사용 중단 + 전문 청소</td></tr>
+</table>
+
+<h2>09 | 정리 — 전문 청소 판단 기준 체크리스트</h2>
+
+<div class="step-box">
+<strong>✅ 전문 청소 판단 체크리스트</strong><br><br>
+① 필터를 세척해도 냄새가 3일 내 재발 → 전문 청소<br><br>
+② 켜자마자 강한 곰팡이 냄새 1~2분 이상 지속 → 전문 청소<br><br>
+③ 가동 중 물이 방 안으로 뚝뚝 떨어짐 → 전문 청소 (드레인 막힘)<br><br>
+④ 에어컨 켜고 눈·코 증상이 생김 → 즉시 사용 중단 + 전문 청소<br><br>
+⑤ 3년 이상 전문 청소 미실시 → 예방 차원 전문 청소<br><br>
+⑥ 업체 선정 시 팬 분해 여부·드레인팬 포함 여부 반드시 확인
+</div>
+
+<div class="tip-box">
+💡 여름 폭염이 막바지인 8~9월은 에어컨 청소 업체의 성수기가 끝나가는 시기라 예약이 비교적 수월합니다. 9~10월 사이에 청소 받으면 비수기 할인을 받을 수 있는 경우도 있고, 내년 여름을 깨끗이 시작할 수 있습니다.
+</div>
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260820/tech_travel_photo_sort.html">여행 사진 정리 앱 추천 — 귀국 후 사진 자동 분류와 클라우드 백업</a></li>
+<li><a href="../260820/local_chuseok_highway_traffic.html">추석 귀성·귀경 고속도로 정체 예측 — 막히는 시간대와 피하는 법</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#에어컨냄새</span>
+<span class="tag">#에어컨전문청소</span>
+<span class="tag">#에어컨청소신호</span>
+<span class="tag">#에어컨곰팡이</span>
+<span class="tag">#에어컨분해청소</span>
+<span class="tag">#에어컨셀프청소</span>
+<span class="tag">#에어컨드레인</span>
+<span class="tag">#에어컨관리</span>
+<span class="tag">#여름가전청소</span>
+<span class="tag">#폭염막바지</span>
+</div>
+</body>
+</html>

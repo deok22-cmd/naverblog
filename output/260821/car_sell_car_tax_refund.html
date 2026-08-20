@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>차량 팔 때 자동차세 환급받는 법 — 폐차·명의이전 후 잔여 세액 계산과 신청</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>차량 팔 때 자동차세 환급받는 법 — 폐차·명의이전 후 잔여 세액 계산과 신청</h1>
+<div class="intro-box">
+차를 팔거나 폐차할 때, 이미 낸 자동차세 중 남은 기간 분은 <strong>돌려받을 수 있다</strong>는 사실을 모르는 분이 많습니다. 자동차세는 1월과 7월 두 번에 나눠 납부하거나 연납으로 한 번에 내는데, 차를 중간에 처분하면 처분일 이후 기간에 해당하는 세금은 환급 대상이 됩니다.<br><br>
+이 글에서는 자동차세 환급이 발생하는 조건, 환급액 계산 방식, 신청 방법을 단계별로 안내합니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260821/5_car_tax_refund_1.png</span></div>
+<pre class="prompt-text" id="prompt-5-1">Korean used car dealer lot with various cars for sale, price tags visible, urban setting, daytime, photorealistic, ultra high detail, wide angle, clean commercial atmosphere, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">중고차 매매 단지 전경 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 자동차세 환급이 생기는 이유</h2>
+
+자동차세는 <strong>1월 1일을 기준으로 해당 차량을 소유한 사람</strong>에게 1년치 세금이 부과됩니다. 납부는 6월(1기분, 1~6월)과 12월(2기분, 7~12월)로 나뉘며, 연납(1월)을 선택하면 할인 혜택을 받고 한 번에 납부할 수 있습니다.<br><br>
+
+문제는 <strong>차를 연중에 팔거나 폐차</strong>하는 경우입니다. 이미 낸 세금 중 차를 보유하지 않는 기간에 해당하는 금액은 원칙상 환급 대상이 됩니다.<br><br>
+
+예를 들어 6월에 자동차를 판매(명의이전 완료)하면, 이미 납부한 1기분 중 7~12월 기간은 새 소유자에게 귀속되므로 이 부분이 환급될 수 있습니다. 단, 실무적으로는 명의이전 시점과 납부 시점에 따라 환급 여부와 금액이 달라집니다.
+
+<h2>02 | 환급 대상이 되는 경우 — 명의이전·폐차 구분</h2>
+
+<table class="info-table">
+<tr><th>구분</th><th>환급 발생 조건</th><th>비고</th></tr>
+<tr><td>개인 간 명의이전 (중고차 매매)</td><td>이미 납부한 세금 중 명의이전 완료일 이후 기간에 해당하는 금액</td><td>새 소유자가 잔여분 납부</td></tr>
+<tr><td>폐차</td><td>폐차 등록 완료일 이후 기간에 해당하는 납부 세금</td><td>잔여분 환급 신청 가능</td></tr>
+<tr><td>수출</td><td>수출 말소 등록일 이후 기간</td><td>폐차와 동일 처리</td></tr>
+<tr><td>연납 납부 후 처분</td><td>연납 후 처분일 이후 기간에 해당하는 잔여분</td><td>연납 할인분은 비례 조정</td></tr>
+</table>
+
+<div class="warn-box">
+⚠️ 단순 보험 해지·번호판 반납·임시 미운행 상태에서는 환급이 발생하지 않습니다. 반드시 <strong>자동차 등록원부 상 말소(폐차·수출) 또는 소유권 이전 등록이 완료</strong>되어야 합니다.
+</div>
+
+<h2>03 | 환급액 계산 방법 — 일할 계산</h2>
+
+환급액은 <strong>일할 계산</strong>으로 산정됩니다.<br><br>
+
+<strong>기본 공식</strong>:<br>
+환급액 = (납부한 세액) × (처분일 이후 남은 일수) ÷ (해당 납부 기간의 전체 일수)<br><br>
+
+<strong>예시 계산</strong>:<br>
+- 상황: 6월 1기분(1월~6월) 30만 원 납부, 4월 15일에 명의이전 완료<br>
+- 남은 기간: 4월 16일~6월 30일 = 약 76일<br>
+- 1기분 전체: 181일 (1월 1일~6월 30일)<br>
+- 환급 예상액: 30만 원 × 76 ÷ 181 ≈ 약 126,000원<br><br>
+
+실제 환급액은 지자체 계산 기준에 따라 다소 차이가 날 수 있습니다. 정확한 금액은 처분 후 지자체(시·군·구청 세무과) 또는 위택스(wetax.go.kr)에서 확인할 수 있습니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260821/5_car_tax_refund_2.png</span></div>
+<pre class="prompt-text" id="prompt-5-2">Person reviewing tax refund documents at desk, Korean government forms and car registration papers, calculator visible, home office environment, photorealistic, ultra high detail, clean administrative atmosphere, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">자동차세 환급 관련 서류를 검토하는 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>04 | 환급 신청 방법 — 자동·수동 두 가지</h2>
+
+<strong>자동 환급 (명의이전의 경우)</strong>:<br>
+명의이전이 완료되면, 기존 소유자가 납부한 세금 중 잔여분은 <strong>지자체가 직권으로 환급 처리</strong>하는 경우가 많습니다. 이때는 별도 신청 없이 기존 소유자 계좌로 환급금이 입금됩니다.<br><br>
+
+단, 계좌 정보가 지자체에 등록되어 있지 않으면 현금으로 환급하거나 상계(향후 세금과 상계)하는 방식으로 처리될 수 있습니다.<br><br>
+
+<strong>폐차 후 수동 신청</strong>:<br>
+폐차의 경우 환급이 자동으로 처리되지 않는 경우도 있습니다. 이때는 직접 신청해야 합니다.<br><br>
+
+① <strong>위택스(wetax.go.kr)</strong>에서 온라인 신청 가능 (환급 신청 → 자동차세 환급)<br>
+② <strong>해당 시·군·구청 세무과 방문</strong> 후 환급 신청서 작성<br>
+③ 필요 서류: 폐차 확인서(또는 말소 사실증명서), 통장 사본, 신분증
+
+<h2>05 | 연납 후 처분한 경우 — 할인분도 되돌아오나?</h2>
+
+1월에 연납 할인을 받고 1년치 자동차세를 한 번에 낸 후, 중간에 차를 처분한 경우 약간 복잡합니다.<br><br>
+
+지자체에 따라 다르지만 일반적으로:<br>
+- 처분일 이후 기간에 해당하는 세액을 환급하되<br>
+- 연납 할인(보통 5% 내외)은 잔여 기간에 비례해 <strong>할인분 일부를 반납</strong>할 수 있습니다.<br><br>
+
+예를 들어 40만 원 납부 후 연중 처분하면, 잔여 기간 환급 + 할인분 정산이 함께 이뤄집니다. 정확한 금액은 해당 지자체 세무과에 직접 문의하는 것이 가장 정확합니다.
+
+<h2>06 | 자동차세 환급금 소멸시효 — 언제까지 신청해야 하나?</h2>
+
+자동차세 환급금의 소멸시효는 <strong>5년</strong>입니다. 처분일로부터 5년 이내에 신청하지 않으면 환급받을 권리가 사라집니다.<br><br>
+
+하지만 환급이 발생하는 즉시 신청하는 것이 좋습니다. 폐차·명의이전 완료 후 1~2개월 이내에 신청하는 것이 처리도 빠르고, 잊어버리지 않을 수 있습니다.
+
+<h2>07 | 차를 팔기 전 확인할 자동차세 관련 사항</h2>
+
+차를 팔기 전에 자동차세 관련해서 아래 사항을 먼저 확인하세요.<br><br>
+
+① <strong>미납 자동차세가 있는지 확인</strong>: 위택스(wetax.go.kr) 또는 자동차세 ARS(전화 조회)에서 미납 여부 조회 가능. 미납이 있으면 명의이전 시 문제가 될 수 있습니다.<br><br>
+② <strong>자동차세 체납 시 매매 거부 가능성</strong>: 지자체에 따라 체납 차량의 명의이전이 제한될 수 있습니다.<br><br>
+③ <strong>이전 등록 후 환급 신청</strong>: 명의이전 완료 후 잔여분 환급을 위택스 또는 구청에서 확인하세요.
+
+<h2>08 | 폐차 후 추가로 받을 수 있는 혜택</h2>
+
+자동차세 환급 외에도 폐차 시 받을 수 있는 혜택이 있습니다.<br><br>
+
+<strong>자동차 말소 후 자동차보험 환급</strong>: 자동차 말소 등록 후 보험사에 연락하면 미경과 보험료가 환급됩니다.<br><br>
+<strong>폐차 지원금(노후 경유차)</strong>: 환경부·지자체가 노후 경유차 조기 폐차 시 지원금을 지급합니다. 차량 연식·배출 등급에 따라 최대 300만~600만 원까지 지원된 사례가 있으나, 지원 조건과 금액은 해당 지자체에 직접 문의하세요.<br><br>
+<strong>공채 할인·번호판 반납</strong>: 번호판은 폐차 업체 또는 운전면허시험장에서 반납하며, 고가 차량은 공채 일부를 반납해야 할 수도 있습니다.
+
+<h2>09 | 정리 — 차 팔 때 자동차세 환급 핵심 체크리스트</h2>
+
+<div class="step-box">
+<strong>✅ 자동차세 환급 체크리스트</strong><br><br>
+① 명의이전 또는 폐차 말소 등록이 완료된 이후 환급 신청 가능<br><br>
+② 환급액 = 납부 세액 × 처분일 이후 남은 일수 ÷ 납부 기간 전체 일수 (일할 계산)<br><br>
+③ 자동 환급(명의이전) 또는 수동 신청(폐차) → 위택스(wetax.go.kr) 또는 구청 세무과<br><br>
+④ 연납 후 처분 시 할인분 일부 반납 발생 가능 → 지자체 확인 필수<br><br>
+⑤ 소멸시효 5년이지만, 처분 직후 바로 신청하는 것을 권장<br><br>
+⑥ 보험 환급·노후차 지원금도 함께 챙기기
+</div>
+
+<div class="warn-box">
+⚠️ 이 글의 내용은 2026년 8월 기준 일반적인 안내입니다. 지자체별로 처리 방식이 다를 수 있으므로 정확한 금액과 절차는 해당 시·군·구청 세무과 또는 위택스(wetax.go.kr) 고객센터(126)에 문의하세요.
+</div>
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260820/car_first_inspection_new.html">신차 출고 후 첫 정기검사 — 시기·비용·예약 방법</a></li>
+<li><a href="../260820/local_chuseok_highway_traffic.html">추석 귀성·귀경 고속도로 정체 예측 — 막히는 시간대와 피하는 법</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#자동차세환급</span>
+<span class="tag">#차팔때자동차세</span>
+<span class="tag">#폐차환급</span>
+<span class="tag">#자동차세일할계산</span>
+<span class="tag">#명의이전세금환급</span>
+<span class="tag">#위택스</span>
+<span class="tag">#자동차세신청</span>
+<span class="tag">#중고차매매세금</span>
+<span class="tag">#폐차자동차세</span>
+<span class="tag">#차량처분절차</span>
+</div>
+</body>
+</html>
