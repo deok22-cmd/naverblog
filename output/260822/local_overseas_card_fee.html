@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>해외결제 수수료 카드별 비교 — 트래블월렛·하나 트래블로그·씨티 체크카드 실전 정리</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1f9f1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>해외결제 수수료 카드별 비교 — 트래블월렛·하나 트래블로그·씨티 체크카드 실전 정리</h1>
+<div class="intro-box">
+해외여행에서 신용카드·체크카드를 쓸 때마다 붙는 해외결제 수수료는 생각보다 큽니다. 국제브랜드 수수료(비자·마스터 1%), 해외서비스 수수료(은행별 0.2~1.5%), 환전 스프레드까지 합치면 실결제금액의 2~3%가 추가로 빠져나갑니다. 이 글에서는 수수료가 낮거나 없는 카드들을 실제 사용 조건과 함께 비교해 해외 나갈 때 뭘 챙겨야 하는지 정리합니다.
+</div>
+
+<h2>01 | 해외결제 수수료 구조 먼저 이해하기</h2>
+
+해외 카드 결제 시 발생하는 비용은 크게 세 가지입니다.<br><br>
+
+<table class="info-table">
+  <thead><tr><th>항목</th><th>부과 주체</th><th>일반적 요율</th></tr></thead>
+  <tbody>
+    <tr><td>국제브랜드 수수료</td><td>Visa / Mastercard / Amex</td><td>결제액의 약 1%</td></tr>
+    <tr><td>해외서비스(이용) 수수료</td><td>카드 발급 은행</td><td>0.2~1.5%</td></tr>
+    <tr><td>환전 스프레드</td><td>Visa·Master 기준환율과의 차이</td><td>0.5~1.5%</td></tr>
+  </tbody>
+</table>
+
+일반 신용카드로 100만 원어치 결제하면 2만~3만 원이 수수료로 빠져나갑니다. 이를 피하는 방법이 '수수료 면제 카드'를 선택하는 것입니다.<br><br>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260822/4_oversea_fee_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-1">Close-up of various credit cards and debit cards spread on a table, travel wallet, passport, foreign currency bills in the background, concept of overseas travel payment and fee comparison, clean flat lay photography, sharp focus, neutral background, 1:1 aspect ratio, high detail</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">해외결제 카드 비교 개념 이미지 / AI 제작 이미지</div>
+</div>
+
+<h2>02 | 트래블월렛 — 앱에서 미리 충전, 환전 수수료 최저</h2>
+
+<strong>트래블월렛</strong>은 카드사가 아닌 핀테크 앱 기반 선불 카드입니다. 앱에서 원화를 충전하고, 현지 통화로 환전 후 해당 잔액으로 결제하는 방식입니다.<br><br>
+
+<div class="info-box">
+<strong>트래블월렛 주요 조건</strong><br>
+- 환전 수수료: 시장 환율 기준 (환전 스프레드 최소)<br>
+- 해외결제 수수료: 0% (본인 충전 금액 범위 내)<br>
+- 이용 가능 통화: 주요 통화 20여 종 이상<br>
+- 체크카드형 Visa 카드로 해외 ATM 출금도 가능<br>
+- 단점: 충전 한도 존재, 국내 결제 불가
+</div>
+
+트래블월렛의 가장 큰 장점은 환율 우대가 아니라 <strong>환전 스프레드가 거의 없는 시장 환율</strong>로 충전한다는 점입니다. 환전소나 은행보다 유리한 경우가 많습니다. 여행 전 앱을 깔고 미리 충전해두는 것을 권합니다.<br><br>
+
+<h2>03 | 하나 트래블로그 — 국내 체크카드 방식, 자동 환전</h2>
+
+<strong>하나 트래블로그</strong>는 하나은행의 해외여행 특화 체크카드입니다. 원화 계좌에 돈을 넣어두면 결제 시 자동으로 해당 국가 통화로 환전됩니다.<br><br>
+
+<table class="info-table">
+  <thead><tr><th>항목</th><th>조건</th></tr></thead>
+  <tbody>
+    <tr><td>해외결제 수수료</td><td>0% (환전 우대 90% 이상)</td></tr>
+    <tr><td>ATM 인출 수수료</td><td>일정 횟수 면제 (월별 상이 — 재확인)</td></tr>
+    <tr><td>발급 방법</td><td>하나은행 앱·지점 발급</td></tr>
+    <tr><td>해외 브랜드</td><td>Visa 또는 Mastercard 선택</td></tr>
+    <tr><td>환전 방식</td><td>트래블로그 앱에서 미리 환전 후 지정 통화 계좌에 보관</td></tr>
+  </tbody>
+</table>
+
+트래블로그는 여러 통화를 미리 환전해 통화별 계좌에 담아두고 현지에서 꺼내 쓰는 개념입니다. 환전 타이밍을 조절할 수 있어 환율이 유리할 때 미리 넣어두는 방식으로 절약할 수 있습니다.<br><br>
+
+<h2>04 | 씨티 체크카드(리워드카드) — 수수료 면제 + 포인트</h2>
+
+<strong>씨티은행 체크카드</strong> 중 일부 상품은 해외결제 수수료를 면제합니다. 단, 씨티은행은 2022년 이후 국내 소비자 금융을 철수했고 현재 씨티카드 발급이 중단된 상태입니다. 기존 보유자만 계속 사용 가능합니다.<br><br>
+
+<div class="warn-box">
+⚠️ <strong>씨티 체크카드 신규 발급 불가</strong>: 2022년 씨티은행 국내 소비자 금융 사업 철수로 신규 발급이 종료됐습니다. 기존 카드는 유효기간 내 사용 가능하나, 혜택이 변경될 수 있습니다. 대안으로 트래블월렛·트래블로그·현지 특화 카드를 검토하세요.
+</div>
+
+<h2>05 | 기타 비교 대상 — 현지 특화 카드들</h2>
+
+씨티·트래블월렛·트래블로그 외에도 검토할 카드들이 있습니다.<br><br>
+
+<table class="info-table">
+  <thead><tr><th>카드명</th><th>해외수수료</th><th>특징</th></tr></thead>
+  <tbody>
+    <tr><td>신한 SOL트래블 체크</td><td>0% (연간 한도 내)</td><td>포인트 적립, 국내 결제도 가능</td></tr>
+    <tr><td>국민 트래블러스 체크</td><td>우대 제공</td><td>KB국민은행 계좌 연동</td></tr>
+    <tr><td>카카오페이 해외결제</td><td>수수료 조건 재확인</td><td>앱 기반, 환전 없이 자동 결제</td></tr>
+    <tr><td>토스 해외결제 카드</td><td>별도 수수료 없음(조건 재확인)</td><td>토스 계좌 기반 Visa</td></tr>
+  </tbody>
+</table>
+
+카드별 세부 조건(면제 한도, ATM 수수료, 환율 우대율)은 수시로 변경될 수 있으므로, <strong>각 카드사 공식 홈페이지 또는 앱에서 최신 조건을 반드시 확인</strong>하세요.<br><br>
+
+<h2>06 | 카드 선택 기준 — 어떤 걸 쓸 때 유리한가</h2>
+
+<ul>
+<li><strong>단기 여행(1~2주) + 현지 결제 중심</strong>: 트래블월렛 or 트래블로그 충전식이 가장 확실</li>
+<li><strong>환율 타이밍 관리하고 싶다면</strong>: 트래블로그 미리 환전 기능</li>
+<li><strong>국내외 함께 쓸 카드 하나만</strong>: 신한 SOL트래블 등 겸용 체크카드</li>
+<li><strong>해외 ATM 인출이 잦다면</strong>: ATM 수수료 면제 횟수 확인 필수</li>
+</ul>
+
+<h2>07 | 해외결제 DCC 함정 피하는 법</h2>
+
+해외 가맹점에서 결제할 때 "원화로 결제하시겠습니까(Pay in KRW)?"라고 물어보면 <strong>반드시 현지 통화(Local Currency)를 선택</strong>하세요. 이것이 DCC(Dynamic Currency Conversion)입니다.<br><br>
+
+DCC를 선택하면 가맹점 측의 불리한 환율이 적용되어 2~5%를 추가로 손해봅니다. 수수료 면제 카드를 써도 DCC에 당하면 의미가 없습니다.<br><br>
+
+<div class="tip-box">
+💡 <strong>DCC 피하는 실전 팁</strong><br>
+현지 결제 단말기에 "원화/KRW/Debit in KRW" 선택 버튼이 나오면 항상 거부하고 현지 통화(EUR, JPY, USD 등)를 선택하세요. 온라인 결제에서도 마찬가지입니다.
+</div>
+
+<h2>08 | 환전과 카드 비율 — 얼마는 현금, 얼마는 카드</h2>
+
+카드 결제가 잘 되는 도시(도쿄·파리·방콕 등)에서도 소액 현금은 필요합니다. 권장 비율은 체험·교통·쇼핑은 카드, 로컬 시장·노점·팁은 현금입니다.<br><br>
+
+일반적으로 <strong>현금 20~30%, 카드 70~80%</strong>로 가져가는 것이 무난합니다. 현금 환전도 주거래 은행 앱에서 미리 신청하면 환율 우대를 받을 수 있습니다.<br><br>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260822/4_oversea_fee_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-2">Person using a debit card at an overseas payment terminal, currency exchange comparison concept, DCC decline button on terminal screen, travel wallet app on smartphone showing zero foreign transaction fee, clean modern financial concept photo, 1:1 aspect ratio, high detail</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">해외 결제 시 DCC 주의 개념 이미지 / AI 제작 이미지</div>
+</div>
+
+<h2>09 | 카드 분실·도난 시 대처법</h2>
+
+해외에서 카드 분실·도난 시 즉시 카드사 앱에서 <strong>카드 사용 정지(잠금)</strong>를 걸어야 합니다. 대부분 앱에서 즉시 처리됩니다.<br><br>
+
+<ul>
+<li>Visa 글로벌 긴급 서비스: +1-410-581-9994 (수신자부담)</li>
+<li>Mastercard 글로벌 긴급 서비스: +1-800-627-8372</li>
+<li>각 은행 고객센터 국제전화 번호를 카드에서 미리 메모</li>
+</ul>
+
+여분 카드를 한 장 더 챙기는 것이 가장 확실한 대비입니다.<br><br>
+
+<h2>10 | 요약 — 해외 나가기 전 체크리스트</h2>
+
+<ul>
+<li>☑️ 해외수수료 0% 카드 1장 발급 또는 충전 확인</li>
+<li>☑️ 트래블로그·트래블월렛 앱 설치·환전 완료</li>
+<li>☑️ DCC 거부 방법 숙지 (현지 통화 선택)</li>
+<li>☑️ 카드사 앱에서 해외 결제 한도 설정 확인</li>
+<li>☑️ 여분 카드 1장 별도 보관</li>
+<li>☑️ 해외 ATM 인출 수수료 조건 확인</li>
+</ul>
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260821/local_train_season_pass.html">국내 기차 정기권과 KTX 열차이용권 — 자주 타면 뭐가 더 이득인가</a></li>
+<li><a href="../260822/travel_chuncheon_soyang_skywalk.html">춘천 소양강 스카이워크 어디서 타나 — 물레길 카약과 소양강댐 9월 수상 나들이 코스</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#해외결제수수료</span>
+<span class="tag">#트래블월렛</span>
+<span class="tag">#하나트래블로그</span>
+<span class="tag">#해외여행카드</span>
+<span class="tag">#수수료없는카드</span>
+<span class="tag">#DCC주의</span>
+<span class="tag">#해외카드추천</span>
+<span class="tag">#환전우대</span>
+<span class="tag">#여행준비</span>
+<span class="tag">#해외결제팁</span>
+</div>
+</body>
+</html>

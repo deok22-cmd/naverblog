@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>자동차 리콜과 무상수선 차이 — 무조건 공짜인가, 안 가면 어떻게 되나</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1f9f1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>자동차 리콜과 무상수선 차이 — 무조건 공짜인가, 안 가면 어떻게 되나</h1>
+<div class="intro-box">
+자동차 리콜 통지를 받고 "꼭 가야 하나?", "안 가면 어떻게 되나?"라고 고민하는 분이 많습니다. 리콜과 무상수선은 비슷해 보이지만 법적 성격, 강제성, 수리 범위가 다릅니다. 리콜 대상 차량을 방치하면 보험 처리나 사고 책임에 영향이 있을 수 있습니다. 이 글에서 리콜과 무상수선의 차이, 안 가면 어떻게 되는지, 조회 방법까지 정리합니다.
+</div>
+
+<h2>01 | 리콜과 무상수선의 법적 차이</h2>
+
+같아 보이지만 근본적으로 다른 제도입니다.<br><br>
+
+<table class="info-table">
+  <thead><tr><th>구분</th><th>리콜 (Recall)</th><th>무상수선 (캠페인)</th></tr></thead>
+  <tbody>
+    <tr><td>법적 근거</td><td>자동차관리법 제31조 (강제)</td><td>제조사 자발적 서비스</td></tr>
+    <tr><td>결함 기준</td><td>안전에 직접적 위험을 초래하는 결함</td><td>품질·편의성 문제 (안전 결함 미만)</td></tr>
+    <tr><td>강제성</td><td>정부 명령으로 시행 의무</td><td>제조사 자율 결정</td></tr>
+    <tr><td>비용</td><td>100% 제조사 부담</td><td>제조사 부담 (단, 조건 있는 경우 있음)</td></tr>
+    <tr><td>통보 방법</td><td>우편·문자·공식 공지 의무</td><td>공지 방식 제조사 재량</td></tr>
+  </tbody>
+</table>
+
+리콜은 <strong>국토교통부가 명령</strong>하는 강제 조치로, 제조사는 반드시 무상으로 결함을 수리해야 합니다. 무상수선은 제조사가 자발적으로 시행하는 서비스 캠페인으로, 안전 결함은 아니지만 소비자 불편을 해소하기 위해 무상으로 처리해주는 것입니다.<br><br>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260822/6_recall_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-1">Car mechanic inspecting a vehicle at an authorized dealership service center, recall repair work in progress, diagnostic equipment connected to car, official Korean automotive recall notice document on clipboard, clean professional service bay, photorealistic, 1:1 aspect ratio, detailed</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">자동차 리콜 점검 서비스 센터 이미지 / AI 제작 이미지</div>
+</div>
+
+<h2>02 | 리콜 통지를 받으면 꼭 가야 하나</h2>
+
+법적으로 차주가 리콜을 반드시 받아야 할 의무는 없습니다. 그러나 <strong>방치하면 실질적 불이익</strong>이 생깁니다.<br><br>
+
+<div class="warn-box">
+⚠️ <strong>리콜 무시하면 생기는 불이익</strong><br>
+① 리콜 해당 부위 결함으로 사고 발생 시 보험사·제조사 과실 비율 다툼에서 차주에게 불리할 수 있음<br>
+② 중고차 매매 시 리콜 미완료 이력이 확인되면 감가 요인 발생<br>
+③ 결함 부위 방치로 2차 고장 시 수리비 자부담 가능성<br>
+④ 일부 리콜은 기한이 있어 기한 경과 후 비용이 발생할 수 있음
+</div>
+
+리콜 수리는 무상이고 딜러·서비스센터에서 예약만 하면 됩니다. 일반적으로 리콜 부위 수리는 1~3시간 내에 완료됩니다. 귀찮더라도 받는 것이 유리합니다.<br><br>
+
+<h2>03 | 리콜 대상 여부 조회 방법</h2>
+
+본인 차량이 리콜 대상인지 확인하는 방법은 세 가지입니다.<br><br>
+
+<div class="info-box">
+<strong>리콜 대상 조회 방법</strong><br>
+1. <strong>자동차리콜센터 사이트</strong>(car.go.kr): 차대번호(VIN) 또는 차량 번호판으로 조회 가능. 현재 진행 중인 리콜·무상수선 목록 확인<br>
+2. <strong>제조사 공식 앱·홈페이지</strong>: 현대·기아·르노 등 각 브랜드 앱에서 소유 차량 등록 후 알림 설정<br>
+3. <strong>문자·우편 통보</strong>: 등록된 차주 연락처로 국토교통부·제조사 공식 통보
+</div>
+
+차대번호(VIN)는 자동차 등록증 상단이나 운전석 A필러(앞 유리 좌측 하단) 스티커에서 확인할 수 있습니다.<br><br>
+
+<h2>04 | 무상수선은 어떻게 신청하나</h2>
+
+무상수선(서비스 캠페인)은 리콜과 달리 차주가 <strong>직접 해당 서비스센터에 예약</strong>해야 합니다. 제조사 공지를 놓치면 스스로 챙겨야 합니다.<br><br>
+
+<table class="info-table">
+  <thead><tr><th>브랜드</th><th>무상수선 확인 방법</th></tr></thead>
+  <tbody>
+    <tr><td>현대자동차</td><td>현대 블루링크 앱 → 내 차 관리 → 서비스 캠페인</td></tr>
+    <tr><td>기아자동차</td><td>기아 커넥트 앱 → 차량 관리</td></tr>
+    <tr><td>르노코리아</td><td>르노 공식 홈페이지 서비스 예약</td></tr>
+    <tr><td>KG모빌리티</td><td>공식 홈페이지 또는 서비스센터 직접 문의</td></tr>
+    <tr><td>수입차</td><td>각 브랜드 공식 딜러 서비스센터 문의</td></tr>
+  </tbody>
+</table>
+
+무상수선은 기간이 정해진 경우가 많습니다. 통보를 받으면 기한 내에 처리하는 것이 좋습니다.<br><br>
+
+<h2>05 | 리콜 vs 무상수선 한 번에 받을 수 있나</h2>
+
+같은 서비스센터 예약 시 리콜과 무상수선을 동시에 처리할 수 있는 경우가 많습니다. 예약 시 "리콜 및 서비스 캠페인 동시 처리"를 요청하면 됩니다.<br><br>
+
+정기 점검과 함께 처리하면 시간을 아낄 수 있습니다. 단, 서비스센터별로 대기 일정이 달라 예약 후 1~2주 대기하는 경우도 있습니다.<br><br>
+
+<h2>06 | 리콜 수리 후 챙겨야 할 것</h2>
+
+<ul>
+<li>리콜 수리 완료 후 <strong>수리확인서(작업 명세서)</strong>를 받아두세요. 이후 중고차 매매 시 유용합니다.</li>
+<li>리콜 수리 부위를 직접 눈으로 확인하거나 담당 직원에게 어떤 부품을 교체했는지 구두 설명을 요청하세요.</li>
+<li>수리 후 이상 증상이 남아 있으면 즉시 재점검을 요청할 권리가 있습니다.</li>
+</ul>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260822/6_recall_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-2">Car owner checking a vehicle identification number VIN on registration document, smartphone showing Korean car recall inquiry website car.go.kr, recall status confirmed on screen, clean desk setting, informational concept photography, 1:1 aspect ratio, high detail</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">자동차 리콜 대상 조회 방법 이미지 / AI 제작 이미지</div>
+</div>
+
+<h2>07 | 리콜 사기 주의 — 이런 연락은 의심하라</h2>
+
+<div class="warn-box">
+⚠️ <strong>가짜 리콜 통보 사기</strong>: "리콜 부품 교체비가 발생한다", "현장 납부가 필요하다"는 연락은 가짜입니다. 정식 리콜은 100% 무상이며 추가 비용이 없습니다. 의심스러우면 해당 제조사 공식 고객센터나 자동차리콜센터(1588-0900)에 직접 확인하세요.
+</div>
+
+<h2>08 | 요약 — 리콜 받아야 하는 이유 한 줄씩</h2>
+
+<ul>
+<li>☑️ 리콜 = 정부 명령, 안전 결함, 100% 무상, 받는 것이 의무 (법적 강제는 없으나 불이익 있음)</li>
+<li>☑️ 무상수선 = 제조사 자발, 품질 이슈, 기간 내 챙겨야 함</li>
+<li>☑️ 대상 여부는 car.go.kr 또는 제조사 앱에서 무료 조회</li>
+<li>☑️ 리콜 미수리 시 사고 과실 불리 가능 + 중고차 감가</li>
+<li>☑️ 수리 후 작업 명세서 반드시 수령·보관</li>
+</ul>
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260821/car_sell_car_tax_refund.html">자동차 팔 때 자동차세 환급 — 방법과 신청 기간 정리</a></li>
+<li><a href="../260822/local_overseas_card_fee.html">해외결제 수수료 카드별 비교 — 트래블월렛·하나 트래블로그 실전 정리</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#자동차리콜</span>
+<span class="tag">#무상수선</span>
+<span class="tag">#리콜대상조회</span>
+<span class="tag">#리콜안가면</span>
+<span class="tag">#리콜vs무상수선</span>
+<span class="tag">#자동차관리</span>
+<span class="tag">#car.go.kr</span>
+<span class="tag">#서비스캠페인</span>
+<span class="tag">#자동차상식</span>
+<span class="tag">#리콜사기주의</span>
+</div>
+</body>
+</html>
