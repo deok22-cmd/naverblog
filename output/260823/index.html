@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026-08-23 발행 대시보드</title>
+<style>
+  body { font-family: 'Apple SD Gothic Neo', sans-serif; background: #f5f5f5; padding: 20px; max-width: 900px; margin: 0 auto; }
+  h1 { color: #333; border-bottom: 3px solid #388e3c; padding-bottom: 10px; font-size: 1.5em; }
+  .meta { color: #777; font-size: 0.9em; margin-bottom: 30px; }
+  .card { background: #fff; border-radius: 10px; padding: 18px 22px; margin: 14px 0; box-shadow: 0 1px 4px rgba(0,0,0,.08); border-left: 6px solid #ccc; display: flex; align-items: flex-start; gap: 14px; }
+  .card.travel { border-left-color: #00796b; }
+  .card.life { border-left-color: #388e3c; }
+  .card.recipe { border-left-color: #e64a19; }
+  .seq { font-size: 1.6em; font-weight: 800; color: #ccc; min-width: 32px; line-height: 1.1; }
+  .card.travel .seq { color: #00796b; }
+  .card.life .seq { color: #388e3c; }
+  .card.recipe .seq { color: #e64a19; }
+  .card-body { flex: 1; }
+  .card-title a { font-size: 1.05em; font-weight: 700; color: #222; text-decoration: none; }
+  .card-title a:hover { text-decoration: underline; }
+  .badge { display: inline-block; font-size: 0.75em; padding: 2px 8px; border-radius: 4px; margin-right: 6px; color: #fff; }
+  .badge.travel { background: #00796b; }
+  .badge.local { background: #388e3c; }
+  .badge.rite { background: #388e3c; }
+  .badge.car { background: #388e3c; }
+  .badge.gov { background: #388e3c; }
+  .badge.recipe { background: #e64a19; }
+  .card-meta { font-size: 0.82em; color: #888; margin-top: 4px; }
+  .flag-box { background: #fff3e0; border: 2px solid #ff6b00; border-radius: 10px; padding: 18px 22px; margin: 30px 0; }
+  .flag-box h2 { color: #e65100; font-size: 1.1em; margin: 0 0 10px; }
+  .flag-item { font-size: 0.92em; padding: 4px 0; color: #333; }
+  .flag-item span { font-weight: 700; }
+  .summary-box { background: #e8f5e9; border-radius: 10px; padding: 18px 22px; margin: 24px 0; }
+  .summary-box h2 { color: #1b5e20; font-size: 1.05em; margin: 0 0 10px; }
+  .summary-row { display: flex; flex-wrap: wrap; gap: 16px; font-size: 0.9em; }
+  .s-item { background: #fff; border-radius: 6px; padding: 8px 16px; border: 1px solid #c8e6c9; }
+  .s-item strong { color: #388e3c; }
+</style>
+</head>
+<body>
+<h1>📋 2026-08-23 (일) 발행 대시보드</h1>
+<div class="meta">발행 일자: 2026-08-23 (일요일) · 총 7건 · 시즌: 초가을 선점 / 여행 시즌게이트 통과 1건(보충 적용)</div>
+
+<div class="summary-box">
+  <h2>📊 발행 믹스 현황</h2>
+  <div class="summary-row">
+    <div class="s-item"><strong>여행 (travel_)</strong> 1건 — 강화 마니산(9~10월 시즌게이트 통과)</div>
+    <div class="s-item"><strong>인접 (local_)</strong> 2건 — LCC결항·여권재발급(여행부족 보충)</div>
+    <div class="s-item"><strong>경조사 (rite_)</strong> 1건</div>
+    <div class="s-item"><strong>자동차 (car_)</strong> 1건</div>
+    <div class="s-item"><strong>레시피 (recipe_)</strong> 1건 — 일요일 로테이션</div>
+    <div class="s-item"><strong>지원금 (gov_)</strong> 1건 — 여행부족 보충</div>
+  </div>
+</div>
+
+<div class="card travel">
+  <div class="seq">01</div>
+  <div class="card-body">
+    <div class="card-title">
+      <span class="badge travel">travel_</span>
+      <a href="travel_ganghwa_manisan_fall.html">강화 마니산 참성단 가을 트레킹 — 가는 법·코스·동막해변 낙조 당일 코스</a>
+    </div>
+    <div class="card-meta">이미지: 1_manisan_1.png / 1_manisan_2.png / 1_manisan_3.png | 큐 §02 #228 소비 | 시즌 9~10월 ✅</div>
+  </div>
+</div>
+
+<div class="card life">
+  <div class="seq">02</div>
+  <div class="card-body">
+    <div class="card-title">
+      <span class="badge local">local_</span>
+      <a href="local_lcc_delay_refund.html">국내 LCC 국제선 지연·결항 보상 기준 — 대형항공사와 뭐가 다르고 대체편 어떻게 신청하나</a>
+    </div>
+    <div class="card-meta">이미지: 2_lcc_delay_1.png / 2_lcc_delay_2.png | 생활정보 §01 #85 소비 | 여행부족 보충</div>
+  </div>
+</div>
+
+<div class="card life">
+  <div class="seq">03</div>
+  <div class="card-body">
+    <div class="card-title">
+      <span class="badge local">local_</span>
+      <a href="local_passport_renewal.html">여권 유효기간 얼마 남았을 때 재발급해야 하나 — 6개월 룰과 자동출입국심사 등록 방법</a>
+    </div>
+    <div class="card-meta">이미지: 3_passport_1.png / 3_passport_2.png | 생활정보 §01 #86 소비 | 여행부족 보충</div>
+  </div>
+</div>
+
+<div class="card life">
+  <div class="seq">04</div>
+  <div class="card-body">
+    <div class="card-title">
+      <span class="badge rite">rite_</span>
+      <a href="rite_opening_gift_manners.html">개업식 화분·축하선물 보내기와 오픈일 방문 예절 — 뭘 가져가고 뭘 조심해야 하나</a>
+    </div>
+    <div class="card-meta">이미지: 4_opening_gift_1.png / 4_opening_gift_2.png | 생활정보 §02 P34 소비</div>
+  </div>
+</div>
+
+<div class="card life">
+  <div class="seq">05</div>
+  <div class="card-body">
+    <div class="card-title">
+      <span class="badge car">car_</span>
+      <a href="car_uninsured_hitrun_comp.html">무보험·뺑소니 사고 당했을 때 정부보장사업으로 보상받는 법</a>
+    </div>
+    <div class="card-meta">이미지: 5_hitrun_1.png / 5_hitrun_2.png | 생활정보 §02 C38 소비</div>
+  </div>
+</div>
+
+<div class="card recipe">
+  <div class="seq">06</div>
+  <div class="card-body">
+    <div class="card-title">
+      <span class="badge recipe">recipe_</span>
+      <a href="recipe_seaweed_soup_beef.html">소고기 미역국 깊은 맛 내는 법 — 참기름에 볶는 순서와 끓이는 시간</a>
+    </div>
+    <div class="card-meta">이미지: 6_seaweed_soup_1.png / 6_seaweed_soup_2.png | 생활정보 §04 recipe_ #6 소비 | 일요일 로테이션</div>
+  </div>
+</div>
+
+<div class="card life">
+  <div class="seq">07</div>
+  <div class="card-body">
+    <div class="card-title">
+      <span class="badge gov">gov_</span>
+      <a href="gov_flu_vaccine_2026.html">독감·코로나 무료 예방접종 대상과 시기 — 2026년 어디서 어떻게 맞나</a>
+    </div>
+    <div class="card-meta">이미지: 7_flu_vaccine_1.png / 7_flu_vaccine_2.png | 생활정보 §02 #36 소비 | 여행부족 보충</div>
+  </div>
+</div>
+
+<div class="flag-box">
+  <h2>🚨 큐 부족 경고 (G3 임계 미달)</h2>
+  <div class="flag-item">🔴 <span>[QUEUE CRITICAL travel: 8]</span>: 유효 버퍼 8건이나 오늘 시즌게이트 통과 1건(9~10월 행만 유효). 임계 25 대비 절대 부족 — 즉시 queue-refiller 실행 필요</div>
+  <div class="flag-item">🟠 <span>[QUEUE LOW local: 11]</span>: 오늘 2건 소비 후 약 11건. 임계 14 미달</div>
+  <div class="flag-item">🟡 <span>[QUEUE LOW vertical:rite_ 10]</span>: 오늘 소비 후 약 10건. 임계 14 미달</div>
+  <div class="flag-item">🟡 <span>[QUEUE LOW vertical:car_ 9]</span>: 오늘 소비 후 약 9건. 임계 14 미달</div>
+</div>
+
+<div style="font-size:0.8em;color:#999;margin-top:30px;text-align:center;">
+  Generated: 2026-08-23 | Naver Blog Daily Auto-Publish | $TistorySuspended=true | $InstaSuspended=true
+</div>
+</body>
+</html>

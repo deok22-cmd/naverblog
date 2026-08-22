@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>국내 LCC 국제선 지연·결항 보상 기준 — 대형항공사와 뭐가 다르고 대체편 어떻게 신청하나</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>국내 LCC 국제선 지연·결항 보상 기준 — 대형항공사와 뭐가 다르고 대체편 어떻게 신청하나</h1>
+<div class="intro-box">
+여름 성수기가 막바지에 이른 시점에 LCC(저비용항공사) 이용자가 가장 많이 당황하는 상황 중 하나가 갑작스러운 지연과 결항입니다. 제주항공·진에어·에어부산·티웨이항공 등 국내 LCC는 대형항공사와 보상 규정이 다소 다릅니다.<br><br>
+이 글에서는 LCC 국제선이 지연·결항됐을 때 소비자가 받을 수 있는 보상 기준, 대체편 신청 방법, 환불 절차를 정리했습니다. 출발 전 미리 알아두면 실제 상황에서 당황하지 않고 권리를 찾을 수 있습니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+  <div class="ph-head">
+    <span>📷 AI 이미지 생성 영역</span>
+    <span class="ph-file">images/260823/2_lcc_delay_1.png</span>
+  </div>
+  <pre class="prompt-text" id="prompt-2-1">Inside a busy international airport terminal in South Korea. Flight departure board showing multiple delayed and cancelled flights highlighted in red. Frustrated passengers waiting with luggage near gate area. Airport staff at information desk helping customers. Modern airport interior with bright lighting, photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+  <button class="copy-btn" onclick="copyPrompt('prompt-2-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">공항 출발 안내판 지연·결항 상황 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | LCC와 대형항공사 보상 차이</h2>
+
+LCC(저비용항공사)는 기본적으로 국제항공법(몬트리올 협약)을 따르며, 국내에서는 <strong>항공교통이용자 보호기준(국토교통부 고시)</strong>이 적용됩니다. 대형항공사(FSC)와 LCC 모두 같은 규정의 적용을 받지만, 실무에서 차이가 나는 이유는 다음과 같습니다.<br><br>
+
+<strong>FSC(대형항공사)</strong>는 자사 대체편이나 파트너 항공사 편을 비교적 빨리 연결해 줄 수 있습니다. LCC는 노선이 제한적이어서 대체편 제공이 어렵거나 지연이 길어지는 경우가 많습니다.<br><br>
+
+또한 LCC 운임 자체가 저렴한 만큼 환불 시 돌려받는 금액도 상대적으로 적습니다. 초특가 프로모션 운임은 약관에 따라 환불 불가 또는 수수료 부담이 클 수 있으므로 구매 시 약관을 반드시 확인해야 합니다.
+
+<h2>02 | 지연 시간별 보상 기준</h2>
+
+국토교통부 고시 <strong>항공교통이용자 보호기준</strong>에 따르면, 국제선 항공편이 지연될 경우 다음과 같은 조치를 항공사가 이행해야 합니다.<br><br>
+
+<table class="info-table">
+<tr><th>지연 시간</th><th>항공사 의무</th></tr>
+<tr><td>2시간 이상</td><td>식음료 또는 이에 상당하는 금액 제공</td></tr>
+<tr><td>4시간 이상</td><td>숙박 제공(귀책이 항공사인 경우), 대체편 또는 환불 중 선택 가능</td></tr>
+<tr><td>결항</td><td>대체편 제공 또는 전액 환불, 추가 비용(숙박·교통) 보상</td></tr>
+</table>
+
+단, <strong>천재지변(태풍·폭설·화산재 등)</strong>이나 관제 문제, 테러 위협 등 불가항력 사유로 인한 지연·결항은 식음료 제공 의무는 있으나 금전적 보상 의무가 면제될 수 있습니다. 귀책 여부를 명확히 확인하는 것이 중요합니다.
+
+<h2>03 | LCC별 보상 실무 — 현장 대응</h2>
+
+실제 지연·결항 상황이 발생하면 다음과 같이 행동하세요.<br><br>
+
+<strong>1단계</strong>: 공항 내 해당 항공사 카운터 또는 게이트 직원에게 즉시 문의합니다. 지연 사유와 예상 출발 시간을 확인하고 서면(또는 앱 알림) 기록을 요청하세요.<br><br>
+
+<strong>2단계</strong>: 지연 2시간 이상이면 식음료 제공 바우처를 요청합니다. 일부 LCC는 자동 지급이 되지 않으므로 직접 요청해야 합니다.<br><br>
+
+<strong>3단계</strong>: 결항이나 장기 지연 시 대체편 탑승 또는 환불 중 선택을 요청합니다. 환불을 선택할 경우 다음 항공 편의 별도 예매 비용을 항공사에 청구할 수 있는지 확인하세요(귀책이 항공사인 경우).<br><br>
+
+<div class="info-box">
+📌 현장에서 구두로만 대응하면 나중에 분쟁 시 증거가 없습니다. 항공사 직원과의 대화 내용, 공지 화면, 바우처 등을 사진으로 기록해 두세요.
+</div>
+
+<h2>04 | 대체편 신청 방법</h2>
+
+항공사가 대체편을 제공할 의무가 있는 경우(귀책사유가 항공사일 때), 다음 절차를 따릅니다.<br><br>
+
+<strong>현장 카운터 신청</strong>: 가장 빠른 방법입니다. 대기 줄이 길 경우 항공사 앱이나 고객센터 전화로 병행하세요.<br><br>
+
+<strong>앱·웹사이트 변경</strong>: 제주항공·진에어·에어부산·티웨이항공 등 주요 LCC는 모두 앱에서 편명 변경 기능을 제공합니다. 단, 결항이 선언된 경우 수수료 없이 변경 가능하지만 자리가 빠르게 차므로 즉시 접속하세요.<br><br>
+
+<strong>타 항공사로 변경</strong>: LCC 결항 시 같은 노선의 다른 항공사 편으로 옮기는 것은 일반적으로 항공사가 강제하지는 않습니다. 단, 소비자가 자비로 타 항공사 편을 예약하고 원 항공사에 차액 보상을 청구하는 방법도 가능합니다(귀책 확인 후). 이 경우 영수증을 반드시 보관하세요.
+
+<div class="img-area">
+<div class="img-placeholder">
+  <div class="ph-head">
+    <span>📷 AI 이미지 생성 영역</span>
+    <span class="ph-file">images/260823/2_lcc_delay_2.png</span>
+  </div>
+  <pre class="prompt-text" id="prompt-2-2">Close-up of a smartphone screen showing an airline app with flight cancellation notice and refund request form in Korean. Person's hands holding phone at airport gate. Background blurred airport lounge with waiting passengers. Detailed UI design visible, photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+  <button class="copy-btn" onclick="copyPrompt('prompt-2-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">항공사 앱에서 환불·변경 신청하는 화면 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 환불 절차와 소요 기간</h2>
+
+항공사 귀책으로 결항이나 4시간 이상 지연 시 환불을 선택할 수 있습니다.<br><br>
+
+<strong>신청 방법</strong>: 항공사 홈페이지 또는 앱의 '예약 관리 → 환불 신청'에서 진행합니다. 현장 카운터에서도 가능합니다.<br><br>
+
+<strong>환불 소요 기간</strong>: 카드 결제 기준 통상 7~14 영업일 이내입니다. LCC에 따라 3~4주가 걸리는 경우도 있습니다. 항공사 공식 약관에서 정확한 기간을 확인하세요.<br><br>
+
+<strong>여행자보험 연계</strong>: 여행자보험에 '항공기 지연 보상 특약'이 포함돼 있다면 추가 보상이 가능합니다. 보험사에 지연 증명 서류(항공사 발급 지연 확인서 또는 앱 기록)를 제출하면 됩니다.
+
+<h2>06 | 불가항력과 보상 한계</h2>
+
+<strong>천재지변·테러·ATC 사유</strong>로 결항·지연된 경우, 항공사의 금전적 보상 의무는 제한됩니다. 이 경우 기본적인 식음료와 환불 처리는 해 줘야 하지만, 추가 비용(호텔·교통)을 항공사가 전액 부담하지 않을 수 있습니다.<br><br>
+
+이를 대비해 <strong>여행자보험에 항공기 결항 및 지연 특약</strong>을 미리 가입해 두는 것이 중요합니다. 지연 6시간 이상, 결항 등의 경우 정액 보험금을 받을 수 있습니다. 성수기 막판에 LCC를 이용할수록 이 특약이 중요합니다.
+
+<h2>07 | 성수기 막판 LCC 이용 시 주의 사항</h2>
+
+8월 말은 여름 성수기 마지막 주간으로, LCC 국제선이 만석 운항됩니다. 이 시기 특히 주의할 점입니다.<br><br>
+
+<strong>초특가 운임 환불 불가 조건 확인</strong>: 최저가 프로모션 티켓은 결항 시에도 항공권 원가 환불만 받을 수 있고, 제반 비용 보상이 제한될 수 있습니다. 약관을 꼭 확인하세요.<br><br>
+
+<strong>결항 시 대체편 좌석 부족</strong>: 성수기에는 대체편 자리도 이미 꽉 차 있는 경우가 많습니다. 결항 통보 즉시 앱으로 가능한 빠른 대체편을 선점하세요.<br><br>
+
+<strong>여행자보험 사전 가입</strong>: 출발 전에 반드시 가입해야 합니다. 결항이 발생한 후 가입하면 소급 적용이 되지 않습니다.
+
+<h2>08 | 소비자 불만 접수 기관</h2>
+
+항공사와 협의가 원만하게 해결되지 않을 때 공식 기관에 민원을 제기할 수 있습니다.<br><br>
+
+<strong>국토교통부 항공교통서비스 신고센터</strong>: 1661-2626, 또는 항공교통서비스(ACS) 홈페이지(www.acs.go.kr)에서 온라인 신고 가능합니다.<br><br>
+
+<strong>한국소비자원</strong>: 1372 전화 또는 소비자24(www.consumer.go.kr)에서 피해구제 신청 가능합니다.<br><br>
+
+<strong>카드사 이의제기</strong>: 항공사 환불이 지연·거부되는 경우 카드사에 '차지백(chargeback)' 신청을 고려할 수 있습니다. 카드 결제일로부터 120일 이내인지 확인하세요.
+
+<h2>09 | 정리 — 결항 시 체크리스트</h2>
+
+<div class="step-box">
+✅ 지연·결항 공지 확인 즉시 사진 기록<br>
+✅ 항공사 카운터 또는 앱으로 대체편 또는 환불 선택<br>
+✅ 식음료 바우처 현장 요청 (2시간 이상 지연 시)<br>
+✅ 숙박 필요 시 항공사 부담 요청 (귀책사유가 항공사인 경우)<br>
+✅ 모든 비용 영수증 보관 (호텔·교통·식사)<br>
+✅ 여행자보험 지연 보상 특약 신청 (보험사에 지연 확인서 제출)<br>
+✅ 해결 안 되면 항공교통서비스 신고센터(1661-2626) 신고
+</div>
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260822/local_overseas_card_fee.html">해외결제 수수료 카드별 비교 — 트래블월렛·하나 트래블로그 실전 정리</a></li>
+<li><a href="../260822/travel_chuncheon_soyang_skywalk.html">춘천 소양강 스카이워크 — 물레길 카약과 9월 수상 나들이 코스</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#LCC결항보상</span>
+<span class="tag">#저비용항공사지연</span>
+<span class="tag">#항공결항환불</span>
+<span class="tag">#국제선지연보상</span>
+<span class="tag">#대체편신청</span>
+<span class="tag">#제주항공결항</span>
+<span class="tag">#진에어결항</span>
+<span class="tag">#항공소비자권리</span>
+<span class="tag">#여행자보험</span>
+<span class="tag">#항공교통서비스</span>
+</div>
+</body>
+</html>

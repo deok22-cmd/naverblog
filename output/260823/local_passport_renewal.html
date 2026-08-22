@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>여권 유효기간 얼마 남았을 때 재발급해야 하나 — 6개월 룰과 자동출입국심사 등록 방법</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>여권 유효기간 얼마 남았을 때 재발급해야 하나 — 6개월 룰과 자동출입국심사 등록 방법</h1>
+<div class="intro-box">
+해외여행을 앞두고 여권을 꺼냈다가 유효기간이 얼마 남지 않아 당황하는 분들이 많습니다. 입국 심사에서 여권을 거부당하거나 항공사에서 탑승을 막히는 상황을 피하려면, <strong>6개월 잔여 유효기간 원칙</strong>을 반드시 이해해야 합니다.<br><br>
+이 글에서는 국가별 여권 유효기간 요구 기준, 재발급 절차와 소요 기간, 그리고 자동출입국심사(SES) 등록 방법까지 한 번에 정리했습니다. 다음 여행 전에 꼭 확인하세요.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+  <div class="ph-head">
+    <span>📷 AI 이미지 생성 영역</span>
+    <span class="ph-file">images/260823/3_passport_1.png</span>
+  </div>
+  <pre class="prompt-text" id="prompt-3-1">South Korean passport on wooden desk with travel documents and boarding pass. Passport opened to show photo page with visa stamps. Selective focus on passport cover, navy blue background. Clean flat lay composition, natural lighting, photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+  <button class="copy-btn" onclick="copyPrompt('prompt-3-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">대한민국 여권과 항공권 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 여권 유효기간 6개월 룰이란</h2>
+
+많은 나라가 입국 시 <strong>여권 유효기간이 최소 6개월 이상 남아 있어야</strong> 한다는 조건을 적용합니다. 이를 '6개월 룰'이라 부릅니다.<br><br>
+
+예를 들어 8월 23일에 출국한다면, 여권 만료일이 2027년 2월 23일 이전이면 일부 국가에서 입국이 거부될 수 있습니다. 비자 없이 입국하는 국가들 대부분이 이 기준을 적용합니다.<br><br>
+
+단, 국가마다 기준이 다릅니다. 미국은 체류 기간 이상만 남아 있으면 되고, 유럽 쉥겐 지역은 출국 시 3개월 이상을 요구합니다. 정확한 기준은 외교부 해외안전여행 홈페이지(www.0404.go.kr)에서 여행 국가별로 확인하세요.
+
+<h2>02 | 내 여권 유효기간 확인 방법</h2>
+
+여권 표지 안쪽 첫 페이지에 <strong>만료일(Date of Expiry)</strong>이 명시되어 있습니다. 형식은 YYYY/MM/DD로 표기됩니다.<br><br>
+
+온라인으로도 확인할 수 있습니다. <strong>정부24(www.gov.kr)</strong>에서 공동인증서 또는 간편인증으로 로그인하면 '여권 정보 조회' 서비스를 이용할 수 있습니다.<br><br>
+
+외교부 <strong>영사민원24(www.passport.go.kr)</strong>에서도 본인 인증 후 여권 유효기간 확인이 가능합니다. 여권을 분실한 경우에도 이 서비스를 통해 상태 확인이 가능합니다.
+
+<h2>03 | 재발급이 필요한 상황</h2>
+
+다음 경우 여권 재발급이 필요합니다.<br><br>
+
+<strong>1. 유효기간 만료 또는 임박</strong>: 잔여 유효기간이 6개월 미만으로 줄어들었을 때. 특히 복수 국가를 방문하거나 비자 신청이 필요한 경우 더 일찍 재발급을 권장합니다.<br><br>
+
+<strong>2. 사증란(비자 페이지) 소진</strong>: 여권 유효기간이 남아 있어도 비자 스탬프를 찍을 빈 페이지가 없으면 입국 거부될 수 있습니다. 이 경우 여권 재발급이 필요합니다.<br><br>
+
+<strong>3. 분실·훼손</strong>: 여권을 잃어버리거나 물에 젖어 훼손된 경우. 훼손 여권은 입국 거부 가능성이 있습니다.<br><br>
+
+<strong>4. 개명·주민번호 변경</strong>: 법원에서 개명을 한 경우 여권 정보와 실제 신분이 달라지므로 재발급이 필요합니다.
+
+<h2>04 | 여권 재발급 절차와 준비물</h2>
+
+여권 재발급은 <strong>방문 신청</strong>이 원칙입니다. 일부 경우 대리 신청도 가능하지만, 전자여권이기 때문에 본인이 직접 하는 것을 권장합니다.<br><br>
+
+<strong>신청 장소</strong>: 전국 시·군·구청 및 행정복지센터 여권 담당 창구. 외교부 여권과(서울 광화문, 전국 14개 도시 여권사무소)에서도 신청 가능합니다.<br><br>
+
+<strong>준비물</strong><br>
+- 여권 발급 신청서 (현장 비치)<br>
+- 여권용 사진 1매 (6개월 이내 촬영, 3.5cm×4.5cm)<br>
+- 신분증 (주민등록증 또는 운전면허증)<br>
+- 기존 여권 (분실 시 분실신고서 대체)<br>
+- 수수료 (성인 10년 복수여권 기준 53,000원, 단수·기간별 다름 — 발급 전 재확인)<br><br>
+
+<strong>처리 기간</strong>: 일반 신청 기준 약 5~7 근무일. 긴급 발급은 3 근무일 이내로 빠르지만 별도 수수료가 있습니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+  <div class="ph-head">
+    <span>📷 AI 이미지 생성 영역</span>
+    <span class="ph-file">images/260823/3_passport_2.png</span>
+  </div>
+  <pre class="prompt-text" id="prompt-3-2">Korean traveler registering at automated immigration kiosk at Incheon International Airport. Modern self-service immigration control terminal with facial recognition camera. Person scanning their passport on the device. Bright modern airport interior background, clean design, photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+  <button class="copy-btn" onclick="copyPrompt('prompt-3-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">인천공항 자동출입국심사(SES) 등록 이용 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 온라인 신청 가능 여부</h2>
+
+현재 <strong>전자여권 재발급은 온라인 신청이 불가</strong>합니다. 전자여권 신청은 본인 확인과 지문 등록이 필요하기 때문에 반드시 창구를 방문해야 합니다.<br><br>
+
+다만, <strong>영사민원24(www.passport.go.kr)</strong>에서 신청서를 미리 작성하고 방문 예약을 할 수 있어 대기 시간을 줄일 수 있습니다. 온라인 예약 후 방문하면 빠르게 처리됩니다.<br><br>
+
+재외공관에 있는 경우(해외 체류 중)에는 해당 국가 주재 한국 대사관·영사관에서 재발급 신청이 가능합니다. 처리 기간은 국내보다 더 길어질 수 있습니다.
+
+<h2>06 | 자동출입국심사(SES) 등록 방법</h2>
+
+인천·김포·김해·제주·청주 국제공항에서 여권 심사 없이 빠르게 통과할 수 있는 <strong>자동출입국심사(Smart Entry Service, SES)</strong>를 활용하면 공항 수속이 훨씬 편해집니다.<br><br>
+
+<strong>등록 대상</strong>: 대한민국 국적 만 19세 이상(일부 공항에서 17세 이상도 가능). 신여권 발급 시마다 재등록이 필요합니다.<br><br>
+
+<strong>등록 장소</strong>: 공항 내 자동출입국심사 등록 센터. 인천공항 1터미널·2터미널 입국장에 센터가 있으며, 출입국 때 무관하게 방문 신청 가능합니다.<br><br>
+
+<strong>준비물</strong>: 본인 여권만 지참하면 됩니다.<br><br>
+
+<strong>소요 시간</strong>: 약 5~10분. 지문과 얼굴을 등록하면 이후 자동심사대(키오스크)를 이용해 빠르게 출입국할 수 있습니다.
+
+<h2>07 | 여권 재발급 후 자동심사 재등록 주의</h2>
+
+여권을 새로 발급받으면 <strong>기존 SES 등록 정보는 무효</strong>가 됩니다. 새 여권으로 다시 등록 센터를 방문해 재등록해야 자동출입국심사를 이용할 수 있습니다.<br><br>
+
+공항 이용 전에 미리 등록해 두는 것이 좋습니다. 공항 도착 당일에 등록하면 출국 수속 전에 완료해야 해서 시간이 촉박할 수 있습니다.<br><br>
+
+<div class="tip-box">
+💡 인천공항 2터미널에는 자동심사 등록 센터가 입국장(B1)과 3층 출국장 근처 등 여러 곳에 있어 방문 전 위치를 확인하면 좋습니다.
+</div>
+
+<h2>08 | 여권 분실 시 대처법</h2>
+
+해외에서 여권을 잃어버렸다면, 즉시 가장 가까운 <strong>한국 대사관 또는 영사관</strong>에 연락하세요.<br><br>
+
+귀국을 위한 <strong>여행증명서(임시여권)</strong>를 재외공관에서 신청할 수 있습니다. 현지 경찰에 분실 신고 후 접수증(Police Report)을 받아야 하는 경우가 많습니다.<br><br>
+
+국내에서 분실한 경우에는 가까운 구청 여권 창구에서 분실 신고 후 재발급 신청을 하면 됩니다. 분실 여권은 무효 처리되므로 발견해도 사용할 수 없습니다.
+
+<h2>09 | 자주 묻는 질문 (FAQ)</h2>
+
+<strong>Q. 6개월도 안 남았는데 지금 당장 여행 가도 되나?</strong><br>
+A. 방문 국가의 입국 조건을 먼저 확인하세요. 국가별로 요구 기간이 다릅니다. 외교부 해외안전여행(www.0404.go.kr)에서 국가별 여권 유효기간 조건을 확인할 수 있습니다.<br><br>
+
+<strong>Q. 재발급 후 기존 여권의 비자 스탬프는 어떻게 되나?</strong><br>
+A. 유효한 비자(미국 B1/B2 등 복수비자)가 구 여권에 찍혀 있다면, 신 여권과 구 여권을 함께 지참해 제시하면 됩니다. 구 여권의 비자는 유효기간 내 계속 유효합니다.<br><br>
+
+<strong>Q. 여권 사진 규격은?</strong><br>
+A. 3.5cm×4.5cm, 흰색 배경, 6개월 이내 촬영, 안경 착용 불가, 귀가 보여야 합니다. 규격 미달 사진은 반려되니 여권 사진 전문 사진관 이용을 권장합니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260822/local_overseas_card_fee.html">해외결제 수수료 카드별 비교 — 트래블월렛·하나 트래블로그 실전 정리</a></li>
+<li><a href="local_lcc_delay_refund.html">국내 LCC 국제선 지연·결항 보상 기준과 대체편 신청 방법</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#여권재발급</span>
+<span class="tag">#여권유효기간6개월</span>
+<span class="tag">#자동출입국심사</span>
+<span class="tag">#SES등록</span>
+<span class="tag">#여권분실대처</span>
+<span class="tag">#해외여행준비</span>
+<span class="tag">#인천공항자동심사</span>
+<span class="tag">#여권발급비용</span>
+<span class="tag">#외교부여권</span>
+<span class="tag">#영사민원24</span>
+</div>
+</body>
+</html>

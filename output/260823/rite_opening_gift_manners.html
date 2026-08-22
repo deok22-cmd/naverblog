@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>개업식 화분·축하선물 보내기와 오픈일 방문 예절 — 뭘 가져가고 뭘 조심해야 하나</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>개업식 화분·축하선물 보내기와 오픈일 방문 예절 — 뭘 가져가고 뭘 조심해야 하나</h1>
+<div class="intro-box">
+지인이나 친척이 가게나 사무실을 새로 열면, 무엇을 선물로 챙겨야 할지 막막한 경우가 많습니다. 화분이 정석이라지만 크기와 종류도 제각각이고, 봉투(축의금)를 써야 하는지도 애매합니다.<br><br>
+이 글에서는 개업 축하선물 선택 기준부터 화분 크기와 리본 문구, 현금 봉투 예절, 오픈일 방문 타이밍과 주의사항까지 구체적으로 정리했습니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+  <div class="ph-head">
+    <span>📷 AI 이미지 생성 영역</span>
+    <span class="ph-file">images/260823/4_opening_gift_1.png</span>
+  </div>
+  <pre class="prompt-text" id="prompt-4-1">Elegant flower arrangement for business grand opening ceremony. Large white and pink flower basket with congratulatory ribbon saying "축하합니다" in Korean. Set against a modern Korean shop exterior. Warm lighting, festive atmosphere, photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+  <button class="copy-btn" onclick="copyPrompt('prompt-4-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">개업 축하 화환과 꽃 바구니 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 개업 선물의 기본 원칙</h2>
+
+개업 선물을 고를 때는 두 가지를 먼저 파악해야 합니다. <strong>업종(매장·사무실·음식점 등)과 내 관계(지인·친척·직장동료 등)</strong>입니다.<br><br>
+
+매장이나 음식점처럼 손님을 직접 받는 공간이라면 <strong>화환·화분처럼 눈에 잘 띄는 선물</strong>이 환영받습니다. 반면 사무실이나 공방처럼 외부인 방문이 드문 공간이라면 실용적인 생활용품·커피머신·공기청정기 등이 더 도움이 됩니다.<br><br>
+
+관계가 가까울수록 현금 봉투가 솔직하고 실용적인 선택이 됩니다. 상사나 사업적 관계라면 격식 있는 화환이나 고급 선물세트가 어울립니다.
+
+<h2>02 | 개업 화환 선택 가이드</html>
+
+<strong>화환(화환 스탠드형)</strong>은 개업 축하의 가장 전통적인 선물입니다. 가게 앞에 줄지어 세워진 화환은 성황을 보여주는 상징이기도 합니다.<br><br>
+
+화환 주문 시 리본 문구를 함께 정해야 합니다. 위쪽(상단) 리본에는 <strong>"축 개업" 또는 "개업을 축하드립니다"</strong>를, 아래쪽 리본에는 <strong>보내는 사람 이름이나 단체명</strong>을 넣습니다.<br><br>
+
+가격대는 5만 원~20만 원대가 일반적입니다. 지인 수준이라면 7~10만 원, 가까운 친척이나 친구라면 10~15만 원대가 무난합니다. 꽃 배달 앱이나 지역 꽃집을 통해 발송일에 맞춰 예약하면 됩니다.<br><br>
+
+<div class="tip-box">
+💡 화환은 오픈 전날이나 오픈 당일 오전 중에 배달되도록 맞추는 것이 좋습니다. 오후 늦게 도착하면 가장 손님이 많은 시간대를 놓칩니다.
+</div>
+
+<h2>03 | 화분 선택 요령</h2>
+
+화환 대신 <strong>관엽식물 화분</strong>을 보내는 것도 좋습니다. 실내에서 오래 키울 수 있어 매장주가 실용적으로 받아들이는 경우가 많습니다.<br><br>
+
+인기 있는 개업 화분 종류는 다음과 같습니다.<br>
+- <strong>금전수(크라슐라)</strong>: 재물운을 상징해 가장 인기 있는 개업 화분<br>
+- <strong>인도고무나무</strong>: 크고 풍성한 잎이 인테리어 효과도 있음<br>
+- <strong>드라세나(행운목)</strong>: 공기 정화 효과·적은 관리로 오래 유지<br>
+- <strong>재스민·허브류</strong>: 향이 좋아 카페·베이커리 등에 어울림<br><br>
+
+크기는 공간에 맞게 고릅니다. 작은 매장이라면 탁상용 소품 화분, 넓은 매장이나 사무실이라면 1m 이상 대형 화분이 어울립니다.
+
+<h2>04 | 현금 봉투와 금액 기준</h2>
+
+개업 선물 대신 <strong>현금 봉투</strong>를 건네도 됩니다. 이때 봉투 겉면에는 <strong>"축 개업" 또는 "개업 축하"</strong>라고 씁니다. 결혼식 축의금 봉투와 형식은 유사합니다.<br><br>
+
+금액 기준은 관계에 따라 다릅니다.<br>
+
+<table class="info-table">
+<thead><tr><th>관계</th><th>일반적 금액</th></tr></thead>
+<tbody>
+<tr><td>직장 동료·지인</td><td>3~5만 원</td></tr>
+<tr><td>친한 친구·친척</td><td>5~10만 원</td></tr>
+<tr><td>형제·부모·자녀</td><td>10~30만 원 이상</td></tr>
+<tr><td>상사나 비즈니스 관계</td><td>선물세트·화환으로 대체 권장</td></tr>
+</tbody>
+</table>
+
+현금 봉투는 예약금 없이 짧은 방문이 어려울 때 특히 실용적입니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+  <div class="ph-head">
+    <span>📷 AI 이미지 생성 영역</span>
+    <span class="ph-file">images/260823/4_opening_gift_2.png</span>
+  </div>
+  <pre class="prompt-text" id="prompt-4-2">Korean style cash gift envelope on wooden table with calligraphy brush. Envelope reads "축 개업" in Korean brush calligraphy. Small money plant in pot beside it. Warm natural lighting, flat lay, clean minimal background, photorealistic, ultra high detail, 1:1 aspect ratio.</pre>
+  <button class="copy-btn" onclick="copyPrompt('prompt-4-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">개업 축하 현금 봉투와 금전수 화분 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 피해야 할 선물</h2>
+
+관례상 개업 축하선물로 <strong>피하는 것</strong>이 좋은 품목이 있습니다.<br><br>
+
+<strong>신발·슬리퍼</strong>: 오래된 미신이기는 하지만 일부에서 '저 떠나라'는 뜻으로 꺼립니다.<br>
+<strong>칼·가위</strong>: 인연을 끊는다는 느낌으로 꺼리는 경향이 있습니다.<br>
+<strong>선인장</strong>: 뾰족한 가시가 재수 없다고 여기는 분들이 있습니다.<br>
+<strong>붉은 글씨</strong>: 봉투나 카드에 빨간 펜 글씨는 피하는 것이 좋습니다.<br><br>
+
+이런 속설이 맞고 틀리고를 떠나, 상대가 예민할 수 있으니 굳이 피해서 나쁠 것은 없습니다.
+
+<h2>06 | 오픈 당일 방문 예절</h2>
+
+개업식 당일 방문할 때 지켜야 할 예절이 있습니다.<br><br>
+
+<strong>방문 타이밍</strong>: 오픈 초기 1~2시간은 가장 혼잡합니다. 점주가 정신없을 때 오래 머물면 오히려 부담이 됩니다. 방문은 짧고 간결하게 축하 인사를 건네는 것이 원칙입니다.<br><br>
+
+<strong>음식점·카페의 경우</strong>: 오픈 당일에 무료 증정·샘플 행사를 하는 경우가 많습니다. 지인이라면 제값을 지불하고 주문하는 것이 예의입니다. 공짜만 챙기면 오히려 민폐가 됩니다.<br><br>
+
+<strong>오래 머물기</strong>: 매장이 손님으로 붐빌 때 지인이 오래 자리를 차지하면 곤란합니다. 식사나 구매를 마쳤으면 자리를 비워 다른 손님을 받을 수 있게 해주세요.<br><br>
+
+<div class="warn-box">
+⚠️ 선물을 들고 방문할 때는 사전에 상대의 바쁜 시간대를 확인하고 가는 것이 좋습니다. 아무 연락 없이 오픈 당일 정오에 화분을 들고 나타나면 처리하기 난감할 수 있습니다.
+</div>
+
+<h2>07 | 멀리서 축하할 때 — 화환 대행·택배 선물</h2>
+
+직접 방문하기 어려울 때는 꽃집 화환 대행이나 택배 선물을 활용합니다.<br><br>
+
+화환 대행은 전국 꽃집 네트워크를 통해 주문하면 됩니다. <strong>카카오 선물하기, 쿠팡, 네이버 스마트스토어</strong> 등에서도 개업 화환·화분 배달 서비스를 찾을 수 있습니다.<br><br>
+
+실용 선물을 택배로 보낼 때는 <strong>배달 일정을 오픈 전날</strong>에 맞추는 것이 좋습니다. 오픈 당일이면 바빠서 포장을 풀 시간이 없을 수 있습니다.<br><br>
+
+<div class="tip-box">
+💡 선물과 함께 짧은 손편지나 카드를 동봉하면 훨씬 더 따뜻하게 받아들여집니다. 축하 문구는 간결하게 "새 출발 진심으로 축하합니다"처럼 쓰면 충분합니다.
+</div>
+
+<h2>08 | 개업 축하 문자·카카오 메시지 쓰는 법</h2>
+
+직접 선물을 보내기 어렵다면 문자나 카카오 메시지로 마음을 전하는 것만으로도 충분합니다. 형식보다 진심이 중요합니다.<br><br>
+
+<strong>예시 문구</strong><br>
+- "이번에 새로 여신 가게 진심으로 축하드려요! 하시는 일 모두 잘 되길 바랍니다."<br>
+- "드디어 오픈이네요! 정말 축하해요. 가게 번성하길 바랄게요. 곧 들를게요 :)"<br>
+- "오픈 축하드립니다. 사업 번창하시고 건강하세요."<br><br>
+
+형식적인 말보다 상대를 구체적으로 언급하는 메시지가 더 기억에 남습니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260822/rite_no_name_giftenvelope.html">이름 없는 축의금 봉투, 확인 방법과 처리 예절</a></li>
+<li><a href="../260816/rite_funeral_after_meal.html">장례식장 음식 예절과 조문 후 식사 가이드</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#개업선물</span>
+<span class="tag">#개업화분</span>
+<span class="tag">#개업화환</span>
+<span class="tag">#개업식예절</span>
+<span class="tag">#축개업</span>
+<span class="tag">#개업봉투금액</span>
+<span class="tag">#개업선물추천</span>
+<span class="tag">#경조사예절</span>
+<span class="tag">#개업현금봉투</span>
+<span class="tag">#개업화환문구</span>
+</div>
+</body>
+</html>
