@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>해외 로밍 요금 귀국 후 확인하는 법 — 과다청구 이의신청과 eSIM 잔여 데이터 환불</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>해외 로밍 요금 귀국 후 확인하는 법 — 과다청구 이의신청과 eSIM 잔여 데이터 환불</h1>
+<div class="intro-box">
+해외여행을 다녀온 뒤 통신 요금 청구서를 받아보고 깜짝 놀란 경험, 한 번쯤 있지 않으신가요? 로밍 요금은 사용량에 따라 예상보다 훨씬 많이 나오거나, 반대로 eSIM 잔여 데이터가 남아 환불 문의를 해야 하는 경우가 생깁니다. 이 글에서는 <strong>귀국 후 로밍 요금을 정확히 확인하는 방법</strong>, 과다청구가 의심될 때 <strong>이의신청하는 절차</strong>, 그리고 <strong>eSIM 잔여 데이터를 환불받을 수 있는지</strong>까지 실용 정보를 정리했습니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260824/4_roaming_fee_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-1">Person at airport arrival hall looking at smartphone showing a telecom billing app with roaming data usage details and charges breakdown, worried expression, blurred airport background with signage, realistic casual travel clothing, modern smartphone screen clearly visible, warm interior lighting, photorealistic, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">귀국 후 스마트폰으로 로밍 요금 청구 내역을 확인하는 여행자 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 해외 로밍 요금, 어떻게 청구되나</h2>
+
+해외 로밍 요금은 크게 <strong>데이터 로밍</strong>, <strong>음성 통화 로밍</strong>, <strong>문자 로밍</strong>으로 나뉩니다.<br><br>
+
+데이터 로밍은 국내 통신사에서 제공하는 <strong>정액 로밍 요금제</strong>에 가입했는지 여부에 따라 요금 체계가 완전히 달라집니다. 요금제에 가입했다면 일 단위 정액이 부과되고, 미가입 상태에서 데이터를 사용했다면 종량제(KB당 과금)가 적용됩니다.<br><br>
+
+종량제 로밍은 단 몇 MB를 사용해도 수만~수십만 원이 청구될 수 있어 주의가 필요합니다. 특히 앱 자동 업데이트나 클라우드 백업이 백그라운드에서 실행되면 본인도 모르게 대량 데이터가 소모됩니다.<br><br>
+
+음성 통화 로밍은 수신·발신 모두 과금이 되는 경우가 많습니다. 국가에 따라 분당 요금이 다르며, 해외에서 국내로 거는 발신과 수신 모두 요금이 발생한다는 점을 기억하세요.<br><br>
+
+로밍 요금은 통상 귀국 후 다음 달 청구서에 합산되어 나오므로, 여행 직후가 아닌 한두 달 뒤에야 실제 요금을 알게 되는 경우도 있습니다.<br><br>
+
+<h2>02 | 귀국 후 로밍 요금 확인하는 3가지 방법</h2>
+
+귀국 후 로밍 사용 요금을 미리 파악하고 싶다면 다음 세 가지 방법을 활용하세요.<br><br>
+
+<strong>① 통신사 공식 앱 확인</strong>: SKT(T전화·My T), KT(올레닷컴·My KT), LGU+(U+앱)에서 최근 청구 예정 요금 조회가 가능합니다. 앱 > 요금 > 로밍 사용 내역으로 들어가면 국가별·날짜별 데이터·통화 사용량을 확인할 수 있습니다.<br><br>
+
+<strong>② 고객센터 전화 조회</strong>: SKT 114, KT 100, LGU+ 101로 전화해 "해외 로밍 사용 내역 조회"를 요청하면 담당자가 상세 내역을 알려줍니다.<br><br>
+
+<strong>③ 공식 홈페이지 마이페이지</strong>: 각 통신사 공식 홈페이지에 로그인 후 마이페이지 > 요금 내역 > 로밍 상세 조회 메뉴를 이용합니다. PDF 명세서를 다운로드해 보관해두는 것이 나중에 이의신청 시 유용합니다.<br><br>
+
+청구 예정 금액이 예상보다 크게 높다면, 청구서가 확정되기 전에 내역을 먼저 파악해두는 것이 이의신청에 유리합니다.<br><br>
+
+<h2>03 | 로밍 요금 과다청구 의심 시 이의신청 절차</h2>
+
+로밍 요금이 이상하다고 느껴진다면 다음 단계로 이의신청을 진행할 수 있습니다.<br><br>
+
+<div class="step-box">
+<strong>Step 1. 사용 내역 상세 조회</strong>: 통신사 앱 또는 홈페이지에서 날짜별·시간대별 데이터·통화 사용 기록을 확인합니다. 본인이 실제로 사용한 내역과 대조해 과청구 여부를 파악합니다.
+</div>
+<div class="step-box">
+<strong>Step 2. 통신사 고객센터에 이의신청</strong>: 과다청구가 확인되면 해당 통신사 고객센터(SKT 114, KT 100, LGU+ 101)에 전화해 이의신청 의사를 밝힙니다. "로밍 과다청구 이의신청"이라고 명확히 말하면 담당 부서로 연결해줍니다.
+</div>
+<div class="step-box">
+<strong>Step 3. 증빙 자료 제출</strong>: 여행 중 Wi-Fi만 사용했다는 근거(호텔 Wi-Fi 연결 기록, eSIM 데이터 사용 내역 등), 실제 있었던 위치 기록 등을 준비하면 이의신청에 도움이 됩니다.
+</div>
+<div class="step-box">
+<strong>Step 4. 방송통신위원회 민원</strong>: 통신사와 협의가 되지 않을 경우 방송통신위원회(msit.go.kr 또는 국번 없이 1335)에 민원을 제기할 수 있습니다. 통신사는 규제기관 민원에 더 신속히 대응하는 경향이 있습니다.
+</div>
+
+이의신청이 받아들여지면 과다청구 금액을 환급받거나 다음 달 청구서에서 차감해주는 방식으로 처리됩니다.<br><br>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260824/4_roaming_fee_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-2">Close-up of a person's hand holding a smartphone showing a telecom app with detailed roaming data usage chart and itemized billing breakdown, eSIM settings visible on screen, modern clean UI design, soft focus background of a home office desk, photorealistic, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">통신사 앱에서 로밍 요금 상세 내역을 확인하는 장면 / AI 제작 이미지</div>
+</div>
+
+<h2>04 | eSIM 잔여 데이터, 환불받을 수 있나</h2>
+
+해외 eSIM 서비스를 구매해 사용했는데 데이터가 남았다면, 환불 가능 여부는 <strong>eSIM 판매처의 정책</strong>에 따라 달라집니다.<br><br>
+
+국내 통신사 eSIM 로밍 요금제(SKT·KT·LGU+)는 일반적으로 사용 전 취소는 가능하지만, <strong>사용 후 잔여 데이터 환불은 원칙적으로 불가</strong>합니다. 개통 후 첫 접속이 이루어지면 사용한 것으로 간주되기 때문입니다.<br><br>
+
+단, 서비스 오류나 기술적 문제로 데이터를 사용하지 못한 경우에는 이의신청을 통해 일부 또는 전액 환불받을 수 있는 사례가 있으므로, 포기하지 말고 고객센터에 문의해보세요.<br><br>
+
+해외 서드파티 eSIM 앱(예: Airalo, Holafly, Nomad 등)은 업체마다 환불 정책이 다릅니다. 구매 시 이용약관의 환불 조항을 미리 확인하는 것이 중요합니다. 일부 서비스는 미사용 데이터 일부 환급을 지원하기도 합니다.<br><br>
+
+eSIM 잔여 데이터 환불을 원한다면, 귀국 직후 해당 앱의 고객 채팅이나 이메일로 신청하는 것이 가장 빠릅니다.<br><br>
+
+<h2>05 | 국내 통신사별 로밍 이의신청 채널 정리</h2>
+
+<table class="info-table">
+  <tr><th>통신사</th><th>고객센터</th><th>이의신청 방법</th></tr>
+  <tr><td>SKT</td><td>114 (무료)</td><td>전화·T world 앱·SKT 매장 방문</td></tr>
+  <tr><td>KT</td><td>100 (무료)</td><td>전화·올레닷컴·KT 매장 방문</td></tr>
+  <tr><td>LGU+</td><td>101 (무료)</td><td>전화·U+ 앱·LGU+ 매장 방문</td></tr>
+  <tr><td>알뜰폰(MVNO)</td><td>각 통신사 고객센터</td><td>해당 MVNO 고객센터 이용</td></tr>
+</table>
+
+고객센터 상담 시 '로밍 사용 내역 이의신청'이라고 먼저 밝히면 일반 요금 상담 큐가 아닌 전문 부서로 연결돼 처리가 빠릅니다.<br><br>
+
+<h2>06 | 로밍 요금 폭탄 예방법 — 다음 여행을 위한 체크리스트</h2>
+
+이미 청구서를 받아든 분이라면 이번 경험을 교훈 삼아, 다음 여행에는 미리 예방하는 것이 최선입니다.<br><br>
+
+<strong>① 출국 전 로밍 요금제 가입 확인</strong>: 각 통신사 로밍 센터(SKT 해외로밍 080-011-6000, KT·LGU+ 각 고객센터)에 문의하거나 앱에서 로밍 요금제를 미리 가입해 두세요. 정액제 가입 시 종량 과금을 방지할 수 있습니다.<br><br>
+
+<strong>② 데이터 로밍 스위치 OFF</strong>: 요금제를 가입하지 않을 경우 스마트폰 설정에서 '셀룰러 데이터 로밍'을 끄고 Wi-Fi만 사용합니다.<br><br>
+
+<strong>③ 현지 유심 또는 eSIM 구매</strong>: 여행 기간이 길거나 데이터 사용량이 많다면 현지 유심이나 해외 전용 eSIM을 구매하는 것이 국내 통신사 로밍보다 저렴한 경우가 많습니다.<br><br>
+
+<strong>④ 자동 업데이트·백업 비활성화</strong>: 앱 자동 업데이트, 사진 클라우드 자동 백업은 셀룰러 데이터 사용 설정에서 Wi-Fi 전용으로 바꿔두세요.<br><br>
+
+<strong>⑤ 매일 사용량 모니터링</strong>: 통신사 앱에서 해외 로밍 실시간 데이터 사용량을 매일 확인하는 습관을 들이면 갑작스러운 요금 폭탄을 예방할 수 있습니다.<br><br>
+
+<h2>07 | 로밍 요금 분쟁, 방송통신위원회에 민원 넣는 법</h2>
+
+통신사와의 협의로 해결되지 않는 경우, 정부 기관을 통한 분쟁 조정 절차를 이용할 수 있습니다.<br><br>
+
+<strong>방송통신위원회 이용자 정보포털</strong>: 과학기술정보통신부 민원 포털(minwon.msit.go.kr) 또는 방송통신위원회 홈페이지에서 온라인 민원 신청이 가능합니다.<br><br>
+
+<strong>전화 민원</strong>: 국번 없이 <strong>1335</strong>로 전화하면 통신 서비스 관련 분쟁 상담을 받을 수 있습니다.<br><br>
+
+<strong>한국소비자원</strong>: 소비자24(consumer.go.kr)를 통해 소비자 분쟁 조정 신청도 가능합니다. 금액이 크고 명백한 잘못이 있는 경우 활용을 검토해보세요.<br><br>
+
+분쟁 신청 시 통화 녹음, 고객센터 상담 기록, 청구서 PDF 사본 등을 미리 보관해 두면 절차가 수월합니다.<br><br>
+
+<h2>08 | 자주 묻는 질문 Q&A</h2>
+
+<strong>Q. 귀국 후 몇 개월 지나면 이의신청이 안 되나요?</strong><br>
+A. 통신사마다 다르지만 대부분 청구일로부터 6개월~1년 이내에 이의신청이 가능합니다. 이상 내역을 발견하면 빠를수록 처리가 쉬우니 청구서 수령 즉시 확인하세요.<br><br>
+
+<strong>Q. 해외에서 전화를 받기만 했는데도 요금이 나오나요?</strong><br>
+A. 네, 대부분의 로밍 상품에서 해외 수신 통화도 과금됩니다. 수신 거절 설정을 해두거나, 카카오톡·WhatsApp 등 인터넷 통화를 활용하면 통화 요금을 줄일 수 있습니다.<br><br>
+
+<strong>Q. 로밍 요금제를 나중에 소급해서 적용받을 수 있나요?</strong><br>
+A. 원칙적으로는 사용 전에 가입해야 하지만, 귀국 직후 즉시 고객센터에 문의하면 일부 통신사에서 소급 적용을 검토해 주는 경우도 있습니다. 다만 확정적이지 않으므로 출국 전 가입이 최선입니다.<br><br>
+
+<h2>09 | 정리 — 귀국 후 로밍 요금 대응 흐름도</h2>
+
+요금 폭탄이 날아왔을 때 당황하지 않도록, 전체 대응 흐름을 정리하면 다음과 같습니다.<br><br>
+
+<div class="step-box">
+1️⃣ 통신사 앱·홈페이지에서 로밍 사용 내역 상세 조회<br>
+2️⃣ 실제 사용 내역과 청구 내역 대조 → 불일치 항목 메모<br>
+3️⃣ 고객센터에 이의신청 → 담당 부서에서 재검토<br>
+4️⃣ 결과 안내 후 환급 또는 조정 적용<br>
+5️⃣ 결과 불만족 시 → 방통위(1335) 또는 한국소비자원 민원 접수
+</div>
+
+로밍 요금은 생각보다 구제받는 사례가 많습니다. 일단 '이건 맞는 요금인가?' 의문이 생기면 포기하지 말고 문의해보는 것이 중요합니다.<br><br>
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260823/local_lcc_delay_refund.html">LCC 항공편 지연·결항 보상 신청하는 법 — 보상 기준·서류·절차 완전 정리</a></li>
+<li><a href="../260823/local_passport_renewal.html">여권 유효기간 얼마 남았을 때 재발급해야 하나 — 6개월 룰과 자동출입국심사 등록 방법</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#해외로밍</span>
+<span class="tag">#로밍요금확인</span>
+<span class="tag">#로밍과다청구</span>
+<span class="tag">#이의신청</span>
+<span class="tag">#eSIM환불</span>
+<span class="tag">#해외여행실용</span>
+<span class="tag">#통신사로밍</span>
+<span class="tag">#로밍요금조회</span>
+<span class="tag">#해외데이터</span>
+<span class="tag">#여행실용정보</span>
+</div>
+</body>
+</html>

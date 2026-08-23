@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>내 차 팔 때 중고차 매입 견적 여러 곳에서 비교받는 법 — 출장 매입 주의사항까지</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>내 차 팔 때 중고차 매입 견적 여러 곳에서 비교받는 법 — 출장 매입 주의사항까지</h1>
+<div class="intro-box">
+내 차를 팔기로 결심했는데, 어디서 어떻게 팔아야 가장 좋은 가격을 받을 수 있을지 막막하신가요? <strong>중고차 매입 견적은 한 곳에서만 받으면 손해</strong>를 보기 쉽습니다. 같은 차라도 업체마다 수십만 원에서 수백만 원까지 차이가 나는 경우가 흔합니다. 이 글에서는 온라인 견적 비교 플랫폼 활용법, 출장 매입 주의사항, 그리고 차를 팔기 전 손쉽게 시세를 파악하는 방법까지 실용 가이드를 정리했습니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260824/6_car_sell_quote_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-1">Person using smartphone app to compare used car purchase price quotes from multiple dealers, car visible in background in a parking lot, multiple quote comparison interface on mobile screen showing different price offers, realistic casual clothing, sunny day, photorealistic, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">스마트폰으로 중고차 매입 견적을 여러 업체에서 비교하는 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 내 차 시세, 먼저 파악하는 방법</h2>
+
+견적 비교 전, 내 차의 대략적인 시세를 먼저 파악해두면 업체가 제시하는 금액이 적절한지 판단하기 쉽습니다.<br><br>
+
+<strong>엔카(encar.com)</strong>: 국내 최대 중고차 거래 플랫폼으로, 같은 연식·주행거리·옵션의 차량이 현재 얼마에 올라와 있는지 확인할 수 있습니다. 판매 가격이므로 실제 매입 가격은 이보다 10~20% 낮을 수 있습니다.<br><br>
+
+<strong>케이카(kcar.com) 내차팔기</strong>: 케이카의 온라인 견적 서비스로, 차량 정보를 입력하면 즉시 예상 매입 가격을 제공합니다.<br><br>
+
+<strong>SK엔카 내차사기 · 오토옥션</strong>: 경매 방식으로 여러 딜러에게 동시에 견적을 받는 방식이어서 경쟁 입찰을 통해 높은 가격을 받을 수도 있습니다.<br><br>
+
+이렇게 여러 채널에서 먼저 시세를 파악한 뒤 실물 견적을 받으면, 낮은 가격을 제시받았을 때 협상이 가능합니다.<br><br>
+
+<h2>02 | 중고차 매입 견적 비교 플랫폼 총정리</h2>
+
+현재 운영 중인 주요 중고차 매입 견적 비교 서비스를 정리했습니다.<br><br>
+
+<table class="info-table">
+  <tr><th>플랫폼</th><th>방식</th><th>특징</th></tr>
+  <tr><td>SK엔카 내차사기</td><td>경매 입찰</td><td>여러 딜러 동시 입찰, 경쟁으로 높은 가격 가능</td></tr>
+  <tr><td>케이카 내차팔기</td><td>즉시 견적</td><td>온라인 견적 즉시 확인, 방문 매입 진행</td></tr>
+  <tr><td>AJ셀카(셀카닷컴)</td><td>견적 비교</td><td>복수 업체 견적 비교 후 최고가 선택</td></tr>
+  <tr><td>오토플러스</td><td>출장/방문 매입</td><td>전국 출장 매입 서비스</td></tr>
+  <tr><td>카카오페이 중고차</td><td>온라인 견적</td><td>카카오 연동 간편 신청</td></tr>
+</table>
+
+여러 플랫폼에 동시에 견적을 신청해두면 같은 날 여러 업체의 최종 제안을 비교할 수 있어 시간을 아낄 수 있습니다.<br><br>
+
+<h2>03 | 온라인 견적 신청 — 어떻게 진행되나</h2>
+
+온라인 견적 신청은 대체로 다음과 같은 흐름으로 진행됩니다.<br><br>
+
+<div class="step-box">
+<strong>Step 1. 차량 정보 입력</strong>: 차량 번호, 연식, 주행거리, 색상, 사고 유무 등 기본 정보를 입력합니다. 사고 이력은 정직하게 입력하는 것이 나중에 분쟁 없이 원활하게 거래하는 방법입니다.
+</div>
+<div class="step-box">
+<strong>Step 2. 예상 견적 확인</strong>: AI 기반 시세 분석 결과 또는 담당자 연락을 통해 예상 매입 금액을 확인합니다.
+</div>
+<div class="step-box">
+<strong>Step 3. 실물 차량 확인 (방문 또는 출장)</strong>: 담당자가 직접 차를 확인한 후 최종 견적을 제시합니다. 온라인 견적은 실물 확인 전 예상가이며, 최종 가격은 실물 상태에 따라 달라질 수 있습니다.
+</div>
+<div class="step-box">
+<strong>Step 4. 계약 및 이전 서류 처리</strong>: 가격 합의 후 이전 등록 서류(자동차 등록증, 신분증, 도장 등)를 준비해 거래를 완료합니다.
+</div>
+
+<h2>04 | 출장 매입이란 — 편리함과 주의할 점</h2>
+
+출장 매입은 매입 업체 담당자가 집이나 직장으로 직접 찾아와 차를 보고 견적을 내주는 서비스입니다.<br><br>
+
+이동이 불편하거나 바쁜 분들에게 편리하지만, 주의할 점도 있습니다.<br><br>
+
+<div class="warn-box">
+⚠️ <strong>출장 매입 주의사항</strong><br>
+① 출장비·방문비 명목으로 추가 금액을 요구하는 업체는 피하세요. 정상적인 출장 매입 서비스는 출장비 무료가 원칙입니다.<br>
+② 현장에서 "지금 결정하지 않으면 이 가격은 없다"는 압박을 가하는 업체는 신중하게 판단하세요. 검토 시간을 요구하는 것은 정당한 권리입니다.<br>
+③ 출장 담당자가 제시하는 가격이 온라인 견적과 크게 차이 난다면, 이유를 명확히 설명 받고 다른 업체와 비교 후 결정하세요.
+</div>
+
+출장 매입 업체는 이름이 알려진 대형 플랫폼(케이카, 엔카 등)을 통해 신청하는 것이 개인 중개상보다 신뢰도가 높습니다.<br><br>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260824/6_car_sell_quote_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-2">Used car dealer inspecting a white sedan in a parking lot, checking exterior condition and reading OBD diagnostic device plugged into car interior, clipboard with inspection form, professional uniform, sunny day, realistic used car purchasing scene, photorealistic, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">출장 매입 담당자가 차량 상태를 꼼꼼하게 점검하는 장면 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 최고가 받으려면 — 차 팔기 전 준비해야 할 것들</h2>
+
+같은 차라도 상태에 따라 매입가가 달라집니다. 팔기 전 간단한 준비로 가격을 높일 수 있습니다.<br><br>
+
+<strong>외관·실내 청소</strong>: 세차와 실내 청소를 해두면 차의 상태가 더 좋아 보여 긍정적인 첫인상을 줍니다. 비용 대비 효과가 큰 준비입니다.<br><br>
+
+<strong>서류 정리</strong>: 자동차 등록증, 정기검사 증명서, 보험 이력 등을 미리 준비해두면 거래가 빠르게 진행됩니다.<br><br>
+
+<strong>사고 이력 확인</strong>: 카히스토리(carhistory.or.kr)나 보험개발원에서 본인 차량의 사고 이력을 미리 확인하면, 업체와 협의 시 공식 자료로 활용할 수 있습니다.<br><br>
+
+<strong>추가 옵션·악세서리 파악</strong>: 선루프, 열선 시트, 내비게이션 등 옵션 목록을 정리해두면 견적 산정 시 누락 없이 반영될 수 있습니다.<br><br>
+
+<strong>소모품 정비</strong>: 타이어 교체 시기가 임박했거나 경고등이 켜져 있는 경우, 이는 감가 요소가 됩니다. 비용 대비 고려해서 사전 정비 여부를 결정하세요.<br><br>
+
+<h2>06 | 직접 판매 vs 업체 매입 — 어떤 방법이 유리할까</h2>
+
+중고차를 파는 방법은 크게 두 가지입니다. <strong>업체에 직접 매각</strong>하거나, <strong>개인 간 직거래(당근마켓, 번개장터, 엔카 개인직거래)</strong>로 파는 방법입니다.<br><br>
+
+<strong>업체 매각의 장점</strong>: 빠르고 간편합니다. 이전 절차·세금 처리 등을 업체가 대행해주어 번거로움이 적습니다.<br><br>
+
+<strong>업체 매각의 단점</strong>: 개인 거래보다 가격이 낮을 수 있습니다. 업체가 재판매 마진을 붙이기 때문입니다.<br><br>
+
+<strong>개인 직거래의 장점</strong>: 가격 협상 여지가 있고, 업체보다 높은 가격에 판매 가능합니다.<br><br>
+
+<strong>개인 직거래의 단점</strong>: 매수자를 구하는 데 시간이 걸리고, 이전 등록 절차를 직접 처리해야 하며, 사기 거래 위험도 있습니다.<br><br>
+
+급하게 차를 처분해야 하는 경우라면 업체 매각이, 시간 여유가 있고 최대 가격을 원한다면 개인 직거래를 고려해볼 수 있습니다.<br><br>
+
+<h2>07 | 이전 등록 서류와 절차 — 판매 완료까지 뭘 준비하나</h2>
+
+중고차 매각 시 필요한 서류를 미리 준비해두면 당일 거래가 빠르게 진행됩니다.<br><br>
+
+<table class="info-table">
+  <tr><th>서류</th><th>비고</th></tr>
+  <tr><td>자동차 등록증</td><td>분실 시 관할 차량등록사업소에서 재발급</td></tr>
+  <tr><td>신분증</td><td>주민등록증 또는 운전면허증</td></tr>
+  <tr><td>도장(인감 도장 or 서명)</td><td>매도용 인감증명서 발급 시 인감 도장 필요</td></tr>
+  <tr><td>매도용 인감증명서</td><td>인감증명서 발급 후 '자동차 이전용' 명시 필요</td></tr>
+  <tr><td>자동차세 납부 확인</td><td>체납 없어야 이전 가능</td></tr>
+</table>
+
+업체 매입의 경우 이전 등록 서류 준비를 업체가 안내해주며, 필요한 서류를 직접 수거하러 오기도 합니다.<br><br>
+
+<h2>08 | 중고차 매각 후 세금 문제 — 알아둬야 할 것</h2>
+
+개인이 자가용 승용차를 매각할 때는 일반적으로 <strong>양도소득세가 부과되지 않습니다</strong>. 승용차는 비과세 자산에 해당하기 때문입니다.<br><br>
+
+단, 사업용 차량이나 법인 소유 차량은 세무 처리가 다를 수 있으므로, 이 경우 세무사 또는 국세청(126) 문의를 권장합니다.<br><br>
+
+차량 이전 후 자동차세 환급이 발생할 수 있습니다. 이미 납부한 연간 자동차세 중 매각 이후 기간에 해당하는 금액을 환급받을 수 있으니, 관할 시·군·구청 세무과에 문의하세요.<br><br>
+
+<h2>09 | 중고차 팔 때 자주 묻는 Q&A</h2>
+
+<strong>Q. 견적을 받은 뒤 계약을 취소할 수 있나요?</strong><br>
+A. 최종 계약서에 서명하기 전까지는 취소가 가능합니다. 구두 합의나 앱 내 견적 수락만으로 법적 계약이 성립되지는 않습니다. 단, 출장 매입의 경우 담당자가 방문한 비용을 고려해 신중하게 결정하세요.<br><br>
+
+<strong>Q. 사고 차량도 팔 수 있나요?</strong><br>
+A. 네, 사고 이력이 있어도 판매할 수 있습니다. 단 사고 이력은 카히스토리 등에서 조회되므로, 숨기지 않고 정직하게 고지하는 것이 나중에 분쟁 없이 거래를 완료하는 길입니다.<br><br>
+
+<strong>Q. 할부금이 남아 있는 차도 팔 수 있나요?</strong><br>
+A. 매각 대금으로 남은 할부금을 상환하는 방식으로 판매가 가능합니다. 금융사 동의와 선취상환 수수료가 발생할 수 있으니, 금융사에 먼저 확인하세요.<br><br>
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260823/car_uninsured_hitrun_comp.html">무보험·뺑소니 차에 치였을 때 보상받는 법 — 정부 보장 사업 신청 절차</a></li>
+<li><a href="../260823/local_lcc_delay_refund.html">LCC 항공편 지연·결항 보상 신청하는 법 — 보상 기준·서류·절차 완전 정리</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#중고차매도</span>
+<span class="tag">#중고차매입견적</span>
+<span class="tag">#차팔때</span>
+<span class="tag">#중고차비교</span>
+<span class="tag">#출장매입</span>
+<span class="tag">#중고차플랫폼</span>
+<span class="tag">#엔카</span>
+<span class="tag">#케이카</span>
+<span class="tag">#중고차시세</span>
+<span class="tag">#자동차매도</span>
+</div>
+</body>
+</html>
