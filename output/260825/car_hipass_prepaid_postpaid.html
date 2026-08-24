@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>하이패스 선불카드 vs 후불, 나한테 뭐가 유리한가 — 연회비·충전·미납 리스크 비교</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>하이패스 선불카드 vs 후불, 나한테 뭐가 유리한가 — 연회비·충전·미납 리스크 비교</h1>
+<div class="intro-box">
+하이패스를 처음 달 때 선불카드로 할지, 후불(신용·체크카드 연동)로 할지 헷갈리는 분들이 많습니다. 선불카드는 충전이 번거롭고, 후불카드는 연회비나 미납 걱정이 있습니다. 이 글에서는 두 방식의 구조적 차이, 충전 방법, 할인 혜택, 미납 리스크, 사용 패턴별 추천 기준을 정리합니다. 공식 정보 출처: 한국도로공사 공식 홈페이지(highway.co.kr), 이파인(efine.go.kr). ※ 정확한 요금·혜택은 카드사 및 한국도로공사 홈페이지에서 방문 시 기준으로 재확인하시기 바랍니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 생성 필요</span><span class="ph-file">images/260825/6_hipass_1.png</span></div>
+<div class="prompt-text" id="p6-1">A car passing through a Hi-Pass toll gate on a Korean highway. Clear signage visible showing the Hi-Pass lane. Autumn scenery on the sides. The camera captures the vehicle from the side at the moment of passing through. Clean, informational photography style, no motion blur.</div>
+<button class="copy-btn" onclick="copyPrompt('p6-1')">프롬프트 복사</button>
+</div>
+<div class="img-caption">하이패스 톨게이트 통과 장면 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 하이패스 선불카드와 후불카드 — 기본 구조 차이</h2>
+
+하이패스 카드는 크게 두 종류입니다.<br><br>
+
+<strong>선불카드</strong>: 마치 교통카드처럼 미리 금액을 충전해두고 사용하는 방식입니다. 잔액 범위 안에서만 결제되며, 잔액이 없으면 통행료가 결제되지 않아 미납 처리됩니다. 신용 점수나 신용카드 발급 자격이 없어도 누구나 사용할 수 있습니다.<br><br>
+
+<strong>후불카드</strong>: 신용카드 또는 체크카드에 하이패스 기능을 탑재한 방식입니다. 통행료가 카드사에 자동 청구되고 매월 결제일에 출금됩니다. 신용카드 기반이라면 신용 점수와 발급 조건이 필요합니다.<br><br>
+
+<table class="info-table">
+<tr><th>구분</th><th>선불카드</th><th>후불카드</th></tr>
+<tr><td>결제 방식</td><td>충전액 차감</td><td>카드사 청구</td></tr>
+<tr><td>잔액 부족 시</td><td>미납 처리</td><td>신용 결제 진행</td></tr>
+<tr><td>연회비</td><td>없음</td><td>카드 종류에 따라 있음</td></tr>
+<tr><td>발급 조건</td><td>누구나</td><td>신용카드 기준 적용</td></tr>
+<tr><td>할인 혜택</td><td>기본 할인만</td><td>카드 혜택 추가 가능</td></tr>
+</table>
+
+<h2>02 | 선불카드 충전 방법 — 편의점·앱·하이패스 충전기</h2>
+
+하이패스 선불카드 충전은 여러 방법으로 할 수 있습니다.<br><br>
+
+<strong>편의점 충전</strong>: CU·GS25·세븐일레븐 등 주요 편의점 계산대에서 충전할 수 있습니다. 카드를 리더기에 대고 원하는 금액을 말하면 됩니다. 충전 단위는 5,000원~50,000원 수준입니다.<br><br>
+
+<strong>한국도로공사 앱(EX하이웨이)</strong>: 스마트폰 앱에서 계좌이체 또는 카드 결제로 충전할 수 있습니다. 앱에서 잔액 조회도 함께 가능합니다.<br><br>
+
+<strong>고속도로 하이패스 충전기</strong>: 일부 휴게소와 영업소 인근에 하이패스 전용 충전 단말기가 설치되어 있습니다. 24시간 이용 가능하지만 설치 위치가 제한적입니다.<br><br>
+
+<strong>주유소</strong>: 일부 주유소에서도 충전 서비스를 제공합니다.<br><br>
+
+<div class="tip-box">
+💡 <strong>잔액 알림 설정 권장</strong>: 선불카드는 잔액이 일정 기준(예: 5,000원) 이하로 떨어지면 문자 알림을 받을 수 있도록 설정해 두면 미납 사고를 예방할 수 있습니다. 한국도로공사 고객센터(1588-2504)에서 안내받을 수 있습니다.
+</div>
+
+<h2>03 | 후불카드 결제 구조 — 신용카드·체크카드 연동 방식</h2>
+
+후불 하이패스는 카드사의 신용카드 또는 체크카드에 하이패스 기능이 탑재된 형태입니다. 별도 하이패스 카드 없이 해당 카드 하나로 통행료가 자동 처리됩니다.<br><br>
+
+<strong>신용카드 연동</strong>: 매달 통행료 사용 금액이 카드 청구서에 합산되어 결제일에 출금됩니다. 신용 한도 내에서 별도 충전 없이 사용할 수 있어 편리합니다.<br><br>
+
+<strong>체크카드 연동</strong>: 통행료가 발생할 때마다 연결된 통장에서 즉시 출금됩니다. 신용카드 발급이 어렵거나 관리가 불안한 분에게 적합합니다. 단, 통장 잔액이 부족하면 결제 실패 처리됩니다.<br><br>
+
+후불 방식은 편의점 방문 없이 자동으로 처리된다는 것이 가장 큰 장점입니다. 장거리 운전이 잦은 분에게 번거로움을 크게 줄여줍니다.
+
+<h2>04 | 요금 할인 비교 — 어느 쪽이 더 저렴한가</h2>
+
+하이패스 통행료 할인은 기본적으로 선불·후불 모두 적용됩니다.<br><br>
+
+<strong>기본 할인</strong>: 한국도로공사 고속도로의 경우, 하이패스 이용 차량은 경차·장애인 차량·국가유공자 차량 등 특정 조건 충족 시 할인을 받습니다. 선불·후불 구분 없이 단말기 등록 차량에 동일하게 적용됩니다.<br><br>
+
+<strong>카드사 추가 할인</strong>: 후불 방식의 경우, 특정 카드(예: 특정 신용카드의 하이패스 연계 혜택)를 사용하면 통행료의 일부를 포인트로 적립하거나 캐시백을 받을 수 있습니다. 이 혜택은 카드마다 다르므로 발급 전 약관을 확인하세요.<br><br>
+
+순수 통행료 금액 자체는 선불·후불 간 차이가 없습니다. <strong>추가 혜택은 후불카드(신용카드 연동)에서 더 다양하게 제공되는 경향</strong>이 있습니다.
+
+<h2>05 | 선불 잔액 부족 시 어떻게 되나 — 미납과 벌금</h2>
+
+선불 하이패스는 잔액이 0원 이하면 통행료 결제가 되지 않고 미납 처리됩니다.
+
+<div class="warn-box">
+⚠️ <strong>미납 발생 시 처리 과정</strong><br>
+1. 하이패스 단말기에서 결제 실패 → 미납 번호판 카메라 인식<br>
+2. 미납 고지서 우편 발송 (차량 등록 주소 기준)<br>
+3. 고지서 수령 후 기한 내 납부 (인터넷·앱·은행 납부 가능)<br>
+4. 미납 지속 시 가산금 발생 및 차량 등록 제한 가능
+</div>
+
+미납이 발생했다면 이파인(efine.go.kr) 또는 한국도로공사 홈페이지(highway.co.kr)에서 미납 내역을 조회하고 납부할 수 있습니다. 납부 기한 내 처리하면 가산금 없이 정상 금액만 납부하면 됩니다.<br><br>
+
+선불카드 이용자는 장거리 운행 전날 반드시 잔액을 확인하는 습관을 들이세요.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 생성 필요</span><span class="ph-file">images/260825/6_hipass_2.png</span></div>
+<div class="prompt-text" id="p6-2">Flat lay comparison of a Hi-Pass prepaid card (선불) and a credit card with Hi-Pass function (후불) placed side by side on a clean white surface. Both cards visible with Korean text visible. Simple, clean product photography for comparison article, neutral background.</div>
+<button class="copy-btn" onclick="copyPrompt('p6-2')">프롬프트 복사</button>
+</div>
+<div class="img-caption">하이패스 선불카드와 후불카드 비교 / AI 제작 이미지</div>
+</div>
+
+<h2>06 | 후불카드 연회비·신용점수 조건 — 발급 주의사항</h2>
+
+후불 하이패스 카드를 발급받을 때 주의해야 할 사항이 있습니다.<br><br>
+
+<strong>연회비</strong>: 하이패스 기능이 포함된 신용카드는 연회비가 있는 경우가 많습니다. 연간 통행료 사용액이 연회비보다 적다면 선불카드가 더 유리합니다. 통행료 캐시백 혜택이 있는 카드라면 연회비 이상의 혜택을 받을 수 있는지 계산해 보세요.<br><br>
+
+<strong>신용 점수 조건</strong>: 신용카드형 후불 하이패스는 카드 발급 심사를 통과해야 합니다. 신용 점수가 낮거나 소득 증빙이 어려운 경우 발급이 거절될 수 있습니다. 이 경우 선불카드 또는 체크카드 연동 후불을 고려하세요.<br><br>
+
+<strong>카드 혜택 중복 주의</strong>: 하이패스 할인을 받기 위해 새 카드를 발급하면서 기존 주거래 카드 혜택을 포기하는 상황이 생길 수 있습니다. 새 카드의 총 혜택이 기존 카드 + 선불카드 조합보다 유리한지 비교해 보세요.
+
+<h2>07 | 하이패스 단말기 등록·교체 — 카드 바꿀 때 주의사항</h2>
+
+하이패스 단말기는 구매 후 차량에 장착하고, 사용하는 카드를 등록해야 정상 작동합니다.<br><br>
+
+<strong>선불카드</strong>: 단말기에 카드를 삽입하면 자동으로 등록됩니다. 카드를 교체할 때는 기존 카드를 빼고 새 카드를 삽입하면 됩니다.<br><br>
+
+<strong>후불카드</strong>: 카드 발급 후 한국도로공사 홈페이지나 앱에서 단말기와 카드를 연동 등록해야 합니다. 카드를 교체(분실·만료·재발급)하면 반드시 재등록 절차를 거쳐야 합니다. 재등록 없이 기존 카드 번호가 다른 카드를 삽입하면 결제가 되지 않습니다.<br><br>
+
+단말기 배터리 부족이나 오류가 발생하면 톨게이트에서 멈추지 말고 그대로 통과한 뒤 미납 고지서 수령 후 처리하세요.
+
+<h2>08 | 명절 통행료 무료 혜택 — 선불·후불 모두 적용되나</h2>
+
+추석·설 연휴에는 고속도로 통행료가 무료로 운영되는 경우가 있습니다. 이 혜택은 하이패스 선불·후불 구분 없이, 일반 톨게이트 이용 차량 모두에게 동일하게 적용됩니다.<br><br>
+
+다만, <strong>무료 운영 여부와 기간은 매년 정부 결정에 따라 다릅니다</strong>. 국토교통부나 한국도로공사 공지를 연휴 시작 전에 확인하는 것이 정확합니다.<br><br>
+
+무료 구간이라도 하이패스 단말기는 정상 작동해야 합니다. 단말기가 오작동하면 일반 차로를 이용하면 됩니다.
+
+<h2>09 | 사용 패턴별 추천 — 나는 선불인가 후불인가</h2>
+
+<table class="info-table">
+<tr><th>패턴</th><th>추천 방식</th><th>이유</th></tr>
+<tr><td>고속도로를 월 1~2회 이하 사용</td><td>선불카드</td><td>연회비 부담 없음, 간단</td></tr>
+<tr><td>매주 고속도로 이용, 잔액 관리 귀찮음</td><td>후불(신용카드)</td><td>자동 결제로 편리</td></tr>
+<tr><td>신용카드 발급 어려운 분</td><td>선불카드 또는 체크카드형 후불</td><td>신용 조건 불필요</td></tr>
+<tr><td>카드 혜택으로 통행료 환급 원함</td><td>후불(신용카드, 혜택 확인 후)</td><td>캐시백·포인트 적립</td></tr>
+<tr><td>장거리 화물·영업용 차량</td><td>후불(법인카드 가능)</td><td>충전 관리 부담 없음</td></tr>
+</table>
+
+<strong>결론</strong>: 고속도로를 자주 타지 않거나 신용카드 관리가 번거로운 분은 선불카드가 심플합니다. 매주 또는 매일 고속도로를 이용하고 충전이 귀찮다면 후불이 편합니다. 추가 혜택을 원한다면 카드사 혜택을 꼼꼼히 비교한 뒤 후불카드를 선택하세요.
+
+<h2>10 | 잔액·이용내역 조회법 — 한국도로공사 사이트·앱</h2>
+
+<div class="step-box">
+<strong>선불카드 잔액 조회 방법</strong><br>
+① 한국도로공사 앱(EX하이웨이) → 로그인 → 하이패스 → 잔액 조회<br>
+② highway.co.kr 접속 → 하이패스 메뉴 → 선불카드 잔액 조회<br>
+③ 편의점 단말기에 카드 삽입 후 잔액 확인<br>
+④ 단말기 잔액 표시 기능 활용 (단말기마다 다름)
+</div>
+
+<div class="step-box">
+<strong>후불카드 이용내역 조회 방법</strong><br>
+① 해당 카드사 앱 또는 홈페이지 → 이용 내역에서 확인<br>
+② highway.co.kr → 통행료 납부 내역 조회 (로그인 후)<br>
+③ 이파인(efine.go.kr) → 미납 통행료 조회 및 납부
+</div>
+
+이용내역은 한국도로공사 앱에서 연도별·월별로 확인할 수 있습니다. 연간 이용액을 파악해 연회비 대비 혜택이 충분한지 판단하는 데 활용하세요.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260824/car_used_car_sell_quote.html">내 차 팔 때 중고차 매입 견적 여러 곳에서 비교받는 법 — 출장 매입 주의사항까지</a></li>
+<li><a href="../260824/local_overseas_roaming_fee_check.html">해외 로밍 요금 귀국 후 확인하는 법 — 과다청구 이의신청과 eSIM 잔여 데이터 환불</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#하이패스선불</span>
+<span class="tag">#하이패스후불</span>
+<span class="tag">#하이패스충전</span>
+<span class="tag">#통행료미납</span>
+<span class="tag">#하이패스비교</span>
+<span class="tag">#고속도로통행료</span>
+<span class="tag">#EX하이웨이</span>
+<span class="tag">#이파인</span>
+<span class="tag">#하이패스연회비</span>
+<span class="tag">#차량관리</span>
+</div>
+</body>
+</html>

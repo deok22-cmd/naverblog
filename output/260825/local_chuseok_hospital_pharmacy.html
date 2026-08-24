@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>추석 연휴 문 여는 병원·약국 찾는 법 — 명절 응급진료 조회 5분 정리</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>추석 연휴 문 여는 병원·약국 찾는 법 — 명절 응급진료 조회 5분 정리</h1>
+<div class="intro-box">
+추석 연휴가 되면 대부분의 동네 의원과 약국이 문을 닫습니다. 하지만 연휴 중에도 당직 병원과 당번 약국은 반드시 운영되며, 이를 빠르게 찾는 방법을 알아두면 갑작스러운 상황에서 당황하지 않을 수 있습니다. 이 글에서는 추석 연휴 기간 문 여는 병원과 약국을 조회하는 공식 루트(e-gen.or.kr, 건강보험심사평가원, 응급의료정보제공 앱)를 정리하고, 증상별 대처법과 119 활용 기준, 연휴 전 준비할 상비약 목록까지 안내합니다. 출처: 응급의료포털(e-gen.or.kr), 건강보험심사평가원(hira.or.kr).
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 생성 필요</span><span class="ph-file">images/260825/4_chuseok_hospital_1.png</span></div>
+<div class="prompt-text" id="p4-1">A person using a smartphone to search for open hospitals during Korean Chuseok holiday. The phone screen shows a medical information portal website. Traditional Korean decorations (Chuseok moon and harvest motifs) visible in the background. Clean, informative lifestyle photo, soft lighting.</div>
+<button class="copy-btn" onclick="copyPrompt('p4-1')">프롬프트 복사</button>
+</div>
+<div class="img-caption">추석 연휴 병원·약국 스마트폰 조회 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 추석 연휴에 병원이 문을 닫는 이유 — 휴업과 당직 구조</h2>
+
+추석은 법정 공휴일입니다. 동네 의원과 약국은 공휴일 영업 의무가 없으므로 대부분 문을 닫습니다. 병원급(병원·종합병원)과 응급실은 연중 무휴로 운영하지만 응급실은 긴급 상황 전용이므로 가벼운 증상으로 방문하면 오랜 대기가 불가피합니다.<br><br>
+
+정부는 명절 연휴마다 <strong>비상진료체계</strong>를 가동합니다. 전국 시군구 보건소와 지정된 비상진료기관(당직 의원)이 연휴 기간 순번에 따라 문을 열어 경증 환자를 진료합니다. 당번 약국도 마찬가지로 지역별로 순번을 정해 연휴 중에도 최소한의 약국이 열립니다.<br><br>
+
+비상진료기관의 당직 병원 정보는 연휴 시작 전 보건소, 응급의료포털, 건강보험심사평가원 홈페이지를 통해 공개됩니다. 연휴가 시작되기 하루 전에 미리 확인해 두는 것이 좋습니다.
+
+<h2>02 | 응급의료포털(e-gen.or.kr)에서 당직 의원 찾기</h2>
+
+가장 빠른 방법은 <strong>응급의료포털(e-gen.or.kr)</strong>을 이용하는 것입니다. 보건복지부와 국립중앙의료원이 운영하는 공식 사이트로, 실시간 운영 정보를 제공합니다.
+
+<div class="step-box">
+<strong>e-gen.or.kr 이용 순서</strong><br>
+1. 브라우저에서 e-gen.or.kr 접속<br>
+2. 화면 상단 메뉴에서 '병원·약국' 또는 '명절 비상진료기관' 배너 클릭<br>
+3. 지역(시도·시군구) 선택<br>
+4. 오늘 날짜 기준 운영 중인 병원·약국 목록 확인<br>
+5. 전화번호 클릭 시 바로 통화 가능
+</div>
+
+연휴 기간에는 메인 화면에 '명절 비상진료기관 안내' 배너가 별도로 나타납니다. 이 배너를 클릭하면 연휴 전 기간 날짜별 운영 기관 목록이 나옵니다.<br><br>
+
+<div class="tip-box">
+💡 <strong>방문 전 반드시 전화 확인</strong>: 홈페이지상 운영 정보와 실제 운영 여부가 다를 수 있습니다. 이동 전 반드시 전화로 당일 운영 여부를 확인하세요.
+</div>
+
+<h2>03 | 건강보험심사평가원 병원·약국 찾기 사이트 활용</h2>
+
+<strong>건강보험심사평가원(hira.or.kr)</strong>의 '병원·약국 찾기' 서비스도 유용합니다. 특히 '진료 중인 병원' 필터를 사용하면 현재 운영 중인 기관만 보이므로 빠르게 찾을 수 있습니다.
+
+<div class="step-box">
+<strong>hira.or.kr 이용 순서</strong><br>
+1. hira.or.kr 접속 → 상단 메뉴 '병원·약국 찾기'<br>
+2. 위치 기반 검색 또는 주소 직접 입력<br>
+3. 오른쪽 필터에서 '진료 중' 체크<br>
+4. 진료 과목, 진료 시간 필터 적용<br>
+5. 목록에서 전화번호 확인 후 방문
+</div>
+
+이 서비스는 스마트폰 브라우저에서도 편리하게 사용할 수 있습니다. 위치 정보 접근을 허용하면 현재 위치에서 가까운 당직 기관을 자동으로 찾아줍니다.
+
+<h2>04 | 응급실 vs 비상진료기관 — 어디로 가야 하나</h2>
+
+연휴 중 몸이 좋지 않을 때 어디로 가야 할지 헷갈리는 경우가 많습니다.
+
+<table class="info-table">
+<tr><th>상황</th><th>가야 할 곳</th></tr>
+<tr><td>발열·두통·가벼운 복통·소화불량</td><td>비상진료기관(당직 의원)</td></tr>
+<tr><td>경미한 상처·찰과상·염좌</td><td>비상진료기관</td></tr>
+<tr><td>처방전 약 부족</td><td>당번 약국 또는 비상진료기관</td></tr>
+<tr><td>흉통·호흡 곤란·의식 저하</td><td>119 신고 또는 응급실</td></tr>
+<tr><td>심한 출혈·골절 의심·화상</td><td>응급실 또는 119</td></tr>
+<tr><td>뇌졸중 의심(갑자기 말 못함·팔다리 마비)</td><td>즉시 119 신고</td></tr>
+</table>
+
+응급실은 중증 응급 환자를 위한 곳입니다. 경증 환자가 응급실을 방문하면 대기 시간이 매우 길고, 응급실 수가가 일반 진료보다 훨씬 높습니다. <strong>경증이라면 반드시 비상진료기관을 먼저 찾으세요.</strong>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 생성 필요</span><span class="ph-file">images/260825/4_chuseok_hospital_2.png</span></div>
+<div class="prompt-text" id="p4-2">Flat lay of a Korean household medicine kit with common over-the-counter medicines for holiday emergencies: digestive tablets, fever reducers, bandages, hand sanitizer, thermometer, arranged neatly on a white surface. Clean, informational product photography style.</div>
+<button class="copy-btn" onclick="copyPrompt('p4-2')">프롬프트 복사</button>
+</div>
+<div class="img-caption">명절 연휴 대비 상비약 구성 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 연휴 약국 찾기 — 공공심야약국·당번약국 조회</h2>
+
+<strong>당번약국</strong>은 지역 약사회에서 연휴 기간 순번을 정해 운영하는 약국입니다. e-gen.or.kr이나 hira.or.kr에서 '운영 중 약국' 필터를 사용하면 찾을 수 있습니다.<br><br>
+
+<strong>공공심야약국</strong>은 자정까지 또는 24시간 운영하는 약국으로, 전국 주요 도시에 지정되어 있습니다. 공공심야약국 찾기는 건강보험심사평가원 홈페이지나 앱에서 '심야약국' 필터로 검색할 수 있습니다.<br><br>
+
+<strong>응급실 내 약국</strong>: 응급의료기관(상급종합병원·종합병원)의 원내 약국은 응급실이 운영되는 한 연중무휴로 운영됩니다. 일반 처방전도 취급하는 경우가 있으니 급할 때 문의할 수 있습니다.
+
+<h2>06 | 스마트폰 앱 — 응급의료정보제공 앱 설정법</h2>
+
+보건복지부가 제공하는 <strong>'응급의료정보제공'</strong> 앱(구 e-gen 앱)을 미리 설치해 두면 연휴 중 가장 편리하게 주변 당직 병·의원과 약국을 찾을 수 있습니다.
+
+<div class="step-box">
+<strong>앱 설치와 활용법</strong><br>
+1. 스마트폰 앱스토어에서 '응급의료정보제공' 검색 후 설치<br>
+2. 위치 접근 권한 허용<br>
+3. 메인화면 '주변 병원' 또는 '주변 약국' 탭 선택<br>
+4. '운영 중' 필터 체크<br>
+5. 거리순 또는 진료과목별 정렬 후 선택
+</div>
+
+앱은 오프라인에서도 일부 기능이 작동하도록 설계되어 있습니다. 단, 실시간 운영 정보는 인터넷 연결이 필요합니다. 연휴 시작 전 앱을 설치하고 한 번 실행해 두세요.
+
+<h2>07 | 증상별 대처법 — 체증·고열·외상·화상·복통</h2>
+
+<strong>체증·소화불량</strong>: 가벼운 소화 장애는 소화제(베아제·훼스탈 등)로 대처합니다. 1~2일이 지나도 호전되지 않거나 구토·혈변이 동반되면 진료가 필요합니다.<br><br>
+
+<strong>고열(38℃ 이상)</strong>: 해열제(타이레놀·이부프로펜 등)를 복용합니다. 39℃ 이상 고열이 지속되거나 호흡 곤란이 함께 나타나면 응급 진료가 필요합니다. 어린아이의 경우 38.5℃ 이상 고열은 빠르게 내과·소아과 당직 의원에 연락하세요.<br><br>
+
+<strong>찰과상·열상</strong>: 상처를 깨끗이 씻고 소독 후 거즈로 압박합니다. 출혈이 멈추지 않거나 깊은 상처는 봉합이 필요할 수 있으므로 응급실에 가야 합니다.<br><br>
+
+<strong>화상</strong>: 흐르는 찬물에 15~20분 이상 식힙니다. 물집이 생기거나 피부가 벗겨진 2~3도 화상은 응급실 방문이 필요합니다.<br><br>
+
+<strong>복통</strong>: 가벼운 복통은 소화제나 진경제로 대처합니다. 오른쪽 아래 배의 심한 통증(맹장 의심), 고열을 동반한 복통, 혈변은 즉시 응급실에 가야 합니다.
+
+<h2>08 | 119 활용법 — 전화 상담 vs 직접 신고 기준</h2>
+
+<strong>119에 전화 상담</strong>: 응급 여부가 불분명할 때 119에 전화하면 증상을 듣고 응급인지 아닌지 안내해 줍니다. "응급인지 모르겠는데 증상을 말해도 되냐"고 물으면 안내를 받을 수 있습니다. 이 상담은 구급차 출동 없이 전화로만 이뤄집니다.<br><br>
+
+<strong>119 출동 요청</strong>: 의식이 없거나 심정지가 의심될 때, 뇌졸중·심근경색 증상이 나타날 때, 스스로 이동이 불가능한 부상 시 즉시 119에 신고해야 합니다. 이때 <strong>주소와 환자 상태를 침착하게 전달</strong>하는 것이 중요합니다.<br><br>
+
+<strong>구급차 탑승 시 참고</strong>: 구급차는 가장 가까운 응급의료기관으로 이송합니다. 원하는 병원이 있다면 출발 전 구급대원에게 말해도 되지만, 의료 상황에 따라 이송 병원이 결정될 수 있습니다.
+
+<h2>09 | 연휴 전 미리 챙길 상비약 리스트</h2>
+
+추석 연휴 시작 전 약국이 문을 열 때 아래 상비약을 미리 구비해 두면 경증 증상을 연휴 중에 스스로 대처할 수 있습니다.
+
+<div class="info-box">
+<strong>✅ 추석 연휴 상비약 체크리스트</strong><br>
+• 소화제 (베아제, 훼스탈 등)<br>
+• 해열·진통제 (타이레놀 등, 성인용·소아용 구분)<br>
+• 지사제 (설사가 잦은 분)<br>
+• 멀미약 (귀성 장거리 이동 대비)<br>
+• 소독약 + 밴드 + 거즈<br>
+• 파스 (장시간 운전·이동 후 근육통)<br>
+• 구강청결제·인후통 스프레이 (목 관련 증상 대비)<br>
+• 평소 복용 중인 처방약 (충분한 수량 확인 필수)
+</div>
+
+특히 <strong>평소 복용하는 만성질환 약(혈압·당뇨·심장 등)</strong>은 연휴 기간 내 충분히 남아있는지 사전에 확인하세요. 부족하다면 연휴 전 주치의 처방을 받아 미리 조제하는 것이 안전합니다.
+
+<h2>10 | 귀성지에서 고향 병원 찾는 법 — 지방 의료 포털 활용</h2>
+
+추석에 고향으로 내려가 있는 경우에도 같은 방법을 사용하면 됩니다. e-gen.or.kr과 hira.or.kr은 전국 의료기관 정보를 제공하므로 어느 지역에 있어도 이용할 수 있습니다.<br><br>
+
+추가로, 지역 보건소 홈페이지에서 연휴 기간 비상진료기관 안내문을 게시하는 경우가 많습니다. 방문 지역 보건소 홈페이지를 미리 즐겨찾기 해두면 편리합니다.<br><br>
+
+각 시군구 보건소 전화번호는 e-gen.or.kr에서 검색할 수 있습니다. 보건소는 연휴 중에도 일부 시간대 응급 상담 전화를 운영하는 경우가 있으므로 전화 문의가 가능합니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260824/local_overseas_roaming_fee_check.html">해외 로밍 요금 귀국 후 확인하는 법 — 과다청구 이의신청과 eSIM 잔여 데이터 환불</a></li>
+<li><a href="../260824/rite_sanggyeonrye_gift.html">상견례 자리에 선물 가져가야 하나 — 상대 부모님 첫 인사 예절과 준비물</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#추석연휴병원</span>
+<span class="tag">#명절당직병원</span>
+<span class="tag">#연휴약국찾기</span>
+<span class="tag">#응급의료포털</span>
+<span class="tag">#e-gen</span>
+<span class="tag">#당번약국</span>
+<span class="tag">#명절응급진료</span>
+<span class="tag">#상비약</span>
+<span class="tag">#추석건강</span>
+<span class="tag">#연휴의료</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>전원주택 데크 오일스테인 언제 다시 칠하나 — 벗겨짐 판단법과 재도장 순서 정리</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>전원주택 데크 오일스테인 언제 다시 칠하나 — 벗겨짐 판단법과 재도장 순서 정리</h1>
+<div class="intro-box">
+전원주택 목재 데크는 자외선·비·습기에 지속적으로 노출되기 때문에 오일스테인(목재 보호 도료)이 시간이 지나면서 닳고 벗겨집니다. 재도장을 너무 늦추면 목재 자체가 갈라지거나 썩는 원인이 됩니다. 이 글에서는 데크 오일스테인이 필요한 이유, 재도장 시기를 판단하는 방법, 가을이 재도장에 적합한 이유, 표면 정리부터 도포까지의 순서, 제품 선택 기준, 셀프 시공 시 주의사항과 비용 비교까지 실용적으로 정리합니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 생성 필요</span><span class="ph-file">images/260825/7_deck_oilstain_1.png</span></div>
+<div class="prompt-text" id="p7-1">A person applying oil stain to a wooden deck of a Korean countryside house. Using a brush and roller, coating the weathered wooden deck boards with brown oil stain. Sunny autumn day, garden visible in background, DIY home improvement. Practical lifestyle photography, natural lighting.</div>
+<button class="copy-btn" onclick="copyPrompt('p7-1')">프롬프트 복사</button>
+</div>
+<div class="img-caption">전원주택 데크 오일스테인 도장 작업 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 데크에 오일스테인이 필요한 이유 — 목재 보호 원리</h2>
+
+야외 목재 데크는 비·자외선·온도 변화에 그대로 노출됩니다. 오일스테인은 목재 표면에 오일 성분이 침투하거나 피막을 형성해 수분 흡수를 차단하고 자외선으로 인한 색 바램을 막는 역할을 합니다.<br><br>
+
+보호 처리 없이 방치된 목재는 2~3년 내에 회색으로 변하고(실버링), 표면이 갈라지며, 장기적으로는 부패가 진행됩니다. 목재 부패가 시작되면 도료만으로는 복원이 어렵고 교체 비용이 훨씬 커집니다.<br><br>
+
+오일스테인을 정기적으로 관리하면 <strong>데크 수명을 10~15년 이상으로 늘릴 수 있습니다</strong>. 처음 시공할 때 품질 좋은 도료를 사용하고 이후 2~3년 주기로 재도장하는 것이 가장 경제적인 관리법입니다.
+
+<h2>02 | 재도장 시기 판단법 — 벗겨짐·회색화·물 흡수 테스트</h2>
+
+재도장이 필요한지 판단하는 가장 쉬운 방법은 아래 세 가지를 확인하는 것입니다.<br><br>
+
+<strong>① 물 흡수 테스트</strong>: 깨끗한 물 한 컵을 데크 위에 뿌립니다. 물방울이 구슬처럼 맺혀 굴러다니면 오일이 아직 살아있는 것입니다. 물이 목재에 빠르게 흡수되면 오일이 소진된 것으로, 재도장 시기입니다.<br><br>
+
+<strong>② 색상 변화</strong>: 데크 색상이 전체적으로 회백색으로 바래고, 나뭇결이 희끗희끗하게 보인다면 오일이 소진된 신호입니다. 이 상태를 오래 방치하면 실버링이 심해집니다.<br><br>
+
+<strong>③ 도료 벗겨짐</strong>: 표면 도료(특히 유성 도막형 제품)가 군데군데 들뜨거나 벗겨진다면 빠르게 재처리해야 합니다. 벗겨진 부분으로 수분이 직접 침투해 목재 손상이 가속됩니다.
+
+<h2>03 | 가을이 재도장 적기인 이유 — 온도·습도 조건</h2>
+
+오일스테인 도포에는 온도와 습도 조건이 맞아야 합니다. 가을(9~10월)이 가장 이상적인 이유는 다음과 같습니다.<br><br>
+
+<strong>온도</strong>: 오일스테인은 보통 5℃~30℃ 범위에서 정상 도포됩니다. 한여름(35℃ 이상)에는 도료가 너무 빨리 마르고 붓 자국이 남기 쉽습니다. 가을 기온 15~25℃는 작업하기에 가장 적합한 온도 범위입니다.<br><br>
+
+<strong>습도</strong>: 장마철과 태풍 시즌이 끝난 9월 이후에는 대기 습도가 낮아집니다. 목재 함수율이 낮아야 오일이 깊이 침투합니다. 목재 함수율 20% 이하 상태에서 도포하는 것이 이상적입니다.<br><br>
+
+<strong>건조 시간</strong>: 봄과 가을에는 도포 후 건조가 균일하게 이뤄집니다. 겨울에 시공하면 낮은 기온으로 건조가 느려지고, 동결이 발생하면 도막이 손상될 수 있습니다.
+
+<h2>04 | 재도장 전 표면 정리 — 사포질과 고압세척 순서</h2>
+
+도료를 잘 밀착시키려면 표면 정리가 필수입니다. 순서는 다음과 같습니다.
+
+<div class="step-box">
+<strong>데크 표면 정리 순서</strong><br>
+1. 데크 위 이물질(먼지·낙엽·화분 등) 제거<br>
+2. 고압세척기(또는 솔+물)로 전체 세척 → 먼지·이끼·오래된 도료 잔여물 제거<br>
+3. 2~3일 충분히 건조 (맑은 날 기준)<br>
+4. 거칠거나 일어난 부분은 사포(60~80방) → 결 방향으로 사포질<br>
+5. 사포 먼지 제거 (빗자루 또는 집진기)<br>
+6. 도포 전 목재 함수율 확인 (목재 함수율 측정기 사용, 또는 표면이 완전히 말랐는지 육안 확인)
+</div>
+
+기존 도막형 도료(에나멜·우레탄계)가 덧발려 있다면 오일계 스테인 재도장 전에 도막을 완전히 제거해야 합니다. 이때는 도막 제거제와 스크레이퍼가 필요하며 작업 난이도가 높아집니다. 처음부터 오일 침투형 도료를 쓴 데크라면 사포질만으로 충분합니다.
+
+<h2>05 | 오일스테인 제품 고르기 — 오일계 vs 수성계 차이</h2>
+
+시중에 판매되는 데크용 도료는 크게 두 가지로 나뉩니다.
+
+<table class="info-table">
+<tr><th>구분</th><th>오일계(유성)</th><th>수성계</th></tr>
+<tr><td>침투력</td><td>높음 (목재 깊이 침투)</td><td>중간 (표면 피막 위주)</td></tr>
+<tr><td>내구성</td><td>높음</td><td>중간~높음</td></tr>
+<tr><td>건조 시간</td><td>24~48시간</td><td>2~4시간</td></tr>
+<tr><td>냄새</td><td>강함 (환기 필수)</td><td>약함</td></tr>
+<tr><td>도구 세척</td><td>신나 필요</td><td>물로 세척 가능</td></tr>
+<tr><td>적합 용도</td><td>장기 보호 목적 데크</td><td>주거 근접 또는 DIY 초보</td></tr>
+</table>
+
+오일계 스테인(린시드 오일, 텅 오일 계열)은 내구성이 뛰어나지만 시공 중 냄새가 강하고 건조 시간이 깁니다. 수성 스테인은 빠른 건조와 편리한 세척이 장점이지만, 오일계보다 재도장 주기가 짧을 수 있습니다. <strong>야외 데크에는 오일계 침투형 도료가 일반적으로 더 권장됩니다.</strong>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 생성 필요</span><span class="ph-file">images/260825/7_deck_oilstain_2.png</span></div>
+<div class="prompt-text" id="p7-2">Before-and-after comparison of a wooden deck: left side shows weathered, grey-toned old deck boards; right side shows freshly oiled, warm brown restored deck. Clear visual contrast. Bright natural lighting, close-up of deck boards showing grain. Home improvement photography style.</div>
+<button class="copy-btn" onclick="copyPrompt('p7-2')">프롬프트 복사</button>
+</div>
+<div class="img-caption">오일스테인 재도장 전후 비교 / AI 제작 이미지</div>
+</div>
+
+<h2>06 | 도포 방법과 횟수 — 첫 도장과 2차 도장 간격</h2>
+
+표면 정리가 끝났다면 이제 실제 도포 단계입니다.<br><br>
+
+<strong>1차 도포</strong>: 도료를 목재 결 방향으로 붓 또는 넓적한 데크 롤러를 사용해 고르게 바릅니다. 처음에는 도료를 충분히 흡수시키는 것이 중요합니다. 표면에 도료가 고이지 않도록 얇게 여러 번 바르는 것이 기본입니다.<br><br>
+
+<strong>1차 도포 후 건조</strong>: 오일계 기준 12~24시간 이상 건조합니다. 표면을 손으로 만졌을 때 도료가 손에 묻어나지 않으면 2차 도포가 가능합니다.<br><br>
+
+<strong>2차 도포</strong>: 1차 도포가 충분히 건조된 후 같은 방법으로 2차 도포합니다. 2차 도포 후 최소 24~48시간 건조 후 사용합니다.<br><br>
+
+처음 오일스테인을 처리하는 새 목재나 오랜만에 재도장하는 데크는 2~3회 도포를 해야 충분한 보호 효과를 얻을 수 있습니다.
+
+<h2>07 | 도구 준비와 마스킹 — 붓·롤러·마스킹테이프</h2>
+
+셀프 시공에 필요한 도구를 미리 준비합니다.
+
+<div class="info-box">
+<strong>✅ 재도장 준비 도구 목록</strong><br>
+• 데크용 넓적 롤러 (10~15cm 폭, 데크 바닥면 도포용)<br>
+• 붓 (모서리·난간·틈새 처리용)<br>
+• 마스킹테이프 (벽면·창틀 경계 보호)<br>
+• 비닐 시트 (화분·가구·창문 보호)<br>
+• 신나 또는 물 (오일계·수성계에 맞춰 세척용)<br>
+• 장갑 + 오래된 옷 (도료 묻음 주의)<br>
+• 모자 또는 눈 보호 장비
+</div>
+
+마스킹테이프는 데크와 벽이 만나는 경계면, 유리창 하단에 붙여두면 도료 번짐을 방지합니다. 화분이나 가구는 이동하거나 비닐로 덮어두세요.
+
+<h2>08 | 시공 시 주의사항 — 날씨·환기·화기 안전</h2>
+
+<strong>날씨</strong>: 비가 오거나 비 예보가 있는 날에는 작업하지 않습니다. 도료 도포 후 최소 24시간 이내에 비가 오면 도막이 얼룩지거나 씻겨나갈 수 있습니다. 기상청 앱에서 향후 2~3일 날씨를 확인한 뒤 맑은 날에 작업하세요.<br><br>
+
+<strong>환기</strong>: 오일계 스테인은 유해 휘발성 유기화합물(VOC)을 포함합니다. 개방된 야외라면 상관없지만, 데크가 반실내(베란다형)라면 환기를 충분히 확보해야 합니다.<br><br>
+
+<strong>화기 안전</strong>: 오일계 도료와 신나는 인화성이 있습니다. 작업 중 담배를 피우거나 화기 근처에서 사용하지 마세요. 사용한 헝겊이나 롤러는 물에 담가서 폐기하거나 밀봉 봉투에 넣어 버립니다. 산화 반응으로 자연 발화 가능성이 있습니다.
+
+<h2>09 | 건조 후 첫 비 전 주의사항과 관리법</h2>
+
+재도장 후 충분한 건조 시간이 지나면 바로 사용해도 됩니다. 단, 도포 완료 후 48~72시간 이내에 비가 올 경우 도막이 완전히 경화되지 않아 얼룩이 생길 수 있으므로 방수 커버를 덮어두면 좋습니다.<br><br>
+
+<strong>이후 관리</strong>: 재도장 후에는 봄·가을 두 번씩 물 흡수 테스트를 해서 오일 상태를 점검하는 것이 좋습니다. 국소적으로 도막이 빠른 부위(햇볕이 많이 드는 남향 부분)는 부분 터치업 도포로 수명을 연장할 수 있습니다.<br><br>
+
+낙엽·흙이 데크 위에 쌓이지 않도록 주기적으로 쓸어주고, 화분 받침대가 장시간 데크와 접촉하지 않도록 받침을 받쳐두면 부패를 예방할 수 있습니다.
+
+<h2>10 | 셀프 vs 업체 의뢰 — 비용과 난이도 비교</h2>
+
+<table class="info-table">
+<tr><th>구분</th><th>셀프 시공</th><th>전문 업체 의뢰</th></tr>
+<tr><td>비용 (15평 데크 기준)</td><td>도료 5~15만원 + 도구 2~5만원</td><td>20~60만원 이상 (면적·지역별 차이)</td></tr>
+<tr><td>소요 시간</td><td>1~2일 (표면 정리 포함)</td><td>반나절~1일</td></tr>
+<tr><td>품질</td><td>개인 기술에 따라 편차</td><td>균일한 품질, 균열 보수 포함</td></tr>
+<tr><td>적합 상황</td><td>간단한 재도장, 소형 데크</td><td>면적이 넓거나 도막 제거 필요 시</td></tr>
+</table>
+
+처음 해보는 분이라면 작은 면적(2~3평)부터 셀프 시공을 연습한 뒤 전체 데크로 넓혀가는 것을 권합니다. 도막 제거가 필요한 경우(기존 도료가 에나멜이나 우레탄 계열), 난간이 복잡한 경우, 또는 데크 면적이 20평 이상이라면 전문 업체 의뢰가 효율적입니다.<br><br>
+
+<div class="tip-box">
+💡 <strong>업체 선정 팁</strong>: 데크 도장 전문 업체를 찾을 때는 시공 전후 사진을 요청하고, 사용 도료명과 도포 횟수를 계약서에 명시하도록 하세요. 저가 도료로 한 번만 발라주는 경우 내구성이 떨어질 수 있습니다.
+</div>
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260824/car_used_car_sell_quote.html">내 차 팔 때 중고차 매입 견적 여러 곳에서 비교받는 법 — 출장 매입 주의사항까지</a></li>
+<li><a href="../260824/recipe_mushroom_stirfry.html">표고버섯 볶음 감칠맛 내는 법 — 물 안 나오게 볶는 불 세기와 기름 양</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#전원주택데크</span>
+<span class="tag">#오일스테인</span>
+<span class="tag">#데크재도장</span>
+<span class="tag">#목재보호</span>
+<span class="tag">#데크관리</span>
+<span class="tag">#셀프도장</span>
+<span class="tag">#전원주택관리</span>
+<span class="tag">#가을집수리</span>
+<span class="tag">#텍스처도료</span>
+<span class="tag">#DIY목재</span>
+</div>
+</body>
+</html>

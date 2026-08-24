@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>결혼식 하객으로 축가·사진 부탁받으면 뭘 준비해야 하나 — 선곡·리허설·촬영 팁</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>결혼식 하객으로 축가·사진 부탁받으면 뭘 준비해야 하나 — 선곡·리허설·촬영 팁</h1>
+<div class="intro-box">
+지인의 결혼식에서 축가를 부탁받거나 사진 촬영을 맡아달라는 연락을 받으면 기쁘면서도 막막해집니다. 어떤 곡을 골라야 하는지, 리허설은 어떻게 하는지, 당일 무엇을 챙겨야 하는지 알아두면 훨씬 여유롭게 준비할 수 있습니다. 이 글에서는 결혼식 축가 선곡과 당일 준비물, 사진 촬영 요청을 받았을 때 챙겨야 할 것들, 사례비 관련 예절, 부탁을 정중히 거절하는 법까지 실용적인 관점에서 정리합니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 생성 필요</span><span class="ph-file">images/260825/5_wedding_song_1.png</span></div>
+<div class="prompt-text" id="p5-1">A young Korean person singing at a wedding ceremony, holding a microphone. Beautiful wedding hall decor with flowers and warm lighting in the background. Bride and groom smiling while listening. Formal but warm atmosphere. Event photography style, candid moment.</div>
+<button class="copy-btn" onclick="copyPrompt('p5-1')">프롬프트 복사</button>
+</div>
+<div class="img-caption">결혼식 하객 축가 공연 장면 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 축가 부탁받으면 어떻게 답장해야 하나 — 수락 전 확인 사항</h2>
+
+축가 부탁 연락이 오면 즉시 수락하기 전에 몇 가지를 확인하는 것이 좋습니다. 결혼식 날짜와 시간이 본인 일정과 충돌하지 않는지, 행사장 마이크와 음향 시설이 있는지, MR(반주 음악)을 직접 가져가야 하는지 예식장에서 제공하는지, 리허설 시간을 확보할 수 있는지 먼저 물어보세요.<br><br>
+
+<strong>확인 후 수락</strong>: "감사해요! 날짜가 괜찮으면 할게요. 예식 장소 음향 상태랑 MR 파일 어떻게 하면 될지 알려줄 수 있어요?" 정도로 답장하면 자연스럽습니다.<br><br>
+
+<strong>부담스럽다면 솔직하게</strong>: 부담스럽거나 자신 없으면 솔직하게 말하는 것이 낫습니다. "정말 고마운데, 노래를 잘 못해서 걱정이 돼. 다른 방식으로 도울 방법이 있으면 좋겠어"라고 표현하면 관계를 해치지 않고 상황을 정리할 수 있습니다.
+
+<h2>02 | 결혼식 축가 선곡 팁 — 어울리는 곡과 피해야 할 곡</h2>
+
+선곡은 가장 중요한 결정 중 하나입니다. 자신이 잘 소화할 수 있는 곡을 선택하는 것이 첫 번째 원칙입니다.<br><br>
+
+<strong>어울리는 곡 특징</strong>: 가사에 사랑·약속·행복·함께 등의 내용이 담긴 곡, 너무 슬프거나 이별을 다루지 않는 곡, 고음이 무리하지 않는 음역대, 하객들이 익히 알고 있어 공감을 이끌 수 있는 대중적인 곡.<br><br>
+
+<strong>피해야 할 곡</strong>: 가사에 이별·슬픔·후회가 담긴 곡, 지나치게 어둡거나 빠른 리듬의 곡, 너무 어려워서 실수 확률이 높은 곡. 심지어 의미 좋다고 골랐다가 가사를 잘못 읽히는 곡도 피하는 것이 좋습니다.<br><br>
+
+신랑·신부가 좋아하는 곡을 부르는 것도 좋습니다. 미리 어떤 분위기의 곡을 원하는지 물어보고 의견을 반영하면 더욱 특별한 선물이 됩니다.
+
+<h2>03 | 리허설은 필수인가 — 시간과 장소 협의 방법</h2>
+
+예식장 리허설은 반드시 해야 하는 것은 아니지만, 가능하면 하는 것을 강력히 추천합니다. 예식장 마이크 감도, 음향 볼륨, 반주 파일 재생 방식을 미리 확인하면 당일 실수를 크게 줄일 수 있습니다.<br><br>
+
+리허설은 보통 결혼식 당일 오전 예식 시작 1~2시간 전에 가능합니다. 예식장 사정에 따라 전날 저녁에 간단히 할 수도 있습니다. 신랑 또는 신부 측에게 "리허설 잠깐 해도 되냐"고 사전에 물어보면 됩니다.<br><br>
+
+<strong>리허설에서 확인할 것</strong>: 마이크 볼륨 조절 여부, MR 파일이 예식장 시스템에서 정상 재생되는지, 노래 시작 큐 사인을 MC와 조율해 두기, 서 있을 위치 확인.
+
+<h2>04 | 축가 당일 준비물 — MR 파일·마이크·복장 체크리스트</h2>
+
+<div class="info-box">
+<strong>✅ 축가 당일 준비물 체크리스트</strong><br>
+• MR 파일 (USB 2~3개 + 스마트폰 저장 + 클라우드 백업) — 포맷은 MP3와 WAV 두 가지<br>
+• 가사 메모지 또는 스마트폰 (긴장 시 가사 빈 칸 대비)<br>
+• 예식에 맞는 단정한 복장 (너무 캐주얼하거나 화려하지 않게)<br>
+• 목 컨디션 관리 — 전날 충분한 수면, 따뜻한 물 또는 생강차<br>
+• 예식장 도착 시간 — 예식 시작 최소 1시간 전
+</div>
+
+<strong>MR 파일 백업이 중요합니다</strong>. USB만 들고 갔다가 예식장 시스템이 인식을 못 하거나 USB가 불량인 경우가 실제로 종종 있습니다. 스마트폰 블루투스 연결이나 직접 스피커 연결(3.5mm 잭)도 가능한지 사전에 확인해 두세요.
+
+<h2>05 | 사진 촬영 부탁받았을 때 — 장비와 동선 사전 확인</h2>
+
+카메라를 잘 다룬다는 이유로 사진 촬영을 부탁받는 경우도 많습니다. 수락 전 스스로 역할 범위를 명확히 해야 합니다.<br><br>
+
+<strong>확인할 사항</strong>: 공식 웨딩 사진작가가 따로 있는지, 내가 촬영하는 범위(본식 전·후 스냅? 피로연 자리?)는 어디까지인지, 사진 파일을 언제까지 전달해야 하는지, 보정은 해야 하는지.<br><br>
+
+<strong>장비 준비</strong>: 미러리스 또는 DSLR을 보유하고 있다면 충분히 활용할 수 있습니다. 실내 조명이 어두운 예식장은 밝은 단초점 렌즈(50mm f/1.8 등)가 유리합니다. 스마트폰만 있어도 인물 모드와 충분한 조도에서 좋은 사진을 찍을 수 있습니다.<br><br>
+
+<strong>동선 파악</strong>: 행진 루트, 신랑 신부 입장 위치, 예식 단상 위치를 미리 파악해 두면 핵심 순간을 놓치지 않습니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 생성 필요</span><span class="ph-file">images/260825/5_wedding_song_2.png</span></div>
+<div class="prompt-text" id="p5-2">A guest photographer at a Korean wedding, holding a camera and capturing candid moments of the couple. Beautiful floral decorations, soft white and gold wedding hall. The photographer smiles while taking photos. Warm, festive atmosphere. Documentary wedding photography style.</div>
+<button class="copy-btn" onclick="copyPrompt('p5-2')">프롬프트 복사</button>
+</div>
+<div class="img-caption">결혼식 하객 사진 촬영 장면 / AI 제작 이미지</div>
+</div>
+
+<h2>06 | 결혼식 사진 잘 찍는 팁 — 핵심 순간과 앵글</h2>
+
+결혼식 사진에서 절대 놓치면 안 되는 순간들이 있습니다.<br><br>
+
+<strong>반드시 담아야 할 순간</strong>: 신부 입장 걷는 순간(측면 또는 정면), 성혼 선언 시 두 사람의 표정, 반지 교환, 첫 키스(찰나), 폐백이나 친척 인사 후 기념사진, 부모님과의 사진.<br><br>
+
+<strong>앵글 팁</strong>: 단상 정면에서만 찍으면 단조롭습니다. 측면이나 대각선 방향, 하객석에서 바라보는 앵글도 섞어줍니다. 두 사람의 표정이 잘 나오는 순간을 포착하는 것이 가장 중요합니다.<br><br>
+
+<strong>플래시 사용 주의</strong>: 진행 중 플래시가 번쩍이면 진행을 방해할 수 있습니다. 가급적 자연광과 실내 조명을 활용하고, 플래시는 꼭 필요할 때만 사용하세요.
+
+<h2>07 | 사진 파일 전달 — 용량·원본·보정 여부 협의</h2>
+
+사진을 찍고 나면 전달 방식을 미리 정해두어야 합니다. 무조건 전부 다 보내는 것이 좋은 것이 아닙니다.<br><br>
+
+<strong>정리 후 전달</strong>: 전체 파일 중 잘 나온 사진만 추려서 전달하는 것이 수신자 입장에서 편합니다. 눈 감은 사진, 흔들린 사진은 미리 걸러내주세요.<br><br>
+
+<strong>용량과 방법</strong>: 네이버 MYBOX, 구글 드라이브, 카카오톡 대용량 파일 전송 기능을 이용하면 원본 고화질 파일을 전달할 수 있습니다. 카카오톡으로 직접 사진을 보내면 화질이 압축되므로 링크 방식을 사용하세요.<br><br>
+
+<strong>보정 여부</strong>: 보정(라이트룸·포토샵 등)은 내가 자원한 것이 아니라면 먼저 협의하세요. 부담되면 "원본은 드릴게, 보정까지는 어렵고"라고 솔직히 말하는 것이 낫습니다.
+
+<h2>08 | 사례비 받는 법과 거절하는 예절</h2>
+
+축가나 사진 촬영을 해준 후 신랑·신부 측에서 사례비를 주겠다고 하는 경우가 있습니다. 관계와 상황에 따라 받기도 하고 거절하기도 합니다.<br><br>
+
+<strong>사례를 받을 때</strong>: "고마워, 작은 선물로 받을게"처럼 자연스럽게 수락하면 됩니다. 금액을 두고 실랑이하는 것은 오히려 어색합니다. 특히 소속이 다른 밴드나 세미 프로 수준이라면 사례를 받는 것이 자연스럽습니다.<br><br>
+
+<strong>사례를 거절할 때</strong>: 친한 친구나 가족 사이라면 "괜찮아, 선물이야"라고 가볍게 거절할 수 있습니다. 이 경우 축의금을 별도로 낼지, 아니면 이것이 선물이 되는지 마음속으로 정해두는 것이 좋습니다.
+
+<h2>09 | 부탁 정중히 거절하는 법 — 관계 유지하며 사양하기</h2>
+
+축가나 사진 부탁을 거절할 때는 이유를 충분히 설명하면서도 배려하는 방식이 중요합니다.<br><br>
+
+<strong>거절하는 말 예시</strong><br>
+"정말 고맙고 영광이야. 근데 나 요즘 목 상태가 안 좋아서 잘못하면 민폐가 될 것 같아서 걱정이 돼. 다른 방식으로 도울 수 있으면 기꺼이 할게."<br><br>
+
+"카메라는 있는데, 나보다 사진 잘 찍는 친구가 더 좋을 것 같아서. 혹시 같이 도울 수 있는 부분이 있으면 알려줘."<br><br>
+
+거절 후 다른 방식으로 도움을 제안하면 관계에 금이 가지 않습니다. 사회 진행 보조, 방명록 관리, 선물 접수 등 다른 역할을 자원하는 것이 좋습니다.
+
+<h2>10 | 하객으로서 기본 예절 — 도착 시간과 축의금</h2>
+
+축가나 사진을 맡지 않더라도 결혼식 하객으로서 기본적인 예절은 지켜야 합니다.<br><br>
+
+<strong>도착 시간</strong>: 예식 시작 15~20분 전에 도착하는 것이 기본입니다. 특히 축가나 사진을 맡았다면 최소 1시간 전 도착이 필요합니다.<br><br>
+
+<strong>축의금</strong>: 관계와 상황에 따라 다르며, 통상적인 범위 내에서 마음을 담아 준비합니다. 현금이 어렵다면 온라인 계좌 이체도 사전에 신랑·신부에게 문의하면 가능합니다.<br><br>
+
+<strong>복장</strong>: 흰색 드레스나 검정 상복을 연상시키는 복장은 피합니다. 행사장 분위기에 어울리는 단정하고 밝은 색상의 정장 또는 스마트 캐주얼이 무난합니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260824/rite_sanggyeonrye_gift.html">상견례 자리에 선물 가져가야 하나 — 상대 부모님 첫 인사 예절과 준비물</a></li>
+<li><a href="../260824/local_overseas_roaming_fee_check.html">해외 로밍 요금 귀국 후 확인하는 법 — 과다청구 이의신청과 eSIM 잔여 데이터 환불</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#결혼식축가</span>
+<span class="tag">#하객축가준비</span>
+<span class="tag">#결혼식사진촬영</span>
+<span class="tag">#축가선곡</span>
+<span class="tag">#MR파일</span>
+<span class="tag">#결혼식예절</span>
+<span class="tag">#하객역할</span>
+<span class="tag">#경조사준비</span>
+<span class="tag">#결혼식리허설</span>
+<span class="tag">#사례비예절</span>
+</div>
+</body>
+</html>
