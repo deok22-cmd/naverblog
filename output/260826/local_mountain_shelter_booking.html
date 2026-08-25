@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>지리산·설악산 대피소 예약 언제 열리나 — 취소표 잡는 법과 가을 탐방 일정 짜기</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1f8f1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #a5d6a7; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #a5d6a7; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>지리산·설악산 대피소 예약 언제 열리나 — 취소표 잡는 법과 가을 탐방 일정 짜기</h1>
+
+<div class="intro-box">
+지리산 천왕봉, 설악산 대청봉. 국내 최고 종주 코스를 완주하려면 반드시 대피소 예약을 먼저 해야 합니다. 가을 시즌(9~10월)은 최성수기라 예약이 특히 어렵습니다. 예약 오픈일은 언제인지, 취소표는 어떻게 잡는지, 대피소별 체크포인트는 무엇인지 한 곳에 정리했습니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260826/4_shelter_1.png</span></div>
+<pre class="prompt-text" id="prompt-4-1">Mountain shelter refuge hut on Korean alpine ridge at dawn, dramatic rocky peaks covered in autumn foliage, hikers preparing to leave shelter at sunrise, golden light spreading across mountain ridgeline, photorealistic, ultra high detail, majestic mountainscape, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-4-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">가을 산 대피소 새벽 출발 풍경 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 대피소 예약이 필요한 이유</h2>
+
+국립공원 내 대피소는 무분별한 야영을 줄이고 생태계를 보호하기 위해 예약제를 운영합니다. 예약 없이는 대피소에 숙박할 수 없습니다. 특히 지리산 종주 코스(천왕봉 구간)와 설악산 공룡능선 코스는 당일 완주가 어려워 대피소 1~2박이 필수입니다.<br><br>
+
+대피소 예약은 국립공원 통합예약시스템(<strong>reservation.knps.or.kr</strong>)에서만 가능합니다. 별도 앱은 없으며, 모바일 웹 또는 PC로 예약합니다. 예약은 본인 명의 1인 1인분만 가능하고, 대리 예약 또는 양도는 금지되어 있습니다.
+
+<h2>02 | 예약 오픈일 — 몇 달 전에 열리나</h2>
+
+국립공원 대피소 예약 오픈 시기는 공원별로 다르며, 매년 변동이 있습니다. 일반적으로 이용일 기준 <strong>1~3개월 전</strong>에 예약이 열립니다.<br><br>
+
+<table class="info-table">
+<tr><th>공원</th><th>주요 대피소</th><th>일반 예약 오픈</th></tr>
+<tr><td>지리산</td><td>세석, 연하천, 치밭목, 장터목, 벽소령</td><td>이용일 약 2개월 전 오픈</td></tr>
+<tr><td>설악산</td><td>중청대피소, 희운각대피소</td><td>이용일 약 2개월 전 오픈</td></tr>
+<tr><td>북한산</td><td>백운대 대피소</td><td>이용일 약 1개월 전 오픈</td></tr>
+</table>
+
+정확한 오픈 일정은 매년 국립공원공단 공식 홈페이지(knps.or.kr) 공지사항을 확인해야 합니다. 예약 오픈 당일은 수요가 집중되어 오픈 즉시 마감되는 경우가 많습니다.
+
+<div class="warn-box">
+⚠️ <strong>주의</strong>: 이 글의 예약 오픈 기준일(이용일 2개월 전 등)은 일반적 기준이며, 연도별로 변경될 수 있습니다. 반드시 국립공원 공식 홈페이지 최신 공지를 확인하세요.
+</div>
+
+<h2>03 | 가을 시즌 예약 경쟁이 극심한 이유</h2>
+
+9~10월은 국내 트레킹 성수기입니다. 단풍 절정 시기인 10월 중순~11월 초에는 예약 오픈 후 수 분 안에 마감됩니다. 9월 초중순도 추석 연휴 등 황금연휴와 겹치면 경쟁이 치열합니다.<br><br>
+
+가을 대피소 예약에 성공하려면 다음 방법을 병행하는 것이 현실적입니다.<br><br>
+
+<div class="step-box">
+① <strong>예약 오픈 날짜 미리 파악</strong> — 국립공원 홈페이지 '공지사항' 상시 확인<br>
+② <strong>오픈 당일 자정 또는 오전 9시 대기</strong> — 오픈 시간은 공원별 다름<br>
+③ <strong>여러 날짜를 동시에 노리기</strong> — 원하는 날 불가 시 대체 날짜 즉시 선택<br>
+④ <strong>취소표 알림 활용</strong> — 예약 취소 시 재등록 알림 서비스
+</div>
+
+<h2>04 | 취소표 잡는 법 — 사실상 마지막 수단</h2>
+
+이미 예약이 꽉 찬 대피소의 취소표를 잡는 방법입니다.<br><br>
+
+국립공원 통합예약시스템(reservation.knps.or.kr)에는 <strong>'예약 대기' 기능</strong>이 있습니다. 대기 신청을 해두면 취소가 발생했을 때 알림을 받을 수 있습니다. 이용일에 가까워질수록 취소가 늘어나는 경향이 있으므로, 이용 1~2주 전에 주기적으로 확인하는 것이 효과적입니다.<br><br>
+
+<div class="tip-box">
+💡 <strong>취소표 잡기 팁</strong><br>
+① 직접 홈페이지를 자주 새로고침하는 방법도 현실적으로 유효합니다.<br>
+② 금요일 저녁~토요일 새벽 시간대에 취소가 집중 발생합니다.<br>
+③ 이용 3~7일 전에 갑자기 취소가 나오는 경우도 있습니다.<br>
+④ 이용 전날~당일 취소표는 재배정 알림보다 직접 확인이 빠를 수 있습니다.
+</div>
+
+<h2>05 | 지리산 주요 대피소 정보</h2>
+
+<table class="info-table">
+<tr><th>대피소명</th><th>위치</th><th>수용</th><th>특징</th></tr>
+<tr><td>세석대피소</td><td>해발 1,700m</td><td>약 60명</td><td>지리산 종주 핵심 거점</td></tr>
+<tr><td>연하천대피소</td><td>해발 1,470m</td><td>약 50명</td><td>노고단·천왕봉 중간 거점</td></tr>
+<tr><td>치밭목대피소</td><td>해발 1,460m</td><td>약 50명</td><td>중산리 출발 루트 거점</td></tr>
+<tr><td>장터목대피소</td><td>해발 1,650m</td><td>약 40명</td><td>천왕봉 바로 아래</td></tr>
+<tr><td>벽소령대피소</td><td>해발 1,340m</td><td>약 40명</td><td>서쪽 종주 루트 중간</td></tr>
+</table>
+
+각 대피소는 간단한 식사(라면, 김치찌개 등)와 식수를 제공합니다. 침구는 공용 담요가 제공되지만 개인 슬리핑백을 지참하면 더 편합니다. 전기는 충전 콘센트가 제한적이므로 보조배터리를 준비하세요.
+
+<h2>06 | 설악산 주요 대피소 정보</h2>
+
+<table class="info-table">
+<tr><th>대피소명</th><th>위치</th><th>수용</th><th>특징</th></tr>
+<tr><td>중청대피소</td><td>해발 1,676m</td><td>약 80명</td><td>대청봉 바로 아래, 설악 대표 대피소</td></tr>
+<tr><td>희운각대피소</td><td>해발 1,400m</td><td>약 50명</td><td>공룡능선 루트 핵심 거점</td></tr>
+</table>
+
+설악산은 지리산보다 대피소 수가 적어 경쟁이 더 치열합니다. 특히 공룡능선 코스(희운각-공룡능선-마등령-비선대)는 하산만 7~8시간이 소요되므로 체력 준비가 필수입니다.
+
+<h2>07 | 가을 탐방 일정 예시 — 지리산 1박 2일 종주</h2>
+
+<div class="step-box">
+<strong>[1일차]</strong><br>
+07:00 성삼재 주차장 출발 → 노고단 → 임걸령 → 삼도봉 → 화개재 → 연하천대피소 도착 (약 8시간)<br>
+<br>
+<strong>[2일차]</strong><br>
+06:00 연하천 출발 → 세석평전 → 장터목대피소 → 천왕봉 → 중산리 하산 (약 9시간)
+</div>
+
+지리산 종주 1박 2일은 총 이동 거리 약 25km, 총 17시간 내외의 강행군입니다. 트레킹 경험이 충분하고 체력이 뒷받침되는 분에게만 추천합니다. 초보자는 노고단 왕복 또는 천왕봉 당일 코스(중산리 출발)를 추천합니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260826/4_shelter_2.png</span></div>
+<pre class="prompt-text" id="prompt-4-2">Hikers trekking along Jirisan mountain ridge in autumn, dramatic panoramic view of mountains covered in colorful autumn foliage, winding trail through rocky terrain, blue sky with clouds, photorealistic, ultra high detail, sweeping mountain landscape, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-4-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">지리산 능선 가을 트레킹 풍경 / AI 제작 이미지</div>
+</div>
+
+<h2>08 | 대피소 이용 시 필수 준비물</h2>
+
+<div class="info-box">
+🎒 <strong>대피소 1박 필수 준비물</strong><br>
+• 슬리핑백 (공용 담요 있으나 개인 위생 차원에서 지참)<br>
+• 헤드랜턴 + 여분 배터리<br>
+• 보조배터리 (충전 콘센트 제한)<br>
+• 비상식량·행동식 (에너지바, 초콜릿, 건조식품)<br>
+• 레인커버·우비 (산중 날씨 급변)<br>
+• 구급약 (진통제, 반창고, 근육통 파스)<br>
+• 등산 스틱 (특히 하산 시 무릎 부담 경감)
+</div>
+
+대피소 내부는 혼잡합니다. 복도까지 짐을 쌓지 않도록 배낭 정리에 주의하세요. 대피소 내 취침 시간이 정해져 있으며, 새벽 출발 시 다른 이용자를 위해 최대한 조용히 이동해야 합니다.
+
+<h2>09 | 가을 산행 중 주의할 기상 변화</h2>
+
+가을 산은 평지보다 기온이 10~15°C 낮고 일교차가 큽니다. 9월 초중순이라도 고산 대피소 새벽 기온은 5~10°C 이하로 내려가는 경우가 있습니다. 얇은 패딩 또는 보온 재킷을 반드시 챙기세요.<br><br>
+
+안개와 낙뢰가 위험합니다. 능선 구간에서 낙뢰 경보가 발령되면 즉시 대피소나 계곡으로 내려와야 합니다. 국립공원공단 공식 앱(국립공원 스마트 앱)을 통해 실시간 기상 정보를 확인하세요.
+
+<h2>10 | 국립공원 탐방 예약 관련 유용한 링크 모음</h2>
+
+<div class="info-box">
+🔗 <strong>필수 사이트</strong><br>
+• 국립공원 통합예약시스템: reservation.knps.or.kr<br>
+• 국립공원공단 공식: knps.or.kr<br>
+• 국립공원 스마트 앱: 앱스토어/플레이스토어에서 '국립공원' 검색<br>
+• 지리산 탐방안전지원팀: 055-970-1000<br>
+• 설악산 탐방안전지원팀: 033-801-0900
+</div>
+
+예약 취소는 이용일 기준 며칠 전까지 무료 취소 가능하며, 그 이후에는 위약금이 발생합니다. 정확한 환불 규정은 예약 시 고지되는 내용을 확인하세요.
+
+<div class="recommend-area">
+<strong>📌 함께 읽으면 좋은 글</strong><br><br>
+<a href="../260826/travel_suwon_hwaseong_chuseok.html">수원 화성 성곽 추석 연휴 나들이 — 행궁동 카페골목과 야간 개장 코스 총정리</a><br>
+<a href="../260825/travel_achimsugyo_fall_garden.html">아침고요수목원 가을 단풍 시즌 — 예약 필수 여부와 포토존·야간조명 코스 총정리</a>
+</div>
+
+<div class="tags">
+<span class="tag">#지리산대피소예약</span>
+<span class="tag">#설악산대피소예약</span>
+<span class="tag">#국립공원예약</span>
+<span class="tag">#지리산종주</span>
+<span class="tag">#취소표잡기</span>
+<span class="tag">#가을등산</span>
+<span class="tag">#천왕봉</span>
+<span class="tag">#대청봉</span>
+<span class="tag">#산대피소</span>
+<span class="tag">#국립공원통합예약</span>
+</div>
+</body>
+</html>

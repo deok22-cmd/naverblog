@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>돌잡이 물건 종류와 의미 — 요즘 돌잡이 준비물 리스트가 전통과 달라진 점</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1f8f1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #a5d6a7; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #a5d6a7; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>돌잡이 물건 종류와 의미 — 요즘 돌잡이 준비물 리스트가 전통과 달라진 점</h1>
+
+<div class="intro-box">
+아이의 첫 번째 생일인 돌은 한국에서 가장 중요한 경조사 중 하나입니다. 돌잔치의 하이라이트인 돌잡이는 아이가 무작위로 집는 물건으로 미래를 점치는 전통 의식입니다. 전통적으로는 실·쌀·활·책·돈이 기본이었지만, 요즘 돌잡이 상에는 마이크·골프공·청진기·판사봉 등 현대적 물건이 다양하게 올라옵니다. 전통 물건의 의미와 요즘 인기 아이템, 준비할 때 주의할 점을 정리했습니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260826/5_doljabbi_1.png</span></div>
+<pre class="prompt-text" id="prompt-5-1">Korean doljabi ceremony setup, traditional colorful table with items including string, rice, book, money, stethoscope, microphone arranged beautifully, baby in traditional hanbok sitting in front, warm celebratory atmosphere, photorealistic, ultra high detail, bright and festive, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">돌잡이 상 차림 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 돌잡이란 무엇인가</h2>
+
+돌잡이(돌잡기)는 아이의 돌잔치 때 여러 가지 물건을 상 위에 올려놓고, 아이가 스스로 집는 물건으로 미래를 예측하는 한국 전통 의식입니다. 실제로 운명을 결정한다기보다는 잔치 분위기를 즐기고 아이의 미래를 덕담하는 행위에 가깝습니다.<br><br>
+
+돌잡이 의식은 삼국 시대부터 이어져 온 풍습으로 알려져 있습니다. 전통적으로는 엄마 품에 안겨 상에 놓인 물건을 잡게 했으며, 현재는 포토존을 꾸미고 사진과 영상을 찍는 행사로 발전했습니다. 많은 가정이 돌잡이 테이블을 전문 업체에 의뢰하거나 직접 꾸미기도 합니다.
+
+<h2>02 | 전통 돌잡이 물건 7가지와 의미</h2>
+
+<table class="info-table">
+<tr><th>물건</th><th>의미</th><th>전통 해석</th></tr>
+<tr><td>실(명주실)</td><td>장수</td><td>오래 살아라 — 돌잡이 물건 중 가장 기본</td></tr>
+<tr><td>쌀(백미)</td><td>풍요·부유</td><td>먹을 것 걱정 없이 살아라</td></tr>
+<tr><td>돈(엽전·지폐)</td><td>부유·재물</td><td>부자로 살아라</td></tr>
+<tr><td>활(화살)</td><td>무용·용기</td><td>나라를 지키는 무인이 되어라</td></tr>
+<tr><td>책(붓)</td><td>학문·문장</td><td>학자·선비가 되어라</td></tr>
+<tr><td>국수</td><td>장수</td><td>길게, 건강하게 살아라</td></tr>
+<tr><td>떡(시루떡)</td><td>무탈·평안</td><td>무병장수하여라</td></tr>
+</table>
+
+전통 돌잡이 물건은 그 시대의 이상적인 직업관과 가치관을 반영합니다. 문무(文武) 겸비가 이상이었던 시대에는 붓과 활이 중요했고, 농경 사회에서는 쌀이 풍요의 상징이었습니다.
+
+<h2>03 | 요즘 돌잡이 상에 올라오는 현대 아이템</h2>
+
+현재 돌잔치에서는 전통 물건에 더해 다양한 현대 직업을 상징하는 물건이 추가됩니다. 아이의 성별과 가족 특성에 맞게 선택하는 추세입니다.<br><br>
+
+<table class="info-table">
+<tr><th>물건</th><th>상징 직업·의미</th></tr>
+<tr><td>청진기 (미니어처)</td><td>의사</td></tr>
+<tr><td>마이크</td><td>가수·아나운서·방송인</td></tr>
+<tr><td>판사봉 (해머)</td><td>판사·법조인</td></tr>
+<tr><td>골프공</td><td>운동선수·스포츠</td></tr>
+<tr><td>카메라 미니어처</td><td>사진작가·영상 크리에이터</td></tr>
+<tr><td>비행기 장난감</td><td>파일럿·항공사</td></tr>
+<tr><td>컴퓨터 마우스</td><td>개발자·IT 직군</td></tr>
+<tr><td>붓·팔레트</td><td>화가·예술가</td></tr>
+<tr><td>컵·오더패드</td><td>바리스타·요리사·외식업</td></tr>
+<tr><td>축구공</td><td>운동선수</td></tr>
+</table>
+
+요즘 돌잡이는 아이가 어떤 물건을 잡더라도 즐겁게 받아들이는 문화가 자리잡았습니다. 아이가 잡기 좋게 미니어처 크기로 제작된 돌잡이 세트 상품이 많이 판매됩니다.
+
+<h2>04 | 돌잡이 세트 — 직접 준비 vs 구매</h2>
+
+<h3>직접 준비</h3>
+집에 있는 소품을 활용하거나 다이소·소품샵에서 미니어처 아이템을 모아 직접 구성하는 방법입니다. 비용을 절감할 수 있고 개성 있는 구성이 가능합니다. 다만 준비 시간이 필요하고 테이블 꾸미기(스타일링)가 서툴면 어려울 수 있습니다.<br><br>
+
+<h3>세트 구매</h3>
+온라인 쇼핑몰(네이버 스마트스토어, 쿠팡 등)에서 '돌잡이 세트'를 검색하면 10~15가지 미니어처 세트를 5천 원~3만 원 내외에 구매할 수 있습니다. 성별에 따른 구성이 다른 세트도 있습니다. 구성이 표준화되어 있어 빠르게 준비할 수 있습니다.
+
+<div class="tip-box">
+💡 <strong>구매 팁</strong><br>
+• 물건 크기는 아이 손에 잡히는 5~10cm 이내로 선택하세요.<br>
+• 너무 작은 미니어처는 아이가 입에 넣을 수 있어 위험합니다.<br>
+• 날카로운 모서리가 없는 소재를 고르세요.<br>
+• 행사장 카펫 또는 테이블 색상과 어울리는 세트를 고르면 사진이 예쁘게 나옵니다.
+</div>
+
+<h2>05 | 돌잡이 테이블 꾸미기 트렌드</h2>
+
+최근 돌잡이 테이블은 SNS 공유를 의식한 포토존 개념으로 발전했습니다. 배경 천, 꽃 장식, 한복 소품, 아이 이름 레터링 보드 등을 함께 구성합니다.<br><br>
+
+인기 있는 스타일은 ① 한복 한복 한복 한옥 감성(베이지·한지 느낌), ② 파스텔 톤 영문 레터링 모던 스타일, ③ 자연 소재(우드 트레이·리넨 패브릭) 내추럴 스타일입니다.<br><br>
+
+돌잡이 테이블 꾸미기 전문 대여 업체도 있습니다. 테이블보, 배경, 소품 세트 대여 후 촬영하고 반납하는 방식입니다. 하루 대여 기준 3만~10만 원 내외입니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260826/5_doljabbi_2.png</span></div>
+<pre class="prompt-text" id="prompt-5-2">Beautiful Korean doljabi table decoration setup, modern pastel themed party table with various small symbolic items, baby's name letter board, flowers decoration, elegant and festive atmosphere, photorealistic, ultra high detail, warm and celebratory lighting, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">모던 돌잡이 테이블 꾸미기 예시 / AI 제작 이미지</div>
+</div>
+
+<h2>06 | 돌잡이 순서와 행사 진행 팁</h2>
+
+<div class="step-box">
+① 아이에게 한복을 입힌 후 돌잡이 테이블 앞에 앉힌다<br>
+② 사회자 또는 부모가 각 물건의 의미를 소개한다<br>
+③ 아이가 스스로 물건을 잡도록 유도한다<br>
+④ 아이가 잡은 물건의 의미를 낭독하고 박수와 환호로 축하한다<br>
+⑤ 사진·영상 촬영 후 다음 행사(케이크 촛불 끄기 등)로 이동
+</div>
+
+아이마다 반응이 다릅니다. 물건에 관심을 보이지 않거나 울음을 터뜨리는 경우도 있습니다. 강요하지 말고 아이 컨디션에 맞게 유연하게 진행하세요. 돌잡이 순서 전 아이가 배고프거나 졸린 상태가 아닌지 확인하는 것이 중요합니다.
+
+<h2>07 | 돌잡이 관련 자주 묻는 질문</h2>
+
+<strong>Q. 아이가 두 개 잡으면 어떻게 되나요?</strong><br>
+정해진 규칙은 없습니다. 두 개를 잡으면 두 가지 의미를 모두 부여하거나, 먼저 집은 손의 물건을 주된 것으로 보는 경우가 많습니다.<br><br>
+
+<strong>Q. 돌잡이 물건을 몇 개 올려야 하나요?</strong><br>
+전통적으로는 5~7가지이지만 현재는 10~15가지도 흔합니다. 물건이 너무 많으면 아이가 혼란스러워할 수 있으므로 7~10개가 적당합니다.<br><br>
+
+<strong>Q. 돌잡이 물건은 재사용 가능한가요?</strong><br>
+구매한 미니어처 세트는 다음 돌잔치에 지인에게 빌려주거나, 중고로 나눔하는 경우가 많습니다.<br><br>
+
+<strong>Q. 돌잡이 순서는 필수인가요?</strong><br>
+필수 행사는 아닙니다. 요즘은 가정에서 소규모 돌잔치를 할 때 돌잡이를 생략하기도 합니다. 행사 규모와 가족 의향에 따라 자유롭게 결정하세요.
+
+<h2>08 | 성별에 따른 돌잡이 구성 트렌드</h2>
+
+전통적으로 성별에 따라 구성이 달랐으나 현재는 성별 구분 없이 같은 세트를 쓰는 추세입니다. 다만 부모의 취향에 따라 일부 물건을 추가하거나 빼기도 합니다.<br><br>
+
+최근에는 아이의 성별을 의식하지 않고 직업 다양성을 골고루 담으려는 경향이 있습니다. 여자아이에게도 청진기·판사봉을 올리고, 남자아이에게도 붓·팔레트를 올리는 것이 이제는 자연스러운 풍경입니다.
+
+<div class="recommend-area">
+<strong>📌 함께 읽으면 좋은 글</strong><br><br>
+<a href="../260825/rite_wedding_guest_song_photo.html">결혼식 축가 부탁 예절과 축의금 사진 촬영 매너 — 하객이 꼭 알아야 할 것들</a><br>
+<a href="../260826/travel_suwon_hwaseong_chuseok.html">수원 화성 성곽 추석 연휴 나들이 — 행궁동 카페골목과 야간 개장 코스 총정리</a>
+</div>
+
+<div class="tags">
+<span class="tag">#돌잡이물건종류</span>
+<span class="tag">#돌잡이의미</span>
+<span class="tag">#돌잡이세트</span>
+<span class="tag">#돌잔치준비</span>
+<span class="tag">#돌잡이테이블</span>
+<span class="tag">#돌잡이순서</span>
+<span class="tag">#아이첫생일</span>
+<span class="tag">#돌잔치</span>
+<span class="tag">#돌잡이트렌드</span>
+<span class="tag">#첫돌행사</span>
+</div>
+</body>
+</html>
