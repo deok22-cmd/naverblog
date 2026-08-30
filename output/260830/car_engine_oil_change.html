@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>엔진오일 교체 주기와 합성유·광유 차이 — 직접 넣으면 보증 문제 없나</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>엔진오일 교체 주기와 합성유·광유 차이 — 직접 넣으면 보증 문제 없나</h1>
+
+<div class="intro-box">
+엔진오일 교체는 자동차 유지관리 중 가장 기본적이고 중요한 항목입니다. 그런데 언제 바꿔야 하는지, 합성유와 광유 중 어떤 것을 써야 하는지, 직접 교체하면 제조사 보증에 영향이 있는지 명확히 아는 분이 많지 않습니다. 이 글에서 실질적인 답을 드립니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 1 / 2</span><button class="copy-btn" onclick="copyPrompt('p6_1')">프롬프트 복사</button></div>
+<div class="ph-file">images/260830/6_engineoil_1.png</div>
+<pre class="prompt-text" id="p6_1">엔진오일 교체 장면. 차량 엔진룸 오일 주입구에 합성 엔진오일을 붓는 장면. 엔진오일 용기(5W-30 합성유), 깨끗한 정비 환경. 사진 스타일, 실용적인 분위기, 자연광.</pre>
+</div>
+<div class="img-caption">엔진오일 교체 작업 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 엔진오일이 왜 중요한가</h2>
+
+엔진오일은 엔진 내부 금속 부품 사이의 마찰을 줄이고 열을 분산하며, 불순물을 청소하는 역할을 합니다. 쉽게 말해 엔진이 원활하게 작동하도록 윤활·냉각·세정·방청 기능을 동시에 수행합니다.<br><br>
+
+엔진오일이 부족하거나 오래된 상태로 방치하면 어떻게 될까요? 금속 부품 간 마찰이 증가해 엔진 마모가 가속됩니다. 열이 제대로 분산되지 않아 과열이 발생하고, 심한 경우 엔진 내부 부품이 눌어붙는 '엔진 시이즈(Seize)'가 발생합니다. 이 경우 엔진 전체를 교환해야 하는 최악의 상황이 됩니다.<br><br>
+
+주행 거리 기준으로 교체 시기를 놓치지 않는 것이 차량 수명을 늘리는 가장 경제적인 유지관리 방법입니다. 엔진오일 한 번 교체 비용은 3~8만 원 수준이지만, 엔진 손상 수리 비용은 수백만~수천만 원에 달합니다.
+
+<h2>02 | 합성유·반합성유·광유 차이</h2>
+
+엔진오일은 기유(베이스 오일)의 제조 방식에 따라 광유(Mineral Oil), 반합성유(Semi-Synthetic), 완전합성유(Full Synthetic)로 나뉩니다.
+
+<table class="info-table">
+<tr><th>종류</th><th>특징</th><th>교체 주기</th><th>가격대</th></tr>
+<tr><td>광유 (Mineral)</td><td>원유 정제. 불순물 많음. 점도 변화 큼</td><td>5,000~7,500km / 6개월</td><td>저가</td></tr>
+<tr><td>반합성유 (Semi-Synthetic)</td><td>광유+합성유 혼합. 중간 성능</td><td>7,500~10,000km / 1년</td><td>중가</td></tr>
+<tr><td>완전합성유 (Full Synthetic)</td><td>화학 합성. 불순물 없음. 온도 안정성 우수</td><td>10,000~15,000km / 1년</td><td>고가</td></tr>
+</table>
+
+<strong>어떤 것을 선택해야 하나?</strong><br><br>
+
+결론부터 말하면: <strong>차량 제조사 권장 스펙에 맞는 오일을 사용하는 것이 원칙</strong>입니다. 차량 취급 설명서(매뉴얼)에 권장 오일 규격이 명시되어 있습니다. 예를 들어 "5W-30 API SN" 등의 규격이 표기되어 있습니다.<br><br>
+
+최신 가솔린 엔진과 디젤 엔진 대부분은 완전합성유를 권장합니다. 구형 차량이나 높은 주행 거리 차량은 오히려 반합성유나 고주행거리용 특화 오일이 더 적합한 경우도 있습니다. 확신이 없으면 정비소에서 차종에 맞는 오일을 추천받으세요.
+
+<h2>03 | 엔진오일 점도 표기 읽는 법</h2>
+
+엔진오일 용기에는 "5W-30", "0W-20", "10W-40" 같은 점도 표기가 있습니다. 이를 읽는 방법을 알아봅니다.<br><br>
+
+<strong>예시: 5W-30</strong><br>
+<strong>W 앞 숫자(5W)</strong>: 겨울(Winter) 저온 점도. 숫자가 작을수록 추운 날씨에서 오일이 더 잘 흐름. 시동성 우수.<br>
+<strong>W 뒤 숫자(30)</strong>: 고온(100°C) 점도. 숫자가 클수록 고온에서 오일막이 두꺼움. 엔진 보호 우수.<br><br>
+
+<div class="info-box">
+<strong>한국 기후와 권장 점도</strong><br>
+한국 4계절 기준: 5W-30 또는 5W-40이 무난합니다.<br>
+극한 혹한 지역(강원 산간 등): 0W-30 또는 0W-40도 좋습니다.<br>
+고온 다습한 여름: 5W-40 이상 점도가 엔진 보호에 유리합니다.<br>
+단, 차량 매뉴얼의 권장 점도를 항상 우선시하세요.
+</div>
+
+다른 점도 오일을 이전 오일과 혼합해도 되는지 궁금한 분이 많습니다. 결론: 같은 종류(합성유끼리, 광유끼리)라면 혼합해도 엔진에 즉각적인 손상은 없습니다만, 혼합 후 전체 오일 성능이 저하됩니다. 최대한 빨리 교환하세요.
+
+<h2>04 | 교체 주기 — 언제 바꿔야 하나</h2>
+
+엔진오일 교체 주기는 두 가지 기준 중 먼저 도달하는 것을 따릅니다: <strong>주행 거리 또는 기간</strong>.
+
+<table class="info-table">
+<tr><th>오일 종류</th><th>주행거리 기준</th><th>기간 기준</th></tr>
+<tr><td>완전합성유</td><td>10,000~15,000km</td><td>1년</td></tr>
+<tr><td>반합성유</td><td>7,500~10,000km</td><td>6~12개월</td></tr>
+<tr><td>광유</td><td>5,000~7,500km</td><td>6개월</td></tr>
+</table>
+
+단, 아래와 같은 조건에서는 더 짧은 주기로 교체하는 것이 좋습니다.<br><br>
+
+• <strong>시내 주행 비율이 높은 경우</strong>: 잦은 정차·출발로 엔진 부하가 높아 오일 열화가 빠릅니다. 10,000km 기준 차량이라도 8,000km에 교체 권장.<br>
+• <strong>고온·고부하 주행 (산악 도로, 고속 주행 多)</strong>: 오일 산화가 빨라집니다.<br>
+• <strong>오래된 차량(10년/15만km 이상)</strong>: 엔진 내부 슬러지가 많을 수 있어 더 자주 교체 필요.<br>
+• <strong>터보 엔진 차량</strong>: 터보 부품은 고온에 노출되므로 일반 자연흡기 엔진보다 짧은 주기 권장.
+
+<h2>05 | 직접 교체하면 보증(워런티)에 영향이 있나</h2>
+
+"직접 엔진오일을 교체하면 제조사 보증이 취소된다"는 말이 돌지만, <strong>이것은 사실이 아닙니다.</strong><br><br>
+
+한국과 미국 모두 소비자 보호법에 따라, 소비자가 직접 오일을 교체했다는 이유만으로 제조사가 보증을 거부할 수 없습니다. 미국의 경우 매그너슨-모스 워런티법(Magnuson-Moss Warranty Act)이 이를 명시하고 있으며, 한국 소비자분쟁해결기준도 유사한 원칙을 적용합니다.<br><br>
+
+<strong>보증에 영향을 주는 경우</strong><br><br>
+
+① 차량 매뉴얼에서 권장하지 않는 오일 규격을 사용하여 엔진 손상이 발생한 경우<br>
+② 오일 교체 작업 중 부품(오일 캡, 드레인 볼트 등)을 손상시킨 경우<br>
+③ 오일 교체 기록(구입 영수증, 교체 날짜·주행거리 메모)을 전혀 남기지 않은 경우<br><br>
+
+따라서 직접 교체 시에는: 권장 규격 오일 사용, 교체 날짜·주행거리 기록, 오일 구입 영수증 보관을 반드시 챙기세요. 이 세 가지만 지키면 보증 분쟁에서 불리하지 않습니다.
+
+<h2>06 | 엔진오일 직접 교체 방법</h2>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 2 / 2</span><button class="copy-btn" onclick="copyPrompt('p6_2')">프롬프트 복사</button></div>
+<div class="ph-file">images/260830/6_engineoil_2.png</div>
+<pre class="prompt-text" id="p6_2">엔진오일 점검 장면. 차량 엔진룸에서 오일 딥스틱을 꺼내 오일 상태를 확인하는 손. 오일 딥스틱의 최대·최소 눈금, 깨끗한 엔진룸. 사진 스타일, 자연광, 실용적인 분위기.</pre>
+</div>
+<div class="img-caption">엔진오일 딥스틱 점검 / AI 제작 이미지</div>
+</div>
+
+엔진오일 직접 교체는 기본 공구와 지식이 있으면 가능합니다. 하지만 처음 도전이라면 아래 단계별 안내를 참고하세요.<br><br>
+
+<div class="step-box">
+<strong>엔진오일 직접 교체 단계</strong><br><br>
+① 필요 도구 준비: 드레인 볼트에 맞는 소켓 렌치, 오일 필터 렌치, 오일 팬(수거용), 새 오일 필터, 새 드레인 볼트 가스켓, 신품 엔진오일<br>
+② 엔진 5분 워밍업 후 시동 끄고 15~20분 대기(오일이 따뜻해야 잘 빠짐, 식혀서 화상 예방)<br>
+③ 차량 잭업 후 드레인 볼트 위치 확인 (하부 오일 팬 아래 나사)<br>
+④ 드레인 볼트 풀어 폐오일 수거 (오일 팬에 받기)<br>
+⑤ 오일 필터 교체 (렌치로 돌려 교체, 새 필터 고무링에 신유 살짝 도포)<br>
+⑥ 드레인 볼트 새 가스켓으로 조임 (과조임 주의)<br>
+⑦ 엔진 상부 오일 캡 열고 신품 오일 규정량 주입<br>
+⑧ 시동 후 1~2분 유지, 오일 누유 없는지 하부 확인<br>
+⑨ 시동 끄고 5분 후 딥스틱으로 오일 양 확인
+</div>
+
+폐오일은 반드시 환경부 지정 방식으로 처리해야 합니다. 주유소, 자동차 부품점(카센터)에 폐오일 수거함이 있습니다. 일반 쓰레기로 버리면 불법입니다.
+
+<h2>07 | 카센터에서 교체할 때 알면 좋은 것</h2>
+
+직접 교체보다 카센터를 이용하는 분이 훨씬 많습니다. 카센터에서 교체 시 알아두면 좋은 정보를 정리합니다.<br><br>
+
+<strong>오일 선택 주도권은 본인에게</strong>: "좋은 거 넣어주세요"라고 하면 카센터가 마진이 좋은 오일로 선택하는 경우가 있습니다. 미리 차량 매뉴얼에 있는 권장 규격(예: 5W-30 SM/SN급 합성유)을 말하고 선택하세요.<br><br>
+
+<strong>오일 필터도 함께 교체</strong>: 엔진오일 교체 시 오일 필터도 함께 바꾸는 것이 원칙입니다. 필터만 교체하지 않으면 새 오일이 오염된 필터를 통과하면서 성능이 빨리 저하됩니다.<br><br>
+
+<strong>교체 후 영수증 보관</strong>: 교체 날짜, 주행거리, 사용 오일 종류·규격이 기재된 영수증을 보관하세요. 이것이 보증 분쟁 시 기록입니다.
+
+<h2>08 | 오일 경고등이 켜졌을 때</h2>
+
+계기판에 오일 관련 경고등이 켜졌다면 즉시 조치가 필요합니다. 종류별로 대응 방법이 다릅니다.<br><br>
+
+<div class="warn-box">
+⚠️ <strong>오일 압력 경고등(기름 물방울 모양)</strong>: 가장 심각한 경고입니다. 즉시 안전한 곳에 정차하고 시동을 끄세요. 계속 주행하면 수 분 내 엔진 치명적 손상이 발생할 수 있습니다.<br><br>
+⚡ <strong>오일 교환 알림 표시(주행거리 기반)</strong>: 설정 주행거리 도달 알림. 즉시 정차 불필요, 가까운 시일 내 교환하면 됩니다.
+</div>
+
+<h2>09 | 엔진오일 관련 자주 묻는 질문</h2>
+
+<strong>Q. 오일이 줄어드는 게 정상인가요?</strong><br>
+A. 소량(6개월에 500cc 이하)의 오일 감소는 정상 범위입니다. 그 이상 줄어든다면 누유(엔진 하부 오일 흔적 확인) 또는 연소(흰 연기)를 의심해야 합니다. 딥스틱으로 월 1회 오일 양 점검을 권장합니다.<br><br>
+
+<strong>Q. 합성유를 넣다가 광유로 바꿔도 되나요?</strong><br>
+A. 기술적으로는 가능합니다. 합성유에서 광유로 전환 시 성능 저하가 있을 수 있으나 엔진 손상은 없습니다. 다만 역방향(광유→합성유)도 마찬가지입니다. 혼합 사용은 피하고, 전환 시 완전히 교체 후 신품 오일을 넣으세요.<br><br>
+
+<strong>Q. 오일 색이 검어졌는데 바로 교환해야 하나요?</strong><br>
+A. 오일은 세정 기능이 있어 사용 초반부터 검어집니다. 색만으로 교환 시기를 판단하기는 어렵습니다. 딥스틱의 오일이 매우 끈적하거나 금속 입자가 보이거나, 주행거리·기간 기준이 된 경우 교환하세요.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260826/car_dashboard_warning_light.html">자동차 계기판 경고등 종류와 대처법 — 즉시 정차해야 하는 것 vs 나중에 봐도 되는 것</a></li>
+<li><a href="local_travel_insurance_claim.html">여행자보험 다녀온 뒤 청구하는 법 — 병원비·수하물 분실 보상 신청 절차</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<span class="tag">#엔진오일교체주기</span>
+<span class="tag">#합성유광유차이</span>
+<span class="tag">#엔진오일직접교체</span>
+<span class="tag">#자동차유지관리</span>
+<span class="tag">#엔진오일점도</span>
+<span class="tag">#워런티보증</span>
+<span class="tag">#5W30</span>
+<span class="tag">#완전합성유</span>
+<span class="tag">#오일교환비용</span>
+<span class="tag">#자동차정비</span>
+</div>
+</body>
+</html>

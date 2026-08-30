@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>추석 잡채 미리 만들어도 안 붇는 법 — 당면 삶기·헹구기와 재료별 볶는 순서</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #e64a19; padding-bottom: 12px; color: #bf360c; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #fbe9e7; padding: 12px 15px; border-left: 6px solid #e64a19; margin-top: 50px; color: #bf360c; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #bf360c; margin: 24px 0 8px; }
+  .intro-box { background: #fffaf8; border: 2px solid #ffccbc; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #e64a19; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #fff5f2; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #ffccbc; border-radius: 8px; padding: 20px; background: #fffaf8; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #e64a19; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #e64a19; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #fffaf8; border: 1px solid #ffccbc; border-left: 4px solid #e64a19; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #e64a19; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#e64a19'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>추석 잡채 미리 만들어도 안 붇는 법 — 당면 삶기·헹구기와 재료별 볶는 순서</h1>
+
+<div class="intro-box">
+추석 명절 잡채는 많은 양을 미리 만들어 두어야 하는데, 시간이 지나면 당면이 불어나고 서로 뭉쳐 식감이 나빠지는 것이 가장 큰 고민입니다. 당면이 붇는 이유와 안 붇는 핵심 원리를 알면 하루 전에 만들어도 찰진 식감을 유지할 수 있습니다. 당면 삶는 법, 재료별 볶는 순서, 보관 방법까지 실전 레시피로 정리합니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 1 / 2</span><button class="copy-btn" onclick="copyPrompt('p7_1')">프롬프트 복사</button></div>
+<div class="ph-file">images/260830/7_japchae_1.png</div>
+<pre class="prompt-text" id="p7_1">잘 만들어진 추석 잡채. 넓은 접시에 담긴 윤기 나는 잡채, 색색 채소와 쇠고기가 섞인 탐스러운 모습. 참기름 향이 느껴질 듯한 표면의 광택. 한국 전통 명절 음식 분위기, 사진 스타일, 식욕을 돋우는 따뜻한 조명.</pre>
+</div>
+<div class="img-caption">추석 잡채 완성 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 잡채 당면이 붇는 진짜 이유</h2>
+
+잡채를 미리 만들면 당면이 불어 뭉치는 이유, 알고 계신가요? 당면의 주성분은 전분(녹말)입니다. 삶아진 전분은 시간이 지나면서 수분을 흡수해 계속 부풀어 오르는 성질을 가집니다.<br><br>
+
+특히 두 가지 상황에서 불림이 심각해집니다.<br><br>
+
+첫째, 삶은 당면을 뜨거운 채로 양념과 버무리면 열기가 남아 전분 흡수가 계속됩니다.<br><br>
+
+둘째, 삶은 당면을 찬물에 충분히 헹구지 않으면 표면에 점액 전분(녹말풀)이 남아 서로 달라붙고 계속 불게 됩니다.<br><br>
+
+그리고 결정적으로, 완성된 잡채에 남은 수분이 많으면 냉장 보관 중에도 당면이 국물을 흡수하여 불어납니다.<br><br>
+
+이 세 가지 원인을 막으면 하루 전에 만든 잡채도 안 붇습니다. 핵심은 <strong>충분한 찬물 헹굼 → 참기름 코팅 → 재료별 수분 최소화 → 당면과 채소 분리 보관</strong>입니다.
+
+<h2>02 | 재료와 분량 (4~6인분 기준)</h2>
+
+<table class="info-table">
+<tr><th>재료</th><th>분량</th><th>비고</th></tr>
+<tr><td>당면</td><td>200g</td><td>국산 고구마 당면 권장</td></tr>
+<tr><td>쇠고기(채끝 또는 불고기용)</td><td>150g</td><td>얇게 채 썰기</td></tr>
+<tr><td>표고버섯</td><td>4~5개</td><td>물에 불린 것, 채 썰기</td></tr>
+<tr><td>당근</td><td>1/2개</td><td>채 썰기</td></tr>
+<tr><td>시금치</td><td>100g</td><td>데쳐서 사용</td></tr>
+<tr><td>양파</td><td>1/2개</td><td>채 썰기</td></tr>
+<tr><td>목이버섯</td><td>30g</td><td>불려서 사용 (선택)</td></tr>
+<tr><td>달걀 지단</td><td>2개</td><td>황백 지단 (선택)</td></tr>
+<tr><td>참기름</td><td>3~4 큰술</td><td>마무리 + 코팅용</td></tr>
+<tr><td>간장</td><td>3 큰술</td><td>기본 간</td></tr>
+<tr><td>설탕</td><td>1.5 큰술</td><td>단맛 조절</td></tr>
+<tr><td>다진 마늘</td><td>1 큰술</td><td></td></tr>
+<tr><td>후추</td><td>약간</td><td></td></tr>
+</table>
+
+당면은 반드시 국산 고구마 당면을 추천합니다. 중국산 감자 전분 당면에 비해 탄력과 쫀쫀함이 뛰어나 조리 후에도 식감이 잘 살아납니다.
+
+<h2>03 | 핵심 — 당면 삶는 법과 찬물 헹구기</h2>
+
+잡채가 안 붇으려면 당면 처리 과정이 가장 중요합니다. 단계별로 정확히 따라 하세요.<br><br>
+
+<div class="step-box">
+<strong>당면 삶기 단계별 방법</strong><br><br>
+① <strong>끓는 물에 당면 투입</strong>: 물이 완전히 팔팔 끓을 때 당면을 넣습니다. 미지근한 물에 넣으면 불균일하게 익습니다.<br><br>
+② <strong>7~8분 삶기</strong>: 중불로 줄이고 7~8분 삶습니다. 당면 한 가닥을 꺼내 손으로 끊어봐 탄력이 느껴지면 완성. 너무 오래 삶으면 너무 물러집니다. 잡채 당면은 약간 덜 익은 듯 (al dente) 하게 삶는 것이 포인트입니다.<br><br>
+③ <strong>찬물에 충분히 헹구기</strong>: 즉시 찬물에 옮겨 전분을 씻어냅니다. 이 단계가 핵심입니다. 최소 3~4회, 물이 맑아질 때까지 반복해서 헹굽니다. 전분(녹말풀)이 충분히 씻겨야 당면이 뭉치지 않고 불지 않습니다.<br><br>
+④ <strong>물기 제거 후 참기름 코팅</strong>: 채반에 받쳐 물기를 충분히 제거합니다. 참기름 1~2 큰술을 넣고 버무려 당면 표면에 기름막을 씌웁니다. 이 기름막이 수분 재흡수를 막는 핵심입니다.<br><br>
+⑤ <strong>적당한 길이로 자르기</strong>: 당면을 먹기 좋게 가위로 15~20cm 길이로 잘라줍니다.
+</div>
+
+<div class="tip-box">
+💡 <strong>전날 만들 경우 당면 보관 팁</strong>: 참기름 코팅한 당면을 밀폐 용기에 넣어 냉장 보관합니다. 채소·쇠고기와는 반드시 분리 보관하세요. 냉장 보관 중 당면이 더 불지 않습니다.
+</div>
+
+<h2>04 | 재료별 밑간과 볶는 순서</h2>
+
+잡채 재료는 각각 따로 볶아서 마지막에 합치는 것이 정석입니다. 한꺼번에 볶으면 재료 간 수분이 섞여 식감이 물러지고, 각 재료 고유의 맛이 살지 않습니다.<br><br>
+
+<strong>재료별 밑간 먼저</strong><br><br>
+
+<strong>쇠고기 밑간</strong>: 간장 1 큰술, 설탕 0.5 큰술, 다진 마늘 0.5 큰술, 참기름, 후추 조금. 10~15분 재워 두기.<br><br>
+
+<strong>표고버섯 밑간</strong>: 간장 0.5 큰술, 참기름 조금, 설탕 약간. 볶기 전 버무려 두기.<br><br>
+
+<strong>당근, 양파, 시금치</strong>: 소금 약간으로 각각 따로 볶고 물기 빼기.
+
+<div class="step-box">
+<strong>볶는 순서</strong><br><br>
+① <strong>쇠고기</strong> 먼저 중불~강불로 볶아 완전히 익히기. 건져두기.<br>
+② <strong>표고버섯</strong> 중불로 볶기. 수분이 나오면 불 올려 수분을 날리며 볶기. 건져두기.<br>
+③ <strong>당근</strong> 소금 약간과 함께 강불로 빠르게 볶기(30~40초). 아삭함 살리기.<br>
+④ <strong>양파</strong> 중불로 반투명해질 때까지 볶기.<br>
+⑤ <strong>시금치</strong> 데친 후 찬물 헹구고 꼭 짠 뒤, 참기름·소금으로 가볍게 무치기(볶지 않아도 됨).<br>
+⑥ <strong>당면</strong> 마지막에 합치기: 넓은 볼이나 팬에 당면과 모든 재료를 넣고 간장, 참기름, 설탕으로 최종 간 맞추기.
+</div>
+
+<h2>05 | 당면과 채소 양념하는 법</h2>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 2 / 2</span><button class="copy-btn" onclick="copyPrompt('p7_2')">프롬프트 복사</button></div>
+<div class="ph-file">images/260830/7_japchae_2.png</div>
+<pre class="prompt-text" id="p7_2">잡채 재료를 따로 볶는 장면. 프라이팬에 당근, 표고버섯, 쇠고기 등 색색의 재료들이 각각 볶아지고 있는 모습. 한국 가정집 주방, 자연스러운 조리 장면. 사진 스타일, 따뜻한 조명.</pre>
+</div>
+<div class="img-caption">잡채 재료별 따로 볶기 / AI 제작 이미지</div>
+</div>
+
+모든 재료를 볶은 후 최종 양념으로 합치는 단계입니다. 이 과정에서도 수분 관리가 중요합니다.<br><br>
+
+<strong>최종 양념 비율 (4~6인분)</strong><br>
+간장 2 큰술, 설탕 1 큰술, 참기름 2 큰술, 후추 약간<br><br>
+
+재료를 합칠 때는 볼을 이용하는 것이 좋습니다. 팬에 합치면 열에 의해 당면에 수분이 더 흡수됩니다.<br><br>
+
+<div class="tip-box">
+💡 간장을 먼저 넣고 버무린 뒤 맛을 보면서 설탕을 조절하세요. 참기름은 가장 마지막에 넣어야 향이 살아납니다.<br><br>
+💡 간장 대신 국간장을 사용하면 색이 더 연하게 나옵니다. 잡채 색을 밝게 하고 싶다면 국간장 비율을 높이세요.
+</div>
+
+<h2>06 | 전날 만들 때 분리 보관하는 법</h2>
+
+추석 당일 바쁜 상황을 대비해 하루 전에 잡채를 준비하려면 보관 방법이 핵심입니다.<br><br>
+
+<strong>가장 안 붇는 방법: 당면과 채소 분리 보관</strong><br><br>
+
+① 참기름 코팅한 당면을 별도 밀폐 용기에 보관<br>
+② 볶은 채소와 쇠고기를 별도 용기에 보관<br>
+③ 당일 상에 내기 30분~1시간 전에 합쳐서 양념 버무리기<br><br>
+
+이 방법을 쓰면 당면이 채소·양념의 수분을 흡수하지 않아 다음날도 탱탱한 식감을 유지합니다.<br><br>
+
+<strong>한꺼번에 완성해서 보관할 경우</strong><br>
+이미 양념까지 버무린 잡채를 냉장 보관할 때는, 참기름을 평소보다 조금 더 넣어 코팅을 강화하세요. 먹기 전에 전자레인지로 1~2분 가열하면 부드럽게 먹을 수 있습니다. 단, 냉장 후 가열하면 채소 색이 다소 탁해집니다.
+
+<h2>07 | 색 고운 잡채 만드는 비법</h2>
+
+추석 잡채는 맛도 중요하지만 색이 아름다워야 합니다. 색이 탁해지는 이유와 해결법입니다.<br><br>
+
+<strong>시금치</strong>: 너무 오래 볶으면 색이 탁해집니다. 데친 후 바로 찬물에 담가 색을 고정한 뒤, 볶지 않고 참기름·소금으로만 무치면 선명한 초록색을 유지합니다.<br><br>
+
+<strong>달걀 지단</strong>: 황·백 지단을 따로 부쳐 채 썰어 얹으면 잡채가 한층 화려해집니다. 지단은 불을 약하게 하고 천천히 부쳐야 표면이 매끄럽습니다.<br><br>
+
+<strong>당근</strong>: 강불에 빠르게 볶아야 색이 선명합니다. 오래 볶으면 주황빛이 다른 재료에 물들 수 있습니다.<br><br>
+
+<strong>표고버섯</strong>: 수분을 충분히 날려가며 볶아야 색이 진하고 향이 살아납니다.
+
+<h2>08 | 채식·비건 잡채 만들기</h2>
+
+고기 없이도 맛있는 잡채를 만들 수 있습니다. 불교 제례용 또는 채식 손님이 있을 때 활용하세요.<br><br>
+
+<strong>쇠고기 대체 재료</strong>: 두부(물기 꼭 짜서 강불 볶기), 대파(두툼하게 채 썰어 볶기), 느타리버섯(결대로 찢어 볶기).<br><br>
+
+<strong>맛 내는 팁</strong>: 표고버섯 불린 물을 양념에 조금 섞으면 깊은 풍미가 납니다. 다시마 물로 당면을 삶으면 감칠맛이 더 살아납니다.
+
+<h2>09 | 남은 잡채 맛있게 먹는 법</h2>
+
+추석이 끝나고 남은 잡채는 다음과 같이 활용하면 맛있게 먹을 수 있습니다.<br><br>
+
+<strong>잡채 볶음밥</strong>: 기름 두른 팬에 잡채를 넣고 밥을 추가해 강불로 볶습니다. 간장 조금과 달걀 1개를 추가하면 한 끼 식사가 됩니다.<br><br>
+
+<strong>잡채 전</strong>: 밀가루, 달걀, 잡채를 섞어 반죽해 기름 두른 팬에 부치면 잡채전이 됩니다. 아이들이 특히 좋아하는 메뉴입니다.<br><br>
+
+<strong>잡채 만두</strong>: 만두피에 잡채를 소로 넣어 빚으면 잡채 만두가 됩니다. 명절 후 간식으로 제격입니다.<br><br>
+
+추석 잡채의 성패는 당면 처리에 달려 있습니다. 찬물 헹구기를 충분히 하고, 참기름 코팅을 잊지 마세요. 재료를 따로 볶고 보관하는 것만으로도 다음 날 아침에도 탱탱한 잡채를 즐길 수 있습니다. 맛있는 추석 명절 되세요.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="rite_chuseok_seongmyo.html">추석 성묘 준비물과 순서 — 가을 산소 참배 예절과 인사 드리는 법</a></li>
+<li><a href="../260826/travel_naju_yeongsan_chuseok.html">추석 연휴 나주 영산강 코스모스 산책 코스 — 가을 꽃 드라이브</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<span class="tag">#추석잡채</span>
+<span class="tag">#잡채레시피</span>
+<span class="tag">#잡채안붇는법</span>
+<span class="tag">#당면삶기</span>
+<span class="tag">#명절요리</span>
+<span class="tag">#추석음식</span>
+<span class="tag">#잡채보관법</span>
+<span class="tag">#당면요리</span>
+<span class="tag">#한국명절요리</span>
+<span class="tag">#잡채만들기</span>
+</div>
+</body>
+</html>
