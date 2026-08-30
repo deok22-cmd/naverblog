@@ -45,6 +45,55 @@ Write-Log ""
 
 $exit = 1
 
+# 실패 신호 파일 — 대시보드가 이걸 읽어 상단에 배너를 띄운다(build-dashboard.ps1).
+# 성공하면 Step 2에서 지운다. 남아 있으면 "아직 안 고쳐진 실패"라는 뜻.
+$FailFlag = Join-Path $LogsDir "LAST_FAILURE.txt"
+
+function Set-Failure([string]$kind, [string]$detail, [string]$howto) {
+    $body = @(
+        "WHEN=$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')",
+        "KIND=$kind",
+        "DETAIL=$detail",
+        "HOWTO=$howto",
+        "LOG=$LogFile"
+    ) -join "`r`n"
+    [System.IO.File]::WriteAllText($FailFlag, $body, $utf8NoBom)
+}
+
+# === Step 0.4: 인증 사전 점검 (2026-08-30 신설 — 사용자 지시) ===
+# 계기: 8/27~8/30 나흘간 "Failed to authenticate: OAuth session expired"로 발행이 0건이었는데
+#   아무도 몰랐다. 로그에만 찍히고 스크립트는 조용히 다음 단계로 넘어갔기 때문.
+# 여기서 미리 잡아야 의미가 있다 — 발행을 시도한 뒤 실패를 아는 것보다 낫다.
+Write-Log "=== Step 0.4: Auth Precheck @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="
+$authOk = $false
+try {
+    $probe = ("ping" | & claude -p --model claude-sonnet-4-6 --max-budget-usd 1 --output-format text 2>&1 | Out-String)
+    if ($LASTEXITCODE -eq 0 -and $probe -notmatch 'Failed to authenticate|OAuth session expired|Invalid API key') {
+        $authOk = $true
+        Write-Log "AUTH OK"
+    } else {
+        Write-Log "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+        Write-Log "[AUTH FAIL] Claude CLI 인증 만료 - /login 필요"
+        Write-Log "  조치: 터미널에서 claude 실행 후 /login (또는 claude login)"
+        Write-Log "  인증 전까지 매일 04시 발행이 계속 0건이 됩니다."
+        Write-Log "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+        Write-Log ("probe: " + ($probe -replace "`r?`n", ' ').Trim())
+    }
+} catch {
+    Write-Log "[AUTH FAIL] 인증 점검 중 예외: $_"
+}
+
+if (-not $authOk) {
+    Set-Failure "AUTH" "Claude CLI 인증 만료(OAuth session expired) - 발행 시도조차 못 함" "터미널에서 claude 실행 후 /login"
+    Write-Log ""
+    Write-Log "=== 인증 실패로 Step 0.5/0.6/1 전부 건너뜁니다. 예산·큐를 소모하지 않습니다. ==="
+    # 대시보드는 그래도 재빌드해서 배너가 뜨게 한다.
+    $dashOnly = Join-Path $ScriptsDir "build-dashboard.ps1"
+    if (Test-Path -LiteralPath $dashOnly) { & $dashOnly 2>&1 | Out-Null }
+    exit 1
+}
+Write-Log ""
+
 # === Step 0.5: 주간 큐 리필 (2026-08-01 정례화 — 사용자 지시) ===
 # 계기: 8/1 실행에서 여행 외 큐가 전부 고갈(시즌게이트 통과 0건) → 7건 전부 travel_ 발행.
 # 매주 월요일 실행분에서만 가동, 임계 미달 큐만 채운다. 임계표 = daily-prompt.md §2 G3.
@@ -132,8 +181,22 @@ try {
     $exit = $LASTEXITCODE
     Write-Log ""
     Write-Log "=== Claude exit code: $exit ==="
+
+    if ($exit -ne 0) {
+        # 인증은 Step 0.4에서 걸렀으니 여기 오는 건 예산 초과·타임아웃·모델 오류 등이다.
+        $YMD = Get-Date -Format "yyMMdd"
+        $made = 0
+        $dayDir = Join-Path $OutputDir $YMD
+        if (Test-Path -LiteralPath $dayDir) {
+            $made = @(Get-ChildItem -LiteralPath $dayDir -Filter "*.html" -File -EA SilentlyContinue |
+                Where-Object { $_.Name -ne "index.html" }).Count
+        }
+        Write-Log "[STEP1 FAIL] exit=$exit · 오늘 생성된 원고 $made건"
+        Set-Failure "STEP1" "원고 작성 실패(exit=$exit) - 오늘 생성 $made건" "로그에서 마지막 오류 확인 후 수동 재실행"
+    }
 } catch {
     [System.IO.File]::AppendAllText($LogFile, "FATAL (Claude step): $_`r`n", $utf8NoBom)
+    Set-Failure "FATAL" "Claude 호출 중 예외: $_" "로그 확인 후 수동 재실행"
     exit 1
 }
 
@@ -355,6 +418,12 @@ if ($TistorySuspended) {
 # === Step 2: 작성 성공 시 git add / commit / push ===
 Write-Log ""
 Write-Log "=== Git Auto-Push @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="
+
+# 여기까지 왔고 Step 1이 성공했다면 지난 실패는 해소된 것 — 신호 파일을 지운다.
+if ($exit -eq 0 -and (Test-Path -LiteralPath $FailFlag)) {
+    Remove-Item -LiteralPath $FailFlag -Force -EA SilentlyContinue
+    Write-Log "이전 실패 신호(LAST_FAILURE.txt) 해소 - 삭제함."
+}
 
 if ($exit -ne 0) {
     Write-Log "SKIP: Claude exited with code $exit, no push attempted."

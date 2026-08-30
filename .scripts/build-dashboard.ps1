@@ -262,6 +262,39 @@ $totalPng = ($adsenseSets | Measure-Object -Property Png -Sum).Sum
 if ($null -eq $totalPng) { $totalPng = 0 }
 $generatedAt = Get-Date -Format "yyyy-MM-dd HH:mm"
 
+# ---- 실패 배너 (2026-08-30 신설) ----
+# daily-run.ps1이 실패 시 .scripts/logs/LAST_FAILURE.txt 를 남기고, 성공하면 지운다.
+# 계기: 8/27~30 나흘간 인증 만료로 발행 0건이었는데 아무도 몰랐다.
+$failBanner = ""
+$failFlagPath = Join-Path $ProjectRoot ".scripts\logs\LAST_FAILURE.txt"
+if (Test-Path -LiteralPath $failFlagPath) {
+    $fk = @{}
+    foreach ($line in [System.IO.File]::ReadAllLines($failFlagPath)) {
+        $kv = $line -split '=', 2
+        if ($kv.Count -eq 2) { $fk[$kv[0]] = $kv[1] }
+    }
+    $fWhen = if ($fk.ContainsKey('WHEN')) { $fk['WHEN'] } else { '?' }
+    $fKind = if ($fk.ContainsKey('KIND')) { $fk['KIND'] } else { '?' }
+    $fDetail = if ($fk.ContainsKey('DETAIL')) { $fk['DETAIL'] } else { '' }
+    $fHowto = if ($fk.ContainsKey('HOWTO')) { $fk['HOWTO'] } else { '' }
+
+    # 마지막 발행일로부터 며칠 비었는지
+    $gapTxt = ""
+    if ($naverDays.Count -gt 0) {
+        $gapDays = Days-Since $naverDays[0].Date
+        if ($gapDays -ge 1) { $gapTxt = " · 마지막 발행 이후 <b>$($gapDays)일</b> 비었습니다" }
+    }
+
+    $failBanner = @"
+<div class="alert">
+  <div class="ah">🚨 자동 발행이 실패한 상태입니다 &mdash; $(Enc $fKind)</div>
+  <div class="ad">$(Enc $fDetail)$gapTxt</div>
+  <div class="ax"><b>조치</b> · $(Enc $fHowto)</div>
+  <div class="am">최초 감지 $(Enc $fWhen) · 고쳐서 정상 발행되면 이 배너는 자동으로 사라집니다.</div>
+</div>
+"@
+}
+
 # ============================================================
 # 5. 네이버 매트릭스 행 렌더
 # ============================================================
@@ -537,6 +570,13 @@ body.showall tr.folded{display:table-row}
 .ch.off{background:var(--line2);color:var(--ink3);text-decoration:line-through}
 a.ch.on:hover{text-decoration:underline}
 
+.alert{background:var(--badbg);border:1px solid color-mix(in srgb,var(--bad) 40%,transparent);
+  border-left:5px solid var(--bad);border-radius:0 10px 10px 0;padding:16px 20px;margin:18px 0 6px}
+.alert .ah{font-weight:800;font-size:1rem;color:var(--bad);letter-spacing:-.01em}
+.alert .ad{margin-top:6px;font-size:.9rem;color:var(--ink)}
+.alert .ax{margin-top:8px;font-size:.9rem;color:var(--ink)}
+.alert .am{margin-top:9px;font-size:.78rem;color:var(--ink3)}
+
 .memo{margin:0;padding-left:20px;font-size:.85rem;color:var(--ink2)}
 .memo li{margin-bottom:6px}
 .memo b{color:var(--ink)}
@@ -554,6 +594,8 @@ a.ch.on:hover{text-decoration:underline}
   <h1>4채널 통합 운영 대시보드</h1>
   <div class="sub">네이버 블로그(자동 7건/일) → 티스토리 애드센스 → 인스타 카드뉴스 → 쓰레드 · 갱신 $generatedAt</div>
 </header>
+
+$failBanner
 
 <div class="kpis">
   <div class="kpi"><div class="v">$totalNaver</div><div class="k">네이버 누적 원고</div></div>
