@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>추석 전 반죽 황금비율 — 부치고 식어도 안 질겨지는 밀가루:물 비율</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #e64a19; padding-bottom: 12px; color: #bf360c; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #fbe9e7; padding: 12px 15px; border-left: 6px solid #e64a19; margin-top: 50px; color: #bf360c; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #bf360c; margin: 24px 0 8px; }
+  .intro-box { background: #fffaf8; border: 2px solid #ffccbc; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #e64a19; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #fff5f2; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #ffccbc; border-radius: 8px; padding: 20px; background: #fffaf8; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #e64a19; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #e64a19; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #fffaf8; border: 1px solid #ffccbc; border-left: 4px solid #e64a19; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#e64a19'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>추석 전 반죽 황금비율 — 부치고 식어도 안 질겨지는 밀가루:물 비율</h1>
+<div class="intro-box">
+추석 전 부침개(전)는 명절 음식 중 가장 많이 부치는 것 중 하나지만, 식으면 질겨지거나 기름이 배어 눅눅해지는 경우가 많습니다. 비결은 반죽 비율에 있습니다. <strong>밀가루:물:달걀 비율을 정확히 맞추고 글루텐이 생기지 않게 섞는 방법</strong>만 알면, 한 김 식어도 바삭함과 부드러움이 유지됩니다.
+</div>
+
+<h2>01 | 전 반죽이 질겨지는 진짜 이유</h2>
+
+전이 식으면 질겨지는 주요 원인은 <strong>글루텐(gluten) 과잉 형성</strong>입니다. 밀가루의 단백질(글루아딘 + 글루테닌)은 물과 만나 치댈수록 결합해 질긴 조직을 만듭니다.<br><br>
+
+즉, 반죽을 오래 저을수록 → 글루텐이 강해질수록 → 식었을 때 더 질겨집니다. 반대로 글루텐 형성을 최소화하면 식어도 부드럽고, 기름 흡수도 줄어듭니다.<br><br>
+
+<strong>글루텐 최소화 전략</strong>:<br>
+✔ 반죽은 재료를 넣은 후 젓가락으로 5~10회 가볍게 섞기만 한다<br>
+✔ 덩어리가 조금 남아도 괜찮다 (지나치게 매끄럽게 만들 필요 없음)<br>
+✔ 밀가루를 체에 내려 공기를 포함시키면 반죽이 가벼워진다
+
+<h2>02 | 황금비율 — 밀가루:물:달걀</h2>
+
+<div class="info-box">
+<strong>📋 전 반죽 기본 황금비율 (4인분 기준)</strong><br><br>
+• 부침가루(또는 밀가루) <strong>200g (약 1컵 반)</strong><br>
+• 찬물 <strong>200~220ml (약 1컵)</strong><br>
+• 달걀 <strong>1개</strong><br>
+• 소금 <strong>½ 작은술</strong>
+</div>
+
+밀가루와 물의 비율은 <strong>1:1(무게 기준)</strong>이 기본입니다. 단, 찬물을 사용하는 것이 핵심입니다. 냉장 보관한 차가운 물은 글루텐 형성을 늦춰 반죽을 바삭하게 만듭니다.<br><br>
+
+달걀은 필수는 아니지만 전의 결착력을 높이고 노릇한 색감을 만들어 줍니다.
+
+<h2>03 | 재료별 반죽 조절 — 재료 수분에 따라 물을 줄인다</h2>
+
+<table class="info-table">
+<tr><th>전 종류</th><th>특징</th><th>물 조절</th></tr>
+<tr><td>동태전·생선전</td><td>재료 수분 少</td><td>기본 비율 유지</td></tr>
+<tr><td>애호박전·감자전</td><td>재료 수분 多</td><td>물 20% 줄이기</td></tr>
+<tr><td>김치전</td><td>김치 수분 발생</td><td>물 30~50% 줄이고 두껍게 부치기</td></tr>
+<tr><td>파전·해물파전</td><td>물기 많은 해물</td><td>물 20% 줄이기, 파 건지고 납작하게</td></tr>
+<tr><td>두부전</td><td>두부 수분 제거 필요</td><td>두부 물기 제거 후 기본 비율</td></tr>
+</table>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head">
+<span>📷 AI 이미지 생성 영역</span>
+<span class="ph-file">images/260831/7_jeon_1.png</span>
+</div>
+<pre class="prompt-text" id="prompt-7-1">Various Korean Jeon (savory pancakes) arranged beautifully on a traditional Korean wooden serving board, including golden-brown haemul pajeon (seafood green onion pancake), hobakjeon (zucchini pancake), and dongtaejeon (pollack pancake), dipping sauce bowl with soy sauce and vinegar, appetizing warm tones, festive Chuseok table setting, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-7-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">추석 전 모둠 — 동태전·호박전·파전 황금색으로 부친 모습 / AI 제작 이미지</div>
+</div>
+
+<h2>04 | 찬물 vs 탄산수 vs 얼음물 — 바삭함의 차이</h2>
+
+<h3>찬물(냉수)</h3>
+가장 기본적이며 글루텐 형성을 줄여 부드럽게 바삭한 전을 만듭니다.<br><br>
+
+<h3>탄산수</h3>
+탄산의 기포가 반죽을 가볍게 만들어 튀김처럼 바삭한 질감을 냅니다. 특히 감자전·파전에 탄산수를 쓰면 차이가 뚜렷합니다. 물 대신 1:1로 대체 가능.<br><br>
+
+<h3>얼음물</h3>
+찬물보다 더 낮은 온도. 빠르게 반죽을 식힌 상태로 팬에 올려 바삭함을 극대화. 여름·추석처럼 주방이 더울 때 유용.
+
+<h2>05 | 부침 기술 — 불 조절이 절반이다</h2>
+
+<strong>중약불에서 시작해 중강불로 마무리</strong>가 핵심입니다.<br><br>
+
+① 팬을 충분히 예열 (기름을 두르고 연기가 살짝 날 때)<br>
+② 반죽을 붓고 <strong>중약불</strong>로 속을 익힌다 (1~2분)<br>
+③ 뒤집고 나서 <strong>중강불</strong>로 올려 겉을 노릇하게 마무리<br>
+④ 다시 한 번 뒤집어 30초 추가로 바삭하게<br><br>
+
+처음부터 강불이면 겉만 타고 속이 안 익습니다. 기름은 넉넉하게 두를수록 바삭한 전이 됩니다. 너무 아끼면 눌어붙고 식었을 때 질겨집니다.
+
+<h2>06 | 추석 전 대량으로 부칠 때 — 미리 준비법</h2>
+
+<div class="tip-box">
+💡 <strong>전날 미리 준비하는 법</strong><br><br>
+• 반죽만 만들어 냉장 보관 (최대 반나절)<br>
+• 재료(생선·애호박 등)는 손질·소금 밑간까지만 해두고 냉장<br>
+• 부친 전은 겹치지 않게 놓고 식힌 다음 냉장 보관 → 먹기 전 에어프라이어 180℃ 3~4분 데우면 식당 수준 바삭함 복원
+</div>
+
+냉동 보관: 충분히 식힌 전 사이에 종이호일을 끼워 지퍼백에 넣으면 최대 2주 보관 가능. 해동 없이 에어프라이어 170℃ 5분으로 바로 데울 수 있습니다.
+
+<h2>07 | 부침가루 vs 밀가루 — 뭘 쓸까</h2>
+
+<table class="info-table">
+<tr><th>구분</th><th>부침가루</th><th>밀가루(박력분)</th></tr>
+<tr><td>구성</td><td>밀가루+전분+베이킹파우더+소금 혼합</td><td>순수 밀가루</td></tr>
+<tr><td>바삭함</td><td>전분이 포함돼 더 바삭</td><td>비교적 덜 바삭</td></tr>
+<tr><td>조절성</td><td>고정 배합 (간 조절 필요 없음)</td><td>원하는 대로 배합 조절</td></tr>
+<tr><td>추천 상황</td><td>빠르고 간편하게 부칠 때</td><td>재료 맛을 살리고 싶을 때</td></tr>
+</table>
+
+밀가루로 만들 때 바삭함을 더하려면 <strong>전분(감자전분·옥수수전분)을 밀가루의 20~30%</strong>로 섞어주세요.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head">
+<span>📷 AI 이미지 생성 영역</span>
+<span class="ph-file">images/260831/7_jeon_2.png</span>
+</div>
+<pre class="prompt-text" id="prompt-7-2">Korean cooking scene - mixing jeon batter in a stainless bowl, flour and ice cold water being stirred with chopsticks, bubbles visible in the thin batter, measuring cups and eggs nearby on a kitchen counter, warm kitchen lighting, step-by-step cooking preparation, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-7-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">전 반죽 — 찬물로 젓가락으로 가볍게 10회만 섞어야 글루텐이 안 생긴다 / AI 제작 이미지</div>
+</div>
+
+<h2>08 | 전 종류별 반죽 레시피 한눈에 보기</h2>
+
+<h3>동태전 (4인분)</h3>
+동태 4토막 / 부침가루 100g + 물 90ml (재료 수분 少이므로 기본 비율 그대로)<br><br>
+
+<h3>애호박전 (4인분)</h3>
+애호박 1개 썰기 / 부침가루 60g + 물 40ml (재료 수분 多이므로 물 줄이기)<br><br>
+
+<h3>김치전 (4인분)</h3>
+신김치 200g + 부침가루 80g + 물 50ml + 김치 국물 1~2큰술 (김치 수분 활용)<br><br>
+
+<h3>파전(해물파전, 4인분)</h3>
+쪽파 100g + 부침가루 100g + 물 80ml + 탄산수 20ml (탄산수로 바삭함 UP)
+
+<h2>09 | 추석 전 반죽 핵심 정리</h2>
+
+<div class="info-box">
+① <strong>밀가루(부침가루):물 = 1:1</strong> (무게 기준)<br>
+② 반드시 <strong>찬물(얼음물·탄산수)</strong> 사용<br>
+③ 반죽은 <strong>5~10회 가볍게</strong>만 섞기 (글루텐 최소화)<br>
+④ 재료 수분이 많으면 물을 20~30% 줄이기<br>
+⑤ 중약불 속 익히기 → 중강불 겉 바삭하게<br>
+⑥ 남은 전은 에어프라이어 180℃ 3~4분 → 갓 부친 수준 복원
+</div>
+
+<div class="recommend-area">
+<strong>📌 함께 읽으면 좋은 글</strong><br><br>
+🔗 <a href="../260830/recipe_japchae_chuseok_nonsticky.html">추석 잡채 식어도 안 굳는 비법 — 당면·참기름 비율 총정리</a><br>
+🔗 <a href="../260830/travel_changnyeong_hwawangsan_silvergrass.html">창녕 화왕산 억새밭 가을 등산 코스 완전 가이드</a>
+</div>
+
+<div class="tags">
+<span class="tag">#전반죽황금비율</span>
+<span class="tag">#추석전반죽</span>
+<span class="tag">#전반죽비율</span>
+<span class="tag">#전부치기</span>
+<span class="tag">#전반죽글루텐</span>
+<span class="tag">#식어도바삭한전</span>
+<span class="tag">#명절전준비</span>
+<span class="tag">#추석음식</span>
+<span class="tag">#파전반죽비율</span>
+<span class="tag">#부침가루밀가루차이</span>
+</div>
+</body>
+</html>
