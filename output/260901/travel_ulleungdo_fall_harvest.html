@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>울릉도 가을 여행, 호박엿·독도새우 제철과 여객선 예약 팁</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #004d40; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf9; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #b2dfdb; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #00796b; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #b2dfdb; border-left: 4px solid #00796b; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #00796b; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#00796b'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>울릉도 가을 여행, 호박엿·독도새우 제철과 여객선 예약 팁</h1>
+<div class="intro-box">
+울릉도는 여름 성수기가 끝난 9~10월에 가장 빛나는 섬입니다. 관광객이 줄어 한적해지면서도 호박엿·독도새우 같은 특산물이 제철을 맞고, 성인봉 단풍과 나리분지 억새가 가을 감성을 더합니다.<br><br>
+하지만 울릉도 여행에서 가장 큰 허들은 <strong>여객선 예약과 날씨로 인한 결항</strong>입니다. 이 글에서는 계절 특산물 정보와 함께 여객선 예약 노하우, 추천 일정, 숙박 선택 방법까지 실용적으로 정리했습니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 1 / 3</span><span class="ph-file">images/260901/3_ulleungdo_1.png</span></div>
+<div id="p3_1" class="prompt-text">Aerial panoramic view of Ulleungdo island in South Korea during early autumn. The volcanic island rises dramatically from the deep blue East Sea. Lush green mountains with hints of autumn color. Small fishing village visible along the rocky coastline. Clear sky with light clouds. Dramatic, remote, and natural beauty. Travel photography style.</div>
+<button class="copy-btn" onclick="copyPrompt('p3_1')">프롬프트 복사</button>
+</div>
+<div class="img-caption">울릉도 전경, 동해 한가운데 솟아오른 화산섬 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 울릉도 가을, 왜 특별한가</h2>
+
+울릉도는 경상북도 울릉군에 속하는 섬으로, 동해 한가운데에 화산 활동으로 형성된 섬입니다. 면적은 약 72.9㎢, 해안선 길이 약 56.5km의 작은 섬이지만 수려한 자연 경관과 독특한 먹거리로 매년 많은 여행자를 불러 모읍니다.<br><br>
+
+여름(7~8월)은 다이빙·스노클링을 즐기는 성수기라 숙박비가 올라가고 예약 경쟁이 치열합니다. 반면 <strong>9~10월은 성수기가 끝난 직후</strong>라 숙박과 식당 예약이 훨씬 여유롭고 가격도 합리적입니다. 여행객이 줄어든 섬은 더 조용하고 진짜 울릉도의 매력을 느끼기 좋은 환경이 됩니다.<br><br>
+
+특히 9월부터는 울릉도 특산물의 수확 시기가 맞물립니다. 독도새우(도화새우·닭새우)의 어획이 본격화되고, 호박엿은 가을 수확한 호박으로 만든 신선한 제품이 나오는 시기입니다. 성인봉(984m)의 단풍도 10월부터 시작되어 등반 가치도 높아집니다.
+
+<h2>02 | 호박엿 — 울릉도 대표 특산물과 제철의 의미</h2>
+
+호박엿은 울릉도를 대표하는 먹거리이자 기념품입니다. 울릉도에서 자라는 재래종 호박('울릉 호박')을 쪄서 으깬 뒤 조청과 함께 늘여 만드는 전통 방식 엿입니다. 색이 노랗고 달콤하면서도 호박 고유의 구수함이 나는 것이 특징입니다.<br><br>
+
+호박은 늦여름에서 초가을(8~9월)이 수확 시기입니다. 이 시기에 갓 수확한 신선한 호박으로 만든 호박엿이 가장 맛이 풍부합니다. 따라서 <strong>9월에 울릉도를 방문하면 가장 신선한 호박엿</strong>을 맛볼 수 있습니다.<br><br>
+
+도동항 인근 재래시장과 특산품 가게에서 구입할 수 있습니다. 낱개로도 살 수 있어 여러 가게를 비교해 가며 시식 후 구입하는 것을 권장합니다. 진공 포장된 제품은 상온에서도 유통기한이 길어 선물용으로도 적합합니다.
+
+<h2>03 | 독도새우 — 제철 알고 주문해야 더 맛있다</h2>
+
+'독도새우'는 울릉도와 독도 인근 동해 심해에서 잡히는 새우의 총칭으로, 크게 <strong>도화새우·닭새우·꽃새우(물렁가시붉은새우)</strong> 세 종류를 말합니다. 수심 200~700m의 차가운 심해에 서식하기 때문에 살이 단단하고 단맛이 강한 것이 특징입니다.<br><br>
+
+세 종류 모두 가을(9~11월)에 어획량이 늘어나 이 시기에 신선도가 높고 맛도 좋습니다. 특히 닭새우는 크기가 크고 육즙이 풍부해 가격이 높지만 울릉도에서 한 번쯤 맛봐야 할 별미입니다.<br><br>
+
+도동항·저동항 주변 횟집에서 회, 구이, 찜 등 다양한 방식으로 즐길 수 있습니다. 식당마다 가격 차이가 있으므로 메뉴판을 먼저 확인하고 들어가는 것이 좋습니다. 제철이지만 공급이 많지 않아 저녁보다 점심 시간에 방문하면 더 신선한 새우를 맛볼 수 있습니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 2 / 3</span><span class="ph-file">images/260901/3_ulleungdo_2.png</span></div>
+<div id="p3_2" class="prompt-text">Fresh deep-sea shrimp (Dokdo shrimp) served on a white plate at a Korean seafood restaurant. Large, plump, bright red shrimp with translucent shells, freshly prepared. Garnished with sliced lemon and seasonal greens. Traditional Korean dining setting. Food photography, natural lighting, appetizing and vibrant colors.</div>
+<button class="copy-btn" onclick="copyPrompt('p3_2')">프롬프트 복사</button>
+</div>
+<div class="img-caption">울릉도 독도새우, 가을이 제철인 동해의 별미 / AI 제작 이미지</div>
+</div>
+
+<h2>04 | 여객선 예약 — 노선별 출발지와 예약 방법</h2>
+
+울릉도로 가는 방법은 여객선뿐입니다. 현재 운항 중인 주요 노선은 포항, 강릉(묵호) 출발이 대표적이며, 각 노선마다 운항 선사와 예약 방법이 다릅니다.
+
+<table class="info-table">
+<tr><th>출발지</th><th>소요 시간</th><th>주요 선사</th><th>예약 방법</th></tr>
+<tr><td>포항</td><td>약 3시간~3시간 30분</td><td>씨스포빌 등</td><td>공식 홈페이지 또는 전화</td></tr>
+<tr><td>강릉·묵호</td><td>약 2시간~3시간</td><td>씨스타크루즈 등</td><td>공식 홈페이지 또는 전화</td></tr>
+</table>
+
+예약은 출발일 기준 최소 1~2주 전에 하는 것이 좋습니다. 성수기는 아니더라도 연휴나 주말 주변에는 선석이 빠르게 채워집니다. 운항 선사 공식 홈페이지에서 온라인 예약이 가능하며, 일부 여행사를 통해서도 예약할 수 있습니다.<br><br>
+
+<strong>왕복 예약을 동시에 진행</strong>하는 것이 중요합니다. 편도만 예약하고 현지에서 귀환 편을 알아보다 결항이 연속되면 오도 가도 못하는 상황이 생길 수 있습니다.
+
+<div class="warn-box">
+⚠️ 울릉도 여객선은 기상 악화 시 결항이 빈번합니다. 9~10월도 태풍이나 높은 파고로 결항될 수 있으므로, <strong>일정에 여유를 두고 귀환 편을 1~2일 늦게 예약</strong>하는 것이 안전합니다. 비행기나 KTX처럼 당일치기가 불가능한 여행지입니다.
+</div>
+
+<h2>05 | 가을 울릉도 추천 관광지</h2>
+
+울릉도는 섬 자체가 관광 명소이지만, 가을에 특히 빛나는 장소들이 있습니다.<br><br>
+
+<strong>나리분지</strong>는 울릉도 유일의 평지로, 가을이면 억새밭이 넓게 펼쳐져 장관을 이룹니다. 주변에 투막집(울릉도 전통 가옥)이 남아 있어 전통 문화도 함께 볼 수 있습니다. 나리분지에서 알봉까지 이어지는 산책 코스도 가을에 걷기 좋습니다.<br><br>
+
+<strong>성인봉(984m)</strong>은 울릉도 최고봉으로 10월부터 단풍이 들기 시작합니다. 도동 케이블카를 이용해 일부 구간을 단축할 수 있으며, 정상에서 바라보는 동해 전망은 매우 장엄합니다. 왕복 약 3~4시간이 소요됩니다.<br><br>
+
+<strong>봉래폭포</strong>·<strong>도동 약수</strong>도 빼놓을 수 없습니다. 봉래폭포는 시원한 물줄기와 울창한 숲이 가을 초입의 시원한 분위기를 만들어 냅니다. 도동 약수는 탄산 성분이 있는 천연 광천수로 울릉도에서만 맛볼 수 있는 특별한 경험입니다.
+
+<h2>06 | 성인봉 트레킹 — 가을 등산 준비와 난이도</h2>
+
+성인봉 트레킹은 울릉도 여행의 꽃입니다. 코스는 주로 도동항 → 케이블카(선택) → 사태골 → 성인봉 정상 코스와 나리분지 → 알봉 → 성인봉 코스가 있습니다.<br><br>
+
+난이도는 중상급으로, 경사가 급한 구간이 있어 트레킹 경험이 어느 정도 있는 분들에게 권장합니다. 가을 낙엽이 쌓인 구간은 미끄러울 수 있으므로 등산화 착용이 필수입니다. 정상에서의 시야는 날씨에 따라 크게 달라지므로 맑은 날 오전에 출발하는 것이 좋습니다.<br><br>
+
+출발 전 도동사무소나 숙소에서 최신 탐방로 정보와 기상 상황을 확인하세요. 음용수는 충분히 챙기고, 긴팔 옷 한 벌을 여분으로 준비하면 정상 부근의 갑작스러운 기온 변화에 대응할 수 있습니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 3 / 3</span><span class="ph-file">images/260901/3_ulleungdo_3.png</span></div>
+<div id="p3_3" class="prompt-text">The Nari Basin of Ulleungdo island in autumn, South Korea. A rare flat valley surrounded by steep volcanic mountains. Silver pampas grass sways in a gentle breeze across the basin floor. Traditional thatched-roof Korean houses (tumakjip) nestled among the grass and trees. Golden autumn light bathes the scene. Peaceful, remote, and culturally rich atmosphere.</div>
+<button class="copy-btn" onclick="copyPrompt('p3_3')">프롬프트 복사</button>
+</div>
+<div class="img-caption">울릉도 나리분지, 가을 억새와 투막집이 어우러진 풍경 / AI 제작 이미지</div>
+</div>
+
+<h2>07 | 숙박 선택 — 성수기 끝난 9월의 장점</h2>
+
+울릉도의 숙박 시설은 도동·저동·사동 항구 주변에 집중되어 있습니다. 게스트하우스·민박·펜션·호텔급 숙소까지 다양한 선택지가 있습니다.<br><br>
+
+9~10월은 성수기가 지난 시기라 숙박비가 여름보다 20~30% 저렴한 경우가 많습니다. 예약 경쟁도 덜해서 원하는 날짜에 마음에 드는 숙소를 고를 수 있는 여유가 생깁니다. 단, 연휴(추석·한글날) 전후는 예외적으로 예약이 빠르게 마감될 수 있습니다.<br><br>
+
+해안 절경을 즐기고 싶다면 저동항이나 천부리 쪽 숙소가 뷰 면에서 좋습니다. 도동항 주변은 식당과 편의점 접근성이 가장 좋아 1박 2일 첫 방문자에게 추천합니다.
+
+<h2>08 | 2박 3일 추천 일정</h2>
+
+울릉도는 당일치기가 불가능한 여행지입니다. 최소 1박 2일이지만, 제대로 즐기려면 2박 3일을 권장합니다.
+
+<div class="step-box">
+<strong>2박 3일 추천 일정 (포항 출발 기준)</strong><br><br>
+<strong>1일차</strong> — 포항 오전 출발 → 오후 도동항 도착 → 도동 약수·이중섭 화가 거주지 → 저동항 야경 · 오징어 회 저녁<br><br>
+<strong>2일차</strong> — 오전 성인봉 트레킹 (또는 케이블카 + 산책) → 점심 독도새우 회 → 오후 나리분지·투막집 탐방 → 저녁 호박엿 쇼핑<br><br>
+<strong>3일차</strong> — 오전 봉래폭포 → 도동 재래시장 기념품 구입 → 점심 후 여객선 귀환
+</div>
+
+날씨에 따라 일정 변동이 생길 수 있으므로 각 날의 대안 활동을 미리 생각해 두는 것이 좋습니다. 특히 성인봉 트레킹은 비 오는 날이나 강풍 예보가 있는 날은 피하세요.
+
+<h2>09 | 방문 전 반드시 확인할 것</h2>
+
+울릉도 여행은 일반적인 국내 여행보다 사전 준비가 더 많이 필요합니다. 아래 사항을 꼭 확인하세요.
+
+<div class="step-box">
+✅ 여객선 왕복 예약 완료 (출발 2주 이상 전 권장)<br>
+✅ 기상 예보 확인 — 출발 전날과 당일 파고 확인 (기상청 특보 페이지)<br>
+✅ 결항 대비 플랜 준비 — 여유 일정 1~2일 추가 또는 환불 정책 확인<br>
+✅ 숙박 예약 (도동·저동·사동 주변)<br>
+✅ 렌터카·스쿠터 예약 (섬 내 대중교통 제한적, 자동차나 바이크 권장)<br>
+✅ 성인봉 트레킹 예정이면 등산화·긴팔 준비<br>
+✅ 현금 준비 (섬 내 일부 식당·상점 카드 불가)
+</div>
+
+<h2>10 | 울릉도 섬 내 이동 방법</h2>
+
+울릉도 내 이동은 렌터카, 스쿠터, 노선버스, 택시를 이용할 수 있습니다. 섬 전체를 도는 일주도로(약 44km)가 정비되어 있어 렌터카나 스쿠터가 있으면 자유롭게 이동할 수 있습니다.<br><br>
+
+<strong>렌터카</strong>는 도동항 근처 렌터카 업체에서 예약할 수 있습니다. 성수기가 아닌 9~10월은 현장 예약도 가능하지만, 미리 예약해 두면 선택 폭이 넓습니다. 섬의 도로 폭이 좁고 경사와 커브가 많아 운전 경험이 어느 정도 있는 분들에게 적합합니다.<br><br>
+
+<strong>노선버스</strong>는 도동·저동·사동·천부 구간을 운행하지만 배차 간격이 길어 주요 관광지 이동에 제약이 있을 수 있습니다. 시간표를 미리 파악하고 이용하거나, 택시를 보조 수단으로 활용하면 편리합니다.
+
+울릉도는 준비가 필요한 여행지지만, 그만큼 도착했을 때의 감동도 특별합니다. 가을 특산물과 한적함이 더해지는 9~10월은 울릉도를 처음 방문하거나 재방문하기에 모두 이상적인 시기입니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260831/travel_ganghwa_jeondeungsa_fall.html">강화 전등사 가을 — 고즈넉한 산사와 단풍이 만드는 풍경</a></li>
+<li><a href="../260831/travel_hwasun_jeokbyeok_fall.html">화순 적벽 가을 — 붉은 절벽과 호수가 어우러진 비경</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#울릉도</span>
+<span class="tag">#울릉도가을여행</span>
+<span class="tag">#독도새우</span>
+<span class="tag">#호박엿</span>
+<span class="tag">#여객선예약</span>
+<span class="tag">#성인봉트레킹</span>
+<span class="tag">#나리분지</span>
+<span class="tag">#동해섬여행</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>돌잔치 어디서 할까 — 전문식장·호텔·홈파티 비용 비교와 예약 순서</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>돌잔치 어디서 할까 — 전문식장·호텔·홈파티 비용 비교와 예약 순서</h1>
+<div class="intro-box">
+아이의 첫 번째 생일, 돌잔치는 가족에게 특별한 행사지만 처음 준비하는 부모님께는 결정해야 할 것이 너무 많습니다. 전문식장, 호텔 연회장, 집에서 하는 홈파티 중 어떤 방식이 우리 가족에게 맞을까요?<br><br>
+이 글에서는 세 가지 유형의 비용 구조, 장단점, 예약 순서와 타이밍, 하객 수에 따른 선택 기준까지 실용적으로 정리했습니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 1 / 2</span><span class="ph-file">images/260901/5_doljanchi_1.png</span></div>
+<div id="p5_1" class="prompt-text">A beautiful Korean first birthday party (doljanchi) setup. A decorated table with traditional Korean rice cake towers and festive colorful foods. Baby in a traditional Hanbok outfit seated at the center table surrounded by flowers and balloons. Warm and joyful atmosphere. Professional event photography style. No text.</div>
+<button class="copy-btn" onclick="copyPrompt('p5_1')">프롬프트 복사</button>
+</div>
+<div class="img-caption">돌잔치 상차림과 한복 차림의 아이, 첫 생일을 기념하는 자리 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 돌잔치 장소 결정, 왜 어렵게 느껴지나</h2>
+
+돌잔치 장소를 고르는 일이 어려운 이유는 선택지가 다양한 동시에 각각 트레이드오프(장단점)가 명확하기 때문입니다. 비용을 줄이려면 홈파티가 유리하지만 준비 부담이 크고, 전문식장은 편리하지만 가격이 올라갑니다. 호텔은 품격이 있지만 비용이 가장 높습니다.<br><br>
+
+또한 양가 부모님의 의견, 초청할 하객 수, 예산, 돌잡이·사진 촬영 등 부대 행사 구성까지 고려하면 복잡도가 더욱 높아집니다. 먼저 <strong>우선순위를 정하는 것</strong>이 장소 선택의 첫걸음입니다. 비용 절감이 최우선인지, 편의성이 최우선인지, 분위기와 사진 결과물이 최우선인지에 따라 최적의 선택이 달라집니다.
+
+<h2>02 | 전문 돌잔치 식장 — 비용과 패키지 구성</h2>
+
+전문 돌잔치 식장은 돌잔치 행사 진행에 특화된 공간입니다. 식사 제공, 돌잔치 상차림, 사회자 진행, 돌잡이 도구 세트, 돌복(한복) 대여 등을 패키지로 묶어 제공하는 것이 일반적입니다.<br><br>
+
+비용은 1인 식사비를 기준으로 책정하는 경우가 많습니다. 보통 성인 1인당 뷔페 또는 코스 식사비가 포함되며, 행사 진행비(사회자·음향·영상)는 별도이거나 기본 패키지에 포함됩니다. 총 비용은 하객 수와 패키지 구성에 따라 크게 달라지므로, 견적을 최소 3곳 이상 받아 비교하는 것이 좋습니다.<br><br>
+
+<strong>전문 식장의 장점</strong>은 행사 전체를 식장 측에서 코디네이션해 줘 부모님의 부담이 적다는 것입니다. 경험 많은 사회자가 프로그램을 원활하게 진행하고, 돌잡이·케이크 커팅 등 순서도 자연스럽게 이어집니다. 사진 촬영 환경도 잘 갖춰진 경우가 많습니다.<br><br>
+
+<strong>단점</strong>은 비용이 홈파티보다 높고, 식장마다 분위기가 비슷해질 수 있다는 점입니다. 또 하객 최소 인원 조건이 있는 경우가 많아, 소규모(30인 미만) 행사에는 맞지 않을 수 있습니다.
+
+<h2>03 | 호텔 연회장 돌잔치 — 어떤 가족에게 맞는가</h2>
+
+호텔 연회장은 세 가지 유형 중 가장 격식 있는 선택입니다. 음식의 품질, 공간의 분위기, 서비스 수준이 높고 하객에게 강한 인상을 남길 수 있습니다.<br><br>
+
+비용은 세 유형 중 가장 높습니다. 인당 식사비가 전문식장보다 높고, 최소 인원 기준도 높게 설정되는 경우가 많습니다. 다만 호텔에 따라 돌잔치 전용 패키지를 운영하며, 시즌이나 요일에 따라 할인을 제공하기도 합니다.<br><br>
+
+<strong>호텔 돌잔치가 적합한 경우</strong>는 하객 중 어르신 비율이 높거나, 양가 부모님이 특별한 행사로 대접받기를 원할 때, 또는 부부 모두 직장 동료 등 외부 하객이 많아 격식을 중시할 때입니다. 사진 결과물의 배경도 호텔이 가장 세련된 느낌을 주는 경우가 많습니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 2 / 2</span><span class="ph-file">images/260901/5_doljanchi_2.png</span></div>
+<div id="p5_2" class="prompt-text">A cozy and heartwarming home birthday party for a baby's first birthday (doljanchi) in a modern Korean apartment. Pastel balloon decorations and a simple birthday cake on a dining table. Family members gathered around, grandparents and young parents smiling warmly. Intimate, personal, and emotional atmosphere. Natural indoor lighting.</div>
+<button class="copy-btn" onclick="copyPrompt('p5_2')">프롬프트 복사</button>
+</div>
+<div class="img-caption">홈파티 돌잔치, 가족 중심의 따뜻한 첫 생일 / AI 제작 이미지</div>
+</div>
+
+<h2>04 | 홈파티 돌잔치 — 현실적인 준비 범위와 비용</h2>
+
+홈파티 돌잔치는 비용을 가장 줄일 수 있는 방법이지만, 준비 부담이 가장 큰 방식이기도 합니다. 음식 준비, 공간 세팅, 사진 환경 구성, 돌잔치 진행을 모두 스스로 해결해야 합니다.<br><br>
+
+<strong>비용</strong>은 음식 재료비, 케이크, 풍선·현수막 등 데코용품, 돌잔치 상차림(떡 주문)으로 구성됩니다. 케이터링 서비스를 이용하면 음식 준비 부담을 덜 수 있지만 비용이 추가됩니다. 전체 비용은 구성에 따라 달라지지만 전문식장보다 유의미하게 낮은 경우가 많습니다.<br><br>
+
+<strong>홈파티가 적합한 경우</strong>는 하객이 10~20인 이하의 가까운 가족·친척 중심일 때, 분위기보다 편안함을 선호할 때, 예산을 최우선으로 줄이고 싶을 때입니다. 요즘은 SNS를 통해 홈파티 돌잔치 아이디어가 많이 공유되어, 아이디어와 손재주가 있다면 충분히 아름다운 공간을 연출할 수 있습니다.
+
+<h2>05 | 세 유형 비용 한눈에 비교</h2>
+
+<table class="info-table">
+<tr><th>유형</th><th>특징</th><th>비용 수준</th><th>적합 인원</th></tr>
+<tr><td>전문 돌잔치 식장</td><td>패키지 진행, 편리함</td><td>중간~높음</td><td>30~100인</td></tr>
+<tr><td>호텔 연회장</td><td>격식·품격, 최고 서비스</td><td>높음</td><td>50인 이상 유리</td></tr>
+<tr><td>홈파티</td><td>준비 부담 있음, 비용 절감</td><td>낮음~중간</td><td>10~20인 이하</td></tr>
+</table>
+
+<div class="info-box">
+<strong>비용 외 고려 요소</strong><br>
+• 양가 부모님의 기대치와 의견<br>
+• 초청 하객의 연령대 분포<br>
+• 부모(특히 어머니)의 행사 당일 여유 확보 가능 여부<br>
+• 사진·영상 촬영의 중요도<br>
+• 돌잡이·사회자 필요 여부
+</div>
+
+<h2>06 | 예약 순서와 타이밍 — 몇 개월 전에 시작해야 하나</h2>
+
+돌잔치는 생각보다 일찍 준비를 시작해야 합니다. 특히 주말 일정은 인기 있는 날짜와 장소는 수개월 전부터 마감됩니다.
+
+<div class="step-box">
+<strong>돌잔치 준비 타임라인</strong><br>
+<strong>D-6개월~5개월</strong>: 장소 유형 결정 및 예산 책정, 전문식장·호텔 견적 비교, 주말 날짜 가예약<br>
+<strong>D-4개월~3개월</strong>: 장소 계약·계약금 납입, 사진관(돌스냅·돌앨범) 예약<br>
+<strong>D-2개월</strong>: 돌복(한복·드레스) 맞춤 또는 대여 예약, 하객 초대장 발송<br>
+<strong>D-1개월</strong>: 메뉴 최종 확인, 돌잔치 상차림(떡·음식) 업체 예약, 풍선·데코 주문<br>
+<strong>D-2주</strong>: 하객 인원 최종 확정, 식장에 통보<br>
+<strong>D-당일</strong>: 이른 시간 식장 도착, 세팅 확인
+</div>
+
+홈파티의 경우 장소 예약은 필요 없지만, 케이터링·케이크·데코 업체는 2~3개월 전부터 알아두는 것이 좋습니다. 인기 업체는 빠르게 예약이 찼습니다.
+
+<h2>07 | 돌잡이 준비물과 진행 순서</h2>
+
+돌잡이는 돌잔치의 하이라이트입니다. 아이가 여러 물건 중 하나를 잡으면 그것으로 미래를 점치는 전통 의례입니다. 어느 것을 잡든 부모도 하객도 즐겁게 웃을 수 있는 행사입니다.<br><br>
+
+<strong>전통 돌잡이 물건</strong>: 실(장수), 쌀(복록), 책(학업), 돈(재물), 활(무인), 붓(문관) 등<br><br>
+
+<strong>현대식 추가 물건</strong>: 마이크(연예인), 청진기(의사), 판사봉(법관), 마우스(개발자), 골프공, 비행기 모형 등 가족의 유머 감각에 맞게 추가합니다.<br><br>
+
+돌잡이 진행 순서는 ① 아이 입장 → ② 돌잡이 물건 소개 → ③ 아이가 물건을 선택 → ④ 결과 발표 및 하객과 웃음 나누기 → ⑤ 케이크 커팅 및 생일 축하 순으로 이어지는 것이 일반적입니다.
+
+<h2>08 | 하객 수와 장소 선택의 관계</h2>
+
+하객 수는 장소 선택에서 가장 중요한 변수입니다. 일반적인 기준을 정리하면 다음과 같습니다.<br><br>
+
+<strong>10~20인(소규모)</strong>: 홈파티가 가장 적합합니다. 전문식장은 최소 인원 조건을 충족하지 못할 수 있고, 공간이 넓어 오히려 허전해 보일 수 있습니다.<br><br>
+
+<strong>30~60인(중규모)</strong>: 전문 돌잔치 식장이 가장 현실적입니다. 패키지 구성도 이 규모에 최적화되어 있는 경우가 많습니다.<br><br>
+
+<strong>70인 이상(대규모)</strong>: 호텔 연회장이나 대형 전문식장이 적합합니다. 공간이 충분히 넓고 서비스 인력도 규모에 맞게 배치됩니다.
+
+<h2>09 | 사진·영상 업체 선택 시 주의사항</h2>
+
+돌잔치에서 사진과 영상은 행사 이후에도 오래 남는 소중한 기록입니다. 사진 업체 선택 시 몇 가지를 꼭 확인하세요.<br><br>
+
+포트폴리오를 충분히 살펴보고, 실제 돌잔치 현장 사진이 포함되어 있는지 확인합니다. 행사 당일 촬영 범위(돌스냅·가족사진·동영상 여부)와 결과물 납품 기간도 계약 전에 명확히 정해야 합니다. 원본 파일을 제공하는지도 확인하세요.<br><br>
+
+<div class="tip-box">
+💡 <strong>팁</strong>: 돌잔치 전날 또는 당일 오전에 스튜디오에서 별도로 돌 사진 촬영을 하는 것도 좋습니다. 행사 당일은 바쁘고 아이가 피곤해할 수 있어, 스튜디오 촬영을 따로 하면 더 여유 있게 좋은 사진을 남길 수 있습니다.
+</div>
+
+<h2>10 | 돌잔치 준비 최종 체크리스트</h2>
+
+<div class="step-box">
+✅ 날짜·장소 예약 및 계약 완료 (주말은 6개월 전 권장)<br>
+✅ 예산 책정 및 항목별 금액 분배<br>
+✅ 사진관·영상 업체 예약<br>
+✅ 돌복(한복·드레스) 맞춤 또는 대여 완료<br>
+✅ 하객 명단 확정 및 초대장 발송<br>
+✅ 돌잡이 물건 준비 (전통 + 현대 조합)<br>
+✅ 돌잔치 상차림(떡·과일·음식) 업체 예약<br>
+✅ 데코용품(풍선·현수막·꽃) 주문 또는 DIY 준비<br>
+✅ 식장에 최종 인원 통보 (D-2주)<br>
+✅ 당일 진행 순서 식장 사회자와 사전 협의
+</div>
+
+돌잔치는 아이의 첫 번째 생일을 기념하는 소중한 행사입니다. 어느 방식을 선택하든 부모님과 가족이 진심을 담아 준비했다면 그것이 최고의 돌잔치입니다. 비용과 편의성보다 '우리 가족에게 맞는 방식'을 기준으로 선택하시기를 바랍니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260831/rite_cremation_memorial_options.html">화장·납골당 선택 가이드 — 절차와 비용 현실적으로 정리</a></li>
+<li><a href="../260831/local_fall_cablecar_booking.html">가을 케이블카 여행, 예약 방법과 주요 노선 비교</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#돌잔치</span>
+<span class="tag">#돌잔치장소</span>
+<span class="tag">#돌잔치비용</span>
+<span class="tag">#돌잔치식장</span>
+<span class="tag">#호텔돌잔치</span>
+<span class="tag">#홈파티돌잔치</span>
+<span class="tag">#돌잡이준비</span>
+<span class="tag">#첫생일준비</span>
+</div>
+</body>
+</html>
