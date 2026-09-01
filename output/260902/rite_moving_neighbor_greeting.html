@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>이사 당일 옆집 인사, 뭘 들고 어떻게 해야 할까 — 선물과 타이밍 정리</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1fdf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>이사 당일 옆집 인사, 뭘 들고 어떻게 해야 할까 — 선물과 타이밍 정리</h1>
+<div class="intro-box">
+이사를 마친 뒤 옆집 인사를 해야 한다는 건 알지만, 정작 뭘 들고 어떤 말을 해야 하는지, 몇 집까지 가야 하는지 막막한 경우가 많습니다. 지나치게 격식을 차리면 부담스럽고, 너무 가볍게 하면 첫인상이 걱정됩니다. 이 글에서는 이사 인사 선물 품목과 금액대, 방문 타이밍, 말 걸기 어려울 때 대처법을 실용적으로 정리합니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260902/5_moving_neighbor_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-1">A person holding a neatly wrapped gift set — a bag containing laundry detergent and tissue paper packages — standing at a neighbor's apartment door in a Korean apartment hallway. The door is slightly ajar, warm light from inside. The visitor is dressed casually but neatly. The gift bag has a simple bow. Photorealistic, warm indoor corridor lighting, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">이사 인사 선물로 많이 선택되는 세제·휴지 세트 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 이사 인사, 꼭 해야 할까</h2>
+
+법적 의무는 없지만, 이사 인사는 첫 번째 소음 민원과 분리수거 갈등을 예방하는 실질적인 수단입니다. 인사 없이 지내다 작은 트러블이 생기면 대화의 문을 여는 것이 훨씬 어려워집니다. 반대로 이사 당일 짧고 정중하게 인사를 건네면 이웃 관계의 첫 기준선이 설정되고, 이후 불가피한 소음 발생 시 "이해해 주세요"라는 한마디가 훨씬 쉬워집니다.
+
+<h2>02 | 몇 집까지 인사하나</h2>
+
+아파트 기준 일반적인 범위는 다음과 같습니다.<br><br>
+
+<strong>윗집·아랫집·좌우 옆집(최대 4~5집)</strong>이 기본입니다. 같은 층 마주 보는 집까지 포함하면 6~7집이 되기도 합니다. 빌라나 단독주택은 바로 인접한 세대(벽을 공유하는 집) 위주로 하면 충분합니다.<br><br>
+
+이사 소음이 특히 미치는 범위가 위아래이므로, 시간적 제약이 있다면 <strong>윗집·아랫집 최소 2집</strong>만 먼저 하는 것도 현실적인 선택입니다.
+
+<h2>03 | 선물 품목과 금액대</h2>
+
+<table class="info-table">
+<tr><th>품목</th><th>금액대</th><th>특징</th></tr>
+<tr><td>세제 세트 (세탁·주방·욕실)</td><td>1~2만원</td><td>가장 무난, 거의 모든 가정에서 사용</td></tr>
+<tr><td>휴지 세트</td><td>8천~1.5만원</td><td>부피 크지만 실용성 최고</td></tr>
+<tr><td>세제 + 휴지 혼합 세트</td><td>1.5~3만원</td><td>넉넉한 느낌, 좋은 첫인상</td></tr>
+<tr><td>식품 세트 (참기름·조미료 등)</td><td>1~3만원</td><td>알레르기 변수 있음, 경우에 따라 좋음</td></tr>
+<tr><td>카페 상품권</td><td>1~2만원</td><td>최근 선호 증가, 받는 쪽에 선택권</td></tr>
+</table>
+
+현실적인 예산은 <strong>집당 1~2만원</strong>이 가장 일반적입니다. 5집을 방문한다면 5~10만원 선에서 준비할 수 있습니다. 마트 대형 세제 세트나 편의점 포장 휴지가 가격 대비 실용성이 높은 선택입니다.
+
+<div class="tip-box">
+💡 <strong>포장 팁</strong><br>
+마트에서 구매 시 포장 서비스를 이용하면 훨씬 정갈해 보입니다. 손잡이 있는 쇼핑백에 담아 드리는 것만으로도 충분히 격식을 갖출 수 있습니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260902/5_moving_neighbor_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-2">A warm, friendly moment at a Korean apartment front door — a new neighbor handing over a wrapped gift to an older resident who answers the door with a welcoming smile. Both are dressed casually. The hallway is clean and modern. Moving boxes visible in the background through the open door of the new apartment. Photorealistic, warm soft lighting, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">이사 당일 인사 — 짧고 정중하게 인사를 건네는 것이 가장 중요합니다 / AI 제작 이미지</div>
+</div>
+
+<h2>04 | 방문 타이밍 — 언제 가야 하나</h2>
+
+이사 당일은 사실 짐 옮기느라 인사를 제대로 하기 어렵습니다. 가장 이상적인 타이밍은 <strong>이사 완료 후 1~3일 이내</strong>이며, 방문 시간대는 오전 10~11시 또는 오후 2~4시가 무난합니다.<br><br>
+
+저녁 시간(7시 이후)이나 이른 아침(9시 이전)은 피하는 것이 좋습니다. 주말에는 집에 계신 경우가 많지만 오전 일찍은 수면 중일 수 있으니 오전 10시 이후를 권장합니다.<br><br>
+
+문을 두드려도 응답이 없다면 문 앞에 작은 메모 카드를 선물에 붙여두면 됩니다. "○호로 이사 왔습니다. 앞으로 잘 부탁드립니다. — ○호" 한 줄이면 충분합니다.
+
+<h2>05 | 뭐라고 말해야 할까 — 짧은 인사 스크립트</h2>
+
+"안녕하세요, 며칠 전 ○○호로 이사 온 ○○○입니다. 이사 소음에 불편드렸을 것 같아 인사드리러 왔어요. 앞으로 잘 부탁드립니다."<br><br>
+
+긴 말 필요 없습니다. 30초 이내로 끝내는 것이 서로에게 편합니다. 상대방이 문을 오래 열어두지 않아도 됩니다. 선물을 건네고 간략히 인사하면 됩니다.
+
+<h2>06 | 인터폰만 눌렀는데 안 나온다면</h2>
+
+<strong>두 번 이상 방문하지 않는 것</strong>이 원칙입니다. 1회 방문 시 응답이 없으면 문 앞에 선물과 메모를 두고 돌아옵니다. 메모에는 연락처를 남기지 않아도 됩니다. 억지로 대면하려 시도하면 오히려 불편한 관계가 시작될 수 있습니다.
+
+<h2>07 | 자주 묻는 질문 정리</h2>
+
+<strong>Q. 인사를 안 가도 되는 경우가 있나요?</strong><br>
+이미 안면이 있는 이웃이거나, 주변에서 이사 인사 문화가 없는 것이 확인된 경우(예: 오피스텔 혼거 단지)는 선물 없이 복도에서 가볍게 인사로 대체하기도 합니다.<br><br>
+
+<strong>Q. 역으로 이웃이 먼저 인사 왔는데 답례를 어떻게 하나요?</strong><br>
+받은 당일 또는 다음날 같은 금액대의 답례 선물을 들고 방문하는 것이 일반적입니다. 부담스럽다면 "감사합니다, 덕분에 따뜻하게 시작할 수 있을 것 같아요"라고 인사로 마무리하고, 이후 복도에서 마주칠 때 먼저 인사하는 것으로 관계를 쌓아가면 됩니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260901/rite_doljanchi_venue_comparison.html">돌잔치 어디서 할까 — 전문식장·호텔·홈파티 비용 비교와 예약 순서</a></li>
+<li><a href="../260901/local_travel_insurance_vs_card.html">해외 출국 전 여행자보험 vs 신용카드 여행 보험, 어느 쪽이 더 보장이 좋을까</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#이사인사</span>
+<span class="tag">#이사선물</span>
+<span class="tag">#이웃인사</span>
+<span class="tag">#이사후인사</span>
+<span class="tag">#이사인사선물추천</span>
+<span class="tag">#아파트이사인사</span>
+<span class="tag">#이사인사타이밍</span>
+<span class="tag">#이사준비</span>
+</div>
+</body>
+</html>

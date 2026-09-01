@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>초보운전 스티커 언제까지 붙여야 하나, 의무·기간·떼는 시점 정리</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1fdf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>초보운전 스티커 언제까지 붙여야 하나, 의무·기간·떼는 시점 정리</h1>
+<div class="intro-box">
+면허를 따고 차를 처음 몰기 시작하면 초보운전 스티커를 붙이는 것이 관례이지만, 법적으로 의무인지, 언제 떼야 하는지는 의외로 정확히 모르는 경우가 많습니다. "1년은 붙여야 한다"는 말도 있고 "그냥 개인 자유"라는 말도 있어 혼란스럽습니다. 이 글에서 국내 도로교통법 기준과 실제 관행을 명확하게 정리합니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260902/6_beginner_sticker_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-1">Close-up of the rear of a Korean passenger car (sedan or SUV) with a yellow and green "초보운전" (beginner driver) sticker on the trunk lid or rear bumper. The sticker is clearly visible with Korean characters. Car is parked in a suburban setting, natural daylight. Photorealistic, clean automotive photography, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">초보운전 스티커 — 한국 도로에서 흔히 볼 수 있는 노란색 표시 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 초보운전 스티커는 법적 의무인가</h2>
+
+결론부터 말하면, <strong>현행 도로교통법에서 초보운전 스티커 부착은 법적 의무가 아닙니다.</strong><br><br>
+
+일본의 경우 운전면허 취득 후 1년 이내 초보 마크(와카바 마크) 부착이 의무이며 미부착 시 과태료가 부과됩니다. 이 제도가 국내에도 도입되어야 한다는 논의는 있었지만, 2026년 현재 국내에서는 법령상 부착 의무 조항이 없습니다.<br><br>
+
+따라서 붙이는 것도, 붙이지 않는 것도, 떼는 시점도 모두 운전자 개인의 선택입니다.
+
+<h2>02 | 그렇다면 왜 붙이는가 — 실제 효과</h2>
+
+초보운전 스티커의 실제 효과는 <strong>주변 운전자의 양보를 유도</strong>하는 데 있습니다. 고속도로 진입·차선 변경·주차장 좁은 공간에서 다른 운전자가 좀 더 여유를 두고 기다려주는 경우가 많습니다.<br><br>
+
+반면 스티커로 인해 오히려 클락션·압박 주행을 받는다고 느끼는 운전자도 있습니다. 개인 경험과 주행 환경에 따라 효용이 다를 수 있습니다.
+
+<h2>03 | 언제 떼야 하나 — 일반적인 기준</h2>
+
+법적 기준이 없으므로 스스로 판단해야 합니다. 다음의 체크리스트가 기준이 될 수 있습니다.
+
+<table class="info-table">
+<tr><th>항목</th><th>기준</th></tr>
+<tr><td>운전 기간</td><td>면허 취득 후 6개월~1년 이상 실주행</td></tr>
+<tr><td>주행 환경 적응</td><td>고속도로·도심 차선 변경에 불안감 없을 때</td></tr>
+<tr><td>주차 실력</td><td>협소한 주차장 전진·후진 주차 자신 있을 때</td></tr>
+<tr><td>사고·접촉 횟수</td><td>최근 3개월 무사고 유지</td></tr>
+</table>
+
+가장 현실적인 기준은 <strong>"스스로 초보라고 느끼지 않을 때"</strong>입니다. 1년을 무조건 붙여야 한다는 규정은 없으며, 주행 숙련도에 따라 6개월 만에 떼는 사람도, 3년 이상 붙이는 사람도 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260902/6_beginner_sticker_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-2">A person's hand carefully peeling off a "초보운전" sticker from the rear of a car bumper, using a plastic card to lift one corner, with no damage to the paint. Sunlight on the car's surface. A clean, satisfying moment symbolizing gaining driving confidence. Photorealistic, close-up, natural outdoor light, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">초보운전 스티커를 안전하게 제거하는 법 — 플라스틱 카드로 모서리를 들어올리면 자국 없이 제거됩니다 / AI 제작 이미지</div>
+</div>
+
+<h2>04 | 스티커 자국 없이 깔끔하게 제거하는 법</h2>
+
+스티커를 오래 붙여두면 접착제 자국이 남아 제거가 어렵습니다. 다음 방법으로 깔끔하게 처리할 수 있습니다.<br><br>
+
+<strong>1단계 — 열 가하기</strong>: 헤어드라이어로 스티커 표면을 30~60초 가열하면 접착력이 약해집니다. 여름 햇빛 아래 차를 주차해두어도 효과가 있습니다.<br><br>
+
+<strong>2단계 — 모서리부터 들기</strong>: 플라스틱 카드(신용카드 등)를 이용해 한 모서리를 들어올립니다. 손톱이나 금속 스크레이퍼는 도장 손상 위험이 있습니다.<br><br>
+
+<strong>3단계 — 잔여 접착제 제거</strong>: 접착제 자국은 시판 스티커 제거제(스티커 클리너) 또는 식용 식물성 오일을 솜에 적셔 닦으면 제거됩니다.<br><br>
+
+<strong>4단계 — 왁스 마무리</strong>: 제거 후 해당 부위에 카 왁스를 얇게 발라 광택을 유지합니다.
+
+<div class="tip-box">
+💡 <strong>자국 없는 스티커 선택 팁</strong><br>
+처음부터 마그넷(자석) 타입 초보운전 표시를 사용하면 접착제 자국 없이 언제든 탈부착이 가능합니다. 마그넷 타입은 온라인 쇼핑몰에서 쉽게 구매할 수 있으며, 잊어버린 채 세차를 해도 분리됩니다.
+</div>
+
+<h2>05 | 보험과의 관계 — 초보운전 스티커가 보험료에 영향 주나</h2>
+
+국내 자동차 보험료는 운전자 나이, 사고 이력, 특약 구성 등에 따라 결정되며, 초보운전 스티커 부착 여부는 보험료 산정에 직접적인 영향을 주지 않습니다.<br><br>
+
+다만 신규 면허 취득자는 가입 첫 해에 사고 이력 할인 혜택이 없어 보험료가 높게 책정되는 것이 일반적입니다. 운전 경력이 쌓이고 무사고 기간이 길어질수록 할인율이 누적됩니다.
+
+<h2>06 | 초보운전 스티커 문구, 어떤 게 나을까</h2>
+
+시중에는 유머형 문구("천천히 갈게요", "아직 배우는 중", "저도 무서워요")부터 무난한 "초보운전" 문구까지 다양합니다. 유머형 문구는 주변 운전자의 경계심을 낮추는 효과가 있다는 의견도 있으나, 지나치게 자극적인 문구는 오히려 역효과를 낼 수 있습니다.<br><br>
+
+가장 안전한 선택은 주황색이나 노란색 바탕의 <strong>고시인성 색상 + 간단한 "초보운전" 문구</strong>입니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260901/car_scratch_insurance_vs_selfrepair.html">차 긁혔을 때 보험 처리 vs 자비 수리, 어떤 선택이 더 유리할까</a></li>
+<li><a href="../260901/local_travel_insurance_vs_card.html">해외 출국 전 여행자보험 vs 신용카드 여행 보험, 어느 쪽이 더 보장이 좋을까</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#초보운전스티커</span>
+<span class="tag">#초보운전기간</span>
+<span class="tag">#초보운전스티커제거</span>
+<span class="tag">#운전면허초보</span>
+<span class="tag">#초보운전의무</span>
+<span class="tag">#초보운전언제뗄까</span>
+<span class="tag">#자동차스티커</span>
+<span class="tag">#신규면허운전</span>
+</div>
+</body>
+</html>
