@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>황매산 억새밭 언제 절정인가 — 합천·산청 가을 억새밭 드라이브와 해인사 연계</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #004d40; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf9; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #b2dfdb; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #00796b; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #b2dfdb; border-left: 4px solid #00796b; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #00796b; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#00796b'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>황매산 억새밭 언제 절정인가 — 합천·산청 가을 억새밭 드라이브와 해인사 연계</h1>
+<div class="intro-box">
+경남 합천과 산청의 경계에 솟은 황매산(1,113m)은 <strong>9월 하순~10월 초순이 억새 절정</strong>으로, 정상부 황매평원 일대가 황금빛 억새 물결로 뒤덮입니다.<br><br>
+봄 철쭉으로 유명한 산이지만 가을 억새 역시 규모와 경관에서 전국 손에 꼽히는 명소입니다. 특히 정상 근처까지 차로 올라갈 수 있어 등산 초보자도 비교적 쉽게 억새 뷰를 즐길 수 있다는 점이 큰 장점입니다.<br><br>
+해인사·가야산과 가까워 하루 일정으로 두 명소를 묶는 드라이브 코스도 인기입니다. 이 글에서는 억새 절정 시기·주차·코스·해인사 연계까지 필요한 정보를 정리했습니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head">
+<span>📷 AI 이미지 생성 영역</span>
+<span class="ph-file">images/260903/1_hwangmaesan_1.png</span>
+</div>
+<pre class="prompt-text" id="prompt-1-1">Aerial view of Hwangmaesan mountain plateau in South Korea covered with vast silver grass fields (억새) in golden autumn light, late September, wide open highland meadow, mountain ridgeline in background, warm golden hour photography, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-1-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">황매산 황매평원의 가을 억새 전경 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 황매산 억새 절정은 언제인가</h2>
+
+황매산 억새의 절정 시기는 <strong>9월 하순에서 10월 초순</strong>이 일반적입니다. 해발 1,000m 이상의 고지대인 황매평원은 저지대보다 2~3주 이른 가을을 맞이하기 때문에, 전국 평야의 코스모스·단풍이 한창인 10월 중순쯤이면 황매산 억새는 이미 쇠퇴하는 경향이 있습니다.<br><br>
+
+보다 정확한 개화 상황은 방문 1~2주 전에 합천군청(☎ 055-930-3114) 또는 산청군청(☎ 055-970-6114) 홈페이지에서 확인하는 것이 좋습니다. 해마다 기온에 따라 일주일 정도 차이가 납니다.<br><br>
+
+<div class="info-box">
+📅 <strong>2026 예상 절정</strong>: 9월 25일(목)~10월 10일(금) 전후 (확정 일정은 발행 직전 재검증)<br>
+억새 색이 가장 짙은 시간대는 <strong>오전 10시~오후 4시</strong>, 역광이 아름다운 석양 무렵도 추천합니다.
+</div>
+
+해마다 주차 공간이 부족해 9~10월 황매산은 <strong>가능하면 평일을 노리거나 오전 8시 이전 도착</strong>을 권장합니다. 주말 오전 10시 이후에는 산 아래 도로에서부터 차량 정체가 시작됩니다.
+
+<h2>02 | 황매산 위치와 접근 방법</h2>
+
+황매산은 <strong>경남 합천군 가회면과 산청군 차황면 경계</strong>에 위치합니다. 합천 쪽과 산청 쪽 두 방향에서 진입할 수 있습니다.<br><br>
+
+<strong>합천 방향(황매산군립공원 주차장)</strong>: 대전-통영고속도로 단성IC → 산청·합천 방면 → 약 30분<br><br>
+
+<strong>산청 방향</strong>: 지리산·남해 방면에서 오는 경우 산청 쪽 진입이 더 편리합니다.<br><br>
+
+<table class="info-table">
+<tr><th>출발지</th><th>경로</th><th>소요 시간(참고)</th></tr>
+<tr><td>서울·수도권</td><td>경부고속→대전통영고속 단성IC</td><td>약 3시간~3시간 30분</td></tr>
+<tr><td>부산</td><td>남해고속→서마산IC→합천 방면</td><td>약 1시간 30분</td></tr>
+<tr><td>대구</td><td>88고속→합천IC→가회면</td><td>약 1시간</td></tr>
+<tr><td>광주·전남</td><td>광주대구고속→진주→단성IC</td><td>약 1시간 30분~2시간</td></tr>
+</table>
+
+대중교통으로는 접근이 불편합니다. 합천시외버스터미널에서 가회면 방향 농촌버스가 있으나 배차 간격이 길어 <strong>자가용 또는 렌터카 이용</strong>을 권장합니다.
+
+<h2>03 | 황매산 주차장 정보와 혼잡 피하는 법</h2>
+
+황매산 주차장은 합천군립공원 측 기준 <strong>황매산 제1·2·3주차장</strong>으로 구분됩니다.<br><br>
+
+<strong>제1주차장</strong>: 산 아래(해발 약 700m 구간), 비교적 넓어 가장 많이 이용됩니다.<br>
+<strong>제2·3주차장</strong>: 산 중턱, 차로 황매평원에 가장 가깝지만 주차 공간이 적어 주말에는 금방 만차가 됩니다.<br><br>
+
+<div class="tip-box">
+💡 <strong>혼잡 회피 팁</strong><br>
+① 주말 억새 절정기에는 오전 7~8시 이전 도착을 목표로 하세요.<br>
+② 제2·3주차장이 만차면 제1주차장에 주차 후 걸어 올라가는 편이 시간상 이득일 수 있습니다.<br>
+③ 주말 낮 12~2시는 정체가 가장 심합니다. 평일이나 오전 일찍 방문을 추천합니다.
+</div>
+
+주차 요금은 소형차 기준 무료~소액(부과 유무 변경될 수 있으므로 방문 전 확인)입니다. 억새철에는 임시 유료 주차장이 운영되는 경우도 있습니다.
+
+<h2>04 | 황매산 탐방 코스별 소요 시간</h2>
+
+황매산은 정상(1,113m)까지 완전히 등산하는 코스와, <strong>차를 이용해 황매평원 인근까지 올라간 뒤 짧게 걷는 코스</strong>로 나뉩니다. 억새 감상만이 목적이라면 후자를 추천합니다.<br><br>
+
+<div class="step-box">
+<strong>📍 황매평원 단순 산책 코스 (왕복 1~2시간)</strong><br>
+제2·3주차장 → 황매평원 억새밭 산책 → 전망대 → 주차장 복귀<br>
+경사가 완만한 산책로를 따라 거대한 억새밭을 둘러볼 수 있어 연령 제한 없이 즐길 수 있습니다.
+</div>
+
+<div class="step-box">
+<strong>📍 황매산 정상 등산 코스 (왕복 4~5시간)</strong><br>
+제1주차장 → 황매봉 → 정상(1,113m) → 황매평원 → 주차장 복귀<br>
+능선을 따라 억새 물결과 주변 산세를 함께 감상할 수 있는 코스입니다.
+</div>
+
+억새철에는 국립공원·군립공원의 탐방로 통제 여부를 미리 확인하는 것이 중요합니다. 합천군립공원 공식 페이지 또는 국립공원공단 홈페이지(knps.or.kr)에서 실시간 정보를 확인하세요.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head">
+<span>📷 AI 이미지 생성 영역</span>
+<span class="ph-file">images/260903/1_hwangmaesan_2.png</span>
+</div>
+<pre class="prompt-text" id="prompt-1-2">Hikers walking on a trail through golden silver grass fields on Hwangmaesan mountain, Korea, autumn, blue sky, crisp mountain air, traditional Korean landscape, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-1-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">황매산 억새밭 탐방로를 걷는 등산객 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 황매산에서 해인사·가야산 연계 드라이브</h2>
+
+황매산에서 해인사까지는 차로 약 40~50분 거리입니다. 가야산국립공원 내 해인사는 팔만대장경 보관으로 유명한 유네스코 세계문화유산으로, 경내 가을 단풍도 아름다워 10월 초·중순에는 억새와 초기 단풍을 함께 즐길 수 있습니다.<br><br>
+
+<strong>추천 당일 코스</strong><br>
+→ 오전 황매산 억새밭 감상 → 점심 합천 식당(황매산 주변 식당가) → 오후 해인사 경내 산책 → 저녁 귀가<br><br>
+
+해인사 입장료는 성인 기준 3,000원(2026년 기준, 변동 가능)이며, 주차료는 별도입니다. 방문 전 해인사 공식 홈페이지(haeinsa.or.kr)에서 현황을 확인하세요.
+
+<h2>06 | 황매산 주변 맛집과 먹거리</h2>
+
+황매산 입구인 합천 가회면 일대와 합천읍에 식당가가 형성되어 있습니다.<br><br>
+
+<strong>황매산 주변 먹거리</strong>: 산나물 비빔밥, 토종닭 백숙, 두부전골이 대표적입니다. 가을 억새철에는 단체 관광객이 몰려 인기 식당은 대기가 생기므로 정오 전후 방문이 좋습니다.<br><br>
+
+<strong>합천읍 방향</strong>: 합천 내에서는 장어 요리와 향토 한식이 유명합니다. 합천 시내의 한식집은 산청 방향보다 선택지가 다양합니다.<br><br>
+
+<div class="tip-box">
+💡 <strong>음식 주의사항</strong><br>
+가을 산 먹거리 식당은 단체 관광버스 시간대와 겹치면 대기가 길어집니다. 오전 11시 30분 이전이나 오후 1시 30분 이후를 노리면 비교적 여유롭습니다.
+</div>
+
+<h2>07 | 황매산 가을 날씨와 복장 준비물</h2>
+
+9월 하순~10월 초순 황매산은 해발 1,000m 이상 지대이므로 <strong>평지보다 5~8°C 낮은 기온</strong>을 예상해야 합니다. 낮에는 따뜻하지만 아침저녁에는 바람이 강하고 쌀쌀합니다.<br><br>
+
+<strong>필수 복장·준비물</strong><br>
+- 얇은 패딩 또는 방풍 재킷 (억새밭은 바람이 강함)<br>
+- 등산화 또는 트레킹화 (산책로라도 흙길·돌길)<br>
+- 선글라스 (고지대 자외선 주의)<br>
+- 물과 간식 (카페·편의점은 주차장 근처에 한정적)<br>
+- 여분의 긴팔 티셔츠
+
+<div class="warn-box">
+⚠️ <strong>안전 주의</strong><br>
+억새밭 사진을 찍으러 탐방로 밖으로 나가는 경우가 많은데, 탐방로 이탈은 생태계 훼손과 안전사고의 위험이 있습니다. 지정된 탐방로를 이용해 주세요.
+</div>
+
+<h2>08 | 황매산 억새 명당 포토 스폿</h2>
+
+황매산에서 사진이 가장 잘 나오는 포인트는 <strong>황매평원 중앙부 능선 구간</strong>과 <strong>정상부 전망대 주변</strong>입니다.<br><br>
+
+<strong>황매평원 능선</strong>: 억새가 바람에 일렁이는 장면을 가장 잘 담을 수 있는 곳입니다. 넓은 초원과 원거리 산세가 한 프레임에 들어옵니다.<br><br>
+
+<strong>정상부 전망대</strong>: 황매산 정상 부근에서 바라보는 남쪽 방향 전망이 압도적입니다. 맑은 날에는 지리산 능선까지 조망되기도 합니다.<br><br>
+
+<strong>사진 촬영 꿀팁</strong>: 억새는 역광(태양이 뒤에 있는 구도)에서 황금빛으로 빛나는 장면이 가장 아름답습니다. 오후 3~5시 오후 역광 타이밍을 맞추면 SNS용 인생샷을 건질 수 있습니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head">
+<span>📷 AI 이미지 생성 영역</span>
+<span class="ph-file">images/260903/1_hwangmaesan_3.png</span>
+</div>
+<pre class="prompt-text" id="prompt-1-3">Backlighting sunset photograph of silver grass (억새) fields on Hwangmaesan mountain in Korea, golden hour, late afternoon sun behind the grass creating glowing silhouettes, dramatic sky, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-1-3')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">황매산 억새 역광 황금빛 장면, 오후 석양 / AI 제작 이미지</div>
+</div>
+
+<h2>09 | 황매산 억새 방문 전 체크리스트</h2>
+
+<div class="step-box">
+✅ <strong>방문 전 확인 사항</strong><br>
+① 합천군립공원 또는 산청군청 공식 홈페이지에서 <strong>억새 개화 현황</strong> 확인 (절정 1~2주 전부터 업데이트)<br>
+② 탐방로 <strong>통제 여부</strong> 확인 (knps.or.kr 또는 공원 관리사무소)<br>
+③ 주말이면 <strong>오전 8시 이전 출발</strong> 계획<br>
+④ 방풍·방한 재킷 준비 (고지대 바람 강함)<br>
+⑤ 해인사 연계 시 <strong>입장 시간·요금</strong> 사전 확인
+</div>
+
+황매산 억새는 한 번 타이밍을 맞추면 "이런 곳이 한국에 있었나"라는 감탄이 나오는 곳입니다. 9월 하순 억새 절정기에 이른 아침 방문을 계획해 보세요. 주차 걱정 없이 고요한 억새밭을 혼자 독점하는 것도 충분히 가능합니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260902/travel_chuncheon_soyang_dam_fall_drive.html">소양강댐·청평호 초가을 드라이브, 춘천 9월 당일치기 코스</a></li>
+<li><a href="../260902/travel_wonju_chiak_gugnyong_fall.html">강원 치악산 구룡폭포·황골계곡 초가을 트레킹, 원주 가을 나들이 코스</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#황매산</span>
+<span class="tag">#황매산억새</span>
+<span class="tag">#합천여행</span>
+<span class="tag">#산청여행</span>
+<span class="tag">#가을억새</span>
+<span class="tag">#억새명소</span>
+<span class="tag">#황매평원</span>
+<span class="tag">#가을드라이브</span>
+<span class="tag">#경남가을여행</span>
+<span class="tag">#해인사연계</span>
+</div>
+</body>
+</html>

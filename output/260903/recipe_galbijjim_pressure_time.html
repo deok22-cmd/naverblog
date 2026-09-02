@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>갈비찜 핏물 빼는 시간과 압력솥 시간 — 부드럽고 깊은 맛 내는 단계별 정리</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #e64a19; padding-bottom: 12px; color: #bf360c; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #fbe9e7; padding: 12px 15px; border-left: 6px solid #e64a19; margin-top: 50px; color: #bf360c; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #bf360c; margin: 24px 0 8px; }
+  .intro-box { background: #fffaf8; border: 2px solid #ffccbc; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #e64a19; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #fff5f2; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #ffccbc; border-radius: 8px; padding: 20px; background: #fffaf8; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #e64a19; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #e64a19; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #fffaf8; border: 1px solid #ffccbc; border-left: 4px solid #e64a19; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #e64a19; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#e64a19'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>갈비찜 핏물 빼는 시간과 압력솥 시간 — 부드럽고 깊은 맛 내는 단계별 정리</h1>
+<div class="intro-box">
+추석이 다가오면 갈비찜을 준비하는 가정이 많습니다. 그런데 처음 만들거나 오랜만에 만들 때 "핏물을 얼마나 빼야 하지?", "압력솥으로 몇 분이나 쪄야 하나?" 헷갈리는 경우가 많습니다.<br><br>
+핏물을 너무 짧게 빼면 잡냄새가 남고, 너무 오래 두면 갈비의 깊은 맛이 빠집니다. 압력솥 조리 시간도 짧으면 질기고 길면 살이 뼈에서 흘러내립니다.<br><br>
+갈비찜의 핵심인 <strong>핏물 제거 시간, 블랜칭(끓는 물에 데치기), 압력솥 시간, 양념 비율</strong>을 단계별로 정리했습니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head">
+<span>📷 AI 이미지 생성 영역</span>
+<span class="ph-file">images/260903/7_galbijjim_1.png</span>
+</div>
+<pre class="prompt-text" id="prompt-7-1">Korean braised short ribs (갈비찜) in a dark ceramic bowl, tender beef ribs glazed with soy sauce and sweetened braising liquid, garnished with chestnuts, jujubes, carrots, and ginkgo nuts, steam rising, authentic Korean home cooking, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-7-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">갈비찜 완성본 — 율밤·대추·은행을 곁들인 정갈한 한 그릇 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 갈비찜 핏물 빼는 시간과 방법</h2>
+
+핏물 제거는 갈비찜에서 가장 먼저 해야 하는 단계입니다. 핏물을 충분히 빼야 잡냄새가 없어지고 맑은 양념 색이 납니다.<br><br>
+
+<strong>핏물 빼는 방법 1 — 찬물 담가두기 (기본)</strong><br>
+갈비를 찬물에 담가 1~2시간 둡니다. 30분마다 한 번씩 물을 갈아주면 더 효과적입니다. 총 물 교체 횟수는 2~3회가 적당합니다.<br><br>
+
+<strong>핏물 빼는 방법 2 — 냉장고 하룻밤 (가장 깊은 맛)</strong><br>
+시간이 있다면 찬물에 담근 채로 냉장고에 8~12시간 두는 것이 가장 좋습니다. 천천히 핏물이 빠지면서 갈비 본연의 맛은 최대한 살아 있습니다.<br><br>
+
+<div class="info-box">
+⏱️ <strong>핏물 제거 시간 요약</strong><br>
+- 최소: 찬물 1시간 (30분마다 물 교체)<br>
+- 표준: 찬물 2시간 (30분마다 물 교체, 2~3회)<br>
+- 최적: 냉장고 8~12시간 (하룻밤 담금)<br>
+→ 핏물 색이 옅어지면 충분히 뺀 것
+</div>
+
+핏물 제거 후에는 체에 받쳐 물기를 빼주세요.
+
+<h2>02 | 블랜칭(끓는 물 데치기) 단계</h2>
+
+핏물을 뺀 갈비는 <strong>끓는 물에 데쳐 잔여 불순물과 기름기를 제거</strong>합니다. 이 단계를 생략하면 최종 요리에서 거품이 많이 나고 맛이 탁해질 수 있습니다.<br><br>
+
+<strong>블랜칭 방법</strong><br>
+① 냄비에 물을 넉넉히 붓고 강불로 팔팔 끓입니다.<br>
+② 갈비를 넣고 3~5분 데칩니다.<br>
+③ 갈비를 건져 흐르는 찬물로 씻어 불순물을 제거합니다.<br>
+④ 체에 받쳐 물기를 제거합니다.<br><br>
+
+이 과정에서 갈비 표면의 기름기가 상당히 제거되어 완성된 갈비찜이 더 깔끔한 맛이 납니다.
+
+<h2>03 | 압력솥 갈비찜 조리 시간</h2>
+
+압력솥을 쓰면 냄비보다 시간이 1/3 이하로 줄어들고 살이 더 부드럽게 됩니다.<br><br>
+
+<table class="info-table">
+<tr><th>조리 방법</th><th>압력 증기 후 시간</th><th>식감</th></tr>
+<tr><td>압력솥 (짧게)</td><td>15분</td><td>살이 약간 단단, 씹는 맛 있음</td></tr>
+<tr><td>압력솥 (표준)</td><td>20~25분</td><td>뼈에서 살 잘 분리, 적당히 부드러움 (추천)</td></tr>
+<tr><td>압력솥 (오래)</td><td>30분 이상</td><td>뼈에서 살이 분리될 정도로 매우 부드러움</td></tr>
+<tr><td>일반 냄비</td><td>약불 1시간 30분~2시간</td><td>깊은 맛, 시간 오래 걸림</td></tr>
+</table>
+
+<strong>압력솥 사용 순서</strong><br>
+① 블랜칭한 갈비를 압력솥에 넣고 양념 재료를 모두 넣습니다.<br>
+② 물을 갈비가 절반 잠길 정도로 붓습니다 (약 1컵).<br>
+③ 뚜껑을 닫고 강불로 끓입니다. 압력 추가 돌기 시작하면 약불로 줄이고 타이머를 20~25분 설정합니다.<br>
+④ 불을 끄고 압력이 자연 감소할 때까지 기다립니다 (약 10~15분).<br>
+⑤ 뚜껑을 열어 국물 양을 확인하고 강불에서 졸여 농도를 맞춥니다.
+
+<h2>04 | 갈비찜 양념 비율 (소갈비 600g 기준)</h2>
+
+<table class="info-table">
+<tr><th>재료</th><th>양</th></tr>
+<tr><td>간장</td><td>5큰술</td></tr>
+<tr><td>설탕</td><td>2큰술</td></tr>
+<tr><td>배즙 (또는 사과즙)</td><td>3큰술</td></tr>
+<tr><td>다진 마늘</td><td>1큰술</td></tr>
+<tr><td>다진 생강</td><td>1/2작은술</td></tr>
+<tr><td>참기름</td><td>1큰술</td></tr>
+<tr><td>후추</td><td>약간</td></tr>
+<tr><td>물</td><td>1컵 (200ml)</td></tr>
+</table>
+
+<div class="tip-box">
+💡 <strong>과즙 연육 효과</strong><br>
+배즙이나 사과즙에는 단백질 분해 효소가 있어 갈비 살을 더 부드럽게 합니다. 없으면 키위 1/4개를 갈아 넣어도 됩니다. 단, 키위는 너무 많이 넣으면 살이 뭉그러지므로 소량만 사용합니다.
+</div>
+
+<h2>05 | 부재료 넣는 순서와 타이밍</h2>
+
+갈비찜에 넣는 당근, 감자, 율밤, 대추, 은행 등의 부재료는 <strong>넣는 타이밍</strong>이 다릅니다.<br><br>
+
+<strong>압력솥 사용 시 타이밍</strong><br>
+- <strong>감자·당근</strong>: 압력 조리 완료 후 넣어 뚜껑 열고 5~10분 약불로 함께 졸이기 (너무 일찍 넣으면 뭉그러짐)<br>
+- <strong>율밤·대추</strong>: 압력 조리 시작 전 처음부터 함께 넣어도 됩니다 (단단해서 모양 유지)<br>
+- <strong>은행</strong>: 마무리 단계, 그릇에 담을 때 올립니다 (색감과 향을 살리기 위해)<br>
+- <strong>황밤(밤)</strong>: 껍질 벗겨 압력 조리 시작 전 함께 넣습니다.
+
+<h2>06 | 완성 후 간 맞추기와 보관</h2>
+
+완성된 갈비찜은 식으면서 간이 더 배어들어 처음보다 조금 짤 수 있습니다. 따라서 마무리 간을 할 때는 약간 싱겁다 싶게 맞추고, 다음 날 먹을 때 기호에 맞춰 간장을 추가하는 방법이 좋습니다.<br><br>
+
+<strong>보관 방법</strong><br>
+- 냉장 보관: 3일 이내 소비 권장<br>
+- 냉동 보관: 소분하여 냉동 시 1~2달 보관 가능 (해동 후 다시 끓이면 갓 만든 것과 비슷)<br>
+- 재가열: 전자레인지보다는 냄비에 물 약간을 더해 약불로 데우면 맛이 더 살아납니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head">
+<span>📷 AI 이미지 생성 영역</span>
+<span class="ph-file">images/260903/7_galbijjim_2.png</span>
+</div>
+<pre class="prompt-text" id="prompt-7-2">Korean braised beef short ribs (갈비찜) being prepared at home, raw marinated ribs in a pressure cooker with soy sauce marinade, Korean kitchen setting with traditional cookware, ingredients like soy sauce, garlic, ginger visible, realistic food photography style, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-7-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">갈비찜 준비 과정 — 양념 재료를 넣은 압력솥 / AI 제작 이미지</div>
+</div>
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="rite_graduation_gift_amount.html">졸업·입학 선물 얼마가 적당한가 — 봉투가 나은가 물건이 나은가, 관계별 기준</a></li>
+<li><a href="../260902/rite_moving_neighbor_greeting.html">이사 후 이웃 인사, 어느 범위까지 해야 하고 무엇을 드리면 좋은가</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#갈비찜</span>
+<span class="tag">#갈비찜레시피</span>
+<span class="tag">#갈비찜핏물</span>
+<span class="tag">#갈비찜압력솥</span>
+<span class="tag">#갈비찜양념</span>
+<span class="tag">#추석음식</span>
+<span class="tag">#명절음식</span>
+<span class="tag">#한국요리</span>
+<span class="tag">#압력솥요리</span>
+<span class="tag">#갈비요리</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>졸업·입학 선물 얼마가 적당한가 — 봉투가 나은가 물건이 나은가, 관계별 기준</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #a5d6a7; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf3; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #a5d6a7; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #a5d6a7; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>졸업·입학 선물 얼마가 적당한가 — 봉투가 나은가 물건이 나은가, 관계별 기준</h1>
+<div class="intro-box">
+졸업식·입학식 시즌이 되면 "얼마가 적당한가"를 두고 고민하는 분들이 많습니다. 너무 적으면 성의 없어 보이고, 너무 많으면 부담스럽게 느껴질 수 있으니까요.<br><br>
+정해진 정답은 없지만 <strong>관계의 깊이·상대방 나이·이후에 받을 자리가 있는지</strong>에 따라 적절한 금액 기준이 달라집니다. 또 요즘은 현금 봉투보다 <strong>실용 물건이나 선불카드</strong>를 선호하는 경향도 있습니다.<br><br>
+관계별 금액 기준과 봉투 vs 물건 선택 기준, 실질적인 선물 추천까지 정리했습니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head">
+<span>📷 AI 이미지 생성 영역</span>
+<span class="ph-file">images/260903/5_graduation_1.png</span>
+</div>
+<pre class="prompt-text" id="prompt-5-1">A graduation gift wrapping with a white envelope and flowers on a clean white background, soft pastel aesthetic, Korean graduation ceremony bouquet and gift box, warm natural light, flat lay style, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">졸업 시즌 현금 봉투와 꽃다발 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 관계별 적정 금액 기준</h2>
+
+졸업·입학 선물 금액은 <strong>'친밀도'와 '향후 답례 가능성'</strong>을 함께 고려하는 것이 가장 합리적입니다.<br><br>
+
+<table class="info-table">
+<tr><th>관계</th><th>일반적인 기준액</th><th>비고</th></tr>
+<tr><td>친자녀·손자녀</td><td>제한 없음 (가정 형편 기준)</td><td>부모·조부모 선물은 금액보다 '경험'이 좋음</td></tr>
+<tr><td>형제자매 자녀</td><td>5만~10만 원</td><td>초등: 3~5만, 중·고등·대학: 5~10만</td></tr>
+<tr><td>친한 친구 자녀</td><td>3만~5만 원</td><td>직접 안 만나는 경우 3만 원도 적절</td></tr>
+<tr><td>직장 동료 자녀</td><td>2만~3만 원</td><td>직접 접점 없으면 부조 생략도 자연스러움</td></tr>
+<tr><td>친한 동생·후배</td><td>3만~5만 원</td><td>입학 축하금은 졸업보다 소폭 낮아도 됨</td></tr>
+<tr><td>교수·선생님에게 받는 경우</td><td>받기만 하면 됨</td><td>역방향 선물은 오히려 실례가 되기도 함</td></tr>
+</table>
+
+<div class="tip-box">
+💡 <strong>팁</strong><br>
+"내가 나중에 받을 자리가 있나"를 생각해 보세요. 상대 자녀 졸업이 있으면 그때 받게 되므로 조금 여유 있게 줘도 됩니다. 반대로 답례 기회가 없는 관계(독신·무자녀)라면 좀 더 신중하게 결정하세요.
+</div>
+
+<h2>02 | 봉투 vs 물건, 무엇이 나은가</h2>
+
+<strong>현금 봉투가 나은 경우</strong><br>
+- 상대방이 필요한 것을 모를 때 (특히 취업 준비생, 대학 입학생)<br>
+- 멀리 택배로 보내야 할 때<br>
+- 졸업·입학을 계기로 큰 지출(노트북·교복 등)이 예상될 때<br><br>
+
+<strong>물건이 나은 경우</strong><br>
+- 상대방이 원하는 것을 알고 있을 때<br>
+- 가까운 관계여서 직접 전달 가능할 때<br>
+- 현금보다 '선물'의 느낌을 강조하고 싶을 때<br><br>
+
+<strong>선불 상품권·기프티콘</strong>: 최근에는 백화점 상품권, 카카오·네이버 포인트, 올리브영 기프티콘 등 실용적인 선불 상품권이 현금 봉투의 대안으로 인기입니다. 상대방이 직접 쓰고 싶은 곳에 사용할 수 있어 호응이 좋습니다.
+
+<h2>03 | 나이별·단계별 선물 추천</h2>
+
+<strong>초등학교 입학 (7세)</strong><br>
+- 현금 봉투 3만~5만 원<br>
+- 문구세트, 독서 기프트카드, 학용품 세트<br>
+- 입학 기념 '이름 도장'도 실용적인 선물로 인기<br><br>
+
+<strong>중학교·고등학교 입학·졸업</strong><br>
+- 현금 봉투 5만 원<br>
+- 학교 근처 카페 기프티콘 + 자기계발서 조합<br>
+- 스마트워치, 에어팟 같은 실용 전자기기(가까운 관계)<br><br>
+
+<strong>대학 입학·졸업</strong><br>
+- 현금 봉투 5만~10만 원<br>
+- 취업 준비생: 정장 구입 지원금, 오피스 의류 상품권<br>
+- 졸업 후 취업 예정자: 사회생활 실용품 (무선 이어폰·가방·지갑)
+
+<h2>04 | 봉투를 줄 때 쓰는 한마디</h2>
+
+<div class="step-box">
+✏️ <strong>졸업 축하 한마디 예시</strong><br>
+"그동안 고생 많았어. 앞으로가 더 기대돼. 새 출발 응원해!"<br>
+"졸업 축하해. 이 돈으로 하고 싶은 것 해!"<br>
+"작은 마음이야. 새 시작 앞에 든든한 힘이 됐으면 해."<br>
+<br>
+✏️ <strong>입학 축하 한마디 예시</strong><br>
+"입학 축하해! 새로운 곳에서도 잘 해낼 거야."<br>
+"첫걸음이 시작됐네. 응원 많이 할게."<br>
+"멋진 학교에 들어갔구나. 좋은 경험 많이 쌓아."
+</div>
+
+<h2>05 | 봉투 대신 현물 선물 살 때 피해야 할 것들</h2>
+
+선물로 물건을 살 때 흔히 하는 실수를 정리했습니다.<br><br>
+
+<strong>피해야 할 선물</strong><br>
+- 본인 취향에만 맞는 책 → 읽지 않을 가능성이 높음<br>
+- 향수·화장품 → 사람마다 선호가 달라 실패율 높음<br>
+- 지나치게 비싼 전자기기 → 관계 대비 부담스럽게 느껴짐<br>
+- 교육 관련 선물 → 졸업식에서 또 공부하라는 압박감으로 받아들여질 수 있음<br><br>
+
+<div class="warn-box">
+⚠️ <strong>참고</strong><br>
+"뭐가 필요해?"라고 먼저 물어보는 것이 가장 좋은 방법입니다. 특히 대학 입학생은 필요한 것이 개인마다 매우 달라서 직접 묻고 사주는 것이 가장 실용적인 선물이 됩니다.
+</div>
+
+<h2>06 | 졸업·입학 선물 전달할 때 예절</h2>
+
+<strong>현금 봉투</strong>: 축하카드와 함께 봉투에 넣어 전달하는 것이 기본 예절입니다. 카드에 한 마디 직접 쓴 축하 문구를 더하면 성의가 더 전해집니다.<br><br>
+
+<strong>택배 발송</strong>: 멀리 있는 경우 택배로 보낼 때는 카카오톡이나 문자로 "오늘 발송했어, 잘 받아"라는 메시지를 먼저 보내면 받는 사람이 기다리는 설렘이 생깁니다.<br><br>
+
+<strong>기프티콘</strong>: 카카오톡 기프티콘을 보낼 때도 단순 전송보다 짧은 메시지를 함께 보내면 더 정감 있게 받아들여집니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head">
+<span>📷 AI 이미지 생성 영역</span>
+<span class="ph-file">images/260903/5_graduation_2.png</span>
+</div>
+<pre class="prompt-text" id="prompt-5-2">A Korean graduation ceremony scene, student in graduation gown receiving flowers and gift from family, warm celebration moment, bright spring day, emotional and joyful expression, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">졸업식에서 가족으로부터 선물을 받는 졸업생 / AI 제작 이미지</div>
+</div>
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260902/rite_moving_neighbor_greeting.html">이사 후 이웃 인사, 어느 범위까지 해야 하고 무엇을 드리면 좋은가</a></li>
+<li><a href="local_nationalpark_trail_control.html">국립공원 탐방로 통제·계곡 폐쇄 확인하는 법과 입산 가능 시간</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#졸업선물</span>
+<span class="tag">#입학선물</span>
+<span class="tag">#졸업선물금액</span>
+<span class="tag">#입학선물추천</span>
+<span class="tag">#경조사봉투</span>
+<span class="tag">#현금봉투</span>
+<span class="tag">#졸업축하금</span>
+<span class="tag">#선물추천</span>
+<span class="tag">#졸업식</span>
+<span class="tag">#입학식</span>
+</div>
+</body>
+</html>
