@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>애호박전 부치기 황금비율 — 밀가루:부침가루 비율과 굽는 온도</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #e64a19; padding-bottom: 12px; color: #bf360c; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #fbe9e7; padding: 12px 15px; border-left: 6px solid #e64a19; margin-top: 50px; color: #bf360c; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #bf360c; margin: 24px 0 8px; }
+  .intro-box { background: #fffaf8; border: 2px solid #ffccbc; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #e64a19; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #fff5f2; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #ffccbc; border-radius: 8px; padding: 20px; background: #fffaf8; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #e64a19; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #e64a19; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #fffaf8; border: 1px solid #ffccbc; border-left: 4px solid #e64a19; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #e64a19; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#e64a19'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>애호박전 부치기 황금비율 — 밀가루:부침가루 비율과 굽는 온도</h1>
+
+<div class="intro-box">
+애호박전은 재료가 단순하지만 잘 부치기가 까다롭습니다. 겉은 노릇하고 바삭한데 속은 촉촉하게 익히는 게 포인트입니다. 가루 비율이 맞지 않으면 두껍고 떡지거나 부스러지고, 온도가 맞지 않으면 기름이 흥건하거나 타버립니다. <strong>실패 없이 바삭하고 촉촉한 애호박전</strong> 만드는 비율과 굽는 법을 정리했습니다.
+</div>
+
+<h2>01 | 재료와 황금비율 — 2인분 기준</h2>
+
+<table class="info-table">
+  <tr><th>재료</th><th>양 (2인분)</th><th>비고</th></tr>
+  <tr><td>애호박</td><td>1개 (약 250g)</td><td>중간 크기 기준</td></tr>
+  <tr><td>소금</td><td>1/2 작은술</td><td>밑간 + 수분 제거용</td></tr>
+  <tr><td>밀가루</td><td>3큰술</td><td>전용 밀가루 또는 중력분</td></tr>
+  <tr><td>부침가루</td><td>1큰술</td><td>밀가루와 3:1 비율</td></tr>
+  <tr><td>달걀</td><td>1~2개</td><td>크기에 따라 조절</td></tr>
+  <tr><td>식용유</td><td>3~4큰술</td><td>중불에서 충분히</td></tr>
+</table>
+
+<div class="info-box">
+<strong>밀가루:부침가루 = 3:1이 정답인 이유</strong><br>
+• <strong>밀가루 100%</strong>: 바삭하지만 뻑뻑하고 겉이 거침<br>
+• <strong>부침가루 100%</strong>: 맛은 좋지만 소가 무거워 흐트러지기 쉽고 두꺼워짐<br>
+• <strong>밀가루 75% + 부침가루 25%</strong>: 얇고 바삭한 겉, 적당한 간, 촉촉한 속 — 최적 조합
+</div>
+
+<h2>02 | 핵심 전처리 — 수분 제거</h2>
+
+애호박전이 흐물흐물하거나 기름이 많이 튀는 이유는 대부분 <strong>수분 제거를 제대로 안 했기 때문</strong>입니다.<br><br>
+
+<div class="step-box">
+<strong>Step 1. 애호박 썰기</strong><br>
+0.5cm 두께로 동그랗게 썹니다. 너무 얇으면 굽는 중에 부서지고, 너무 두꺼우면 속이 안 익습니다. 0.4~0.6cm가 적당합니다.
+</div>
+
+<div class="step-box">
+<strong>Step 2. 소금 절이기</strong><br>
+썬 애호박에 소금(1/2작은술)을 뿌리고 10~15분 기다립니다. 물이 많이 나옵니다.
+</div>
+
+<div class="step-box">
+<strong>Step 3. 물기 짜기</strong><br>
+키친타월이나 면보로 꼭 눌러 물기를 완전히 제거합니다. <strong>이 단계가 바삭함의 핵심</strong>입니다. 물기가 남으면 기름이 튀고 겉이 눅눅해집니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260904/7_zucchini_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-7-1">Korean zucchini pancakes (hobakjeon) being pan-fried in a cast iron skillet, golden brown crispy edges, round slices of zucchini coated in egg batter sizzling in oil, steam rising, kitchen background, warm cooking atmosphere, overhead perspective, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-7-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">애호박전 노릇하게 부치기 — 황금빛 겉면이 완성된 순간 / AI 제작 이미지</div>
+</div>
+
+<h2>03 | 반죽 입히기 — 순서가 중요합니다</h2>
+
+<div class="step-box">
+<strong>밀가루 → 달걀 순서</strong><br>
+① 물기를 제거한 애호박에 밀가루+부침가루 혼합을 얇게 털어 입힙니다 (두껍게 바르면 안 됩니다)<br>
+② 풀어 둔 달걀물에 담급니다<br>
+③ 달걀물이 고루 묻은 것을 팬에 올립니다
+</div>
+
+<div class="warn-box">
+⚠️ <strong>흔한 실수</strong><br>
+달걀을 먼저 입히고 밀가루를 뿌리는 분이 있는데, 이렇게 하면 밀가루가 덩어리지고 겉이 불균일하게 굳습니다. 반드시 <strong>밀가루 먼저, 달걀 나중</strong>입니다.
+</div>
+
+<h2>04 | 굽는 온도와 화력 — 단계별 설명</h2>
+
+<table class="info-table">
+  <tr><th>단계</th><th>화력</th><th>시간</th><th>포인트</th></tr>
+  <tr><td>예열</td><td>중불~중강불</td><td>2분</td><td>팬 충분히 달구기</td></tr>
+  <tr><td>기름 두르기</td><td>중불로 줄임</td><td>—</td><td>식용유 3~4큰술, 팬 전체에 퍼지게</td></tr>
+  <tr><td>첫 면 굽기</td><td>중불</td><td>2~3분</td><td>만지지 말고 기다리기</td></tr>
+  <tr><td>뒤집기</td><td>중불 유지</td><td>—</td><td>가장자리가 투명해지면 신호</td></tr>
+  <tr><td>반대 면</td><td>중약불로 줄임</td><td>1~2분</td><td>약간 눌러서 속까지 익히기</td></tr>
+</table>
+
+<div class="tip-box">
+💡 <strong>불 조절 실패 시 증상</strong><br>
+• <strong>강불</strong>: 겉만 타고 속이 날것 → 중불로 낮추고 뚜껑을 잠깐 덮어서 속 익히기<br>
+• <strong>약불</strong>: 기름 흡수가 많아 기름진 전 → 불을 높여 빠르게 마무리
+</div>
+
+<h2>05 | 바삭하게 부치는 핵심 비법 3가지</h2>
+
+<div class="step-box">
+<strong>① 팬을 충분히 예열하세요</strong><br>
+차가운 팬에 기름을 두르고 올리면 기름이 흡수됩니다. 팬을 먼저 달군 뒤 기름을 넣고 1분 기다렸다가 재료를 올려야 기름이 겉면을 코팅합니다.
+</div>
+
+<div class="step-box">
+<strong>② 한 번에 많이 올리지 마세요</strong><br>
+팬 공간의 70% 이상 채우면 팬 온도가 급격히 떨어집니다. 여유 있게 간격을 두고 올려야 고른 열이 유지됩니다.
+</div>
+
+<div class="step-box">
+<strong>③ 뒤집은 후 절대 누르지 마세요 (첫 면은)</strong><br>
+첫 면을 굽는 동안 억지로 누르면 달걀이 터져 나옵니다. 뒤집은 뒤에만 가볍게 눌러줍니다.
+</div>
+
+<h2>06 | 명절 애호박전 대량 부치기 — 미리 준비 시 보관법</h2>
+
+<div class="info-box">
+<strong>미리 부쳐서 보관할 때</strong><br>
+• 부쳐 낸 뒤 한 김 식히고 키친타월 깔고 겹쳐 담기<br>
+• 냉장 보관 시 2~3일 이내 섭취<br>
+• 냉동 시: 한 장씩 랩 싸서 냉동 → 먹기 전 팬에 기름 없이 약불에 데우기(전자레인지는 눅눅해짐)
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260904/7_zucchini_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-7-2">Korean traditional holiday food spread, beautifully plated zucchini pancakes (hobakjeon) arranged on a white ceramic plate, golden brown perfectly cooked rounds, served with small bowl of soy sauce dipping sauce, garnished with thinly sliced red chili, rustic wooden table, warm inviting atmosphere, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-7-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">완성된 애호박전 — 접시에 가지런히 담긴 명절 반찬 / AI 제작 이미지</div>
+</div>
+
+<h2>07 | 함께 담으면 좋은 소스 — 간단 초간장 레시피</h2>
+
+<div class="step-box">
+<strong>기본 초간장 (2인분)</strong><br>
+간장 2큰술 + 식초 1큰술 + 물 1큰술 + 고춧가루 1/4작은술(선택) + 통깨<br>
+→ 섞어서 바로 사용. 냉장 2~3일 보관 가능.
+</div>
+
+<div class="step-box">
+<strong>명절 스타일 양념간장</strong><br>
+간장 2큰술 + 참기름 1작은술 + 송송 썬 쪽파 1큰술 + 통깨<br>
+→ 기름지지 않고 고소한 맛이 전과 잘 어울립니다.
+</div>
+
+<div class="recommend-area">
+  <strong>📌 함께 읽으면 좋은 글</strong><br><br>
+  <a href="../260903/recipe_galbijjim_pressure_time.html">갈비찜 압력솥 시간과 물 양 — 뼈까지 부드럽게 익히는 비율</a><br>
+  <a href="../260904/rite_first_chuseok_silaw_visit.html">처음 맞는 추석 시댁 방문 — 며느리 준비물과 예절 체크리스트</a>
+</div>
+
+<div class="tags">
+<span class="tag">#애호박전</span>
+<span class="tag">#애호박전황금비율</span>
+<span class="tag">#애호박전레시피</span>
+<span class="tag">#명절전</span>
+<span class="tag">#전부치기</span>
+<span class="tag">#추석요리</span>
+<span class="tag">#부침가루밀가루비율</span>
+<span class="tag">#바삭한전</span>
+<span class="tag">#명절음식</span>
+<span class="tag">#한국요리</span>
+</div>
+</body>
+</html>

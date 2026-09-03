@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>자동차 타이어 마모 한계 체크법과 교체 시기, 사이즈 읽는 법</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>자동차 타이어 마모 한계 체크법과 교체 시기, 사이즈 읽는 법</h1>
+
+<div class="intro-box">
+타이어는 자동차의 안전과 직결되는 핵심 소모품입니다. 마모가 진행되면 제동 거리가 늘어나고 빗길 수막현상 위험이 커집니다. 하지만 언제 교체해야 하는지 모르는 분이 많습니다. <strong>집에서 10초면 할 수 있는 마모도 확인법</strong>부터 교체 시기, 사이즈 읽는 법까지 알기 쉽게 정리했습니다.
+</div>
+
+<h2>01 | 타이어 마모 한계 — 법적 기준과 실질 기준</h2>
+
+타이어 트레드(홈) 깊이가 <strong>1.6mm 이하</strong>이면 도로교통법상 불법입니다. 하지만 실제로는 이보다 훨씬 이전에 교체해야 합니다.<br><br>
+
+<table class="info-table">
+  <tr><th>트레드 깊이</th><th>상태</th><th>권고</th></tr>
+  <tr><td>8mm 이상</td><td>새 타이어 수준</td><td>이상 없음</td></tr>
+  <tr><td>4~8mm</td><td>정상 사용 중</td><td>정기 점검 유지</td></tr>
+  <tr><td>3mm</td><td>교체 준비 시작</td><td>빗길 주의 시작</td></tr>
+  <tr><td>1.6~2mm</td><td>마모 한계 근접</td><td>즉시 교체 권장</td></tr>
+  <tr><td>1.6mm 이하</td><td>법적 불법 수준</td><td>즉시 교체 (수막 위험)</td></tr>
+</table>
+
+<h2>02 | 집에서 하는 마모 체크 — 100원짜리 동전법</h2>
+
+<div class="step-box">
+<strong>100원짜리 동전 체크법</strong><br>
+100원짜리 동전을 타이어 홈에 이순신 장군 머리 방향으로(글씨가 위로) 꽂습니다.<br>
+• 머리 상단(모자 윗부분)이 홈 안으로 들어가면 → 아직 여유 있음<br>
+• 머리 상단이 보이면 → 마모 한계 근접, 교체 준비 필요<br>
+• 얼굴 전체가 보이면 → 즉시 교체 필요
+</div>
+
+<div class="step-box">
+<strong>마모 표시(TWI) 확인법</strong><br>
+타이어 측면에 삼각형(▲) 표시가 있습니다. 그 위치의 홈 안쪽을 들여다보면 작은 돌기가 있습니다. 이것이 <strong>마모 한계 표시(TWI)</strong>입니다. 트레드 면이 이 돌기와 같은 높이까지 닳으면 교체 시점입니다.
+</div>
+
+<h2>03 | 교체 시기 — 마모 외에 연수도 확인하세요</h2>
+
+트레드가 충분해 보여도 제조 연도가 오래됐다면 교체가 필요합니다. 고무 성분이 굳고 갈라지면 접지력이 저하됩니다.<br><br>
+
+<table class="info-table">
+  <tr><th>기준</th><th>교체 권장 시점</th></tr>
+  <tr><td>주행 거리</td><td>4~5만 km 또는 마모 한계 도달 중 먼저 오는 것</td></tr>
+  <tr><td>제조 연도</td><td>제조 후 5년 이상 → 점검, 10년 이상 → 교체</td></tr>
+  <tr><td>균열·이상 마모</td><td>옆면 균열, 한쪽만 마모, 울퉁불퉁하면 즉시 점검</td></tr>
+</table>
+
+<div class="tip-box">
+💡 <strong>제조 연도 확인법</strong><br>
+타이어 측면에 DOT 코드가 있습니다. 끝 4자리가 제조 주·연도입니다. 예: 2423 → 2024년 23주(6월 초) 제조.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260904/6_tire_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-1">Close-up of a car tire tread pattern being checked with a Korean 100-won coin inserted into the groove to measure tread depth, hand holding the coin, blurred car background, bright daylight, clear focus on the coin and tire tread, educational automotive safety concept, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">100원짜리 동전으로 타이어 트레드 깊이 체크하는 법 / AI 제작 이미지</div>
+</div>
+
+<h2>04 | 타이어 사이즈 읽는 법 — 숫자 해석</h2>
+
+타이어 측면에는 예를 들어 <strong>215/55R17 94V</strong>처럼 숫자가 표기됩니다.<br><br>
+
+<table class="info-table">
+  <tr><th>표기</th><th>의미</th><th>예시</th></tr>
+  <tr><td>215</td><td>타이어 폭 (mm)</td><td>폭이 215mm</td></tr>
+  <tr><td>55</td><td>편평비 (%)</td><td>높이가 폭의 55%</td></tr>
+  <tr><td>R</td><td>래디얼 구조</td><td>현재 승용차 표준</td></tr>
+  <tr><td>17</td><td>림(휠) 직경 (인치)</td><td>17인치 휠에 장착</td></tr>
+  <tr><td>94</td><td>하중 지수</td><td>최대 670kg까지 지지</td></tr>
+  <tr><td>V</td><td>속도 지수</td><td>최고 240km/h까지 허용</td></tr>
+</table>
+
+<div class="info-box">
+<strong>교체 시 반드시 동일 사이즈를 써야 하나요?</strong><br>
+원칙적으로 <strong>동일 사이즈</strong>를 사용해야 합니다. 사이즈가 다르면 주행 거리계 오차, 4WD 차량의 구동계 손상, 차고 변화 등 문제가 생깁니다. 업그레이드는 타이어 전문점에서 상담 후 진행하세요.
+</div>
+
+<h2>05 | 마모 패턴으로 보는 차량 이상 진단</h2>
+
+<div class="step-box">
+<strong>중앙만 마모 (가운데 볼록)</strong><br>
+→ 공기압 과다. 타이어 중앙만 노면에 닿아 가운데가 빨리 마모됩니다. 적정 공기압으로 낮추세요.
+</div>
+
+<div class="step-box">
+<strong>양쪽 끝만 마모 (양 어깨 마모)</strong><br>
+→ 공기압 부족. 타이어가 찌그러져 양쪽 끝이 닿습니다. 공기를 채우고, 만성적이면 타이어 점검.
+</div>
+
+<div class="step-box">
+<strong>한쪽만 마모</strong><br>
+→ 얼라인먼트(휠 정렬) 불량 또는 캠버 이상. 카센터에서 얼라인먼트 점검이 필요합니다.
+</div>
+
+<div class="step-box">
+<strong>울퉁불퉁 마모 (깃털 모양)</strong><br>
+→ 토우(Toe) 불량 또는 서스펜션 이상. 얼라인먼트·하체 종합 점검 필요.
+</div>
+
+<h2>06 | 타이어 수명 늘리는 관리법</h2>
+
+<table class="info-table">
+  <tr><th>관리 항목</th><th>권장 주기</th><th>효과</th></tr>
+  <tr><td>공기압 점검</td><td>월 1회 (냉각 상태에서)</td><td>마모 균일, 연비 향상</td></tr>
+  <tr><td>타이어 위치 교환</td><td>8,000~10,000km마다</td><td>4개 균일 마모로 수명 연장</td></tr>
+  <tr><td>휠 얼라인먼트</td><td>1~2년 또는 심한 충격 후</td><td>편마모 방지</td></tr>
+  <tr><td>휠 밸런스</td><td>위치 교환 시 함께</td><td>고속 진동 방지</td></tr>
+</table>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260904/6_tire_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-2">Automotive tire sidewall close-up showing tire size markings 215/55R17 94V clearly visible, slightly worn tire tread on the left side of the frame, clean garage floor background, bright workshop lighting, informational automotive concept, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">타이어 사이즈 표기 읽는 법 — 측면 숫자가 뜻하는 것 / AI 제작 이미지</div>
+</div>
+
+<h2>07 | 교체 비용 절감 팁</h2>
+
+<div class="tip-box">
+💡 <strong>타이어 저렴하게 교체하는 방법</strong><br>
+① <strong>온라인 구매 + 공임나라·타이어픽 장착</strong>: 제조사 직영몰이나 타이어뱅크 온라인에서 타이어 구매 후, 인근 장착점에 가져가 장착비만 내는 방식. 30~40% 저렴<br>
+② <strong>타이어 교환 시즌(3~4월, 9~10월) 피하기</strong>: 수요가 몰려 가격이 오릅니다. 비시즌에 미리 교체하거나 프로모션 확인<br>
+③ <strong>4개 동시 교체</strong>: 개당 교체보다 4개 묶음 구매가 더 저렴한 경우가 많음
+</div>
+
+<div class="recommend-area">
+  <strong>📌 함께 읽으면 좋은 글</strong><br><br>
+  <a href="../260903/car_ev_underground_fire_safety.html">전기차 지하주차장 화재 위험과 안전 주차 요령</a><br>
+  <a href="../260904/local_fall_hiking_beginner_gear.html">가을 산행 초보 준비물 — 등산화·스틱 고르는 기준과 안전 수칙</a>
+</div>
+
+<div class="tags">
+<span class="tag">#타이어마모</span>
+<span class="tag">#타이어교체시기</span>
+<span class="tag">#타이어사이즈</span>
+<span class="tag">#마모체크</span>
+<span class="tag">#자동차관리</span>
+<span class="tag">#타이어수명</span>
+<span class="tag">#트레드깊이</span>
+<span class="tag">#타이어점검</span>
+<span class="tag">#공기압체크</span>
+<span class="tag">#차량관리</span>
+</div>
+</body>
+</html>
