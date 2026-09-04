@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>아이폰·갤럭시 사진 서로 옮기기 — 화질 안 깨지는 방법</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .compare-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+  .compare-table th { background: #388e3c; color: #fff; padding: 10px; text-align: center; }
+  .compare-table td { padding: 10px 12px; border: 1px solid #ddd; font-size: 0.9em; }
+  .compare-table tr:nth-child(even) td { background: #f1faf1; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>아이폰·갤럭시 사진 서로 옮기기 — 화질 안 깨지는 방법</h1>
+<div class="intro-box">
+가족 여행에서 아이폰으로 찍은 사진을 갤럭시를 쓰는 가족에게 보내거나, 반대로 갤럭시 사진을 아이폰으로 옮겨야 할 때 화질이 깨진 경험이 있으신가요? 카카오톡으로 사진을 보내면 편리하지만, 자동으로 압축이 되어 원본 화질이 손실됩니다.<br><br>
+아이폰과 갤럭시 간 사진을 원본 화질로 주고받는 방법은 여러 가지가 있습니다. 어떤 방법이 가장 편리하고 화질 손실이 없는지, 각 방법의 특징을 상황별로 정리했습니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+  <div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260905/7_photoxfer_1.png</span></div>
+  <pre class="prompt-text" id="prompt-7-1">iPhone and Samsung Galaxy smartphone side by side, photo transfer concept, arrows showing photo sharing between two different phones, clean minimal background, technology concept, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+  <button class="copy-btn" onclick="copyPrompt('prompt-7-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">아이폰·갤럭시 간 사진 전송 — 방법마다 화질 차이가 납니다 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 카카오톡 사진 전송이 화질 손실되는 이유</h2>
+
+카카오톡으로 사진을 보낼 때 '일반 전송'을 선택하면 카카오 서버가 자동으로 이미지를 <strong>압축</strong>합니다. 편리하지만 원본 해상도와 용량이 줄어듭니다. 5000만 화소 갤럭시 S 시리즈 사진이 수 MB에서 수백 KB로 줄어들 수 있습니다.<br><br>
+
+카카오톡에서 '원본 전송' 기능을 사용하면 압축 없이 파일을 보낼 수 있습니다. 다만 수신 측에서도 사진을 저장할 때 '원본 저장'으로 받아야 원본 품질이 유지됩니다. 방법은 다음과 같습니다.
+
+<div class="step-box">
+<strong>[카카오톡 원본 전송 방법]</strong><br>
+채팅창 → 사진 첨부 → 사진 선택 후 하단에 '원본' 토글 활성화 → 전송<br>
+수신 측: 사진 길게 눌러 '원본 저장' 선택
+</div>
+
+<div class="warn-box">
+⚠️ 카카오톡 원본 전송은 파일 용량 제한이 있습니다. 단일 파일 기준 300MB, 1회 전송 파일 수 기준 30장 이하로 제한됩니다. 영상 원본 전송은 더 제한적입니다.
+</div>
+
+<h2>02 | 구글 포토 — 아이폰↔갤럭시 가장 범용적인 해결책</h2>
+
+구글 포토는 아이폰과 갤럭시 모두 앱을 설치할 수 있어, 기기 브랜드에 상관없이 사진을 공유하기 가장 편리한 서비스입니다.<br><br>
+
+<strong>원본 품질 설정</strong>이 핵심입니다. 구글 포토 백업 설정에서 '원본 화질'을 선택하면 압축 없이 사진이 업로드됩니다. 단, 구글 계정 무료 저장 용량(15GB)을 소진하면 유료 플랜(Google One)이 필요합니다.
+
+<div class="step-box">
+<strong>[구글 포토로 사진 공유하는 방법]</strong><br>
+1. 양쪽 기기 모두 구글 포토 앱 설치·로그인<br>
+2. 백업 설정 → '원본 화질' 선택(중요!)<br>
+3. 공유하려는 사진 선택 → 공유 아이콘 → 링크 공유 또는 대상 계정 직접 초대<br>
+4. 수신 측: 링크 열어 다운로드
+</div>
+
+<strong>앨범 공유 기능</strong>: 가족 여행 사진 같이 여러 장을 지속적으로 공유할 때는 '공유 앨범'을 만들어 가족 모두를 초대하면 가장 편리합니다. 각자 기기에서 사진을 올리면 모두가 볼 수 있습니다.
+
+<h2>03 | 클라우드 링크 공유 — 네이버 MYBOX, iCloud</h2>
+
+<strong>네이버 MYBOX(마이박스)</strong>: 국내 사용자에게 익숙한 네이버 서비스입니다. PC 연동이 편리하고, 링크 공유로 상대방이 앱 없이도 사진을 받을 수 있습니다. 기본 무료 용량은 30GB로 구글보다 넉넉합니다.<br><br>
+
+<strong>iCloud 링크</strong>: 아이폰에서 사진을 선택 후 공유 → 'iCloud 링크 복사'를 선택하면 링크를 생성할 수 있습니다. 이 링크를 갤럭시 사용자에게 보내면 갤럭시에서도 링크를 열어 사진을 원본 품질로 다운로드할 수 있습니다. 추가 앱 설치 없이 사용 가능하다는 장점이 있습니다.
+
+<div class="step-box">
+<strong>[iCloud 링크 공유 방법]</strong><br>
+아이폰 사진 앱 → 사진 선택 → 공유 아이콘(화살표 위) → 'iCloud 링크 복사' → 카카오톡 등으로 링크 전송<br>
+갤럭시 수신 측: 링크 클릭 → 브라우저에서 다운로드
+</div>
+
+<h2>04 | 케이블 연결 — PC를 거치는 가장 확실한 방법</h2>
+
+PC를 통한 전송은 번거롭지만 화질 손실이 전혀 없는 가장 확실한 방법입니다.
+
+<strong>절차</strong>:<br>
+1. 갤럭시를 USB로 PC에 연결 → PC에서 파일 탐색기로 사진 폴더에 접근 → 사진 복사<br>
+2. 아이폰을 USB로 PC에 연결 → PC에서 아이폰 드라이브(DCIM) 접근 → 사진 복사<br>
+3. PC의 공통 폴더에 모아 둔 후 정리<br><br>
+
+<div class="tip-box">
+💡 <strong>아이폰 HEIC 형식 주의</strong>: 아이폰으로 찍은 사진은 HEIC(High Efficiency Image Container) 포맷으로 저장됩니다. 갤럭시나 Windows에서 HEIC를 열 수 없는 경우가 있습니다. 아이폰 설정 → 카메라 → 포맷 → '가장 호환성 높은 형식'으로 변경하면 JPG로 저장되어 호환성이 좋아집니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+  <div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260905/7_photoxfer_2.png</span></div>
+  <pre class="prompt-text" id="prompt-7-2">Person using Google Photos app on smartphone to share photos, screen showing shared album interface, casual home setting, modern clean smartphone, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+  <button class="copy-btn" onclick="copyPrompt('prompt-7-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">구글 포토 공유 앨범 — 아이폰·갤럭시 모두 사용할 수 있는 가장 범용적인 방법 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 방법별 비교 요약</h2>
+
+<table class="compare-table">
+<thead>
+<tr><th>방법</th><th>화질</th><th>편의성</th><th>비용</th><th>추천 상황</th></tr>
+</thead>
+<tbody>
+<tr><td>카카오톡 원본 전송</td><td>원본 유지</td><td>매우 쉬움</td><td>무료</td><td>소수 사진, 즉시 전송</td></tr>
+<tr><td>구글 포토 공유</td><td>원본 유지(설정 시)</td><td>쉬움</td><td>무료(15GB 내)</td><td>가족 앨범 공유</td></tr>
+<tr><td>iCloud 링크</td><td>원본 유지</td><td>아이폰→타기기 간편</td><td>무료</td><td>아이폰→갤럭시 단방향</td></tr>
+<tr><td>네이버 MYBOX</td><td>원본 유지</td><td>쉬움</td><td>무료(30GB)</td><td>PC 연동 포함</td></tr>
+<tr><td>USB 케이블+PC</td><td>원본 유지</td><td>번거로움</td><td>무료</td><td>대용량, HEIC 변환 등</td></tr>
+</tbody>
+</table>
+
+<h2>06 | 빠른 결론 — 상황별 추천</h2>
+
+<strong>지금 당장 몇 장 보내야 할 때</strong>: 카카오톡 원본 전송<br><br>
+
+<strong>가족 여행 사진 수십~수백 장 공유할 때</strong>: 구글 포토 공유 앨범<br><br>
+
+<strong>아이폰에서 갤럭시로 간단하게 보낼 때</strong>: iCloud 링크 복사 후 카카오톡으로 링크 전송<br><br>
+
+<strong>화질·메타데이터(GPS, 날짜 등)까지 100% 보존해야 할 때</strong>: USB 케이블 + PC를 통한 직접 복사<br><br>
+
+사진 전송 방법보다 더 중요한 것은 <strong>수신 측이 받은 파일을 어떻게 저장하는지</strong>입니다. 카카오톡이나 링크로 사진을 받더라도 다운로드할 때 '원본 저장' 또는 '고화질 저장' 옵션을 선택해야 화질이 유지됩니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260904/tech_google_photos_storage_free.html">구글 포토 무료 용량 꽉 찼을 때 — 정리 방법과 Google One 가입 기준</a></li>
+<li><a href="../260904/tech_smartphone_backup_essential.html">스마트폰 사진 백업 필수 설정 — 잃어버리기 전에 지금 해야 할 것</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#아이폰갤럭시</span>
+<span class="tag">#사진전송</span>
+<span class="tag">#화질손실없이</span>
+<span class="tag">#구글포토</span>
+<span class="tag">#iCloud링크</span>
+<span class="tag">#카카오톡원본전송</span>
+<span class="tag">#사진공유</span>
+<span class="tag">#HEIC변환</span>
+<span class="tag">#스마트폰사진</span>
+<span class="tag">#사진백업</span>
+</div>
+</body>
+</html>

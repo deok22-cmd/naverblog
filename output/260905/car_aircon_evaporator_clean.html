@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>자동차 에어컨 냄새 안 없어질 때 에바포레이터 분사 vs 업체 세척 비교</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .compare-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+  .compare-table th { background: #388e3c; color: #fff; padding: 10px; text-align: center; }
+  .compare-table td { padding: 10px 12px; border: 1px solid #ddd; text-align: center; font-size: 0.9em; }
+  .compare-table tr:nth-child(even) td { background: #f1faf1; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>자동차 에어컨 냄새 안 없어질 때 에바포레이터 분사 vs 업체 세척 비교</h1>
+<div class="intro-box">
+에어컨 필터를 갈아봤는데도 퀴퀴한 냄새가 계속 난다면, 문제는 에어컨 필터가 아니라 에바포레이터(Evaporator)에 있을 가능성이 높습니다. 에바포레이터는 자동차 에어컨의 냉각 핵심 부품으로, 공기 중 수분이 응결하면서 오랜 기간에 걸쳐 곰팡이와 세균이 번식하는 곳입니다.<br><br>
+에바포레이터 세척 방법에는 크게 두 가지가 있습니다. 하나는 셀프로 스프레이형 세척제를 분사하는 방법이고, 다른 하나는 전문 업체에서 에바포레이터를 분리 또는 비분리 상태로 세척하는 방법입니다. 두 방법의 차이와 각각의 적합한 상황을 알아봅니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+  <div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260905/6_aircon_1.png</span></div>
+  <pre class="prompt-text" id="prompt-6-1">Car air conditioning evaporator component, automotive AC evaporator with frost and dust buildup, mechanic workshop setting, technical close-up of car interior HVAC system, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+  <button class="copy-btn" onclick="copyPrompt('prompt-6-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">자동차 에바포레이터 — 냉기가 만들어지는 핵심 부품으로 곰팡이 번식 위험 높음 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 에바포레이터에서 냄새가 나는 이유</h2>
+
+에어컨을 켜면 에바포레이터 표면 온도가 영하로 내려갑니다. 이 과정에서 공기 중 수분이 에바포레이터 표면에 응결·결빙됩니다. 에어컨을 끄면 결빙된 수분이 녹아 배출되어야 하는데, 완전히 배출되지 않으면 에바포레이터 주변에 습기가 남습니다.<br><br>
+
+이 습기가 오랜 기간 쌓이면 <strong>곰팡이와 세균이 번식</strong>하게 됩니다. 에어컨을 틀면 이 냄새가 차 내부로 들어오는 것입니다. 에어컨 필터는 공기 중 먼지를 걸러주지만, 이미 에바포레이터에 번식한 곰팡이까지 차단하지는 못합니다.<br><br>
+
+<div class="tip-box">
+💡 <strong>언제 특히 심해지나?</strong><br>
+여름철 에어컨을 집중적으로 사용한 후, 가을로 접어드는 9~10월에 냄새가 가장 심하게 느껴지는 경우가 많습니다. 여름 동안 에바포레이터 습기가 축적된 것이 날씨가 선선해지면서 더 뚜렷하게 감지되기 때문입니다.
+</div>
+
+<h2>02 | 셀프 스프레이 세척 — 방법과 한계</h2>
+
+자동차 에어컨 냄새 제거 스프레이 제품은 다이소, 자동차용품점, 온라인 쇼핑몰 등에서 쉽게 구입할 수 있습니다. 가격은 5,000원~2만 원 내외입니다. 사용 방법은 보통 다음과 같습니다.<br><br>
+
+<strong>스프레이 사용 방법</strong>:<br>
+1. 에어컨 필터를 분리한 상태에서 외기 모드로 에어컨 팬을 최대 속도로 작동시킵니다.<br>
+2. 스프레이 캔을 에어컨 필터 삽입구에 넣고 분사합니다.<br>
+3. 약 10~20분 동안 팬을 돌려 세척제가 에바포레이터 전체에 퍼지도록 합니다.<br>
+4. 이후 문과 창문을 열어 환기합니다.<br><br>
+
+<strong>셀프 방식의 한계</strong>: 스프레이 세척제는 곰팡이 억제 성분이 포함되어 있어 단기적으로 냄새를 줄여주지만, 에바포레이터 표면의 오염이 심할 경우 표면을 직접 물리적으로 세척하지 못해 효과가 오래가지 않습니다. 보통 1~3개월 정도 효과가 지속됩니다.
+
+<h2>03 | 전문 업체 세척 — 비분리 vs 분리 세척</h2>
+
+<strong>비분리 세척</strong>: 에바포레이터를 차에서 분리하지 않고 전용 세척 장비로 세척액을 분사하여 오염물을 제거하는 방법입니다. 비교적 빠르게 작업이 완료되며, 비용은 5~15만 원 내외입니다. 다만 에바포레이터 내부 깊숙한 곳의 오염까지 완전히 제거하기 어렵다는 한계가 있습니다.<br><br>
+
+<strong>분리 세척</strong>: 에바포레이터를 차에서 분리하여 고압 세척과 살균을 진행하는 방법입니다. 가장 철저한 세척 방식이지만 작업 시간이 길고 비용이 상대적으로 높습니다. 비용은 차종에 따라 다르며, 15~30만 원 이상 들 수 있습니다. 차종에 따라 분리 자체가 매우 어렵거나 추가 비용이 발생하는 경우도 있습니다.
+
+<table class="compare-table">
+<thead>
+<tr><th>방법</th><th>비용(참고)</th><th>효과 지속</th><th>오염 제거 정도</th><th>적합 상황</th></tr>
+</thead>
+<tbody>
+<tr><td>셀프 스프레이</td><td>5,000~2만원</td><td>1~3개월</td><td>표면 억제 수준</td><td>경미한 냄새, 예방 관리</td></tr>
+<tr><td>업체 비분리 세척</td><td>5~15만원</td><td>6~12개월</td><td>중간 수준</td><td>냄새 심하나 분리 불필요시</td></tr>
+<tr><td>업체 분리 세척</td><td>15~30만원+</td><td>1년 이상</td><td>가장 철저</td><td>장기 방치, 극심한 냄새</td></tr>
+</tbody>
+</table>
+
+<div class="warn-box">
+⚠️ <strong>주의</strong>: 위 비용은 일반적인 참고 범위이며, 차종·업체·지역에 따라 크게 달라질 수 있습니다. 실제 견적은 방문 점검 후 확인하세요.
+</div>
+
+<h2>04 | 가을 마감 시즌에 에바포레이터 관리하는 이유</h2>
+
+9~10월은 에어컨 사용이 줄어드는 시점입니다. 이때 에바포레이터 세척과 관리를 하면 다음과 같은 이점이 있습니다.<br><br>
+
+<strong>겨울 히터 사용 시 냄새 예방</strong>: 겨울에 히터를 켜도 내부 공기 순환 경로는 에어컨과 공유합니다. 에바포레이터의 곰팡이를 가을에 제거하지 않으면 겨울 히터 사용 시에도 냄새가 날 수 있습니다.<br><br>
+
+<strong>비수기 업체 여유</strong>: 여름 성수기에는 에어컨 관련 작업 예약이 밀려 대기가 길지만, 가을에는 상대적으로 예약이 수월합니다. 작업 시간도 여유롭게 배정받을 수 있습니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+  <div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260905/6_aircon_2.png</span></div>
+  <pre class="prompt-text" id="prompt-6-2">Mechanic spraying car AC cleaning spray into cabin air filter slot, hands visible, car interior with open glove box, professional automotive maintenance, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+  <button class="copy-btn" onclick="copyPrompt('prompt-6-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">에어컨 필터 삽입구를 통한 셀프 세척제 분사 — 가장 쉬운 DIY 방법 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 에바포레이터 냄새 예방법 — 습관 하나로 달라진다</h2>
+
+세척보다 더 중요한 것은 예방입니다. 에바포레이터 냄새 발생을 줄이는 가장 효과적인 습관은 <strong>에어컨 끄기 전 5분 외기 환기</strong>입니다.<br><br>
+
+방법은 간단합니다. 목적지에 도착하기 5분 전, 에어컨 버튼을 끄고 팬만 켜서(외기 모드) 바람이 나오게 합니다. 이렇게 하면 에바포레이터 표면에 남은 냉기와 수분이 어느 정도 건조됩니다. 에바포레이터가 완전히 마르지는 않지만, 장기적으로 곰팡이 번식 속도를 늦추는 데 효과적입니다.<br><br>
+
+또한 에어컨 필터는 제조사 권장 주기(보통 12,000~15,000km 또는 1년)에 맞춰 교체하는 것이 기본입니다. 필터는 냄새 원인이 아닐 수 있지만, 필터가 오염되면 차 내 공기질 전반이 나빠지므로 정기 교체를 권장합니다.
+
+<h2>06 | 셀프로 해결이 어려운 상황 — 업체 방문 기준</h2>
+
+아래에 해당된다면 셀프 세척보다 전문 업체 방문을 권장합니다.
+
+- 에어컨 스프레이를 2~3회 사용해도 냄새가 줄지 않는 경우
+- 에어컨을 켰을 때 역겨운 냄새 혹은 곰팡이 냄새가 매우 강하게 나는 경우
+- 차 구입 후 에바포레이터 세척을 한 번도 하지 않은 경우 (7~10년 이상)
+- 비가 많이 오는 날이나 습한 날에 유독 냄새가 심해지는 경우
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260904/car_fall_tire_inspection.html">가을 장거리 전 타이어 점검 항목 — 마모·공기압·얼라인먼트 체크</a></li>
+<li><a href="../260904/car_wiper_replacement_timing.html">와이퍼 교체 시기와 빗소리 달라지는 기준 — 셀프 교체 방법</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#에어컨냄새</span>
+<span class="tag">#에바포레이터</span>
+<span class="tag">#자동차에어컨</span>
+<span class="tag">#차량관리</span>
+<span class="tag">#에어컨세척</span>
+<span class="tag">#에바포레이터세척</span>
+<span class="tag">#자동차냄새</span>
+<span class="tag">#곰팡이냄새</span>
+<span class="tag">#가을차량점검</span>
+<span class="tag">#카케어</span>
+</div>
+</body>
+</html>
