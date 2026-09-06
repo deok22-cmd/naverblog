@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>청도 와인터널과 반시감 수확 체험 — 경북 가을 먹거리 나들이 코스</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #004d40; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf9; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #b2dfdb; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #00796b; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #b2dfdb; border-left: 4px solid #00796b; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #00796b; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#00796b'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>청도 와인터널과 반시감 수확 체험 — 경북 가을 먹거리 나들이 코스</h1>
+
+<div class="intro-box">
+경북 청도는 씨 없는 납작 감 '반시'와 이를 원료로 만든 감 와인으로 유명한 고장입니다. 폐철도 터널을 활용한 청도 와인터널은 연중 13~14°C를 유지하는 항온·항습 환경 덕분에 감 와인 숙성과 시음 명소로 자리 잡았습니다. 9월 말부터 시작되는 반시감 수확 체험, 청도 소싸움테마파크, 천년 고찰 운문사까지 하루에 알차게 묶어 즐길 수 있는 경북 가을 나들이 코스를 소개합니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260907/3_cheongdo_wine_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-1">Interior of Cheongdo Wine Tunnel in North Gyeongsang Province, South Korea. A long arched brick tunnel stretching into the distance, lined on both sides with hundreds of wooden wine barrels stacked in rows. Warm amber and deep red atmospheric lighting from string lights and spotlights illuminating the wine barrels. The tunnel ceiling arches in a classic railway tunnel shape. Visitors walking in the middle of the tunnel exploring the wine display. A few wine tasting counters visible. The air looks cool and the ambiance is intimate and cozy. Photorealistic, ultra high detail, 1:1 aspect ratio, moody interior photography.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">청도 와인터널 내부 와인 조명과 숙성 공간 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 청도 와인터널이란 — 폐철도 터널의 변신</h2>
+
+청도 와인터널은 경북 청도군 화양읍 송금리에 위치한 독특한 체험 명소입니다. 일제강점기에 건설된 옛 경부선 증기기관차 터널을 2006년부터 와인 저장 및 판매 공간으로 탈바꿈시킨 곳입니다.<br><br>
+
+터널 길이는 약 1,006m에 달합니다. 터널 내부는 연중 <strong>13~14°C의 항온·항습</strong>이 자연적으로 유지되어, 와인 숙성에 이상적인 환경을 제공합니다. 별도의 냉난방 설비 없이도 이 온도가 유지된다는 점이 이 터널의 가장 큰 자랑입니다.<br><br>
+
+청도 와인터널에서는 청도 특산품인 반시 감으로 만든 <strong>감 와인</strong>을 생산하고 판매합니다. 씨 없는 납작한 반시를 원료로 한 감 와인은 포도 와인과는 다른 독특한 맛과 향을 가지며, 청도 여행의 필수 기념품으로 꼽힙니다.<br><br>
+
+터널 내부는 와인 저장 오크통, 화려한 조명 장식, 포토존 등으로 꾸며져 있어 탐방 자체가 볼거리입니다. 특히 붉은 조명과 와인 오크통이 어우러진 구간은 인스타그램 인기 촬영 스폿으로 유명합니다.<br><br>
+
+시음 체험이 입장권에 포함되어 있으며, 청도와인터널 공식 홈페이지 또는 방문 전 전화로 최신 운영 정보와 입장료를 확인하시기 바랍니다. 연중 개방되지만 가을이 감 와인 출하 시즌으로 더욱 활기찬 분위기를 느낄 수 있습니다.<br><br>
+
+터널 내부는 연중 13~14°C로 서늘합니다. 바깥이 아무리 더운 날씨여도 터널 안에서는 <strong>얇은 겉옷</strong>이 필요합니다. 여름이나 초가을 방문객이 깜짝 놀라는 경우가 많으므로, 반드시 겉옷 한 장을 준비하시기 바랍니다.
+
+<h2>02 | 청도 반시감 — 경북 최고 특산 감의 모든 것</h2>
+
+반시(盤枾)는 청도 특산품의 상징입니다. '소반(盤)처럼 납작하다'는 뜻에서 이름이 유래했으며, 가장 큰 특징은 <strong>씨가 없다</strong>는 점입니다. 씨 없는 납작한 감은 청도군의 특수한 토양과 기후 조건에서만 생산됩니다.<br><br>
+
+수확 시기는 9월 말부터 11월 초까지이며, 10월이 절정입니다. 반시는 곶감과 홍시의 원료로 활용되며, 전국 곶감 생산량의 상당 비율이 청도 반시에서 나올 정도로 생산량이 많습니다.<br><br>
+
+당도가 높고 육질이 부드러워 <strong>생식</strong>으로도 인기입니다. 특히 홍시가 될 때의 물렁거리는 식감과 달콤한 맛은 청도 반시만의 특징으로 알려져 있습니다.<br><br>
+
+수확 체험 농원은 청도군 내 여러 곳에서 운영되고 있습니다. 방문 전에 청도군 농촌체험 안내 센터나 청도군청 홈페이지를 통해 체험 가능한 농원 목록과 예약 방법을 확인하시기 바랍니다.<br><br>
+
+9월 말~10월에는 청도 일대를 드라이브하다 보면 감나무에 주렁주렁 달린 붉은 반시의 장관을 어렵지 않게 볼 수 있습니다. 감나무 군락지 드라이브 자체가 하나의 볼거리입니다.<br><br>
+
+청도 반시 직거래 구입은 청도 재래시장이나 와인터널 매장에서 할 수 있습니다. 직거래 구입이 신선도와 가격 면에서 가장 유리하며, 택배 발송 서비스를 이용하면 집에서도 청도 반시를 즐길 수 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260907/3_cheongdo_wine_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-2">A Korean persimmon orchard in Cheongdo, North Gyeongsang Province, in early autumn. Rows of persimmon trees loaded with bright orange-red flat persimmons (bansi variety, seedless) hanging heavily from branches. A farmer and a family with children harvesting persimmons using baskets. The orchard is bathed in warm afternoon sunlight. Blue sky with a few white clouds visible above the treeline. A rural Korean countryside setting with mountains in the background. Fallen leaves beginning to appear on the orchard floor. Photorealistic, ultra high detail, 1:1 aspect ratio, warm documentary photography style.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">청도 반시감 수확 체험 — 감나무에 주렁주렁 붉게 익은 반시 / AI 제작 이미지</div>
+</div>
+
+<h2>03 | 청도 소싸움테마파크</h2>
+
+청도 소싸움은 한국 전통 민속 행사 중 하나로, 청도에서 전국 최대 규모로 운영되고 있습니다. 소들이 뿔을 맞대고 힘을 겨루는 전통 놀이로, 유흥적 도박과는 거리가 먼 건전한 전통 민속 문화입니다.<br><br>
+
+<strong>청도 소싸움테마파크</strong>는 청도읍에 위치하며, 소싸움 체험과 전시를 상설로 운영하고 있습니다. 소싸움의 역사와 규칙을 소개하는 전시관, 소싸움 경기장, 미니 동물원, 어린이 체험 시설 등이 갖추어져 있어 가족 나들이 장소로 손색이 없습니다.<br><br>
+
+정기 소싸움 경기 일정은 공식 홈페이지를 통해 확인하시기 바랍니다. 특별 행사 기간에는 더욱 규모 있는 대회가 열리며, 방문 전에 일정을 파악하면 생생한 경기를 관람할 수 있습니다.<br><br>
+
+입장료는 성인과 소인 기준으로 구분되며, 현장에서 확인하시기 바랍니다. 소싸움 관련 기념품 판매도 이루어지며, 청도의 전통 문화를 담은 다양한 물건들을 구입할 수 있습니다.<br><br>
+
+어린이 동반 가족이라면 미니 동물원과 어린이 체험 시설이 있어 아이들이 특히 좋아합니다. 소를 직접 만져보거나 먹이를 주는 체험도 가능한 경우가 있으니 현장에서 확인해 보세요.<br><br>
+
+청도 소싸움테마파크는 청도 와인터널과 차로 10~15분 거리에 있어 함께 묶어 방문하기 좋습니다. 오전에 와인터널을 관람하고 점심 후 소싸움테마파크를 방문하는 순서가 일반적입니다.
+
+<h2>04 | 청도 와인터널 방문 실용 정보</h2>
+
+청도 와인터널의 주소는 경북 청도군 화양읍 청도천로 351입니다. 내비게이션에 '청도와인터널' 또는 해당 주소를 입력하면 바로 안내받을 수 있습니다.<br><br>
+
+운영 시간은 기본적으로 오전 9시부터 오후 6시까지이나, 시즌과 행사에 따라 변동될 수 있습니다. 방문 전에 청도와인터널 공식 홈페이지 또는 전화로 최신 운영 시간과 프로그램을 확인하시기 바랍니다.<br><br>
+
+주차는 와인터널 전용 주차장을 이용하며 무료로 운영됩니다. 주차 공간이 넓어 성수기에도 주차 걱정이 크지 않습니다.<br><br>
+
+터널 내부 온도는 연중 <strong>13~14°C</strong>입니다. 여름에 방문해도, 초가을에 방문해도 터널 안은 서늘합니다. 얇은 가디건이나 바람막이 한 장을 꼭 챙기시기 바랍니다. 특히 더운 날씨에 방문하면 온도 차가 크게 느껴집니다.<br><br>
+
+포토존은 터널 중간 구간의 와인 저장고와 붉은 조명 구간이 가장 인기입니다. 오크통과 조명이 어우러진 이 구간은 사진 촬영에 최적화된 공간으로, 삼각대 없이도 분위기 있는 사진을 찍을 수 있습니다.<br><br>
+
+접근 경로는 경부고속도로 청도IC 또는 대구-부산고속도로 청도IC에서 하차 후 진입합니다. 대구에서는 약 30~40분, 부산에서는 약 1시간 30분, 서울에서는 약 3시간 30분이 소요됩니다.
+
+<h2>05 | 청도 와인터널 주변 코스 연결</h2>
+
+와인터널 관람 후 바로 연결할 수 있는 주변 명소가 다양합니다. 가장 가까운 곳은 <strong>청도읍성</strong>으로, 조선 시대에 쌓은 읍성의 일부가 남아 있습니다. 무료로 관람할 수 있으며, 소박하지만 역사적 의미가 있는 공간입니다.<br><br>
+
+<strong>운문사</strong>는 청도군 운문면에 위치한 천년 고찰로, 비구니 도량으로 유명합니다. 운문사 경내의 솔숲과 사찰 건축이 조화를 이루는 고즈넉한 분위기가 매력적입니다. 와인터널에서 운문사까지는 차로 약 20~30분이 소요됩니다.<br><br>
+
+운문사 주변의 <strong>운문호</strong>는 운문댐 저수지로, 가을 수변 드라이브 명소입니다. 수면에 반영되는 산과 하늘 풍경이 특히 아름다우며, 드라이브 코스로 부담 없이 즐길 수 있습니다.<br><br>
+
+청도읍성 인근에서 청도군 경계를 넘으면 밀양으로 연결되며, 밀양 표충사나 밀양강 드라이브와 함께 묶어 당일 여행 반경을 넓힐 수도 있습니다.<br><br>
+
+비슬산은 청도군과 대구 달성군 경계에 위치하며, 대구에서 약 30분 거리입니다. 억새와 단풍의 10월 절정이 유명하며, 청도 여행 후 귀경길에 비슬산 드라이브를 추가하는 것도 좋습니다.<br><br>
+
+청도IC에서 밀양 방향으로 드라이브를 연결하면 더욱 다채로운 경북 남부 일주 코스가 완성됩니다. 청도~밀양~양산 방면으로 이어지는 루트는 경남·경북 접경 지역의 다양한 명소를 한 번에 즐길 수 있는 드라이브 코스입니다.
+
+<h2>06 | 경북 가을 먹거리 — 청도에서 맛봐야 할 것</h2>
+
+청도 여행에서 첫 번째로 맛봐야 할 것은 <strong>감 와인</strong>입니다. 청도 와인터널 현장에서 구매하거나 시음할 수 있습니다. 포도 와인과는 달리 감의 은은한 단맛과 특유의 향이 특징이며, 기념품으로도 인기 높습니다.<br><br>
+
+<strong>청도 황토 감곶감</strong>은 청도 반시를 말린 곶감으로, 청도 특산 곶감입니다. 9월 말~10월에 방문하면 곶감 건조 풍경을 볼 수 있는 농장도 있습니다. 직거래 구입 시 신선하고 저렴합니다.<br><br>
+
+<strong>청도 한우 갈비</strong>는 소싸움 문화와 함께 발달한 청도의 쇠고기 음식 문화를 대표합니다. 청도 시내와 소싸움테마파크 인근에 한우 갈비 전문 식당들이 있으며, 경북 한우의 품질이 뛰어납니다.<br><br>
+
+운문사 인근에는 <strong>산나물 비빔밥</strong>을 전문으로 하는 산골 식당들이 있습니다. 운문산에서 채취한 제철 산나물로 만든 비빔밥은 사찰음식의 담백함과 산나물의 향긋함이 어우러진 맛입니다.<br><br>
+
+<strong>청도 5일장</strong>은 2일과 7일로 끝나는 날에 열립니다. 지역 농산물과 먹거리를 직거래로 구입할 수 있으며, 청도 반시와 지역 특산품을 시장에서 구입하면 더욱 저렴합니다.<br><br>
+
+청도 여행의 마무리로 지역 막걸리와 홍시 한 잔을 즐겨 보세요. 청도에서 생산되는 전통 막걸리는 구수하고 은은한 맛이 특징이며, 반시 홍시와 함께 즐기면 경북 가을 여행의 정취를 완성할 수 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260907/3_cheongdo_wine_3.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-3">Cheongdo traditional bullfighting theme park in North Gyeongsang Province, South Korea, on a sunny autumn day. A wide arena with a sandy ring where two large Korean bulls face off, their horns locked together. Spectators watching from tiered stands on both sides, many wearing autumn jackets. Banners and flags of the event decorating the arena. Adjacent to the ring, families with children walking around the park grounds. In the background, rolling hills with early autumn foliage. Traditional festival atmosphere with vendors. Photorealistic, ultra high detail, 1:1 aspect ratio, vivid documentary photography.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-3')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">청도 소싸움테마파크와 경북 가을 나들이 풍경 / AI 제작 이미지</div>
+</div>
+
+<h2>07 | 청도 반시감 수확 체험 — 농원 체험 방법</h2>
+
+청도 반시감 수확 체험은 9월 말부터 10월 말까지 운영하는 체험 농원에서 진행됩니다. 시기에 따라 체험 가능한 농원 수가 달라지므로, 방문 전에 <strong>청도군 농업기술센터</strong> 또는 청도관광안내소에 문의해 운영 중인 농원 목록을 확인하시기 바랍니다.<br><br>
+
+체험 내용은 기본적으로 <strong>직접 감 따기</strong>와 현장에서 홍시 맛보기로 구성됩니다. 감나무에서 직접 반시를 따는 경험은 도시에서는 접하기 어려운 특별한 체험으로, 어린이들에게 자연 교육 효과가 큽니다.<br><br>
+
+수확한 감을 현장에서 kg 단위로 구입할 수 있습니다. 농장 직거래이므로 시중 마트보다 저렴하게 청도 반시를 구입할 수 있으며, 신선도도 보장됩니다.<br><br>
+
+사전 예약이 필요한 농원이 많습니다. 특히 주말에는 체험객이 몰리므로 최소 1주일 전에 예약하는 것을 권장합니다. 청도군청 홈페이지나 해당 농원 전화번호를 통해 예약하시기 바랍니다.<br><br>
+
+체험 시에는 편한 복장과 운동화를 착용하는 것이 좋습니다. 감나무 아래에서 작업하므로 감 즙이 옷에 묻을 수 있으니 여유 옷을 준비해 두거나 물세탁이 쉬운 옷을 입고 오시는 것을 권장합니다.<br><br>
+
+체험 후 농원 주변을 천천히 산책하며 가을 감나무 풍경을 충분히 즐겨 보세요. 주렁주렁 달린 붉은 반시와 파란 하늘의 대비는 청도 가을 여행의 가장 인상적인 장면 중 하나로 남을 것입니다.
+
+<h2>08 | 청도 당일치기 추천 코스</h2>
+
+청도 당일치기 코스를 아래 일정으로 계획하면 주요 명소를 모두 둘러볼 수 있습니다. 대구나 경남에서 출발하면 오전 일찍 도착이 가능하고, 수도권에서도 오전 7시 전후 출발하면 여유 있게 소화할 수 있습니다.<br><br>
+
+<strong>오전 10시</strong> — 청도 와인터널에 도착합니다. 터널 내부를 천천히 탐방하며 와인 저장 공간과 포토존을 둘러봅니다. 시음 코너에서 감 와인을 맛보고 마음에 드는 와인을 구입합니다. 소요 시간 약 1시간 30분.<br><br>
+
+<strong>오전 11시 30분</strong> — 청도읍 일대 한우 갈비 식당으로 이동해 점심을 즐깁니다. 청도 한우 갈비는 청도 여행의 대표 먹거리 중 하나로, 양질의 경북 한우를 합리적인 가격에 맛볼 수 있습니다.<br><br>
+
+<strong>오후 1시</strong> — 청도 소싸움테마파크로 이동합니다. 소싸움 전시관 관람과 미니 동물원 체험을 즐깁니다. 어린이를 동반한 경우에는 어린이 체험 시설에서 더 많은 시간을 보낼 수 있습니다. 소요 시간 약 1시간 30분.<br><br>
+
+<strong>오후 2시 30분</strong> — 사전에 예약한 반시감 수확 체험 농원으로 이동합니다. 직접 반시를 따고, 현장에서 홍시를 맛보는 체험을 즐깁니다. 체험 후 직거래로 반시를 구입해 가는 것도 좋습니다.<br><br>
+
+<strong>오후 4시</strong> — 운문사와 운문호 드라이브로 이동합니다. 천년 고찰 운문사 경내를 조용히 산책하고, 운문호 수변 드라이브로 청도 여행의 마무리를 장식합니다.<br><br>
+
+<strong>오후 5시 30분</strong> — 귀경길에 오릅니다. 청도 특산 곶감이나 감 와인을 선물용으로 구입해 떠나는 것도 좋습니다.
+
+<h2>09 | 청도 여행 실용 정보 정리</h2>
+
+서울·수도권에서 청도까지는 경부고속도로 청도IC를 이용하며, 약 3시간 30분이 소요됩니다. 차량 정체가 있는 시간대를 피해 오전 6~7시에 출발하면 여유 있게 도착할 수 있습니다.<br><br>
+
+대구에서 청도는 매우 가까워 약 30~40분이면 도착합니다. 대구 시민들의 당일치기 나들이 장소로 특히 인기가 높습니다. 부산에서는 대구-부산고속도로를 이용해 약 1시간 30분이 소요됩니다.<br><br>
+
+대중교통을 이용할 경우 동대구역에서 청도역까지 무궁화호 또는 ITX-새마을 열차로 약 30분이 소요됩니다. 청도역에서 와인터널까지는 시내버스 또는 택시를 이용해야 합니다. 택시가 더욱 편리하며, 요금은 현장에서 확인하시기 바랍니다.<br><br>
+
+숙박은 청도읍 내 모텔과 펜션을 이용할 수 있으나, 청도는 당일치기 여행지로 수요가 많아 숙박 시설 수가 많지 않습니다. 1박 2일을 계획한다면 조기에 예약하시기 바랍니다.<br><br>
+
+청도 와인터널은 방문객이 많은 인기 명소이므로 주말 오전에 방문하는 것이 혼잡을 피하기 좋습니다. 가을 성수기 주말에는 입장 대기가 생길 수 있으므로 오전 10시 이전에 도착하는 것을 권장합니다.<br><br>
+
+청도군청 문화관광 홈페이지 또는 청도와인터널 공식 홈페이지에서 방문 전 운영 정보, 시음 프로그램, 계절 이벤트 일정을 반드시 확인하시기 바랍니다. 가격과 운영 시간이 수시로 변동될 수 있습니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260906/travel_odaesan_woljeongsa_fall.html">오대산 월정사 전나무숲 초가을 산책과 상원사</a></li>
+<li><a href="../260906/travel_jeju_sanguemburi_silvergrass.html">제주 산굼부리·따라비오름 억새, 가을 오름 드라이브 코스</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<span class="tag">#청도와인터널</span>
+<span class="tag">#반시감수확</span>
+<span class="tag">#청도여행</span>
+<span class="tag">#경북가을나들이</span>
+<span class="tag">#소싸움테마파크</span>
+<span class="tag">#감와인</span>
+<span class="tag">#운문사</span>
+<span class="tag">#청도반시</span>
+<span class="tag">#경북당일치기</span>
+<span class="tag">#가을먹거리</span>
+</div>
+
+</body>
+</html>
