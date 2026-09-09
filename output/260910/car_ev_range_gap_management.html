@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>전기차 주행가능거리 표시와 실제 주행거리 차이 나는 이유와 관리법</title>
+<style>
+  body { max-width:780px; margin:0 auto; padding:20px; font-family:'Noto Sans KR',sans-serif; color:#212121; line-height:1.85; }
+  h1 { border-bottom:5px solid #e65100; color:#bf360c; font-size:1.55em; padding-bottom:12px; margin-bottom:24px; }
+  h2 { background:#fff3e0; border-left:6px solid #e65100; color:#bf360c; padding:10px 16px; margin:36px 0 16px; font-size:1.13em; }
+  .intro-box { background:#fff8e1; border:2px solid #ffcc80; border-radius:8px; padding:18px 22px; margin-bottom:28px; }
+  .img-area { margin:30px 0; text-align:center; }
+  .img-placeholder { border:2px dashed #ffcc80; background:#fff3e0; border-radius:8px; width:100%; height:300px; display:flex; align-items:center; justify-content:center; color:#e65100; font-size:0.95em; }
+  .img-caption { font-size:0.88em; color:#666; font-style:italic; margin-top:8px; }
+  .info-table { width:100%; border-collapse:collapse; margin:20px 0; }
+  .info-table th { background:#e65100; color:#fff; padding:9px 12px; text-align:left; }
+  .info-table td { padding:9px 12px; border-bottom:1px solid #ddd; }
+  .info-table tr:nth-child(even) td { background:#fff3e0; }
+  .recommend-area { background:#f8f9fa; border-radius:8px; padding:20px 24px; margin:36px 0; }
+  .recommend-area h3 { color:#e65100; margin-top:0; }
+  .tag { background:#f0f0f0; border:1px solid #ddd; border-radius:4px; padding:3px 10px; font-size:0.85em; margin:2px; display:inline-block; }
+</style>
+</head>
+<body>
+<h1>전기차 주행가능거리 표시와 실제 주행거리 차이 나는 이유와 관리법</h1>
+
+<div class="intro-box">
+전기차 계기판에 '220km 주행 가능'이라고 떴는데 실제로는 170km 만에 방전 직전이 된 경험, 전기차 오너라면 한번쯤 겪습니다. 이 차이는 왜 생기는 걸까요? 이 글에서는 전기차 표시 주행가능거리(DTE)와 실제 주행거리 사이에 차이가 발생하는 이유를 정리하고, 실거리를 늘리는 관리법까지 안내합니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder"><img src="../../images/260910/6_ev_range_1.png" alt="전기차 계기판 주행가능거리" style="max-width:100%;max-height:300px;object-fit:cover;" onerror="this.parentElement.innerHTML='📷 전기차 계기판 주행가능거리 표시 (이미지 준비 중)'"></div>
+  <div class="img-caption">전기차 계기판 — 표시 주행가능거리(DTE)와 실제 주행거리 사이에는 늘 차이가 있다</div>
+</div>
+
+<h2>01 | 표시 주행가능거리(DTE)는 어떻게 계산되나</h2>
+
+전기차 계기판에 나타나는 '주행가능거리(DTE: Distance to Empty)'는 현재 배터리 잔량 × 예측 에너지 효율을 기반으로 계산됩니다. 예측 효율은 최근 수 km~수십 km 주행의 평균 전비(km/kWh)를 기반으로 산출되며, 차량 제조사마다 계산 방식이 조금씩 다릅니다.<br><br>
+
+즉, DTE는 '지금 이 속도와 조건으로 계속 달리면 이 거리만큼 갈 수 있을 것'이라는 추정치입니다. 조건이 바뀌면 표시 숫자도 빠르게 바뀝니다. 에어컨을 켜면 DTE가 줄어들고, 완속 도심 주행을 하면 DTE가 늘어나는 현상이 바로 이 때문입니다.
+
+<h2>02 | 차이가 나는 가장 큰 이유 — 온도와 속도</h2>
+
+<strong>①온도: 겨울에 특히 극심</strong><br>
+리튬이온 배터리는 온도에 민감합니다. 기온이 낮을수록 배터리 내 이온 이동 속도가 느려져 실질적으로 꺼낼 수 있는 에너지가 줄어듭니다. 영하 10°C 환경에서는 여름(25°C) 대비 실주행거리가 20~40%까지 감소하는 경우가 있습니다.<br><br>
+
+반대로 고온(35°C 이상)에서도 배터리 효율이 떨어지지만, 저온만큼 극단적이지는 않습니다. 9월처럼 온도가 선선해지는 시기는 오히려 배터리 효율이 가장 좋은 계절입니다.<br><br>
+
+<strong>②속도: 고속 주행이 핵심 변수</strong><br>
+전기차 전비는 주행 속도에 크게 영향을 받습니다. 도심 저속 주행(30~60km/h)에서는 회생제동 효과가 높아 전비가 좋지만, 고속도로 100~120km/h 주행에서는 공기 저항이 크게 증가해 전비가 급격히 낮아집니다.<br><br>
+
+예를 들어 도심에서 DTE 200km로 출발했더라도 고속도로 110km/h로 달리면 실제 주행거리는 150~160km 수준으로 줄어드는 경우가 흔합니다.
+
+<h2>03 | 기타 차이 발생 요인들</h2>
+
+<strong>공조장치 사용</strong>: 에어컨·히터는 상당한 전력을 소비합니다. 특히 히터(PTC 히터 방식)는 에어컨보다 더 많은 전력을 씁니다. 혹한기에는 난방 단독으로 10~20% 이상의 에너지가 소모될 수 있습니다.<br><br>
+
+<strong>탑승 인원·짐 무게</strong>: 차량 무게가 증가할수록 가속 시 더 많은 에너지가 필요합니다. 5명 풀승차와 대형 짐은 전비를 낮춥니다.<br><br>
+
+<strong>타이어 공기압</strong>: 공기압이 낮으면 구름 저항이 커져 전비가 낮아집니다. 전기차는 타이어 공기압 유지가 내연기관차보다 더 중요합니다.<br><br>
+
+<strong>배터리 노화</strong>: 전기차 배터리는 충방전 사이클이 누적될수록 용량이 서서히 줄어듭니다. 출고 초기 대비 3~5년 후에는 실용량이 5~15% 감소하는 것이 일반적이며, 이에 따라 표시 DTE도 점차 낮아집니다.<br><br>
+
+<strong>BMS(배터리관리시스템) 예약 영역</strong>: 대부분의 전기차 제조사는 배터리 상한(SOC 100%)과 하한(SOC 0%)에 안전 마진을 둡니다. 표시상 '완충'이 물리적 100%가 아닐 수 있고, '0%'도 물리적으로 몇 kWh가 남은 상태입니다. 이 예약 영역은 배터리 수명 보호를 위한 것입니다.
+
+<div class="img-area">
+  <div class="img-placeholder"><img src="../../images/260910/6_ev_range_2.png" alt="전기차 전비 향상 팁" style="max-width:100%;max-height:300px;object-fit:cover;" onerror="this.parentElement.innerHTML='📷 전기차 전비 향상 관리법 (이미지 준비 중)'"></div>
+  <div class="img-caption">전비 관리 — 속도와 공조장치 조절만으로도 실주행거리가 달라진다</div>
+</div>
+
+<h2>04 | 실주행거리 늘리는 관리법 7가지</h2>
+
+<strong>1. 고속도로에서는 속도 90~100km/h 유지</strong>: 110km/h → 90km/h로 줄이면 전비가 15~25% 향상됩니다. 급하지 않은 장거리 운전에서는 크루즈컨트롤로 속도를 일정하게 유지하세요.<br><br>
+
+<strong>2. 에코(Eco) 모드 적극 활용</strong>: 에코 모드는 가속 응답을 완만하게 해 전력 소모를 줄입니다. 급출발·급가속을 자연스럽게 억제하는 효과도 있습니다.<br><br>
+
+<strong>3. 회생제동 단계 높이기</strong>: 가능하면 회생제동을 최대로 설정하세요. 브레이크를 밟을 때 이 에너지를 전기로 회수하므로, 특히 내리막·도심 감속 구간에서 효과적입니다.<br><br>
+
+<strong>4. 타이어 공기압 정기 확인</strong>: 전기차 권장 공기압(보통 38~42psi)을 월 1회 이상 확인하세요. 온도가 낮아지는 계절 변화 때는 공기압이 내려가는 경향이 있습니다.<br><br>
+
+<strong>5. 예열/사전공조 활용</strong>: 겨울에는 충전 중에 차량 실내 온도를 미리 높이는 '사전 공조' 기능을 활용하세요. 충전 전력으로 차량을 데우므로 주행 중 배터리 소모를 줄일 수 있습니다.<br><br>
+
+<strong>6. 완충보다 80~90% 충전 유지</strong>: 장기적으로 배터리 수명을 위해 평소에는 80~90%까지만 충전하는 것이 좋습니다. 장거리 여행 직전에만 완충하는 방식이 이상적입니다.<br><br>
+
+<strong>7. 급속충전 최소화</strong>: 급속충전은 배터리에 빠르게 열이 쌓여 장기 수명에 영향을 줍니다. 가능하면 가정용 완속충전을 주로 이용하고, 장거리 이동 시에만 급속을 활용하세요.
+
+<h2>05 | 계절별 예상 실주행 범위 참고표</h2>
+
+<table class="info-table">
+  <tr><th>계절</th><th>기온 범위</th><th>공인 대비 실거리 비율(도심 기준)</th><th>공인 대비 실거리 비율(고속 기준)</th></tr>
+  <tr><td>봄·가을</td><td>15~25°C</td><td>약 90~100%</td><td>약 75~85%</td></tr>
+  <tr><td>여름</td><td>30°C 이상</td><td>약 85~95%(에어컨 사용)</td><td>약 70~80%</td></tr>
+  <tr><td>겨울</td><td>0°C 이하</td><td>약 60~75%(히터 사용)</td><td>약 50~65%</td></tr>
+</table>
+
+위 수치는 차종·운전 습관·에어컨·히터 사용 여부에 따라 크게 달라집니다. 참고용 범위로 활용하세요.
+
+<h2>06 | 장거리 여행 전 체크리스트</h2>
+
+전기차로 장거리 여행을 계획한다면 출발 전 다음을 점검하세요.<br><br>
+
+<strong>①충전 계획 수립</strong>: 목적지까지 경유할 급속충전소 위치와 예상 충전 시간을 미리 파악합니다. 카카오맵, 네이버 지도, 차량 내비게이션의 전기차 충전소 안내 기능을 활용하세요.<br><br>
+
+<strong>②DTE에 20~30% 안전마진 두기</strong>: 예를 들어 충전소까지 150km라면, DTE가 최소 190~200km 이상일 때 출발해야 안심할 수 있습니다.<br><br>
+
+<strong>③완충 출발</strong>: 장거리 여행 당일 아침에 완충(가능하면 100%)하고 출발하세요.<br><br>
+
+<strong>④고속도로 진입 전 타이어 점검</strong>: 타이어 공기압·마모 상태를 확인하고, 특히 기온 변화가 큰 환절기에는 추가 공기를 넣어두세요.
+
+<h2>07 | 전기차 구매 전 공인 주행거리, 어떻게 해석해야 하나</h2>
+
+국내 전기차 공인 주행거리는 국토교통부·산업부 기준(복합·도심·고속도로 3가지)으로 산출됩니다. 이 수치는 표준화된 실험실 조건에서 측정한 것으로, 실제 도로 주행과 차이가 납니다.<br><br>
+
+전기차 구매 시 공인 주행거리는 비교 기준으로 유용하지만, 실거리는 공인의 70~90% 수준으로 예상하는 것이 현실적입니다. 특히 고속도로 위주로 운전하거나, 겨울이 추운 지역에 산다면 더 보수적으로 계획하세요.<br><br>
+
+실거리에 대한 정확한 정보는 같은 차종 오너 커뮤니티(클리앙, 네이버 카페 등)의 실사용 후기를 참고하는 것이 가장 현실적입니다.
+
+<h2>08 | 자주 묻는 질문</h2>
+
+<strong>Q. 배터리 100%로 충전하면 안 좋나요?</strong><br>
+A. 매일 100% 완충을 반복하면 배터리 수명에 조금 영향을 줄 수 있습니다. 장거리 전날 또는 한 달에 수 차례 완충은 괜찮지만, 평소에는 80~90% 수준을 유지하는 것이 권장됩니다. 대부분의 전기차에는 충전 상한을 80%나 90%로 설정하는 기능이 있습니다.<br><br>
+
+<strong>Q. 겨울에 DTE가 갑자기 크게 줄었어요. 배터리 이상인가요?</strong><br>
+A. 기온이 낮아지면 자연스럽게 배터리 실용량이 줄어드는 현상이므로 대부분 정상입니다. 봄이 되어도 계속 회복되지 않으면 배터리 상태 진단(BMS 데이터 확인)을 받아보는 것이 좋습니다.<br><br>
+
+<strong>Q. 전비(km/kWh) 얼마가 좋은 건가요?</strong><br>
+A. 차종·크기마다 기준이 달라 일률적으로 비교하기 어렵습니다. 같은 차종 같은 계절 기준 다른 운전자의 평균 전비와 비교하는 것이 현실적입니다. 일반적으로 중형 세단 기준 도심 5~7km/kWh, 고속 4~5.5km/kWh 정도가 양호한 수준입니다.
+
+<div class="recommend-area">
+  <h3>📎 함께 읽으면 좋은 글</h3>
+  <ul>
+    <li><a href="../260909/car_wiper_replace_diy.html">자동차 와이퍼 셀프 교체 방법 — 장마철 전 꼭 확인하세요</a></li>
+    <li><a href="../260909/local_chuseok_ev_charging.html">추석 귀성길 전기차 충전소 — 명절 전기차 여행 완벽 준비</a></li>
+  </ul>
+</div>
+
+<div style="margin-top:30px;">
+  <span class="tag">전기차주행거리</span>
+  <span class="tag">전기차DTE</span>
+  <span class="tag">전비향상</span>
+  <span class="tag">전기차관리</span>
+  <span class="tag">전기차배터리</span>
+  <span class="tag">전기차겨울</span>
+  <span class="tag">EV주행거리</span>
+  <span class="tag">전기차충전</span>
+  <span class="tag">전기차팁</span>
+  <span class="tag">EV관리법</span>
+</div>
+</body>
+</html>
