@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>텃밭 9월 가을 수확 마무리와 토양 정리 — 월동 준비 순서와 가을 파종 체크리스트</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>텃밭 9월 가을 수확 마무리와 토양 정리 — 월동 준비 순서와 가을 파종 체크리스트</h1>
+<div class="intro-box">
+9월은 텃밭에서 가장 바쁜 달 중 하나입니다. 여름 내내 수고한 고추·방울토마토·호박의 마지막 수확을 마무리하고, 이제는 땅을 쉬게 하면서 다음 계절을 준비해야 합니다. 동시에 시금치·쪽파·배추처럼 가을 기온에 잘 자라는 작물의 파종 적기이기도 합니다.<br><br>
+이 글에서는 9월 텃밭 할 일 달력부터 여름 채소 정리법, 토양 재생 방법, 가을 작물 파종 타이밍, 그리고 10월 준비 사항까지 순서대로 정리했습니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 1</span><span class="ph-file">7_garden_1.png</span></div>
+<div class="prompt-text" id="prompt1">A Korean home vegetable garden in September. Various vegetables being harvested - red peppers (gochoo), green onions, and late-season tomatoes. The garden shows a mix of mature crops being pulled and fresh seedlings being planted. Natural light, realistic garden photography style.</div>
+<button class="copy-btn" onclick="copyPrompt('prompt1')">프롬프트 복사</button>
+</div>
+<div class="img-caption">9월 텃밭 — 여름 수확 마무리와 가을 작물 파종이 동시에 이루어지는 전환기 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 9월 텃밭 달력 — 이달 해야 할 일 한눈에</h2>
+
+<table class="info-table">
+<thead><tr><th>시기</th><th>주요 할 일</th></tr></thead>
+<tbody>
+<tr><td>9월 초 (1~10일)</td><td>고추 수확 마무리, 방울토마토 정리, 시금치·쪽파 파종</td></tr>
+<tr><td>9월 중 (10~20일)</td><td>배추 모종 아주심기 (늦어도 9월 15일 이전 권장), 무 파종</td></tr>
+<tr><td>9월 하 (20~30일)</td><td>여름 채소 줄기 제거, 퇴비 투입, 땅 갈기(로터리)</td></tr>
+<tr><td>9월 내내</td><td>잡초 제거, 물 관리 (아침 저온 주의 — 과습 금지)</td></tr>
+</tbody>
+</table>
+
+9월은 계절 전환기라 일교차가 10~15℃ 이상 벌어지기 시작합니다. 아침 저온에 약한 작물은 서리 전에 수확을 마쳐야 하고, 반대로 시금치·쪽파·배추처럼 서늘한 기온에 강한 작물은 지금이 파종 최적기입니다.
+
+<h2>02 | 가을 수확 마무리 — 고추·방울토마토·호박</h2>
+
+<strong>고추</strong>: 9월 중에도 열매가 달리지만, 기온이 낮아지면 착색이 느려집니다. 아직 녹색인 고추는 따뜻한 실내에 두면 서서히 붉어집니다. 서리 예보가 있으면 미성숙 고추도 전량 수확 후 실내에서 후숙시키세요.<br><br>
+
+<strong>방울토마토</strong>: 첫 서리 이전 2주 안에 달린 열매를 모두 수확합니다. 줄기는 뿌리째 뽑아 퇴비함으로 보냅니다. 방울토마토 줄기는 병충해 피해를 입기 쉬우므로 소각하거나 밀봉 처리하는 것이 좋습니다.<br><br>
+
+<strong>늙은 호박·애호박</strong>: 늙은 호박은 서리가 와도 껍질이 두꺼워 일정 기간 버팁니다. 단, 장기 보관하려면 서리 맞기 전에 수확해야 합니다. 호박은 서늘하고 건조한 창고에서 수개월 보관 가능합니다.
+
+<h2>03 | 여름 채소 줄기 정리와 퇴비화</h2>
+
+수확이 끝난 작물의 줄기·잎을 제대로 처리해야 내년 병충해를 예방할 수 있습니다.<br><br>
+
+<strong>퇴비화 가능한 것</strong>: 병충해 피해가 없는 잎·줄기·뿌리. 잘게 썰어 퇴비함(컴포스터)에 넣거나 땅에 묻으면 몇 달 후 퇴비가 됩니다.<br><br>
+
+<strong>소각하거나 따로 버려야 하는 것</strong>: 흰가루병·탄저병·역병 등 병원균이 있는 식물체. 퇴비로 만들면 병균이 살아남아 다음 해에 전파될 수 있습니다.<br><br>
+
+<div class="warn-box">
+⚠️ <strong>고추 탄저병 처리 주의</strong><br>
+탄저병에 걸린 고추 줄기와 낙과를 퇴비함에 넣으면 내년에 같은 병이 발생할 위험이 큽니다. 반드시 비닐봉지에 밀봉해 일반쓰레기로 처리하거나 소각하세요.
+</div>
+
+<h2>04 | 토양 재생 — 여름이 끝난 땅을 되살리는 법</h2>
+
+여름 내 작물이 많은 양분을 흡수한 후라 토양이 고갈 상태일 수 있습니다. 가을 파종 전 토양을 보충하는 작업이 수확량에 직접적인 영향을 미칩니다.<br><br>
+
+<strong>토양 재생 순서</strong>
+
+<div class="step-box">
+① <strong>잡초 및 전작물 잔재 제거</strong> (뿌리째 뽑기)<br>
+② <strong>퇴비 투입</strong>: 잘 발효된 퇴비(완숙 퇴비)를 ㎡당 2~3kg 살포<br>
+③ <strong>석회 투입</strong> (산성 토양의 경우): 고토석회 또는 소석회를 ㎡당 150~200g 살포<br>
+→ ※ 석회와 퇴비는 <strong>동시에 뿌리면 안 됩니다</strong>. 화학반응으로 질소가 손실됩니다. 석회를 먼저 뿌리고 2주 후 퇴비 투입을 권장합니다.<br>
+④ <strong>땅 갈기</strong>: 삽이나 로터리(관리기)로 20~30cm 깊이로 갈아 엎어 공기 투입<br>
+⑤ <strong>2~3주 묵히기</strong>: 석회·퇴비가 땅에 안정화될 시간 주기
+</div>
+
+<h2>05 | 가을 파종 작물 준비 — 시금치·쪽파·상추</h2>
+
+9월은 시금치·쪽파·상추 같은 서늘한 날씨를 좋아하는 채소의 최적 파종 시기입니다.<br><br>
+
+<table class="info-table">
+<thead><tr><th>작물</th><th>파종 적기</th><th>수확 예상</th><th>특이사항</th></tr></thead>
+<tbody>
+<tr><td>시금치</td><td>9월 초~중순</td><td>10월 말~11월</td><td>서리에 강함, 12월도 수확 가능</td></tr>
+<tr><td>쪽파</td><td>9월 초~중순</td><td>10월~11월</td><td>씨앗보다 인경(알뿌리) 심기가 빠름</td></tr>
+<tr><td>상추</td><td>9월 초~중 (늦어지면 성장 느림)</td><td>10월 중~말</td><td>여름보다 잎이 연하고 쓴맛 적음</td></tr>
+<tr><td>열무</td><td>9월 초</td><td>10월 중~말</td><td>성장 빠름, 김치·열무밥 활용</td></tr>
+</tbody>
+</table>
+
+시금치는 직파(씨앗을 바로 흙에 심기)가 이상적입니다. 파종 전 하루 씨앗을 물에 불려두면 발아 속도가 빨라집니다.
+
+<h2>06 | 배추·무 모종 아주심기 타이밍</h2>
+
+배추와 무는 가을 텃밭의 하이라이트입니다. 김장 배추는 <strong>9월 10~20일</strong>이 아주심기(정식)의 적기입니다. 이 시기를 놓치면 충분한 결구(속 차오름)가 이루어지지 않아 배추가 묶어주기만 해도 단단해지지 않는 경우가 생깁니다.<br><br>
+
+<strong>배추 아주심기 방법</strong>
+
+<div class="step-box">
+① 모종 구입: 묘목상이나 농협에서 7~8엽 이상 된 건강한 모종 선택<br>
+② 식재 간격: 배추는 포기 간 40~50cm, 이랑 간 50~60cm 확보<br>
+③ 심기: 뿌리가 잘 펼쳐지도록 구멍을 충분히 파고 심은 뒤 흙을 꼭 눌러줌<br>
+④ 물 주기: 심은 직후 충분히 관수, 이후 3~4일에 한 번<br>
+⑤ 망 덮기: 배추좀나방·진딧물 피해 예방을 위해 한랭사(망사) 설치 권장
+</div>
+
+<strong>무</strong>는 모종 이식보다 직파가 더 좋습니다. 구멍당 씨앗 2~3알씩 넣고 발아 후 가장 건강한 1주만 남기고 솎아냅니다.
+
+<h2>07 | 퇴비·석회 투입 순서와 양 — 헷갈리는 것 정리</h2>
+
+<div class="info-box">
+📋 <strong>퇴비·석회 투입 정리표</strong><br>
+• <strong>석회(고토석회 기준)</strong>: ㎡당 150~200g → 투입 후 2주 이상 경과 후 퇴비 투입<br>
+• <strong>완숙 퇴비</strong>: ㎡당 2~3kg → 석회 투입 2주 후, 경운 전에 살포<br>
+• <strong>화학비료(복합비료)</strong>: 파종 1주일 전 ㎡당 50~100g → 과다 시 뿌리 상함<br>
+• ❌ 석회 + 퇴비 동시 투입 금지 (질소 손실)<br>
+• ❌ 미발효 생퇴비 사용 금지 (뿌리 상함, 병충해 증가)
+</div>
+
+<h2>08 | 잡초 관리와 멀칭 방법</h2>
+
+9월에는 아직 잡초가 왕성하게 자라는 시기입니다. 특히 고온다습한 날씨가 이어지면 1~2주 사이에 잡초가 작물을 뒤덮을 수 있습니다.<br><br>
+
+<strong>멀칭(Mulching)</strong>은 흙 표면을 짚·검은 비닐·부직포 등으로 덮어 잡초 생장을 억제하고 토양 수분을 유지하는 방법입니다.<br><br>
+
+<div class="step-box">
+🌿 <strong>멀칭 소재 비교</strong><br>
+• <strong>검은 비닐 멀칭</strong>: 잡초 차단 효과 최강, 지온 유지. 단, 수확 후 회수 필요<br>
+• <strong>짚 멀칭</strong>: 친환경, 토양 습도 유지, 분해되면 유기물 공급. 단, 해충 은신처 될 수 있음<br>
+• <strong>부직포 멀칭</strong>: 재사용 가능, 통기성 좋음. 초보자에게 적합
+</div>
+
+<h2>09 | 텃밭 도구 점검과 보관</h2>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 2</span><span class="ph-file">7_garden_2.png</span></div>
+<div class="prompt-text" id="prompt2">Garden tools (trowel, hoe, rake, watering can) cleaned and organized in a small shed, ready for autumn storage. Autumn leaves visible outside the shed window. Gardening gloves and seed packets also visible. Clean, organized, warm tones. Realistic style.</div>
+<button class="copy-btn" onclick="copyPrompt('prompt2')">프롬프트 복사</button>
+</div>
+<div class="img-caption">가을 텃밭 도구 정리 — 시즌 전환기 점검과 보관이 내년 텃밭의 시작 / AI 제작 이미지</div>
+</div>
+
+여름 내 혹독하게 사용한 텃밭 도구는 이 시기에 점검하고 보관 상태를 정비해야 합니다.<br><br>
+
+<strong>도구별 점검 사항</strong>
+
+<div class="step-box">
+• <strong>삽·호미·갈퀴</strong>: 날 부분에 녹이 있으면 사포로 갈아내고 기름(식용유 가능) 발라 보관<br>
+• <strong>전지가위</strong>: 날 세우기(숫돌 또는 칼가는 봉), 볼트·너트 조임 확인<br>
+• <strong>호스·레인가드</strong>: 겨울 전 물을 완전히 빼서 동파 방지<br>
+• <strong>지지대(파이프·대나무)</strong>: 녹이나 상처 없는지 확인 후 실내 보관
+</div>
+
+<h2>10 | 10월 준비 사항 미리 체크 — 11월 서리 전까지 할 것</h2>
+
+<div class="tip-box">
+📅 <strong>10월 텃밭 할 일 미리 보기</strong><br>
+• 배추 결구 시작 시 끝 잎 묶어주기 (10월 중~하순)<br>
+• 무 솎음질 마무리, 뿌리 비대 확인<br>
+• 쪽파·시금치 첫 수확 시작 (10월 하순)<br>
+• 고추 건조 마무리 (수확한 고추 햇볕에 2~3주 건조)<br>
+• 월동 준비 — 마늘·양파 파종 (10월 중~11월 초가 적기)<br>
+• 서리 예보 시 배추 외엽 묶기 또는 부직포 덮기
+</div>
+
+지금 9월에 토양 정리와 가을 파종을 제때 마쳐야 10~11월 수확이 풍성해집니다. 배추·무·시금치·쪽파 중 본인 텃밭 규모에 맞게 1~2가지만 집중해서 심는 것이 초보자에게는 더 성공률이 높습니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260910/local_flu_vaccination_2026.html">독감 예방접종 언제 맞나 — 2026 성인·어르신 국가 무료 접종 시기</a></li>
+<li><a href="../260910/rite_mourning_transfer_text.html">상갓집 조의금 계좌이체 후 상주에게 연락하는 방법과 문자 예시</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#텃밭9월</span>
+<span class="tag">#가을텃밭</span>
+<span class="tag">#텃밭작물정리</span>
+<span class="tag">#배추모종심기</span>
+<span class="tag">#시금치파종</span>
+<span class="tag">#토양관리</span>
+<span class="tag">#퇴비넣기</span>
+<span class="tag">#텃밭월동준비</span>
+</div>
+</body>
+</html>

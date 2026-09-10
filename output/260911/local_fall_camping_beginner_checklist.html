@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>가을 캠핑 입문 준비물 체크리스트 — 초보자도 따뜻하게 즐기는 법</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>가을 캠핑 입문 준비물 체크리스트 — 초보자도 따뜻하게 즐기는 법</h1>
+<div class="intro-box">
+9월~10월은 캠핑 초보자가 시작하기 가장 좋은 계절입니다. 여름처럼 폭염도 없고 겨울처럼 극한 추위도 아니어서 장비 선택의 폭이 넓습니다. 단, 가을 특유의 큰 일교차(낮 20℃, 새벽 8~12℃)를 제대로 대비하지 않으면 첫 캠핑이 추위와의 싸움이 될 수 있습니다.<br><br>
+이 글에서는 가을 캠핑에 필수적인 장비와 의류, 초보자가 흔히 빠지는 실수, 그리고 캠핑장 예약 팁까지 한번에 정리했습니다. 처음 가는 분도 이 체크리스트 하나로 준비를 마칠 수 있습니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 1</span><span class="ph-file">4_camping_1.png</span></div>
+<div class="prompt-text" id="prompt1">A cozy autumn camping scene in South Korea. A dome tent set up among colorful fall foliage (red, orange, yellow leaves), campfire burning with warm glow, camping chairs and a table with hot beverages. Misty morning atmosphere, golden hour light filtering through trees. Peaceful and inviting. Photorealistic.</div>
+<button class="copy-btn" onclick="copyPrompt('prompt1')">프롬프트 복사</button>
+</div>
+<div class="img-caption">가을 숲속 캠핑 사이트 — 단풍과 모닥불이 어우러진 가을 캠핑의 정수 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 가을 캠핑이 초보자에게 가장 좋은 계절인 이유</h2>
+
+여름 캠핑은 모기와 더위, 겨울 캠핑은 동파와 극한 추위가 문제입니다. 봄은 꽃가루와 황사, 늦봄은 갑작스러운 폭우로 예측이 어렵습니다.<br><br>
+
+가을(9~10월)은 이 모든 변수가 가장 적은 계절입니다. 일기 예보를 보고 맑은 날만 골라 가면 실패 확률이 크게 줄어듭니다. 단풍이 물드는 캠핑장 풍경, 선선한 바람, 맑은 밤하늘 별 — 캠핑의 낭만이 가장 잘 살아나는 계절입니다.<br><br>
+
+단, 새벽 기온이 예상보다 낮게 떨어지는 점만 제대로 대비하면 됩니다. 9월 초에는 최저 기온이 18~20℃이지만 10월이 되면 5~10℃까지 내려갈 수 있습니다.
+
+<h2>02 | 텐트 선택 — 3시즌 텐트로 충분한가</h2>
+
+가을 캠핑 입문자에게는 <strong>3시즌 텐트(3-season tent)</strong>로 충분합니다. 봄·여름·가을을 커버하는 제품으로, 환기 구조가 좋고 가벼워 이동과 설치가 쉽습니다.<br><br>
+
+<table class="info-table">
+<thead><tr><th>항목</th><th>3시즌 텐트</th><th>4시즌(동계) 텐트</th></tr></thead>
+<tbody>
+<tr><td>무게</td><td>가볍다 (2~4kg)</td><td>무겁다 (4~7kg)</td></tr>
+<tr><td>통기성</td><td>우수 (메시 소재)</td><td>낮다 (밀폐 구조)</td></tr>
+<tr><td>내한성</td><td>영하 5℃까지</td><td>영하 20℃ 이하도 가능</td></tr>
+<tr><td>가격</td><td>상대적으로 저렴</td><td>비싸다</td></tr>
+<tr><td>가을 캠핑 적합성</td><td>충분</td><td>과도한 사양</td></tr>
+</tbody>
+</table>
+
+텐트 설치 시 바람이 불어오는 방향에 텐트 출입구가 향하지 않도록 합니다. 사이트 내 움푹 파인 곳보다 약간 높은 곳을 선택해야 새벽 이슬과 빗물이 텐트 안으로 스며들지 않습니다.
+
+<h2>03 | 침낭 온도 등급 제대로 읽기 — 이 숫자 하나가 따뜻함을 결정</h2>
+
+침낭에는 컴포트(Comfort), 리미트(Limit), 익스트림(Extreme) 세 가지 온도 등급이 표시됩니다. 초보자는 <strong>컴포트 온도</strong>를 기준으로 고르는 것이 안전합니다.<br><br>
+
+<div class="info-box">
+🌡️ <strong>가을 캠핑 침낭 선택 기준</strong><br>
+• 9월 초중순: 컴포트 5~10℃ 제품<br>
+• 10월: 컴포트 0~5℃ 제품 (밤기온 5~8℃ 대비)<br>
+• 10월 말~: 컴포트 -5℃ 제품 권장 (새벽 3~5℃까지 내려갈 수 있음)<br><br>
+가을 캠핑에 처음 구입한다면 컴포트 0℃ 침낭이 가장 범용적으로 사용할 수 있습니다.
+</div>
+
+충전재는 <strong>다운(오리털·거위털)</strong>이 가볍고 따뜻하지만 젖으면 보온력이 급격히 떨어집니다. <strong>합성 충전재</strong>는 무겁지만 습기에 강하고 가격이 저렴합니다. 가을 캠핑 입문용으로는 합성 충전재 제품이 가성비 면에서 낫습니다.
+
+<h2>04 | 매트와 에어패드 — 바닥 냉기가 침낭보다 무섭다</h2>
+
+많은 초보자가 간과하는 부분이 바닥 보온입니다. 차가운 땅에서 올라오는 냉기는 침낭의 보온력을 반감시킵니다. 아무리 좋은 침낭도 매트 없이 바닥에 깔면 새벽에 추워서 깨게 됩니다.<br><br>
+
+매트의 보온 성능은 <strong>R값(R-value)</strong>으로 표시합니다. 가을 캠핑(10℃ 이하 환경)에는 R값 2~4 제품을 추천합니다.<br><br>
+
+<strong>매트 종류 비교</strong>
+
+<div class="step-box">
+• <strong>폼 매트(클로즈드셀)</strong>: 접어도 부피 있음, 저렴, 물에 강함. 보조 레이어로 활용<br>
+• <strong>에어 매트(인플레이터블)</strong>: 공기 주입식, 가벼움, 아늑함. 단, 구멍 나면 치명적 — 패치킷 필수<br>
+• <strong>자충 매트(셀프 인플레이팅)</strong>: 에어+폼 혼합, 밸브 열면 자동으로 공기 충전. 가격과 성능 균형
+</div>
+
+<h2>05 | 취사 도구와 불멍 준비물</h2>
+
+가을 캠핑에서 따뜻한 국물 한 그릇의 가치는 여름과 비교할 수 없습니다. 취사 도구는 최소한으로 갖추되 핵심 아이템은 빠뜨리지 마세요.<br><br>
+
+<strong>취사 기본 세트</strong>: 버너 + 가스 카트리지 + 코펠(냄비·프라이팬 세트) + 식기 세트<br><br>
+
+<div class="warn-box">
+⚠️ <strong>가을 가스 카트리지 주의사항</strong><br>
+기온이 낮아지면 일반 부탄가스의 기화 효율이 떨어집니다. 아침 기온 5℃ 이하에서는 부탄+프로판 혼합 가스나 이소부탄 카트리지를 사용하세요. 일반 부탄 카트리지는 10℃ 이하에서 화력이 급격히 약해질 수 있습니다.
+</div>
+
+<strong>화로대(불멍용)</strong>: 캠핑장마다 직화 금지 규정이 다릅니다. 화로대가 있어야 모닥불을 피울 수 있는 곳이 대부분입니다. 접이식 화로대는 부피 작고 가볍습니다.
+
+<h2>06 | 조명과 랜턴 — 배터리 걱정 없이</h2>
+
+캠핑장에 전기 연결이 있는 사이트라면 전기 랜턴이 가장 편리합니다. 비전기 사이트라면 건전지 또는 충전식 랜턴을 준비해야 합니다.<br><br>
+
+<strong>추천 랜턴 구성</strong>
+
+<div class="step-box">
+① 테이블 조명용 LED 랜턴 1개 (충전식, 조도 조절 가능)<br>
+② 헤드랜턴 1인당 1개 (어두울 때 화장실 이동·취사 시 필수)<br>
+③ 소형 랜턴 또는 스트링 라이트 (분위기용)
+</div>
+
+배터리 잔량을 출발 전 반드시 확인하고, 여분 건전지나 보조배터리를 준비하세요.
+
+<h2>07 | 의류 레이어링 — 가을 일교차 10~15℃ 대비법</h2>
+
+레이어링(layering)은 옷을 여러 겹 입어 온도 변화에 대응하는 방식입니다.<br><br>
+
+<div class="step-box">
+🧥 <strong>3레이어 기본 원칙</strong><br>
+1. <strong>베이스 레이어</strong>: 몸에 밀착해 땀을 배출하는 기능성 속옷. 면 소재는 땀 흡수 후 건조 느려 가을에 부적합<br>
+2. <strong>미드 레이어</strong>: 보온을 담당. 플리스 재킷, 경량 패딩이 대표적<br>
+3. <strong>아우터 레이어</strong>: 바람·습기 차단. 방풍 재킷 또는 하드쉘
+</div>
+
+가을 캠핑에서는 낮에 반팔+얇은 재킷으로 충분하더라도, 저녁·새벽을 위한 두꺼운 패딩이나 플리스를 반드시 챙겨야 합니다. 모자와 장갑도 10월 이후라면 필수입니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 2</span><span class="ph-file">4_camping_2.png</span></div>
+<div class="prompt-text" id="prompt2">Flat lay of essential autumn camping gear on a wooden surface: sleeping bag, inflatable sleeping pad, headlamp, compact camp stove with gas canister, fleece jacket, beanie hat, and a hot thermos. Clean, organized product photography, natural light.</div>
+<button class="copy-btn" onclick="copyPrompt('prompt2')">프롬프트 복사</button>
+</div>
+<div class="img-caption">가을 캠핑 필수 준비물 — 침낭·매트·랜턴·의류 레이어링의 핵심 아이템 / AI 제작 이미지</div>
+</div>
+
+<h2>08 | 가을 캠핑 음식 추천 5가지</h2>
+
+선선한 날씨에 특히 맛있는 가을 캠핑 음식을 소개합니다.<br><br>
+
+<strong>① 부대찌개</strong>: 재료 손질이 쉽고 화로대 위에서 끓이면 한방에 메인 요리 완성. 추운 새벽에 특히 인기<br>
+<strong>② 감자·고구마 구이</strong>: 화로대 잿불에 은박지 감자를 넣어두면 1시간 후 완성. 손이 안 가는 간식<br>
+<strong>③ 어묵탕</strong>: 재료 준비 간단, 국물이 따뜻해 가을·겨울 캠핑에 최적<br>
+<strong>④ 삼겹살 구이</strong>: 캠핑의 기본. 가을 선선한 날씨에 연기 냄새 덜 배어 상쾌<br>
+<strong>⑤ 핫초코·따뜻한 사케르</strong>: 모닥불 앞에서 마시는 따뜻한 음료는 가을 캠핑의 하이라이트
+
+<h2>09 | 초보자 실수 TOP 5와 대처법</h2>
+
+<div class="warn-box">
+❌ <strong>초보 캠퍼가 자주 하는 실수</strong><br><br>
+1. <strong>침낭 온도 등급 과신</strong>: 컴포트 10℃ 침낭으로 새벽 5℃에 덜덜 떨기 → 여분 담요 또는 핫팩 준비<br>
+2. <strong>바닥 매트 없이 방문</strong>: 바닥 냉기로 새벽에 잠 못 자기 → 폼 매트 또는 에어패드 필수<br>
+3. <strong>가스 카트리지 부족</strong>: 저온에서 화력 저하로 아침 식사 못 하기 → 예비 카트리지 1개 더<br>
+4. <strong>취침 전 과식</strong>: 배부른 상태에서 침낭 속 소화 불량으로 잠 못 자기<br>
+5. <strong>우중 캠핑 무대책</strong>: 갑작스러운 비에 텐트 안 침수 → 사이트 선정 시 배수 확인, 타프 필수
+</div>
+
+<h2>10 | 가을 캠핑장 예약 팁 — 인기 사이트는 3주 전이 기본</h2>
+
+가을 단풍 시즌(10월~11월 초) 주말 캠핑장은 인기 사이트일수록 예약 오픈 직후 매진됩니다. 국립공원 야영장은 <strong>국립공원 예약시스템(reservation.knps.or.kr)</strong>에서, 일반 캠핑장은 <strong>캠핑할래(campinghalre.com)</strong>나 <strong>네이버 예약</strong>을 이용합니다.<br><br>
+
+<div class="tip-box">
+✅ <strong>캠핑장 예약 꿀팁</strong><br>
+• 국립공원 야영장은 보통 입실일 30일 전 00시에 오픈 — 알림 맞춰 접속<br>
+• 주말 예약이 어려우면 금요일~토요일 1박, 또는 주중 예약 도전<br>
+• 처음이라면 화장실·샤워실 가까운 오토캠핑장을 선택 (편의시설 풍부)<br>
+• 캠핑장 리뷰에서 '바닥 상태'와 '경사 여부' 꼭 확인
+</div>
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260910/local_flu_vaccination_2026.html">독감 예방접종 언제 맞나 — 2026 성인·어르신 국가 무료 접종 시기</a></li>
+<li><a href="../260910/rite_mourning_transfer_text.html">상갓집 조의금 계좌이체 후 상주에게 연락하는 방법과 문자 예시</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#가을캠핑</span>
+<span class="tag">#캠핑입문</span>
+<span class="tag">#캠핑준비물</span>
+<span class="tag">#캠핑체크리스트</span>
+<span class="tag">#침낭고르기</span>
+<span class="tag">#캠핑초보</span>
+<span class="tag">#오토캠핑</span>
+<span class="tag">#캠핑음식</span>
+</div>
+</body>
+</html>
