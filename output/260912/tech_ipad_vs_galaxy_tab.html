@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>아이패드 vs 갤럭시탭 어떤 게 나에게 맞나 — 용도별 선택 가이드</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>아이패드 vs 갤럭시탭 어떤 게 나에게 맞나 — 용도별 선택 가이드</h1>
+<div class="intro-box">
+태블릿을 처음 사거나 교체할 때 "아이패드 vs 갤럭시탭" 고민은 피할 수 없습니다. 두 제품 모두 완성도가 높아 "어느 쪽이 더 낫다"고 단정하기 어렵습니다. 중요한 것은 자신의 사용 목적과 이미 쓰는 기기 생태계에 맞는 선택입니다. 이 글에서는 그림 그리기·업무·동영상 감상·공부 등 용도별로 어느 쪽이 유리한지 실용적으로 비교합니다.
+</div>
+
+<h2>01 | 핵심 스펙 한눈에 비교</h2>
+
+2026년 기준 주요 모델을 기준으로 스펙을 비교합니다. 가격과 세부 스펙은 출시 시기·구매처에 따라 달라질 수 있으므로 구매 전 공식 사이트에서 최신 정보를 확인하세요.<br><br>
+
+<table class="info-table">
+<tr><th>항목</th><th>아이패드(iPad Air/Pro)</th><th>갤럭시탭(Tab S 시리즈)</th></tr>
+<tr><td>운영체제</td><td>iPadOS</td><td>Android (One UI)</td></tr>
+<tr><td>프로세서</td><td>Apple M 시리즈</td><td>Qualcomm Snapdragon/Exynos</td></tr>
+<tr><td>필압 펜슬</td><td>Apple Pencil(별매)</td><td>S Pen(일부 모델 내장)</td></tr>
+<tr><td>앱 생태계</td><td>App Store(태블릿 최적화 앱 多)</td><td>Google Play(스마트폰 앱 확장)</td></tr>
+<tr><td>파일 관리</td><td>Files 앱(제한적)</td><td>자유로운 파일 시스템 접근</td></tr>
+<tr><td>멀티태스킹</td><td>Stage Manager(iPadOS)</td><td>DeX 모드(외부 모니터 연결)</td></tr>
+<tr><td>가격대(일반 모델)</td><td>높음</td><td>중간(보급형~프리미엄 다양)</td></tr>
+</table>
+
+<h2>02 | 그림 그리기·필기에는 무엇이 나은가</h2>
+
+태블릿을 그림 그리기나 필기 목적으로 구매하는 분이 많습니다. 이 용도에서는 두 제품의 차이가 가장 크게 나타납니다.<br><br>
+
+<strong>아이패드가 유리한 이유</strong>: Procreate, Notability, GoodNotes 같은 창작·필기 앱이 아이패드 전용으로 최적화되어 있습니다. Apple Pencil의 반응 속도와 필압 인식은 업계 최고 수준으로 평가받습니다. 전문 일러스트레이터·웹툰 작가 중 아이패드를 주력으로 쓰는 비율이 높습니다.<br><br>
+
+<strong>갤럭시탭이 유리한 이유</strong>: S Pen이 일부 모델에 내장되어 별도 구매 비용이 없습니다. Samsung Notes와 Concepts 앱도 필기에 충분하며, 안드로이드 기반이라 파일 관리가 자유롭습니다. Clip Studio Paint 안드로이드 버전도 사용 가능합니다.
+
+<div class="info-box">
+📌 <strong>전문 그래픽 작업(유료 앱 투자 의사 있음)</strong>: 아이패드 Pro 우세<br>
+📌 <strong>학습·메모·일반 필기(비용 절약 우선)</strong>: 갤럭시탭 S Pen 내장 모델 실용적
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260912/7_ipad_1.png</span></div>
+<pre class="prompt-text" id="prompt-7-1">Side-by-side comparison of Apple iPad Pro and Samsung Galaxy Tab S on a white desk, one with Apple Pencil drawing on screen and one with S Pen stylus, both showing creative apps and digital illustrations, clean minimalist setup with natural lighting, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-7-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">아이패드 Pro(좌)와 갤럭시탭 S(우) 나란히 비교 — 펜슬 활용 시 체감 차이가 가장 큰 부문 / AI 제작 이미지</div>
+</div>
+
+<h2>03 | 업무·생산성 — 어느 쪽이 더 편한가</h2>
+
+업무용으로 사용할 때는 연동할 기기 환경이 핵심입니다.<br><br>
+
+<strong>아이폰·맥북 사용자라면 아이패드가 자연스러운 선택</strong>입니다. AirDrop, 사이드카(맥 세컨드 스크린), iCloud 연동, 핸드오프(기기 간 작업 이어받기)가 원활합니다. Microsoft Office, Pages, Keynote 모두 iPadOS에서 잘 동작합니다.<br><br>
+
+<strong>갤럭시폰·윈도우 PC 사용자라면 갤럭시탭이 편합니다</strong>. 갤럭시탭과 갤럭시폰 간 '링크 투 윈도우'로 PC에서 탭을 미러링하거나 파일을 주고받을 수 있습니다. DeX 모드로 외부 모니터에 연결하면 노트북 대체 활용도 가능합니다.<br><br>
+
+<strong>Microsoft 365 구독자</strong>: 두 플랫폼 모두 앱이 있으나, 안드로이드에서 파일 관리가 더 자유롭습니다. iOS는 Files 앱을 거쳐야 하는 경우가 있어 복잡하게 느껴질 수 있습니다.
+
+<h2>04 | 동영상 감상 · OTT · 게임</h2>
+
+엔터테인먼트 용도라면 두 제품 모두 훌륭합니다. 세부 차이를 살펴봅니다.<br><br>
+
+<strong>화면 품질</strong>: 아이패드 Pro의 OLED/Mini LED, 갤럭시탭 S Ultra의 AMOLED 모두 최고 수준입니다. 일반 모델에서는 갤럭시탭 AMOLED가 아이패드 Air LCD보다 색감이 선명하다는 평이 많습니다.<br><br>
+
+<strong>OTT 앱</strong>: 넷플릭스·유튜브·웨이브·티빙 모두 두 플랫폼에서 동일하게 동작합니다. 화질 제한은 타 플랫폼 정책에 따라 다를 수 있습니다.<br><br>
+
+<strong>게임</strong>: 국내 모바일 게임은 안드로이드 버전이 먼저 출시되거나 최적화되는 경우가 많습니다. 해외 인디 게임이나 Apple Arcade 타이틀은 아이패드가 풍부합니다.
+
+<h2>05 | 학생·공부용 태블릿 선택</h2>
+
+학생이나 자녀를 위한 학습용 태블릿을 고를 때 고려할 사항입니다.<br><br>
+
+<strong>초등·중등 자녀용</strong>: 국내 교육 앱(스마트폰 앱 연동 포함) 대부분이 안드로이드를 지원합니다. 갤럭시탭 보급형 + S Pen 모델(Tab A9 FE 등)이 가성비 면에서 현실적인 선택입니다.<br><br>
+
+<strong>고등·대학생</strong>: 필기·PDF 주석이 많다면 아이패드 + Apple Pencil + GoodNotes 조합이 강력합니다. 다만 Apple Pencil 2세대와 GoodNotes 유료 구독비가 추가로 발생합니다.<br><br>
+
+<strong>온라인 강의 수강</strong>: 클래스101·패스트캠퍼스·유데미 등 주요 플랫폼은 두 플랫폼 모두 정상 지원합니다.
+
+<h2>06 | 가격 대비 가치 — 어느 모델이 가성비가 높나</h2>
+
+각 브랜드 내에서도 라인업이 다양합니다. 예산별로 현실적인 선택지를 안내합니다.<br><br>
+
+<strong>50만 원 미만</strong>: 아이패드 9~10세대(기본형), 갤럭시탭 A8/A9. 이 가격대에서는 갤럭시탭이 더 다양한 선택지를 제공합니다.<br><br>
+
+<strong>60~100만 원</strong>: 아이패드 Air(중간), 갤럭시탭 S9 FE. 아이패드 Air가 성능 면에서 우위이며 앱 최적화도 좋습니다.<br><br>
+
+<strong>100만 원 이상</strong>: 아이패드 Pro, 갤럭시탭 S Ultra. 전문가 수준의 작업이 목적이 아니라면 오버스펙일 수 있습니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260912/7_ipad_2.png</span></div>
+<pre class="prompt-text" id="prompt-7-2">Korean student using a tablet for studying, split screen showing one person using iPad with Apple Pencil for note-taking and another using Samsung Galaxy Tab for video lecture, home study environment with books and stationery, warm study room lighting, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-7-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">공부·필기 목적으로 태블릿을 활용하는 모습 — 용도에 따라 최적 기기가 다릅니다 / AI 제작 이미지</div>
+</div>
+
+<h2>07 | 이미 쓰는 기기 생태계가 가장 중요한 기준</h2>
+
+실제로 써보면 스펙보다 생태계가 사용 편의를 좌우하는 경우가 훨씬 많습니다.<br><br>
+
+<table class="info-table">
+<tr><th>현재 기기 환경</th><th>추천 태블릿</th><th>이유</th></tr>
+<tr><td>아이폰 + 맥북</td><td>아이패드</td><td>AirDrop·Sidecar·Handoff 연동</td></tr>
+<tr><td>갤럭시폰 + 윈도우 PC</td><td>갤럭시탭</td><td>Link to Windows·DeX·파일 연동</td></tr>
+<tr><td>갤럭시폰 + 맥북</td><td>어느 쪽이든</td><td>혼합 환경, 용도 우선 결정</td></tr>
+<tr><td>아이폰 + 윈도우 PC</td><td>어느 쪽이든</td><td>혼합 환경, 용도 우선 결정</td></tr>
+</table>
+
+<h2>08 | 용도별 최종 추천 요약</h2>
+
+<div class="step-box">
+🎨 <strong>전문 그래픽·일러스트</strong>: 아이패드 Air/Pro + Apple Pencil<br>
+✏️ <strong>학교 필기·PDF 주석(예산 충분)</strong>: 아이패드 + GoodNotes<br>
+✏️ <strong>학교 필기·PDF 주석(예산 제한)</strong>: 갤럭시탭 S Pen 내장 모델<br>
+💼 <strong>업무·생산성(아이폰·맥 생태계)</strong>: 아이패드<br>
+💼 <strong>업무·생산성(갤럭시폰·윈도우 생태계)</strong>: 갤럭시탭<br>
+🎮 <strong>게임·엔터테인먼트</strong>: 갤럭시탭(국내 게임 호환성), 아이패드(Apple Arcade·해외 앱)<br>
+👶 <strong>초등 자녀 교육용(가성비 우선)</strong>: 갤럭시탭 보급형
+</div>
+
+<h2>09 | 구매 전 마지막 체크리스트</h2>
+
+<div class="tip-box">
+💡 <strong>구매 전 5가지 확인 사항</strong><br>
+① 내 스마트폰 브랜드와 같은 생태계인가<br>
+② 주목적이 그림·필기·동영상·업무 중 무엇인가<br>
+③ Apple Pencil·S Pen 별도 구매 비용 포함해서 예산 계산했나<br>
+④ 필요한 앱이 해당 플랫폼에서 지원되는가<br>
+⑤ 용량 선택 — 동영상·그림을 많이 저장하면 128GB 이상 권장(아이패드는 확장 불가)
+</div>
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260911/house_garden_fall_harvest_soil_prep.html">가을 텃밭 수확 후 토양 관리 — 겨울 준비와 이듬해 봄을 위한 작업</a></li>
+<li><a href="travel_jeju_sabyeol_silvergrass.html">제주 새별오름 억새 언제 절정인가, 가을 오름 드라이브 코스</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#아이패드</span>
+<span class="tag">#갤럭시탭</span>
+<span class="tag">#아이패드vs갤럭시탭</span>
+<span class="tag">#태블릿추천</span>
+<span class="tag">#아이패드에어</span>
+<span class="tag">#갤럭시탭S</span>
+<span class="tag">#태블릿비교</span>
+<span class="tag">#ApplePencil</span>
+<span class="tag">#SPen</span>
+<span class="tag">#태블릿구매가이드</span>
+</div>
+</body>
+</html>

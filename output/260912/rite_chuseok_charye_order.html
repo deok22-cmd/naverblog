@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>추석 집안 차례 준비 순서와 지방 쓰는 법 — 제사와 다른 점</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>추석 집안 차례 준비 순서와 지방 쓰는 법 — 제사와 다른 점</h1>
+<div class="intro-box">
+추석 차례는 음력 8월 15일 아침 조상을 추모하는 의례입니다. 제사와 비슷해 보이지만 시간대·준비 음식·절차에 차이가 있어 매년 헷갈리는 분이 많습니다. 이 글에서는 차례와 제사의 차이, 추석 차례 준비 순서, 지방 쓰는 법을 단계별로 정리합니다. 가정마다 관습이 다를 수 있으므로 이 글은 일반적인 유교식 관례를 참고 자료로 안내하는 것이며, 집안 어른과 상의하여 결정하시기 바랍니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260912/5_charye_1.png</span></div>
+<pre class="prompt-text" id="prompt-5-1">Korean Chuseok ancestral ritual table (charye) beautifully set with traditional foods, white rice, songpyeon rice cakes, autumn fruits (pears, persimmons, apples), vegetables, fish and meat dishes arranged neatly on low wooden table, white paper spirit tablets (jibang) visible, warm indoor morning light, respectful atmosphere, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">추석 차례상 차림 예시, 햅쌀밥·송편·제철 과일로 정성스럽게 차린 차례 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 차례와 제사, 무엇이 다른가</h2>
+
+차례(茶禮)와 제사(祭祀)는 모두 조상을 추모하는 의식이지만 몇 가지 중요한 차이가 있습니다.<br><br>
+
+<table class="info-table">
+<tr><th>구분</th><th>차례</th><th>제사(기제사)</th></tr>
+<tr><td>시기</td><td>명절 아침(설·추석)</td><td>기일(돌아가신 날) 밤 또는 자정 전</td></tr>
+<tr><td>시간대</td><td>아침 일찍(9시 전후)</td><td>저녁~자정</td></tr>
+<tr><td>주요 음식</td><td>햅쌀밥·송편(추석), 떡국(설), 제철 과일·나물</td><td>메(밥)·갱(국)·탕·나물·적(구이) 등</td></tr>
+<tr><td>절 횟수</td><td>재배(두 번)</td><td>재배(남성 기준 두 번)</td></tr>
+<tr><td>분향·헌주</td><td>간소하게</td><td>절차 더 세밀함</td></tr>
+<tr><td>지방</td><td>모심(일부 집안 생략하기도 함)</td><td>반드시 모심</td></tr>
+</table>
+
+<div class="info-box">
+📌 <strong>핵심 차이</strong>: 차례는 명절 아침 모든 조상을 한자리에서 함께 모시는 의례이고, 제사는 특정 조상의 기일에 개별적으로 모시는 의례입니다. 차례는 제사보다 형식이 간소한 것이 일반적입니다.
+</div>
+
+<h2>02 | 추석 차례 준비 — D-3부터 당일까지</h2>
+
+차례 준비는 사흘 전부터 시작하면 여유롭습니다.<br><br>
+
+<div class="step-box">
+<strong>[D-3, 3일 전]</strong><br>
+- 차례에 모실 조상 수 확인 (제수 음식 양 결정)<br>
+- 장보기: 과일·전 재료·제수용 생선(명태 등)·나물 재료 구매<br>
+- 제기(차례 그릇) 꺼내 세척, 부족하면 준비<br><br>
+<strong>[D-1, 하루 전]</strong><br>
+- 과일 씻어 두기, 나물 데쳐 두기<br>
+- 전 부치기(동태전·호박전·고구마전 등)<br>
+- 지방 용지 준비 (한지 또는 백지)<br>
+- 차례상 테이블과 병풍(있는 경우) 세팅 위치 확인<br><br>
+<strong>[당일 이른 아침]</strong><br>
+- 햅쌀밥(메) 짓기, 국(갱) 준비<br>
+- 차례상 차리기 (약 30~40분 소요)<br>
+- 지방 쓰기 및 향로에 향 피우기<br>
+- 차례 시작 (오전 9시 전후, 가문마다 상이)
+</div>
+
+<h2>03 | 추석 차례상 차리는 법</h2>
+
+차례상은 신위(지방)를 기준으로 북쪽을 등지고 서는 배향이 일반적입니다. 상차림은 가문과 지역에 따라 다르며, 아래는 일반적인 유교식 예를 참고한 것입니다.<br><br>
+
+<table class="info-table">
+<tr><th>줄</th><th>위치</th><th>올리는 것</th></tr>
+<tr><td>1열 (신위 앞)</td><td>가장 앞</td><td>밥(메)·국(갱)·숟가락·젓가락, 술잔</td></tr>
+<tr><td>2열</td><td>두 번째</td><td>전(부침개), 적(구이류), 탕</td></tr>
+<tr><td>3열</td><td>세 번째</td><td>나물(시금치·고사리·도라지), 간장, 식혜·수정과</td></tr>
+<tr><td>4열</td><td>네 번째</td><td>포(北포南혜 — 북쪽에 포, 남쪽에 식혜·수정과)</td></tr>
+<tr><td>5열 (가장 밖)</td><td>뒤</td><td>과일(홍동백서 — 붉은 과일 동쪽, 흰 과일 서쪽)</td></tr>
+</table>
+
+<div class="tip-box">
+💡 <strong>간소화 차례상</strong>: 성균관 의례정립위원회는 상차림 간소화를 권고하고 있습니다. 전·탕·포 없이 밥·국·나물·과일만으로도 의미 있는 차례가 가능하다는 입장입니다. 가족이 함께 의논하여 부담 없는 방식으로 준비하세요.
+</div>
+
+<h2>04 | 지방 쓰는 법</h2>
+
+지방(紙榜)은 차례 때 조상의 신위를 나타내는 종이로, 한지나 깨끗한 백지에 붓펜이나 볼펜으로 씁니다.<br><br>
+
+<strong>지방 형식 (일반적인 유교식 예시):</strong><br><br>
+
+<div class="step-box">
+<strong>아버지 지방</strong>: 顯考學生府君神位 (현고학생부군신위)<br>
+또는 한글로: 아버님 신위<br><br>
+<strong>어머니 지방</strong>: 顯妣孺人○○○氏神位 (현비유인○○씨신위, ○○는 어머니 본관)<br>
+또는 한글로: 어머님 신위<br><br>
+<strong>조부모 지방</strong>: 顯祖考 / 顯祖妣 뒤에 府君神位 / ○○氏神位
+</div>
+
+한자 지방이 어렵다면 한글로 '아버님 신위', '어머님 신위'와 같이 써도 무방합니다. 최근에는 프린터로 미리 출력해 쓰는 가정도 많습니다.<br><br>
+
+지방의 크기는 가로 6cm, 세로 22cm 정도가 일반적이며, 흰 종이를 사용합니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260912/5_charye_2.png</span></div>
+<pre class="prompt-text" id="prompt-5-2">Close-up of Korean ancestral spirit tablet (jibang) written in traditional Chinese characters with black ink brush on white rice paper, placed upright against a folded screen, incense burner with wisps of smoke, traditional Korean ritual setting, respectful and solemn atmosphere, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+<button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+</div>
+<div class="img-caption">차례 지방(신위 종이)과 향로, 조상을 모시는 의례의 중심 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 차례 진행 순서</h2>
+
+차례 진행 순서는 집안마다 다소 다를 수 있으나, 일반적인 절차를 소개합니다.<br><br>
+
+<div class="step-box">
+① <strong>강신(降神)</strong>: 향을 피우고 술을 모래나 향로에 붓는 절차 (조상을 모시는 의미)<br>
+② <strong>참신(參神)</strong>: 모든 가족이 두 번 절함<br>
+③ <strong>헌주(獻酒)</strong>: 술을 올림. 추석 차례는 통상 초헌(첫잔) 1회만 진행하는 경우가 많음<br>
+④ <strong>삽시정저(揷匙正箸)</strong>: 밥에 숟가락, 반찬에 젓가락을 꽂음<br>
+⑤ <strong>합문(闔門)</strong>: 잠시 문을 닫거나 뒤를 돌아 조상이 드시는 시간을 드림 (2~3분)<br>
+⑥ <strong>계문(啓門)</strong>: 문을 열고 다시 참배<br>
+⑦ <strong>철시복반(撤匙覆飯)</strong>: 숟가락을 내리고 밥그릇 뚜껑을 덮음<br>
+⑧ <strong>사신(辭神)</strong>: 두 번 절하며 조상을 보내드림<br>
+⑨ <strong>지방 태우기</strong>: 지방을 불로 태워 날려 보냄<br>
+⑩ <strong>음복(飮福)</strong>: 가족이 함께 차례 음식을 나눠 먹음
+</div>
+
+<h2>06 | 추석 차례 음식 — 꼭 올려야 하는 것과 빼도 되는 것</h2>
+
+추석 차례에 빠질 수 없는 필수 음식과 최근 간소화 추세를 반영한 현실적인 가이드를 소개합니다.<br><br>
+
+<strong>꼭 올려야 하는 것</strong>: 햅쌀 밥(메) · 국(갱) · 송편 · 과일(사과·배·감 등) · 나물 1~2종<br><br>
+
+<strong>있으면 좋은 것</strong>: 전(동태전·호박전 등) · 포(북어포 등) · 탕<br><br>
+
+<strong>생략해도 되는 것</strong>: 지역·가문에 따라 기피 음식(복숭아·고춧가루·마늘 등)이 다릅니다. 집안 어른께 확인하세요. 성균관 의례정립위원회는 "음식의 종류보다 정성이 중요하다"는 입장을 공식 발표한 바 있습니다.
+
+<h2>07 | 흔한 실수와 주의사항</h2>
+
+차례를 처음 주관하는 분이 자주 하는 실수를 미리 알아두면 도움이 됩니다.<br><br>
+
+<strong>① 지방을 거꾸로 쓰거나 크기가 너무 작은 경우</strong>: 지방은 세로로 길쭉하게 써야 합니다. 가로로 쓰거나 너무 작게 쓰면 차례상에 모시기 어렵습니다.<br><br>
+
+<strong>② 복숭아 올리기</strong>: 전통적으로 복숭아는 귀신을 쫓는 과일이라 차례상에 올리지 않습니다. 이 관습은 지방마다 다르니 집안 어른께 확인하세요.<br><br>
+
+<strong>③ 고춧가루·마늘 사용한 음식</strong>: 일부 전통에서는 제수 음식에 고춧가루와 마늘을 넣지 않습니다. 나물 무침 시 주의하세요.
+
+<h2>08 | 간소화 차례와 현대적 변형</h2>
+
+최근에는 핵가족화와 간편화 추세에 따라 차례 방식도 변화하고 있습니다.<br><br>
+
+음식을 직접 하지 않고 <strong>마트·축제 제수 음식 세트(3만~10만 원대)</strong>를 구매해 간편하게 준비하는 가정이 늘고 있습니다. 제수 음식 세트는 대형 마트, 백화점 식품관, 온라인 쇼핑몰에서 추석 전주부터 판매됩니다.<br><br>
+
+또한 지방 없이 사진(영정 사진)이나 디지털 사진으로 대신하는 가정도 있으며, 차례 자체를 없애고 <strong>가족 모임·성묘로 대체하는 경우</strong>도 늘고 있습니다. 중요한 것은 형식보다 가족이 함께 조상을 기억하는 마음임을 기억하세요.
+
+<h2>09 | 차례 관련 자주 묻는 질문</h2>
+
+<strong>Q. 기혼 자녀 집에서도 차례를 지낼 수 있나요?</strong><br>
+A. 원칙적으로 차례는 장남 또는 장손 집에서 주관하는 것이 전통이지만, 현대에는 형제·자매가 나누어 지내거나 모인 장소에서 함께 지내는 경우도 많습니다. 가족 간 협의로 결정하면 됩니다.<br><br>
+
+<strong>Q. 부모님 두 분 모두 돌아가셨으면 지방을 두 장 써야 하나요?</strong><br>
+A. 네, 조부와 조모를 함께 모실 경우 지방을 두 장 쓰거나, 한 장에 두 분을 함께 쓰는 방식도 있습니다. 집안 어른과 상의하여 결정하세요.<br><br>
+
+<strong>Q. 처가 쪽 조상도 함께 차례를 지낼 수 있나요?</strong><br>
+A. 전통적으로는 부계(父系) 조상만 모시지만, 현대에는 양가 조상을 함께 모시는 가정도 있습니다. 두 가정의 어른과 상의 후 결정하세요.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260911/rite_wedding_anniversary_gift_amount.html">결혼기념일 선물과 용돈 — 몇 주년부터 크게 챙기나</a></li>
+<li><a href="../260911/local_fall_camping_beginner_checklist.html">가을 캠핑 입문 준비물 체크리스트 — 초보자도 따뜻하게 즐기는 법</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#추석차례</span>
+<span class="tag">#차례준비순서</span>
+<span class="tag">#지방쓰는법</span>
+<span class="tag">#차례상차리기</span>
+<span class="tag">#추석명절</span>
+<span class="tag">#제사차이</span>
+<span class="tag">#차례음식</span>
+<span class="tag">#명절준비</span>
+<span class="tag">#추석풍습</span>
+<span class="tag">#간소화차례</span>
+</div>
+</body>
+</html>
