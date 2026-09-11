@@ -1,0 +1,1611 @@
+{
+ "week_label": null,
+ "week_start": "2026-08-31",
+ "week_end": "2026-09-06",
+ "captured_at": "2026-09-11",
+ "metric": "weekly_views",
+ "coverage": "top200",
+ "coverage_note": "제목은 캡처에서 잘려 나와 발행이력.md 색인과 (제목접두사+작성일)로 매칭해 복원함. slug/series는 그 매칭 결과.",
+ "posts": [
+  {
+   "rank": 1,
+   "title": "하이패스 선불카드 vs 후불, 나한테 뭐가 유리한가 — 연회비·충전·미납 리스크 비교",
+   "weekly_views": 642,
+   "published": "2026-08-25",
+   "slug": "car_hipass_prepaid_postpaid",
+   "series": "자동차"
+  },
+  {
+   "rank": 2,
+   "title": "결혼식 못 갈 때 축의금 카카오페이·계좌이체 보내는 예절과 문자",
+   "weekly_views": 416,
+   "published": "2026-08-09",
+   "slug": "rite_wedding_nonattendance_transfer",
+   "series": "경조사"
+  },
+  {
+   "rank": 3,
+   "title": "울주 신불산·영취산 9월 억새 언제 절정인가, 영남알프스 케이블카 타는 법",
+   "weekly_views": 299,
+   "published": "2026-08-15",
+   "slug": "travel_ulju_sinbul",
+   "series": "국내여행"
+  },
+  {
+   "rank": 4,
+   "title": "서산·태안 꽃게 언제 제철인가 — 천수만 드라이브와 서해 가을 먹거리 나들이",
+   "weekly_views": 294,
+   "published": "2026-08-25",
+   "slug": "travel_seosan_taean_crab_season",
+   "series": "국내여행"
+  },
+  {
+   "rank": 5,
+   "title": "고창 선운사 꽃무릇 언제 절정인가 — 9월 상사화 군락과 도솔암 드라이브 코스",
+   "weekly_views": 248,
+   "published": "2026-08-24",
+   "slug": "travel_gochang_seonunsa_lycoris",
+   "series": "국내여행"
+  },
+  {
+   "rank": 6,
+   "title": "남양주 물의정원 코스모스 9월 — 북한강 드라이브와 수도권 가을 전초 나들이 코스",
+   "weekly_views": 242,
+   "published": "2026-08-19",
+   "slug": "travel_namyangju_muljeong_cosmos",
+   "series": "국내여행"
+  },
+  {
+   "rank": 7,
+   "title": "포항 호미곶·구룡포 꽃게 제철 드라이브 — 가을 꽃게찜 먹으러 가는 법과 초가을 코스",
+   "weekly_views": 237,
+   "published": "2026-08-25",
+   "slug": "travel_pohang_homigot_crab_autumn",
+   "series": "국내여행"
+  },
+  {
+   "rank": 8,
+   "title": "결혼식 하객 뭐 입고 가나, 계절별·관계별 복장과 피해야 할 옷",
+   "weekly_views": 177,
+   "published": "2026-08-02",
+   "slug": "rite_wedding_guest_dress",
+   "series": "경조사"
+  },
+  {
+   "rank": 9,
+   "title": "전주 한옥마을 야경 산책 코스 — 오목대·자만벽화마을·경기전 야간 개장",
+   "weekly_views": 175,
+   "published": "2026-08-14",
+   "slug": "travel_jeonju_hanok_night",
+   "series": "국내여행"
+  },
+  {
+   "rank": 10,
+   "title": "부고 문자 받았을 때 답장 문구와 조문 못 갈 때 조의금 보내는 법",
+   "weekly_views": 173,
+   "published": "2026-07-12",
+   "slug": "rite_funeral_message",
+   "series": "경조사"
+  },
+  {
+   "rank": 11,
+   "title": "파주 임진강변 코스모스와 …[미해결]",
+   "weekly_views": 167,
+   "published": "2026-08-21",
+   "slug": null,
+   "series": null
+  },
+  {
+   "rank": 12,
+   "title": "KTX 자전거·유아차 기차에 가져가는 법과 추가요금, 무임 기준",
+   "weekly_views": 165,
+   "published": "2026-08-09",
+   "slug": "local_ktx_bicycle_stroller",
+   "series": "인접·여행실무"
+  },
+  {
+   "rank": 13,
+   "title": "김장배추 무름병·진딧물 방제 — 시기별로 뭘 뿌려야 하나",
+   "weekly_views": 156,
+   "published": "2026-08-14",
+   "slug": "house_kimjang_cabbage_pest",
+   "series": "전원주택"
+  },
+  {
+   "rank": 14,
+   "title": "스카이스캐너·네이버 항공권 최저가 언제 뜨나, 국내외 예매 타이밍 패턴",
+   "weekly_views": 155,
+   "published": "2026-08-07",
+   "slug": "local_flight_booking_timing",
+   "series": "인접·여행실무"
+  },
+  {
+   "rank": 15,
+   "title": "K-패스 광역버스·신분당선도 환급되나, 적용 가능한 교통수단과 제외 노선",
+   "weekly_views": 154,
+   "published": "2026-06-27",
+   "slug": "gov_kpass_metro_coverage",
+   "series": "지원금"
+  },
+  {
+   "rank": 15,
+   "title": "문경 단산 모노레일 타는 법과 에코월드 짚라인, 문경새재 여름 고원 나들이 코스",
+   "weekly_views": 154,
+   "published": "2026-08-01",
+   "slug": "travel_mungyeong_dansan",
+   "series": "국내여행"
+  },
+  {
+   "rank": 17,
+   "title": "고창 학원농장 해바라기 언제 볼 수 있나, 청보리밭 이어 여름 노란 물결 드라이브",
+   "weekly_views": 140,
+   "published": "2026-08-12",
+   "slug": "travel_gochang_sunflower",
+   "series": "국내여행"
+  },
+  {
+   "rank": 18,
+   "title": "여의도 한강공원 주차 무료시간과 자리 잘 나는 지구는 어디",
+   "weekly_views": 139,
+   "published": "2026-06-12",
+   "slug": "local_yeouido_hangang_parking_free",
+   "series": "인접·여행실무"
+  },
+  {
+   "rank": 18,
+   "title": "창경궁 가을 야간 개장, 비원 탐방 예약 방법과 초가을 궁궐 코스",
+   "weekly_views": 139,
+   "published": "2026-09-01",
+   "slug": "travel_changgyeonggung_fall_night",
+   "series": "국내여행"
+  },
+  {
+   "rank": 20,
+   "title": "중고차 직거래 자동차 명의이전 셀프로 하는 법, 필요서류와 절차 5분 정리",
+   "weekly_views": 130,
+   "published": "2026-07-17",
+   "slug": "car_title_transfer",
+   "series": "자동차"
+  },
+  {
+   "rank": 21,
+   "title": "무주 덕유산 케이블카 초가을 코스 — 설천봉 전망과 반딧불이 서식지 가는 법",
+   "weekly_views": 129,
+   "published": "2026-08-22",
+   "slug": "travel_muju_deogyu_fall",
+   "series": "국내여행"
+  },
+  {
+   "rank": 22,
+   "title": "결혼·장례 답례품 선택 기준과 금액대별 추천 — 받는 사람이 좋아하는 선물 고르는 법",
+   "weekly_views": 128,
+   "published": "2026-07-23",
+   "slug": "rite_wedding_reply",
+   "series": "경조사"
+  },
+  {
+   "rank": 23,
+   "title": "봉평 메밀꽃 개화 시기와 이효석문화제 — 9월 평창 여행 코스와 주차",
+   "weekly_views": 126,
+   "published": "2026-08-14",
+   "slug": "travel_pyeongchang_bongpyeong_meemilkkot",
+   "series": "국내여행"
+  },
+  {
+   "rank": 24,
+   "title": "상견례 자리와 비용 누가 내나, 요즘 예단·예물은 어떻게 하나",
+   "weekly_views": 125,
+   "published": "2026-08-08",
+   "slug": "rite_sanggyeonrye_wedding",
+   "series": "경조사"
+  },
+  {
+   "rank": 25,
+   "title": "전남 화순 적벽과 동복호 드라이브 — 9월 초가을 당일 코스와 입장 정보",
+   "weekly_views": 122,
+   "published": "2026-08-31",
+   "slug": "travel_hwasun_jeokbyeok_fall",
+   "series": "국내여행"
+  },
+  {
+   "rank": 26,
+   "title": "안성팜랜드 가을 코스모스·허수아비 축제, 수도권 9월 나들이 코스",
+   "weekly_views": 120,
+   "published": "2026-09-04",
+   "slug": "travel_anseong_farmland_cosmos",
+   "series": "국내여행"
+  },
+  {
+   "rank": 27,
+   "title": "정선 민둥산 억새 언제 절정인가 — 삼탄아트마인 폐광 예술과 강원 초가을 드라이브 코스",
+   "weekly_views": 118,
+   "published": "2026-08-19",
+   "slug": "travel_jeongson_mindungsan_silvergrass",
+   "series": "국내여행"
+  },
+  {
+   "rank": 27,
+   "title": "지리산·설악산 대피소 예약 언제 열리나 — 취소표 잡는 법과 가을 탐방 일정 짜기",
+   "weekly_views": 118,
+   "published": "2026-08-26",
+   "slug": "local_mountain_shelter_booking",
+   "series": "인접·여행실무"
+  },
+  {
+   "rank": 29,
+   "title": "부모님 환갑·고희·팔순 행사 용돈 얼마가 적당한가, 자녀 형제 분담 관례",
+   "weekly_views": 116,
+   "published": "2026-08-11",
+   "slug": "rite_parents_milestone_birthday_money",
+   "series": "경조사"
+  },
+  {
+   "rank": 30,
+   "title": "아침고요수목원 가을 단풍 정원 — 9월 입장료·운영 시간과 수도권 나들이 코스",
+   "weekly_views": 110,
+   "published": "2026-08-25",
+   "slug": "travel_achimsugyo_fall_garden",
+   "series": "국내여행"
+  },
+  {
+   "rank": 31,
+   "title": "예비군·민방위 훈련 연기 신청과 통지서 인터넷으로 조회하는 법",
+   "weekly_views": 106,
+   "published": "2026-08-02",
+   "slug": "gov_reserve_training_delay",
+   "series": "지원금"
+  },
+  {
+   "rank": 32,
+   "title": "전국 메밀꽃 개화 언제 절정인가 — 봉평·하동·고창 비교와 9월 여행 코스",
+   "weekly_views": 104,
+   "published": "2026-08-11",
+   "slug": "travel_buckwheat_flower_blooming_when",
+   "series": "국내여행"
+  },
+  {
+   "rank": 33,
+   "title": "여의도 밤도깨비 야시장 운영 시간과 위치, 한강 여름밤 피크닉 푸드트럭 코스",
+   "weekly_views": 99,
+   "published": "2026-07-16",
+   "slug": "travel_yeouido_nightmarket",
+   "series": "국내여행"
+  },
+  {
+   "rank": 34,
+   "title": "마당 잔디 장마 후 이끼·잡초 제거, 시기와 방법 정리",
+   "weekly_views": 98,
+   "published": "2026-09-01",
+   "slug": "house_lawn_moss_weed_removal",
+   "series": "전원주택"
+  },
+  {
+   "rank": 35,
+   "title": "하동 북천 코스모스·메밀꽃축제 일정과 북천역 레일바이크, 남도 가을 전초 코스",
+   "weekly_views": 95,
+   "published": "2026-08-15",
+   "slug": "travel_hadong_bukcheon",
+   "series": "국내여행"
+  },
+  {
+   "rank": 36,
+   "title": "콩국수 콩물 황금비율 — 서리태 삶는 시간과 껍질 벗기기 비법",
+   "weekly_views": 92,
+   "published": "2026-08-16",
+   "slug": "recipe_kongguksu_ratio",
+   "series": "레시피"
+  },
+  {
+   "rank": 37,
+   "title": "인천 굴업도 가는 배편 시간표와 개머리언덕 은하수 명당, 백패킹 야영 가이드",
+   "weekly_views": 91,
+   "published": "2026-07-17",
+   "slug": "travel_incheon_gulupdo",
+   "series": "국내여행"
+  },
+  {
+   "rank": 38,
+   "title": "추석 고속버스·시외버스 예매 언제 열리나, 취소표 잡는 법",
+   "weekly_views": 88,
+   "published": "2026-08-11",
+   "slug": "local_chuseok_express_bus_ticket",
+   "series": "인접·여행실무"
+  },
+  {
+   "rank": 38,
+   "title": "홍천 사과·포도 수확 체험 어디서 하나 — 홍천강 가을 드라이브와 소나기마을 코스",
+   "weekly_views": 88,
+   "published": "2026-08-26",
+   "slug": "travel_hongcheon_apple_grape_harvest",
+   "series": "국내여행"
+  },
+  {
+   "rank": 40,
+   "title": "진천 농다리·초평호 코스모스 언제 피나 — 9월 충북 가을 드라이브 코스와 주차",
+   "weekly_views": 85,
+   "published": "2026-08-24",
+   "slug": "travel_jincheon_nongdari_cosmos",
+   "series": "국내여행"
+  },
+  {
+   "rank": 41,
+   "title": "해외결제 수수료 카드별 비교 — 트래블월렛·하나 트래블로그·씨티 체크카드 실전 정리",
+   "weekly_views": 83,
+   "published": "2026-08-22",
+   "slug": "local_overseas_card_fee",
+   "series": "인접·여행실무"
+  },
+  {
+   "rank": 42,
+   "title": "영월 별마로천문대 야간관측 예약 방법과 한반도지형·청령포, 늦여름 강원 별밤 코스",
+   "weekly_views": 80,
+   "published": "2026-08-07",
+   "slug": "travel_yeongwol_byeolmaro",
+   "series": "국내여행"
+  },
+  {
+   "rank": 43,
+   "title": "화장 후 납골당·수목장·산골 뭐가 다른가 — 유골 안치 방법 선택 기준",
+   "weekly_views": 79,
+   "published": "2026-08-31",
+   "slug": "rite_cremation_memorial_options",
+   "series": "경조사"
+  },
+  {
+   "rank": 44,
+   "title": "수원 화성 성곽 추석 연휴 나들이 — 행궁동 카페골목과 야간 개장 코스 총정리",
+   "weekly_views": 78,
+   "published": "2026-08-26",
+   "slug": "travel_suwon_hwaseong_chuseok",
+   "series": "국내여행"
+  },
+  {
+   "rank": 45,
+   "title": "경기 화성 제부도 조개잡이와 궁평항 낙조, 수도권 서해 당일 드라이브 코스",
+   "weekly_views": 77,
+   "published": "2026-08-08",
+   "slug": "travel_hwaseong_jebudo_seashore",
+   "series": "국내여행"
+  },
+  {
+   "rank": 46,
+   "title": "영주 소백산 죽령옛길과 희방폭포, 늦여름 숲 그늘 트레킹 코스와 주차",
+   "weekly_views": 76,
+   "published": "2026-08-13",
+   "slug": "travel_yeongju_sobaeksan",
+   "series": "국내여행"
+  },
+  {
+   "rank": 47,
+   "title": "돌잔치·집들이 초대받으면 축하금과 선물 얼마가 적당한가",
+   "weekly_views": 75,
+   "published": "2026-07-13",
+   "slug": "rite_birthday_housewarming",
+   "series": "경조사"
+  },
+  {
+   "rank": 48,
+   "title": "추석 귀성·귀경 고속도로 정체 예측 — 2026 추석 연휴 막히는 시간대와 피하는 법",
+   "weekly_views": 73,
+   "published": "2026-08-21",
+   "slug": "local_chuseok_highway_traffic",
+   "series": "인접·여행실무"
+  },
+  {
+   "rank": 49,
+   "title": "서울 남산 N서울타워 케이블카 타는 시간과 인왕산 야경, 여름밤 도심 야경 코스",
+   "weekly_views": 71,
+   "published": "2026-08-07",
+   "slug": "travel_namsan_tower_night",
+   "series": "국내여행"
+  },
+  {
+   "rank": 50,
+   "title": "신안 퍼플섬 배 시간표와 자전거 대여, 보라색 마을 인생샷 명당",
+   "weekly_views": 68,
+   "published": "2026-06-12",
+   "slug": "travel_sinnan_purple_island_june",
+   "series": "국내여행"
+  },
+  {
+   "rank": 50,
+   "title": "운전면허 취소 후 재취득 절차와 결격기간 — 음주·사망사고 기준",
+   "weekly_views": 68,
+   "published": "2026-08-09",
+   "slug": "car_license_revocation_reacquisition",
+   "series": "자동차"
+  },
+  {
+   "rank": 50,
+   "title": "열무김치 아삭하게 담그는 법 — 소금 농도와 국물 비율",
+   "weekly_views": 68,
+   "published": "2026-08-10",
+   "slug": "recipe_yeolmu_kimchi_crispy",
+   "series": "레시피"
+  },
+  {
+   "rank": 53,
+   "title": "돌잡이 물건 종류와 의미 — 요즘 돌잡이 준비물 리스트가 전통과 달라진 점",
+   "weekly_views": 67,
+   "published": "2026-08-26",
+   "slug": "rite_doljanchi_doljabbi",
+   "series": "경조사"
+  },
+  {
+   "rank": 54,
+   "title": "조기폐차 보조금 받는 법과 5등급 차량 조회, 2026 지원금 얼마",
+   "weekly_views": 66,
+   "published": "2026-08-11",
+   "slug": "car_early_scrap_subsidy_2026",
+   "series": "자동차"
+  },
+  {
+   "rank": 54,
+   "title": "합천 해인사 9월 가야산 초가을 — 장경판전 관람과 고견사 폭포 드라이브 코스",
+   "weekly_views": 66,
+   "published": "2026-08-19",
+   "slug": "travel_hapcheon_haeinsa_earlyfall",
+   "series": "국내여행"
+  },
+  {
+   "rank": 56,
+   "title": "KTX·SRT 입석·자유석과 늦었을 때 환불·연착 보상 방법",
+   "weekly_views": 63,
+   "published": "2026-07-10",
+   "slug": "local_ktx_standing_refund",
+   "series": "인접·여행실무"
+  },
+  {
+   "rank": 57,
+   "title": "담양 메타세쿼이아길 가을, 10월 이전에 미리 가야 하는 이유",
+   "weekly_views": 62,
+   "published": "2026-09-01",
+   "slug": "travel_damyang_metasequoia_fall",
+   "series": "국내여행"
+  },
+  {
+   "rank": 58,
+   "title": "서울숲·올림픽공원 여름 야외 공연과 야경, 8월 무료 행사 큐레이션",
+   "weekly_views": 61,
+   "published": "2026-08-12",
+   "slug": "travel_seoul_forest_summer",
+   "series": "국내여행"
+  },
+  {
+   "rank": 59,
+   "title": "승진·개업·집들이 축하 선물과 금액, 관계별로 얼마가 적당한가",
+   "weekly_views": 60,
+   "published": "2026-07-28",
+   "slug": "rite_promotion_gift",
+   "series": "경조사"
+  },
+  {
+   "rank": 59,
+   "title": "어린이보호구역 과태료 얼마고 신호·속도 위반 이의신청은 어떻게 하나",
+   "weekly_views": 60,
+   "published": "2026-08-03",
+   "slug": "car_school_zone_fine",
+   "series": "자동차"
+  },
+  {
+   "rank": 59,
+   "title": "추석 고속도로 통행료 면제 기간과 연휴 정체 구간, 덜 막히는 출발 타이밍",
+   "weekly_views": 60,
+   "published": "2026-08-12",
+   "slug": "local_chuseok_tollway",
+   "series": "인접·여행실무"
+  },
+  {
+   "rank": 59,
+   "title": "경차·국가유공자·장애인 자동차 취득세 감면 조건과 채권 매입 면제 신청법",
+   "weekly_views": 60,
+   "published": "2026-08-15",
+   "slug": "car_tax_exemption",
+   "series": "자동차"
+  },
+  {
+   "rank": 63,
+   "title": "인천 무의도 하나개해수욕장 가는 법과 무의바다누리길, 수도권 섬 당일치기 코스",
+   "weekly_views": 59,
+   "published": "2026-07-11",
+   "slug": "travel_muuido_hanagae",
+   "series": "국내여행"
+  },
+  {
+   "rank": 63,
+   "title": "서울 하늘공원 억새 언제 절정이나, 월드컵공원 9월 은빛 물결 가을 전초 코스",
+   "weekly_views": 59,
+   "published": "2026-08-10",
+   "slug": "travel_seoul_haneul_park_silvergrass",
+   "series": "국내여행"
+  },
+  {
+   "rank": 65,
+   "title": "소양강댐·청평호 초가을 드라이브, 춘천 9월 당일치기 코스",
+   "weekly_views": 58,
+   "published": "2026-09-02",
+   "slug": "travel_chuncheon_soyang_dam_fall_drive",
+   "series": "국내여행"
+  },
+  {
+   "rank": 66,
+   "title": "청송 주왕산 폭포길과 주산지·달기약수탕, 늦여름 경북 계곡 트레킹",
+   "weekly_views": 57,
+   "published": "2026-08-06",
+   "slug": "travel_cheongsong_juwangsan",
+   "series": "국내여행"
+  },
+  {
+   "rank": 67,
+   "title": "평창 안반데기 고랭지 배추밭 언제 초록 절정, 은하수 보는 밤 드라이브 코스",
+   "weekly_views": 56,
+   "published": "2026-08-02",
+   "slug": "travel_anbandegi_galaxy_drive",
+   "series": "국내여행"
+  },
+  {
+   "rank": 67,
+   "title": "대구 수성못 오리배·나이트마켓 늦여름 밤 산책 코스와 수성유원지",
+   "weekly_views": 56,
+   "published": "2026-08-16",
+   "slug": "travel_daegu_suseongmot",
+   "series": "국내여행"
+  },
+  {
+   "rank": 67,
+   "title": "경주 불국사·석굴암 초가을 방문 — 토함산 단풍 전초와 주차 전략",
+   "weekly_views": 56,
+   "published": "2026-08-31",
+   "slug": "travel_gyeongju_bulguksa_earlyfall",
+   "series": "국내여행"
+  },
+  {
+   "rank": 67,
+   "title": "차 긁혔을 때 보험 처리 vs 자비 수리, 어떤 선택이 더 유리할까",
+   "weekly_views": 56,
+   "published": "2026-09-01",
+   "slug": "car_scratch_insurance_vs_selfrepair",
+   "series": "자동차"
+  },
+  {
+   "rank": 71,
+   "title": "여의도 밤도깨비 야시장 운영 요일과 …[미해결]",
+   "weekly_views": 55,
+   "published": "2026-07-26",
+   "slug": null,
+   "series": null
+  },
+  {
+   "rank": 72,
+   "title": "청양 칠갑산·장곡사 구절초 꽃길 언제 가나 — 9월 충남 가을 나들이와 고추 수확 체험",
+   "weekly_views": 53,
+   "published": "2026-08-24",
+   "slug": "travel_cheongyang_chilgapsan",
+   "series": "국내여행"
+  },
+  {
+   "rank": 73,
+   "title": "텃밭 두더지·달팽이 피해 막는 법 — 장마 끝난 뒤 대처 시기와 친환경 방제 순서",
+   "weekly_views": 52,
+   "published": "2026-08-26",
+   "slug": "house_garden_pest_vole_snail",
+   "series": "전원주택"
+  },
+  {
+   "rank": 74,
+   "title": "폰 저장공간 부족할 때 해결법 — 카톡 캐시·사진 중복 삭제 순서",
+   "weekly_views": 51,
+   "published": "2026-08-15",
+   "slug": "tech_phone_storage",
+   "series": "기기·IT실무"
+  },
+  {
+   "rank": 75,
+   "title": "자동차 계기판 경고등 색깔별 의미 — 즉시 세워야 하는 빨간불 vs 나중에 봐도 되는 노란불",
+   "weekly_views": 50,
+   "published": "2026-08-26",
+   "slug": "car_dashboard_warning_light",
+   "series": "자동차"
+  },
+  {
+   "rank": 76,
+   "title": "제주 성산일출봉 입장료·주차와 섭지코지 여름 드라이브 코스",
+   "weekly_views": 49,
+   "published": "2026-07-07",
+   "slug": "travel_seongsan_ilchulbong_summer",
+   "series": "국내여행"
+  },
+  {
+   "rank": 76,
+   "title": "자동차 번호판 재발급과 기호식 번호판 신청 절차, 필요서류 5분 정리",
+   "weekly_views": 49,
+   "published": "2026-08-07",
+   "slug": "car_license_plate_reissue",
+   "series": "자동차"
+  },
+  {
+   "rank": 78,
+   "title": "통영 소매물도 배 시간표와 등대섬 노두길 개방 시간, 7월 한려수도 섬 트레킹",
+   "weekly_views": 48,
+   "published": "2026-07-03",
+   "slug": "travel_somaemuldo_lighthouse",
+   "series": "국내여행"
+  },
+  {
+   "rank": 78,
+   "title": "해외 로밍 요금 귀국 후 확인하는 법 — 과다청구 이의신청과 eSIM 잔여 데이터 환불",
+   "weekly_views": 48,
+   "published": "2026-08-24",
+   "slug": "local_overseas_roaming_fee_check",
+   "series": "인접·여행실무"
+  },
+  {
+   "rank": 80,
+   "title": "더경기패스 K-패스와 차이, 경기도민은 얼마나 더 환급받나",
+   "weekly_views": 47,
+   "published": "2026-06-27",
+   "slug": "gov_gyeonggi_pass_vs_kpass",
+   "series": "지원금"
+  },
+  {
+   "rank": 80,
+   "title": "공항에서 시내까지 — 인천·김포·김해·제주 공항별 교통 총정리",
+   "weekly_views": 47,
+   "published": "2026-08-06",
+   "slug": "local_airport_city_transport",
+   "series": "인접·여행실무"
+  },
+  {
+   "rank": 82,
+   "title": "서울 문래동 창작촌 철공소 골목 산책 코스, 지하철로 찾아가는 힙한 예술 거리",
+   "weekly_views": 46,
+   "published": "2026-06-19",
+   "slug": "travel_munraedong_artvillage",
+   "series": "국내여행"
+  },
+  {
+   "rank": 82,
+   "title": "여수 거문도·백도 유람선 배 시간표와 여름 섬여행, 등대·낚시 코스",
+   "weekly_views": 46,
+   "published": "2026-07-21",
+   "slug": "travel_yeosu_geomundo",
+   "series": "국내여행"
+  },
+  {
+   "rank": 82,
+   "title": "굴업도 백패킹 가는 법과 …[미해결]",
+   "weekly_views": 46,
+   "published": "2026-07-26",
+   "slug": null,
+   "series": null
+  },
+  {
+   "rank": 82,
+   "title": "돌잔치·백일잔치 드레스코드와 카카오톡 온라인 선물 보내는 예절",
+   "weekly_views": 46,
+   "published": "2026-08-12",
+   "slug": "rite_baekil_dress",
+   "series": "경조사"
+  },
+  {
+   "rank": 82,
+   "title": "충주 사과 수확 체험 어디서 하나 — 월악산 드라이브와 충북 가을 먹거리 나들이",
+   "weekly_views": 46,
+   "published": "2026-08-21",
+   "slug": "travel_chungju_apple_harvest",
+   "series": "국내여행"
+  },
+  {
+   "rank": 87,
+   "title": "인천공항 첫차 막차 공항버스·공항철도 시간, 새벽 출발·심야 도착 동선",
+   "weekly_views": 45,
+   "published": "2026-06-20",
+   "slug": "local_incheon_airport_transit",
+   "series": "인접·여행실무"
+  },
+  {
+   "rank": 87,
+   "title": "홍도 유람선 배 시간표와 흑산도 …[미해결]",
+   "weekly_views": 45,
+   "published": "2026-07-26",
+   "slug": null,
+   "series": null
+  },
+  {
+   "rank": 89,
+   "title": "침낭 세탁 및 텐트 곰팡이 …[미해결]",
+   "weekly_views": 44,
+   "published": "2026-04-14",
+   "slug": null,
+   "series": null
+  },
+  {
+   "rank": 89,
+   "title": "9월 전국 핑크뮬리 명소 언제 피나 — 제주·하동·함안·서울 어디서 먼저 보나",
+   "weekly_views": 44,
+   "published": "2026-08-11",
+   "slug": "travel_pinkmuhly_blooming_when",
+   "series": "국내여행"
+  },
+  {
+   "rank": 91,
+   "title": "홍천 비발디파크 오션월드 여름 개장 일정과 입장권 싸게 사는 법",
+   "weekly_views": 43,
+   "published": "2026-07-11",
+   "slug": "travel_bivaldipark_oceanworld",
+   "series": "국내여행"
+  },
+  {
+   "rank": 91,
+   "title": "울릉도 가을 여행, 호박엿·독도새우 제철과 여객선 예약 팁",
+   "weekly_views": 43,
+   "published": "2026-09-01",
+   "slug": "travel_ulleungdo_fall_harvest",
+   "series": "국내여행"
+  },
+  {
+   "rank": 91,
+   "title": "강원 치악산 구룡폭포·황골계곡 초가을 트레킹, 원주 가을 나들이 코스",
+   "weekly_views": 43,
+   "published": "2026-09-02",
+   "slug": "travel_wonju_chiak_gugnyong_fall",
+   "series": "국내여행"
+  },
+  {
+   "rank": 94,
+   "title": "괴산 산막이옛길 유람선 타는 법과 여름 트레킹 코스, 괴산호 연하협 구름다리",
+   "weekly_views": 42,
+   "published": "2026-08-01",
+   "slug": "travel_goesan_sanmaki",
+   "series": "국내여행"
+  },
+  {
+   "rank": 94,
+   "title": "창녕 우포늪 새벽 물안개 보러 가는 법, 생태탐방로와 관찰대 코스",
+   "weekly_views": 42,
+   "published": "2026-08-13",
+   "slug": "travel_changnyeong_upo",
+   "series": "국내여행"
+  },
+  {
+   "rank": 94,
+   "title": "보은 말티재 전망대에서 속리산 조망 — 12굽이 비경과 속리산테마파크 드라이브",
+   "weekly_views": 42,
+   "published": "2026-08-13",
+   "slug": "travel_boeun_maltijae",
+   "series": "국내여행"
+  },
+  {
+   "rank": 97,
+   "title": "결혼식 하객으로 축가·사진 부탁받으면 뭘 준비해야 하나 — 선곡·리허설·촬영 팁",
+   "weekly_views": 41,
+   "published": "2026-08-25",
+   "slug": "rite_wedding_guest_song_photo",
+   "series": "경조사"
+  },
+  {
+   "rank": 98,
+   "title": "영덕 블루로드 6월 트레킹 코스 — 동해 해안 절경과 대게 마을 걷기 가이드",
+   "weekly_views": 40,
+   "published": "2026-06-11",
+   "slug": "travel_yeongdeok_blueroad_june_trek",
+   "series": "국내여행"
+  },
+  {
+   "rank": 98,
+   "title": "결혼 준비 단계별 순서 체크리스트 — 상견례부터 청첩장·예식장 계약까지",
+   "weekly_views": 40,
+   "published": "2026-08-15",
+   "slug": "rite_wedding_checklist",
+   "series": "경조사"
+  },
+  {
+   "rank": 100,
+   "title": "신안 홍도 유람선 배 시간표와 흑산도 1박 코스, 목포항 출발 여름 섬여행",
+   "weekly_views": 39,
+   "published": "2026-07-17",
+   "slug": "travel_shinan_hongdo",
+   "series": "국내여행"
+  },
+  {
+   "rank": 100,
+   "title": "인천 소래포구 어시장·해양생태공원과 월곶 여름 밤바다, 수도권 갯벌 당일 코스",
+   "weekly_views": 39,
+   "published": "2026-07-31",
+   "slug": "travel_incheon_sorae_fishmarket",
+   "series": "국내여행"
+  },
+  {
+   "rank": 100,
+   "title": "여행 중 짐 맡기기 — 기차역·버스터미널·스마트락커 요금과 이용법",
+   "weekly_views": 39,
+   "published": "2026-08-04",
+   "slug": "local_luggage_storage_travel",
+   "series": "인접·여행실무"
+  },
+  {
+   "rank": 100,
+   "title": "추석 연휴 항공권·숙소 언제 풀리나, 예매 오픈 시점과 취소표 잡는 법",
+   "weekly_views": 39,
+   "published": "2026-08-08",
+   "slug": "local_chuseok_flight_accommodation",
+   "series": "인접·여행실무"
+  },
+  {
+   "rank": 104,
+   "title": "제주 한라산 영실·어리목 여름 트레킹 코스와 예약 방법",
+   "weekly_views": 38,
+   "published": "2026-07-10",
+   "slug": "travel_hallasan_yeongshil",
+   "series": "국내여행"
+  },
+  {
+   "rank": 104,
+   "title": "자동차 보험 다이렉트 vs 설계사 통해 가입, 실제 보험료 차이와 장단점",
+   "weekly_views": 38,
+   "published": "2026-08-08",
+   "slug": "car_insurance_direct_vs_agent",
+   "series": "자동차"
+  },
+  {
+   "rank": 104,
+   "title": "나주곰탕·홍어문화마을 추석 연휴 드라이브 — 영산강변 둘러보는 남도 1일 코스",
+   "weekly_views": 38,
+   "published": "2026-08-26",
+   "slug": "travel_naju_yeongsan_chuseok",
+   "series": "국내여행"
+  },
+  {
+   "rank": 104,
+   "title": "이사 당일 옆집 인사, 뭘 들고 어떻게 해야 할까 — 선물과 타이밍 정리",
+   "weekly_views": 38,
+   "published": "2026-09-02",
+   "slug": "rite_moving_neighbor_greeting",
+   "series": "경조사"
+  },
+  {
+   "rank": 108,
+   "title": "화천 조경철천문대 여름 은하수 예약 방법과 관람 시간, 광덕계곡 당일 피서 코스",
+   "weekly_views": 37,
+   "published": "2026-07-15",
+   "slug": "travel_hwacheon_astronomy",
+   "series": "국내여행"
+  },
+  {
+   "rank": 108,
+   "title": "정선 병방치 스카이워크와 짚와이어, 동강 한반도지형 전망 여름 나들이",
+   "weekly_views": 37,
+   "published": "2026-07-19",
+   "slug": "travel_jeongseon_byeongbangchi",
+   "series": "국내여행"
+  },
+  {
+   "rank": 108,
+   "title": "경주 황룡사지·첨성대·대릉원 9월 초가을 야간 산책과 코스모스 드라이브",
+   "weekly_views": 37,
+   "published": "2026-08-11",
+   "slug": "travel_gyeongju_hwangnyongsa_nightwalk",
+   "series": "국내여행"
+  },
+  {
+   "rank": 108,
+   "title": "텃밭 가을 파종 언제 — 배추·무·시금치 시기와 포기 간격",
+   "weekly_views": 37,
+   "published": "2026-08-11",
+   "slug": "house_fall_seeding_timing",
+   "series": "전원주택"
+  },
+  {
+   "rank": 112,
+   "title": "전기차 충전기 종류와 급속·완속 요금 비교, 카드 없이 충전하는 법",
+   "weekly_views": 36,
+   "published": "2026-08-12",
+   "slug": "car_ev_charging",
+   "series": "자동차"
+  },
+  {
+   "rank": 113,
+   "title": "폰 사진 백업 구글포토 유료 전환 후 대안 비교 — 아이클라우드·원드라이브·NAS·삼성클라우드",
+   "weekly_views": 34,
+   "published": "2026-08-22",
+   "slug": "tech_phone_photo_backup",
+   "series": "기기·IT실무"
+  },
+  {
+   "rank": 114,
+   "title": "완도 청산도 슬로길 코스와 배 시간표, 서편제길·구들장논 여름 섬여행",
+   "weekly_views": 33,
+   "published": "2026-07-18",
+   "slug": "travel_wando_cheongsando",
+   "series": "국내여행"
+  },
+  {
+   "rank": 114,
+   "title": "통영 욕지도 모노레일 타는 법과 배 시간표, 여름 섬 한 바퀴 드라이브",
+   "weekly_views": 33,
+   "published": "2026-07-21",
+   "slug": "travel_tongyeong_yokjido",
+   "series": "국내여행"
+  },
+  {
+   "rank": 114,
+   "title": "군산 선유도 고군산군도 드라이브와 짚라인·해수욕장, 차로 가는 여름 섬 코스",
+   "weekly_views": 33,
+   "published": "2026-07-27",
+   "slug": "travel_gunsan_seonyu",
+   "series": "국내여행"
+  },
+  {
+   "rank": 114,
+   "title": "당진 왜목마을 일출·일몰 동시 명소와 삽교호 함상공원 서해 드라이브 코스",
+   "weekly_views": 33,
+   "published": "2026-08-01",
+   "slug": "travel_dangjin_waemok",
+   "series": "국내여행"
+  },
+  {
+   "rank": 114,
+   "title": "장례식장 비용 현실 — 빈소·화장·납골당 총 얼마 드나, 통상 범위",
+   "weekly_views": 33,
+   "published": "2026-08-10",
+   "slug": "rite_funeral_home_cost_estimate",
+   "series": "경조사"
+  },
+  {
+   "rank": 114,
+   "title": "예산 예당호 출렁다리 길이·모노레일·짚라인 — 늦여름 충남 나들이 코스",
+   "weekly_views": 33,
+   "published": "2026-08-14",
+   "slug": "travel_yesan_yedangho_bridge",
+   "series": "국내여행"
+  },
+  {
+   "rank": 120,
+   "title": "한국 여권 무비자 여행 가능한 나라와 체류기간, 여권 잔여기간 6개월 규칙",
+   "weekly_views": 32,
+   "published": "2026-06-25",
+   "slug": "local_novisa_travel_countries",
+   "series": "인접·여행실무"
+  },
+  {
+   "rank": 120,
+   "title": "포천 한탄강 하늘다리·비둘기낭폭포 주상절리 협곡 트레킹 코스와 주차 방법",
+   "weekly_views": 32,
+   "published": "2026-07-11",
+   "slug": "travel_pocheon_hantangang",
+   "series": "국내여행"
+  },
+  {
+   "rank": 120,
+   "title": "노인 기초연금 수급 자격과 얼마 받나, 2026 신청 방법",
+   "weekly_views": 32,
+   "published": "2026-07-30",
+   "slug": "gov_senior_pension",
+   "series": "지원금"
+  },
+  {
+   "rank": 120,
+   "title": "가평 쁘띠프랑스·이탈리아마을 여름 야간과 자라섬, 수도권 이색 당일 코스",
+   "weekly_views": 32,
+   "published": "2026-07-31",
+   "slug": "travel_gapyeong_petitfrance",
+   "series": "국내여행"
+  },
+  {
+   "rank": 120,
+   "title": "상견례 자리에 선물 가져가야 하나 — 상대 부모님 첫 인사 예절과 준비물",
+   "weekly_views": 32,
+   "published": "2026-08-24",
+   "slug": "rite_sanggyeonrye_gift",
+   "series": "경조사"
+  },
+  {
+   "rank": 120,
+   "title": "강화 전등사·고려산 초가을과 외포리 젓갈 거리 — 9월 수도권 당일 코스",
+   "weekly_views": 32,
+   "published": "2026-08-31",
+   "slug": "travel_ganghwa_jeondeungsa_fall",
+   "series": "국내여행"
+  },
+  {
+   "rank": 126,
+   "title": "구글 스프레드시트 GOOGLEFINANCE …[미해결]",
+   "weekly_views": 31,
+   "published": "2026-05-14",
+   "slug": null,
+   "series": null
+  },
+  {
+   "rank": 126,
+   "title": "가족관계증명서 상세·일반 차이와 정부24 인터넷 발급 절차",
+   "weekly_views": 31,
+   "published": "2026-07-10",
+   "slug": "cert_family_register_cert",
+   "series": "증명서(폐지)"
+  },
+  {
+   "rank": 126,
+   "title": "공항 라운지 무료 이용법, 신용카드·PP카드 조건과 프라이어리티 패스 비교",
+   "weekly_views": 31,
+   "published": "2026-07-30",
+   "slug": "local_airport_lounge",
+   "series": "인접·여행실무"
+  },
+  {
+   "rank": 126,
+   "title": "부산 감천문화마을 벽화골목 포토존과 야경, 늦여름 이색 코스 어떻게 즐길까",
+   "weekly_views": 31,
+   "published": "2026-08-15",
+   "slug": "travel_busan_gamcheon",
+   "series": "국내여행"
+  },
+  {
+   "rank": 130,
+   "title": "구글 스프레드시트 드롭다운 …[미해결]",
+   "weekly_views": 30,
+   "published": "2026-05-12",
+   "slug": null,
+   "series": null
+  },
+  {
+   "rank": 130,
+   "title": "의왕 왕송호수 레일바이크 예약 방법과 7월 연꽃, 조류생태과학관 당일 코스",
+   "weekly_views": 30,
+   "published": "2026-06-25",
+   "slug": "travel_uiwang_wangsong_lotus",
+   "series": "국내여행"
+  },
+  {
+   "rank": 130,
+   "title": "부모님 생신 선물 고르는 법 — 연령대별 실용 선물과 용돈 봉투 예절",
+   "weekly_views": 30,
+   "published": "2026-08-21",
+   "slug": "rite_birthday_parents_gift",
+   "series": "경조사"
+  },
+  {
+   "rank": 130,
+   "title": "거창 수승대 9월 계곡 마지막 산책 — 수월정 정자와 덕유산 자락 초가을 드라이브 코스",
+   "weekly_views": 30,
+   "published": "2026-08-22",
+   "slug": "travel_geochang_susungdae_fall",
+   "series": "국내여행"
+  },
+  {
+   "rank": 134,
+   "title": "여수 밤바다 낭만포차 어디서 먹나, 돌산대교·해상케이블카 야경 여름 코스",
+   "weekly_views": 29,
+   "published": "2026-07-12",
+   "slug": "travel_yeosu_nightmarket",
+   "series": "국내여행"
+  },
+  {
+   "rank": 134,
+   "title": "완도 청산도 슬로길 코스와 배 시간표, 서편제길·구들장논 여름 섬여행",
+   "weekly_views": 29,
+   "published": "2026-07-27",
+   "slug": "travel_wando_cheongsando",
+   "series": "국내여행"
+  },
+  {
+   "rank": 136,
+   "title": "장례식 조의금 얼마 내나, 부의금 봉투 쓰는 법과 조문 예절",
+   "weekly_views": 28,
+   "published": "2026-07-07",
+   "slug": "rite_condolence_money_etiquette",
+   "series": "경조사"
+  },
+  {
+   "rank": 136,
+   "title": "해외 입국 시 반입 금지 물품 목록과 검역 신고 방법, 안 하면 어떻게 되나",
+   "weekly_views": 28,
+   "published": "2026-07-09",
+   "slug": "local_overseas_entry_customs",
+   "series": "인접·여행실무"
+  },
+  {
+   "rank": 136,
+   "title": "제천 청풍호 케이블카와 옥순봉 출렁다리·의림지, 충북 여름 호수 코스",
+   "weekly_views": 28,
+   "published": "2026-08-06",
+   "slug": "travel_jecheon_cheongpungho",
+   "series": "국내여행"
+  },
+  {
+   "rank": 139,
+   "title": "비행기 연착·결항 보상과 환불, 어떻게 대처하나",
+   "weekly_views": 27,
+   "published": "2026-07-08",
+   "slug": "local_airplane_delay_compensation",
+   "series": "인접·여행실무"
+  },
+  {
+   "rank": 139,
+   "title": "결혼식 사회 부탁받았을 때 멘트와 준비 순서, 당일 진행 흐름 완성하기",
+   "weekly_views": 27,
+   "published": "2026-08-07",
+   "slug": "rite_wedding_emcee_speech",
+   "series": "경조사"
+  },
+  {
+   "rank": 139,
+   "title": "안동 하회마을 월영교·부용대 뱅놀이, 초가을 경북 고택 여행 코스와 주차",
+   "weekly_views": 27,
+   "published": "2026-08-10",
+   "slug": "travel_andong_hahoe_earlyfall",
+   "series": "국내여행"
+  },
+  {
+   "rank": 139,
+   "title": "추석 귀성길 고속도로 휴게소 맛집과 전기차 충전소 위치 찾는 법",
+   "weekly_views": 27,
+   "published": "2026-08-16",
+   "slug": "local_chuseok_expressway_food",
+   "series": "인접·여행실무"
+  },
+  {
+   "rank": 139,
+   "title": "춘천 소양강 스카이워크 어디서 타나 — 물레길 카약과 소양강댐 9월 수상 나들이 코스",
+   "weekly_views": 27,
+   "published": "2026-08-22",
+   "slug": "travel_chuncheon_soyang_skywalk",
+   "series": "국내여행"
+  },
+  {
+   "rank": 144,
+   "title": "고흥 남열해돋이해수욕장 가는 법과 나로우주센터 전망대, 남해 여름 바다 드라이브 코스",
+   "weekly_views": 26,
+   "published": "2026-07-14",
+   "slug": "travel_goheung_namyeol",
+   "series": "국내여행"
+  },
+  {
+   "rank": 144,
+   "title": "울진 불영계곡 여름 드라이브와 불영사, 36번국도 협곡 물놀이 명당",
+   "weekly_views": 26,
+   "published": "2026-07-20",
+   "slug": "travel_uljin_bulyeong",
+   "series": "국내여행"
+  },
+  {
+   "rank": 146,
+   "title": "서울 북악스카이웨이 팔각정 …[미해결]",
+   "weekly_views": 25,
+   "published": "2026-05-19",
+   "slug": null,
+   "series": null
+  },
+  {
+   "rank": 146,
+   "title": "곡성 섬진강 기차마을 레일바이크 요금과 증기기관차 예약, 여름 물놀이 코스까지",
+   "weekly_views": 25,
+   "published": "2026-06-17",
+   "slug": "travel_gokseong_railbike",
+   "series": "국내여행"
+  },
+  {
+   "rank": 146,
+   "title": "인천 I-패스 혜택과 신청 방법, K-패스보다 유리한 점은",
+   "weekly_views": 25,
+   "published": "2026-06-27",
+   "slug": "gov_incheon_ipass_benefit",
+   "series": "지원금"
+  },
+  {
+   "rank": 146,
+   "title": "지방세 납세증명서·세목별 과세증명 위택스 인터넷 발급하는 법",
+   "weekly_views": 25,
+   "published": "2026-07-22",
+   "slug": "cert_local_tax_cert",
+   "series": "증명서(폐지)"
+  },
+  {
+   "rank": 146,
+   "title": "양양 서핑 초보 강습 어디서 받나, 죽도해변·하조대 늦여름 서핑 입문",
+   "weekly_views": 25,
+   "published": "2026-08-08",
+   "slug": "travel_yangyang_surfing_beginner",
+   "series": "국내여행"
+  },
+  {
+   "rank": 146,
+   "title": "전원주택 데크 오일스테인 언제 다시 칠하나 — 벗겨짐 판단법과 재도장 순서 정리",
+   "weekly_views": 25,
+   "published": "2026-08-25",
+   "slug": "house_deck_oilstain_refinish",
+   "series": "전원주택"
+  },
+  {
+   "rank": 152,
+   "title": "포항 국제불빛축제 …[미해결]",
+   "weekly_views": 24,
+   "published": "2026-04-17",
+   "slug": null,
+   "series": null
+  },
+  {
+   "rank": 152,
+   "title": "남편이랑 25년 만에 떠난 …[미해결]",
+   "weekly_views": 24,
+   "published": "2026-05-02",
+   "slug": null,
+   "series": null
+  },
+  {
+   "rank": 152,
+   "title": "해남 달마고도 트레킹 …[미해결]",
+   "weekly_views": 24,
+   "published": "2026-06-08",
+   "slug": null,
+   "series": null
+  },
+  {
+   "rank": 152,
+   "title": "봉화 백천계곡 열목어 서식지와 청옥산 자연휴양림 예약, 여름 오지 피서 코스",
+   "weekly_views": 24,
+   "published": "2026-07-04",
+   "slug": "travel_bonghwa_valley_summer",
+   "series": "국내여행"
+  },
+  {
+   "rank": 152,
+   "title": "무주 반딧불이축제 일정과 관람 명당, 적상산 드라이브 코스",
+   "weekly_views": 24,
+   "published": "2026-07-08",
+   "slug": "travel_muju_firefly_festival",
+   "series": "국내여행"
+  },
+  {
+   "rank": 152,
+   "title": "부산 이기대 해안산책로 언제 걸으면 좋나, 오륙도 스카이워크 바다 조망 코스",
+   "weekly_views": 24,
+   "published": "2026-07-12",
+   "slug": "travel_busan_igidae",
+   "series": "국내여행"
+  },
+  {
+   "rank": 152,
+   "title": "상주 경천대 전망대 가는 법과 상주보 …[미해결]",
+   "weekly_views": 24,
+   "published": "2026-07-25",
+   "slug": null,
+   "series": null
+  },
+  {
+   "rank": 159,
+   "title": "양재시민의숲 메타세콰이어 …[미해결]",
+   "weekly_views": 23,
+   "published": "2026-05-18",
+   "slug": null,
+   "series": null
+  },
+  {
+   "rank": 159,
+   "title": "태백 구와우마을 해바라기 축제 언제 절정인가, 매봉산 바람의언덕 연계 늦여름 나들이",
+   "weekly_views": 23,
+   "published": "2026-08-12",
+   "slug": "travel_taebaek_sunflower",
+   "series": "국내여행"
+  },
+  {
+   "rank": 159,
+   "title": "단풍철 케이블카·모노레일 예약 언제 해야 줄 안 서나 — 설악·내장·대둔산 예매법",
+   "weekly_views": 23,
+   "published": "2026-08-31",
+   "slug": "local_fall_cablecar_booking",
+   "series": "인접·여행실무"
+  },
+  {
+   "rank": 159,
+   "title": "추석 전 반죽 황금비율 — 부치고 식어도 안 질겨지는 밀가루:물 비율",
+   "weekly_views": 23,
+   "published": "2026-08-31",
+   "slug": "recipe_jeon_batter_golden_ratio",
+   "series": "레시피"
+  },
+  {
+   "rank": 163,
+   "title": "인제 곰배령 탐방 예약 방법과 7월 야생화 코스, 동자꽃·금강초롱꽃 절정 시기",
+   "weekly_views": 22,
+   "published": "2026-06-28",
+   "slug": "travel_inje_gombaryeong_wildflower",
+   "series": "국내여행"
+  },
+  {
+   "rank": 163,
+   "title": "동해·강릉·속초·고성 동해안 5일 여름 로드트립 코스와 숙소 기준점",
+   "weekly_views": 22,
+   "published": "2026-08-10",
+   "slug": "travel_eastcoast_5days_roadtrip",
+   "series": "국내여행"
+  },
+  {
+   "rank": 163,
+   "title": "완주 대둔산 케이블카 초가을 조망과 태고사, 전북 가을 나들이 코스",
+   "weekly_views": 22,
+   "published": "2026-09-04",
+   "slug": "travel_wanju_daedunsan_fall",
+   "series": "국내여행"
+  },
+  {
+   "rank": 166,
+   "title": "쿠디(Coody) 에어텐트 …[미해결]",
+   "weekly_views": 21,
+   "published": "2026-04-10",
+   "slug": null,
+   "series": null
+  },
+  {
+   "rank": 166,
+   "title": "영동 물한계곡 여름 계곡 트레킹과 민주지산 원시림 피서, 충북 숨은 명소",
+   "weekly_views": 21,
+   "published": "2026-06-29",
+   "slug": "travel_mulhan_valley",
+   "series": "국내여행"
+  },
+  {
+   "rank": 166,
+   "title": "여름 캠핑 모기·벌레 퇴치법과 빠뜨리기 쉬운 준비물, 체크리스트로 확인",
+   "weekly_views": 21,
+   "published": "2026-07-03",
+   "slug": "local_camping_mosquito_checklist",
+   "series": "인접·여행실무"
+  },
+  {
+   "rank": 169,
+   "title": "건축물대장 표제부·전유부 보는 법과 무단증축 확인, 전세대출 영향",
+   "weekly_views": 20,
+   "published": "2026-07-12",
+   "slug": "cert_building_map_reading",
+   "series": "증명서(폐지)"
+  },
+  {
+   "rank": 169,
+   "title": "통영 비진도 배 시간표와 산호빛 해변, 한려수도 여름 섬 트레킹 코스",
+   "weekly_views": 20,
+   "published": "2026-07-13",
+   "slug": "travel_tongyeong_bijindo",
+   "series": "국내여행"
+  },
+  {
+   "rank": 169,
+   "title": "강릉 소금강계곡 어디서 물놀이하나, 오대산 청학동 소금강 트레킹과 주차",
+   "weekly_views": 20,
+   "published": "2026-07-20",
+   "slug": "travel_gangneung_sogumgang",
+   "series": "국내여행"
+  },
+  {
+   "rank": 169,
+   "title": "완도 신지 명사십리해수욕장 가는 법과 물놀이, 신지도 여름 피서 코스",
+   "weekly_views": 20,
+   "published": "2026-07-22",
+   "slug": "travel_wando_sinjido_beach",
+   "series": "국내여행"
+  },
+  {
+   "rank": 169,
+   "title": "화천 조경철천문대 예약 방법과 …[미해결]",
+   "weekly_views": 20,
+   "published": "2026-07-25",
+   "slug": null,
+   "series": null
+  },
+  {
+   "rank": 169,
+   "title": "제주 오설록 티뮤지엄과 카멜리아힐 — 서귀포 서쪽 녹차밭 드라이브 코스",
+   "weekly_views": 20,
+   "published": "2026-08-16",
+   "slug": "travel_jeju_oseullok",
+   "series": "국내여행"
+  },
+  {
+   "rank": 169,
+   "title": "강릉 오죽헌과 경포호 초가을 …[미해결]",
+   "weekly_views": 20,
+   "published": "2026-08-21",
+   "slug": null,
+   "series": null
+  },
+  {
+   "rank": 176,
+   "title": "전원주택의 로망 …[미해결]",
+   "weekly_views": 19,
+   "published": "2026-04-21",
+   "slug": null,
+   "series": null
+  },
+  {
+   "rank": 176,
+   "title": "서울 성수동 카페거리 도보 가이드 …[미해결]",
+   "weekly_views": 19,
+   "published": "2026-05-15",
+   "slug": null,
+   "series": null
+  },
+  {
+   "rank": 176,
+   "title": "거창 월성계곡 사선대 너럭바위 물놀이와 수승대 당일치기 드라이브 코스",
+   "weekly_views": 19,
+   "published": "2026-07-05",
+   "slug": "travel_geochang_wolseong_valley",
+   "series": "국내여행"
+  },
+  {
+   "rank": 176,
+   "title": "축하화환과 근조화환 주문하는 법, 리본 문구 예시와 가격대",
+   "weekly_views": 19,
+   "published": "2026-07-13",
+   "slug": "rite_flower_order",
+   "series": "경조사"
+  },
+  {
+   "rank": 176,
+   "title": "보령 원산도 오봉산해수욕장 가는 법과 삽시도 배편 …[미해결]",
+   "weekly_views": 19,
+   "published": "2026-07-25",
+   "slug": null,
+   "series": null
+  },
+  {
+   "rank": 176,
+   "title": "부산 영도 흰여울문화마을과 송도해상케이블카·스카이워크 여름 밤바다 코스",
+   "weekly_views": 19,
+   "published": "2026-07-31",
+   "slug": "travel_busan_youngdo_whitevil",
+   "series": "국내여행"
+  },
+  {
+   "rank": 176,
+   "title": "포천 비둘기낭폭포 주차와 아트밸리·산정호수, 수도권 협곡 피서 당일 코스",
+   "weekly_views": 19,
+   "published": "2026-08-03",
+   "slug": "travel_pocheon_bidulginang_summer",
+   "series": "국내여행"
+  },
+  {
+   "rank": 176,
+   "title": "강릉 경포해변·안목해변 8월 말엔 얼마나 한적한가, 늦여름 동해 당일 코스",
+   "weekly_views": 19,
+   "published": "2026-08-08",
+   "slug": "travel_gangneung_gyeongpo_late_summer",
+   "series": "국내여행"
+  },
+  {
+   "rank": 176,
+   "title": "중고차 직거래 사기 예방 체크리스트 — 계약서 작성과 성능점검 확인법",
+   "weekly_views": 19,
+   "published": "2026-08-14",
+   "slug": "car_used_car_scam_prevention",
+   "series": "자동차"
+  },
+  {
+   "rank": 176,
+   "title": "가을 축제 셔틀버스 어디서 타나 — 억새·불꽃·국화 주차장과 무료순환버스 위치 총정리",
+   "weekly_views": 19,
+   "published": "2026-08-19",
+   "slug": "local_autumn_festival_shuttle",
+   "series": "인접·여행실무"
+  },
+  {
+   "rank": 186,
+   "title": "구글 스프레드시트 조건부 서식 …[미해결]",
+   "weekly_views": 18,
+   "published": "2026-04-28",
+   "slug": null,
+   "series": null
+  },
+  {
+   "rank": 186,
+   "title": "제주 한림공원과 협재해변 …[미해결]",
+   "weekly_views": 18,
+   "published": "2026-06-08",
+   "slug": null,
+   "series": null
+  },
+  {
+   "rank": 186,
+   "title": "괴산 화양구곡 9곡 트레킹 코스와 입장료, 충북 청정 계곡 피서지 가는 법",
+   "weekly_views": 18,
+   "published": "2026-06-24",
+   "slug": "travel_goesan_hwayanggugyok",
+   "series": "국내여행"
+  },
+  {
+   "rank": 186,
+   "title": "정선 함백산 만항재 7월 야생화, 차로 오르는 국내 최고 고개 드라이브 코스",
+   "weekly_views": 18,
+   "published": "2026-06-28",
+   "slug": "travel_jeongseon_hambaeksan_wildflower",
+   "series": "국내여행"
+  },
+  {
+   "rank": 186,
+   "title": "차량번호로 하이패스 미납 통행료 조회·납부하는 법",
+   "weekly_views": 18,
+   "published": "2026-07-10",
+   "slug": "car_hipass_toll_unpaid",
+   "series": "자동차"
+  },
+  {
+   "rank": 186,
+   "title": "여름엔 역시 갯장어 …[미해결]",
+   "weekly_views": 18,
+   "published": "2026-07-17",
+   "slug": null,
+   "series": null
+  },
+  {
+   "rank": 186,
+   "title": "추석 전날 막차·첫차 시간과 늦은 밤 귀성 대안 교통수단 총정리",
+   "weekly_views": 18,
+   "published": "2026-08-14",
+   "slug": "local_holiday_last_train",
+   "series": "인접·여행실무"
+  },
+  {
+   "rank": 193,
+   "title": "정선 아우라지 레일바이크 예약·요금과 여량 여름 물놀이, 정선 5일장 연계 코스",
+   "weekly_views": 17,
+   "published": "2026-07-06",
+   "slug": "travel_jeongseun_auraji_railbike_summer",
+   "series": "국내여행"
+  },
+  {
+   "rank": 193,
+   "title": "고속도로 휴게소 맛집 어디서 확인하나, 전기차 충전소 미리 찾는 법",
+   "weekly_views": 17,
+   "published": "2026-07-07",
+   "slug": "local_highway_service_area_tips",
+   "series": "인접·여행실무"
+  },
+  {
+   "rank": 193,
+   "title": "제습기 연속배수 세팅으로 물통 안 비우는 법과 곰팡이 냄새 제거하기",
+   "weekly_views": 17,
+   "published": "2026-07-09",
+   "slug": "appli_dehumidifier_drain",
+   "series": "계절가전"
+  },
+  {
+   "rank": 193,
+   "title": "소득금액증명원 홈택스 인터넷 발급 방법, 대출·보조금 낼 때 어디서 떼나",
+   "weekly_views": 17,
+   "published": "2026-07-15",
+   "slug": "cert_income_certificate",
+   "series": "증명서(폐지)"
+  },
+  {
+   "rank": 193,
+   "title": "부산 해운대·광안리·송정 여름 밤바다 어디로 갈까, 3대 해변 비교와 야경 코스",
+   "weekly_views": 17,
+   "published": "2026-07-29",
+   "slug": "travel_busan_beach_compare",
+   "series": "국내여행"
+  },
+  {
+   "rank": 193,
+   "title": "봉투에 이름 어디 쓰나, 축의금·부의금 봉투 쓰는 법과 한자 표기",
+   "weekly_views": 17,
+   "published": "2026-08-03",
+   "slug": "rite_envelope_writing",
+   "series": "경조사"
+  },
+  {
+   "rank": 193,
+   "title": "광복절 주말 서울 역사 나들이 — 서대문형무소역사관과 독립문·효창공원 코스",
+   "weekly_views": 17,
+   "published": "2026-08-09",
+   "slug": "travel_seoul_independence_day",
+   "series": "국내여행"
+  },
+  {
+   "rank": 193,
+   "title": "차량 튜닝 합법 vs 불법 기준 — 선팅·블랙박스·매연저감장치 허용 범위",
+   "weekly_views": 17,
+   "published": "2026-08-14",
+   "slug": "car_tuning_legal",
+   "series": "자동차"
+  }
+ ]
+}
