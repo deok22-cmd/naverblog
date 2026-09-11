@@ -20,8 +20,13 @@ $ProjectRoot = (Get-Item $PSScriptRoot).Parent.FullName
 $ScriptsDir  = Join-Path $ProjectRoot ".scripts"
 $LogsDir     = Join-Path $ScriptsDir "logs"
 $PromptFile  = Join-Path $ScriptsDir "daily-prompt.md"
+$OutputDir   = Join-Path $ProjectRoot "output"
 $Stamp       = Get-Date -Format "yyyyMMdd-HHmmss"
 $LogFile     = Join-Path $LogsDir "daily-$Stamp.log"
+
+# === 하루 기대 발행 건수 (Step 1.8 검증 게이트 기준값) ===
+# daily-prompt.md §2의 믹스 합계와 같아야 한다. 믹스를 바꾸면 여기도 같이 바꾼다.
+$ExpectedPosts = 7
 
 # 작업 디렉터리 이동
 Set-Location $ProjectRoot
@@ -191,8 +196,8 @@ try {
             $made = @(Get-ChildItem -LiteralPath $dayDir -Filter "*.html" -File -EA SilentlyContinue |
                 Where-Object { $_.Name -ne "index.html" }).Count
         }
-        Write-Log "[STEP1 FAIL] exit=$exit · 오늘 생성된 원고 $made건"
-        Set-Failure "STEP1" "원고 작성 실패(exit=$exit) - 오늘 생성 $made건" "로그에서 마지막 오류 확인 후 수동 재실행"
+        Write-Log "[STEP1 FAIL] exit=$exit · 오늘 생성된 원고 ${made}건"
+        Set-Failure "STEP1" "원고 작성 실패(exit=$exit) - 오늘 생성 ${made}건" "로그에서 마지막 오류 확인 후 수동 재실행"
     }
 } catch {
     [System.IO.File]::AppendAllText($LogFile, "FATAL (Claude step): $_`r`n", $utf8NoBom)
@@ -415,12 +420,136 @@ if ($TistorySuspended) {
     }
 }
 
+# === Step 1.8: 발행 검증 게이트 (2026-09-11 신설 — 사용자 지시) ===
+# 계기: 7/1~9/10 구간을 네이버 실제 등록분과 대조했더니 **원고 112건이 생성만 되고 등록되지
+#   않았다**(stats/미업로드_원고_점검_20260911.md). 그중 56건이 8/17·18·21·23·30·9/3·5·6
+#   — 그날 치가 통째로 빠진 패턴인데, 스크립트는 매번 성공으로 끝났다. 볼 수 있는 계기판이
+#   없었던 게 사고가 두 달을 간 이유다.
+#
+# ⚠️ 이 게이트가 검증할 수 있는 것과 없는 것을 분명히 해 둔다.
+#   daily-run은 **네이버에 업로드하지 않는다** — 등록은 에디터 복사-붙여넣기(수동)다.
+#   따라서 여기서 기계적으로 확인 가능한 건 아래 (1)(2)까지다.
+#     (1) 오늘 올릴 원고가 실제로 $ExpectedPosts건 만들어졌는가   ← 8/27~29형(생성 0건) 차단
+#     (2) 발행이력.md가 그 결과를 반영했는가                      ← 9/7~9형(이력 결손) 차단
+#     (3) 최근 14일 중 원고가 모자란 날이 있는가                  ← 결번 조기 발견
+#   **실제 네이버 등록 여부는 여기서 알 수 없다.** 그건 주간 통계 대조(stats/weekly)로만
+#   확인되므로, 월요일 실행분에서 "지난주 등록분과 대조하라"는 리마인더를 로그·배너에 남긴다.
+#
+# 실패해도 commit/push는 막지 않는다 — 만든 원고는 보존해야 하고, 티스토리 게이트와 달리
+#   여기서 막으면 원고가 로컬에만 남아 오히려 유실 위험이 커진다. 대신 LAST_FAILURE.txt를
+#   남겨 대시보드에 배너를 띄우고 종료코드를 3으로 돌려 스케줄러가 실패로 기록하게 한다.
+Write-Log ""
+Write-Log "=== Step 1.8: Publish Verification Gate @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="
+$publishGateFailed = $false
+$gateReasons = @()
+
+if ($exit -ne 0) {
+    Write-Log "SKIP Gate: Step 1이 exit $exit 로 끝나 이미 실패 처리됨."
+} else {
+    $YMD = Get-Date -Format "yyMMdd"
+
+    # --- (1) 오늘 생성 건수 ---
+    $todayDir = Join-Path $OutputDir $YMD
+    $madeToday = 0
+    if (Test-Path -LiteralPath $todayDir) {
+        $madeToday = @(Get-ChildItem -LiteralPath $todayDir -Filter "*.html" -File -EA SilentlyContinue |
+            Where-Object { $_.Name -ne "index.html" }).Count
+    }
+    Write-Log "(1) 오늘($YMD) 생성 원고: $madeToday / $ExpectedPosts 건"
+    if ($madeToday -lt $ExpectedPosts) {
+        $publishGateFailed = $true
+        $gateReasons += "오늘 원고 ${madeToday}건 (기대 ${ExpectedPosts}건)"
+        Write-Log "    [FAIL] 생성 건수 미달."
+    }
+
+    # --- (2) 발행이력.md 갱신 후 오늘자 행 수 확인 ---
+    # 이력 갱신을 파이프라인 마지막 고정 단계로 만든다. 9/7~9/9이 이력에서 통째로 빠져 있었던
+    # 이유가 이 스크립트를 따로 돌려야 했기 때문이다.
+    $HistFile = Join-Path $ProjectRoot "발행이력.md"
+    try {
+        & python "$ProjectRoot\scripts\build_publish_history.py" 2>&1 | ForEach-Object {
+            $line = "$_"
+            Write-Host $line
+            [System.IO.File]::AppendAllText($LogFile, "$line`r`n", $utf8NoBom)
+        }
+        $histExit = $LASTEXITCODE
+        Write-Log "build_publish_history exit: $histExit"
+        if ($histExit -ne 0) {
+            $publishGateFailed = $true
+            $gateReasons += "발행이력 갱신 실패(exit=$histExit)"
+        }
+    } catch {
+        $publishGateFailed = $true
+        $gateReasons += "발행이력 갱신 중 예외: $_"
+        Write-Log "    [FAIL] build_publish_history.py 예외: $_"
+    }
+
+    # 이력 본문을 한 번만 읽어 (2)(3)에서 같이 쓴다.
+    # ⚠️ Select-String -SimpleMatch 에 [regex]::Escape 한 패턴을 넘기면 역슬래시를 문자 그대로
+    #    찾아 항상 0건이 나온다. 정규식 매칭으로 통일한다.
+    $histText = ""
+    if (Test-Path -LiteralPath $HistFile) {
+        $histText = Get-Content -LiteralPath $HistFile -Raw -Encoding utf8
+    }
+    # 발행이력 행 형식: | 26.09.11 | 국내여행 | `slug` | 제목 |
+    $todayLabel = (Get-Date -Format "yy.MM.dd")
+    $histRows = ([regex]::Matches($histText, [regex]::Escape("| $todayLabel |"))).Count
+    Write-Log "(2) 발행이력.md 오늘자($todayLabel) 행: $histRows 건"
+    if ($histRows -lt $madeToday) {
+        $publishGateFailed = $true
+        $gateReasons += "발행이력 반영 ${histRows}건 < 생성 ${madeToday}건"
+        Write-Log "    [FAIL] 이력에 반영되지 않은 원고가 있음."
+    }
+
+    # --- (3) 최근 14일 결번 점검 ---
+    # output/은 주간 정리로 비워지므로(2026-08-15~) 이력 기준으로 센다.
+    $gaps = @()
+    for ($i = 1; $i -le 14; $i++) {
+        $lbl = (Get-Date).AddDays(-$i).ToString("yy.MM.dd")
+        $n = ([regex]::Matches($histText, [regex]::Escape("| $lbl |"))).Count
+        if ($n -lt $ExpectedPosts) { $gaps += "$lbl($n)" }
+    }
+    if ($gaps.Count -gt 0) {
+        Write-Log "(3) 최근 14일 중 원고가 모자란 날: $($gaps -join ', ')"
+        if ($gaps.Count -ge 3) {
+            $publishGateFailed = $true
+            $gateReasons += "최근 14일 결번 $($gaps.Count)일: $($gaps -join ', ')"
+            Write-Log "    [FAIL] 결번이 3일 이상 — 파이프라인을 점검할 것."
+        }
+    } else {
+        Write-Log "(3) 최근 14일 결번 없음."
+    }
+
+    # --- (4) 월요일: 네이버 실제 등록분 대조 리마인더 (자동 검증 불가 영역) ---
+    if ((Get-Date).DayOfWeek -eq [System.DayOfWeek]::Monday) {
+        Write-Log "(4) [REMINDER] 월요일 — 네이버 주간 통계를 캡처해 stats/weekly에 적재하고,"
+        Write-Log "    실제 등록분과 발행이력.md를 대조하십시오. 업로드는 수동이라 스크립트가 검증할 수 없습니다."
+        Write-Log "    대조 절차: stats/미업로드_원고_점검_20260911.md 참조."
+    }
+
+    if ($publishGateFailed) {
+        $detail = ($gateReasons -join " / ")
+        Write-Log "[PUBLISH GATE FAIL] $detail"
+        Set-Failure "PUBLISH" $detail "output/$YMD 확인 후 부족분 수동 생성. 네이버 등록은 별도 — 붙여넣기 누락분이 없는지 stats/weekly와 대조."
+    } else {
+        Write-Log "[PUBLISH GATE OK] 생성 ${madeToday}건 · 이력 ${histRows}건 · 결번 $($gaps.Count)일"
+    }
+}
+
+# 종료코드 계산 — Step 1은 성공했지만 검증 게이트가 실패하면 3을 돌려준다.
+# (Step 2에서 커밋·푸시는 정상 진행한다. 원고를 원격에 남기는 쪽이 언제나 안전하다.)
+function Get-FinalExit {
+    if ($publishGateFailed -and $exit -eq 0) { return 3 }
+    return $exit
+}
+
 # === Step 2: 작성 성공 시 git add / commit / push ===
 Write-Log ""
 Write-Log "=== Git Auto-Push @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="
 
-# 여기까지 왔고 Step 1이 성공했다면 지난 실패는 해소된 것 — 신호 파일을 지운다.
-if ($exit -eq 0 -and (Test-Path -LiteralPath $FailFlag)) {
+# 여기까지 왔고 Step 1과 검증 게이트가 모두 통과했다면 지난 실패는 해소된 것 — 신호 파일을 지운다.
+# ⚠️ $publishGateFailed 조건이 빠지면 방금 Step 1.8이 쓴 실패 신호를 여기서 지워버린다.
+if ($exit -eq 0 -and -not $publishGateFailed -and (Test-Path -LiteralPath $FailFlag)) {
     Remove-Item -LiteralPath $FailFlag -Force -EA SilentlyContinue
     Write-Log "이전 실패 신호(LAST_FAILURE.txt) 해소 - 삭제함."
 }
@@ -449,6 +578,7 @@ try {
     $Trackers = @(
         "국내여행지.md",
         "생활정보.md",
+        "발행이력.md",
         "sub_topic_tracker.md",
         "spreadsheet.md",
         "receipt.md"
@@ -541,7 +671,7 @@ try {
     $staged = & git diff --cached --name-only 2>&1
     if ([string]::IsNullOrWhiteSpace(($staged -join "`n"))) {
         Write-Log "INFO: No staged changes; skipping commit/push."
-        exit $exit
+        exit (Get-FinalExit)
     }
 
     Write-Log "Staged files:"
@@ -557,7 +687,7 @@ try {
 
     if ($commitExit -ne 0) {
         Write-Log "ERROR: commit failed; abort push."
-        exit $exit
+        exit (Get-FinalExit)
     }
 
     # push (현재 체크아웃된 브랜치 → origin)
@@ -577,4 +707,10 @@ try {
     [System.IO.File]::AppendAllText($LogFile, "ERROR (Git step): $_`r`n", $utf8NoBom)
 }
 
-exit $exit
+$final = Get-FinalExit
+if ($final -eq 3) {
+    Write-Log ""
+    Write-Log "=== 종료코드 3 — 원고는 커밋·푸시됐지만 발행 검증 게이트가 실패했습니다. ==="
+    Write-Log "    대시보드 상단 배너와 $FailFlag 를 확인하십시오."
+}
+exit $final
