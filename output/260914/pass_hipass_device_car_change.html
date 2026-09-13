@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>하이패스 단말기 차 바꿀 때 그대로 쓰나 — 차량 변경 등록 절차</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>하이패스 단말기 차 바꿀 때 그대로 쓰나 — 차량 변경 등록 절차</h1>
+<div class="intro-box">
+차를 바꾸면 하이패스 단말기도 새로 사야 할까요? 결론부터 말하면 단말기는 그대로 써도 됩니다. 하지만 <strong>차량 정보 변경 등록</strong>은 반드시 해야 합니다. 이것을 안 하면 차량 번호 불일치로 통행 기록이 꼬이거나 미납 고지가 날아올 수 있습니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>🖼 이미지 1 / 2</span><span class="ph-file">images/260914/6_hipass_1.png</span></div>
+<div class="prompt-text" id="p6_1">자동차 앞 유리에 부착된 하이패스 단말기 클로즈업. 깔끔한 차 실내, 하이패스 OBU 장치가 앞 유리 하단에 붙어 있는 모습, 밝은 낮 실내, 사실적인 사진 스타일.</div>
+<button class="copy-btn" onclick="copyPrompt('p6_1')">프롬프트 복사</button>
+</div>
+<div class="img-caption">하이패스 단말기 — 차가 바뀌어도 단말기는 재사용 가능, 등록 정보만 바꾸면 된다 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 하이패스 단말기, 차 바꾸면 어떻게 되나</h2>
+
+하이패스 단말기는 단말기 자체에 고유 번호(단말기 ID)가 있고, 이 ID에 차량 번호·사용자 정보가 연결되어 있습니다. 차량이 변경되면 단말기 ID에 연결된 차량 번호를 새 차 번호로 바꿔야 합니다.<br><br>
+
+이 과정을 <strong>차량 변경 등록(또는 차량 정보 변경)</strong>이라고 합니다. 등록하지 않으면 고속도로 통행 시 이전 차량 번호로 기록되어 문제가 생길 수 있습니다.<br><br>
+
+<div class="warn-box">
+⚠️ 차를 판매하고 새 차를 출고받은 경우, 잔존 차량에서 단말기를 떼어 오지 않았다면 이전 차 번호로 등록된 단말기가 사용될 수 있습니다. 이 경우 전 소유자가 미납 고지를 받는 상황이 생길 수 있으므로, 차량 매도 시 단말기를 반드시 회수하거나 등록 해제를 해두어야 합니다.
+</div>
+
+<h2>02 | 차량 변경 등록이 필요한 이유</h2>
+
+하이패스 차로는 통과 시 차량 번호판과 단말기 신호를 동시에 인식합니다. 단말기 ID의 차량 번호와 실제 번호판이 일치해야 정상 과금이 됩니다.<br><br>
+
+불일치 시 발생하는 문제:
+- 통행 요금이 미납으로 처리될 수 있음
+- 이전 차량 번호로 미납 내역이 누적될 수 있음
+- 차량 조회 시 하이패스 이용 내역이 엉키는 문제<br><br>
+
+<div class="info-box">
+요컨대 단말기는 재사용 가능하지만, 차 번호 변경 등록은 새 차 출고 직후 바로 해두어야 합니다.
+</div>
+
+<h2>03 | 차량 변경 등록 방법 — 온라인 절차</h2>
+
+하이패스 단말기의 차량 정보 변경은 발급사(카드사)를 통해 처리합니다. 하이패스 카드를 발급한 카드사 앱이나 홈페이지에서 진행합니다.<br><br>
+
+<div class="step-box">
+<strong>온라인 차량 변경 등록 절차 (재검증)</strong><br>
+① 하이패스 카드 발급사 앱 또는 홈페이지 로그인<br>
+② '하이패스 관리' 또는 '차량 정보 변경' 메뉴 이동<br>
+③ 기존 차량 번호 조회 확인<br>
+④ 새 차량 번호 및 차종 입력<br>
+⑤ 변경 신청 완료 (즉시 또는 1영업일 내 적용)
+</div>
+
+<div class="tip-box">
+<strong>💡 카드사별 메뉴 위치</strong><br>
+카드사마다 메뉴 이름이 다를 수 있습니다. '마이하이패스', '단말기 관리', '차량 변경' 등의 키워드로 검색하면 해당 메뉴를 찾을 수 있습니다. 확인되지 않은 세부 경로는 카드사 고객센터에 문의하시기 바랍니다. (재검증)
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>🖼 이미지 2 / 2</span><span class="ph-file">images/260914/6_hipass_2.png</span></div>
+<div class="prompt-text" id="p6_2">스마트폰 화면에 카드 앱 하이패스 메뉴가 열려 있는 장면. 차량 정보 변경 화면, 차량 번호 입력 필드, 현대적인 UI, 손이 폰을 쥔 모습, 밝은 배경, 일러스트 스타일.</div>
+<button class="copy-btn" onclick="copyPrompt('p6_2')">프롬프트 복사</button>
+</div>
+<div class="img-caption">카드사 앱에서 차량 변경 등록 — 몇 분이면 완료되지만 빠뜨리기 쉬운 절차 / AI 제작 이미지</div>
+</div>
+
+<h2>04 | 등록 변경 적용까지 얼마나 걸리나</h2>
+
+온라인 신청 시 대부분 즉시 또는 최대 1영업일 내에 반영됩니다. 신청 직후 고속도로를 이용하면 변경된 차량 번호로 정상 처리됩니다.<br><br>
+
+다만 카드사 전산 처리 일정에 따라 다음 영업일 처리가 원칙인 경우도 있습니다. 새 차 출고 당일 고속도로를 이용해야 한다면, 카드사 고객센터에 전화 신청을 먼저 하는 것이 안전합니다.<br><br>
+
+<h2>05 | 새 차와 기존 단말기 호환 여부</h2>
+
+하이패스 단말기는 차종과 무관하게 대부분 호환됩니다. 차량 앞 유리에 부착하는 OBU(On Board Unit) 타입은 붙이는 위치만 바꾸면 됩니다.<br><br>
+
+단, 일부 전기차나 ECG 유리(친환경 유리) 차량의 경우 전파 투과 특성이 달라 하이패스 인식률이 낮을 수 있습니다. 이 경우 전용 외장 부착형 단말기를 쓰거나, 차량 번호판 인식 방식 하이패스(미래 하이패스) 서비스를 이용합니다.<br><br>
+
+<h2>06 | 단말기 재구매가 필요한 경우</h2>
+
+기존 단말기가 오래되거나 고장난 경우, 단말기 교체가 필요합니다. 국내 하이패스 단말기는 대부분 KS 규격 단말기라 카드사와 무관하게 작동합니다.<br><br>
+
+<table class="info-table">
+<tr><th>단말기 유형</th><th>특징</th><th>가격대</th></tr>
+<tr><td>유리 부착형 (OBU)</td><td>가장 일반적, 앞 유리 안쪽 부착</td><td>3~5만 원</td></tr>
+<tr><td>블랙박스 일체형</td><td>블랙박스에 하이패스 통합, 배선 통일</td><td>10~20만 원</td></tr>
+<tr><td>하이패스 카드형</td><td>단말기 없이 카드 단독으로 사용 (일부 차로만 가능, 재검증)</td><td>카드비용만</td></tr>
+</table>
+
+<h2>07 | 법인 차량 등록 차이</h2>
+
+법인 하이패스는 법인 카드와 연결된 단말기로, 법인 차량 번호를 등록합니다. 법인 차량이 교체될 경우 법인 카드 담당 카드사 법인 고객 채널을 통해 변경합니다. 일반 개인 절차와 동일하지만, 법인 인증(공인인증 또는 사업자 번호 확인) 단계가 추가될 수 있습니다. (재검증)<br><br>
+
+<h2>08 | 리스·렌트 차량에서의 하이패스</h2>
+
+장기 렌트나 리스 차량에서는 렌트사(리스사)가 하이패스 단말기를 제공하는 경우가 있습니다. 이 경우 단말기는 렌트 차량에 고정되어 있고, 통행료는 렌트비와 함께 청구되거나 별도 청구됩니다.<br><br>
+
+개인 소유 하이패스 카드·단말기를 렌트 차량에 사용하고 싶다면, 렌트 차량 번호로 단말기 차량 정보를 변경한 후 이용해야 합니다. 렌트 기간 동안만 변경해두고, 반납 후에는 원래 차량(또는 새 차)으로 재변경합니다.<br><br>
+
+<h2>09 | 변경 등록 시 자주 하는 실수</h2>
+
+<div class="step-box">
+<strong>❌ 자주 하는 실수들</strong><br>
+• 차 번호만 바꾸고 차종(승용/승합/화물)을 바꾸지 않음 → 감면 적용 오류 발생<br>
+• 번호판 숫자를 잘못 입력 → 다음 통행 때 차량 불일치 오류<br>
+• 이전 차 매도 후 단말기 미회수 → 전 소유자 이름으로 통행 기록 발생<br>
+• 변경 완료 전 고속도로 이용 → 이전 차 번호로 기록됨
+</div>
+
+<div class="tip-box">
+<strong>💡 변경 후 확인법</strong><br>
+고속도로 통행 후 카드사 앱에서 하이패스 이용 내역을 조회했을 때 새 차량 번호로 기록되면 정상입니다.
+</div>
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260913/car_used_car_installment_comparison.html">중고차 할부 구입 시 캐피탈 vs 은행 할부 이자율 비교, 어떤 게 나을까</a></li>
+<li><a href="../260913/travel_seoul_fireworks_hangang_2026.html">서울 세계불꽃축제 2026 한강 명당 어디서 보나, 입장료와 교통 안내</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#하이패스단말기</span>
+<span class="tag">#차량변경등록</span>
+<span class="tag">#하이패스차바꿀때</span>
+<span class="tag">#고속도로통행료</span>
+<span class="tag">#하이패스설정</span>
+</div>
+</body>
+</html>
