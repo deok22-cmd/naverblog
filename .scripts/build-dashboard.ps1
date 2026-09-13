@@ -23,7 +23,10 @@ $DashboardPath = Join-Path $ProjectRoot "dashboard.html"
 $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
 
 # 새 믹스 시행일 (이 날짜부터 신규 로테이션 슬롯 준수를 판정)
-$NewMixFrom = "260810"
+# 믹스 판정 시행일. 이 날짜부터의 발행분만 $SlotTarget과 대조한다.
+# 2026-09-13 개정으로 목표가 바뀌었으므로, 구 믹스(260810~260912) 날짜를 새 목표로 판정하면
+# 전부 '어긋남'으로 뜬다 → 시행일을 함께 올린다.
+$NewMixFrom = "260913"
 
 # ============================================================
 # 0. 계열(prefix) 사전 — 슬롯 그룹 / 라벨 / 색
@@ -37,12 +40,13 @@ $SlotColor = @{
     "신규" = "#DB2777"   # pink-600
     "보충" = "#64748B"   # 중립 회색 — 의도적으로 categorical 팔레트 밖
 }
-$SlotTarget = @{ "여행" = 3; "인접" = 1; "생활" = 2; "신규" = 1; "보충" = 0 }
+# 2026-09-13 개정: 여행 3→2, 신규 로테이션 1→2 (daily-prompt.md §2)
+$SlotTarget = @{ "여행" = 2; "인접" = 1; "생활" = 2; "신규" = 2; "보충" = 0 }
 $SlotDesc = @{
     "여행" = "국내여행 (주력)"
     "인접" = "인접 롱테일 — 해외·교통 여행실무 우선"
     "생활" = "생활 버티컬 — 경조사 + 자동차"
-    "신규" = "신규 로테이션 — 레시피·전원주택·기기실무"
+    "신규" = "신규 로테이션 2칸 — 교통요금·전원주택·레시피·기기실무"
     "보충" = "보충·레거시 계열 (큐 부족 시에만)"
 }
 
@@ -52,11 +56,12 @@ $Cat = @{
     "local"  = @("인접", "인접·여행실무")
     "rite"   = @("생활", "경조사")
     "car"    = @("생활", "자동차")
+    "pass"   = @("신규", "교통요금·환급")
     "recipe" = @("신규", "레시피")
     "house"  = @("신규", "전원주택")
     "tech"   = @("신규", "기기·IT실무")
     "gov"    = @("보충", "지원금")
-    "appli"  = @("보충", "계절가전")
+    "appli"  = @("보충", "계절가전(폐지)")
     "cert"   = @("보충", "증명서(폐지)")
     "admin"  = @("보충", "행정발급")
     "money"  = @("보충", "재테크(폐지)")
@@ -64,11 +69,18 @@ $Cat = @{
 }
 
 # 요일별 신규 로테이션 기대 계열 (daily-prompt.md 2조)
+# 2026-09-13: 로테이션이 1칸 → 2칸이 되면서 요일마다 기대 계열이 둘이다.
 $RotationByDow = @{
-    "월" = "recipe"; "목" = "recipe"; "일" = "recipe"
-    "화" = "house";  "금" = "house"
-    "수" = "tech";   "토" = "tech"
+    "월" = @("pass", "recipe")
+    "화" = @("house", "tech")
+    "수" = @("pass", "recipe")
+    "목" = @("house", "tech")
+    "금" = @("pass", "recipe")
+    "토" = @("house", "tech")
+    "일" = @("pass", "house")
 }
+# 2칸 체제 시행일 — 이 날짜부터 두 계열을 모두 기대한다(이전 날짜는 옛 1칸 규칙이라 검사 생략).
+$Rotation2From = "260913"
 $DowKr = @{
     "Monday" = "월"; "Tuesday" = "화"; "Wednesday" = "수"; "Thursday" = "목"
     "Friday" = "금"; "Saturday" = "토"; "Sunday" = "일"
@@ -246,7 +258,7 @@ foreach ($day in $naverDays) {
     }
 }
 # 현행 믹스에 편성된 계열은 아직 0건이어도 행을 만들어 둔다(신규 로테이션 추적용)
-foreach ($k in @("travel", "local", "rite", "car", "recipe", "house", "tech")) {
+foreach ($k in @("travel", "local", "rite", "car", "pass", "house", "recipe", "tech")) {
     if (-not $serieStat.ContainsKey($k)) {
         $serieStat[$k] = [PSCustomObject]@{
             Prefix = $k; Slot = $Cat[$k][0]; Label = $Cat[$k][1]; Count = 0; Last = ""
@@ -349,15 +361,17 @@ foreach ($day in $naverDays) {
     $skew = ""
     foreach ($p in ($day.Posts | Group-Object Prefix)) {
         $lim = 3
-        if ($p.Name -eq "travel") { $lim = 4 }
+        # 여행은 믹스 2 + 보충 1까지 정상 (2026-09-13: 믹스 3 → 2라 상한도 4 → 3)
+        if ($p.Name -eq "travel") { $lim = 3 }
         if ($p.Count -gt $lim) { $skew = "$($p.Name) $($p.Count)건" }
     }
     if ($skew -ne "") { $flags += "<span class=`"badge bad`" title=`"큐 고갈 시 한 계열이 하루를 잠식하는 패턴`">편중 $skew</span>" }
-    # 신규 로테이션 요일 준수
-    if ($day.Date -ge $NewMixFrom -and $RotationByDow.ContainsKey($dow)) {
-        $want = $RotationByDow[$dow]
-        $got = @($day.Posts | Where-Object { $_.Prefix -eq $want }).Count
-        if ($got -eq 0) { $flags += "<span class=`"badge warn`">$want 누락</span>" }
+    # 신규 로테이션 요일 준수 (2026-09-13부터 요일당 2계열)
+    if ($day.Date -ge $Rotation2From -and $RotationByDow.ContainsKey($dow)) {
+        foreach ($want in $RotationByDow[$dow]) {
+            $got = @($day.Posts | Where-Object { $_.Prefix -eq $want }).Count
+            if ($got -eq 0) { $flags += "<span class=`"badge warn`">$want 누락</span>" }
+        }
     }
     # 정리된 날짜는 index·이미지가 없는 게 정상이므로 경보를 띄우지 않는다
     if ($day.Pruned) {
@@ -608,7 +622,7 @@ $failBanner
 
 <section>
   <h2><span class="n">01</span>네이버 블로그 — 일자별 슬롯 구성</h2>
-  <p class="note">발행 믹스 목표 = <b>여행 3 · 인접 1 · 생활 2 · 신규 1 = 7건</b>(2026-08-10 시행).
+  <p class="note">발행 믹스 목표 = <b>여행 2 · 인접 1 · 생활 2 · 신규 2 = 7건</b>(2026-09-13 시행).
   목표와 어긋난 칸은 <span class="badge warn">노란 배경</span>, 한 계열이 하루를 잠식하면 <span class="badge bad">편중</span>으로 표시된다.
   시행일 이전 날짜는 구 믹스이므로 구성만 보여주고 판정하지 않는다.</p>
   <div class="legend">
@@ -689,7 +703,7 @@ $($sbSets.ToString())
   <ul class="memo">
     <li><b>이 대시보드는 자동 생성물이다.</b> 매일 새벽 4시 발행 직후 <code>.scripts\build-dashboard.ps1</code>이 재생성한다.
     직접 <code>dashboard.html</code>을 고치면 다음 실행에 덮어써지므로, 화면을 바꾸려면 빌더를 고쳐야 한다.</li>
-    <li><b>신규 로테이션</b>: 월·목·일 <code>recipe_</code> / 화·금 <code>house_</code> / 수·토 <code>tech_</code>.
+    <li><b>신규 로테이션 (2026-09-13부터 하루 2건)</b>: 월·수·금 <code>pass_</code>+<code>recipe_</code> / 화·목·토 <code>house_</code>+<code>tech_</code> / 일 <code>pass_</code>+<code>house_</code>.
     해당 요일에 그 계열이 없으면 점검 칸에 누락 배지가 뜬다.</li>
     <li><b>편중 경보</b>는 2026-08-01 큐 전면 고갈로 7건이 전부 <code>travel_</code>로 나간 사고의 재발 감지용이다.
     떴다면 큐 리필(<code>.scripts\refill-prompt.md</code>, 매주 월요일 자동)이 밀린 것이다.</li>
