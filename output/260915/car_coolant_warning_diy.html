@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>냉각수 경고등 켜졌을 때 대처 순서와 부동액 교체 시기, 겨울 전 점검</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>냉각수 경고등 켜졌을 때 대처 순서와 부동액 교체 시기, 겨울 전 점검</h1>
+
+<div class="intro-box">
+운전 중 계기판에 냉각수 경고등이 켜지면 당황하기 쉽습니다. <strong>경고등 색깔에 따라 대처 방법이 완전히 다르기 때문에</strong> 색상과 의미를 먼저 파악하는 것이 중요합니다.<br><br>
+빨간 경고등은 엔진 과열을 의미하는 위험 신호입니다. 즉각 행동하지 않으면 엔진이 심각하게 손상될 수 있습니다. 이 글에서는 냉각수 경고등 종류별 대처 순서부터 부동액 교체 시기, 겨울을 앞두고 반드시 확인해야 할 점검 항목까지 단계별로 안내합니다.<br><br>
+<strong>⚠️ 안전 안내:</strong> 이 글은 자동차 정비 안전 정보입니다. 고온의 엔진 부품 취급 시 심각한 화상 위험이 있습니다. 응급 보충 이후에는 반드시 전문 정비소 방문을 병행하시기 바랍니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 이미지 준비 중</span>
+      <span class="ph-file">5_coolant_1.png</span>
+    </div>
+    <pre id="prompt-5-1" class="prompt-text">Car dashboard with temperature warning light illuminated in red, car engine coolant overheating warning symbol glowing, close-up of instrument cluster, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">프롬프트 복사</button>
+  </div>
+  <div class="img-caption">자동차 냉각수 경고등이 켜진 계기판 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 냉각수 경고등 색깔 — 파란색과 빨간색은 전혀 다른 신호</h2>
+
+냉각수 경고등은 모두 같은 의미가 아닙니다. <strong>색깔에 따라 상황이 완전히 달라지므로</strong> 색상 구분을 먼저 이해하는 것이 가장 중요합니다.<br><br>
+
+<strong>파란색 냉각수 경고등</strong>은 냉각수 온도가 아직 낮다는 뜻입니다. 주로 시동을 걸고 바로 출발할 때 켜지며, 엔진이 적정 온도로 워밍업되면 자동으로 꺼집니다. 이 상태에서는 급가속이나 고회전 운전을 피하고 천천히 워밍업해 주시는 것이 좋습니다. 파란 경고등 자체는 정상 범위의 안내 표시입니다.<br><br>
+
+<strong>빨간색 또는 주황색 냉각수 경고등</strong>은 완전히 다른 신호입니다. 엔진이 과열(오버히트) 상태에 가까워지거나 이미 위험 온도에 도달했음을 알립니다. 이때는 즉시 조치가 필요하며, 그냥 운전을 계속하면 수십만 원에서 수백만 원에 달하는 엔진 수리비로 이어질 수 있습니다.<br><br>
+
+<strong>냉각수 부족 경고(!아이콘 또는 물결 모양 아이콘)</strong>는 냉각수 수위가 MIN 이하로 떨어졌을 때 켜집니다. 당장 과열은 아니더라도 방치하면 머지않아 빨간 경고등이 켜질 수 있으니 빠르게 보충이 필요합니다.<br><br>
+
+차량마다 계기판 디자인이 조금씩 다를 수 있으므로, 낯선 아이콘이 보이면 차량 매뉴얼을 확인하거나 가까운 정비소에 문의하시기 바랍니다.
+
+<h2>02 | 빨간 경고등 켜졌을 때 즉시 해야 할 것 — 순서가 중요</h2>
+
+빨간 냉각수 경고등이 켜지면 당황하지 말고 아래 순서대로 행동하세요. <strong>순서를 지키는 것이 엔진 손상을 최소화하는 핵심입니다.</strong><br><br>
+
+<div class="step-box">
+<strong>1단계 — 에어컨 즉시 끄기, 히터 최대로 켜기</strong><br>
+에어컨은 엔진 부하를 높여 온도를 더 올립니다. 반대로 히터를 최대로 켜면 엔진 열이 실내로 분산되어 냉각에 도움이 됩니다. 더워도 참아야 합니다.
+</div>
+
+<div class="step-box">
+<strong>2단계 — 안전한 장소에 신속히 정차</strong><br>
+고속도로라면 갓길에, 시내라면 주차장이나 도로변 안전 공간으로 차를 세웁니다. 엔진 경고등이 켜진 상태로 무리하게 주행을 지속하면 엔진이 고착될 수 있습니다.
+</div>
+
+<div class="step-box">
+<strong>3단계 — 엔진 끄고 30분 이상 냉각 대기</strong><br>
+시동을 끈 뒤 최소 30분 이상 기다립니다. 이때 보닛을 즉시 열거나 냉각수 캡을 바로 열면 뜨거운 증기와 냉각수가 분출되어 화상을 입을 수 있습니다.
+</div>
+
+<div class="step-box">
+<strong>4단계 — 냉각 확인 후 보닛 열기</strong><br>
+손을 보닛에 살짝 대어 열기가 느껴지지 않을 때 보닛을 엽니다. 이때도 냉각수 캡은 천천히, 두꺼운 장갑이나 수건을 이용해 여세요.
+</div>
+
+<div class="step-box">
+<strong>5단계 — 냉각수 리저버 탱크 수위 확인</strong><br>
+흰색 반투명 통이 리저버 탱크입니다. MAX와 MIN 표시 사이에 냉각수가 있는지 확인합니다. 비어있거나 MIN 이하라면 보충이 필요합니다.
+</div>
+
+<div class="step-box">
+<strong>6단계 — 응급 보충 후 정비소 방문</strong><br>
+냉각수가 없으면 정수된 물을 응급 보충합니다. 임시 보충이므로 반드시 정비소에서 냉각수 계통 전체 점검을 받아야 합니다.
+</div>
+
+<h2>03 | 정차 후 보닛 열 때 절대 서두르지 않는 이유</h2>
+
+엔진이 과열된 상태에서 라디에이터 캡이나 냉각수 리저버 탱크 캡을 급하게 열면 내부 압력으로 인해 <strong>섭씨 100도가 넘는 냉각수와 증기가 폭발적으로 분출됩니다.</strong><br><br>
+
+이로 인한 화상은 매우 심각할 수 있습니다. 실제로 매년 이런 사고로 병원 치료를 받는 경우가 발생합니다. 냉각수는 완전히 식어 있어도 색상이 형광빛이거나 화학물질이 포함되어 있어 피부에 닿으면 자극이 될 수 있습니다.<br><br>
+
+엔진이 충분히 냉각되었는지 확인하는 방법은 세 가지입니다.<br><br>
+
+첫 번째, <strong>손바닥을 보닛 위에 살짝 대어보기</strong>입니다. 뜨거운 열기가 느껴지면 아직 위험합니다. 두 번째, <strong>최소 30분 대기</strong>가 기본입니다. 여름 폭염 중에는 45분 이상 기다리는 것이 안전합니다. 세 번째, <strong>캡을 열기 전 수건이나 두꺼운 천을 덮어서</strong> 천천히 돌려 열어 압력이 먼저 빠질 수 있도록 합니다.<br><br>
+
+급하다고 서두르지 마세요. 화상 치료비와 고통이 30분 기다리는 것보다 훨씬 더 큰 손해입니다.
+
+<h2>04 | 냉각수 직접 보충하는 법 — 리저버 탱크 위치와 방법</h2>
+
+엔진이 충분히 냉각된 뒤 냉각수를 직접 보충할 수 있습니다. <strong>리저버 탱크 위치는 대부분의 차량에서 엔진룸 한쪽 모서리</strong>에 있는 흰색 또는 반투명 플라스틱 통입니다.<br><br>
+
+차량 메이커에 따라 위치가 다르므로, 처음이라면 차량 매뉴얼에서 '냉각수 리저버 탱크' 또는 'coolant reservoir' 항목을 찾아보세요. 대부분 탱크 위에 온도계 아이콘이나 물결 모양 마크가 표시되어 있습니다.<br><br>
+
+<strong>보충 방법은 다음과 같습니다.</strong> 탱크의 MAX와 MIN 표시 사이까지 채워주면 됩니다. 응급 상황이라면 정제수(생수도 가능)를 임시 보충할 수 있지만, 이는 어디까지나 응급 조치입니다. 물만 보충하면 냉각수와 부동액의 혼합 비율이 달라지기 때문에 반드시 정비소에서 정상 비율로 재조정해야 합니다.<br><br>
+
+냉각수를 구매해서 보충할 경우, <strong>기존에 사용 중인 냉각수 색상과 같은 종류를 사용</strong>하는 것이 원칙입니다. 색상이 다른 냉각수를 섞으면 화학 반응이 일어나 슬러지가 생길 수 있습니다. 모르겠다면 정비소에서 처리하는 것이 가장 안전합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 이미지 준비 중</span>
+      <span class="ph-file">5_coolant_2.png</span>
+    </div>
+    <pre id="prompt-5-2" class="prompt-text">Hand opening car radiator coolant reservoir cap, antifreeze coolant bottle beside, car engine compartment, careful maintenance procedure, photorealistic, ultra high detail, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-2')">프롬프트 복사</button>
+  </div>
+  <div class="img-caption">냉각수 리저버 탱크 캡 개방과 부동액 보충 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 부동액과 냉각수 차이 — 같은 것인가 다른 것인가</h2>
+
+많은 분들이 '냉각수'와 '부동액'을 같은 것으로 알고 계시지만, 엄밀히는 다릅니다. <strong>부동액(antifreeze)은 냉각수에 섞어 넣는 화학 첨가제이고, 냉각수는 부동액과 물을 혼합한 최종 혼합 액체입니다.</strong><br><br>
+
+부동액은 에틸렌 글리콜 또는 프로필렌 글리콜이 주성분입니다. 이 물질이 물의 어는점을 낮춰주어 겨울철 냉각수가 얼어 동파되는 것을 막습니다. 동시에 끓는점을 높여 여름 고온에서도 냉각수가 끓어 오르는 것을 방지합니다.<br><br>
+
+<strong>일반적인 혼합 비율은 부동액 50% : 정제수 50%입니다.</strong> 이 비율에서 어는점은 약 −37℃ 수준으로, 한국의 대부분 지역 겨울 기온에 충분히 대응합니다. 혹한 지역이나 강원도 산간 지방에 거주하시는 경우 부동액 비율을 60%까지 높이는 경우도 있습니다.<br><br>
+
+부동액 비율이 너무 높아도 냉각 효율이 오히려 떨어질 수 있으니 70% 이상은 권장하지 않습니다. 정비소에서 굴절계(refractometer)로 현재 혼합 비율을 확인하는 서비스를 제공하므로, 교체 전에 현재 상태를 측정해 보시는 것도 좋습니다.
+
+<h2>06 | 부동액 교체 주기와 시기 — 몇 km마다 갈아야 하나</h2>
+
+부동액은 시간이 지나면 산성화되고, 방청 성분과 방식 성분이 소모됩니다. 오래된 부동액은 냉각 계통 내부를 부식시켜 라디에이터, 워터펌프, 냉각수 호스 손상으로 이어질 수 있습니다.<br><br>
+
+<strong>일반적인 교체 주기는 주행거리 약 40,000~60,000km 또는 2년 중 먼저 도래하는 시점입니다.</strong> 최근에는 장수명(long-life) 부동액이 늘어나 100,000km 또는 5년 교체 주기를 권장하는 제품도 있습니다. 차량 매뉴얼에 명시된 교체 주기를 우선 따르시기 바랍니다.<br><br>
+
+교체 시기로 가장 적합한 계절은 <strong>겨울이 오기 전인 10월~11월입니다.</strong> 냉각수 성능이 최대로 필요한 계절 직전에 신선한 부동액을 채워두는 것이 현명합니다. 여름 이후 고온 운전으로 냉각수 성능이 일부 소모된 상태이기도 합니다.<br><br>
+
+교체 비용은 일반적으로 공임 포함 5만~10만 원 내외입니다. 냉각수 플러싱(세정) 포함 여부에 따라 달라질 수 있으므로 사전에 정비소에 확인하세요.
+
+<h2>07 | 냉각수 색깔이 갈색으로 변했다면 — 교체 신호 읽기</h2>
+
+냉각수의 색상은 부동액 성분과 메이커에 따라 초록색, 파란색, 노란색, 분홍색 등 다양합니다. 중요한 것은 처음 색깔보다 <strong>현재 색깔이 갈색이나 흑갈색, 또는 탁해졌는지 여부</strong>입니다.<br><br>
+
+냉각수가 갈색으로 변하는 이유는 두 가지입니다. 첫 번째는 <strong>냉각 계통 내부의 부식 또는 녹이 혼합</strong>된 경우입니다. 특히 오래된 차량이나 철 재질 부품이 많은 차량에서 나타납니다. 두 번째는 <strong>엔진 오일이 냉각수에 유입</strong>된 경우입니다. 이 경우 헤드 가스켓 손상을 의심해야 합니다.<br><br>
+
+냉각수가 탁하거나 갈색이면 즉시 교체가 필요합니다. 또한 라디에이터 캡을 열었을 때 냉각수 위에 기름기가 떠 있거나 거품이 많다면 헤드 가스켓 점검을 서두르세요.<br><br>
+
+<div class="warn-box">
+⚠️ <strong>냉각수 오일 혼합은 즉각 정비 필요:</strong> 냉각수에 엔진오일이 섞이면 두 가지 유체 모두 기능을 잃고, 엔진 내부 마모가 빠르게 진행됩니다. 이 상태로 계속 운행하면 엔진 전체 교환으로 이어질 수 있습니다.
+</div>
+
+<h2>08 | 겨울 전 냉각수 점검 체크리스트 — 항목별 확인법</h2>
+
+겨울이 오기 전 10월 중에 아래 항목들을 점검하면 겨울 내내 냉각 계통 걱정 없이 다닐 수 있습니다. 직접 확인 가능한 항목과 정비소 점검 항목으로 나눠 드립니다.<br><br>
+
+<table class="info-table">
+  <tr><th>점검 항목</th><th>확인 방법</th><th>이상 징후</th></tr>
+  <tr><td>리저버 탱크 수위</td><td>탱크의 MAX/MIN 눈금 확인</td><td>MIN 이하면 보충 필요</td></tr>
+  <tr><td>냉각수 색상·탁도</td><td>탱크 옆에서 육안 확인</td><td>갈색·탁함이면 교체</td></tr>
+  <tr><td>냉각수 호스 상태</td><td>호스 표면 만져서 균열·경화 확인</td><td>딱딱하거나 균열 있으면 교체</td></tr>
+  <tr><td>라디에이터 캡 상태</td><td>고무 패킹 마모 확인</td><td>패킹 변형·손상이면 교체</td></tr>
+  <tr><td>부동액 혼합 비율</td><td>정비소 굴절계 측정</td><td>−30℃ 이하 보호 미달이면 교체</td></tr>
+  <tr><td>서모스탯 작동</td><td>정비소에서 확인</td><td>워밍업이 유독 느리거나 빠르면 의심</td></tr>
+</table>
+
+이 중 리저버 탱크 수위와 냉각수 색상은 엔진이 식은 상태에서 누구든 직접 확인할 수 있습니다. 나머지 항목은 전문 정비소에서 확인해 주시는 것이 안전합니다.<br><br>
+
+겨울 전 점검을 한 번에 하고 싶다면 엔진오일 교체 방문 때 냉각수 동시 점검을 요청하면 편리합니다.
+
+<h2>09 | 오버히트 후 정비소에서 꼭 점검받아야 할 항목</h2>
+
+엔진 과열(오버히트)이 한 번이라도 발생했다면 이후 정상 운행이 된다고 해서 안심해서는 안 됩니다. <strong>오버히트는 엔진 내부에 잠재적 손상을 남기는 경우가 많습니다.</strong><br><br>
+
+정비소에서 반드시 확인받아야 할 항목들입니다.<br><br>
+
+<strong>냉각수 계통 압력 테스트</strong>는 라디에이터 캡을 통해 계통 전체에 압력을 가해 누수 지점을 찾는 검사입니다. 눈에 보이지 않는 미세 균열도 발견할 수 있습니다.<br><br>
+
+<strong>서모스탯 작동 여부</strong>는 냉각수 온도를 감지해 냉각수 흐름을 제어하는 부품입니다. 오버히트 후 서모스탯이 제대로 열리지 않으면 다시 과열이 반복됩니다.<br><br>
+
+<strong>워터펌프 이상 여부</strong>는 냉각수를 강제로 순환시키는 펌프입니다. 과열 충격으로 베어링이나 임펠러가 손상되는 경우가 있습니다.<br><br>
+
+<strong>헤드 가스켓 손상 여부</strong>는 가장 심각한 경우입니다. 헤드 가스켓이 손상되면 엔진 오일과 냉각수가 혼합되거나, 압축 가스가 냉각 계통으로 누출될 수 있습니다. 수리비가 수십만~수백만 원에 달할 수 있으므로 조기 발견이 중요합니다.
+
+<h2>10 | 냉각수 관련 DIY 한계 — 어디까지 셀프 가능한가</h2>
+
+냉각수 관련 작업 중 DIY로 가능한 범위와 정비소에 맡겨야 할 범위는 명확히 구분됩니다. <strong>잘못된 DIY는 오히려 더 큰 비용을 초래할 수 있습니다.</strong><br><br>
+
+<div class="info-box">
+<strong>DIY 가능 범위</strong><br>
+• 리저버 탱크 수위 확인 및 보충 (엔진 완전 냉각 후)<br>
+• 냉각수 색상·탁도 육안 점검<br>
+• 냉각수 호스 외관 균열 확인 (터치 포함)<br>
+• 응급 상황 시 정수된 물로 임시 보충
+</div>
+
+<div class="warn-box">
+<strong>반드시 정비소에서 해야 할 작업</strong><br>
+• 냉각수 전량 교체 및 플러싱 (냉각수를 전부 빼고 새로 채우는 작업)<br>
+• 서모스탯 교체<br>
+• 워터펌프 교체<br>
+• 라디에이터 교체 또는 수리<br>
+• 부동액 혼합 비율 측정 및 조정<br>
+• 오버히트 후 계통 전체 압력 테스트
+</div>
+
+냉각수 전량 교체 작업은 냉각수를 완전히 빼내고 계통을 플러싱한 뒤 새 냉각수로 채우는 작업입니다. 이 과정에서 공기 빼기(에어 블리딩)가 제대로 되지 않으면 공기가 갇혀 오히려 냉각 효율이 크게 떨어집니다. 전문 장비와 경험이 필요한 작업이므로 정비소에 맡기시는 것을 권장드립니다.<br><br>
+
+냉각수는 유해 화학물질이 포함되어 있어 폐기할 때도 일반 하수구에 버리면 환경 오염을 유발합니다. 폐냉각수는 정비소 또는 공식 폐액 처리 업체를 통해 처리해야 합니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+  <li><a href="../260914/travel_namisum_autumn_cosmos.html">남이섬 가을 단풍과 자라섬 코스모스 — 당일치기 완벽 코스</a></li>
+  <li><a href="../260914/pass_hipass_device_car_change.html">하이패스 단말기 차 바꿀 때 그대로 쓰나 — 재등록 방법과 주의사항</a></li>
+</ul>
+</div>
+
+<div class="tags">
+  <span class="tag">#냉각수경고등</span>
+  <span class="tag">#부동액교체</span>
+  <span class="tag">#오버히트대처</span>
+  <span class="tag">#자동차점검</span>
+  <span class="tag">#겨울자동차</span>
+  <span class="tag">#부동액시기</span>
+  <span class="tag">#냉각수보충</span>
+  <span class="tag">#자동차DIY</span>
+</div>
+
+</body>
+</html>
