@@ -167,9 +167,69 @@ if ((($today -eq $RefillDay) -or $ForceRefill) -and (Test-Path -LiteralPath $Pru
 }
 Write-Log ""
 
+# === Step 0.7: 오늘의 정책 계산 → 프롬프트에 주입 (2026-09-16 신설) ===
+# 계기: 2026-09-15(화)을 「월」로 잘못 적고 월요일 로테이션(pass_+recipe_)으로 발행해
+#   원고 7건을 통째로 재작성했다. daily-prompt.md에 "요일은 명령으로 계산하라"는 산문
+#   규칙이 추가됐지만, 모델에게 계산을 맡기는 한 같은 실수가 다시 난다.
+#   래퍼가 요일을 직접 계산해 **기대 계열을 문장으로 박아** 넘긴다 — 추측할 여지를 없앤다.
+# 정책 원본 = .scripts/policy.json (사람용 사양은 daily-prompt.md §2 · 계열 상태는 카테고리_포트폴리오.md)
+$PolicyFile = Join-Path $ScriptsDir "policy.json"
+$Policy = $null
+# .NET DayOfWeek는 Sunday=0이다. 한글 요일로 명시 매핑한다(산술 변환은 일요일에서 틀린다).
+$DowKrMap = @{
+    "Monday" = "월"; "Tuesday" = "화"; "Wednesday" = "수"; "Thursday" = "목"
+    "Friday" = "금"; "Saturday" = "토"; "Sunday" = "일"
+}
+$todayDow = $DowKrMap[(Get-Date).DayOfWeek.ToString()]
+$wantRotation = @()
+try {
+    if (Test-Path -LiteralPath $PolicyFile) {
+        $Policy = Get-Content -LiteralPath $PolicyFile -Raw -Encoding utf8 | ConvertFrom-Json
+        if ($Policy.rotationByDow.PSObject.Properties.Name -contains $todayDow) {
+            $wantRotation = @($Policy.rotationByDow.$todayDow)
+        }
+        Write-Log "=== Step 0.7: Policy @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="
+        Write-Log "오늘 = $(Get-Date -Format 'yyyy-MM-dd') ($todayDow) · 기대 로테이션 = $($wantRotation -join ', ')"
+        Write-Log "DROP 계열 = $($Policy.dropped -join ', ')"
+    } else {
+        Write-Log "WARN: $PolicyFile 없음 — 요일 주입·믹스 검증 스킵(프롬프트 규칙만으로 진행)."
+    }
+} catch {
+    Write-Log "ERROR (Step 0.7 policy 로드): $_ — 주입 없이 진행."
+    $Policy = $null
+}
+Write-Log ""
+
 # === Step 1: Claude CLI로 원고 작성 ===
 try {
     $prompt = Get-Content -LiteralPath $PromptFile -Raw -Encoding utf8
+
+    # 오늘의 확정 사실을 프롬프트 맨 앞에 붙인다(모델이 요일을 다시 계산하지 않게).
+    if ($null -ne $Policy -and $wantRotation.Count -ge 2) {
+        $bt = [char]96   # 백틱 — PowerShell 이스케이프 문자라 문자 코드로 만든다
+        $dropTxt = (($Policy.dropped | ForEach-Object { "$bt$($_)_$bt" }) -join " · ")
+        $rot1 = "$bt$($wantRotation[0])_$bt"
+        $rot2 = "$bt$($wantRotation[1])_$bt"
+        $ymdFull = Get-Date -Format 'yyyy-MM-dd'
+        $ymdShort = Get-Date -Format 'yyMMdd'
+        $inject = @(
+            "# 🔒 오늘의 확정 사항 (래퍼가 계산함 — 다시 계산하지 말고 그대로 쓸 것)",
+            "",
+            "- **오늘 날짜**: $ymdFull  (출력 폴더 $bt$ymdShort$bt)",
+            "- **오늘 요일**: **${todayDow}요일**",
+            "- **오늘 로테이션 2건은 반드시**: $rot1 1건 + $rot2 1건",
+            "- **DROP 계열(절대 선정·보충 금지)**: $dropTxt",
+            "- **여행은 최대 $($Policy.travelMax)건.** 비여행 칸을 여행으로 채우지 말 것. 모든 비여행 큐가 시즌게이트 0건일 때만 예외이고, 그때는 완료 출력에 $bt[LEAK travel N]$bt 를 남긴다.",
+            "",
+            "> 위 값은 $bt.scripts/policy.json$bt 에서 계산됐다. 아래 본문의 요일표와 어긋나 보이면 **이 블록이 맞다.**",
+            "> 발행 후 $bt daily-run.ps1 $bt Step 1.8이 같은 표로 검증하며, 어기면 실패로 기록된다.",
+            "",
+            "---",
+            ""
+        ) -join "`r`n"
+        $prompt = $inject + $prompt
+        Write-Log "프롬프트에 오늘의 확정 사항 주입 완료(${todayDow}요일 · $($wantRotation -join '+'))."
+    }
 
     $prompt | & claude `
         -p `
@@ -520,9 +580,71 @@ if ($exit -ne 0) {
         Write-Log "(3) 최근 14일 결번 없음."
     }
 
-    # --- (4) 월요일: 네이버 실제 등록분 대조 리마인더 (자동 검증 불가 영역) ---
+    # --- (4) 정책 준수 검증 — 요일 로테이션 · DROP 계열 · 여행 누수 (2026-09-16 신설) ---
+    # 산문 규칙만으로 드리프트가 반복됐다: 09-15에 요일을 잘못 계산해 로테이션이 어긋났고,
+    #   09-01~15 발행 105건 중 여행이 43건(41%)으로 보충 규칙이 여행으로 샜다.
+    #   Step 0.7이 예방(요일 주입), 여기가 검출이다. 둘 다 .scripts/policy.json 한 표를 본다.
+    if ($null -eq $Policy) {
+        Write-Log "(4) SKIP: policy.json 없음 — 정책 준수 검증 생략."
+    } else {
+        $prefixes = @()
+        if (Test-Path -LiteralPath $todayDir) {
+            $prefixes = @(Get-ChildItem -LiteralPath $todayDir -Filter "*.html" -File -EA SilentlyContinue |
+                Where-Object { $_.Name -ne "index.html" } |
+                ForEach-Object { ($_.BaseName -split "_")[0] })
+        }
+        Write-Log "(4) 오늘 계열 구성: $(($prefixes | Group-Object | ForEach-Object { "$($_.Name) $($_.Count)" }) -join ' · ')"
+
+        # 4-a. DROP 계열이 섞였나 (하드 위반)
+        $dropHit = @($prefixes | Where-Object { $Policy.dropped -contains $_ } | Select-Object -Unique)
+        if ($dropHit.Count -gt 0) {
+            $publishGateFailed = $true
+            $gateReasons += "DROP 계열 발행: $($dropHit -join ', ')"
+            Write-Log "    [FAIL] DROP 계열이 발행됐다 — $($dropHit -join ', ')"
+        }
+
+        # 4-b. 오늘 요일의 기대 로테이션 2계열이 각각 있나
+        if ($wantRotation.Count -ge 2) {
+            $missRot = @($wantRotation | Where-Object { $prefixes -notcontains $_ })
+            if ($missRot.Count -gt 0) {
+                $publishGateFailed = $true
+                $gateReasons += "${todayDow}요일 로테이션 누락: $(($missRot | ForEach-Object { $_ + '_' }) -join ', ')"
+                Write-Log "    [FAIL] ${todayDow}요일 기대 로테이션 누락 — $($missRot -join ', ')"
+            } else {
+                Write-Log "    로테이션 OK (${todayDow}: $($wantRotation -join ' + '))"
+            }
+        }
+
+        # 4-c. 여행 누수 (비여행 칸을 여행으로 채웠나)
+        $travelN = @($prefixes | Where-Object { $_ -eq "travel" }).Count
+        if ($travelN -gt $Policy.travelMax) {
+            $publishGateFailed = $true
+            $gateReasons += "여행 누수 ${travelN}건 (상한 $($Policy.travelMax))"
+            Write-Log "    [FAIL] 여행 ${travelN}건 — 상한 $($Policy.travelMax) 초과. 비여행 칸이 여행으로 샜다."
+        }
+
+        # 4-d. 슬롯 목표 대조 (참고 — 위 셋과 달리 실패로 만들지 않는다)
+        $slotCount = @{}
+        foreach ($p in $prefixes) {
+            $slot = "보충"
+            if ($Policy.slotByPrefix.PSObject.Properties.Name -contains $p) { $slot = $Policy.slotByPrefix.$p }
+            if (-not $slotCount.ContainsKey($slot)) { $slotCount[$slot] = 0 }
+            $slotCount[$slot]++
+        }
+        $slotTxt = @()
+        foreach ($s in $Policy.slotTarget.PSObject.Properties.Name) {
+            $have = 0
+            if ($slotCount.ContainsKey($s)) { $have = $slotCount[$s] }
+            $mark = ""
+            if ($have -ne $Policy.slotTarget.$s) { $mark = " (목표 $($Policy.slotTarget.$s))" }
+            $slotTxt += "${s} ${have}${mark}"
+        }
+        Write-Log "    슬롯: $($slotTxt -join ' · ')"
+    }
+
+    # --- (5) 월요일: 네이버 실제 등록분 대조 리마인더 (자동 검증 불가 영역) ---
     if ((Get-Date).DayOfWeek -eq [System.DayOfWeek]::Monday) {
-        Write-Log "(4) [REMINDER] 월요일 — 네이버 주간 통계를 캡처해 stats/weekly에 적재하고,"
+        Write-Log "(5) [REMINDER] 월요일 — 네이버 주간 통계를 캡처해 stats/weekly에 적재하고,"
         Write-Log "    실제 등록분과 발행이력.md를 대조하십시오. 업로드는 수동이라 스크립트가 검증할 수 없습니다."
         Write-Log "    대조 절차: stats/미업로드_원고_점검_20260911.md 참조."
     }
