@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>하이패스 미납 통행료 조회하고 한 번에 납부하는 법 — 가산금 붙기 전 처리 순서</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>하이패스 미납 통행료 조회하고 한 번에 납부하는 법 — 가산금 붙기 전 처리 순서</h1>
+
+<div class="intro-box">
+하이패스 차로를 통과했는데 카드 충전이 안 돼 있거나 단말기 오작동으로 통행료가 빠져나가지 않는 경우, <strong>미납 통행료</strong>가 발생합니다.<br><br>
+미납 통행료를 방치하면 <strong>통행일로부터 30일 이내에 10배 가산금</strong>이 부과됩니다. 예를 들어 미납 통행료가 1,000원이면 10,000원이 됩니다.<br><br>
+이 글에서는 미납 조회 경로 3가지, 한 번에 납부하는 방법, 가산금 부과 시점과 이의신청 방법까지 정리합니다.<br><br>
+<small>※ 이 글의 통행료·가산금 정보는 한국도로공사(ex.co.kr) 공시 기준으로 작성되었습니다. (재검증: 2026.09 기준)</small>
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 1/2</span><button class="copy-btn" onclick="copyPrompt('p6_1')">프롬프트 복사</button></div>
+<div class="ph-file">images/260916/6_hipass_1.png</div>
+<div class="prompt-text" id="p6_1">하이패스 차로 통과 차량, 고속도로 하이패스 게이트, 블루 하이패스 차로 표시등, 차량 근접 촬영, 실사 사진 스타일</div>
+</div>
+<div class="img-caption">하이패스 미납 통행료 — 30일 이내 납부 필수 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 미납 통행료 발생 원인 — 언제 생기나</h2>
+
+하이패스 미납 통행료가 발생하는 주요 원인입니다.
+
+<table class="info-table">
+<tr><th>원인</th><th>설명</th></tr>
+<tr><td>선불 카드 잔액 부족</td><td>하이패스 선불카드 잔액이 통행료보다 적을 때</td></tr>
+<tr><td>후불 카드 결제 실패</td><td>신용카드 한도 초과, 연체, 카드 분실·정지 상태</td></tr>
+<tr><td>단말기 인식 오류</td><td>단말기 위치 불량, 전원 꺼짐, 카드 미삽입 상태</td></tr>
+<tr><td>차로 진입 속도 과다</td><td>20km/h 초과 진입 시 인식 실패 가능</td></tr>
+<tr><td>렌터카·법인차 변경 미등록</td><td>번호판 변경 후 단말기 재등록 안 한 경우</td></tr>
+</table>
+
+<h2>02 | 미납 통행료 조회 방법 3가지</h2>
+
+미납 통행료는 다음 세 가지 경로에서 조회할 수 있습니다.
+
+<div class="step-box">
+<strong>조회 경로 1 — 한국도로공사 EX 앱 (가장 편리)</strong><br><br>
+① 스마트폰에서 'EX 한국도로공사' 앱 설치<br>
+② 로그인 (간편 인증 가능)<br>
+③ '하이패스' → '미납 내역 조회' 선택<br>
+④ 차량번호 입력 → 미납 목록 확인 및 즉시 납부 가능
+</div>
+
+<div class="step-box">
+<strong>조회 경로 2 — 한국도로공사 홈페이지</strong><br><br>
+① 인터넷 브라우저에서 ex.co.kr 접속<br>
+② 상단 메뉴 '고객서비스' → '미납통행료 조회/납부' 클릭<br>
+③ 차량번호 또는 하이패스 카드번호 입력<br>
+④ 미납 내역 확인 후 신용카드·계좌이체로 납부
+</div>
+
+<div class="step-box">
+<strong>조회 경로 3 — 전화 (1588-2504)</strong><br><br>
+① 한국도로공사 고객센터 1588-2504 전화<br>
+② 자동응답 또는 상담원 연결<br>
+③ 차량번호 불러주면 미납 내역 안내<br>
+④ 현장 수납소 또는 온라인 납부 안내
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 2/2</span><button class="copy-btn" onclick="copyPrompt('p6_2')">프롬프트 복사</button></div>
+<div class="ph-file">images/260916/6_hipass_2.png</div>
+<div class="prompt-text" id="p6_2">스마트폰 화면에 통행료 납부 앱 화면, 미납 조회 화면, 모바일 결제 화면 클로즈업, 클린한 UI 화면 실사 스타일</div>
+</div>
+<div class="img-caption">EX 앱으로 미납 통행료 조회 및 납부 / AI 제작 이미지</div>
+</div>
+
+<h2>03 | 가산금 부과 시점과 금액 — 얼마나 붙나</h2>
+
+미납 통행료를 방치하면 가산금이 붙습니다. <strong>유료도로법 제19조의2</strong>에 따른 기준입니다.
+
+<table class="info-table">
+<tr><th>기간</th><th>가산금</th><th>예시 (원래 통행료 1,000원)</th></tr>
+<tr><td>통행일~30일 이내 납부</td><td>없음 (원금만)</td><td>1,000원</td></tr>
+<tr><td>30일 초과 시</td><td>원금의 10배</td><td>10,000원</td></tr>
+</table>
+
+<div class="warn-box">
+⚠️ <strong>30일 이내 납부가 핵심</strong>: 가산금은 30일이 지나는 순간 자동 부과됩니다. 고지서를 받지 못해도 기간이 경과하면 부과됩니다. 정기적으로 EX 앱에서 미납 내역을 확인하는 것이 가장 확실한 방법입니다.
+</div>
+
+<h2>04 | 가산금 부과 후 이의신청 — 방법은 있나</h2>
+
+가산금이 부과된 후 이의신청이 가능한 경우가 있습니다.
+
+<div class="info-box">
+<strong>이의신청 가능한 경우</strong><br>
+• 하이패스 단말기 오작동으로 인한 미납 (정비 기록 또는 고장 증빙 있을 때)<br>
+• 차량 도난 등 본인이 운행하지 않은 경우<br>
+• 행정 오류로 잘못 부과된 경우<br><br>
+<strong>이의신청 방법</strong><br>
+• EX 앱 또는 홈페이지 → 민원 접수<br>
+• 한국도로공사 고객센터 1588-2504<br>
+• 현장 영업소 방문
+</div>
+
+이의신청이 인용되면 가산금 전부 또는 일부 면제가 가능합니다. 단, 단순히 몰랐다는 이유만으로는 가산금 면제가 어렵습니다.
+
+<h2>05 | 미납 통행료 일괄 납부 방법</h2>
+
+미납 건이 여러 개일 때 한 번에 납부하는 방법입니다.
+
+<div class="step-box">
+<strong>EX 앱 일괄 납부 순서</strong><br><br>
+1단계. EX 앱 로그인<br>
+2단계. 하이패스 → 미납통행료 조회<br>
+3단계. 미납 목록에서 전체 선택 또는 납부할 건 체크<br>
+4단계. 납부 수단 선택 (신용카드·체크카드·계좌이체·간편결제)<br>
+5단계. 결제 완료 → 납부 영수증 발급 (이메일 또는 앱 내 저장)
+</div>
+
+<div class="tip-box">
+💡 <strong>자동납부 등록 팁</strong>: 미납이 자주 발생한다면 하이패스 후불카드를 자동납부 등록해 두는 것이 좋습니다. EX 앱에서 '자동납부 신청' 기능을 통해 미납 발생 시 자동으로 결제되도록 설정할 수 있습니다. (재검증: ex.co.kr 서비스 기준)
+</div>
+
+<h2>06 | 하이패스 단말기 관리 — 미납 예방법</h2>
+
+<table class="info-table">
+<tr><th>예방 항목</th><th>방법</th></tr>
+<tr><td>선불카드 잔액 확인</td><td>EX 앱에서 수시 확인, 부족 시 충전</td></tr>
+<tr><td>후불카드 유효기간 확인</td><td>카드 만료 전 재발급, 한도 여유 유지</td></tr>
+<tr><td>단말기 장착 위치</td><td>앞유리 중앙 상단, 틴팅 방해 없이</td></tr>
+<tr><td>진입 속도 준수</td><td>하이패스 차로 진입 시 20km/h 이하</td></tr>
+<tr><td>차량번호 변경 시 재등록</td><td>번호판 변경 후 즉시 EX 앱 또는 영업소에서 재등록</td></tr>
+</table>
+
+<h2>07 | 고속도로 미납 통행료 고지서를 못 받은 경우</h2>
+
+미납 통행료 고지서는 차량 등록지 주소로 발송됩니다. 주소 이전 후 미변경 등으로 못 받는 경우가 있습니다.<br><br>
+
+<strong>고지서를 못 받아도 미납 사실은 존재</strong>합니다. 고지서 미수령이 가산금 면제 사유가 되지 않습니다. 정기적으로 EX 앱에서 본인 차량 미납 내역을 확인하는 습관이 중요합니다.
+
+<h2>08 | 렌터카·법인차 미납 통행료 처리</h2>
+
+렌터카나 법인 차량을 이용하다 미납이 발생한 경우, 처리 방법이 다릅니다.
+
+<div class="info-box">
+<strong>렌터카 미납</strong>: 렌터카 회사가 미납 통행료를 1차 납부 후, 이용자(실 운전자)에게 청구하는 구조입니다. 반납 시 정산되거나 이후 청구서로 받게 됩니다.<br><br>
+<strong>법인 차량 미납</strong>: 차량 등록자(법인)에게 고지서가 발송됩니다. 법인 담당자에게 미납 사실을 알리고 처리 방법을 협의하세요.
+</div>
+
+<h2>09 | 미납 통행료 처리 체크리스트</h2>
+
+<table class="info-table">
+<tr><th>항목</th><th>확인</th></tr>
+<tr><td>EX 앱 또는 홈페이지에서 미납 조회</td><td>□</td></tr>
+<tr><td>미납 통행일로부터 30일 이내 납부 여부 확인</td><td>□</td></tr>
+<tr><td>가산금 부과 여부 확인 (30일 초과 건)</td><td>□</td></tr>
+<tr><td>이의신청 필요 시 증빙 자료 준비</td><td>□</td></tr>
+<tr><td>하이패스 카드 잔액·유효기간 확인</td><td>□</td></tr>
+<tr><td>단말기 장착 위치 및 진입 속도 습관 점검</td><td>□</td></tr>
+</table>
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260915/car_coolant_warning_diy.html">냉각수 경고등 켜졌을 때 — 직접 보충하는 법과 정비소 가야 할 기준</a></li>
+<li><a href="car_dashcam_parking_battery.html">블랙박스 주차 녹화 모드 — 전압차단 설정으로 배터리 방전 막는 법</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<span class="tag">#하이패스미납</span>
+<span class="tag">#통행료미납조회</span>
+<span class="tag">#미납통행료납부</span>
+<span class="tag">#가산금부과</span>
+<span class="tag">#EX앱</span>
+<span class="tag">#하이패스조회</span>
+<span class="tag">#고속도로통행료</span>
+<span class="tag">#하이패스카드</span>
+<span class="tag">#통행료가산금</span>
+</div>
+</body>
+</html>

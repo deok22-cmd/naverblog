@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>상갓집에서 밥 먹을 때 음식값 따로 내야 하나 — 부조금 포함 여부와 자리 뜨는 시점</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>상갓집에서 밥 먹을 때 음식값 따로 내야 하나 — 부조금 포함 여부와 자리 뜨는 시점</h1>
+
+<div class="intro-box">
+상갓집을 처음 방문하는 분들이 가장 많이 궁금해하는 것 중 하나가 <strong>"여기서 밥 먹고 가도 되나, 그 비용은 부조금에 포함된 건가"</strong>입니다.<br><br>
+결론부터 말씀드리면, <strong>장례식장 음식값은 부조금에 포함된 개념으로 별도 계산하지 않습니다.</strong> 부조금을 냈다면 식사는 유족이 제공하는 것이고, 방문객이 따로 비용을 내는 경우는 없습니다.<br><br>
+다만 자리를 뜨는 시점, 몇 번 방문하는지, 부조금이 없는 경우엔 어떻게 하는지 등 헷갈리는 상황은 꽤 다양합니다. 이 글에서 상황별로 정리합니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 1/2</span><button class="copy-btn" onclick="copyPrompt('p4_1')">프롬프트 복사</button></div>
+<div class="ph-file">images/260916/4_funeral_1.png</div>
+<div class="prompt-text" id="p4_1">장례식장 음식 상차림, 흰 천 덮인 식탁, 갈비찜 나물 밥 국 등 장례 음식, 조용하고 경건한 분위기, 실사 음식 사진 스타일, 따뜻한 조명</div>
+</div>
+<div class="img-caption">장례식장 음식 — 부조금 포함 비용 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 상갓집 음식값은 부조금에 포함되나</h2>
+
+<strong>예, 포함됩니다.</strong><br><br>
+
+장례식장 음식은 유족이 부조금을 모아 마련합니다. 조문객이 낸 부조금이 음식 비용에 충당되는 구조이기 때문에, 방문객이 식사비를 추가로 내는 경우는 원칙적으로 없습니다.<br><br>
+
+전통 장례 문화에서도 <strong>장례 음식은 유족이 대접하는 음식</strong>으로 여겨졌고, 조문객은 부의금(부조금)으로 조의를 표하고 음식을 대접받는 방식이었습니다. 이 관행이 현대 장례식장에서도 이어지고 있습니다.<br><br>
+
+따라서 상갓집에서 식사를 하고 나서 "계산할게요"라고 하는 것은 오히려 실례가 될 수 있습니다. 유족이 마련한 음식을 드시면 됩니다.
+
+<h2>02 | 부조금을 못 냈을 때 밥을 먹어도 되나</h2>
+
+상황에 따라 다릅니다.
+
+<table class="info-table">
+<tr><th>상황</th><th>식사 여부</th><th>처리 방법</th></tr>
+<tr><td>현금 없이 왔을 때</td><td>가능</td><td>다음에 따로 전달하거나, 다른 방식으로 조의를 표함</td></tr>
+<tr><td>부조금을 나중에 보낼 예정</td><td>가능</td><td>식사 후 유족에게 "나중에 보낼게요" 말씀드리면 됨</td></tr>
+<tr><td>부조금 없이 지인 따라 온 경우</td><td>가능하나 예의 고려</td><td>지인이 부조금을 냈다면 함께 식사해도 됨</td></tr>
+<tr><td>아예 인연이 없는 경우</td><td>가급적 자제</td><td>빈소 참배만 하고 퇴장하는 것이 적절</td></tr>
+</table>
+
+부조금이 없어도 빈소에서 조문을 마친 후 식사를 권유받으면 드셔도 됩니다. 장례식장 측에서 조문객에게 음식을 거절하는 경우는 거의 없습니다. 다만 너무 오래 머물거나, 아는 사람 없이 식사만 하고 가는 것은 분위기상 적절하지 않습니다.
+
+<h2>03 | 상갓집 방문 — 몇 번 가야 하나</h2>
+
+<div class="info-box">
+<strong>일반적인 장례 방문 횟수 기준</strong><br>
+• 친한 친구·직계 지인: 빈소 입관일 or 첫날 방문 + 발인 당일 함께함도 좋음<br>
+• 직장 동료·지인: 보통 1회 방문 (빈소 조문)으로 충분<br>
+• 먼 지인·아는 분: 1회, 짧은 조문 후 퇴장<br>
+• 3일장 기준: 1~2일차가 방문하기 좋고, 3일차(발인날)는 가족 중심
+</div>
+
+장례는 3일장이 일반적입니다. 어느 날 방문해도 실례가 아닙니다. 다만 발인(마지막 날 이른 아침 출발) 직전에는 가족 인원이 집중되므로, 친분이 깊지 않다면 1~2일차 빈소 방문이 적당합니다.
+
+<h2>04 | 빈소 도착 후 순서 — 처음 가는 분을 위한 안내</h2>
+
+<div class="step-box">
+<strong>상갓집 방문 순서</strong><br><br>
+① 도착 후 부조금 봉투 작성 (성함 필기)<br>
+② 입구 접수처에서 부조금 전달 / 방명록 작성<br>
+③ 빈소 입장 → 영정 앞 헌화 또는 분향<br>
+④ 절 1~2번 (종교에 따라 다름, 기독교는 묵념으로 대체 가능)<br>
+⑤ 상주에게 인사 (짧게, "삼가 조의를 표합니다")<br>
+⑥ 식장 내 식당으로 이동 → 식사<br>
+⑦ 적당한 시간 후 퇴장 인사
+</div>
+
+<div class="tip-box">
+💡 <strong>복장 팁</strong>: 검정색 또는 어두운 색상 정장이 기본입니다. 부득이 캐주얼이라면 무채색 계열 옷. 밝은 색상·화려한 패턴은 피하세요. 여성의 경우 액세서리는 최소화합니다.
+</div>
+
+<h2>05 | 자리를 뜨는 시점 — 얼마나 있어야 하나</h2>
+
+방문 시간은 관계에 따라 다릅니다.
+
+<table class="info-table">
+<tr><th>관계</th><th>권장 체류 시간</th><th>식사 여부</th></tr>
+<tr><td>직장 동료·업무 관계</td><td>30분~1시간</td><td>식사 후 퇴장 가능</td></tr>
+<tr><td>친한 친구·오래된 지인</td><td>1~2시간 이상</td><td>식사 + 대화 후 퇴장</td></tr>
+<tr><td>가족·가까운 친척</td><td>당일 전체 머무는 경우도 있음</td><td>수발 들며 식사 함께</td></tr>
+<tr><td>먼 지인·명목상 조문</td><td>20~30분</td><td>짧은 조문 후 퇴장도 무방</td></tr>
+</table>
+
+<strong>퇴장 시 인사</strong>는 간단히 "힘내세요", "조심히 돌아가시겠습니다"와 같이 짧게 하면 됩니다. 유족이 슬픔 속에 있으므로 긴 대화는 피하는 것이 예의입니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 2/2</span><button class="copy-btn" onclick="copyPrompt('p4_2')">프롬프트 복사</button></div>
+<div class="ph-file">images/260916/4_funeral_2.png</div>
+<div class="prompt-text" id="p4_2">조문 봉투와 흰 국화꽃, 부조금 봉투, 조용하고 경건한 배경, 장례 예절 컨셉, 클린한 플랫레이 사진 스타일</div>
+</div>
+<div class="img-caption">부조금 봉투와 조문 예절 / AI 제작 이미지</div>
+</div>
+
+<h2>06 | 부조금 봉투 쓰는 법</h2>
+
+부조금 봉투는 장례식장 입구에 비치된 경우가 많습니다. 따로 준비하지 못했다면 현장에서 받을 수 있습니다.
+
+<div class="info-box">
+<strong>부조금 봉투 작성 요령</strong><br>
+• 앞면 중앙: 부의(賻儀) 또는 조의(弔意) / 근조(謹弔) — 한자나 한글 모두 무방<br>
+• 앞면 하단 또는 뒷면: 성명 기재 (단체명인 경우 단체명)<br>
+• 금액: 봉투 안에 흰 봉투로 한 번 더 싸거나, 단순 지폐 넣기<br>
+• 편지지: 별도 위로 글 넣어도 좋으나 필수 아님
+</div>
+
+<h2>07 | 부조금 얼마가 적당한가 — 관계별 기준</h2>
+
+<table class="info-table">
+<tr><th>관계</th><th>일반적 금액대</th><th>비고</th></tr>
+<tr><td>직장 동료 (같은 팀)</td><td>5만 원</td><td>팀 합산 시 1인 3~5만도 가능</td></tr>
+<tr><td>직장 상사·선배</td><td>5~10만 원</td><td>관계 친밀도에 따라</td></tr>
+<tr><td>친한 친구</td><td>5~10만 원</td><td>친밀도·경제 상황 고려</td></tr>
+<tr><td>일반 지인</td><td>3~5만 원</td><td>관계가 가볍다면 3만도 무방</td></tr>
+<tr><td>가족·친척</td><td>10만 원 이상</td><td>범위 크고 상황에 따라 상이</td></tr>
+</table>
+
+<div class="tip-box">
+💡 <strong>홀수 금액?</strong> 예부터 짝수는 나눌 수 있다는 의미로 꺼린다는 말이 있어 3·5·7만처럼 홀수를 선호하는 경향도 있습니다. 그러나 현대에서는 5만·10만 등 편하게 내는 경우도 많아 크게 구애받지 않아도 됩니다.
+</div>
+
+<h2>08 | 종교별 조문 예절 차이</h2>
+
+<table class="info-table">
+<tr><th>구분</th><th>불교 장례</th><th>기독교 장례</th><th>천주교 장례</th><th>무종교</th></tr>
+<tr><td>인사 방법</td><td>절 2번</td><td>묵념 (절 대신)</td><td>묵념 또는 짧은 기도</td><td>절 1~2번</td></tr>
+<tr><td>향 피우기</td><td>O (필수)</td><td>X (향 없음)</td><td>X (향 없음)</td><td>O</td></tr>
+<tr><td>헌화</td><td>O (흰 꽃)</td><td>O (꽃 예절)</td><td>O</td><td>O</td></tr>
+</table>
+
+방문 전 유족의 종교를 미리 확인하는 것이 좋습니다. 종교가 다른 장례라면 영정 앞에서 상대 예법을 따르거나, 묵념으로 대신해도 실례가 아닙니다.
+
+<h2>09 | 상갓집 예절 체크리스트</h2>
+
+<table class="info-table">
+<tr><th>항목</th><th>확인</th></tr>
+<tr><td>부조금 봉투 준비 (현장 비치품 활용 가능)</td><td>□</td></tr>
+<tr><td>어두운 색상 복장</td><td>□</td></tr>
+<tr><td>향수·강한 향기 자제</td><td>□</td></tr>
+<tr><td>핸드폰 무음 설정</td><td>□</td></tr>
+<tr><td>빈소 내 큰 소리·웃음 자제</td><td>□</td></tr>
+<tr><td>식사 후 적절한 시간에 퇴장 인사</td><td>□</td></tr>
+<tr><td>유족에게 긴 위로 대화 삼가기</td><td>□</td></tr>
+</table>
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260915/rite_retirement_gift_amount.html">퇴직 선물 얼마나 해야 하나 — 관계별 적정 금액 표</a></li>
+<li><a href="../260915/car_coolant_warning_diy.html">냉각수 경고등 켜졌을 때 — 직접 보충하는 법과 정비소 가야 할 기준</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<span class="tag">#상갓집예절</span>
+<span class="tag">#부조금포함여부</span>
+<span class="tag">#장례식음식</span>
+<span class="tag">#조문예절</span>
+<span class="tag">#부의금</span>
+<span class="tag">#장례예절</span>
+<span class="tag">#상갓집밥</span>
+<span class="tag">#조문순서</span>
+<span class="tag">#부조금금액</span>
+</div>
+</body>
+</html>
