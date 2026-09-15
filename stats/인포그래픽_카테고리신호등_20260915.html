@@ -1,0 +1,591 @@
+<title>카테고리 신호등</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap">
+<style>
+:root{
+  --ground:#F4F6F8; --surface:#FFFFFF; --sunk:#EAEEF2;
+  --ink:#15202B; --ink2:#4A5764; --muted:#768290; --line:#D8DEE4; --line2:#E6EAEE;
+  --c-travel:#0891B2; --c-core:#4F46E5; --c-sprint:#DB2777; --c-off:#8A96A3;
+  --good:#1E8A57; --warn:#B97A0A; --crit:#C23B2B;
+  --good-bg:#E3F3EA; --warn-bg:#FBF0DA; --crit-bg:#FAE6E3;
+  --display:"Black Han Sans","IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0F141B; --surface:#161D26; --sunk:#1C2530;
+    --ink:#E7ECF1; --ink2:#AEB8C2; --muted:#7F8A96; --line:#2A3440; --line2:#222B36;
+    --c-travel:#0F9AB8; --c-core:#8466F2; --c-sprint:#E3558B; --c-off:#6B7684;
+    --good:#3FB67C; --warn:#E0A232; --crit:#EE6A57;
+    --good-bg:#16302A; --warn-bg:#33291A; --crit-bg:#3A1F1C;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0F141B; --surface:#161D26; --sunk:#1C2530;
+  --ink:#E7ECF1; --ink2:#AEB8C2; --muted:#7F8A96; --line:#2A3440; --line2:#222B36;
+  --c-travel:#0F9AB8; --c-core:#8466F2; --c-sprint:#E3558B; --c-off:#6B7684;
+  --good:#3FB67C; --warn:#E0A232; --crit:#EE6A57;
+  --good-bg:#16302A; --warn-bg:#33291A; --crit-bg:#3A1F1C;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.65;margin:0;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:40px 24px 64px;display:grid;gap:56px}
+h1,h2,h3{text-wrap:balance;margin:0}
+h2{font-family:var(--display);font-weight:400;font-size:30px;line-height:1.2;letter-spacing:.01em}
+h3{font-size:16px;font-weight:700}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.lede{color:var(--ink2);max-width:62ch}
+code{font-family:var(--mono);font-size:.92em}
+.num{font-variant-numeric:tabular-nums}
+.sec{display:grid;gap:20px}
+.sec-head{display:grid;gap:6px}
+
+.top{display:grid;gap:22px;padding-bottom:28px;border-bottom:2px solid var(--ink)}
+.top-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px}
+.title{font-family:var(--display);font-weight:400;font-size:clamp(44px,7vw,76px);line-height:1;letter-spacing:-.01em}
+.signal{display:flex;gap:10px;align-items:center;padding:10px 14px;background:var(--surface);border:1px solid var(--line);border-radius:999px}
+.lamp{width:14px;height:14px;border-radius:50%}
+.lamp.g{background:var(--good)} .lamp.a{background:var(--warn)} .lamp.r{background:var(--crit)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;color:var(--ink2);font-size:13px}
+.meta b{color:var(--ink);font-weight:500}
+
+.st{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.st.up{color:var(--good);background:var(--good-bg)}
+.st.keep{color:var(--ink2);background:var(--sunk)}
+.st.warn{color:var(--warn);background:var(--warn-bg)}
+.st.drop{color:var(--crit);background:var(--crit-bg)}
+
+.why{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px;align-items:start}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.fact{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;padding:14px 0;border-top:1px solid var(--line2)}
+.fact:first-child{border-top:0;padding-top:0}
+.fact .big{font-family:var(--display);font-size:34px;line-height:1;grid-row:span 2;min-width:120px}
+.fact .k{font-weight:700;font-size:14px}
+.fact .v{color:var(--ink2);font-size:13px}
+svg text{font-family:var(--body)}
+.ax{fill:var(--muted);font-size:11px}
+.axm{fill:var(--muted);font-size:11px;font-family:var(--mono)}
+.grid-l{stroke:var(--line2);stroke-width:1}
+.cap{color:var(--muted);font-size:12px}
+
+.rules{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.rule{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;display:grid;gap:8px;align-content:start}
+.rule .cond{font-family:var(--mono);font-size:21px;font-weight:600;font-variant-numeric:tabular-nums}
+.rule.up{border-top:4px solid var(--good)} .rule.keep{border-top:4px solid var(--ink2)}
+.rule.warn{border-top:4px solid var(--warn)} .rule.drop{border-top:4px solid var(--crit)}
+.rule .act{color:var(--ink2);font-size:13px}
+.chart-wrap{overflow-x:auto}
+.chart-wrap svg{min-width:680px;width:100%;height:auto;display:block}
+.chart-wrap svg.spark{min-width:420px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--ink2)}
+.sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+
+.iron{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px;margin:0;padding:0}
+.iron li{list-style:none;padding:14px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:96px 1fr;gap:14px}
+.iron .tag{font-family:var(--mono);font-size:12px;color:var(--muted);padding-top:3px}
+
+.week{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:28px;align-items:start}
+.wk{border-collapse:separate;border-spacing:4px;width:100%;min-width:560px}
+.wk th{font-size:12px;font-weight:500;color:var(--muted);text-align:center;padding:0 0 4px}
+.wk th.d{font-family:var(--display);font-weight:400;font-size:18px;color:var(--ink);width:38px}
+.wk td{font-family:var(--mono);font-size:12px;text-align:center;padding:9px 2px;border-radius:6px;white-space:nowrap}
+.c-t{background:color-mix(in oklab,var(--c-travel) 16%,var(--surface));color:var(--ink)}
+.c-c{background:color-mix(in oklab,var(--c-core) 15%,var(--surface));color:var(--ink)}
+.c-s{background:var(--c-sprint);color:#fff;font-weight:600}
+.tally{display:grid;gap:12px}
+.tally-row{display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:center}
+.bar{height:10px;border-radius:0 4px 4px 0;background:var(--sunk);grid-column:1/-1;overflow:hidden}
+.bar>i{display:block;height:100%;border-radius:0 4px 4px 0}
+.tally-row .n{font-family:var(--mono);font-variant-numeric:tabular-nums;font-weight:600}
+
+.sprint{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;display:grid;gap:10px;align-content:start}
+.card-top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.card .pfx{font-family:var(--mono);font-weight:600;color:var(--c-sprint);font-size:15px}
+.card .score{font-family:var(--display);font-size:26px;line-height:1}
+.card .score small{font-family:var(--body);font-size:11px;color:var(--muted);margin-left:2px}
+.card .days{font-size:12px;color:var(--muted)}
+.card dl{margin:0;display:grid;gap:6px}
+.card dt{font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--muted)}
+.card dd{margin:0 0 4px;font-size:13px;color:var(--ink2)}
+.card dd.no{color:var(--crit)}
+.card .ex{font-size:13px;padding:10px 12px;background:var(--sunk);border-radius:6px}
+
+.click{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.hb{display:grid;gap:10px}
+.hb-row{display:grid;grid-template-columns:56px 1fr 52px;gap:10px;align-items:center;font-size:13px}
+.hb-row .track{height:14px;background:var(--sunk);border-radius:0 4px 4px 0}
+.hb-row .fill{height:100%;border-radius:0 4px 4px 0;background:var(--c-core)}
+.hb-row .fill.lo{background:var(--c-off)}
+.hb-row .val{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+.pairs{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+.pairs th{text-align:left;font-size:12px;font-weight:700;color:var(--muted);padding:0 12px 8px 0;border-bottom:1px solid var(--line)}
+.pairs td{padding:12px 12px 12px 0;border-bottom:1px solid var(--line2);vertical-align:top}
+.pairs td.bad{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--crit);width:34%}
+.steps4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.s4{padding:14px;border-left:3px solid var(--c-core);background:var(--surface);border-radius:0 8px 8px 0;display:grid;gap:4px;align-content:start}
+.s4 .i{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.s4 b{font-size:14px}
+.s4 span{font-size:13px;color:var(--ink2)}
+
+.flows{display:grid;gap:10px}
+.flow{display:grid;grid-template-columns:180px 1fr;gap:16px;align-items:center;padding:14px 18px;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+.flow .when{font-size:13px;font-weight:700}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.chain .n{font-family:var(--mono);font-size:13px;padding:4px 10px;border-radius:6px;background:var(--sunk)}
+.chain .n.s{background:color-mix(in oklab,var(--c-sprint) 14%,var(--surface));color:var(--c-sprint);font-weight:600}
+.chain .arr{color:var(--muted)}
+.chain .x{font-family:var(--mono);font-size:13px;padding:4px 10px;border-radius:6px;color:var(--crit);border:1px dashed var(--crit);text-decoration:line-through}
+.block-note{padding:14px 18px;border:2px solid var(--crit);border-radius:10px;background:var(--crit-bg);font-size:14px}
+.block-note b{color:var(--crit)}
+
+.ad{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.ad h3{margin-bottom:12px}
+.ad ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.ad li{padding-left:20px;position:relative;font-size:14px}
+.deny li::before{content:"✕";position:absolute;left:0;color:var(--crit);font-weight:700}
+.allow li::before{content:"✓";position:absolute;left:0;color:var(--good);font-weight:700}
+
+.queue{width:100%;border-collapse:collapse;font-size:14px;min-width:640px}
+.queue th{text-align:left;font-size:12px;color:var(--muted);font-weight:700;padding:0 12px 8px 0;border-bottom:1px solid var(--line)}
+.queue td{padding:10px 12px 10px 0;border-bottom:1px solid var(--line2);vertical-align:middle}
+.queue td.rank{font-family:var(--display);font-size:20px;width:36px}
+.queue .sc{display:grid;grid-template-columns:28px 1fr;gap:8px;align-items:center;width:150px}
+.queue .sc i{display:block;height:8px;border-radius:0 4px 4px 0;background:var(--c-core)}
+.queue .red{color:var(--crit);font-size:12px;font-weight:700}
+
+.routine{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface)}
+.rt{padding:18px 16px;display:grid;gap:6px;align-content:start;border-left:1px solid var(--line)}
+.rt:first-child{border-left:0}
+.rt .i{font-family:var(--display);font-size:28px;line-height:1;color:var(--c-core)}
+.rt .who{font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--muted)}
+.rt b{font-size:15px}
+.rt span{font-size:13px;color:var(--ink2)}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.two h3{margin-bottom:12px}
+.checklist{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.checklist li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:14px}
+.checklist li::before{content:"";width:14px;height:14px;border:2px solid var(--ink2);border-radius:3px;margin-top:4px}
+.warnline{color:var(--crit);font-weight:700}
+
+footer{border-top:1px solid var(--line);padding-top:20px;display:grid;gap:8px;color:var(--muted);font-size:12px}
+footer a{color:var(--ink2)}
+a:focus-visible{outline:2px solid var(--c-core);outline-offset:2px}
+
+@media (max-width:900px){
+  .why,.week,.click,.ad,.two{grid-template-columns:1fr}
+  .rules,.sprint,.steps4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .routine{grid-template-columns:1fr}
+  .rt{border-left:0;border-top:1px solid var(--line)} .rt:first-child{border-top:0}
+  .iron{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr;gap:8px}
+}
+@media (max-width:560px){
+  .rules,.sprint,.steps4{grid-template-columns:1fr}
+  .iron li{grid-template-columns:1fr;gap:2px}
+}
+</style>
+
+<div class="wrap">
+
+<header class="top">
+  <div class="top-row">
+    <div style="display:grid;gap:10px">
+      <span class="eyebrow">naverblog · 운영 규칙 · 2026-09-15 제정</span>
+      <h1 class="title">카테고리 신호등</h1>
+    </div>
+    <div class="signal" aria-label="판정 신호: 승격 초록, 경고 호박, DROP 빨강">
+      <span class="lamp g"></span><span class="lamp a"></span><span class="lamp r"></span>
+      <span style="font-size:13px;color:var(--ink2);margin-left:4px">승격 · 경고 · DROP</span>
+    </div>
+  </div>
+  <p class="lede" style="font-size:17px">성과 없는 계열은 과감하게 DROP하고, 성과 있는 계열은 발굴해 키운다. 어떤 계열을 쓰고 버릴지는 이제 <code>카테고리_포트폴리오.md</code> 한 파일이 결정한다 — 다른 규칙과 어긋나면 이 파일이 이긴다.</p>
+  <div class="meta">
+    <span>목표 <b>애드포스트 일 5~8천 원 → 10배</b></span>
+    <span>근거 <b>36개 주제 점수화 연구</b></span>
+    <span>첫 판정 <b>2026-10-05~10-11 주간 통계</b></span>
+  </div>
+</header>
+
+<section class="sec">
+  <div class="sec-head">
+    <span class="eyebrow">왜 바꾸나</span>
+    <h2>AI는 읽어가는데 사람은 안 들어온다</h2>
+  </div>
+  <div class="why">
+    <figure class="panel" style="margin:0;display:grid;gap:10px">
+      <h3>주간 조회수 상위 100편 합계</h3>
+      <div class="chart-wrap">
+        <svg class="spark" viewBox="0 0 540 176" role="img" aria-label="주간 상위 100편 조회수 합계: 6월 초 9,917에서 7/27주 23,361로 정점, 8/31주 9,910으로 하락">
+          <line class="grid-l" x1="44" y1="140" x2="520" y2="140"/>
+          <line class="grid-l" x1="44" y1="92" x2="520" y2="92"/>
+          <line class="grid-l" x1="44" y1="44" x2="520" y2="44"/>
+          <text class="ax" x="38" y="144" text-anchor="end">0</text>
+          <text class="ax" x="38" y="96" text-anchor="end">1만</text>
+          <text class="ax" x="38" y="48" text-anchor="end">2만</text>
+          <text class="ax" x="44" y="162" text-anchor="middle">6/8</text>
+          <text class="ax" x="196" y="162" text-anchor="middle">7/6</text>
+          <text class="ax" x="348" y="162" text-anchor="middle">8/3</text>
+          <text class="ax" x="500" y="162" text-anchor="middle">8/31</text>
+          <path d="M44 92.4 L82 96.7 L120 101.5 L158 86.4 L196 65.2 L234 47.3" fill="none" stroke="var(--c-core)" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M234 47.3 L272 75.1 L310 27.9 L386 46.3 L462 78.4" fill="none" stroke="var(--c-core)" stroke-width="2" stroke-dasharray="4 4"/>
+          <path d="M462 78.4 L500 92.4" fill="none" stroke="var(--c-core)" stroke-width="2"/>
+          <g fill="var(--c-core)" stroke="var(--surface)" stroke-width="2">
+            <circle cx="44" cy="92.4" r="4"><title>6/8주 9,917</title></circle>
+            <circle cx="82" cy="96.7" r="4"><title>6/15주 9,028</title></circle>
+            <circle cx="120" cy="101.5" r="4"><title>6/22주 8,017</title></circle>
+            <circle cx="158" cy="86.4" r="4"><title>6/29주 11,161</title></circle>
+            <circle cx="196" cy="65.2" r="4"><title>7/6주 15,589</title></circle>
+            <circle cx="234" cy="47.3" r="4"><title>7/13주 19,303</title></circle>
+            <circle cx="310" cy="27.9" r="5"><title>7/27주 23,361 (정점)</title></circle>
+            <circle cx="386" cy="46.3" r="4"><title>8/10주 19,512</title></circle>
+            <circle cx="462" cy="78.4" r="4"><title>8/24주 12,836</title></circle>
+            <circle cx="500" cy="92.4" r="5"><title>8/31주 9,910</title></circle>
+          </g>
+          <circle cx="272" cy="75.1" r="4" fill="var(--surface)" stroke="var(--c-core)" stroke-width="2"><title>7/20주 13,528 — 1~20위 결손, 과소 집계</title></circle>
+          <text x="310" y="16" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">23,361</text>
+          <text x="500" y="116" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">9,910</text>
+        </svg>
+      </div>
+      <figcaption class="cap">점선 = 결손 주(8/3·8/17)를 건너뛰었거나 커버리지가 부분(7/20, 속 빈 점)인 구간. 7월 말 정점 대비 −58%.</figcaption>
+    </figure>
+    <div>
+      <div class="fact"><span class="big num">116만</span><span class="k">AI 브리핑 누적 인용</span><span class="v">블로그 권위는 충분하다. 문제는 한 줄로 답이 끝나는 제목이 인용만 주고 클릭을 잃는 구조.</span></div>
+      <div class="fact"><span class="big num">41%</span><span class="k">9월 전반 발행 중 여행 비중</span><span class="v">3주 생존율 16%로 가장 빨리 죽는 계열이, 빈칸 보충을 타고 다시 1위가 됐다.</span></div>
+      <div class="fact"><span class="big num">261원</span><span class="k">애드포스트 클릭당 단가</span><span class="v">회피 규칙이 고단가 생활 실무까지 막고 있었다. 트래픽만으로는 10배가 불가능하다.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-head">
+    <span class="eyebrow">판정 기준 · 발행 3~5주차 글의 건당 주간 조회수</span>
+    <h2>기준선은 두 개: 15와 40</h2>
+    <p class="lede">데뷔주·2주차 숫자로는 판정하지 않는다(조회 정점이 발행 2주차). 이미 쓴 편수는 판단에 넣지 않는다.</p>
+  </div>
+  <div class="rules">
+    <div class="rule up"><span class="st up">▲ 승격</span><span class="cond">≥ 40 · 2회 연속</span><span class="act">주 배정 +2 (계열당 최대 주 7)</span></div>
+    <div class="rule keep"><span class="st keep">● 유지</span><span class="cond">15 ~ 40</span><span class="act">배정 그대로, 다음 판정 대기</span></div>
+    <div class="rule warn"><span class="st warn">◆ 경고</span><span class="cond">&lt; 15 · 1회</span><span class="act">다음 판정에서 또 15 미만이면 DROP</span></div>
+    <div class="rule drop"><span class="st drop">■ DROP</span><span class="cond">&lt; 15 · 2회 연속</span><span class="act">6편 이상 썼는데 3주차 글이 top200에 0건이어도 DROP. 로테이션 즉시 제거·큐 동결</span></div>
+  </div>
+  <figure class="panel" style="margin:0;display:grid;gap:12px">
+    <h3>계열별 건당 주간 조회수 — 8/31~9/6 주 실측</h3>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--c-travel)"></i>여행 기둥</span>
+      <span><i class="sw" style="background:var(--c-core)"></i>생활 실무 상설</span>
+      <span><i class="sw" style="background:var(--c-sprint)"></i>스프린트 A (측정 전)</span>
+      <span><i class="sw" style="background:var(--c-off)"></i>DROP · 보충 전용</span>
+    </div>
+    <div class="chart-wrap">
+      <svg viewBox="0 0 780 528" role="img" aria-label="계열별 건당 주간 조회수 가로 막대. 교통요금 179.8, 전원주택 46.0, 경조사 42.1, 국내여행 26.0, 자동차 25.7, 여행실무 15.4, 레시피 15.2, 기기IT 14.2, 지원금 10.7, 증명서 6.2, 계절가전 0.9. 스프린트 4계열은 측정 전">
+        <defs>
+          <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <rect width="6" height="6" fill="var(--c-off)" opacity="0.35"/>
+            <line x1="0" y1="0" x2="0" y2="6" stroke="var(--c-off)" stroke-width="3"/>
+          </pattern>
+        </defs>
+        <rect x="170" y="30" width="127.5" height="428" fill="var(--crit)" opacity="0.07"/>
+        <rect x="297.5" y="30" width="212.5" height="428" fill="var(--ink2)" opacity="0.04"/>
+        <rect x="510" y="30" width="170" height="428" fill="var(--good)" opacity="0.08"/>
+        <text x="233.75" y="20" text-anchor="middle" font-size="12" font-weight="700" fill="var(--crit)">DROP 구간</text>
+        <text x="403.75" y="20" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink2)">유지</text>
+        <text x="595" y="20" text-anchor="middle" font-size="12" font-weight="700" fill="var(--good)">승격 구간</text>
+        <line x1="297.5" y1="30" x2="297.5" y2="466" stroke="var(--crit)" stroke-width="1.5" stroke-dasharray="5 3"/>
+        <line x1="510" y1="30" x2="510" y2="466" stroke="var(--good)" stroke-width="1.5" stroke-dasharray="5 3"/>
+        <text class="axm" x="170" y="484" text-anchor="middle">0</text>
+        <text class="axm" x="297.5" y="484" text-anchor="middle" style="fill:var(--crit);font-weight:600">15</text>
+        <text class="axm" x="510" y="484" text-anchor="middle" style="fill:var(--good);font-weight:600">40</text>
+        <text class="axm" x="680" y="484" text-anchor="middle">60</text>
+        <text class="ax" x="425" y="510" text-anchor="middle">건당 주간 조회수 (top200 관측 — 컷 밖 글은 안 보여 과소 추정)</text>
+
+        <g font-size="13">
+          <text x="160" y="48" text-anchor="end" fill="var(--ink)"><tspan font-family="IBM Plex Mono, monospace" font-weight="600">pass_</tspan> 교통요금</text>
+          <rect x="170" y="37" width="510" height="14" rx="3" fill="var(--c-core)"><title>pass_ 교통요금·환급 179.8 — 축 밖</title></rect>
+          <path d="M660 34 l6 10 l-6 10 M668 34 l6 10 l-6 10" fill="none" stroke="var(--surface)" stroke-width="2"/>
+          <text x="686" y="48" fill="var(--ink)" font-weight="700">179.8 ▸</text>
+
+          <text x="160" y="76" text-anchor="end" fill="var(--ink)"><tspan font-family="IBM Plex Mono, monospace" font-weight="600">house_</tspan> 전원주택</text>
+          <rect x="170" y="65" width="391" height="14" rx="3" fill="var(--c-core)"><title>house_ 46.0 — 표본 9편</title></rect>
+          <text x="567" y="76" fill="var(--ink)">46.0 · 유지(축소)</text>
+
+          <text x="160" y="104" text-anchor="end" fill="var(--ink)"><tspan font-family="IBM Plex Mono, monospace" font-weight="600">rite_</tspan> 경조사</text>
+          <rect x="170" y="93" width="357.9" height="14" rx="3" fill="var(--c-core)"><title>rite_ 42.1 — 3주 생존율 96%</title></rect>
+          <text x="534" y="104" fill="var(--ink)">42.1</text>
+
+          <text x="160" y="132" text-anchor="end" fill="var(--ink)"><tspan font-family="IBM Plex Mono, monospace" font-weight="600">travel_</tspan> 국내여행</text>
+          <rect x="170" y="121" width="221" height="14" rx="3" fill="var(--c-travel)"><title>travel_ 26.0 — 3주 생존율 16%</title></rect>
+          <text x="397" y="132" fill="var(--ink)">26.0</text>
+
+          <text x="160" y="160" text-anchor="end" fill="var(--ink)"><tspan font-family="IBM Plex Mono, monospace" font-weight="600">car_</tspan> 자동차</text>
+          <rect x="170" y="149" width="218.5" height="14" rx="3" fill="var(--c-core)"><title>car_ 25.7</title></rect>
+          <text x="394" y="160" fill="var(--ink)">25.7</text>
+
+          <text x="160" y="188" text-anchor="end" fill="var(--ink)"><tspan font-family="IBM Plex Mono, monospace" font-weight="600">local_</tspan> 여행실무</text>
+          <rect x="170" y="177" width="130.9" height="14" rx="3" fill="var(--c-travel)"><title>local_ 15.4</title></rect>
+          <text x="307" y="188" fill="var(--ink)">15.4</text>
+
+          <text x="160" y="216" text-anchor="end" fill="var(--muted)"><tspan font-family="IBM Plex Mono, monospace" font-weight="600">recipe_</tspan> 레시피</text>
+          <rect x="170" y="205" width="129.2" height="14" rx="3" fill="url(#hatch)"><title>recipe_ 15.2 — DROP 09-15</title></rect>
+          <text x="306" y="216" fill="var(--crit)" font-weight="700">15.2 · DROP*</text>
+
+          <text x="160" y="244" text-anchor="end" fill="var(--muted)"><tspan font-family="IBM Plex Mono, monospace" font-weight="600">tech_</tspan> 기기·IT</text>
+          <rect x="170" y="233" width="120.7" height="14" rx="3" fill="url(#hatch)"><title>tech_ 14.2 — DROP 09-15</title></rect>
+          <text x="297" y="244" fill="var(--crit)" font-weight="700">14.2 · DROP</text>
+
+          <text x="160" y="272" text-anchor="end" fill="var(--muted)"><tspan font-family="IBM Plex Mono, monospace" font-weight="600">gov_</tspan> 지원금</text>
+          <rect x="170" y="261" width="91" height="14" rx="3" fill="url(#hatch)"><title>gov_ 10.7 — 보충 전용</title></rect>
+          <text x="267" y="272" fill="var(--muted)">10.7 · 보충 전용</text>
+
+          <text x="160" y="300" text-anchor="end" fill="var(--muted)"><tspan font-family="IBM Plex Mono, monospace" font-weight="600">cert_</tspan> 증명서</text>
+          <rect x="170" y="289" width="52.7" height="14" rx="3" fill="url(#hatch)"><title>cert_ 6.2 — DROP 08-09</title></rect>
+          <text x="229" y="300" fill="var(--crit)" font-weight="700">6.2 · DROP</text>
+
+          <text x="160" y="328" text-anchor="end" fill="var(--muted)"><tspan font-family="IBM Plex Mono, monospace" font-weight="600">appli_</tspan> 계절가전</text>
+          <rect x="170" y="317" width="7.7" height="14" rx="2" fill="url(#hatch)"><title>appli_ 0.9 — DROP 09-13</title></rect>
+          <text x="184" y="328" fill="var(--crit)" font-weight="700">0.9 · DROP</text>
+
+          <line x1="0" y1="344" x2="780" y2="344" stroke="var(--line)"/>
+
+          <text x="160" y="366" text-anchor="end" fill="var(--ink)"><tspan font-family="IBM Plex Mono, monospace" font-weight="600" fill="var(--c-sprint)">labor_</tspan> 노무</text>
+          <rect x="170" y="355" width="340" height="14" rx="3" fill="none" stroke="var(--c-sprint)" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <text x="180" y="366" fill="var(--c-sprint)" font-size="12" font-weight="600">측정 전 · 10-05주 첫 판정</text>
+
+          <text x="160" y="394" text-anchor="end" fill="var(--ink)"><tspan font-family="IBM Plex Mono, monospace" font-weight="600" fill="var(--c-sprint)">lease_</tspan> 임대차</text>
+          <rect x="170" y="383" width="340" height="14" rx="3" fill="none" stroke="var(--c-sprint)" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <text x="180" y="394" fill="var(--c-sprint)" font-size="12" font-weight="600">측정 전 · 10-05주 첫 판정</text>
+
+          <text x="160" y="422" text-anchor="end" fill="var(--ink)"><tspan font-family="IBM Plex Mono, monospace" font-weight="600" fill="var(--c-sprint)">ins_</tspan> 보험청구</text>
+          <rect x="170" y="411" width="340" height="14" rx="3" fill="none" stroke="var(--c-sprint)" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <text x="180" y="422" fill="var(--c-sprint)" font-size="12" font-weight="600">측정 전 · 10-05주 첫 판정</text>
+
+          <text x="160" y="450" text-anchor="end" fill="var(--ink)"><tspan font-family="IBM Plex Mono, monospace" font-weight="600" fill="var(--c-sprint)">repair_</tspan> 집수리</text>
+          <rect x="170" y="439" width="340" height="14" rx="3" fill="none" stroke="var(--c-sprint)" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <text x="180" y="450" fill="var(--c-sprint)" font-size="12" font-weight="600">측정 전 · 10-05주 첫 판정</text>
+        </g>
+      </svg>
+    </div>
+    <p class="cap">막대 끝이 꺾인 <code>pass_</code>는 축(60)을 넘어 179.8까지 간다. *<code>recipe_</code> 15.2는 기준선 바로 위지만, 단가 최저·AI 흡수 최대로 연구 점수 58점(36개 중 하위)이라 첫 편성에서 결정으로 DROP했다. 이후부터는 위 네 칸의 규칙만 적용한다.</p>
+  </figure>
+</section>
+
+<section class="sec">
+  <div class="sec-head">
+    <span class="eyebrow">철칙 — 예외 없음</span>
+    <h2>일곱 줄 규칙판</h2>
+  </div>
+  <ul class="iron">
+    <li><span class="tag">DROP</span><span><b>성과 없는 계열은 버린다.</b> 쓴 편수·들인 노력(매몰비용)은 판단에 넣지 않는다.</span></li>
+    <li><span class="tag">타이밍</span><span><b>판정은 발행 3주차 이후에만.</b> 데뷔주 숫자는 최종치의 15~25%다.</span></li>
+    <li><span class="tag">동결</span><span><b>DROP 즉시 적재·발행·보충 중단.</b> 기존 글은 삭제·비공개 금지(조회 자산).</span></li>
+    <li><span class="tag">빈칸</span><span><b>빈 칸은 여행으로 채우지 않는다.</b> 발굴 대기열 1순위 계열을 투입한다.</span></li>
+    <li><span class="tag">동시 4</span><span><b>스프린트는 최대 4계열.</b> 새 계열은 빈자리가 날 때만 들어온다.</span></li>
+    <li><span class="tag">영구 금지</span><span><b>투자·시세·대출 권유, 치료·약 권고, 개별 법률 판단, 날조 경험.</b></span></li>
+    <li><span class="tag">클릭</span><span><b>모든 원고에 클릭 블록 필수.</b> AI가 한 줄로 옮길 수 없는 표·체크리스트·문구 예시.</span></li>
+  </ul>
+</section>
+
+<section class="sec">
+  <div class="sec-head">
+    <span class="eyebrow">요일표 · 9/16(수)부터</span>
+    <h2>한 주는 49칸</h2>
+    <p class="lede">하루 7건 × 7일. 스프린트 8칸이 여행이 새던 자리와 레시피·IT가 쓰던 자리를 대신한다. 요일은 명령으로 계산한다 — 추측 금지(9/15 화요일을 「월」로 적는 사고가 있었다).</p>
+  </div>
+  <div class="week">
+    <div class="chart-wrap panel" style="padding:12px">
+      <table class="wk">
+        <thead><tr><th></th><th>여행</th><th>여행</th><th>인접</th><th>경조사</th><th>자동차</th><th>로테이션 ①</th><th>로테이션 ②</th></tr></thead>
+        <tbody>
+          <tr><th class="d">월</th><td class="c-t">travel_</td><td class="c-t">travel_</td><td class="c-t">local_</td><td class="c-c">rite_</td><td class="c-c">car_</td><td class="c-c">pass_</td><td class="c-s">labor_</td></tr>
+          <tr><th class="d">화</th><td class="c-t">travel_</td><td class="c-t">travel_</td><td class="c-t">local_</td><td class="c-c">rite_</td><td class="c-c">car_</td><td class="c-s">repair_</td><td class="c-s">lease_</td></tr>
+          <tr><th class="d">수</th><td class="c-t">travel_</td><td class="c-t">travel_</td><td class="c-t">local_</td><td class="c-c">rite_</td><td class="c-c">car_</td><td class="c-c">pass_</td><td class="c-s">ins_</td></tr>
+          <tr><th class="d">목</th><td class="c-t">travel_</td><td class="c-t">travel_</td><td class="c-t">local_</td><td class="c-c">rite_</td><td class="c-c">car_</td><td class="c-c">house_</td><td class="c-s">labor_</td></tr>
+          <tr><th class="d">금</th><td class="c-t">travel_</td><td class="c-t">travel_</td><td class="c-t">local_</td><td class="c-c">rite_</td><td class="c-c">car_</td><td class="c-c">pass_</td><td class="c-s">repair_</td></tr>
+          <tr><th class="d">토</th><td class="c-t">travel_</td><td class="c-t">travel_</td><td class="c-t">local_</td><td class="c-c">rite_</td><td class="c-c">car_</td><td class="c-s">lease_</td><td class="c-s">ins_</td></tr>
+          <tr><th class="d">일</th><td class="c-t">travel_</td><td class="c-t">travel_</td><td class="c-t">local_</td><td class="c-c">rite_</td><td class="c-c">car_</td><td class="c-c">pass_</td><td class="c-c">house_</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tally panel">
+      <h3>주 배정</h3>
+      <div class="tally-row"><span>여행 기둥 <span class="cap">travel_ 14 · local_ 7</span></span><span class="n">21</span><div class="bar"><i style="width:42.9%;background:var(--c-travel)"></i></div></div>
+      <div class="tally-row"><span>생활 실무 상설 <span class="cap">rite_ 7 · car_ 7 · pass_ 4 · house_ 2</span></span><span class="n">20</span><div class="bar"><i style="width:40.8%;background:var(--c-core)"></i></div></div>
+      <div class="tally-row"><span>스프린트 A <span class="cap">4계열 × 2</span></span><span class="n">8</span><div class="bar"><i style="width:16.3%;background:var(--c-sprint)"></i></div></div>
+      <div class="tally-row"><span>DROP <span class="cap">recipe_ · tech_ (전주 6칸)</span></span><span class="n" style="color:var(--crit)">0</span><div class="bar"><i style="width:0"></i></div></div>
+      <p class="cap">막대 = 49칸 중 비율. 9/15(화) 발행분까지는 옛 요일표.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-head">
+    <span class="eyebrow">스프린트 A · 2026-09-16 가동 · 첫 판정 10-05주</span>
+    <h2>새로 시험하는 네 계열</h2>
+    <p class="lede">36개 주제 연구에서 상위 7개가 모두 「생활 속 돈·계약·제도 실무」였다. 고단가 광고주가 붙고, 매년 같은 때 다시 검색되고, 계산·서류가 필요해 AI 한 줄로 안 끝난다. 그중 가을 수요에 맞는 넷을 먼저 넣었다.</p>
+  </div>
+  <div class="sprint">
+    <article class="card">
+      <div class="card-top"><span class="pfx">labor_</span><span class="score">83<small>점</small></span></div>
+      <h3>노무·직장</h3><span class="days">월 · 목</span>
+      <dl><dt>넣을 것</dt><dd>퇴직금·연차수당·주휴수당 계산표, 퇴사 절차, 육아휴직 급여</dd>
+      <dt>금지</dt><dd class="no">개별 분쟁 판단 · 실업급여 기본(발행됨)</dd></dl>
+      <p class="ex">퇴직금 계산 예시 — 월급 300만 원 3년 근무하면 얼마, 평균임금 계산표</p>
+    </article>
+    <article class="card">
+      <div class="card-top"><span class="pfx">lease_</span><span class="score">86<small>점</small></span></div>
+      <h3>임대차·이사</h3><span class="days">화 · 토</span>
+      <dl><dt>넣을 것</dt><dd>전월세 체크리스트·특약 문구, 보증금 반환 절차, 전세보증보험 비교, 중개수수료</dd>
+      <dt>금지</dt><dd class="no">매매·시세·투자·대출 권유</dd></dl>
+      <p class="ex">전세보증보험 HUG vs HF vs SGI — 가입 조건·보증료 비교표</p>
+    </article>
+    <article class="card">
+      <div class="card-top"><span class="pfx">ins_</span><span class="score">81<small>점</small></span></div>
+      <h3>보험 청구·실무</h3><span class="days">수 · 토</span>
+      <dl><dt>넣을 것</dt><dd>실손 청구 서류·기한, 세대별 차이, 지급 거절 대응, 일상배상책임 청구</dd>
+      <dt>금지</dt><dd class="no">자동차보험(car_ 담당) · 상품 가입 권유</dd></dl>
+      <p class="ex">실손보험 청구 서류 한눈에 — 금액별 필요서류 표와 앱 청구 순서</p>
+    </article>
+    <article class="card">
+      <div class="card-top"><span class="pfx">repair_</span><span class="score">86<small>점</small></span></div>
+      <h3>집수리·결로곰팡이</h3><span class="days">화 · 금</span>
+      <dl><dt>넣을 것</dt><dd>곰팡이·누수·실리콘·도배·방충망, 11~2월 결로·외풍 — 셀프 vs 업체 비용</dd>
+      <dt>금지</dt><dd class="no">구조·전기·가스 셀프 시공 권유</dd></dl>
+      <p class="ex">욕실 실리콘 곰팡이 재시공 — 셀프 vs 업체 비용 비교와 순서</p>
+    </article>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-head">
+    <span class="eyebrow">Naverblog.md 3.3 · 전 계열 필수</span>
+    <h2>클릭 설계 — 들어와야만 얻는 것을 둔다</h2>
+    <p class="lede">AI 브리핑이 한 줄 답을 가져가도 인용은 남기고, 표·체크리스트·문구 예시는 본문에 남긴다. 클릭 블록이 없으면 원고를 저장하지 않는다.</p>
+  </div>
+  <div class="click">
+    <figure class="panel" style="margin:0;display:grid;gap:12px">
+      <h3>AI가 인용한 뒤 실제 클릭률 — 질의 유형별</h3>
+      <div class="hb">
+        <div class="hb-row"><span>정보형</span><div class="track"><div class="fill lo" style="width:36.3%"></div></div><span class="val">3.6%</span></div>
+        <div class="hb-row"><span>비교형</span><div class="track"><div class="fill" style="width:70.3%"></div></div><span class="val">7.0%</span></div>
+        <div class="hb-row"><span>구매형</span><div class="track"><div class="fill" style="width:86.4%"></div></div><span class="val">8.6%</span></div>
+      </div>
+      <figcaption class="cap">축 0~10%. 정보형 질의는 AI 요약이 36% 확률로 뜨고 74%가 검색 화면에서 끝난다. 출처 Focus Digital 2026.</figcaption>
+    </figure>
+    <figure class="panel" style="margin:0;display:grid;gap:12px">
+      <h3>우리 블로그 제목 유형별 평균 주간 조회</h3>
+      <div class="hb">
+        <div class="hb-row"><span>비교형</span><div class="track"><div class="fill" style="width:91.2%"></div></div><span class="val">91.2</span></div>
+        <div class="hb-row"><span>질의형</span><div class="track"><div class="fill" style="width:72.6%"></div></div><span class="val">72.6</span></div>
+        <div class="hb-row"><span>그 외</span><div class="track"><div class="fill lo" style="width:56%"></div></div><span class="val">56.0</span></div>
+      </div>
+      <figcaption class="cap">축 0~100. 8/31주 top200. 1위 「하이패스 선불 vs 후불」 642, 2위 「축의금 보내는 문자」 416.</figcaption>
+    </figure>
+  </div>
+  <div class="steps4">
+    <div class="s4"><span class="i">첫 문단</span><b>핵심 답 2~3문장</b><span>AI 인용 유지 — 메이트 선정 1순위 기준</span></div>
+    <div class="s4"><span class="i">본문</span><b>클릭 블록 1개 이상</b><span>계산표 · 비교표 · 체크리스트 · 문구 예시 · 절차표</span></div>
+    <div class="s4"><span class="i">제목</span><b>블록이 드러나게</b><span>vs · 비교 · 계산 · 서류 · 체크리스트 · 문구</span></div>
+    <div class="s4" style="border-left-color:var(--crit)"><span class="i">저장 직전</span><b>블록 없으면 저장 금지</b><span>「언제·얼마」 한 줄로 끝나는 제목 단독 금지</span></div>
+  </div>
+  <div class="chart-wrap panel">
+    <table class="pairs">
+      <thead><tr><th>한 줄로 끝남 — 인용만 되고 클릭 없음</th><th>들어와야 얻음</th></tr></thead>
+      <tbody>
+        <tr><td class="bad">퇴직금은 얼마나 받나</td><td>퇴직금 계산 예시 — 월급 300만 원 3년 근무하면 얼마, 평균임금 계산표</td></tr>
+        <tr><td class="bad">실손보험 청구 기한</td><td>실손보험 청구 서류 한눈에 — 금액별 필요서류 표와 앱 청구 순서</td></tr>
+        <tr><td class="bad">선운사 꽃무릇 언제 피나</td><td>선운사 꽃무릇 절정 주간과 주차 전쟁 피하는 시간대, 도솔암 코스 비교</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-head">
+    <span class="eyebrow">daily-prompt §2 · 부족 시 보충</span>
+    <h2>빈칸은 왼쪽부터 채운다</h2>
+  </div>
+  <div class="flows">
+    <div class="flow"><span class="when">로테이션 칸이 비면</span><div class="chain"><span class="n s">같은 스프린트 다른 계열</span><span class="arr">→</span><span class="n">pass_</span><span class="arr">→</span><span class="n">car_</span><span class="arr">→</span><span class="n">rite_</span><span class="arr">→</span><span class="n">gov_ (교통·환급만)</span><span class="arr">✕</span><span class="x">travel_</span></div></div>
+    <div class="flow"><span class="when">경조사·자동차 칸이 비면</span><div class="chain"><span class="n">local_ 해외·교통 실무</span><span class="arr">→</span><span class="n s">스프린트</span><span class="arr">→</span><span class="n">pass_</span><span class="arr">✕</span><span class="x">travel_</span></div></div>
+    <div class="flow"><span class="when">인접 칸이 비면</span><div class="chain"><span class="n">pass_</span><span class="arr">→</span><span class="n s">스프린트</span><span class="arr">✕</span><span class="x">travel_</span></div></div>
+  </div>
+  <p class="block-note"><b>여행은 여행 칸(하루 2건)에만 쓴다.</b> 예외는 모든 비여행 큐가 시즌 게이트 통과 0건일 때뿐이며, 그때는 완료 출력에 <code>[LEAK travel N]</code>을 반드시 남긴다. DROP 계열(<code>recipe_</code>·<code>tech_</code>·<code>appli_</code>·<code>cert_</code>)은 보충에서도 제외.</p>
+</section>
+
+<section class="sec">
+  <div class="sec-head">
+    <span class="eyebrow">운영원칙 D-4 개정</span>
+    <h2>금지와 허용을 나눴다</h2>
+    <p class="lede">옛 규칙은 「재테크·부동산금융 회피」 한 줄로 고단가 생활 실무까지 막았다. 이제 권유·판단은 막고, 절차·비교는 연다.</p>
+  </div>
+  <div class="ad">
+    <div class="panel deny"><h3><span class="st drop">■ 계속 금지</span></h3><ul>
+      <li>주식·코인·투자·시세·갭투자</li><li>대출·보험 상품 가입 권유, 보장 추천</li><li>치료·약 권고</li><li>개별 법률 사안의 승패 판단</li><li>결과 날조, 해보지 않은 경험 서술</li></ul></div>
+    <div class="panel allow"><h3><span class="st up">▲ 허용 — 1차 출처 + (재검증) 필수</span></h3><ul>
+      <li>임대차 계약·보증금 반환 <b>절차</b></li><li>전세보증보험 <b>조건 비교</b></li><li>보험금 <b>청구 절차</b></li><li>세금 <b>신고 절차</b> · 카드 <b>혜택 비교</b></li><li>퇴직금·연차 등 노무 <b>계산</b></li></ul></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-head">
+    <span class="eyebrow">발굴 대기열 · 빈자리가 나면 위에서부터</span>
+    <h2>다음 타자</h2>
+  </div>
+  <div class="chart-wrap panel">
+    <table class="queue">
+      <thead><tr><th>순</th><th>계열(안)</th><th>연구 점수</th><th>투입 조건</th></tr></thead>
+      <tbody>
+        <tr><td class="rank">1</td><td><code>biz_</code> 자영업·소상공인 실무</td><td><div class="sc"><span class="num">88</span><i style="width:88%"></i></div></td><td>스프린트 DROP 발생 즉시 · 늦어도 10월 중순 — 대표 실경험 각도</td></tr>
+        <tr><td class="rank">2</td><td><code>tax_</code> 세금·환급</td><td><div class="sc"><span class="num">81</span><i style="width:81%"></i></div></td><td>11월 중순 (1월 연말정산 역산)</td></tr>
+        <tr><td class="rank">3</td><td><code>telecom_</code> 통신·요금제·알뜰폰</td><td><div class="sc"><span class="num">78</span><i style="width:78%"></i></div></td><td>빈자리</td></tr>
+        <tr><td class="rank">4</td><td><code>law_</code> 법률 생활</td><td><div class="sc"><span class="num">82</span><i style="width:82%"></i></div></td><td>빈자리 <span class="red">· YMYL 강화 후</span></td></tr>
+        <tr><td class="rank">5</td><td><code>card_</code> 카드 혜택 비교</td><td><div class="sc"><span class="num">79</span><i style="width:79%"></i></div></td><td>빈자리 · 투자·대출 권유 금지</td></tr>
+        <tr><td class="rank">6</td><td><code>edu_</code> 자격증·시험 일정</td><td><div class="sc"><span class="num">78</span><i style="width:78%"></i></div></td><td>빈자리</td></tr>
+        <tr><td class="rank">7</td><td><code>wed_</code> 결혼·출산 제도</td><td><div class="sc"><span class="num">75</span><i style="width:75%"></i></div></td><td>빈자리 · rite_와 각도 분리</td></tr>
+        <tr><td class="rank">8</td><td><code>pet_</code> 반려동물 실무</td><td><div class="sc"><span class="num">75</span><i style="width:75%"></i></div></td><td>빈자리</td></tr>
+        <tr><td class="rank">9</td><td><code>med_</code> 건강검진·병원 제도</td><td><div class="sc"><span class="num">76</span><i style="width:76%"></i></div></td><td>빈자리 <span class="red">· YMYL 강화 후</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="cap">점수 막대 축 0~100 (수요·단가 각 25, AI 흡수 저항·수명 각 15, 자동생성 적합·경쟁 여지 각 10). 추정치 — 검색광고 키워드도구 CSV로 실측 갱신. 사람 레인(자동 발행 아님): 캠핑장비 세탁·보관(대표 13년 실경험), 김포 맛집 실방문.</p>
+</section>
+
+<section class="sec">
+  <div class="sec-head">
+    <span class="eyebrow">카테고리_포트폴리오.md §5 · stats를 올릴 때마다</span>
+    <h2>한 번 돌 때마다 다섯 단계</h2>
+  </div>
+  <div class="routine">
+    <div class="rt"><span class="i">1</span><span class="who">사용자</span><b>캡처</b><span>주간 조회 top200 · 애드포스트 표 · AI 인용수</span></div>
+    <div class="rt"><span class="i">2</span><span class="who">CLAUDE</span><b>적재</b><span>캡처 → <code>stats/weekly/</code> JSON</span></div>
+    <div class="rt"><span class="i">3</span><span class="who">분석 에이전트</span><b>판정</b><span>계열별 건당 조회 → 승격·유지·경고·DROP, KPI 1행</span></div>
+    <div class="rt"><span class="i">4</span><span class="who">CLAUDE</span><b>조치</b><span>DROP·승격·투입을 규칙 파일에 반영 — 추가 승인 없이</span></div>
+    <div class="rt"><span class="i">5</span><span class="who">CLAUDE</span><b>push · 4줄 보고</b><span>DROP / 승격 / 투입 / KPI 변화</span></div>
+  </div>
+  <div class="two">
+    <div class="panel"><h3>사용자가 직접 할 일</h3>
+      <ul class="checklist">
+        <li>매주: 「stats 업데이트했어」 + 캡처 3종</li>
+        <li>네이버 메뉴를 「여행」「생활 돈·제도 실무」 두 기둥으로 재편 (Naverblog.md 01조)</li>
+        <li>발행할 때 slug prefix를 보고 하위 메뉴 선택</li>
+        <li>가능하면 검색광고 키워드도구 CSV → <code>stats/keywords/</code></li>
+      </ul></div>
+    <div class="panel"><h3>다른 PC에서 이어갈 때</h3>
+      <ul class="checklist">
+        <li>작업 시작 전 <code>git pull</code> — <code>CLAUDE.md</code>가 자동으로 읽힌다</li>
+        <li>작업이 끝나면 바꾼 파일만 commit → push</li>
+        <li class="warnline">자동 발행 스케줄러(04:00)는 PC 한 대에서만 켠다</li>
+      </ul></div>
+  </div>
+</section>
+
+<footer>
+  <span>기준 파일 <code>카테고리_포트폴리오.md</code> · 연구 <code>stats/연구_카테고리유니버스_20260915.md</code> · KPI <code>stats/kpi_weekly.csv</code></span>
+  <span>건당 수치는 8/31~9/6 주 top200 관측(<code>stats/분석_20260911_주간.md</code>). top-N 컷 밖 글은 보이지 않아 과소 추정이며, 주간 조회는 누적이 아니다. 추세 차트는 커버리지가 다른 주를 섞지 않도록 top100 합계만 비교했다.</span>
+  <span>외부 출처: <a href="https://focus-digital.co/ai-ctr-by-llm-industry-and-query-type/">Focus Digital — AI CTR by query type</a> · <a href="https://zdnet.co.kr/view/?no=20260622165503">ZDNet — 네이버 메이트</a> · <a href="https://postdot.kr/blog/naver-adpost-guide">PostDot — 애드포스트 RPM</a></span>
+</footer>
+
+</div>

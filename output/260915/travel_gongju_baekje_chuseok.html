@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>공주 공산성·무령왕릉 추석 연휴 나들이 — 백제 역사 코스와 주차·입장료</title>
+<title>공주 공산성·무령왕릉 추석 연휴 반나절 vs 1박2일 동선표 — 추석 당일 휴무와 입장료 비교</title>
 <style>
   body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
   h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
@@ -33,8 +33,7 @@ function copyPrompt(id) {
   const text = document.getElementById(id).innerText;
   navigator.clipboard.writeText(text).then(() => {
     const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
-    const orig = btn.innerText;
-    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    const orig = btn.innerText; btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
     setTimeout(() => { btn.innerText = orig; btn.style.background = '#00796b'; }, 2000);
   });
 }
@@ -42,313 +41,211 @@ function copyPrompt(id) {
 </head>
 <body>
 
-<h1>공주 공산성·무령왕릉 추석 연휴 나들이<br>백제 역사 코스와 주차·입장료 총정리</h1>
+<h1>공주 공산성·무령왕릉 추석 연휴 반나절 vs 1박2일 동선표<br>추석 당일 휴무와 입장료 비교</h1>
 
 <div class="intro-box">
-2026년 추석 연휴(9월 27일~10월 1일)를 앞두고 <strong>수도권에서 2시간 이내</strong>에 닿는 깊이 있는 역사 여행지를 찾고 계신다면, 충남 공주를 강력히 추천합니다.<br><br>
-공주는 <strong>백제 웅진 시대(475~538년)</strong>의 수도였으며, 유네스코 세계문화유산으로 등재된 <strong>공산성</strong>과 <strong>무령왕릉</strong>이 시내에 나란히 자리 잡고 있습니다.<br><br>
-볼거리가 빽빽한 서울이나 경주처럼 인파에 치이는 분위기보다, 금강 물줄기를 옆에 두고 유서 깊은 성벽을 천천히 걸으며 쉬어가는 여행을 원하는 분께 딱 맞는 곳입니다.<br><br>
-이 글에서는 <strong>공산성 성벽 산책 코스, 무령왕릉 관람 포인트, 국립공주박물관, 공주 밤 요리, 추석 연휴 운영 정보</strong>까지 한 번에 정리해 드립니다.<br><br>
-마곡사·부여·논산까지 이어지는 연계 코스도 함께 담았으니 일정 계획에 활용하세요.
+2026년 추석 연휴는 <strong>9월 24일(목)부터 26일(토)까지</strong>이고 추석 당일은 <strong>9월 25일(금)</strong>입니다. 공주 공산성과 무령왕릉과 왕릉원은 <strong>명절 당일 휴무</strong>, 국립공주박물관도 <strong>추석 휴관</strong>으로 안내되어 있어 <strong>25일에는 세 곳 모두 문을 닫습니다.</strong> 연휴에 공주를 간다면 24일·26일·27일(일) 중 하루를 고르는 것이 핵심입니다.<br><br>
+입장료는 공산성과 무령왕릉과 왕릉원 모두 <strong>성인 3,000원, 청소년·군인 2,000원, 어린이 1,000원</strong>이고, 운영시간은 3~10월 기준 오전 9시~오후 6시(종료 30분 전까지 입장)입니다.<br><br>
+이 글에는 연휴 날짜별 개방표, 반나절과 1박2일 동선 비교표, 가족 인원별 입장료 계산표를 담았습니다. (정보 기준일 2026-09-15 · 운영 변경 가능성이 있어 출발 전 공주시 문화관광 안내 재확인 권장)
 </div>
 
 <div class="img-area">
   <div class="img-placeholder">
     <div class="ph-head">
-      <span>📷 이미지 1 — 공산성 성곽길과 가을 하늘</span>
+      <span>📷 이미지 1 — 금강 위로 이어지는 공산성 성곽길</span>
       <span class="ph-file">../../images/260915/2_gongju_1.png</span>
     </div>
-    <div id="prompt1" class="prompt-text">Gongsanseong fortress wall in Gongju South Korea with autumn sky, ancient stone ramparts winding over hills, Geumgang river visible below, fall foliage beginning to color, photorealistic, ultra high detail, 1:1 aspect ratio</div>
+    <div id="prompt1" class="prompt-text">Gongsanseong fortress stone walls in Gongju South Korea winding along a green hill above the Geumgang river, clear early autumn sky, traditional gate pavilion with colorful dancheong, visitors walking on the rampart path, photorealistic, ultra high detail, 1:1 aspect ratio</div>
     <button class="copy-btn" onclick="copyPrompt('prompt1')">프롬프트 복사</button>
   </div>
-  <div class="img-caption">공산성 성곽길에서 바라본 가을 풍경 — 금강이 내려다보이는 백제의 옛 왕성</div>
+  <div class="img-caption">금강을 내려다보며 이어지는 공산성 성곽길 / AI 제작 이미지</div>
 </div>
 
-<h2>01 | 추석 연휴에 공주 가는 이유 — 가깝고 깊은 역사</h2>
+<h2>01 | 추석 연휴 날짜별 개방표 — 25일은 피해야 한다</h2>
 
-추석 연휴 여행지를 고를 때 많은 분이 제주나 해외를 떠올리지만, 연휴 기간 항공권과 숙박 비용 상승을 생각하면 가성비 높은 국내 역사 여행지가 오히려 빛납니다.<br><br>
-공주는 <strong>서울 기준 약 1시간 50분~2시간</strong> 거리로, 당일치기로도 충분히 돌아볼 수 있는 곳입니다. 1박 2일 일정이라면 더욱 여유롭게 공주와 부여를 함께 즐길 수 있습니다.<br><br>
-공주의 역사적 무게는 결코 가볍지 않습니다. 백제는 475년 한성(현 서울 풍납토성)이 고구려에 함락되자 웅진(지금의 공주)으로 수도를 옮겼고, 63년간 이 땅에서 왕조를 이어갔습니다. 이 시기가 바로 백제 중기 문화의 절정기입니다.<br><br>
-2015년 <strong>유네스코 세계문화유산</strong>으로 등재된 '백제역사유적지구'의 핵심이 바로 공주의 공산성과 무령왕릉·왕릉원입니다. 세계가 인정한 문화유산을 추석 연휴에 가족과 함께 걸어보는 것은 특별한 경험이 될 것입니다.<br><br>
-또한 공주는 추석 연휴의 <strong>정서적 풍경</strong>과도 잘 어울립니다. 금강 변을 따라 걷는 공산성 성벽길, 고즈넉한 왕릉 주변 솔숲, 제민천을 따라 늘어선 카페와 맛집 골목이 명절의 느긋함과 어우러집니다.
-
-<h2>02 | 공산성 가는 법과 주차 — 연휴 교통 팁</h2>
-
-공산성은 <strong>충청남도 공주시 산성동 금강 변</strong>에 위치합니다. 금강을 바로 옆에 두고 솟은 야트막한 구릉 위에 자리 잡고 있어 접근이 어렵지 않습니다.<br><br>
-
-<strong>자동차 이용 시</strong><br>
-서울 출발 기준 가장 일반적인 경로입니다.<br>
-<strong>서울 → 경부고속도로 → 천안논산고속도로 → 공주IC → 공주시내 방면 → 공산성</strong><br>
-공주IC에서 공산성까지는 약 5~10분 내외입니다. 내비게이션에 <strong>'공산성 공영주차장'</strong>으로 검색하면 정확하게 안내됩니다.<br><br>
-
-<strong>대전·천안 방면 출발</strong>이라면 천안논산고속도로를 이용하면 됩니다. 대전 기준 약 40~50분, 천안 기준 약 30분 소요됩니다.<br><br>
-
-<strong>대중교통 이용 시</strong><br>
-서울 고속버스터미널 또는 동서울터미널에서 공주종합버스터미널까지 고속버스로 약 1시간 40분이 소요됩니다. 공주터미널에서 공산성까지는 도보로 약 20분, 택시로 약 5분입니다. KTX 천안아산역에서 시외버스로 공주 방면 이동도 가능합니다.<br><br>
-
-<strong>주차 정보</strong>
+추석 연휴 여행에서 가장 흔한 실수는 <strong>명절 당일에 문화유산을 찾아갔다가 문 앞에서 돌아서는 것</strong>입니다. 공주 핵심 세 곳의 연휴 운영을 날짜별로 정리했습니다.<br><br>
 
 <table class="info-table">
-  <tr><th>주차장</th><th>위치</th><th>요금</th><th>규모</th></tr>
-  <tr><td><strong>공산성 공영주차장</strong></td><td>공산성 동문 인근</td><td>무료</td><td>약 200면</td></tr>
-  <tr><td>공주문화원 인근 공영</td><td>산성동 시내</td><td>유료 (1시간 600원)</td><td>약 80면</td></tr>
-  <tr><td>금강 둔치 임시주차장</td><td>금강교 하부</td><td>무료 (연휴 임시)</td><td>연휴 시 운영</td></tr>
+  <tr><th>날짜</th><th>공산성</th><th>무령왕릉과 왕릉원</th><th>국립공주박물관</th><th>추천도</th></tr>
+  <tr><td>9/24 (목) 연휴 첫날</td><td>개방</td><td>개방</td><td>개방</td><td>좋음 (귀성 정체 주의)</td></tr>
+  <tr><td><strong>9/25 (금) 추석 당일</strong></td><td><strong>휴무</strong></td><td><strong>휴무</strong></td><td><strong>휴관</strong></td><td>방문 비추천</td></tr>
+  <tr><td>9/26 (토) 연휴 마지막 날</td><td>개방</td><td>개방</td><td>개방</td><td>가장 붐빔</td></tr>
+  <tr><td>9/27 (일)</td><td>개방</td><td>개방</td><td>개방</td><td>좋음 (귀경 정체 전 오전)</td></tr>
+  <tr><td>9/28 (월)</td><td>개방</td><td>개방</td><td>정기 휴관(월요일)</td><td>박물관 제외 가능</td></tr>
 </table>
 
-<div class="warn-box">
-<strong>연휴 교통 주의.</strong> 추석 연휴 기간에는 공주 시내 전반적으로 교통량이 증가합니다. <strong>공주IC 진출 후 공산성 방면 도로</strong>가 정체될 수 있으므로 오전 10시 이전 도착을 권장합니다. 귀경 시에는 오후 4시 이전 또는 저녁 7시 이후 출발이 유리합니다.
-</div>
+위 표는 각 기관이 공개한 휴무 기준(공산성·왕릉원 명절 당일 휴무, 박물관 월요일·추석 휴관)을 날짜에 적용한 것입니다. 연휴 기간 임시 개방이나 행사 일정이 새로 발표될 수 있으니 <strong>출발 전날 한 번 더 확인</strong>하세요.
 
-<h2>03 | 공산성 성벽 산책 코스 — 한 바퀴 걷는 데 얼마나 걸리나</h2>
-
-공산성의 성벽은 <strong>총 2,660m</strong>입니다. 성벽 위로 올라가 한 바퀴를 걸으면 약 <strong>1시간~1시간 20분</strong>이 소요됩니다.<br><br>
-성벽의 높이와 지형 변화가 있어 완만한 오르내림이 반복됩니다. 걷기 편한 신발을 착용하고 물을 챙겨오는 것이 좋습니다.<br><br>
-
-<strong>추천 산책 코스 (시계 방향 기준)</strong>
-
-<div class="step-box">
-<strong>출발: 공산성 동문(영동루)</strong><br>
-매표소가 동문 옆에 있습니다. 티켓을 구매하고 동문으로 입장합니다.
-</div>
-<div class="step-box">
-<strong>① 쌍수정 광장</strong><br>
-공산성 내부 평지 중 가장 넓은 광장으로 산책의 시작점. 인조가 이괄의 난을 피해 머물렀다고 전해지는 쌍수정이 자리하고 있습니다.
-</div>
-<div class="step-box">
-<strong>② 서문(금서루)과 북쪽 성벽</strong><br>
-금강이 한눈에 내려다보이는 가장 전망 좋은 구간입니다. 날씨가 맑은 날에는 금강 건너 공주 시내까지 보입니다.
-</div>
-<div class="step-box">
-<strong>③ 만하루</strong><br>
-금강 변 언덕에 세워진 누각으로, 공산성에서 포토스팟으로 가장 유명한 곳입니다. 강물과 누각이 어우러진 풍경은 꼭 사진에 담아보세요.
-</div>
-<div class="step-box">
-<strong>④ 연지(연꽃못)와 동문 복귀</strong><br>
-성 안쪽의 연지를 지나 동문으로 돌아옵니다. 연지는 백제 시대부터 있던 것으로 추정되는 연못으로, 가을에는 연잎이 풍성하게 남아있습니다.
-</div>
-
-전체 코스를 여유롭게 돌면 약 1시간 30분~2시간 소요됩니다. 어린이나 노약자를 동반하는 경우 시간을 여유 있게 잡으세요.
-
-<h2>04 | 공산성 볼거리 — 연지·쌍수정·만하루·쌍수산책로</h2>
-
-공산성 안에는 성벽 외에도 곳곳에 역사적 의미가 있는 건물과 공간이 자리하고 있습니다. 주요 볼거리를 하나씩 살펴봅니다.<br><br>
-
-<strong>연지(蓮池)</strong><br>
-성 동쪽에 위치한 연꽃 연못입니다. 백제 시대부터 성 안에서 식수와 방어를 위해 조성했던 것으로 추정됩니다. 현재는 복원된 연지 주변으로 산책로가 조성되어 있으며, 여름부터 초가을까지 연꽃이 피어 아름답습니다.<br><br>
-
-<strong>쌍수정(雙樹亭)</strong><br>
-조선 인조 2년(1624년) 이괄의 난 당시 인조 임금이 피난 왔던 자리에 세워진 정자입니다. 인조가 이곳에 서 있던 두 나무에 기대어 소식을 기다렸다고 전하며, 그 두 나무를 기념해 '쌍수정'이라는 이름이 붙었습니다.<br><br>
-
-<strong>만하루(挽河樓)</strong><br>
-금강 물줄기가 직접 보이는 성벽 서쪽 끝에 위치한 누각입니다. 강과 가장 가까운 위치에 있어 전망이 빼어나며, 공산성에서 가장 대표적인 포토스팟입니다. 누각 앞 벤치에서 잠시 쉬며 금강 풍경을 감상해 보세요.<br><br>
-
-<strong>금서루(錦西樓)</strong><br>
-서쪽 성문인 금서루는 최근에 복원된 누문으로 규모가 큽니다. 성벽 위에서 바라본 금서루의 모습이 공산성을 상징하는 이미지로 많이 사용됩니다.<br><br>
-
-<strong>영은사(靈隱寺)</strong><br>
-성 안쪽에 위치한 조선 시대 사찰입니다. 백제 시대 왕궁 터 일부로 알려진 곳에 세워진 사찰로, 한적하게 들러볼 수 있습니다.<br><br>
-
-<div class="tip-box">
-<strong>TIP.</strong> 공산성 성벽 위는 가을 단풍 시즌에 특히 아름답습니다. 10월 중순 이후 성벽 주변 수목이 단풍으로 물들면 더욱 아름다운 풍경을 감상할 수 있습니다.
-</div>
-
-<h2>05 | 무령왕릉·왕릉원 입장료와 관람 포인트</h2>
-
-공산성에서 <strong>차로 5분, 도보로 약 20분</strong> 거리에 위치한 무령왕릉·왕릉원은 공주 역사 여행의 또 다른 핵심입니다.<br><br>
-
-<strong>무령왕릉 기본 정보</strong>
+<h2>02 | 입장료·운영시간 비교표 — 두 곳 합쳐 성인 6,000원</h2>
 
 <table class="info-table">
-  <tr><th>항목</th><th>내용</th></tr>
-  <tr><td>정식 명칭</td><td>공주 무령왕릉과 왕릉원 (사적)</td></tr>
-  <tr><td>위치</td><td>충남 공주시 웅진동 57 (공주시 왕릉로 37)</td></tr>
-  <tr><td>입장료</td><td>성인 1,500원 / 청소년 1,000원 / 어린이 700원</td></tr>
-  <tr><td>운영 시간</td><td>09:00~18:00 (매표는 17:30까지)</td></tr>
-  <tr><td>휴관일</td><td>매주 월요일, 1월 1일 (추석 당일 별도 확인 필요)</td></tr>
+  <tr><th>구분</th><th>공산성</th><th>무령왕릉과 왕릉원</th><th>국립공주박물관</th></tr>
+  <tr><td>성인</td><td>3,000원</td><td>3,000원</td><td>상설전시 무료(재검증)</td></tr>
+  <tr><td>청소년·군인</td><td>2,000원</td><td>2,000원</td><td>상설전시 무료(재검증)</td></tr>
+  <tr><td>어린이</td><td>1,000원</td><td>1,000원</td><td>상설전시 무료(재검증)</td></tr>
+  <tr><td>관람시간 (3~10월)</td><td>09:00~18:00</td><td>09:00~18:00</td><td>기관 안내 확인</td></tr>
+  <tr><td>입장 마감</td><td>종료 30분 전</td><td>종료 30분 전</td><td>기관 안내 확인</td></tr>
+  <tr><td>휴무</td><td>명절 당일·신정</td><td>명절 당일·신정</td><td>월요일·1/1·설날·추석</td></tr>
 </table>
 
-무령왕릉은 1971년 배수로 공사 중 우연히 발견된 왕릉으로, 도굴되지 않은 원형 상태 그대로 발굴된 매우 희귀한 사례입니다. 출토된 <strong>금제 관식, 금제 귀걸이, 지석(묘지명)</strong> 등 108종 2,906점의 유물이 발굴되었으며, 상당수가 <strong>국보</strong>로 지정되어 있습니다.<br><br>
-왕릉 내부는 현재 보존을 위해 직접 입장이 제한되어 있으며, <strong>실물 크기 모형으로 재현된 전시관</strong>에서 내부를 관람할 수 있습니다.<br><br>
+11월부터는 동절기 운영으로 두 유적의 관람시간이 오후 5시까지로 짧아집니다. 공주시민 할인과 20인 이상 단체 요금도 따로 있으니 해당된다면 매표소에서 문의하세요.
 
-<strong>무료 해설 투어</strong><br>
-왕릉원 입구에서 <strong>문화유산 해설사의 무료 해설 투어</strong>가 운영됩니다. 투어 시간은 오전 10시, 오후 2시, 오후 4시 세 차례(연휴 기간 시간 변동 가능)이며, 약 40~50분간 진행됩니다. 역사 지식이 없는 분도 이해하기 쉽게 설명해 주므로 적극 추천합니다.<br><br>
+<h2>03 | 가족 인원별 입장료 계산표</h2>
+
+두 유적을 모두 보는 경우의 합계입니다. 박물관 상설전시는 무료로 계산했습니다.<br><br>
+
+<table class="info-table">
+  <tr><th>구성</th><th>공산성</th><th>왕릉원</th><th>합계</th></tr>
+  <tr><td>성인 2명</td><td>6,000원</td><td>6,000원</td><td>12,000원</td></tr>
+  <tr><td>성인 2 + 어린이 1</td><td>7,000원</td><td>7,000원</td><td>14,000원</td></tr>
+  <tr><td>성인 2 + 청소년 1 + 어린이 1</td><td>9,000원</td><td>9,000원</td><td>18,000원</td></tr>
+  <tr><td>성인 4명 (부모님 동반)</td><td>12,000원</td><td>12,000원</td><td>24,000원</td></tr>
+</table>
+
+<strong>계산식: (성인 3,000원 + 청소년 2,000원 + 어린이 1,000원) × 인원 × 2곳</strong><br><br>
+
+만 나이 기준이나 경로 우대 적용 여부는 매표소 안내를 따르므로, 신분증을 챙겨 가면 현장에서 확인이 빠릅니다.
+
+<h2>04 | 반나절 vs 1박2일 동선 비교표 — 우리 가족은 어느 쪽?</h2>
+
+공주 핵심 세 곳은 서로 차로 10분 안팎이라 반나절에도 돌아볼 수 있습니다. 다만 연휴에는 주차·대기 시간이 늘어나므로 일정 여유를 비교해 고르세요.<br><br>
+
+<table class="info-table">
+  <tr><th>항목</th><th>반나절 (당일치기)</th><th>1박2일</th></tr>
+  <tr><td>포함 코스</td><td>공산성 + 왕릉원 + 박물관</td><td>공주 3곳 + 제민천 산책 + 마곡사 또는 부여</td></tr>
+  <tr><td>걷는 양</td><td>많음 (성곽 한 바퀴 포함 시)</td><td>분산되어 여유</td></tr>
+  <tr><td>잘 맞는 날짜</td><td>9/24 오전 또는 9/27 오전</td><td>9/26~27 또는 9/27~28</td></tr>
+  <tr><td>잘 맞는 일행</td><td>성인끼리, 귀성·귀경길 경유</td><td>아이·부모님 동반</td></tr>
+  <tr><td>주의</td><td>입장 마감 17:30 역산</td><td>연휴 숙소 조기 마감</td></tr>
+</table>
+
+<h3>반나절 동선 (9/27 일요일 예시)</h3>
+
+<div class="step-box">
+<strong>09:00</strong> 공산성 도착·입장 → 성곽길 일부 + 금서루·공북루 전망 (약 1시간 30분)<br>
+<strong>10:40</strong> 차로 이동 → 무령왕릉과 왕릉원 관람 (약 1시간)<br>
+<strong>11:50</strong> 국립공주박물관에서 무령왕릉 출토 유물 관람 (약 1시간)<br>
+<strong>13:00</strong> 공주 시내 점심 → 귀경 출발 (정체 시작 전)
+</div>
+
+<h3>1박2일 동선 (9/26~27 예시)</h3>
+
+<div class="step-box">
+<strong>1일차</strong> 오후 도착 → 공산성 성곽길 산책 → 제민천 주변 저녁·산책 → 공주 숙박<br>
+<strong>2일차</strong> 09:00 무령왕릉과 왕릉원 → 국립공주박물관 → 점심 → 마곡사 또는 부여 방면으로 이동 후 귀가
+</div>
+
+<h2>05 | 공산성 성곽길 코스표 — 전 구간 vs 전망 구간</h2>
+
+공산성은 금강 남쪽 구릉을 따라 성벽이 이어지는 백제 웅진 시기의 왕성 터로, 2015년 '백제역사유적지구'의 하나로 유네스코 세계유산에 등재되었습니다. 성곽 둘레는 약 2.66km로 알려져 있으며, 오르내림이 있어 체력과 시간에 맞춰 구간을 고르는 것이 좋습니다.<br><br>
+
+<table class="info-table">
+  <tr><th>코스</th><th>포함 지점</th><th>소요 (여유 기준)</th><th>추천</th></tr>
+  <tr><td>전망 구간</td><td>금서루(서문) → 성곽 위 금강 조망</td><td>약 40분~1시간</td><td>아이·부모님 동반</td></tr>
+  <tr><td>강변 구간</td><td>공북루 → 만하루·연지</td><td>약 1시간</td><td>사진 촬영</td></tr>
+  <tr><td>한 바퀴</td><td>성곽 전 구간</td><td>1시간 30분 이상</td><td>걷기 좋아하는 성인</td></tr>
+</table>
+
+성곽 위는 그늘이 적은 구간이 있어 9월 한낮에는 햇볕이 강합니다. <strong>오전에 성곽을 걷고, 오후에는 실내인 박물관</strong>으로 가는 순서가 체력 소모가 적습니다.
 
 <div class="img-area">
   <div class="img-placeholder">
     <div class="ph-head">
-      <span>📷 이미지 2 — 공주 무령왕릉 석실 내부 재현 전시</span>
+      <span>📷 이미지 2 — 무령왕릉과 왕릉원 고분 풍경</span>
       <span class="ph-file">../../images/260915/2_gongju_2.png</span>
     </div>
-    <div id="prompt2" class="prompt-text">Interior recreation display of King Muryeong tomb in Gongju, ancient Baekje kingdom burial chamber replica with gold ornaments and artifacts, museum lighting, photorealistic, ultra high detail, 1:1 aspect ratio</div>
+    <div id="prompt2" class="prompt-text">Grassy royal tomb mounds of the Baekje kingdom at Muryeong royal tomb complex in Gongju Korea, gentle green hills with pine trees, walking path and visitors in early autumn, soft morning light, photorealistic, ultra high detail, 1:1 aspect ratio</div>
     <button class="copy-btn" onclick="copyPrompt('prompt2')">프롬프트 복사</button>
   </div>
-  <div class="img-caption">무령왕릉 석실 내부 재현 전시 — 백제 왕릉의 정교한 벽돌 구조와 출토 유물 배치 복원 모습</div>
+  <div class="img-caption">솔숲 사이로 봉분이 이어지는 무령왕릉과 왕릉원 / AI 제작 이미지</div>
 </div>
 
-<h2>06 | 국립공주박물관 — 무료 관람의 숨은 보석</h2>
+<h2>06 | 무령왕릉과 왕릉원 관람 포인트 — 모형 전시관부터</h2>
 
-무령왕릉 바로 옆에 위치한 <strong>국립공주박물관</strong>은 공주 역사 여행의 마무리를 장식하는 곳입니다.<br><br>
-무령왕릉 출토 유물의 실물을 전시하는 국내 유일의 박물관으로, 특히 <strong>금제 관식, 금제 귀걸이, 청동 거울, 왕과 왕비의 지석(묘지명 돌판)</strong> 등 국보급 유물을 직접 눈으로 확인할 수 있습니다.<br><br>
+무령왕릉은 1971년 배수로 공사 중 발견된 백제 무령왕과 왕비의 무덤으로, 도굴되지 않은 채 발견되어 무덤 주인을 알려주는 지석과 많은 유물이 함께 나왔습니다. 고분 내부는 보존을 위해 직접 들어갈 수 없고, <strong>모형 전시관</strong>에서 벽돌무덤 구조를 볼 수 있습니다.<br><br>
 
-<strong>국립공주박물관 기본 정보</strong>
+<div class="step-box">
+<strong>관람 순서 체크리스트</strong><br>
+☐ 모형 전시관에서 벽돌무덤 내부 구조 먼저 보기<br>
+☐ 봉분 산책로 따라 고분군 둘러보기<br>
+☐ 해설 프로그램 운영 시간 매표소에서 확인<br>
+☐ 실물 유물은 국립공주박물관에서 이어서 보기
+</div>
+
+왕릉원에서 구조를 먼저 보고 박물관에서 실물 유물을 보면, 같은 이야기를 두 번 확인하는 셈이라 아이들도 훨씬 잘 기억합니다.
+
+<h2>07 | 국립공주박물관 — 무령왕릉 유물 실물 보는 곳</h2>
+
+국립공주박물관은 무령왕릉 출토 유물을 중심으로 웅진 백제 문화를 소개하는 곳입니다. 왕릉원에서 가까워 동선에 넣기 쉽고, 날씨가 덥거나 비가 올 때 실내 대안으로도 좋습니다.<br><br>
 
 <table class="info-table">
-  <tr><th>항목</th><th>내용</th></tr>
-  <tr><td>위치</td><td>충남 공주시 관광단지길 34 (웅진동)</td></tr>
-  <tr><td>입장료</td><td><strong>무료</strong> (상설전시관 기준)</td></tr>
-  <tr><td>운영 시간</td><td>평일 09:00~18:00 / 주말·공휴일 09:00~18:00</td></tr>
-  <tr><td>추석 연휴 운영</td><td>연휴 정상 운영 (추석 당일 포함, 공식 확인 권장)</td></tr>
-  <tr><td>소요 시간</td><td>1층·2층 상설 전시관 합산 약 1~1.5시간</td></tr>
+  <tr><th>체크 항목</th><th>내용</th></tr>
+  <tr><td>휴관일</td><td>매주 월요일(대체공휴일이면 다음 날), 1월 1일, 설날, 추석</td></tr>
+  <tr><td>연휴 중 휴관</td><td>9/25(추석), 9/28(월)</td></tr>
+  <tr><td>관람 요금·시간</td><td>박물관 누리집 안내 확인</td></tr>
+  <tr><td>추천 소요</td><td>약 1시간</td></tr>
 </table>
 
-박물관 1층에는 <strong>웅진 백제 역사실</strong>이 있어 무령왕릉 유물을 중심으로 백제 중기 문화를 체계적으로 보여줍니다. 2층은 충남 지역 전체 출토 유물을 다루는 <strong>충청의 역사실</strong>로 구성되어 있습니다.<br><br>
-박물관 앞 야외 공간도 잘 정비되어 있어 산책하기 좋으며, 어린이 체험 프로그램도 주기적으로 운영됩니다. 연휴 기간에는 특별 프로그램이 운영되는 경우도 있으니 출발 전 박물관 홈페이지를 확인해 보세요.<br><br>
+박물관은 연휴 기간 특별 프로그램이 공지되는 경우가 있으니 방문 전 누리집 공지를 보세요.
 
-<div class="info-box">
-<strong>무령왕릉 → 국립공주박물관 동선 팁</strong><br>
-무령왕릉 관람 후 걸어서 3분 이내 거리에 박물관이 있습니다. 왕릉 해설을 듣고 실물 유물을 박물관에서 다시 보면 역사 이해도가 크게 높아집니다. 두 곳을 묶어 오전 일정으로 소화하는 것을 추천합니다.
-</div>
+<h2>08 | 주차·교통과 연휴 정체 피하는 시간</h2>
 
-<h2>07 | 공주 추석 연휴 운영시간 — 당일 휴관 여부 확인법</h2>
-
-추석 연휴(2026년 9월 27일~10월 1일)에는 문화시설마다 운영 방침이 다릅니다. 공주 주요 시설의 운영 정보를 정리합니다.<br><br>
+공산성은 <strong>승용차 무료 주차</strong>가 가능한 것으로 안내되어 있고, 대중교통은 공주종합터미널에서 101번·125번 시내버스로 이동할 수 있습니다. 연휴에는 주차장이 빨리 차므로 도착 시간을 당기는 것이 가장 확실한 방법입니다.<br><br>
 
 <table class="info-table">
-  <tr><th>시설</th><th>평소 운영시간</th><th>추석 연휴 방침</th><th>확인 방법</th></tr>
-  <tr><td><strong>공산성</strong></td><td>09:00~18:00 (매표 17:30)</td><td>연휴 정상 운영 예상, 추석 당일 별도 확인</td><td>공주시청 문화관광과</td></tr>
-  <tr><td><strong>무령왕릉·왕릉원</strong></td><td>09:00~18:00</td><td>연휴 정상 운영 예상</td><td>왕릉원 관리사무소</td></tr>
-  <tr><td><strong>국립공주박물관</strong></td><td>09:00~18:00</td><td>추석 당일 포함 정상 운영 예상</td><td>박물관 공식 홈페이지</td></tr>
-  <tr><td><strong>마곡사</strong></td><td>일출~일몰</td><td>사찰 특성상 연중 개방</td><td>마곡사 홈페이지</td></tr>
+  <tr><th>시간대</th><th>상황 예상</th><th>권장</th></tr>
+  <tr><td>09:00 전후</td><td>주차 여유</td><td>공산성 입장 추천</td></tr>
+  <tr><td>11:00~14:00</td><td>관광객·식사 인파 집중</td><td>실내(박물관)·식사로 분산</td></tr>
+  <tr><td>15:00 이후</td><td>귀경 차량 증가</td><td>일찍 출발 또는 저녁 이후</td></tr>
 </table>
 
-<strong>반드시 출발 전 확인하세요.</strong> 공공 문화시설은 추석 당일 또는 연휴 특정일에 휴관하거나 운영 시간이 단축되는 경우가 있습니다. 아래 연락처로 사전 확인하는 것이 가장 확실합니다.<br><br>
+<h2>09 | 공주 제민천 산책과 가을 먹거리</h2>
 
-<div class="info-box">
-<strong>추석 연휴 운영 확인 연락처</strong><br>
-- 공주시 문화관광 안내: 041-840-8211<br>
-- 국립공주박물관: 041-850-6300<br>
-- 공주 관광 안내소(공산성 앞): 041-856-7700<br>
-- 공주시 문화관광 공식 홈페이지: www.gongju.go.kr
-</div>
-
-연휴 기간은 입장 인원이 평소보다 많아 대기가 생길 수 있습니다. <strong>오전 9시 개장 직후</strong>에 입장하면 인파를 피해 여유롭게 관람할 수 있습니다.<br><br>
-
-<div class="warn-box">
-<strong>주의.</strong> 추석 당일(2026년 9월 29일, 화요일)에는 국립공주박물관을 포함한 국립 기관이 휴관하는 경우도 있습니다. 반드시 공식 홈페이지 또는 전화로 재확인하세요.
-</div>
-
-<h2>08 | 공주 밤 요리와 제민천 카페거리 — 먹거리 산책 코스</h2>
-
-공주는 <strong>밤(栗)의 고장</strong>으로도 유명합니다. 공주 밤은 당도와 크기에서 국내 최고 수준으로 평가받으며, 가을 수확 시즌인 9~10월에는 공주 전역에서 밤 요리와 밤 상품을 만날 수 있습니다.<br><br>
-
-<strong>공주 밤으로 만든 먹거리</strong>
-
-<div class="step-box">
-<strong>밤막걸리</strong><br>
-공주 밤으로 빚은 향토 막걸리입니다. 은은한 밤향과 약한 단맛이 특징으로, 공주 시내 여러 식당에서 판매합니다. 여행 중 점심이나 저녁 식사 자리에서 한 잔 곁들여보세요.
-</div>
-<div class="step-box">
-<strong>밤빵</strong><br>
-공주 대표 기념품으로 자리 잡은 밤빵은 공주 시내 여러 베이커리에서 판매합니다. 통밤이 들어간 촉촉한 빵으로 선물용으로도 인기가 높습니다. 제민천 카페거리 주변 베이커리에서 갓 구운 것을 구입하는 것을 추천합니다.
-</div>
-<div class="step-box">
-<strong>밤묵·밤밥</strong><br>
-공주 향토 음식인 밤묵은 도토리묵과 비슷하지만 밤을 주원료로 사용해 색이 더 밝고 고소합니다. 밤밥은 갓 도정한 쌀에 통밤을 넣어 지은 밥으로, 공주 전통 한식 식당에서 맛볼 수 있습니다.
-</div>
-
-<strong>제민천 카페거리 산책</strong><br>
-공주 시내를 흐르는 작은 하천 제민천 주변으로 카페와 식당이 자리한 카페거리가 형성되어 있습니다. 공산성과 왕릉원에서 도보 10~15분 거리로, 역사 탐방 후 가볍게 산책하며 커피 한잔하기에 좋습니다.<br><br>
-제민천 카페거리는 오래된 건물을 리모델링한 분위기 있는 카페들이 많아 사진 찍기에도 좋습니다. 저녁 무렵 조명이 켜지면 운치 있는 분위기가 더해집니다.<br><br>
+공산성 남쪽 원도심을 흐르는 제민천 주변은 오래된 건물을 고친 카페와 식당이 모여 있어 걷기 좋습니다. 공주는 밤 산지로 잘 알려져 있어 가을에는 밤을 넣은 빵·디저트를 파는 곳을 쉽게 만날 수 있습니다.<br><br>
 
 <div class="tip-box">
-<strong>TIP.</strong> 공주 시내에는 <strong>공주 산성시장</strong>도 있습니다. 추석 연휴 전후로 밤 판매 노점이 늘어나며, 공주 특산 밤을 저렴하게 구입할 수 있습니다. 선물 구매를 계획 중이라면 들러보세요.
+<strong>TIP.</strong> 연휴에는 시내 식당도 휴무일이 제각각입니다. 방문하려는 식당의 연휴 영업 여부를 지도 앱 공지나 전화로 확인하고, 추석 당일(25일)은 특히 문 닫는 곳이 많다고 생각하고 계획하세요.
 </div>
 
-<h2>09 | 마곡사까지 연계하는 반나절 코스</h2>
-
-공주 시내에서 <strong>차로 약 30분</strong> 거리에 <strong>마곡사(麻谷寺)</strong>가 있습니다. 충남 4대 사찰 중 하나로, 백제 시대에 창건된 유서 깊은 사찰입니다. 2018년 '산사, 한국의 산지 승원'으로 유네스코 세계문화유산에 등재되었습니다.<br><br>
-마곡사는 공주 시내와 달리 울창한 숲속에 자리 잡고 있어 특유의 고요하고 시원한 분위기를 자랑합니다. 추석 연휴 인파가 몰리는 시내 관광지와 달리 비교적 한적하게 방문할 수 있습니다.<br><br>
-
-<strong>마곡사 기본 정보</strong>
+<h2>10 | 마곡사·부여 연계 비교 — 1박2일 둘째 날 고르기</h2>
 
 <table class="info-table">
-  <tr><th>항목</th><th>내용</th></tr>
-  <tr><td>위치</td><td>충남 공주시 사곡면 마곡사로 966</td></tr>
-  <tr><td>입장료</td><td>성인 3,000원 (공주 시내 관광지와 별도)</td></tr>
-  <tr><td>공주 시내에서 거리</td><td>차로 약 30분 (약 23km)</td></tr>
-  <tr><td>소요 시간</td><td>경내 산책 약 1~1.5시간</td></tr>
+  <tr><th>항목</th><th>마곡사</th><th>부여</th></tr>
+  <tr><td>성격</td><td>산사, 숲길 산책</td><td>백제 사비 시기 유적</td></tr>
+  <tr><td>세계유산</td><td>2018 '산사, 한국의 산지승원'</td><td>2015 '백제역사유적지구'</td></tr>
+  <tr><td>잘 맞는 일행</td><td>조용한 휴식, 부모님 동반</td><td>역사 흐름을 이어 보고 싶은 가족</td></tr>
+  <tr><td>연휴 체크</td><td>사찰 행사·주차 상황</td><td>각 유적 명절 운영 확인</td></tr>
 </table>
 
-마곡사 경내에는 <strong>대웅보전, 대광보전, 5층 석탑</strong> 등 주요 문화재가 있으며, 경내를 흐르는 작은 계곡과 숲길이 조화를 이룹니다. 사찰 주변 솔숲 산책로는 가을에 특히 아름다우며, 산책을 즐기는 방문객들로 인기가 있습니다.<br><br>
-
-<strong>공주 시내 + 마곡사 연계 반나절 코스</strong>
-
-<div class="info-box">
-오전 9시 공산성 입장 → 성벽 산책 (1시간 30분) → 오전 11시 무령왕릉·왕릉원 (1시간) → 오후 12시 30분 국립공주박물관 (1시간) → 오후 1시 30분 점심 식사 (제민천 카페거리 인근) → 오후 3시 마곡사 출발 → 오후 3시 30분 마곡사 경내 산책 (1시간 30분) → 오후 5시 귀가 출발
-</div>
-
-당일치기로는 빠듯하지만 충분히 소화 가능한 일정입니다. 아이들이나 노약자가 동행하는 경우 공산성 또는 마곡사 중 하나를 선택해 여유 있게 관람하는 것을 권장합니다.
+공주에서 웅진 백제를 보고 부여에서 사비 백제를 이어 보면 백제 후기 흐름이 자연스럽게 연결됩니다. 반대로 걷기 부담을 줄이고 싶다면 숲길이 편안한 마곡사가 좋습니다.
 
 <div class="img-area">
   <div class="img-placeholder">
     <div class="ph-head">
-      <span>📷 이미지 3 — 추석 연휴 공주 금강 인근 가을 풍경</span>
+      <span>📷 이미지 3 — 공주 원도심 제민천 가을 산책길</span>
       <span class="ph-file">../../images/260915/2_gongju_3.png</span>
     </div>
-    <div id="prompt3" class="prompt-text">Autumn scenery near Geumgang River in Gongju Korea, golden trees and calm river reflection, traditional hanok village glimpse, peaceful holiday atmosphere, photorealistic, ultra high detail, 1:1 aspect ratio</div>
+    <div id="prompt3" class="prompt-text">Small stream Jeminchen in old downtown Gongju Korea with walking path, renovated old houses turned into cafes, early autumn trees, relaxed holiday stroll atmosphere, warm afternoon light, photorealistic, ultra high detail, 1:1 aspect ratio</div>
     <button class="copy-btn" onclick="copyPrompt('prompt3')">프롬프트 복사</button>
   </div>
-  <div class="img-caption">공주 금강 인근 가을 풍경 — 황금빛 단풍과 잔잔한 강물이 어우러진 추석 연휴 나들이 풍경</div>
-</div>
-
-<h2>10 | 부여·논산 추가 연계 코스와 숙박 선택지</h2>
-
-공주 여행을 1박 2일로 계획한다면 부여와 논산을 연계하면 더욱 풍부한 백제 역사 여행이 됩니다.<br><br>
-
-<strong>부여 — 백제문화단지 (공주에서 차로 40분)</strong><br>
-부여는 백제의 마지막 수도(사비 시대)로, 공주에서 차로 40분 거리에 있습니다. <strong>백제문화단지</strong>는 백제 왕궁과 사찰을 대규모로 복원한 테마파크형 문화시설로, 어린이부터 어른까지 폭넓게 즐길 수 있습니다. 유네스코 세계문화유산 부소산성, 정림사지 5층 석탑, 국립부여박물관과 함께 묶어보세요.<br><br>
-
-<strong>논산 관촉사 (공주에서 차로 약 40분)</strong><br>
-논산 관촉사는 높이 18.12m의 <strong>은진미륵</strong>으로 유명한 사찰입니다. 고려 시대 제작된 거대한 석조 미륵불상은 국내에서 가장 높은 석불로, 큰 코와 소박한 표정이 특징적입니다. 공주에서 논산 방향으로 이동하는 길에 들르기 편합니다.<br><br>
-
-<strong>공주 숙박 선택지</strong>
-
-<table class="info-table">
-  <tr><th>유형</th><th>특징</th><th>가격대</th></tr>
-  <tr><td>공주 시내 비즈니스 호텔</td><td>공산성 도보권, 조식 포함 옵션</td><td>6~10만 원</td></tr>
-  <tr><td>금강변 펜션</td><td>강 뷰, 가족 단위 적합</td><td>10~15만 원</td></tr>
-  <tr><td>마곡사 인근 게스트하우스</td><td>숲속 분위기, 조용한 환경</td><td>5~8만 원</td></tr>
-  <tr><td>계룡스파텔 (계룡시)</td><td>공주 인접, 수영장 시설</td><td>12~20만 원</td></tr>
-</table>
-
-<div class="warn-box">
-<strong>추석 연휴 숙박 예약 필수.</strong> 추석 연휴 기간에는 공주·부여 인근 숙박시설이 수 주 전에 예약 마감됩니다. 특히 가족 단위 방문이 많은 숙박시설은 연휴 1~2달 전부터 예약이 시작됩니다. 지금 바로 예약 현황을 확인하세요.
-</div>
-
-<strong>1박 2일 추천 일정 요약</strong>
-
-<div class="info-box">
-<strong>1일차</strong>: 공주 도착 → 공산성 산책 → 무령왕릉 + 국립공주박물관 → 제민천 카페거리 저녁 식사 및 산책 → 공주 숙박<br><br>
-<strong>2일차</strong>: 마곡사 오전 방문 → 점심(공주 밤 요리) → 부여 백제문화단지 오후 관람 → 귀가
+  <div class="img-caption">카페와 옛집이 어우러진 공주 제민천 산책길 / AI 제작 이미지</div>
 </div>
 
 <div class="recommend-area">
   <strong>함께 읽으면 좋은 글</strong><br><br>
-  ▶ <a href="../260914/travel_namisum_autumn_cosmos.html">남이섬 가을 단풍과 자라섬 코스모스 — 경춘선 기차 여행 완전 정리</a><br>
-  ▶ <a href="../260914/travel_gwangyang_jeoneo_fall_seafood.html">광양 섬진강 전어 제철 맛집 어디가 좋나 — 가을 전어회 코스 총정리</a>
+  ▶ <a href="../260914/travel_namisum_autumn_cosmos.html">남이섬 가을 단풍과 자라섬 코스모스, 9월 가평 당일 나들이 코스</a><br>
+  ▶ <a href="../260914/travel_gwangyang_jeoneo_fall_seafood.html">광양 섬진강 전어 제철 맛집 어디가 좋나 — 쌍계사 초가을 드라이브 코스</a>
 </div>
 
 <p>
   <span class="tag">#공주여행</span>
-  <span class="tag">#공산성</span>
+  <span class="tag">#공산성입장료</span>
   <span class="tag">#무령왕릉</span>
-  <span class="tag">#추석연휴나들이</span>
-  <span class="tag">#백제역사여행</span>
+  <span class="tag">#추석연휴가볼만한곳</span>
+  <span class="tag">#추석당일휴무</span>
   <span class="tag">#국립공주박물관</span>
-  <span class="tag">#공주밤</span>
-  <span class="tag">#제민천카페거리</span>
-  <span class="tag">#마곡사</span>
-  <span class="tag">#유네스코세계문화유산</span>
+  <span class="tag">#백제역사유적지구</span>
+  <span class="tag">#공주당일치기</span>
 </p>
 
 </body>
