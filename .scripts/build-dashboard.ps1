@@ -46,7 +46,7 @@ $SlotDesc = @{
     "여행" = "국내여행 (주력)"
     "인접" = "인접 롱테일 — 해외·교통 여행실무 우선"
     "생활" = "생활 버티컬 — 경조사 + 자동차"
-    "신규" = "신규 로테이션 2칸 — 교통요금·전원주택·레시피·기기실무"
+    "신규" = "로테이션 2칸 — 교통요금·전원주택·🧪스프린트(노무·임대차·보험·집수리)"
     "보충" = "보충·레거시 계열 (큐 부족 시에만)"
 }
 
@@ -57,9 +57,14 @@ $Cat = @{
     "rite"   = @("생활", "경조사")
     "car"    = @("생활", "자동차")
     "pass"   = @("신규", "교통요금·환급")
-    "recipe" = @("신규", "레시피")
+    "recipe" = @("보충", "레시피(DROP)")
     "house"  = @("신규", "전원주택")
-    "tech"   = @("신규", "기기·IT실무")
+    "tech"   = @("보충", "기기·IT실무(DROP)")
+    # 2026-09-16 🧪 스프린트 A (카테고리_포트폴리오.md)
+    "labor"  = @("신규", "노무·직장")
+    "lease"  = @("신규", "임대차·이사")
+    "ins"    = @("신규", "보험청구")
+    "repair" = @("신규", "집수리")
     "gov"    = @("보충", "지원금")
     "appli"  = @("보충", "계절가전(폐지)")
     "cert"   = @("보충", "증명서(폐지)")
@@ -70,7 +75,18 @@ $Cat = @{
 
 # 요일별 신규 로테이션 기대 계열 (daily-prompt.md 2조)
 # 2026-09-13: 로테이션이 1칸 → 2칸이 되면서 요일마다 기대 계열이 둘이다.
+# 2026-09-16 개정: recipe_·tech_ DROP → 🧪 스프린트 A (카테고리_포트폴리오.md). 이 날짜 이전은 옛 표로 판정.
 $RotationByDow = @{
+    "월" = @("pass", "labor")
+    "화" = @("repair", "lease")
+    "수" = @("pass", "ins")
+    "목" = @("house", "labor")
+    "금" = @("pass", "repair")
+    "토" = @("lease", "ins")
+    "일" = @("pass", "house")
+}
+$Rotation3From = "260916"
+$RotationByDowV2 = @{
     "월" = @("pass", "recipe")
     "화" = @("house", "tech")
     "수" = @("pass", "recipe")
@@ -258,7 +274,7 @@ foreach ($day in $naverDays) {
     }
 }
 # 현행 믹스에 편성된 계열은 아직 0건이어도 행을 만들어 둔다(신규 로테이션 추적용)
-foreach ($k in @("travel", "local", "rite", "car", "pass", "house", "recipe", "tech")) {
+foreach ($k in @("travel", "local", "rite", "car", "pass", "house", "labor", "lease", "ins", "repair")) {
     if (-not $serieStat.ContainsKey($k)) {
         $serieStat[$k] = [PSCustomObject]@{
             Prefix = $k; Slot = $Cat[$k][0]; Label = $Cat[$k][1]; Count = 0; Last = ""
@@ -367,8 +383,10 @@ foreach ($day in $naverDays) {
     }
     if ($skew -ne "") { $flags += "<span class=`"badge bad`" title=`"큐 고갈 시 한 계열이 하루를 잠식하는 패턴`">편중 $skew</span>" }
     # 신규 로테이션 요일 준수 (2026-09-13부터 요일당 2계열)
-    if ($day.Date -ge $Rotation2From -and $RotationByDow.ContainsKey($dow)) {
-        foreach ($want in $RotationByDow[$dow]) {
+    $rotTable = $RotationByDowV2
+    if ($day.Date -ge $Rotation3From) { $rotTable = $RotationByDow }
+    if ($day.Date -ge $Rotation2From -and $rotTable.ContainsKey($dow)) {
+        foreach ($want in $rotTable[$dow]) {
             $got = @($day.Posts | Where-Object { $_.Prefix -eq $want }).Count
             if ($got -eq 0) { $flags += "<span class=`"badge warn`">$want 누락</span>" }
         }
@@ -703,7 +721,7 @@ $($sbSets.ToString())
   <ul class="memo">
     <li><b>이 대시보드는 자동 생성물이다.</b> 매일 새벽 4시 발행 직후 <code>.scripts\build-dashboard.ps1</code>이 재생성한다.
     직접 <code>dashboard.html</code>을 고치면 다음 실행에 덮어써지므로, 화면을 바꾸려면 빌더를 고쳐야 한다.</li>
-    <li><b>신규 로테이션 (2026-09-13부터 하루 2건)</b>: 월·수·금 <code>pass_</code>+<code>recipe_</code> / 화·목·토 <code>house_</code>+<code>tech_</code> / 일 <code>pass_</code>+<code>house_</code>.
+    <li><b>🚦 로테이션 (2026-09-16 개정 · 기준 <code>카테고리_포트폴리오.md</code>)</b>: 월 <code>pass_</code>+<code>labor_</code> / 화 <code>repair_</code>+<code>lease_</code> / 수 <code>pass_</code>+<code>ins_</code> / 목 <code>house_</code>+<code>labor_</code> / 금 <code>pass_</code>+<code>repair_</code> / 토 <code>lease_</code>+<code>ins_</code> / 일 <code>pass_</code>+<code>house_</code>. ⛔ <code>recipe_</code>·<code>tech_</code> DROP.
     해당 요일에 그 계열이 없으면 점검 칸에 누락 배지가 뜬다.</li>
     <li><b>편중 경보</b>는 2026-08-01 큐 전면 고갈로 7건이 전부 <code>travel_</code>로 나간 사고의 재발 감지용이다.
     떴다면 큐 리필(<code>.scripts\refill-prompt.md</code>, 매주 월요일 자동)이 밀린 것이다.</li>
