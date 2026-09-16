@@ -8,7 +8,7 @@ def get_base64_image(image_path):
         if ext == 'jpg': ext = 'jpeg'
         return f"data:image/{ext};base64,{encoded_string}"
 
-base_path = r"D:\lightsail\naverblog"
+base_path = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 out_dir = os.path.join(base_path, "output_figma")
 img_dir = os.path.join(base_path, "images", "260410")
 

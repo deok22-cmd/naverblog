@@ -5,7 +5,7 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 
 def fix_tistory_violations(day_str=None):
-    project_root = r"d:\lightsail\naverblog"
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     if not day_str:
         day_str = datetime.now().strftime("%y%m%d")
     tistory_dir = os.path.join(project_root, "output_tistory", day_str)

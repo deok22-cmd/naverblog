@@ -10,7 +10,7 @@ if sys.platform.startswith('win'):
     sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
 
 def scan_placeholders():
-    project_root = r"d:\lightsail\naverblog"
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     day_dir = os.path.join(project_root, "output", "260711")
     
     if not os.path.exists(day_dir):

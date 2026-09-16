@@ -3,7 +3,7 @@ import re
 from bs4 import BeautifulSoup
 
 def convert_naver_to_tistory():
-    project_root = r"d:\lightsail\naverblog"
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     naver_path = os.path.join(project_root, "output", "260704", "travel_bonghwa_valley_summer.html")
     tistory_path = os.path.join(project_root, "output_tistory", "260704", "travel_bonghwa_valley_summer.html")
     
