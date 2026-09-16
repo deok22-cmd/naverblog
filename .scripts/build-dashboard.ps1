@@ -32,21 +32,45 @@ $NewMixFrom = "260913"
 # 0. 계열(prefix) 사전 — 슬롯 그룹 / 라벨 / 색
 #    색은 dataviz validate_palette.js 통과 조합 (light, --pairs all ALL PASS)
 # ============================================================
-$SlotOrder = @("여행", "인접", "생활", "신규", "보충")
+$SlotOrder = @("여행", "이슈", "인접", "생활", "신규", "보충")
 $SlotColor = @{
     "여행" = "#0891B2"   # cyan-600
     "인접" = "#4F46E5"   # indigo-600
     "생활" = "#EA580C"   # orange-600
     "신규" = "#DB2777"   # pink-600
+    # 2026-09-16b: hot_ 레인이 생기면서 슬롯이 5개가 됐다. 그런데 **5번째 범주형 색은 만들 수 없다** —
+    #   위 4색은 이미 CVD(적록색약) 하에서 구분 가능한 색상환을 다 쓴 상태이고, 초록·보라·청록·황토
+    #   후보를 전부 검증기에 넣어 봤지만 하나도 통과하지 못했다(deutan ΔE 1.1~6.2 · normal 6.9~13.6).
+    #   dataviz 규율대로 **색을 억지로 늘리지 않고** 중립 단계로 뺀다. 이 매트릭스는 슬롯이
+    #   고정 열이고 칩에 계열 이름이 그대로 박히므로, 식별은 위치와 텍스트가 이미 담당한다.
+    "이슈" = "#334155"   # slate-700 — 보충(#64748B)보다 명확히 어둡게 잡아 둘을 구분
     "보충" = "#64748B"   # 중립 회색 — 의도적으로 categorical 팔레트 밖
 }
 # 2026-09-13 개정: 여행 3→2, 신규 로테이션 1→2 (daily-prompt.md §2)
 $SlotTarget = @{ "여행" = 2; "인접" = 1; "생활" = 2; "신규" = 2; "보충" = 0 }
+
+# 2026-09-16b: 슬롯 목표가 요일마다 달라졌다(여행 2 또는 3 · 이슈 1 또는 0 …).
+#   고정 $SlotTarget으로 판정하면 대부분의 날이 '어긋남'으로 칠해진다.
+#   요일별 목표는 .scripts/policy.json 의 slotTargetByDow 를 **직접 읽어** 쓴다 —
+#   이 표를 여기에 또 복사하면 09-13·09-16 때처럼 다시 어긋난다(사본 4개째가 된다).
+$PolicyPath = Join-Path $ProjectRoot ".scripts\policy.json"
+$SlotTargetByDow = $null
+$PolicyVersion = ""
+try {
+    if (Test-Path -LiteralPath $PolicyPath) {
+        $pol = Get-Content -LiteralPath $PolicyPath -Raw -Encoding utf8 | ConvertFrom-Json
+        $SlotTargetByDow = $pol.slotTargetByDow
+        $PolicyVersion = "$($pol.version)"
+    }
+} catch { $SlotTargetByDow = $null }
+$SlotTargetFrom = "260917"   # 요일별 목표 시행일 (그 이전은 고정 $SlotTarget으로 판정)
+
 $SlotDesc = @{
     "여행" = "국내여행 (주력)"
+    "이슈" = "🔥 날짜 확정 이슈 — 소스 생활정보.md §06 · 발행창 D-21~D-7"
     "인접" = "인접 롱테일 — 해외·교통 여행실무 우선"
     "생활" = "생활 버티컬 — 경조사 + 자동차"
-    "신규" = "로테이션 2칸 — 교통요금·전원주택·🧪스프린트(노무·임대차·보험·집수리)"
+    "신규" = "로테이션 — 교통요금·전원주택·🧪스프린트(노무·임대차·보험·집수리)"
     "보충" = "보충·레거시 계열 (큐 부족 시에만)"
 }
 
@@ -364,8 +388,23 @@ foreach ($day in $naverDays) {
     foreach ($s in $SlotOrder) {
         $n = 0
         foreach ($v in $bySlot[$s].Values) { $n += $v }
+
+        # 목표는 260917부터 요일별(policy.json slotTargetByDow), 그 전은 고정 $SlotTarget
+        $tgt = $null
+        if ($day.Date -ge $SlotTargetFrom -and $null -ne $SlotTargetByDow -and
+            ($SlotTargetByDow.PSObject.Properties.Name -contains $dow) -and
+            ($SlotTargetByDow.$dow.PSObject.Properties.Name -contains $s)) {
+            $tgt = [int]$SlotTargetByDow.$dow.$s
+        } elseif ($SlotTarget.ContainsKey($s)) {
+            $tgt = [int]$SlotTarget[$s]
+        }
+
         if ($n -eq 0) {
-            $cells += "<td class=`"cell empty`">·</td>"
+            # 배정이 있는데 0건이면 빈 칸도 어긋남으로 표시한다.
+            # (옛 코드는 무조건 '·'로 넘겨서 hot_처럼 레인이 통째로 빠진 날을 못 잡았다.)
+            $emptyCls = "cell empty"
+            if ($day.Date -ge $NewMixFrom -and $null -ne $tgt -and $tgt -gt 0) { $emptyCls = "cell empty off" }
+            $cells += "<td class=`"$emptyCls`">·</td>"
             continue
         }
         $chips = ""
@@ -376,7 +415,7 @@ foreach ($day in $naverDays) {
             $chips += "<span class=`"chip`" style=`"--c:$($SlotColor[$s])`">$(Enc $k)$mult</span>"
         }
         $off = ""
-        if ($day.Date -ge $NewMixFrom -and $n -ne $SlotTarget[$s]) { $off = " off" }
+        if ($day.Date -ge $NewMixFrom -and $null -ne $tgt -and $n -ne $tgt) { $off = " off" }
         $cells += "<td class=`"cell$off`">$chips</td>"
     }
 
@@ -495,6 +534,36 @@ foreach ($s in $adsenseSets) {
 # ============================================================
 # 8. HTML 출력
 # ============================================================
+
+# 슬롯 헤더·범례는 $SlotOrder에서 생성한다.
+# (옛 코드는 <th>와 범례를 하드코딩해 둬서, 2026-09-16b에 hot_ 「이슈」 레인이 생겼을 때
+#  칸이 아예 안 만들어졌다. 슬롯을 추가·삭제해도 이제 자동으로 따라온다.)
+$todayDowForHead = $DowKr[(Get-Date).DayOfWeek.ToString()]
+$slotTh = ""
+$slotLegend = ""
+foreach ($s in $SlotOrder) {
+    $tgTxt = ""
+    if ($null -ne $SlotTargetByDow -and ($SlotTargetByDow.PSObject.Properties.Name -contains $todayDowForHead) -and
+        ($SlotTargetByDow.$todayDowForHead.PSObject.Properties.Name -contains $s)) {
+        $tgTxt = "오늘 $($SlotTargetByDow.$todayDowForHead.$s)"
+    } elseif ($SlotTarget.ContainsKey($s)) {
+        $tgTxt = "$($SlotTarget[$s])"
+    }
+    $slotTh += "      <th>$s <span class=`"tg`">$tgTxt</span></th>`r`n"
+    $slotLegend += "    <span class=`"li`"><span class=`"dot`" style=`"--c:$($SlotColor[$s])`"></span>$s &mdash; $($SlotDesc[$s])</span>`r`n"
+}
+$slotTh = $slotTh.TrimEnd("`r", "`n")
+$slotLegend = $slotLegend.TrimEnd("`r", "`n")
+
+# 매트릭스 설명 문구도 policy.json에서 오늘 요일 구성으로 만든다(하드코딩 금지).
+$mixNote = "발행 믹스는 요일마다 다르다 (policy.json $PolicyVersion · compositionByDow)"
+if ($null -ne $SlotTargetByDow -and ($SlotTargetByDow.PSObject.Properties.Name -contains $todayDowForHead)) {
+    $parts = @($SlotTargetByDow.$todayDowForHead.PSObject.Properties |
+        Where-Object { [int]$_.Value -gt 0 } | ForEach-Object { "$($_.Name) $($_.Value)" })
+    $dayTotal = ($SlotTargetByDow.$todayDowForHead.PSObject.Properties | Measure-Object -Property Value -Sum).Sum
+    $mixNote = "오늘(${todayDowForHead}요일) 목표 = <b>$($parts -join ' · ') = ${dayTotal}건</b> · 요일마다 구성이 다르다(policy.json $PolicyVersion)"
+}
+
 $html = @"
 <!DOCTYPE html>
 <html lang="ko">
@@ -655,25 +724,17 @@ $failBanner
 
 <section>
   <h2><span class="n">01</span>네이버 블로그 — 일자별 슬롯 구성</h2>
-  <p class="note">발행 믹스 목표 = <b>여행 2 · 인접 1 · 생활 2 · 신규 2 = 7건</b>(2026-09-13 시행).
+  <p class="note">$mixNote.
   목표와 어긋난 칸은 <span class="badge warn">노란 배경</span>, 한 계열이 하루를 잠식하면 <span class="badge bad">편중</span>으로 표시된다.
   시행일 이전 날짜는 구 믹스이므로 구성만 보여주고 판정하지 않는다.</p>
   <div class="legend">
-    <span class="li"><span class="dot" style="--c:$($SlotColor['여행'])"></span>여행 &mdash; $($SlotDesc['여행'])</span>
-    <span class="li"><span class="dot" style="--c:$($SlotColor['인접'])"></span>인접 &mdash; $($SlotDesc['인접'])</span>
-    <span class="li"><span class="dot" style="--c:$($SlotColor['생활'])"></span>생활 &mdash; $($SlotDesc['생활'])</span>
-    <span class="li"><span class="dot" style="--c:$($SlotColor['신규'])"></span>신규 &mdash; $($SlotDesc['신규'])</span>
-    <span class="li"><span class="dot" style="--c:$($SlotColor['보충'])"></span>보충 &mdash; $($SlotDesc['보충'])</span>
+$slotLegend
   </div>
   <div class="scroll">
   <table>
     <thead><tr>
       <th>발행일</th>
-      <th>여행 <span class="tg">목표 3</span></th>
-      <th>인접 <span class="tg">1</span></th>
-      <th>생활 <span class="tg">2</span></th>
-      <th>신규 <span class="tg">1</span></th>
-      <th>보충 <span class="tg">0</span></th>
+$slotTh
       <th style="text-align:right">이미지</th>
       <th>점검</th>
     </tr></thead>
