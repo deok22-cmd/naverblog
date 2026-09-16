@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>전기차 배터리 교체 비용과 보증기간, 배터리 노후화 판단 기준</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>전기차 배터리 교체 비용과 보증기간, 배터리 노후화 판단 기준</h1>
+
+<div class="intro-box">
+전기차를 구매할 때 가장 걱정되는 부분 중 하나가 배터리입니다. 배터리가 노후화되면 주행 거리가 줄어들고, 교체 비용이 수백만 원에서 수천만 원에 달할 수 있다는 이야기가 돌기 때문입니다.<br><br>
+실제로 전기차 배터리 교체 비용은 얼마나 되는지, 제조사 보증기간 내에는 무상으로 교체받을 수 있는지, 배터리가 언제 노후화됐다고 판단하는지를 이 글에서 정리합니다. 전기차 구매를 고민 중이거나 이미 타고 있는 분들 모두 참고하십시오.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260917/5_ev_battery_1.png</span></div>
+    <pre class="prompt-text" id="prompt-5-1">Electric vehicle battery pack being inspected at a dealership workshop. Technician in uniform checking battery health on diagnostic tablet. Large EV battery module on workshop floor. Clean industrial photography, bright workshop lighting, no brand logos visible.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">전기차 배터리 점검 장면 — 정기 진단의 중요성 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 전기차 배터리, 언제 교체해야 하나</h2>
+
+전기차 배터리는 충·방전을 반복하면서 서서히 성능이 저하됩니다. 배터리의 성능 저하 정도를 표시하는 지표를 SoH(State of Health, 배터리 건강 상태)라고 하며, 100%에서 시작해 사용할수록 낮아집니다.<br><br>
+교체를 고려해야 하는 시점은 제조사마다 다르지만 일반적으로 SoH가 70~75% 이하로 떨어졌을 때입니다. 이 수준이 되면 최초 완충 주행 거리의 70~75%밖에 달리지 못하기 때문에 실용성이 크게 떨어집니다.<br><br>
+한국 제조사들의 보증 기준은 보통 "10년 또는 20만km 주행 중 먼저 도래하는 조건에서 최초 용량 대비 70~75% 이상 유지"입니다. 이 기준을 밑돌면 보증 수리(배터리 교체)가 가능합니다. 각 제조사별 정확한 조건은 보증서에서 확인해야 합니다.
+
+<h2>02 | 제조사별 배터리 보증기간 비교</h2>
+
+<table class="info-table">
+<thead>
+<tr><th>제조사</th><th>보증기간 / 주행거리</th><th>보증 기준(SoH)</th><th>비고</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>현대</strong></td><td>10년 / 20만km</td><td>70% 이하</td><td>아이오닉, EV 시리즈 (재검증 필요)</td></tr>
+<tr><td><strong>기아</strong></td><td>10년 / 20만km</td><td>70% 이하</td><td>EV6, EV9 등 (재검증 필요)</td></tr>
+<tr><td><strong>제네시스</strong></td><td>10년 / 20만km</td><td>70% 이하</td><td>GV60, G80e 등 (재검증 필요)</td></tr>
+<tr><td><strong>테슬라</strong></td><td>8년 / 24만km(Model Y 기준)</td><td>70% 이하</td><td>모델별 상이 (재검증 필요)</td></tr>
+<tr><td><strong>쉐보레 볼트</strong></td><td>8년 / 16만km</td><td>60% 이하</td><td>구형 모델 기준 (재검증 필요)</td></tr>
+</tbody>
+</table>
+
+<div class="warn-box">
+⚠️ <strong>주의:</strong> 위 표의 수치는 공개된 자료를 기반으로 한 참고 정보이며, 모델·연식·출시 국가별로 상이할 수 있습니다. 정확한 보증 조건은 구매한 차량의 보증서 또는 해당 제조사 서비스센터에서 확인하십시오. (재검증 필요)
+</div>
+
+<h2>03 | 배터리 교체 비용 — 실제 금액대</h2>
+
+배터리 교체 비용은 차종과 배터리 용량에 따라 크게 다릅니다. 배터리 가격은 kWh당 단가로 계산하는데, 2025~2026년 기준 kWh당 약 10~20만 원대로 추정됩니다(재검증 필요).<br><br>
+배터리 용량 기준 교체 비용 참고 계산:<br>
+- 40kWh 배터리(소형 전기차): 400~800만 원 내외<br>
+- 77kWh 배터리(중형 전기차): 800~1,500만 원 내외<br>
+- 100kWh 이상 대형: 1,500만 원 이상<br><br>
+위 수치는 시장 유통 가격 기준으로 제조사 공식 서비스센터 교체 시 공임비가 추가되며, 차종에 따라 교체 비용 차이가 큽니다. 2026년 배터리 가격은 전년 대비 하락 추세이므로 실제 비용은 최신 서비스센터 견적을 확인하십시오.<br><br>
+<strong>보증 기간 내 교체:</strong> 보증 조건을 충족하면 배터리 교체 비용은 제조사 부담입니다. 이때 공임비도 대부분 무상입니다. 보증 기간이 지났다면 전액 차주 부담이 됩니다.
+
+<h2>04 | 배터리 노후화 판단 기준</h2>
+
+배터리 노후화는 눈에 보이지 않아 판단하기 어렵지만 아래 방법으로 현재 상태를 확인할 수 있습니다.<br><br>
+<strong>1. 차량 계기판·인포테인먼트 배터리 상태 확인:</strong> 현대·기아 등 주요 제조사 차량은 계기판이나 인포테인먼트 시스템에서 배터리 상태 정보(잔존 용량, SoH 등)를 제공합니다. 메뉴 → 차량 정보 → 배터리 상태에서 확인합니다.<br><br>
+<strong>2. 전용 진단 앱:</strong> OBD-II 단말기와 스마트폰 앱을 연결하면 SoH 수치를 직접 읽을 수 있습니다. Torque Pro, BatScan 등 앱이 사용됩니다.<br><br>
+<strong>3. 서비스센터 점검:</strong> 가장 정확한 방법입니다. 제조사 공식 서비스센터에서 배터리 진단 장비로 SoH, 셀 불균형, 이상 온도 등을 정밀 측정합니다. 보증 기간 내라면 진단 비용 무료인 경우가 많습니다.
+
+<h2>05 | 배터리 노후화 징후 — 이런 증상이 있다면</h2>
+
+다음 증상이 나타나면 배터리 노후화를 의심해 볼 수 있습니다.<br><br>
+<strong>① 주행 거리가 눈에 띄게 줄었다:</strong> 같은 충전 조건에서 초기보다 주행 가능 거리가 20~30% 이상 감소했다면 SoH 저하를 의심할 수 있습니다. 계절(기온)에 따른 배터리 효율 변화는 정상 범위이므로 여름·겨울 평균으로 비교해야 합니다.<br><br>
+<strong>② 급속 충전 속도가 느려졌다:</strong> 배터리 상태가 나쁠수록 충전 시스템이 배터리를 보호하기 위해 충전 속도를 제한합니다. 같은 충전기에서 이전보다 충전 시간이 길어졌다면 배터리 점검을 받아 보십시오.<br><br>
+<strong>③ 계기판 배터리 경고등 점등:</strong> 배터리 관련 경고등이 들어오면 즉시 서비스센터를 방문하십시오. 방치하면 배터리 손상이 가속화됩니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head"><span>📷 AI 이미지 생성 영역</span><span class="ph-file">images/260917/5_ev_battery_2.png</span></div>
+    <pre class="prompt-text" id="prompt-5-2">Electric vehicle dashboard showing battery State of Health (SoH) at 68%, charging status indicator, and range estimate. Clean modern EV instrument cluster display. Warning indicator visible. Photorealistic digital dashboard photography, no specific brand logos.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">전기차 계기판의 배터리 상태(SoH) 표시 화면 / AI 제작 이미지</div>
+</div>
+
+<h2>06 | 배터리 교체 vs 중고 배터리 수리 — 선택 기준</h2>
+
+배터리 교체에는 크게 세 가지 선택지가 있습니다.<br><br>
+<strong>① 제조사 공식 신품 교체:</strong> 가장 비싸지만 보증이 새로 적용됩니다. 품질과 안전성이 가장 높으며, 보증 기간 내 무상 교체가 가능합니다.<br><br>
+<strong>② 인증 재생(리퍼비시) 배터리 교체:</strong> 제조사 또는 공인 업체가 성능 테스트를 거쳐 재생한 배터리로 교체하는 방법입니다. 신품보다 30~50% 저렴하며 일정 기간 보증도 제공됩니다. 다만 보증 내용이 신품과 다를 수 있어 계약서를 꼼꼼히 확인해야 합니다.<br><br>
+<strong>③ 비공인 업체 수리:</strong> 가장 저렴하지만 안전성 검증이 불충분할 수 있고, 수리 후 차량 보증이 무효화되는 경우가 있습니다. 화재 위험도 고려해야 합니다.<br><br>
+보증 기간이 남아 있다면 반드시 공식 서비스센터를 이용하십시오. 보증이 끝난 경우에는 신품과 인증 재생 배터리의 비용·보증 조건을 비교해 선택하는 것이 합리적입니다.
+
+<h2>07 | 배터리 수명 연장 방법</h2>
+
+배터리 노후화를 늦추는 실용적인 방법을 정리합니다.<br><br>
+<strong>① 완충·완방 피하기:</strong> 배터리는 0%~100% 반복 사용보다 20~80% 구간에서 유지할 때 수명이 길어집니다. 일상 충전은 80~90%까지만 하고, 여행 등 필요할 때만 100% 충전하십시오.<br><br>
+<strong>② 급속 충전 최소화:</strong> 급속 충전(DC 차데모·CCS)은 빠르지만 배터리에 열이 많이 발생해 수명을 단축시킵니다. 일상 충전은 완속(AC 7kW)을 주로 이용하고 급속은 장거리 이동 시에만 사용하십시오.<br><br>
+<strong>③ 극단적 기온 노출 피하기:</strong> 여름 직사광선 아래 장시간 주차, 겨울철 장기간 실외 방치는 배터리에 악영향을 줍니다. 지하 주차나 그늘 주차를 선택하고 배터리 히팅 시스템이 있는 차량은 겨울철 예열 기능을 활용하십시오.
+
+<h2>08 | 보험·보조금으로 배터리 비용 충당 가능한가</h2>
+
+배터리 교체 비용을 보험이나 정부 보조금으로 충당할 수 있는지 많이 묻습니다.<br><br>
+<strong>자동차 보험:</strong> 일반 자동차 종합보험은 배터리 자연 노후화에 의한 교체 비용을 보상하지 않습니다. 단, 교통사고로 인한 배터리 손상은 자기차량손해(자차 담보) 범위 내에서 처리될 수 있습니다. 보험 약관을 확인하거나 보험사에 문의하십시오.<br><br>
+<strong>정부 보조금:</strong> 배터리 교체에 직접 적용되는 정부 보조금은 2026년 현재 일반적으로 없습니다. 단, 전기차 구매 보조금은 신차 구입 시 적용되며 배터리 교체에는 적용되지 않습니다. 향후 관련 정책이 마련될 수 있으므로 환경부 전기차 보조금 누리집을 주기적으로 확인하십시오. (재검증 필요)
+
+<h2>09 | 전기차 구매 전 배터리 체크리스트</h2>
+
+전기차를 새로 구매하거나 중고 전기차를 고려 중이라면 다음 항목을 반드시 확인하십시오.<br><br>
+<strong>신차 구매 시:</strong> 배터리 보증 기간(연수·주행거리), 보증 기준 SoH%, 공식 서비스센터 교체 예상 비용, 배터리 임대 방식 여부(일부 차량은 배터리를 구독 방식으로 제공).<br><br>
+<strong>중고차 구매 시:</strong> 현재 SoH 수치 확인(진단 의뢰 또는 앱 확인), 잔여 배터리 보증 기간, 충방전 이력, 급속 충전 빈도, 주요 배터리 관련 교환 이력.<br><br>
+중고 전기차를 거래할 때는 배터리 상태 리포트를 서면으로 요구하는 것이 좋습니다. 몇몇 공인 중고차 플랫폼은 배터리 진단 리포트를 기본 제공하고 있습니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260916/car_dashcam_parking_battery.html">블랙박스 주차 녹화 모드 종류와 배터리 방전 없이 쓰는 법</a></li>
+<li><a href="../260916/travel_jirisan_piagol_fall_foliage.html">지리산 피아골 단풍 언제 절정인가 — 성삼재 드라이브와 뱀사골 코스 비교</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<span class="tag">#전기차배터리</span>
+<span class="tag">#배터리교체비용</span>
+<span class="tag">#배터리보증기간</span>
+<span class="tag">#배터리노후화</span>
+<span class="tag">#SoH</span>
+<span class="tag">#전기차유지비</span>
+<span class="tag">#EV배터리</span>
+<span class="tag">#전기차관리</span>
+</div>
+</body>
+</html>
