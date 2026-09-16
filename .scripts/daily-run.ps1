@@ -182,14 +182,28 @@ $DowKrMap = @{
 }
 $todayDow = $DowKrMap[(Get-Date).DayOfWeek.ToString()]
 $wantRotation = @()
+$wantComp = $null
+$compTxt = ""
+$todayTravelMax = 3
 try {
     if (Test-Path -LiteralPath $PolicyFile) {
         $Policy = Get-Content -LiteralPath $PolicyFile -Raw -Encoding utf8 | ConvertFrom-Json
         if ($Policy.rotationByDow.PSObject.Properties.Name -contains $todayDow) {
             $wantRotation = @($Policy.rotationByDow.$todayDow)
         }
+        # 2026-09-16b: 요일별 전체 구성표가 유일한 기준. 로테이션은 여기서 파생된 사본일 뿐이다.
+        if ($null -ne $Policy.compositionByDow -and ($Policy.compositionByDow.PSObject.Properties.Name -contains $todayDow)) {
+            $wantComp = $Policy.compositionByDow.$todayDow
+            $compTxt = (($wantComp.PSObject.Properties | ForEach-Object { "$($_.Name)_ $($_.Value)" }) -join " · ")
+        }
+        if ($null -ne $Policy.travelMaxByDow -and ($Policy.travelMaxByDow.PSObject.Properties.Name -contains $todayDow)) {
+            $todayTravelMax = [int]$Policy.travelMaxByDow.$todayDow
+        } elseif ($null -ne $Policy.travelMax) {
+            $todayTravelMax = [int]$Policy.travelMax
+        }
         Write-Log "=== Step 0.7: Policy @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="
-        Write-Log "오늘 = $(Get-Date -Format 'yyyy-MM-dd') ($todayDow) · 기대 로테이션 = $($wantRotation -join ', ')"
+        Write-Log "오늘 = $(Get-Date -Format 'yyyy-MM-dd') ($todayDow) · 구성 = $compTxt"
+        Write-Log "여행 상한 = $todayTravelMax · 기대 로테이션 = $($wantRotation -join ', ')"
         Write-Log "DROP 계열 = $($Policy.dropped -join ', ')"
     } else {
         Write-Log "WARN: $PolicyFile 없음 — 요일 주입·믹스 검증 스킵(프롬프트 규칙만으로 진행)."
@@ -205,30 +219,36 @@ try {
     $prompt = Get-Content -LiteralPath $PromptFile -Raw -Encoding utf8
 
     # 오늘의 확정 사실을 프롬프트 맨 앞에 붙인다(모델이 요일을 다시 계산하지 않게).
-    if ($null -ne $Policy -and $wantRotation.Count -ge 2) {
+    if ($null -ne $Policy -and $null -ne $wantComp) {
         $bt = [char]96   # 백틱 — PowerShell 이스케이프 문자라 문자 코드로 만든다
         $dropTxt = (($Policy.dropped | ForEach-Object { "$bt$($_)_$bt" }) -join " · ")
-        $rot1 = "$bt$($wantRotation[0])_$bt"
-        $rot2 = "$bt$($wantRotation[1])_$bt"
         $ymdFull = Get-Date -Format 'yyyy-MM-dd'
         $ymdShort = Get-Date -Format 'yyMMdd'
+        # 요일 구성표를 한 줄씩 펼쳐 준다 — 모델이 합계를 다시 계산하지 않게.
+        $compLines = @($wantComp.PSObject.Properties | ForEach-Object {
+            "  - $bt$($_.Name)_$bt **$($_.Value)건**"
+        })
+        $compTotal = ($wantComp.PSObject.Properties | Measure-Object -Property Value -Sum).Sum
         $inject = @(
             "# 🔒 오늘의 확정 사항 (래퍼가 계산함 — 다시 계산하지 말고 그대로 쓸 것)",
             "",
             "- **오늘 날짜**: $ymdFull  (출력 폴더 $bt$ymdShort$bt)",
             "- **오늘 요일**: **${todayDow}요일**",
-            "- **오늘 로테이션 2건은 반드시**: $rot1 1건 + $rot2 1건",
+            "- **오늘 발행 구성 (합계 ${compTotal}건 — 이 표가 전부다. 계열도 건수도 바꾸지 말 것)**:"
+        ) + $compLines + @(
             "- **DROP 계열(절대 선정·보충 금지)**: $dropTxt",
-            "- **여행은 최대 $($Policy.travelMax)건.** 비여행 칸을 여행으로 채우지 말 것. 모든 비여행 큐가 시즌게이트 0건일 때만 예외이고, 그때는 완료 출력에 $bt[LEAK travel N]$bt 를 남긴다.",
+            "- **여행은 오늘 정확히 $todayTravelMax건.** 초과도 미달도 실패다. 비여행 칸을 여행으로 채우지 말 것. 모든 비여행 큐가 시즌게이트 0건일 때만 예외이고, 그때는 완료 출력에 $bt[LEAK travel N]$bt 를 남긴다.",
+            "- 🔥 $bt hot_ $bt 이 표에 있으면: 소스는 $bt 생활정보.md §06 이슈 캘린더 $bt 뿐이다. **D-21 ~ D-7 창 안의 행만** 선정한다. ⛔ 인물·연예·사건사고·정치·투자/시세 금지. ⛔ D-day 당일 소비형 금지.",
             "",
-            "> 위 값은 $bt.scripts/policy.json$bt 에서 계산됐다. 아래 본문의 요일표와 어긋나 보이면 **이 블록이 맞다.**",
+            "> 위 값은 $bt.scripts/policy.json$bt 의 $bt compositionByDow $bt 에서 계산됐다. 아래 본문의 요일표와 어긋나 보이면 **이 블록이 맞다.**",
             "> 발행 후 $bt daily-run.ps1 $bt Step 1.8이 같은 표로 검증하며, 어기면 실패로 기록된다.",
             "",
             "---",
             ""
-        ) -join "`r`n"
+        )
+        $inject = $inject -join "`r`n"
         $prompt = $inject + $prompt
-        Write-Log "프롬프트에 오늘의 확정 사항 주입 완료(${todayDow}요일 · $($wantRotation -join '+'))."
+        Write-Log "프롬프트에 오늘의 확정 사항 주입 완료(${todayDow}요일 · $compTxt)."
     }
 
     $prompt | & claude `
@@ -603,24 +623,44 @@ if ($exit -ne 0) {
             Write-Log "    [FAIL] DROP 계열이 발행됐다 — $($dropHit -join ', ')"
         }
 
-        # 4-b. 오늘 요일의 기대 로테이션 2계열이 각각 있나
-        if ($wantRotation.Count -ge 2) {
-            $missRot = @($wantRotation | Where-Object { $prefixes -notcontains $_ })
-            if ($missRot.Count -gt 0) {
+        # 4-b. 요일 구성표와 정확히 일치하나 (2026-09-16b — 로테이션 존재 검사에서 전수 대조로 강화)
+        #   옛 규칙은 "로테이션 2계열이 있기만 하면" 통과라, travel이 3건이어도 car_가 통째로
+        #   빠져도 잡지 못했다. 이제 compositionByDow와 건수까지 맞춰 본다.
+        if ($null -ne $wantComp) {
+            $actual = @{}
+            foreach ($p in $prefixes) {
+                if (-not $actual.ContainsKey($p)) { $actual[$p] = 0 }
+                $actual[$p]++
+            }
+            $compDiff = @()
+            foreach ($prop in $wantComp.PSObject.Properties) {
+                $have = 0
+                if ($actual.ContainsKey($prop.Name)) { $have = $actual[$prop.Name] }
+                if ($have -ne [int]$prop.Value) {
+                    $compDiff += "$($prop.Name)_ $have건(기대 $($prop.Value))"
+                }
+            }
+            # 구성표에 없는 계열이 나왔나
+            foreach ($k in $actual.Keys) {
+                if (-not ($wantComp.PSObject.Properties.Name -contains $k)) {
+                    $compDiff += "$($k)_ $($actual[$k])건(오늘 배정 없음)"
+                }
+            }
+            if ($compDiff.Count -gt 0) {
                 $publishGateFailed = $true
-                $gateReasons += "${todayDow}요일 로테이션 누락: $(($missRot | ForEach-Object { $_ + '_' }) -join ', ')"
-                Write-Log "    [FAIL] ${todayDow}요일 기대 로테이션 누락 — $($missRot -join ', ')"
+                $gateReasons += "${todayDow}요일 구성 불일치: $($compDiff -join ', ')"
+                Write-Log "    [FAIL] ${todayDow}요일 구성표와 불일치 — $($compDiff -join ' / ')"
             } else {
-                Write-Log "    로테이션 OK (${todayDow}: $($wantRotation -join ' + '))"
+                Write-Log "    구성 OK (${todayDow}: $compTxt)"
             }
         }
 
-        # 4-c. 여행 누수 (비여행 칸을 여행으로 채웠나)
+        # 4-c. 여행 건수 (그날 배정 초과 = 비여행 칸이 여행으로 샌 것)
         $travelN = @($prefixes | Where-Object { $_ -eq "travel" }).Count
-        if ($travelN -gt $Policy.travelMax) {
+        if ($travelN -gt $todayTravelMax) {
             $publishGateFailed = $true
-            $gateReasons += "여행 누수 ${travelN}건 (상한 $($Policy.travelMax))"
-            Write-Log "    [FAIL] 여행 ${travelN}건 — 상한 $($Policy.travelMax) 초과. 비여행 칸이 여행으로 샜다."
+            $gateReasons += "여행 누수 ${travelN}건 (${todayDow}요일 배정 $todayTravelMax)"
+            Write-Log "    [FAIL] 여행 ${travelN}건 — ${todayDow}요일 배정 $todayTravelMax 초과. 비여행 칸이 여행으로 샜다."
         }
 
         # 4-d. 슬롯 목표 대조 (참고 — 위 셋과 달리 실패로 만들지 않는다)
@@ -631,12 +671,16 @@ if ($exit -ne 0) {
             if (-not $slotCount.ContainsKey($slot)) { $slotCount[$slot] = 0 }
             $slotCount[$slot]++
         }
+        $slotTgt = $Policy.slotTarget
+        if ($null -ne $Policy.slotTargetByDow -and ($Policy.slotTargetByDow.PSObject.Properties.Name -contains $todayDow)) {
+            $slotTgt = $Policy.slotTargetByDow.$todayDow
+        }
         $slotTxt = @()
-        foreach ($s in $Policy.slotTarget.PSObject.Properties.Name) {
+        foreach ($s in $slotTgt.PSObject.Properties.Name) {
             $have = 0
             if ($slotCount.ContainsKey($s)) { $have = $slotCount[$s] }
             $mark = ""
-            if ($have -ne $Policy.slotTarget.$s) { $mark = " (목표 $($Policy.slotTarget.$s))" }
+            if ($have -ne $slotTgt.$s) { $mark = " (목표 $($slotTgt.$s))" }
             $slotTxt += "${s} ${have}${mark}"
         }
         Write-Log "    슬롯: $($slotTxt -join ' · ')"

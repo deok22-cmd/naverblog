@@ -1,4 +1,4 @@
-# 티스토리 Phase B 자동 검수 게이트 (구조 적합성 + 중복 차단)
+﻿# 티스토리 Phase B 자동 검수 게이트 (구조 적합성 + 중복 차단)
 #
 # 배경: daily-prompt.md §5.5.9-bis 검증은 "모델이 세션 내에서 스스로 실행"하는
 #       honor-system이었고, 실제 commit/push를 하는 daily-run.ps1 에는 연결돼

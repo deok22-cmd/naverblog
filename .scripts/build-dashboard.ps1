@@ -57,6 +57,7 @@ $Cat = @{
     "rite"   = @("생활", "경조사")
     "car"    = @("생활", "자동차")
     "pass"   = @("신규", "교통요금·환급")
+    "hot"    = @("이슈", "이슈·시즌")
     "recipe" = @("보충", "레시피(DROP)")
     "house"  = @("신규", "전원주택")
     "tech"   = @("보충", "기기·IT실무(DROP)")
@@ -86,6 +87,19 @@ $RotationByDow = @{
     "일" = @("pass", "house")
 }
 $Rotation3From = "260916"
+# 2026-09-16b 2차 개정: 여행 14→18 · pass_ 4→7 · hot_ 신설 5 · car_ 7→3 · local_ 7→2 · rite_ 7→4.
+# 기계용 원본은 .scripts/policy.json 의 compositionByDow 다(요일마다 전체 구성을 건수까지 지정).
+# 아래 표는 그중 §04/§05 로테이션 칸만 뽑은 사본이라 대시보드 표기에만 쓴다.
+$RotationByDowV3 = @{
+    "월" = @("pass", "labor")
+    "화" = @("pass", "house", "lease")
+    "수" = @("pass", "ins")
+    "목" = @("pass", "repair")
+    "금" = @("pass", "labor")
+    "토" = @("pass", "house", "lease")
+    "일" = @("pass", "ins", "repair")
+}
+$Rotation4From = "260917"
 $RotationByDowV2 = @{
     "월" = @("pass", "recipe")
     "화" = @("house", "tech")
@@ -385,6 +399,7 @@ foreach ($day in $naverDays) {
     # 신규 로테이션 요일 준수 (2026-09-13부터 요일당 2계열)
     $rotTable = $RotationByDowV2
     if ($day.Date -ge $Rotation3From) { $rotTable = $RotationByDow }
+    if ($day.Date -ge $Rotation4From) { $rotTable = $RotationByDowV3 }
     if ($day.Date -ge $Rotation2From -and $rotTable.ContainsKey($dow)) {
         foreach ($want in $rotTable[$dow]) {
             $got = @($day.Posts | Where-Object { $_.Prefix -eq $want }).Count
