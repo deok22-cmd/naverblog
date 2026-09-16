@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>블랙박스 주차 녹화 모드 종류와 배터리 방전 없이 쓰는 법 — 전압차단 설정 순서표</title>
 <style>
   body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
@@ -42,22 +43,15 @@ function copyPrompt(id) {
 </head>
 <body>
 <h1>블랙박스 주차 녹화 모드 종류와 배터리 방전 없이 쓰는 법 — 전압차단 설정 순서표</h1>
-
 <div class="intro-box">
-블랙박스 주차 녹화를 켜 두면 배터리가 방전돼 차가 안 켜진다는 경험, 한 번쯤 해보셨나요?<br><br>
-주차 녹화 중 배터리 방전을 막는 핵심은 <strong>전압차단 설정</strong>입니다. 블랙박스가 차량 배터리를 몇 V까지 내려가면 스스로 전원을 끄도록 설정하는 기능입니다.<br><br>
+블랙박스 주차 녹화를 켜 두면 배터리가 방전돼 차가 안 켜진다는 경험, 한 번쯤 해보셨나요?<br/><br/>
+주차 녹화 중 배터리 방전을 막는 핵심은 <strong>전압차단 설정</strong>입니다. 블랙박스가 차량 배터리를 몇 V까지 내려가면 스스로 전원을 끄도록 설정하는 기능입니다.<br/><br/>
 이 글에서는 주차 녹화 모드의 종류(상시·이벤트·타임랩스), 전압차단 설정 순서, 주차 보조배터리(보조전원) 활용법까지 한 번에 정리합니다.
 </div>
-
 <div class="img-area">
-<div class="img-placeholder">
-<div class="ph-head"><span>📷 이미지 1/2</span><button class="copy-btn" onclick="copyPrompt('p5_1')">프롬프트 복사</button></div>
-<div class="ph-file">images/260916/5_dashcam_1.png</div>
-<div class="prompt-text" id="p5_1">자동차 앞유리에 장착된 블랙박스, 주차장에 세워진 차, 블랙박스 LED 녹화 표시등, 실내 클로즈업, 실사 사진 스타일</div>
-</div>
-<div class="img-caption">블랙박스 주차 녹화 모드 — 배터리 방전 방지 핵심은 전압차단 / AI 제작 이미지</div>
-</div>
+<img alt="블랙박스 주차 녹화 모드 — 배터리 방전 방지 핵심은 전압차단 / AI 제작 이미지" src="../../images/260916/5_dashcam_1.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
 
+</div>
 <h2>01 | 블랙박스 주차 녹화 모드 종류 비교</h2>
 
 블랙박스 주차 녹화 모드는 제조사와 모델에 따라 다르지만, 대부분 세 가지로 나뉩니다.
@@ -68,41 +62,34 @@ function copyPrompt(id) {
 <tr><td>이벤트 녹화</td><td>충격·움직임 감지 시 촬영</td><td>중간</td><td>일반 주차 상황, 야간 주차</td></tr>
 <tr><td>타임랩스 녹화</td><td>일정 간격(예: 1분마다 1프레임)으로 저장</td><td>낮음</td><td>장기 주차, 배터리 걱정 많을 때</td></tr>
 </table>
-
-<strong>이벤트 녹화</strong>는 가장 많이 쓰이는 모드입니다. 충격 감지 센서(G-Sensor)가 일정 수치 이상 충격을 감지하면 그 전후 구간을 저장합니다. 충격이 없으면 녹화가 되지 않아 배터리 소모가 적습니다.<br><br>
-
+<strong>이벤트 녹화</strong>는 가장 많이 쓰이는 모드입니다. 충격 감지 센서(G-Sensor)가 일정 수치 이상 충격을 감지하면 그 전후 구간을 저장합니다. 충격이 없으면 녹화가 되지 않아 배터리 소모가 적습니다.<br/><br/>
 <strong>타임랩스</strong>는 충격 감지와 무관하게 일정 간격으로 영상을 남기는 방식입니다. 배터리 소모가 가장 적어 장기 주차(해외여행·장기 출장)에 유리합니다. 단, 누군가 차를 긁고 가는 순간이 타임랩스 간격 사이에 있으면 증거가 나오지 않을 수 있다는 한계가 있습니다.
 
 <h2>02 | 배터리 방전 원리 — 왜 방전이 되나</h2>
 
-차량 배터리(납축전지 기준 12V)는 완충 시 약 12.6V를 유지합니다. 블랙박스 주차 녹화는 시동이 꺼진 상태에서 배터리 전압을 소비합니다.<br><br>
-
-<strong>방전 임계 전압</strong>: 차량 배터리가 11.5V 이하로 떨어지면 시동이 걸리지 않는 경우가 많습니다. 12V 이하도 엔진 시동에 부담을 줍니다.<br><br>
+차량 배터리(납축전지 기준 12V)는 완충 시 약 12.6V를 유지합니다. 블랙박스 주차 녹화는 시동이 꺼진 상태에서 배터리 전압을 소비합니다.<br/><br/>
+<strong>방전 임계 전압</strong>: 차량 배터리가 11.5V 이하로 떨어지면 시동이 걸리지 않는 경우가 많습니다. 12V 이하도 엔진 시동에 부담을 줍니다.<br/><br/>
 
 배터리 용량이 60Ah인 차의 경우, 블랙박스 이벤트 모드 소비 전력이 약 2~3W라면 12시간 이상 주차해도 이론상 방전이 안 됩니다. 그러나 실제로는 배터리 노후도·기온(겨울철 성능 저하)·기타 암전류(ECU·시계 등)가 더해져 예상보다 빨리 방전됩니다.
 
 <h2>03 | 전압차단 설정 — 가장 중요한 기능</h2>
-
 <strong>전압차단(배터리 보호) 기능</strong>은 블랙박스가 차량 배터리 전압을 모니터링하다가 설정 전압 이하로 떨어지면 자동으로 전원을 끄는 기능입니다.
 
 <div class="step-box">
-<strong>전압차단 설정 순서 (제조사별 메뉴 위치는 다르나 일반적 순서)</strong><br><br>
-1단계. 블랙박스 전원 ON → 메인 메뉴 접속<br>
-2단계. 설정(Settings) → 주차 모드(Parking Mode) 또는 배터리 보호(Battery Protection) 선택<br>
-3단계. 전압차단 기능 '활성화(ON)' 설정<br>
-4단계. 차단 전압 수치 선택<br>
-&nbsp;&nbsp;&nbsp;- 권장: <strong>12.0V</strong> (일반 납축전지 차량)<br>
-&nbsp;&nbsp;&nbsp;- 12.2V: 보수적 설정 (배터리 노후, 겨울철)<br>
-&nbsp;&nbsp;&nbsp;- 11.8V: 배터리 성능 좋고 녹화 시간 연장 원할 때<br>
+<strong>전압차단 설정 순서 (제조사별 메뉴 위치는 다르나 일반적 순서)</strong><br/><br/>
+1단계. 블랙박스 전원 ON → 메인 메뉴 접속<br/>
+2단계. 설정(Settings) → 주차 모드(Parking Mode) 또는 배터리 보호(Battery Protection) 선택<br/>
+3단계. 전압차단 기능 '활성화(ON)' 설정<br/>
+4단계. 차단 전압 수치 선택<br/>
+   - 권장: <strong>12.0V</strong> (일반 납축전지 차량)<br/>
+   - 12.2V: 보수적 설정 (배터리 노후, 겨울철)<br/>
+   - 11.8V: 배터리 성능 좋고 녹화 시간 연장 원할 때<br/>
 5단계. 저장 후 재부팅
 </div>
-
 <div class="warn-box">
 ⚠️ <strong>전압차단 설정 주의</strong>: 전압차단 수치를 너무 낮게(11.5V 이하) 설정하면 방전이 완전히 일어난 후 차단됩니다. 납축전지는 완전 방전을 반복하면 수명이 급격히 줄어듭니다. 12.0V 이상으로 설정하는 것을 권장합니다.
 </div>
-
 <h2>04 | 권장 전압차단 수치 표</h2>
-
 <table class="info-table">
 <tr><th>배터리 상태·계절</th><th>권장 차단 전압</th><th>이유</th></tr>
 <tr><td>새 배터리, 여름·봄·가을</td><td>12.0V</td><td>안전 마진 확보하면서 녹화 시간 최대화</td></tr>
@@ -110,34 +97,25 @@ function copyPrompt(id) {
 <tr><td>EFB/AGM 배터리 차량</td><td>12.3V 이상</td><td>고성능 배터리는 더 보수적 차단 권장</td></tr>
 <tr><td>보조배터리(캐패시터) 연결</td><td>차량 배터리 설정 불필요</td><td>보조배터리에서 전원 공급, 차량 배터리 무관</td></tr>
 </table>
-
 <h2>05 | 주차 보조배터리 — 연결하면 해결되나</h2>
 
-주차 녹화 전용 <strong>보조배터리(보조전원팩)</strong>를 블랙박스에 연결하면 차량 배터리 소모 없이 주차 녹화가 가능합니다.<br><br>
-
+주차 녹화 전용 <strong>보조배터리(보조전원팩)</strong>를 블랙박스에 연결하면 차량 배터리 소모 없이 주차 녹화가 가능합니다.<br/><br/>
 <strong>보조배터리 종류</strong>:
 
 <div class="info-box">
-① <strong>납축전지형 보조배터리</strong>: 대용량, 저렴, 무겁고 부피 큼. 트렁크에 설치.<br><br>
-② <strong>리튬이온 배터리팩</strong>: 가볍고 소형, 충전식. 5,000~20,000mAh 제품 다양.<br><br>
+① <strong>납축전지형 보조배터리</strong>: 대용량, 저렴, 무겁고 부피 큼. 트렁크에 설치.<br/><br/>
+② <strong>리튬이온 배터리팩</strong>: 가볍고 소형, 충전식. 5,000~20,000mAh 제품 다양.<br/><br/>
 ③ <strong>슈퍼 캐패시터(울트라캐패시터)</strong>: 차량 배터리와 독립적으로 작동, 충방전 수명 매우 길지만 용량 작음.
 </div>
-
 <strong>선택 기준</strong>: 하루 8~12시간 이상 주차, 야외 장기 주차가 잦다면 납축전지형 보조배터리. 이동이 편리하고 단기 주차(3~6시간)라면 리튬이온 팩이 실용적입니다.
 
 <div class="img-area">
-<div class="img-placeholder">
-<div class="ph-head"><span>📷 이미지 2/2</span><button class="copy-btn" onclick="copyPrompt('p5_2')">프롬프트 복사</button></div>
-<div class="ph-file">images/260916/5_dashcam_2.png</div>
-<div class="prompt-text" id="p5_2">자동차 블랙박스 설정 화면 클로즈업, 전압차단 설정 메뉴 화면, 블랙박스 LCD 화면, 배터리 보호 설정 화면, 실사 사진 스타일</div>
-</div>
-<div class="img-caption">블랙박스 전압차단 설정 화면 — 12.0V 권장 / AI 제작 이미지</div>
-</div>
+<img alt="블랙박스 전압차단 설정 화면 — 12.0V 권장 / AI 제작 이미지" src="../../images/260916/5_dashcam_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
 
+</div>
 <h2>06 | 겨울철 특별 주의사항</h2>
 
-겨울철(12~2월)에는 배터리 방전 위험이 여름보다 2~3배 높습니다. 납축전지는 영하 10℃에서 성능이 여름 대비 30~40% 저하됩니다.<br><br>
-
+겨울철(12~2월)에는 배터리 방전 위험이 여름보다 2~3배 높습니다. 납축전지는 영하 10℃에서 성능이 여름 대비 30~40% 저하됩니다.<br/><br/>
 <strong>겨울 대응 방법</strong>:
 - 전압차단 설정을 12.2V 이상으로 올리기
 - 주차 모드를 상시→이벤트 또는 타임랩스로 변경
@@ -147,9 +125,7 @@ function copyPrompt(id) {
 <div class="tip-box">
 💡 <strong>배터리 교체 시점 확인법</strong>: 블랙박스 앱이나 차량 전압계에서 시동 직후 배터리 전압이 12.5V 이하면 교체를 고려할 시기입니다. 12.4V 이하는 교체 필수 신호로 보세요.
 </div>
-
 <h2>07 | 블랙박스 주차 모드 설정 체크리스트</h2>
-
 <table class="info-table">
 <tr><th>항목</th><th>확인</th><th>권장값</th></tr>
 <tr><td>전압차단 기능 활성화</td><td>□</td><td>ON</td></tr>
@@ -159,18 +135,15 @@ function copyPrompt(id) {
 <tr><td>SD 카드 포맷 및 용량 확인</td><td>□</td><td>64GB 이상 Class10 이상</td></tr>
 <tr><td>겨울철 전압차단 상향 조정</td><td>□</td><td>12.2V 이상으로 변경</td></tr>
 </table>
-
-<h2>08 | 블랙박스 주차 녹화 Q&A</h2>
-
+<h2>08 | 블랙박스 주차 녹화 Q&amp;A</h2>
 <div class="info-box">
-<strong>Q. 주차 중에도 항상 켜 두는 게 좋나요?</strong><br>
-A. 야외 주차·거주지 주차 걱정이 있다면 이벤트 모드 + 전압차단 12.0V 설정으로 켜 두는 것을 권장합니다. 지하 주차장이라면 이벤트 모드 정도로 충분합니다.<br><br>
-<strong>Q. SD 카드는 얼마나 자주 교체해야 하나요?</strong><br>
-A. 블랙박스 SD 카드는 덮어쓰기를 반복하므로 일반 SD보다 수명이 짧습니다. 2년마다 또는 이상 증상(파일 오류·저장 불가) 발생 시 교체를 권장합니다.<br><br>
-<strong>Q. 타이어 공기압 경고 후 블랙박스 영상이 자꾸 끊겨요.</strong><br>
+<strong>Q. 주차 중에도 항상 켜 두는 게 좋나요?</strong><br/>
+A. 야외 주차·거주지 주차 걱정이 있다면 이벤트 모드 + 전압차단 12.0V 설정으로 켜 두는 것을 권장합니다. 지하 주차장이라면 이벤트 모드 정도로 충분합니다.<br/><br/>
+<strong>Q. SD 카드는 얼마나 자주 교체해야 하나요?</strong><br/>
+A. 블랙박스 SD 카드는 덮어쓰기를 반복하므로 일반 SD보다 수명이 짧습니다. 2년마다 또는 이상 증상(파일 오류·저장 불가) 발생 시 교체를 권장합니다.<br/><br/>
+<strong>Q. 타이어 공기압 경고 후 블랙박스 영상이 자꾸 끊겨요.</strong><br/>
 A. 충격 감도(G-Sensor)가 너무 높게 설정되어 있거나, SD 카드 불량·용량 부족이 원인일 수 있습니다. 감도를 낮추고 SD 카드를 포맷해 보세요.
 </div>
-
 <h2>09 | 블랙박스 선택 시 주차 모드 비교 포인트</h2>
 
 새 블랙박스를 고른다면 주차 모드 성능을 기준으로 비교하세요.
@@ -183,7 +156,6 @@ A. 충격 감도(G-Sensor)가 너무 높게 설정되어 있거나, SD 카드 �
 <tr><td>보조배터리 호환</td><td>자사 보조배터리 또는 범용 보조배터리 연결 여부</td></tr>
 <tr><td>앱 원격 확인</td><td>Wi-Fi 또는 LTE로 스마트폰 실시간 확인 가능 여부</td></tr>
 </table>
-
 <div class="recommend-area">
 <strong>🔗 같이 볼만한 글</strong>
 <ul>
@@ -191,7 +163,6 @@ A. 충격 감도(G-Sensor)가 너무 높게 설정되어 있거나, SD 카드 �
 <li><a href="../260915/travel_boryeong_daeha_namdanghang_fall.html">보령 남당항 대하축제 2026 — 가을 대하 먹으러 가는 법</a></li>
 </ul>
 </div>
-
 <div class="tags">
 <span class="tag">#블랙박스주차모드</span>
 <span class="tag">#블랙박스배터리방전</span>
