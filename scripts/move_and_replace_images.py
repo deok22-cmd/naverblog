@@ -1,67 +1,24 @@
 import os
-import re
-import shutil
+import sys
+import datetime
 from bs4 import BeautifulSoup
 
-def process_images_and_manuscripts():
-    project_root = r"d:\lightsail\naverblog"
-    brain_dir = r"C:\Users\User\.gemini\antigravity\brain\c27937a8-3dc9-4888-be22-54ec5ffe072a"
-    dest_img_dir = os.path.join(project_root, "images", "260711")
+def process_images_and_manuscripts(target_date=None):
+    if not target_date:
+        if len(sys.argv) > 1:
+            target_date = sys.argv[1]
+        else:
+            target_date = datetime.datetime.now().strftime("%y%m%d")
+
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+    dest_img_dir = os.path.join(project_root, "images", target_date)
     
-    # 1. Create destination directory if it doesn't exist
     if not os.path.exists(dest_img_dir):
         os.makedirs(dest_img_dir)
         print(f"Created directory: {dest_img_dir}")
         
-    # List of expected image base names for 260711
-    expected_images = [
-        "1_bivaldipark_1", "1_bivaldipark_2", "1_bivaldipark_3",
-        "2_muuido_1", "2_muuido_2", "2_muuido_3",
-        "3_hantangang_1", "3_hantangang_2", "3_hantangang_3",
-        "4_typhoon_1", "4_typhoon_2", "4_typhoon_3",
-        "5_fine_1", "5_fine_2", "5_fine_3",
-        "6_aircon_1", "6_aircon_2", "6_aircon_3",
-        "7_mortgage_1", "7_mortgage_2", "7_mortgage_3"
-    ]
-    
-    slug_map = {
-        "travel_bivaldipark_oceanworld": "1_bivaldipark",
-        "travel_muuido_hanagae": "2_muuido",
-        "travel_pocheon_hantangang": "3_hantangang",
-        "local_typhoon_cancel": "4_typhoon",
-        "car_fine_difference": "5_fine",
-        "appli_aircon_electricity": "6_aircon",
-        "cert_registry_mortgage": "7_mortgage"
-    }
-    
-    # 2. Move and rename images from brain directory to destination if they exist
-    print("\n--- Moving and Renaming Images ---")
-    brain_files = os.listdir(brain_dir) if os.path.exists(brain_dir) else []
-    moved_count = 0
-    
-    for base_name in expected_images:
-        matched_files = [f for f in brain_files if f.startswith(base_name + "_") and f.endswith(".png")]
-        if not matched_files:
-            matched_files = [f for f in brain_files if f == base_name + ".png"]
-            
-        if matched_files:
-            matched_files.sort()
-            src_file = matched_files[-1]
-            src_path = os.path.join(brain_dir, src_file)
-            dest_file = base_name + ".png"
-            dest_path = os.path.join(dest_img_dir, dest_file)
-            
-            shutil.copy2(src_path, dest_path)
-            print(f"Copied: {src_file} -> {dest_file}")
-            moved_count += 1
-        else:
-            print(f"Notice: No generated file found in brain_dir for {base_name} (yet)")
-            
-    print(f"Successfully processed {moved_count}/{len(expected_images)} images.")
-    
-    # 3. Process Naver manuscripts (output/260711/*.html)
-    print("\n--- Processing Naver Manuscripts (output/260711/) ---")
-    naver_dir = os.path.join(project_root, "output", "260711")
+    print(f"\n--- Processing Manuscripts (output/{target_date}/) ---")
+    naver_dir = os.path.join(project_root, "output", target_date)
     if os.path.exists(naver_dir):
         naver_files = [f for f in os.listdir(naver_dir) if f.endswith(".html") and f != "index.html"]
         for f in naver_files:
@@ -74,25 +31,40 @@ def process_images_and_manuscripts():
             
             if placeholders:
                 updated = False
-                for index, ph in enumerate(placeholders, 1):
+                for ph in placeholders:
                     file_el = ph.find(class_="ph-file")
+                    ph_file = ""
                     if file_el:
                         ph_file = file_el.get_text().strip()
                     else:
-                        slug = f.replace(".html", "")
-                        prefix = slug_map.get(slug)
-                        if prefix:
-                            ph_file = f"images/260711/{prefix}_{index}.png"
-                        else:
-                            ph_file = ""
+                        prompt_box = ph.find(class_="prompt-box") or ph.find("pre")
+                        if prompt_box:
+                            box_text = prompt_box.get_text().strip()
+                            for line in box_text.split("\n"):
+                                line = line.strip()
+                                if ":" in line:
+                                    parts = line.split(":", 1)
+                                    key = parts[0].strip()
+                                    val = parts[1].strip()
+                                    if "저장 경로" in key or "저장경로" in key:
+                                        ph_file = val
+                                        break
+                                    elif "파일명" in key and not ph_file:
+                                        ph_file = f"images/{target_date}/{val}"
                             
                     if not ph_file:
                         continue
+
+                    # Normalize path (remove leading relative path prefixes)
+                    if ph_file.startswith("../../"):
+                        ph_file = ph_file[6:]
+                    elif ph_file.startswith("../"):
+                        ph_file = ph_file[3:]
                     
                     img_filename = os.path.basename(ph_file)
                     dest_img_path = os.path.join(dest_img_dir, img_filename)
                     if not os.path.exists(dest_img_path):
-                        print(f"  -> Skipping placeholder {img_filename} in {f} (image not generated yet)")
+                        print(f"  -> Skipping {img_filename} in {f} (image file not found in images/{target_date}/)")
                         continue
                     
                     parent_area = ph.find_parent(class_="img-area")
@@ -121,47 +93,7 @@ def process_images_and_manuscripts():
                         file.write(str(soup))
                     print(f"  -> Updated {f}")
     else:
-        print(f"Error: Naver output directory {naver_dir} not found.")
-        
-    # 4. Process Tistory manuscripts (output_tistory/260711/*.html)
-    print("\n--- Processing Tistory Manuscripts (output_tistory/260711/) ---")
-    tistory_dir = os.path.join(project_root, "output_tistory", "260711")
-    if os.path.exists(tistory_dir):
-        tistory_files = [f for f in os.listdir(tistory_dir) if f.endswith(".html") and f != "index.html"]
-        for f in tistory_files:
-            filepath = os.path.join(tistory_dir, f)
-            with open(filepath, "r", encoding="utf-8") as file:
-                content = file.read()
-                
-            soup = BeautifulSoup(content, "html.parser")
-            imgs = soup.find_all("img")
-            updated = False
-            
-            for img in imgs:
-                src = img.get("src", "")
-                img_filename = os.path.basename(src)
-                dest_img_path = os.path.join(dest_img_dir, img_filename)
-                if os.path.exists(dest_img_path):
-                    sibling = img.find_next_sibling()
-                    if sibling and sibling.name == "div" and "(이미지 제작 예정)" in sibling.get_text():
-                        old_caption = sibling.get_text().strip()
-                        new_caption = old_caption.replace("(이미지 제작 예정)", "/ AI 제작 이미지").strip()
-                        
-                        sibling.string = new_caption
-                        img["alt"] = new_caption
-                        updated = True
-                        print(f"  -> Updated caption for {src}: '{old_caption}' -> '{new_caption}'")
-                else:
-                    print(f"  -> Skipping caption update for {src} in {f} (image not generated yet)")
-                        
-            if updated:
-                with open(filepath, "w", encoding="utf-8") as file:
-                    file.write(str(soup))
-                print(f"File: {f} updated successfully.")
-            else:
-                print(f"File: {f} (No captions needed update or already processed)")
-    else:
-        print(f"Error: Tistory output directory {tistory_dir} not found (or Tistory is suspended).")
+        print(f"Error: Output directory {naver_dir} not found.")
 
 if __name__ == "__main__":
     process_images_and_manuscripts()
