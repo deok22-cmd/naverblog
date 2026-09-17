@@ -205,6 +205,11 @@ try {
         Write-Log "오늘 = $(Get-Date -Format 'yyyy-MM-dd') ($todayDow) · 구성 = $compTxt"
         Write-Log "여행 상한 = $todayTravelMax · 기대 로테이션 = $($wantRotation -join ', ')"
         Write-Log "DROP 계열 = $($Policy.dropped -join ', ')"
+        # 2026-09-17: 자동 발행은 월~금. 토·일 실행은 사용자가 직접 돌린 수동 발행이다.
+        if ($null -ne $Policy.autoDays -and (@($Policy.autoDays) -notcontains $todayDow)) {
+            Write-Log "[MANUAL] 오늘(${todayDow}요일)은 자동 발행일이 아니다 — 수동 실행으로 간주하고 그대로 진행한다."
+            Write-Log "         구성은 compositionByDow의 ${todayDow}요일 표를 그대로 쓴다."
+        }
     } else {
         Write-Log "WARN: $PolicyFile 없음 — 요일 주입·믹스 검증 스킵(프롬프트 규칙만으로 진행)."
     }
@@ -583,11 +588,28 @@ if ($exit -ne 0) {
 
     # --- (3) 최근 14일 결번 점검 ---
     # output/은 주간 정리로 비워지므로(2026-08-15~) 이력 기준으로 센다.
+    # 🔴 2026-09-17: 자동 발행이 월~금으로 바뀌었다. autoDays에 없는 요일(토·일)은 0건이
+    #    정상이므로 결번으로 세지 않는다. 안 그러면 14일 창에 주말이 늘 4일 들어가
+    #    `$gaps.Count -ge 3` 조건에 매일 걸려 게이트가 상시 실패한다.
+    #    단 주말에 **수동으로 발행한 흔적이 있으면**(1건 이상) 그날은 정상 발행일로 보고
+    #    7건 기준으로 함께 점검한다.
+    $autoDays = @("월", "화", "수", "목", "금")
+    if ($null -ne $Policy -and $null -ne $Policy.autoDays) { $autoDays = @($Policy.autoDays) }
     $gaps = @()
+    $skippedDays = @()
     for ($i = 1; $i -le 14; $i++) {
-        $lbl = (Get-Date).AddDays(-$i).ToString("yy.MM.dd")
+        $d = (Get-Date).AddDays(-$i)
+        $lbl = $d.ToString("yy.MM.dd")
+        $dw = $DowKrMap[$d.DayOfWeek.ToString()]
         $n = ([regex]::Matches($histText, [regex]::Escape("| $lbl |"))).Count
+        if (($autoDays -notcontains $dw) -and $n -eq 0) {
+            $skippedDays += "$lbl($dw)"
+            continue
+        }
         if ($n -lt $ExpectedPosts) { $gaps += "$lbl($n)" }
+    }
+    if ($skippedDays.Count -gt 0) {
+        Write-Log "(3) 자동 발행일이 아니라 제외: $($skippedDays -join ', ')"
     }
     if ($gaps.Count -gt 0) {
         Write-Log "(3) 최근 14일 중 원고가 모자란 날: $($gaps -join ', ')"

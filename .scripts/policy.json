@@ -14,8 +14,19 @@
     "  단일 상한으로는 '3건인 날'과 '2건인 날의 누수'를 구분할 수 없었다.",
     "  compositionByDow가 이제 유일한 기준이고, rotationByDow·slotTarget·travelMaxByDow는 여기서 파생된 사본이다."
   ],
-  "version": "2026-09-16b",
+  "version": "2026-09-17",
   "expectedPosts": 7,
+
+  "_autoDaysComment": [
+    "2026-09-17 사용자 지시 — 자동 발행은 월~금만. 토·일은 필요할 때 수동으로만 발행한다.",
+    "작업 스케줄러 NaverblogDaily 트리거도 주간(월~금) 04:00으로 바꿨다.",
+    "⚠️ autoDays는 '스케줄러가 도는 날'이지 '발행해도 되는 날'이 아니다.",
+    "   토·일에 수동으로 daily-run.ps1을 실행하면 compositionByDow의 토·일 구성을 그대로 쓴다.",
+    "   따라서 compositionByDow의 토·일 항목은 지우지 않는다.",
+    "⚠️ 결번 점검(daily-run Step 1.8-3)은 autoDays에 없는 요일을 세지 않는다.",
+    "   안 그러면 14일 창에 주말 4일이 늘 0건이라 매일 실패로 잡힌다."
+  ],
+  "autoDays": ["월", "화", "수", "목", "금"],
 
   "compositionByDow": {
     "월": { "travel": 3, "pass": 1, "hot": 1, "car": 1, "labor": 1 },

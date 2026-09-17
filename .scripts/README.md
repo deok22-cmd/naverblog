@@ -1,6 +1,6 @@
 # Naverblog 일일 자동 발행 시스템
 
-매일 새벽 4시(KST) Windows 작업 스케줄러가 Claude Code CLI를 비대화 모드로 호출하여 그날의 5개 원고를 자동 작성합니다. 이미지는 placeholder로 남겨두어 사용자가 Antigravity로 별도 생성합니다.
+**월~금** 새벽 4시(KST) Windows 작업 스케줄러가 Claude Code CLI를 비대화 모드로 호출하여 그날의 원고 7건을 자동 작성합니다(2026-09-17 개정 — 토·일 자동 발행 없음, 필요 시 수동 실행). 이미지는 placeholder로 남겨두어 사용자가 Antigravity로 별도 생성합니다.
 
 ---
 
@@ -21,14 +21,14 @@ PowerShell을 **관리자 권한으로 열 필요는 없으며**, 일반 사용�
 ```powershell
 schtasks /Create `
   /TN "NaverblogDaily" `
-  /SC DAILY /ST 04:00 `
+  /SC WEEKLY /D MON,TUE,WED,THU,FRI /ST 04:00 `
   /TR "powershell.exe -NoProfile -ExecutionPolicy Bypass -File D:\lightsail\naverblog\.scripts\daily-run.ps1" `
   /F
 ```
 
 옵션 설명:
 - `/TN "NaverblogDaily"`: 작업 이름
-- `/SC DAILY /ST 04:00`: 매일 04:00 실행
+- `/SC WEEKLY /D MON,TUE,WED,THU,FRI /ST 04:00`: **월~금** 04:00 실행 (2026-09-17 개정. 토·일은 수동)
 - `/TR ...`: 실행할 명령. PowerShell이 래퍼 스크립트를 호출
 - `/F`: 같은 이름이 있으면 강제 덮어쓰기
 
