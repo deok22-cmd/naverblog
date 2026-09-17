@@ -65,6 +65,142 @@ function Set-Failure([string]$kind, [string]$detail, [string]$howto) {
     [System.IO.File]::WriteAllText($FailFlag, $body, $utf8NoBom)
 }
 
+# === Step 0.3: 업로드 백로그 점검 — 안 올라갔으면 오늘은 만들지 않는다 (2026-09-17 신설) ===
+# 사용자 지시: "발행이 됐는데 내가 사정이 있어 업로드를 못하면(주말이든 주중이든),
+#   다음날 원고 발행을 안 하고 그 다음날 이어가게 해줘. 원고가 휴지가 되는 걸 막고 싶다."
+#
+# 배경: 네이버 업로드는 에디터 수동 붙여넣기다. 그래서 7/1~9/10 대조에서 원고 112건이
+#   생성만 되고 등록되지 않았다(stats/미업로드_원고_점검_20260911.md). 매일 새로 7건을
+#   찍어내니 백로그가 눈덩이가 됐고, 결국 대부분이 시즌을 넘겨 버려졌다.
+#
+# 🔑 핵심: **네이버 블로그 RSS로 실제 등록분을 읽을 수 있다.**
+#   https://rss.blog.naver.com/<blogId>.xml — 최근 50건의 제목·발행일을 준다.
+#   브라우저 자동화가 아니라 단순 HTTP GET이라 차단되지 않는다(2026-09-17 실측 확인).
+#   하루 7건이면 50건 = 약 일주일치를 덮으므로 "어제 것이 올라갔나"를 보기에 충분하다.
+#
+# 그래서 사용자는 **아무것도 하지 않아도 된다.** 여행 가서 업로드를 못 하면 다음 실행이
+#   스스로 멈추고, 돌아와서 붙여넣으면 그 다음 실행이 스스로 재개한다.
+#   PC에 접속할 필요도, 파일을 고칠 필요도 없다.
+#
+# 안전장치 — 이 점검이 발행을 잘못 막는 일이 없도록:
+#   · blogId가 비어 있으면 그냥 통과(기능 비활성)
+#   · 네트워크·RSS 오류면 경고만 남기고 **통과**(막지 않는다)
+#   · 오늘 생성분은 판정에서 제외(아직 붙여넣기 전일 수 있다)
+#   · RSS가 덮지 못하는 오래된 날짜는 판정에서 제외
+#   · .scripts/logs/SKIP_UPLOAD_CHECK 파일을 만들면 1회 우회
+Write-Log "=== Step 0.3: Upload Backlog Check @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="
+$SkipUploadFlag = Join-Path $LogsDir "SKIP_UPLOAD_CHECK"
+$uploadPaused = $false
+try {
+    $cfgRaw = $null
+    if (Test-Path -LiteralPath (Join-Path $ScriptsDir "policy.json")) {
+        $cfgRaw = Get-Content -LiteralPath (Join-Path $ScriptsDir "policy.json") -Raw -Encoding utf8 | ConvertFrom-Json
+    }
+    $blogId = ""
+    $pauseThreshold = 7
+    if ($null -ne $cfgRaw) {
+        if ($null -ne $cfgRaw.naverBlogId) { $blogId = "$($cfgRaw.naverBlogId)".Trim() }
+        if ($null -ne $cfgRaw.uploadPauseThreshold) { $pauseThreshold = [int]$cfgRaw.uploadPauseThreshold }
+    }
+
+    if (Test-Path -LiteralPath $SkipUploadFlag) {
+        Remove-Item -LiteralPath $SkipUploadFlag -Force -EA SilentlyContinue
+        Write-Log "SKIP_UPLOAD_CHECK 플래그 발견 — 이번 실행은 업로드 점검을 건너뛴다(플래그는 소모됨)."
+    }
+    elseif ([string]::IsNullOrWhiteSpace($blogId)) {
+        Write-Log "SKIP: policy.json 의 naverBlogId 가 비어 있다 — 업로드 점검 비활성."
+        Write-Log "      채워 넣으면 이 단계가 자동으로 켜진다(값 = 네이버 블로그 주소의 아이디)."
+    }
+    else {
+        [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+        $rssUrl = "https://rss.blog.naver.com/$blogId.xml"
+        $resp = Invoke-WebRequest -Uri $rssUrl -TimeoutSec 25 -UseBasicParsing
+        $xml = [xml]$resp.Content
+        $items = @($xml.rss.channel.item)
+
+        function Get-NodeText($n) {
+            if ($n -is [string]) { return $n }
+            if ($null -eq $n) { return "" }
+            return $n.InnerText
+        }
+        function Normalize-Title([string]$t) {
+            if ($null -eq $t) { return "" }
+            return ($t -replace '[^0-9A-Za-z가-힣]', '')
+        }
+
+        $rssTitles = @()
+        $rssDates = @()
+        foreach ($it in $items) {
+            $rssTitles += (Normalize-Title (Get-NodeText $it.title))
+            try { $rssDates += ([datetime]::Parse($it.pubDate)).Date } catch { }
+        }
+        if ($rssDates.Count -eq 0) { throw "RSS에 항목이 없다(아이디가 틀렸을 수 있음)." }
+        $rssOldest = ($rssDates | Sort-Object)[0]
+        $rssNewest = ($rssDates | Sort-Object)[-1]
+        Write-Log "RSS: $($items.Count)건 · 커버 $($rssOldest.ToString('yyyy-MM-dd')) ~ $($rssNewest.ToString('yyyy-MM-dd'))"
+
+        # 발행이력에서 "RSS가 덮는 구간 ~ 어제"의 원고를 꺼내 대조
+        $HistFile0 = Join-Path $ProjectRoot "발행이력.md"
+        $histText0 = ""
+        if (Test-Path -LiteralPath $HistFile0) { $histText0 = Get-Content -LiteralPath $HistFile0 -Raw -Encoding utf8 }
+        $yesterday = (Get-Date).AddDays(-1).Date
+        $missing = @()
+        $checked = 0
+        foreach ($line in ($histText0 -split "`r?`n")) {
+            $m = [regex]::Match($line, '^\|\s*(\d{2})\.(\d{2})\.(\d{2})\s*\|\s*[^|]*\|\s*`([^`]+)`\s*\|\s*(.+?)\s*\|\s*$')
+            if (-not $m.Success) { continue }
+            $d = $null
+            try { $d = [datetime]::ParseExact("20$($m.Groups[1].Value)$($m.Groups[2].Value)$($m.Groups[3].Value)", "yyyyMMdd", $null) } catch { continue }
+            if ($d -lt $rssOldest -or $d -gt $yesterday) { continue }
+            $checked++
+            $nt = Normalize-Title $m.Groups[5].Value
+            if ($nt.Length -lt 8) { continue }
+            # 앞부분 공통 접두사로 대조한다. 한쪽이 더 짧을 수 있으므로 **짧은 쪽 기준**으로
+            # 비교한다($rt.StartsWith($key) 한 방향만 보면, 네이버 제목이 키보다 짧을 때
+            # 같은 글인데도 미등록으로 잡힌다 — 2026-09-17 테스트에서 실제로 걸렸다).
+            # 최소 8자는 일치해야 같은 글로 본다. 우리 제목은 40자 이상이라 실질 14자 비교다.
+            $found = $false
+            foreach ($rt in $rssTitles) {
+                $k = [Math]::Min(14, [Math]::Min($nt.Length, $rt.Length))
+                if ($k -ge 8 -and $nt.Substring(0, $k) -eq $rt.Substring(0, $k)) { $found = $true; break }
+            }
+            if (-not $found) { $missing += "$($d.ToString('MM-dd')) $($m.Groups[4].Value)" }
+        }
+        Write-Log "대조: 이력 $checked건(RSS 커버 구간 ~ 어제) 중 미등록 $($missing.Count)건 · 중단 임계 $pauseThreshold"
+        if ($missing.Count -gt 0) {
+            foreach ($x in ($missing | Select-Object -First 10)) { Write-Log "   미등록: $x" }
+            if ($missing.Count -gt 10) { Write-Log "   ... 외 $($missing.Count - 10)건" }
+        }
+
+        if ($missing.Count -ge $pauseThreshold) {
+            $uploadPaused = $true
+            Write-Log ""
+            Write-Log "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+            Write-Log "[UPLOAD PAUSE] 미등록 원고 $($missing.Count)건 — 오늘은 새 원고를 만들지 않는다."
+            Write-Log "  이미 만든 원고가 네이버에 올라가지 않은 상태다. 여기서 더 찍어내면 백로그만 쌓인다."
+            Write-Log "  조치: 밀린 원고를 네이버에 붙여넣으면 다음 실행에서 **자동으로 재개**된다."
+            Write-Log "        (RSS로 등록을 확인하므로 이 PC에서 아무 작업도 할 필요 없다.)"
+            Write-Log "  급히 강행하려면: $SkipUploadFlag 파일을 만들고 다시 실행."
+            Write-Log "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+            Set-Failure "UPLOAD_BACKLOG" "미등록 원고 $($missing.Count)건 — 오늘 생성을 건너뜀(백로그 방지)" "밀린 원고를 네이버에 올리면 다음 실행에서 자동 재개. 강행하려면 logs\SKIP_UPLOAD_CHECK 생성."
+        } else {
+            Write-Log "[UPLOAD OK] 백로그 $($missing.Count)건 — 임계 미만이므로 정상 진행."
+        }
+    }
+} catch {
+    Write-Log "WARN (업로드 점검 실패, 막지 않고 진행): $_"
+}
+
+if ($uploadPaused) {
+    # 대시보드는 갱신해서 배너가 뜨게 한다. 큐·예산은 건드리지 않는다.
+    $dashOnly0 = Join-Path $ScriptsDir "build-dashboard.ps1"
+    if (Test-Path -LiteralPath $dashOnly0) { & $dashOnly0 | Out-Null }
+    Write-Log ""
+    Write-Log "=== 업로드 백로그로 오늘 실행을 종료한다(종료코드 4). 큐·예산 소모 없음. ==="
+    exit 4
+}
+Write-Log ""
+
 # === Step 0.4: 인증 사전 점검 (2026-08-30 신설 — 사용자 지시) ===
 # 계기: 8/27~8/30 나흘간 "Failed to authenticate: OAuth session expired"로 발행이 0건이었는데
 #   아무도 몰랐다. 로그에만 찍히고 스크립트는 조용히 다음 단계로 넘어갔기 때문.

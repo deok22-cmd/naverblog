@@ -351,12 +351,20 @@ if (Test-Path -LiteralPath $failFlagPath) {
         if ($gapDays -ge 1) { $gapTxt = " · 마지막 발행 이후 <b>$($gapDays)일</b> 비었습니다" }
     }
 
+    # UPLOAD_BACKLOG는 고장이 아니라 **의도된 일시정지**다(2026-09-17 신설).
+    # 같은 빨간 "실패" 문구를 쓰면 뭔가 망가진 줄 알고 불필요하게 손대게 된다.
+    $alertHead = "🚨 자동 발행이 실패한 상태입니다 &mdash; $(Enc $fKind)"
+    $alertFoot = "최초 감지 $(Enc $fWhen) · 고쳐서 정상 발행되면 이 배너는 자동으로 사라집니다."
+    if ($fKind -eq "UPLOAD_BACKLOG") {
+        $alertHead = "⏸️ 원고 생성을 일시정지했습니다 &mdash; 업로드가 밀려 있습니다"
+        $alertFoot = "감지 $(Enc $fWhen) · <b>밀린 원고를 네이버에 올리면 다음 실행에서 자동으로 재개</b>됩니다(RSS로 확인하므로 이 PC에서 할 일 없음). 고장이 아닙니다."
+    }
     $failBanner = @"
 <div class="alert">
-  <div class="ah">🚨 자동 발행이 실패한 상태입니다 &mdash; $(Enc $fKind)</div>
+  <div class="ah">$alertHead</div>
   <div class="ad">$(Enc $fDetail)$gapTxt</div>
   <div class="ax"><b>조치</b> · $(Enc $fHowto)</div>
-  <div class="am">최초 감지 $(Enc $fWhen) · 고쳐서 정상 발행되면 이 배너는 자동으로 사라집니다.</div>
+  <div class="am">$alertFoot</div>
 </div>
 "@
 }

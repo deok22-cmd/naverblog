@@ -28,6 +28,23 @@
   ],
   "autoDays": ["월", "화", "수", "목", "금"],
 
+  "_uploadCheckComment": [
+    "2026-09-17 사용자 지시 — 업로드가 밀리면 다음날 원고를 만들지 않고, 업로드되면 다시 이어간다.",
+    "daily-run.ps1 Step 0.3이 https://rss.blog.naver.com/<naverBlogId>.xml 로 실제 등록분을 읽어",
+    "발행이력.md와 대조한다. 미등록이 uploadPauseThreshold 이상이면 그날 생성을 건너뛴다(exit 4).",
+    "밀린 원고를 네이버에 올리면 RSS에 잡혀 다음 실행에서 자동으로 재개된다 — PC 조작 불필요.",
+    "",
+    "🔴 naverBlogId 가 비어 있으면 이 기능은 꺼져 있다. 네이버 블로그 주소가",
+    "   https://blog.naver.com/abcd1234 라면 여기에 abcd1234 를 적는다.",
+    "",
+    "임계 7 = 하루치. 하루 분량이 통째로 안 올라갔으면 멈춘다는 뜻.",
+    "부분 업로드(예: 7건 중 5건만)도 누적되면 결국 임계를 넘겨 멈춘다.",
+    "⚠️ RSS는 최근 50건만 준다(하루 7건이면 약 7일). 그보다 오래된 날짜는 판정에서 제외된다.",
+    "⚠️ 오늘 생성분은 판정에 넣지 않는다(아직 붙여넣기 전일 수 있다). 어제까지만 본다."
+  ],
+  "naverBlogId": "",
+  "uploadPauseThreshold": 7,
+
   "compositionByDow": {
     "월": { "travel": 3, "pass": 1, "hot": 1, "car": 1, "labor": 1 },
     "화": { "travel": 2, "pass": 1, "hot": 1, "rite": 1, "house": 1, "lease": 1 },
