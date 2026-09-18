@@ -143,7 +143,22 @@ try {
         $HistFile0 = Join-Path $ProjectRoot "발행이력.md"
         $histText0 = ""
         if (Test-Path -LiteralPath $HistFile0) { $histText0 = Get-Content -LiteralPath $HistFile0 -Raw -Encoding utf8 }
+        # 판정 창 — 2026-09-19 실측으로 바로잡음
+        #  ⚠️ RSS의 pubDate는 **네이버에 등록한 시각**이지 원고 생성일이 아니다.
+        #     사용자가 며칠치를 몰아서 올리면 여러 날 원고가 같은 pubDate로 찍힌다.
+        #     따라서 "RSS가 덮는 날짜 전부"를 대조하면 두 가지가 동시에 망가진다:
+        #      ① RSS 50건 한도에 걸려 잘린 **가장 오래된 날**은 일부만 보여 오탐이 난다
+        #         (09-19 실측: 09-11이 3/7로 잡혀 미등록 4건이 허위로 나왔다)
+        #      ② 오래전에 못 올린 글이 영원히 남아 임계를 갉아먹는다 — 언젠가 상시 정지가 된다
+        #  → **최근 uploadCheckDays(기본 3)일 생성분만** 본다. 사용자 요구가
+        #     "어제 것이 안 올라갔으면 오늘 멈춰라"이므로 짧은 창이 오히려 정확하다.
+        #     오래된 백로그는 이 장치가 아니라 stats 점검에서 따로 다룬다.
+        $checkDays = 3
+        if ($null -ne $cfgRaw -and $null -ne $cfgRaw.uploadCheckDays) { $checkDays = [int]$cfgRaw.uploadCheckDays }
         $yesterday = (Get-Date).AddDays(-1).Date
+        $windowStart = (Get-Date).AddDays(-$checkDays).Date
+        if ($windowStart -lt $rssOldest) { $windowStart = $rssOldest }
+        Write-Log "판정 창: $($windowStart.ToString('yyyy-MM-dd')) ~ $($yesterday.ToString('yyyy-MM-dd')) (최근 ${checkDays}일 생성분)"
         $missing = @()
         $checked = 0
         foreach ($line in ($histText0 -split "`r?`n")) {
@@ -151,7 +166,7 @@ try {
             if (-not $m.Success) { continue }
             $d = $null
             try { $d = [datetime]::ParseExact("20$($m.Groups[1].Value)$($m.Groups[2].Value)$($m.Groups[3].Value)", "yyyyMMdd", $null) } catch { continue }
-            if ($d -lt $rssOldest -or $d -gt $yesterday) { continue }
+            if ($d -lt $windowStart -or $d -gt $yesterday) { continue }
             $checked++
             $nt = Normalize-Title $m.Groups[5].Value
             if ($nt.Length -lt 8) { continue }
@@ -166,7 +181,7 @@ try {
             }
             if (-not $found) { $missing += "$($d.ToString('MM-dd')) $($m.Groups[4].Value)" }
         }
-        Write-Log "대조: 이력 $checked건(RSS 커버 구간 ~ 어제) 중 미등록 $($missing.Count)건 · 중단 임계 $pauseThreshold"
+        Write-Log "대조: 이력 $checked건(최근 ${checkDays}일 생성분) 중 미등록 $($missing.Count)건 · 중단 임계 $pauseThreshold"
         if ($missing.Count -gt 0) {
             foreach ($x in ($missing | Select-Object -First 10)) { Write-Log "   미등록: $x" }
             if ($missing.Count -gt 10) { Write-Log "   ... 외 $($missing.Count - 10)건" }
