@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>실손보험 청구 기한 몇 년인가 — 지난 병원비 모아서 청구하는 법과 소멸시효</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>실손보험 청구 기한 몇 년인가 — 지난 병원비 모아서 청구하는 법과 소멸시효</h1>
+<div class="intro-box">
+병원비를 낸 뒤 바쁘다는 이유로, 귀찮다는 이유로 실손보험 청구를 미루다 기한이 지나 포기한 경험이 있으신가요? 실손보험에는 소멸시효가 있어서 청구 기한을 넘기면 지급받을 권리가 사라집니다. 반대로 기한 안에 묵혀둔 영수증들을 모아 한꺼번에 청구하면 생각보다 많은 금액을 돌려받을 수 있습니다. 아래에서는 실손보험 청구 기한의 정확한 계산 방법, 필요 서류, 청구 방법을 금융감독원 기준으로 안내합니다.<br><br>
+⚠️ 보험 약관과 소멸시효는 보험사·가입 시기·약관 조건에 따라 다를 수 있습니다. 아래 내용은 일반적인 기준이며, 정확한 내용은 가입한 보험사 또는 금융감독원 금융소비자포털(fine.fss.or.kr)에서 확인하세요 (재검증).
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📸 이미지 1 / 2</span><span class="ph-file">images/260923/7_silsohn_1.png</span></div>
+<div class="prompt-text" id="p7_1">병원 영수증과 실손보험 청구서, 스마트폰으로 보험 앱을 사용하는 손, 깔끔한 배경, 실사 스타일</div>
+<button class="copy-btn" onclick="copyPrompt('p7_1')">프롬프트 복사</button>
+</div>
+<div class="img-caption">실손보험 청구 — 소멸시효 3년 안에 지난 병원비를 모아 청구할 수 있습니다 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 실손보험 청구, 지금 해도 될까</h2>
+
+결론부터 말하면 병원비를 낸 날로부터 <strong>3년 이내</strong>라면 청구할 수 있습니다. 이것이 실손보험의 소멸시효입니다.<br><br>
+
+많은 분이 "그때 안 했으니까 이제 못 받겠지"라고 포기하는 경우가 있는데, 실제로는 진료일로부터 3년이 지나지 않았다면 지금 당장 청구해도 됩니다. 1년 치 영수증을 한꺼번에 모아 청구하는 것도 가능합니다. 심지어 여러 번 병원을 다녀왔더라도 각 진료 건별로 소멸시효를 개별 적용하므로, 각 진료일로부터 3년이 지나지 않은 건이라면 모두 청구 대상이 됩니다.<br><br>
+
+단, 소멸시효 기산점(시작일)이 언제인지에 대해서는 약관별로 차이가 있습니다. 일반적으로는 <strong>진료받은 날(또는 퇴원일)</strong>부터 기산합니다. 일부 약관에서는 의료비를 실제로 납부한 날부터 기산하기도 하므로, 확실하지 않다면 보험사에 직접 문의하는 것이 좋습니다.
+
+<h2>02 | 소멸시효 3년의 의미 — 언제부터 세나</h2>
+
+실손보험 소멸시효의 기산점에 대해 더 자세히 살펴봅니다.
+
+<table class="info-table">
+<thead>
+<tr><th>구분</th><th>기산점</th><th>비고</th></tr>
+</thead>
+<tbody>
+<tr><td>통상 약관(외래·입원)</td><td>진료일(또는 퇴원일)</td><td>가장 일반적인 기준</td></tr>
+<tr><td>일부 약관</td><td>의료비 납부일</td><td>약관 조건 확인 필요</td></tr>
+<tr><td>상해·질병 입원</td><td>퇴원일 기준</td><td>장기 입원 시 퇴원일부터</td></tr>
+<tr><td>처방전 조제비</td><td>조제일</td><td>처방전 발행일과 다를 수 있음</td></tr>
+</tbody>
+</table>
+
+상법 제662조에 따르면 보험금 청구권의 소멸시효는 3년입니다. 이는 강행규정은 아니어서 일부 보험사는 약관으로 기간을 달리 정하기도 합니다. 가입한 보험의 약관을 직접 확인하거나, 보험사 고객센터에 "청구 기한이 언제까지인지" 문의해보세요.
+
+<h2>03 | 소멸시효 계산표 — 나의 마감일은</h2>
+
+진료일 기준 소멸시효(3년)를 계산하면 다음과 같습니다.
+
+<table class="info-table">
+<thead>
+<tr><th>진료일</th><th>소멸시효 마감일</th><th>현재 기준 (2026-09-23)</th></tr>
+</thead>
+<tbody>
+<tr><td>2023년 9월 23일</td><td>2026년 9월 22일</td><td>⛔ 기한 만료 (어제까지)</td></tr>
+<tr><td>2023년 9월 24일</td><td>2026년 9월 23일</td><td>✅ 오늘이 마지막 날</td></tr>
+<tr><td>2023년 10월 이후</td><td>2026년 10월 이후</td><td>✅ 아직 기한 내</td></tr>
+<tr><td>2024년 전체</td><td>2027년 해당 날짜</td><td>✅ 여유 있음</td></tr>
+<tr><td>2025년 전체</td><td>2028년 해당 날짜</td><td>✅ 충분한 여유</td></tr>
+</tbody>
+</table>
+
+<div class="warn-box">
+⚠️ <strong>2023년 9월~10월 진료분을 아직 청구하지 않았다면 지금 바로 청구하세요.</strong> 기한 만료 직전이므로 더 이상 미뤄선 안 됩니다.
+</div>
+
+<h2>04 | 청구할 수 있는 병원비 범위</h2>
+
+실손보험이 보장하는 의료비의 범위를 알아야 청구 누락을 막을 수 있습니다.
+
+<table class="info-table">
+<thead>
+<tr><th>항목</th><th>청구 가능 여부</th><th>비고</th></tr>
+</thead>
+<tbody>
+<tr><td>외래 진찰비</td><td>✅ 가능</td><td>1세대 실손은 공제금액 후 지급</td></tr>
+<tr><td>입원비</td><td>✅ 가능</td><td>급여·비급여 모두 포함(한도 내)</td></tr>
+<tr><td>처방전 조제비</td><td>✅ 가능</td><td>병원 영수증과 처방전 필요</td></tr>
+<tr><td>비급여 검사비</td><td>✅ 가능</td><td>MRI·초음파 등 비급여 포함</td></tr>
+<tr><td>치과 치료</td><td>△ 제한적</td><td>충치·보철 등 일부 제외, 약관 확인</td></tr>
+<tr><td>한방 치료</td><td>△ 약관에 따라</td><td>4세대 실손은 한방 특약 별도</td></tr>
+<tr><td>미용·성형 수술</td><td>❌ 불가</td><td>의료 목적이 아닌 경우 제외</td></tr>
+<tr><td>비타민·영양제 처방</td><td>❌ 불가</td><td>치료 목적 아닌 경우 제외</td></tr>
+</tbody>
+</table>
+
+실손보험은 세대(1~4세대)에 따라 보장 범위와 공제금액(자기부담금)이 다릅니다. 본인이 1세대(2009년 이전)인지 최근 4세대인지를 확인하면 내가 받을 수 있는 금액을 더 정확히 예측할 수 있습니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📸 이미지 2 / 2</span><span class="ph-file">images/260923/7_silsohn_2.png</span></div>
+<div class="prompt-text" id="p7_2">의료 서류와 보험 청구 서류 묶음, 병원 영수증, 진단서, 깔끔한 책상 위 배치, 실사 스타일</div>
+<button class="copy-btn" onclick="copyPrompt('p7_2')">프롬프트 복사</button>
+</div>
+<div class="img-caption">실손보험 청구 서류 — 영수증·처방전·진단서를 모아두면 한꺼번에 청구할 수 있습니다 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 필요한 서류 체크리스트</h2>
+
+청구 시 필요한 서류는 병원비 종류와 청구 방법에 따라 다소 다르지만, 일반적인 기준은 다음과 같습니다.
+
+<table class="info-table">
+<thead>
+<tr><th>항목</th><th>필수 여부</th><th>비고</th></tr>
+</thead>
+<tbody>
+<tr><td>의료비 영수증(진료비 계산서)</td><td>✅ 필수</td><td>병원에서 발급, 카드 영수증 아님</td></tr>
+<tr><td>진료비 세부 내역서</td><td>✅ 필수</td><td>세부 항목 명시, 요청 시 병원에서 발급</td></tr>
+<tr><td>처방전(조제비 청구 시)</td><td>✅ 필수</td><td>처방전 원본 또는 사본</td></tr>
+<tr><td>입원 확인서(입원비 청구 시)</td><td>✅ 필수</td><td>병원에서 발급</td></tr>
+<tr><td>진단서(고액·수술 청구 시)</td><td>조건부 필수</td><td>일정 금액 이상 또는 수술 시</td></tr>
+<tr><td>통장 사본</td><td>첫 청구 시</td><td>이후에는 기존 계좌 이용</td></tr>
+<tr><td>신분증(본인 확인용)</td><td>창구 방문 시</td><td>앱 청구 시 불필요</td></tr>
+</tbody>
+</table>
+
+<div class="tip-box">
+<strong>💡 서류 분실 시 재발급 방법</strong> — 의료비 영수증이나 진료비 세부 내역서를 분실했다면 진료받은 병원에 재발급을 요청할 수 있습니다. 국민건강보험공단 앱(건강보험증 조회)에서 진료 내역을 확인하면 방문한 병원을 파악할 수 있습니다. 단, 재발급에 수수료가 드는 경우가 있습니다.
+</div>
+
+<h2>06 | 청구 방법 3가지 비교 — 앱·팩스·방문</h2>
+
+<table class="info-table">
+<thead>
+<tr><th>방법</th><th>편의성</th><th>처리 속도</th><th>적합한 경우</th></tr>
+</thead>
+<tbody>
+<tr><td>보험사 앱(모바일 청구)</td><td>★★★★★</td><td>2~5일</td><td>소액, 스마트폰 익숙한 분</td></tr>
+<tr><td>팩스(서류 팩스 전송)</td><td>★★★</td><td>5~7일</td><td>팩스 이용 가능한 직장인</td></tr>
+<tr><td>창구 방문</td><td>★★</td><td>당일~3일</td><td>고액 청구, 서류 복잡한 경우</td></tr>
+<tr><td>우편</td><td>★★</td><td>7~10일</td><td>팩스·앱 어려운 어르신</td></tr>
+</tbody>
+</table>
+
+<strong>모바일 앱 청구 방법</strong><br>
+① 가입한 보험사 앱을 설치하고 로그인<br>
+② '보험금 청구' 메뉴 선택<br>
+③ 진료 정보 입력 (병원명, 진료일, 병명)<br>
+④ 서류 사진 촬영 업로드 (영수증, 세부내역서)<br>
+⑤ 환급 계좌 입력 후 제출<br><br>
+
+대부분의 보험사가 모바일 앱 청구를 제공하며, 삼성화재·현대해상·DB손해보험·KB손해보험 등 주요 보험사는 소액 청구(30만 원 이하 내외)는 영수증 사진만으로 처리하는 간편 청구 서비스를 운영합니다.
+
+<h2>07 | 청구 후 처리 기간과 지급 과정</h2>
+
+보험금은 청구 접수 후 일반적으로 다음 절차를 거칩니다.
+
+<table class="info-table">
+<thead>
+<tr><th>단계</th><th>소요 기간</th><th>내용</th></tr>
+</thead>
+<tbody>
+<tr><td>접수 확인</td><td>즉시~1일</td><td>앱·팩스 접수 후 문자 발송</td></tr>
+<tr><td>서류 심사</td><td>2~5일</td><td>서류 검토, 추가 서류 요청 가능</td></tr>
+<tr><td>보험금 지급</td><td>3~10일</td><td>지급 결정 후 계좌 입금</td></tr>
+<tr><td>지급 불가 통보(거절 시)</td><td>3~10일</td><td>사유 문서로 통보</td></tr>
+</tbody>
+</table>
+
+보험업법에 따라 보험사는 청구 서류가 완비된 후 3영업일 이내에 지급하거나 지급 불가 사유를 통보해야 합니다. 이 기간을 넘기면 지연이자가 발생합니다.
+
+<h2>08 | 자주 거절되는 이유와 대처법</h2>
+
+실손보험 청구가 거절되는 주요 사유와 대처 방법을 정리합니다.<br><br>
+
+<strong>거절 사유 1. 서류 불충분</strong><br>
+세부 내역서 없이 영수증만 제출한 경우 반려될 수 있습니다. 세부 내역서를 병원에서 반드시 수령하세요.<br><br>
+
+<strong>거절 사유 2. 소멸시효 초과</strong><br>
+진료일로부터 3년이 지난 경우 지급 의무가 없습니다. 기간을 정확히 계산하세요.<br><br>
+
+<strong>거절 사유 3. 보장 제외 항목</strong><br>
+미용 목적 치료, 비만 치료, 영양제 처방 등은 보장 제외입니다. 약관을 확인하세요.<br><br>
+
+<strong>거절 시 이의 제기 방법</strong><br>
+보험사의 지급 거절 결정이 부당하다고 판단되면 ① 보험사 이의신청 → ② 금융감독원 민원(1332) → ③ 금융분쟁조정위원회 신청 순으로 단계적으로 이의를 제기할 수 있습니다.
+
+<h2>09 | 미청구 실손보험 찾는 방법</h2>
+
+내가 실손보험에 가입되어 있는지 모르거나, 오래전 가입한 보험을 잊어버린 경우가 있습니다.<br><br>
+
+<strong>내 보험 한눈에 확인하기</strong><br>
+금융감독원 통합연금포털(100lifeplan.fss.or.kr) 또는 보험다모아(e-insmarket.or.kr)에서 내가 가입한 보험 전체를 조회할 수 있습니다. 공인인증서(또는 간편 인증) 로그인 후 '내 보험 조회' 메뉴를 이용하면 됩니다.<br><br>
+
+<strong>숨어있는 보험금 찾기</strong><br>
+금융감독원 '내 보험 찾아줌' 서비스(cont.insure.or.kr)에서는 미수령 보험금을 조회할 수 있습니다. 본인 확인 후 청구하지 않은 보험금이 있는지 확인해보세요.<br><br>
+
+<div class="info-box">
+<strong>📌 청구 기한이 얼마 남지 않은 분들을 위한 행동 요령</strong><br>
+① 2023년 10월 이전 병원 영수증이 있다면 지금 바로 확인<br>
+② 없다면 병원에 연락해 재발급 요청<br>
+③ 영수증과 세부 내역서를 모아 보험사 앱으로 청구<br>
+④ 조제비가 있다면 처방전도 함께
+</div>
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260921/labor_weekly_holiday_pay.html">주휴수당 조건과 계산 방법 — 주 15시간 알바 시급별 계산표</a></li>
+<li><a href="../260921/pass_family_toll_discount.html">다자녀 고속도로 통행료 감면 신청 어디서 하나 — 대상 조건과 서류</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#실손보험청구</span>
+<span class="tag">#실손보험기한</span>
+<span class="tag">#소멸시효3년</span>
+<span class="tag">#보험금청구방법</span>
+<span class="tag">#병원비환급</span>
+<span class="tag">#실손보험서류</span>
+<span class="tag">#보험금거절대처</span>
+<span class="tag">#미청구보험금</span>
+</div>
+</body>
+</html>

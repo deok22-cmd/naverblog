@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>서울 불꽃축제 날 지하철 몇 시까지 다니나 — 교통통제 구간과 귀가 동선 완전 정리</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>서울 불꽃축제 날 지하철 몇 시까지 다니나 — 교통통제 구간과 귀가 동선 완전 정리</h1>
+<div class="intro-box">
+서울 세계불꽃축제는 매년 100만 명 이상이 몰리는 가을 대표 야경 이벤트입니다. 2026년에는 10월 3일(토, 개천절)에 여의도 한강공원 일대에서 개최될 예정입니다. 문제는 축제가 끝나는 밤 10시 전후, 100만 인파가 한꺼번에 귀가를 시작한다는 것입니다. 지하철은 몇 시까지 다니는지, 어떤 노선을 타야 덜 혼잡한지, 교통통제는 어느 구간에서 이루어지는지를 미리 파악하면 훨씬 수월하게 귀가할 수 있습니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📸 이미지 1 / 2</span><span class="ph-file">images/260923/5_fireworks_1.png</span></div>
+<div class="prompt-text" id="p5_1">서울 한강 불꽃축제 야경, 여의도 한강공원 위로 폭발하는 화려한 불꽃, 밤하늘과 서울 도심 야경, 실사 사진 스타일</div>
+<button class="copy-btn" onclick="copyPrompt('p5_1')">프롬프트 복사</button>
+</div>
+<div class="img-caption">서울 세계불꽃축제 — 매년 100만 명이 몰리는 가을 야경 대표 이벤트 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 2026 서울세계불꽃축제 기본 정보</h2>
+
+서울세계불꽃축제는 한화그룹이 주최하는 연례 행사로, 매년 10월 초 여의도 한강공원에서 열립니다. 2026년 행사는 개천절(10월 3일, 토요일)에 개최될 예정이며, 주요 정보는 다음과 같습니다.
+
+<table class="info-table">
+<thead>
+<tr><th>항목</th><th>내용</th></tr>
+</thead>
+<tbody>
+<tr><td>일시</td><td>2026년 10월 3일(토) 오후 7시~9시 30분 내외</td></tr>
+<tr><td>장소</td><td>여의도 한강공원 및 인근 한강 일대</td></tr>
+<tr><td>주최</td><td>한화그룹 (매년 변동 없음)</td></tr>
+<tr><td>입장료</td><td>무료 (일부 유료 관람석 별도)</td></tr>
+<tr><td>예상 관람객</td><td>100만 명 이상</td></tr>
+<tr><td>교통 통제</td><td>행사 당일 주변 도로 일부 통제</td></tr>
+</tbody>
+</table>
+
+<div class="warn-box">
+⚠️ 행사 일정·장소·교통 통제 구간은 주최측(한화) 및 서울시 공식 발표 기준으로 변경될 수 있습니다. 출발 전 한화 불꽃축제 공식 홈페이지(fireworks.hanwha.com)와 서울시 교통 정보 사이트(topis.seoul.go.kr)에서 최신 공지를 확인하세요.
+</div>
+
+<h2>02 | 지하철 임시 연장 운행 — 몇 시까지 다나</h2>
+
+서울시와 수도권 전철 운영사는 불꽃축제처럼 대규모 인파가 몰리는 행사 당일에 지하철 막차를 연장 운행합니다. 2025년 기준 불꽃축제 당일 임시 연장 운행 내역은 다음과 같습니다.
+
+<table class="info-table">
+<thead>
+<tr><th>노선</th><th>통상 막차</th><th>연장 운행 막차(예상)</th><th>비고</th></tr>
+</thead>
+<tbody>
+<tr><td>5호선 (여의나루역)</td><td>자정 전후</td><td>오전 1시~1시 30분</td><td>여의나루 → 상일동/마천 방향</td></tr>
+<tr><td>9호선 (국회의사당역)</td><td>자정 전후</td><td>오전 1시~1시 30분</td><td>개화·중앙보훈병원 방향 모두</td></tr>
+<tr><td>1호선</td><td>자정 전후</td><td>30분~1시간 연장</td><td>서울역 방면 환승 고려</td></tr>
+<tr><td>2호선</td><td>자정 전후</td><td>30분 연장 내외</td><td>당산역 환승 → 여의도 접근</td></tr>
+</tbody>
+</table>
+
+구체적인 연장 운행 시각은 행사 2~3일 전에 서울교통공사 공식 홈페이지(seoulmetro.co.kr)와 코레일 앱에 공지됩니다. 반드시 당해 연도 공지를 확인하세요.<br><br>
+
+<strong>핵심 포인트</strong>: 5호선 여의나루역과 9호선 국회의사당역이 가장 가깝습니다. 행사 종료(오후 9시 30분) 후 연장 운행 막차는 대략 오전 1시~1시 30분까지 운행하는 경우가 많습니다. 그러나 행사 종료 직후 30분~1시간은 두 역 모두 극도로 혼잡합니다.
+
+<h2>03 | 5호선·9호선 — 어느 역이 덜 혼잡한가</h2>
+
+행사 종료 후 5호선 여의나루역과 9호선 국회의사당역에는 수십만 명이 동시에 몰립니다. 경험자들의 후기를 종합하면 다음과 같습니다.
+
+<table class="info-table">
+<thead>
+<tr><th>항목</th><th>5호선 여의나루역</th><th>9호선 국회의사당역</th></tr>
+</thead>
+<tbody>
+<tr><td>행사장 거리</td><td>매우 가까움</td><td>가까움</td></tr>
+<tr><td>혼잡도</td><td>매우 높음 (1위)</td><td>높음 (2위)</td></tr>
+<tr><td>대기 시간</td><td>1~2시간</td><td>40분~1시간 30분</td></tr>
+<tr><td>급행 여부</td><td>없음</td><td>급행 있음</td></tr>
+<tr><td>환승 편의</td><td>보통</td><td>우수 (9호선 급행)</td></tr>
+</tbody>
+</table>
+
+혼잡을 피하고 싶다면 행사 종료 1시간 전 먼저 자리를 이동해 승차하거나, 행사 종료 후 30분~1시간을 한강공원에서 기다렸다가 인파가 빠진 뒤 역으로 향하는 전략이 효과적입니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📸 이미지 2 / 2</span><span class="ph-file">images/260923/5_fireworks_2.png</span></div>
+<div class="prompt-text" id="p5_2">서울 지하철 역 안에 사람들이 몰린 모습, 대규모 이벤트 이후 귀가 인파, 지하철 플랫폼 혼잡, 실사 스타일</div>
+<button class="copy-btn" onclick="copyPrompt('p5_2')">프롬프트 복사</button>
+</div>
+<div class="img-caption">행사 종료 후 지하철역 혼잡 — 미리 파악한 귀가 동선이 결정적 차이를 만듭니다 / AI 제작 이미지</div>
+</div>
+
+<h2>04 | 교통통제 구간과 시간대</h2>
+
+불꽃축제 당일에는 여의도 인근 도로 상당 부분이 통제됩니다. 일반적으로 적용되는 통제 구간은 다음과 같습니다.
+
+<table class="info-table">
+<thead>
+<tr><th>통제 구간</th><th>통제 시간(예상)</th><th>비고</th></tr>
+</thead>
+<tbody>
+<tr><td>여의도 한강공원 진입로</td><td>오후 5시~오후 11시</td><td>차량 진입 전면 통제</td></tr>
+<tr><td>여의대로 일부 구간</td><td>오후 6시~오후 10시</td><td>인도 개방, 차도 통제</td></tr>
+<tr><td>마포대교·원효대교 인근</td><td>오후 7시~오후 10시</td><td>부분 차량 통제</td></tr>
+<tr><td>63빌딩 앞 한강 둔치 진입로</td><td>오후 5시~오후 11시</td><td>차량 전면 통제</td></tr>
+</tbody>
+</table>
+
+자가용으로 여의도에 가는 것은 사실상 불가능합니다. 택시도 교통통제 구간 외부에서 내려주는 경우가 많아, 마지막 1~2km를 걸어야 할 수 있습니다. 당일은 처음부터 대중교통을 이용하는 것이 최선입니다.
+
+<h2>05 | 귀가 동선 3가지 비교</h2>
+
+100만 인파를 뚫고 귀가하는 현실적인 방법 세 가지를 비교합니다.
+
+<table class="info-table">
+<thead>
+<tr><th>방법</th><th>장점</th><th>단점</th><th>추천 대상</th></tr>
+</thead>
+<tbody>
+<tr><td>지하철 즉시 탑승</td><td>가장 빠른 이동</td><td>대기 1~2시간, 극도로 혼잡</td><td>체력 좋은 1~2인</td></tr>
+<tr><td>인파 빠질 때까지 대기 후 탑승</td><td>혼잡 회피</td><td>한강공원 1시간 추가 체류</td><td>가족·어르신 동반</td></tr>
+<tr><td>마포·당산 방향 도보 후 탑승</td><td>혼잡역 회피</td><td>20~30분 도보</td><td>체력 있는 분</td></tr>
+</tbody>
+</table>
+
+<strong>도보 우회 전략 상세</strong><br>
+여의나루역·국회의사당역이 극도로 혼잡할 때, 여의도에서 마포쪽으로 15~20분 걸으면 공덕역(5·6호선·공항철도·경의중앙선)에 닿을 수 있습니다. 또는 당산역(2·9호선)으로 걸어가면 상대적으로 덜 혼잡하게 탑승할 수 있습니다. 체력이 있다면 이 방법이 총 귀가 시간을 가장 단축합니다.
+
+<h2>06 | 관람 포인트 — 최적 자리는 어디</h2>
+
+<table class="info-table">
+<thead>
+<tr><th>관람 포인트</th><th>특징</th><th>혼잡도</th></tr>
+</thead>
+<tbody>
+<tr><td>여의도 한강공원 메인</td><td>정면 가장 가까운 뷰</td><td>매우 높음</td></tr>
+<tr><td>마포대교 북단(마포 쪽 한강공원)</td><td>강 건너 측면 뷰, 여유로움</td><td>중</td></tr>
+<tr><td>원효대교 남단 인근</td><td>넓은 앵글, 덜 혼잡</td><td>중</td></tr>
+<tr><td>63빌딩 일대</td><td>측면 뷰, 초고층 배경</td><td>높음</td></tr>
+<tr><td>서강대교 부근 마포구</td><td>멀어서 덜 붐빔, 전체 뷰</td><td>낮음</td></tr>
+</tbody>
+</table>
+
+<div class="tip-box">
+<strong>💡 SNS 인생샷 포인트</strong> — 여의도 대신 마포대교 북단에서 강 건너 불꽃을 촬영하면 서울 야경과 불꽃을 함께 담을 수 있고 혼잡도 피할 수 있습니다. 삼각대와 스마트폰 야경 모드를 활용하면 더욱 선명한 사진이 나옵니다.
+</div>
+
+<h2>07 | 주의사항과 안전 수칙</h2>
+
+100만 명이 동시에 모이는 행사에서 안전이 최우선입니다.<br><br>
+
+<strong>인파 안전</strong> — 군중 압착 사고 예방을 위해 항상 출구와 대피로를 확인하고, 혼잡한 곳에서는 팔을 가슴 앞으로 모아 공간을 확보하세요. 어린이는 반드시 손을 잡고 이동하며, 사전에 잃어버렸을 때 만날 약속 장소를 정해두세요.<br><br>
+
+<strong>음주</strong> — 한강공원은 음주 가능 구역이 제한되어 있습니다. 행사 당일 음주 제한 구역과 금연 구역을 확인하세요.<br><br>
+
+<strong>쓰레기</strong> — 대규모 행사 후 쓰레기 문제가 심각합니다. 개인 쓰레기는 반드시 수거해서 가져가세요. 분리수거 봉투를 미리 챙기면 편리합니다.<br><br>
+
+<strong>자전거·킥보드</strong> — 행사 당일 한강공원 내 자전거·전동킥보드 이용이 제한될 수 있습니다. 사전 공지를 확인하세요.
+
+<h2>08 | 행사 전날 미리 챙겨야 할 것</h2>
+
+<table class="info-table">
+<thead>
+<tr><th>항목</th><th>확인</th><th>메모</th></tr>
+</thead>
+<tbody>
+<tr><td>지하철 연장 운행 공지 확인</td><td>☐</td><td>seoulmetro.co.kr</td></tr>
+<tr><td>교통통제 구간 최신 공지 확인</td><td>☐</td><td>topis.seoul.go.kr</td></tr>
+<tr><td>관람 장소 사전 답사 또는 지도 확인</td><td>☐</td><td>귀가 동선도 함께</td></tr>
+<tr><td>방한 의류 준비</td><td>☐</td><td>10월 밤 한강 기온 10~15°C</td></tr>
+<tr><td>돗자리·방석 준비</td><td>☐</td><td>잔디 위 장시간 대기용</td></tr>
+<tr><td>배터리·보조 배터리 충전</td><td>☐</td><td>스마트폰 야경 촬영용</td></tr>
+<tr><td>현금·교통카드 잔액 확인</td><td>☐</td><td>혼잡 시 충전 불편</td></tr>
+<tr><td>어린이 동반 시 만남 장소 사전 약속</td><td>☐</td><td>이름·전화번호 옷에 부착도 효과적</td></tr>
+</tbody>
+</table>
+
+<h2>09 | 근처 편의시설 정보</h2>
+
+<strong>편의점</strong> — 여의도 한강공원 내 편의점은 행사 당일 극도로 혼잡합니다. 음식과 음료는 미리 준비해서 가는 것이 좋습니다.<br><br>
+
+<strong>화장실</strong> — 한강공원 내 화장실은 다수 있지만 인파가 몰리는 행사 종료 전후에는 대기 시간이 길어집니다. 입장 후 일찍 위치를 파악해두세요. 이동형 화장실이 추가 설치되는 경우가 많습니다.<br><br>
+
+<strong>응급 의료소</strong> — 대규모 행사 당일에는 응급처치팀과 의료소가 행사 구역 내에 배치됩니다. 위치는 현장 안내 지도 또는 행사 진행 요원에게 문의하세요.<br><br>
+
+<strong>분실물 센터</strong> — 행사 종료 후 여의도 한강공원 안내소 또는 주최측 부스에 분실물 센터가 운영됩니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260921/hot_armed_forces_day_airshow.html">국군의 날 에어쇼 2026 어디서 보나 — 행사장·교통통제·관람 방법</a></li>
+<li><a href="../260921/pass_family_toll_discount.html">다자녀 고속도로 통행료 감면 신청 어디서 하나 — 대상 조건과 서류</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#서울불꽃축제</span>
+<span class="tag">#불꽃축제지하철</span>
+<span class="tag">#여의도불꽃축제</span>
+<span class="tag">#한화불꽃축제</span>
+<span class="tag">#불꽃축제교통통제</span>
+<span class="tag">#서울10월행사</span>
+<span class="tag">#귀가동선</span>
+<span class="tag">#한강공원</span>
+</div>
+</body>
+</html>

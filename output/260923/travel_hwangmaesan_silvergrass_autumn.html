@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>황매산 억새밭 언제 절정인가 — 합천·산청 가을 억새 드라이브와 해인사 연계</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #004d40; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf9; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #b2dfdb; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #00796b; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #b2dfdb; border-left: 4px solid #00796b; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #00796b; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#00796b'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>황매산 억새밭 언제 절정인가 — 합천·산청 가을 억새 드라이브와 해인사 연계</h1>
+<div class="intro-box">
+황매산(黃梅山)은 경남 합천과 산청에 걸쳐 있는 해발 1,108m의 산으로, 봄에는 철쭉, 가을에는 억새로 전국적 명성을 얻은 곳입니다. 정상 일대 60만 평에 달하는 억새밭이 10월 중순에 황금빛으로 물들면, 차도가 있는 황매평전까지 드라이브로 올라가 발 아래 펼쳐지는 황금 물결을 감상할 수 있습니다. 여기에 가야산 기슭의 해인사까지 더하면 억새와 단풍, 문화유산을 하루에 모두 즐기는 경남 가을 코스가 완성됩니다. 억새 절정 시기와 두 산 접근 방법, 드라이브 포인트를 자세히 안내합니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📸 이미지 1 / 3</span><span class="ph-file">images/260923/3_hwangmaesan_1.png</span></div>
+<div class="prompt-text" id="p3_1">황매산 정상 억새밭 전경, 황금빛 억새가 능선을 가득 채운 가을 풍경, 구름과 파란 하늘, 드라이브 도로가 보이는 원경, 실사 사진 스타일</div>
+<button class="copy-btn" onclick="copyPrompt('p3_1')">프롬프트 복사</button>
+</div>
+<div class="img-caption">황매산 억새밭 전경 — 60만 평 황금빛 물결, 경남 최고의 가을 드라이브 코스 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 황매산이란 — 봄 철쭉에서 가을 억새까지</h2>
+
+황매산(黃梅山, 1,108m)은 경상남도 합천군 가회면과 산청군 차황면에 걸쳐 있는 산입니다. 이름의 '황매(黃梅)'는 노란 매화를 뜻하지만, 실제로 이 산을 유명하게 만든 것은 매화가 아니라 두 가지 꽃입니다. 5월이면 정상 일대가 진분홍 철쭉으로 뒤덮이고, 10월이면 황금빛 억새로 바뀝니다. 덕분에 봄과 가을, 연간 두 번의 절정 시즌에 전국에서 방문객이 몰리는 경남 대표 명산이 되었습니다.<br><br>
+
+황매산의 가장 큰 장점은 차로 정상 가까이 오를 수 있다는 점입니다. 황매산 순환도로(약 5.5km)를 따라 차를 타고 황매평전까지 올라가면 도보 없이도 억새밭 한가운데를 경험할 수 있습니다. 등산이 힘든 어르신이나 어린 아이와 함께 온 가족 여행객도 충분히 즐길 수 있는 이유입니다.<br><br>
+
+해발 800~900m에 형성된 황매평전 일대는 사방이 탁 트인 고원 분지 지형으로, 억새가 군락을 이루기 좋은 환경입니다. 60만 평에 달하는 억새밭이 바람에 일렁이는 모습은 보는 사람마다 감탄사를 자아냅니다.
+
+<h2>02 | 억새 절정 시기 예측 — 해발 1,108m 기준</h2>
+
+황매산 억새는 화왕산·대봉산 등 다른 경남 억새 명소와 비교했을 때 해발 고도가 중간 정도여서, 절정 시기는 해마다 조금씩 다르지만 대체로 10월 중순이 가장 좋습니다.
+
+<table class="info-table">
+<thead>
+<tr><th>시기</th><th>억새 상태</th><th>방문 적합도</th><th>메모</th></tr>
+</thead>
+<tbody>
+<tr><td>9월 하순</td><td>초기 황금빛 시작</td><td>보통</td><td>일부 구간 이름, 전체 약 40%</td></tr>
+<tr><td>10월 1~7일</td><td>절정 진입</td><td>양호</td><td>60~70% 황금색</td></tr>
+<tr><td>10월 8~20일</td><td><strong>절정 (최적)</strong></td><td>최적</td><td>80~100%, 억새 축제 기간</td></tr>
+<tr><td>10월 21~31일</td><td>절정 후반</td><td>양호</td><td>억새 일부 쓰러짐, 단풍 혼재</td></tr>
+<tr><td>11월 초</td><td>억새 말기</td><td>보통</td><td>갈색 변화, 가야산 단풍과 혼재</td></tr>
+</tbody>
+</table>
+
+합천군에서는 억새 절정 시기에 황매산 억새제(황매산군립공원 관리사무소 주관)를 운영하는 경우가 많습니다. 행사 기간에는 주차·교통통제가 강화되므로 사전에 합천군 문화관광과(055-930-3831)에 문의하거나 합천군 공식 관광 홈페이지를 확인하세요.
+
+<div class="tip-box">
+<strong>💡 베스트 방문 전략</strong> — 억새제 기간 주말은 주차 만차가 4~5시간씩 지속됩니다. 평일 방문이 어렵다면 토요일 오전 7~8시에 도착하거나, 억새제가 끝난 직후 주말(10월 셋째 주 이후)을 노리면 혼잡을 피해 비교적 여유롭게 즐길 수 있습니다.
+</div>
+
+<h2>03 | 황매산 코스 2가지 — 드라이브 vs 정상 등산</h2>
+
+<strong>코스 A: 황매평전 드라이브 코스 (1~2시간)</strong><br>
+합천 또는 산청 쪽 진입로에서 황매산 순환도로를 따라 차로 올라가, 황매평전 주차장에 차를 세우고 억새밭 사이 산책로를 걷는 코스입니다. 전체 도보 거리 1~2km, 오르막 거의 없음. 어르신·유모차·반려견 동반 여행객에게 가장 인기 있는 방법입니다.<br><br>
+
+<strong>코스 B: 정상 등산 코스 (3~4시간)</strong><br>
+황매산 정상(1,108m)까지 등산하는 코스입니다. 합천 가회면 쪽에서 출발하는 황매산군립공원 등산로가 일반적입니다. 정상에서 보이는 360도 파노라마 — 지리산·덕유산·가야산이 한꺼번에 보이는 조망 — 은 드라이브 코스에서는 맛볼 수 없는 경험입니다. 체력이 좋다면 정상 등산 + 내려오는 길에 황매평전 드라이브 조합을 추천합니다.
+
+<table class="info-table">
+<thead>
+<tr><th>항목</th><th>드라이브 코스</th><th>정상 등산 코스</th></tr>
+</thead>
+<tbody>
+<tr><td>소요 시간</td><td>1~2시간</td><td>3~4시간</td></tr>
+<tr><td>난이도</td><td>매우 쉬움</td><td>중~상</td></tr>
+<tr><td>체력 부담</td><td>거의 없음</td><td>있음</td></tr>
+<tr><td>조망</td><td>황매평전 파노라마</td><td>360도 파노라마</td></tr>
+<tr><td>가족 적합도</td><td>매우 높음</td><td>보통</td></tr>
+</tbody>
+</table>
+
+<h2>04 | 합천 쪽 접근 vs 산청 쪽 접근</h2>
+
+황매산은 합천군과 산청군 두 군에 걸쳐 있어 접근 방향이 두 가지입니다. 어느 쪽에서 올라가느냐에 따라 주차장과 순환도로 진입 방향이 달라집니다.
+
+<table class="info-table">
+<thead>
+<tr><th>항목</th><th>합천 방면 진입</th><th>산청 방면 진입</th></tr>
+</thead>
+<tbody>
+<tr><td>네비 검색어</td><td>황매산 군립공원(합천)</td><td>황매산(산청)</td></tr>
+<tr><td>고속도로</td><td>중부내륙고속도로 합천IC</td><td>남해고속도로 단성IC</td></tr>
+<tr><td>부산 거리</td><td>약 1시간 30분</td><td>약 1시간 40분</td></tr>
+<tr><td>서울 거리</td><td>약 3시간</td><td>약 3시간</td></tr>
+<tr><td>주차장 규모</td><td>큼 (500대 이상)</td><td>중간</td></tr>
+<tr><td>해인사 연계</td><td>쉬움 (합천 → 해인사)</td><td>불편 (우회 필요)</td></tr>
+</tbody>
+</table>
+
+해인사와 함께 방문할 계획이라면 합천 방면 진입 후 합천댐 → 해인사 코스가 자연스럽습니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📸 이미지 2 / 3</span><span class="ph-file">images/260923/3_hwangmaesan_2.png</span></div>
+<div class="prompt-text" id="p3_2">황매산 순환도로에서 바라본 억새밭과 산 능선, 도로 옆 황금색 억새, 가을 드라이브 분위기, 실사 스타일</div>
+<button class="copy-btn" onclick="copyPrompt('p3_2')">프롬프트 복사</button>
+</div>
+<div class="img-caption">황매산 순환도로 드라이브 — 차 안에서 즐기는 황금빛 억새 파노라마 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 해인사 연계 코스 — 억새와 팔만대장경 한 번에</h2>
+
+합천에 왔다면 해인사(海印寺)를 빼놓을 수 없습니다. 황매산에서 해인사까지는 차로 약 40~50분 거리입니다. 합천댐 호수 경관을 따라 드라이브하면 가는 길 자체도 풍경이 좋습니다.<br><br>
+
+해인사는 팔만대장경(국보)을 보관한 법보사찰로, 가야산 국립공원 내에 자리 잡고 있습니다. 10월 중순이면 해인사 일주문에서 법당 앞까지 이어지는 1km 길의 단풍이 절정에 달합니다. 황매산 억새의 황금빛과 해인사 단풍의 붉은빛을 같은 날 경험하는 것은 경남 가을 여행의 백미라 할 수 있습니다.<br><br>
+
+해인사 입장료: 성인 3,000원 / 청소년 1,500원 / 어린이 700원. 주차장은 해인사 입구 유료 주차장 이용(약 3,000원/회). 관람 시간은 오전 7시~오후 6시.
+
+<h2>06 | 주차장과 교통 정보</h2>
+
+<strong>황매산 주차</strong><br>
+황매산은 억새 시즌 주말에 심각한 주차난이 발생합니다. 황매평전 주차장(합천 측 400대, 산청 측 150대 규모)이 오전 9~10시면 만차가 되는 경우가 많습니다. 일부 해에는 셔틀버스를 운행해 아래 주차장에서 황매평전까지 이동하도록 하기도 합니다.<br><br>
+
+주차비는 합천 측 기준 소형 기준 약 2,000~4,000원(연도별 변동). 주차장 요금 및 셔틀버스 운행 여부는 합천군청 관광과에 사전 문의하세요.<br><br>
+
+<strong>대중교통</strong><br>
+합천 시외버스터미널에서 가회면 방면 군내버스 이용. 배차 간격이 넓어 렌터카나 택시를 이용하는 것이 현실적입니다. 서울·부산에서 당일치기 패키지 관광버스도 억새 시즌에 운행합니다.
+
+<h2>07 | 황매산 입장료 및 운영 정보</h2>
+
+<table class="info-table">
+<thead>
+<tr><th>항목</th><th>내용</th></tr>
+</thead>
+<tbody>
+<tr><td>입장료(황매산군립공원)</td><td>성인 1,000원 / 청소년·어린이 700원</td></tr>
+<tr><td>억새제 기간</td><td>통상 10월 둘째~셋째 주말 (연도별 변경)</td></tr>
+<tr><td>순환도로 개방</td><td>억새 시즌 9~11월, 동절기 폐쇄</td></tr>
+<tr><td>문의</td><td>황매산군립공원 관리사무소 055-930-3831</td></tr>
+</tbody>
+</table>
+
+<h2>08 | 인근 먹거리와 숙박</h2>
+
+<strong>합천 먹거리</strong><br>
+합천은 내륙 산악 지역 특성상 한우·산나물·더덕 요리가 유명합니다. 합천 시내에는 한우 전문 식당들이 있으며, 해인사 입구 식당가에서는 산채비빔밥과 버섯전골을 맛볼 수 있습니다.<br><br>
+
+<strong>합천댐 호수 주변 카페</strong><br>
+합천댐 주변에 경치 좋은 카페들이 생겼습니다. 황매산 방문 후 합천댐 호수를 바라보며 커피 한 잔을 즐기는 코스도 인기입니다.<br><br>
+
+<strong>숙박</strong><br>
+합천 시내 모텔과 펜션들이 있으나 억새 절정 시기 주말에는 예약이 빠릅니다. 가야산 해인사 인근의 펜션·민박도 옵션입니다. 1박 여행이라면 해인사 인근 숙소 + 이튿날 황매산 코스로 여유롭게 즐기는 것도 좋습니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📸 이미지 3 / 3</span><span class="ph-file">images/260923/3_hwangmaesan_3.png</span></div>
+<div class="prompt-text" id="p3_3">합천 해인사 단풍, 일주문으로 이어지는 단풍 터널, 붉은 단풍과 절 건물, 가을 정취, 실사 사진 스타일</div>
+<button class="copy-btn" onclick="copyPrompt('p3_3')">프롬프트 복사</button>
+</div>
+<div class="img-caption">합천 해인사 가을 단풍 — 황매산 억새와 함께하는 경남 가을 2대 명소 / AI 제작 이미지</div>
+</div>
+
+<h2>09 | 가을 억새 여행 준비 체크리스트</h2>
+
+<table class="info-table">
+<thead>
+<tr><th>항목</th><th>확인</th><th>메모</th></tr>
+</thead>
+<tbody>
+<tr><td>억새 절정 시기 확인</td><td>☐</td><td>합천군청 055-930-3831</td></tr>
+<tr><td>억새제 날짜·주차 통제 확인</td><td>☐</td><td>당해 연도 공지 확인 필수</td></tr>
+<tr><td>오전 8시 이전 도착 목표</td><td>☐</td><td>주말 주차 전쟁 대비</td></tr>
+<tr><td>방풍 재킷·방한 의류</td><td>☐</td><td>고지대 기온 10°C 내외</td></tr>
+<tr><td>트레킹화·미끄럼 방지 신발</td><td>☐</td><td>초지 구간 미끄러울 수 있음</td></tr>
+<tr><td>해인사 방문 계획</td><td>☐</td><td>합천에서 40~50분</td></tr>
+<tr><td>숙박 예약(1박 시)</td><td>☐</td><td>10월 주말 조기 마감</td></tr>
+<tr><td>간식·식수 준비</td><td>☐</td><td>황매평전 매점 운영 여부 확인</td></tr>
+</tbody>
+</table>
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260921/travel_hwawangsan_silvergrass_autumn.html">창녕 화왕산 억새밭 절정은 언제인가 — 가을 등산 코스와 정상 전망</a></li>
+<li><a href="../260921/travel_hallasan_first_fall_foliage.html">한라산 단풍 언제 시작하나 — 고지대 색 변화와 영실·어리목 탐방 예약법</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#황매산</span>
+<span class="tag">#황매산억새</span>
+<span class="tag">#합천여행</span>
+<span class="tag">#산청여행</span>
+<span class="tag">#가을억새</span>
+<span class="tag">#경남드라이브</span>
+<span class="tag">#해인사단풍</span>
+<span class="tag">#억새절정시기</span>
+</div>
+</body>
+</html>
