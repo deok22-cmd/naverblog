@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>상주 측 계좌 안내 문자 어떻게 보내나 — 부고 문자 예시와 조의금 이체 안내 문구</title>
+<style>
+  body { margin: 0 auto; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+  .text-example { background: #f5f5f5; border: 1px solid #ddd; border-radius: 6px; padding: 16px 20px; margin: 16px 0; font-size: 0.92em; line-height: 2.0; white-space: pre-line; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector('button[onclick="copyPrompt(\''+id+'\')"]');
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>상주 측 계좌 안내 문자 어떻게 보내나 — 부고 문자 예시와 조의금 이체 안내 문구</h1>
+
+<div class="intro-box">
+부고 소식을 전하면서 조의금 계좌를 함께 안내하는 문자를 처음 보내야 하는 상황이 생각보다 당황스럽습니다.<br><br>
+어떤 말투로 써야 하는지, 계좌 정보를 어디에 어떻게 넣어야 하는지, 상주가 직접 보내도 되는 건지 막막한 경우가 많습니다.<br><br>
+이 글에서는 부고 문자에 계좌 안내를 추가하는 방법, 문자 예시 모음, 카카오페이·토스 활용법, 그리고 주의사항을 정리합니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 1 / 2</span><span class="ph-file">images/260924/6_mourner_1.png</span></div>
+<div class="prompt-text" id="p6_1">스마트폰 화면에 부고 문자 메시지를 작성하는 손. 차분하고 어두운 톤의 배경, 흰 문자 입력 화면. 전통적이고 정중한 분위기의 장례식 관련 이미지. 4:3, 사진 현실감.</div>
+<button class="copy-btn" onclick="copyPrompt('p6_1')">프롬프트 복사</button>
+</div>
+<div class="img-caption">부고 문자 작성 — 정중한 안내가 상주의 부담을 덜어준다 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 상주 측 계좌 안내가 왜 필요한가</h2>
+
+코로나19 이후 비대면 조문이 확산되면서 <strong>직접 방문 대신 계좌 이체로 조의금을 전달하는 비율이 크게 늘었습니다.</strong><br><br>
+이로 인해 부고 연락을 받자마자 조의금 이체 방법을 묻는 경우가 많아졌고, 상주 측에서 먼저 계좌를 안내하는 것이 오히려 조문객의 부담을 줄여주는 관행으로 자리 잡았습니다.<br><br>
+상주가 직접 계좌 정보를 문자로 보내는 것은 현재 관행상 전혀 실례가 아닙니다. 오히려 안내를 받지 못한 지인이 어떻게 해야 할지 몰라 난감해지는 것을 방지합니다.<br><br>
+계좌 안내 방식은 크게 두 가지입니다: <strong>부고 문자에 계좌를 직접 포함하는 방법</strong>과 <strong>부고 문자와 별도로 계좌 안내 문자를 보내는 방법</strong>입니다.
+
+<h2>02 | 부고 문자에 계좌를 넣는 방법</h2>
+
+부고 문자는 기본적으로 고인의 인적사항과 장례식장 정보, 발인 시각을 포함합니다. 여기에 계좌 안내를 추가하는 방식은 두 가지입니다.
+
+<table class="info-table">
+<tr><th>방식</th><th>장단점</th><th>적합 상황</th></tr>
+<tr><td>부고 문자 안에 계좌 포함</td><td>한 번에 전달, 문자 길이 늘어남</td><td>짧은 연락처 목록, 즉시 공유 필요 시</td></tr>
+<tr><td>부고 문자 + 별도 계좌 안내 문자</td><td>내용 분리가 명확, 문자 두 번 발송</td><td>연락처가 많거나 단체 문자 발송 시</td></tr>
+<tr><td>카카오페이·토스 링크 첨부</td><td>입금 확인 편리, 앱 이용 필요</td><td>모바일 친숙한 지인 그룹에 적합</td></tr>
+</table>
+
+<h2>03 | 계좌 안내 문자 예시 모음</h2>
+
+아래 예시는 상황에 맞게 이름·은행·계좌번호를 변경해서 사용하세요.
+
+<h3>예시 1 — 부고 문자에 계좌 포함 (표준형)</h3>
+<div class="text-example">부고 말씀 드립니다.
+
+저희 [관계: 아버지/어머니/부친/모친] [고인 성함]께서
+[날짜]에 별세하셨습니다.
+
+■ 빈소: [장례식장명] [호실]
+■ 발인: [날짜] 오전/오후 [시각]
+■ 장지: [묘지/화장장 등]
+
+부의금 계좌 안내
+[은행명] [계좌번호] 예금주: [상주 이름]
+
+[상주 이름] 드림</div>
+
+<h3>예시 2 — 계좌만 별도로 안내하는 문자</h3>
+<div class="text-example">[상주 이름]입니다.
+조의를 표해주셔서 감사합니다.
+
+조의금 계좌를 안내드립니다.
+[은행명] [계좌번호]
+예금주: [이름]
+
+이체 시 '성함+조의'로 입력해 주시면
+확인하는 데 도움이 됩니다.
+감사합니다.</div>
+
+<h3>예시 3 — 직장 동료 또는 지인에게 보내는 간단형</h3>
+<div class="text-example">안녕하세요, [이름]입니다.
+저희 [관계]께서 별세하셨습니다.
+
+조문이 어려우신 분들을 위해
+계좌 정보를 안내드립니다.
+[은행] [계좌번호] (예금주: [이름])
+
+감사합니다.</div>
+
+<h2>04 | 조의금 이체 확인 방법</h2>
+
+계좌로 조의금이 들어오면 입금 내역을 확인하고 감사 인사를 전하는 것이 예의입니다.<br><br>
+<strong>입금자명 확인</strong>: 이체 시 입금자명을 "성함+조의"처럼 입력해달라고 안내하면, 누가 보냈는지 파악하기 쉽습니다. 나중에 답례 연락을 할 때도 도움이 됩니다.<br><br>
+<strong>은행 앱 알림</strong>: 스마트폰 은행 앱의 입금 알림을 켜두면 실시간으로 확인할 수 있습니다. 장례 기간 동안 상주가 직접 확인이 어렵다면 가족 중 한 명이 담당하는 것이 좋습니다.<br><br>
+<strong>조문록과 대조</strong>: 직접 조문한 분과 이체로 조의를 전한 분 목록을 함께 정리해두면 나중에 답례 연락에 누락이 없습니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 2 / 2</span><span class="ph-file">images/260924/6_mourner_2.png</span></div>
+<div class="prompt-text" id="p6_2">장례식장 빈소 내부의 차분한 분위기. 국화꽃이 놓인 조문 테이블, 조문객 방명록, 하얀 국화. 절제되고 정숙한 장례식장 이미지, 따뜻한 조명. 4:3.</div>
+<button class="copy-btn" onclick="copyPrompt('p6_2')">프롬프트 복사</button>
+</div>
+<div class="img-caption">장례식장 조문 — 방문이 어려운 분들을 위한 계좌 이체 안내가 현대 장례 관행으로 자리잡았다 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 카카오페이·토스 조의금 기능 활용</h2>
+
+스마트폰 활용에 익숙한 지인 그룹에는 카카오페이의 '부의금 모으기' 또는 토스의 송금 링크를 활용하는 것도 편리합니다.<br><br>
+<strong>카카오페이 송금 링크</strong>: 카카오페이 앱에서 '송금 링크 만들기'를 이용하면 카카오톡으로 공유 가능한 링크를 생성할 수 있습니다. 받는 사람이 카카오페이 계정이 없어도 링크를 통해 이체가 가능합니다.<br><br>
+<strong>토스 송금 링크</strong>: 토스 앱에서 '링크로 받기'를 이용해 송금 링크를 생성할 수 있습니다. 링크를 클릭하면 토스 앱이나 웹으로 연결되어 이체됩니다.<br><br>
+이런 방법은 계좌번호를 직접 입력하지 않아도 되어 편리하지만, 연령대가 높은 어르신들에게는 계좌 직접 이체 안내가 더 친숙할 수 있습니다.
+
+<h2>06 | 계좌 안내 시 주의사항</h2>
+
+<div class="step-box">
+<strong>꼭 지켜야 할 사항</strong><br>
+☑ 예금주 이름이 맞는지 확인 (보통 상주 본인 계좌 사용)<br>
+☑ 계좌번호 오타 확인 (한 자리라도 잘못되면 이체 오류)<br>
+☑ 다자녀·여러 형제인 경우 누구 계좌로 통일할지 가족 간 협의<br>
+☑ 이체 한도 제한 없는 계좌인지 확인 (일부 인터넷 전용 계좌 한도 확인)
+</div>
+
+<div class="tip-box">
+<strong>💡 문자 발송 타이밍</strong><br>
+부고 문자는 별세 직후 빠르게 보내는 것이 좋습니다. 계좌 안내를 함께 보낼 것인지, 별도로 보낼 것인지를 미리 가족 간에 결정해두면 혼란을 줄일 수 있습니다.
+</div>
+
+<h2>07 | 장례식장 현장과 이체 병행</h2>
+
+직접 조문 온 분들은 현장에서 조의금을 전달하고, 방문이 어려운 분들은 이체로 받는 방식을 병행하는 것이 일반적입니다.<br><br>
+<strong>현장 조의금 관리</strong>: 장례식장에는 보통 조의금 봉투와 방명록이 준비되어 있습니다. 현장 수납 담당자를 지정해 두는 것이 혼선을 줄입니다.<br><br>
+<strong>이체 내역 기록</strong>: 이체받은 조의금은 장례 후 가족이 함께 확인하고, 고마운 분들 목록을 기록해 두는 것이 좋습니다. 나중에 답례 인사나 결혼·경조사 때 기준이 됩니다.
+
+<h2>08 | 부고 문자 전체 예시 템플릿 (복사 활용)</h2>
+
+<div class="text-example">부고 드립니다.
+
+고인  : [고인 성함] ([생년월일])
+가족  : 상주 [이름] (고인과 관계)
+별세일: [연도]년 [월]일 [시각]
+
+■ 빈소  : [장례식장명 및 호수]
+            [주소]
+■ 발인  : [날짜] 오전 [시각]
+■ 장지  : [묘지 또는 화장장]
+
+───────────────────
+ 부의금 계좌 안내
+ [은행명] [계좌번호]
+ 예금주: [이름]
+───────────────────
+
+조문 시간: [오전 00시 ~ 익일 발인 전]
+문의: [연락처]
+
+[상주 이름] 드림</div>
+
+<h2>09 | 자주 묻는 질문</h2>
+
+<strong>Q. 상주가 직접 계좌를 안내해도 예의에 어긋나지 않나요?</strong><br>
+현재는 거의 보편화된 관행입니다. 오히려 안내를 하지 않으면 조문 의사가 있는 분들이 어떻게 해야 할지 몰라 불편을 겪습니다.<br><br>
+<strong>Q. 계좌 안내를 카톡 단체 메시지로 보내도 되나요?</strong><br>
+네, 가능합니다. 카카오톡 단체방 또는 단체 문자로 보내는 것이 일반적입니다. 부고를 받은 분들이 이미 한 그룹 안에 있다면 단체 발송이 효율적입니다.<br><br>
+<strong>Q. 이체 후 답례는 어떻게 하나요?</strong><br>
+장례 후 별도의 감사 문자를 보내는 것이 예의입니다. "바쁘신 가운데 조의를 표해 주셔서 감사드립니다" 형태의 짧은 문자로 충분합니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260923/rite_parents_anniversary_gift.html">부모님 기념일 선물 — 상황별 고르는 법</a></li>
+<li><a href="../260923/ins_silsohn_claim_deadline.html">실손보험 청구 기한과 서류 준비 방법</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<span class="tag">#부고문자</span>
+<span class="tag">#조의금계좌</span>
+<span class="tag">#상주계좌안내</span>
+<span class="tag">#장례문자</span>
+<span class="tag">#조의금이체</span>
+<span class="tag">#부고안내문자예시</span>
+<span class="tag">#장례절차</span>
+</div>
+</body>
+</html>

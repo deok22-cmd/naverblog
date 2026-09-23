@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>셀프 도배 비용 얼마 — 방 1칸 자재 계산표와 업체 견적 비교</title>
+<style>
+  body { margin: 0 auto; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector('button[onclick="copyPrompt(\''+id+'\')"]');
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>셀프 도배 비용 얼마 — 방 1칸 자재 계산표와 업체 견적 비교</h1>
+
+<div class="intro-box">
+도배를 업체에 맡기면 비용이 얼마나 드는지, 직접 하면 얼마나 절약되는지 궁금해하는 분들이 많습니다.<br><br>
+방 1칸(약 10~12㎡ 기준) 기준으로 셀프 도배 자재비는 약 3~6만 원, 업체 시공 시 인건비 포함 7~15만 원 수준입니다(재검증, 지역·자재·업체 등급에 따라 변동).<br><br>
+이 글에서는 방 크기별 도배지 롤 계산 방법, 자재 목록, 셀프 시공 순서, 업체 견적 비교 방법을 정리합니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 1 / 2</span><span class="ph-file">images/260924/7_wallpaper_1.png</span></div>
+<div class="prompt-text" id="p7_1">셀프 도배 작업 중인 사람. 방 벽에 흰색 벽지를 붙이고 있는 손과 도배 솔, 풀 바른 벽지 롤이 바닥에 있음. 깔끔한 실내 작업 환경. 사진 현실감, 4:3.</div>
+<button class="copy-btn" onclick="copyPrompt('p7_1')">프롬프트 복사</button>
+</div>
+<div class="img-caption">셀프 도배 작업 — 자재비와 시간을 투자하면 인건비를 절약할 수 있다 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 셀프 도배 vs 업체 시공 — 한눈에 비교</h2>
+
+<table class="info-table">
+<tr><th>구분</th><th>셀프 도배</th><th>업체 시공</th></tr>
+<tr><td>방 1칸 비용</td><td>자재비 3~6만 원</td><td>7~15만 원 (인건비 포함, 재검증)</td></tr>
+<tr><td>소요 시간</td><td>초보자 기준 4~6시간</td><td>전문 기사 1~2시간</td></tr>
+<tr><td>품질</td><td>솜씨에 따라 편차 큼</td><td>마감 품질 안정적</td></tr>
+<tr><td>자재 선택</td><td>직접 선택 가능</td><td>업체 권장 자재 또는 직접 구매 후 의뢰</td></tr>
+<tr><td>추천 대상</td><td>1인실·창고 등 소형 공간</td><td>안방·거실 등 주요 공간</td></tr>
+</table>
+
+<strong>핵심 판단 기준</strong>: 공간이 작고 마감 품질에 크게 연연하지 않는다면 셀프도 충분합니다. 거실이나 안방처럼 마감이 눈에 잘 보이는 공간은 업체에 맡기는 것이 후회가 적습니다.
+
+<h2>02 | 방 1칸 도배지 롤 계산 방법</h2>
+
+도배지 한 롤의 치수는 제품마다 다르지만 일반 합지(단색 벽지) 기준 보통 <strong>폭 53cm × 길이 12m 또는 폭 106cm × 길이 12m</strong>가 많습니다. 실크 벽지는 폭이 더 넓은 경우가 있습니다.<br><br>
+<strong>간단 롤 계산 공식</strong>: 방의 둘레(벽 전체 길이) × 천장 높이 ÷ 1롤 면적 × 1.1(여유분 10%)
+
+<table class="info-table">
+<tr><th>방 크기</th><th>벽 면적 (대략)</th><th>필요 롤 수 (합지 기준)</th></tr>
+<tr><td>3평 (약 10㎡)</td><td>약 30~35㎡ (벽+천장)</td><td>6~8롤</td></tr>
+<tr><td>5평 (약 16㎡)</td><td>약 45~55㎡</td><td>9~12롤</td></tr>
+<tr><td>8평 (약 26㎡, 거실 기준)</td><td>약 65~80㎡</td><td>13~17롤</td></tr>
+</table>
+
+<strong>주의</strong>: 천장 도배 포함 여부, 문·창문 위치에 따라 실제 롤 수는 달라집니다. 여유분 10~15%를 더 여유롭게 잡는 것이 좋습니다. 남은 벽지는 나중에 보수용으로 보관하세요.
+
+<h2>03 | 셀프 도배 자재 목록과 비용표</h2>
+
+<table class="info-table">
+<tr><th>자재</th><th>용도</th><th>참고 가격 (재검증)</th></tr>
+<tr><td>합지 벽지</td><td>벽·천장 마감</td><td>롤당 5,000~10,000원</td></tr>
+<tr><td>실크 벽지</td><td>고급 마감</td><td>롤당 15,000~30,000원</td></tr>
+<tr><td>도배풀 (분말)</td><td>벽지 접착</td><td>1~2kg 기준 5,000~8,000원</td></tr>
+<tr><td>도배 솔 (솔/스펀지 롤러)</td><td>풀 바름 및 밀착</td><td>5,000~10,000원</td></tr>
+<tr><td>스크레이퍼·커터</td><td>마감선 정리</td><td>5,000~8,000원</td></tr>
+<tr><td>마스킹 테이프</td><td>문틀·몰딩 보호</td><td>2,000~4,000원</td></tr>
+<tr><td>방수 포장지 (바닥 보호)</td><td>바닥 오염 방지</td><td>1,000~2,000원</td></tr>
+</table>
+
+<strong>방 1칸(3평) 셀프 시공 총 자재비 예상</strong>: 벽지 6~8롤(3~6만 원) + 도구·풀(1~2만 원) = 약 4~8만 원 (재검증, 자재 품질·구입처에 따라 상이)
+
+<h2>04 | 도배 순서 — 셀프 시공 단계별</h2>
+
+<div class="step-box">
+<strong>1단계 — 사전 준비</strong><br>
+☑ 가구 이동 또는 가구 위 비닐 덮기<br>
+☑ 콘센트·스위치 커버 분리<br>
+☑ 기존 벽지 상태 확인 (들뜬 부분 보수 또는 제거 여부 결정)<br>
+☑ 천장 도배 먼저, 벽 도배 나중 순서 확인
+</div>
+
+<div class="step-box">
+<strong>2단계 — 풀 개기 및 벽지 재단</strong><br>
+☑ 분말 풀은 물에 타서 30분 이상 숙성<br>
+☑ 벽지는 천장 높이 + 위아래 각 5cm 여유 포함해 재단<br>
+☑ 재단된 벽지 뒷면에 풀 고르게 바르기 (풀 부족하면 들뜸 발생)
+</div>
+
+<div class="step-box">
+<strong>3단계 — 부착 및 마감</strong><br>
+☑ 상단부터 맞추고 아래로 내리며 솔로 기포 제거<br>
+☑ 겹치는 부분(이음매)은 1~2cm 겹쳐서 붙인 후 커터로 마감<br>
+☑ 문틀·창틀 주변 여분 벽지 커터로 정리<br>
+☑ 마른 걸레로 표면 이물질 제거
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 2 / 2</span><span class="ph-file">images/260924/7_wallpaper_2.png</span></div>
+<div class="prompt-text" id="p7_2">인테리어 도배 업체 기사가 전문적으로 방 벽지를 시공하는 모습. 짧은 시간 내 깔끔하게 부착하는 전문가 손길, 새하얀 벽지, 마감된 방 내부. 사진 현실감, 4:3.</div>
+<button class="copy-btn" onclick="copyPrompt('p7_2')">프롬프트 복사</button>
+</div>
+<div class="img-caption">전문 도배 업체 시공 — 마감 품질과 시공 속도가 셀프와 차이가 크다 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 업체 견적 범위와 비교 포인트</h2>
+
+업체 시공 비용은 지역·자재 등급·공간 구조에 따라 크게 달라집니다. 아래는 아파트 기준 참고 범위입니다(재검증).
+
+<table class="info-table">
+<tr><th>공간</th><th>업체 시공 (자재 포함) 참고 범위</th><th>비고</th></tr>
+<tr><td>방 1칸 (약 3평)</td><td>8만~15만 원</td><td>합지 기준, 재검증</td></tr>
+<tr><td>안방 (약 4~5평)</td><td>12만~20만 원</td><td>실크 선택 시 상향</td></tr>
+<tr><td>거실 (약 8~12평)</td><td>25만~50만 원</td><td>높은 천장·복잡한 구조 가산</td></tr>
+<tr><td>전체 (방3+거실+주방)</td><td>80만~180만 원</td><td>자재 등급, 34평 기준 참고</td></tr>
+</table>
+
+<strong>견적 비교 포인트</strong>:<br><br>
+① 자재 포함 여부: 견적에 벽지 자재가 포함인지, 인건비만인지 확인.<br><br>
+② 기존 벽지 제거 비용 포함 여부: 현재 벽지가 여러 겹 쌓여 있다면 제거 비용이 추가될 수 있습니다.<br><br>
+③ 곰팡이·결로 구간 추가 처리 여부: 문제 부위 사전 처리가 필요하면 추가 견적이 필요합니다.
+
+<h2>06 | 풀 바르기 vs 실크 분말 — 차이</h2>
+
+도배풀은 크게 <strong>기성 풀(액상)</strong>과 <strong>분말 풀</strong>로 나뉩니다.<br><br>
+<strong>분말 풀</strong>은 물에 타서 직접 개어 사용하며, 가격이 저렴합니다. 초보자가 농도 조절에 실패하면 풀이 너무 묽거나 너무 되어 시공이 어려워질 수 있습니다.<br><br>
+<strong>액상 기성 풀</strong>은 개봉 후 바로 사용 가능하고, 농도 조절이 안정적입니다. 가격이 약간 높지만 초보자에게 더 사용하기 편합니다.<br><br>
+실크 벽지는 무겁고 두꺼워 풀이 충분히 발라져야 들뜸이 없습니다. 합지보다 풀 소비량이 약 1.3~1.5배 더 필요합니다.
+
+<h2>07 | 자주 실패하는 패턴</h2>
+
+<div class="warn-box">
+<strong>⚠️ 초보자 실패 사례 TOP 5</strong><br>
+① 이음매 맞추기 실패 — 문양 있는 벽지는 패턴 맞추기가 어려워 손실 발생. 첫 도배라면 무지(단색) 벽지 권장<br>
+② 기포 제거 미흡 — 솔질 방향이 일정하지 않아 기포 잔류<br>
+③ 마감선 정리 미흡 — 커터 각도가 잘못되면 문틀 주변이 지저분하게 마감<br>
+④ 풀 농도 실수 — 너무 묽으면 벽지가 흘러내림<br>
+⑤ 기존 벽지 안 뜯고 덧붙이기 — 기존 벽지가 들뜬 상태에서 덧붙이면 나중에 함께 떨어짐
+</div>
+
+<h2>08 | 도배 전 준비사항 체크리스트</h2>
+
+<div class="step-box">
+<strong>사전 점검</strong><br>
+☑ 벽면 결로·곰팡이 여부 확인 (도배 전 처리 우선)<br>
+☑ 기존 벽지 상태: 들뜸이 많다면 제거 후 초배지부터<br>
+☑ 벽지 롤 수 계산 (벽 둘레 × 높이 ÷ 롤 면적 × 1.15)<br>
+☑ 자재·도구 구매 목록 작성<br>
+☑ 작업 시간 여유 확보 (초보자 방 1칸 하루 작업 기준)
+</div>
+
+<h2>09 | 자주 묻는 질문</h2>
+
+<strong>Q. 도배지 위에 페인트 칠을 해도 되나요?</strong><br>
+합지 벽지 위에 수성 페인트를 칠하는 것은 가능합니다. 하지만 페인트 칠 후 벽지를 교체하려면 페인트까지 함께 제거해야 하므로 번거롭습니다.<br><br>
+<strong>Q. 곰팡이가 있는 벽에 바로 도배해도 되나요?</strong><br>
+안 됩니다. 곰팡이를 제거하지 않고 도배하면 수개월 내에 새 벽지 위로 곰팡이가 다시 올라옵니다. 곰팡이 제거제 처리 후 완전 건조 뒤 도배해야 합니다.<br><br>
+<strong>Q. 업체에 직접 자재를 사다 맡기면 더 저렴한가요?</strong><br>
+벽지를 직접 구입해 업체에 인건비만 지불하는 방식이 가능합니다. 단, 업체마다 다르고 인건비 조건이 달라질 수 있으니 미리 확인이 필요합니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260923/ins_silsohn_claim_deadline.html">실손보험 청구 기한 — 집수리 후 청구 가능한 경우</a></li>
+<li><a href="car_window_tint_vlt_guide.html">차량 썬팅 비용과 VLT 수치 비교</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<span class="tag">#셀프도배</span>
+<span class="tag">#도배비용</span>
+<span class="tag">#도배자재</span>
+<span class="tag">#방도배</span>
+<span class="tag">#도배업체견적</span>
+<span class="tag">#도배롤계산</span>
+<span class="tag">#도배셀프시공</span>
+</div>
+</body>
+</html>

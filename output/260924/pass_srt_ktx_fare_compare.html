@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SRT vs KTX 요금 차이 — 같은 구간인데 왜 다른가</title>
+<style>
+  body { margin: 0 auto; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector('button[onclick="copyPrompt(\''+id+'\')"]');
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>SRT vs KTX 요금 차이 — 같은 구간인데 왜 다른가</h1>
+
+<div class="intro-box">
+SRT와 KTX는 같은 고속철도이지만 운영 회사가 다르고, 동일 구간임에도 요금이 다릅니다.<br><br>
+SRT는 SR(수서고속철도 주식회사)이, KTX는 코레일이 운영하며 각각 독립적인 운임 체계와 할인 정책을 적용합니다.<br><br>
+이 글에서는 주요 구간별 요금 차이, 두 열차의 노선 차이, 그리고 내 상황에서 어느 쪽이 더 유리한지를 정리합니다. 요금·조건은 각 운영사 공식 사이트 기준으로 작성했으며, 시행 시기에 따라 변동될 수 있으니 실제 예매 전 확인하시기 바랍니다 (재검증).
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 1 / 2</span><span class="ph-file">images/260924/3_srt_1.png</span></div>
+<div class="prompt-text" id="p3_1">고속철도 SRT와 KTX 열차가 나란히 역 플랫폼에 정차한 비교 이미지. 두 열차의 색상 대비(SRT 빨강, KTX 파랑), 넓고 깨끗한 역사 내부. 사진 현실감, 4:3.</div>
+<button class="copy-btn" onclick="copyPrompt('p3_1')">프롬프트 복사</button>
+</div>
+<div class="img-caption">SRT와 KTX — 같은 고속철도지만 운영사와 노선, 요금 체계가 다르다 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | SRT와 KTX — 가장 큰 차이 한눈에</h2>
+
+<table class="info-table">
+<tr><th>구분</th><th>SRT</th><th>KTX</th></tr>
+<tr><td>운영사</td><td>SR (수서고속철도)</td><td>코레일 (한국철도공사)</td></tr>
+<tr><td>서울 출발역</td><td>수서역, 동탄역</td><td>서울역, 용산역, 행신역</td></tr>
+<tr><td>노선 커버</td><td>경부선(부산·목포·광주) 일부 / 수도권 남부 특화</td><td>전국 주요 노선 (경부·호남·강릉·전라선 등)</td></tr>
+<tr><td>요금 (서울~부산 기준)</td><td>일반실 약 59,800원</td><td>일반실 약 59,800원 (동일, 재검증)</td></tr>
+<tr><td>할인 체계</td><td>SR 포인트 / SRT 멤버십</td><td>코레일 멤버십 / 레일플러스</td></tr>
+<tr><td>예매 앱·사이트</td><td>SRT 앱 / 수서고속철 홈페이지</td><td>코레일 앱 / KORAIL.com</td></tr>
+</table>
+
+<strong>⚠️ 주의</strong>: 아래 요금 수치는 기준 시점의 공시 요금이며 시행 시기에 따라 변동될 수 있습니다. 실제 예매 시 각 운영사 공식 사이트(SRT: srt.co.kr / 코레일: letskorail.com)에서 확인하세요.
+
+<h2>02 | 주요 구간별 요금 비교표</h2>
+
+동일 구간이라도 SRT는 수서역 출발, KTX는 서울역 출발 기준입니다. <strong>수서역은 서울 강남·분당권에서 가깝고, 서울역은 강북·마포권에서 가까운 만큼</strong> 단순 요금 비교만으로 판단하기 어렵습니다.
+
+<table class="info-table">
+<tr><th>구간</th><th>SRT 일반실</th><th>KTX 일반실</th><th>차이</th></tr>
+<tr><td>수서/서울 → 부산</td><td>약 59,800원</td><td>약 59,800원</td><td>거의 동일 (재검증)</td></tr>
+<tr><td>수서/서울 → 광주송정</td><td>약 46,800원</td><td>약 46,800원</td><td>거의 동일 (재검증)</td></tr>
+<tr><td>수서/서울 → 대전</td><td>약 23,700원</td><td>약 23,700원</td><td>거의 동일 (재검증)</td></tr>
+<tr><td>수서/서울 → 대구</td><td>약 43,500원</td><td>약 43,500원</td><td>거의 동일 (재검증)</td></tr>
+</table>
+
+기본 요금은 사실상 거의 동일합니다. <strong>차이는 요금이 아니라 할인 조건과 노선 접근성</strong>에서 납니다.
+
+<h2>03 | SRT가 더 저렴하게 느껴지는 이유</h2>
+
+공시 기본 요금은 비슷하지만, 체감 가격이 SRT가 더 싸게 느껴지는 이유는 세 가지입니다.<br><br>
+<strong>① 조기 할인 폭</strong>: SRT는 출발 30일 전 예매 시 최대 15%, 7일 전 10% 할인이 적용됩니다(재검증, SR 공식 사이트 확인). KTX도 조기 할인이 있지만 폭이 SRT보다 약간 낮은 경우가 있습니다.<br><br>
+<strong>② SR 포인트 적립 구조</strong>: SRT는 이용 금액의 일정 비율을 SR 포인트로 적립해주며, 적립된 포인트로 다음 예매 시 할인을 받을 수 있습니다. 자주 이용하는 출장·여행객이라면 체감 할인이 더 크게 느껴집니다.<br><br>
+<strong>③ 수서역 접근 경로</strong>: 강남·분당·용인 거주자는 수서역까지 가는 교통비와 시간이 서울역보다 훨씬 적게 드므로, 전체 비용으로 보면 SRT가 유리합니다.
+
+<h2>04 | KTX만 가는 노선과 정차역</h2>
+
+SRT는 경부선·호남선 주요 구간만 운행하며, <strong>강릉선(경강선)·전라선(여수)·동해선·경전선(창원·진주) 방면은 KTX만 운행</strong>합니다.<br><br>
+또한 SRT는 중간 정차역이 KTX보다 적습니다. 예를 들어 경부선에서 KTX는 천안아산·오송·대전·김천구미·동대구·경주 등 여러 역에 정차하지만, SRT는 주요 역 위주로만 정차합니다.<br><br>
+중간 역(예: 천안아산, 오송, 김천구미)에서 내려야 한다면 KTX가 선택지가 더 많습니다.
+
+<table class="info-table">
+<tr><th>노선</th><th>SRT 가능 여부</th><th>KTX 가능 여부</th></tr>
+<tr><td>서울/수서 → 부산</td><td>✅ 가능</td><td>✅ 가능</td></tr>
+<tr><td>서울/수서 → 광주송정</td><td>✅ 가능</td><td>✅ 가능</td></tr>
+<tr><td>서울 → 강릉</td><td>❌ 불가</td><td>✅ 가능</td></tr>
+<tr><td>서울 → 여수엑스포</td><td>❌ 불가</td><td>✅ 가능</td></tr>
+<tr><td>서울 → 진주/창원</td><td>❌ 불가</td><td>✅ 가능</td></tr>
+</table>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 2 / 2</span><span class="ph-file">images/260924/3_srt_2.png</span></div>
+<div class="prompt-text" id="p3_2">고속철도 예매 앱 화면을 손으로 들고 있는 장면. SRT와 KTX 앱 아이콘이 보이는 스마트폰 화면, 배경은 기차역 내부. 사진 현실감, 4:3.</div>
+<button class="copy-btn" onclick="copyPrompt('p3_2')">프롬프트 복사</button>
+</div>
+<div class="img-caption">SRT와 KTX는 예매 앱도 따로 — 출발역과 노선 확인 후 유리한 쪽을 선택한다 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 할인 제도 비교 — 어디서 더 이득인가</h2>
+
+<table class="info-table">
+<tr><th>할인 종류</th><th>SRT</th><th>KTX</th></tr>
+<tr><td>청소년 할인</td><td>만 13~18세 30% 할인</td><td>만 13~18세 30% 할인</td></tr>
+<tr><td>경로 할인</td><td>만 65세 이상 30% 할인</td><td>만 65세 이상 30% 할인</td></tr>
+<tr><td>조기 예매</td><td>30일 전 최대 15% (재검증)</td><td>15~30일 전 최대 10~15% (재검증)</td></tr>
+<tr><td>다자녀 할인</td><td>3자녀 이상 가정 할인 있음 (재검증)</td><td>3자녀 이상 가정 할인 있음 (재검증)</td></tr>
+<tr><td>장애인 할인</td><td>장애인 복지카드 제시 시 50% 할인</td><td>장애인 복지카드 제시 시 50% 할인</td></tr>
+<tr><td>국가유공자</td><td>해당 (재검증)</td><td>해당 (재검증)</td></tr>
+</table>
+
+기본 할인 구조는 양쪽이 매우 비슷합니다. <strong>차이는 멤버십 포인트 환급 속도와 앱 기반 추가 쿠폰</strong>에서 납니다. SRT 앱의 '깜짝 특가'나 KTX의 'KTX 할인 쿠폰' 형태로 비정기 프로모션이 진행되므로, 자주 이용한다면 두 앱 모두 알림을 켜두는 것이 좋습니다.
+
+<h2>06 | 예매 방법 차이</h2>
+
+<strong>SRT 예매</strong>: SRT 공식 앱(구글플레이·앱스토어) 또는 srt.co.kr 웹사이트. SR 회원 가입 후 이용.<br><br>
+<strong>KTX 예매</strong>: 코레일 앱(코레일 Talk) 또는 letskorail.com 웹사이트. 코레일 회원 가입 후 이용.<br><br>
+두 시스템은 통합되어 있지 않기 때문에, SRT 앱으로 KTX를 예매하거나 그 반대는 불가능합니다. 목적지에 두 열차 모두 운행한다면 각 앱을 열어 따로 조회하고 비교해야 합니다.<br><br>
+<strong>현장 발권</strong>은 두 열차 모두 역 내 무인발권기를 이용할 수 있으며, 예매 없이 당일 발권도 가능합니다(잔여 좌석이 있을 경우에 한함).
+
+<h2>07 | 좌석·서비스 차이</h2>
+
+SRT와 KTX 모두 <strong>특실(1등석)과 일반실</strong>로 구성됩니다. 특실은 더 넓은 좌석 간격과 음료 서비스(열차에 따라 다름)를 제공합니다.<br><br>
+실내 인테리어와 좌석 품질은 열차 연식에 따라 다소 차이가 있지만, 전반적으로 SRT와 KTX 일반실의 편의성은 거의 비슷합니다. 장거리(3시간 이상) 이동이라면 특실 업그레이드가 피로 감소에 도움이 됩니다.<br><br>
+<strong>와이파이</strong>는 SRT와 KTX 모두 차내 무료 와이파이를 제공하나, 터널 구간이나 혼잡 시간대에는 속도 저하가 있습니다.
+
+<h2>08 | 내 상황에서 어느 쪽이 나은가</h2>
+
+<div class="step-box">
+<strong>SRT가 유리한 경우</strong><br>
+✅ 강남·분당·위례·용인 등 수서역 접근이 편한 곳에 거주<br>
+✅ 부산·광주·대전 방면 이동<br>
+✅ 조기 예매로 할인을 적극 활용하려는 경우<br>
+✅ SR 포인트를 꾸준히 적립하는 자주 이용자
+</div>
+
+<div class="step-box">
+<strong>KTX가 유리한 경우</strong><br>
+✅ 서울역·용산역 접근이 편한 강북·마포·인천 거주자<br>
+✅ 강릉·여수·진주·창원 등 SRT 미운행 노선 이용<br>
+✅ 중간 역(천안아산·오송·동대구·경주 등)에서 내려야 하는 경우<br>
+✅ 코레일 멤버십 할인을 이미 적용 중인 경우
+</div>
+
+<h2>09 | 자주 묻는 질문</h2>
+
+<strong>Q. SRT와 KTX 환승이 되나요?</strong><br>
+두 열차는 별개의 운영사이므로 직접 환승 연계는 없습니다. 다만 대전역, 동대구역 등 KTX와 SRT가 모두 정차하는 역에서 내려서 다시 예매하는 방식은 가능합니다.<br><br>
+<strong>Q. 동탄역은 어떻게 가나요?</strong><br>
+동탄역은 SRT 전용 역으로, 수도권 광역철도(GTX-A 노선)와 환승됩니다(2024년 개통 이후). 경기 남부 거주자라면 수서역보다 동탄역이 더 가까울 수 있습니다.<br><br>
+<strong>Q. 두 열차 모두 예매하고 하나 취소해도 되나요?</strong><br>
+출발 전 취소라면 패널티 없이(또는 소액 수수료로) 취소 가능합니다. 단, 출발 시간 직전에는 취소 수수료가 올라가므로 미리 결정하는 것이 좋습니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260923/pass_ktx_discount_all.html">KTX 할인 다 모아보기 — 청소년·경로·다자녀 어디까지 되나</a></li>
+<li><a href="travel_jangheung_cheonkwansan_silvergrass.html">장흥 천관산 억새 가을 여행 — 남도 드라이브 코스</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<span class="tag">#SRT</span>
+<span class="tag">#KTX</span>
+<span class="tag">#고속열차요금</span>
+<span class="tag">#SRT vs KTX</span>
+<span class="tag">#기차여행</span>
+<span class="tag">#기차요금비교</span>
+<span class="tag">#수서역</span>
+<span class="tag">#고속철도</span>
+</div>
+</body>
+</html>

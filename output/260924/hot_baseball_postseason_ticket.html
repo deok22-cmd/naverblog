@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>프로야구 포스트시즌 티켓 언제 풀리나 — 구단별 예매 시작 시각과 대기표 잡는 법</title>
+<style>
+  body { margin: 0 auto; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector('button[onclick="copyPrompt(\''+id+'\')"]');
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>프로야구 포스트시즌 티켓 언제 풀리나 — 구단별 예매 시작 시각과 대기표 잡는 법</h1>
+
+<div class="intro-box">
+KBO 리그 정규시즌이 10월 초 마무리되면 곧바로 포스트시즌이 시작됩니다. 와일드카드 결정전부터 한국시리즈까지 단계별로 진행되며, 각 단계마다 티켓 예매가 새로 열립니다.<br><br>
+포스트시즌 티켓은 정규시즌보다 수요가 폭발적으로 높아 예매 오픈과 동시에 매진되는 경우가 많습니다. 미리 준비하지 않으면 선호 좌석을 구하지 못하거나, 대기표가 풀리는 타이밍을 놓치게 됩니다.<br><br>
+이 글에서는 2026 KBO 포스트시즌 일정(재검증), 구단별 예매처, 대기표 잡는 전략, 현장 관람 준비를 정리합니다.
+</div>
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 1 / 2</span><span class="ph-file">images/260924/4_baseball_1.png</span></div>
+<div class="prompt-text" id="p4_1">가을 야구 포스트시즌 경기장 야경. 야간 조명이 환하게 켜진 한국 프로야구 구장, 가득 찬 관중석, 전광판의 불꽃, 흥분된 응원 분위기. 사진 현실감, 4:3.</div>
+<button class="copy-btn" onclick="copyPrompt('p4_1')">프롬프트 복사</button>
+</div>
+<div class="img-caption">가을 야구 포스트시즌 — 매진 사태가 반복되는 10월의 열기 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 2026 KBO 포스트시즌 일정 (재검증)</h2>
+
+2026년 KBO 정규시즌은 10월 초 마무리 예정이며(재검증, 구단 및 KBO 공식 발표 확인), 이후 포스트시즌이 단계적으로 시작됩니다.<br><br>
+KBO 포스트시즌은 연도에 따라 일정이 조정될 수 있으며, 아래는 통상적인 포스트시즌 구조입니다.
+
+<table class="info-table">
+<tr><th>단계</th><th>경기 형식</th><th>통상 시작 시기</th><th>홈팀</th></tr>
+<tr><td>와일드카드 결정전</td><td>3위 vs 4위 (1~2게임)</td><td>정규시즌 종료 직후</td><td>3위팀</td></tr>
+<tr><td>준플레이오프</td><td>3전 2선승</td><td>WC 이후 3~5일</td><td>2위팀</td></tr>
+<tr><td>플레이오프</td><td>5전 3선승</td><td>준PO 이후</td><td>2위팀</td></tr>
+<tr><td>한국시리즈</td><td>7전 4선승</td><td>PO 이후</td><td>정규시즌 1위팀</td></tr>
+</table>
+
+<strong>⚠️ 재검증 필요</strong>: 2026년 구체적인 경기 일정, 참가 팀, 경기장은 KBO 공식 홈페이지(kbo.or.kr) 및 각 구단 공식 채널에서 확인하세요.
+
+<h2>02 | 구단별 예매처와 오픈 시각</h2>
+
+포스트시즌 티켓은 KBO 공식 앱 또는 구단별 공식 예매처에서 판매됩니다. 구단마다 예매처와 오픈 시각이 다를 수 있으므로 각 구단 공식 SNS와 홈페이지를 미리 팔로우해 두는 것이 핵심입니다.<br><br>
+일반적으로 포스트시즌 티켓 오픈 공지는 해당 경기 <strong>2~3일 전</strong>에 이루어지며, 오픈 시각은 보통 <strong>오전 11시~오후 1시 사이</strong>에 집중됩니다. 오픈과 동시에 접속자가 폭발하기 때문에 대기 시스템에 진입하게 됩니다.
+
+<table class="info-table">
+<tr><th>구단</th><th>홈구장</th><th>주요 예매 채널</th></tr>
+<tr><td>두산 베어스</td><td>잠실야구장</td><td>공식 홈페이지 / 인터파크 티켓</td></tr>
+<tr><td>LG 트윈스</td><td>잠실야구장</td><td>공식 홈페이지 / 인터파크 티켓</td></tr>
+<tr><td>SSG 랜더스</td><td>인천SSG랜더스필드</td><td>공식 홈페이지</td></tr>
+<tr><td>KT 위즈</td><td>수원 KT위즈파크</td><td>공식 홈페이지 / 인터파크</td></tr>
+<tr><td>롯데 자이언츠</td><td>부산 사직야구장</td><td>공식 홈페이지 / 인터파크</td></tr>
+<tr><td>삼성 라이온즈</td><td>대구 라이온즈파크</td><td>공식 홈페이지 / 인터파크</td></tr>
+<tr><td>한화 이글스</td><td>대전 한화생명이글스파크</td><td>공식 홈페이지 / 인터파크</td></tr>
+<tr><td>NC 다이노스</td><td>창원NC파크</td><td>공식 홈페이지</td></tr>
+<tr><td>키움 히어로즈</td><td>서울 고척스카이돔</td><td>공식 홈페이지</td></tr>
+<tr><td>KIA 타이거즈</td><td>광주 기아챔피언스필드</td><td>공식 홈페이지 / 인터파크</td></tr>
+</table>
+
+<strong>재검증</strong>: 각 구단의 공식 예매 채널은 시즌마다 변경될 수 있습니다. 포스트시즌 진출 구단 확정 후 구단 공식 SNS(인스타그램·X)에서 예매 공지를 반드시 확인하세요.
+
+<h2>03 | 대기표 시스템 이해하기</h2>
+
+포스트시즌 티켓 예매 오픈 시각에는 동시 접속자가 폭발적으로 늘어나 대기열 시스템이 작동합니다.<br><br>
+<strong>대기표 시스템 작동 방식</strong>:<br><br>
+예매 페이지 접속 시 자동으로 대기 번호가 부여됩니다. 앞 순서가 빠지면 자동으로 앞으로 당겨지며, 자신의 차례가 되면 좌석 선택 화면으로 이동합니다.<br><br>
+대기표가 풀리는 경로는 크게 두 가지입니다. ① 예매 오픈 직후 일부 취소 좌석이 풀리는 경우, ② 결제 미완료로 자동 취소된 좌석이 재오픈되는 경우입니다.<br><br>
+<strong>대기표 잡는 핵심 타이밍</strong>은 예매 오픈 후 약 20~30분 뒤와 1시간 뒤입니다. 처음에 결제를 완료하지 못한 사람들의 좌석이 이 시간대에 다시 풀리는 경향이 있습니다.
+
+<div class="img-area">
+<div class="img-placeholder">
+<div class="ph-head"><span>📷 이미지 2 / 2</span><span class="ph-file">images/260924/4_baseball_2.png</span></div>
+<div class="prompt-text" id="p4_2">스마트폰으로 야구 티켓 예매 중인 손. 화면에 좌석 배치도와 대기 번호가 표시됨. 긴장감 있는 손가락, 배경에 야구 경기장. 사진 현실감, 4:3.</div>
+<button class="copy-btn" onclick="copyPrompt('p4_2')">프롬프트 복사</button>
+</div>
+<div class="img-caption">포스트시즌 티켓 예매 — 오픈 직후 대기 시스템에서 자리를 잡는 전략이 중요하다 / AI 제작 이미지</div>
+</div>
+
+<h2>04 | 예매 성공 전략 — 시간대별 준비 순서</h2>
+
+<div class="step-box">
+<strong>D-3 전 준비</strong><br>
+☑ 구단 공식 SNS·공식 홈페이지 팔로우 및 알림 설정<br>
+☑ 예매처 회원 가입 및 결제 카드 미리 등록<br>
+☑ 구단 멤버십 여부 확인 (멤버십 우선 예매 제도 있는 경우 있음)<br>
+☑ 관람하고 싶은 좌석 구역 미리 파악 (선호 구역 순위 3개 정하기)
+</div>
+
+<div class="step-box">
+<strong>예매 오픈 당일</strong><br>
+☑ 오픈 10분 전부터 예매 페이지 열어두기<br>
+☑ 여러 기기(PC + 스마트폰)에서 동시 접속 시도<br>
+☑ 오픈 시각 정각에 새로고침<br>
+☑ 대기 번호 진입 즉시 좌석 구역 변경 없이 빠르게 결제 진행<br>
+☑ 결제 시 자동완성 활성화로 시간 단축
+</div>
+
+<div class="step-box">
+<strong>취소표 대기 전략</strong><br>
+☑ 오픈 후 20~30분, 1시간 뒤 다시 접속<br>
+☑ 경기 당일 오전에도 취소표 발생 (이동·날씨 등으로 당일 취소 다수)<br>
+☑ 경기 2~3시간 전 오후 시간대도 취소표 풀림 빈번
+</div>
+
+<h2>05 | 좌석 구역별 요금 비교</h2>
+
+구역별 요금은 구단과 경기 단계(와일드카드~한국시리즈)에 따라 다릅니다. 일반적인 범위를 참고로 제시합니다.
+
+<table class="info-table">
+<tr><th>좌석 구역</th><th>일반 정규시즌</th><th>포스트시즌 (참고)</th></tr>
+<tr><td>1루·3루 내야석</td><td>12,000~15,000원</td><td>15,000~22,000원 내외</td></tr>
+<tr><td>외야 일반석</td><td>7,000~10,000원</td><td>10,000~15,000원 내외</td></tr>
+<tr><td>테이블석·지정석</td><td>18,000~25,000원</td><td>25,000~35,000원 내외</td></tr>
+<tr><td>한국시리즈 VIP석</td><td>—</td><td>5~10만 원 이상 가능성 있음</td></tr>
+</table>
+
+<strong>재검증 필요</strong>: 포스트시즌 요금은 구단·단계마다 다르며 연도별로 변동됩니다. 구단 공식 발표 확인 필수.
+
+<h2>06 | 현장 관람 준비물과 입장 방법</h2>
+
+포스트시즌은 정규시즌보다 혼잡도가 훨씬 높습니다. <strong>경기 시작 1시간 30분 전 도착</strong>을 권장합니다.<br><br>
+<strong>필수 지참물</strong>: 모바일 티켓(또는 실물 티켓), 신분증, 응원 도구(막대풍선·유니폼 등), 우비(야간 경기 기온 변화 대비), 간식(반입 가능 여부는 구장별 규정 확인).<br><br>
+<strong>모바일 티켓 주의사항</strong>: 입장 시 스캔이 되지 않는 경우를 대비해 캡처본이나 인쇄본을 준비해 두면 좋습니다. 통신 혼잡으로 앱이 느려질 수 있습니다.
+
+<h2>07 | 티켓 양도·환불 규정</h2>
+
+포스트시즌은 정규시즌과 달리 비가 와도 경기가 예정대로 진행되는 경우가 많습니다. 경기 취소 시에는 환불이 이루어지지만, 단순 변심 환불은 대부분 출발 전 일정 기간 내에만 가능합니다.<br><br>
+<strong>양도 주의</strong>: 비공식 경로(당근마켓 등)를 통한 티켓 양도는 구단 시스템에서 확인되지 않아 입장 불가 사례가 있습니다. 공식 양도 시스템이 있는 경우에는 공식 채널을 이용하세요.
+
+<h2>08 | 주차와 교통편</h2>
+
+포스트시즌 경기일은 주변 도로가 극도로 혼잡합니다. 특히 잠실야구장(잠실역 인근) 같은 도심 구장은 <strong>대중교통 이용을 강력히 권장</strong>합니다.<br><br>
+각 구장별 가장 가까운 지하철역:<br><br>
+잠실야구장 — 2호선·9호선 잠실역 / 수원 KT위즈파크 — 1호선 수원역 버스 연계 / 대구 라이온즈파크 — 1호선 수성구청역 인근 / 광주 기아챔피언스필드 — 광주 도시철도 1호선 연계<br><br>
+대중교통 이용이 불가피한 경우, 경기 종료 후 30~60분은 역 근처 카페에서 대기하다 이동하면 혼잡 피크를 피할 수 있습니다.
+
+<h2>09 | 포스트시즌 관람 체크리스트</h2>
+
+<div class="step-box">
+<strong>예매 전 체크리스트</strong><br>
+☑ 홈팀 구단 공식 SNS 팔로우·알림 ON<br>
+☑ 예매처 로그인·결제 수단 등록<br>
+☑ 좌석 구역 후보 3개 정하기<br>
+☑ 멤버십 우선 예매 자격 확인<br>
+☑ 오픈 시각 30분 전 기기 준비
+</div>
+
+<div class="step-box">
+<strong>경기 당일 체크리스트</strong><br>
+☑ 모바일 티켓 오프라인 저장 또는 캡처<br>
+☑ 교통 수단 미리 확인 (출발 시간 역산)<br>
+☑ 경기 시작 90분 전 현장 도착 목표<br>
+☑ 우비·방한 자켓 챙기기 (야간 기온 10월 초 서울 기준 10~15℃)<br>
+☑ 반입 금지 물품 확인 (구장별 상이)
+</div>
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260923/hot_fireworks_subway_hours.html">불꽃축제 날 지하철 막차와 교통통제 구간</a></li>
+<li><a href="pass_srt_ktx_fare_compare.html">SRT vs KTX 요금 차이 — 원정 응원 갈 때 어느 열차가 유리한가</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<span class="tag">#프로야구포스트시즌</span>
+<span class="tag">#KBO포스트시즌</span>
+<span class="tag">#야구티켓</span>
+<span class="tag">#한국시리즈티켓</span>
+<span class="tag">#야구예매</span>
+<span class="tag">#포스트시즌일정</span>
+<span class="tag">#가을야구</span>
+</div>
+</body>
+</html>
