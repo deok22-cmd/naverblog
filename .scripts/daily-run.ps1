@@ -866,6 +866,58 @@ if ($exit -ne 0) {
         Write-Log "    대조 절차: stats/미업로드_원고_점검_20260911.md 참조."
     }
 
+    # --- (6) hot_ D-day 실재 검증 (2026-09-23 신설 — 불꽃축제 오보 사고 대응) ---
+    # 사고: 09-23 생성분 `hot_fireworks_subway_hours`가 서울세계불꽃축제를 2026-10-03으로
+    #   단정했으나 실제 개최일은 2026-09-05로 **이미 18일 지난 행사**였다. 큐(§06 #3)의 D-day에
+    #   `(재검증)`이 붙어 있었는데 생성 에이전트가 검증 없이 예년 패턴("10월 초")으로 추정해 썼다.
+    #   산문 규칙(생활정보.md §06 선정규칙 7)만으로는 막히지 않는다 — 여기서 결정론적으로 잡는다.
+    # 요구: hot_ 원고는 본문 어딘가에 아래 마커를 1개 넣는다(주석이므로 네이버 붙여넣기에 안 보인다).
+    #   <!-- hot-dday: 2026-10-03 | src: https://... -->
+    # 판정: 마커 없음 → FAIL · D-day가 오늘보다 과거 → FAIL · src가 http(s)로 시작 안 함 → FAIL.
+    $hotFiles = @()
+    if (Test-Path -LiteralPath $todayDir) {
+        $hotFiles = @(Get-ChildItem -LiteralPath $todayDir -Filter "hot_*.html" -File -ErrorAction SilentlyContinue)
+    }
+    if ($hotFiles.Count -eq 0) {
+        Write-Log "(6) 오늘 hot_ 원고 없음 — D-day 검증 생략."
+    } else {
+        $today0 = (Get-Date).Date
+        foreach ($hf in $hotFiles) {
+            $txt = Get-Content -LiteralPath $hf.FullName -Raw -Encoding UTF8
+            $m = [regex]::Match($txt, '<!--\s*hot-dday:\s*(\d{4}-\d{2}-\d{2})\s*\|\s*src:\s*(\S+?)\s*-->')
+            if (-not $m.Success) {
+                $publishGateFailed = $true
+                $gateReasons += "$($hf.Name): hot-dday 마커 없음"
+                Write-Log "(6) [FAIL] $($hf.Name) — <!-- hot-dday: YYYY-MM-DD | src: URL --> 마커가 없다. D-day를 1차 출처로 확정하고 마커를 넣을 것."
+                continue
+            }
+            $dd = $null
+            if (-not [datetime]::TryParseExact($m.Groups[1].Value, 'yyyy-MM-dd', $null, [System.Globalization.DateTimeStyles]::None, [ref]$dd)) {
+                $publishGateFailed = $true
+                $gateReasons += "$($hf.Name): hot-dday 날짜 파싱 실패"
+                Write-Log "(6) [FAIL] $($hf.Name) — D-day 형식 오류: $($m.Groups[1].Value)"
+                continue
+            }
+            $src = $m.Groups[2].Value
+            if ($src -notmatch '^https?://') {
+                $publishGateFailed = $true
+                $gateReasons += "$($hf.Name): hot-dday src가 URL이 아님"
+                Write-Log "(6) [FAIL] $($hf.Name) — src가 1차 출처 URL이 아니다: $src"
+                continue
+            }
+            $diff = ($dd.Date - $today0).Days
+            if ($diff -lt 0) {
+                $publishGateFailed = $true
+                $gateReasons += "$($hf.Name): D-day $($dd.ToString('yyyy-MM-dd'))가 이미 지남"
+                Write-Log "(6) [FAIL] $($hf.Name) — D-day $($dd.ToString('yyyy-MM-dd'))는 이미 지난 날짜다(D+$([Math]::Abs($diff))). 지난 이슈 원고는 폐기하고 §06 행도 폐기 표기할 것."
+            } elseif ($diff -lt 7 -or $diff -gt 21) {
+                Write-Log "(6) [WARN] $($hf.Name) — D-$diff 는 발행 창 D-21~D-7 밖이다(차단은 안 함). src: $src"
+            } else {
+                Write-Log "(6) [OK] $($hf.Name) — D-$diff · src: $src"
+            }
+        }
+    }
+
     if ($publishGateFailed) {
         $detail = ($gateReasons -join " / ")
         Write-Log "[PUBLISH GATE FAIL] $detail"
