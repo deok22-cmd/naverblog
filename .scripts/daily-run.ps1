@@ -1,6 +1,6 @@
-﻿# Naverblog 일일 자동 발행 PowerShell 래퍼
+# Naverblog 일일 자동 발행 PowerShell 래퍼
 # Windows 작업 스케줄러가 매일 새벽 4:00 실행
-# 1) Claude CLI로 원고 5건 작성 → 2) 작성 결과만 GitHub에 자동 push
+# 1) Antigravity CLI로 원고 7건 작성 → 2) 작성 결과만 GitHub에 자동 push
 
 # === 티스토리 자동 발행 플래그 ===
 # 2026-07-09 중단(True): 애드센스 "가치 없는 콘텐츠" 반려 → 네이버 파생 미러 폐기.
@@ -45,7 +45,7 @@ function Write-Log([string]$line) {
 [System.IO.File]::WriteAllText($LogFile, "=== Naverblog Daily Run @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ===`r`n", $utf8NoBom)
 Write-Log "ProjectRoot: $ProjectRoot"
 Write-Log "PromptFile : $PromptFile"
-Write-Log "Model      : claude-sonnet-4-6"
+Write-Log "Model      : gemini-3.8-flash-high"
 Write-Log ""
 
 $exit = 1
@@ -223,14 +223,14 @@ Write-Log ""
 Write-Log "=== Step 0.4: Auth Precheck @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="
 $authOk = $false
 try {
-    $probe = ("ping" | & claude -p --model claude-sonnet-4-6 --max-budget-usd 1 --output-format text 2>&1 | Out-String)
-    if ($LASTEXITCODE -eq 0 -and $probe -notmatch 'Failed to authenticate|OAuth session expired|Invalid API key') {
+    $probe = (& agy --model gemini-3.8-flash-high --dangerously-skip-permissions --output-format text --print "ping" 2>&1 | Out-String)
+    if ($LASTEXITCODE -eq 0 -and $probe -match 'pong') {
         $authOk = $true
         Write-Log "AUTH OK"
     } else {
         Write-Log "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-        Write-Log "[AUTH FAIL] Claude CLI 인증 만료 - /login 필요"
-        Write-Log "  조치: 터미널에서 claude 실행 후 /login (또는 claude login)"
+        Write-Log "[AUTH FAIL] Antigravity CLI 인증/실행 실패"
+        Write-Log "  조치: 터미널에서 agy 실행 또는 로그인 상태 점검"
         Write-Log "  인증 전까지 매일 04시 발행이 계속 0건이 됩니다."
         Write-Log "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
         Write-Log ("probe: " + ($probe -replace "`r?`n", ' ').Trim())
@@ -240,7 +240,7 @@ try {
 }
 
 if (-not $authOk) {
-    Set-Failure "AUTH" "Claude CLI 인증 만료(OAuth session expired) - 발행 시도조차 못 함" "터미널에서 claude 실행 후 /login"
+    Set-Failure "AUTH" "Antigravity CLI 인증/실행 실패 - 발행 시도조차 못 함" "터미널에서 agy 실행 상태 점검"
     Write-Log ""
     Write-Log "=== 인증 실패로 Step 0.5/0.6/1 전부 건너뜁니다. 예산·큐를 소모하지 않습니다. ==="
     # 대시보드는 그래도 재빌드해서 배너가 뜨게 한다.
@@ -269,11 +269,9 @@ if ((($today -eq $RefillDay) -or $ForceRefill) -and (Test-Path -LiteralPath $Ref
     try {
         $rp = Get-Content -LiteralPath $RefillPrompt -Raw -Encoding utf8
 
-        $rp | & claude `
-            -p `
-            --model claude-sonnet-4-6 `
-            --permission-mode bypassPermissions `
-            --max-budget-usd 5 `
+        $rp | & agy `
+            --model gemini-3.8-flash-high `
+            --dangerously-skip-permissions `
             --output-format text `
             --add-dir $ProjectRoot 2>&1 |
         ForEach-Object {
@@ -370,7 +368,7 @@ try {
 }
 Write-Log ""
 
-# === Step 1: Claude CLI로 원고 작성 ===
+# === Step 1: Antigravity CLI로 원고 작성 ===
 try {
     $prompt = Get-Content -LiteralPath $PromptFile -Raw -Encoding utf8
 
@@ -407,11 +405,9 @@ try {
         Write-Log "프롬프트에 오늘의 확정 사항 주입 완료(${todayDow}요일 · $compTxt)."
     }
 
-    $prompt | & claude `
-        -p `
-        --model claude-sonnet-4-6 `
-        --permission-mode bypassPermissions `
-        --max-budget-usd 7 `
+    $prompt | & agy `
+        --model gemini-3.8-flash-high `
+        --dangerously-skip-permissions `
         --output-format text `
         --add-dir $ProjectRoot 2>&1 |
     ForEach-Object {
@@ -421,7 +417,7 @@ try {
     }
     $exit = $LASTEXITCODE
     Write-Log ""
-    Write-Log "=== Claude exit code: $exit ==="
+    Write-Log "=== Antigravity CLI exit code: $exit ==="
 
     if ($exit -ne 0) {
         # 인증은 Step 0.4에서 걸렀으니 여기 오는 건 예산 초과·타임아웃·모델 오류 등이다.
@@ -436,8 +432,8 @@ try {
         Set-Failure "STEP1" "원고 작성 실패(exit=$exit) - 오늘 생성 ${made}건" "로그에서 마지막 오류 확인 후 수동 재실행"
     }
 } catch {
-    [System.IO.File]::AppendAllText($LogFile, "FATAL (Claude step): $_`r`n", $utf8NoBom)
-    Set-Failure "FATAL" "Claude 호출 중 예외: $_" "로그 확인 후 수동 재실행"
+    [System.IO.File]::AppendAllText($LogFile, "FATAL (Antigravity step): $_`r`n", $utf8NoBom)
+    Set-Failure "FATAL" "Antigravity 호출 중 예외: $_" "로그 확인 후 수동 재실행"
     exit 1
 }
 
@@ -504,7 +500,7 @@ Write-Log "=== Insta Card Channel @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==
 if ($InstaSuspended) {
     Write-Log "SKIP Insta: 인스타 자동생성 중단됨(2026-07-08 사용자 지시, `$InstaSuspended). 블로그 이미지는 사용자 별도 제작."
 } elseif ($exit -ne 0) {
-    Write-Log "SKIP Insta: Claude content step exit $exit (콘텐츠 실패 시 인스타 생략)."
+    Write-Log "SKIP Insta: Antigravity content step exit $exit (콘텐츠 실패 시 인스타 생략)."
 } else {
     try {
         $YMD = Get-Date -Format "yyMMdd"
@@ -518,16 +514,14 @@ if ($InstaSuspended) {
             Write-Log "WARN: $SecretFile 없음 — 이미지 생성/래스터는 스킵됩니다(카드 SVG만 생성)."
         }
 
-        # Phase C-1: insta-card-builder 5건 (독립 Claude 실행 — 콘텐츠 예산과 분리)
+        # Phase C-1: insta-card-builder 5건 (독립 Antigravity 실행)
         $InstaPrompt = Join-Path $ScriptsDir "insta-prompt.md"
         if (Test-Path -LiteralPath $InstaPrompt) {
             Write-Log "--- Phase C-1: insta-card-builder (cards/prompts/caption) ---"
             $ip = Get-Content -LiteralPath $InstaPrompt -Raw -Encoding utf8
-            $ip | & claude `
-                -p `
-                --model claude-sonnet-4-6 `
-                --permission-mode bypassPermissions `
-                --max-budget-usd 6 `
+            $ip | & agy `
+                --model gemini-3.8-flash-high `
+                --dangerously-skip-permissions `
                 --output-format text `
                 --add-dir $ProjectRoot 2>&1 |
             ForEach-Object {
@@ -535,7 +529,7 @@ if ($InstaSuspended) {
                 Write-Host $line
                 [System.IO.File]::AppendAllText($LogFile, "$line`r`n", $utf8NoBom)
             }
-            Write-Log "Phase C-1 claude exit: $LASTEXITCODE"
+            Write-Log "Phase C-1 agy exit: $LASTEXITCODE"
         } else {
             Write-Log "WARN: $InstaPrompt 없음 — Phase C-1 스킵."
         }
@@ -637,7 +631,7 @@ $gateBlocked = $false
 if ($TistorySuspended) {
     Write-Log "SKIP Gate: Tistory 자동 발행 일시 중단(`$TistorySuspended=$true). 수동 작성은 별도."
 } elseif ($exit -ne 0) {
-    Write-Log "SKIP Gate: Claude content step exit $exit (콘텐츠 실패 시 push도 어차피 스킵)."
+    Write-Log "SKIP Gate: Antigravity content step exit $exit (콘텐츠 실패 시 push도 어차피 스킵)."
 } else {
     $GateScript = Join-Path $ScriptsDir "tistory-gate.ps1"
     $GateDay    = Get-Date -Format "yyMMdd"
@@ -866,6 +860,58 @@ if ($exit -ne 0) {
         Write-Log "    대조 절차: stats/미업로드_원고_점검_20260911.md 참조."
     }
 
+    # --- (6) hot_ D-day 실재 검증 (2026-09-23 신설 — 불꽃축제 오보 사고 대응) ---
+    # 사고: 09-23 생성분 `hot_fireworks_subway_hours`가 서울세계불꽃축제를 2026-10-03으로
+    #   단정했으나 실제 개최일은 2026-09-05로 **이미 18일 지난 행사**였다. 큐(§06 #3)의 D-day에
+    #   `(재검증)`이 붙어 있었는데 생성 에이전트가 검증 없이 예년 패턴("10월 초")으로 추정해 썼다.
+    #   산문 규칙(생활정보.md §06 선정규칙 7)만으로는 막히지 않는다 — 여기서 결정론적으로 잡는다.
+    # 요구: hot_ 원고는 본문 어딘가에 아래 마커를 1개 넣는다(주석이므로 네이버 붙여넣기에 안 보인다).
+    #   <!-- hot-dday: 2026-10-03 | src: https://... -->
+    # 판정: 마커 없음 → FAIL · D-day가 오늘보다 과거 → FAIL · src가 http(s)로 시작 안 함 → FAIL.
+    $hotFiles = @()
+    if (Test-Path -LiteralPath $todayDir) {
+        $hotFiles = @(Get-ChildItem -LiteralPath $todayDir -Filter "hot_*.html" -File -ErrorAction SilentlyContinue)
+    }
+    if ($hotFiles.Count -eq 0) {
+        Write-Log "(6) 오늘 hot_ 원고 없음 — D-day 검증 생략."
+    } else {
+        $today0 = (Get-Date).Date
+        foreach ($hf in $hotFiles) {
+            $txt = Get-Content -LiteralPath $hf.FullName -Raw -Encoding UTF8
+            $m = [regex]::Match($txt, '<!--\s*hot-dday:\s*(\d{4}-\d{2}-\d{2})\s*\|\s*src:\s*(\S+?)\s*-->')
+            if (-not $m.Success) {
+                $publishGateFailed = $true
+                $gateReasons += "$($hf.Name): hot-dday 마커 없음"
+                Write-Log "(6) [FAIL] $($hf.Name) — <!-- hot-dday: YYYY-MM-DD | src: URL --> 마커가 없다. D-day를 1차 출처로 확정하고 마커를 넣을 것."
+                continue
+            }
+            $dd = $null
+            if (-not [datetime]::TryParseExact($m.Groups[1].Value, 'yyyy-MM-dd', $null, [System.Globalization.DateTimeStyles]::None, [ref]$dd)) {
+                $publishGateFailed = $true
+                $gateReasons += "$($hf.Name): hot-dday 날짜 파싱 실패"
+                Write-Log "(6) [FAIL] $($hf.Name) — D-day 형식 오류: $($m.Groups[1].Value)"
+                continue
+            }
+            $src = $m.Groups[2].Value
+            if ($src -notmatch '^https?://') {
+                $publishGateFailed = $true
+                $gateReasons += "$($hf.Name): hot-dday src가 URL이 아님"
+                Write-Log "(6) [FAIL] $($hf.Name) — src가 1차 출처 URL이 아니다: $src"
+                continue
+            }
+            $diff = ($dd.Date - $today0).Days
+            if ($diff -lt 0) {
+                $publishGateFailed = $true
+                $gateReasons += "$($hf.Name): D-day $($dd.ToString('yyyy-MM-dd'))가 이미 지남"
+                Write-Log "(6) [FAIL] $($hf.Name) — D-day $($dd.ToString('yyyy-MM-dd'))는 이미 지난 날짜다(D+$([Math]::Abs($diff))). 지난 이슈 원고는 폐기하고 §06 행도 폐기 표기할 것."
+            } elseif ($diff -lt 7 -or $diff -gt 21) {
+                Write-Log "(6) [WARN] $($hf.Name) — D-$diff 는 발행 창 D-21~D-7 밖이다(차단은 안 함). src: $src"
+            } else {
+                Write-Log "(6) [OK] $($hf.Name) — D-$diff · src: $src"
+            }
+        }
+    }
+
     if ($publishGateFailed) {
         $detail = ($gateReasons -join " / ")
         Write-Log "[PUBLISH GATE FAIL] $detail"
@@ -894,7 +940,7 @@ if ($exit -eq 0 -and -not $publishGateFailed -and (Test-Path -LiteralPath $FailF
 }
 
 if ($exit -ne 0) {
-    Write-Log "SKIP: Claude exited with code $exit, no push attempted."
+    Write-Log "SKIP: Antigravity exited with code $exit, no push attempted."
     exit $exit
 }
 
