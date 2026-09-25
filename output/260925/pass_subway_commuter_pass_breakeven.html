@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>지하철 정기권 얼마부터 이득인가 — 서울 전용 vs 거리비례 손익분기 계산표와 K-패스 비교</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>지하철 정기권 얼마부터 이득인가 — 서울 전용 vs 거리비례 손익분기 계산표와 K-패스 비교</h1>
+<div class="intro-box">
+지하철 정기권(서울 전용 61,600원)은 기본운임 1,400원 기준 <strong>한 달 동안 순수 지하철을 45회 이상 탑승할 때부터 확실한 이득</strong>이 발생하며, 최대 60회를 모두 채워 타면 매월 22,400원(약 26.7%)의 교통비를 절약할 수 있습니다.<br><br>
+하지만 지하철 정기권은 <strong>시내버스 및 광역버스와의 환승 할인이 일절 적용되지 않는 치명적 단점</strong>이 있어, 버스를 단 한 번이라도 갈아타는 출퇴근자에게는 오히려 손해가 발생합니다.<br><br>
+내 출퇴근 경로에서 지하철 정기권, 정부의 K-패스 환급(20~53%), 서울시 기후동행카드 중 과연 어떤 제도가 가장 저렴한지 손익분기 계산표를 통해 확실하게 확인해보세요.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260925/4_subwaypass_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-1">Clean and professional eye-level photograph of a modern Seoul subway fare gate terminal in South Korea. A commuter cleanly tapping a red-and-white Seoul metro commuter pass transit card onto the contactless electronic card reader screen displaying fare confirmation. Bright and tidy metro station platform background with digital destination displays and safety screen doors, realistic depth of field, sharp photographic focus, realistic lighting, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">수도권 전철 개찰구에서 태그하는 지하철 정기권 교통카드 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 지하철 정기권의 기본 구조와 충전 방식</h2>
+
+수도권 대중교통 요금이 인상된 이후 매달 고정적으로 지출되는 교통비 부담을 덜기 위해 지하철 정기권에 관심을 갖는 직장인과 학생들이 크게 늘었습니다. 서울교통공사와 코레일 등 전철 운영기관에서 발행하는 지하철 정기권은 <strong>선불식 전용 카드에 일정 금액을 충전하여 30일 동안 정해진 횟수만큼 차감</strong>하며 사용하는 교통카드입니다.<br><br>
+기본 규칙은 매우 명확합니다. 충전일로부터 <strong>30일 이내에 최대 60회</strong>까지 승차할 수 있습니다. 30일이 지나거나 60회를 모두 소진하면 카드의 효력이 끝나며, 둘 중 하나라도 먼저 도달하면 남은 일수나 횟수는 자동으로 소멸합니다.<br><br>
+정기권 카드는 전철 역사 내 고객안내센터나 역무실에서 2,500원(플라스틱 카드 현금 구매)에 최초 1회 구입하며, 이후 역사에 비치된 교통카드 충전기에서 현금으로 30일 정기권을 충전하여 사용하는 구조입니다.
+
+<h2>02 | 서울 전용 vs 거리비례용 정기권 종류 및 요금 체계</h2>
+
+지하철 정기권은 이용 가능한 구간과 거리에 따라 크게 <strong>서울 전용 정기권</strong>과 <strong>거리비례용 정기권</strong> 두 가지로 구분됩니다.
+
+<table class="info-table">
+<tr><th>구분</th><th>충전 요금 (30일 기준)</th><th>이용 가능 구간</th><th>특징 및 감액 기준</th></tr>
+<tr><td>서울 전용 정기권</td><td><strong>61,600원</strong></td><td>서울 시내 전철 구간 (1~9호선, 우이신설, 신림선 등)</td><td>기본운임(1,400원) 44회분 가격 책정. 경기·인천 진출 시 추가 차감</td></tr>
+<tr><td>거리비례용 정기권 (1단계)</td><td><strong>55,000원</strong></td><td>수도권 전철 전 구간 중 20km 이내 단거리</td><td>단거리 출퇴근자 전용 (경인·경부 국철 단거리)</td></tr>
+<tr><td>거리비례용 정기권 (2단계~18단계)</td><td><strong>61,600원 ~ 117,800원</strong></td><td>거리별(20km 초과~구간별 차등) 수도권 전 구간</td><td>장거리 통근자(수원·의정부·인천 등) 전용 요금제</td></tr>
+</table>
+
+서울 전용 정기권은 서울 지하철 기본요금인 1,400원의 44회분(61,600원)에 해당하는 금액으로 최대 60회를 탑승할 수 있도록 설계되어 있습니다. 반면 수도권 광역 통근자를 위한 거리비례용 정기권은 이용하는 통근 거리에 따라 1단계(55,000원)부터 18단계(117,800원)까지 세분되어 운영됩니다.
+
+<h2>03 | 지하철 정기권 손익분기 계산표 — 월 탑승 횟수별 절감액</h2>
+
+그렇다면 지하철 정기권을 썼을 때 과연 몇 번부터 본전을 뽑고, 얼마나 돈을 아낄 수 있을까요? 서울 시내 기본요금 구간(1,400원)을 일반 신용카드 후불교통카드로 탈 때와 서울 전용 정기권(61,600원)을 이용할 때의 비용을 횟수별로 정밀 계산했습니다.
+
+<table class="info-table">
+<tr><th>월 순수 탑승 횟수</th><th>일반 교통카드 결제액 (1,400원/회)</th><th>서울 전용 정기권 요금</th><th>실제 절감 금액 (이득/손해)</th></tr>
+<tr><td>30회 (월 15일 왕복)</td><td>42,000원</td><td>61,600원</td><td><strong>-19,600원 손해</strong> (비추천)</td></tr>
+<tr><td>40회 (월 20일 왕복)</td><td>56,000원</td><td>61,600원</td><td><strong>-5,600원 손해</strong></td></tr>
+<tr><td><strong>44회 (손익분기점)</strong></td><td><strong>61,600원</strong></td><td><strong>61,600원</strong></td><td><strong>0원 (본전 도달선)</strong></td></tr>
+<tr><td>45회 탑승</td><td>63,000원</td><td>61,600원</td><td><strong>+1,400원 이득 시작</strong></td></tr>
+<tr><td>50회 (출퇴근+주말 외출)</td><td>70,000원</td><td>61,600원</td><td><strong>+8,400원 절감</strong></td></tr>
+<tr><td>55회 탑승</td><td>77,000원</td><td>61,600원</td><td><strong>+15,400원 절감</strong></td></tr>
+<tr><td><strong>60회 (최대 한도 소진)</strong></td><td><strong>84,000원</strong></td><td><strong>61,600원</strong></td><td><strong>+22,400원 최대 절감 (약 26.7% 이득)</strong></td></tr>
+</table>
+
+위 계산표에서 보듯, 한 달에 최소 <strong>45회 이상 순수 지하철만 탈 때부터 실질적인 이득</strong>이 발생합니다. 주 5일(월 약 22일 근무) 매일 출퇴근 왕복(44회)을 하고, 주말이나 평일 저녁에 추가로 6~10회 정도 지하철로 약속을 다닌다면 매달 1만 5천 원에서 2만 2천 원 이상의 교통비를 확실히 절약할 수 있습니다.
+
+<h2>04 | 지하철 정기권 vs K-패스 vs 기후동행카드 3종 혜택 비교</h2>
+
+현재 수도권 교통비 절감 제도는 지하철 정기권 외에도 정부의 <strong>K-패스</strong>와 서울시의 <strong>기후동행카드</strong>가 치열하게 경쟁하고 있습니다. 각 제도의 장단점을 비교하여 본인의 이동 패턴에 가장 적합한 카드를 판별해야 합니다.
+
+<table class="info-table">
+<tr><th>비교 항목</th><th>지하철 정기권 (서울 전용)</th><th>정부 K-패스</th><th>서울 기후동행카드</th></tr>
+<tr><td>월 부담 요금</td><td>61,600원 (선불 60회)</td><td>쓴 만큼 후불 결제 후 환급</td><td>62,000원 (무제한) / 65,000원(따릉이)</td></tr>
+<tr><td>환급/할인율</td><td>정액 할인 (최대 26.7% 절감)</td><td>일반 20%, 청년(만19~34세) 30%, 저소득 53%</td><td>서울 시내 전철·버스 무제한 이용</td></tr>
+<tr><td><strong>버스 환승</strong></td><td><strong>불가 (단독 이용만 가능)</strong></td><td><strong>전국 버스·지하철 환승 가능</strong></td><td><strong>서울 시내버스·마을버스 무제한 환승</strong></td></tr>
+<tr><td>신분당선·광역버스</td><td>신분당선 추가 차감 / 광역버스 불가</td><td>광역버스, GTX, 신분당선 모두 환급</td><td>신분당선 및 광역버스 불가</td></tr>
+<tr><td>카드 발급/충전</td><td>플라스틱 카드(2,500원) + 역사 현금 충전</td><td>일반 신용/체크카드 발급 (모바일 가능)</td><td>모바일 티머니(안드로이드) / 실물카드</td></tr>
+<tr><td>가장 유리한 대상</td><td><strong>버스를 절대 안 타고 지하철만 50회+ 타는 사람</strong></td><td><strong>버스-지하철 환승 출퇴근자 및 청년층</strong></td><td><strong>서울 시내에서 버스와 지하철을 복합 이용하는 통근자</strong></td></tr>
+</table>
+
+비교표에서 드러나듯, 버스를 조금이라도 이용한다면 기후동행카드나 K-패스가 압도적으로 유리합니다. 하지만 집과 직장이 모두 역세권이라 버스를 전혀 타지 않는 직장인이라면 지하철 정기권의 경제성이 여전히 강력한 위력을 발휘합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260925/4_subwaypass_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-2">Side-by-side comparative close-up of three modern Korean public transportation payment cards resting on a sleek wooden table. The specialized Seoul Metro Commuter Pass, a modern K-Pass transit credit card with subtle Korean banking logos, and a vibrant Seoul Climate Card with clean typography. Soft natural daylight, shallow depth of field, sharp photographic focus, financial and smart transit budgeting concept, realistic colors, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">지하철 정기권, K-패스, 기후동행카드 3종 교통카드 실물 비교 / AI 제작 이미지</div>
+</div>
+
+<h2>05 | 지하철 정기권 절대 사면 안 되는 사람 — 버스 환승의 치명적 함정</h2>
+
+지하철 정기권을 구매하기 전에 반드시 점검해야 할 치명적인 단점은 바로 <strong>'환승 할인 미적용'</strong>입니다.<br><br>
+많은 분들이 실수하는 패턴이 있습니다. "집에서 지하철역까지 마을버스를 타고(1,200원), 지하철로 갈아타서 출근한다"는 사람입니다. 일반 교통카드를 쓰면 지하철 환승 할인이 적용되어 추가 요금이 거의 붙지 않지만, 지하철 정기권 카드는 버스 단말기에서 인식되지 않으므로 버스 요금은 다른 신용카드로 1,200원~1,500원을 전액 결제해야 합니다.<br><br>
+결국 버스 요금 5만 원에 정기권 요금 61,600원이 더해져 월 교통비가 11만 원을 훌쩍 넘어가게 됩니다. 따라서 <strong>통근 경로에 버스가 단 1회라도 포함되는 분은 지하철 정기권을 절대 사면 안 되며</strong>, 반드시 K-패스나 기후동행카드를 선택해야 합니다.
+
+<h2>06 | 코레일·신분당선·경인선 이용 시 거리비례용 정기권 단계 계산법</h2>
+
+서울을 벗어나 경기·인천 지역으로 통근하는 승객이라면 서울 전용이 아닌 <strong>거리비례용 정기권</strong>을 구매해야 합니다. 거리비례용은 이용 구간의 최단 운행 거리에 따라 단계가 결정됩니다.<br><br>
+예를 들어 서울 시내에서 탑승하여 경기도 부천, 안양, 성남 등으로 이동할 경우 편도 이동 거리가 20km 이내라면 1단계(55,000원) 또는 2단계(61,600원)가 적용됩니다. 만약 거리가 먼 수원이나 평택, 동두천 등지에서 서울로 통근할 경우 7단계에서 12단계에 해당하는 정기권을 충전해야 합니다.<br><br>
+특히 주의할 점은 <strong>신분당선</strong> 이용 시입니다. 신분당선은 민자 철도 별도 운임이 부과되므로 서울 전용 정기권으로는 아예 개찰구를 통과할 수 없으며, 거리비례용 정기권이라 하더라도 승하차 시 횟수가 1회가 아니라 2회 이상 추가 차감될 수 있으므로 사전에 서울교통공사 홈페이지 정기권 거리 계산기를 통해 본인 구간의 정확한 단계를 조회하고 충전해야 낭패를 보지 않습니다.
+
+<h2>07 | 지하철 정기권 카드 구매처와 역사 내 교통카드 충전기 사용 순서</h2>
+
+지하철 정기권을 처음 발급받아 충전하는 절차는 매우 간단하지만, <strong>'오직 현금으로만 충전된다'</strong>는 점을 반드시 기억해야 합니다.
+
+<div class="step-box">
+<strong>지하철 정기권 최초 발급 및 충전 4단계</strong><br><br>
+<strong>1단계: 실물 카드 구입 (현금 2,500원)</strong><br>
+수도권 전철 역사 내 고객안내센터(역무실) 창구에 방문하여 "지하철 정기권 카드 주세요"라고 요청하고 현금 2,500원을 지불하고 카드를 수령합니다.<br><br>
+<strong>2단계: 1회용 발매·교통카드 충전기 이동</strong><br>
+역사 개찰구 주변에 위치한 무인 '교통카드 충전기' 화면에서 [교통카드 충전] 버튼 대신 <strong>[정기권 충전]</strong> 메뉴를 터치합니다.<br><br>
+<strong>3단계: 정기권 종류 선택 (서울전용 vs 거리비례)</strong><br>
+카드를 거치대에 올려놓은 뒤, 서울 시내만 이용할 경우 [서울 전용]을, 경기·인천 구간을 오갈 경우 [거리비례용]을 선택하고 출발역과 도착역을 입력합니다.<br><br>
+<strong>4단계: 충전 시작일 지정 및 현금 투입</strong><br>
+사용 개시일을 오늘 또는 미래 날짜로 지정한 뒤 충전 금액(서울 전용 61,600원)에 해당하는 <strong>지폐(현금)를 투입</strong>하여 충전을 완료합니다.
+</div>
+
+충전이 완료되면 영수증이 출력되며, 카드 뒷면에 인쇄된 카드 번호를 국세청 홈택스에 등록해두면 매달 충전하는 정기권 요금에 대해 <strong>연말정산 대중교통 소득공제(공제율 최대 80% 한시 적용)</strong> 혜택을 빠짐없이 챙길 수 있습니다.
+
+<h2>08 | 유효기간 30일과 잔여 횟수 만료 시 환불 및 연장 규정</h2>
+
+지하철 정기권은 30일 유효기간이 지나면 잔여 횟수가 남아 있더라도 남은 횟수는 즉시 소멸합니다. 따라서 월말에 남은 횟수를 아깝지 않게 소진하려면 평소 이용 페이스를 조절해야 합니다.<br><br>
+만약 장기 출장, 입원, 퇴사 등으로 인해 유효기간 내에 정기권을 더 이상 쓸 수 없게 되었다면 <strong>중도 환불</strong>을 신청할 수 있습니다. 환불은 역무실 창구에서 가능하며, 충전 금액에서 <strong>[사용한 일수 × 1일 2회 기준 요금]과 수수료 50원</strong>을 차감한 잔액을 현금으로 돌려받게 됩니다.<br><br>
+다만 이미 사용 횟수가 44회를 넘어선 상태라면 환불 산식에 의해 반환 금액이 0원이 되므로, 40회 이상 사용했다면 환불하기보다는 지인에게 양도하거나 주말 나들이용으로 소진하는 것이 경제적입니다.
+
+<h2>09 | 내 출퇴근 경로에 맞는 최적 교통카드 최종 선택 체크리스트</h2>
+
+마지막으로 내가 지하철 정기권을 사야 할지, 아니면 다른 카드를 써야 할지 결정할 수 있는 4대 체크포인트를 정리해 드립니다.
+
+<div class="tip-box">
+<strong>💡 최적의 교통카드 선택 가이드</strong><br><br>
+1. <strong>출퇴근 시 버스를 단 한 번도 타지 않고 지하철만 탄다?</strong><br>
+→ 월 45회 이상 탑승 시 <strong>지하철 정기권(서울 전용 61,600원)이 가장 저렴</strong>합니다.<br><br>
+2. <strong>서울 시내에서 버스와 지하철을 번갈아 타며 자주 이동한다?</strong><br>
+→ 버스 무제한 탑승이 가능한 <strong>기후동행카드(62,000원)가 무조건 유리</strong>합니다.<br><br>
+3. <strong>경기·인천에서 서울로 광역버스나 광역철도(GTX)를 타고 다닌다?</strong><br>
+→ 광역 교통수단 환급이 적용되는 <strong>정부 K-패스(The 경기패스·인천 I-패스)</strong>가 유일한 정답입니다.<br><br>
+4. <strong>만 19세~34세 청년층에 해당한다?</strong><br>
+→ K-패스는 30%를 현금 환급해주므로, 월 교통비가 7만 원 수준이라면 K-패스가 정기권보다 더 저렴해집니다.
+</div>
+
+내 하루 통근 패턴을 정확히 분석하여 불필요하게 새어 나가는 대중교통비를 똑똑하게 방어해 보시길 바랍니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260924/pass_ktx_srt_integration_guide.html">KTX·SRT 통합, 내 요금은 얼마나 내렸나 — 인하 계산법과 회원·앱 전환 체크리스트</a></li>
+<li><a href="../260924/travel_boseong_tea_komaek_fall.html">보성 녹차밭 가을 드라이브와 벌교 꼬막 제철 시작 — 전남 가을 먹거리 코스</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<span class="tag">#지하철정기권</span>
+<span class="tag">#지하철정기권손익분기</span>
+<span class="tag">#서울전용정기권가격</span>
+<span class="tag">#지하철정기권기후동행카드비교</span>
+<span class="tag">#지하철정기권K패스비교</span>
+<span class="tag">#대중교통비절약</span>
+<span class="tag">#지하철정기권충전방법</span>
+<span class="tag">#거리비례정기권</span>
+<span class="tag">#직장인교통비할인</span>
+<span class="tag">#지하철정기권버스환승</span>
+</div>
+</body>
+</html>
