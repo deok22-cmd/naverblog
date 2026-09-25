@@ -1,4 +1,4 @@
-# Naverblog 일일 자동 발행 PowerShell 래퍼
+﻿# Naverblog 일일 자동 발행 PowerShell 래퍼
 # Windows 작업 스케줄러가 매일 새벽 4:00 실행
 # 1) Antigravity CLI로 원고 7건 작성 → 2) 작성 결과만 GitHub에 자동 push
 
@@ -886,7 +886,9 @@ if ($exit -ne 0) {
                 continue
             }
             $dd = $null
-            if (-not [datetime]::TryParseExact($m.Groups[1].Value, 'yyyy-MM-dd', $null, [System.Globalization.DateTimeStyles]::None, [ref]$dd)) {
+            try {
+                $dd = [datetime]::ParseExact($m.Groups[1].Value, 'yyyy-MM-dd', $null)
+            } catch {
                 $publishGateFailed = $true
                 $gateReasons += "$($hf.Name): hot-dday 날짜 파싱 실패"
                 Write-Log "(6) [FAIL] $($hf.Name) — D-day 형식 오류: $($m.Groups[1].Value)"
