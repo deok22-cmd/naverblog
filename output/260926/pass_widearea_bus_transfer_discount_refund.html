@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>광역버스 환승 할인 안 될 때 — 미적용 원인 5가지와 과다 요금 환불 신청 방법 체크리스트</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>광역버스 환승 할인 안 될 때 — 미적용 원인 5가지와 과다 요금 환불 신청 방법 체크리스트</h1>
+<div class="intro-box">
+수도권 광역버스(직행좌석형·M버스)는 일반 시내버스보다 기본요금이 비싸기 때문에 환승 할인이 제대로 적용되지 않으면 한 번에 수천 원의 추가 요금이 부과될 수 있습니다. 정상적으로 환승했다고 생각했음에도 기본요금이 이중 결제되거나 패널티 요금이 발생하는 대표적인 원인은 하차 미태그, 유효시간 초과, 동일 노선 환승 등 5가지 유형으로 압축됩니다. 본 글에서는 환승 할인 미적용의 구체적인 원인과 계산 구조를 밝히고, 부당하게 과다 부과된 교통비를 카드사로부터 전액 환불받는 신청 방법과 증빙 절차를 안내해 드립니다.
+</div>
+<div class="img-area">
+<img alt="전세보증보험 신청을 위해 준비한 공인 임대차계약서와 등기부등본 서류 / AI 제작 이미지" src="../../images/260926/3_buspass_1.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">광역버스 단말기에 교통카드를 태그하여 환승 요금을 처리하는 모습 / AI 제작 이미지</div>
+</div>
+<h2>01 | 광역버스 출퇴근길 환승 할인 누락, 왜 자주 발생하나</h2>
+수도권 광역버스는 서울과 경기·인천을 오가는 장거리 노선 특성상 기본요금이 일반 시내버스(1,500원)의 두 배에 달하는 3,000원(경기 직행좌석형 기준)에 달합니다. 여기에 지하철이나 시내버스로 갈아탈 때 환승 할인을 받지 못하면 편도 교통비만 4,500원~5,000원을 훌쩍 넘기게 됩니다.<br/><br/>
+많은 직장인과 학생들이 출퇴근 시간 혼잡한 차내에서 서두르다 하차 단말기 인식을 놓치거나, 배차 간격 지연으로 환승 유효 시간을 넘기는 등 다양한 돌발 변수로 인해 부당한 추가 요금을 지불하고 있습니다.<br/><br/>
+단말기 화면의 음성 안내("환승입니다" 또는 "하차입니다")를 무심코 지나치면 당일에는 인지하지 못하다가 월말 카드 청구서나 K-패스 마일리지 정산 내역을 보고서야 누락 사실을 발견하는 경우가 적지 않습니다.
+
+<h2>02 | 수도권 통합환승할인 기본 원칙과 적용 조건</h2>
+수도권 통합요금제는 서울시, 경기도, 인천시의 지하철과 버스(간선·지선·광역·마을버스)를 하나의 대중교통망으로 묶어 총 이동 거리에 따라 요금을 비례 부과하는 제도입니다.<br/><br/>
+<strong>기본 환승 규칙</strong>은 교통수단 중 가장 높은 기본요금을 최초 탑승 시 지불하고, 갈아탈 때마다 기본요금은 면제되며 통합 이동 거리에 따른 추가 거리 요금(기본거리 초과 시 5km마다 100원 부과)만 지불하는 구조입니다.<br/><br/>
+환승 할인은 하차 태그 시점으로부터 <strong>30분 이내</strong>(오후 9시부터 다음 날 오전 7시까지 야간 시간대는 <strong>60분 이내</strong>)에 다음 대중교통에 승차해야 유효하며, 최대 4회 환승(총 5회 탑승)까지 혜택이 이어집니다.
+
+<table class="info-table">
+<tr>
+<th>구분</th>
+<th>일반 시내버스</th>
+<th>지하철 (기본)</th>
+<th>직행좌석형 광역버스</th>
+<th>광역급행버스 (M버스)</th>
+</tr>
+<tr>
+<td>기본요금 (성인 카드)</td>
+<td>1,500원</td>
+<td>1,400원</td>
+<td>3,000원</td>
+<td>2,800원</td>
+</tr>
+<tr>
+<td>기본 제공 거리</td>
+<td>10km</td>
+<td>10km</td>
+<td>30km</td>
+<td>30km</td>
+</tr>
+<tr>
+<td>초과 요금 기준</td>
+<td>5km당 100원</td>
+<td>5km당 100원</td>
+<td>5km당 100원</td>
+<td>5km당 100원</td>
+</tr>
+<tr>
+<td>환승 인정 시간</td>
+<td colspan="4">주간 30분 이내 / 야간(21시~07시) 60분 이내</td>
+</tr>
+</table>
+<h2>03 | [원인 1] 하차 태그 누락 및 잔여 거리 패널티 부과 기준</h2>
+환승 할인이 누락되는 가장 흔한 원인 1위는 직전 교통수단에서의 <strong>하차 태그 누락</strong>입니다. 목적지에 도착해 내릴 때 단말기에 카드를 찍지 않고 그냥 내리면 시스템은 승객이 종점까지 탑승한 것으로 간주하거나 이동 거리를 측정할 수 없게 됩니다.<br/><br/>
+이 경우 다음 교통수단에 승차할 때 직전 노선의 최장 이동 거리에 해당하는 <strong>패널티 요금(기본요금 수준의 추가 운임)</strong>이 부과되며, 동시에 연속 환승 자격이 즉시 소멸하여 새로운 기본요금이 청구됩니다.<br/><br/>
+특히 광역버스에서 하차 태그를 누락하고 다음 날 아침 지하철을 타면, 지하철 탑승 시 어제 광역버스의 최대 패널티 요금(최대 1,500원 안팎)과 지하철 기본요금(1,400원)이 동시에 찍히는 요금 폭탄을 맞게 됩니다.
+
+<h2>04 | [원인 2] 환승 유효 시간 30분(야간 60분) 초과와 단말기 시간 오차</h2>
+하차 태그를 정상적으로 마쳤더라도 다음 버스나 지하철에 승차 태그를 하기까지의 시간이 30분을 1초라도 초과하면 환승 할인이 적용되지 않고 새로운 기본요금이 전액 결제됩니다.<br/><br/>
+특히 출퇴근 시간 광역버스는 배차 간격이 20~30분 이상 벌어지는 경우가 잦아 정류장에서 버스를 기다리다가 환승 인정 제한 시간을 넘기는 일이 빈번하게 발생합니다.<br/><br/>
+또한 드물게 버스 차내 단말기의 전산 시스템 시계가 실제 표준시보다 1~2분 빠르게 설정되어 있어 승객의 스마트폰 기준으로는 29분 만에 탔으나 전산상 31분으로 처리되어 환승이 무산되는 시스템 오류 사례도 존재합니다.
+
+<div class="img-area">
+<img alt="전세보증보험 신청을 위해 준비한 공인 임대차계약서와 등기부등본 서류 / AI 제작 이미지" src="../../images/260926/3_buspass_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">스마트폰 앱을 통해 교통카드 환승 이력과 과다 부과 요금을 조회하는 화면 / AI 제작 이미지</div>
+</div>
+<h2>05 | [원인 3] 동일 노선 및 동일 차량 재탑승 시 환승 불가 규정</h2>
+수도권 통합환승 요금제는 '서로 다른 노선 간의 갈아타기'를 전제로 운임을 할인해 주는 제도입니다. 따라서 <strong>번호가 완전히 같은 노선 버스를 다시 타거나 지하철에서 개찰구를 나갔다가 같은 역으로 다시 들어가는 경우</strong>에는 환승이 절대 적용되지 않습니다.<br/><br/>
+예를 들어 수원에서 강남역으로 가는 3000번 광역버스를 타고 가다가 중간 정류장에서 잠시 하차하여 볼일을 본 뒤, 20분 후에 다시 오는 동일한 3000번 버스를 탑승하면 환승 시간이 30분 이내라 할지라도 환승 할인이 되지 않고 3,000원의 기본요금이 고스란히 추가 청구됩니다.<br/><br/>
+노선 번호가 같은 버스를 연이어 타야 할 때는 중간에 지하철이나 다른 번호의 지선·마을버스를 1회 경유하여 환승 체인을 구성해야 할인을 유지할 수 있습니다.
+
+<h2>06 | [원인 4] 4회 환승(총 5회 탑승) 한도 초과 및 카드사 오류</h2>
+수도권 통합환승할인은 최대 4회 환승, 즉 <strong>총 5개의 교통수단 탑승</strong>까지만 한정하여 혜택을 제공합니다.<br/><br/>
+출근 경로가 '마을버스 → 지하철 → 광역버스 → 시내버스 → 마을버스'처럼 5회 탑승을 완료한 후, 추가로 다른 버스로 갈아타는 6번째 탑승부터는 이전의 통합 거리 정산이 강제 종료되고 완전히 새로운 1회 차 승차로 분류되어 기본요금이 새롭게 부과됩니다.<br/><br/>
+또한 실물 후불교통카드(신용카드)와 삼성페이·모바일티머니 등 모바일 교통카드를 혼용하여 승차와 하차 시 서로 다른 매체를 단말기에 접촉했을 경우에도 시스템은 이를 서로 다른 사람으로 인식하여 환승 할인을 누락시킵니다.
+
+<h2>07 | [원인 5] 다인승 환승 시 인원수 변경으로 인한 할인 탈락</h2>
+동행인이 있어 2인 이상의 요금을 한 장의 카드로 결제하는 '다인승 탑승'의 경우 환승 규정이 매우 엄격합니다.<br/><br/>
+환승 할인이 인정되려면 <strong>승차할 때마다 기사님께 "2명입니다"라고 미리 구두 요청한 뒤 단말기에 태그해야 하며, 환승하는 모든 대중교통에서 탑승 인원수가 단 1명도 달라지지 않고 끝까지 동일</strong>해야 합니다.<br/><br/>
+처음 버스에서 2인으로 결제했다가 다음 광역버스에서 1명만 탑승하여 1인으로 결제하거나, 반대로 1인에서 2인으로 인원을 늘려 승차하면 다인승 환승 체인이 완전히 깨져 전원 환승 할인이 박탈됩니다. (지하철은 시스템상 다인승 환승이 아예 불가하므로 버스 ↔ 지하철 다인 환승은 성립하지 않습니다.)
+
+<h2>08 | 교통카드 이용 내역 조회와 부당 과금 확인하는 법</h2>
+환승 할인이 누락되어 억울하게 추가 요금이 빠져나갔는지 확인하려면 교통카드사의 공식 이용 내역을 상세 조회해야 합니다.<br/><br/>
+· <strong>티머니(Tmoney) 이용자</strong>: 티머니 공식 홈페이지 또는 '모바일티머니' 앱 로그인 → [나의 티머니] → [이용내역조회] 메뉴에서 최근 1년간의 승하차 일시, 이용 노선, 승하차 정류장, 결제 금액, 환승 여부를 건별로 조회할 수 있습니다.<br/>
+· <strong>이즐(구 캐시비·로카모빌리티) 이용자</strong>: '이즐충전소' 앱 또는 공식 홈페이지 내 [거래내역조회] 메뉴에서 상세 내역 확인이 가능합니다.<br/>
+· <strong>신용·체크카드 후불교통카드</strong>: 카드사 앱의 후불교통 이용명세서에서는 승하차 정류장이 생략되는 경우가 많으므로, 티머니나 이즐 정산사 고객센터에 카드번호 16자리를 불러주고 '정산 원장'을 요청해야 정확한 승하차 시간과 환승 누락 초 단위를 확인할 수 있습니다.
+
+<h2>09 | 카드사별(티머니·이즐) 과다 요금 환불 신청 단계별 절차</h2>
+단말기 오작동, 시간 오차, 시스템 오류 등으로 인해 환승 할인이 정상적으로 처리되지 않고 과다 청구된 사실이 확인되었다면 고객센터를 통해 손쉽게 전액 환불받을 수 있습니다.<br/><br/>
+<div class="step-box">
+<strong>📞 과다 부과 요금 환불 접수 4단계 절차</strong><br/><br/>
+1. <strong>정산사 고객센터 연결</strong>: 티머니 고객센터(1644-0088) 또는 이즐 고객센터(1644-0006)로 전화하여 상담원 연결을 선택합니다.<br/>
+2. <strong>카드 번호 및 사고 일자 조회</strong>: 사용한 교통카드 번호(실물카드 16자리 또는 모바일 가상카드 번호)와 부당 요금이 결제된 날짜, 대략적인 탑승 시간대, 이용 노선 번호를 안내합니다.<br/>
+3. <strong>환승 누락 원인 소명</strong>: "단말기 접촉은 정상이었으나 기기 오류로 미태그 처리됨" 또는 "배차 간격 지연 및 시스템 시계 오차로 인한 초과" 등 정황을 접수하면 상담원이 전산 로그를 즉시 대조합니다.<br/>
+4. <strong>환불금 입금 처리</strong>: 심사 결과 부당 청구가 인정되면 신청일 기준 2~3 영업일 이내에 신청자 본인 명의 계좌로 과다 부과된 차액(또는 결제 취소)이 현금 입금됩니다.
+</div>
+<h2>10 | 환승 누락 재발 방지를 위한 대중교통 이용 습관 체크리스트</h2>
+매일 반복되는 출퇴근길 소중한 교통비를 지키기 위해 승하차 시 반드시 점검해야 할 행동 요령입니다.<br/><br/>
+<div class="info-box">
+<strong>📋 광역버스 환승 할인 사수 체크리스트</strong><br/><br/>
+1. <strong>단말기 화면과 비프음 확인</strong>: 내릴 때 단말기 화면에 '하차입니다' 문구와 잔여 잔액이 정상 표기되는지 1초간 눈으로 확인하세요.<br/>
+2. <strong>스마트폰 중복 결제 방지</strong>: 실물 카드와 모바일 NFC 카드가 겹쳐져 '카드를 한 장만 대주세요' 오류가 뜨면 즉시 단일 카드로 재태그하세요.<br/>
+3. <strong>광역버스 승차 전 배차 간격 확인</strong>: 지하철 하차 후 환승 잔여 시간이 10분 미만인데 광역버스 도착 예정 시간이 15분 이상 남았다면, 중간에 시내버스를 1회 경유하여 환승 시간을 리셋하는 것도 방법입니다.<br/>
+4. <strong>월 1회 교통카드 명세서 검토</strong>: K-패스 환급 신청자나 정기 통근자는 월 1회 정산 내역을 점검하여 누락된 환불 건이 없는지 확인하세요.
+</div>
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260925/pass_subway_commuter_pass_breakeven.html">지하철 정기권 얼마부터 이득인가 — 서울 전용 vs 거리비례 손익분기 계산표와 K-패스 비교</a></li>
+<li><a href="../260925/labor_resignation_checklist_settlement.html">퇴사 전 체크리스트 — 퇴직금·미사용 연차수당 정산과 4대보험 처리 순서</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#광역버스환승할인</span>
+<span class="tag">#수도권통합환승</span>
+<span class="tag">#환승할인안될때</span>
+<span class="tag">#교통카드환불신청</span>
+<span class="tag">#티머니환불</span>
+<span class="tag">#하차태그누락</span>
+<span class="tag">#패널래요금</span>
+<span class="tag">#M버스환승</span>
+<span class="tag">#대중교통요금절약</span>
+<span class="tag">#K패스환급</span>
+</div>
+</body>
+</html>

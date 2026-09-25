@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>자동차보험 특약 비교 — 꼭 필요한 것과 뺄 것 비용 계산과 갱신 전 체크리스트</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>자동차보험 특약 비교 — 꼭 필요한 것과 뺄 것 비용 계산과 갱신 전 체크리스트</h1>
+<div class="intro-box">
+매년 돌아오는 자동차보험 갱신 시 전년도 설정을 그대로 유지하거나 보험사 추천 기본값으로 서둘러 계약을 마치는 운전자가 많습니다. 그러나 몇천 원의 차이로 사고 발생 시 수천만 원의 보상 차이가 벌어지는 '핵심 필수 특약'이 있는 반면, 실효성 없이 보험료만 올리는 '불필요한 특약'도 존재합니다. 본 글에서는 무보험차상해, 자동차상해(자상) vs 자기신체사고(자손), 견인거리 확대 등 주요 특약의 실제 비용 차이와 보장 범위를 정밀 계산표로 비교하고 갱신 전 필수 체크리스트를 정리해 드립니다.
+</div>
+<div class="img-area">
+<img alt="전세보증보험 신청을 위해 준비한 공인 임대차계약서와 등기부등본 서류 / AI 제작 이미지" src="../../images/260926/4_carins_1.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">다이렉트 자동차보험 특약별 보험료와 보장 내역을 온라인으로 비교 분석하는 모습 / AI 제작 이미지</div>
+</div>
+<h2>01 | 매년 돌아오는 자동차보험 갱신, 기본값 그대로 가입하면 손해인 이유</h2>
+다이렉트 자동차보험 가입 화면에서 시스템이 권장하는 '표준 플랜'은 보험사의 리스크 관리를 위해 최소한의 보상 한도로 세팅되어 있는 경우가 대부분입니다.<br/><br/>
+예를 들어 대물배상을 2억 원으로 낮게 설정하거나, 운전자 본인 치료비를 가장 저렴한 '자기신체사고'로 묶어두는 식입니다. 이 경우 연간 납입 보험료는 1만~2만 원가량 절약될 수 있지만, 고가 수입차와의 추돌 사고나 본인 과실 사고 발생 시 수천만 원의 본인 부담금이 발생할 위험에 노출됩니다.<br/><br/>
+반대로 굳이 필요하지 않은 중복 특약이나 실효성이 떨어지는 부가 담보를 관성적으로 포함해 수만 원의 보험료를 낭비하는 사례도 흔합니다. 1년에 딱 한 번 갱신할 때 특약 세부 내역을 10분만 꼼꼼히 점검하면 가장 안전하면서도 경제적인 최적의 플랜을 구성할 수 있습니다.
+
+<h2>02 | 자동차보험 기본 담보와 선택 특약의 구조적 차이</h2>
+자동차보험은 법률상 의무적으로 가입해야 하는 '책임보험(대인배상Ⅰ, 대물배상 2천만 원)'과 선택적으로 가입하는 '종합보험 담보(대인배상Ⅱ, 대물배상 확대, 자기신체사고/자동차상해, 자기차량손해, 무보험차상해)', 그리고 이를 보강하는 '특별약관(특약)'으로 구성됩니다.<br/><br/>
+특약은 기본 종합보험 담보의 보장 범위를 확장하거나 운전자 범위를 제한하여 보험료를 깎아주는 역할을 합니다.<br/><br/>
+운전자의 운행 패턴, 연간 주행거리, 가족 구성원, 차량 연식에 맞추어 필수 특약은 최고 한도로 보강하고, 불필요한 특약은 과감히 삭제하는 '선택과 집중'이 필요합니다.
+
+<h2>03 | [반드시 넣어야 할 특약 1] 무보험차상해와 한도 5억 상향의 가치</h2>
+'무보험차상해'는 상대방 차량이 책임보험조차 들지 않은 뺑소니 차량이거나 대물·대인 한도가 턱없이 부족한 차량일 때, 내 보험사에서 먼저 보상금을 전액 지급해 주는 핵심 담보입니다.<br/><br/>
+더욱 중요한 점은 나와 내 배우자뿐만 아니라 <strong>부모님과 자녀가 길을 걷다가 뺑소니나 무보험차에 치였을 때도 이 특약으로 보상</strong>을 받을 수 있다는 광범위한 가족 보호 기능을 지니고 있다는 사실입니다.<br/><br/>
+대부분의 보험사 기본 설정값은 2억 원이지만, 이를 <strong>5억 원으로 상향 조정할 때 추가되는 연간 보험료는 단 1,000원~2,000원 안팎</strong>에 불과합니다. 커피 한 잔도 안 되는 비용으로 보상 한도를 2.5배 높일 수 있으므로 무조건 5억 원 최고 한도로 가입하는 것이 유리합니다.
+
+<h2>04 | [반드시 넣어야 할 특약 2] 자기신체사고(자손) vs 자동차상해(자상) 비용 계산 비교</h2>
+내 과실로 인한 단독 사고나 쌍방 과실 사고 시 운전자 본인 및 가족의 병원비를 보상하는 담보는 '자기신체사고(자손)'와 '자동차상해(자상)' 중 하나를 선택해야 합니다.<br/><br/>
+두 담보는 이름이 비슷하지만 실제 보상 방식에서는 하늘과 땅 차이의 결과를 낳습니다.<br/><br/>
+<table class="info-table">
+<tr>
+<th>비교 항목</th>
+<th>자기신체사고 (자손)</th>
+<th>자동차상해 (자상) - 권장</th>
+<th>차이점 및 가치 판단</th>
+</tr>
+<tr>
+<td>보상 기준</td>
+<td>상해 급수별(1~14급) 정액 한도 내 지급</td>
+<td>급수 무관, 실제 치료비 전액 + 위자료 + 휴업손해</td>
+<td>자상은 비급여 및 휴업손실까지 전액 실손 보장</td>
+</tr>
+<tr>
+<td>과실 상계</td>
+<td>본인 과실 비율만큼 치료비 차감 지급</td>
+<td>과실 비율 무관, 100% 전액 선지급 보상</td>
+<td>자상은 내 과실 100% 사고여도 병원비 걱정 없음</td>
+</tr>
+<tr>
+<td>동승 가족 보장</td>
+<td>치료비 급수 한도 초과 시 본인 부담 발생</td>
+<td>동승 가족 전원에게 실제 손해액 전액 지급</td>
+<td>가족 탑승 잦은 차량일수록 필수적</td>
+</tr>
+<tr>
+<td>연간 추가 보험료</td>
+<td>기본 포함 (0원)</td>
+<td>+2만 원 ~ 3만 5천 원 안팎</td>
+<td>연 3만 원 투자로 수천만 원 의료비 리스크 완벽 헤지</td>
+</tr>
+</table>
+
+자손은 상해 등급에 따라 지급 한도가 묶여 있어 실제 병원비가 500만 원이 나와도 등급 한도가 200만 원이면 나머지 300만 원은 자비로 부담해야 합니다. 반면 자상은 입원 기간 중 일하지 못해 발생한 '휴업손해금'과 '위자료'까지 모두 지급하므로 연간 2만~3만 원을 더 내더라도 반드시 자상(사망 2억/부상 5천 또는 1억)을 선택해야 합니다.
+
+<div class="img-area">
+<img alt="전세보증보험 신청을 위해 준비한 공인 임대차계약서와 등기부등본 서류 / AI 제작 이미지" src="../../images/260926/4_carins_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">고속도로 및 원거리 운행 시 필수적인 자동차보험 긴급출동 견인 서비스 현장 / AI 제작 이미지</div>
+</div>
+<h2>05 | [반드시 넣어야 할 특약 3] 다른 자동차 운전담보 및 대인배상Ⅱ 무한 설정</h2>
+'다른 자동차 운전담보 특약'은 내가 친구나 친척, 직장 동료의 차량을 임시로 운전하다가 사고를 냈을 때, 내 자동차보험으로 상대방 및 동승자의 피해를 보상해 주는 매우 유용한 담보입니다.<br/><br/>
+무보험차상해를 가입하면 기본 세트로 자동 포함되는 경우가 많지만, 일부 다이렉트 상품에서는 별도 체크를 요구하기도 하므로 누락 여부를 반드시 확인해야 합니다.<br/><br/>
+아울러 '대인배상Ⅱ'는 반드시 <strong>'무한'</strong>으로 설정해야 합니다. 대인배상Ⅱ를 무한으로 가입해야만 교통사고처리 특례법상 12대 중과실이나 사망·중상해 사고를 제외한 일반 과실 사고 시 형사처벌(기소)을 면제받을 수 있습니다.
+
+<h2>06 | [운전 성향별 선택 특약] 긴급출동 서비스 확장형 견인거리 확대</h2>
+배터리 방전, 타이어 펑크, 비상 급유, 견인 등을 지원하는 '긴급출동 서비스'는 기본적으로 10km~20km의 무료 견인 거리를 제공합니다.<br/><br/>
+하지만 고속도로나 지방 국도, 여행지에서 차량이 고장 났을 때 기본 견인 거리를 초과하면 <strong>1km당 2,000원~3,000원의 사설 추가 견인 요금</strong>이 발생합니다. 예를 들어 50km 떨어진 단골 정비소나 거주지로 견인하려면 현장에서 8만~10만 원을 결제해야 합니다.<br/><br/>
+이때 <strong>'견인거리 확대 특약(50km 또는 60km)'을 추가하면 연간 보험료 약 2,000원~4,000원</strong>만 추가됩니다. 장거리 출퇴근자나 주말 여행을 자주 다니는 운전자라면 반드시 견인거리 확대를 체크해 두는 것이 현명합니다.
+
+<h2>07 | [빼도 무방한 불필요 특약] 성형지원금·주말사고확대 등 실효성 낮은 항목</h2>
+반대로 보험료만 축내고 실제 보상 청구 빈도가 극히 낮은 특약들은 갱신 시 과감히 제외하는 것이 좋습니다.<br/><br/>
+· <strong>치아보철·성형비용 지원 특약</strong>: 사고로 인한 안면부 성형 수술 시 일정액을 정액 지원하지만, 이미 실손의료비나 자동차상해(자상)에서 치료 목적 성형이 대부분 커버되므로 중복 가입일 가능성이 높습니다.<br/>
+· <strong>주말·휴일 사고 확대 보상 특약</strong>: 주말에 발생한 사고에 대해서만 보상금을 추가 지급하는 조건으로, 평일 운행 비중이 높은 출퇴근 운전자에게는 불필요합니다.<br/>
+· <strong>원데이/단기 렌터카 특약</strong>: 차량 수리 기간 동안 렌터카 비용을 지원하는 특약이지만, 연간 3만~5만 원 수준으로 비싼 편이므로 대중교통 이용이 가능한 가구라면 생략해도 무방합니다.
+
+<h2>08 | 마일리지(주행거리)·블랙박스·티맵 안전운전 점수 환급 특약 챙기기</h2>
+보험료를 깎아주는 '할인 환급형 특약'은 손해를 전혀 보지 않고 수십만 원을 돌려받을 수 있는 최고의 재테크 수단입니다.<br/><br/>
+· <strong>마일리지 특약 (주행거리 환급)</strong>: 연간 1만 5천 km 이하 주행 시 주행거리 구간에 따라 납입한 보험료의 5%~최대 40% 이상을 만기 시 현금으로 환급해 줍니다. 가입 시 비용이 전혀 들지 않으므로 무조건 신청해야 합니다.<br/>
+· <strong>티맵(TMAP)·카카오내비 안전운전 특약</strong>: 안전운전 점수 70점~80점 이상을 달성하면 가입 시 5%~13%의 즉시 할인 혜택이 적용됩니다.<br/>
+· <strong>첨단 안전장치 장착 특약</strong>: 차선이탈 경고장치(LDWS), 전방충돌 경고장치(FCW), 어라운드 뷰 등이 장착된 차량은 증빙 사진 등록만으로 3%~7% 추가 할인이 가능합니다.
+
+<h2>09 | 다이렉트 갱신 시 특약 재설계에 따른 실제 보험료 증감 예시표</h2>
+배기량 2,000cc 중형 세단(30대 중반, 무사고 5년 차 운전자 기준)의 실제 특약 변경에 따른 보험료 증감 시뮬레이션입니다.<br/><br/>
+<table class="info-table">
+<tr>
+<th>담보 및 특약 항목</th>
+<th>기존 설정 (미흡형)</th>
+<th>권장 설정 (실속 안심형)</th>
+<th>연간 보험료 차액</th>
+</tr>
+<tr>
+<td>대물배상</td>
+<td>2억 원</td>
+<td>10억 원</td>
+<td>+6,200원</td>
+</tr>
+<tr>
+<td>신체 사고 담보</td>
+<td>자기신체사고 (사망 1억)</td>
+<td>자동차상해 (사망 2억/부상 5천)</td>
+<td>+28,500원</td>
+</tr>
+<tr>
+<td>무보험차상해</td>
+<td>2억 원</td>
+<td>5억 원</td>
+<td>+1,400원</td>
+</tr>
+<tr>
+<td>긴급출동 견인거리</td>
+<td>기본 10km</td>
+<td>확대 60km</td>
+<td>+3,100원</td>
+</tr>
+<tr>
+<td>불필요 부가 특약 2종</td>
+<td>주말확대 + 성형지원 가입</td>
+<td>과감히 제외</td>
+<td>-14,000원</td>
+</tr>
+<tr>
+<td><strong>최종 보험료 변동 합계</strong></td>
+<td colspan="2">보장 한도는 3~5배 폭증 / 완벽한 실손 보장 구축</td>
+<td><strong>약 +25,200원 (월 2,100원)</strong></td>
+</tr>
+</table>
+
+월 2,100원가량의 비용만 추가하면 대물 10억 원, 자상 전액 실손, 무보험차 5억 원, 견인 60km라는 가장 든든한 방패를 완성할 수 있습니다.
+
+<h2>10 | 계약 체결 직전 최종 확인해야 할 갱신 체크리스트</h2>
+결제 버튼을 누르기 전 아래 5가지 항목을 최종 점검하여 누락된 혜택이 없는지 확인하세요.<br/><br/>
+<div class="info-box">
+<strong>📋 자동차보험 갱신 직전 5분 체크리스트</strong><br/><br/>
+1. <strong>운전자 한정 범위</strong>: '기본 누구나'로 되어 있다면 '부부 한정' 또는 '1인 한정'으로 좁혀 10%~20% 보험료를 절감했는지 확인하세요.<br/>
+2. <strong>자동차상해(자상) 전환 여부</strong>: 자기신체사고(자손)가 아닌 자동차상해로 올바르게 체크되었는지 재확인하세요.<br/>
+3. <strong>대물배상 10억 원 설정</strong>: 2억이나 5억 대신 10억 원으로 상향되었는지 확인하세요. (차액 몇천 원 수준)<br/>
+4. <strong>주행거리 계기판 사진 등록</strong>: 마일리지 환급을 위해 시작 주행거리 계기판 사진을 선명하게 촬영하여 업로드하세요.<br/>
+5. <strong>보험료 결제 제휴카드 혜택</strong>: 신용카드사별 30만 원 이상 결제 시 2만~3만 원 청구할인 또는 캐시백 이벤트를 사전 확인하세요.
+</div>
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260925/pass_subway_commuter_pass_breakeven.html">지하철 정기권 얼마부터 이득인가 — 서울 전용 vs 거리비례 손익분기 계산표와 K-패스 비교</a></li>
+<li><a href="../260925/labor_resignation_checklist_settlement.html">퇴사 전 체크리스트 — 퇴직금·미사용 연차수당 정산과 4대보험 처리 순서</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#자동차보험특약</span>
+<span class="tag">#자동차보험갱신</span>
+<span class="tag">#다이렉트자동차보험</span>
+<span class="tag">#자동차상해자기신체사고</span>
+<span class="tag">#무보험차상해</span>
+<span class="tag">#대물배상10억</span>
+<span class="tag">#견인거리확대특약</span>
+<span class="tag">#자동차보험료계산</span>
+<span class="tag">#마일리지특약환급</span>
+<span class="tag">#운전자보험비교</span>
+</div>
+</body>
+</html>
