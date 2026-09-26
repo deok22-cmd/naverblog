@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>실손보험 1~4세대 차이 비교 — 가입 시기별 자기부담금 계산표와 내 세대 판별 체크리스트</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>실손보험 1~4세대 차이 비교 — 가입 시기별 자기부담금 계산표와 내 세대 판별 체크리스트</h1>
+<div class="intro-box">
+국민 10명 중 8명이 가입하여 '제2의 건강보험'으로 불리는 실손의료보험은 <strong>언제 가입했느냐(가입 연월)에 따라 1세대부터 4세대까지 자기부담금 비율과 갱신 보험료 구조가 완전히 달라집니다.</strong> 1세대(2009년 9월 이전)는 자기부담금이 사실상 0원(또는 5천 원)인 반면 매년 갱신 폭이 매우 가파르고, 4세대(2021년 7월 이후)는 보험료가 최대 70% 저렴하지만 급여 20%·비급여 30%의 자기부담률과 비급여 이용량에 따른 보험료 차등제(할증제)가 적용됩니다.<br/><br/>
+병원 치료를 자주 받지 않는 건강한 사람이라면 비싼 1·2세대를 유지하는 것이 과도한 보험료 낭비가 될 수 있고, 반대로 만성질환이나 비급여 치료가 잦은 분은 섣불리 4세대로 전환했다가 보장 혜택이 대폭 축소될 수 있습니다.<br/><br/>
+금융감독원 표준약관 기준 세대별 비교표와 실제 병원비 발생 시 환급금 계산표, 그리고 내 보험 증권 세대 판별 체크리스트를 확인해 보세요.
+</div>
+<div class="img-area">
+<img alt="방충망 셀프 교체에 필요한 미세망 롤과 롤러, 고무 오치가스켓 등 기본 공구 세트 / AI 제작 이미지" src="../../images/260927/6_silson_1.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">실손의료보험 보험 증권 약관과 병원비 진료비 영수증 정산 서류 / AI 제작 이미지</div>
+</div>
+<h2>01 | 4,000만 국민이 가입한 제2의 건강보험 실손의료보험의 세대별 변천사</h2>
+실손의료보험은 피보험자가 질병이나 상해로 병원 치료를 받았을 때 국민건강보험의 법정 본인부담금과 비급여 의료비를 실손으로 보상해 주는 민간 보험입니다.<br/><br/>
+초기 실손보험은 의료 이용의 도덕적 해이를 막는 장치가 부족하여 손해율이 급등했고, 이에 금융감독원과 보험업계는 2009년 표준화(2세대), 2017년 착한실손(3세대), 2021년 7월 이용량 연동 차등제(4세대)로 약관을 개정해 왔습니다.<br/><br/>
+이에 따라 같은 실손보험이라 하더라도 가입 시점에 따라 보상 범위, 자기부담금, 갱신 주기, 비급여 특약 조건이 완전히 다르게 적용되므로, 소비자는 자신이 어느 세대에 속해 있는지 정확히 인지해야 손해를 보지 않습니다.
+
+<h2>02 | 가입 시기별로 나뉘는 1세대·2세대·3세대·4세대 실손보험 구분 기준</h2>
+본인이 가입한 실손보험의 세대는 보험 계약 체결일을 기준으로 칼같이 분류됩니다.<br/><br/>
+<strong>1세대 (구실손, 2009년 9월 이전 가입)</strong> : 표준화 이전 상품으로, 입원의 경우 100% 전액 보상(자기부담금 0원), 통원은 5천 원 공제 후 전액 보상되는 파격적인 보장성을 지닙니다.<br/><br/>
+<strong>2세대 (표준화 실손, 2009년 10월 ~ 2017년 3월 가입)</strong> : 금융당국이 표준화한 상품으로 입원 시 90% 보상(자기부담 10%), 통원은 의원 1만 원·병원 1.5만 원·종합병원 2만 원 또는 10~20% 공제 방식이 적용됩니다.<br/><br/>
+<strong>3세대 (착한실손, 2017년 4월 ~ 2021년 6월 가입)</strong> : 기본형(급여 10~20%, 비급여 20% 공제)과 3대 비급여 특약(도수치료·비급여 주사·비급여 MRI, 자기부담 30%)으로 분리된 구조입니다.<br/><br/>
+<strong>4세대 (현재 판매 중, 2021년 7월 이후 가입)</strong> : 급여는 주계약(자기부담 20%), 비급여는 전액 특약(자기부담 30%)으로 완전 분리되었으며, 직전 1년간 비급여 보험금 수령액에 따라 차년도 비급여 보험료가 할인되거나 최대 300%까지 할증되는 방식입니다.
+
+<h2>03 | 1~4세대 실손보험 급여·비급여 자기부담금 및 보장 한도 종합 비교표</h2>
+각 세대별 보장 구조의 핵심 차이점을 한눈에 파악할 수 있도록 금융감독원 표준약관 기준으로 정리하였습니다.<br/><br/>
+<table class="info-table">
+<tr>
+<th>구분</th>
+<th>1세대 (구실손)</th>
+<th>2세대 (표준화)</th>
+<th>3세대 (착한실손)</th>
+<th>4세대 (현행)</th>
+</tr>
+<tr>
+<td>가입 시기</td>
+<td>~2009년 9월</td>
+<td>2009년 10월 ~ 2017년 3월</td>
+<td>2017년 4월 ~ 2021년 6월</td>
+<td>2021년 7월 ~ 현재</td>
+</tr>
+<tr>
+<td>입원 자기부담금</td>
+<td><strong>0원 (100% 보장)</strong></td>
+<td>10% 또는 20% (선택형)</td>
+<td>급여 10~20%, 비급여 20%</td>
+<td><strong>급여 20%, 비급여 30%</strong></td>
+</tr>
+<tr>
+<td>통원 공제금액</td>
+<td>5,000원 공제</td>
+<td>의원 1만 / 병원 1.5만 / 상급 2만</td>
+<td>의원 1만~2만 원 or 10~20% 큰 금액</td>
+<td><strong>급여 1~2만 원 / 비급여 3만 원</strong></td>
+</tr>
+<tr>
+<td>3대 비급여 (도수 등)</td>
+<td>일반 통원 한도 내 보장</td>
+<td>일반 통원 한도 내 보장</td>
+<td>특약 분리 (자기부담 30%, 횟수 제한)</td>
+<td>특약 분리 (자기부담 30%, 연간 한도)</td>
+</tr>
+<tr>
+<td>갱신 주기 / 재가입</td>
+<td>3년 또는 5년 / 없음</td>
+<td>1년 / 15년 재가입 (13년 4월~)</td>
+<td>1년 갱신 / 15년 재가입</td>
+<td><strong>1년 갱신 / 5년 재가입</strong></td>
+</tr>
+<tr>
+<td>보험료 수준</td>
+<td>가장 비쌈 (지속 급등)</td>
+<td>다소 비쌈 (손해율 연동)</td>
+<td>1세대 대비 약 50% 저렴</td>
+<td><strong>1세대 대비 약 70% 저렴</strong></td>
+</tr>
+</table>
+
+위 비교표에서 볼 수 있듯이 1세대와 2세대는 보장 혜택과 자기부담금 면에서는 압도적으로 유리하지만, 연령이 증가하고 갱신 시점이 도래할 때마다 보험료가 2배, 3배로 폭등하는 치명적인 단점을 안고 있습니다.
+
+<h2>04 | 병원비 10만 원·50만 원·200만 원 발생 시 세대별 실수령 환급금 계산표</h2>
+실제 병원 외래 진료 및 검사를 받았을 때, 각 세대별로 환급받는 실수령액이 얼마나 차이 나는지 구체적인 가상 예시로 계산해 드립니다.<br/><br/>
+<table class="info-table">
+<tr>
+<th>가상 진료 상황 (동네 의원 외래)</th>
+<th>1세대 환급액 (5천 원 공제)</th>
+<th>2세대 환급액 (1만 원 공제 기준)</th>
+<th>3세대 환급액 (비급여 20%)</th>
+<th>4세대 환급액 (비급여 30%)</th>
+</tr>
+<tr>
+<td><strong>상황 A : 감기·몸살 진료</strong><br/>급여 3만 원 + 비급여 2만 원 (총 5만 원)</td>
+<td>45,000원 환급<br/>(본인부담 5,000원)</td>
+<td>40,000원 환급<br/>(본인부담 10,000원)</td>
+<td>36,000원 환급<br/>(본인부담 14,000원)</td>
+<td>24,000원 환급<br/>(본인부담 26,000원)</td>
+</tr>
+<tr>
+<td><strong>상황 B : 외래 통원 및 정밀 초음파</strong><br/>급여 5만 원 + 비급여 15만 원 (총 20만 원)</td>
+<td>195,000원 환급<br/>(본인부담 5,000원)</td>
+<td>180,000원 환급<br/>(본인부담 20,000원)</td>
+<td>160,000원 환급<br/>(본인부담 40,000원)</td>
+<td>145,000원 환급<br/>(본인부담 55,000원)</td>
+</tr>
+<tr>
+<td><strong>상황 C : 비급여 도수치료 1회</strong><br/>순수 비급여 15만 원 단독 발생</td>
+<td>145,000원 환급<br/>(본인부담 5,000원)</td>
+<td>130,000원 환급<br/>(본인부담 20,000원)</td>
+<td>105,000원 환급<br/>(본인부담 45,000원)</td>
+<td>105,000원 환급<br/>(공제 3만 vs 30% 큰 4.5만)</td>
+</tr>
+</table>
+
+단순 소액 외래 진료에서는 4세대 실손의 자기부담금이 다소 크게 느껴질 수 있지만, 수술이나 장기 입원 등 수백만 원 대의 고액 의료비가 발생하는 경우에는 4세대 역시 연간 본인부담금 상한제(급여 200만 원 한도)가 작동하므로 결정적인 파산 위험을 막아주는 안전판 역할을 충분히 수행합니다.
+
+<div class="img-area">
+<img alt="방충망 셀프 교체에 필요한 미세망 롤과 롤러, 고무 오치가스켓 등 기본 공구 세트 / AI 제작 이미지" src="../../images/260927/6_silson_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">실손보험 세대별 보험료 부담과 의료비 보장 혜택의 균형을 나타낸 인포그래픽 / AI 제작 이미지</div>
+</div>
+<h2>05 | 4세대 실손보험의 핵심 특징 — 직전 1년 비급여 이용량에 따른 보험료 차등제(할증·할인)</h2>
+4세대 실손보험의 가장 혁신적이면서도 주의해야 할 제도는 바로 <strong>'비급여 보험료 차등 적용제'</strong>입니다.<br/><br/>
+이 제도는 비급여 의료를 전혀 이용하지 않는 대다수 선량한 가입자의 보험료 부담을 낮추고, 비급여 의료를 과도하게 많이 이용한 가입자에게 그에 상응하는 보험료를 부과하는 구조입니다.<br/><br/>
+직전 1년간 비급여 보험금을 <strong>0원</strong> 수령한 가입자는 차년도 비급여 보험료의 <strong>약 5% 내외를 할인</strong>받습니다. 반면 100만 원 이상 150만 원 미만 수령 시 100% 할증(2배), 150만 원 이상 300만 원 미만 수령 시 200% 할증(3배), 300만 원 이상 수령 시에는 <strong>최대 300% 할증(4배)</strong>이 적용됩니다. 단, 중증질환자(암, 뇌혈관, 심장질환 등) 및 희귀난치성 질환자는 할증 대상에서 제외됩니다.
+
+<h2>06 | 도수치료·비급여 주사제·MRI 보장 범위와 청구 제한 기준의 차이</h2>
+실손보험 손해율의 주범으로 꼽히는 3대 비급여 항목(도수치료·체외충격파·증식치료, 비급여 주사제, 비급여 자기공명영상 MRI)은 세대에 따라 청구 허들이 매우 큽니다.<br/><br/>
+<strong>1·2세대</strong>는 질병·상해 통원 한도(일 25만~30만 원) 내에서 의사의 소견이 있으면 연간 180회 한도로 넉넉하게 청구할 수 있었습니다.<br/><br/>
+그러나 <strong>3·4세대</strong>는 완전히 독립된 특약으로 분리되었습니다. 도수치료의 경우 연간 최대 350만 원, 50회 한도로 제한되며 매 10회 치료 시마다 증상 개선 및 통증 완화가 객관적으로 입증되어야 추가 10회가 보장됩니다. 비급여 영양 주사제 역시 식약처 허가 범위 내에서 치료 목적으로 투여된 경우에만 엄격하게 지급 심사가 이루어집니다.
+
+<h2>07 | 1·2세대 기존 가입자가 4세대로 계약 전환할 때 득실 분석(보험료 vs 보장성)</h2>
+매월 10만~20만 원이 넘는 1세대 구실손 보험료 청구서를 받아 들고 4세대로의 '계약 전환'을 고민하는 가입자가 급증하고 있습니다. 전환 여부를 판단하는 명확한 기준은 다음과 같습니다.<br/><br/>
+<strong>4세대 전환이 유리한 경우</strong> : 연간 병원 방문 횟수가 1~2회에 불과할 정도로 건강한 분, 비급여 도수치료나 비급여 주사를 거의 맞지 않는 분, 은퇴 후 고정 소득이 줄어들어 매월 나가는 1·2세대 갱신 보험료가 가계 경제에 심각한 부담이 되는 분입니다.<br/><br/>
+<strong>기존 1·2세대를 끝까지 유지해야 하는 경우</strong> : 허리 디스크나 관절 질환으로 정기적인 도수치료 및 비급여 물리치료가 필수적인 분, 만성질환이나 기저질환이 있어 지속적인 약 처방과 외래 검사를 받는 분, 향후 고령으로 인해 비급여 의료비 지출이 크게 예상되는 분입니다. 한 번 4세대로 전환하면 이전 세대로 절대 되돌릴 수 없으므로(계약 전환 철회 6개월 이내만 가능) 신중한 판단이 요구됩니다.
+
+<h2>08 | 내 증권과 보험사 앱에서 가입 세대와 갱신 주기를 확인하는 3단계 순서</h2>
+내가 가입한 실손보험이 몇 세대인지 가장 확실하게 확인하는 디지털 조회 순서를 안내해 드립니다.<br/><br/>
+<div class="step-box">
+· <strong>1단계 (앱 접속)</strong> : 가입한 해당 보험사(삼성화재·현대해상·KB손보·DB손보 등) 모바일 앱에 로그인합니다.<br/>
+· <strong>2단계 (계약 상세 조회)</strong> : [마이페이지] → [내 보험 조회] → [계약 상세 정보]로 들어갑니다.<br/>
+· <strong>3단계 (담보명 및 갱신일 확인)</strong> : 담보 명칭에서 '기본형실손' 또는 '표준화실손', '3대비급여' 표기를 확인하고, 약관 개시일(최초 계약일)의 연월을 대조합니다.
+</div>
+금융결제원의 '내보험다보여' 누리집이나 '내보험찾아줌(Cont)' 서비스를 이용하면 여러 보험사에 흩어져 있는 실손 가입 내역을 한눈에 통합 조회할 수 있습니다.
+
+<h2>09 | 실손보험 청구 전 서류 준비와 계약 유지 여부 결정 체크리스트</h2>
+성공적인 실손보험 활용과 최적의 계약 관리를 위한 필수 점검 사항을 정리해 드립니다.<br/><br/>
+<div class="step-box">
+<strong>📄 병원비 청구 시 필수 구비 서류</strong><br/><br/>
+· <strong>통원 3만 원 이하</strong> : 진료비 계산서·영수증, 진료비 세부내역서 (비급여 발생 시 필수)<br/>
+· <strong>통원 3만 원 초과</strong> : 영수증 + 세부내역서 + 처방전(질병분류기호 질병코드 포함) 또는 통원확인서<br/>
+· <strong>입원 치료</strong> : 영수증 + 세부내역서 + 입퇴원확인서 또는 진단서 (병명·입원 기간 명시)
+</div>
+<div class="tip-box">
+<strong>💡 4세대 전환 전 셀프 진단 체크리스트</strong><br/>
+1. <strong>최근 1년간 비급여 청구 총액</strong> : 100만 원 이상 비급여를 청구했다면 4세대 전환 시 할증 대상이 될 수 있습니다.<br/>
+2. <strong>현재 월 납입 보험료 부담 수준</strong> : 1·2세대 실손 보험료가 월 15만 원을 초과하여 해지를 고민 중이라면 해지 대신 4세대 전환을 고려하세요.<br/>
+3. <strong>가족력 및 지병 유무</strong> : 혈압, 당뇨 등 정기 처방이 필요한 만성질환이 있다면 보장 한도가 큰 기존 세대 유지가 유리합니다.<br/>
+4. <strong>전환 철회 가능 기간</strong> : 전환 후 6개월 이내에는 보험금 수령 이력이 없는 경우에 한해 기존 계약으로 원복 신청이 가능합니다.
+</div>
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260926/car_insurance_rider_essential_vs_optional.html">자동차보험 특약 비교 — 꼭 필요한 것과 뺄 것 비용 계산과 갱신 전 체크리스트</a></li>
+<li><a href="../260926/lease_jeonse_guarantee_hug_hf_sgi_compare.html">전세보증보험 HUG vs HF vs SGI 가입 조건 비교 — 기관별 보증료율 계산표와 신청 서류 체크리스트</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#실손보험세대별차이</span>
+<span class="tag">#실손보험1세대4세대비교</span>
+<span class="tag">#실손보험자기부담금계산</span>
+<span class="tag">#4세대실손보험료할증</span>
+<span class="tag">#실손보험계약전환득실</span>
+<span class="tag">#착한실손3세대</span>
+<span class="tag">#도수치료실손청구한도</span>
+<span class="tag">#실손의료비청구서류</span>
+<span class="tag">#실손보험세대확인방법</span>
+<span class="tag">#실손보험유지체크리스트</span>
+</div>
+</body>
+</html>
