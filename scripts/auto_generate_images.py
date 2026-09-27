@@ -156,10 +156,14 @@ def main():
             prompt = prompt_el.get_text().strip() if prompt_el else ""
             if ph_file and prompt:
                 fname = os.path.basename(ph_file)
+                stem, ext = os.path.splitext(fname)
+                base_stem = re.sub(r'_(pro|flash)$', '', stem, flags=re.IGNORECASE)
                 tasks.append({
                     "html": hname,
                     "ph_file": ph_file,
-                    "filename": fname,
+                    "orig_filename": fname,
+                    "base_stem": base_stem,
+                    "ext": ext,
                     "caption": caption_text,
                     "prompt": prompt
                 })
@@ -177,22 +181,46 @@ def main():
     print(f"\nImage generation starting (Primary: {current_model}, Fallback: {fallback_model})...")
     
     for idx, item in enumerate(tasks, 1):
-        target_img_path = os.path.join(img_dir, item["filename"])
-        model_tag = "PRO" if "pro" in current_model else "FLASH"
-        print(f"[{idx}/{len(tasks)}] [{model_tag}] ({item['html']}) {item['filename']} ... ", end="", flush=True)
+        base_stem = item["base_stem"]
+        ext = item["ext"]
+        orig_fname = item["orig_filename"]
         
-        if os.path.exists(target_img_path) and os.path.getsize(target_img_path) > 1000:
-            print("EXISTS (skip)")
+        # Check if already generated (_pro, _flash, or original)
+        candidate_pro = f"{base_stem}_pro{ext}"
+        candidate_flash = f"{base_stem}_flash{ext}"
+        
+        existing_fname = None
+        for cand in [candidate_pro, candidate_flash, orig_fname]:
+            cand_path = os.path.join(img_dir, cand)
+            if os.path.exists(cand_path) and os.path.getsize(cand_path) > 1000:
+                existing_fname = cand
+                break
+                
+        if existing_fname:
+            print(f"[{idx}/{len(tasks)}] ({item['html']}) {existing_fname} ... EXISTS (skip)")
             skip_count += 1
+            item["saved_filename"] = existing_fname
             continue
             
+        model_tag = "PRO" if "pro" in current_model else "FLASH"
+        suffix = "_pro" if "pro" in current_model else "_flash"
+        target_filename = f"{base_stem}{suffix}{ext}"
+        target_img_path = os.path.join(img_dir, target_filename)
+        
+        print(f"[{idx}/{len(tasks)}] [{model_tag}] ({item['html']}) {target_filename} ... ", end="", flush=True)
+        
         img_bytes = None
+        used_model = current_model
         try:
             img_bytes = generate_image(item["prompt"], api_key, model=current_model)
         except QuotaExceededError as qe:
             if current_model != fallback_model:
                 print(f"PRO QUOTA EXCEEDED! -> Falling back to FLASH ({fallback_model}) ... ", end="", flush=True)
                 current_model = fallback_model
+                used_model = current_model
+                suffix = "_flash"
+                target_filename = f"{base_stem}{suffix}{ext}"
+                target_img_path = os.path.join(img_dir, target_filename)
                 try:
                     img_bytes = generate_image(item["prompt"], api_key, model=current_model)
                 except QuotaExceededError:
@@ -211,8 +239,9 @@ def main():
         if img_bytes:
             with open(target_img_path, "wb") as img_file:
                 img_file.write(img_bytes)
-            actual_tag = "PRO" if "pro" in current_model else "FLASH"
-            print(f"CREATED ({actual_tag}, {len(img_bytes)} bytes)")
+            actual_tag = "PRO" if "pro" in used_model else "FLASH"
+            print(f"CREATED ({actual_tag}, {target_filename}, {len(img_bytes)} bytes)")
+            item["saved_filename"] = target_filename
             success_count += 1
             time.sleep(3) # Rate limit courtesy
         elif not quota_exceeded:
@@ -237,8 +266,21 @@ def main():
                 continue
                 
             fname = os.path.basename(ph_file)
-            img_path = os.path.join(img_dir, fname)
-            if not os.path.exists(img_path):
+            stem, ext = os.path.splitext(fname)
+            base_stem = re.sub(r'_(pro|flash)$', '', stem, flags=re.IGNORECASE)
+            
+            # Check which file exists on disk: _pro, _flash, or original
+            candidate_pro = f"{base_stem}_pro{ext}"
+            candidate_flash = f"{base_stem}_flash{ext}"
+            candidate_orig = fname
+            
+            matched_fname = None
+            for cand in [candidate_pro, candidate_flash, candidate_orig]:
+                if os.path.exists(os.path.join(img_dir, cand)):
+                    matched_fname = cand
+                    break
+                    
+            if not matched_fname:
                 # Image not generated yet; leave placeholder for prompt_helper / manual generation
                 continue
                 
@@ -252,7 +294,7 @@ def main():
             
             # Create new img tag
             img_tag = soup.new_tag("img")
-            img_tag["src"] = f"../../images/{target_date}/{fname}"
+            img_tag["src"] = f"../../images/{target_date}/{matched_fname}"
             img_tag["alt"] = caption_text
             img_tag["style"] = "width:100%; border-radius:8px; display:block; margin:0 auto;"
             
