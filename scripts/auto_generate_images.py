@@ -133,13 +133,15 @@ def main():
         print(f"  {i}. {h}")
     print()
     
-    # Step 1: Scan placeholders in index.html sequence
+    # Step 1: Scan placeholders and missing images in index.html sequence
     tasks = []
+    seen_stems = set()
     for hname in html_files:
         hpath = os.path.join(out_dir, hname)
         with open(hpath, "r", encoding="utf-8") as f:
             soup = BeautifulSoup(f.read(), "html.parser")
             
+        # 1-A: Scan img-placeholder elements
         phs = soup.find_all(class_="img-placeholder")
         for ph in phs:
             file_el = ph.find(class_="ph-file")
@@ -167,6 +169,49 @@ def main():
                     "caption": caption_text,
                     "prompt": prompt
                 })
+                seen_stems.add(base_stem)
+
+        # 1-B: Also scan <img> tags whose files do NOT exist on disk!
+        # (Handles cases where draft directly output <img> tags instead of placeholders)
+        imgs = soup.find_all("img")
+        for img in imgs:
+            src = img.get("src", "")
+            if not src:
+                continue
+            fname = os.path.basename(src)
+            stem, ext = os.path.splitext(fname)
+            base_stem = re.sub(r'_(pro|flash)$', '', stem, flags=re.IGNORECASE)
+            if base_stem in seen_stems:
+                continue
+                
+            cand_pro = f"{base_stem}_pro{ext}"
+            cand_flash = f"{base_stem}_flash{ext}"
+            cand_orig = fname
+            exists_already = any(os.path.exists(os.path.join(img_dir, c)) and os.path.getsize(os.path.join(img_dir, c)) > 1000 for c in [cand_pro, cand_flash, cand_orig])
+            
+            if not exists_already:
+                alt = img.get("alt", "")
+                parent_area = img.find_parent(class_="img-area") or img.find_parent(class_="img-block")
+                caption_text = ""
+                if parent_area:
+                    cap_el = parent_area.find(class_="img-caption")
+                    if cap_el:
+                        caption_text = cap_el.get_text().strip()
+                
+                desc = alt or caption_text
+                desc_clean = re.sub(r'\s*/\s*AI\s*제작\s*이미지.*', '', desc).strip()
+                prompt = f"{desc_clean}, photorealistic, authentic, beautiful natural lighting, ultra high detail, 1:1 aspect ratio"
+                
+                tasks.append({
+                    "html": hname,
+                    "ph_file": f"images/{target_date}/{fname}",
+                    "orig_filename": fname,
+                    "base_stem": base_stem,
+                    "ext": ext,
+                    "caption": caption_text,
+                    "prompt": prompt
+                })
+                seen_stems.add(base_stem)
 
     print(f"Total placeholders found: {len(tasks)}")
     
@@ -309,6 +354,33 @@ def main():
                 
             file_updated = True
             replaced_count += 1
+            
+        # 3-B: Also update existing <img> tag src if matched_fname has _pro or _flash suffix
+        imgs = soup.find_all("img")
+        for img in imgs:
+            src = img.get("src", "")
+            if not src:
+                continue
+            fname = os.path.basename(src)
+            stem, ext = os.path.splitext(fname)
+            base_stem = re.sub(r'_(pro|flash)$', '', stem, flags=re.IGNORECASE)
+            
+            candidate_pro = f"{base_stem}_pro{ext}"
+            candidate_flash = f"{base_stem}_flash{ext}"
+            candidate_orig = f"{base_stem}{ext}"
+            
+            matched_fname = None
+            for cand in [candidate_pro, candidate_flash, candidate_orig]:
+                if os.path.exists(os.path.join(img_dir, cand)):
+                    matched_fname = cand
+                    break
+                    
+            if matched_fname:
+                expected_src = f"../../images/{target_date}/{matched_fname}"
+                if img.get("src") != expected_src:
+                    img["src"] = expected_src
+                    file_updated = True
+                    replaced_count += 1
             
         if file_updated:
             with open(hpath, "w", encoding="utf-8") as f:
