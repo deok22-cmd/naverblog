@@ -28,7 +28,8 @@ def get_gemini_api_key():
     return None
 
 def generate_image(prompt, api_key, max_retries=2):
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image:generateContent?key={api_key}"
+    # Google 플래그십 최고 품질 이미지 생성 모델 (IDE 도구와 동일 계열 Pro 엔진)
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-image:generateContent?key={api_key}"
     payload = {
         "contents": [{
             "parts": [{"text": prompt}]
