@@ -27,9 +27,9 @@ def get_gemini_api_key():
                 return m.group(1)
     return None
 
-def generate_image(prompt, api_key, max_retries=2):
-    # Google 플래그십 최고 품질 이미지 생성 모델 (IDE 도구와 동일 계열 Pro 엔진)
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-image:generateContent?key={api_key}"
+def generate_image(prompt, api_key, model="gemini-3-pro-image", max_retries=2):
+    # Google Gemini 이미지 생성 모델 (기본: gemini-3-pro-image, Fallback: gemini-2.5-flash-image)
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
     payload = {
         "contents": [{
             "parts": [{"text": prompt}]
@@ -53,10 +53,7 @@ def generate_image(prompt, api_key, max_retries=2):
         except urllib.error.HTTPError as e:
             err_body = e.read().decode("utf-8", errors="replace")
             if e.code == 429 or "RESOURCE_EXHAUSTED" in err_body or "quota" in err_body.lower():
-                if attempt < max_retries:
-                    time.sleep(10)
-                else:
-                    raise QuotaExceededError(f"HTTP 429: {err_body[:200]}")
+                raise QuotaExceededError(f"HTTP 429 ({model}): {err_body[:200]}")
             else:
                 if attempt < max_retries:
                     time.sleep(5)
@@ -169,37 +166,57 @@ def main():
 
     print(f"Total placeholders found: {len(tasks)}")
     
-    # Step 2: Generate missing images in order
+    # Step 2: Generate missing images in order (PRO first -> dynamic fallback to FLASH)
     success_count = 0
     skip_count = 0
     quota_exceeded = False
     
+    current_model = "gemini-3-pro-image"
+    fallback_model = "gemini-2.5-flash-image"
+    
+    print(f"\nImage generation starting (Primary: {current_model}, Fallback: {fallback_model})...")
+    
     for idx, item in enumerate(tasks, 1):
         target_img_path = os.path.join(img_dir, item["filename"])
-        print(f"[{idx}/{len(tasks)}] ({item['html']}) {item['filename']} ... ", end="", flush=True)
+        model_tag = "PRO" if "pro" in current_model else "FLASH"
+        print(f"[{idx}/{len(tasks)}] [{model_tag}] ({item['html']}) {item['filename']} ... ", end="", flush=True)
         
         if os.path.exists(target_img_path) and os.path.getsize(target_img_path) > 1000:
             print("EXISTS (skip)")
             skip_count += 1
             continue
             
+        img_bytes = None
         try:
-            img_bytes = generate_image(item["prompt"], api_key)
-            if img_bytes:
-                with open(target_img_path, "wb") as img_file:
-                    img_file.write(img_bytes)
-                print(f"CREATED ({len(img_bytes)} bytes)")
-                success_count += 1
-                time.sleep(3) # Rate limit courtesy
-            else:
-                print("FAILED (no image bytes returned)")
+            img_bytes = generate_image(item["prompt"], api_key, model=current_model)
         except QuotaExceededError as qe:
-            print("QUOTA EXCEEDED!")
-            print(f"\n[ALERT] Image generation quota full or rate limited at image #{idx} ({item['filename']}).")
-            quota_exceeded = True
-            break
+            if current_model != fallback_model:
+                print(f"PRO QUOTA EXCEEDED! -> Falling back to FLASH ({fallback_model}) ... ", end="", flush=True)
+                current_model = fallback_model
+                try:
+                    img_bytes = generate_image(item["prompt"], api_key, model=current_model)
+                except QuotaExceededError:
+                    print("FLASH QUOTA ALSO EXCEEDED!")
+                    quota_exceeded = True
+                    break
+                except Exception as fe:
+                    print(f"FLASH FAILED ({fe})")
+            else:
+                print("FLASH QUOTA EXCEEDED!")
+                quota_exceeded = True
+                break
         except Exception as e:
             print(f"FAILED ({e})")
+            
+        if img_bytes:
+            with open(target_img_path, "wb") as img_file:
+                img_file.write(img_bytes)
+            actual_tag = "PRO" if "pro" in current_model else "FLASH"
+            print(f"CREATED ({actual_tag}, {len(img_bytes)} bytes)")
+            success_count += 1
+            time.sleep(3) # Rate limit courtesy
+        elif not quota_exceeded:
+            print("SKIPPED (no image generated)")
             
     print(f"\nImage generation batch ended: {success_count} created, {skip_count} existing.")
     
@@ -230,8 +247,8 @@ def main():
             caption_el = None
             if parent_area:
                 caption_el = parent_area.find(class_="img-caption")
-                if cap_el:
-                    caption_text = cap_el.get_text().strip()
+                if caption_el:
+                    caption_text = caption_el.get_text().strip()
             
             # Create new img tag
             img_tag = soup.new_tag("img")
