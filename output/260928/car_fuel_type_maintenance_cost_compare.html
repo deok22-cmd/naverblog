@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>휘발유 vs 경유 vs LPG vs 전기차 유지비 비교 — 연간 주행거리별 유류비 계산표와 차량 선택 체크리스트</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>휘발유 vs 경유 vs LPG vs 전기차 유지비 비교 — 연간 주행거리별 유류비 계산표와 차량 선택 체크리스트</h1>
+<div class="intro-box">
+신차나 중고차를 구매할 때 차량 가격 못지않게 가계 경제에 장기적인 영향을 미치는 핵심 요소는 바로 <strong>연간 유지비(유류비+자동차세+정비비)</strong>입니다. 2026년 현재 오피넷 유가 기준 휘발유(가솔린), 경유(디젤), 액화석유가스(LPG), 전기(EV) 충전 요금은 단가와 실연비에 따라 총 유지비 격차가 크게 벌어집니다.<br/><br/>
+연간 15,000km를 주행하는 준중형·중형 세단 기준으로 비교하면, <strong>휘발유 차량의 연간 유류비는 약 200만 원 안팎</strong>인 반면, <strong>전기차(가정용 심야 완속 충전 기준)는 약 65만 원 선</strong>으로 연간 약 135만 원 이상의 유류비 절감 효과가 발생합니다. LPG 차량 역시 리터당 저렴한 연료 단가 덕분에 약 155만 원 선으로 가솔린 대비 뛰어난 가성비를 보여줍니다.<br/><br/>
+연간 주행거리 1만km·2만km·3만km 구간별 실제 유류비 및 자동차세 합산 계산표, 소모품 교체 주기와 정비 비용 차이, 그리고 내 주행 패턴에 딱 맞는 차량 선택 체크리스트를 완벽하게 비교해 드립니다.
+</div>
+<div class="img-area">
+<img alt="주유소 주유기와 전기차 급속 충전기가 나란히 배치된 자동차 연료 유지비 비교 인포그래픽 / AI 제작 이미지" src="../../images/260928/6_fuelcost_1.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">휘발유·경유·LPG 주유와 전기차 충전 비용 비교 안내 / AI 제작 이미지</div>
+</div>
+<h2>01 | 신차 및 중고차 구매 시 가장 중요한 핵심 기준, 연료별 연간 유지비</h2>
+자동차를 보유하고 운행하는 과정에서 발생하는 유지비는 크게 <strong>연료비(유류비/충전비)</strong>, <strong>자동차세</strong>, <strong>보험료</strong>, 그리고 <strong>소모품 및 정비 비용</strong>으로 구성됩니다.<br/><br/>
+차량 가격은 한 번 지출하면 끝이지만, 유류비와 자동차세는 차량을 운행하는 매달, 매년 고정적으로 통장에서 빠져나가는 실질적인 생활비입니다.<br/><br/>
+특히 같은 모델이라도 가솔린, 디젤, 하이브리드, LPG, 순수 전기차(EV) 등 파워트레인에 따라 차량 구매 초기 비용과 연간 유지비의 비중이 완전히 뒤바뀝니다.<br/><br/>
+따라서 단순히 차량 가격만 비교할 것이 아니라, 나의 연간 예상 주행거리와 충전 인프라 접근성을 종합적으로 고려한 '총 소유 비용(TCO, Total Cost of Ownership)' 계산이 반드시 선행되어야 후회 없는 차량을 선택할 수 있습니다.
+
+<h2>02 | 2026년 기준 4대 연료(휘발유·경유·LPG·전기) 평균 단가와 공인 연비 기준</h2>
+유지비 계산을 위해 한국석유공사 유가정보서비스 오피넷(Opinet) 및 환경부 전기차 충전 요금 공시 기준의 대표적인 연료 단가와 준중형~중형 차량 기준 공인 복합 연비를 설정합니다.<br/><br/>
+· <strong>휘발유 (가솔린)</strong>: 리터당 1,650원 / 평균 복합 연비 12.5 km/L<br/>
+· <strong>경유 (디젤)</strong>: 리터당 1,520원 / 평균 복합 연비 15.0 km/L<br/>
+· <strong>LPG</strong>: 리터당 980원 / 평균 복합 연비 9.5 km/L<br/>
+· <strong>전기차 (EV)</strong>: kWh당 320원 (한전 완속/급속 평균 가중치) / 전비 5.5 km/kWh<br/><br/>
+엔진 배기량 기준 자동차세(승용 기준)는 가솔린/디젤/LPG 1,600cc~2,000cc 차량이 연간 약 29만 원~52만 원 선이며, 전기차는 배기량과 무관하게 비영업용 승용차 기준 연간 <strong>130,000원(지방교육세 포함 총 13만 원 고정)</strong>으로 가장 저렴합니다.
+
+<h2>03 | 연간 1만km 주행 시 연료별 유류비·충전비 및 자동차세 합산 비교표</h2>
+주말 나들이나 단거리 도심 출퇴근 위주로 운행하여 연간 주행거리가 10,000km 수준인 일반 운전자의 연간 필수 고정비 계산 결과입니다.<br/><br/>
+<table class="info-table">
+<tr>
+<th>구분</th>
+<th>연간 소모 연료량</th>
+<th>연간 유류비/충전비</th>
+<th>연간 자동차세 (2,000cc 기준)</th>
+<th>연간 필수 유지비 합계</th>
+</tr>
+<tr>
+<td><strong>휘발유 (가솔린)</strong></td>
+<td>800 L</td>
+<td>1,320,000원</td>
+<td>519,000원</td>
+<td><strong>1,839,000원</strong></td>
+</tr>
+<tr>
+<td><strong>경유 (디젤)</strong></td>
+<td>667 L</td>
+<td>1,013,840원</td>
+<td>519,000원</td>
+<td><strong>1,532,840원</strong></td>
+</tr>
+<tr>
+<td><strong>LPG</strong></td>
+<td>1,053 L</td>
+<td>1,031,940원</td>
+<td>519,000원</td>
+<td><strong>1,550,940원</strong></td>
+</tr>
+<tr>
+<td><strong>전기차 (EV)</strong></td>
+<td>1,818 kWh</td>
+<td>581,760원</td>
+<td>130,000원</td>
+<td><strong>711,760원</strong></td>
+</tr>
+</table>
+연간 1만km 주행 시 가솔린과 전기차의 연간 유지비 차이는 약 112만 원입니다. 초기 차량 구매 가격에서 전기차가 가솔린 대비 통상 800만~1,000만 원 이상 비싸다는 점을 감안하면, 연 1만km 이하 운전자에게는 초기 구매 비용을 회수하는 데 약 8~9년 이상이 소요되어 경제적 실익이 상대적으로 낮습니다.
+
+<h2>04 | 연간 2만km 주행 시 손익분기점 분석과 유류비 절감액 계산표</h2>
+왕복 50~60km 안팎의 통근을 매일 하거나 교외 드라이브를 즐겨 연간 20,000km를 주행하는 표준적인 운전자 구간입니다.<br/><br/>
+<table class="info-table">
+<tr>
+<th>구분</th>
+<th>연간 유류비/충전비</th>
+<th>연간 자동차세</th>
+<th>연간 필수 유지비 합계</th>
+<th>휘발유 대비 연간 절감액</th>
+</tr>
+<tr>
+<td><strong>휘발유 (가솔린)</strong></td>
+<td>2,640,000원</td>
+<td>519,000원</td>
+<td><strong>3,159,000원</strong></td>
+<td>기준 (0원)</td>
+</tr>
+<tr>
+<td><strong>경유 (디젤)</strong></td>
+<td>2,026,680원</td>
+<td>519,000원</td>
+<td><strong>2,545,680원</strong></td>
+<td><strong>613,320원 절감</strong></td>
+</tr>
+<tr>
+<td><strong>LPG</strong></td>
+<td>2,063,160원</td>
+<td>519,000원</td>
+<td><strong>2,582,160원</strong></td>
+<td><strong>576,840원 절감</strong></td>
+</tr>
+<tr>
+<td><strong>전기차 (EV)</strong></td>
+<td>1,163,520원</td>
+<td>130,000원</td>
+<td><strong>1,293,520원</strong></td>
+<td><strong>1,865,480원 절감</strong></td>
+</tr>
+</table>
+연간 2만km를 주행하면 전기차는 가솔린 대비 연간 약 186만 원, LPG는 약 57만 원을 아낄 수 있습니다. 4~5년 운행 시 전기차는 약 800만~900만 원의 유지비를 아끼게 되어 신차 구매 시 비쌌던 차액을 본격적으로 상쇄하는 손익분기점(BEP) 구간에 도달합니다.
+
+<div class="img-area">
+<img alt="차량 정비 리프트에 올려진 자동차 하부와 엔진룸 소모품 교체 및 정비 점검 현장 / AI 제작 이미지" src="../../images/260928/6_fuelcost_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">연료 타입별로 상이한 엔진 소모품 및 정비 주기 점검 / AI 제작 이미지</div>
+</div>
+<h2>05 | 연간 3만km 이상 장거리 운행 시 전기차 vs 디젤 vs LPG 가성비 비교</h2>
+영업직, 광역 장거리 통근자, 지방 출장이 잦아 연간 30,000km 이상을 주행하는 경우 유지비 격차는 압도적으로 벌어집니다.<br/><br/>
+연간 3만km 주행 시 가솔린 유류비는 396만 원에 달하지만, 전기차는 충전비가 약 174만 원으로 <strong>연간 220만 원 이상의 순수 유류비 차이</strong>가 발생합니다. 자동차세 차이까지 합산하면 연간 260만 원 이상 절약됩니다.<br/><br/>
+다만 장거리 운행 시에는 '충전 시간과 스트레스'라는 기회비용을 따져야 합니다. 고속도로 휴게소 급속 충전(kWh당 약 380~420원) 비중이 높아지면 전기차의 비용 절감 폭이 줄어들기 때문입니다.<br/><br/>
+따라서 고속도로 장거리 위주 운전자에게는 충전 대기가 없고 고속 연비가 17~20km/L에 달하는 <strong>하이브리드(HEV)</strong> 또는 <strong>디젤(경유)</strong> 차량이 여전히 강력한 대안으로 작동합니다.
+
+<h2>06 | 소모품 교체 및 정비 비용 차이(엔진오일·DPF·점화플러그·배터리)</h2>
+유류비 외에 정기적으로 발생하는 소모품 교체 주기와 정비 비용도 연료 방식별로 큰 차이를 보입니다.<br/><br/>
+· <strong>내연기관 공통 (가솔린·디젤·LPG)</strong>: 1만km마다 엔진오일 교체(회당 7만~12만 원), 미션오일, 점화플러그(가솔린/LPG 4만~8만km, 약 8만~15만 원), 냉각수 등 엔진 계통 소모품이 주기적으로 발생합니다.<br/>
+· <strong>디젤 특유의 정비 리스크</strong>: 요소수(SCR) 주기적 보충, 디젤 매연포집필터(DPF) 클리닝(약 20만~30만 원) 및 고장 교체비(150만~250만 원), 인젝터 및 고압펌프 수리비 등 노후화 시 정비 비용 부담이 가장 큽니다.<br/>
+· <strong>전기차 (EV)의 정비 우위</strong>: 엔진오일, 점화플러그, 타이밍벨트, 미션오일이 아예 없습니다. 회생제동 덕분에 브레이크 패드 수명이 내연기관의 2~3배에 달합니다. 주요 소모품은 에어컨필터, 감속기 오일, 타이어(고중량으로 마모 빠름)에 불과하여 통상 정비비가 내연기관의 30% 수준에 그칩니다.
+
+<h2>07 | 공영주차장·고속도로 통행료 감면 등 친환경차 및 LPG 부가 혜택 비교</h2>
+차량을 유지하면서 누릴 수 있는 부가적인 법적 감면 혜택도 무시할 수 없는 절약 포인트입니다.<br/><br/>
+<strong>전기차(친환경차 1종)</strong>는 고속도로 통행료 50% 감면(2026년 기준 연장 적용 여부 확인 필요), 전국 공영주차장 요금 50% 할인, 서울 남산 1·3호 터널 혼잡통행료 100% 면제 혜택을 받습니다.<br/><br/>
+<strong>LPG 차량</strong>은 제3종 저공해 인증을 받은 최신 모델의 경우 전국 공영주차장 20~50% 할인 및 공항 주차장 할인 혜택을 누릴 수 있습니다.<br/><br/>
+반면 디젤 차량은 강화되는 환경 규제로 인해 노후 경유차 진입 제한(배출가스 4·5등급 조치) 및 환경개선부담금(연간 2회, 약 8만~15만 원 선)이 부과될 수 있어 도심 주행 시 불리합니다.
+
+<h2>08 | 출퇴근 거리와 충전 인프라에 따른 내 상황별 최적 차종 추천 가이드</h2>
+내 라이프스타일과 주거 환경에 맞춰 가장 만족도가 높은 연료 유형을 제안합니다.<br/><br/>
+<div class="step-box">
+<strong>🚗 주행 환경별 최적 파워트레인 매칭표</strong><br/><br/>
+· <strong>집/회사에 완속 충전기가 완비 + 연 1.5만km 이상</strong> → <strong>순수 전기차(EV) 압도적 추천</strong> (저렴한 심야 충전, 압도적 가성비)<br/>
+· <strong>자가 충전 환경 없음 + 연 1.5만km 이하 단거리 출퇴근</strong> → <strong>가솔린(휘발유)</strong> (정숙성, 잔고장 없음, 낮은 신차 가격)<br/>
+· <strong>충전 시설 없음 + 연 2만km 이상 도심/교외 복합 주행</strong> → <strong>하이브리드(HEV) 또는 LPG</strong> (검증된 경제성과 주유 편의성)<br/>
+· <strong>고속도로 장거리 위주 지방 출장 + 짐 적재 많음</strong> → <strong>디젤(경유) 또는 하이브리드</strong> (고속 연비 극대화)
+</div>
+거주지에 완속 충전기가 없는 상태에서 전기차를 구매하면 급속 충전 대기와 충전소 스트레스로 인해 유지비 절감액 이상의 피로감을 겪게 되므로 충전 인프라 확인이 최우선입니다.
+
+<h2>09 | 연료 타입 결정 전 반드시 확인해야 할 5가지 핵심 체크리스트</h2>
+차량을 최종 계약하기 전 반드시 점검해야 할 체크리스트입니다.<br/><br/>
+<div class="tip-box">
+<strong>💡 연료 및 파워트레인 선택 체크리스트</strong><br/>
+1. <strong>나의 연간 실제 주행거리</strong>: 계기판 주행거리나 보험사 마일리지 기록을 통해 연간 몇 km를 타는지 정확히 계산해 보세요.<br/>
+2. <strong>주거지 충전기 확보 여부</strong>: 아파트나 빌라 주차장에 고정 완속 충전기가 설치되어 있고 자리가 넉넉한지 확인하세요.<br/>
+3. <strong>보유 예정 기간</strong>: 3년 이하로 짧게 타고 바꿀 예정이라면 감가상각과 초기 구매비 회수를 고려해 가솔린이나 하이브리드가 유리합니다.<br/>
+4. <strong>LPG 충전소 동선</strong>: 자주 다니는 출퇴근 경로에 접근하기 쉬운 LPG 충전소가 있는지 미리 검색해 보세요.<br/>
+5. <strong>디젤 환경 규제</strong>: 거주지 도심 진입 제한 및 디젤 특유의 DPF 정비 비용 부담을 감당할 수 있는지 따져보세요.
+</div>
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260927/ins_generation_1_to_4_copay_compare.html">실손보험 1~4세대 차이 비교 — 가입 시기별 자기부담금 계산표와 내 세대 판별 체크리스트</a></li>
+<li><a href="../260927/pass_dongbaek_pass_vs_kpass_compare.html">부산 동백패스 vs K-패스 환급 비교 — 월 대중교통 이용액별 손익분기 계산표와 중복 여부 체크리스트</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#자동차유지비비교</span>
+<span class="tag">#휘발유경유차이</span>
+<span class="tag">#전기차유지비</span>
+<span class="tag">#LPG유지비</span>
+<span class="tag">#연간주행거리유류비</span>
+<span class="tag">#전기차손익분기점</span>
+<span class="tag">#자동차세비교</span>
+<span class="tag">#오피넷유가</span>
+<span class="tag">#하이브리드유지비</span>
+<span class="tag">#신차연료선택</span>
+</div>
+</body>
+</html>

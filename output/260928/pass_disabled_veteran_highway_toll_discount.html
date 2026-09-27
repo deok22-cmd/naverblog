@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>국가유공자·장애인 고속도로 통행료 감면 혜택 — 감면율 비교 계산표와 지문인식 하이패스 단말기 신청 서류 체크리스트</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>국가유공자·장애인 고속도로 통행료 감면 혜택 — 감면율 비교 계산표와 지문인식 하이패스 단말기 신청 서류 체크리스트</h1>
+<div class="intro-box">
+국가유공자와 등록 장애인은 유료도로법 시행령에 따라 한국도로공사가 관리하는 재정고속도로와 대다수 민자고속도로 이용 시 <strong>통행료를 전액(100%) 면제받거나 50% 감면</strong>받을 수 있습니다. 상이등급 1~5급 국가유공자와 장애 정도가 심한 장애인(기존 1~3급) 중 일부 대상자는 100% 면제 혜택이 주어지며, 그 외 상이등급 6~7급 국가유공자 및 전체 등록 장애인은 50% 감면이 적용됩니다.<br/><br/>
+고속도로 통행료 감면을 무정차로 편리하게 적용받기 위해서는 <strong>지문인식 감면 단말기</strong>를 차량에 장착하거나, 지자체 및 고속도로 톨게이트 영업소를 통해 사전 등록된 통합복지카드를 연동해야 합니다. 2026년 현재는 스마트폰 위치정보(GPS)를 활용한 감면 하이패스 서비스도 순차 확대되고 있어 지문 인증의 불편함이 점차 개선되고 있습니다.<br/><br/>
+대상자별 상이·장애 등급에 따른 감면율 비교표, 감면 대상 차량의 배기량 및 인승 요건, 지문인식 단말기 신청 절차와 구비 서류 체크리스트를 꼼꼼하게 정리해 드립니다.
+</div>
+<div class="img-area">
+<img alt="고속도로 톨게이트 하이패스 전용 차로와 지문인식 감면 단말기 인증 시스템 / AI 제작 이미지" src="../../images/260928/4_tolldiscount_1.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">고속도로 하이패스 감면 차로와 감면 단말기 시스템 안내 / AI 제작 이미지</div>
+</div>
+<h2>01 | 국가유공자 및 장애인 고속도로 통행료 감면 제도의 취지와 법적 근거</h2>
+국가유공자와 등록 장애인에 대한 고속도로 통행료 감면 제도는 유료도로법 제15조 및 동법 시행령 제8조에 근거를 두고 있습니다.<br/><br/>
+국가를 위해 헌신하고 희생한 독립유공자, 국가유공자, 5·18민주유공자, 보훈보상대상자 등에 대한 국가적 예우와, 이동에 제약이 있는 장애인의 이동권 보장 및 경제적 부담 경감을 목적으로 운영되고 있습니다.<br/><br/>
+감면 혜택은 한국도로공사가 운영하는 전국 모든 재정고속도로에 기본 적용되며, 대부분의 민간투자고속도로(민자고속도로)와 지자체 유료도로에서도 동일하거나 유사한 감면 규정을 준용하고 있습니다.<br/><br/>
+단, 이 제도는 감면 대상자 본인이 직접 운전하거나 본인이 해당 차량에 동승하여 이동할 때에만 합법적으로 인정되며, 타인에게 대여하거나 비동승 시 사용하는 것은 엄격히 금지됩니다.
+
+<h2>02 | 대상자별 상이·장애 등급에 따른 감면율(100% 면제 vs 50% 감면) 비교표</h2>
+감면율은 유공자의 상이등급 및 장애인의 장애 정도에 따라 100% 전액 면제와 50% 반액 감면으로 구분됩니다.<br/><br/>
+<table class="info-table">
+<tr>
+<th>대상 구분</th>
+<th>세부 자격 및 상이·장애 등급</th>
+<th>통행료 감면율</th>
+<th>소관 부처</th>
+</tr>
+<tr>
+<td>독립유공자</td>
+<td>애국지사 본인 및 유족 (선순위자 1인)</td>
+<td><strong>100% 전액 면제</strong></td>
+<td>국가보훈부</td>
+</tr>
+<tr>
+<td>국가유공자 (상이 1~5급)</td>
+<td>전상군경, 공상군경, 4·19혁명부상자 등 상이 1~5급</td>
+<td><strong>100% 전액 면제</strong></td>
+<td>국가보훈부</td>
+</tr>
+<tr>
+<td>5·18민주화운동부상자</td>
+<td>장해등급 1~5급 판정자</td>
+<td><strong>100% 전액 면제</strong></td>
+<td>국가보훈부</td>
+</tr>
+<tr>
+<td>국가유공자 (상이 6~7급)</td>
+<td>상이 6급, 7급 판정 국가유공자 본인</td>
+<td><strong>50% 감면</strong></td>
+<td>국가보훈부</td>
+</tr>
+<tr>
+<td>보훈보상대상자</td>
+<td>재해부상군경 등 상이 1~7급 본인</td>
+<td><strong>50% 감면</strong></td>
+<td>국가보훈부</td>
+</tr>
+<tr>
+<td><strong>등록 장애인 (전체)</strong></td>
+<td><strong>장애 정도가 심한 장애인(중증) 및 심하지 않은 장애인(경증)</strong></td>
+<td><strong>50% 감면</strong></td>
+<td>보건복지부</td>
+</tr>
+<tr>
+<td>고엽제후유의증 환자</td>
+<td>고도·중등도·경도 장애 등급 판정자</td>
+<td><strong>50% 감면</strong></td>
+<td>국가보훈부</td>
+</tr>
+</table>
+상이 등급이 없는 일반 국가유공자(무공수훈자, 참전유공자 등)는 고속도로 통행료 감면 대상에 해당하지 않으므로 유의하셔야 합니다.
+
+<h2>03 | 감면 혜택 적용이 가능한 차량 기준과 공동명의 인정 요건</h2>
+통행료 감면은 대상자 본인이 소유한 모든 차량에 적용되는 것이 아니라, 법에서 정한 <strong>1가구 1대(대상자당 1대)</strong>의 등록 차량에만 국한됩니다.<br/><br/>
+감면 대상 차량의 규격 기준은 다음과 같습니다.<br/>
+1. <strong>승용자동차</strong>: 배기량 2,000cc 이하 일반 승용차, 7인승 이상 10인승 이하 일반 승용차(배기량 무관), 친환경차(전기차·수소차 등 승용차)<br/>
+2. <strong>승합자동차</strong>: 승차정원 12인승 이하 승합자동차<br/>
+3. <strong>화물자동차</strong>: 최대적재량 1톤 이하 화물자동차<br/><br/>
+차량의 명의는 감면 대상자 본인 명의이거나, 대상자와 주민등록표상 함께 거재하는 세대원(배우자, 직계존비속, 직계비속의 배우자, 형제자매)과의 <strong>공동명의</strong>로 등록되어 있어야 합니다. 법인 명의 차량이나 렌터카, 리스 차량(장기렌트 포함)은 원칙적으로 감면 대상에서 제외됩니다.
+
+<h2>04 | 유료도로 통행료 감면카드(통합복지카드) 발급 대상과 신청 방법</h2>
+감면 혜택을 증명하고 적용받기 위한 핵심 매체는 <strong>'통행료 감면기능이 탑재된 복지카드'</strong>입니다.<br/><br/>
+장애인은 주소지 읍·면·동 행정복지센터에서 '장애인 통합복지카드(통행료 감면용)'를 신청하여 발급받을 수 있으며, 신용카드, 체크카드, 단순 신분증형 카드 중 선택할 수 있습니다.<br/><br/>
+국가유공자는 관할 보훈지청을 통해 '국가유공자 통합복지카드'를 신청해야 합니다.<br/><br/>
+복지카드 전면 또는 후면에는 통행료 감면 대상 차량 번호가 정확히 인쇄되어 발급되며, 고속도로 일반 요금소(TCS)를 이용할 때는 요금 수납원에게 통행권과 함께 이 카드를 제시하고 본인 확인을 거쳐 즉시 감면받을 수 있습니다.
+
+<div class="img-area">
+<img alt="지문 인식 센서가 결합된 차량용 하이패스 감면 단말기와 통합복지카드 구성품 / AI 제작 이미지" src="../../images/260928/4_tolldiscount_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">차량에 설치되는 지문인식 하이패스 감면 단말기 구성품 / AI 제작 이미지</div>
+</div>
+<h2>05 | 지문인식 하이패스 단말기 vs 일반 단말기 등록 절차 및 차이점</h2>
+정차 없이 하이패스 차로를 통과하며 감면을 받으려면 반드시 한국도로공사에 등록된 <strong>지문인식 감면 단말기</strong>를 장착해야 합니다.<br/><br/>
+일반 하이패스 단말기에 감면 복지카드를 삽입하더라도 지문 인증 절차가 없으면 일반 통행료가 그대로 전액 청구됩니다.<br/><br/>
+지문인식 단말기는 본체와 별도의 지문 스캐너(인식기)로 구성되어 있습니다. 지문 등록은 단말기 구입 후 관할 읍·면·동 행정복지센터 또는 보훈지청, 한국도로공사 각 톨게이트 영업소를 방문하여 대상자의 지문 정보를 단말기 내부 모듈에 암호화하여 등록해야 합니다.<br/><br/>
+최근에는 지문 인증의 번거로움을 줄이기 위해 스마트폰의 '고속도로 통행료' 앱과 차량용 일반 단말기를 블루투스로 연동하여 본인 인증 및 탑승 여부를 확인하는 위치기반 감면 서비스도 도입되고 있습니다.
+
+<h2>06 | 요금소 통과 시 올바른 이용 방법과 탑승 확인 수칙</h2>
+지문인식 하이패스 단말기를 설치한 차량으로 고속도로를 이용할 때는 다음 수칙을 반드시 준수해야 정상적인 감면이 처리됩니다.<br/><br/>
+1. <strong>출발 전 지문 인증</strong>: 시동을 켠 후 단말기에 감면 하이패스 카드를 삽입하고 지문 스캐너에 대상자의 손가락을 접촉하여 본인 인증을 완료합니다. 인증 성공 시 음성으로 "감면 인증되었습니다"라는 안내가 나옵니다.<br/>
+2. <strong>인증 유효시간 확인</strong>: 지문 인증의 유효시간은 통상 <strong>4시간</strong>입니다. 4시간이 경과하기 전에 휴게소에 들르거나 장거리 주행 중에는 재인증을 해야 합니다.<br/>
+3. <strong>시동 차단 시 재인증</strong>: 주행 중 휴게소나 주유소에서 시동을 껐다가 다시 켜면 지문 인증이 해제되므로, 출발 전 반드시 지문 재인증을 수행해야 합니다.<br/>
+4. <strong>본인 동승 필수</strong>: 하이패스 차로 통과 시 고성능 적외선 카메라와 단속 장비로 탑승 여부가 확인될 수 있으며, 대상자가 동승하지 않은 상태에서 부정 사용 시 감면액의 10배에 달하는 부가통행료가 징수되고 카드 사용이 정지될 수 있습니다.
+
+<h2>07 | 고속도로 통행료 감면 단말기 신규 신청 시 필수 준비 서류 체크리스트</h2>
+감면 단말기를 처음 구입하고 차량 및 지문을 등록할 때 필요한 구비 서류 목록입니다.<br/><br/>
+<div class="tip-box">
+<strong>📋 지문인식 감면 단말기 등록 필수 서류 체크리스트</strong><br/>
+1. <strong>신분증</strong>: 주민등록증, 운전면허증 등 대상자 본인 신분증<br/>
+2. <strong>감면 복지카드</strong>: 장애인 통합복지카드 또는 국가유공자증(통합복지카드)<br/>
+3. <strong>자동차등록증</strong>: 감면 대상 차량으로 등록할 자동차등록증 원본<br/>
+4. <strong>주민등록등본</strong>: 공동명의 차량인 경우 세대원 거주 확인을 위해 필수 (3개월 이내 발급본)<br/>
+5. <strong>구입한 감면 단말기</strong>: 지문 모듈이 포함된 지문인식 하이패스 단말기 기기 본체
+</div>
+대리인이 등록을 신청하는 경우 대상자의 위임장과 인감증명서, 대리인의 신분증이 추가로 필요합니다.
+
+<h2>08 | 지문 인증 실패나 카드 미소지 등 현장 돌발 상황 대처 가이드</h2>
+지문 센서 오류나 노령·건조함으로 인해 지문 인증이 되지 않거나 복지카드를 깜빡하고 지참하지 않았을 때 대처 요령입니다.<br/><br/>
+지문 인증이 반복해서 실패하는 경우 하이패스 차로로 바로 통과하면 정상 감면이 불가하므로, <strong>일반 수납 차로(TCS)</strong>로 진입하여 통행권을 뽑고 출구 수납원에게 장애인등록증 또는 유공자증을 직접 제시하여 수동 감면을 받아야 합니다.<br/><br/>
+만약 하이패스 차로를 통과하여 일반 요금이 청구되었거나 미납 고지서가 발송된 경우, 통행일로부터 30일 이내에 한국도로공사 영업소를 방문하여 당시 대상자 탑승 사실을 소명(당일 병원 진료 영수증, 복지카드 등 제출)하면 소급하여 감면 요금으로 정산받을 수 있습니다.<br/><br/>
+손가락 지문이 마모되어 인식이 아예 불가능한 대상자의 경우, 안과 진단서나 의사 소견서를 첨부하여 도로공사 영업소에서 '지문 인증 예외' 신청을 하시면 대체 인증 절차를 안내받을 수 있습니다.
+
+<h2>09 | 통행료 감면 신청 전 반드시 점검해야 할 핵심 4단계 절차표</h2>
+놓치기 쉬운 감면 혜택을 완벽하게 누리기 위한 단계별 신청 절차를 요약합니다.<br/><br/>
+<div class="step-box">
+<strong>🚀 고속도로 통행료 감면 완벽 등록 4단계 절차표</strong><br/><br/>
+· <strong>1단계 : 자격 확인 및 카드 발급</strong> — 관할 주민센터나 보훈지청에서 통행료 감면 기능이 있는 통합복지카드 신규/재발급<br/>
+· <strong>2단계 : 감면 단말기 구매</strong> — 온라인 쇼핑몰이나 제조사를 통해 조달청 인증 지문인식 하이패스 감면 단말기 구입<br/>
+· <strong>3단계 : 차량 및 지문 등록</strong> — 주민센터, 보훈지청 또는 도로공사 영업소를 방문하여 단말기에 차량 정보 입력 및 지문 등록<br/>
+· <strong>4단계 : 차량 장착 및 테스트</strong> — 차량 전면 유리 중앙 하단에 단말기 부착 후 시동을 켜고 지문 인증 정상 작동 여부 확인
+</div>
+<div class="tip-box">
+<strong>💡 최종 점검 체크리스트</strong><br/>
+1. 신차 구매나 차량 변경 시 기존 단말기의 차종 변경 등록을 반드시 새로 진행해야 합니다.<br/>
+2. 이사를 하여 세대가 분리되면 공동명의 감면 자격이 상실될 수 있으므로 주소지 변경 시 재확인하세요.<br/>
+3. 감면 복지카드의 유효기간 만료 전 갱신 신청을 완료하여 혜택 단절을 방지하세요.
+</div>
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260927/pass_dongbaek_pass_vs_kpass_compare.html">부산 동백패스 vs K-패스 환급 비교 — 월 대중교통 이용액별 손익분기 계산표와 중복 여부 체크리스트</a></li>
+<li><a href="../260927/travel_icheon_ceramics_rice_meal_fall.html">경기 이천 도자기마을 가을 나들이 — 물레 체험 코스와 이천쌀밥 정식 가격 비교 체크리스트</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#고속도로통행료감면</span>
+<span class="tag">#장애인통행료할인</span>
+<span class="tag">#국가유공자통행료면제</span>
+<span class="tag">#하이패스감면단말기</span>
+<span class="tag">#지문인식단말기등록</span>
+<span class="tag">#통합복지카드</span>
+<span class="tag">#하이패스장애인할인</span>
+<span class="tag">#유료도로통행료면제</span>
+<span class="tag">#한국도로공사감면</span>
+<span class="tag">#고속도로할인제도</span>
+</div>
+</body>
+</html>
