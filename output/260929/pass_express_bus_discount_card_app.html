@@ -1,0 +1,234 @@
+<!--
+  네이버 원고 표준 템플릿 — Platinum v5 (SSOT)
+  ==========================================================
+  ⛔ 이 파일의 <style> 블록·<script> 블록·마크업 구조는 그대로 복사해서 쓴다.
+     CSS 속성값을 임의로 바꾸거나, 새 클래스를 만들거나, 레이아웃을 새로 디자인하지 않는다.
+     (2026-08-16 지시: 매일 디자인이 바뀌어 가독성이 떨어지는 문제를 막기 위함)
+
+  치환 토큰 — 카테고리 컬러 세트만 아래 표에서 골라 그대로 치환한다.
+
+  | slug prefix                                              | ACCENT  | DARK    | TINT    | BORDER  | SOFT    | EVEN    |
+  |----------------------------------------------------------|---------|---------|---------|---------|---------|---------|
+  | travel_ (국내여행)                                        | #00796b | #004d40 | #e0f2f1 | #b2dfdb | #f9fdf9 | #f1faf9 |
+  | recipe_ (음식·레시피)                                     | #e64a19 | #bf360c | #fbe9e7 | #ffccbc | #fffaf8 | #fff5f2 |
+  | 그 외 생활정보 (local_ car_ rite_ tech_ gov_ money_       | #388e3c | #1b5e20 | #e8f5e9 | #c8e6c9 | #f9fdf9 | #f1faf1 |
+  |  home_ house_ admin_ appli_ cert_ …)                     |         |         |         |         |         |         |
+
+  구조 규칙
+  - <body>
+<h1>고속버스 할인 카드와 예매 앱 혜택 비교 — 왕복 할인·조기예매 중복 적용 기준과 요금 절약 계산표</h1>
+<div class="intro-box">
+고속버스를 이용해 장거리 출장이나 고향 방문, 주말여행을 떠날 때 승차권 예매 방법과 결제 카드 선택만 잘해도 회당 수천 원에서 수만 원까지 요금을 절약할 수 있습니다.<br><br>
+티머니GO 앱 예매 시 제공되는 GO마일리지 적립 혜택부터 조기예매 10% 할인, 왕복 예매 추가 할인, 청소년·대학생 대상 할인율까지 다양한 할인 제도가 운영되고 있지만, 어떤 항목들이 서로 중복 적용되고 제외되는지 명확히 알고 있는 승객은 많지 않습니다.<br><br>
+신용카드 및 체크카드의 대중교통 청구할인 혜택과의 연계 방법부터 K-패스 환급 적용 불가 규정, 출발 시간대별 취소 수수료 공제율 계산표까지 고속버스 이용객을 위한 실전 요금 절약 가이드를 알기 쉽게 정리해 드립니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260929/3_express_bus_pass_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-1">Modern premium express bus interior and exterior at an express bus terminal platform in Korea, sleek luxury bus with comfortable leather reclining seats, warm terminal ambient lighting, smartphone displaying bus ticketing mobile application with discount confirmation on screen, realistic travel aesthetic, high detail, photorealistic style, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">고속버스 모바일 예매 앱과 현대식 프리미엄 버스 플랫폼 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 고속버스 요금 할인 제도 구조와 중복 적용 핵심 요약</h2>
+고속버스 운임 체계는 국토교통부의 여객자동차 운송사업 운임 요율 기준을 따르며, 일반·우등·프리미엄 등 등급별 기본요금에 각종 할인 제도가 차등 적용되는 구조를 갖추고 있습니다.<br><br>
+많은 이용객이 궁금해하는 핵심은 "여러 가지 할인 혜택을 한 번에 중복해서 받을 수 있는가"입니다.<br><br>
+원칙적으로 고속버스 운임의 자체 법정·제도적 할인(청소년, 대학생, 국가유공자, 조기예매, 왕복할인 등)은 '가장 할인율이 높은 1가지'만 단일 적용되는 것이 기본 규칙입니다.<br><br>
+하지만 티머니GO와 같은 예매 플랫폼에서 자체 제공하는 '모바일 앱 마일리지 적립'이나 '쿠폰 할인', 그리고 결제 단계에서 적용되는 '신용카드 대중교통 청구할인'은 고속버스 승차권 할인과 <strong>이중·삼중으로 중복 적용</strong>이 가능합니다.<br><br>
+따라서 승차권 자체의 사전·왕복 할인을 먼저 적용받은 후, 제휴 카드로 결제하여 청구할인을 챙기고, 플랫폼 마일리지까지 적립하는 3단계 전략을 활용해야 실질적인 최대 절약 효과를 누릴 수 있습니다.
+
+<h2>02 | 티머니GO 앱 예매 혜택과 마일리지 적립·환급 기준</h2>
+현재 전국 고속버스 공식 모바일 예매 플랫폼은 티머니(Tmoney)에서 운영하는 '고속버스 티머니' 및 통합 모빌리티 앱인 '티머니GO(Tmoney GO)'로 일원화되어 있습니다.<br><br>
+특히 티머니GO 앱을 통해 고속버스를 예매하고 탑승하면 결제 금액의 일정 비율이 'GO마일리지'로 자동 적립됩니다.<br><br>
+신규 가입 프로모션이나 월간 정기 챌린지를 달성할 경우 결제 금액의 3~5%가 추가 적립되며, 적립된 마일리지는 다음번 승차권 예매 시 1원 단위부터 현금처럼 차감 결제할 수 있습니다.<br><br>
+또한 티머니GO 내에서 고속버스와 서울·지자체 따릉이(공공자전거) 또는 택시를 연계 이용할 경우 '환승 리워드'가 지급되어 회당 500원에서 최대 1,000원의 마일리지가 환급됩니다.<br><br>
+기존 종이 승차권 발권 없이 모바일 QR코드 하나로 검표기를 태그하고 즉시 탑승할 수 있어 시간 절약과 편의성 면에서도 앱 예매가 압도적으로 유리합니다.
+
+<h2>03 | 고속버스 조기예매 및 왕복 예매 할인율과 적용 조건</h2>
+고속버스 운송사들은 비수기 승객 유치와 사전 예약 활성화를 위해 '사전 예매(조기예매)'와 '왕복 예매' 할인 제도를 상시 운영하고 있습니다.<br><br>
+조기예매 할인은 탑승일 기준 최소 2일 전(D-2)까지 왕복 승차권을 한 번에 결제하거나, 30일 이내에 동일 노선을 왕복할 때 <strong>운임의 10%</strong>를 할인해 주는 제도입니다.<br><br>
+또한 평일(월~목요일) 승차권을 사전 예매할 경우 노선 및 운송사에 따라 5~10%의 추가 요금 인하 혜택이 적용되는 경우가 많습니다.<br><br>
+단, 명절 특별 수송 기간(설날, 추석 연휴)이나 여름 휴가 성수기(7월 말~8월 초), 특정 주말 황금연휴 기간에는 조기예매 및 왕복 할인 적용이 전면 제외되므로 예매 화면에서 할인 금액 반영 여부를 반드시 확인해야 합니다.<br><br>
+심야 고속버스나 할증이 붙는 새벽 시간대 노선은 조기예매 할인율이 기본요금에만 한정 적용될 수 있다는 점도 유의할 필요가 있습니다.
+
+<h2>04 | 청소년·대학생·아동 연령별 고속버스 할인율과 증빙 서류</h2>
+고속버스는 대중교통 공공성 확보를 위해 연령대별 법정 할인 제도를 철저히 시행하고 있습니다.
+
+<table class="info-table">
+  <thead>
+    <tr>
+      <th>구분</th>
+      <th>연령 및 자격 기준</th>
+      <th>할인율</th>
+      <th>적용 가능 버스 등급</th>
+      <th>탑승 시 필수 증빙</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>유아 (무임)</strong></td>
+      <td>만 6세 미만 (좌석 미배정)</td>
+      <td><strong>100% 무료</strong></td>
+      <td>전 등급 (보호자 1인당 1명)</td>
+      <td>주민등록등본 (모바일 확인)</td>
+    </tr>
+    <tr>
+      <td><strong>아동 (초등생)</strong></td>
+      <td>만 6세 이상 ~ 만 13세 미만</td>
+      <td><strong>50% 할인</strong></td>
+      <td>일반·우등·프리미엄 전 등급</td>
+      <td>학생증, 청소년증, 등본</td>
+    </tr>
+    <tr>
+      <td><strong>청소년 (중고생)</strong></td>
+      <td>만 13세 이상 ~ 만 18세 이하</td>
+      <td><strong>20% 할인</strong></td>
+      <td>일반고속 (우등·프리미엄 제외 노선 다수)</td>
+      <td>학생증, 청소년증</td>
+    </tr>
+    <tr>
+      <td><strong>대학생 (협약 노선)</strong></td>
+      <td>대학교 재학생</td>
+      <td><strong>10%~20% 할인</strong></td>
+      <td>운송사 협약 지방 노선 한정</td>
+      <td>모바일 학생증, 재학증명서</td>
+    </tr>
+  </tbody>
+</table>
+
+특히 청소년 할인의 경우 일반고속 버스에는 전면 적용되지만, 우등고속이나 프리미엄 버스에는 지자체 및 운송사 협약에 따라 할인이 배제되는 노선이 있으므로 예매 시 확인이 필요합니다.<br><br>
+모바일 앱에서 청소년 요금으로 예매했더라도 탑승 시 검표원이 신분증 제시를 요구할 수 있으므로, 청소년증이나 모바일 학생증을 반드시 소지해야 하며, 미지참 시 성인 요금 차액을 현장에서 추징당할 수 있습니다.
+
+<h2>05 | 나라사랑카드 및 국가유공자·군인 할인 혜택 비교</h2>
+국방의 의무를 다하고 있는 현역 군인과 국가유공자를 위한 특별 요금 감면 제도 역시 마련되어 있습니다.<br><br>
+국가유공자(독립유공자, 상이군경 등)는 유공자증을 제시할 경우 상이 등급에 따라 <strong>30%~70% 감면</strong> 또는 무임 승차가 지원되며, 일반·우등 고속버스에서 폭넓게 혜택을 받을 수 있습니다.<br><br>
+현역 병사의 경우 '나라사랑카드'(KB국민, IBK기업)를 이용하여 고속버스 승차권을 결제하면 전월 실적 조건 충족 시 <strong>5%~10% 청구할인</strong>(월 한도 내)을 돌려받을 수 있습니다.<br><br>
+또한 군인 휴가증을 소지하고 터미널 창구에서 현장 발권하거나 국방 복지 포털 연계 사이트를 이용할 경우 특정 운송사 협약 노선에 한해 군인 전용 할인(10%)이 지원되는 경우도 있으므로 출타 전 복지 혜택을 점검하는 것이 유리합니다.
+
+<h2>06 | 고속버스 결제 청구할인 신용카드·체크카드 BEST 혜택 비교표</h2>
+승차권 자체의 사전 예매 할인 외에 가장 큰 절약 무기는 바로 '대중교통 특화 카드'의 결제 청구할인입니다.<br><br>
+대다수 카드사에서 '고속버스' 가맹점을 대중교통 카테고리로 분류하여 5%에서 최대 20%까지 할인 또는 캐시백을 제공합니다.
+
+<table class="info-table">
+  <thead>
+    <tr>
+      <th>카드사 및 상품명</th>
+      <th>고속버스 할인 혜택</th>
+      <th>월 통합 할인 한도</th>
+      <th>전월 이용 실적 조건</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>신한카드 B.Big(삑)</strong></td>
+      <td>대중교통 일 200원~600원 정액 할인</td>
+      <td>월 최대 18,000원</td>
+      <td>전월 30만 원 이상</td>
+    </tr>
+    <tr>
+      <td><strong>KB국민 알뜰교통/대중교통</strong></td>
+      <td>고속버스·시외버스 10% 청구할인</td>
+      <td>월 5,000원~10,000원</td>
+      <td>전월 30만 원 이상</td>
+    </tr>
+    <tr>
+      <td><strong>삼성카드 iD MOVE</strong></td>
+      <td>대중교통 및 고속버스 10% 결제일 할인</td>
+      <td>월 최대 12,000원</td>
+      <td>전월 40만 원 이상</td>
+    </tr>
+    <tr>
+      <td><strong>IBK 기업 나라사랑카드</strong></td>
+      <td>고속버스 결제 시 5% 청구할인</td>
+      <td>월 최대 5,000원</td>
+      <td>전월 20만 원 이상</td>
+    </tr>
+  </tbody>
+</table>
+
+단, 일부 신용카드의 경우 '시내버스 및 지하철'만 대중교통으로 인정하고 '고속버스·철도'는 제외하는 조항이 있으므로 카드 상품 약관의 '대중교통 가맹점 세부 인정 기준'을 사전에 체크해야 합니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260929/3_express_bus_pass_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-2">Close-up of a traveler holding a sleek smartphone scanning a digital mobile ticket QR code at the automatic ticketing gate of an express bus, illuminated digital scanner screen glowing softly, bus driver and clean modern bus interior visible in soft blur behind, high resolution, realistic textures, photorealistic travel technology concept, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">고속버스 승차권 모바일 QR 태그 및 자동 개찰 풍경 / AI 제작 이미지</div>
+</div>
+
+<h2>07 | K-패스 환급 대상 여부와 시외·고속버스 적용 불가 규정 안내</h2>
+많은 승객이 가장 많이 혼동하는 제도 중 하나가 바로 정부의 'K-패스(The 경기패스, 인천 I-패스 포함)' 환급 여부입니다.<br><br>
+결론부터 명확히 말씀드리면, <strong>고속버스와 시외버스는 K-패스 환급 대상 교통수단에 포함되지 않습니다.</strong><br><br>
+K-패스 및 광역교통패스는 전국 시내버스, 마을버스, 광역버스(신분당선, 수도권 광역급행철도 GTX 포함), 도시철도 등 '도시 내 및 광역 생활권 대중교통'에 한정하여 이용 횟수 기반 20~53%를 환급해 주는 제도입니다.<br><br>
+고속버스와 KTX·SRT 일반열차는 '장거리 지역 간 간선 교통수단'으로 분류되어 K-패스 단말기 태그가 불가능하며, 승차권 결제액에 대한 K-패스 환급금 역시 지급되지 않습니다.<br><br>
+따라서 고속버스를 이용할 때는 K-패스 카드의 패스 환급 기능 대신, 카드 상품 자체에 탑재된 일반 대중교통 청구할인 서비스나 티머니GO 마일리지를 노리는 것이 올바른 전략입니다.
+
+<h2>08 | 취소 수수료 시간대별 공제율과 위약금 없는 취소 타이밍</h2>
+일정이 급히 변경되어 승차권을 취소해야 할 때 취소 타이밍에 따라 수수료가 크게 달라집니다.<br><br>
+고속버스 모바일 취소 수수료는 여객자동차 운송사업법 표준약관에 따라 출발 시간 전후를 기준으로 정밀하게 차등 적용됩니다.
+
+<div class="warn-box">
+  <strong>⚠️ 고속버스 승차권 취소 수수료 기준표</strong><br>
+  · <strong>예매 후 1시간 이내</strong> : 출발 시간 무관 <strong>수수료 0원 (전액 환불)</strong><br>
+  · <strong>출발 2일 전(D-2)까지</strong> : <strong>수수료 0원 (전액 환불)</strong><br>
+  · <strong>출발 1일 전 ~ 출발 1시간 전</strong> : 결제 금액의 <strong>5% 공제</strong><br>
+  · <strong>출발 1시간 전 ~ 출발 직전</strong> : 결제 금액의 <strong>10% 공제</strong><br>
+  · <strong>출발 후 목적지 도착 전</strong> : 결제 금액의 <strong>30% 공제</strong> 후 환불<br>
+  · <strong>목적지 도착 예정 시간 이후</strong> : 환불 불가 (운임 100% 소멸)
+</div>
+
+출발 당일이라도 예매를 완료한 시점으로부터 1시간 이내에 취소하면 당일 취소 수수료가 면제되므로, 잘못 예매했거나 일정이 바뀌었다면 즉시 취소 버튼을 누르는 것이 손실을 막는 핵심입니다.
+
+<h2>09 | 고속버스 승차권 예매 전 최종 할인 적용 계산표와 체크리스트</h2>
+실제 서울-부산 우등고속 노선(편도 기준 운임 약 39,000원)을 예매할 때 결합 전략에 따른 실부담 요금을 계산해 보면 다음과 같습니다.
+
+<div class="step-box">
+  <strong>💡 서울-부산 우등고속 요금 절약 시뮬레이션</strong><br>
+  · <strong>정상 요금</strong> : 39,000원<br>
+  · <strong>1단계 (사전 왕복 예매 10% 적용)</strong> : 39,000원 - 3,900원 = 35,100원<br>
+  · <strong>2단계 (대중교통 카드 10% 청구할인)</strong> : 35,100원 결제 시 카드 대금 청구서에서 3,510원 추가 차감 (실부담 31,590원)<br>
+  · <strong>3단계 (티머니GO 3% 마일리지 적립)</strong> : 결제액 기준 1,053원 마일리지 적립<br>
+  · <strong>최종 체감 운임</strong> : <strong>30,537원 (총 8,463원 / 약 21.7% 실질 할인 효과)</strong>
+</div>
+
+<div class="tip-box">
+  <strong>📋 고속버스 예매 출발 전 필수 체크리스트</strong><br>
+  1. <strong>티머니GO 앱 설치 및 로그인</strong> : 기본 마일리지 적립 및 환승 리워드 혜택 활성화.<br>
+  2. <strong>왕복 일정 확정 시 사전 예매</strong> : 출발 2일 전까지 왕복으로 묶어 10% 조기예매 할인 확보.<br>
+  3. <strong>대중교통 할인 신용카드 결제</strong> : 고속버스 가맹점 청구할인 제공 카드(전월 실적 충족 여부 확인) 사용.<br>
+  4. <strong>신분증 지참</strong> : 청소년·대학생·유공자 요금 예매 시 현장 확인용 신분증 필수 소지.<br>
+  5. <strong>QR코드 캡처 백업</strong> : 터미널 네트워크 지연 대비 탑승 전 모바일 승차권 화면 캡처 저장.
+</div>
+
+이와 같은 할인 결합 전략을 실천하여 장거리 이동 시 교통비 부담을 시원하게 줄여보시길 바랍니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260928/pass_disabled_veteran_highway_toll_discount.html">국가유공자·장애인 고속도로 통행료 감면 혜택 — 감면율 비교 계산표와 지문인식 하이패스 단말기 신청 서류 체크리스트</a></li>
+<li><a href="../260928/travel_yesan_chusa_deoksan_fall_drive.html">충남 예산 추사고택·덕산온천 가을 당일치기 코스 — 관람 동선과 온천탕 요금 비교 체크리스트</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#고속버스할인</span>
+<span class="tag">#티머니GO할인</span>
+<span class="tag">#고속버스조기예매</span>
+<span class="tag">#고속버스왕복할인</span>
+<span class="tag">#청소년고속버스할인</span>
+<span class="tag">#대중교통할인카드</span>
+<span class="tag">#K패스고속버스</span>
+<span class="tag">#고속버스취소수수료</span>
+<span class="tag">#고속버스마일리지</span>
+<span class="tag">#교통비절약팁</span>
+</div>
+</body>
+</html>

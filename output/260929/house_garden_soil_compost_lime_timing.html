@@ -1,0 +1,182 @@
+<!--
+  네이버 원고 표준 템플릿 — Platinum v5 (SSOT)
+  ==========================================================
+  ⛔ 이 파일의 <style> 블록·<script> 블록·마크업 구조는 그대로 복사해서 쓴다.
+     CSS 속성값을 임의로 바꾸거나, 새 클래스를 만들거나, 레이아웃을 새로 디자인하지 않는다.
+     (2026-08-16 지시: 매일 디자인이 바뀌어 가독성이 떨어지는 문제를 막기 위함)
+
+  치환 토큰 — 카테고리 컬러 세트만 아래 표에서 골라 그대로 치환한다.
+
+  | slug prefix                                              | ACCENT  | DARK    | TINT    | BORDER  | SOFT    | EVEN    |
+  |----------------------------------------------------------|---------|---------|---------|---------|---------|---------|
+  | travel_ (국내여행)                                        | #00796b | #004d40 | #e0f2f1 | #b2dfdb | #f9fdf9 | #f1faf9 |
+  | recipe_ (음식·레시피)                                     | #e64a19 | #bf360c | #fbe9e7 | #ffccbc | #fffaf8 | #fff5f2 |
+  | 그 외 생활정보 (local_ car_ rite_ tech_ gov_ money_       | #388e3c | #1b5e20 | #e8f5e9 | #c8e6c9 | #f9fdf9 | #f1faf1 |
+  |  home_ house_ admin_ appli_ cert_ …)                     |         |         |         |         |         |         |
+
+  구조 규칙
+  - <body>
+<h1>텃밭 가을 흙 만들기 — 완숙 퇴비와 석회 넣는 시기·평당 투입량 계산표와 산도 조절 체크리스트</h1>
+<div class="intro-box">
+가을철 텃밭 농사의 성패는 좋은 모종이나 비싼 비료가 아니라, 파종 2~3주 전 토양을 어떻게 개량하고 밑거름을 넣느냐에 따라 80% 이상 결정됩니다.<br><br>
+여름내 작물을 키워내며 지력이 쇠약해지고 장마철 잦은 비로 산성화된 텃밭 흙을 알칼리성 석회로 중화시키고 유기물 퇴비를 듬뿍 넣어 비옥한 떼알 구조로 되살리는 흙 만들기 작업은 필수적인 기초 공사입니다.<br><br>
+많은 초보 농부들이 저지르는 치명적 실수인 '석회와 퇴비의 동시 시비'로 인한 질소 가스 피해를 완벽히 차단하는 1~2주 분리 살포 원칙부터 평수별 정확한 퇴비·석회 투입량 계산표, 깊이 30cm 흙 뒤집기 요령까지 가을 작물 맞춤 토양 관리법을 상세히 정리해 드립니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260929/6_garden_soil_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-1">A healthy productive autumn vegetable garden plot in South Korea, rich dark brown crumbly loam soil freshly plowed and turned with a shovel, neat raised planting beds prepared for planting garlic and spinach, bags of organic compost fertilizer and agricultural lime visible nearby, warm golden autumn afternoon sun shining on rich fertile earth, rustic wooden fence, ultra high detail, realistic farming photography, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">가을 파종을 앞두고 기름지게 일구어 놓은 텃밭 흙과 고랑 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 텃밭 가을 밭 만들기 원리와 토양 산도 조절 핵심 요약</h2>
+여름철 고추, 토마토, 옥수수 등을 수확하고 난 텃밭 토양은 작물이 양분을 대량으로 흡수한 데다 여름 장마철 집중호우로 토양 속 칼슘과 마그네슘이 빗물에 씻겨 내려가 <strong>pH 5.0 이하의 강한 산성</strong>으로 기울어져 있는 경우가 대부분입니다.<br><br>
+산성화된 토양에서는 토양 미생물의 활동이 급격히 저하되고 인산 등 필수 미네랄이 흙에 결합되어 작물 뿌리가 영양분을 전혀 흡수하지 못하게 됩니다.<br><br>
+이 상태에서 마늘, 양파, 시금치 등 가을 작물을 그대로 심으면 뿌리내림이 불량해지고 냉해를 입어 월동에 실패하기 쉽습니다.<br><br>
+따라서 가을 밭 만들기의 첫걸음은 <strong>석회를 뿌려 산도를 중성(pH 6.0~6.8)으로 교정</strong>하고, <strong>완숙 유기물 퇴비를 투입하여 흙의 물리성과 통기성을 회복</strong>시켜 주는 토양 종합 리모델링 작업입니다.
+
+<h2>02 | 석회와 퇴비의 역할 차이 — 왜 산성 토양을 먼저 개량해야 하는가</h2>
+초보 텃밭지기들이 흔히 하는 착각 중 하나가 '석회를 영양제(비료)'로 생각하는 것입니다.<br><br>
+석회(고토석회, 소석회)는 흙의 영양분이라기보다는 산성화된 흙을 중화시키는 <strong>'토양 체질 개선제'</strong>입니다. 토양의 수소이온 농도를 낮추어 작물이 비료 성분을 잘 흡수할 수 있는 최적의 생육 환경을 만들어 주는 역할을 합니다.<br><br>
+반면 퇴비(가축분 퇴비, 부엽토 등)는 미생물이 풍부한 유기물 덩어리로, 흙 입자를 몽글몽글한 떼알 구조(단립 구조)로 뭉치게 하여 물 빠짐(배수성)과 수분 보존력(보수력), 공기 유통(통기성)을 동시에 향상시키는 <strong>'흙의 보약'</strong>입니다.<br><br>
+산성 토양을 먼저 중화시키지 않은 채 퇴비만 많이 넣으면 토양 산성화가 더욱 가속화되므로, 반드시 석회로 흙의 바탕을 닦은 뒤 퇴비를 공급하는 순서를 지켜야 합니다.
+
+<h2>03 | 절대 동시 시비 금지! 석회와 퇴비 살포 간격 1~2주 분리 원칙</h2>
+가을 밭 만들기에서 가장 중요하며 절대 어겨서는 안 되는 철칙은 <strong>"석회와 퇴비를 같은 날 동시에 밭에 뿌리지 않는다"</strong>는 것입니다.<br><br>
+석회는 강한 알칼리성을 띠고 있으며, 유기물 퇴비에는 다량의 암모니아태 질소 성분이 포함되어 있습니다.<br><br>
+두 물질이 흙 속에서 직접 만나 섞이게 되면 화학 반응이 일어나 질소 성분이 <strong>암모니아 가스로 변해 공기 중으로 날아가 버리는 '가스 휘산 현상'</strong>이 발생합니다.<br><br>
+이로 인해 비싼 비료 성분은 전부 허공으로 소실되고, 흙 속에 갇힌 유독 가스는 작물의 여린 뿌리를 태워 말라 죽게 만드는 '가스 장애'를 유발합니다.<br><br>
+따라서 반드시 <strong>파종 3주 전(D-21)에 석회를 먼저 뿌려 흙을 뒤집어 두고, 최소 1~2주가 지난 파종 1주 전(D-7)에 퇴비를 넣고 다시 갈아엎는 분리 시비</strong>를 실천해야 합니다.
+
+<h2>04 | 텃밭 면적별(3평·5평·10평) 완숙 퇴비 및 석회 투입량 계산표</h2>
+비료는 모자라도 문제지만 과다 투입 시 염류 집적과 가스 장해를 유발하므로 텃밭 면적에 맞춰 정량을 계산해 투입해야 합니다.
+
+<table class="info-table">
+  <thead>
+    <tr>
+      <th>텃밭 면적</th>
+      <th>고토석회 권장 투입량</th>
+      <th>완숙퇴비 권장 투입량 (20kg 포대 기준)</th>
+      <th>복합비료 (밑거름용)</th>
+      <th>시비 간격</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>3평 (약 10㎡)</strong></td>
+      <td>1.0kg ~ 1.5kg</td>
+      <td>1포대 (20kg)</td>
+      <td>300g (종이컵 약 2컵)</td>
+      <td>석회 살포 후 10일 뒤 퇴비</td>
+    </tr>
+    <tr>
+      <td><strong>5평 (약 16.5㎡)</strong></td>
+      <td>2.0kg ~ 2.5kg</td>
+      <td>1.5포대 ~ 2포대 (30~40kg)</td>
+      <td>500g (종이컵 약 3컵)</td>
+      <td>석회 살포 후 10~14일 뒤 퇴비</td>
+    </tr>
+    <tr>
+      <td><strong>10평 (약 33㎡)</strong></td>
+      <td>3.5kg ~ 5.0kg</td>
+      <td>3포대 ~ 4포대 (60~80kg)</td>
+      <td>1.0kg (1봉지 소량)</td>
+      <td>석회 살포 후 2주 뒤 퇴비</td>
+    </tr>
+    <tr>
+      <td><strong>20평 (약 66㎡)</strong></td>
+      <td>7.0kg ~ 10.0kg</td>
+      <td>6포대 ~ 8포대 (120~160kg)</td>
+      <td>2.0kg</td>
+      <td>석회 살포 후 2주 뒤 퇴비</td>
+    </tr>
+  </tbody>
+</table>
+
+통상 텃밭 1평(3.3㎡)당 완숙 퇴비는 약 5~7kg(20kg 한 포대로 3~4평 시비), 고토석회는 300~500g(종이컵 2~3컵 분량)이 표준 기준입니다.
+
+<h2>05 | 소석회 vs 고토석회 vs 패화석 — 텃밭 토양별 적합한 석회 종류 비교</h2>
+농협이나 종묘상에서 판매하는 석회 자재는 원료와 특성에 따라 여러 종류가 있으므로 목적에 맞게 골라 써야 합니다.<br><br>
+텃밭용으로 가장 안전하고 권장되는 것은 <strong>'고토석회(마그네슘 석회)'</strong>입니다. 칼슘(알칼리분 53%)과 마그네슘(고토 15%)이 함께 들어있어 식물의 광합성을 촉진하며, 입상(알갱이) 형태로 가공되어 바람에 날리지 않아 뿌리기 매우 편리합니다.<br><br>
+'소석회'는 반응 속도가 매우 빠르고 알칼리도가 높아 토양 중화 효과는 즉각적이지만, 강한 알칼리성으로 인해 토양 미생물을 죽이고 가스 발생 위험이 커 초보자가 다루기에는 위험합니다.<br><br>
+굴 껍데기를 가공해 만든 '패화석'은 천연 유기 칼슘 자재로 친환경 유기농 텃밭에 적합하며 알칼리도가 완만하여 토양에 무리를 주지 않는 장점이 있습니다.
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 이미지 생성 영역</span>
+      <span class="ph-file">images/260929/6_garden_soil_2.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-2">Close-up of a gardener hands holding rich dark crumbly garden compost soil full of healthy earthworms and organic matter, wearing working gardening gloves, small garden trowel and soil pH meter testing tester probe inserted into the earth, natural soft lighting, hyper-realistic, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-2')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">완숙 퇴비가 섞여 떼알 구조를 이룬 건강한 토양 점검 / AI 제작 이미지</div>
+</div>
+
+<h2>06 | 미숙 퇴비 사용 시 발생하는 가스 장애 증상과 완숙 퇴비 구별법</h2>
+냄새가 지독하게 나는 덜 발효된 '미숙(未熟) 퇴비'를 밭에 넣으면 흙 속에서 발효가 계속 진행되면서 50~70도의 고열과 함께 암모니아 가스 및 유화수소 가스가 뿜어져 나옵니다.<br><br>
+이 가스는 작물의 잎을 노랗게 하얗게 태우고 뿌리를 부패시켜 결국 모종을 전멸시키는 치명적인 결과를 낳습니다.<br><br>
+완벽히 발효된 <strong>'완숙(完熟) 퇴비'</strong>는 코를 찌르는 악취나 가축 분뇨 냄새가 전혀 나지 않으며, 비 온 뒤 깊은 산속 숲길에서 맡을 수 있는 구수하고 향긋한 흙냄새가 납니다.<br><br>
+손으로 쥐었을 때 축축하지 않고 보슬보슬하며 검은 갈색을 띠고, 짚이나 톱밥 알갱이가 원래 형태를 잃고 잘게 부스러지는 것이 좋은 퇴비입니다.
+
+<h2>07 | 흙 뒤집기(심경) 깊이 25~30cm 작업 요령과 이랑·고랑 만들기</h2>
+석회나 퇴비를 뿌린 후에는 삽이나 쇠스랑, 관리기를 이용해 흙을 <strong>깊이 25~30cm 이상 깊게 파서 뒤집어 주는 '심경(深耕)' 작업</strong>을 해야 합니다.<br><br>
+겉흙에만 비료를 살살 긁어모아 놓으면 비가 올 때 비료가 전부 고랑으로 쓸려 내려가고, 뿌리가 깊게 뻗어 내려가지 못해 가뭄과 추위에 취약해집니다.<br><br>
+흙을 깊이 파서 갈아엎으며 큰 흙덩어리를 잘게 부수고 돌멩이와 전 작물의 묵은 뿌리를 골라내야 부드러운 흙 사이로 산소가 공급됩니다.<br><br>
+가을 작물 중 마늘과 양파는 평평하고 넓은 평이랑(폭 100~120cm)을 만들어 유공 비닐을 씌우고, 물 빠짐이 중요한 무와 배추는 두둑을 20~25cm 높게 세운 외줄 두둑을 만들어 주는 것이 배수 관리에 유리합니다.
+
+<h2>08 | 주요 가을 작물(마늘·양파·시금치) 파종 전 밭 완성 D-day 역산 일정</h2>
+성공적인 가을 텃밭 농사를 위해 파종 예정일로부터 역산하는 3단계 스케줄을 수립해야 합니다.
+
+<div class="step-box">
+  <strong>🗓️ 가을 텃밭 만들기 D-day 역산 타임테이블</strong><br>
+  · <strong>D-21 (파종 3주 전)</strong> : 잡초 및 이전 작물 잔재물 제거 + 고토석회 평당 300~500g 살포 후 1차 깊이갈이(30cm).<br>
+  · <strong>D-14 (파종 2주 전)</strong> : 비를 맞혀 석회가 흙과 반응하도록 방치 (가뭄 시 물을 흠뻑 뿌려줌).<br>
+  · <strong>D-7 (파종 1주 전)</strong> : 완숙퇴비(평당 5~7kg) + 밑거름 복합비료 살포 후 2차 정밀 로터리 흙 뒤집기.<br>
+  · <strong>D-3 (파종 3일 전)</strong> : 두둑과 고랑 성형 + 토양 살충제(굼벵이 방제) 미량 살포 후 비닐 멀칭.<br>
+  · <strong>D-day (파종 당일)</strong> : 마늘 종구·양파 모종 정식 또는 시금치 씨앗 파종 후 충분한 관수.
+</div>
+
+이와 같이 3주간의 준비 과정을 거쳐 만든 밭은 어떤 모종을 심어도 뿌리가 활착을 빠르게 마치고 튼튼하게 자라납니다.
+
+<h2>09 | 텃밭 가을 토양 개량 작업 단계별 필수 실행 체크리스트</h2>
+가을 밭갈이에 나서기 전 반드시 점검해야 할 핵심 실행 수칙입니다.
+
+<div class="tip-box">
+  <strong>📋 텃밭 가을 흙 만들기 성공 체크리스트</strong><br>
+  1. <strong>석회-퇴비 시비 간격 준수</strong> : 두 자재를 절대로 같은 날 뿌리지 않고 최소 10일~2주 간격 두기.<br>
+  2. <strong>완숙 퇴비 확인</strong> : 코를 찌르는 가축 분뇨 냄새가 없는 향긋한 부식토 냄새의 완숙 퇴비만 사용.<br>
+  3. <strong>투입량 정량 계량</strong> : 1평당 석회 400g, 완숙퇴비 6kg 기준을 초과하지 않도록 면적 대비 계량.<br>
+  4. <strong>30cm 깊이갈이 실천</strong> : 표면만 긁지 말고 삽 깊이만큼 흙을 뒤집어 통기성과 배수성 확보.<br>
+  5. <strong>비닐 멀칭 전 수분 확인</strong> : 흙이 너무 바짝 마른 상태에서 비닐을 씌우지 말고 비가 온 뒤 촉촉할 때 멀칭.
+</div>
+
+기초가 튼튼한 비옥한 흙을 만들어 다가오는 겨울을 이겨내고 내년 봄 풍성한 수확의 기쁨을 누려보시길 바랍니다.
+
+<div class="recommend-area">
+<strong>🔗 같이 볼만한 글</strong>
+<ul>
+<li><a href="../260928/car_fuel_type_maintenance_cost_compare.html">휘발유 vs 경유 vs LPG vs 전기차 유지비 비교 — 연간 주행거리별 유류비 계산표와 차량 선택 체크리스트</a></li>
+<li><a href="../260928/travel_namhansanseong_fall_trail_course.html">남한산성 가을 단풍 둘레길 1코스 트레킹 — 주차장 위치별 요금 비교와 소요시간 체크리스트</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#텃밭흙만들기</span>
+<span class="tag">#텃밭가을비료</span>
+<span class="tag">#석회퇴비살포시기</span>
+<span class="tag">#석회퇴비동시시비금지</span>
+<span class="tag">#완숙퇴비구별법</span>
+<span class="tag">#고토석회효능</span>
+<span class="tag">#텃밭산도조절</span>
+<span class="tag">#마늘밭만들기</span>
+<span class="tag">#양파밭만들기</span>
+<span class="tag">#텃밭가스장애</span>
+</div>
+</body>
+</html>
