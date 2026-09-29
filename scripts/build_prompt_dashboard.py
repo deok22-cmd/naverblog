@@ -212,7 +212,7 @@ def parse_date_dir(project_root, date_str):
     }
 
 def build_dashboard(target_date=None):
-    project_root = r"d:\lightsail\naverblog"
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     all_dates = get_all_dates(project_root)
     
     if not all_dates:

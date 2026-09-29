@@ -1,0 +1,65 @@
+<!--
+  네이버 원고 표준 템플릿 — Platinum v5 (SSOT)
+  ==========================================================
+  ⛔ 이 파일의 <style> 블록·<script> 블록·마크업 구조는 그대로 복사해서 쓴다.
+     CSS 속성값을 임의로 바꾸거나, 새 클래스를 만들거나, 레이아웃을 새로 디자인하지 않는다.
+     (2026-08-16 지시: 매일 디자인이 바뀌어 가독성이 떨어지는 문제를 막기 위함)
+
+  치환 토큰 — 카테고리 컬러 세트만 아래 표에서 골라 그대로 치환한다.
+
+  | slug prefix                                              | ACCENT  | DARK    | TINT    | BORDER  | SOFT    | EVEN    |
+  |----------------------------------------------------------|---------|---------|---------|---------|---------|---------|
+  | travel_ (국내여행)                                        | #00796b | #004d40 | #e0f2f1 | #b2dfdb | #f9fdf9 | #f1faf9 |
+  | recipe_ (음식·레시피)                                     | #e64a19 | #bf360c | #fbe9e7 | #ffccbc | #fffaf8 | #fff5f2 |
+  | 그 외 생활정보 (local_ car_ rite_ tech_ gov_ money_       | #388e3c | #1b5e20 | #e8f5e9 | #c8e6c9 | #f9fdf9 | #f1faf1 |
+  |  home_ house_ admin_ appli_ cert_ …)                     |         |         |         |         |         |         |
+
+  구조 규칙
+  - <body> 직속으로 <h1>, .intro-box, .img-area, <h2>/<h3>, .info-table, .step-box, .tip-box, .warn-box, .recommend-area, .tags 만 배치
+  - .wrap 같은 바깥 감싸는 div를 두지 않는다.
+  - 마크다운 ** 대신 <strong> 태그를 쓴다.
+  - 문단 구분은 <br><br> 로 한다.
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>{{TITLE}}</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid {{ACCENT}}; padding-bottom: 12px; color: {{DARK}}; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: {{TINT}}; padding: 12px 15px; border-left: 6px solid {{ACCENT}}; margin-top: 50px; color: {{DARK}}; }
+  h3 { font-size: 1.05em; font-weight: 700; color: {{DARK}}; margin: 24px 0 8px; }
+  .intro-box { background: {{SOFT}}; border: 2px solid {{BORDER}}; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: {{ACCENT}}; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: {{EVEN}}; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed {{BORDER}}; border-radius: 8px; padding: 20px; background: {{SOFT}}; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: {{ACCENT}}; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: {{ACCENT}}; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: {{SOFT}}; border: 1px solid {{BORDER}}; border-left: 4px solid {{ACCENT}}; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid {{ACCENT}}; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '{{ACCENT}}'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>

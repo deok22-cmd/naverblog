@@ -1,21 +1,46 @@
-<!--
-  네이버 원고 표준 템플릿 — Platinum v5 (SSOT)
-  ==========================================================
-  ⛔ 이 파일의 <style> 블록·<script> 블록·마크업 구조는 그대로 복사해서 쓴다.
-     CSS 속성값을 임의로 바꾸거나, 새 클래스를 만들거나, 레이아웃을 새로 디자인하지 않는다.
-     (2026-08-16 지시: 매일 디자인이 바뀌어 가독성이 떨어지는 문제를 막기 위함)
-
-  치환 토큰 — 카테고리 컬러 세트만 아래 표에서 골라 그대로 치환한다.
-
-  | slug prefix                                              | ACCENT  | DARK    | TINT    | BORDER  | SOFT    | EVEN    |
-  |----------------------------------------------------------|---------|---------|---------|---------|---------|---------|
-  | travel_ (국내여행)                                        | #00796b | #004d40 | #e0f2f1 | #b2dfdb | #f9fdf9 | #f1faf9 |
-  | recipe_ (음식·레시피)                                     | #e64a19 | #bf360c | #fbe9e7 | #ffccbc | #fffaf8 | #fff5f2 |
-  | 그 외 생활정보 (local_ car_ rite_ tech_ gov_ money_       | #388e3c | #1b5e20 | #e8f5e9 | #c8e6c9 | #f9fdf9 | #f1faf1 |
-  |  home_ house_ admin_ appli_ cert_ …)                     |         |         |         |         |         |         |
-
-  구조 규칙
-  - <body>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>2026 전국 국화 축제 언제 어디서 열리나 — 서울 조계사·함평 국향대전·익산 일정과 예매 할인 비교표</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
 <h1>2026 전국 국화 축제 언제 어디서 열리나 — 서울 조계사·함평 국향대전·익산 일정과 예매 할인 비교표</h1>
 <div class="intro-box">
 가을의 깊은 향기를 온몸으로 느낄 수 있는 전국 국화 축제가 10월 중순부터 전국 각지에서 화려한 개막을 알립니다.<br><br>
@@ -167,5 +192,5 @@
 <span class="tag">#가을축제추천</span>
 <span class="tag">#국화화분관리</span>
 </div>
-
-
+</body>
+</html>
