@@ -1,4 +1,4 @@
-﻿# Naverblog 일일 자동 발행 PowerShell 래퍼
+# Naverblog 일일 자동 발행 PowerShell 래퍼
 # Windows 작업 스케줄러가 매일 새벽 4:00 실행
 # 1) Antigravity CLI로 원고 7건 작성 → 2) 작성 결과만 GitHub에 자동 push
 
@@ -64,6 +64,24 @@ function Set-Failure([string]$kind, [string]$detail, [string]$howto) {
     ) -join "`r`n"
     [System.IO.File]::WriteAllText($FailFlag, $body, $utf8NoBom)
 }
+
+# === Step 0.0: 원격 저장소 사전 동기화 (2026-09-30 신설) ===
+# 회사 노트북 등 외부에서 푸시된 수정 사항이 있을 경우, 덮어쓰기/push 거절(non-fast-forward) 방지
+Write-Log "=== Step 0.0: Git Remote Sync @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="
+try {
+    $curBranch = (& git rev-parse --abbrev-ref HEAD 2>&1).Trim()
+    if ($curBranch -and $LASTEXITCODE -eq 0) {
+        Write-Log "Syncing branch '$curBranch' with origin..."
+        $pullOut = & git pull --rebase --autostash origin "$curBranch" 2>&1
+        if ($pullOut) {
+            $pullOut | ForEach-Object { Write-Log "git pull: $_" }
+        }
+        Write-Log "Git pull exit: $LASTEXITCODE"
+    }
+} catch {
+    Write-Log "WARN (Git Sync): $_"
+}
+Write-Log ""
 
 # === Step 0.3: 업로드 백로그 점검 — 안 올라갔으면 오늘은 만들지 않는다 (2026-09-17 신설) ===
 # 사용자 지시: "발행이 됐는데 내가 사정이 있어 업로드를 못하면(주말이든 주중이든),
@@ -457,6 +475,27 @@ try {
     }
 } catch {
     Write-Log "ERROR (Naver Caption Fix): $_"
+}
+
+# === Step 1.44: HTML 원고 헤더 무결성 검증 및 자동 복구 (2026-09-30 신설) ===
+# LLM 초안 생성 시 <!DOCTYPE html> 누락이나 미완료 주석(<!--)으로 브라우저가 공백 처리되거나
+# 이미지 플레이스홀더 파싱이 누락되는 문제를 방지하기 위해 헤더 자동 복구 실행.
+Write-Log ""
+Write-Log "=== HTML Header Integrity Check & Repair @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="
+try {
+    $repairScript = Join-Path $ProjectRoot "scripts\repair_html_headers.py"
+    $repairDay = Get-Date -Format "yyMMdd"
+    if (Test-Path -LiteralPath $repairScript) {
+        python $repairScript $repairDay 2>&1 | ForEach-Object {
+            $line = "$_"
+            Write-Host $line
+            [System.IO.File]::AppendAllText($LogFile, "$line`r`n", $utf8NoBom)
+        }
+    } else {
+        Write-Log "WARN: $repairScript 없음 — 헤더 복구 스킵."
+    }
+} catch {
+    Write-Log "ERROR (HTML Header Repair): $_"
 }
 
 # === Step 1.45: 원고 이미지 자동 생성 및 원고 본문 매칭 (2026-09-25 신설) ===

@@ -1,204 +1,203 @@
-<!--
-  네이버 원고 표준 템플릿 — Platinum v5 (SSOT)
-  ==========================================================
-  ⛔ 이 파일의 <style> 블록·<script> 블록·마크업 구조는 그대로 복사해서 쓴다.
-     CSS 속성값을 임의로 바꾸거나, 새 클래스를 만들거나, 레이아웃을 새로 디자인하지 않는다.
-     (2026-08-16 지시: 매일 디자인이 바뀌어 가독성이 떨어지는 문제를 막기 위함)
+<!DOCTYPE html>
 
-  치환 토큰 — 카테고리 컬러 세트만 아래 표에서 골라 그대로 치환한다.
-
-  | slug prefix                                              | ACCENT  | DARK    | TINT    | BORDER  | SOFT    | EVEN    |
-  |----------------------------------------------------------|---------|---------|---------|---------|---------|---------|
-  | travel_ (국내여행)                                        | #00796b | #004d40 | #e0f2f1 | #b2dfdb | #f9fdf9 | #f1faf9 |
-  | recipe_ (음식·레시피)                                     | #e64a19 | #bf360c | #fbe9e7 | #ffccbc | #fffaf8 | #fff5f2 |
-  | 그 외 생활정보 (local_ car_ rite_ tech_ gov_ money_       | #388e3c | #1b5e20 | #e8f5e9 | #c8e6c9 | #f9fdf9 | #f1faf1 |
-  |  home_ house_ admin_ appli_ cert_ …)                     |         |         |         |         |         |         |
-
-  구조 규칙
-  - <body>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>보험금 지급 거절 부지급 통보 받았을 때 이의신청서 문구 예시와 금감원 분쟁조정 3단계 절차표</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
 <h1>보험금 지급 거절 부지급 통보 받았을 때 이의신청서 문구 예시와 금감원 분쟁조정 3단계 절차표</h1>
-
 <div class="intro-box">
-매달 성실하게 보험료를 납부해 오다가 큰 질병이나 사고로 치료를 받고 보험금을 청구했는데, 보험사로부터 느닷없이 '부지급(지급 거절)' 또는 '일부 삭감' 문자 통보를 받게 되면 막막하고 억울한 심정이 듭니다. 보험사는 전문 손해사정 인력과 법률 자문단을 갖추고 있어 개인이 홀로 맞서기란 결코 쉽지 않습니다.<br><br>
+매달 성실하게 보험료를 납부해 오다가 큰 질병이나 사고로 치료를 받고 보험금을 청구했는데, 보험사로부터 느닷없이 '부지급(지급 거절)' 또는 '일부 삭감' 문자 통보를 받게 되면 막막하고 억울한 심정이 듭니다. 보험사는 전문 손해사정 인력과 법률 자문단을 갖추고 있어 개인이 홀로 맞서기란 결코 쉽지 않습니다.<br/><br/>
 하지만 보험사의 1차 부지급 결정이 결코 법적 확정판결은 아닙니다. 실제로 보험사의 부당한 면책 주장이나 무리한 의료자문에 대해 논리적인 이의신청과 금융감독원 분쟁조정을 거쳐 정당한 보험금을 전액 돌려받는 사례가 매우 많습니다. 오늘 포스팅에서는 보험사 단골 부지급 사유 분석, 실제 복사해 쓰는 이의신청서 공식 문구 예시, 금감원 분쟁조정 3단계 표준 대응 절차표와 필수 체크리스트를 상세히 안내해 드립니다.
 </div>
-
 <div class="img-area">
-  <div class="img-placeholder">
-    <div class="ph-head">
-      <span>📷 AI 이미지 생성 영역</span>
-      <span class="ph-file">images/260930/7_insurance_claim_rejection_1.png</span>
-    </div>
-    <pre class="prompt-text" id="prompt-7-1">A realistic macro photograph of an insurance claimant sitting at a clean desk, carefully reviewing an official claim denial notification document with a fine black ballpoint pen. Next to the document lies an official medical certificate and a health insurance policy booklet with highlighted clauses. The warm indoor study lighting casts soft realistic shadows, capturing the serious, focused atmosphere of a consumer preparing a legal appeal, photorealistic texture, 8k resolution, 1:1 aspect ratio.</pre>
-    <button class="copy-btn" onclick="copyPrompt('prompt-7-1')">📋 프롬프트 복사하기</button>
-  </div>
-  <div class="img-caption">보험사 부지급 통보서와 약관 조항, 의사 진단서를 꼼꼼히 대조하며 이의신청을 준비하는 모습 / AI 제작 이미지</div>
+<img alt="보험사 부지급 통보서와 약관 조항, 의사 진단서를 꼼꼼히 대조하며 이의신청을 준비하는 모습 / AI 제작 이미지" src="../../images/260930/7_insurance_claim_rejection_1_pro.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">보험사 부지급 통보서와 약관 조항, 의사 진단서를 꼼꼼히 대조하며 이의신청을 준비하는 모습 / AI 제작 이미지</div>
 </div>
-
 <h2>01 | 보험금 부지급·일부 삭감 통보를 받는 주된 이유 3가지</h2>
 
-보험사가 고객의 보험금 청구를 거절할 때 내세우는 논리는 대부분 다음 3가지 유형으로 귀결됩니다.<br><br>
-
+보험사가 고객의 보험금 청구를 거절할 때 내세우는 논리는 대부분 다음 3가지 유형으로 귀결됩니다.<br/><br/>
 <table class="info-table">
-  <thead>
-    <tr>
-      <th>거절 사유 유형</th>
-      <th>보험사의 주요 주장 논리</th>
-      <th>가입자의 반박 및 방어 핵심 포인트</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>1. 고지의무 위반 주장</strong></td>
-      <td>가입 전 병원 진료 이력, 투약 사실을 알리지 않았으므로 계약 해지 및 부지급</td>
-      <td>청구한 질병과 과거 치료 이력 간에 <strong>의학적 인과관계가 없음</strong>을 입증 (상법 제655조 단서)</td>
-    </tr>
-    <tr>
-      <td><strong>2. 의료자문 결과 불일치</strong></td>
-      <td>보험사 자문 의사 소견상 입원 치료 불필요, 과잉 진료, 통상 치료 범주 초과</td>
-      <td>환자를 직접 대면 진료한 <strong>주치의 진단서·소견서의 증명력</strong>이 제3자 서면 자문보다 우위임을 주장</td>
-    </tr>
-    <tr>
-      <td><strong>3. 약관상 면책조항 적용</strong></td>
-      <td>직접 치료 목적 아님, 미용·예방 목적 치료, 면책 질병 분류코드 해당 주장</td>
-      <td><strong>작성자 불이익의 원칙</strong>(약관의 뜻이 불명확할 때는 고객에게 유리하게 해석해야 함) 적용</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>거절 사유 유형</th>
+<th>보험사의 주요 주장 논리</th>
+<th>가입자의 반박 및 방어 핵심 포인트</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. 고지의무 위반 주장</strong></td>
+<td>가입 전 병원 진료 이력, 투약 사실을 알리지 않았으므로 계약 해지 및 부지급</td>
+<td>청구한 질병과 과거 치료 이력 간에 <strong>의학적 인과관계가 없음</strong>을 입증 (상법 제655조 단서)</td>
+</tr>
+<tr>
+<td><strong>2. 의료자문 결과 불일치</strong></td>
+<td>보험사 자문 의사 소견상 입원 치료 불필요, 과잉 진료, 통상 치료 범주 초과</td>
+<td>환자를 직접 대면 진료한 <strong>주치의 진단서·소견서의 증명력</strong>이 제3자 서면 자문보다 우위임을 주장</td>
+</tr>
+<tr>
+<td><strong>3. 약관상 면책조항 적용</strong></td>
+<td>직접 치료 목적 아님, 미용·예방 목적 치료, 면책 질병 분류코드 해당 주장</td>
+<td><strong>작성자 불이익의 원칙</strong>(약관의 뜻이 불명확할 때는 고객에게 유리하게 해석해야 함) 적용</td>
+</tr>
+</tbody>
 </table>
 
 보험사는 자체적인 내부 지침을 앞세워 마치 법적 지급 의무가 없는 것처럼 통보하지만, 객관적인 대법원 판례나 금융감독원 분쟁조정 선례와 상치되는 경우가 매우 흔합니다.
 
 <h2>02 | 보험사 현장심사와 의료자문 동의서 함부로 서명하면 안 되는 이유</h2>
 
-보험금 청구 후 보험사에서 위탁한 손해사정 법인 조사원이 병원이나 자택으로 방문하여 각종 서류에 서명을 요구하는 경우가 있습니다.<br><br>
+보험금 청구 후 보험사에서 위탁한 손해사정 법인 조사원이 병원이나 자택으로 방문하여 각종 서류에 서명을 요구하는 경우가 있습니다.<br/><br/>
 
-이때 <strong>'진료기록 열람 및 복사 동의서/위임장'</strong>은 정당한 심사를 위해 필요하므로 서명해 주어야 하지만, <strong>'의료자문 동의서'와 '부지급 확인서(합의서)'에는 절대 쉽게 서명해서는 안 됩니다.</strong><br><br>
-
+이때 <strong>'진료기록 열람 및 복사 동의서/위임장'</strong>은 정당한 심사를 위해 필요하므로 서명해 주어야 하지만, <strong>'의료자문 동의서'와 '부지급 확인서(합의서)'에는 절대 쉽게 서명해서는 안 됩니다.</strong><br/><br/>
 <div class="warn-box">
-⚠️ <strong>의료자문 동의서 주의보</strong><br>
+⚠️ <strong>의료자문 동의서 주의보</strong><br/>
 보험사가 요구하는 제3자 의료자문은 보험사와 자문 계약이 체결된 의사에게 환자를 보지도 않고 차트만 보내 소견을 받는 구조입니다. 이 자문 결과는 가입자에게 불리하게 나오는 경우가 압도적으로 많습니다. 주치의가 명확한 치료 목적 소견을 냈다면, 보험사의 일방적인 의료자문 요구를 거부하고 제3의 대학병원 동행 자문을 역제안해야 합니다.
 </div>
-
 <h2>03 | 보험금 분쟁 해결 3단계 표준 대응 절차표</h2>
 
-보험금 지급 거절 통보를 받았을 때 감정적으로 콜센터에 항의하기보다는 체계적인 3단계 법적·행정적 절차를 밟아야 승소율을 극대화할 수 있습니다.<br><br>
-
+보험금 지급 거절 통보를 받았을 때 감정적으로 콜센터에 항의하기보다는 체계적인 3단계 법적·행정적 절차를 밟아야 승소율을 극대화할 수 있습니다.<br/><br/>
 <table class="info-table">
-  <thead>
-    <tr>
-      <th>단계</th>
-      <th>대응 명칭</th>
-      <th>행동 요령 및 핵심 제출 서류</th>
-      <th>예상 처리 기간</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>1단계</strong></td>
-      <td><strong>사유서 및 손사보고서 확보</strong></td>
-      <td>보험사에 공식 '손해사정서 사본' 및 '구체적 부지급 사유서' 서면 발급 청구</td>
-      <td>청구 후 3~5일 이내</td>
-    </tr>
-    <tr>
-      <td><strong>2단계</strong></td>
-      <td><strong>보험사 자체 재심의 청구</strong></td>
-      <td>주치의 반박 소견서 첨부, 내용증명 우편으로 '보험금 지급 재심의 이의신청서' 발송</td>
-      <td>접수 후 약 10~15일</td>
-    </tr>
-    <tr>
-      <td><strong>3단계</strong></td>
-      <td><strong>금감원 분쟁조정 신청</strong></td>
-      <td>보험사 재심의 기각 시 금융감독원 e-금융민원센터(파인)에 정식 분쟁조정 접수</td>
-      <td>약 30일 ~ 90일 소요</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>단계</th>
+<th>대응 명칭</th>
+<th>행동 요령 및 핵심 제출 서류</th>
+<th>예상 처리 기간</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1단계</strong></td>
+<td><strong>사유서 및 손사보고서 확보</strong></td>
+<td>보험사에 공식 '손해사정서 사본' 및 '구체적 부지급 사유서' 서면 발급 청구</td>
+<td>청구 후 3~5일 이내</td>
+</tr>
+<tr>
+<td><strong>2단계</strong></td>
+<td><strong>보험사 자체 재심의 청구</strong></td>
+<td>주치의 반박 소견서 첨부, 내용증명 우편으로 '보험금 지급 재심의 이의신청서' 발송</td>
+<td>접수 후 약 10~15일</td>
+</tr>
+<tr>
+<td><strong>3단계</strong></td>
+<td><strong>금감원 분쟁조정 신청</strong></td>
+<td>보험사 재심의 기각 시 금융감독원 e-금융민원센터(파인)에 정식 분쟁조정 접수</td>
+<td>약 30일 ~ 90일 소요</td>
+</tr>
+</tbody>
 </table>
 
 1단계에서 보험사가 어떤 조항을 근거로 거절했는지를 서면으로 명확히 확보하는 것이 모든 반격의 출발점입니다.
 
 <h2>04 | 1단계: 손해사정서 교부 청구와 부지급 사유서 정밀 분석법</h2>
 
-보험업법 제188조 및 손해사정업무 규정에 따라, 보험사는 손해사정이 완료되면 피보험자에게 <strong>손해사정서 사본을 교부할 법적 의무</strong>가 있습니다.<br><br>
+보험업법 제188조 및 손해사정업무 규정에 따라, 보험사는 손해사정이 완료되면 피보험자에게 <strong>손해사정서 사본을 교부할 법적 의무</strong>가 있습니다.<br/><br/>
 
-보험사 담당자에게 전화하여 "구두 설명 말고, 이번 부지급 결정에 근거가 된 <strong>손해사정서 전면 사본과 부지급 결정 통보 공문</strong>을 이메일 또는 등기우편으로 보내주십시오"라고 당당히 요구하세요.<br><br>
+보험사 담당자에게 전화하여 "구두 설명 말고, 이번 부지급 결정에 근거가 된 <strong>손해사정서 전면 사본과 부지급 결정 통보 공문</strong>을 이메일 또는 등기우편으로 보내주십시오"라고 당당히 요구하세요.<br/><br/>
 
 수령한 손해사정서를 보면 보험사가 적용한 약관 조항 번호, 인용한 판례, 참고한 의료자문 의사의 익명 소견이 명시되어 있습니다. 이 논리를 파악해야만 주치의에게 정확한 반박 소견서를 요청할 수 있습니다.
 
 <div class="img-area">
-  <div class="img-placeholder">
-    <div class="ph-head">
-      <span>📷 AI 이미지 생성 영역</span>
-      <span class="ph-file">images/260930/7_insurance_claim_rejection_2.png</span>
-    </div>
-    <pre class="prompt-text" id="prompt-7-2">A crisp, professional over-the-shoulder shot of a person using a laptop computer to access the official Financial Supervisory Service (FSS) e-consumer portal website (Fine). On the modern browser screen, the online dispute mediation application form is visible. Next to the keyboard are arranged official medical diagnosis papers, an identification card, and an official appeal letter, clean modern home office setting, natural daylight, photorealistic realism, 1:1 aspect ratio.</pre>
-    <button class="copy-btn" onclick="copyPrompt('prompt-7-2')">📋 프롬프트 복사하기</button>
-  </div>
-  <div class="img-caption">금융감독원 e-금융민원센터 파인 홈페이지에서 분쟁조정 신청 서류를 접수하는 화면 / AI 제작 이미지</div>
+<img alt="금융감독원 e-금융민원센터 파인 홈페이지에서 분쟁조정 신청 서류를 접수하는 화면 / AI 제작 이미지" src="../../images/260930/7_insurance_claim_rejection_2_pro.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">금융감독원 e-금융민원센터 파인 홈페이지에서 분쟁조정 신청 서류를 접수하는 화면 / AI 제작 이미지</div>
 </div>
-
 <h2>05 | 2단계: 보험사 소비자보호실 자체 재심의 청구와 이의신청서 문구 예시</h2>
 
-손해사정서 분석을 마쳤다면, 담당 설계사나 일선 보상과 직원을 건너뛰고 해당 보험사의 본사 <strong>'소비자보호팀(고객만족팀)'</strong>에 공식 이의신청서를 제출해야 합니다.<br><br>
+손해사정서 분석을 마쳤다면, 담당 설계사나 일선 보상과 직원을 건너뛰고 해당 보험사의 본사 <strong>'소비자보호팀(고객만족팀)'</strong>에 공식 이의신청서를 제출해야 합니다.<br/><br/>
 
 이의신청서에는 감정적 호소 대신, 객관적인 의학적 사실과 약관 해석의 원칙을 명확한 법률적 어조로 기술해야 보험사 내부 심의위원회가 움직입니다.
 
 <h2>06 | 실제 복사해 쓰는 보험금 부지급 이의신청서 표준 양식</h2>
 
-보험사에 내용증명 우편이나 팩스로 발송할 수 있는 공식 이의신청서 서식 템플릿입니다. 괄호 부분을 본인 상황에 맞게 수정하여 활용하세요.<br><br>
-
+보험사에 내용증명 우편이나 팩스로 발송할 수 있는 공식 이의신청서 서식 템플릿입니다. 괄호 부분을 본인 상황에 맞게 수정하여 활용하세요.<br/><br/>
 <div class="step-box" style="background:#fdfefe; font-family:monospace; font-size:0.9em; line-height:1.7;">
-<strong>[보험금 부지급 결정에 대한 재심의 이의신청서]</strong><br><br>
-1. 수 신: ○○보험주식회사 대표이사 (소비자보호총괄책임자 귀하)<br>
-2. 발 신: 피보험자 성명 (생년월일: YYYY-MM-DD / 연락처: 010-XXXX-XXXX)<br>
-3. 증권번호: 제 XXXXXXXX-XXXX 호 (상품명: ○○건강보험)<br>
-4. 사고(접수)번호: 2026-XXXXXX<br><br>
-<strong>[이의 신청 취지]</strong><br>
-귀사가 2026년 ○월 ○일자로 통보한 '보험금 부지급(접수번호: 2026-XXXXXX)' 결정은 당해 보험약관의 취지 및 대법원 판례에 위배되는 부당한 처분이므로, 이를 즉시 취소하고 청구된 보험금 전액(금 ○○○원)을 지연이자율을 가산하여 지급할 것을 엄중히 촉구합니다.<br><br>
-<strong>[이의 신청 이유]</strong><br>
-1. 의학적 필요성의 존재: 귀사는 본인의 치료가 '입원 치료의 불필요' 또는 '직접 치료 미해당'이라고 주장하나, 주치의(○○병원 전문의 ○○○)는 [붙임 1] 진단서 및 소견서와 같이 환자의 상태상 통원 치료가 불가능하여 입원 치료가 절대적으로 불가피했음을 명백히 확인하고 있습니다.<br>
-2. 의료자문의 부당성: 귀사가 근거로 삼은 제3자 서면 의료자문은 환자를 직접 진찰하지 않은 자의 주관적 견해에 불과하며, 대면 진료를 행한 주치의의 임상적 판단보다 우선할 수 없습니다(대법원 2017다206735 판결 등 참조).<br>
-3. 약관의 규제에 관한 법률 제5조(작성자 불이익의 원칙): 약관 조항의 해석이 모호하거나 다의적인 경우 고객에게 유리하게 해석되어야 함에도, 귀사는 면책조항을 자의적으로 확대 해석하여 보험금 지급을 회피하고 있습니다.<br><br>
-<strong>[결어 및 향후 계획]</strong><br>
-본 이의신청서 접수일로부터 10영업일 이내에 보험금 지급 재심의 결과를 서면으로 통보해 주시기 바라며, 만약 정당한 사유 없이 재차 지급을 거부할 경우 즉시 금융감독원 분쟁조정위원회에 정식 분쟁조정을 신청하고 한국소비자원 피해구제 등 가능한 모든 법적 조치를 취할 것임을 통지합니다.<br><br>
-2026년 ○○월 ○○일<br>
-위 신청인: ○ ○ ○ (인 또는 서명)<br><br>
+<strong>[보험금 부지급 결정에 대한 재심의 이의신청서]</strong><br/><br/>
+1. 수 신: ○○보험주식회사 대표이사 (소비자보호총괄책임자 귀하)<br/>
+2. 발 신: 피보험자 성명 (생년월일: YYYY-MM-DD / 연락처: 010-XXXX-XXXX)<br/>
+3. 증권번호: 제 XXXXXXXX-XXXX 호 (상품명: ○○건강보험)<br/>
+4. 사고(접수)번호: 2026-XXXXXX<br/><br/>
+<strong>[이의 신청 취지]</strong><br/>
+귀사가 2026년 ○월 ○일자로 통보한 '보험금 부지급(접수번호: 2026-XXXXXX)' 결정은 당해 보험약관의 취지 및 대법원 판례에 위배되는 부당한 처분이므로, 이를 즉시 취소하고 청구된 보험금 전액(금 ○○○원)을 지연이자율을 가산하여 지급할 것을 엄중히 촉구합니다.<br/><br/>
+<strong>[이의 신청 이유]</strong><br/>
+1. 의학적 필요성의 존재: 귀사는 본인의 치료가 '입원 치료의 불필요' 또는 '직접 치료 미해당'이라고 주장하나, 주치의(○○병원 전문의 ○○○)는 [붙임 1] 진단서 및 소견서와 같이 환자의 상태상 통원 치료가 불가능하여 입원 치료가 절대적으로 불가피했음을 명백히 확인하고 있습니다.<br/>
+2. 의료자문의 부당성: 귀사가 근거로 삼은 제3자 서면 의료자문은 환자를 직접 진찰하지 않은 자의 주관적 견해에 불과하며, 대면 진료를 행한 주치의의 임상적 판단보다 우선할 수 없습니다(대법원 2017다206735 판결 등 참조).<br/>
+3. 약관의 규제에 관한 법률 제5조(작성자 불이익의 원칙): 약관 조항의 해석이 모호하거나 다의적인 경우 고객에게 유리하게 해석되어야 함에도, 귀사는 면책조항을 자의적으로 확대 해석하여 보험금 지급을 회피하고 있습니다.<br/><br/>
+<strong>[결어 및 향후 계획]</strong><br/>
+본 이의신청서 접수일로부터 10영업일 이내에 보험금 지급 재심의 결과를 서면으로 통보해 주시기 바라며, 만약 정당한 사유 없이 재차 지급을 거부할 경우 즉시 금융감독원 분쟁조정위원회에 정식 분쟁조정을 신청하고 한국소비자원 피해구제 등 가능한 모든 법적 조치를 취할 것임을 통지합니다.<br/><br/>
+2026년 ○○월 ○○일<br/>
+위 신청인: ○ ○ ○ (인 또는 서명)<br/><br/>
 [첨부서류] 1. 주치의 소견서 사본 1부, 2. 진료비 상세내역서 사본 1부.
 </div>
-
 <h2>07 | 3단계: 금융감독원 e-금융민원센터 분쟁조정 신청 방법과 필수 첨부 서류</h2>
 
-보험사 자체 재심의에서도 기각 결정이 내려졌다면, 국가 금융 감독 기관인 금융감독원의 분쟁조정 제도를 이용해야 합니다. 법원 소송과 달리 <strong>비용이 전혀 들지 않으며</strong>, 금융소비자 보호 차원에서 매우 강력한 조정력을 발휘합니다.<br><br>
-
+보험사 자체 재심의에서도 기각 결정이 내려졌다면, 국가 금융 감독 기관인 금융감독원의 분쟁조정 제도를 이용해야 합니다. 법원 소송과 달리 <strong>비용이 전혀 들지 않으며</strong>, 금융소비자 보호 차원에서 매우 강력한 조정력을 발휘합니다.<br/><br/>
 <div class="step-box">
-<strong>🌐 금융감독원 분쟁조정 신청 절차</strong><br>
-1. 금융감독원 전자금융민원센터(파인: fine.fss.or.kr) 접속<br>
-2. [민원·분쟁조정 신청] → 본인 인증 로그인<br>
-3. 피신청인(보험사명), 보험 상품명, 증권번호 입력<br>
-4. 민원 요지 및 신청 이유 작성 (위 이의신청서 내용을 그대로 복사·붙여넣기)<br>
-5. <strong>필수 첨부 서류 업로드</strong>: 보험사 부지급 사유서, 진단서 및 진료비 세부내역서, 주치의 반박 소견서, 약관 사본<br>
+<strong>🌐 금융감독원 분쟁조정 신청 절차</strong><br/>
+1. 금융감독원 전자금융민원센터(파인: fine.fss.or.kr) 접속<br/>
+2. [민원·분쟁조정 신청] → 본인 인증 로그인<br/>
+3. 피신청인(보험사명), 보험 상품명, 증권번호 입력<br/>
+4. 민원 요지 및 신청 이유 작성 (위 이의신청서 내용을 그대로 복사·붙여넣기)<br/>
+5. <strong>필수 첨부 서류 업로드</strong>: 보험사 부지급 사유서, 진단서 및 진료비 세부내역서, 주치의 반박 소견서, 약관 사본<br/>
 6. 접수 완료 및 민원 접수번호 확인 (담당 조사역 배정)
 </div>
-
 <h2>08 | 금감원 분쟁조정 진행 절차와 소요 기간 및 합의 권고 효력</h2>
 
-금감원에 민원이 접수되면 먼저 금융감독원 담당 조사역이 보험사에 '소명 요구서'를 발송합니다. 많은 보험사가 금감원의 감사 및 민원 평가 등급 하락을 우려하여, 정식 분쟁조정위원회에 상정되기 전 조사역의 중재 단계에서 <strong>'합의(보험금 전액 또는 일부 지급)'를 제안</strong>해 오는 경우가 많습니다.<br><br>
+금감원에 민원이 접수되면 먼저 금융감독원 담당 조사역이 보험사에 '소명 요구서'를 발송합니다. 많은 보험사가 금감원의 감사 및 민원 평가 등급 하락을 우려하여, 정식 분쟁조정위원회에 상정되기 전 조사역의 중재 단계에서 <strong>'합의(보험금 전액 또는 일부 지급)'를 제안</strong>해 오는 경우가 많습니다.<br/><br/>
 
-만약 합의가 이루어지지 않으면 민관 전문가로 구성된 <strong>'금융분쟁조정위원회'</strong>에 정식 상정되어 법원 판결에 준하는 조정결정서가 작성됩니다.<br><br>
+만약 합의가 이루어지지 않으면 민관 전문가로 구성된 <strong>'금융분쟁조정위원회'</strong>에 정식 상정되어 법원 판결에 준하는 조정결정서가 작성됩니다.<br/><br/>
 
 양 당사자가 조정안을 수락하면 재판상 화해와 동일한 효력이 발생하여 보험사는 보험금을 즉시 지급해야 합니다. 처리 기간은 통상 1개월에서 사안이 복잡한 경우 3개월 안팎이 소요됩니다.
 
 <h2>09 | 보험금 분쟁 발생 시 피보험자가 반드시 챙겨야 할 7가지 체크리스트</h2>
 
-보험사와의 분쟁에서 지치지 않고 승리하기 위해 가입자가 반드시 지켜야 할 황금 수칙입니다.<br><br>
-
+보험사와의 분쟁에서 지치지 않고 승리하기 위해 가입자가 반드시 지켜야 할 황금 수칙입니다.<br/><br/>
 <div class="info-box">
-<strong>🛡️ 보험금 분쟁 승리를 위한 7대 행동 지침</strong><br>
-- [ ] <strong>모든 통화 녹음 및 서면 기록</strong>: 보상과 직원과의 전화 통화는 자동 녹음하고, 모든 거절 통보는 서면(이메일·등기)으로 받으세요.<br>
-- [ ] <strong>의료자문 동의서 함부로 서명 금지</strong>: 주치의 판단이 확실하다면 일방적인 서면 자문 요구를 단호히 거부하세요.<br>
-- [ ] <strong>손해사정서 원본 확보</strong>: 보험업법에 따라 작성된 공식 손해사정서 사본을 청구하여 근거 논리를 확인하세요.<br>
-- [ ] <strong>주치의 반박 소견서 발급</strong>: "본 환자의 상태는 일상생활이 불가능하여 입원 치료가 의학적으로 필수적이었음" 등 구체적 문구를 소견서에 명시 요청하세요.<br>
-- [ ] <strong>보험사 본사 소비자보호팀 공략</strong>: 지점 담당자와 실랑이하지 마시고 본사 전담 부서에 이의신청서를 정식 접수하세요.<br>
-- [ ] <strong>금융감독원 e-금융민원센터 활용</strong>: 1차 거절 시 주저하지 말고 금감원 분쟁조정을 신청하세요. 비용은 0원입니다.<br>
+<strong>🛡️ 보험금 분쟁 승리를 위한 7대 행동 지침</strong><br/>
+- [ ] <strong>모든 통화 녹음 및 서면 기록</strong>: 보상과 직원과의 전화 통화는 자동 녹음하고, 모든 거절 통보는 서면(이메일·등기)으로 받으세요.<br/>
+- [ ] <strong>의료자문 동의서 함부로 서명 금지</strong>: 주치의 판단이 확실하다면 일방적인 서면 자문 요구를 단호히 거부하세요.<br/>
+- [ ] <strong>손해사정서 원본 확보</strong>: 보험업법에 따라 작성된 공식 손해사정서 사본을 청구하여 근거 논리를 확인하세요.<br/>
+- [ ] <strong>주치의 반박 소견서 발급</strong>: "본 환자의 상태는 일상생활이 불가능하여 입원 치료가 의학적으로 필수적이었음" 등 구체적 문구를 소견서에 명시 요청하세요.<br/>
+- [ ] <strong>보험사 본사 소비자보호팀 공략</strong>: 지점 담당자와 실랑이하지 마시고 본사 전담 부서에 이의신청서를 정식 접수하세요.<br/>
+- [ ] <strong>금융감독원 e-금융민원센터 활용</strong>: 1차 거절 시 주저하지 말고 금감원 분쟁조정을 신청하세요. 비용은 0원입니다.<br/>
 - [ ] <strong>보험금 소멸시효 점검</strong>: 보험금 청구권의 소멸시효는 사고 발생일로부터 3년입니다. 분쟁 중에도 시효가 중단되도록 서면 청구를 유지하세요.
 </div>
 

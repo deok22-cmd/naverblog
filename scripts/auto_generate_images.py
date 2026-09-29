@@ -10,6 +10,13 @@ import datetime
 import subprocess
 from bs4 import BeautifulSoup
 
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+        sys.stderr.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
+
 class QuotaExceededError(Exception):
     """Raised when Gemini API quota (HTTP 429 or ResourceExhausted) is reached."""
     pass

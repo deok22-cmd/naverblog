@@ -5,6 +5,13 @@ import json
 import urllib.parse
 from bs4 import BeautifulSoup
 
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+        sys.stderr.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
+
 def get_all_dates(project_root):
     output_dir = os.path.join(project_root, "output")
     if not os.path.exists(output_dir):
