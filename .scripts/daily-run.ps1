@@ -1,4 +1,4 @@
-# Naverblog 일일 자동 발행 PowerShell 래퍼
+﻿# Naverblog 일일 자동 발행 PowerShell 래퍼
 # Windows 작업 스케줄러가 매일 새벽 4:00 실행
 # 1) Antigravity CLI로 원고 7건 작성 → 2) 작성 결과만 GitHub에 자동 push
 
