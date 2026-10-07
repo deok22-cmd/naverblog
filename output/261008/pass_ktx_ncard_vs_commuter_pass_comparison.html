@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KTX N카드 vs 정기승차권 할인율과 손익분기 비교 — 주 2~3회 출퇴근·출장러 실제 요금 계산표</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>KTX N카드 vs 정기승차권 할인율과 손익분기 비교 — 주 2~3회 출퇴근·출장러 실제 요금 계산표</h1>
+<div class="intro-box">
+  KTX를 이용해 주 2~3회 출퇴근하거나 정기 출장을 다니는 이용자라면, <strong>주당 이용 일수에 따라 N카드와 정기승차권의 손익분기점이 명확하게 갈립니다.</strong><br/><br/>
+<strong>주 1~3회 탑승하며 반드시 지정 좌석에 앉아야 한다면 N카드(15~40% 할인 횟수권)</strong>가 압도적으로 유리하며, <strong>주 4~5회 매일 통근하며 자유석·입석을 감수할 수 있다면 정기승차권(약 45~50% 할인)</strong>이 총비용 면에서 절약됩니다.<br/><br/>
+  서울~천안아산, 서울~오송, 서울~대전 등 주요 통근 구간 기준으로 실제 월간 납부액을 계산해 보면, 주 3회(월 12~13회 왕복) 탑승 시 N카드를 활용했을 때 정기권 대비 좌석 확보 보장과 일정 취소의 유연성에서 훨씬 높은 실익을 얻을 수 있습니다.
+</div>
+<div class="img-area">
+<img alt="KTX 고속열차 승강장과 스마트폰 코레일톡 앱으로 승차권을 확인하는 승객 / AI 제작 이미지" src="../../images/261008/3_pass_ktx_ncard_vs_commuter_pass_comparison_1_pro.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">KTX 고속열차 승강장과 스마트폰 코레일톡 앱으로 승차권을 확인하는 승객 / AI 제작 이미지</div>
+</div>
+<h2>01 | KTX 잦은 이용객의 고민: N카드가 유리할까, 정기승차권이 나을까?</h2>
+수도권과 지방 혁신도시, 대전·세종·오송 연구단지 등을 정기적으로 오가는 직장인들에게 KTX 요금은 매달 지출되는 고정비 중 가장 큰 비중을 차지합니다.<br/><br/>
+한국철도공사(코레일)는 정기 이용객을 위해 크게 두 가지 할인 제도를 운영하고 있습니다. 바로 <strong>'KTX N카드'</strong>와 <strong>'KTX 정기승차권'</strong>입니다.<br/><br/>
+많은 이용자가 "무조건 할인율 숫자가 높은 정기권이 이득 아닐까?"라고 단순하게 생각하지만, 재택근무 확대나 유연근무제, 잦은 출장 일정 변경 등의 변수가 겹치면 오히려 정기권이 큰 손해로 이어지는 경우가 빈번합니다.<br/><br/>
+자신의 출근 빈도, 좌석 확보 필요성, 스케줄 변동 가능성을 정확히 따져보고 선택해야 소중한 교통비를 극대화하여 절약할 수 있습니다.
+
+<h2>02 | KTX N카드 개념과 구매 비용, 구간별 기본 할인 구조</h2>
+<strong>KTX N카드</strong>는 지정한 구간을 일정 기간 동안 정해진 횟수만큼 열차별 <strong>15%에서 최대 40%까지 할인받아 '지정 좌석'을 예매할 수 있는 모바일 할인 횟수권</strong>입니다.<br/><br/>
+코레일톡 앱에서 카드 형태로 구매하며, N카드 자체를 구매할 때 소정의 카드값이 발생합니다.
+
+<table class="info-table">
+<tr>
+<th>N카드 권종 구분</th>
+<th>유효 기간</th>
+<th>사용 가능 횟수</th>
+<th>N카드 구매 가격 (카드값)</th>
+</tr>
+<tr>
+<td><strong>1인권 (단독형)</strong></td>
+<td>2개월 ~ 3개월</td>
+<td>10회 ~ 30회</td>
+<td>지정 구간 일반실 기준운임 × 횟수 × <strong>5%</strong></td>
+</tr>
+<tr>
+<td><strong>2인권 (동행형)</strong></td>
+<td>3개월</td>
+<td>20회 ~ 30회</td>
+<td>지정 구간 일반실 기준운임 × 횟수 × <strong>7%</strong></td>
+</tr>
+<tr>
+<td><strong>3구간권 (다구간형)</strong></td>
+<td>2개월 ~ 3개월</td>
+<td>10회 ~ 30회</td>
+<td>지정 구간 중 가장 비싼 기준운임 × 횟수 × <strong>7%</strong></td>
+</tr>
+</table>
+
+예를 들어 서울~대전 구간(편도 편도 23,700원)을 10회 이용하는 1인권을 구매한다면, 카드 구매비는 `23,700원 × 10회 × 5% = 11,850원`입니다.<br/><br/>
+이 카드를 소지하면 해당 구간 열차 예매 시 열차 혼잡도에 따라 최소 15%에서 최대 40% 할인된 가격으로 일반실 좌석을 지정하여 예매하게 됩니다. (평균 15~25% 할인율 적용 빈도가 높음)
+
+<h2>03 | KTX 정기승차권 종류(10일·1개월·기간자유형)와 할인율 기준</h2>
+반면 <strong>KTX 정기승차권</strong>은 정해진 기간 동안 해당 구간의 열차를 무제한(1일 2회, 왕복 기준) 탑승할 수 있는 패스형 승차권입니다.<br/><br/>
+정기권은 <strong>일반 정기권(1개월, 10일)</strong>과 <strong>기간자유형 정기권(10일~1개월 중 주말 포함 여부를 본인이 선택)</strong>으로 나뉩니다.
+• <strong>일반 정기권 할인율</strong>: 성인 기준 <strong>45% ~ 50% 할인</strong> (청소년·어린이는 최대 60% 할인)<br/>
+• <strong>탑승 조건</strong>: 원칙적으로 <strong>'입석 또는 자유석(평일 출퇴근 시간대 8호차~10호차 등 지정 운영)'</strong>만 이용 가능합니다.<br/>
+• <strong>좌석 지정 불가</strong>: 사전에 좌석을 지정할 수 없으며, 만약 빈자리가 없으면 통로에 서서 가야 한다는 결정적인 단점이 있습니다.
+
+<h2>04 | 주당 탑승 횟수(주 2회 vs 주 3회 vs 주 5회)별 실제 월 교통비 계산표</h2>
+가장 핵심인 <strong>'서울~대전' 구간(편도 정가 23,700원 / 월 4주 기준)</strong>을 토대로, 탑승 빈도별 실제 월간 지출 총비용을 정밀 비교해 보겠습니다. (N카드는 평균 할인율 20% 적용 + 카드값 5% 반영 가정)
+
+<table class="info-table">
+<tr>
+<th>구분 (월 탑승 횟수)</th>
+<th>일반 예매 (정가)</th>
+<th>KTX N카드 (월 지출액)</th>
+<th>KTX 정기승차권 (1개월권)</th>
+<th>어느 쪽이 유리한가?</th>
+</tr>
+<tr>
+<td><strong>주 1회 왕복 (월 8회)</strong></td>
+<td>189,600원</td>
+<td><strong>약 161,160원</strong></td>
+<td>약 237,000원 (고정)</td>
+<td><strong>N카드 압승</strong> (정기권은 대규모 손해)</td>
+</tr>
+<tr>
+<td><strong>주 2회 왕복 (월 16회)</strong></td>
+<td>379,200원</td>
+<td><strong>약 322,320원</strong></td>
+<td>약 237,000원 (고정)</td>
+<td><strong>N카드 추천</strong> (좌석 보장 가치 감안 시 실익 높음)</td>
+</tr>
+<tr>
+<td><strong>주 3회 왕복 (월 24회)</strong></td>
+<td>568,800원</td>
+<td><strong>약 483,480원</strong></td>
+<td><strong>약 237,000원</strong></td>
+<td><strong>손익분기점 갈림길</strong> (체력·좌석 vs 비용 절약)</td>
+</tr>
+<tr>
+<td><strong>주 5회 왕복 (월 40회)</strong></td>
+<td>948,000원</td>
+<td>약 805,800원</td>
+<td><strong>약 237,000원</strong></td>
+<td><strong>정기승차권 압승</strong> (월 56만 원 이상 대폭 절감)</td>
+</tr>
+</table>
+
+위 계산표에서 보듯, <strong>주 2회 이하 탑승 시에는 정기권을 사면 무조건 손해</strong>입니다.<br/><br/>
+주 3회 출근하는 하이브리드 근무자의 경우 금액 자체는 정기권이 약 24만 원 저렴해 보이지만, 아래의 좌석 환경과 환불 리스크를 따져보면 N카드를 선택하는 이용자가 압도적으로 많습니다.
+
+<div class="img-area">
+<img alt="KTX 좌석에 앉아 노트북으로 업무를 보며 정기 승차권을 이용하는 출퇴근 직장인 / AI 제작 이미지" src="../../images/261008/3_pass_ktx_ncard_vs_commuter_pass_comparison_2_pro.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">KTX 좌석에 앉아 노트북으로 업무를 보며 정기 승차권을 이용하는 출퇴근 직장인 / AI 제작 이미지</div>
+</div>
+<h2>05 | 좌석 지정 가능 여부와 입석·자유석 이용 환경의 현실적 차이</h2>
+N카드와 정기권의 가장 본질적인 차이는 바로 <strong>'내 자리의 보장 여부'</strong>입니다.<br/><br/>
+출퇴근 피크 시간대(오전 7~8시, 오후 18~19시) 경부선 및 호남선 KTX는 거의 전 열차가 매진됩니다.<br/><br/>
+• <strong>N카드 이용자</strong>: 승차일 1개월 전부터 코레일톡에서 <strong>원하는 호차와 좌석(창가·통로)을 직접 지정</strong>하여 편안하게 앉아서 출퇴근할 수 있습니다. 피로도 감소와 이동 중 업무 처리가 가능합니다.<br/>
+• <strong>정기권 이용자</strong>: 지정 좌석이 없으므로 평일 자유석 객차(주로 17~18호차 또는 8호차)에 일찍 줄을 서서 자리를 잡아야 합니다. 만약 앞선 정차역에서 자유석이 이미 꽉 차면 <strong>1시간~1시간 30분 동안 통로에 서서 가야 하는 체력적 한계</strong>가 발생합니다.
+
+<h2>06 | 일정 변경·취소 시 환불 규정과 위약금 비교</h2>
+직장 생활에서는 야근, 회식, 출장 연기, 휴가 등 일정 변경이 빈번하게 일어납니다. 이때 두 제도의 환불 정책 차이가 지출에 큰 영향을 줍니다.
+
+<div class="step-box">
+<strong>🔄 환불 및 스케줄 변경 규정 비교</strong><br/><br/>
+  • <strong>N카드 승차권 취소</strong>: 일반 승차권과 동일한 반환 위약금 규정이 적용됩니다. 출발 3시간 전까지는 위약금 0원(무료 취소)이며, 취소 즉시 N카드 사용 횟수가 1회 자동으로 복원됩니다. 일정이 취소되어도 손해가 거의 없습니다.<br/>
+  • <strong>정기승차권 환불</strong>: 정기권은 사용 개시일 이후 환불 시 <strong>'사용일수 × 편도 기준운임(할인 없는 정가 2회분) + 최저 반환수수료'</strong>를 공제하고 잔액을 돌려줍니다. 즉, 개시 후 며칠만 지나도 환불 가능 금액이 거의 0원에 수렴하여 일정 변경에 따른 보호를 받지 못합니다.
+</div>
+<h2>07 | KTX 마일리지 적립 여부와 제휴 신용카드 추가 청구할인 중복 팁</h2>
+알뜰한 교통비 절약을 위해 추가 혜택 중복 적용 여부를 반드시 확인해야 합니다.<br/><br/>
+• <strong>마일리지 적립</strong>: N카드로 할인 예매한 승차권은 결제 금액의 <strong>5% KTX 마일리지가 정상 적립</strong>됩니다. 반면 정기승차권은 대폭 할인 상품이라는 이유로 코레일 마일리지가 일절 적립되지 않습니다.<br/>
+• <strong>신용카드 청구할인 중복</strong>: 철도 할인 혜택이 탑재된 신용카드(예: 신한 딥오일, 삼성 iD VITA, KB국민 탄탄대로 등 코레일 5~10% 청구할인 카드)로 N카드 구매비 및 승차권을 결제하면 <strong>N카드 기본 할인에 카드사 청구할인이 중복 적용</strong>됩니다.<br/>
+• <strong>K-패스 적용 여부</strong>: KTX, SRT 등 고속철도는 전국 지자체 대중교통 환급 제도인 K-패스 환급 대상에서 제외되므로 유의하시기 바랍니다.
+
+<h2>08 | 주 2~3회 출퇴근러를 위한 상황별 맞춤 추천 가이드 (손익분기점)</h2>
+고민을 한 방에 끝낼 수 있도록 이용 유형별 최종 선택 기준을 정리해 드립니다.
+
+<div class="tip-box">
+<strong>🎯 나에게 맞는 KTX 할인 수단 선택 공식</strong><br/><br/>
+  1. <strong>N카드를 선택해야 하는 분</strong><br/>
+  - 주 2회 이하 탑승하는 하이브리드 근무자<br/>
+  - 주 3회 탑승하지만 허리 통증이나 피로도 때문에 무조건 앉아서 가야 하는 분<br/>
+  - 출장이나 미팅 시간이 자주 바뀌어 유연한 예매 변경이 필요한 분<br/>
+  - 마일리지 적립과 신용카드 추가 혜택을 챙기고 싶은 분<br/><br/>
+  2. <strong>정기승차권을 선택해야 하는 분</strong><br/>
+  - 주 4~5회 매일 정해진 시간에 예외 없이 출퇴근하는 고정 통근자<br/>
+  - 시발역(서울역, 용산역, 행신역 등)에서 탑승하여 자유석 착석 확률이 90% 이상인 분<br/>
+  - 한 달 교통비를 20만 원대 초반으로 무조건 고정하여 최소화해야 하는 분
+</div>
+<h2>09 | KTX N카드 및 정기승차권 구매 전 필수 체크리스트 &amp; FAQ</h2>
+마지막으로 구매 전 확인해야 할 핵심 사항을 점검해 보세요.
+
+<div class="info-box">
+<strong>📋 구매 전 3단계 자가진단 체크리스트</strong><br/><br/>
+  [ ] 이번 달 공휴일 및 연차 일수 계산: 징검다리 연휴가 많은 달에는 정기권의 가성비가 급락합니다.<br/>
+  [ ] 출퇴근 탑승역의 자유석 착석 가능성 확인: 중간 정차역(수원, 천안아산 등)은 아침 피크 시간대 자유석 만석 확률이 높습니다.<br/>
+  [ ] 코레일톡 앱 최신 버전 업데이트: N카드 및 기간자유형 정기권은 코레일톡 모바일 앱 전용 상품입니다.
+</div>
+<div class="info-box">
+<strong>❓ 자주 묻는 질문 FAQ</strong><br/><br/>
+<strong>Q1. N카드로 예매한 표를 다른 사람에게 양도할 수 있나요?</strong><br/>
+  A1. 불가능합니다. N카드는 본인 회원번호에 귀속되는 상품으로, N카드로 할인받은 승차권은 타인에게 선물하거나 캡처하여 양도할 수 없으며 부정승차 적발 시 10배 부가운임이 부과됩니다.<br/><br/>
+<strong>Q2. N카드 유효기간이 끝났는데 횟수가 남았으면 어떻게 되나요?</strong><br/>
+  A2. 유효기간 만료 전 1회에 한해 유효기간 연장이 가능합니다. 기간 내에 다 쓰지 못하면 잔여 횟수에 비례한 카드값 환불(수수료 공제)을 신청할 수 있습니다.<br/><br/>
+<strong>Q3. 정기권으로 주말에도 KTX를 탈 수 있나요?</strong><br/>
+  A3. 일반 정기권은 원칙적으로 평일(월~금)만 사용 가능하며 공휴일과 주말은 이용할 수 없습니다. 주말 탑승이 필요하다면 코레일톡 '기간자유형 정기권'에서 주말 포함 옵션을 직접 설정하여 구매해야 합니다.
+</div>
+<div class="recommend-area">
+<h3>📌 함께 읽으면 좋은 교통·자동차 생활 실무</h3>
+<ul>
+<li><a href="../261004/pass_motorway_unpaid_toll_surcharge_rules.html">자동차 전용도로 미납 통행료 납부 방법과 가산금 부과 기준 — 범칙금 압류 전 독촉 절차 체크리스트</a></li>
+<li><a href="../261004/travel_yeongju_buseoksa_fall_foliage.html">영주 부석사 가을 은행나무길 언제 절정인가 — 일주문 노란 터널과 무량수전 안양루 단풍 코스</a></li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">#KTXN카드</span>
+<span class="tag">#KTX정기승차권</span>
+<span class="tag">#KTX할인방법</span>
+<span class="tag">#KTX출퇴근비용</span>
+<span class="tag">#코레일톡할인</span>
+<span class="tag">#KTX손익분기점</span>
+<span class="tag">#기차정기권</span>
+<span class="tag">#KTX자유석</span>
+<span class="tag">#KTX마일리지</span>
+<span class="tag">#교통비절약</span>
+</div>
+</body>
+</html>
