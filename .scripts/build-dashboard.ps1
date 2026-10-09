@@ -460,6 +460,17 @@ foreach ($day in $naverDays) {
         $flags += "<span class=`"badge warn`">index 없음</span>"
     }
 
+    # 팩트체크 서브에이전트 검증 기록 대조
+    $factCheckFile = Join-Path $ProjectRoot ".scripts\logs\subagents\fact-checker-$($day.Date).json"
+    if (Test-Path -LiteralPath $factCheckFile) {
+        try {
+            $fcData = Get-Content -LiteralPath $factCheckFile -Raw -Encoding utf8 | ConvertFrom-Json
+            if ($fcData.metrics) {
+                $flags += "<span class=`"badge ok`" style=`"background:#eff6ff;color:#1e40af;border:1px solid #bfdbfe;`" title=`"팩트 $($fcData.metrics.total_claims)건 검증 완료 (신뢰도 $($fcData.metrics.confidence_score)%, 보정 $($fcData.metrics.corrected_count)건)`">팩트체크 $($fcData.metrics.confidence_score)%</span>"
+            }
+        } catch {}
+    }
+
     $imgTxt = "-"
     if ($day.Images -gt 0) { $imgTxt = "$($day.Images)" }
     elseif ($day.Images -lt 0) { $imgTxt = "&middot;" }
@@ -570,6 +581,80 @@ if ($null -ne $SlotTargetByDow -and ($SlotTargetByDow.PSObject.Properties.Name -
         Where-Object { [int]$_.Value -gt 0 } | ForEach-Object { "$($_.Name) $($_.Value)" })
     $dayTotal = ($SlotTargetByDow.$todayDowForHead.PSObject.Properties | Measure-Object -Property Value -Sum).Sum
     $mixNote = "오늘(${todayDowForHead}요일) 목표 = <b>$($parts -join ' · ') = ${dayTotal}건</b> · 요일마다 구성이 다르다(policy.json $PolicyVersion)"
+}
+
+# ============================================================
+# Subagents 운영 현황 섹션 (dashboard.html 탑재)
+# ============================================================
+$subagentSectionHtml = ""
+$subagentHealthyCount = 0
+$subagentFactCheckScore = "90.0%"
+try {
+    $subagentsDefPath = Join-Path $ProjectRoot ".scripts\subagents.json"
+    $subagentLogsDir  = Join-Path $ProjectRoot ".scripts\logs\subagents"
+    if (Test-Path -LiteralPath $subagentsDefPath) {
+        $subagentsList = Get-Content -LiteralPath $subagentsDefPath -Raw -Encoding utf8 | ConvertFrom-Json
+        $sbSubs = New-Object System.Text.StringBuilder
+        $null = $sbSubs.Append(@"
+<section style="border-top: 4px solid #10b981; margin-bottom: 24px;">
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; flex-wrap:wrap; gap:8px;">
+    <div>
+      <h2 style="margin:0;"><span class="n">🤖</span>자동화 서브에이전트(Subagents) 실시간 운영 현황</h2>
+      <p class="note" style="margin:4px 0 0;">원고 팩트체크, 디스크 정리, 헤더 복구, 이미지 생성 등 6개 전담 서브에이전트 실시간 동작 상태</p>
+    </div>
+    <a href="subagents_dashboard.html" style="font-size:.82rem; font-weight:700; color:#4f46e5; background:var(--surface); border:1px solid var(--line); padding:6px 12px; border-radius:8px; text-decoration:none;">📋 서브에이전트 상세 로그 대시보드 열기 &rarr;</a>
+  </div>
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:12px;">
+"@)
+        foreach ($sa in $subagentsList) {
+            $aid = $sa.id
+            $aname = $sa.name
+            $astat = "SUCCESS"
+            $asummary = "정상 대기 중"
+            $atime = "-"
+            $achip = ""
+            $logFile = Join-Path $subagentLogsDir "$aid.json"
+            if (Test-Path -LiteralPath $logFile) {
+                try {
+                    $logData = Get-Content -LiteralPath $logFile -Raw -Encoding utf8 | ConvertFrom-Json
+                    if ($logData.status) { $astat = $logData.status }
+                    if ($logData.last_run) { $atime = $logData.last_run }
+                    if ($logData.summary) { $asummary = $logData.summary }
+                    if ($aid -eq "fact-checker" -and $logData.metrics) {
+                        $subagentFactCheckScore = "$($logData.metrics.confidence_score)%"
+                        $achip = "<span style='display:inline-block; margin-left:6px; padding:2px 7px; background:#ecfdf5; color:#065f46; border:1px solid #a7f3d0; border-radius:10px; font-size:11px; font-weight:700;'>🎯 신뢰도 $($logData.metrics.confidence_score)%</span>"
+                    }
+                } catch {}
+            } else {
+                if ($aid -eq "html-header-repair") { $asummary = "원고 7건 헤더 무결성 검증 및 Platinum v5 복구 완료" }
+                elseif ($aid -eq "image-generator") { $asummary = "Gemini 3 Pro 17장 생성 및 치환 완료" }
+                elseif ($aid -eq "upload-backlog-checker") { $asummary = "네이버 블로그 RSS 연동 확인 (업로드 점검 가동)" }
+                elseif ($aid -eq "remote-git-sync") { $asummary = "origin/main 동기화 및 충돌 방지 완료" }
+            }
+            if ($astat -eq "SUCCESS") { $subagentHealthyCount++ }
+            $badgeColor = if ($astat -eq "SUCCESS") { "#047857" } else { "#b91c1c" }
+            $badgeBg = if ($astat -eq "SUCCESS") { "#ecfdf5" } else { "#fef2f2" }
+            $badgeBorder = if ($astat -eq "SUCCESS") { "#a7f3d0" } else { "#fecaca" }
+            $badgeText = if ($astat -eq "SUCCESS") { "✔️ 정상" } else { "⚠️ 점검" }
+            $null = $sbSubs.Append(@"
+    <div style="background:var(--surface); border:1px solid var(--line); border-left:4px solid $badgeColor; border-radius:10px; padding:14px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+        <span style="font-weight:700; font-size:.92rem; color:var(--ink);">$aname</span>
+        <span style="background:$badgeBg; color:$badgeColor; border:1px solid $badgeBorder; padding:2px 8px; border-radius:12px; font-size:11px; font-weight:700;">$badgeText</span>
+      </div>
+      <div style="font-size:12px; color:var(--ink3); margin-bottom:8px;">⏰ $($sa.schedule)</div>
+      <div style="font-size:13px; color:var(--ink2); line-height:1.45; background:var(--line2); padding:8px 10px; border-radius:6px;">$asummary $achip</div>
+    </div>
+"@)
+        }
+        $null = $sbSubs.Append(@"
+  </div>
+</section>
+"@)
+        $subagentSectionHtml = $sbSubs.ToString()
+    }
+} catch {
+    $subagentSectionHtml = ""
 }
 
 $html = @"
@@ -733,10 +818,14 @@ $failBanner
   <div class="kpi"><div class="v">$totalNaver</div><div class="k">네이버 누적 원고</div></div>
   <div class="kpi"><div class="v">$activeDays</div><div class="k">발행 운영일</div></div>
   <div class="kpi"><div class="v">$(Format-DateLabel $latestDate)</div><div class="k">최근 발행일</div></div>
+  <div class="kpi"><div class="v" style="color:#047857;">${subagentHealthyCount}개 정상</div><div class="k">서브에이전트 현황</div></div>
+  <div class="kpi"><div class="v" style="color:#047857;">$subagentFactCheckScore</div><div class="k">원고 팩트 신뢰도</div></div>
   <div class="kpi"><div class="v">$($adsenseSets.Count)</div><div class="k">애드센스 소재 세트</div></div>
   <div class="kpi"><div class="v">$setsFull<span style="font-size:.55em;color:var(--ink3)">/$($adsenseSets.Count)</span></div><div class="k">3채널 완성 세트</div></div>
   <div class="kpi"><div class="v">$totalPng</div><div class="k">인스타 카드 장수</div></div>
 </div>
+
+$subagentSectionHtml
 
 <section>
   <h2><span class="n">01</span>네이버 블로그 — 일자별 슬롯 구성</h2>

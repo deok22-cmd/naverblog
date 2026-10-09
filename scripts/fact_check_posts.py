@@ -280,7 +280,7 @@ def fact_check_directory(target_date=None):
 
     state_data = {
         "id": "fact-checker",
-        "name": "원고 팩트체크 & 데이터 검증기",
+        "name": "원고 팩트체크 서브에이전트 (Fact-Checker)",
         "last_run": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "status": status,
         "duration_sec": duration,
