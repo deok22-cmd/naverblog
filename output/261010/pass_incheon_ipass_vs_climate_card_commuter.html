@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>인천 I-패스 vs 기후동행카드 인천 출퇴근 직장인 요금 비교 — 월 대중교통 이용 횟수별 손익분기 계산표</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>인천 I-패스 vs 기후동행카드 인천 출퇴근 직장인 요금 비교 — 월 대중교통 이용 횟수별 손익분기 계산표</h1>
+<div class="intro-box">
+  인천에 거주하며 서울로 출퇴근하는 직장인의 경우, <strong>광역버스를 타거나 월 대중교통 지출액이 8만 원 미만이면 무제한 20~30% 환급을 받는 인천 I-패스가 절대적으로 유리</strong>합니다.<br/><br/>
+  반면 <strong>광역버스를 타지 않고 서울 지하철과 시내버스만 월 45회 이상 집중 이용하며 서울 시내 이동이 잦은 경우에는 월 6만 2천 원 정액권인 기후동행카드</strong>가 유리합니다.<br/><br/>
+  특히 인천 I-패스는 정부 K-패스를 기반으로 하여 <strong>이용 횟수 60회 한도가 없고 청년 연령도 만 39세까지 30% 환급율</strong>이 적용되므로 대부분의 인천 통근자에게 실질 절감액이 더 큽니다.<br/><br/>
+  내 실제 출퇴근 교통수단(광역버스 vs 지하철)과 월 이용 횟수에 따른 손익분기점을 아래 계산표를 통해 즉시 확인해 보세요.
+</div>
+<div class="img-area">
+<img alt="인천과 서울을 오가는 대중교통 환승 시스템과 교통비 절감을 위한 카드 비교 분석 / AI 제작 이미지" src="../../images/261010/3_pass_incheon_ipass_vs_climate_card_commuter_1_pro.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">인천과 서울을 오가는 대중교통 환승 시스템과 교통비 절감을 위한 카드 비교 분석 / AI 제작 이미지</div>
+</div>
+<h2>01 | 인천 거주 서울 출퇴근 직장인의 대중교통 카드 고민 핵심 요약</h2>
+수도권 대중교통 요금 인상 이후 매달 10만 원 안팎으로 치솟은 출퇴근 교통비는 직장인들의 큰 고정 지출 부담이 되었습니다.<br/><br/>
+현재 수도권 통근자들에게 가장 주목받는 제도는 국토교통부 기반의 <strong>'인천 I-패스(K-패스 인천형)'</strong>와 서울시의 무제한 대중교통 정기권인 <strong>'기후동행카드'</strong>입니다.<br/><br/>
+인천에서 서울로 출퇴근하는 직장인은 거주지가 인천이면서 주 활동 무대가 서울이기 때문에 두 카드 중 어떤 것을 써야 할지 혼란을 겪는 경우가 많습니다.<br/><br/>
+결론부터 말씀드리면, <strong>"광역버스(빨간버스) 탑승 여부"</strong>와 <strong>"월 이용 횟수"</strong> 두 가지 기준만 확인하면 본인에게 딱 맞는 카드가 명확하게 갈립니다.<br/><br/>
+두 제도는 운영 방식이 '사후 환급형(I-패스)'과 '선불 정액권(기후동행카드)'으로 완전히 다르므로 본인의 이동 패턴을 정밀하게 대입해 보아야 손해를 보지 않습니다.
+
+<h2>02 | 인천 I-패스 환급 제도와 주요 혜택 및 신청 자격</h2>
+인천 I-패스는 정부의 전국 단위 교통비 환급 사업인 'K-패스'를 인천광역시민의 통근 특성에 맞춰 대폭 확대한 제도입니다.<br/><br/>
+주민등록상 주소지가 <strong>인천광역시에 등록된 만 19세 이상 시민</strong>이라면 누구나 별도의 신규 카드 발급 없이 기존 K-패스 전용 카드로 자동 적용됩니다.<br/><br/>
+기존 정부 K-패스가 월 15회 이상 최대 60회까지만 환급을 제공하는 반면, 인천 I-패스는 <strong>월 60회 초과 이용분에 대해서도 횟수 제한 없이 무제한 환급</strong>을 제공하는 것이 가장 큰 강점입니다.<br/><br/>
+환급 비율은 <strong>일반 성인 20%, 청년(만 19~39세) 30%, 65세 이상 어르신 30%, 저소득층 53.3%</strong>에 달합니다.<br/><br/>
+특히 일반 K-패스의 청년 기준이 만 34세인 반면, 인천 I-패스는 만 39세까지 30% 청년 혜택을 연장 적용하여 30대 직장인들에게 막대한 혜택을 제공합니다.
+
+<h2>03 | 서울시 기후동행카드 권종별 가격과 인천 구간 적용 범위</h2>
+기후동행카드는 30일간 일정 금액을 충전하면 서울 시내 대중교통을 횟수 제한 없이 무제한으로 탑승할 수 있는 정기권입니다.<br/><br/>
+권종은 <strong>따릉이 제외 62,000원권</strong>과 <strong>따릉이 포함 65,000원권</strong>으로 나뉘며, 청년(만 19~39세)의 경우 7,000원 할인된 <strong>55,000원 / 58,000원</strong>에 이용할 수 있습니다.<br/><br/>
+그러나 인천 거주자 입장에서 기후동행카드를 쓸 때 가장 주의해야 할 점은 <strong>'노선 적용 범위의 한계'</strong>입니다.<br/><br/>
+서울 시내버스 및 서울 관내 지하철역에서는 자유롭게 승하차가 가능하지만, 인천 관내 역의 경우 <strong>인천 1·2호선 및 인천 관내 시내버스는 전면 적용 대상에서 제외</strong>됩니다.<br/><br/>
+서울 지하철 7호선(석남~까치울 구간)과 공항철도(인천공항~계양 구간) 등 일부 서울시 협약 구간에서만 승차가 가능하며, 일반적인 인천 광역버스는 기후동행카드로 탑승할 수 없습니다.
+
+<div class="img-area">
+<img alt="수도권 전철 게이트 통과 시 적용 노선과 환승 혜택을 확인하는 스마트 출퇴근 모습 / AI 제작 이미지" src="../../images/261010/3_pass_incheon_ipass_vs_climate_card_commuter_2_pro.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">수도권 전철 게이트 통과 시 적용 노선과 환승 혜택을 확인하는 스마트 출퇴근 모습 / AI 제작 이미지</div>
+</div>
+<h2>04 | 인천 I-패스 vs 기후동행카드 주요 이용 조건 및 혜택 비교표</h2>
+두 제도의 핵심적인 차이점을 한눈에 비교하실 수 있도록 아래 표로 완벽하게 정리했습니다.
+
+<table class="info-table">
+<tr>
+<th>비교 항목</th>
+<th>인천 I-패스 (K-패스 인천형)</th>
+<th>서울 기후동행카드</th>
+</tr>
+<tr>
+<td><strong>기본 방식</strong></td>
+<td>사후 환급형 (신용 청구차감 / 체크 계좌입금)</td>
+<td>선불 충전 정기권 (30일권)</td>
+</tr>
+<tr>
+<td><strong>이용 요금</strong></td>
+<td>쓴 만큼 결제 후 환급 (기본요금 없음)</td>
+<td>월 62,000원 (따릉이 미포함 기준)</td>
+</tr>
+<tr>
+<td><strong>환급율 및 혜택</strong></td>
+<td>일반 20% / 청년·어르신 30% / 저소득 53.3%</td>
+<td>정액 충전 후 서울 대중교통 무제한 탑승</td>
+</tr>
+<tr>
+<td><strong>청년 연령 기준</strong></td>
+<td><strong>만 19세 ~ 34세</strong> (30% 환급)</td>
+<td><strong>만 19세 ~ 39세</strong> (55,000원으로 7천원 할인)</td>
+</tr>
+<tr>
+<td><strong>월 이용 횟수 한도</strong></td>
+<td><strong>무제한</strong> (월 15회 이상 이용 시 상한 없음)</td>
+<td><strong>무제한</strong> (기간 내 무제한)</td>
+</tr>
+<tr>
+<td><strong>광역버스 적용 여부</strong></td>
+<td><strong>전국 광역버스 탑승 가능</strong> (환급 적용)</td>
+<td><strong>광역버스 탑승 불가</strong> (별도 결제 필요)</td>
+</tr>
+<tr>
+<td><strong>적용 지역 범위</strong></td>
+<td>전국 대중교통 (인천·서울·경기 및 전국)</td>
+<td>서울 시내 대중교통 중심 (인천 버스·지하철 대다수 제외)</td>
+</tr>
+</table>
+
+위 비교표에서 볼 수 있듯이, 인천 I-패스는 전국 단위의 모든 대중교통에서 환급이 되는 반면 기후동행카드는 철저하게 서울 시내 중심의 정액제입니다.
+
+<h2>05 | 월 대중교통 이용 횟수별(20회·40회·60회) 실제 교통비 손익분기 계산표</h2>
+인천에서 서울로 지하철을 이용해 통근하는 일반 직장인(편도 요금 약 1,700원 기준)을 가정한 실제 월 교통비 지출액 계산표입니다.<br/><br/>
+일반 성인(20% 환급)과 청년(30% 환급) 기준 각각 기후동행카드(일반 6.2만 원 / 청년 5.5만 원)와 비교해 보았습니다.
+
+<table class="info-table">
+<tr>
+<th>월 이용 횟수</th>
+<th>총 교통비 원금</th>
+<th>I-패스 일반 (20% 환급)</th>
+<th>I-패스 청년 (30% 환급)</th>
+<th>기후동행카드 (정액권)</th>
+<th>유리한 카드 판정</th>
+</tr>
+<tr>
+<td><strong>20회 (주 2~3회 출근)</strong></td>
+<td>34,000원</td>
+<td>27,200원 (실지출)</td>
+<td>23,800원 (실지출)</td>
+<td>62,000원 / 청년 5.5만</td>
+<td><strong>I-패스 압승</strong> (3만 원 이상 절약)</td>
+</tr>
+<tr>
+<td><strong>40회 (주 5회 기본 출퇴근)</strong></td>
+<td>68,000원</td>
+<td>54,400원 (실지출)</td>
+<td>47,600원 (실지출)</td>
+<td>62,000원 / 청년 5.5만</td>
+<td><strong>I-패스 우세</strong> (7천~8천 원 절약)</td>
+</tr>
+<tr>
+<td><strong>50회 (주 5회 + 주말 외출)</strong></td>
+<td>85,000원</td>
+<td>68,000원 (실지출)</td>
+<td>59,500원 (실지출)</td>
+<td>62,000원 / 청년 5.5만</td>
+<td><strong>기후동행카드 우세</strong> (약 4천~6천 원 절약)</td>
+</tr>
+<tr>
+<td><strong>60회 이상 (매일 잦은 이동)</strong></td>
+<td>102,000원</td>
+<td>81,600원 (실지출)</td>
+<td>71,400원 (실지출)</td>
+<td>62,000원 / 청년 5.5만</td>
+<td><strong>기후동행카드 압승</strong> (2만 원 안팎 절약)</td>
+</tr>
+</table>
+
+계산 결과, 일반적인 주 5일 출퇴근(월 약 40~44회)만 하는 직장인이라면 <strong>인천 I-패스를 쓰는 것이 기후동행카드보다 실부담액이 더 적습니다.</strong><br/><br/>
+반면 주말에도 서울에서 활동하거나 외근이 잦아 월 대중교통 탑승 횟수가 50회를 훌쩍 넘는다면 기후동행카드가 유리해지기 시작합니다.
+
+<h2>06 | 광역버스(빨간버스) 및 신분당선 이용자의 필승 카드 선택법</h2>
+만약 출퇴근 시 광역버스(M버스, 직행좌석버스, 광역급행버스)를 타는 분이라면 계산할 필요도 없이 <strong>무조건 인천 I-패스를 선택</strong>하셔야 합니다.<br/><br/>
+기후동행카드는 기본적으로 광역버스 탑승이 불가능하며, 카드를 태그하더라도 인식이 되지 않거나 일반 잔액이 차감되지 않아 별도의 카드를 찍어야 합니다.<br/><br/>
+광역버스는 편도 요금이 3,000원에 달하기 때문에 한 달 왕복 40회만 타도 12만 원의 교통비가 발생합니다.<br/><br/>
+이때 인천 I-패스를 사용하면 일반 성인은 24,000원(20%), 청년은 무려 36,000원(30%)을 현금으로 계좌에 환급받게 됩니다.<br/><br/>
+또한 신분당선이나 수도권 광역급행철도(GTX) 역시 기후동행카드 적용이 제한되지만 I-패스는 환급 대상에 포함되므로 고액 요금 노선 이용자에게는 I-패스가 정답입니다.
+
+<h2>07 | 청년 연령 기준과 어르신 혜택 비교 (I-패스 만 39세 vs 기후동행 만 39세)</h2>
+두 제도 모두 청년 세대의 교통비 절감을 위해 혜택을 대폭 강화해 두었습니다.<br/><br/>
+고무적인 점은 두 제도 모두 <strong>청년의 연령 기준을 '만 19세부터 만 39세까지'</strong>로 동일하게 넓혀 두었다는 점입니다.<br/><br/>
+만 35세~39세 사이의 직장인들은 일반 전국 K-패스(만 34세 한도)에서는 청년 혜택에서 탈락하지만, 인천 I-패스에서는 30%의 환급율을 온전히 보장받습니다.<br/><br/>
+또한 인천 I-패스는 <strong>65세 이상 어르신에게도 30%의 환급 혜택</strong>을 신설하여 제공하고 있습니다.<br/><br/>
+지하철은 무임 승차를 하시더라도 시내버스나 광역버스를 이용하실 때 30% 환급이 적용되므로 어르신들의 버스 요금 부담을 크게 덜어줍니다.
+
+<h2>08 | 인천 출퇴근 직장인 유형별 최적 교통카드 결정 체크리스트</h2>
+복잡한 고민을 한 번에 끝낼 수 있도록 통근 유형별 최종 선택 가이드를 제시해 드립니다.
+
+<div class="step-box">
+<strong>🎯 나에게 맞는 교통카드 3초 판별 체크리스트</strong><br/><br/>
+  1. <strong>유형 A: 출퇴근 시 광역버스(M버스, 직행버스)를 1회라도 탄다</strong><br/>
+     👉 <strong>선택: 인천 I-패스 100% 확정</strong> (기후동행카드는 광역버스 탑승 불가)<br/><br/>
+  2. <strong>유형 B: 광역버스는 안 타고, 지하철만 주 5일 딱 출퇴근한다 (월 40~44회)</strong><br/>
+     👉 <strong>선택: 인천 I-패스 유리</strong> (기후동행 6.2만 원보다 I-패스 실지출 4.7만~5.4만 원이 더 저렴)<br/><br/>
+  3. <strong>유형 C: 서울 지하철 7호선이나 공항철도로 진입하며, 서울 시내 외근·약속이 많다 (월 50회 이상)</strong><br/>
+     👉 <strong>선택: 기후동행카드 유리</strong> (월 50회 이상부터는 정액 무제한 혜택이 손익분기 돌파)<br/><br/>
+  4. <strong>유형 D: 인천 시내버스 및 인천 지하철 1·2호선 환승이 필수적이다</strong><br/>
+     👉 <strong>선택: 인천 I-패스 필수</strong> (기후동행카드는 인천 시내버스와 인천 1·2호선 사용 불가)
+</div>
+
+대부분의 인천 시민은 인천 시내버스 환승이나 광역버스 이용이 필수적이므로 80% 이상의 이용자에게 인천 I-패스가 정답입니다.
+
+<h2>09 | 카드 발급 및 K-패스 앱 등록 절차와 환급금 수령 팁</h2>
+인천 I-패스를 이용하는 방법은 매우 간단합니다. 기존에 K-패스 전용 카드를 갖고 계신 분은 아무것도 새로 하실 필요가 없습니다.<br/><br/>
+신규 이용자라면 신한, 국민, 삼성, 현대, 우리, 하나, 농협, 기업, BC 등 주요 카드사에서 <strong>'K-패스 전용 신용카드 또는 체크카드'</strong>를 발급받으세요.<br/><br/>
+카드를 수령하신 후 스마트폰에 <strong>K-패스 공식 앱</strong>을 설치하고 회원가입을 진행합니다.<br/><br/>
+회원가입 시 본인 인증 과정에서 주민등록번호를 통해 <strong>인천광역시 거주 사실이 자동으로 확인되면 즉시 '인천 I-패스' 혜택이 적용</strong>됩니다.<br/><br/>
+환급금은 신용카드의 경우 다음 달 청구 대금에서 자동 차감되며, 체크카드는 등록된 결제 계좌로 약속된 정산일에 현금 캐시백으로 입금됩니다.
+
+<div class="recommend-area">
+<strong>📌 함께 읽으면 좋은 가을 여행 &amp; 실전 생활정보</strong><br/><br/>
+  • <a href="../261008/pass_ktx_ncard_vs_commuter_pass_comparison.html">KTX N카드 vs 정기승차권 할인율과 손익분기 비교 — 주 2~3회 출퇴근·출장러 실제 요금 계산표</a><br/>
+  • <a href="../261008/travel_iksan_chrysanthemum_festival_mireuksaji.html">익산 천만송이 국화축제 2026 일정과 관람 코스 — 중앙체육공원 주차장 팁과 미륵사지 연계 동선</a>
+</div>
+<div class="tags">
+<span class="tag">#인천아이패스</span>
+<span class="tag">#기후동행카드</span>
+<span class="tag">#K패스환급</span>
+<span class="tag">#인천출퇴근교통비</span>
+<span class="tag">#대중교통할인</span>
+<span class="tag">#교통카드비교</span>
+<span class="tag">#광역버스할인</span>
+<span class="tag">#직장인교통비절약</span>
+<span class="tag">#기후동행카드인천</span>
+<span class="tag">#대중교통손익분기</span>
+</div>
+</body>
+</html>
