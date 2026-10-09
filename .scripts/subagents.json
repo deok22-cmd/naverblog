@@ -22,6 +22,17 @@
     "enabled": true
   },
   {
+    "id": "fact-checker",
+    "name": "원고 팩트체크 & 데이터 검증기",
+    "description": "2026년 기준 일정, 장소, 금액(입장료/주차료/할인), 법정 규정 등을 정밀 팩트체크하여 오기 시 자동 보정 및 신뢰도 검증 로그 기록",
+    "category": "원고 파이프라인",
+    "schedule": "매일 04:00 (헤더 복구 직후 / 이미지 생성 직전)",
+    "schedule_type": "daily",
+    "trigger_day": "all",
+    "script": "scripts/fact_check_posts.py",
+    "enabled": true
+  },
+  {
     "id": "image-generator",
     "name": "Gemini Pro/Flash 이미지 생성 & 매칭기",
     "description": "원고 플레이스홀더를 파싱하여 Gemini 3 Pro(_pro.png)로 생성하고 쿼터 소진 시 Flash로 자동 전환 및 <img> 치환",

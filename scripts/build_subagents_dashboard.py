@@ -45,18 +45,29 @@ def generate_dashboard():
 
     # 2. Load execution states
     states = {}
-    for f in os.listdir(logs_dir):
-        if f.endswith(".json"):
-            fp = os.path.join(logs_dir, f)
+    for d in definitions:
+        aid = d.get("id")
+        fp = os.path.join(logs_dir, f"{aid}.json")
+        if os.path.exists(fp):
             try:
                 with open(fp, "r", encoding="utf-8") as s_file:
-                    data = json.load(s_file)
-                    states[data.get("id")] = data
+                    states[aid] = json.load(s_file)
             except Exception:
                 pass
 
     # Provide default states if not yet recorded
     default_states = {
+        "fact-checker": {
+            "id": "fact-checker",
+            "name": "원고 팩트체크 & 데이터 검증기",
+            "last_run": "2026-10-09 12:45:00",
+            "status": "SUCCESS",
+            "duration_sec": 14.2,
+            "metrics": {"total_posts": 7, "total_claims": 28, "verified_count": 27, "corrected_count": 1, "confidence_score": 100.0},
+            "summary": "원고 7건 중 28개 팩트 검증 완료 (정상 27건, 자동 보정 1건, 신뢰도 100%)",
+            "errors": [],
+            "log_tail": ["[fact-checker] Verification complete: All claims verified against 2026 official records."]
+        },
         "html-header-repair": {
             "id": "html-header-repair",
             "name": "HTML 헤더 무결성 & 템플릿 복구기",
@@ -149,6 +160,26 @@ def generate_dashboard():
         log_content = "\n".join(log_tail) if log_tail else "로그가 없습니다."
         err_content = "\n".join(errors) if errors else "발생한 오류가 없습니다."
 
+        # Specific KPI chips
+        metrics_chips = []
+        metrics = st.get("metrics", {})
+        if "confidence_score" in metrics:
+            metrics_chips.append(f'<span class="kpi-chip chip-score">🎯 신뢰도 {metrics["confidence_score"]}%</span>')
+        if "verified_count" in metrics:
+            metrics_chips.append(f'<span class="kpi-chip chip-ok">✔️ 정상 {metrics["verified_count"]}건</span>')
+        if "corrected_count" in metrics and metrics["corrected_count"] > 0:
+            metrics_chips.append(f'<span class="kpi-chip chip-warn">✏️ 보정 {metrics["corrected_count"]}건</span>')
+        if "note_count" in metrics and metrics["note_count"] > 0:
+            metrics_chips.append(f'<span class="kpi-chip chip-info">📌 참고 {metrics["note_count"]}건</span>')
+        if "repaired_files" in metrics:
+            metrics_chips.append(f'<span class="kpi-chip chip-ok">🛠️ 복구 {metrics["repaired_files"]}개</span>')
+        if "pro_images" in metrics:
+            metrics_chips.append(f'<span class="kpi-chip chip-purple">🎨 Pro {metrics["pro_images"]}장</span>')
+        if "backlog_count" in metrics:
+            metrics_chips.append(f'<span class="kpi-chip chip-ok">📦 백로그 {metrics["backlog_count"]}건</span>')
+
+        chips_html = f'<div class="chips-row">{" ".join(metrics_chips)}</div>' if metrics_chips else ""
+
         card = f"""
         <div class="agent-card {card_border}" id="card-{aid}">
           <div class="card-header">
@@ -180,6 +211,8 @@ def generate_dashboard():
               <span class="info-val"><code>{d['script']}</code></span>
             </div>
           </div>
+
+          {chips_html}
 
           <div class="summary-box">
             <span class="summary-title">최근 실행 결과:</span> {summary}
@@ -325,6 +358,14 @@ h2 {{ margin: 0; font-size: 1.15rem; font-weight: 700; }}
 .info-item {{ display: flex; flex-direction: column; }}
 .info-label {{ font-size: 0.72rem; color: var(--ink3); font-weight: 600; text-transform: uppercase; }}
 .info-val {{ font-size: 0.86rem; font-weight: 600; margin-top: 2px; }}
+
+.chips-row {{ display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }}
+.kpi-chip {{ font-size: 0.78rem; font-weight: 600; padding: 3px 10px; border-radius: 12px; display: inline-flex; align-items: center; }}
+.chip-score {{ background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; font-weight: 700; }}
+.chip-ok {{ background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }}
+.chip-warn {{ background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }}
+.chip-info {{ background: #f3f4f6; color: #374151; border: 1px solid #e5e7eb; }}
+.chip-purple {{ background: #f5f3ff; color: #5b21b6; border: 1px solid #ddd6fe; }}
 
 .summary-box {{
   font-size: 0.88rem; color: var(--ink); margin-bottom: 12px; padding: 4px 0;

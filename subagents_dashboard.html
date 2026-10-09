@@ -122,6 +122,14 @@ h2 { margin: 0; font-size: 1.15rem; font-weight: 700; }
 .info-label { font-size: 0.72rem; color: var(--ink3); font-weight: 600; text-transform: uppercase; }
 .info-val { font-size: 0.86rem; font-weight: 600; margin-top: 2px; }
 
+.chips-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+.kpi-chip { font-size: 0.78rem; font-weight: 600; padding: 3px 10px; border-radius: 12px; display: inline-flex; align-items: center; }
+.chip-score { background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; font-weight: 700; }
+.chip-ok { background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+.chip-warn { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+.chip-info { background: #f3f4f6; color: #374151; border: 1px solid #e5e7eb; }
+.chip-purple { background: #f5f3ff; color: #5b21b6; border: 1px solid #ddd6fe; }
+
 .summary-box {
   font-size: 0.88rem; color: var(--ink); margin-bottom: 12px; padding: 4px 0;
 }
@@ -185,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <header>
     <div>
       <h1>🤖 서브에이전트 운영 & 모니터링 대시보드</h1>
-      <div class="sub">Antigravity Subagent Orchestration & Automated Task Health Center (업데이트: 2026-10-09 12:29:58)</div>
+      <div class="sub">Antigravity Subagent Orchestration & Automated Task Health Center (업데이트: 2026-10-09 12:58:18)</div>
       <div class="nav-links">
         <a class="nav-btn" href="dashboard.html">📊 블로그 4채널 운영 대시보드</a>
         <a class="nav-btn" href="prompt_helper.html">🎨 이미지 프롬프트 헬퍼</a>
@@ -196,11 +204,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   <div class="kpis">
     <div class="kpi">
-      <div class="val" style="color:var(--accent);">5</div>
+      <div class="val" style="color:var(--accent);">6</div>
       <div class="lbl">등록된 서브에이전트 수</div>
     </div>
     <div class="kpi">
-      <div class="val" style="color:var(--ok);">5</div>
+      <div class="val" style="color:var(--ok);">6</div>
       <div class="lbl">정상 작동 (Healthy)</div>
     </div>
     <div class="kpi">
@@ -208,10 +216,10 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="lbl">오류 / 주의 필요</div>
     </div>
     <div class="kpi">
-      <div class="val" style="color:#10b981;">31.64 GB</div>
-      <div class="lbl">C: 드라이브 여유 (26.7%) · <strong>쾌적</strong></div>
+      <div class="val" style="color:#10b981;">30.41 GB</div>
+      <div class="lbl">C: 드라이브 여유 (25.6%) · <strong>쾌적</strong></div>
       <div class="kpi-disk-bar">
-        <div class="kpi-disk-fill" style="width:73.3%; background:#10b981;"></div>
+        <div class="kpi-disk-fill" style="width:74.4%; background:#10b981;"></div>
       </div>
     </div>
   </div>
@@ -252,6 +260,8 @@ document.addEventListener('DOMContentLoaded', function() {
               <span class="info-val"><code>scripts/clean_pc_disk.py</code></span>
             </div>
           </div>
+
+          
 
           <div class="summary-box">
             <span class="summary-title">최근 실행 결과:</span> 0개 파일 삭제 완료 (0.0 MB 확보, C: 여유 29.19 GB) (사용 중 25개 안전 건너뜀)
@@ -316,6 +326,8 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
           </div>
 
+          <div class="chips-row"><span class="kpi-chip chip-ok">🛠️ 복구 7개</span></div>
+
           <div class="summary-box">
             <span class="summary-title">최근 실행 결과:</span> 원고 7건 헤더 무결성 검증 및 Platinum v5 정규 템플릿 복구 완료
           </div>
@@ -328,6 +340,74 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="accordion-content" id="log-html-header-repair" style="display:none;">
               
               <div class="log-box"><strong>최근 실행 로그 (Tail):</strong><pre>[08:34:38] Header repair completed: 7 files repaired.</pre></div>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="agent-card border-ok" id="card-fact-checker">
+          <div class="card-header">
+            <div>
+              <div class="card-title-row">
+                <span class="agent-name">원고 팩트체크 & 데이터 검증기</span>
+                <span class="cat-tag">원고 파이프라인</span>
+              </div>
+              <div class="agent-desc">2026년 기준 일정, 장소, 금액(입장료/주차료/할인), 법정 규정 등을 정밀 팩트체크하여 오기 시 자동 보정 및 신뢰도 검증 로그 기록</div>
+            </div>
+            <div class="status-wrap"><span class="badge badge-ok">✔️ 정상 완료</span></div>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-item">
+              <span class="info-label">동작 주기</span>
+              <span class="info-val">⏰ 매일 04:00 (헤더 복구 직후 / 이미지 생성 직전)</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">최근 실행</span>
+              <span class="info-val">🕒 2026-10-09 12:57:59</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">실행 소요 시간</span>
+              <span class="info-val">⚡ 248.19초</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">실행 스크립트</span>
+              <span class="info-val"><code>scripts/fact_check_posts.py</code></span>
+            </div>
+          </div>
+
+          <div class="chips-row"><span class="kpi-chip chip-score">🎯 신뢰도 90.0%</span> <span class="kpi-chip chip-ok">✔️ 정상 86건</span> <span class="kpi-chip chip-warn">✏️ 보정 4건</span> <span class="kpi-chip chip-info">📌 참고 10건</span></div>
+
+          <div class="summary-box">
+            <span class="summary-title">최근 실행 결과:</span> 원고 7건 중 100개 팩트 검증 완료 (정상: 86개, 보정: 4개, 참고: 10개, 신뢰도: 90.0%)
+          </div>
+
+          <div class="log-accordion">
+            <button class="accordion-btn" onclick="toggleLog('fact-checker')">
+              <span>📋 최근 실행 로그 & 오류 세부 정보 보기</span>
+              <span id="arr-fact-checker">▼</span>
+            </button>
+            <div class="accordion-content" id="log-fact-checker" style="display:none;">
+              
+              <div class="log-box"><strong>최근 실행 로그 (Tail):</strong><pre>[12:57:10]       ✔️ 모든 팩트 정상 확인 (16개 항목)
+[12:57:11] [6/7] 검증 중: travel_asan_oeam_folk_village_autumn_walk.html
+[12:57:11]       제목: 아산 외암민속마을 가을 산책 코스와 관람 팁 — 황금들녘 돌담길 감나무 포토존과 ...
+[12:57:27]       📌 참고 사항: 주말 및 공휴일 지정 시간대(10:30, 13:30, 15:30 등 문화관광해설사 동행 투어) (문화관광해설사 동행 투어 시간은 2026년 공식 일정이 아직 확정되지 않았을 수 있으며, 운영 상황에 따라 변동될 수 있습니다. 방문 전 아산 외암민속마을 공식 홈페이지 또는 관리사무소에 확인하는 것이 좋습니다.)
+[12:57:27]       📌 참고 사항: 가을 짚풀문화제 행사 일정 (2026년 가을 짚풀문화제 행사 일정은 아직 공식적으로 발표되지 않았습니다. 매년 행사 시기와 세부 프로그램은 변동될 수 있으므로, 2026년 공식 발표를 확인해야 합니다.)
+[12:57:27]       ✔️ 모든 팩트 정상 확인 (11개 항목)
+[12:57:28] [7/7] 검증 중: travel_iksan_chrysanthemum_festival_mireuksaji.html
+[12:57:28]       제목: 익산 천만송이 국화축제 2026 일정과 관람 코스 — 중앙체육공원 주차장 팁과 미...
+[12:57:58]       📌 참고 사항: 2026년 제23회 익산 천만송이 국화축제는 10월 23일(금)부터 11월 1일(일)까지 열흘간 펼쳐집니다. (2026년 익산 천만송이 국화축제의 정확한 일정은 아직 공식적으로 발표되지 않았습니다. 제시된 날짜는 과거 축제 시기를 기반으로 한 예상 일정으로 보입니다.)
+[12:57:58]       ✔️ 모든 팩트 정상 확인 (15개 항목)
+[12:57:59] 
+=== 팩트체크 완료 요약 ===
+[12:57:59] 결과 상태     : SUCCESS
+[12:57:59] 소요 시간     : 248.19초
+[12:57:59] 검증 팩트 수  : 100개
+[12:57:59] 정상 확인     : 86개
+[12:57:59] 자동 보정 반영: 4개
+[12:57:59] 참고 알림     : 10개
+[12:57:59] 신뢰도 지수   : 90.0%</pre></div>
             </div>
           </div>
         </div>
@@ -363,6 +443,8 @@ document.addEventListener('DOMContentLoaded', function() {
               <span class="info-val"><code>scripts/auto_generate_images.py</code></span>
             </div>
           </div>
+
+          <div class="chips-row"><span class="kpi-chip chip-purple">🎨 Pro 17장</span></div>
 
           <div class="summary-box">
             <span class="summary-title">최근 실행 결과:</span> 17건 전량 Gemini 3 Pro(_pro.png) 생성 및 HTML <img> 태그 치환 완료
@@ -400,7 +482,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="info-item">
               <span class="info-label">최근 실행</span>
-              <span class="info-val">🕒 2026-10-09 12:29:58</span>
+              <span class="info-val">🕒 2026-10-09 12:58:18</span>
             </div>
             <div class="info-item">
               <span class="info-label">실행 소요 시간</span>
@@ -411,6 +493,8 @@ document.addEventListener('DOMContentLoaded', function() {
               <span class="info-val"><code>.scripts/daily-run.ps1 (Step 0.3)</code></span>
             </div>
           </div>
+
+          <div class="chips-row"><span class="kpi-chip chip-ok">📦 백로그 0건</span></div>
 
           <div class="summary-box">
             <span class="summary-title">최근 실행 결과:</span> 네이버 블로그 RSS 7건 등록 확인 (미업로드 백로그 0건, 정상 발행 허용)
@@ -448,7 +532,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="info-item">
               <span class="info-label">최근 실행</span>
-              <span class="info-val">🕒 2026-10-09 12:29:58</span>
+              <span class="info-val">🕒 2026-10-09 12:58:18</span>
             </div>
             <div class="info-item">
               <span class="info-label">실행 소요 시간</span>
@@ -459,6 +543,8 @@ document.addEventListener('DOMContentLoaded', function() {
               <span class="info-val"><code>.scripts/daily-run.ps1 (Step 0.0 & Step 2)</code></span>
             </div>
           </div>
+
+          
 
           <div class="summary-box">
             <span class="summary-title">최근 실행 결과:</span> origin/main 동기화 완료 (pull --rebase & push 충돌 방지 완료)
