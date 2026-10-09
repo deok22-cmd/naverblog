@@ -715,8 +715,16 @@ a.ch.on:hover{text-decoration:underline}
 <div class="wrap">
 
 <header>
-  <h1>4채널 통합 운영 대시보드</h1>
-  <div class="sub">네이버 블로그(자동 7건/일) → 티스토리 애드센스 → 인스타 카드뉴스 → 쓰레드 · 갱신 $generatedAt</div>
+  <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:10px;">
+    <div>
+      <h1>4채널 통합 운영 대시보드</h1>
+      <div class="sub">네이버 블로그(자동 7건/일) → 티스토리 애드센스 → 인스타 카드뉴스 → 쓰레드 · 갱신 $generatedAt</div>
+    </div>
+    <div style="display:flex; gap:8px;">
+      <a href="subagents_dashboard.html" style="background:var(--surface); border:1px solid var(--line); padding:6px 12px; border-radius:8px; font-size:.82rem; font-weight:600; text-decoration:none;">🤖 서브에이전트 모니터링</a>
+      <a href="prompt_helper.html" style="background:var(--surface); border:1px solid var(--line); padding:6px 12px; border-radius:8px; font-size:.82rem; font-weight:600; text-decoration:none;">🎨 프롬프트 헬퍼</a>
+    </div>
+  </div>
 </header>
 
 $failBanner

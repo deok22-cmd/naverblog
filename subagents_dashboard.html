@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🤖 서브에이전트 운영 & 모니터링 대시보드</title>
+<style>
+:root {
+  --bg: #f8fafc; --surface: #ffffff; --ink: #0f172a; --ink2: #475569; --ink3: #94a3b8;
+  --line: #e2e8f0; --line2: #f1f5f9;
+  --ok: #10b981; --okbg: #ecfdf5; --ok-border: #a7f3d0;
+  --warn: #f59e0b; --warnbg: #fffbeb; --warn-border: #fde68a;
+  --bad: #ef4444; --badbg: #fef2f2; --bad-border: #fecaca;
+  --accent: #3b82f6; --accentbg: #eff6ff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0f19; --surface: #151b28; --ink: #f1f5f9; --ink2: #94a3b8; --ink3: #64748b;
+    --line: #222c3d; --line2: #192231;
+    --ok: #34d399; --okbg: #064e3b33; --ok-border: #064e3b;
+    --warn: #fbbf24; --warnbg: #78350f33; --warn-border: #78350f;
+    --bad: #f87171; --badbg: #7f1d1d33; --bad-border: #7f1d1d;
+    --accent: #60a5fa; --accentbg: #1e3a8a33;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0b0f19; --surface: #151b28; --ink: #f1f5f9; --ink2: #94a3b8; --ink3: #64748b;
+  --line: #222c3d; --line2: #192231;
+  --ok: #34d399; --okbg: #064e3b33; --ok-border: #064e3b;
+  --warn: #fbbf24; --warnbg: #78350f33; --warn-border: #78350f;
+  --bad: #f87171; --badbg: #7f1d1d33; --bad-border: #7f1d1d;
+  --accent: #60a5fa; --accentbg: #1e3a8a33;
+}
+:root[data-theme="light"] {
+  --bg: #f8fafc; --surface: #ffffff; --ink: #0f172a; --ink2: #475569; --ink3: #94a3b8;
+  --line: #e2e8f0; --line2: #f1f5f9;
+  --ok: #10b981; --okbg: #ecfdf5; --ok-border: #a7f3d0;
+  --warn: #f59e0b; --warnbg: #fffbeb; --warn-border: #fde68a;
+  --bad: #ef4444; --badbg: #fef2f2; --bad-border: #fecaca;
+  --accent: #3b82f6; --accentbg: #eff6ff;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Apple SD Gothic Neo", sans-serif;
+  font-size: 14px; line-height: 1.6;
+}
+.wrap { max-width: 1180px; margin: 0 auto; padding: 28px 20px 80px; }
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { font-family: Consolas, monospace; background: var(--line2); padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+
+header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--line);
+}
+h1 { margin: 0 0 6px; font-size: 1.55rem; font-weight: 800; letter-spacing: -0.02em; }
+.sub { color: var(--ink2); font-size: 0.9rem; }
+.nav-links { display: flex; gap: 10px; margin-top: 10px; }
+.nav-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--surface); border: 1px solid var(--line);
+  padding: 6px 12px; border-radius: 8px; font-size: 0.82rem; font-weight: 600; color: var(--ink2);
+}
+.nav-btn:hover { background: var(--accentbg); color: var(--accent); border-color: var(--accent); text-decoration: none; }
+
+.theme-toggle {
+  background: var(--surface); border: 1px solid var(--line);
+  padding: 6px 12px; border-radius: 8px; cursor: pointer; color: var(--ink); font-size: 0.85rem; font-weight: 600;
+}
+
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 28px; }
+.kpi {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: 16px 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+.kpi .val { font-size: 1.7rem; font-weight: 800; line-height: 1.2; letter-spacing: -0.03em; }
+.kpi .lbl { font-size: 0.8rem; color: var(--ink2); margin-top: 4px; font-weight: 500; }
+.kpi-disk-bar {
+  margin-top: 8px; height: 7px; background: var(--line2); border-radius: 4px; overflow: hidden;
+}
+.kpi-disk-fill { height: 100%; border-radius: 4px; transition: width 0.3s; }
+
+.section-head {
+  display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;
+}
+h2 { margin: 0; font-size: 1.15rem; font-weight: 700; }
+
+.agent-card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: 20px 22px; margin-bottom: 16px; transition: all 0.2s ease;
+}
+.agent-card:hover { border-color: var(--accent); box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
+.agent-card.border-ok { border-left: 5px solid var(--ok); }
+.agent-card.border-warn { border-left: 5px solid var(--warn); }
+.agent-card.border-bad { border-left: 5px solid var(--bad); }
+
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px; }
+.card-title-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.agent-name { font-size: 1.1rem; font-weight: 700; letter-spacing: -0.01em; }
+.agent-desc { color: var(--ink2); font-size: 0.85rem; margin-top: 3px; max-width: 780px; }
+.cat-tag {
+  background: var(--accentbg); color: var(--accent); padding: 2px 8px;
+  border-radius: 6px; font-size: 0.75rem; font-weight: 600;
+}
+
+.badge {
+  display: inline-block; padding: 4px 10px; border-radius: 20px;
+  font-size: 0.8rem; font-weight: 700; text-align: center;
+}
+.badge-ok { background: var(--okbg); color: var(--ok); border: 1px solid var(--ok-border); }
+.badge-warn { background: var(--warnbg); color: var(--warn); border: 1px solid var(--warn-border); }
+.badge-bad { background: var(--badbg); color: var(--bad); border: 1px solid var(--bad-border); }
+.badge-muted { background: var(--line2); color: var(--ink3); border: 1px solid var(--line); }
+
+.info-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px; background: var(--line2); padding: 12px 16px; border-radius: 8px; margin-bottom: 12px;
+}
+.info-item { display: flex; flex-direction: column; }
+.info-label { font-size: 0.72rem; color: var(--ink3); font-weight: 600; text-transform: uppercase; }
+.info-val { font-size: 0.86rem; font-weight: 600; margin-top: 2px; }
+
+.summary-box {
+  font-size: 0.88rem; color: var(--ink); margin-bottom: 12px; padding: 4px 0;
+}
+.summary-title { font-weight: 700; color: var(--ink2); }
+
+.log-accordion { margin-top: 10px; }
+.accordion-btn {
+  width: 100%; display: flex; justify-content: space-between; align-items: center;
+  background: none; border: none; padding: 8px 0; color: var(--ink2);
+  font-size: 0.82rem; font-weight: 600; cursor: pointer; text-align: left;
+}
+.accordion-btn:hover { color: var(--accent); }
+.accordion-content {
+  background: var(--bg); border: 1px solid var(--line); border-radius: 8px;
+  padding: 12px 16px; margin-top: 6px;
+}
+.log-box pre, .err-box pre {
+  margin: 6px 0 0; font-family: Consolas, monospace; font-size: 0.8rem;
+  white-space: pre-wrap; line-height: 1.5; color: var(--ink2);
+}
+.err-box {
+  background: var(--badbg); border-left: 3px solid var(--bad);
+  padding: 8px 12px; border-radius: 4px; margin-bottom: 10px; color: var(--bad);
+}
+
+.guide-box {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: 20px 22px; margin-top: 30px;
+}
+.guide-box h3 { margin: 0 0 8px; font-size: 0.98rem; }
+.guide-box p { margin: 0 0 10px; color: var(--ink2); font-size: 0.85rem; }
+.guide-box ol { margin: 0; padding-left: 20px; font-size: 0.85rem; color: var(--ink2); }
+.guide-box li { margin-bottom: 4px; }
+</style>
+<script>
+function toggleLog(id) {
+  var el = document.getElementById('log-' + id);
+  var arr = document.getElementById('arr-' + id);
+  if (el.style.display === 'none') {
+    el.style.display = 'block';
+    arr.innerText = '▲';
+  } else {
+    el.style.display = 'none';
+    arr.innerText = '▼';
+  }
+}
+function toggleTheme() {
+  var cur = document.documentElement.getAttribute('data-theme');
+  var nxt = cur === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', nxt);
+  localStorage.setItem('theme', nxt);
+}
+document.addEventListener('DOMContentLoaded', function() {
+  var saved = localStorage.getItem('theme');
+  if (saved) document.documentElement.setAttribute('data-theme', saved);
+});
+</script>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>🤖 서브에이전트 운영 & 모니터링 대시보드</h1>
+      <div class="sub">Antigravity Subagent Orchestration & Automated Task Health Center (업데이트: 2026-10-09 12:29:58)</div>
+      <div class="nav-links">
+        <a class="nav-btn" href="dashboard.html">📊 블로그 4채널 운영 대시보드</a>
+        <a class="nav-btn" href="prompt_helper.html">🎨 이미지 프롬프트 헬퍼</a>
+      </div>
+    </div>
+    <button class="theme-toggle" onclick="toggleTheme()">🌓 테마 전환</button>
+  </header>
+
+  <div class="kpis">
+    <div class="kpi">
+      <div class="val" style="color:var(--accent);">5</div>
+      <div class="lbl">등록된 서브에이전트 수</div>
+    </div>
+    <div class="kpi">
+      <div class="val" style="color:var(--ok);">5</div>
+      <div class="lbl">정상 작동 (Healthy)</div>
+    </div>
+    <div class="kpi">
+      <div class="val" style="color:var(--ink3);">0</div>
+      <div class="lbl">오류 / 주의 필요</div>
+    </div>
+    <div class="kpi">
+      <div class="val" style="color:#10b981;">31.64 GB</div>
+      <div class="lbl">C: 드라이브 여유 (26.7%) · <strong>쾌적</strong></div>
+      <div class="kpi-disk-bar">
+        <div class="kpi-disk-fill" style="width:73.3%; background:#10b981;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-head">
+    <h2>📡 서브에이전트별 동작 주기 및 실행 현황</h2>
+  </div>
+
+  <div class="agent-list">
+    
+        <div class="agent-card border-ok" id="card-disk-cleaner">
+          <div class="card-header">
+            <div>
+              <div class="card-title-row">
+                <span class="agent-name">PC 디스크 & 캐시 자동 청소기</span>
+                <span class="cat-tag">시스템 유지보수</span>
+              </div>
+              <div class="agent-desc">Hugging Face, NPM, IDE 구버전 확장 프로그램, 앱 설치파일 잔여물 등을 주기적으로 안전하게 정리하여 C드라이브 용량 확보</div>
+            </div>
+            <div class="status-wrap"><span class="badge badge-ok">✔️ 정상 완료</span></div>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-item">
+              <span class="info-label">동작 주기</span>
+              <span class="info-val">⏰ 매주 일요일 04:00 (또는 C: 여유공간 5GB 미만 긴급 시)</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">최근 실행</span>
+              <span class="info-val">🕒 2026-10-09 12:26:23</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">실행 소요 시간</span>
+              <span class="info-val">⚡ 0.01초</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">실행 스크립트</span>
+              <span class="info-val"><code>scripts/clean_pc_disk.py</code></span>
+            </div>
+          </div>
+
+          <div class="summary-box">
+            <span class="summary-title">최근 실행 결과:</span> 0개 파일 삭제 완료 (0.0 MB 확보, C: 여유 29.19 GB) (사용 중 25개 안전 건너뜀)
+          </div>
+
+          <div class="log-accordion">
+            <button class="accordion-btn" onclick="toggleLog('disk-cleaner')">
+              <span>📋 최근 실행 로그 & 오류 세부 정보 보기</span>
+              <span id="arr-disk-cleaner">▼</span>
+            </button>
+            <div class="accordion-content" id="log-disk-cleaner" style="display:none;">
+              
+              <div class="log-box"><strong>최근 실행 로그 (Tail):</strong><pre>[12:26:23]   [3/8] IDE 확장 프로그램 구버전 정리: C:\Users\User/.antigravity-ide/extensions
+[12:26:23]   [4/8] agy.exe 구버전 백업 파일 정리: C:\Users\User\AppData\Local\agy\bin
+[12:26:23]         삭제: agy.exe.1790535608659445200.old
+[12:26:23]   [5/8] 앱 구버전 설치 잔여 패키지 및 확장 휴지통 정리
+[12:26:23]   [6/8] 윈도우 업데이트 다운로드 캐시 정리: C:\Windows\SoftwareDistribution\Download
+[12:26:23]   [7/8] 사용자 Temp 폴더 정리: C:\Users\User\AppData\Local\Temp
+[12:26:23]   [8/8] 루트 임시 폴더 정리: C:\Temp
+[12:26:23]   [8/8] 루트 임시 폴더 정리: C:\tmp
+[12:26:23] 
+=== 정리 완료 요약 ===
+[12:26:23] 결과 상태     : SUCCESS
+[12:26:23] 소요 시간     : 0.01초
+[12:26:23] 삭제된 파일   : 0개
+[12:26:23] 확보된 용량   : 0.0 MB (0.0 GB)
+[12:26:23] 정리 후 C:여유: 29.19 GB (전체 118.67 GB)
+[12:26:23] 사용 중 건너뜀: 25개</pre></div>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="agent-card border-ok" id="card-html-header-repair">
+          <div class="card-header">
+            <div>
+              <div class="card-title-row">
+                <span class="agent-name">HTML 헤더 무결성 & 템플릿 복구기</span>
+                <span class="cat-tag">원고 파이프라인</span>
+              </div>
+              <div class="agent-desc">원고 초안의 주석 누락(<!--) 및 DOCTYPE/CSS 누락 여부를 검증하고 Platinum v5 정규 헤더로 자동 치환 복구</div>
+            </div>
+            <div class="status-wrap"><span class="badge badge-ok">✔️ 정상 완료</span></div>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-item">
+              <span class="info-label">동작 주기</span>
+              <span class="info-val">⏰ 매일 04:00 (원고 생성 직후 / 이미지 생성 직전)</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">최근 실행</span>
+              <span class="info-val">🕒 2026-09-30 08:34:38</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">실행 소요 시간</span>
+              <span class="info-val">⚡ 0.45초</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">실행 스크립트</span>
+              <span class="info-val"><code>scripts/repair_html_headers.py</code></span>
+            </div>
+          </div>
+
+          <div class="summary-box">
+            <span class="summary-title">최근 실행 결과:</span> 원고 7건 헤더 무결성 검증 및 Platinum v5 정규 템플릿 복구 완료
+          </div>
+
+          <div class="log-accordion">
+            <button class="accordion-btn" onclick="toggleLog('html-header-repair')">
+              <span>📋 최근 실행 로그 & 오류 세부 정보 보기</span>
+              <span id="arr-html-header-repair">▼</span>
+            </button>
+            <div class="accordion-content" id="log-html-header-repair" style="display:none;">
+              
+              <div class="log-box"><strong>최근 실행 로그 (Tail):</strong><pre>[08:34:38] Header repair completed: 7 files repaired.</pre></div>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="agent-card border-ok" id="card-image-generator">
+          <div class="card-header">
+            <div>
+              <div class="card-title-row">
+                <span class="agent-name">Gemini Pro/Flash 이미지 생성 & 매칭기</span>
+                <span class="cat-tag">원고 파이프라인</span>
+              </div>
+              <div class="agent-desc">원고 플레이스홀더를 파싱하여 Gemini 3 Pro(_pro.png)로 생성하고 쿼터 소진 시 Flash로 자동 전환 및 <img> 치환</div>
+            </div>
+            <div class="status-wrap"><span class="badge badge-ok">✔️ 정상 완료</span></div>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-item">
+              <span class="info-label">동작 주기</span>
+              <span class="info-val">⏰ 매일 04:00 (원고 생성 직후)</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">최근 실행</span>
+              <span class="info-val">🕒 2026-09-30 08:37:46</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">실행 소요 시간</span>
+              <span class="info-val">⚡ 78.5초</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">실행 스크립트</span>
+              <span class="info-val"><code>scripts/auto_generate_images.py</code></span>
+            </div>
+          </div>
+
+          <div class="summary-box">
+            <span class="summary-title">최근 실행 결과:</span> 17건 전량 Gemini 3 Pro(_pro.png) 생성 및 HTML <img> 태그 치환 완료
+          </div>
+
+          <div class="log-accordion">
+            <button class="accordion-btn" onclick="toggleLog('image-generator')">
+              <span>📋 최근 실행 로그 & 오류 세부 정보 보기</span>
+              <span id="arr-image-generator">▼</span>
+            </button>
+            <div class="accordion-content" id="log-image-generator" style="display:none;">
+              
+              <div class="log-box"><strong>최근 실행 로그 (Tail):</strong><pre>[08:37:46] [Success] All images processed and matched successfully.</pre></div>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="agent-card border-ok" id="card-upload-backlog-checker">
+          <div class="card-header">
+            <div>
+              <div class="card-title-row">
+                <span class="agent-name">네이버 블로그 RSS 업로드 백로그 감시기</span>
+                <span class="cat-tag">품질 & 정책 관리</span>
+              </div>
+              <div class="agent-desc">실제 네이버 등록 여부를 RSS로 대조하여 업로드가 밀렸을 시 원고가 낭비되지 않도록 신규 발행을 자동 일시정지</div>
+            </div>
+            <div class="status-wrap"><span class="badge badge-ok">✔️ 정상 완료</span></div>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-item">
+              <span class="info-label">동작 주기</span>
+              <span class="info-val">⏰ 매일 04:00 (발행 시작 전)</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">최근 실행</span>
+              <span class="info-val">🕒 2026-10-09 12:29:58</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">실행 소요 시간</span>
+              <span class="info-val">⚡ 1.2초</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">실행 스크립트</span>
+              <span class="info-val"><code>.scripts/daily-run.ps1 (Step 0.3)</code></span>
+            </div>
+          </div>
+
+          <div class="summary-box">
+            <span class="summary-title">최근 실행 결과:</span> 네이버 블로그 RSS 7건 등록 확인 (미업로드 백로그 0건, 정상 발행 허용)
+          </div>
+
+          <div class="log-accordion">
+            <button class="accordion-btn" onclick="toggleLog('upload-backlog-checker')">
+              <span>📋 최근 실행 로그 & 오류 세부 정보 보기</span>
+              <span id="arr-upload-backlog-checker">▼</span>
+            </button>
+            <div class="accordion-content" id="log-upload-backlog-checker" style="display:none;">
+              
+              <div class="log-box"><strong>최근 실행 로그 (Tail):</strong><pre>[SUCCESS] RSS items verified: 7 latest manuscripts uploaded.</pre></div>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="agent-card border-ok" id="card-remote-git-sync">
+          <div class="card-header">
+            <div>
+              <div class="card-title-row">
+                <span class="agent-name">원격 저장소(노트북) 양방향 동기화기</span>
+                <span class="cat-tag">동기화 & 배포</span>
+              </div>
+              <div class="agent-desc">회사 노트북에서 커밋/푸시된 작업 내역을 집 PC 실행 전 pull --rebase로 자동 통합하여 충돌 방지</div>
+            </div>
+            <div class="status-wrap"><span class="badge badge-ok">✔️ 정상 완료</span></div>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-item">
+              <span class="info-label">동작 주기</span>
+              <span class="info-val">⏰ 매일 04:00 (시작 시) 및 발행 완료 시</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">최근 실행</span>
+              <span class="info-val">🕒 2026-10-09 12:29:58</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">실행 소요 시간</span>
+              <span class="info-val">⚡ 2.1초</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">실행 스크립트</span>
+              <span class="info-val"><code>.scripts/daily-run.ps1 (Step 0.0 & Step 2)</code></span>
+            </div>
+          </div>
+
+          <div class="summary-box">
+            <span class="summary-title">최근 실행 결과:</span> origin/main 동기화 완료 (pull --rebase & push 충돌 방지 완료)
+          </div>
+
+          <div class="log-accordion">
+            <button class="accordion-btn" onclick="toggleLog('remote-git-sync')">
+              <span>📋 최근 실행 로그 & 오류 세부 정보 보기</span>
+              <span id="arr-remote-git-sync">▼</span>
+            </button>
+            <div class="accordion-content" id="log-remote-git-sync" style="display:none;">
+              
+              <div class="log-box"><strong>최근 실행 로그 (Tail):</strong><pre>[SUCCESS] Remote sync verified: origin/main up-to-date.</pre></div>
+            </div>
+          </div>
+        </div>
+        
+  </div>
+
+  <div class="guide-box">
+    <h3>💡 새로운 서브에이전트를 추가하는 방법</h3>
+    <p>앞으로 주기적인 업무(트렌드 키워드 수집, 통계 스크랩, 자동 백업 등)를 수행하는 서브에이전트를 확장할 때는 다음 순서로 연동하시면 됩니다:</p>
+    <ol>
+      <li><code>scripts/</code> 폴더에 실행할 파이썬 스크립트 작성 (실행 결과를 <code>.scripts/logs/subagents/&lt;id&gt;.json</code>으로 기록)</li>
+      <li><code>.scripts/subagents.json</code> 파일에 에이전트 이름, 주기, 스크립트 경로 1개 블록 등록</li>
+      <li><code>.scripts/daily-run.ps1</code> 내 적절한 단계(또는 요일 조건문)에 호출 구문 추가</li>
+      <li>대시보드 재빌드(<code>python scripts/build_subagents_dashboard.py</code>) 시 본 화면에 자동으로 카드가 생성되고 모니터링됩니다.</li>
+    </ol>
+  </div>
+</div>
+</body>
+</html>

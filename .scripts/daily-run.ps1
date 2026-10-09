@@ -81,6 +81,33 @@ try {
 } catch {
     Write-Log "WARN (Git Sync): $_"
 }
+# === Step 0.2: PC 디스크 & 캐시 정리 서브에이전트 (2026-10-09 신설) ===
+# 매주 일요일(또는 C: 드라이브 여유공간 5GB 미만 긴급 시) 안전 캐시/임시파일/구버전 확장 자동 정리
+Write-Log "=== Step 0.2: Disk Cleaner Subagent @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="
+try {
+    $cleanScript = Join-Path $ProjectRoot "scripts\clean_pc_disk.py"
+    $dow = (Get-Date).ToString("ddd")
+    $cDrive = Get-PSDrive C -EA SilentlyContinue
+    $cFreeGb = if ($cDrive) { [math]::Round($cDrive.Free / 1GB, 2) } else { 999 }
+    
+    $shouldClean = ($dow -eq "일") -or ($cFreeGb -lt 5.0)
+    if ($shouldClean -and (Test-Path -LiteralPath $cleanScript)) {
+        if ($cFreeGb -lt 5.0) {
+            Write-Log "긴급 정리 트리거: C: 드라이브 여유공간 ${cFreeGb} GB (< 5.0 GB)"
+        } else {
+            Write-Log "주간 정기 청소 트리거: 매주 일요일 정기 정리 실행"
+        }
+        python $cleanScript 2>&1 | ForEach-Object {
+            $line = "$_"
+            Write-Host $line
+            [System.IO.File]::AppendAllText($LogFile, "$line`r`n", $utf8NoBom)
+        }
+    } else {
+        Write-Log "SKIP: 오늘은 일요일이 아니며 C: 여유공간(${cFreeGb} GB)이 충분함."
+    }
+} catch {
+    Write-Log "WARN (Disk Cleaner): $_"
+}
 Write-Log ""
 
 # === Step 0.3: 업로드 백로그 점검 — 안 올라갔으면 오늘은 만들지 않는다 (2026-09-17 신설) ===
@@ -551,6 +578,23 @@ try {
     Write-Log "Prompt helper dashboard rebuild complete."
 } catch {
     Write-Log "ERROR (Prompt helper dashboard rebuild): $_"
+}
+
+# === Step 1.56: 서브에이전트 모니터링 대시보드 재빌드 (2026-10-09 신설) ===
+Write-Log ""
+Write-Log "=== Subagents Dashboard Rebuild @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="
+try {
+    $subagentDashScript = Join-Path $ProjectRoot "scripts\build_subagents_dashboard.py"
+    if (Test-Path -LiteralPath $subagentDashScript) {
+        python $subagentDashScript 2>&1 | ForEach-Object {
+            $line = "$_"
+            Write-Host $line
+            [System.IO.File]::AppendAllText($LogFile, "$line`r`n", $utf8NoBom)
+        }
+        Write-Log "Subagents dashboard rebuild complete."
+    }
+} catch {
+    Write-Log "ERROR (Subagents dashboard rebuild): $_"
 }
 
 # === Step 1.6: 인스타 카드 채널 (Phase C) ===
@@ -1103,6 +1147,17 @@ try {
     if (Test-Path $PromptHelperAbsPath) {
         $out = & git add -- "prompt_helper.html" 2>&1
         if ($out) { $out | ForEach-Object { Write-Log "git add prompt_helper.html: $_" } }
+    }
+
+    # 서브에이전트 모니터링 대시보드 및 상태 로그 stage
+    $SubagentsDashAbsPath = Join-Path $ProjectRoot "subagents_dashboard.html"
+    if (Test-Path $SubagentsDashAbsPath) {
+        $out = & git add -- "subagents_dashboard.html" 2>&1
+        if ($out) { $out | ForEach-Object { Write-Log "git add subagents_dashboard.html: $_" } }
+    }
+    $SubagentsLogsPath = Join-Path $ProjectRoot ".scripts\logs\subagents"
+    if (Test-Path $SubagentsLogsPath) {
+        $out = & git add -- ".scripts/logs/subagents" 2>&1
     }
 
     # 트래커 파일 stage (변경된 것만 자동으로 잡힘)

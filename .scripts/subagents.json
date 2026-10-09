@@ -1,0 +1,57 @@
+[
+  {
+    "id": "disk-cleaner",
+    "name": "PC 디스크 & 캐시 자동 청소기",
+    "description": "Hugging Face, NPM, IDE 구버전 확장 프로그램, 앱 설치파일 잔여물 등을 주기적으로 안전하게 정리하여 C드라이브 용량 확보",
+    "category": "시스템 유지보수",
+    "schedule": "매주 일요일 04:00 (또는 C: 여유공간 5GB 미만 긴급 시)",
+    "schedule_type": "weekly",
+    "trigger_day": "일",
+    "script": "scripts/clean_pc_disk.py",
+    "enabled": true
+  },
+  {
+    "id": "html-header-repair",
+    "name": "HTML 헤더 무결성 & 템플릿 복구기",
+    "description": "원고 초안의 주석 누락(<!--) 및 DOCTYPE/CSS 누락 여부를 검증하고 Platinum v5 정규 헤더로 자동 치환 복구",
+    "category": "원고 파이프라인",
+    "schedule": "매일 04:00 (원고 생성 직후 / 이미지 생성 직전)",
+    "schedule_type": "daily",
+    "trigger_day": "all",
+    "script": "scripts/repair_html_headers.py",
+    "enabled": true
+  },
+  {
+    "id": "image-generator",
+    "name": "Gemini Pro/Flash 이미지 생성 & 매칭기",
+    "description": "원고 플레이스홀더를 파싱하여 Gemini 3 Pro(_pro.png)로 생성하고 쿼터 소진 시 Flash로 자동 전환 및 <img> 치환",
+    "category": "원고 파이프라인",
+    "schedule": "매일 04:00 (원고 생성 직후)",
+    "schedule_type": "daily",
+    "trigger_day": "all",
+    "script": "scripts/auto_generate_images.py",
+    "enabled": true
+  },
+  {
+    "id": "upload-backlog-checker",
+    "name": "네이버 블로그 RSS 업로드 백로그 감시기",
+    "description": "실제 네이버 등록 여부를 RSS로 대조하여 업로드가 밀렸을 시 원고가 낭비되지 않도록 신규 발행을 자동 일시정지",
+    "category": "품질 & 정책 관리",
+    "schedule": "매일 04:00 (발행 시작 전)",
+    "schedule_type": "daily",
+    "trigger_day": "all",
+    "script": ".scripts/daily-run.ps1 (Step 0.3)",
+    "enabled": true
+  },
+  {
+    "id": "remote-git-sync",
+    "name": "원격 저장소(노트북) 양방향 동기화기",
+    "description": "회사 노트북에서 커밋/푸시된 작업 내역을 집 PC 실행 전 pull --rebase로 자동 통합하여 충돌 방지",
+    "category": "동기화 & 배포",
+    "schedule": "매일 04:00 (시작 시) 및 발행 완료 시",
+    "schedule_type": "daily",
+    "trigger_day": "all",
+    "script": ".scripts/daily-run.ps1 (Step 0.0 & Step 2)",
+    "enabled": true
+  }
+]
