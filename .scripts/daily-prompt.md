@@ -224,27 +224,38 @@
 - **제목** (`Naverblog.md` 03조 3.1·3.2): 클리셰(`완전 가이드`·`완벽 가이드`·`총정리`·`끝판왕`·`A to Z`) 금지. `2026`은 검색어 핵심일 때만(같은 날 7건 중 최대 1~2건). 자연스러운 한 문장.
   - **롱테일 엔지니어링(3.2) 전 카테고리 필수**: 제목은 카테고리 라벨이 아니라 *검색 질의문*. `[구체 고유명사·정확 제도명] + [한정 수식어 1~2: 대상·상황·시기] + [검색 의도어/숫자: 요금·얼마·무료시간·신청 방법·가는 법·개화 등]`을 최소 2레버 조합. ❌`서울 4대궁 입장료` → ✅`경복궁 무료입장 되는 날과 4대궁 야간개장`.
 - **가격 표기** (Naverblog.md 2.2): 품목별 단가 나열 지양, 공식 고정 요금만(입장료·주차료 등). 먹거리는 "1만 원 안팎" 식 대략 범위.
-- **이미지**: **원고 카테고리별 이미지 영역 수 — 여행 원고(`travel_*`)는 3개, 생활정보 원고(그 외 전 prefix)는 2개** (2026-07-13 발행분부터 적용).
-  ⚠️ **네이버 원고 작성 시에는 항상 아래 `<div class="img-placeholder">` 표준 서식(영문 프롬프트 80~150 단어 포함)으로 작성한다.** (원고 생성 직후 자동화 스크립트 Step 1.45가 이 프롬프트를 읽어 고품질 Pro/Flash 이미지를 생성하고 자동으로 `<img>` 태그로 치환한다. 원고 작성 단계에서 `<img>` 태그를 직접 작성하지 말 것.)
-  **두 경우 모두 이미지 바로 아래 `<div class="img-caption">` 캡션 줄이 반드시 있어야 한다(생략 절대 금지).**
+- **이미지 (🔴 2026-10-15 방안 B 전면 개정 — 100% 무료 쿼터 & 비주얼 인포그래픽)**:
+  - **대표 이미지 생성 영역(placeholder)은 모든 원고 공통 "글당 딱 1개(메인 썸네일)"로 배치한다.**
+    - 하루 7편 × 1장 = **하루 총 7장**만 생성.
+    - Antigravity IDE의 일일 무료 쿼터(약 13~14개) 범위 내에서 100% 완결되므로 **Google AI Studio 유료 API 과금 0원**을 완벽하게 보장한다.
+    - 파일명 강제: `images/YYMMDD/<seq>_<slug>_1.png` (정규식 `^images/\d{6}/[1-7]_.+_1\.png$`).
+  - **본문의 2번째, 3번째 이미지 자리에는 AI 이미지 대신 "CSS 비주얼 인포그래픽 카드"를 필수 배치한다.**
+    (스마트에디터 붙여넣기 호환, 모바일 가독성 및 체류 시간 극대화, C-Rank/DIA 품질 점수 상승)
+    - **2번째 비주얼 자리 (코스/절차 인포그래픽)**: 추천 동선 3대 코스 또는 단계별 핵심 절차, 소요시간, 추천 포토존/실전 팁 요약 카드.
+    - **3번째 비주얼 자리 (핵심 지표 매트릭스)**: 입장료·주차비·골든타임·거리 등 독자가 가장 궁금해하는 핵심 수치 4분할 지표 카드.
+  
+  ⚠️ **네이버 원고 작성 시 대표 썸네일은 항상 아래 `<div class="img-placeholder">` 표준 서식(영문 프롬프트 80~150 단어 포함)으로 작성한다.**
+  이미지 바로 아래 `<div class="img-caption">` 캡션 줄이 반드시 있어야 한다(생략 절대 금지).
 
-  **표준 placeholder 블록:**
+  **표준 대표 썸네일 placeholder 블록:**
 
   ```html
   <div class="img-area">
     <div class="img-placeholder">
       <div class="ph-head">
-        <span>📷 AI 이미지 생성 영역</span>
-        <span class="ph-file">images/YYMMDD/<seq>_<slug>_<idx>.png</span>
+        <span>📷 AI 대표 메인 썸네일 생성 영역</span>
+        <span class="ph-file">images/YYMMDD/<seq>_<slug>_1.png</span>
       </div>
-      <pre class="prompt-text" id="prompt-<seq>-<idx>">[영문 프롬프트 80~150 단어, photorealistic, ultra high detail, 1:1 aspect ratio]</pre>
-      <button class="copy-btn" onclick="copyPrompt('prompt-<seq>-<idx>')">📋 프롬프트 복사하기</button>
+      <pre class="prompt-text" id="prompt-<seq>-1">[영문 프롬프트 80~150 단어, photorealistic, ultra high detail, 1:1 aspect ratio]</pre>
+      <button class="copy-btn" onclick="copyPrompt('prompt-<seq>-1')">📋 프롬프트 복사하기</button>
     </div>
     <div class="img-caption">[한글 캡션] / AI 제작 이미지</div>
   </div>
   ```
-  - 파일명 강제 `{원고seq:1~7}_{keyword}_{이미지seq:1~3}.png` (정규식 `^images/\d{6}/[1-7]_.+_[1-3]\.png$`). 저장 직전 모든 `<img src>`·placeholder의 `ph-file`이 이 형식인지 확인.
-  - **저장 직전 캡션 자가검증 (필수)**: 각 `<img>` 또는 `.img-placeholder` 바로 다음 형제로 `<div class="img-caption">…/ AI 제작 이미지</div>`가 **원고 카테고리별 목표 개수(여행 `travel_*` = 3개, 생활정보 그 외 prefix = 2개)** 만큼 존재하는지 확인. `<img>` 개수 = `img-caption` div 개수 = (해당 카테고리 목표 개수)가 아니면 저장 금지·보완. (캡션 문구는 `<img alt>`와 같아도 무방하나 화면에 보이는 `img-caption` div를 절대 빠뜨리지 않는다.)
+
+  - **저장 직전 캡션 및 인포그래픽 자가검증 (필수)**:
+    - 원고당 대표 `.img-placeholder` 1개 및 바로 다음 형제로 `<div class="img-caption">…/ AI 제작 이미지</div>` 1개 존재 확인.
+    - 본문에 코스/절차 인포그래픽 카드 1개 + 핵심 지표 매트릭스 카드 1개 배치 확인.
 
 - **팩트체크**: 일정·요금·운영시간 등은 `WebSearch`로 2026년 값 확인. **음력 명절(단오·추석·설·정월대보름·초파일·한식 등)은 양력 환산을 반드시 WebSearch로 검증** (예: 2026 단오 = 6/19). 확인 못 하면 구체 날짜 단정 금지(시즌 표기로 회피).
   - **생활정보 §02(지원금·금융) 글 YMYL**: 정부24·복지로·홈택스·건강보험공단 등 **1차 출처를 인용**하고 금액·지급일·자격 요건을 발행 직전 재검증. 확인 못 한 수치는 단정 금지(범위·"공고 확인" 안내로 회피).
@@ -285,13 +296,12 @@
   <div style="font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; padding: 16px;">
   ```
 - **표 행 배경**: 각 `<td>`에 직접 `background: #f1faf9;`(여행 짝수행) / `#fff`(홀수행). `nth-child` 안 됨.
-- **이미지 (핵심·반복 사고 지점)**: 네이버에서 만든 이미지(`images/YYMMDD/<seq>_<slug>_<idx>.png`)를 **표준 `<img>` 1줄 블록 3개로 재사용한다.** 새 이미지 안 만들고, **네이버의 `img-placeholder` 박스(`📷 AI 이미지 생성 영역`·`📋 프롬프트 복사하기` 등)는 절대 carry over하지 않는다.** 표준 블록:
+- **이미지 (🔴 2026-10-15 방안 B 적용)**: 네이버에서 생성된 대표 썸네일 이미지(`images/YYMMDD/<seq>_<slug>_1.png`) **1개를 상단에 표준 `<img>` 블록으로 재사용한다.** 새 이미지는 만들지 않으며, **네이버의 `img-placeholder` 박스는 절대 carry over하지 않는다.** 표준 블록:
   ```html
-  <div style="margin:30px 0;text-align:center;"><img alt="캡션" src="../../images/YYMMDD/<seq>_<slug>_<idx>.png" style="max-width:100%;height:auto;border-radius:8px;"/><div style="font-size:0.9em;color:#666;margin-top:10px;font-style:italic;">캡션 / AI 제작 이미지</div></div>
+  <div style="margin:30px 0;text-align:center;"><img alt="캡션" src="../../images/YYMMDD/<seq>_<slug>_1.png" style="max-width:100%;height:auto;border-radius:8px;"/><div style="font-size:0.9em;color:#666;margin-top:10px;font-style:italic;">캡션 / AI 제작 이미지</div></div>
   ```
-  - `<img>`는 **네이버판과 1:1**(카테고리별 개수 동일 — 여행 `travel_*` 3개, 생활정보 그 외 prefix 2개). 같은 `src` 중복 금지.
   - `alt`·캡션은 네이버와 다른 문구로 재작성(라벨 `/ AI 제작 이미지`는 유지).
-  - **⚠️ 캡션은 같은 이미지를 가리켜야 한다 (피사체 고정·문구만 변경)**: 이미지는 네이버와 **완전히 같은 파일**을 공유하므로, 티스토리의 `_<idx>.png` 캡션은 **네이버의 같은 `_<idx>.png` 캡션이 묘사한 피사체·장면을 그대로 유지**한 채 표현(어휘·어순)만 바꿔 쓴다. 예: 네이버 `_2.png`=`청량사 유리보전과 6월 수국` → 티스토리 `_2.png`=`청량사 유리보전 앞 수국`(○). 같은 `_2.png`인데 `강구항 어시장` 같이 **다른 대상**을 적으면 위반(엉뚱한 캡션). 티스토리는 본문 꼭지 순서가 네이버와 달라도 **캡션은 본문 문맥이 아니라 그 이미지가 실제로 보여주는 대상**을 기준으로 쓴다(논리 정합 필수). 작성 후 3개 캡션이 각 src의 실제 피사체와 맞는지 네이버 캡션과 1:1 대조 확인.
+  - 본문 2번째, 3번째 자리는 네이버판과 동일하게 인라인 스타일 기반의 코스/절차 인포그래픽 박스 및 핵심 지표 매트릭스 카드를 배치한다.
 
 - **내부 링크**: 하루 1건이므로 `recommend-area`는 **최근 티스토리 원고 2건**(`../<최근 발행일자>/`의 서로 다른 날, 가능하면 관련 주제)으로 건다. 과거 폴더에 티스토리가 없으면 링크 없이 박스만 두지 말고 가장 근접 2건을 찾는다.
 - **해시태그**: 본문 끝에 태그 칩 **10개** (네이버 원본 `.tag` 그대로 또는 동등):
@@ -302,7 +312,7 @@
 
 **저장 직전 자가검증** (티스토리 1건):
 - [ ] 외곽 래퍼 1개, Platinum h1 1개, 번호 h2 9+, `<style>·class=` 0
-- [ ] `<img>` 3개·같은 src 중복 0·placeholder 박스 0, 추천 박스 1개, 태그 칩 10개
+- [ ] `<img>` 1개(대표 썸네일)·placeholder 박스 0, 추천 박스 1개, 태그 칩 10개
 - [ ] **미러 아님**: 네이버판에 없는 부가가치 ≥2(표·FAQ·체크리스트·비교 중) 포함, 문장 독립 작성·네이버와 저유사
 - [ ] **날조 경험 0**: '직접 가보니·가봤·먹어보니·들렀더니' 등 미체험 1인칭 경험 서술 전무
 - [ ] 1차 출처 ≥2 명시 인용 + 정보 기준일 + 공식 재확인 고지(📝 정보 메모)

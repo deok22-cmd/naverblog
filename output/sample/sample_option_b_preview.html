@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>[방안 B 샘플] 고양·파주 10월 국화 축제와 일산 호수공원 억새밭 — 대표 1장 + 비주얼 인포그래픽 구성</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #2e7d32; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #2e7d32; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #2e7d32; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  
+  /* 대표 이미지 영역 (글당 딱 1장만 생성) */
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #2e7d32; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #2e7d32; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+
+  /* [방안 B 특화] 2번째 이미지 대체: 모던 인포그래픽 코스 카드 */
+  .infographic-course-box {
+    background: linear-gradient(135deg, #f0fdf4 0%, #e8f5e9 100%);
+    border: 1.5px solid #a5d6a7;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.06);
+  }
+  .infographic-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    font-weight: 800;
+    color: #1b5e20;
+    font-size: 1.05em;
+    border-bottom: 2px dashed #c8e6c9;
+    padding-bottom: 10px;
+  }
+  .course-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .course-card {
+    flex: 1;
+    min-width: 190px;
+    background: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 14px;
+    position: relative;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  }
+  .course-badge {
+    display: inline-block;
+    background: #2e7d32;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-bottom: 6px;
+  }
+  .course-title {
+    font-size: 0.95em;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 6px;
+  }
+  .course-desc {
+    font-size: 0.84em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* [방안 B 특화] 3번째 이미지 대체: 핵심 지표 하이라이트 매트릭스 카드 */
+  .infographic-stat-box {
+    background: #ffffff;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  }
+  .stat-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+  }
+  .stat-card {
+    flex: 1;
+    min-width: 140px;
+    background: #f8faf9;
+    border: 1px solid #e8f5e9;
+    border-radius: 8px;
+    padding: 14px 10px;
+    text-align: center;
+  }
+  .stat-icon { font-size: 1.6em; margin-bottom: 4px; }
+  .stat-label { font-size: 0.8em; color: #666; font-weight: 600; margin-bottom: 4px; }
+  .stat-value { font-size: 1.15em; font-weight: 800; color: #1b5e20; }
+  .stat-sub { font-size: 0.75em; color: #888; margin-top: 2px; }
+
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #2e7d32; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #2e7d32; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#2e7d32'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>고양·파주 10월 국화 축제와 일산 호수공원 억새밭 — 대표 1장 + 비주얼 인포그래픽 구성</h1>
+
+<div class="intro-box">
+  <strong>가을의 절정을 알리는 진한 국화 향기와 은빛 억새의 물결을 만끽하는 수도권 당일치기 나들이입니다.</strong><br/><br/>
+  10월 중순 고양 일산 호수공원은 형형색색의 가을 국화 분재와 조형물이 가득한 야외 꽃 전시, 그리고 호숫가를 따라 바람에 흔들리는 은빛 억새밭이 어우러져 장관을 이룹니다. 입장료 부담 없이 누구나 자유롭게 거닐 수 있는 무료 명소로, 인근 파주의 가을 명소와 함께 묶어 둘러보기 좋습니다. 호수공원 내 4곳의 공영주차장 요금과 혼잡 회피 방법까지 정리했습니다.
+</div>
+
+<!-- ============================================================== -->
+<!-- [방안 B 핵심 1] 글당 유일한 대표 메인 이미지 (하루 7편 = 7장만 생성) -->
+<!-- Antigravity IDE 무료 쿼터(13~14장) 안에서 100% 무료 처리 (API 과금 0원) -->
+<!-- ============================================================== -->
+<div class="img-area">
+  <!-- 이미지 생성 전: 아래와 같은 placeholder 표준 서식 유지 -->
+  <!-- 이미지 생성 후: <img src="../../images/261015/1_travel_goyang_chrysanthemum_1.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/> 로 자동 치환 -->
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 대표 메인 썸네일 생성 영역 (글당 딱 1장)</span>
+      <span class="ph-file">images/261015/1_travel_goyang_chrysanthemum_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-1-1">A picturesque autumn landscape of Ilsan Lake Park in October, South Korea. Colorful yellow, purple, and white chrysanthemums blooming in artistically arranged flower beds in the foreground. In the background, tall silver miscanthus (pampas grass) gently swaying in the autumn breeze along the serene lake walking trail. Warm golden sunlight of a crisp October afternoon filtering through red and golden maple trees, tranquil water reflection, authentic travel photography, beautiful natural lighting, ultra high detail, photorealistic, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-1-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">일산 호수공원 주제광장에 화려하게 펼쳐진 10월 가을 국화 전시 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 수도권 가을 정취의 중심, 일산 호수공원 가을 풍경</h2>
+동양 최대 규모의 인공 호수를 자랑하는 고양시 일산 호수공원(총면적 103만 4,000㎡)은 수도권 시민들에게 가장 친숙하면서도 언제 찾아도 아름다운 휴식처입니다.<br/><br/>
+봄의 벚꽃과 튤립에 이어 가을이 찾아오면 호수 둘레 4.7km를 감싸고 있는 메타세쿼이아, 은행나무, 단풍나무들이 일제히 짙은 가을빛으로 물듭니다.<br/><br/>
+잔잔한 호수 수면 위로 파란 하늘과 알록달록한 단풍이 투영되는 모습은 마치 한 폭의 수채화를 감상하는 듯한 평온함을 선사합니다.<br/><br/>
+넓은 평지 지형으로 이루어져 있어 유모차나 휠체어를 동반한 가족 나들이는 물론, 가벼운 산책과 피크닉을 즐기기에 더없이 최적화된 공간입니다.
+
+<h2>02 | 10월 일산 호수공원 국화 전시와 가을꽃 테마정원</h2>
+매년 10월이면 일산 호수공원 내 고양꽃전시관 광장과 한울광장 일대에서는 <strong>가을 국화 및 가을꽃 야외 전시</strong>가 풍성하게 펼쳐집니다.<br/><br/>
+노란색, 자주색, 순백색의 대국(大菊)과 소국 수만 본이 모여 거대한 꽃 터널과 동물 모양의 토피어리, 탑 모양의 분재 조형물을 형성합니다.<br/><br/>
+전시 공간에 들어서는 순간 은은하고 깊은 국화 향기가 바람을 타고 번져와 후각을 기분 좋게 자극합니다.<br/><br/>
+별도의 입장료 없이 누구나 무료로 자유롭게 관람하고 사진을 찍을 수 있어, 가을 주말이면 알록달록한 꽃밭을 배경으로 추억을 남기려는 나들이객들의 발길이 끊이지 않습니다.
+
+<h2>03 | 전통정원과 달맞이섬 은빛 억새·갈대 산책로</h2>
+꽃 전시장을 지나 호수 안쪽으로 발걸음을 옮기면 고즈넉한 한국 전통정원과 <strong>달맞이섬(월파정)</strong> 주변으로 은빛 억새 군락이 펼쳐집니다.<br/><br/>
+호숫가 수변 데크길을 따라 키 높이만큼 자란 은빛 억새와 갈대가 가을바람에 서걱거리며 춤을 추는 소리는 도심의 소음을 완전히 잊게 만듭니다.<br/><br/>
+특히 해 질 녘인 오후 5시 무렵에 방문하면 황금빛으로 물드는 가을 노을이 억새 이삭 사이로 쏟아져 내려 환상적인 역광 사진을 담을 수 있습니다.
+
+<!-- ============================================================== -->
+<!-- [방안 B 핵심 2] 기존 2번째 AI 이미지 자리를 대체하는 모던 코스 카드 -->
+<!-- 복사-붙여넣기 시 스마트에디터 완벽 지원 + 모바일 가독성 및 체류시간 급상승 -->
+<!-- ============================================================== -->
+<div class="infographic-course-box">
+  <div class="infographic-header">
+    <span style="font-size: 1.2em;">🗺️</span>
+    <span>일산 호수공원 가을 힐링 3대 핵심 추천 코스 가이드</span>
+  </div>
+  <div class="course-grid">
+    <div class="course-card">
+      <div class="course-badge">코스 A · 약 40분</div>
+      <div class="course-title">🌼 가을 국화 & 꽃전시 코스</div>
+      <div class="course-desc">
+        제2주차장 → 고양꽃전시관 광장 → 주제광장 꽃터널 → 한울광장<br/>
+        <strong>포인트</strong>: 다채로운 국화 분재와 가을꽃 포토존 중심 (가족·연인 추천)
+      </div>
+    </div>
+    <div class="course-card">
+      <div class="course-badge">코스 B · 약 50분</div>
+      <div class="course-title">🌾 은빛 억새 & 노을 산책로</div>
+      <div class="course-desc">
+        전통정원 → 달맞이섬(월파정) → 수변 데크길 억새 군락<br/>
+        <strong>포인트</strong>: 16:30~17:30 골든아워 황금빛 역광 인생샷 명당
+      </div>
+    </div>
+    <div class="course-card">
+      <div class="course-badge">코스 C · 약 25분</div>
+      <div class="course-title">🚲 호수 4.7km 단풍 라이딩</div>
+      <div class="course-desc">
+        자전거 전용도로 완비 (보행로 완전 분리)<br/>
+        <strong>포인트</strong>: 메타세쿼이아길 & 단풍나무 가로수길 시원한 가을바람
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 14px; font-size: 0.85em; color: #2e7d32; text-align: center; background: rgba(255,255,255,0.7); padding: 8px 12px; border-radius: 6px; font-weight: 600;">
+    💡 <strong>관람 팁</strong>: 꽃전시관 광장에서 국화 향기를 맡은 후, 오후 4시 이후 달맞이섬 억새길로 이동하면 최상의 조명을 만날 수 있습니다.
+  </div>
+</div>
+
+<h2>04 | 파주 벽초지수목원 & 율곡이이유적지 연계 국화 명소</h2>
+고양 일산 호수공원을 둘러본 후 시간 여유가 있다면 인근 파주의 가을 명소로 코스를 확장해보세요.<br/><br/>
+• <strong>파주 벽초지수목원</strong>: 동서양의 정원이 조화를 이루는 명소로, 10월에는 유럽식 신화의 정원과 동양 정원 곳곳에 수백만 송이의 가을 국화가 만발합니다. 화려한 분수와 조각상, 가을 단풍이 어우러져 이국적인 인생샷을 남길 수 있습니다.<br/><br/>
+• <strong>파주 율곡이이유적지 (자운서원)</strong>: 율곡 이이 선생의 학덕을 기리는 곳으로, 서원 입구에 수령 수백 년 된 거대한 은행나무 거목들이 황금빛 비를 뿌리는 가을 대표 출사지입니다. 서원 주변 잔디밭에는 가을 야생화와 국화가 함께 피어납니다.<br/><br/>
+• <strong>임진각 평화누리공원</strong>: 드넓은 잔디 언덕에 수천 개의 바람개비가 돌아가는 명소로, 시원한 가을바람을 맞으며 연날리기와 산책을 즐기기에 훌륭합니다.
+
+<h2>05 | 일산 호수공원 주차장 4곳 위치와 요금·진입 팁</h2>
+일산 호수공원은 공원 외곽을 따라 총 4개의 공영주차장(제1~제4주차장)이 마련되어 있습니다.<br/><br/>
+목적지에 따라 가까운 주차장을 선택해야 불필요한 보행 시간을 줄일 수 있습니다.
+
+<table class="info-table">
+<tr>
+<th>주차장 명칭</th>
+<th>인접 명소 및 추천 목적</th>
+<th>주차 면수</th>
+<th>주차 요금</th>
+</tr>
+<tr>
+<td>제1주차장 (남쪽)</td>
+<td>자연학습장, 전통정원, 남측 피크닉장</td>
+<td>약 250면</td>
+<td>최초 30분 500원, 초과 10분당 100원 (1시간 800원)</td>
+</tr>
+<tr>
+<td>제2주차장 (동쪽)</td>
+<td>고양꽃전시관, 주제광장 (국화전시 최인접)</td>
+<td>약 350면</td>
+<td>10분당 80원 (1시간 480원)</td>
+</tr>
+<tr>
+<td>제3주차장 (북동)</td>
+<td>한울광장, 노래하는 분수대 방면</td>
+<td>약 800면 (가장 넓음)</td>
+<td>10분당 80원 (1시간 480원)</td>
+</tr>
+<tr>
+<td>제4주차장 (북쪽)</td>
+<td>노래하는 분수대, 킨텍스 방향</td>
+<td>약 580면</td>
+<td>10분당 80원 (1시간 480원)</td>
+</tr>
+</table>
+
+<!-- ============================================================== -->
+<!-- [방안 B 핵심 3] 기존 3번째 AI 이미지 자리를 대체하는 핵심 지표 매트릭스 -->
+<!-- 검색 독자가 가장 궁금해하는 핵심 수치를 직관적 카드로 요약 제공 -->
+<!-- ============================================================== -->
+<div class="infographic-stat-box">
+  <div style="font-weight: 800; color: #1b5e20; font-size: 1.05em; margin-bottom: 4px; display: flex; align-items: center; gap: 8px;">
+    <span>📊</span> <span>일산 호수공원 나들이 핵심 이용 정보 한눈에 보기</span>
+  </div>
+  <div style="font-size: 0.85em; color: #666;">방문 전 꼭 확인해야 할 주요 이용 요금 및 운영 기준 요약표입니다.</div>
+  
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="stat-icon">🎟️</div>
+      <div class="stat-label">공원 및 국화전시 입장료</div>
+      <div class="stat-value" style="color: #2e7d32;">전구역 무료</div>
+      <div class="stat-sub">연중무휴 상시 개방</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">🅿️</div>
+      <div class="stat-label">공영주차장 요금 (제2~4)</div>
+      <div class="stat-value">1시간 480원</div>
+      <div class="stat-sub">3시간 주차 시 1,440원</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">⏰</div>
+      <div class="stat-label">억새 포토존 골든타임</div>
+      <div class="stat-value" style="color: #e65100;">16:30 ~ 17:30</div>
+      <div class="stat-sub">달맞이섬 수변 노을</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">🚲</div>
+      <div class="stat-label">순환 둘레길 거리</div>
+      <div class="stat-value">4.7 km</div>
+      <div class="stat-sub">자전거 25분 / 도보 80분</div>
+    </div>
+  </div>
+</div>
+
+<h2>06 | 호수공원 자전거 대여 요금과 둘레길 라이딩 코스</h2>
+일산 호수공원의 진면목을 제대로 즐기는 또 다른 방법은 자전거 라이딩입니다.<br/><br/>
+공원 내부에는 보행자 전용 산책로와 자전거 전용도로가 완벽하게 분리되어 있어 안전하고 쾌적하게 페달을 밟을 수 있습니다.<br/><br/>
+공원 진입로와 정발산역, 마두역 인근에는 고양시 공공자전거 및 민간 공유 자전거가 넉넉히 비치되어 있습니다.<br/><br/>
+공원 둘레를 따라 도는 4.7km 순환 코스는 평지 직선 구간이 많아 약 25분이면 여유롭게 한 바퀴를 완주할 수 있습니다.
+
+<h2>07 | 라페스타 & 웨스턴돔 맛집거리 점심 식사 추천</h2>
+공원 제2·제3주차장 맞은편으로 길을 건너면 일산의 대표 상업지구인 <strong>웨스턴돔과 라페스타</strong>가 바로 연결됩니다.<br/><br/>
+도보로 5~10분 거리에 수많은 맛집과 카페가 밀집해 있어 점심 식사 장소를 고민할 필요가 없습니다.<br/><br/>
+• <strong>일산 칼국수</strong>: 진한 닭 육수에 바지락이 듬뿍 들어간 칼국수로 쌀쌀한 가을에 최고의 인기를 누립니다.<br/>
+• <strong>웨스턴돔 브런치 & 베이커리</strong>: 트렌디한 인테리어의 파스타, 화덕 피자, 수제버거 맛집들이 즐비합니다.<br/>
+• <strong>라페스타 먹자골목</strong>: 찌개, 고기구이, 해물 요리 등 가성비 뛰어난 다양한 식사 메뉴를 취향대로 골라 즐길 수 있습니다.
+
+<h2>08 | 가을 호수공원 피크닉 준비물과 돗자리 명당</h2>
+10월의 맑은 가을날, 일산 호수공원 잔디밭에서 즐기는 피크닉은 잊지 못할 추억을 만들어줍니다.
+
+<div class="step-box">
+<strong>🧺 호수공원 가을 피크닉 팁 & 추천 스팟</strong><br/><br/>
+  1. <strong>피크닉 명당</strong>: 제1주차장 인근 잔디광장 및 달맞이섬 맞은편 느티나무 그늘 아래 잔디밭<br/>
+  2. <strong>필수 준비물</strong>: 방수 피크닉 매트(돗자리), 얇은 무릎담요(바람막이용), 보온병에 담긴 따뜻한 차<br/>
+  3. <strong>주의 사항</strong>: 공원 내 텐트 및 그늘막 설치는 엄격히 금지(과태료 부과 대상), 돗자리만 허용<br/>
+  4. <strong>환경 보호</strong>: 발생한 쓰레기는 반드시 되가져가거나 분리수거장에 지정 배출<br/>
+  5. <strong>반려견 동반</strong>: 목줄 착용 및 배변봉투 지참 시 동반 산책 가능 (전시 구역 진입 시 주의)
+</div>
+
+<h2>09 | 고양·파주 당일치기 가을 힐링 나들이 코스 일정표</h2>
+수도권에서 출발해 하루 만에 가을의 꽃과 억새를 완벽하게 즐기는 추천 동선입니다.
+
+<table class="info-table">
+<tr>
+<th>시간대</th>
+<th>방문 장소 및 코스</th>
+<th>주요 일정 내용</th>
+</tr>
+<tr>
+<td>10:00 ~ 12:00</td>
+<td>일산 호수공원 꽃전시관 광장</td>
+<td>가을 국화 야외 전시 관람 및 분재 포토존 사진 촬영</td>
+</tr>
+<tr>
+<td>12:00 ~ 13:30</td>
+<td>웨스턴돔 / 라페스타</td>
+<td>도보 5분 거리 맛집가에서 점심 식사 및 카페 휴식</td>
+</tr>
+<tr>
+<td>13:30 ~ 15:30</td>
+<td>호수 둘레길 & 달맞이섬</td>
+<td>은빛 억새밭 산책 또는 4.7km 자전거 라이딩</td>
+</tr>
+<tr>
+<td>16:00 ~ 18:00</td>
+<td>파주 율곡이이유적지 (자운서원)</td>
+<td>수령 수백 년 은행나무 거목 단풍 관람 및 귀가</td>
+</tr>
+</table>
+
+<div class="tip-box">
+<strong>💡 호수공원 가을 나들이 최종 요약 한 줄 팁</strong><br/>
+주말 방문 시 오전 11시 이전에 도착해야 제2주차장에 안전하게 주차할 수 있습니다. 만차 시 제3주차장으로 진입하세요!
+</div>
+
+<div class="recommend-area">
+<strong>📌 함께 보면 좋은 지난 가을 나들이 & 생활 정보</strong><br/><br/>
+  • <a href="../261014/hot_winter_tire_replacement_timing_cost.html">겨울 타이어 언제 갈아야 하나 — 기온 7도 기준 교체 시기와 보관 비용 비교표</a><br/>
+  • <a href="../261013/travel_yangju_nari_park_globe_amaranth_fall.html">양주 나리공원 천일홍 축제 꽃 절정 시기와 주차 팁</a>
+</div>
+
+<div class="tags">
+<span class="tag">#일산호수공원</span>
+<span class="tag">#고양가을국화축제</span>
+<span class="tag">#10월가볼만한곳</span>
+<span class="tag">#일산호수공원억새</span>
+<span class="tag">#일산호수공원주차장</span>
+<span class="tag">#호수공원피크닉</span>
+<span class="tag">#가을당일치기여행</span>
+<span class="tag">#달맞이섬월파정</span>
+<span class="tag">#수도권단풍명소</span>
+<span class="tag">#파주가을명소</span>
+</div>
+
+</body>
+</html>

@@ -227,12 +227,20 @@ def main():
     skip_count = 0
     quota_exceeded = False
     
+    allow_paid_api = "--force-paid-api" in sys.argv
     current_model = "gemini-3-pro-image"
     fallback_model = "gemini-2.5-flash-image"
     
-    print(f"\nImage generation starting (Primary: {current_model}, Fallback: {fallback_model})...")
+    if not allow_paid_api:
+        print("\n[Safety Lock Active] Direct Google AI Studio paid API calls are DISABLED to prevent credit card billing.")
+        print("Images should be created using Antigravity IDE free quota or prompt_helper.html.")
+        print("Skipping API generation and proceeding to Step 3 (matching existing images on disk)...")
+    else:
+        print(f"\n[Warning: Paid API Enabled] Generation starting (Primary: {current_model}, Fallback: {fallback_model})...")
     
     for idx, item in enumerate(tasks, 1):
+        if not allow_paid_api:
+            break
         base_stem = item["base_stem"]
         ext = item["ext"]
         orig_fname = item["orig_filename"]

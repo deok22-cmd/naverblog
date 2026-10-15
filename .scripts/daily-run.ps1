@@ -1,4 +1,4 @@
-﻿# Naverblog 일일 자동 발행 PowerShell 래퍼
+# Naverblog 일일 자동 발행 PowerShell 래퍼
 # Windows 작업 스케줄러가 매일 새벽 4:00 실행
 # 1) Antigravity CLI로 원고 7건 작성 → 2) 작성 결과만 GitHub에 자동 push
 
@@ -545,25 +545,25 @@ try {
     Write-Log "ERROR (Fact-Check Subagent): $_"
 }
 
-# === Step 1.45: 원고 이미지 자동 생성 및 원고 본문 매칭 (2026-09-25 신설) ===
-# index.html 순서대로 이미지를 자동 생성하고 본문 placeholder를 <img>로 치환.
-# 쿼터 도달 시 prompt_helper.html을 자동 갱신하여 수동 제작으로 유연하게 인계.
+# === Step 1.45: 프롬프트 헬퍼 대시보드 갱신 (2026-10-15 개정: Antigravity 무료 쿼터 방안 B) ===
+# 유료 Google Cloud API 과금 방지를 위해 외부 직접 호출을 비활성화하고,
+# Antigravity IDE 내장 무료 쿼터(일 7장)로 대표 이미지를 생성할 수 있도록 prompt_helper.html을 최신 대기 상태로 빌드.
 Write-Log ""
-Write-Log "=== Auto Image Generation & Matching @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="
+Write-Log "=== Update Prompt Helper Dashboard @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="
 try {
-    $imgScript = Join-Path $ProjectRoot "scripts\auto_generate_images.py"
+    $helperScript = Join-Path $ProjectRoot "scripts\build_prompt_dashboard.py"
     $imgDay = Get-Date -Format "yyMMdd"
-    if (Test-Path -LiteralPath $imgScript) {
-        python $imgScript $imgDay 2>&1 | ForEach-Object {
+    if (Test-Path -LiteralPath $helperScript) {
+        python $helperScript $imgDay 2>&1 | ForEach-Object {
             $line = "$_"
             Write-Host $line
             [System.IO.File]::AppendAllText($LogFile, "$line`r`n", $utf8NoBom)
         }
     } else {
-        Write-Log "WARN: $imgScript 없음 — 이미지 자동생성 스킵."
+        Write-Log "WARN: $helperScript 없음 — 프롬프트 헬퍼 갱신 스킵."
     }
 } catch {
-    Write-Log "ERROR (Auto Image Generation): $_"
+    Write-Log "WARN (Prompt Helper Update): $_"
 }
 
 # === Step 1.5: 통합 대시보드 재빌드 ===

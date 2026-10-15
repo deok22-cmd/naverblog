@@ -84,14 +84,28 @@ def process_images_and_manuscripts(target_date=None):
                     new_img_tag["style"] = "width:100%; border-radius:8px; display:block; margin:0 auto;"
                     
                     ph.replace_with(new_img_tag)
-                    if caption_el:
-                        caption_el.decompose()
+                    # Keep caption_el intact below the image
+                    if not caption_el and caption_text and parent_area:
+                        cap_tag = soup.new_tag("div")
+                        cap_tag["class"] = "img-caption"
+                        cap_tag.string = caption_text
+                        new_img_tag.insert_after(cap_tag)
                     updated = True
                             
                 if updated:
                     with open(filepath, "w", encoding="utf-8") as file:
                         file.write(str(soup))
                     print(f"  -> Updated {f}")
+        
+        # Automatically update prompt_helper.html after replacement
+        helper_script = os.path.join(project_root, "scripts", "build_prompt_dashboard.py")
+        if os.path.exists(helper_script):
+            try:
+                import subprocess
+                subprocess.run([sys.executable, helper_script, target_date], check=True)
+                print(f"[Helper] prompt_helper.html successfully updated for {target_date}.")
+            except Exception as e:
+                print(f"[Helper Warning] Failed to update prompt_helper.html: {e}")
     else:
         print(f"Error: Output directory {naver_dir} not found.")
 
