@@ -1,4 +1,4 @@
-# 네이버 원고 이미지 캡션 보정기 (deterministic post-processor)
+﻿# 네이버 원고 이미지 캡션 보정기 (deterministic post-processor)
 # 배경: 모델(daily-prompt §4 지침)에 캡션 div를 강제해도 sonnet이 종종 <img alt="...">에만
 #       캡션을 넣고 화면에 보이는 <div class="img-caption">를 누락한다(2026-06-11~13 발생).
 #       honor-system이 아닌 기계적 보정으로 누락을 0으로 만든다.
