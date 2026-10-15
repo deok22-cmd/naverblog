@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>정읍 내장산 단풍 언제 절정인가 — 내장사 우화정 코스와 셔틀버스·단풍철 주차 꿀팁</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #004d40; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf9; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #b2dfdb; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #00796b; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+
+  /* [방안 B 특화] 2번째 이미지 대체: 추천 코스 인포그래픽 카드 */
+  .infographic-course-box { background: #f9fdf9; border: 1.5px solid #b2dfdb; border-radius: 12px; padding: 22px 20px; margin: 35px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+  .infographic-header { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; font-weight: 800; color: #004d40; font-size: 1.05em; border-bottom: 2px dashed #b2dfdb; padding-bottom: 10px; }
+  .course-grid { display: flex; gap: 12px; flex-wrap: wrap; }
+  .course-card { flex: 1; min-width: 190px; background: #ffffff; border: 1px solid #b2dfdb; border-radius: 8px; padding: 14px; position: relative; box-shadow: 0 2px 6px rgba(0,0,0,0.02); }
+  .course-badge { display: inline-block; background: #00796b; color: #fff; font-size: 0.75em; font-weight: 700; padding: 2px 8px; border-radius: 12px; margin-bottom: 6px; }
+  .course-title { font-size: 0.95em; font-weight: 700; color: #004d40; margin-bottom: 6px; }
+  .course-desc { font-size: 0.84em; color: #555; line-height: 1.5; }
+
+  /* [방안 B 특화] 3번째 이미지 대체: 핵심 지표 하이라이트 매트릭스 카드 */
+  .infographic-stat-box { background: #ffffff; border: 1.5px solid #e0e0e0; border-radius: 12px; padding: 22px 20px; margin: 35px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
+  .stat-grid { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
+  .stat-card { flex: 1; min-width: 140px; background: #f1faf9; border: 1px solid #b2dfdb; border-radius: 8px; padding: 14px 10px; text-align: center; }
+  .stat-icon { font-size: 1.6em; margin-bottom: 4px; }
+  .stat-label { font-size: 0.8em; color: #666; font-weight: 600; margin-bottom: 4px; }
+  .stat-value { font-size: 1.15em; font-weight: 800; color: #004d40; }
+  .stat-sub { font-size: 0.75em; color: #888; margin-top: 2px; }
+
+  .info-box { background: #f9fdf9; border: 1px solid #b2dfdb; border-left: 4px solid #00796b; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #00796b; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#00796b'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>정읍 내장산 단풍 언제 절정인가 — 내장사 우화정 코스와 셔틀버스·단풍철 주차 꿀팁</h1>
+
+<div class="intro-box">
+  <strong>호남 최고의 가을 명소인 내장산 국립공원의 아기단풍 절정은 10월 하순부터 11월 초순 사이입니다.</strong><br/><br/>
+  내장산은 잎이 작고 앙증맞아 '아기단풍'이라 불리는 당단풍나무가 군락을 이루며, 연못 위에 그림처럼 떠 있는 우화정과 일주문으로 이어지는 붉은 단풍 터널은 가을의 극치를 보여줍니다. 2026년 가을 단풍철을 맞아 국립공원 무료입장 전환 기준, 금선교에서 탐방안내소까지 이어지는 셔틀버스 요금과 배차간격, 케이블카 운행 시간, 그리고 주말 극심한 정체를 피할 수 있는 주차장 선점 비법을 상세히 안내해 드립니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 대표 메인 썸네일 생성 영역</span>
+      <span class="ph-file">images/261016/2_travel_naejangsan_fall_foliage_course_parking_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-2-1">A picturesque and vivid autumn landscape of Naejangsan National Park in Jeongeup, South Korea during late October. The iconic traditional Korean wooden pavilion Uhwajeong standing peacefully in the center of a serene pond, perfectly reflecting the vibrant fiery red, orange, and golden yellow maple foliage. A gentle stone bridge connects the shore. Warm autumn sunlight illuminates the baby maple leaves (agi-danpung), creating a magical glowing canopy over the clear mountain water. Traditional Korean temple roofs visible in the background against rugged mountain ridges. Professional landscape photography, vivid color harmony, crystal clear water reflection, ultra high detail, photorealistic, 1:1 aspect ratio</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-2-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">내장산 연못 한가운데 붉은 단풍 반영이 어우러진 우화정 전경 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 호남의 금강산, 내장산 단풍의 지리적 특징과 아기단풍의 매력</h2>
+전북 정읍시와 순창군, 전남 장성군에 걸쳐 있는 내장산(해발 763m)은 예로부터 산 안에 감춰진 비경이 무궁무진하다 하여 '내장(內藏)'이라는 이름이 붙여졌습니다.<br/><br/>
+조선 8경 중 하나로 손꼽히는 내장산의 가을 단풍이 전국에서도 독보적인 사랑을 받는 이유는 바로 <strong>아기단풍</strong>이라 불리는 당단풍나무 덕분입니다.<br/><br/>
+내장산의 단풍잎은 다른 산의 단풍보다 잎의 크기가 어른 손바닥의 절반 정도로 작고 아담하며, 잎 갈래가 9개에서 11개로 섬세하게 갈라져 있습니다.<br/><br/>
+기온차가 큰 분지 지형과 계곡의 풍부한 일조량 덕분에 색채가 유난히 맑고 짙은 선홍빛을 띠는 것이 가장 큰 특징입니다.<br/><br/>
+일주문에서 내장사까지 이어지는 300m 단풍 터널길에는 수령 수백 년의 단풍나무 108그루가 줄지어 서서 하늘을 완전히 붉은빛으로 뒤덮습니다.
+
+<h2>02 | 2026 내장산 단풍 절정 시기 예측과 개화 현황</h2>
+산림청과 기상 관측 데이터에 따르면 올해 내장산의 첫 단풍은 10월 20일 전후로 시작되며, 산 전체의 80%가 물드는 <strong>단풍 절정기는 10월 28일경부터 11월 8일경까지</strong>로 예측됩니다.<br/><br/>
+해발 고도에 따라 단풍이 물드는 시기가 다르므로 방문 시점에 맞춰 산책 코스를 정하는 것이 좋습니다.
+
+<div class="info-box">
+  <strong>🍁 내장산 구간별 단풍 진행 시기 안내</strong><br/><br/>
+  • <strong>산 정상부 (신선봉·연자봉 능선)</strong>: 10월 20일 ~ 10월 26일 (가장 먼저 울긋불긋 물듦)<br/>
+  • <strong>중간 계곡부 (케이블카 상부·원적암)</strong>: 10월 26일 ~ 11월 2일 (화려한 오색 단풍 조화)<br/>
+  • <strong>평지 산책로 (우화정·일주문·내장사 경내)</strong>: 10월 30일 ~ 11월 8일 (새빨간 아기단풍 터널의 절정)
+</div>
+
+<h2>03 | 입장료 무료화 전환과 케이블카·순환 셔틀버스 요금</h2>
+2023년 5월 국립공원 문화재관람료 감면 정책 시행 이후, 내장사 매표소에서 징수하던 문화재관람료가 전면 폐지되어 <strong>현재 내장산 국립공원 입장은 전액 무료</strong>입니다.<br/><br/>
+다만 노약자나 어린이를 동반한 경우 탐방안내소까지 이동하는 순환 셔틀버스와 케이블카는 별도 요금으로 운영됩니다.
+
+<table class="info-table">
+  <tr>
+    <th>교통 수단</th>
+    <th>운행 구간</th>
+    <th>이용 요금</th>
+    <th>배차 및 운영 시간</th>
+  </tr>
+  <tr>
+    <td>순환 셔틀버스</td>
+    <td>금선교(매표소) ↔ 탐방안내소 (2.3km)</td>
+    <td>어른 1,000원 / 어린이 500원 (편도)</td>
+    <td>성수기 07:00 ~ 18:00 (5~10분 간격 수시 운행)</td>
+  </tr>
+  <tr>
+    <td>내장산 케이블카</td>
+    <td>탐방안내소 ↔ 연자봉 전망대 (514m)</td>
+    <td>대인 왕복 10,000원 (편도 6,000원)<br/>소인 왕복 6,000원 (편도 4,000원)</td>
+    <td>성수기 08:00 ~ 17:30 (대기 인원에 따라 탄력 운행)</td>
+  </tr>
+</table>
+<br/>
+셔틀버스는 금선교 탑승장에서 출발하며 카드로도 결제가 가능합니다. 단풍철 주말에는 셔틀 대기 줄이 길어질 수 있으므로 체력이 허락한다면 우화정까지 이어진 2.3km 숲길을 도보로 천천히 걸어 올라가는 것도 훌륭한 단풍 산책법입니다.
+
+<!-- [방안 B 특화] 2번째 이미지 대체: 추천 코스 인포그래픽 카드 -->
+<div class="infographic-course-box">
+  <div class="infographic-header">
+    <span>🗺️</span>
+    <span>내장산 가을 단풍 3대 핵심 추천 코스 가이드</span>
+  </div>
+  <div class="course-grid">
+    <div class="course-card">
+      <div class="course-badge">코스 A · 약 1시간 30분</div>
+      <div class="course-title">🍁 우화정 &amp; 108 단풍터널</div>
+      <div class="course-desc">
+        금선교 매표소 → 셔틀/도보 → 우화정 연못 → 일주문 단풍터널 → 내장사 경내<br/>
+        <strong>포인트</strong>: 남녀노소 평지 힐링, 우화정 정자와 연못 반영 인생샷 명소
+      </div>
+    </div>
+    <div class="course-card">
+      <div class="course-badge">코스 B · 약 1시간</div>
+      <div class="course-title">🚠 케이블카 &amp; 연자봉 전망대</div>
+      <div class="course-desc">
+        탐방안내소 케이블카 탑승장 → 연자봉 상부 역사 → 전망대 데크 조망<br/>
+        <strong>포인트</strong>: 발아래 펼쳐지는 붉은 단풍 바다와 서래봉 기암괴석 파노라마
+      </div>
+    </div>
+    <div class="course-card">
+      <div class="course-badge">코스 C · 약 2시간 30분</div>
+      <div class="course-title">🥾 원적골 자연관찰로 트레킹</div>
+      <div class="course-desc">
+        내장사 → 원적암 → 사랑의 다리 → 벽련암 → 일주문 순환 둘레길<br/>
+        <strong>포인트</strong>: 고즈넉한 사찰 숲길, 붐비지 않는 호젓한 단풍 트레킹
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 14px; font-size: 0.85em; color: #00796b; text-align: center; background: rgba(255,255,255,0.7); padding: 8px 12px; border-radius: 6px; font-weight: 600;">
+    💡 <strong>관람 팁</strong>: 오전 8시 30분 이전 도착 시 매표소에서 우화정까지 걸어 올라가며 한적한 사진을 찍고, 하산 시에 셔틀버스를 이용하면 피로도를 크게 줄일 수 있습니다.
+  </div>
+</div>
+
+<h2>04 | 우화정 연못 반영과 일주문 108 단풍 터널 포토존</h2>
+내장산 단풍의 시그니처 랜드마크인 <strong>우화정(羽化亭)</strong>은 정자에 날개가 돋아 승천하였다는 전설을 품고 있는 전통 목조 누각입니다.<br/><br/>
+맑은 연못 한가운데 화강암 석축을 쌓고 세워진 우화정 주변으로 오색 단풍나무들이 드리워져, 물결 없는 수면 위로 정자와 단풍이 데칼코마니처럼 비치는 모습은 국내 최고의 가을 사진 출사지로 꼽힙니다.<br/><br/>
+우화정을 지나 10분 정도 걸어 오르면 내장사 일주문이 나타납니다.<br/><br/>
+일주문에서 본당으로 이어지는 300m 구간은 양옆으로 늘어선 아름드리 단풍나무가 터널처럼 아치를 이루고 있어 걷는 내내 붉은 단풍비가 쏟아지는 듯한 황홀경을 선사합니다.
+
+<h2>05 | 내장산 케이블카 탑승 요령과 연자봉 전망대 뷰</h2>
+걷지 않고도 내장산의 파노라마 단풍을 한눈에 담고 싶다면 <strong>내장산 케이블카</strong>를 이용해 보세요.<br/><br/>
+탐방안내소 옆 탑승장에서 출발하는 51인승 케이블카는 약 5분 만에 연자봉 중턱 전망대 승강장에 도착합니다.<br/><br/>
+전망대 테라스에 서면 말굽 모양으로 내장사를 병풍처럼 둘러싸고 있는 서래봉, 불출봉, 망해봉, 신선봉의 기암절벽과 골짜기를 가득 채운 단풍 물결이 한눈에 들어옵니다.<br/><br/>
+케이블카는 사전 인터넷 예약이 불가능하며 100% 당일 현장 발권으로만 운영되므로, 주말 단풍철에는 오전 9시 이전에 발권을 마치는 것이 안전합니다.
+
+<!-- [방안 B 특화] 3번째 이미지 대체: 핵심 지표 하이라이트 매트릭스 카드 -->
+<div class="infographic-stat-box">
+  <div style="font-weight: 800; color: #004d40; font-size: 1.05em; margin-bottom: 4px; display: flex; align-items: center; gap: 8px;">
+    <span>📊</span> <span>내장산 국립공원 단풍 나들이 핵심 이용 지표 요약</span>
+  </div>
+  <div style="font-size: 0.85em; color: #666;">방문 전 꼭 확인해야 할 주요 이용 요금 및 골든타임 수치 정리표입니다.</div>
+  
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="stat-icon">🎟️</div>
+      <div class="stat-label">국립공원 입장료</div>
+      <div class="stat-value" style="color: #00796b;">전면 무료</div>
+      <div class="stat-sub">문화재관람료 폐지</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">🅿️</div>
+      <div class="stat-label">공영주차장 요금</div>
+      <div class="stat-value">일 5,000원</div>
+      <div class="stat-sub">임시주차장 4곳 무료</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">⏰</div>
+      <div class="stat-label">주차 만차 골든타임</div>
+      <div class="stat-value" style="color: #e65100;">07:30 이전</div>
+      <div class="stat-sub">주말 8시 이후 극심 정체</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">🚌</div>
+      <div class="stat-label">정읍역 171번 버스</div>
+      <div class="stat-value">약 30분</div>
+      <div class="stat-sub">15~20분 간격 운행</div>
+    </div>
+  </div>
+</div>
+
+<h2>06 | 단풍철 주차 대란 피하는 주차장별 위치와 무료 셔틀버스</h2>
+10월 하순부터 11월 초순까지의 주말 내장산 진입로는 전국에서 몰려든 차량으로 새벽부터 극심한 정체가 빚어집니다.<br/><br/>
+주차장의 위치와 성격을 미리 파악하고 동선을 계획해야 길 위에서 2~3시간씩 허비하는 일을 막을 수 있습니다.
+
+<table class="info-table">
+  <tr>
+    <th>주차장 명칭</th>
+    <th>위치 및 특징</th>
+    <th>주차 요금</th>
+    <th>만차 예상 시각 (주말 기준)</th>
+  </tr>
+  <tr>
+    <td>제1주차장 (내장호 부근)</td>
+    <td>상가 집단시설지구 인접, 접근성 우수</td>
+    <td>1일 5,000원 (성수기)</td>
+    <td>오전 07:00 ~ 07:30 이전 조기 만차</td>
+  </tr>
+  <tr>
+    <td>제2주차장</td>
+    <td>제1주차장 아래편, 도보 15분 거리</td>
+    <td>1일 5,000원 (성수기)</td>
+    <td>오전 07:30 ~ 08:00 이전 만차</td>
+  </tr>
+  <tr>
+    <td>제3주차장 / 월영습지</td>
+    <td>진입로 초입, 주차 공간 비교적 여유</td>
+    <td>1일 5,000원</td>
+    <td>오전 08:30 전후 만차</td>
+  </tr>
+  <tr>
+    <td>내장산 리조트 임시주차장</td>
+    <td>정읍 시내 방면 외곽 대규모 부지</td>
+    <td>무료</td>
+    <td>단풍철 무료 순환 셔틀버스 연계 운행</td>
+  </tr>
+</table>
+
+<div class="tip-box">
+  <strong>🚗 정체 회피 실전 주차 전략</strong><br/><br/>
+  • <strong>얼리버드 전략</strong>: 제1·2주차장에 차를 대려면 <strong>주말 오전 7시 20분 이전</strong>에 내장산 요금소를 통과해야 합니다.<br/>
+  • <strong>임시주차장 무료 셔틀 활용</strong>: 오전 8시 이후 도착했다면 진입로 정체에 서 있지 말고, 도로변 안내에 따라 <strong>내장산 리조트 관광특구 임시주차장</strong>에 주차한 뒤 정읍시에서 무료로 운행하는 대형 셔틀버스를 타고 이동하는 것이 훨씬 빠릅니다.
+</div>
+
+<h2>07 | 대중교통으로 내장산 가는 법 (KTX 정읍역·시내버스 환승)</h2>
+자가용 운전의 피로와 주차 스트레스를 피하고 싶다면 KTX와 시내버스를 결합한 대중교통 이용을 적극 추천합니다.<br/><br/>
+• <strong>KTX / SRT 호남선</strong>: 용산역 또는 수서역에서 고속열차를 타면 정읍역까지 1시간 20분~1시간 40분 만에 도착합니다.<br/><br/>
+• <strong>정읍역 ↔ 내장산 171번 시내버스</strong>: 정읍역 광장 앞 버스정류장에서 <strong>171번 버스</strong>를 탑승하면 내장산 집단시설지구 터미널까지 환승 없이 약 30분 만에 연결됩니다. 단풍 성수기에는 15~20분 간격으로 증편 운행되어 매우 편리합니다.
+
+<h2>08 | 내장산 단풍 나들이 추천 하루 일정표</h2>
+정읍역 출발을 기준으로 당일치기 단풍 여행을 가장 효율적으로 즐길 수 있는 추천 타임테이블입니다.
+
+<table class="info-table">
+  <tr>
+    <th>시간대</th>
+    <th>일정 및 동선</th>
+    <th>활동 내용 및 추천 팁</th>
+  </tr>
+  <tr>
+    <td>07:30 ~ 08:00</td>
+    <td>정읍역 도착 및 버스 탑승</td>
+    <td>정읍역 앞 171번 버스 승차 후 내장산 상가터미널 이동</td>
+  </tr>
+  <tr>
+    <td>08:00 ~ 09:30</td>
+    <td>금선교 ~ 우화정 도보 산책</td>
+    <td>사람이 붐비기 전 아침 햇살을 머금은 우화정 연못 반영 사진 촬영</td>
+  </tr>
+  <tr>
+    <td>09:30 ~ 11:00</td>
+    <td>108 단풍터널 &amp; 내장사 관람</td>
+    <td>일주문 단풍 터널 걷기, 천년고찰 내장사 경내 산책 및 단풍 감상</td>
+  </tr>
+  <tr>
+    <td>11:00 ~ 12:30</td>
+    <td>점심 식사</td>
+    <td>내장산 상가지구에서 전라도식 산채비빔밥과 버섯전골 식사</td>
+  </tr>
+  <tr>
+    <td>12:30 ~ 14:00</td>
+    <td>케이블카 탑승 &amp; 연자봉 전망대</td>
+    <td>케이블카 탑승 후 정상 전망대에서 내장산 서래봉 암봉 단풍 조망</td>
+  </tr>
+  <tr>
+    <td>14:00 ~ 15:00</td>
+    <td>순환 셔틀 타고 하산</td>
+    <td>탐방안내소에서 금선교까지 셔틀버스 탑승하여 편안하게 복귀</td>
+  </tr>
+  <tr>
+    <td>15:00 ~ 16:00</td>
+    <td>정읍 시내 이동 및 귀가</td>
+    <td>171번 버스로 정읍역 복귀, 정읍 쌍화차거리 들른 후 열차 탑승</td>
+  </tr>
+</table>
+
+<div class="recommend-area">
+  <strong>📌 함께 보면 좋은 지난 여행 &amp; 실속 생활 정보</strong><br/><br/>
+  • <a href="../261014/travel_goyang_chrysanthemum_ilsan_lake_fall.html">고양·파주 10월 국화 전시와 일산 호수공원 억새밭 — 가을 나들이 코스와 공영주차장 요금 비교</a><br/>
+  • <a href="../261013/travel_damyang_gwanbangjerim_fall_foliage.html">담양 관방제림 가을 단풍길 언제 절정인가 — 2km 고목 숲길 산책 코스와 국수의거리·메타프로방스 주차 팁</a>
+</div>
+
+<div class="tags">
+  <span class="tag">#내장산단풍</span>
+  <span class="tag">#내장산단풍시기</span>
+  <span class="tag">#내장사우화정</span>
+  <span class="tag">#내장산케이블카</span>
+  <span class="tag">#내장산셔틀버스</span>
+  <span class="tag">#내장산주차장</span>
+  <span class="tag">#아기단풍</span>
+  <span class="tag">#정읍가을여행</span>
+  <span class="tag">#가을단풍명소</span>
+  <span class="tag">#내장산국립공원</span>
+</div>
+</body>
+</html>
