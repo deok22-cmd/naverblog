@@ -87,7 +87,13 @@ function coverCard(card) {
   const B = 1188;
   let cursor = B;
   let body = "";
-  // name(상호) — 큰 텍스트 아래 크림색 강조
+  // sub(얇은 서브 카피) — 맨 아래, 후킹 바로 밑. 2026-07-29 '먹히는 공식'(맛집계정 벤치마킹):
+  //   커버 = 메인 2줄 훅 + 얇은 서브 1줄(데코 기호 허용). 가격·정보는 커버에 넣지 않는다.
+  if (card.sub) {
+    body += `<text x="76" y="${cursor}" font-family="${FONT}" font-weight="500" font-size="34" fill="#fff" opacity="0.95" letter-spacing="0.5" filter="url(#sh)">${esc(card.sub)}</text>`;
+    cursor -= (34 + 30);
+  }
+  // name(상호) — 큰 텍스트 아래 크림색 강조 (선택)
   if (card.name) {
     body += `<text x="72" y="${cursor}" font-family="${FONT}" font-weight="800" font-size="52" fill="${ACCENT}"${nameStroke} filter="url(#sh)">${esc(card.name)}</text>`;
     cursor -= (52 + 26);
