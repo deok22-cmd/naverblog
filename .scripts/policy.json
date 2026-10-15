@@ -14,7 +14,7 @@
     "  단일 상한으로는 '3건인 날'과 '2건인 날의 누수'를 구분할 수 없었다.",
     "  compositionByDow가 이제 유일한 기준이고, rotationByDow·slotTarget·travelMaxByDow는 여기서 파생된 사본이다."
   ],
-  "version": "2026-09-17",
+  "version": "2026-10-15",
   "expectedPosts": 7,
 
   "_autoDaysComment": [
@@ -48,44 +48,44 @@
   "uploadCheckDays": 3,
 
   "compositionByDow": {
-    "월": { "travel": 3, "pass": 1, "hot": 1, "car": 1, "labor": 1 },
-    "화": { "travel": 2, "pass": 1, "hot": 1, "rite": 1, "house": 1, "lease": 1 },
-    "수": { "travel": 3, "pass": 1, "hot": 1, "rite": 1, "ins": 1 },
-    "목": { "travel": 2, "pass": 1, "hot": 1, "car": 1, "rite": 1, "repair": 1 },
-    "금": { "travel": 3, "pass": 1, "hot": 1, "local": 1, "labor": 1 },
-    "토": { "travel": 2, "pass": 1, "car": 1, "rite": 1, "house": 1, "lease": 1 },
-    "일": { "travel": 3, "pass": 1, "local": 1, "ins": 1, "repair": 1 }
+    "월": { "travel": 4, "hot": 1, "repair": 1, "labor": 1 },
+    "화": { "travel": 3, "hot": 2, "house": 1, "lease": 1 },
+    "수": { "travel": 4, "hot": 1, "repair": 1, "ins": 1 },
+    "목": { "travel": 3, "hot": 2, "house": 1, "car": 1 },
+    "금": { "travel": 4, "hot": 1, "repair": 1, "local": 1 },
+    "토": { "travel": 3, "hot": 2, "repair": 1, "rite": 1 },
+    "일": { "travel": 4, "hot": 1, "house": 1, "car": 1 }
   },
 
   "weeklyTarget": {
-    "travel": 18, "pass": 7, "hot": 5, "rite": 4, "car": 3,
-    "local": 2, "house": 2, "labor": 2, "lease": 2, "ins": 2, "repair": 2
+    "travel": 25, "hot": 10, "repair": 4, "house": 3,
+    "car": 2, "labor": 1, "lease": 1, "ins": 1, "local": 1, "rite": 1
   },
 
-  "travelMaxByDow": { "월": 3, "화": 2, "수": 3, "목": 2, "금": 3, "토": 2, "일": 3 },
-  "travelMax": 3,
+  "travelMaxByDow": { "월": 4, "화": 3, "수": 4, "목": 3, "금": 4, "토": 3, "일": 4 },
+  "travelMax": 4,
 
   "rotationByDow": {
-    "월": ["pass", "labor"],
-    "화": ["pass", "house", "lease"],
-    "수": ["pass", "ins"],
-    "목": ["pass", "repair"],
-    "금": ["pass", "labor"],
-    "토": ["pass", "house", "lease"],
-    "일": ["pass", "ins", "repair"]
+    "월": ["repair", "labor"],
+    "화": ["house", "lease"],
+    "수": ["repair", "ins"],
+    "목": ["house", "car"],
+    "금": ["repair", "local"],
+    "토": ["repair", "rite"],
+    "일": ["house", "car"]
   },
 
-  "dropped": ["recipe", "tech", "appli", "cert"],
+  "dropped": ["recipe", "tech", "appli", "cert", "pass"],
 
-  "slotTarget": { "여행": 2, "인접": 1, "생활": 2, "신규": 2, "보충": 0 },
+  "slotTarget": { "여행": 3, "이슈": 2, "생활": 2, "보충": 0 },
   "slotTargetByDow": {
-    "월": { "여행": 3, "이슈": 1, "인접": 0, "생활": 1, "신규": 2, "보충": 0 },
-    "화": { "여행": 2, "이슈": 1, "인접": 0, "생활": 1, "신규": 3, "보충": 0 },
-    "수": { "여행": 3, "이슈": 1, "인접": 0, "생활": 1, "신규": 2, "보충": 0 },
-    "목": { "여행": 2, "이슈": 1, "인접": 0, "생활": 2, "신규": 2, "보충": 0 },
-    "금": { "여행": 3, "이슈": 1, "인접": 1, "생활": 0, "신규": 2, "보충": 0 },
-    "토": { "여행": 2, "이슈": 0, "인접": 0, "생활": 2, "신규": 3, "보충": 0 },
-    "일": { "여행": 3, "이슈": 0, "인접": 1, "생활": 0, "신규": 3, "보충": 0 }
+    "월": { "여행": 4, "이슈": 1, "인접": 0, "생활": 2, "보충": 0 },
+    "화": { "여행": 3, "이슈": 2, "인접": 0, "생활": 2, "보충": 0 },
+    "수": { "여행": 4, "이슈": 1, "인접": 0, "생활": 2, "보충": 0 },
+    "목": { "여행": 3, "이슈": 2, "인접": 0, "생활": 2, "보충": 0 },
+    "금": { "여행": 4, "이슈": 1, "인접": 1, "생활": 1, "보충": 0 },
+    "토": { "여행": 3, "이슈": 2, "인접": 0, "생활": 2, "보충": 0 },
+    "일": { "여행": 4, "이슈": 1, "인접": 0, "생활": 2, "보충": 0 }
   },
 
   "slotByPrefix": {

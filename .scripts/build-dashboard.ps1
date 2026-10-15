@@ -124,6 +124,17 @@ $RotationByDowV3 = @{
     "일" = @("pass", "ins", "repair")
 }
 $Rotation4From = "260917"
+# 2026-10-15 3차 개정: travel_ 25 (월수금일 4, 화목토 3) · hot_ 10 · pass_ DROP (0) · repair_/house_ 7 · car_ 2 · labor_/lease_/ins_/local_/rite_ 각 1
+$RotationByDowV4 = @{
+    "월" = @("repair", "labor")
+    "화" = @("house", "lease")
+    "수" = @("repair", "ins")
+    "목" = @("house", "car")
+    "금" = @("repair", "local")
+    "토" = @("repair", "rite")
+    "일" = @("house", "car")
+}
+$Rotation5From = "261015"
 $RotationByDowV2 = @{
     "월" = @("pass", "recipe")
     "화" = @("house", "tech")
@@ -438,8 +449,10 @@ foreach ($day in $naverDays) {
     $skew = ""
     foreach ($p in ($day.Posts | Group-Object Prefix)) {
         $lim = 3
-        # 여행은 믹스 2 + 보충 1까지 정상 (2026-09-13: 믹스 3 → 2라 상한도 4 → 3)
-        if ($p.Name -eq "travel") { $lim = 3 }
+        # 여행은 2026-10-15부터 최대 4건(월수금일 4건, 화목토 3건)
+        if ($p.Name -eq "travel") {
+            if ($day.Date -ge "261015") { $lim = 4 } else { $lim = 3 }
+        }
         if ($p.Count -gt $lim) { $skew = "$($p.Name) $($p.Count)건" }
     }
     if ($skew -ne "") { $flags += "<span class=`"badge bad`" title=`"큐 고갈 시 한 계열이 하루를 잠식하는 패턴`">편중 $skew</span>" }
@@ -447,6 +460,7 @@ foreach ($day in $naverDays) {
     $rotTable = $RotationByDowV2
     if ($day.Date -ge $Rotation3From) { $rotTable = $RotationByDow }
     if ($day.Date -ge $Rotation4From) { $rotTable = $RotationByDowV3 }
+    if ($day.Date -ge $Rotation5From) { $rotTable = $RotationByDowV4 }
     if ($day.Date -ge $Rotation2From -and $rotTable.ContainsKey($dow)) {
         foreach ($want in $rotTable[$dow]) {
             $got = @($day.Posts | Where-Object { $_.Prefix -eq $want }).Count
