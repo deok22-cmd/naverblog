@@ -545,6 +545,28 @@ try {
     Write-Log "ERROR (Fact-Check Subagent): $_"
 }
 
+# === Step 1.447: 인포그래픽 카드 2번/3번 PNG 자동 렌더링 & 원고 치환 (2026-10-16 신설) ===
+# 사용자 지시: 1번 대표 이미지만 Antigravity 무료 쿼터로 수동 제작하고,
+# 2번(코스 안내) 및 3번(핵심 지표) 인포그래픽 카드는 시스템이 자동 고해상도 PNG로 렌더링하여
+# images/YYMMDD/ 에 저장하고 HTML 원고를 치환(네이버 에디터 복사/붙여넣기 시 디자인 깨짐 완전 방지).
+Write-Log ""
+Write-Log "=== Render Infographic Cards (Images 2 & 3) @ $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') ==="
+try {
+    $renderScript = Join-Path $ProjectRoot "scripts\render_article_infographics.mjs"
+    $renderDay = Get-Date -Format "yyMMdd"
+    if (Test-Path -LiteralPath $renderScript) {
+        node $renderScript $renderDay 2>&1 | ForEach-Object {
+            $line = "$_"
+            Write-Host $line
+            [System.IO.File]::AppendAllText($LogFile, "$line`r`n", $utf8NoBom)
+        }
+    } else {
+        Write-Log "WARN: $renderScript 없음 — 인포그래픽 렌더링 스킵."
+    }
+} catch {
+    Write-Log "ERROR (Infographic Card Render): $_"
+}
+
 # === Step 1.45: 프롬프트 헬퍼 대시보드 갱신 (2026-10-15 개정: Antigravity 무료 쿼터 방안 B) ===
 # 유료 Google Cloud API 과금 방지를 위해 외부 직접 호출을 비활성화하고,
 # Antigravity IDE 내장 무료 쿼터(일 7장)로 대표 이미지를 생성할 수 있도록 prompt_helper.html을 최신 대기 상태로 빌드.
