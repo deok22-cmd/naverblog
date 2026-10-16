@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <header>
     <div>
       <h1>🤖 서브에이전트 운영 & 모니터링 대시보드</h1>
-      <div class="sub">Antigravity Subagent Orchestration & Automated Task Health Center (업데이트: 2026-10-16 08:45:50)</div>
+      <div class="sub">Antigravity Subagent Orchestration & Automated Task Health Center (업데이트: 2026-10-17 04:27:34)</div>
       <div class="nav-links">
         <a class="nav-btn" href="dashboard.html">📊 블로그 4채널 운영 대시보드</a>
         <a class="nav-btn" href="prompt_helper.html">🎨 이미지 프롬프트 헬퍼</a>
@@ -208,18 +208,18 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="lbl">등록된 서브에이전트 수</div>
     </div>
     <div class="kpi">
-      <div class="val" style="color:var(--ok);">6</div>
+      <div class="val" style="color:var(--ok);">5</div>
       <div class="lbl">정상 작동 (Healthy)</div>
     </div>
     <div class="kpi">
-      <div class="val" style="color:var(--ink3);">0</div>
+      <div class="val" style="color:var(--bad);">1</div>
       <div class="lbl">오류 / 주의 필요</div>
     </div>
     <div class="kpi">
-      <div class="val" style="color:#10b981;">30.79 GB</div>
-      <div class="lbl">C: 드라이브 여유 (25.9%) · <strong>쾌적</strong></div>
+      <div class="val" style="color:#10b981;">31.12 GB</div>
+      <div class="lbl">C: 드라이브 여유 (26.2%) · <strong>쾌적</strong></div>
       <div class="kpi-disk-bar">
-        <div class="kpi-disk-fill" style="width:74.1%; background:#10b981;"></div>
+        <div class="kpi-disk-fill" style="width:73.8%; background:#10b981;"></div>
       </div>
     </div>
   </div>
@@ -345,7 +345,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
         
 
-        <div class="agent-card border-ok" id="card-fact-checker">
+        <div class="agent-card border-bad" id="card-fact-checker">
           <div class="card-header">
             <div>
               <div class="card-title-row">
@@ -354,7 +354,7 @@ document.addEventListener('DOMContentLoaded', function() {
               </div>
               <div class="agent-desc">2026년 기준 일정, 장소, 금액(입장료/주차료/할인), 법정 규정 등을 정밀 팩트체크하여 오기 시 자동 보정 및 신뢰도 검증 로그 기록</div>
             </div>
-            <div class="status-wrap"><span class="badge badge-ok">✔️ 정상 완료</span></div>
+            <div class="status-wrap"><span class="badge badge-bad">⚠️ 오류/주의</span></div>
           </div>
 
           <div class="info-grid">
@@ -364,11 +364,11 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="info-item">
               <span class="info-label">최근 실행</span>
-              <span class="info-val">🕒 2026-10-16 08:45:39</span>
+              <span class="info-val">🕒 2026-10-17 04:26:32</span>
             </div>
             <div class="info-item">
               <span class="info-label">실행 소요 시간</span>
-              <span class="info-val">⚡ 227.26초</span>
+              <span class="info-val">⚡ 326.4초</span>
             </div>
             <div class="info-item">
               <span class="info-label">실행 스크립트</span>
@@ -376,10 +376,10 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
           </div>
 
-          <div class="chips-row"><span class="kpi-chip chip-score">🎯 신뢰도 84.6%</span> <span class="kpi-chip chip-ok">✔️ 정상 131건</span> <span class="kpi-chip chip-warn">✏️ 보정 6건</span> <span class="kpi-chip chip-info">📌 참고 25건</span></div>
+          <div class="chips-row"><span class="kpi-chip chip-score">🎯 신뢰도 82.7%</span> <span class="kpi-chip chip-ok">✔️ 정상 85건</span> <span class="kpi-chip chip-warn">✏️ 보정 1건</span> <span class="kpi-chip chip-info">📌 참고 18건</span></div>
 
           <div class="summary-box">
-            <span class="summary-title">최근 실행 결과:</span> 원고 7건 중 162개 팩트 검증 완료 (정상: 131개, 보정: 6개, 참고: 25개, 신뢰도: 84.6%)
+            <span class="summary-title">최근 실행 결과:</span> 원고 7건 중 104개 팩트 검증 완료 (정상: 85개, 보정: 1개, 참고: 18개, 신뢰도: 82.7%)
           </div>
 
           <div class="log-accordion">
@@ -388,26 +388,26 @@ document.addEventListener('DOMContentLoaded', function() {
               <span id="arr-fact-checker">▼</span>
             </button>
             <div class="accordion-content" id="log-fact-checker" style="display:none;">
-              
-              <div class="log-box"><strong>최근 실행 로그 (Tail):</strong><pre>[08:44:59]       제목: 정읍 내장산 단풍 언제 절정인가 — 내장사 우화정 코스와 셔틀버스·단풍철 주차 꿀...
-[08:45:38]       📌 참고 사항: 단풍 절정기는 10월 28일경부터 11월 8일경까지 (2026년 단풍 절정 시기는 기상 조건에 따라 유동적이며, 현재 시점에서 정확한 날짜를 확정하기는 어렵습니다. 이는 예측치로 이해해야 합니다.)
-[08:45:38]       📌 참고 사항: 산 정상부 (신선봉·연자봉 능선): 10월 20일 ~ 10월 26일 (가장 먼저 울긋불긋 물듦) (2026년 단풍 진행 시기는 기상 조건에 따라 유동적이며, 현재 시점에서 정확한 날짜를 확정하기는 어렵습니다. 이는 예측치로 이해해야 합니다.)
-[08:45:38]       📌 참고 사항: 중간 계곡부 (케이블카 상부·원적암): 10월 26일 ~ 11월 2일 (화려한 오색 단풍 조화) (2026년 단풍 진행 시기는 기상 조건에 따라 유동적이며, 현재 시점에서 정확한 날짜를 확정하기는 어렵습니다. 이는 예측치로 이해해야 합니다.)
-[08:45:38]       📌 참고 사항: 평지 산책로 (우화정·일주문·내장사 경내): 10월 30일 ~ 11월 8일 (새빨간 아기단풍 터널의 절정) (2026년 단풍 진행 시기는 기상 조건에 따라 유동적이며, 현재 시점에서 정확한 날짜를 확정하기는 어렵습니다. 이는 예측치로 이해해야 합니다.)
-[08:45:38]       📌 참고 사항: 제1주차장 만차 예상 시각 (주말 기준): 오전 07:00 ~ 07:30 이전 조기 만차 (주차장 만차 예상 시각은 주말 및 성수기 교통 상황에 따라 유동적이며, 예측치로 이해해야 합니다.)
-[08:45:38]       📌 참고 사항: 제2주차장 만차 예상 시각 (주말 기준): 오전 07:30 ~ 08:00 이전 만차 (주차장 만차 예상 시각은 주말 및 성수기 교통 상황에 따라 유동적이며, 예측치로 이해해야 합니다.)
-[08:45:38]       📌 참고 사항: 제3주차장 만차 예상 시각 (주말 기준): 오전 08:30 전후 만차 (주차장 만차 예상 시각은 주말 및 성수기 교통 상황에 따라 유동적이며, 예측치로 이해해야 합니다.)
-[08:45:38]       📌 참고 사항: 주차 만차 골든타임 07:30 이전 주말 8시 이후 극심 정체 (주차 만차 골든타임은 주말 및 성수기 교통 상황에 따라 유동적이며, 예측치로 이해해야 합니다.)
-[08:45:38]       ✔️ 모든 팩트 정상 확인 (29개 항목)
-[08:45:39] 
+              <div class="err-box"><strong>⚠️ 감지된 오류/경고:</strong><pre>golf_nhatrang_kn_vinpearl_diamondbay_greenfee.html 팩트체크 API 호출 실패: The read operation timed out</pre></div>
+              <div class="log-box"><strong>최근 실행 로그 (Tail):</strong><pre>[04:25:27]       ✔️ 모든 팩트 정상 확인 (16개 항목)
+[04:25:28] [6/7] 검증 중: travel_pocheon_myeongseongsan_silvergrass_sanjeong.html
+[04:25:28]       제목: 포천 명성산 억새축제 등산코스와 소요시간 — 산정호수 주차팁과 억새꽃 군락지 10...
+[04:26:11]       📌 참고 사항: 명성산 억새꽃 축제의 정확한 만개 절정 시기 (2026년 명성산 억새꽃 축제의 정확한 만개 절정 시기는 아직 발표되지 않았습니다. 일반적으로 10월 중순~하순이지만, 매년 기후에 따라 변동될 수 있습니다.)
+[04:26:11]       ✔️ 모든 팩트 정상 확인 (31개 항목)
+[04:26:12] [7/7] 검증 중: travel_sunchang_gangcheonsan_fall_foliage_course.html
+[04:26:12]       제목: 순창 강천산 군립공원 애기단풍 언제 절정인가 — 병풍폭포 구름다리 산책코스와 주차...
+[04:26:31]       📌 참고 사항: 올해 순창 강천산 애기단풍의 절정 시기(10월 25일~11월 10일) (2026년 강천산 애기단풍의 정확한 절정 시기는 아직 공식적으로 발표되지 않았습니다. 일반적으로 10월 말에서 11월 초에 절정을 이루지만, 기상 상황에 따라 변동될 수 있습니다. 해당 기간은 예측치입니다.)
+[04:26:31]       📌 참고 사항: 강천산 애기단풍은 10월 중순부터 점차 색을 바꾸기 시작하여, 10월 25일부터 11월 10일경에 2.7km 계곡 전체가 화려한 불꽃 터널을 이루며 절정의 장관을 이룹니다. (2026년 강천산 애기단풍의 정확한 절정 시기는 아직 공식적으로 발표되지 않았습니다. 해당 기간은 과거의 일반적인 절정 시기를 바탕으로 한 예측치입니다.)
+[04:26:31]       ✔️ 모든 팩트 정상 확인 (12개 항목)
+[04:26:32] 
 === 팩트체크 완료 요약 ===
-[08:45:39] 결과 상태     : SUCCESS
-[08:45:39] 소요 시간     : 227.26초
-[08:45:39] 검증 팩트 수  : 162개
-[08:45:39] 정상 확인     : 131개
-[08:45:39] 자동 보정 반영: 6개
-[08:45:39] 참고 알림     : 25개
-[08:45:39] 신뢰도 지수   : 84.6%</pre></div>
+[04:26:32] 결과 상태     : ERROR
+[04:26:32] 소요 시간     : 326.4초
+[04:26:32] 검증 팩트 수  : 104개
+[04:26:32] 정상 확인     : 85개
+[04:26:32] 자동 보정 반영: 1개
+[04:26:32] 참고 알림     : 18개
+[04:26:32] 신뢰도 지수   : 82.7%</pre></div>
             </div>
           </div>
         </div>
@@ -482,7 +482,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="info-item">
               <span class="info-label">최근 실행</span>
-              <span class="info-val">🕒 2026-10-16 08:45:50</span>
+              <span class="info-val">🕒 2026-10-17 04:27:34</span>
             </div>
             <div class="info-item">
               <span class="info-label">실행 소요 시간</span>
@@ -532,7 +532,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="info-item">
               <span class="info-label">최근 실행</span>
-              <span class="info-val">🕒 2026-10-16 08:45:50</span>
+              <span class="info-val">🕒 2026-10-17 04:27:34</span>
             </div>
             <div class="info-item">
               <span class="info-label">실행 소요 시간</span>

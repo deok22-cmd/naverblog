@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>화장실 타일 줄눈 변색·곰팡이 셀프 제거 순서 — 락스 희석법 vs 줄눈 코팅 시공 비용 비교</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #2e7d32; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #2e7d32; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #2e7d32; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #2e7d32; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #2e7d32; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+
+  /* [방안 B 특화] 2번째 이미지 대체: 추천 코스 인포그래픽 카드 */
+  .infographic-course-box { background: #f9fdf9; border: 1.5px solid #c8e6c9; border-radius: 12px; padding: 22px 20px; margin: 35px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+  .infographic-header { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; font-weight: 800; color: #1b5e20; font-size: 1.05em; border-bottom: 2px dashed #c8e6c9; padding-bottom: 10px; }
+  .course-grid { display: flex; gap: 12px; flex-wrap: wrap; }
+  .course-card { flex: 1; min-width: 190px; background: #ffffff; border: 1px solid #c8e6c9; border-radius: 8px; padding: 14px; position: relative; box-shadow: 0 2px 6px rgba(0,0,0,0.02); }
+  .course-badge { display: inline-block; background: #2e7d32; color: #fff; font-size: 0.75em; font-weight: 700; padding: 2px 8px; border-radius: 12px; margin-bottom: 6px; }
+  .course-title { font-size: 0.95em; font-weight: 700; color: #1b5e20; margin-bottom: 6px; }
+  .course-desc { font-size: 0.84em; color: #555; line-height: 1.5; }
+
+  /* [방안 B 특화] 3번째 이미지 대체: 핵심 지표 하이라이트 매트릭스 카드 */
+  .infographic-stat-box { background: #ffffff; border: 1.5px solid #e0e0e0; border-radius: 12px; padding: 22px 20px; margin: 35px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
+  .stat-grid { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
+  .stat-card { flex: 1; min-width: 140px; background: #f1faf1; border: 1px solid #c8e6c9; border-radius: 8px; padding: 14px 10px; text-align: center; }
+  .stat-icon { font-size: 1.6em; margin-bottom: 4px; }
+  .stat-label { font-size: 0.8em; color: #666; font-weight: 600; margin-bottom: 4px; }
+  .stat-value { font-size: 1.15em; font-weight: 800; color: #1b5e20; }
+  .stat-sub { font-size: 0.75em; color: #888; margin-top: 2px; }
+
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #2e7d32; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #2e7d32; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#2e7d32'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>화장실 타일 줄눈 변색·곰팡이 셀프 제거 순서 — 락스 희석법 vs 줄눈 코팅 시공 비용 비교</h1>
+
+<div class="intro-box">
+  <strong>매일 샤워와 청소를 해도 욕실 타일 틈새에 거뭇거뭇 피어나는 곰팡이와 누런 변색은 백시멘트 줄눈의 미세한 다공성 구조 때문에 발생합니다.</strong><br/><br/>
+  초기 곰팡이와 물때는 솔질로 억지로 긁어내지 않고, <strong>락스 희석액(락스 1: 물 3)을 적신 키친타월을 줄눈에 밀착해 2~3시간 방치하는 '락스 팩 공법'</strong>만으로도 힘들이지 않고 90% 이상 박멸할 수 있습니다.<br/><br/>
+  하지만 곰팡이 포자가 시멘트 내부 깊숙이 침투해 착색되었거나 반복 재발로 지쳤다면, <strong>셀프 튜브형 줄눈제(1만~2만 원)</strong>로 덧바르거나 <strong>전문 줄눈 코팅 업체(욕실 1칸당 15만~25만 원)</strong>를 통해 방수 항균 코팅을 진행하는 것이 경제적입니다. 셀프 제거 3단계 순서부터 자재별 효과 및 시공 견적 비교표까지 완벽히 정리해 드립니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 대표 메인 썸네일 생성 영역</span>
+      <span class="ph-file">images/261017/6_repair_bathroom_tile_grout_mold_clean_cost_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-1">A crisp, realistic DIY home improvement and cleaning photograph focusing on modern bathroom floor tiles. A gloved hand wearing yellow rubber safety gloves carefully applies a paper towel soaked in cleaning solution along the grout lines between light gray ceramic tiles. Half of the grout line shows a clean, sparkling white restored appearance, while the other half displays dark mildew stains, illustrating a clear before-and-after comparison. In the background on the dry clean tile floor sits a spray bottle and a small bottle of sealant. Bright natural bathroom lighting, sharp macro focus on the tile grout texture, photorealistic, 8k resolution, informative lifestyle magazine style, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">욕실 타일 틈새 곰팡이 제거를 위해 락스 팩을 밀착 시공하고 줄눈 코팅을 비교하는 과정 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 왜 화장실 타일 줄눈에 곰팡이가 생길까? 백시멘트의 구조적 한계</h2>
+<p>
+  신축 아파트나 빌라 욕실에 시공되는 기본 줄눈은 대부분 <strong>백시멘트(White Portland Cement)</strong>를 사용합니다.<br/><br/>
+  백시멘트는 가격이 저렴하고 시공이 간편하지만, 굳은 후 표면에 현미경으로 관찰해야 보일 만큼 수많은 미세 기공(Pore)이 형성되는 치명적인 약점을 안고 있습니다.<br/><br/>
+  매일 샤워할 때 튀는 비눗물 속 유지방과 사람의 피부 각질, 샴푸 잔여물이 이 미세 기공 속으로 스며들며, 환기가 조금만 부족해도 고온다습한 욕실 환경에서 <strong>클라도스포리움(흑색 곰팡이)</strong>과 붉은 효모균이 기공 깊숙한 곳까지 뿌리를 내리게 됩니다.<br/><br/>
+  따라서 수세미나 철솔로 표면을 박박 문지르면 시멘트 표면만 깎여 나가 기공이 더욱 넓어지고, 다음번 곰팡이가 더 깊고 빠르게 번식하는 악순환이 발생합니다.
+</p>
+
+<h2>02 | 락스 희석액과 키친타월을 활용한 초간단 곰팡이 박멸 3단계</h2>
+<p>
+  줄눈 표면에 번진 검은 곰팡이는 염소계 표백제(차아염소산나트륨)의 화학적 산화력을 이용해 포자 자체를 분해해야 영구 사멸합니다. 문지르지 않고 불리는 <strong>'밀착 락스 팩 공법'</strong>이 가장 강력합니다.
+</p>
+
+<div class="step-box">
+  <strong>⏱️ 실패 없는 락스 팩 3단계 시공 순서</strong><br/><br/>
+  1. <strong>욕실 완전 건조 (사전 작업)</strong>: 줄눈에 물기가 남아 있으면 락스가 희석되어 살균력이 급격히 떨어집니다. 반나절 동안 환풍기를 틀거나 마른걸레로 타일 바닥을 완전히 건조시킵니다.<br/>
+  2. <strong>희석액 제조 및 키친타월 밀착</strong>: 분무기에 <strong>락스 1: 물 2~3 비율</strong>로 희석합니다. 키친타월이나 화장솜을 얇게 찢어 줄눈 선을 따라 길게 얹은 뒤 분무기로 흠뻑 적셔 줄눈에 완전히 밀착시킵니다. (오염이 심하면 랩을 위에 씌워 증발을 방지합니다.)<br/>
+  3. <strong>2~3시간 방치 후 찬물 헹굼</strong>: 2~3시간 뒤 키친타월을 걷어내면 문지르지 않아도 검은 얼룩이 사라져 있습니다. 부드러운 스펀지로 가볍게 닦아낸 뒤 <strong>반드시 찬물</strong>로 깨끗이 씻어냅니다. (뜨거운 물을 부으면 염소 가스가 발생하므로 절대 금지)
+</div>
+
+<!-- [방안 B 특화] 2번째 이미지 대체: 추천 코스 인포그래픽 카드 -->
+
+<!-- 2번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="🛠️ 화장실 줄눈 곰팡이 완벽 해결 3단계 실전 프로세스 / 인포그래픽 카드" src="../../images/261017/6_repair_bathroom_tile_grout_mold_clean_cost_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">🛠️ 화장실 줄눈 곰팡이 완벽 해결 3단계 실전 프로세스 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>03 | 락스 vs 과탄산소다 vs 젤형 곰팡이 제거제 효과 전수 비교</h2>
+<p>
+  시중에는 다양한 곰팡이 제거 세제들이 판매되고 있습니다. 세제의 화학적 특성에 따라 최적의 사용처가 다릅니다.
+</p>
+
+<table class="info-table">
+  <tr>
+    <th>세제 종류</th>
+    <th>주요 성분 및 원리</th>
+    <th>장점</th>
+    <th>단점 및 주의사항</th>
+  </tr>
+  <tr>
+    <td><strong>희석 락스액</strong><br/>★ 가성비 최강</td>
+    <td>차아염소산나트륨<br/>(강력한 산화 표백)</td>
+    <td>1통 2,000원으로 비용 부담 없음. 곰팡이 포자 사멸력 1위</td>
+    <td>자극적인 염소 냄새, 액체형이라 벽면 타일 흘러내림(키친타월 필수)</td>
+  </tr>
+  <tr>
+    <td><strong>젤형 곰팡이 제거제</strong><br/>★ 벽면·실리콘용</td>
+    <td>고농도 염소계 젤</td>
+    <td>뾰족한 노즐로 줄눈과 실리콘에 직접 도포. 벽면에도 흘러내리지 않음</td>
+    <td>바닥 전체를 시공하기에는 단가가 비쌈 (개당 5,000~8,000원)</td>
+  </tr>
+  <tr>
+    <td><strong>과탄산소다 페이스트</strong><br/>★ 친환경 산소계</td>
+    <td>과탄산나트륨<br/>(활성산소 표백)</td>
+    <td>염소 가스 냄새가 전혀 없음. 묵은 기름때와 누런 피지 오염에 효과적</td>
+    <td>흑곰팡이 뿌리 사멸력은 락스보다 약함. 뜨거운 물에 녹여 반죽해야 함</td>
+  </tr>
+</table>
+
+<h2>04 | 세척 후에도 지워지지 않는 영구 착색의 원인과 해결책</h2>
+<p>
+  락스 팩을 반나절 이상 붙여두었는데도 줄눈이 여전히 누렇거나 거무스름하다면 두 가지 원인 중 하나입니다.<br/><br/>
+  첫째, 곰팡이가 백시멘트 기공 3mm 이상 속까지 파고들어 시멘트 자체를 변색시킨 경우입니다.<br/>
+  둘째, 수돗물 속 녹물(철분)과 미네랄이 알칼리성 시멘트와 결합하여 황변(Yellowing)을 일으킨 화학적 착색입니다.<br/><br/>
+  이 단계에 도달하면 아무리 강한 세제를 부어도 색상이 복원되지 않습니다. 이때는 <strong>기존 백시멘트 표면을 긁어내고 새 줄눈재를 채우거나 코팅하는 리폼 작업</strong>으로 넘어가야 합니다.
+</p>
+
+<h2>05 | 셀프 줄눈 보수제 튜브 시공 순서 — 마스킹 테이프 작업 노하우</h2>
+<p>
+  기존 타일을 뜯지 않고 가장 저렴하게 새집처럼 만드는 방법은 마트나 온라인에서 판매하는 <strong>튜브형 줄눈 보수제(1만~2만 원)</strong>를 활용하는 것입니다.
+</p>
+
+<div class="step-box">
+  <strong>🖌️ 실패 없는 셀프 줄눈 튜브 시공 순서</strong><br/><br/>
+  1. <strong>줄눈 커터기로 1mm 파내기</strong>: 줄눈 긁개(약 3,000원)를 이용해 곰팡이가 핀 백시멘트 표면을 1~2mm 깊이로 V자 형태로 가볍게 파냅니다. 파낸 시멘트 가루를 청소기로 완벽히 흡입합니다.<br/>
+  2. <strong>마스킹 테이프 부착 (핵심 기술)</strong>: 줄눈 양옆 타일 모서리를 따라 종이 마스킹 테이프를 반듯하게 붙입니다. 초보자도 삐져나옴 없이 칼각을 완성하는 핵심 노하우입니다.<br/>
+  3. <strong>튜브 충진 및 헤라 문지르기</strong>: 튜브 앞 노즐을 줄눈 폭에 맞게 비스듬히 자른 뒤 균일한 힘으로 짜 넣습니다. 동봉된 고무 헤라(스패츨러)로 일정한 각도를 유지하며 긁어내 표면을 평평하게 만듭니다.<br/>
+  4. <strong>테이프 즉시 제거 및 24시간 양생</strong>: 약제가 굳기 전(도포 직후 5분 이내) 마스킹 테이프를 45도 각도로 천천히 떼어냅니다. 이후 최소 24시간 동안 물을 쓰지 않고 완전히 굳힙니다.
+</div>
+
+<!-- [방안 B 특화] 3번째 이미지 대체: 핵심 지표 하이라이트 매트릭스 카드 -->
+
+<!-- 3번째 이미지: 자동 렌더링 핵심 지표 카드 -->
+<div class="img-area">
+<img alt="📊 화장실 줄눈 곰팡이 해결 방식별 비용 및 효과 비교표 / 데이터 요약 카드" src="../../images/261017/6_repair_bathroom_tile_grout_mold_clean_cost_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">📊 화장실 줄눈 곰팡이 해결 방식별 비용 및 효과 비교표 / 데이터 요약 카드</div>
+</div>
+
+
+<h2>06 | 셀프 DIY vs 전문 줄눈 시공 비용·소요시간·내구성 비교표</h2>
+<p>
+  셀프 작업과 전문 업체 시공은 비용과 내구성에서 확연한 차이를 보입니다. 거주 기간과 예산에 맞춰 결정해야 합니다.
+</p>
+
+<table class="info-table">
+  <tr>
+    <th>구분 항목</th>
+    <th>셀프 락스 팩 세척</th>
+    <th>셀프 튜브 보수제 (DIY)</th>
+    <th>전문 줄눈 코팅 시공 (업체)</th>
+  </tr>
+  <tr>
+    <td><strong>예상 소요 비용</strong></td>
+    <td>약 3,000 ~ 5,000원</td>
+    <td>약 15,000 ~ 25,000원 (재료비)</td>
+    <td><strong>바닥 1칸: 15만 ~ 25만 원</strong><br/>(벽면 전체 추가 시 30만~45만 원)</td>
+  </tr>
+  <tr>
+    <td><strong>소요 작업 시간</strong></td>
+    <td>약 3시간 (방치 시간 포함)</td>
+    <td>약 2~3시간 (정밀 수작업)</td>
+    <td>약 3~4시간 (전문가 1~2인)</td>
+  </tr>
+  <tr>
+    <td><strong>난이도 / 노동 강도</strong></td>
+    <td>매우 낮음 (뿌려두면 끝)</td>
+    <td>중급 (허리·손목 통증, 손기술 필요)</td>
+    <td>없음 (업체 전담 시공)</td>
+  </tr>
+  <tr>
+    <td><strong>방수 및 곰팡이 방지 수명</strong></td>
+    <td>1~2개월 (습기 차면 즉시 재발)</td>
+    <td>6개월 ~ 1년 (탈락 및 변색 위험)</td>
+    <td><strong>최소 3년 ~ 5년 이상 영구적 유지</strong></td>
+  </tr>
+  <tr>
+    <td><strong>추천 대상</strong></td>
+    <td>전월세 임차인, 단기 거주자</td>
+    <td>비용 절약을 원하는 손재주 있는 분</td>
+    <td>자가 거주자, 신규 입주, 곰팡이 해방 희망자</td>
+  </tr>
+</table>
+
+<h2>07 | 폴리아스파틱 줄눈 코팅의 장점과 업체 선정 시 필수 확인 사항</h2>
+<p>
+  전문 줄눈 시공 업체가 사용하는 고급 자재는 과거의 에폭시를 넘어 <strong>폴리아스파틱(Polyaspartic)</strong>계 수지입니다.<br/><br/>
+  • <strong>완벽한 비흡수 방수성</strong>: 유리알처럼 매끄럽게 경화되어 물과 오염물질이 내부로 절대 흡수되지 않습니다. 곰팡이가 뿌리를 내릴 수 없어 곰팡이 발생률이 0%에 수렴합니다.<br/><br/>
+  • <strong>우수한 신축성과 내구성</strong>: 타일의 미세한 수축 팽창에도 깨지거나 갈라지지 않으며, 락스나 락스 세제에도 탈색되지 않습니다.<br/><br/>
+  • <strong>업체 선정 체크리스트</strong>: 시공 계약 전 반드시 <strong>① 기존 백시멘트를 기계나 전용 공구로 '깊이 3~5mm' 정직하게 파내는지(단순 덧방 시 100% 들뜸 탈락)</strong>, <strong>② 독일·스위스산 정품 친환경 안료 및 수지를 사용하는지</strong>, <strong>③ 최소 1년 무상 A/S 보증서</strong>를 발급하는지 전수 확인해야 합니다.
+</p>
+
+<h2>08 | 욕실 줄눈 곰팡이 재발을 원천 차단하는 환기 및 건조 습관 5가지</h2>
+<p>
+  아무리 깨끗이 청소하고 줄눈을 새로 시공했더라도 습기 관리가 안 되면 표면에 곰팡이가 다시 엉겨 붙습니다.
+</p>
+
+<div class="tip-box">
+  <strong>🚿 곰팡이 재발 방지 5대 생활 수칙</strong><br/><br/>
+  1. <strong>샤워 직후 찬물 샤워기 뿌리기</strong>: 뜨거운 물로 샤워한 직후 타일 벽면과 바닥에 찬물을 한번 뿌려주면 욕실 내부 온도를 급격히 낮춰 곰팡이 증식을 억제합니다.<br/>
+  2. <strong>스퀴지(물기 제거기)로 바닥 긁기</strong>: 샤워 후 스퀴지로 바닥 물기를 하수구 쪽으로 30초만 긁어내도 건조 시간이 3배 이상 단축됩니다.<br/>
+  3. <strong>환풍기 최소 1시간 가동</strong>: 샤워가 끝난 후에도 환풍기를 최소 1~2시간 연속 가동하여 벽면의 습기를 완전히 배출해야 합니다.<br/>
+  4. <strong>욕실 문 5cm 이상 열어두기</strong>: 욕실 문을 밀폐해 두면 내부가 사우나처럼 습해집니다. 항상 문을 조금 열어 집 안 공기가 순환되게 하세요.<br/>
+  5. <strong>바닥 매트 및 젖은 수건 방치 금지</strong>: 축축한 발매트를 욕실 타일 바닥에 오래 깔아두면 그 밑의 줄눈에 100% 흑곰팡이가 번식합니다.
+</div>
+
+<h2>09 | 작업 시 안전 유의사항 — 락스 가스 중독 예방과 환기 수칙</h2>
+<p>
+  화장실은 좁고 밀폐된 공간이므로 세정 작업을 진행할 때 안전 수칙을 철저히 지켜야 합니다.
+</p>
+
+<div class="warn-box">
+  <strong>⚠️ 락스 세정 시 절대 해서는 안 되는 3대 금기</strong><br/><br/>
+  • <strong>산성 세제와 혼합 절대 금지</strong>: 락스에 변기용 산성 세정제나 구연산, 식초를 섞으면 치명적인 독성 염소 가스(황록색 기체)가 발생하여 폐 손상과 호흡 곤란을 유발합니다.<br/>
+  • <strong>뜨거운 물 사용 금지</strong>: 락스 희석 시 뜨거운 물을 쓰면 유효 염소 성분이 급격히 분해되어 독한 냄새와 가스가 공기 중으로 퍼집니다. 항상 찬물을 사용하세요.<br/>
+  • <strong>밀폐 상태 작업 금지</strong>: 마스크와 고무장갑을 반드시 착용하고, 환풍기 스위치를 켠 상태에서 문을 활짝 열어둔 채 작업해야 합니다. 눈에 튀었을 경우 즉시 흐르는 물에 15분 이상 씻어내고 의사의 진료를 받으세요.
+</div>
+
+<div class="recommend-area">
+  <strong>📌 함께 읽어보면 유용한 주택 관리 & 가을 나들이 정보</strong><br/><br/>
+  <p>• <a href="../261016/repair_condensation_prevention_checklist_insulation_cost.html">가을·겨울철 결로 생기는 집 체크리스트 — 원인별 환기 요령과 결로방지 페인트 vs 단열 시공 비용 비교</a></p>
+  <p>• <a href="../261016/travel_cheongsong_juwangsan_fall_foliage_trail.html">청송 주왕산 단풍 언제 절정인가 — 주왕계곡 3대 폭포 코스와 절골 트레킹·공영주차장 팁</a></p>
+</div>
+
+<div class="tags">
+  <span class="tag">#화장실줄눈곰팡이</span>
+  <span class="tag">#타일줄눈청소</span>
+  <span class="tag">#줄눈락스청소</span>
+  <span class="tag">#욕실곰팡이제거</span>
+  <span class="tag">#줄눈시공비용</span>
+  <span class="tag">#셀프줄눈보수</span>
+  <span class="tag">#줄눈코팅</span>
+  <span class="tag">#화장실물때제거</span>
+  <span class="tag">#백시멘트줄눈</span>
+  <span class="tag">#욕실환기노하우</span>
+</div>
+
+</body>
+</html>
