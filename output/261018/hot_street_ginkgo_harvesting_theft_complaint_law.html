@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>도심 가로수 은행 털기 기간과 수거 신청 — 떨어진 은행 주워가면 절도죄인가</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #2e7d32; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #2e7d32; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #2e7d32; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #2e7d32; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #2e7d32; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+
+  /* [방안 B 특화] 2번째 이미지 대체: 추천 코스 인포그래픽 카드 */
+  .infographic-course-box { background: #f9fdf9; border: 1.5px solid #c8e6c9; border-radius: 12px; padding: 22px 20px; margin: 35px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+  .infographic-header { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; font-weight: 800; color: #1b5e20; font-size: 1.05em; border-bottom: 2px dashed #c8e6c9; padding-bottom: 10px; }
+  .course-grid { display: flex; gap: 12px; flex-wrap: wrap; }
+  .course-card { flex: 1; min-width: 190px; background: #ffffff; border: 1px solid #c8e6c9; border-radius: 8px; padding: 14px; position: relative; box-shadow: 0 2px 6px rgba(0,0,0,0.02); }
+  .course-badge { display: inline-block; background: #2e7d32; color: #fff; font-size: 0.75em; font-weight: 700; padding: 2px 8px; border-radius: 12px; margin-bottom: 6px; }
+  .course-title { font-size: 0.95em; font-weight: 700; color: #1b5e20; margin-bottom: 6px; }
+  .course-desc { font-size: 0.84em; color: #555; line-height: 1.5; }
+
+  /* [방안 B 특화] 3번째 이미지 대체: 핵심 지표 하이라이트 매트릭스 카드 */
+  .infographic-stat-box { background: #ffffff; border: 1.5px solid #e0e0e0; border-radius: 12px; padding: 22px 20px; margin: 35px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
+  .stat-grid { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
+  .stat-card { flex: 1; min-width: 140px; background: #f1faf1; border: 1px solid #c8e6c9; border-radius: 8px; padding: 14px 10px; text-align: center; }
+  .stat-icon { font-size: 1.6em; margin-bottom: 4px; }
+  .stat-label { font-size: 0.8em; color: #666; font-weight: 600; margin-bottom: 4px; }
+  .stat-value { font-size: 1.15em; font-weight: 800; color: #1b5e20; }
+  .stat-sub { font-size: 0.75em; color: #888; margin-top: 2px; }
+
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #2e7d32; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #2e7d32; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#2e7d32'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<!-- hot-dday: 2026-10-31 | src: https://eungdapso.seoul.go.kr -->
+<h1>도심 가로수 은행 털기 기간과 수거 신청 — 떨어진 은행 주워가면 절도죄인가</h1>
+<div class="intro-box">
+<strong>가을철 도심 보행로를 노랗게 물들이지만 특유의 지독한 악취로 시민들에게 큰 불편을 주는 가로수 은행 열매는 전국 지자체가 9월 중순부터 10월 31일까지 '은행 열매 집중 채취 및 수거 기동반'을 가동하여 전면 수거 작업을 진행합니다.</strong><br/><br/>
+  길거리나 인도에 떨어진 은행 열매는 관할 지자체의 행정재산으로 분류되므로, 허가 없이 무단으로 대량 채취하거나 장대로 털어 가져갈 경우 <strong>형법 제329조 절도죄(6년 이하 징역 또는 1천만 원 이하 벌금)</strong> 또는 경범죄처벌법상 자연훼손으로 형사처벌을 받을 수 있습니다.<br/><br/>
+  지자체별 은행 열매 수거 민원 접수처(서울 다산콜 120 및 응답소 24시간 즉시처리 서비스), 도로변 은행 열매의 중금속(납·카드뮴) 오염 위험성과 섭취 주의사항, 신발에 묻은 은행 악취 제거 꿀팁을 명쾌하게 정리해 드립니다.
+</div>
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 대표 메인 썸네일 생성 영역</span>
+      <span class="ph-file">images/261018/5_hot_street_ginkgo_harvesting_theft_complaint_law_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-1">A photorealistic daytime documentary scene of municipal city workers harvesting autumn ginkgo nuts along a bustling urban sidewalk in Seoul, South Korea. Two workers wearing fluorescent high-visibility safety vests and hard hats operate a mechanical trunk shaker and a large specialized catch net underneath a tall mature yellow ginkgo tree to collect falling ginkgo seeds before they drop onto the ground. The sidewalk below shows a clean pedestrian walkway, while autumn traffic and modern city buildings line the background under a crisp golden October afternoon light. High dynamic range, realistic depth of field, sharp detail, journalistic street photography, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">도심 가로수 은행나무 열매 낙과 악취를 예방하기 위해 진동 수확기와 그물망으로 조기 채취 작업을 진행하는 모습 / AI 제작 이미지</div>
+</div>
+<h2>01 | 가을철 도심의 천덕꾸러기, 가로수 은행 열매 악취의 원인과 지자체 집중 수거</h2>
+<p>
+  가을이 되면 도심 곳곳의 은행나무는 눈부신 노란 단풍으로 도심을 수놓으며 대기오염 물질과 중금속을 정화하는 훌륭한 공기청정기 역할을 수행합니다.<br/><br/>
+  하지만 10월에 접어들어 암나무에 맺힌 은행 열매가 보행로와 차도로 떨어지면 상황은 급변합니다. 행인들의 발과 차량 바퀴에 짓밟히면서 뿜어내는 특유의 배설물 같은 악취 때문입니다.<br/><br/>
+  은행 열매 겉껍질(육질 외종피)에는 <strong>빌로볼(Bilobol)</strong>과 <strong>은행산(Ginkgolic acid)</strong>이라는 독성 물질이 함유되어 있는데, 천적으로부터 씨앗을 보호하기 위해 지독한 냄새를 풍깁니다. 이 껍질이 피부에 닿으면 접촉성 피부염과 알레르기 수포를 유발하기도 합니다.<br/><br/>
+  이에 따라 서울시를 비롯한 전국 지자체는 매년 <strong>9월 중순부터 10월 31일까지</strong>를 '은행 열매 집중 채취 기간'으로 정하고, 열매가 바닥에 떨어지기 전에 선제적으로 털어내는 전면 작전을 펼치고 있습니다.
+</p>
+<h2>02 | 첨단 진동수확기와 수거 그물망 투입 — 친환경 낙과 방지 기술 총출동</h2>
+<p>
+  과거에는 미화원들이 긴 대나무 장대로 나무를 흔들거나 나뭇가지를 쳐서 은행을 털었으나, 나무에 상처가 나고 보행자 안전사고 위험이 컸습니다.<br/><br/>
+  최근 각 지자체는 굴삭기나 트럭에 장착된 <strong>'굴절 진동 수확기'</strong>를 적극 도입하고 있습니다. 나무 기둥에 충격 흡수 패드를 부착한 뒤 분당 수백 회의 미세 진동을 주면, 불과 1~2분 만에 나뭇가지 훼손 없이 잘 익은 열매만 우수수 떨어집니다.<br/><br/>
+  또한 유동 인구가 많은 지하철역 출입구, 버스정류장, 횡단보도 주변 가로수에는 9월 초부터 깔때기 모양의 <strong>'낙과 방지 수거 그물망'</strong>을 미리 설치하여, 떨어진 열매가 보도블록에 닿지 않고 포켓에 모이도록 관리하고 있습니다.
+</p>
+<!-- [방안 B 특화] 2번째 이미지 대체: 추천 코스 인포그래픽 카드 -->
+
+<!-- 2번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="📋 도심 가로수 은행 불편 민원 접수 및 24시간 즉시 수거 처리 단계 / 인포그래픽 카드" src="../../images/261018/5_hot_street_ginkgo_harvesting_theft_complaint_law_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">📋 도심 가로수 은행 불편 민원 접수 및 24시간 즉시 수거 처리 단계 / 인포그래픽 카드</div>
+</div>
+
+<h2>03 | 떨어진 은행 무단으로 주워가면 절도죄? 관련 법조항과 실제 처벌 기준</h2>
+<p>
+  가을철 어르신들이 비닐봉지와 장대를 들고 가로수 아래에서 은행을 줍거나 터는 모습을 흔히 볼 수 있습니다. 그러나 이는 엄연히 법적인 처벌 대상이 될 수 있습니다.
+</p>
+<table class="info-table">
+<tr>
+<th>구분</th>
+<th>형법상 절도죄 (제329조)</th>
+<th>산림자원법 및 경범죄처벌법</th>
+</tr>
+<tr>
+<td><strong>적용 행위</strong></td>
+<td>가로수 열매를 고의로 장대로 털거나 포대 자루에 담아 대량 채취하는 행위</td>
+<td>가로수 가지를 부러뜨려 훼손하거나 소량의 떨어진 열매를 무단 수거하는 행위</td>
+</tr>
+<tr>
+<td><strong>소유권 귀속</strong></td>
+<td>가로수 및 그 부속물(열매)은 <strong>지자체의 행정재산 (공공 소유)</strong></td>
+<td>공공시설 및 조경 시설 훼손</td>
+</tr>
+<tr>
+<td><strong>처벌 수위</strong></td>
+<td><strong>6년 이하의 징역 또는 1천만 원 이하의 벌금</strong></td>
+<td>500만 원 이하의 과태료 또는 10만 원 이하 벌금·구류</td>
+</tr>
+<tr>
+<td><strong>판례 및 실무</strong></td>
+<td>판매 목적 대량 채취 시 절도죄 기소 처벌<br/>(가정 소비용 소량 채취는 통상 계도 조치)</td>
+<td>나무를 흔들거나 훼손하여 가로수를 상하게 한 경우 손해배상 및 과태료 부과</td>
+</tr>
+</table>
+<div class="warn-box">
+<strong>⚖️ 대법원 판례 및 법률 상식</strong><br/><br/>
+  지자체가 식재하고 관리하는 도로변 가로수는 국유재산 또는 공유재산으로, 가로수에 맺힌 열매뿐만 아니라 <strong>자연적으로 바닥에 떨어진 낙과(落果) 역시 관할 지자체의 관리권과 소유권</strong>에 속합니다. 허가받지 않은 개인이 이를 영리 목적으로 포대에 담아가거나 도구를 이용해 채취하는 행위는 형법상 절도죄의 구성요건을 완벽히 충족하므로 각별히 주의해야 합니다.
+</div>
+<!-- [방안 B 특화] 3번째 이미지 대체: 핵심 지표 하이라이트 매트릭스 카드 -->
+
+<!-- 3번째 이미지: 자동 렌더링 핵심 지표 카드 -->
+<div class="img-area">
+<img alt="📅 집중 수거 기간 ~ 10월 31일 지자체 기동반 운영 📞 수거 신고 전화 국번없이 120 다산콜센터 즉시 접수 ⚖️ 무단 채취 처벌 절도죄 적용 지자체 행정재산 절도 🏥 중금속 안전성 자가 섭취 주의 보건연구원 적합 시 기부 / 데이터 요약 카드" src="../../images/261018/5_hot_street_ginkgo_harvesting_theft_complaint_law_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">📅 집중 수거 기간 ~ 10월 31일 지자체 기동반 운영 📞 수거 신고 전화 국번없이 120 다산콜센터 즉시 접수 ⚖️ 무단 채취 처벌 절도죄 적용 지자체 행정재산 절도 🏥 중금속 안전성 자가 섭취 주의 보건연구원 적합 시 기부 / 데이터 요약 카드</div>
+</div>
+
+<h2>04 | 도로변 은행 주워 먹어도 될까? 매연과 중금속(납·카드뮴) 오염 실태</h2>
+<p>
+  일부 시민들은 "길에 버려진 자연산 은행인데 깨끗이 씻어 구워 먹으면 보약"이라고 생각하지만, 도로변 가로수 은행은 건강에 치명적일 수 있습니다.<br/><br/>
+  • <strong>자동차 배기가스와 타이어 분진 오염</strong>: 가로수는 하루 수만 대의 차량이 내뿜는 매연과 타이어 마모 분진, 브레이크 미세먼지를 직접 흡수합니다. 은행 껍질뿐만 아니라 과육 내부까지 납, 카드뮴 등 중금속이 침투할 가능성이 높습니다.<br/><br/>
+  • <strong>독성 물질 메틸피리독신(MPN) 함유</strong>: 은행은 본래 한 번에 많이 섭취하면 중추신경계 마비를 일으키는 독성 물질을 함유하고 있습니다. 성인 기준 하루 10알, 어린이 2~3알 이하로 섭취를 제한해야 하며, 오염된 도로변 은행은 복통과 구토를 유발할 위험이 큽니다.
+</p>
+<h2>05 | 우리 동네 악취 가로수 신고 방법 — 서울시 다산콜 120 및 응답소 24시간 수거</h2>
+<p>
+  집 앞 골목이나 매일 오가는 출퇴근길에 은행 열매가 짓이겨져 악취가 진동한다면 참지 말고 즉시 지자체에 수거를 요청해야 합니다.
+</p>
+<div class="step-box">
+<strong>📱 3분 만에 끝내는 은행 열매 수거 민원 신청법</strong><br/><br/>
+  • <strong>전화 신청 (가장 빠름)</strong>: 국번 없이 <strong>120 (다산콜센터)</strong>으로 전화하여 "00구 00동 00번지 앞 인도에 은행 열매가 심하게 떨어져 통행이 어렵다"고 구두 접수.<br/>
+  • <strong>온라인 민원 신청</strong>: 서울시 민원 포털 <strong>'응답소(eungdapso.seoul.go.kr)'</strong> 또는 스마트폰 모바일 앱 접속 → [민원 신청] → 현장 사진 첨부 및 위치 등록.<br/>
+  • <strong>현장 처리 절차</strong>: 접수된 민원은 관할 구청 공원녹지과 '은행 수거 즉시처리 기동반'에 실시간 전달되며, 24시간 이내 현장에 출동하여 고압 살수차와 진동기로 일괄 청소를 완료합니다.
+</div>
+<h2>06 | 지자체가 수거한 수십 톤의 은행 열매는 어디로 갈까?</h2>
+<p>
+  서울시 25개 자치구에서 10월 한 달 동안 수거되는 은행 열매의 양은 무려 <strong>100~150톤</strong>에 이릅니다.<br/><br/>
+  지자체는 수거한 은행 열매를 함부로 폐기하지 않고 자원화 절차를 거칩니다.<br/>
+  1. <strong>보건환경연구원 중금속 정밀 검사</strong>: 수거된 열매는 겉껍질을 제거한 뒤 시 보건환경연구원에 의뢰하여 납, 카드뮴 등 유해 중금속 잔류 검사를 거칩니다.<br/>
+  2. <strong>사회복지시설 및 경로당 기증</strong>: 검사 결과 '식용 적합 판정'을 받은 안전한 열매는 건조 및 가공을 거쳐 지역 경로당, 복지관, 저소득 가구에 겨울철 영양 간식으로 전액 무료 기부됩니다.<br/>
+  3. <strong>퇴비 및 천연 살충제 활용</strong>: 부적합 판정을 받거나 파손된 열매는 가축 분뇨와 섞어 친환경 유기농 퇴비로 재활용하거나, 빌로볼 성분을 추출해 해충 방제용 천연 약제로 활용합니다.
+</p>
+<h2>07 | 가로수 은행나무 암수 구별과 지자체의 암나무 교체 사업 현황</h2>
+<p>
+  은행나무는 겉모습만으로는 암수를 구별하기 어렵고, 식재 후 약 20~30년이 지나 열매가 열려야만 암나무임을 알 수 있는 특성이 있습니다.<br/><br/>
+  • <strong>DNA 유전자 성감별 기술</strong>: 국립산림과학원이 어린 묘목 단계에서 암수를 100% 감별하는 DNA 분석법을 개발한 이후, 지자체는 가로수를 심을 때 열매가 맺히지 않는 <strong>'수나무'</strong>만 선별하여 심고 있습니다.<br/><br/>
+  • <strong>암나무 바꿔심기 프로젝트</strong>: 서울시는 도심 은행나무 가로수 10만여 그루 중 열매를 맺는 암나무 약 2만 7천 그루(26%)를 2026년까지 수나무로 전면 교체하거나 외곽 녹지대로 이식하는 사업을 연차별로 추진 중입니다.
+</p>
+<h2>08 | 신발이나 옷에 은행 열매 밟았을 때 냄새 완벽히 없애는 세탁 꿀팁</h2>
+<p>
+  출근길이나 외출 중 무심코 은행 열매를 밟아 신발 밑창에 악취가 배었다면 일반 비누나 물로는 냄새가 잘 지워지지 않습니다.
+</p>
+<div class="tip-box">
+<strong>👟 신발 밑창 은행 악취 박멸 3단계</strong><br/><br/>
+  • <strong>1단계: 물리적 잔여물 제거</strong>: 낡은 칫솔이나 나무젓가락으로 신발 밑창 홈에 낀 찌꺼기를 물로 깨끗이 파내어 씻어냅니다.<br/>
+  • <strong>2단계: 베이킹소다 &amp; 알코올 소독</strong>: 은행의 빌로볼 산성 물질을 중화하기 위해 베이킹소다를 푼 물에 신발 밑창을 15분간 담그거나, 소독용 에탄올(소주)을 칫솔에 묻혀 문질러 줍니다.<br/>
+  • <strong>3단계: 햇볕 건조</strong>: 그늘진 실내에 두면 냄새가 다시 올라오므로, 직사광선이 내리쬐는 베란다나 마당에서 반나절 동안 바짝 건조하면 자외선이 냄새 분자를 완벽히 분해합니다.
+</div>
+<h2>09 | 성숙한 시민 의식 — 가로수 훼손 방지와 쾌적한 가을 보행로 만들기</h2>
+<p>
+  가을철 도심 가로수는 우리 모두가 함께 누리는 소중한 도시 숲이자 공공 자산입니다.<br/><br/>
+  1. <strong>도구 이용 채취 삼가기</strong>: 장대로 나무를 때리거나 발로 기둥을 차는 행위는 은행나무 수피에 상처를 내어 겨울철 동사나 병충해의 원인이 됩니다.<br/>
+  2. <strong>위험 지역 자율 신고</strong>: 횡단보도나 버스정류장 등 미끄럼 사고 위험이 높은 구역은 즉시 120으로 신고하여 청소를 유도해 주세요.<br/>
+  3. <strong>보행 시 바닥 주시</strong>: 비가 온 뒤 젖은 은행 열매는 낙엽과 뒤섞여 매우 미끄러우므로 스마트폰을 보며 걷지 말고 바닥을 확인하며 걸어야 낙상 사고를 예방할 수 있습니다.
+</p>
+<div class="recommend-area">
+<strong>📌 함께 읽어보면 좋은 가을철 생활 이슈 가이드</strong><br/><br/>
+<p>• <a href="../261017/hot_busan_fireworks_gwangalli_traffic_subway.html">2026 부산 불꽃축제 시간과 명당 — 광안리 교통통제 구간과 지하철 연장 시간표</a></p>
+<p>• <a href="../261016/repair_condensation_prevention_checklist_insulation_cost.html">가을·겨울철 결로 생기는 집 체크리스트 — 원인별 환기 요령과 결로방지 페인트 vs 단열 시공 비용 비교</a></p>
+</div>
+<div class="tags">
+<span class="tag">#가로수은행털기</span>
+<span class="tag">#은행열매수거</span>
+<span class="tag">#은행열매악취</span>
+<span class="tag">#은행나무암수구별</span>
+<span class="tag">#은행주우면절도죄</span>
+<span class="tag">#가로수은행절도</span>
+<span class="tag">#다산콜120수거신고</span>
+<span class="tag">#은행열매중금속</span>
+<span class="tag">#은행냄새제거방법</span>
+<span class="tag">#가을도심가로수</span>
+</div>
+</body>
+</html>
