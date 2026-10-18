@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>입사 1년 미만 연차 몇 개 생기나 — 월별 발생 기준표와 퇴사 시 미사용 연차수당 계산법</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+
+  .infographic-box, [class*="infographic-"] { box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif; }
+  .infographic-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; border-bottom: 2px dashed #c8e6c9; padding-bottom: 12px; }
+  .infographic-title { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 1.1em; color: #1b5e20; }
+  .infographic-badge { display: inline-block; background: #388e3c; color: #ffffff; font-size: 0.75em; font-weight: 700; padding: 3px 10px; border-radius: 12px; }
+
+  .infographic-compare-box { background: #ffffff; border: 1.5px solid #c8e6c9; border-radius: 12px; padding: 22px 20px; margin: 35px 0; box-shadow: 0 4px 14px rgba(0,0,0,0.03); }
+  .compare-grid { display: flex; gap: 12px; flex-wrap: wrap; }
+  .compare-col { flex: 1; min-width: 150px; background: #fafafa; border: 1px solid #e5e7eb; border-radius: 8px; padding: 14px 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+  .compare-col.highlight { background: #f9fdf9; border: 1.5px solid #388e3c; }
+  .compare-col-title { font-size: 0.95em; font-weight: 800; color: #1b5e20; margin-bottom: 6px; }
+  .compare-col-badge { display: inline-block; background: #388e3c; color: #fff; font-size: 0.72em; font-weight: 700; padding: 2px 7px; border-radius: 10px; margin-bottom: 8px; }
+  .compare-row { font-size: 0.82em; color: #444; line-height: 1.55; padding: 5px 0; border-bottom: 1px dashed #eee; }
+  .compare-row:last-child { border-bottom: none; }
+
+  .infographic-timeline-box { background: #f9fdf9; border: 1.5px solid #c8e6c9; border-radius: 12px; padding: 22px 20px; margin: 35px 0; box-shadow: 0 4px 14px rgba(0,0,0,0.03); }
+  .timeline-list { display: flex; flex-direction: column; gap: 12px; margin-top: 10px; }
+  .timeline-item { display: flex; align-items: flex-start; gap: 14px; background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 14px; }
+  .timeline-badge { background: #388e3c; color: #ffffff; font-size: 0.78em; font-weight: 800; padding: 4px 9px; border-radius: 6px; white-space: nowrap; }
+  .timeline-content { flex: 1; }
+  .timeline-title { font-size: 0.92em; font-weight: 700; color: #1b5e20; margin-bottom: 4px; }
+  .timeline-desc { font-size: 0.82em; color: #555; line-height: 1.5; }
+
+  .infographic-strategy-box { background: #ffffff; border: 1.5px solid #ef4444; border-radius: 12px; padding: 22px 20px; margin: 35px 0; box-shadow: 0 4px 14px rgba(239,68,68,0.06); }
+  .strategy-grid { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px; }
+  .strategy-col { flex: 1; min-width: 220px; background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 14px; }
+  .strategy-col.solution { background: #f9fdf9; border: 1px solid #c8e6c9; }
+  .hazard-tag { display: inline-block; background: #dc2626; color: #fff; font-size: 0.72em; font-weight: 800; padding: 2px 8px; border-radius: 10px; margin-bottom: 8px; }
+  .safe-tag { display: inline-block; background: #16a34a; color: #fff; font-size: 0.72em; font-weight: 800; padding: 2px 8px; border-radius: 10px; margin-bottom: 8px; }
+
+  .infographic-receipt-box { background: #ffffff; border: 2px dashed #9ca3af; border-radius: 12px; padding: 24px 22px; margin: 35px 0; box-shadow: 0 4px 14px rgba(0,0,0,0.04); }
+  .receipt-table { width: 100%; border-collapse: collapse; margin: 14px 0 16px; font-size: 0.88em; }
+  .receipt-table th { background: #f3f4f6; color: #374151; padding: 8px 10px; text-align: left; border-bottom: 1px solid #d1d5db; }
+  .receipt-table td { padding: 8px 10px; border-bottom: 1px dashed #e5e7eb; color: #4b5563; }
+  .receipt-total { background: #f9fdf9; border-top: 2px solid #388e3c; padding: 12px 16px; border-radius: 6px; display: flex; justify-content: space-between; align-items: center; font-size: 1.1em; font-weight: 800; color: #1b5e20; }
+
+  .infographic-checklist-box { background: #ffffff; border: 1.5px solid #c8e6c9; border-radius: 12px; padding: 22px 20px; margin: 35px 0; box-shadow: 0 4px 14px rgba(0,0,0,0.03); }
+  .checklist-grid { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px; }
+  .checklist-col { flex: 1; min-width: 190px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px; }
+  .checklist-item { font-size: 0.82em; color: #374151; line-height: 1.5; padding: 6px 0; border-bottom: 1px dashed #eee; }
+  .checklist-item:last-child { border-bottom: none; }
+
+  .infographic-stat-box { background: #ffffff; border: 1.5px solid #c8e6c9; border-radius: 12px; padding: 22px 20px; margin: 35px 0; box-shadow: 0 4px 14px rgba(0,0,0,0.03); }
+  .stat-grid { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 12px; }
+  .stat-card { flex: 1; min-width: 130px; background: #f9fdf9; border: 1px solid #c8e6c9; border-radius: 8px; padding: 14px 10px; text-align: center; }
+  .stat-icon { font-size: 1.6em; margin-bottom: 4px; }
+  .stat-label { font-size: 0.8em; color: #666; font-weight: 600; margin-bottom: 4px; }
+  .stat-value { font-size: 1.15em; font-weight: 800; color: #388e3c; }
+  .stat-sub { font-size: 0.75em; color: #777; margin-top: 2px; }
+
+  .infographic-faq-box { background: #f9fdf9; border: 1.5px solid #c8e6c9; border-radius: 12px; padding: 22px 20px; margin: 35px 0; box-shadow: 0 4px 14px rgba(0,0,0,0.03); }
+  .faq-list { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
+  .faq-card { background: #ffffff; border: 1px solid #c8e6c9; border-radius: 8px; padding: 12px 14px; }
+  .faq-q { font-size: 0.88em; font-weight: 800; color: #1b5e20; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
+  .faq-q-badge { background: #388e3c; color: #ffffff; font-size: 0.72em; font-weight: 800; padding: 2px 6px; border-radius: 4px; }
+  .faq-a { font-size: 0.82em; color: #555; line-height: 1.5; }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>입사 1년 미만 연차 몇 개 생기나 — 월별 발생 기준표와 퇴사 시 미사용 연차수당 계산법</h1>
+
+<div class="intro-box">
+  <strong>근로기준법 제60조 제2항에 따라 입사 1년 미만 근로자는 1개월 개근 시 1일씩 유급휴가가 발생하여 1년간 최대 11개의 연차가 생깁니다.</strong><br><br>
+  각 월별 연차는 입사일로부터 만 1년이 되는 날까지 모두 사용할 수 있으며, 1년 미만 근무 후 퇴사하거나 기한 내 쓰지 못한 연차는 <strong>'통상임금(1일 8시간분) × 남은 일수'</strong>로 환산하여 퇴사일로부터 14일 이내에 전액 현금 수당으로 지급받아야 합니다. 단, 대법원 판례에 따라 딱 1년(365일)만 근무하고 퇴사하는 경우에는 최대 11개만 수당 대상이 되며, 1년 하고도 하루를 더 일해야 15개의 연차가 추가 발생합니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 대표 메인 썸네일 생성 영역</span>
+      <span class="ph-file">images/261019/7_labor_under_one_year_annual_leave_calculation_payout_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-7-1">A crisp and modern professional flat-lay desk scene focusing on Korean labor law and HR employment payroll calculation. An open elegant desktop calendar highlighting monthly dates, an official employment contract with Korean text headings, a digital sleek calculator showing numerical figures, and a neat salary payout statement sheet. Beside them, a high-end fountain pen and a warm cup of coffee on a clean light oak wooden desk. Bright, clean natural office lighting, professional corporate HR workspace atmosphere, realistic high-resolution 8k commercial photography, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-7-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">입사 1년 미만 월별 연차 발생 기준과 미사용 연차수당 모의 산정 / AI 제작 이미지</div>
+</div>
+
+
+<!-- 2번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="입사 1년 미만 연차 핵심 법정 지표 / 인포그래픽 카드" src="../../images/261019/7_labor_under_one_year_annual_leave_calculation_payout_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">입사 1년 미만 연차 핵심 법정 지표 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>01 | 신입사원 연차휴가의 법적 근거 — 근로기준법 제60조 제2항의 이해</h2>
+과거에는 입사 첫해에 연차를 사용하면 이듬해 발생하는 15개의 연차에서 차감하는 방식이어서 신입사원의 휴식권이 크게 침해되었습니다.<br><br>
+하지만 근로기준법 개정에 따라 현재는 <strong>입사 1년 미만 근로자에게 주어지는 연차와 1년 만근 후 주어지는 15일의 연차가 완전히 독립적으로 보장</strong>됩니다.<br><br>
+근로기준법 제60조 제2항은 "사용자는 계속하여 근로한 기간이 1년 미만인 근로자 또는 1년간 80퍼센트 미만 출근한 근로자에게 <strong>1개월 개근 시 1일의 유급휴가</strong>를 주어야 한다"고 명시하고 있습니다.<br><br>
+즉, 입사 후 결근 없이 한 달을 온전히 일하면 그 다음 달 첫날에 자유롭게 사용할 수 있는 유급휴가 1일이 확정 발생합니다.<br><br>
+이 규정은 정규직 신입사원뿐만 아니라 계약직, 수습사원, 주 15시간 이상 근무하는 아르바이트생에게도 동일하게 강제 적용되는 법적 권리입니다.
+
+<h2>02 | 월별 연차 발생 타임라인 — 입사일부터 만 1년까지 총 몇 개 생기나</h2>
+입사 1년 미만 동안 발생할 수 있는 법정 연차의 총개수는 <strong>정확히 '최대 11개'</strong>입니다.<br><br>
+1년은 12개월이지만 왜 12개가 아니라 11개일까요? 12개월째를 개근하여 채우는 순간은 바로 '입사 만 1년'이 되는 시점이기 때문입니다.<br><br>
+12개월을 모두 개근한 시점에는 1년 미만 연차가 아니라, 법 제60조 제1항에 따른 '15일의 새로운 연차'가 일괄 부여됩니다.<br><br>
+예를 들어 2026년 1월 1일에 입사하여 매월 결근 없이 개근한 직원의 월별 연차 발생 과정을 살펴보겠습니다.<br><br>
+1월 한 달 개근 시 2월 1일에 1호 연차가 발생하고, 2월 개근 시 3월 1일에 2호가 발생합니다. 이렇게 매달 1개씩 누적되어 11월 한 달을 개근한 12월 1일에 마지막 11호 연차가 발생합니다.<br><br>
+이 11개의 연차는 발생할 때마다 바로 쓸 수 있으며, 쓰지 않고 모아두었다가 원하는 시기에 연속으로 사용하는 것도 법적으로 가능합니다.
+
+
+<!-- 3번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="입사 1년 미만 월별 연차 누적 발생 로드맵 / 인포그래픽 카드" src="../../images/261019/7_labor_under_one_year_annual_leave_calculation_payout_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">입사 1년 미만 월별 연차 누적 발생 로드맵 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>03 | 연차 사용 가능 기한과 소멸 시점 — 1년 미만 연차의 유효기간 룰</h2>
+입사 1년 미만 연차를 다룰 때 반드시 알아야 할 중요한 개정 법률이 <strong>'사용 유효기간'</strong>입니다.<br><br>
+과거에는 각 연차가 발생한 날로부터 각각 1년간 쓸 수 있었으나, 법이 개정되면서 <strong>"발생 시점과 무관하게 최초 입사일로부터 1년이 되는 날"</strong>에 11개의 연차가 모두 일괄 소멸합니다.<br><br>
+즉, 1월 1일 입사자의 경우 2월 1일에 생긴 1호 연차든, 12월 1일에 생긴 11호 연차든 상관없이 <strong>입사 1년 미만 연차는 발생 시점과 무관하게 최초 입사일로부터 만 1년이 되는 날까지 사용해야 합니다.</strong>할 수 있습니다.<br><br>
+12월 1일에 발생한 마지막 연차는 사용 가능 기간이 딱 한 달밖에 되지 않는 셈입니다.<br><br>
+만약 근로자가 계속 근무하는 상태에서 12월 31일까지 연차를 쓰지 못했다면, 회사는 다음 달(이듬해 1월) 급여일에 미사용 연차수당을 현금으로 정산해 주어야 합니다.
+
+
+<!-- 4번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="입사 1년 미만 vs 1년 이상 연차 제도 비교 / 인포그래픽 카드" src="../../images/261019/7_labor_under_one_year_annual_leave_calculation_payout_4.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">입사 1년 미만 vs 1년 이상 연차 제도 비교 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>04 | 미사용 연차수당 정확한 계산 공식 — 통상임금과 209시간의 비밀</h2>
+퇴사할 때 남아 있는 연차는 돈으로 환급받아야 합니다. 이를 <strong>'미사용 연차유급휴가 미지급 수당'</strong>이라 부릅니다.<br><br>
+연차수당 계산의 핵심 기준은 '평균임금'이 아니라 <strong>'통상임금'</strong>입니다.<br><br>
+주 40시간(월~금 하루 8시간) 일하는 일반 정규직 근로자의 월 소정근로시간은 주휴시간 8시간을 포함하여 <strong>월 209시간</strong>으로 법정 계산됩니다.<br><br>
+계산 순서는 다음과 같습니다. 먼저 통상임금에 해당하는 기본급과 고정수당(직책수당, 면허수당 등 정기적·일률적·고정적 급여)을 합산합니다.<br><br>
+<strong>1단계: 통상시급 = 월 통상임금 ÷ 209시간</strong><br>
+<strong>2단계: 1일 통상임금 = 통상시급 × 8시간</strong><br>
+<strong>3단계: 미사용 연차수당 = 1일 통상임금 × 미사용 잔여 연차 일수</strong><br><br>
+예를 들어 월 통상임금이 300만 원인 근로자의 통상시급은 약 14,354원이며, 하루치 연차 일당은 114,832원입니다. 만약 6개의 연차가 남아 있다면 퇴사 시 688,992원을 수당으로 받아야 합니다.
+
+
+<!-- 5번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="월급별 미사용 연차수당 실전 모의 계산서 / 인포그래픽 카드" src="../../images/261019/7_labor_under_one_year_annual_leave_calculation_payout_5.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">월급별 미사용 연차수당 실전 모의 계산서 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>05 | 대법원 전원합의체 판례 — 딱 1년(365일) 계약직 퇴사 시 11개인가 26개인가</h2>
+노무 분야에서 가장 뜨거운 쟁점이자 수많은 분쟁을 낳았던 이슈가 바로 <strong>'딱 1년만 일하고 퇴사했을 때 연차가 11개인가 26개인가'</strong>입니다.<br><br>
+과거 노동부 행정해석은 1년 만근 시 1년 미만 연차 11개에 1년 만근 연차 15개를 더해 '총 26개'를 주어야 한다고 보았습니다.<br><br>
+그러나 <strong>대법원 판례(대법원 2021.10.14. 선고 2021다245180 판결)</strong>에 의해 법리가 완전히 확정 정리되었습니다.<br><br>
+대법원은 "연차유급휴가를 사용할 권리는 전년도 1년간 근로를 마친 다음 날 발생하므로, <strong>딱 1년(365일) 계약기간 만료로 퇴사하는 근로자에게는 15일의 연차가 발생하지 않는다</strong>"고 판결하였습니다.<br><br>
+즉, 365일 근무 후 바로 퇴사하면 <strong>최대 11일분의 연차만 인정</strong>됩니다.<br><br>
+하지만 <strong>1년 하고도 단 '하루'라도 더 근무(366일 이상 근무)</strong>하고 퇴사한다면, 15일의 연차 청구권이 온전히 발생하여 미사용 시 11일 + 15일 = <strong>최대 26일분의 수당을 모두 정산</strong>받을 수 있습니다.
+
+
+<!-- 6번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="퇴사 시점별 연차수당 권리 판단 전술도 / 인포그래픽 카드" src="../../images/261019/7_labor_under_one_year_annual_leave_calculation_payout_6.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">퇴사 시점별 연차수당 권리 판단 전술도 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>06 | 회사가 연차사용촉진을 했다는데, 그래도 수당을 받을 수 있나</h2>
+많은 회사들이 미사용 연차수당 지급 부담을 덜기 위해 근로기준법 제61조에 따른 <strong>'연차휴가 사용촉진제도'</strong>를 도입하고 있습니다.<br><br>
+회사가 적법하게 연차사용촉진 조치를 완료했음에도 근로자가 휴가를 쓰지 않았다면, 회사의 수당 지급 의무는 면제됩니다.<br><br>
+하지만 입사 1년 미만 근로자에 대한 연차촉진은 <strong>법이 정한 엄격한 시기와 서면 절차</strong>를 100% 충족해야만 법적 효력이 발생합니다.<br><br>
+첫째, 입사일로부터 1년이 끝나기 <strong>3개월 전을 기준으로 10일 이내</strong>에 회사가 근로자별로 남은 연차 일수를 서면으로 통보하고 사용 시기를 정해 통보하도록 촉구해야 합니다.<br><br>
+둘째, 근로자가 촉구를 받고도 10일 이내에 시기를 정하지 않은 경우, 회사는 1년이 끝나기 <strong>1개월 전까지</strong> 휴가 사용 시기를 직접 지정하여 서면으로 통보해야 합니다.<br><br>
+만약 회사가 구두나 카카오톡, 사내 인트라넷 공지로만 대충 알렸거나 통보 기한을 단 하루라도 넘겼다면, 촉진 조치는 법적으로 무효가 되며 회사는 반드시 미사용 연차수당을 현금으로 지급해야 합니다.
+
+
+<!-- 7번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="퇴사 전 미사용 연차수당 정산 체크리스트 / 인포그래픽 카드" src="../../images/261019/7_labor_under_one_year_annual_leave_calculation_payout_7.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">퇴사 전 미사용 연차수당 정산 체크리스트 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>07 | 퇴사 후 14일 지나도 수당 안 줄 때 — 고용노동부 신고와 지연이자 청구</h2>
+근로기준법 제36조에 따라 사용자는 근로자가 사망 또는 퇴직한 경우 그 지급 사유가 발생한 때부터 <strong>14일 이내에 임금, 보상금, 그 밖의 모든 금품을 청산</strong>해야 합니다.<br><br>
+만약 당사자 간 기일 연장 합의 없이 14일이 넘도록 연차수당을 주지 않는다면 명백한 임금체불에 해당합니다.<br><br>
+이 경우 퇴사자는 사업장 관할 <strong>지방고용노동관서에 온라인(고용노동부 노동포털)으로 '임금체불 진정'</strong>을 제기할 수 있습니다.<br><br>
+또한 근로기준법 제37조에 따라 퇴직 후 14일이 지난 다음 날부터 실제로 수당을 지급하는 날까지 <strong>연 20%의 지연이자</strong>가 가산됩니다.<br><br>
+연차수당 임금채권의 소멸시효는 <strong>3년</strong>이므로, 퇴사한 지 1~2년이 지났더라도 3년 이내라면 과거에 받지 못한 미사용 연차수당을 소급하여 전액 청구할 수 있습니다.
+
+
+<!-- 8번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="입사 1년 미만 연차 및 수당 FAQ / 인포그래픽 카드" src="../../images/261019/7_labor_under_one_year_annual_leave_calculation_payout_8.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">입사 1년 미만 연차 및 수당 FAQ / 인포그래픽 카드</div>
+</div>
+
+
+<h2>08 | 신입사원 연차 관리 노하우 — 불이익 없이 100% 활용하는 법</h2>
+연차는 근로자의 신체적·정신적 건강을 회복하고 일과 삶의 균형을 유지하기 위한 소중한 법적 권리입니다.<br><br>
+많은 신입사원들이 상사나 동료의 눈치를 보느라 연차를 쓰지 못하고 끙끙 앓는 경우가 많습니다.<br><br>
+근로기준법상 <strong>연차휴가의 사용 시기 지정권은 오직 근로자 본인</strong>에게 있으며, 회사는 사업 운영에 막대한 지장이 있는 극히 예외적인 경우에만 '시기 변경권'을 행사할 수 있을 뿐 휴가 사용 자체를 반려할 권한이 없습니다.<br><br>
+본인의 연차 발생 현황과 남은 일수를 수시로 인사 시스템이나 캘린더에 기록해 두시고, 입사 1년이 되기 전에 계획적으로 휴가를 사용하여 재충전의 기회로 삼으시길 권장합니다.
+
+<h2>09 | 입사 1년 미만 연차 및 수당 정산 총평 및 핵심 정리표</h2>
+입사 1년 미만 연차는 1개월 개근 시 1일씩 누적되어 최대 11일까지 발생하는 독립된 유급휴가입니다.<br><br>
+재직 중에는 입사일로부터 1년 이내에 자유롭게 사용하고, 기한 내 쓰지 못했거나 퇴사 시에는 통상임금 기준의 정당한 현금 수당으로 보상받는 것이 법의 원칙입니다.<br><br>
+자신의 정당한 노동의 대가를 정확히 알고 챙기는 것은 직장인의 가장 기본적인 권리이자 지혜입니다.
+
+<table class="info-table">
+  <tr>
+    <th>구분</th>
+    <th>핵심 요약 법정 기준</th>
+  </tr>
+  <tr>
+    <td>법적 근거</td>
+    <td>근로기준법 제60조 제2항 (1년 미만 유급휴가)</td>
+  </tr>
+  <tr>
+    <td>발생 조건</td>
+    <td>1개월 개근 시 익월 1일 유급휴가 1일 발생 (1년간 최대 11일)</td>
+  </tr>
+  <tr>
+    <td>사용 유효기간</td>
+    <td>최초 입사일로부터 만 1년이 되는 날까지 (이후 소멸 및 수당 전환)</td>
+  </tr>
+  <tr>
+    <td>1일 수당 산정식</td>
+    <td>(월 통상임금 ÷ 209시간) × 8시간</td>
+  </tr>
+  <tr>
+    <td>퇴사 시 수당 계산</td>
+    <td>1일 통상임금 × 미사용 잔여 연차 일수</td>
+  </tr>
+  <tr>
+    <td>퇴사 시 지급 기한</td>
+    <td>퇴직일로부터 14일 이내 (위반 시 연 20% 지연이자 발생)</td>
+  </tr>
+  <tr>
+    <td>소멸시효</td>
+    <td>임금채권 3년 (3년 이내 미지급 수당 전액 청구 가능)</td>
+  </tr>
+  <tr>
+    <td>적용 사업장</td>
+    <td>상시 근로자 수 5인 이상 사업장 필수 적용</td>
+  </tr>
+</table>
+
+<div class="recommend-area">
+  <strong>함께 읽으면 좋은 추천 직장·생활 실무 가이드</strong><br><br>
+  • <a href="../261018/car_urban_railway_bond_hidden_refund_claim.html">자동차 살 때 낸 도시철도채권 환급금 조회 방법 — 배기량별 매입 기준과 5년 소멸시효 전 숨은 돈 찾기</a><br>
+  • <a href="../261018/hot_street_ginkgo_harvesting_theft_complaint_law.html">도심 가로수 은행 털기 기간과 수거 신청 — 떨어진 은행 주워가면 절도죄인가</a>
+</div>
+
+<div class="tags">
+  <span class="tag">#1년미만연차</span>
+  <span class="tag">#신입사원연차</span>
+  <span class="tag">#연차수당계산법</span>
+  <span class="tag">#퇴사연차수당</span>
+  <span class="tag">#미사용연차수당</span>
+  <span class="tag">#근로기준법60조</span>
+  <span class="tag">#통상임금209시간</span>
+  <span class="tag">#1년계약직연차</span>
+  <span class="tag">#연차사용촉진제도</span>
+  <span class="tag">#퇴직금품청산</span>
+</div>
+
+</body>
+</html>
