@@ -47,6 +47,172 @@
   .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
   .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
   .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+
+  /* 8. 평가 지표 & 코스/제품 스코어카드 (.infographic-scorecard-box) */
+  .infographic-scorecard-box {
+    background: #ffffff;
+    border: 1.5px solid #2e7d32;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .scorecard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .scorecard-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .score-label {
+    width: 150px;
+    font-size: 0.86em;
+    font-weight: 700;
+    color: #1f2937;
+  }
+  .score-bar-bg {
+    flex: 1;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .score-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #a5d6a7, #2e7d32);
+    border-radius: 5px;
+  }
+  .score-value {
+    width: 45px;
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: 800;
+    color: #2e7d32;
+  }
+  .score-grade {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 0.72em;
+    font-weight: 800;
+    background: #e8f5e9;
+    color: #2e7d32;
+  }
+
+  /* 9. 장단점 & 추천 vs 비추천 대조 카드 (.infographic-procon-box) */
+  .infographic-procon-box {
+    background: #ffffff;
+    border: 1.5px solid #d1d5db;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .procon-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .pro-col {
+    flex: 1;
+    min-width: 220px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .con-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .pro-badge {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .con-badge {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .procon-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 5px 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.06);
+  }
+  .procon-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 10. 핵심 질문 & 해법 Q&A 매트릭스 (.infographic-faq-box) */
+  .infographic-faq-box {
+    background: #f8fafc;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .faq-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .faq-q {
+    font-size: 0.88em;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .faq-q-badge {
+    background: #0284c7;
+    color: #ffffff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .faq-a {
+    font-size: 0.82em;
+    color: #475569;
+    line-height: 1.5;
+  }
+
 </style>
 <script>
 function copyPrompt(id) {
@@ -132,6 +298,16 @@ function copyPrompt(id) {
 <img alt="📅 집중 수거 기간 ~ 10월 31일 지자체 기동반 운영 📞 수거 신고 전화 국번없이 120 다산콜센터 즉시 접수 ⚖️ 무단 채취 처벌 절도죄 적용 지자체 행정재산 절도 🏥 중금속 안전성 자가 섭취 주의 보건연구원 적합 시 기부 / 데이터 요약 카드" src="../../images/261018/5_hot_street_ginkgo_harvesting_theft_complaint_law_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
 <div class="img-caption">📅 집중 수거 기간 ~ 10월 31일 지자체 기동반 운영 📞 수거 신고 전화 국번없이 120 다산콜센터 즉시 접수 ⚖️ 무단 채취 처벌 절도죄 적용 지자체 행정재산 절도 🏥 중금속 안전성 자가 섭취 주의 보건연구원 적합 시 기부 / 데이터 요약 카드</div>
 </div>
+
+<!-- [인포그래픽 카드 4] 가로수 은행 악취 민원 접수 및 수거 4단계 플로우 -->
+
+<!-- 4번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="가로수 은행 열매 악취 민원 접수 ➔ 기동수거반 처리 4단계 절차도 / 인포그래픽 카드" src="../../images/261018/5_hot_street_ginkgo_harvesting_theft_complaint_law_4.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">가로수 은행 열매 악취 민원 접수 ➔ 기동수거반 처리 4단계 절차도 / 인포그래픽 카드</div>
+</div>
+
+
 <h2>04 | 도로변 은행 주워 먹어도 될까? 매연과 중금속(납·카드뮴) 오염 실태</h2>
 <p>
   일부 시민들은 "길에 버려진 자연산 은행인데 깨끗이 씻어 구워 먹으면 보약"이라고 생각하지만, 도로변 가로수 은행은 건강에 치명적일 수 있습니다.<br/><br/>
@@ -148,6 +324,16 @@ function copyPrompt(id) {
   • <strong>온라인 민원 신청</strong>: 서울시 민원 포털 <strong>'응답소(eungdapso.seoul.go.kr)'</strong> 또는 스마트폰 모바일 앱 접속 → [민원 신청] → 현장 사진 첨부 및 위치 등록.<br/>
   • <strong>현장 처리 절차</strong>: 접수된 민원은 관할 구청 공원녹지과 '은행 수거 즉시처리 기동반'에 실시간 전달되며, 24시간 이내 현장에 출동하여 고압 살수차와 진동기로 일괄 청소를 완료합니다.
 </div>
+
+<!-- [인포그래픽 카드 5] 채취 행위 법적 처벌 비교표 -->
+
+<!-- 5번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="길거리 가로수 은행 채취 — 단순 낙과 줍기 vs 고의 무단 채취 법적 처벌 비교 / 인포그래픽 카드" src="../../images/261018/5_hot_street_ginkgo_harvesting_theft_complaint_law_5.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">길거리 가로수 은행 채취 — 단순 낙과 줍기 vs 고의 무단 채취 법적 처벌 비교 / 인포그래픽 카드</div>
+</div>
+
+
 <h2>06 | 지자체가 수거한 수십 톤의 은행 열매는 어디로 갈까?</h2>
 <p>
   서울시 25개 자치구에서 10월 한 달 동안 수거되는 은행 열매의 양은 무려 <strong>100~150톤</strong>에 이릅니다.<br/><br/>
@@ -162,6 +348,16 @@ function copyPrompt(id) {
   • <strong>DNA 유전자 성감별 기술</strong>: 국립산림과학원이 어린 묘목 단계에서 암수를 100% 감별하는 DNA 분석법을 개발한 이후, 지자체는 가로수를 심을 때 열매가 맺히지 않는 <strong>'수나무'</strong>만 선별하여 심고 있습니다.<br/><br/>
   • <strong>암나무 바꿔심기 프로젝트</strong>: 서울시는 도심 은행나무 가로수 10만여 그루 중 열매를 맺는 암나무 약 2만 7천 그루(26%)를 2026년까지 수나무로 전면 교체하거나 외곽 녹지대로 이식하는 사업을 연차별로 추진 중입니다.
 </p>
+
+<!-- [인포그래픽 카드 6] 가로수 은행 열매 팩트체크 Q&A -->
+
+<!-- 6번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="가로수 은행 열매 중금속 오염 & 독성 팩트체크 TOP 3 Q&A / 인포그래픽 카드" src="../../images/261018/5_hot_street_ginkgo_harvesting_theft_complaint_law_6.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">가로수 은행 열매 중금속 오염 & 독성 팩트체크 TOP 3 Q&A / 인포그래픽 카드</div>
+</div>
+
+
 <h2>08 | 신발이나 옷에 은행 열매 밟았을 때 냄새 완벽히 없애는 세탁 꿀팁</h2>
 <p>
   출근길이나 외출 중 무심코 은행 열매를 밟아 신발 밑창에 악취가 배었다면 일반 비누나 물로는 냄새가 잘 지워지지 않습니다.

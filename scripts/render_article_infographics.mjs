@@ -172,8 +172,13 @@ async function main() {
 
       const replacements = [];
 
+      // 기존 HTML 내 이미 존재하는 이미지 번호 탐지 (증분 렌더링 지원)
+      const existingImgMatches = [...html.matchAll(new RegExp(`${seq}_${slug}_(\\d+)\\.png`, "g"))];
+      const existingNums = existingImgMatches.map(m => parseInt(m[1], 10)).filter(n => !isNaN(n));
+      const startNum = existingNums.length > 0 ? Math.max(...existingNums) + 1 : 2;
+
       for (let i = 0; i < ranges.length; i++) {
-        const imgNum = i + 2;
+        const imgNum = startNum + i;
         const imgFileName = `${seq}_${slug}_${imgNum}.png`;
         const imgPath = path.join(imagesDir, imgFileName);
         const el = elements[i];

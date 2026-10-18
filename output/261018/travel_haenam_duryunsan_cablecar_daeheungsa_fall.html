@@ -47,6 +47,172 @@
   .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
   .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
   .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+
+  /* 8. 평가 지표 & 코스/제품 스코어카드 (.infographic-scorecard-box) */
+  .infographic-scorecard-box {
+    background: #ffffff;
+    border: 1.5px solid #2e7d32;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .scorecard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .scorecard-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .score-label {
+    width: 150px;
+    font-size: 0.86em;
+    font-weight: 700;
+    color: #1f2937;
+  }
+  .score-bar-bg {
+    flex: 1;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .score-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #a5d6a7, #2e7d32);
+    border-radius: 5px;
+  }
+  .score-value {
+    width: 45px;
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: 800;
+    color: #2e7d32;
+  }
+  .score-grade {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 0.72em;
+    font-weight: 800;
+    background: #e8f5e9;
+    color: #2e7d32;
+  }
+
+  /* 9. 장단점 & 추천 vs 비추천 대조 카드 (.infographic-procon-box) */
+  .infographic-procon-box {
+    background: #ffffff;
+    border: 1.5px solid #d1d5db;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .procon-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .pro-col {
+    flex: 1;
+    min-width: 220px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .con-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .pro-badge {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .con-badge {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .procon-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 5px 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.06);
+  }
+  .procon-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 10. 핵심 질문 & 해법 Q&A 매트릭스 (.infographic-faq-box) */
+  .infographic-faq-box {
+    background: #f8fafc;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .faq-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .faq-q {
+    font-size: 0.88em;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .faq-q-badge {
+    background: #0284c7;
+    color: #ffffff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .faq-a {
+    font-size: 0.82em;
+    color: #475569;
+    line-height: 1.5;
+  }
+
 </style>
 <script>
 function copyPrompt(id) {
@@ -137,6 +303,16 @@ function copyPrompt(id) {
 <img alt="🍁 단풍 절정 시기 10.28 ~ 11.08 남도 늦가을 절정 🚠 케이블카 탑승시간 편도 8분 국내 최장급 1.6km 🎫 대흥사 문화재관람료 무료 (0원) 조계종 문화재법 개정 🚗 주차장 이용료 소형 2,000원 케이블카 주차장 무료 / 데이터 요약 카드" src="../../images/261018/2_travel_haenam_duryunsan_cablecar_daeheungsa_fall_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
 <div class="img-caption">🍁 단풍 절정 시기 10.28 ~ 11.08 남도 늦가을 절정 🚠 케이블카 탑승시간 편도 8분 국내 최장급 1.6km 🎫 대흥사 문화재관람료 무료 (0원) 조계종 문화재법 개정 🚗 주차장 이용료 소형 2,000원 케이블카 주차장 무료 / 데이터 요약 카드</div>
 </div>
+
+<!-- [인포그래픽 카드 4] 두륜산 케이블카 & 대흥사 단풍 투어 시간대별 동선 -->
+
+<!-- 4번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="해남 두륜산 케이블카 & 대흥사 가을 단풍 당일치기 추천 동선 / 인포그래픽 카드" src="../../images/261018/2_travel_haenam_duryunsan_cablecar_daeheungsa_fall_4.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">해남 두륜산 케이블카 & 대흥사 가을 단풍 당일치기 추천 동선 / 인포그래픽 카드</div>
+</div>
+
+
 <h2>04 | 고계봉 전망대에서 바라보는 360도 다도해 파노라마와 한라산 조망</h2>
 <p>
   케이블카 상부 역사에 내린 후 잘 정비된 나무 데크 계단을 따라 약 10분 정도 오르면 해발 638m 고계봉 전망대에 도달합니다.<br/><br/>
@@ -150,6 +326,16 @@ function copyPrompt(id) {
   • <strong>추사 김정희와 원교 이광사의 현판 대결</strong>: 대흥사 무량수각에 걸린 '무량수각(無量壽閣)' 현판은 추사 김정희가 제주도 유배 길에 남긴 힘찬 명필이며, 대웅보전의 편액은 조선 후기 서예의 대가 원교 이광사의 글씨로 서예 애호가들의 필수 감상 코스입니다.<br/>
   • <strong>일지암(一枝庵)</strong>: 초의선사가 머물며 다산 정약용, 추사 김정희와 차를 나누며 교유하던 한국 차 문화의 성지입니다. 고즈넉한 대나무 숲길을 따라 15분 정도 올라가면 차 한 잔의 여유를 느낄 수 있습니다.
 </p>
+
+<!-- [인포그래픽 카드 5] 케이블카 vs 도보 등산 비교표 -->
+
+<!-- 5번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="두륜산 정상 정복 — 케이블카 탑승 vs 도보 등산 코스 비교 매트릭스 / 인포그래픽 카드" src="../../images/261018/2_travel_haenam_duryunsan_cablecar_daeheungsa_fall_5.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">두륜산 정상 정복 — 케이블카 탑승 vs 도보 등산 코스 비교 매트릭스 / 인포그래픽 카드</div>
+</div>
+
+
 <h2>06 | 주차장 선택 요령 — 시설지구 대형주차장 vs 일주문 안쪽 주차장</h2>
 <p>
   대흥사 방문 시 주차장은 위치에 따라 장단점이 극명하게 나뉩니다.
@@ -186,6 +372,16 @@ function copyPrompt(id) {
   • <strong>해남 닭코스 요리촌</strong>: 대흥사 입구 연동리 일대에는 전국적으로 유명한 닭요리 전문점들이 모여 있습니다. 토종닭 한 마리로 닭가슴살 육회, 매콤한 닭주물럭, 담백한 닭백숙, 그리고 고소한 녹두닭죽까지 4가지 코스가 차례로 나와 성인 3~4명이 배불리 즐길 수 있습니다.<br/><br/>
   • <strong>산채비빔밥과 도토리묵</strong>: 가볍고 건강한 식사를 원한다면 집단시설지구 식당가에서 직접 채취한 신선한 산나물 8가지와 들기름을 듬뿍 넣은 산채보리밥 정식(1인 12,000원 선)을 추천합니다.
 </p>
+
+<!-- [인포그래픽 카드 6] 해남 두륜산 투어 핵심 Q&A -->
+
+<!-- 6번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="해남 두륜산 케이블카 & 대흥사 단풍 투어 핵심 Q&A / 인포그래픽 카드" src="../../images/261018/2_travel_haenam_duryunsan_cablecar_daeheungsa_fall_6.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">해남 두륜산 케이블카 & 대흥사 단풍 투어 핵심 Q&A / 인포그래픽 카드</div>
+</div>
+
+
 <h2>08 | 대중교통으로 찾아가는 방법과 시내버스 시간표 안내</h2>
 <p>
   대중교통을 이용할 경우 해남종합버스터미널에서 군내버스를 이용하면 편리하게 이동할 수 있습니다.<br/><br/>

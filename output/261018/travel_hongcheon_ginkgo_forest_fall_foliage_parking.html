@@ -173,6 +173,172 @@
   .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
   .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
   .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+
+  /* 8. 평가 지표 & 코스/제품 스코어카드 (.infographic-scorecard-box) */
+  .infographic-scorecard-box {
+    background: #ffffff;
+    border: 1.5px solid #2e7d32;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .scorecard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .scorecard-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .score-label {
+    width: 150px;
+    font-size: 0.86em;
+    font-weight: 700;
+    color: #1f2937;
+  }
+  .score-bar-bg {
+    flex: 1;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .score-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #a5d6a7, #2e7d32);
+    border-radius: 5px;
+  }
+  .score-value {
+    width: 45px;
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: 800;
+    color: #2e7d32;
+  }
+  .score-grade {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 0.72em;
+    font-weight: 800;
+    background: #e8f5e9;
+    color: #2e7d32;
+  }
+
+  /* 9. 장단점 & 추천 vs 비추천 대조 카드 (.infographic-procon-box) */
+  .infographic-procon-box {
+    background: #ffffff;
+    border: 1.5px solid #d1d5db;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .procon-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .pro-col {
+    flex: 1;
+    min-width: 220px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .con-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .pro-badge {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .con-badge {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .procon-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 5px 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.06);
+  }
+  .procon-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 10. 핵심 질문 & 해법 Q&A 매트릭스 (.infographic-faq-box) */
+  .infographic-faq-box {
+    background: #f8fafc;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .faq-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .faq-q {
+    font-size: 0.88em;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .faq-q-badge {
+    background: #0284c7;
+    color: #ffffff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .faq-a {
+    font-size: 0.82em;
+    color: #475569;
+    line-height: 1.5;
+  }
+
 </style>
 <script>
 function copyPrompt(id) {
@@ -285,6 +451,16 @@ function copyPrompt(id) {
   • <strong>해발 600m 고원 농산물</strong>: 큰 일교차 덕분에 당도와 식감이 뛰어난 내면 고랭지 사과, 달콤한 찰옥수수, 자연산 송이버섯과 능이버섯, 건나물(취나물, 곤드레)을 산지 직송 가격으로 구매할 수 있습니다.<br/><br/>
   • <strong>즉석 먹거리 쉼터</strong>: 갓 부쳐낸 노릇노릇한 메밀전병과 감자전, 따끈한 잔치국수와 도토리묵무침은 쌀쌀한 가을 아침 허기를 든든하게 달래줍니다. 주민들이 끓여주는 옥수수차 한 잔은 숲 산책 전후 몸을 따스하게 덥혀줍니다.
 </p>
+
+<!-- [인포그래픽 카드 5] 오전 vs 오후 방문 장단점 대조표 -->
+
+<!-- 5번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="홍천 은행나무숲 오전 08시 vs 오후 14시 방문 장단점 비교 대조표 / 인포그래픽 카드" src="../../images/261018/1_travel_hongcheon_ginkgo_forest_fall_foliage_parking_5.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">홍천 은행나무숲 오전 08시 vs 오후 14시 방문 장단점 비교 대조표 / 인포그래픽 카드</div>
+</div>
+
+
 <h2>06 | 인근 당일치기 연계 명소 — 삼봉자연휴양림 삼봉약수와 칡소폭포</h2>
 <p>
   은행나무숲만 둘러보고 돌아가기 아쉽다면 차로 10~15분 거리에 위치한 천혜의 비경들을 함께 묶어 완벽한 강원도 가을 당일치기 코스를 완성할 수 있습니다.
@@ -329,6 +505,16 @@ function copyPrompt(id) {
   • <strong>편안한 운동화 착용</strong>: 평지 흙길이지만 낙엽 아래 젖은 이슬이나 잔돌이 있을 수 있으므로 구두나 슬리퍼보다는 접지력이 좋은 운동화를 신어야 안전합니다.<br/>
   • <strong>보조 배터리</strong>: 숲 전체가 웅장한 포토존이라 사진과 동영상 촬영이 많아 스마트폰 배터리가 빠르게 소모됩니다.
 </div>
+
+<!-- [인포그래픽 카드 6] 10월 개방 핵심 질문 FAQ -->
+
+<!-- 6번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="홍천 은행나무숲 10월 개방 핵심 질문 TOP 3 Q&A / 인포그래픽 카드" src="../../images/261018/1_travel_hongcheon_ginkgo_forest_fall_foliage_parking_6.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">홍천 은행나무숲 10월 개방 핵심 질문 TOP 3 Q&A / 인포그래픽 카드</div>
+</div>
+
+
 <h2>08 | 대중교통으로 찾아가는 방법과 홍천 터미널 환승 시간표</h2>
 <p>
   자가용 운전이 부담스럽다면 시외버스를 이용해 홍천터미널에서 시내버스로 환승하여 찾아갈 수 있습니다.

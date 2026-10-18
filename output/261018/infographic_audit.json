@@ -1,11 +1,259 @@
 {
   "targetDate": "261018",
-  "auditTimestamp": "2026-10-18T02:48:09.649Z",
+  "auditTimestamp": "2026-10-18T03:08:12.543Z",
   "totalArticlesInspected": 7,
-  "articlesUpdated": 0,
-  "totalCardsRendered": 0,
-  "averageCardsPerArticle": 0,
-  "distinctArchetypesUsed": 0,
-  "archetypeDistribution": {},
-  "cards": []
+  "articlesUpdated": 7,
+  "totalCardsRendered": 17,
+  "averageCardsPerArticle": "2.4",
+  "distinctArchetypesUsed": 8,
+  "archetypeDistribution": {
+    "장단점/추천 대조표": 1,
+    "핵심 Q&A 매트릭스": 7,
+    "타임라인/동선 로드맵": 2,
+    "비교 매트릭스": 3,
+    "평가지표 스코어카드": 1,
+    "단계별 절차 플로우": 1,
+    "비용/견적 영수증": 1,
+    "점검 체크리스트": 1
+  },
+  "cards": [
+    {
+      "article": "travel_hongcheon_ginkgo_forest_fall_foliage_parking.html",
+      "slug": "travel_hongcheon_ginkgo_forest_fall_foliage_parking",
+      "imgNum": 5,
+      "fileName": "1_travel_hongcheon_ginkgo_forest_fall_foliage_parking_5.png",
+      "archetype": "procon",
+      "archetypeName": "장단점/추천 대조표",
+      "caption": "홍천 은행나무숲 오전 08시 vs 오후 14시 방문 장단점 비교 대조표",
+      "dimensions": {
+        "width": 780,
+        "height": 286,
+        "aspectRatio": "2.73"
+      }
+    },
+    {
+      "article": "travel_hongcheon_ginkgo_forest_fall_foliage_parking.html",
+      "slug": "travel_hongcheon_ginkgo_forest_fall_foliage_parking",
+      "imgNum": 6,
+      "fileName": "1_travel_hongcheon_ginkgo_forest_fall_foliage_parking_6.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "홍천 은행나무숲 10월 개방 핵심 질문 TOP 3 Q&A",
+      "dimensions": {
+        "width": 780,
+        "height": 356,
+        "aspectRatio": "2.19"
+      }
+    },
+    {
+      "article": "travel_haenam_duryunsan_cablecar_daeheungsa_fall.html",
+      "slug": "travel_haenam_duryunsan_cablecar_daeheungsa_fall",
+      "imgNum": 4,
+      "fileName": "2_travel_haenam_duryunsan_cablecar_daeheungsa_fall_4.png",
+      "archetype": "timeline",
+      "archetypeName": "타임라인/동선 로드맵",
+      "caption": "해남 두륜산 케이블카 & 대흥사 가을 단풍 당일치기 추천 동선",
+      "dimensions": {
+        "width": 780,
+        "height": 425,
+        "aspectRatio": "1.84"
+      }
+    },
+    {
+      "article": "travel_haenam_duryunsan_cablecar_daeheungsa_fall.html",
+      "slug": "travel_haenam_duryunsan_cablecar_daeheungsa_fall",
+      "imgNum": 5,
+      "fileName": "2_travel_haenam_duryunsan_cablecar_daeheungsa_fall_5.png",
+      "archetype": "compare",
+      "archetypeName": "비교 매트릭스",
+      "caption": "두륜산 정상 정복 — 케이블카 탑승 vs 도보 등산 코스 비교 매트릭스",
+      "dimensions": {
+        "width": 780,
+        "height": 425,
+        "aspectRatio": "1.84"
+      }
+    },
+    {
+      "article": "travel_haenam_duryunsan_cablecar_daeheungsa_fall.html",
+      "slug": "travel_haenam_duryunsan_cablecar_daeheungsa_fall",
+      "imgNum": 6,
+      "fileName": "2_travel_haenam_duryunsan_cablecar_daeheungsa_fall_6.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "해남 두륜산 케이블카 & 대흥사 단풍 투어 핵심 Q&A",
+      "dimensions": {
+        "width": 780,
+        "height": 355,
+        "aspectRatio": "2.20"
+      }
+    },
+    {
+      "article": "travel_jinan_maisan_tapsa_fall_foliage_course.html",
+      "slug": "travel_jinan_maisan_tapsa_fall_foliage_course",
+      "imgNum": 4,
+      "fileName": "3_travel_jinan_maisan_tapsa_fall_foliage_course_4.png",
+      "archetype": "timeline",
+      "archetypeName": "타임라인/동선 로드맵",
+      "caption": "진안 마이산 남부주차장-탑사-탑영제 가을 단풍 힐링 트레킹 동선",
+      "dimensions": {
+        "width": 780,
+        "height": 425,
+        "aspectRatio": "1.84"
+      }
+    },
+    {
+      "article": "travel_jinan_maisan_tapsa_fall_foliage_course.html",
+      "slug": "travel_jinan_maisan_tapsa_fall_foliage_course",
+      "imgNum": 5,
+      "fileName": "3_travel_jinan_maisan_tapsa_fall_foliage_course_5.png",
+      "archetype": "compare",
+      "archetypeName": "비교 매트릭스",
+      "caption": "마이산 진입로 전격 비교 — 남부(완만/호수) vs 북부(계단/사자평)",
+      "dimensions": {
+        "width": 780,
+        "height": 425,
+        "aspectRatio": "1.84"
+      }
+    },
+    {
+      "article": "travel_jinan_maisan_tapsa_fall_foliage_course.html",
+      "slug": "travel_jinan_maisan_tapsa_fall_foliage_course",
+      "imgNum": 6,
+      "fileName": "3_travel_jinan_maisan_tapsa_fall_foliage_course_6.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "진안 마이산 탑사 가을 단풍 투어 필수 질문 TOP 3 Q&A",
+      "dimensions": {
+        "width": 780,
+        "height": 355,
+        "aspectRatio": "2.20"
+      }
+    },
+    {
+      "article": "golf_pattaya_siam_cc_4courses_greenfee_booking.html",
+      "slug": "golf_pattaya_siam_cc_4courses_greenfee_booking",
+      "imgNum": 6,
+      "fileName": "4_golf_pattaya_siam_cc_4courses_greenfee_booking_6.png",
+      "archetype": "scorecard",
+      "archetypeName": "평가지표 스코어카드",
+      "caption": "시암CC 4대 코스 잔디·그린스피드·시설·난이도 종합 스코어카드",
+      "dimensions": {
+        "width": 780,
+        "height": 426,
+        "aspectRatio": "1.83"
+      }
+    },
+    {
+      "article": "golf_pattaya_siam_cc_4courses_greenfee_booking.html",
+      "slug": "golf_pattaya_siam_cc_4courses_greenfee_booking",
+      "imgNum": 7,
+      "fileName": "4_golf_pattaya_siam_cc_4courses_greenfee_booking_7.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "파타야 시암CC 4대 코스 예약 & 라운딩 실무 핵심 Q&A",
+      "dimensions": {
+        "width": 780,
+        "height": 375,
+        "aspectRatio": "2.08"
+      }
+    },
+    {
+      "article": "hot_street_ginkgo_harvesting_theft_complaint_law.html",
+      "slug": "hot_street_ginkgo_harvesting_theft_complaint_law",
+      "imgNum": 4,
+      "fileName": "5_hot_street_ginkgo_harvesting_theft_complaint_law_4.png",
+      "archetype": "flow",
+      "archetypeName": "단계별 절차 플로우",
+      "caption": "가로수 은행 열매 악취 민원 접수 ➔ 기동수거반 처리 4단계 절차도",
+      "dimensions": {
+        "width": 780,
+        "height": 425,
+        "aspectRatio": "1.84"
+      }
+    },
+    {
+      "article": "hot_street_ginkgo_harvesting_theft_complaint_law.html",
+      "slug": "hot_street_ginkgo_harvesting_theft_complaint_law",
+      "imgNum": 5,
+      "fileName": "5_hot_street_ginkgo_harvesting_theft_complaint_law_5.png",
+      "archetype": "compare",
+      "archetypeName": "비교 매트릭스",
+      "caption": "길거리 가로수 은행 채취 — 단순 낙과 줍기 vs 고의 무단 채취 법적 처벌 비교",
+      "dimensions": {
+        "width": 780,
+        "height": 425,
+        "aspectRatio": "1.84"
+      }
+    },
+    {
+      "article": "hot_street_ginkgo_harvesting_theft_complaint_law.html",
+      "slug": "hot_street_ginkgo_harvesting_theft_complaint_law",
+      "imgNum": 6,
+      "fileName": "5_hot_street_ginkgo_harvesting_theft_complaint_law_6.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "가로수 은행 열매 중금속 오염 & 독성 팩트체크 TOP 3 Q&A",
+      "dimensions": {
+        "width": 780,
+        "height": 395,
+        "aspectRatio": "1.98"
+      }
+    },
+    {
+      "article": "house_outdoor_faucet_antifreeze_valve_shutoff_insulation.html",
+      "slug": "house_outdoor_faucet_antifreeze_valve_shutoff_insulation",
+      "imgNum": 5,
+      "fileName": "6_house_outdoor_faucet_antifreeze_valve_shutoff_insulation_5.png",
+      "archetype": "receipt",
+      "archetypeName": "비용/견적 영수증",
+      "caption": "전원주택 야외 부동전 셀프 동파방지 자재비 실전 견적 영수증",
+      "dimensions": {
+        "width": 780,
+        "height": 265,
+        "aspectRatio": "2.95"
+      }
+    },
+    {
+      "article": "house_outdoor_faucet_antifreeze_valve_shutoff_insulation.html",
+      "slug": "house_outdoor_faucet_antifreeze_valve_shutoff_insulation",
+      "imgNum": 6,
+      "fileName": "6_house_outdoor_faucet_antifreeze_valve_shutoff_insulation_6.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "전원주택 야외 부동전 동파·퇴수 관련 핵심 질문 TOP 3 Q&A",
+      "dimensions": {
+        "width": 780,
+        "height": 395,
+        "aspectRatio": "1.97"
+      }
+    },
+    {
+      "article": "car_urban_railway_bond_hidden_refund_claim.html",
+      "slug": "car_urban_railway_bond_hidden_refund_claim",
+      "imgNum": 5,
+      "fileName": "7_car_urban_railway_bond_hidden_refund_claim_5.png",
+      "archetype": "checklist",
+      "archetypeName": "점검 체크리스트",
+      "caption": "자동차 미환급 채권 청구 전 3대 필수 점검 체크리스트",
+      "dimensions": {
+        "width": 780,
+        "height": 182,
+        "aspectRatio": "4.29"
+      }
+    },
+    {
+      "article": "car_urban_railway_bond_hidden_refund_claim.html",
+      "slug": "car_urban_railway_bond_hidden_refund_claim",
+      "imgNum": 6,
+      "fileName": "7_car_urban_railway_bond_hidden_refund_claim_6.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "자동차 미환급 채권 조회 & 청구 독자 핵심 질문 TOP 3 Q&A",
+      "dimensions": {
+        "width": 780,
+        "height": 375,
+        "aspectRatio": "2.08"
+      }
+    }
+  ]
 }

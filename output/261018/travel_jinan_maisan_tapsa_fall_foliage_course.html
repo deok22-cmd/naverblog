@@ -47,6 +47,172 @@
   .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
   .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
   .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+
+  /* 8. 평가 지표 & 코스/제품 스코어카드 (.infographic-scorecard-box) */
+  .infographic-scorecard-box {
+    background: #ffffff;
+    border: 1.5px solid #2e7d32;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .scorecard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .scorecard-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .score-label {
+    width: 150px;
+    font-size: 0.86em;
+    font-weight: 700;
+    color: #1f2937;
+  }
+  .score-bar-bg {
+    flex: 1;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .score-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #a5d6a7, #2e7d32);
+    border-radius: 5px;
+  }
+  .score-value {
+    width: 45px;
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: 800;
+    color: #2e7d32;
+  }
+  .score-grade {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 0.72em;
+    font-weight: 800;
+    background: #e8f5e9;
+    color: #2e7d32;
+  }
+
+  /* 9. 장단점 & 추천 vs 비추천 대조 카드 (.infographic-procon-box) */
+  .infographic-procon-box {
+    background: #ffffff;
+    border: 1.5px solid #d1d5db;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .procon-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .pro-col {
+    flex: 1;
+    min-width: 220px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .con-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .pro-badge {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .con-badge {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .procon-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 5px 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.06);
+  }
+  .procon-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 10. 핵심 질문 & 해법 Q&A 매트릭스 (.infographic-faq-box) */
+  .infographic-faq-box {
+    background: #f8fafc;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .faq-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .faq-q {
+    font-size: 0.88em;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .faq-q-badge {
+    background: #0284c7;
+    color: #ffffff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .faq-a {
+    font-size: 0.82em;
+    color: #475569;
+    line-height: 1.5;
+  }
+
 </style>
 <script>
 function copyPrompt(id) {
@@ -105,6 +271,16 @@ function copyPrompt(id) {
 <img alt="🍁 단풍 절정 시기 10.24 ~ 11.05 타포니 암벽 단풍 ⏱️ 탑사 소요시간 편도 30분 남부 기준 1.8km 🎫 문화재 관람료 무료 (0원) 조계종 감면 정책 🚗 주차장 이용 요금 소형 2,000원 남부·북부 동일 적용 / 데이터 요약 카드" src="../../images/261018/3_travel_jinan_maisan_tapsa_fall_foliage_course_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
 <div class="img-caption">🍁 단풍 절정 시기 10.24 ~ 11.05 타포니 암벽 단풍 ⏱️ 탑사 소요시간 편도 30분 남부 기준 1.8km 🎫 문화재 관람료 무료 (0원) 조계종 감면 정책 🚗 주차장 이용 요금 소형 2,000원 남부·북부 동일 적용 / 데이터 요약 카드</div>
 </div>
+
+<!-- [인포그래픽 카드 4] 진안 마이산 탑사 둘레길 시간대별 동선 -->
+
+<!-- 4번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="진안 마이산 남부주차장-탑사-탑영제 가을 단풍 힐링 트레킹 동선 / 인포그래픽 카드" src="../../images/261018/3_travel_jinan_maisan_tapsa_fall_foliage_course_4.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">진안 마이산 남부주차장-탑사-탑영제 가을 단풍 힐링 트레킹 동선 / 인포그래픽 카드</div>
+</div>
+
+
 <h2>04 | 탑사 바로 뒤 은수사와 태조 이성계의 설화가 깃든 청실배나무</h2>
 <p>
   탑사 관람을 마친 후 대웅전 뒤편 오르막길을 따라 약 10~15분(약 300m) 정도 나무 계단을 오르면 암마이봉 절벽 바로 아래 고즈넉하게 안긴 <strong>은수사(銀水寺)</strong>에 도착합니다.<br/><br/>
@@ -147,6 +323,16 @@ function copyPrompt(id) {
 <td>전북 진안군 진안읍 마이산로 130</td>
 </tr>
 </table>
+
+<!-- [인포그래픽 카드 5] 남부주차장 vs 북부주차장 비교 매트릭스 -->
+
+<!-- 5번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="마이산 진입로 전격 비교 — 남부(완만/호수) vs 북부(계단/사자평) / 인포그래픽 카드" src="../../images/261018/3_travel_jinan_maisan_tapsa_fall_foliage_course_5.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">마이산 진입로 전격 비교 — 남부(완만/호수) vs 북부(계단/사자평) / 인포그래픽 카드</div>
+</div>
+
+
 <h2>06 | 진안 마이산 명물 참나무 장작 등갈비 구이와 더덕구이 한상</h2>
 <p>
   마이산 남부 진입로에 들어서면 참나무 장작불에서 노릇노릇하게 익어가는 바비큐 냄새가 침샘을 자극합니다.<br/><br/>
@@ -159,6 +345,16 @@ function copyPrompt(id) {
   • <strong>진안 모래재 메타세쿼이아길 (차량 15분)</strong>: 진안군 부귀면 모래재로 1.5km 구간에 하늘 높이 솟은 메타세쿼이아 나무들이 주황빛 터널을 이루는 환상적인 도로입니다. CF와 드라마 촬영지로 유명하며 갓길 안전지대에서 감성 사진을 남기기에 좋습니다.<br/><br/>
   • <strong>용담호 환상의 드라이브 코스 (차량 25분)</strong>: 거대한 용담호를 따라 굽이굽이 이어지는 60여 km의 호반 도로는 가을 물안개와 붉은 호숫가 단풍이 어우러져 전북 최고의 가을 힐링 코스로 손꼽힙니다.
 </p>
+
+<!-- [인포그래픽 카드 6] 마이산 탑사 필수 FAQ -->
+
+<!-- 6번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="진안 마이산 탑사 가을 단풍 투어 필수 질문 TOP 3 Q&A / 인포그래픽 카드" src="../../images/261018/3_travel_jinan_maisan_tapsa_fall_foliage_course_6.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">진안 마이산 탑사 가을 단풍 투어 필수 질문 TOP 3 Q&A / 인포그래픽 카드</div>
+</div>
+
+
 <h2>08 | 대중교통으로 마이산 탑사 찾아가는 법과 시외·시내버스 노선</h2>
 <p>
   전주나 진안 시내에서 대중교통으로 마이산을 찾는 방법도 잘 정비되어 있습니다.<br/><br/>
