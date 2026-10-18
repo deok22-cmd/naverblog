@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
 <meta charset="utf-8"/>
@@ -22,23 +23,173 @@
   .copy-btn { background: #2e7d32; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
   .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
 
-  /* [방안 B 특화] 2번째 이미지 대체: 추천 코스 인포그래픽 카드 */
-  .infographic-course-box { background: #f9fdf9; border: 1.5px solid #c8e6c9; border-radius: 12px; padding: 22px 20px; margin: 35px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
-  .infographic-header { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; font-weight: 800; color: #1b5e20; font-size: 1.05em; border-bottom: 2px dashed #c8e6c9; padding-bottom: 10px; }
-  .course-grid { display: flex; gap: 12px; flex-wrap: wrap; }
-  .course-card { flex: 1; min-width: 190px; background: #ffffff; border: 1px solid #c8e6c9; border-radius: 8px; padding: 14px; position: relative; box-shadow: 0 2px 6px rgba(0,0,0,0.02); }
-  .course-badge { display: inline-block; background: #2e7d32; color: #fff; font-size: 0.75em; font-weight: 700; padding: 2px 8px; border-radius: 12px; margin-bottom: 6px; }
-  .course-title { font-size: 0.95em; font-weight: 700; color: #1b5e20; margin-bottom: 6px; }
-  .course-desc { font-size: 0.84em; color: #555; line-height: 1.5; }
+  /* ========================================================
+     🎨 다채널 인포그래픽 아키타입 CSS 시스템
+     ========================================= */
+  .infographic-box, [class*="infographic-"] {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif;
+  }
+  .infographic-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    border-bottom: 2px dashed #c8e6c9;
+    padding-bottom: 12px;
+  }
+  .infographic-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 1.1em;
+    color: #1b5e20;
+  }
+  .infographic-badge {
+    display: inline-block;
+    background: #2e7d32;
+    color: #ffffff;
+    font-size: 0.75em;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+  }
 
-  /* [방안 B 특화] 3번째 이미지 대체: 핵심 지표 하이라이트 매트릭스 카드 */
-  .infographic-stat-box { background: #ffffff; border: 1.5px solid #e0e0e0; border-radius: 12px; padding: 22px 20px; margin: 35px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
-  .stat-grid { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
-  .stat-card { flex: 1; min-width: 140px; background: #f1faf1; border: 1px solid #c8e6c9; border-radius: 8px; padding: 14px 10px; text-align: center; }
-  .stat-icon { font-size: 1.6em; margin-bottom: 4px; }
-  .stat-label { font-size: 0.8em; color: #666; font-weight: 600; margin-bottom: 4px; }
-  .stat-value { font-size: 1.15em; font-weight: 800; color: #1b5e20; }
-  .stat-sub { font-size: 0.75em; color: #888; margin-top: 2px; }
+  /* 1. 비교 매트릭스 카드 (.infographic-compare-box) */
+  .infographic-compare-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .compare-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .compare-col {
+    flex: 1;
+    min-width: 170px;
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 14px 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  }
+  .compare-col.highlight {
+    background: #f9fdf9;
+    border: 1.5px solid #2e7d32;
+  }
+  .compare-col-title {
+    font-size: 0.95em;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 6px;
+  }
+  .compare-col-badge {
+    display: inline-block;
+    background: #2e7d32;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .compare-row {
+    font-size: 0.82em;
+    color: #444;
+    line-height: 1.55;
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .compare-row:last-child {
+    border-bottom: none;
+  }
+
+  /* 2. 단계별 신청/절차 플로우차트 (.infographic-flow-box) */
+  .infographic-flow-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .flow-steps {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-top: 10px;
+  }
+  .flow-card {
+    flex: 1;
+    min-width: 130px;
+    background: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 12px 10px;
+    text-align: center;
+  }
+  .flow-step-num {
+    font-size: 0.72em;
+    font-weight: 800;
+    color: #2e7d32;
+    background: #e8f5e9;
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+  }
+  .flow-title {
+    font-size: 0.88em;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 4px;
+  }
+  .flow-desc {
+    font-size: 0.78em;
+    color: #666;
+    line-height: 1.4;
+  }
+
+  /* 3. 필수 점검 & 준비물 체크리스트 (.infographic-checklist-box) */
+  .infographic-checklist-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .checklist-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .checklist-col {
+    flex: 1;
+    min-width: 190px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .checklist-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 6px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .checklist-item:last-child {
+    border-bottom: none;
+  }
 
   .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #2e7d32; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
   .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #2e7d32; padding: 15px 20px; margin: 15px 0; }
@@ -67,15 +218,8 @@ function copyPrompt(id) {
   부동전의 올바른 4단계 퇴수 순서(호스 분리 → 상부 핸들 완전 잠금 → 하부 수도꼭지 끝까지 개방 → 겨울 내내 개방 유지), 아티론·열선 보온재 셀프 시공법(자재비 1만~2만 원), 그리고 동파로 인한 땅파기 교체 비용(30만~50만 원)을 아끼는 실전 관리 가이드를 정리해 드립니다.
 </div>
 <div class="img-area">
-  <div class="img-placeholder">
-    <div class="ph-head">
-      <span>📷 AI 대표 메인 썸네일 생성 영역</span>
-      <span class="ph-file">images/261018/6_house_outdoor_faucet_antifreeze_valve_shutoff_insulation_1.png</span>
-    </div>
-    <pre class="prompt-text" id="prompt-6-1">A detailed close-up instructional photograph of a stainless steel outdoor antifreeze frost-free yard hydrant faucet standing in the garden lawn of a modern rural Korean country house in late autumn. A homeowner's hands wearing durable work gloves demonstrate turning the top brass shutoff valve handle clockwise while leaving the front brass spigot tap wide open to drain residual water into the gravel drainage bed below. Thick foam pipe insulation and gray weather-resistant waterproof wrap are neatly installed along the lower vertical pipe stem. The garden background features warm autumn trees and a peaceful stone patio under clear late afternoon sunlight. Professional DIY home maintenance tutorial style, sharp focus, 1:1 aspect ratio.</pre>
-    <button class="copy-btn" onclick="copyPrompt('prompt-6-1')">📋 프롬프트 복사하기</button>
-  </div>
-  <div class="img-caption">전원주택 마당 야외 수도 부동전의 상부 핸들을 잠그고 수도꼭지를 개방하여 내부 잔수를 퇴수시키는 월동 점검 모습 / AI 제작 이미지</div>
+<img alt="전원주택 마당 야외 수도 부동전의 상부 핸들을 잠그고 수도꼭지를 개방하여 내부 잔수를 퇴수시키는 월동 점검 모습 / AI 제작 이미지" src="../../images/261018/6_house_outdoor_faucet_antifreeze_valve_shutoff_insulation_1.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">전원주택 마당 야외 수도 부동전의 상부 핸들을 잠그고 수도꼭지를 개방하여 내부 잔수를 퇴수시키는 월동 점검 모습 / AI 제작 이미지</div>
 </div>
 <h2>01 | 전원주택 첫 겨울의 악몽, 야외 수도가 얼어 터지는 근본 원인</h2>
 <p>
@@ -119,19 +263,19 @@ function copyPrompt(id) {
 <p>
   즉, 부동전은 지상 노출 파이프에 물이 고여 있지 않도록 물을 모두 땅속으로 빼내어 '얼 물 자체를 없애는' 물리적 배수 원리로 동파를 방지합니다.
 </p>
-<!-- [방안 B 특화] 2번째 이미지 대체: 추천 코스 인포그래픽 카드 -->
+<!-- [방안 B 특화] 2번째 이미지 대체: 야외 수도 부동전 4단계 잔수 퇴수 & 차단 실전 절차도 -->
 
 <!-- 2번째 이미지: 자동 렌더링 인포그래픽 카드 -->
 <div class="img-area">
-<img alt="🔧 실패 없는 전원주택 야외 수도 부동전 잠금 4단계 실전 순서 / 인포그래픽 카드" src="../../images/261018/6_house_outdoor_faucet_antifreeze_valve_shutoff_insulation_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
-<div class="img-caption">🔧 실패 없는 전원주택 야외 수도 부동전 잠금 4단계 실전 순서 / 인포그래픽 카드</div>
+<img alt="야외 수도 부동전 4단계 잔수 퇴수 & 차단 실전 절차도 / 인포그래픽 카드" src="../../images/261018/6_house_outdoor_faucet_antifreeze_valve_shutoff_insulation_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">야외 수도 부동전 4단계 잔수 퇴수 & 차단 실전 절차도 / 인포그래픽 카드</div>
 </div>
 
 <h2>03 | 90%가 저지르는 치명적 실수 — 수도꼭지를 왜 닫으면 안 되는가?</h2>
 <p>
   전원주택 거주자 10명 중 9명이 범하는 가장 흔한 실수는 <strong>"부동전 핸들도 잠그고, 수도꼭지도 잠그는 것"</strong>입니다.<br/><br/>
   평소 물을 잠글 때 수도꼭지를 닫던 습관 때문에 부동전을 잠근 후 수도꼭지까지 꽉 잠가버리는 경우가 많습니다.<br/><br/>
-  <strong>수도꼭지를 닫으면 발생하는 현상</strong>:<br/>
+<strong>수도꼭지를 닫으면 발생하는 현상</strong>:<br/>
   빨대 끝을 손가락으로 막으면 빨대 안의 음료가 아래로 떨어지지 않는 것과 똑같은 원리입니다. 수도꼭지를 닫아버리면 파이프 상부에 진공이 형성되어 공기가 유입되지 못하므로, 지하 밸브가 열려 있어도 파이프 내부의 물이 아래로 빠져나가지 못하고 파이프 안에 그대로 갇히게 됩니다.<br/><br/>
   이 상태로 첫 영하 5℃ 추위만 닥쳐도 파이프 속 고인 물이 얼어붙으며 부동전 몸통이 터져버립니다. 따라서 <strong>수도꼭지는 물을 빼기 위해 여는 것뿐만 아니라, 겨울 내내 활짝 열린 상태로 방치</strong>해 두어야 안전합니다.
 </p>
@@ -139,19 +283,19 @@ function copyPrompt(id) {
 <strong>👂 정상 퇴수 확인법 ('쉭' 소리의 마법)</strong><br/><br/>
   부동전 상부 핸들을 잠그고 수도꼭지를 여는 순간, 귀를 수도꼭지 가까이 대보세요. 파이프 안으로 공기가 빨려 들어가며 지하 퇴수 구멍으로 잔수가 빠져나가는 <strong>"쉭-" 또는 "꾸르륵-" 하는 경쾌한 흡입 소리</strong>가 3~5초간 들려야 완벽하게 물이 빠진 것입니다. 만약 아무 소리도 안 나고 물방울만 뚝뚝 떨어진다면 퇴수구가 막혔거나 호스가 연결되어 있는지 점검해야 합니다.
 </div>
-<!-- [방안 B 특화] 3번째 이미지 대체: 핵심 지표 하이라이트 매트릭스 카드 -->
+<!-- [방안 B 특화] 3번째 이미지 대체: 부동전 셀프 월동 관리 vs 동파 파열 긴급 굴착 공사비 비교 매트릭스 -->
 
-<!-- 3번째 이미지: 자동 렌더링 핵심 지표 카드 -->
+<!-- 3번째 이미지: 자동 렌더링 인포그래픽 카드 -->
 <div class="img-area">
-<img alt="📅 작업 적정 시기 11월 초순 전 첫 서리·영하권 이전 🚰 수도꼭지 상태 항상 개방(열림) 공기 유입 잔수 퇴수 🛠️ 셀프 보온 자재비 1만 ~ 2만원 보온재+보온테이프 💸 동파 굴착 교체비 30만 ~ 50만원 땅파기 배관 설비 비용 / 데이터 요약 카드" src="../../images/261018/6_house_outdoor_faucet_antifreeze_valve_shutoff_insulation_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
-<div class="img-caption">📅 작업 적정 시기 11월 초순 전 첫 서리·영하권 이전 🚰 수도꼭지 상태 항상 개방(열림) 공기 유입 잔수 퇴수 🛠️ 셀프 보온 자재비 1만 ~ 2만원 보온재+보온테이프 💸 동파 굴착 교체비 30만 ~ 50만원 땅파기 배관 설비 비용 / 데이터 요약 카드</div>
+<img alt="부동전 셀프 월동 관리 vs 동파 파열 긴급 굴착 공사비 비교 매트릭스 / 인포그래픽 카드" src="../../images/261018/6_house_outdoor_faucet_antifreeze_valve_shutoff_insulation_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">부동전 셀프 월동 관리 vs 동파 파열 긴급 굴착 공사비 비교 매트릭스 / 인포그래픽 카드</div>
 </div>
 
 <h2>04 | 정원 호스 체결 방치는 금물! 커플러와 분사 노즐 분리 요령</h2>
 <p>
   부동전 동파의 또 다른 주범은 마당 잔디나 텃밭에 물을 주던 <strong>고무호스를 수도꼭지에 그대로 꽂아두는 것</strong>입니다.<br/><br/>
   호스가 연결되어 있으면 호스 내부의 물이 밤사이 먼저 얼어붙어 수도꼭지 입구를 단단한 얼음 마개처럼 틀어막아 버립니다. 이로 인해 공기가 유입되지 않아 부동전 내부 잔수가 퇴수되지 못합니다.<br/><br/>
-  <strong>월동 호스 관리 3단계</strong>:<br/>
+<strong>월동 호스 관리 3단계</strong>:<br/>
   1. 원터치 커플러나 밴드를 풀고 호스를 수도꼭지에서 완전히 분리합니다.<br/>
   2. 호스를 바닥에 길게 늘어뜨려 호스 내부의 물을 완전히 털어냅니다.<br/>
   3. 물을 뺀 호스는 둥글게 감아 햇볕과 눈비를 피할 수 있는 창고나 보일러실 실내로 옮겨 보관합니다 (외부 방치 시 호스가 경화되어 갈라짐).
@@ -167,6 +311,14 @@ function copyPrompt(id) {
   • <strong>2단계: 은박 테이프 밀봉</strong>: 비와 눈이 스펀지 내부로 스며들지 않도록 방수 은박 테이프를 아래에서 위로 나선형으로 촘촘히 감아 올립니다.<br/>
   • <strong>3단계: 상부 수도꼭지 보온캡</strong>: 열려 있는 수도꼭지 토출구에 찬 바람이나 눈이 들이치지 않도록 벨크로형 방수 보온캡을 씌워줍니다 (완전 밀폐하지 않고 통기성 유지).
 </div>
+<!-- [방안 B 특화] 4번째 이미지 대체: 단독·전원주택 야외 설비 월동 준비 필수 점검 체크리스트 -->
+
+<!-- 4번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="단독·전원주택 야외 설비 월동 준비 필수 점검 체크리스트 / 인포그래픽 카드" src="../../images/261018/6_house_outdoor_faucet_antifreeze_valve_shutoff_insulation_4.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">단독·전원주택 야외 설비 월동 준비 필수 점검 체크리스트 / 인포그래픽 카드</div>
+</div>
+
 <h2>06 | 정열선(동파방지 열선) 설치 시 주의사항과 화재 예방 수칙</h2>
 <p>
   겨울철에도 야외 수도를 계속 써야 하는 단독주택의 경우 부동전 외벽에 <strong>동파방지 열선</strong>을 감아두기도 합니다. 하지만 열선은 겨울철 전원주택 화재의 주요 원인이 되므로 각별한 주의가 필요합니다.<br/><br/>

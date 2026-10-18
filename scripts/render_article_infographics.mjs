@@ -17,32 +17,50 @@ function getTodayYYMMDD() {
   return `${yy}${mm}${dd}`;
 }
 
-function findBalancedDivRange(html, className) {
-  const marker = `<div class="${className}"`;
-  const startIdx = html.indexOf(marker);
-  if (startIdx === -1) return null;
-  let depth = 0;
-  let i = startIdx;
-  let endIdx = -1;
-  while (i < html.length) {
-    if (html.startsWith("<div", i) && (html[i + 4] === " " || html[i + 4] === ">")) {
-      depth++;
-      i += 4;
-    } else if (html.startsWith("</div>", i)) {
-      depth--;
-      i += 6;
-      if (depth === 0) {
-        endIdx = i;
-        break;
+function findTopLevelInfographics(html) {
+  const list = [];
+  const tagStartRegex = /<div\b[^>]*?(?:class=["'][^"']*?\binfographic-[^"']*?["']|data-infographic)[^>]*?>/gi;
+  let match;
+  let cursor = 0;
+
+  while ((match = tagStartRegex.exec(html)) !== null) {
+    const startIdx = match.index;
+    if (startIdx < cursor) continue;
+
+    let depth = 0;
+    let i = startIdx;
+    let endIdx = -1;
+    while (i < html.length) {
+      if (
+        html.slice(i, i + 4).toLowerCase() === "<div" &&
+        (html[i + 4] === " " || html[i + 4] === ">" || html[i + 4] === "/")
+      ) {
+        depth++;
+        i += 4;
+      } else if (html.slice(i, i + 6).toLowerCase() === "</div>") {
+        depth--;
+        i += 6;
+        if (depth === 0) {
+          endIdx = i;
+          break;
+        }
+      } else {
+        i++;
       }
-    } else {
-      i++;
+    }
+
+    if (endIdx !== -1) {
+      list.push({
+        startIdx,
+        endIdx,
+        content: html.substring(startIdx, endIdx),
+        openTag: match[0],
+      });
+      cursor = endIdx;
+      tagStartRegex.lastIndex = endIdx;
     }
   }
-  if (endIdx !== -1) {
-    return { startIdx, endIdx, content: html.substring(startIdx, endIdx) };
-  }
-  return null;
+  return list;
 }
 
 function getOrderedFiles(outputDir) {
@@ -71,9 +89,10 @@ function getOrderedFiles(outputDir) {
 }
 
 async function main() {
-  const targetDate = process.argv[2] || getTodayYYMMDD();
+  const args = process.argv.slice(2);
+  const targetDate = args.find(a => !a.startsWith("-")) || getTodayYYMMDD();
   console.log(`\n======================================================`);
-  console.log(`🖼️ 인포그래픽 카드 자동 렌더링 & 원고 치환 (날짜: ${targetDate})`);
+  console.log(`🎨 동적 다채널 인포그래픽 카드 자동 렌더링 & 치환 (날짜: ${targetDate})`);
   console.log(`======================================================`);
 
   const outputDir = path.resolve("output", targetDate);
@@ -110,7 +129,7 @@ async function main() {
 
   try {
     const page = await browser.newPage();
-    await page.setViewport({ width: 1000, height: 1400, deviceScaleFactor: 2 });
+    await page.setViewport({ width: 1000, height: 1600, deviceScaleFactor: 2 });
 
     for (let idx = 0; idx < files.length; idx++) {
       const file = files[idx];
@@ -119,111 +138,101 @@ async function main() {
       const filePath = path.join(outputDir, file);
       let html = readFileSync(filePath, "utf-8");
 
-      console.log(`[${seq}/${files.length}] 처리 중: ${file}`);
+      console.log(`[${seq}/${files.length}] 검사 중: ${file}`);
+
+      const ranges = findTopLevelInfographics(html);
+      if (ranges.length === 0) {
+        console.log(`   ℹ️ 변환할 인포그래픽 박스가 없거나 이미 이미지로 치환되어 있습니다.`);
+        continue;
+      }
+
+      console.log(`   ✨ 발견된 인포그래픽 카드: ${ranges.length}개 (자동 렌더링 시작)`);
 
       const fileUrl = "file:///" + filePath.replace(/\\/g, "/");
-      let pageLoaded = false;
-
-      // 1. 코스 인포그래픽 카드 (Image 2)
-      const courseRange = findBalancedDivRange(html, "infographic-course-box");
-      const img2FileName = `${seq}_${slug}_2.png`;
-      const img2Path = path.join(imagesDir, img2FileName);
-
-      if (courseRange) {
-        if (!pageLoaded) {
-          await page.goto(fileUrl, { waitUntil: "networkidle0" });
-          await page.addStyleTag({
-            content: `
-              body, button, input, select, textarea {
-                font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif !important;
-                -webkit-font-smoothing: antialiased;
-              }
-            `
-          });
-          pageLoaded = true;
-        }
-
-        const cBox = await page.$(".infographic-course-box");
-        let captionText = "추천 코스 안내";
-        if (cBox) {
-          await cBox.screenshot({ path: img2Path });
-          totalImagesRendered++;
-          console.log(`   ✅ 2번 PNG 저장 완료: images/${targetDate}/${img2FileName}`);
-
-          const headerEl = await cBox.$(".infographic-header");
-          if (headerEl) {
-            const rawHeader = await page.evaluate(el => el.textContent, headerEl);
-            if (rawHeader && rawHeader.trim()) {
-              captionText = rawHeader.replace(/\s+/g, " ").trim();
-            }
+      await page.goto(fileUrl, { waitUntil: "networkidle0" });
+      await page.addStyleTag({
+        content: `
+          body, button, input, select, textarea {
+            font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif !important;
+            -webkit-font-smoothing: antialiased;
           }
-        }
+        `,
+      });
 
-        const replacementHtml = `\n<!-- 2번째 이미지: 자동 렌더링 인포그래픽 카드 -->\n<div class="img-area">\n<img alt="${captionText} / 인포그래픽 카드" src="../../images/${targetDate}/${img2FileName}" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>\n<div class="img-caption">${captionText} / 인포그래픽 카드</div>\n</div>\n`;
+      const elements = await page.$$(
+        "[class*='infographic-']:not([class*='infographic-'] [class*='infographic-']), [data-infographic]"
+      );
 
-        html = html.substring(0, courseRange.startIdx) + replacementHtml + html.substring(courseRange.endIdx);
-      } else {
-        if (existsSync(img2Path)) {
-          console.log(`   ℹ️ 2번 이미지가 이미 존재하며 원고에 반영되어 있습니다.`);
-        }
+      if (elements.length !== ranges.length) {
+        console.warn(
+          `   ⚠️ DOM 엘리먼트 수(${elements.length})와 정규식 파싱 수(${ranges.length})가 다릅니다. DOM 기준 처리.`
+        );
       }
 
-      // 2. 핵심 지표/매트릭스 카드 (Image 3)
-      const statRange = findBalancedDivRange(html, "infographic-stat-box");
-      const img3FileName = `${seq}_${slug}_3.png`;
-      const img3Path = path.join(imagesDir, img3FileName);
+      const replacements = [];
 
-      if (statRange) {
-        if (!pageLoaded) {
-          await page.goto(fileUrl, { waitUntil: "networkidle0" });
-          await page.addStyleTag({
-            content: `
-              body, button, input, select, textarea {
-                font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif !important;
-                -webkit-font-smoothing: antialiased;
-              }
-            `
-          });
-          pageLoaded = true;
-        }
+      for (let i = 0; i < ranges.length; i++) {
+        const imgNum = i + 2;
+        const imgFileName = `${seq}_${slug}_${imgNum}.png`;
+        const imgPath = path.join(imagesDir, imgFileName);
+        const el = elements[i];
 
-        const sBox = await page.$(".infographic-stat-box");
-        let captionText = "핵심 지표 요약";
-        if (sBox) {
-          await sBox.screenshot({ path: img3Path });
-          totalImagesRendered++;
-          console.log(`   ✅ 3번 PNG 저장 완료: images/${targetDate}/${img3FileName}`);
+        let captionText = `인포그래픽 카드 ${imgNum}`;
 
-          const firstDiv = await sBox.$("div");
-          if (firstDiv) {
-            const rawStatTitle = await page.evaluate(el => el.textContent, firstDiv);
-            if (rawStatTitle && rawStatTitle.trim()) {
-              captionText = rawStatTitle.replace(/\s+/g, " ").trim();
+        if (el) {
+          // 캡션 추출 로직: 1) data-caption 속성 2) .infographic-header 3) .infographic-title 4) h3 5) 첫 번째 텍스트 블록
+          captionText = await page.evaluate(target => {
+            const dataCap = target.getAttribute("data-caption");
+            if (dataCap && dataCap.trim()) return dataCap.trim();
+
+            const header = target.querySelector(".infographic-header, .infographic-title, h3");
+            if (header && header.textContent.trim()) {
+              return header.textContent.replace(/\s+/g, " ").trim();
             }
+
+            const firstDiv = target.querySelector("div");
+            if (firstDiv && firstDiv.textContent.trim()) {
+              return firstDiv.textContent.replace(/\s+/g, " ").trim().slice(0, 50);
+            }
+            return "";
+          }, el);
+
+          if (!captionText) {
+            captionText = `핵심 인포그래픽 가이드 ${imgNum}`;
           }
+
+          await el.screenshot({ path: imgPath });
+          totalImagesRendered++;
+          console.log(`   ✅ [${imgNum}번 PNG 저장] ${imgFileName} (${captionText})`);
+        } else {
+          console.warn(`   ⚠️ 엘리먼트 ${i}을(를) DOM에서 찾지 못했습니다.`);
         }
 
-        const replacementHtml = `\n<!-- 3번째 이미지: 자동 렌더링 핵심 지표 카드 -->\n<div class="img-area">\n<img alt="${captionText} / 데이터 요약 카드" src="../../images/${targetDate}/${img3FileName}" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>\n<div class="img-caption">${captionText} / 데이터 요약 카드</div>\n</div>\n`;
+        const replacementHtml = `\n<!-- ${imgNum}번째 이미지: 자동 렌더링 인포그래픽 카드 -->\n<div class="img-area">\n<img alt="${captionText} / 인포그래픽 카드" src="../../images/${targetDate}/${imgFileName}" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>\n<div class="img-caption">${captionText} / 인포그래픽 카드</div>\n</div>\n`;
 
-        html = html.substring(0, statRange.startIdx) + replacementHtml + html.substring(statRange.endIdx);
-      } else {
-        if (existsSync(img3Path)) {
-          console.log(`   ℹ️ 3번 이미지가 이미 존재하며 원고에 반영되어 있습니다.`);
-        }
+        replacements.push({
+          startIdx: ranges[i].startIdx,
+          endIdx: ranges[i].endIdx,
+          html: replacementHtml,
+        });
       }
 
-      if (courseRange || statRange) {
-        writeFileSync(filePath, html, "utf-8");
-        totalHtmlsUpdated++;
-        console.log(`   📝 HTML 원고 치환 완료: ${file}\n`);
+      // 역순 치환 (문자열 인덱스 왜곡 방지)
+      for (let i = replacements.length - 1; i >= 0; i--) {
+        const rep = replacements[i];
+        html = html.substring(0, rep.startIdx) + rep.html + html.substring(rep.endIdx);
       }
+
+      writeFileSync(filePath, html, "utf-8");
+      totalHtmlsUpdated++;
+      console.log(`   📝 HTML 원고 치환 완료: ${file} (총 ${replacements.length}개 카드 이미지화)\n`);
     }
   } finally {
     await browser.close();
   }
 
   console.log(`======================================================`);
-  console.log(`🎉 렌더링 완료 요약`);
+  console.log(`🎉 동적 인포그래픽 렌더링 완료 요약`);
   console.log(`   - 렌더링된 PNG 이미지 수: ${totalImagesRendered}개`);
   console.log(`   - 치환된 HTML 원고 수: ${totalHtmlsUpdated}건`);
   console.log(`======================================================\n`);

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
 <meta charset="utf-8"/>
@@ -22,23 +23,179 @@
   .copy-btn { background: #2e7d32; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
   .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
 
-  /* [방안 B 특화] 2번째 이미지 대체: 추천 코스 인포그래픽 카드 */
-  .infographic-course-box { background: #f9fdf9; border: 1.5px solid #c8e6c9; border-radius: 12px; padding: 22px 20px; margin: 35px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
-  .infographic-header { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; font-weight: 800; color: #1b5e20; font-size: 1.05em; border-bottom: 2px dashed #c8e6c9; padding-bottom: 10px; }
-  .course-grid { display: flex; gap: 12px; flex-wrap: wrap; }
-  .course-card { flex: 1; min-width: 190px; background: #ffffff; border: 1px solid #c8e6c9; border-radius: 8px; padding: 14px; position: relative; box-shadow: 0 2px 6px rgba(0,0,0,0.02); }
-  .course-badge { display: inline-block; background: #2e7d32; color: #fff; font-size: 0.75em; font-weight: 700; padding: 2px 8px; border-radius: 12px; margin-bottom: 6px; }
-  .course-title { font-size: 0.95em; font-weight: 700; color: #1b5e20; margin-bottom: 6px; }
-  .course-desc { font-size: 0.84em; color: #555; line-height: 1.5; }
+  /* ========================================================
+     🎨 다채널 인포그래픽 아키타입 CSS 시스템
+     ========================================= */
+  .infographic-box, [class*="infographic-"] {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif;
+  }
+  .infographic-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    border-bottom: 2px dashed #c8e6c9;
+    padding-bottom: 12px;
+  }
+  .infographic-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 1.1em;
+    color: #1b5e20;
+  }
+  .infographic-badge {
+    display: inline-block;
+    background: #2e7d32;
+    color: #ffffff;
+    font-size: 0.75em;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+  }
 
-  /* [방안 B 특화] 3번째 이미지 대체: 핵심 지표 하이라이트 매트릭스 카드 */
-  .infographic-stat-box { background: #ffffff; border: 1.5px solid #e0e0e0; border-radius: 12px; padding: 22px 20px; margin: 35px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
-  .stat-grid { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
-  .stat-card { flex: 1; min-width: 140px; background: #f1faf1; border: 1px solid #c8e6c9; border-radius: 8px; padding: 14px 10px; text-align: center; }
-  .stat-icon { font-size: 1.6em; margin-bottom: 4px; }
-  .stat-label { font-size: 0.8em; color: #666; font-weight: 600; margin-bottom: 4px; }
-  .stat-value { font-size: 1.15em; font-weight: 800; color: #1b5e20; }
-  .stat-sub { font-size: 0.75em; color: #888; margin-top: 2px; }
+  /* 1. 비교 매트릭스 카드 (.infographic-compare-box) */
+  .infographic-compare-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .compare-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .compare-col {
+    flex: 1;
+    min-width: 170px;
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 14px 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  }
+  .compare-col.highlight {
+    background: #f9fdf9;
+    border: 1.5px solid #2e7d32;
+  }
+  .compare-col-title {
+    font-size: 0.95em;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 6px;
+  }
+  .compare-col-badge {
+    display: inline-block;
+    background: #2e7d32;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .compare-row {
+    font-size: 0.82em;
+    color: #444;
+    line-height: 1.55;
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .compare-row:last-child {
+    border-bottom: none;
+  }
+
+  /* 2. 단계별 신청/절차 플로우차트 (.infographic-flow-box) */
+  .infographic-flow-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .flow-steps {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-top: 10px;
+  }
+  .flow-card {
+    flex: 1;
+    min-width: 130px;
+    background: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 12px 10px;
+    text-align: center;
+  }
+  .flow-step-num {
+    font-size: 0.72em;
+    font-weight: 800;
+    color: #2e7d32;
+    background: #e8f5e9;
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+  }
+  .flow-title {
+    font-size: 0.88em;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 4px;
+  }
+  .flow-desc {
+    font-size: 0.78em;
+    color: #666;
+    line-height: 1.4;
+  }
+
+  /* 3. 실전 비용/예산 견적 영수증 (.infographic-receipt-box) */
+  .infographic-receipt-box {
+    background: #ffffff;
+    border: 2px dashed #9ca3af;
+    border-radius: 12px;
+    padding: 24px 22px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+  }
+  .receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 16px;
+    font-size: 0.88em;
+  }
+  .receipt-table th {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid #d1d5db;
+  }
+  .receipt-table td {
+    padding: 8px 10px;
+    border-bottom: 1px dashed #e5e7eb;
+    color: #4b5563;
+  }
+  .receipt-total {
+    background: #f9fdf9;
+    border-top: 2px solid #2e7d32;
+    padding: 12px 16px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 800;
+    color: #1b5e20;
+  }
 
   .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #2e7d32; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
   .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #2e7d32; padding: 15px 20px; margin: 15px 0; }
@@ -67,15 +224,8 @@ function copyPrompt(id) {
   차량 배기량별 공채 매입 기준표, 공채 할인(즉시 매도) vs 만기 보유 판별법, 지자체 금고 은행별 온라인 환급 신청 경로와 소멸시효 방지 체크리스트를 알기 쉽게 총정리해 드립니다.
 </div>
 <div class="img-area">
-  <div class="img-placeholder">
-    <div class="ph-head">
-      <span>📷 AI 대표 메인 썸네일 생성 영역</span>
-      <span class="ph-file">images/261018/7_car_urban_railway_bond_hidden_refund_claim_1.png</span>
-    </div>
-    <pre class="prompt-text" id="prompt-7-1">A crisp and modern financial concept photograph illustrating urban railway bond refunds for automobile owners in South Korea. On a sleek wooden desk, a smartphone displays an official mobile banking screen showing a successful government bond refund deposit notification. Next to the phone rests a new car smart key, a clean Korean vehicle registration certificate document, and a stack of crisp Korean Won banknotes. Gentle morning natural lighting streams from a side window, conveying security, clarity, and successful financial claim. High resolution, sharp macro detail, editorial business still life style, 1:1 aspect ratio.</pre>
-    <button class="copy-btn" onclick="copyPrompt('prompt-7-1')">📋 프롬프트 복사하기</button>
-  </div>
-  <div class="img-caption">차량 구매 등록 시 의무 매입한 도시철도·지역개발채권의 만기 미환급금을 스마트폰 뱅킹으로 조회하여 환급받는 모습 / AI 제작 이미지</div>
+<img alt="차량 구매 등록 시 의무 매입한 도시철도·지역개발채권의 만기 미환급금을 스마트폰 뱅킹으로 조회하여 환급받는 모습 / AI 제작 이미지" src="../../images/261018/7_car_urban_railway_bond_hidden_refund_claim_1.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">차량 구매 등록 시 의무 매입한 도시철도·지역개발채권의 만기 미환급금을 스마트폰 뱅킹으로 조회하여 환급받는 모습 / AI 제작 이미지</div>
 </div>
 <h2>01 | 내 통장에 잠자고 있는 숨은 돈, 자동차 채권 환급금의 정체</h2>
 <p>
@@ -118,12 +268,12 @@ function copyPrompt(id) {
 <strong>💡 기억이 가물가물하다면? 1분 조회로 즉시 확인!</strong><br/><br/>
   신차 딜러가 알아서 처리해 주어 본인이 공채를 할인했는지 만기 보유했는지 모르는 경우가 대다수입니다. 고민할 필요 없이 아래 안내해 드리는 모바일 뱅킹 앱에서 주민등록번호로 조회 버튼만 누르면, 내가 찾아갈 환급금이 있는지 전산망에서 1초 만에 확인됩니다.
 </div>
-<!-- [방안 B 특화] 2번째 이미지 대체: 추천 코스 인포그래픽 카드 -->
+<!-- [방안 B 특화] 2번째 이미지 대체: 자동차 미환급 채권 온라인 4단계 조회 & 환급 신청 절차도 -->
 
 <!-- 2번째 이미지: 자동 렌더링 인포그래픽 카드 -->
 <div class="img-area">
-<img alt="📱 스마트폰으로 끝내는 자동차 채권 환급금 조회 & 신청 3단계 / 인포그래픽 카드" src="../../images/261018/7_car_urban_railway_bond_hidden_refund_claim_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
-<div class="img-caption">📱 스마트폰으로 끝내는 자동차 채권 환급금 조회 & 신청 3단계 / 인포그래픽 카드</div>
+<img alt="자동차 미환급 채권 온라인 4단계 조회 & 환급 신청 절차도 / 인포그래픽 카드" src="../../images/261018/7_car_urban_railway_bond_hidden_refund_claim_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">자동차 미환급 채권 온라인 4단계 조회 & 환급 신청 절차도 / 인포그래픽 카드</div>
 </div>
 
 <h2>03 | 배기량별 공채 매입 비율과 1,600cc 미만 면제 기준 총정리</h2>
@@ -162,19 +312,19 @@ function copyPrompt(id) {
 <td>차량 가격 5,000만 원 기준 서울은 1,000만 원, 지방은 250만~600만 원 상당 채권 매입</td>
 </tr>
 </table>
-<!-- [방안 B 특화] 3번째 이미지 대체: 핵심 지표 하이라이트 매트릭스 카드 -->
+<!-- [방안 B 특화] 3번째 이미지 대체: 5년 만기 자동차 채권 모의 환급액 정산 영수증 -->
 
-<!-- 3번째 이미지: 자동 렌더링 핵심 지표 카드 -->
+<!-- 3번째 이미지: 자동 렌더링 인포그래픽 카드 -->
 <div class="img-area">
-<img alt="⏳ 채권 만기 기간 5년 ~ 7년 서울 7년 / 지방 5년 ⚠️ 이자 소멸시효 만기 후 5년 원금 소멸시효 10년 🏦 조회 신청처 모바일 뱅킹 신한·농협 등 금고은행 💵 평균 환급 금액 50만 ~ 250만원 원금 + 연복리 이자 / 데이터 요약 카드" src="../../images/261018/7_car_urban_railway_bond_hidden_refund_claim_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
-<div class="img-caption">⏳ 채권 만기 기간 5년 ~ 7년 서울 7년 / 지방 5년 ⚠️ 이자 소멸시효 만기 후 5년 원금 소멸시효 10년 🏦 조회 신청처 모바일 뱅킹 신한·농협 등 금고은행 💵 평균 환급 금액 50만 ~ 250만원 원금 + 연복리 이자 / 데이터 요약 카드</div>
+<img alt="5년 만기 자동차 채권 모의 환급액 정산 영수증 / 인포그래픽 카드" src="../../images/261018/7_car_urban_railway_bond_hidden_refund_claim_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">5년 만기 자동차 채권 모의 환급액 정산 영수증 / 인포그래픽 카드</div>
 </div>
 
 <h2>04 | 방치하면 국가로 귀속! 만기 후 5년 이자, 10년 원금 소멸시효의 진실</h2>
 <p>
   자동차 채권 환급금에서 가장 무서운 함정은 <strong>'소멸시효(消滅時效)'</strong>입니다.<br/><br/>
   지방채권은 만기가 도래하면 자동으로 내 계좌로 입금되지 않고, 차주가 상환을 청구해야만 지급되는 것이 원칙이었습니다 (2022년 3월 이전 등록 차량).<br/><br/>
-  <strong>소멸시효 법적 기준</strong>:<br/>
+<strong>소멸시효 법적 기준</strong>:<br/>
   • <strong>이자 소멸시효 (5년)</strong>: 채권 만기일(발행 후 5년 또는 7년)로부터 5년이 경과하는 날 자정에 <strong>그동안 불어난 모든 이자 청구권이 영구 소멸</strong>되어 지자체 금고로 귀속됩니다.<br/>
   • <strong>원금 소멸시효 (10년)</strong>: 만기일로부터 10년이 지나면 <strong>원금조차 단 1원도 돌려받을 수 없으며 영원히 국고로 환수</strong>됩니다.<br/><br/>
   예를 들어 2014년에 경기도에서 2,000cc 승용차를 사며 5년 만기 지역개발채권을 매입했다면, 2019년에 만기가 되었고 2024년에 이미 5년 이자 소멸시효가 끝났습니다. 2029년이 지나면 원금마저 사라지므로 하루라도 빨리 찾아야 합니다.
@@ -215,6 +365,14 @@ function copyPrompt(id) {
 <td>부산은행 모바일뱅킹 → [공과금] → [도시철도채권 상환]</td>
 </tr>
 </table>
+<!-- [방안 B 특화] 4번째 이미지 대체: 전국 지자체별 채권 금고 은행 & 소멸시효 비교 매트릭스 -->
+
+<!-- 4번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="전국 지자체별 채권 금고 은행 & 소멸시효 비교 매트릭스 / 인포그래픽 카드" src="../../images/261018/7_car_urban_railway_bond_hidden_refund_claim_4.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">전국 지자체별 채권 금고 은행 & 소멸시효 비교 매트릭스 / 인포그래픽 카드</div>
+</div>
+
 <h2>06 | 위택스(Wetax) 및 정부24를 통한 전국 숨은 세금 환급금 원스톱 조회</h2>
 <p>
   은행 앱 이용이 번거롭거나 여러 지자체에 흩어진 환급금을 한 번에 확인하고 싶다면 행정안전부의 <strong>위택스(Wetax)</strong>를 이용하면 간편합니다.
@@ -235,7 +393,7 @@ function copyPrompt(id) {
 <h2>08 | 자동차 중고 매매·폐차 시 채권 환급금은 누구에게 가나?</h2>
 <p>
   "이미 몇 년 전에 차를 중고로 팔았거나 폐차했는데, 그래도 환급금을 받을 수 있나요?"라는 질문을 자주 받습니다.<br/><br/>
-  <strong>정답은 "100% 받을 수 있다"</strong>입니다.<br/>
+<strong>정답은 "100% 받을 수 있다"</strong>입니다.<br/>
   도시철도채권 및 지역개발채권은 차량 자체에 귀속된 것이 아니라, <strong>차량을 등록할 당시 채권을 직접 매입했던 차주 개인(주민등록번호)에게 발행된 독립 유가증권</strong>입니다.<br/><br/>
   따라서 차를 이미 매각하여 남의 차가 되었거나 폐차장을 거쳐 말소되었더라도, 당시 매입했던 본인의 채권 권리는 만기일까지 그대로 살아 있습니다. 과거 5~10년 전 차량을 소유했던 이력이 있다면 지금 즉시 조회해 보아야 하는 이유입니다.
 </p>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
 <meta charset="utf-8"/>
@@ -22,23 +23,149 @@
   .copy-btn { background: #00796b; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
   .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
 
-  /* [방안 B 특화] 2번째 이미지 대체: 추천 코스 인포그래픽 카드 */
-  .infographic-course-box { background: #f4faf8; border: 1.5px solid #80cbc4; border-radius: 12px; padding: 22px 20px; margin: 35px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
-  .infographic-header { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; font-weight: 800; color: #004d40; font-size: 1.05em; border-bottom: 2px dashed #80cbc4; padding-bottom: 10px; }
-  .course-grid { display: flex; gap: 12px; flex-wrap: wrap; }
-  .course-card { flex: 1; min-width: 190px; background: #ffffff; border: 1px solid #b2dfdb; border-radius: 8px; padding: 14px; position: relative; box-shadow: 0 2px 6px rgba(0,0,0,0.02); }
-  .course-badge { display: inline-block; background: #00796b; color: #fff; font-size: 0.75em; font-weight: 700; padding: 2px 8px; border-radius: 12px; margin-bottom: 6px; }
-  .course-title { font-size: 0.95em; font-weight: 700; color: #004d40; margin-bottom: 6px; }
-  .course-desc { font-size: 0.84em; color: #555; line-height: 1.5; }
+  /* ========================================================
+     🎨 다채널 인포그래픽 아키타입 CSS 시스템
+     ========================================= */
+  .infographic-box, [class*="infographic-"] {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif;
+  }
+  .infographic-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    border-bottom: 2px dashed #b2dfdb;
+    padding-bottom: 12px;
+  }
+  .infographic-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 1.1em;
+    color: #004d40;
+  }
+  .infographic-badge {
+    display: inline-block;
+    background: #00796b;
+    color: #ffffff;
+    font-size: 0.75em;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+  }
 
-  /* [방안 B 특화] 3번째 이미지 대체: 핵심 지표 하이라이트 매트릭스 카드 */
-  .infographic-stat-box { background: #ffffff; border: 1.5px solid #e0e0e0; border-radius: 12px; padding: 22px 20px; margin: 35px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
-  .stat-grid { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
-  .stat-card { flex: 1; min-width: 140px; background: #e0f2f1; border: 1px solid #b2dfdb; border-radius: 8px; padding: 14px 10px; text-align: center; }
+  /* 1. 일정/동선 타임라인 로드맵 (.infographic-timeline-box) */
+  .infographic-timeline-box {
+    background: #f1faf9;
+    border: 1.5px solid #b2dfdb;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  .timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #ffffff;
+    border: 1px solid #b2dfdb;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .timeline-badge {
+    background: #00796b;
+    color: #ffffff;
+    font-size: 0.78em;
+    font-weight: 800;
+    padding: 4px 9px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+  .timeline-content {
+    flex: 1;
+  }
+  .timeline-title {
+    font-size: 0.92em;
+    font-weight: 700;
+    color: #004d40;
+    margin-bottom: 4px;
+  }
+  .timeline-desc {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 2. 4분할 핵심 수치 매트릭스 (.infographic-stat-box) */
+  .infographic-stat-box {
+    background: #ffffff;
+    border: 1.5px solid #b2dfdb;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .stat-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .stat-card {
+    flex: 1;
+    min-width: 130px;
+    background: #f1faf9;
+    border: 1px solid #b2dfdb;
+    border-radius: 8px;
+    padding: 14px 10px;
+    text-align: center;
+  }
   .stat-icon { font-size: 1.6em; margin-bottom: 4px; }
   .stat-label { font-size: 0.8em; color: #666; font-weight: 600; margin-bottom: 4px; }
-  .stat-value { font-size: 1.15em; font-weight: 800; color: #004d40; }
+  .stat-value { font-size: 1.15em; font-weight: 800; color: #00796b; }
   .stat-sub { font-size: 0.75em; color: #777; margin-top: 2px; }
+
+  /* 3. 필수 점검 & 준비물 체크리스트 (.infographic-checklist-box) */
+  .infographic-checklist-box {
+    background: #ffffff;
+    border: 1.5px solid #b2dfdb;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .checklist-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .checklist-col {
+    flex: 1;
+    min-width: 190px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .checklist-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 6px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .checklist-item:last-child {
+    border-bottom: none;
+  }
 
   .info-box { background: #f9fdf9; border: 1px solid #b2dfdb; border-left: 4px solid #00796b; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
   .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #00796b; padding: 15px 20px; margin: 15px 0; }
@@ -67,15 +194,8 @@ function copyPrompt(id) {
   주말 오전 극심한 44번·56번 국도 교통정체를 피하는 진입 골든타임(오전 9시 30분 이전 도착), 달둔계곡 임시주차장 이용 노하우, 그리고 인근 삼봉자연휴양림 및 오대산 월정사 연계 당일치기 가을 드라이브 동선을 실전 가이드로 정리해 드립니다.
 </div>
 <div class="img-area">
-  <div class="img-placeholder">
-    <div class="ph-head">
-      <span>📷 AI 대표 메인 썸네일 생성 영역</span>
-      <span class="ph-file">images/261018/1_travel_hongcheon_ginkgo_forest_fall_foliage_parking_1.png</span>
-    </div>
-    <pre class="prompt-text" id="prompt-1-1">A wide-angle panoramic photograph capturing the magical autumn scenery of the Hongcheon Ginkgo Forest in Gangwon-do, South Korea. Over 2,000 mature ginkgo trees with vibrant golden yellow leaves stand in precise, orderly grid rows. The soft morning sunlight filters gently through the dense yellow foliage, casting long dramatic golden shadows onto the ground covered with a thick carpet of fallen yellow ginkgo leaves. In the background, the serene Daldun valley creek glistens under a clear crisp blue autumn sky with distant mountain ridges tinged with red and orange autumn foliage. A peaceful wooden walking path meanders between the tree trunks. Photorealistic, ultra-high definition, cinematic lighting, 8k resolution, nature landscape photography style, 1:1 aspect ratio.</pre>
-    <button class="copy-btn" onclick="copyPrompt('prompt-1-1')">📋 프롬프트 복사하기</button>
-  </div>
-  <div class="img-caption">강원도 홍천 은행나무숲 달둔계곡을 따라 황금빛 터널을 이루는 2천여 그루의 10월 단풍 절경 / AI 제작 이미지</div>
+<img alt="강원도 홍천 은행나무숲 달둔계곡을 따라 황금빛 터널을 이루는 2천여 그루의 10월 단풍 절경 / AI 제작 이미지" src="../../images/261018/1_travel_hongcheon_ginkgo_forest_fall_foliage_parking_1.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">강원도 홍천 은행나무숲 달둔계곡을 따라 황금빛 터널을 이루는 2천여 그루의 10월 단풍 절경 / AI 제작 이미지</div>
 </div>
 <h2>01 | 1년 중 딱 10월 한 달만 열리는 비밀의 숲, 홍천 은행나무숲의 유래와 매력</h2>
 <p>
@@ -120,19 +240,19 @@ function copyPrompt(id) {
 <td>숲 내부 음식물 섭취 금지, 반려동물 목줄 착용 필수</td>
 </tr>
 </table>
-<!-- [방안 B 특화] 2번째 이미지 대체: 추천 코스 인포그래픽 카드 -->
+<!-- [방안 B 특화] 2번째 이미지 대체: 홍천 은행나무숲 당일치기 단풍 투어 타임라인 로드맵 -->
 
 <!-- 2번째 이미지: 자동 렌더링 인포그래픽 카드 -->
 <div class="img-area">
-<img alt="🗺️ 홍천 은행나무숲 & 달둔계곡 3대 핵심 탐방 추천 코스 / 인포그래픽 카드" src="../../images/261018/1_travel_hongcheon_ginkgo_forest_fall_foliage_parking_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
-<div class="img-caption">🗺️ 홍천 은행나무숲 & 달둔계곡 3대 핵심 탐방 추천 코스 / 인포그래픽 카드</div>
+<img alt="홍천 은행나무숲 & 달둔계곡 당일치기 추천 투어 로드맵 / 인포그래픽 카드" src="../../images/261018/1_travel_hongcheon_ginkgo_forest_fall_foliage_parking_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">홍천 은행나무숲 & 달둔계곡 당일치기 추천 투어 로드맵 / 인포그래픽 카드</div>
 </div>
 
 <h2>03 | 실전 관람 가이드 — 노란 카펫이 가장 아름다운 포토존과 동선</h2>
 <p>
   은행나무숲에 들어서면 정원 중앙을 가로지르는 넓은 흙길을 중심으로 좌우에 질서정연하게 은행나무들이 도열해 있습니다.<br/><br/>
   숲의 규모는 약 4만 ㎡(약 1만 2천 평)로 축구장 5개 크기에 달하지만, 경사가 전혀 없는 평지여서 어르신이나 어린아이를 동반한 가족도 가볍게 걸을 수 있습니다.<br/><br/>
-  <strong>최고의 포토존 3곳</strong>:<br/>
+<strong>최고의 포토존 3곳</strong>:<br/>
   • <strong>중앙 격자 터널</strong>: 나무들이 정사각 격자 형태로 정확히 심어져 있어 동서남북 어느 각도로 카메라를 들어도 무한히 뻗어 나가는 노란 나무 기둥의 소실점을 담을 수 있습니다.<br/>
   • <strong>달둔계곡 인접 가장자리</strong>: 숲의 서쪽 가장자리는 맑은 달둔계곡 지류와 맞닿아 있습니다. 붉게 물든 활엽수림과 노란 은행나무가 계곡 바위와 어우러져 한 폭의 진경산수화를 자아냅니다.<br/>
   • <strong>낙엽 융단 쉼터</strong>: 10월 20일을 넘기면 나무에 달린 잎보다 땅에 떨어진 잎이 많아지며 바닥이 10cm 이상 두터운 황금 융단으로 뒤덮입니다. 이곳 벤치에 앉아 하늘을 올려다보는 로우 앵글 샷이 인스타그램 최고의 인기 구도입니다.
@@ -151,12 +271,12 @@ function copyPrompt(id) {
   • <strong>만차 시 대체 주차</strong>: 입구 주차장이 만차되면 경찰과 모범운전자회가 56번 국도 갓길 일방향 주차를 유도합니다. 입구에서 약 800m~1km 떨어진 갓길에 주차 후 계곡 둑길을 따라 걸어 들어오는 것이 대기 시간을 1시간 이상 아끼는 비결입니다.<br/>
   • <strong>내비게이션 주소</strong>: 강원도 홍천군 내면 광원리 686-4 (도로명: 내면 청정로 2084-16).
 </div>
-<!-- [방안 B 특화] 3번째 이미지 대체: 핵심 지표 하이라이트 매트릭스 카드 -->
+<!-- [방안 B 특화] 3번째 이미지 대체: 홍천 은행나무숲 10월 방문 핵심 지표 매트릭스 -->
 
-<!-- 3번째 이미지: 자동 렌더링 핵심 지표 카드 -->
+<!-- 3번째 이미지: 자동 렌더링 인포그래픽 카드 -->
 <div class="img-area">
-<img alt="🍂 은행나무 규모 2,000여 본 40년생 수나무 정원 ⏱️ 평균 소요시간 1시간 30분 관람 및 사진 촬영 💰 입장료 & 주차비 무료 (0원) 사유지 무료 개방 🌤️ 방문 골든타임 오전 9:30 이전 주말 주차난 회피 / 데이터 요약 카드" src="../../images/261018/1_travel_hongcheon_ginkgo_forest_fall_foliage_parking_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
-<div class="img-caption">🍂 은행나무 규모 2,000여 본 40년생 수나무 정원 ⏱️ 평균 소요시간 1시간 30분 관람 및 사진 촬영 💰 입장료 & 주차비 무료 (0원) 사유지 무료 개방 🌤️ 방문 골든타임 오전 9:30 이전 주말 주차난 회피 / 데이터 요약 카드</div>
+<img alt="홍천 은행나무숲 10월 방문 실전 핵심 지표 매트릭스 / 인포그래픽 카드" src="../../images/261018/1_travel_hongcheon_ginkgo_forest_fall_foliage_parking_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">홍천 은행나무숲 10월 방문 실전 핵심 지표 매트릭스 / 인포그래픽 카드</div>
 </div>
 
 <h2>05 | 진입로 내면 농특산물 먹거리 장터와 가을 별미</h2>
@@ -191,6 +311,14 @@ function copyPrompt(id) {
 <td>천년고찰 월정사 앞 1km 전나무 숲길 산책. 가을 단풍과 웅장한 전나무가 빚어내는 힐링 명소.</td>
 </tr>
 </table>
+<!-- [방안 B 특화] 4번째 이미지 대체: 홍천 은행나무숲 관람 에티켓 & 가을 복장 체크리스트 -->
+
+<!-- 4번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="홍천 은행나무숲 관람 에티켓 & 가을 복장 체크리스트 / 인포그래픽 카드" src="../../images/261018/1_travel_hongcheon_ginkgo_forest_fall_foliage_parking_4.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">홍천 은행나무숲 관람 에티켓 & 가을 복장 체크리스트 / 인포그래픽 카드</div>
+</div>
+
 <h2>07 | 가을 홍천 여행 복장과 아침 기온차 대비 필수 준비물</h2>
 <p>
   홍천군 내면은 남한에서 가장 추운 고원 분지 지형 중 하나로, 10월 아침 기온이 영하권에 근접하거나 서리가 내릴 정도로 쌀쌀합니다.
