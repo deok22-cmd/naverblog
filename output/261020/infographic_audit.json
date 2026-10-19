@@ -1,0 +1,567 @@
+{
+  "targetDate": "261020",
+  "auditTimestamp": "2026-10-19T19:22:31.577Z",
+  "totalArticlesInspected": 7,
+  "articlesUpdated": 7,
+  "totalCardsRendered": 39,
+  "averageCardsPerArticle": "5.6",
+  "distinctArchetypesUsed": 8,
+  "archetypeDistribution": {
+    "핵심 수치 매트릭스": 7,
+    "타임라인/동선 로드맵": 5,
+    "비교 매트릭스": 7,
+    "점검 체크리스트": 6,
+    "비용/견적 영수증": 3,
+    "핵심 Q&A 매트릭스": 7,
+    "코스/전술 공략도": 1,
+    "단계별 절차 플로우": 3
+  },
+  "cards": [
+    {
+      "article": "travel_buan_naesosa_temple_fall_foliage_fir_forest.html",
+      "slug": "travel_buan_naesosa_temple_fall_foliage_fir_forest",
+      "imgNum": 2,
+      "fileName": "1_travel_buan_naesosa_temple_fall_foliage_fir_forest_2.png",
+      "archetype": "stat",
+      "archetypeName": "핵심 수치 매트릭스",
+      "caption": "부안 내소사 가을 단풍 산책 4대 핵심 지표",
+      "dimensions": {
+        "width": 780,
+        "height": 280,
+        "aspectRatio": "2.78"
+      }
+    },
+    {
+      "article": "travel_buan_naesosa_temple_fall_foliage_fir_forest.html",
+      "slug": "travel_buan_naesosa_temple_fall_foliage_fir_forest",
+      "imgNum": 3,
+      "fileName": "1_travel_buan_naesosa_temple_fall_foliage_fir_forest_3.png",
+      "archetype": "timeline",
+      "archetypeName": "타임라인/동선 로드맵",
+      "caption": "내소사 가을 단풍 반일 힐링 걷기 코스",
+      "dimensions": {
+        "width": 780,
+        "height": 585,
+        "aspectRatio": "1.33"
+      }
+    },
+    {
+      "article": "travel_buan_naesosa_temple_fall_foliage_fir_forest.html",
+      "slug": "travel_buan_naesosa_temple_fall_foliage_fir_forest",
+      "imgNum": 4,
+      "fileName": "1_travel_buan_naesosa_temple_fall_foliage_fir_forest_4.png",
+      "archetype": "compare",
+      "archetypeName": "비교 매트릭스",
+      "caption": "전나무 숲길 vs 단풍나무 터널 관람 비교",
+      "dimensions": {
+        "width": 780,
+        "height": 368,
+        "aspectRatio": "2.12"
+      }
+    },
+    {
+      "article": "travel_buan_naesosa_temple_fall_foliage_fir_forest.html",
+      "slug": "travel_buan_naesosa_temple_fall_foliage_fir_forest",
+      "imgNum": 5,
+      "fileName": "1_travel_buan_naesosa_temple_fall_foliage_fir_forest_5.png",
+      "archetype": "checklist",
+      "archetypeName": "점검 체크리스트",
+      "caption": "내소사 가을 단풍 여행 준비 및 에티켓 체크리스트",
+      "dimensions": {
+        "width": 780,
+        "height": 320,
+        "aspectRatio": "2.44"
+      }
+    },
+    {
+      "article": "travel_buan_naesosa_temple_fall_foliage_fir_forest.html",
+      "slug": "travel_buan_naesosa_temple_fall_foliage_fir_forest",
+      "imgNum": 6,
+      "fileName": "1_travel_buan_naesosa_temple_fall_foliage_fir_forest_6.png",
+      "archetype": "receipt",
+      "archetypeName": "비용/견적 영수증",
+      "caption": "내소사 단풍 나들이 실전 비용 정산 영수증",
+      "dimensions": {
+        "width": 780,
+        "height": 339,
+        "aspectRatio": "2.30"
+      }
+    },
+    {
+      "article": "travel_buan_naesosa_temple_fall_foliage_fir_forest.html",
+      "slug": "travel_buan_naesosa_temple_fall_foliage_fir_forest",
+      "imgNum": 7,
+      "fileName": "1_travel_buan_naesosa_temple_fall_foliage_fir_forest_7.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "내소사 단풍 산책 FAQ 매트릭스",
+      "dimensions": {
+        "width": 780,
+        "height": 437,
+        "aspectRatio": "1.78"
+      }
+    },
+    {
+      "article": "travel_boryeong_oseosan_mountain_silver_grass_hiking.html",
+      "slug": "travel_boryeong_oseosan_mountain_silver_grass_hiking",
+      "imgNum": 2,
+      "fileName": "2_travel_boryeong_oseosan_mountain_silver_grass_hiking_2.png",
+      "archetype": "stat",
+      "archetypeName": "핵심 수치 매트릭스",
+      "caption": "보령 오서산 억새 산행 4대 핵심 지표",
+      "dimensions": {
+        "width": 780,
+        "height": 280,
+        "aspectRatio": "2.78"
+      }
+    },
+    {
+      "article": "travel_boryeong_oseosan_mountain_silver_grass_hiking.html",
+      "slug": "travel_boryeong_oseosan_mountain_silver_grass_hiking",
+      "imgNum": 3,
+      "fileName": "2_travel_boryeong_oseosan_mountain_silver_grass_hiking_3.png",
+      "archetype": "compare",
+      "archetypeName": "비교 매트릭스",
+      "caption": "오서산 대표 3대 등산 코스 난이도 및 특징 비교",
+      "dimensions": {
+        "width": 780,
+        "height": 470,
+        "aspectRatio": "1.66"
+      }
+    },
+    {
+      "article": "travel_boryeong_oseosan_mountain_silver_grass_hiking.html",
+      "slug": "travel_boryeong_oseosan_mountain_silver_grass_hiking",
+      "imgNum": 4,
+      "fileName": "2_travel_boryeong_oseosan_mountain_silver_grass_hiking_4.png",
+      "archetype": "timeline",
+      "archetypeName": "타임라인/동선 로드맵",
+      "caption": "오서산 억새 산행 & 서해 일몰 감상 하루 일정표",
+      "dimensions": {
+        "width": 780,
+        "height": 585,
+        "aspectRatio": "1.33"
+      }
+    },
+    {
+      "article": "travel_boryeong_oseosan_mountain_silver_grass_hiking.html",
+      "slug": "travel_boryeong_oseosan_mountain_silver_grass_hiking",
+      "imgNum": 5,
+      "fileName": "2_travel_boryeong_oseosan_mountain_silver_grass_hiking_5.png",
+      "archetype": "strategy",
+      "archetypeName": "코스/전술 공략도",
+      "caption": "오서산 억새 산행 위험 회피 전략도",
+      "dimensions": {
+        "width": 780,
+        "height": 328,
+        "aspectRatio": "2.38"
+      }
+    },
+    {
+      "article": "travel_boryeong_oseosan_mountain_silver_grass_hiking.html",
+      "slug": "travel_boryeong_oseosan_mountain_silver_grass_hiking",
+      "imgNum": 6,
+      "fileName": "2_travel_boryeong_oseosan_mountain_silver_grass_hiking_6.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "오서산 억새 산행 FAQ 매트릭스",
+      "dimensions": {
+        "width": 780,
+        "height": 477,
+        "aspectRatio": "1.64"
+      }
+    },
+    {
+      "article": "travel_seocheon_sinseongri_reed_field_fall_sunset.html",
+      "slug": "travel_seocheon_sinseongri_reed_field_fall_sunset",
+      "imgNum": 2,
+      "fileName": "3_travel_seocheon_sinseongri_reed_field_fall_sunset_2.png",
+      "archetype": "stat",
+      "archetypeName": "핵심 수치 매트릭스",
+      "caption": "서천 신성리 갈대밭 4대 핵심 지표",
+      "dimensions": {
+        "width": 780,
+        "height": 280,
+        "aspectRatio": "2.78"
+      }
+    },
+    {
+      "article": "travel_seocheon_sinseongri_reed_field_fall_sunset.html",
+      "slug": "travel_seocheon_sinseongri_reed_field_fall_sunset",
+      "imgNum": 3,
+      "fileName": "3_travel_seocheon_sinseongri_reed_field_fall_sunset_3.png",
+      "archetype": "compare",
+      "archetypeName": "비교 매트릭스",
+      "caption": "갈대 vs 억새 생태적 차이 및 구별 기준표",
+      "dimensions": {
+        "width": 780,
+        "height": 368,
+        "aspectRatio": "2.12"
+      }
+    },
+    {
+      "article": "travel_seocheon_sinseongri_reed_field_fall_sunset.html",
+      "slug": "travel_seocheon_sinseongri_reed_field_fall_sunset",
+      "imgNum": 4,
+      "fileName": "3_travel_seocheon_sinseongri_reed_field_fall_sunset_4.png",
+      "archetype": "timeline",
+      "archetypeName": "타임라인/동선 로드맵",
+      "caption": "신성리 갈대밭 늦가을 오후 감성 산책 코스",
+      "dimensions": {
+        "width": 780,
+        "height": 585,
+        "aspectRatio": "1.33"
+      }
+    },
+    {
+      "article": "travel_seocheon_sinseongri_reed_field_fall_sunset.html",
+      "slug": "travel_seocheon_sinseongri_reed_field_fall_sunset",
+      "imgNum": 5,
+      "fileName": "3_travel_seocheon_sinseongri_reed_field_fall_sunset_5.png",
+      "archetype": "checklist",
+      "archetypeName": "점검 체크리스트",
+      "caption": "신성리 갈대밭 늦가을 산책 필수 준비물 체크리스트",
+      "dimensions": {
+        "width": 780,
+        "height": 300,
+        "aspectRatio": "2.60"
+      }
+    },
+    {
+      "article": "travel_seocheon_sinseongri_reed_field_fall_sunset.html",
+      "slug": "travel_seocheon_sinseongri_reed_field_fall_sunset",
+      "imgNum": 6,
+      "fileName": "3_travel_seocheon_sinseongri_reed_field_fall_sunset_6.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "신성리 갈대밭 FAQ 매트릭스",
+      "dimensions": {
+        "width": 780,
+        "height": 437,
+        "aspectRatio": "1.78"
+      }
+    },
+    {
+      "article": "travel_gurye_cheoneunsa_temple_fall_foliage_suhongru.html",
+      "slug": "travel_gurye_cheoneunsa_temple_fall_foliage_suhongru",
+      "imgNum": 2,
+      "fileName": "4_travel_gurye_cheoneunsa_temple_fall_foliage_suhongru_2.png",
+      "archetype": "stat",
+      "archetypeName": "핵심 수치 매트릭스",
+      "caption": "구례 지리산 천은사 4대 핵심 지표",
+      "dimensions": {
+        "width": 780,
+        "height": 280,
+        "aspectRatio": "2.78"
+      }
+    },
+    {
+      "article": "travel_gurye_cheoneunsa_temple_fall_foliage_suhongru.html",
+      "slug": "travel_gurye_cheoneunsa_temple_fall_foliage_suhongru",
+      "imgNum": 3,
+      "fileName": "4_travel_gurye_cheoneunsa_temple_fall_foliage_suhongru_3.png",
+      "archetype": "timeline",
+      "archetypeName": "타임라인/동선 로드맵",
+      "caption": "천은사 & 지리산 단풍 하루 힐링 산책 동선",
+      "dimensions": {
+        "width": 780,
+        "height": 605,
+        "aspectRatio": "1.29"
+      }
+    },
+    {
+      "article": "travel_gurye_cheoneunsa_temple_fall_foliage_suhongru.html",
+      "slug": "travel_gurye_cheoneunsa_temple_fall_foliage_suhongru",
+      "imgNum": 4,
+      "fileName": "4_travel_gurye_cheoneunsa_temple_fall_foliage_suhongru_4.png",
+      "archetype": "compare",
+      "archetypeName": "비교 매트릭스",
+      "caption": "천은사 2대 힐링 산책 구간 비교",
+      "dimensions": {
+        "width": 780,
+        "height": 368,
+        "aspectRatio": "2.12"
+      }
+    },
+    {
+      "article": "travel_gurye_cheoneunsa_temple_fall_foliage_suhongru.html",
+      "slug": "travel_gurye_cheoneunsa_temple_fall_foliage_suhongru",
+      "imgNum": 5,
+      "fileName": "4_travel_gurye_cheoneunsa_temple_fall_foliage_suhongru_5.png",
+      "archetype": "checklist",
+      "archetypeName": "점검 체크리스트",
+      "caption": "천은사 & 지리산 단풍 드라이브 점검 체크리스트",
+      "dimensions": {
+        "width": 780,
+        "height": 320,
+        "aspectRatio": "2.44"
+      }
+    },
+    {
+      "article": "travel_gurye_cheoneunsa_temple_fall_foliage_suhongru.html",
+      "slug": "travel_gurye_cheoneunsa_temple_fall_foliage_suhongru",
+      "imgNum": 6,
+      "fileName": "4_travel_gurye_cheoneunsa_temple_fall_foliage_suhongru_6.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "천은사 단풍 여행 FAQ 매트릭스",
+      "dimensions": {
+        "width": 780,
+        "height": 437,
+        "aspectRatio": "1.78"
+      }
+    },
+    {
+      "article": "hot_youth_leap_account_subsidy_expansion_calculation.html",
+      "slug": "hot_youth_leap_account_subsidy_expansion_calculation",
+      "imgNum": 2,
+      "fileName": "5_hot_youth_leap_account_subsidy_expansion_calculation_2.png",
+      "archetype": "stat",
+      "archetypeName": "핵심 수치 매트릭스",
+      "caption": "청년도약계좌 매칭 지원 확대 4대 핵심 지표",
+      "dimensions": {
+        "width": 780,
+        "height": 303,
+        "aspectRatio": "2.57"
+      }
+    },
+    {
+      "article": "hot_youth_leap_account_subsidy_expansion_calculation.html",
+      "slug": "hot_youth_leap_account_subsidy_expansion_calculation",
+      "imgNum": 3,
+      "fileName": "5_hot_youth_leap_account_subsidy_expansion_calculation_3.png",
+      "archetype": "compare",
+      "archetypeName": "비교 매트릭스",
+      "caption": "청년도약계좌 소득구간별 기여금 개편 전후 비교",
+      "dimensions": {
+        "width": 780,
+        "height": 368,
+        "aspectRatio": "2.12"
+      }
+    },
+    {
+      "article": "hot_youth_leap_account_subsidy_expansion_calculation.html",
+      "slug": "hot_youth_leap_account_subsidy_expansion_calculation",
+      "imgNum": 4,
+      "fileName": "5_hot_youth_leap_account_subsidy_expansion_calculation_4.png",
+      "archetype": "receipt",
+      "archetypeName": "비용/견적 영수증",
+      "caption": "청년도약계좌 5년 만기 예상 정산 영수증",
+      "dimensions": {
+        "width": 780,
+        "height": 339,
+        "aspectRatio": "2.30"
+      }
+    },
+    {
+      "article": "hot_youth_leap_account_subsidy_expansion_calculation.html",
+      "slug": "hot_youth_leap_account_subsidy_expansion_calculation",
+      "imgNum": 5,
+      "fileName": "5_hot_youth_leap_account_subsidy_expansion_calculation_5.png",
+      "archetype": "checklist",
+      "archetypeName": "점검 체크리스트",
+      "caption": "청년도약계좌 가입 자격 자가점검표",
+      "dimensions": {
+        "width": 780,
+        "height": 339,
+        "aspectRatio": "2.30"
+      }
+    },
+    {
+      "article": "hot_youth_leap_account_subsidy_expansion_calculation.html",
+      "slug": "hot_youth_leap_account_subsidy_expansion_calculation",
+      "imgNum": 6,
+      "fileName": "5_hot_youth_leap_account_subsidy_expansion_calculation_6.png",
+      "archetype": "flow",
+      "archetypeName": "단계별 절차 플로우",
+      "caption": "청년도약계좌 비대면 신청 4단계 절차도",
+      "dimensions": {
+        "width": 780,
+        "height": 254,
+        "aspectRatio": "3.07"
+      }
+    },
+    {
+      "article": "hot_youth_leap_account_subsidy_expansion_calculation.html",
+      "slug": "hot_youth_leap_account_subsidy_expansion_calculation",
+      "imgNum": 7,
+      "fileName": "5_hot_youth_leap_account_subsidy_expansion_calculation_7.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "청년도약계좌 기여금 확대 FAQ 매트릭스",
+      "dimensions": {
+        "width": 780,
+        "height": 457,
+        "aspectRatio": "1.71"
+      }
+    },
+    {
+      "article": "house_septic_tank_fall_cleaning_cost_service_guide.html",
+      "slug": "house_septic_tank_fall_cleaning_cost_service_guide",
+      "imgNum": 2,
+      "fileName": "6_house_septic_tank_fall_cleaning_cost_service_guide_2.png",
+      "archetype": "stat",
+      "archetypeName": "핵심 수치 매트릭스",
+      "caption": "전원주택 정화조 청소 4대 핵심 지표",
+      "dimensions": {
+        "width": 780,
+        "height": 280,
+        "aspectRatio": "2.78"
+      }
+    },
+    {
+      "article": "house_septic_tank_fall_cleaning_cost_service_guide.html",
+      "slug": "house_septic_tank_fall_cleaning_cost_service_guide",
+      "imgNum": 3,
+      "fileName": "6_house_septic_tank_fall_cleaning_cost_service_guide_3.png",
+      "archetype": "compare",
+      "archetypeName": "비교 매트릭스",
+      "caption": "계절별 정화조 청소 여건 및 장단점 비교",
+      "dimensions": {
+        "width": 780,
+        "height": 368,
+        "aspectRatio": "2.12"
+      }
+    },
+    {
+      "article": "house_septic_tank_fall_cleaning_cost_service_guide.html",
+      "slug": "house_septic_tank_fall_cleaning_cost_service_guide",
+      "imgNum": 4,
+      "fileName": "6_house_septic_tank_fall_cleaning_cost_service_guide_4.png",
+      "archetype": "receipt",
+      "archetypeName": "비용/견적 영수증",
+      "caption": "전원주택 정화조 청소 표준 실전 견적서",
+      "dimensions": {
+        "width": 780,
+        "height": 339,
+        "aspectRatio": "2.30"
+      }
+    },
+    {
+      "article": "house_septic_tank_fall_cleaning_cost_service_guide.html",
+      "slug": "house_septic_tank_fall_cleaning_cost_service_guide",
+      "imgNum": 5,
+      "fileName": "6_house_septic_tank_fall_cleaning_cost_service_guide_5.png",
+      "archetype": "flow",
+      "archetypeName": "단계별 절차 플로우",
+      "caption": "정화조 청소 대행업체 신청 및 전산 등록 절차도",
+      "dimensions": {
+        "width": 780,
+        "height": 254,
+        "aspectRatio": "3.07"
+      }
+    },
+    {
+      "article": "house_septic_tank_fall_cleaning_cost_service_guide.html",
+      "slug": "house_septic_tank_fall_cleaning_cost_service_guide",
+      "imgNum": 6,
+      "fileName": "6_house_septic_tank_fall_cleaning_cost_service_guide_6.png",
+      "archetype": "checklist",
+      "archetypeName": "점검 체크리스트",
+      "caption": "전원주택 정화조 가을 점검 체크리스트",
+      "dimensions": {
+        "width": 780,
+        "height": 320,
+        "aspectRatio": "2.44"
+      }
+    },
+    {
+      "article": "house_septic_tank_fall_cleaning_cost_service_guide.html",
+      "slug": "house_septic_tank_fall_cleaning_cost_service_guide",
+      "imgNum": 7,
+      "fileName": "6_house_septic_tank_fall_cleaning_cost_service_guide_7.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "정화조 관리 FAQ 매트릭스",
+      "dimensions": {
+        "width": 780,
+        "height": 477,
+        "aspectRatio": "1.64"
+      }
+    },
+    {
+      "article": "lease_moving_out_cancellation_transfer_checklist.html",
+      "slug": "lease_moving_out_cancellation_transfer_checklist",
+      "imgNum": 2,
+      "fileName": "7_lease_moving_out_cancellation_transfer_checklist_2.png",
+      "archetype": "stat",
+      "archetypeName": "핵심 수치 매트릭스",
+      "caption": "이사 전 필수 행정 4대 핵심 지표",
+      "dimensions": {
+        "width": 780,
+        "height": 280,
+        "aspectRatio": "2.78"
+      }
+    },
+    {
+      "article": "lease_moving_out_cancellation_transfer_checklist.html",
+      "slug": "lease_moving_out_cancellation_transfer_checklist",
+      "imgNum": 3,
+      "fileName": "7_lease_moving_out_cancellation_transfer_checklist_3.png",
+      "archetype": "timeline",
+      "archetypeName": "타임라인/동선 로드맵",
+      "caption": "이사 D-14부터 D+1까지 날짜별 실전 타임라인",
+      "dimensions": {
+        "width": 780,
+        "height": 644,
+        "aspectRatio": "1.21"
+      }
+    },
+    {
+      "article": "lease_moving_out_cancellation_transfer_checklist.html",
+      "slug": "lease_moving_out_cancellation_transfer_checklist",
+      "imgNum": 4,
+      "fileName": "7_lease_moving_out_cancellation_transfer_checklist_4.png",
+      "archetype": "checklist",
+      "archetypeName": "점검 체크리스트",
+      "caption": "이사 당일 공과금 검침 및 정산 체크리스트",
+      "dimensions": {
+        "width": 780,
+        "height": 320,
+        "aspectRatio": "2.44"
+      }
+    },
+    {
+      "article": "lease_moving_out_cancellation_transfer_checklist.html",
+      "slug": "lease_moving_out_cancellation_transfer_checklist",
+      "imgNum": 5,
+      "fileName": "7_lease_moving_out_cancellation_transfer_checklist_5.png",
+      "archetype": "compare",
+      "archetypeName": "비교 매트릭스",
+      "caption": "장기수선충당금 vs 수선유지비 부담 주체 비교",
+      "dimensions": {
+        "width": 780,
+        "height": 368,
+        "aspectRatio": "2.12"
+      }
+    },
+    {
+      "article": "lease_moving_out_cancellation_transfer_checklist.html",
+      "slug": "lease_moving_out_cancellation_transfer_checklist",
+      "imgNum": 6,
+      "fileName": "7_lease_moving_out_cancellation_transfer_checklist_6.png",
+      "archetype": "flow",
+      "archetypeName": "단계별 절차 플로우",
+      "caption": "우편물 및 금융 주소 일괄 변경 4단계 절차도",
+      "dimensions": {
+        "width": 780,
+        "height": 254,
+        "aspectRatio": "3.07"
+      }
+    },
+    {
+      "article": "lease_moving_out_cancellation_transfer_checklist.html",
+      "slug": "lease_moving_out_cancellation_transfer_checklist",
+      "imgNum": 7,
+      "fileName": "7_lease_moving_out_cancellation_transfer_checklist_7.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "이사 행정 및 공과금 FAQ 매트릭스",
+      "dimensions": {
+        "width": 780,
+        "height": 477,
+        "aspectRatio": "1.64"
+      }
+    }
+  ]
+}
