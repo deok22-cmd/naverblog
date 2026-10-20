@@ -1,0 +1,595 @@
+{
+  "targetDate": "261021",
+  "auditTimestamp": "2026-10-20T19:34:04.873Z",
+  "totalArticlesInspected": 7,
+  "articlesUpdated": 7,
+  "totalCardsRendered": 41,
+  "averageCardsPerArticle": "5.9",
+  "distinctArchetypesUsed": 8,
+  "archetypeDistribution": {
+    "핵심 수치 매트릭스": 7,
+    "타임라인/동선 로드맵": 4,
+    "비교 매트릭스": 7,
+    "점검 체크리스트": 7,
+    "비용/견적 영수증": 7,
+    "핵심 Q&A 매트릭스": 6,
+    "단계별 절차 플로우": 2,
+    "평가지표 스코어카드": 1
+  },
+  "cards": [
+    {
+      "article": "travel_daejeon_jangtaesan_metasequoia_fall_foliage.html",
+      "slug": "travel_daejeon_jangtaesan_metasequoia_fall_foliage",
+      "imgNum": 2,
+      "fileName": "1_travel_daejeon_jangtaesan_metasequoia_fall_foliage_2.png",
+      "archetype": "stat",
+      "archetypeName": "핵심 수치 매트릭스",
+      "caption": "장태산 자연휴양림 가을 단풍 산책 4대 핵심 지표",
+      "dimensions": {
+        "width": 780,
+        "height": 229,
+        "aspectRatio": "3.41"
+      }
+    },
+    {
+      "article": "travel_daejeon_jangtaesan_metasequoia_fall_foliage.html",
+      "slug": "travel_daejeon_jangtaesan_metasequoia_fall_foliage",
+      "imgNum": 3,
+      "fileName": "1_travel_daejeon_jangtaesan_metasequoia_fall_foliage_3.png",
+      "archetype": "timeline",
+      "archetypeName": "타임라인/동선 로드맵",
+      "caption": "장태산 자연휴양림 가을 단풍 반일 힐링 산책 동선",
+      "dimensions": {
+        "width": 780,
+        "height": 479,
+        "aspectRatio": "1.63"
+      }
+    },
+    {
+      "article": "travel_daejeon_jangtaesan_metasequoia_fall_foliage.html",
+      "slug": "travel_daejeon_jangtaesan_metasequoia_fall_foliage",
+      "imgNum": 4,
+      "fileName": "1_travel_daejeon_jangtaesan_metasequoia_fall_foliage_4.png",
+      "archetype": "compare",
+      "archetypeName": "비교 매트릭스",
+      "caption": "장태산 지상 흙길 산책로 vs 공중 스카이웨이 관람 비교",
+      "dimensions": {
+        "width": 780,
+        "height": 337,
+        "aspectRatio": "2.32"
+      }
+    },
+    {
+      "article": "travel_daejeon_jangtaesan_metasequoia_fall_foliage.html",
+      "slug": "travel_daejeon_jangtaesan_metasequoia_fall_foliage",
+      "imgNum": 5,
+      "fileName": "1_travel_daejeon_jangtaesan_metasequoia_fall_foliage_5.png",
+      "archetype": "checklist",
+      "archetypeName": "점검 체크리스트",
+      "caption": "장태산 자연휴양림 가을 단풍 여행 준비 및 에티켓 체크리스트",
+      "dimensions": {
+        "width": 780,
+        "height": 267,
+        "aspectRatio": "2.92"
+      }
+    },
+    {
+      "article": "travel_daejeon_jangtaesan_metasequoia_fall_foliage.html",
+      "slug": "travel_daejeon_jangtaesan_metasequoia_fall_foliage",
+      "imgNum": 6,
+      "fileName": "1_travel_daejeon_jangtaesan_metasequoia_fall_foliage_6.png",
+      "archetype": "receipt",
+      "archetypeName": "비용/견적 영수증",
+      "caption": "대전 장태산 자연휴양림 가을 당일치기 나들이 실전 정산 영수증",
+      "dimensions": {
+        "width": 780,
+        "height": 505,
+        "aspectRatio": "1.54"
+      }
+    },
+    {
+      "article": "travel_daejeon_jangtaesan_metasequoia_fall_foliage.html",
+      "slug": "travel_daejeon_jangtaesan_metasequoia_fall_foliage",
+      "imgNum": 7,
+      "fileName": "1_travel_daejeon_jangtaesan_metasequoia_fall_foliage_7.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "장태산 자연휴양림 가을 단풍 자주 묻는 질문 FAQ",
+      "dimensions": {
+        "width": 780,
+        "height": 418,
+        "aspectRatio": "1.87"
+      }
+    },
+    {
+      "article": "travel_asan_paradise_spa_dogo_hot_spring_fall_guide.html",
+      "slug": "travel_asan_paradise_spa_dogo_hot_spring_fall_guide",
+      "imgNum": 2,
+      "fileName": "2_travel_asan_paradise_spa_dogo_hot_spring_fall_guide_2.png",
+      "archetype": "stat",
+      "archetypeName": "핵심 수치 매트릭스",
+      "caption": "아산 파라다이스 스파 도고 4대 핵심 지표",
+      "dimensions": {
+        "width": 780,
+        "height": 289,
+        "aspectRatio": "2.70"
+      }
+    },
+    {
+      "article": "travel_asan_paradise_spa_dogo_hot_spring_fall_guide.html",
+      "slug": "travel_asan_paradise_spa_dogo_hot_spring_fall_guide",
+      "imgNum": 3,
+      "fileName": "2_travel_asan_paradise_spa_dogo_hot_spring_fall_guide_3.png",
+      "archetype": "compare",
+      "archetypeName": "비교 매트릭스",
+      "caption": "파라다이스 스파 도고 이용권 옵션별 혜택 및 요금 비교",
+      "dimensions": {
+        "width": 780,
+        "height": 447,
+        "aspectRatio": "1.75"
+      }
+    },
+    {
+      "article": "travel_asan_paradise_spa_dogo_hot_spring_fall_guide.html",
+      "slug": "travel_asan_paradise_spa_dogo_hot_spring_fall_guide",
+      "imgNum": 4,
+      "fileName": "2_travel_asan_paradise_spa_dogo_hot_spring_fall_guide_4.png",
+      "archetype": "timeline",
+      "archetypeName": "타임라인/동선 로드맵",
+      "caption": "파라다이스 스파 도고 가을 힐링 반일 이용 타임라인",
+      "dimensions": {
+        "width": 780,
+        "height": 459,
+        "aspectRatio": "1.70"
+      }
+    },
+    {
+      "article": "travel_asan_paradise_spa_dogo_hot_spring_fall_guide.html",
+      "slug": "travel_asan_paradise_spa_dogo_hot_spring_fall_guide",
+      "imgNum": 5,
+      "fileName": "2_travel_asan_paradise_spa_dogo_hot_spring_fall_guide_5.png",
+      "archetype": "checklist",
+      "archetypeName": "점검 체크리스트",
+      "caption": "파라다이스 스파 도고 방문 전 필수 준비물 및 규정 체크리스트",
+      "dimensions": {
+        "width": 780,
+        "height": 267,
+        "aspectRatio": "2.92"
+      }
+    },
+    {
+      "article": "travel_asan_paradise_spa_dogo_hot_spring_fall_guide.html",
+      "slug": "travel_asan_paradise_spa_dogo_hot_spring_fall_guide",
+      "imgNum": 6,
+      "fileName": "2_travel_asan_paradise_spa_dogo_hot_spring_fall_guide_6.png",
+      "archetype": "receipt",
+      "archetypeName": "비용/견적 영수증",
+      "caption": "아산 파라다이스 스파 도고 가을 나들이 2인 실전 정산 영수증",
+      "dimensions": {
+        "width": 780,
+        "height": 459,
+        "aspectRatio": "1.70"
+      }
+    },
+    {
+      "article": "travel_naju_hyanggyo_ginkgo_tree_fall_foliage_walk.html",
+      "slug": "travel_naju_hyanggyo_ginkgo_tree_fall_foliage_walk",
+      "imgNum": 2,
+      "fileName": "3_travel_naju_hyanggyo_ginkgo_tree_fall_foliage_walk_2.png",
+      "archetype": "stat",
+      "archetypeName": "핵심 수치 매트릭스",
+      "caption": "나주향교 가을 도보 산책 4대 핵심 지표",
+      "dimensions": {
+        "width": 780,
+        "height": 229,
+        "aspectRatio": "3.41"
+      }
+    },
+    {
+      "article": "travel_naju_hyanggyo_ginkgo_tree_fall_foliage_walk.html",
+      "slug": "travel_naju_hyanggyo_ginkgo_tree_fall_foliage_walk",
+      "imgNum": 3,
+      "fileName": "3_travel_naju_hyanggyo_ginkgo_tree_fall_foliage_walk_3.png",
+      "archetype": "timeline",
+      "archetypeName": "타임라인/동선 로드맵",
+      "caption": "나주읍성 역사·미식 가을 반일 도보 코스",
+      "dimensions": {
+        "width": 780,
+        "height": 459,
+        "aspectRatio": "1.70"
+      }
+    },
+    {
+      "article": "travel_naju_hyanggyo_ginkgo_tree_fall_foliage_walk.html",
+      "slug": "travel_naju_hyanggyo_ginkgo_tree_fall_foliage_walk",
+      "imgNum": 4,
+      "fileName": "3_travel_naju_hyanggyo_ginkgo_tree_fall_foliage_walk_4.png",
+      "archetype": "compare",
+      "archetypeName": "비교 매트릭스",
+      "caption": "나주향교 vs 나주 금성관 관람 포인트 비교",
+      "dimensions": {
+        "width": 780,
+        "height": 337,
+        "aspectRatio": "2.32"
+      }
+    },
+    {
+      "article": "travel_naju_hyanggyo_ginkgo_tree_fall_foliage_walk.html",
+      "slug": "travel_naju_hyanggyo_ginkgo_tree_fall_foliage_walk",
+      "imgNum": 5,
+      "fileName": "3_travel_naju_hyanggyo_ginkgo_tree_fall_foliage_walk_5.png",
+      "archetype": "checklist",
+      "archetypeName": "점검 체크리스트",
+      "caption": "나주 고택·향교 도보 여행 준비 및 에티켓 체크리스트",
+      "dimensions": {
+        "width": 780,
+        "height": 267,
+        "aspectRatio": "2.92"
+      }
+    },
+    {
+      "article": "travel_naju_hyanggyo_ginkgo_tree_fall_foliage_walk.html",
+      "slug": "travel_naju_hyanggyo_ginkgo_tree_fall_foliage_walk",
+      "imgNum": 6,
+      "fileName": "3_travel_naju_hyanggyo_ginkgo_tree_fall_foliage_walk_6.png",
+      "archetype": "receipt",
+      "archetypeName": "비용/견적 영수증",
+      "caption": "나주 당일치기 역사·미식 나들이 2인 실전 정산 영수증",
+      "dimensions": {
+        "width": 780,
+        "height": 642,
+        "aspectRatio": "1.21"
+      }
+    },
+    {
+      "article": "travel_naju_hyanggyo_ginkgo_tree_fall_foliage_walk.html",
+      "slug": "travel_naju_hyanggyo_ginkgo_tree_fall_foliage_walk",
+      "imgNum": 7,
+      "fileName": "3_travel_naju_hyanggyo_ginkgo_tree_fall_foliage_walk_7.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "나주향교 은행나무 단풍 자주 묻는 질문 FAQ",
+      "dimensions": {
+        "width": 780,
+        "height": 418,
+        "aspectRatio": "1.87"
+      }
+    },
+    {
+      "article": "travel_sunchang_chaegyesan_suspension_bridge_fall_hiking.html",
+      "slug": "travel_sunchang_chaegyesan_suspension_bridge_fall_hiking",
+      "imgNum": 2,
+      "fileName": "4_travel_sunchang_chaegyesan_suspension_bridge_fall_hiking_2.png",
+      "archetype": "stat",
+      "archetypeName": "핵심 수치 매트릭스",
+      "caption": "순창 채계산 출렁다리 4대 핵심 관람 지표",
+      "dimensions": {
+        "width": 780,
+        "height": 229,
+        "aspectRatio": "3.41"
+      }
+    },
+    {
+      "article": "travel_sunchang_chaegyesan_suspension_bridge_fall_hiking.html",
+      "slug": "travel_sunchang_chaegyesan_suspension_bridge_fall_hiking",
+      "imgNum": 3,
+      "fileName": "4_travel_sunchang_chaegyesan_suspension_bridge_fall_hiking_3.png",
+      "archetype": "timeline",
+      "archetypeName": "타임라인/동선 로드맵",
+      "caption": "순창 채계산 출렁다리 왕복 산책 및 가을 당일치기 코스",
+      "dimensions": {
+        "width": 780,
+        "height": 459,
+        "aspectRatio": "1.70"
+      }
+    },
+    {
+      "article": "travel_sunchang_chaegyesan_suspension_bridge_fall_hiking.html",
+      "slug": "travel_sunchang_chaegyesan_suspension_bridge_fall_hiking",
+      "imgNum": 4,
+      "fileName": "4_travel_sunchang_chaegyesan_suspension_bridge_fall_hiking_4.png",
+      "archetype": "compare",
+      "archetypeName": "비교 매트릭스",
+      "caption": "순창 채계산 출렁다리 vs 강천산 군립공원 구름다리 비교",
+      "dimensions": {
+        "width": 780,
+        "height": 337,
+        "aspectRatio": "2.32"
+      }
+    },
+    {
+      "article": "travel_sunchang_chaegyesan_suspension_bridge_fall_hiking.html",
+      "slug": "travel_sunchang_chaegyesan_suspension_bridge_fall_hiking",
+      "imgNum": 5,
+      "fileName": "4_travel_sunchang_chaegyesan_suspension_bridge_fall_hiking_5.png",
+      "archetype": "checklist",
+      "archetypeName": "점검 체크리스트",
+      "caption": "채계산 출렁다리 가을 산행 준비 및 안전 수칙 체크리스트",
+      "dimensions": {
+        "width": 780,
+        "height": 267,
+        "aspectRatio": "2.92"
+      }
+    },
+    {
+      "article": "travel_sunchang_chaegyesan_suspension_bridge_fall_hiking.html",
+      "slug": "travel_sunchang_chaegyesan_suspension_bridge_fall_hiking",
+      "imgNum": 6,
+      "fileName": "4_travel_sunchang_chaegyesan_suspension_bridge_fall_hiking_6.png",
+      "archetype": "receipt",
+      "archetypeName": "비용/견적 영수증",
+      "caption": "순창 가을 당일치기 나들이 2인 실전 정산 영수증",
+      "dimensions": {
+        "width": 780,
+        "height": 459,
+        "aspectRatio": "1.70"
+      }
+    },
+    {
+      "article": "travel_sunchang_chaegyesan_suspension_bridge_fall_hiking.html",
+      "slug": "travel_sunchang_chaegyesan_suspension_bridge_fall_hiking",
+      "imgNum": 7,
+      "fileName": "4_travel_sunchang_chaegyesan_suspension_bridge_fall_hiking_7.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "순창 채계산 출렁다리 가을 산행 자주 묻는 질문 FAQ",
+      "dimensions": {
+        "width": 780,
+        "height": 457,
+        "aspectRatio": "1.71"
+      }
+    },
+    {
+      "article": "hot_city_gas_winter_cashback_application_guide.html",
+      "slug": "hot_city_gas_winter_cashback_application_guide",
+      "imgNum": 2,
+      "fileName": "5_hot_city_gas_winter_cashback_application_guide_2.png",
+      "archetype": "stat",
+      "archetypeName": "핵심 수치 매트릭스",
+      "caption": "도시가스 절약 캐시백 4대 핵심 지표",
+      "dimensions": {
+        "width": 780,
+        "height": 229,
+        "aspectRatio": "3.41"
+      }
+    },
+    {
+      "article": "hot_city_gas_winter_cashback_application_guide.html",
+      "slug": "hot_city_gas_winter_cashback_application_guide",
+      "imgNum": 3,
+      "fileName": "5_hot_city_gas_winter_cashback_application_guide_3.png",
+      "archetype": "compare",
+      "archetypeName": "비교 매트릭스",
+      "caption": "도시가스 절약 캐시백 절감률 구간별 환급 단가 비교",
+      "dimensions": {
+        "width": 780,
+        "height": 426,
+        "aspectRatio": "1.83"
+      }
+    },
+    {
+      "article": "hot_city_gas_winter_cashback_application_guide.html",
+      "slug": "hot_city_gas_winter_cashback_application_guide",
+      "imgNum": 4,
+      "fileName": "5_hot_city_gas_winter_cashback_application_guide_4.png",
+      "archetype": "flow",
+      "archetypeName": "단계별 절차 플로우",
+      "caption": "도시가스 절약 캐시백 온라인 신청 4단계 절차 플로우",
+      "dimensions": {
+        "width": 780,
+        "height": 246,
+        "aspectRatio": "3.17"
+      }
+    },
+    {
+      "article": "hot_city_gas_winter_cashback_application_guide.html",
+      "slug": "hot_city_gas_winter_cashback_application_guide",
+      "imgNum": 5,
+      "fileName": "5_hot_city_gas_winter_cashback_application_guide_5.png",
+      "archetype": "checklist",
+      "archetypeName": "점검 체크리스트",
+      "caption": "도시가스 절약 캐시백 신청 전 준비물 및 자격 체크리스트",
+      "dimensions": {
+        "width": 780,
+        "height": 267,
+        "aspectRatio": "2.92"
+      }
+    },
+    {
+      "article": "hot_city_gas_winter_cashback_application_guide.html",
+      "slug": "hot_city_gas_winter_cashback_application_guide",
+      "imgNum": 6,
+      "fileName": "5_hot_city_gas_winter_cashback_application_guide_6.png",
+      "archetype": "receipt",
+      "archetypeName": "비용/견적 영수증",
+      "caption": "30평형 아파트 10% 절감 시 실전 난방비 절감 및 캐시백 정산 영수증",
+      "dimensions": {
+        "width": 780,
+        "height": 459,
+        "aspectRatio": "1.70"
+      }
+    },
+    {
+      "article": "hot_city_gas_winter_cashback_application_guide.html",
+      "slug": "hot_city_gas_winter_cashback_application_guide",
+      "imgNum": 7,
+      "fileName": "5_hot_city_gas_winter_cashback_application_guide_7.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "도시가스 절약 캐시백 자주 묻는 질문 FAQ",
+      "dimensions": {
+        "width": 780,
+        "height": 437,
+        "aspectRatio": "1.78"
+      }
+    },
+    {
+      "article": "repair_winter_draft_proofing_diy_cost_compare.html",
+      "slug": "repair_winter_draft_proofing_diy_cost_compare",
+      "imgNum": 2,
+      "fileName": "6_repair_winter_draft_proofing_diy_cost_compare_2.png",
+      "archetype": "stat",
+      "archetypeName": "핵심 수치 매트릭스",
+      "caption": "겨울 창호 외풍 차단 4대 핵심 지표",
+      "dimensions": {
+        "width": 780,
+        "height": 229,
+        "aspectRatio": "3.41"
+      }
+    },
+    {
+      "article": "repair_winter_draft_proofing_diy_cost_compare.html",
+      "slug": "repair_winter_draft_proofing_diy_cost_compare",
+      "imgNum": 3,
+      "fileName": "6_repair_winter_draft_proofing_diy_cost_compare_3.png",
+      "archetype": "compare",
+      "archetypeName": "비교 매트릭스",
+      "caption": "겨울철 3대 창호 단열 자재 성능 및 비용 비교 매트릭스",
+      "dimensions": {
+        "width": 780,
+        "height": 447,
+        "aspectRatio": "1.75"
+      }
+    },
+    {
+      "article": "repair_winter_draft_proofing_diy_cost_compare.html",
+      "slug": "repair_winter_draft_proofing_diy_cost_compare",
+      "imgNum": 4,
+      "fileName": "6_repair_winter_draft_proofing_diy_cost_compare_4.png",
+      "archetype": "flow",
+      "archetypeName": "단계별 절차 플로우",
+      "caption": "창호 단열 에어캡 들뜸 없는 4단계 완벽 시공 플로우",
+      "dimensions": {
+        "width": 780,
+        "height": 246,
+        "aspectRatio": "3.17"
+      }
+    },
+    {
+      "article": "repair_winter_draft_proofing_diy_cost_compare.html",
+      "slug": "repair_winter_draft_proofing_diy_cost_compare",
+      "imgNum": 5,
+      "fileName": "6_repair_winter_draft_proofing_diy_cost_compare_5.png",
+      "archetype": "checklist",
+      "archetypeName": "점검 체크리스트",
+      "caption": "창호 외풍 취약 부위 자가 진단 및 시공 준비물 체크리스트",
+      "dimensions": {
+        "width": 780,
+        "height": 267,
+        "aspectRatio": "2.92"
+      }
+    },
+    {
+      "article": "repair_winter_draft_proofing_diy_cost_compare.html",
+      "slug": "repair_winter_draft_proofing_diy_cost_compare",
+      "imgNum": 6,
+      "fileName": "6_repair_winter_draft_proofing_diy_cost_compare_6.png",
+      "archetype": "receipt",
+      "archetypeName": "비용/견적 영수증",
+      "caption": "아파트 창호 단열 셀프 DIY vs 전문 틈막이 시공 견적 비교 영수증",
+      "dimensions": {
+        "width": 780,
+        "height": 459,
+        "aspectRatio": "1.70"
+      }
+    },
+    {
+      "article": "repair_winter_draft_proofing_diy_cost_compare.html",
+      "slug": "repair_winter_draft_proofing_diy_cost_compare",
+      "imgNum": 7,
+      "fileName": "6_repair_winter_draft_proofing_diy_cost_compare_7.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "창호 외풍 차단 자주 묻는 질문 FAQ",
+      "dimensions": {
+        "width": 780,
+        "height": 457,
+        "aspectRatio": "1.71"
+      }
+    },
+    {
+      "article": "ins_dental_treatment_indemnity_insurance_coverage_guide.html",
+      "slug": "ins_dental_treatment_indemnity_insurance_coverage_guide",
+      "imgNum": 2,
+      "fileName": "7_ins_dental_treatment_indemnity_insurance_coverage_guide_2.png",
+      "archetype": "stat",
+      "archetypeName": "핵심 수치 매트릭스",
+      "caption": "치과 치료 실손보험 청구 4대 핵심 지표",
+      "dimensions": {
+        "width": 780,
+        "height": 229,
+        "aspectRatio": "3.41"
+      }
+    },
+    {
+      "article": "ins_dental_treatment_indemnity_insurance_coverage_guide.html",
+      "slug": "ins_dental_treatment_indemnity_insurance_coverage_guide",
+      "imgNum": 3,
+      "fileName": "7_ins_dental_treatment_indemnity_insurance_coverage_guide_3.png",
+      "archetype": "compare",
+      "archetypeName": "비교 매트릭스",
+      "caption": "치과 치료 항목별 국민건강보험 급여 vs 비급여 실손 보장 대조표",
+      "dimensions": {
+        "width": 780,
+        "height": 399,
+        "aspectRatio": "1.95"
+      }
+    },
+    {
+      "article": "ins_dental_treatment_indemnity_insurance_coverage_guide.html",
+      "slug": "ins_dental_treatment_indemnity_insurance_coverage_guide",
+      "imgNum": 4,
+      "fileName": "7_ins_dental_treatment_indemnity_insurance_coverage_guide_4.png",
+      "archetype": "scorecard",
+      "archetypeName": "평가지표 스코어카드",
+      "caption": "1~4세대 실손의료보험 치과 치료 보장 범위 및 자기부담률 비교",
+      "dimensions": {
+        "width": 780,
+        "height": 481,
+        "aspectRatio": "1.62"
+      }
+    },
+    {
+      "article": "ins_dental_treatment_indemnity_insurance_coverage_guide.html",
+      "slug": "ins_dental_treatment_indemnity_insurance_coverage_guide",
+      "imgNum": 5,
+      "fileName": "7_ins_dental_treatment_indemnity_insurance_coverage_guide_5.png",
+      "archetype": "checklist",
+      "archetypeName": "점검 체크리스트",
+      "caption": "치과 방문 시 챙겨야 할 실손 청구 필수 서류 3열 체크리스트",
+      "dimensions": {
+        "width": 780,
+        "height": 267,
+        "aspectRatio": "2.92"
+      }
+    },
+    {
+      "article": "ins_dental_treatment_indemnity_insurance_coverage_guide.html",
+      "slug": "ins_dental_treatment_indemnity_insurance_coverage_guide",
+      "imgNum": 6,
+      "fileName": "7_ins_dental_treatment_indemnity_insurance_coverage_guide_6.png",
+      "archetype": "receipt",
+      "archetypeName": "비용/견적 영수증",
+      "caption": "치과 복합 진료 시 실손보험 청구 모의 정산 영수증",
+      "dimensions": {
+        "width": 780,
+        "height": 577,
+        "aspectRatio": "1.35"
+      }
+    },
+    {
+      "article": "ins_dental_treatment_indemnity_insurance_coverage_guide.html",
+      "slug": "ins_dental_treatment_indemnity_insurance_coverage_guide",
+      "imgNum": 7,
+      "fileName": "7_ins_dental_treatment_indemnity_insurance_coverage_guide_7.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "치과 실손보험 청구 자주 묻는 질문 FAQ",
+      "dimensions": {
+        "width": 780,
+        "height": 477,
+        "aspectRatio": "1.64"
+      }
+    }
+  ]
+}

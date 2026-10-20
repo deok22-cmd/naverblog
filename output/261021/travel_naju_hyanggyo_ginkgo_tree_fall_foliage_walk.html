@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>전남 나주향교 500년 은행나무 단풍과 금성관 — 읍성 골목 가을 도보 산책 코스</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #004d40; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf9; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #b2dfdb; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #00796b; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #b2dfdb; border-left: 4px solid #00796b; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #00796b; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+
+  /* ========================================================
+     🎨 다채널 인포그래픽 아키타입 CSS 시스템
+     ========================================= */
+  .infographic-box, [class*="infographic-"] {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif;
+  }
+  .infographic-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    border-bottom: 2px dashed #b2dfdb;
+    padding-bottom: 12px;
+  }
+  .infographic-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 1.1em;
+    color: #004d40;
+  }
+  .infographic-badge {
+    display: inline-block;
+    background: #00796b;
+    color: #ffffff;
+    font-size: 0.75em;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+  }
+
+  /* 1. 비교 매트릭스 카드 (.infographic-compare-box) */
+  .infographic-compare-box {
+    background: #ffffff;
+    border: 1.5px solid #b2dfdb;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .compare-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .compare-col {
+    flex: 1;
+    min-width: 150px;
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 14px 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  }
+  .compare-col.highlight {
+    background: #f9fdf9;
+    border: 1.5px solid #00796b;
+  }
+  .compare-col-title {
+    font-size: 0.95em;
+    font-weight: 800;
+    color: #004d40;
+    margin-bottom: 6px;
+  }
+  .compare-col-badge {
+    display: inline-block;
+    background: #00796b;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .compare-row {
+    font-size: 0.82em;
+    color: #444;
+    line-height: 1.55;
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .compare-row:last-child {
+    border-bottom: none;
+  }
+
+  /* 2. 일정/동선 타임라인 로드맵 (.infographic-timeline-box) */
+  .infographic-timeline-box {
+    background: #f9fdf9;
+    border: 1.5px solid #b2dfdb;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  .timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .timeline-badge {
+    background: #00796b;
+    color: #ffffff;
+    font-size: 0.78em;
+    font-weight: 800;
+    padding: 4px 9px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+  .timeline-content {
+    flex: 1;
+  }
+  .timeline-title {
+    font-size: 0.92em;
+    font-weight: 700;
+    color: #004d40;
+    margin-bottom: 4px;
+  }
+  .timeline-desc {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 3. 코스/난코스 전술 공략도 (.infographic-strategy-box) */
+  .infographic-strategy-box {
+    background: #ffffff;
+    border: 1.5px solid #ef4444;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(239,68,68,0.06);
+  }
+  .strategy-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .strategy-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .strategy-col.solution {
+    background: #f9fdf9;
+    border: 1px solid #b2dfdb;
+  }
+  .hazard-tag {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .safe-tag {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+
+  /* 4. 실전 비용/예산 견적 영수증 (.infographic-receipt-box) */
+  .infographic-receipt-box {
+    background: #ffffff;
+    border: 2px dashed #9ca3af;
+    border-radius: 12px;
+    padding: 24px 22px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+  }
+  .receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 16px;
+    font-size: 0.88em;
+  }
+  .receipt-table th {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid #d1d5db;
+  }
+  .receipt-table td {
+    padding: 8px 10px;
+    border-bottom: 1px dashed #e5e7eb;
+    color: #4b5563;
+  }
+  .receipt-total {
+    background: #f9fdf9;
+    border-top: 2px solid #00796b;
+    padding: 12px 16px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 800;
+    color: #004d40;
+  }
+
+  /* 5. 필수 점검 & 준비물 체크리스트 (.infographic-checklist-box) */
+  .infographic-checklist-box {
+    background: #ffffff;
+    border: 1.5px solid #b2dfdb;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .checklist-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .checklist-col {
+    flex: 1;
+    min-width: 190px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .checklist-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 6px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .checklist-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 6. 단계별 신청/절차 플로우차트 (.infographic-flow-box) */
+  .infographic-flow-box {
+    background: #f9fdf9;
+    border: 1.5px solid #b2dfdb;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .flow-steps {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-top: 10px;
+  }
+  .flow-card {
+    flex: 1;
+    min-width: 130px;
+    background: #ffffff;
+    border: 1px solid #b2dfdb;
+    border-radius: 8px;
+    padding: 12px 10px;
+    text-align: center;
+  }
+  .flow-step-num {
+    font-size: 0.72em;
+    font-weight: 800;
+    color: #00796b;
+    background: #e0f2f1;
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+  }
+  .flow-title {
+    font-size: 0.88em;
+    font-weight: 700;
+    color: #004d40;
+    margin-bottom: 4px;
+  }
+  .flow-desc {
+    font-size: 0.78em;
+    color: #666;
+    line-height: 1.4;
+  }
+
+  /* 7. 4분할 핵심 수치 매트릭스 (.infographic-stat-box) */
+  .infographic-stat-box {
+    background: #ffffff;
+    border: 1.5px solid #b2dfdb;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .stat-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .stat-card {
+    flex: 1;
+    min-width: 130px;
+    background: #f9fdf9;
+    border: 1px solid #b2dfdb;
+    border-radius: 8px;
+    padding: 14px 10px;
+    text-align: center;
+  }
+  .stat-icon { font-size: 1.6em; margin-bottom: 4px; }
+  .stat-label { font-size: 0.8em; color: #666; font-weight: 600; margin-bottom: 4px; }
+  .stat-value { font-size: 1.15em; font-weight: 800; color: #00796b; }
+  .stat-sub { font-size: 0.75em; color: #777; margin-top: 2px; }
+
+  /* 8. 평가 지표 & 코스/제품 스코어카드 (.infographic-scorecard-box) */
+  .infographic-scorecard-box {
+    background: #ffffff;
+    border: 1.5px solid #b2dfdb;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .scorecard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .scorecard-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .score-label {
+    width: 110px;
+    font-size: 0.86em;
+    font-weight: 700;
+    color: #004d40;
+  }
+  .score-bar-bg {
+    flex: 1;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .score-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #e0f2f1, #00796b);
+    border-radius: 5px;
+  }
+  .score-value {
+    width: 45px;
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: 800;
+    color: #00796b;
+  }
+  .score-grade {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 0.72em;
+    font-weight: 800;
+    background: #e0f2f1;
+    color: #00796b;
+  }
+
+  /* 9. 장단점 & 추천 vs 비추천 대조 카드 (.infographic-procon-box) */
+  .infographic-procon-box {
+    background: #ffffff;
+    border: 1.5px solid #b2dfdb;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .procon-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .pro-col {
+    flex: 1;
+    min-width: 220px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .con-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .pro-badge {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .con-badge {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .procon-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 5px 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.06);
+  }
+  .procon-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 10. 핵심 질문 & 해법 Q&A 매트릭스 (.infographic-faq-box) */
+  .infographic-faq-box {
+    background: #f9fdf9;
+    border: 1.5px solid #b2dfdb;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .faq-card {
+    background: #ffffff;
+    border: 1px solid #b2dfdb;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .faq-q {
+    font-size: 0.88em;
+    font-weight: 800;
+    color: #004d40;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .faq-q-badge {
+    background: #00796b;
+    color: #ffffff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .faq-a {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 11. 진화형 범용 인포그래픽 프리미티브 (.infographic-custom-box) */
+  .infographic-custom-box {
+    background: #ffffff;
+    border: 1.5px solid #b2dfdb;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .info-callout {
+    background: #f9fdf9;
+    border-left: 4px solid #00796b;
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.84em;
+    color: #004d40;
+    line-height: 1.5;
+    margin: 8px 0;
+  }
+  .info-pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 8px 0;
+  }
+  .info-pill {
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 4px 10px;
+    font-size: 0.78em;
+    font-weight: 600;
+    color: #374151;
+  }
+  .info-pill.active {
+    background: #e0f2f1;
+    border-color: #00796b;
+    color: #00796b;
+    font-weight: 700;
+  }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#00796b'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>전남 나주향교 500년 은행나무 단풍과 금성관 — 읍성 골목 가을 도보 산책 코스</h1>
+<div class="intro-box">
+<strong>전남 나주향교 대성전 앞마당을 황금빛으로 물들이는 500년 수령 은행나무 단풍의 2026년 절정 시기는 11월 3일경부터 11월 12일경까지입니다.</strong><br/><br/>
+호남 제일의 유학 산실이자 보물 제394호 대성전의 고색창연한 기와지붕 위로 쏟아져 내리는 노란 은행잎 비와 황금 카펫은 가을 남도 여행의 극치를 보여줍니다. 드라마 '성균관 스캔들' 촬영지로 유명한 명륜당 툇마루, 전국 최대 규모의 조선 객사인 보물 제2037호 금성관, 그리고 100년 전통 나주곰탕 거리로 이어지는 운치 넘치는 가을 역사·감성 도보 여행 코스입니다.
+</div>
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 대표 메인 썸네일 생성 영역</span>
+      <span class="ph-file">images/261021/3_travel_naju_hyanggyo_ginkgo_tree_fall_foliage_walk_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-3-1">A breathtaking, photorealistic eye-level photograph of Naju Hyanggyo Confucian School in South Jeolla Province during the golden autumn foliage peak in early November. A magnificent, 500-year-old giant ginkgo tree with brilliant, vibrant canary yellow leaves stands majestically in the traditional courtyard in front of Daeseongjeon hall, a historic Joseon-era wooden structure with weathered wooden pillars and dark curved tiled roof. Golden ginkgo leaves carpet the stone courtyard ground and sit delicately on traditional black roof tiles. Soft golden morning autumn light streams through the ginkgo canopy. Traditional Korean tranquil scholarly atmosphere, ultra high resolution 8k photography, shot on full frame camera, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-3-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">나주향교 500년 거목 은행나무 황금 단풍과 대성전 기와지붕 전경 / AI 제작 이미지</div>
+</div>
+
+<!-- 인포그래픽 1: 4대 핵심 지표 매트릭스 -->
+
+<!-- 2번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="나주향교 가을 도보 산책 4대 핵심 지표 / 인포그래픽 카드" src="../../images/261021/3_travel_naju_hyanggyo_ginkgo_tree_fall_foliage_walk_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">나주향교 가을 도보 산책 4대 핵심 지표 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>01 | 호남 제일의 유학 산실, 나주향교의 역사와 보물 제394호 대성전</h2>
+전라남도 나주시 향교길 38에 자리한 나주향교(羅州鄕校)는 고려 시대와 조선 시대를 통틀어 호남 지방에서 가장 큰 규모와 가장 높은 격식을 자랑했던 지방 국립 교육기관입니다.<br/><br/>
+나주는 고려 성종 때부터 1895년 갑오개혁에 이르기까지 1천 년 가까이 전라도의 행정·경제·문화 중심지인 '목(牧)'이 설치되었던 대도시였으며, 그에 걸맞게 나주향교 역시 전국 최고 수준의 건축미를 자랑합니다.<br/><br/>
+전라도라는 명칭 자체가 전주와 나주의 첫 글자를 따서 지어졌을 만큼, 나주는 호남 유학의 사상적 요람이자 수많은 과거 급제자를 배출한 인재의 보고였습니다.<br/><br/>
+나주향교의 가장 중심 전각인 <strong>보물 제394호 나주향교 대성전(大成殿)</strong>은 조선 태조 7년(1398년)에 창건된 이후 임진왜란의 참화 속에서도 기적적으로 화를 입지 않고 보존된 유서 깊은 목조 건축물입니다.<br/><br/>
+정면 5칸, 측면 4칸의 웅장한 팔작지붕 건물로, 조선 초기 다포계 양식의 간결하면서도 장중한 미학을 원형 그대로 간직하고 있습니다.<br/><br/>
+조선 선조 때 한양의 성균관 문묘가 임진왜란으로 전소되었을 당시, 성균관을 재건하기 위해 도편수를 나주로 급파하여 나주향교 대성전의 치수와 구조를 실측해 본떠 지었다는 기록이 남아 있을 정도로 건축사적 가치가 독보적입니다.<br/><br/>
+대성전 내부에는 공자를 비롯한 5성(五聖), 송조 4현(四賢), 그리고 우리나라 18현(十八賢)의 위패가 정성스럽게 봉안되어 있으며, 해마다 봄가을로 유림들이 모여 엄숙한 석전대제(釋奠大祭)를 봉행합니다.<br/><br/>
+전통적인 전묘후학(前廟後學: 앞쪽에 제향 공간인 대성전을 두고 뒤쪽에 강학 공간인 명륜당을 배치)의 엄격한 공간 배치를 통해 유학의 숭고한 정신을 엿볼 수 있습니다.<br/><br/>
+화려한 단청 대신 세월의 비바람을 견뎌낸 소박한 나무 기둥과 정교한 창호살이 주는 고즈넉한 격조는 현대인들에게 깊은 사색과 평온을 선사합니다.
+
+<h2>02 | 2026년 나주향교 500년 은행나무 단풍 절정 예측과 황금빛 비경</h2>
+나주향교가 매년 늦가을마다 전국 여행객들의 발길을 끌어당기는 최고의 주인공은 바로 <strong>대성전 앞마당에 굳건히 서 있는 수령 500년의 거대한 은행나무</strong>입니다.<br/><br/>
+이 은행나무는 조선 중종 무렵 향교를 중수하며 선비의 굳은 지조와 학문적 결실을 기원하기 위해 유림들이 식재한 것으로 전해집니다.<br/><br/>
+은행나무는 벌레가 생기지 않고 수명이 길어 유학에서는 선비의 청렴성과 영속성을 상징하는 나무로 널리 숭상받아 왔습니다.<br/><br/>
+높이 25m, 가슴높이 둘레가 5m를 훌쩍 넘는 거대한 수형을 자랑하며, 사방으로 뻗어 나간 나뭇가지는 대성전 마당의 절반을 가릴 정도로 거대한 황금 우산을 펼쳐냅니다.<br/><br/>
+2026년 가을 남도 지방의 기상 분석에 따르면, 나주향교 은행나무는 10월 26일경부터 서서히 푸른빛을 벗고 연노란색으로 물들기 시작하여 <strong>11월 3일(화)부터 11월 12일(목) 사이에 완연한 황금빛 절정</strong>에 도달할 것으로 관측됩니다.<br/><br/>
+특히 11월 첫째 주 주말(11월 7일~8일)은 은행나무 잎 전체가 샛노란 카나리아빛으로 가장 찬란하게 빛나는 골든타임입니다.<br/><br/>
+11월 10일을 지나면서 늦가을 서늘한 바람이 불어오면, 바람결에 수만 장의 노란 은행잎이 흩날리며 마치 황금빛 눈이 내리는 듯한 장관을 연출합니다.<br/><br/>
+바닥에 떨어진 은행잎들이 대성전 회백색 기단과 박석 마당 위에 10cm 이상 두텁게 쌓여 황금빛 융단을 이루는 모습은 탄성을 자아내게 만듭니다.<br/><br/>
+햇볕이 따사롭게 비치는 정오 무렵 마당에 서면 온 사방이 황금색 반사광으로 가득 차 환상적인 시각적 감동을 선사합니다.
+
+<!-- 인포그래픽 2: 가을 산책 타임라인 -->
+
+<!-- 3번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="나주읍성 역사·미식 가을 반일 도보 코스 / 인포그래픽 카드" src="../../images/261021/3_travel_naju_hyanggyo_ginkgo_tree_fall_foliage_walk_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">나주읍성 역사·미식 가을 반일 도보 코스 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>03 | 기와지붕 위로 쏟아지는 노란 은행잎과 성균관 스캔들 촬영 명당</h2>
+나주향교의 은행나무가 유독 사진 애호가들과 여행 인플루언서들의 극찬을 받는 이유는 <strong>검은색 전통 기와지붕과 샛노란 은행잎의 극적인 색채 대비</strong> 때문입니다.<br/><br/>
+대성전의 고풍스러운 맞배지붕과 처마 골마다 노란 은행잎들이 소복하게 내려앉은 모습은 마치 정교하게 빚어낸 한국 전통 공예품을 감상하는 듯한 깊은 운치를 자아냅니다.<br/><br/>
+바람이 살랑거릴 때마다 처마 끝 풍경 소리와 함께 잎사귀들이 비처럼 쏟아져 내리며 마당 한가운데에 서 있는 여행자의 어깨 위로 포근하게 내려앉습니다.<br/><br/>
+대성전 뒤편에 자리한 <strong>'명륜당(明倫堂)'</strong>은 과거 선비들이 유학 경전을 강론하던 강당 건물로, 인기 드라마 '성균관 스캔들'의 주 무대로 촬영되었던 곳입니다.<br/><br/>
+명륜당 넓은 대청마루와 길게 뻗은 툇마루에 걸터앉으면, 기둥 사이로 액자처럼 프레임화된 대성전의 옆모습과 황금빛 은행나무 가지가 한 폭의 그림처럼 시야에 담깁니다.<br/><br/>
+이곳 툇마루는 나주향교 최고의 인생샷 포토존으로, 단아한 한복이나 가을 트렌치코트를 입고 옆모습을 남기면 고전 영화의 한 장면 같은 사진을 담으실 수 있습니다.<br/><br/>
+햇살이 비쳐드는 오후 2시에서 3시 사이에는 명륜당 창살 사이로 들어오는 사선 빛줄기가 더해져 한층 아늑하고 깊이 있는 사진이 완성됩니다.<br/><br/>
+마루 바닥에 앉아 가만히 눈을 감으면 바스락거리는 나뭇잎 소리와 풀벌레 소리가 어우러져 마음속 모든 번뇌를 씻어내 줍니다.
+
+<h2>04 | 명륜당 툇마루에서 즐기는 고즈넉한 산사와 유림의 정취</h2>
+나주향교의 또 다른 미덕은 전국적으로 이름난 단풍 명소임에도 불구하고, 대형 사찰이나 테마파크에 비해 상업화되지 않은 <strong>순수한 고요함과 평온함</strong>을 유지하고 있다는 점입니다.<br/><br/>
+경내에 들어서면 시끄러운 음악이나 요란한 매점 소음 대신, 오직 바람에 스치는 댓잎 소리와 바스락거리는 은행잎 밟는 소리만이 귓가를 간지럽힙니다.<br/><br/>
+명륜당 뒤편에는 유생들의 기숙사였던 동재(東齋)와 서재(西齋), 그리고 책을 보관하던 존경각(尊經閣)이 단정한 격자형 배치로 들어서 있습니다.<br/><br/>
+동재와 서재 앞마당에는 소담스러운 석등과 배롱나무 고목이 자리 잡고 있어 여름날의 붉은 꽃 잔치를 지나 늦가을의 차분한 여운을 전합니다.<br/><br/>
+담장 너머로 고개를 내민 붉은 감나무에는 주홍빛 단감이 알알이 매달려 있고, 기와 토담을 따라 자라난 담쟁이덩굴이 붉게 물들어 가을의 깊이를 더합니다.<br/><br/>
+툇마루에 조용히 앉아 500년 거목이 품어온 세월의 무게를 느껴보세요.<br/><br/>
+수백 년 전 이곳에서 나라의 안위를 걱정하고 학문을 닦았던 조선 선비들의 숨결이 바람을 타고 전해지는 듯한 묘한 감흥을 경험할 수 있습니다.<br/><br/>
+소란스러운 일상에서 벗어나 진정한 내면의 휴식과 치유가 필요한 분들에게 나주향교는 남도 최고의 안식처가 되어줄 것입니다.
+
+<!-- 인포그래픽 3: 나주향교 vs 금성관 비교 -->
+
+<!-- 4번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="나주향교 vs 나주 금성관 관람 포인트 비교 / 인포그래픽 카드" src="../../images/261021/3_travel_naju_hyanggyo_ginkgo_tree_fall_foliage_walk_4.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">나주향교 vs 나주 금성관 관람 포인트 비교 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>05 | 전국 최대 규모의 조선 객사, 보물 제2037호 나주 금성관의 웅장함</h2>
+나주향교에서 동쪽으로 약 800m를 걸어가면 나주 목사 고을의 심장이자 조선 시대 지방 객사의 최고봉인 <strong>보물 제2037호 '나주 금성관(錦城館)'</strong>을 마주하게 됩니다.<br/><br/>
+금성관은 조선 성종 6년(1475년)에서 성종 10년(1479년) 사이에 나주목사 이유인에 의해 건립된 지방 관아의 객사(客舍) 건물입니다.<br/><br/>
+객사는 매월 초하루와 보름에 대궐을 향해 절을 올리는 망궐례(望闕禮)를 행하던 정청(正廳)이자, 중앙에서 파견된 고위 관리나 외국 사신이 머물던 영빈관 역할을 수행했습니다.<br/><br/>
+현존하는 전국 객사 건축물 중 가장 규모가 크며, 정면 5칸, 측면 4칸의 웅장한 단층 팔작지붕 구조로 궁궐 정전 못지않은 당당한 위엄을 뽐냅니다.<br/><br/>
+건물 내부의 거대한 통나무 원목 기둥들과 화려하면서도 기품 있는 다포계 포작은 조선 전기 관아 건축의 백미로 꼽힙니다.<br/><br/>
+금성관 정문인 2층 누각 '망화루(望華樓)' 앞마당에는 넓은 잔디광장과 수령 수백 년 된 노거수들이 자리 잡고 있어 가을 산책을 즐기기에 더할 나위 없이 좋습니다.<br/><br/>
+일제강점기 나주군청 청사로 개조되는 수난을 겪기도 하였으나, 1976년 원형 복원 공사를 거쳐 오늘날 당당한 본래의 모습을 되찾아 역사적 교훈을 함께 전해줍니다.<br/><br/>
+해질녘 금성관 마당에 서면 붉게 물든 노을빛이 웅장한 목조 기둥에 반사되어 장엄하면서도 아늑한 정취를 선사합니다.
+
+<h2>06 | 나주읍성 서성문과 돌담길 골목을 걷는 가을 감성 도보 코스</h2>
+나주향교와 금성관 사이를 이어주는 읍성 골목길은 조선 시대 읍성의 원형이 잘 보존된 <strong>살아있는 역사 야외 박물관</strong>입니다.<br/><br/>
+향교 바로 인근에는 복원된 나주읍성의 서쪽 관문인 <strong>'서성문(西成門, 영금문)'</strong>이 성곽과 함께 웅장하게 복원되어 있습니다.<br/><br/>
+서성문은 1894년 동학농민혁명 당시 녹두장군 전봉준이 이끄는 농민군과 나주목 관군이 치열한 공방전을 벌였던 역사적 현장이기도 합니다.<br/><br/>
+성벽 누각에 올라서면 나주 구도심의 평화로운 기와지붕 능선과 나주천 물줄기가 한눈에 내려다보입니다.<br/><br/>
+성벽을 따라 이어지는 좁은 골목길에는 정갈한 황토 돌담과 전통 한옥들이 옹기종기 모여 있어 걷는 재미를 더합니다.<br/><br/>
+골목길 중간에는 대한제국기 나주목사가 머물렀던 '나주목사내아(금학헌)'가 자리 잡고 있는데, 수령 500년 벼락 맞은 팽나무가 영험한 기운을 뿜어내며 여행자들의 발길을 멈추게 합니다.<br/><br/>
+목사내아는 현재 한옥 숙박 체험 시설로도 활용되고 있어, 고즈넉한 한옥 온돌방에서 하룻밤 머물며 옛 목사의 일상을 체험해보는 것도 이색적인 경험입니다.<br/><br/>
+현대식 카페와 개량 한옥 갤러리들이 옛 골목 풍경과 자연스럽게 녹아들어 있어 걷다가 마음에 드는 찻집에 들러 잠시 쉬어가기에 좋습니다.
+
+<!-- 인포그래픽 4: 도보 여행 체크리스트 -->
+
+<!-- 5번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="나주 고택·향교 도보 여행 준비 및 에티켓 체크리스트 / 인포그래픽 카드" src="../../images/261021/3_travel_naju_hyanggyo_ginkgo_tree_fall_foliage_walk_5.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">나주 고택·향교 도보 여행 준비 및 에티켓 체크리스트 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>07 | 나주향교 무료 주차장 현황과 도보 이동 동선 최적화 팁</h2>
+나주향교 여행의 큰 장점 중 하나는 주차 스트레스가 적고 모든 문화재 관람료가 무료라는 점입니다.<br/><br/>
+나주향교 정문 외삼문 바로 맞은편에는 나주시가 조성한 <strong>넓은 향교 공영주차장</strong>이 마련되어 있습니다.<br/><br/>
+대형 버스와 승용차 수십 대를 동시에 수용할 수 있으며, 24시간 연중무휴로 <strong>주차 요금이 전액 무료</strong>입니다.<br/><br/>
+가장 효율적인 도보 이동 동선은 다음과 같습니다.<br/><br/>
+차량을 향교 공영주차장에 편안하게 주차한 뒤, 먼저 나주향교와 500년 은행나무를 여유 있게 둘러봅니다.<br/><br/>
+이어 서성문 성곽길을 거쳐 서부길 골목을 따라 도보로 약 10분 정도 걸어 금성관으로 이동합니다.<br/><br/>
+금성관 관람 후 바로 인근 나주곰탕 거리에서 점심 식사를 하고, 나주목사내아와 정수루를 거쳐 다시 향교 주차장으로 돌아오는 순환 코스를 잡으면 차량을 여러 번 옮길 필요 없이 완벽한 걷기 여행을 완성할 수 있습니다.<br/><br/>
+전체 도보 거리는 약 2.5km 내외로 평탄한 포장도로와 흙길로 이루어져 있어 부모님이나 아이들과 함께 걷기에도 전혀 부담이 없습니다.<br/><br/>
+은행나무 절정기 주말 오후에는 향교 주차장이 붐빌 수 있으나, 회전율이 비교적 빠르고 인근 골목 노상 공영주차장도 여유가 있어 주차에 큰 어려움은 없습니다.
+
+<!-- 인포그래픽 5: 실전 비용 영수증 -->
+
+<!-- 6번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="나주 당일치기 역사·미식 나들이 2인 실전 정산 영수증 / 인포그래픽 카드" src="../../images/261021/3_travel_naju_hyanggyo_ginkgo_tree_fall_foliage_walk_6.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">나주 당일치기 역사·미식 나들이 2인 실전 정산 영수증 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>08 | 100년 전통 나주곰탕 거리와 영산강 황포돛배를 잇는 하루 나들이</h2>
+나주향교와 읍성 산책에서 눈을 호강시켰다면, 이제 입을 즐겁게 할 차례입니다.<br/><br/>
+금성관 정문 망화루 바로 앞 골목에는 전국적인 명성을 떨치는 <strong>'나주곰탕 거리'</strong>가 형성되어 있습니다.<br/><br/>
+뽀얀 뼈 국물이 특징인 일반 설렁탕이나 곰탕과 달리, 나주곰탕은 양지와 사태, 목심 등 한우 살코기를 무쇠 가마솥에 넣고 오랜 시간 푹 고아내어 <strong>국물이 맑고 담백하면서도 깊은 감칠맛</strong>을 냅니다.<br/><br/>
+'하얀집', '노안집', '나주곰탕한우직판장' 등 3대~4대를 이어온 노포들이 성업 중이며, 놋그릇에 밥을 담고 뜨거운 국물을 여러 번 부었다 따라내는 전통 '토렴' 방식으로 제공되어 밥알 하나하나에 깊은 육수 맛이 배어 있습니다.<br/><br/>
+알싸한 깍두기와 잘 익은 묵은지를 얹어 곰탕 한 그릇을 비워내면 늦가을 쌀쌀했던 몸이 안쪽에서부터 훈훈하게 덥혀집니다.<br/><br/>
+수육 한 접시를 곁들이면 부드러운 양지살과 쫀득한 머릿고기의 담백한 풍미가 입안 가득 퍼집니다.<br/><br/>
+오후 늦은 시간에는 영산포 선착장으로 이동하여 옛 남도 뱃길을 복원한 <strong>'영산강 황포돛배'</strong>에 승선해 보세요.<br/><br/>
+붉은 황포 돛을 달고 유유히 흐르는 영산강 물길을 가르며 영산포 홍어의 거리와 강변 갈대숲을 둘러보는 낭만적인 강변 유람으로 하루를 풍성하게 마무리할 수 있습니다.
+
+<!-- 인포그래픽 6: FAQ 카드 -->
+
+<!-- 7번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="나주향교 은행나무 단풍 자주 묻는 질문 FAQ / 인포그래픽 카드" src="../../images/261021/3_travel_naju_hyanggyo_ginkgo_tree_fall_foliage_walk_7.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">나주향교 은행나무 단풍 자주 묻는 질문 FAQ / 인포그래픽 카드</div>
+</div>
+
+
+<h2>09 | 나주향교 가을 여행 요약과 방문자 당부 사항</h2>
+나주향교는 천년 목사 고을 나주의 유구한 역사와 품격, 그리고 500년 거목 은행나무가 빚어내는 찬란한 황금빛 자연미가 완벽한 조화를 이루는 최고의 늦가을 여행지입니다.<br/><br/>
+유학의 기품이 서린 고색창연한 기와지붕 아래서 황금빛 은행잎 비를 맞으며 걷는 경험은 일상의 분주함을 잊고 삶의 여유를 되찾아줍니다.<br/><br/>
+주변의 금성관, 목사내아, 나주곰탕 거리로 이어지는 풍성한 도보 연계 코스는 남도의 따스한 정과 맛, 멋을 한 번에 만끽할 수 있는 최고의 선물입니다.<br/><br/>
+방문하시는 여행객 여러분께서는 우리 선조들이 소중히 물려준 보물 문화재가 훼손되지 않도록 대성전 목조 기둥에 낙서하거나 은행나무 가지를 흔드는 행위를 절대 삼가주시기 바랍니다.<br/><br/>
+올가을, 호남의 유서 깊은 전통과 따뜻한 곰탕 한 그릇의 온정이 살아 숨 쉬는 전남 나주로 떠나 잊지 못할 늦가을 황금빛 추억을 가득 담아보시기 바랍니다.
+
+<div class="recommend-area">
+<strong>📌 함께 읽으면 좋은 가을 여행 &amp; 생활 실무 추천 글</strong><br/><br/>
+• <a href="../261020/travel_gurye_cheoneunsa_temple_fall_foliage_suhongru.html">전남 구례 지리산 천은사 단풍 언제 절정인가 — 수홍루 반영과 상선암 가을 드라이브 코스</a><br/>
+  • <a href="../261020/travel_buan_naesosa_temple_fall_foliage_fir_forest.html">전북 부안 변산반도 내소사 단풍 언제 절정인가 — 전나무 숲길과 대웅보전 꽃살문 가을 산책</a>
+</div>
+<div class="tags">
+  <span class="tag">#나주향교</span>
+  <span class="tag">#나주향교은행나무</span>
+  <span class="tag">#나주가볼만한곳</span>
+  <span class="tag">#금성관</span>
+  <span class="tag">#나주곰탕거리</span>
+  <span class="tag">#전남가을여행</span>
+  <span class="tag">#은행나무단풍명소</span>
+  <span class="tag">#나주읍성</span>
+  <span class="tag">#나주도보여행</span>
+</div>
+</body>
+</html>

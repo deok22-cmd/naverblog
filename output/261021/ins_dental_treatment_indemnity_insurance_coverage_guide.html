@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>치과 치료 실손보험 청구 되나 — 급여 vs 비급여 항목 비교표와 1~4세대 세대별 보장 범위 체크리스트</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+
+  /* ========================================================
+     🎨 다채널 인포그래픽 아키타입 CSS 시스템
+     ========================================= */
+  .infographic-box, [class*="infographic-"] {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif;
+  }
+  .infographic-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    border-bottom: 2px dashed #c8e6c9;
+    padding-bottom: 12px;
+  }
+  .infographic-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 1.1em;
+    color: #1b5e20;
+  }
+  .infographic-badge {
+    display: inline-block;
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.75em;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+  }
+
+  /* 1. 비교 매트릭스 카드 (.infographic-compare-box) */
+  .infographic-compare-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .compare-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .compare-col {
+    flex: 1;
+    min-width: 150px;
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 14px 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  }
+  .compare-col.highlight {
+    background: #f9fdf9;
+    border: 1.5px solid #388e3c;
+  }
+  .compare-col-title {
+    font-size: 0.95em;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 6px;
+  }
+  .compare-col-badge {
+    display: inline-block;
+    background: #388e3c;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .compare-row {
+    font-size: 0.82em;
+    color: #444;
+    line-height: 1.55;
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .compare-row:last-child {
+    border-bottom: none;
+  }
+
+  /* 2. 일정/동선 타임라인 로드맵 (.infographic-timeline-box) */
+  .infographic-timeline-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  .timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .timeline-badge {
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.78em;
+    font-weight: 800;
+    padding: 4px 9px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+  .timeline-content {
+    flex: 1;
+  }
+  .timeline-title {
+    font-size: 0.92em;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 4px;
+  }
+  .timeline-desc {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 3. 코스/난코스 전술 공략도 (.infographic-strategy-box) */
+  .infographic-strategy-box {
+    background: #ffffff;
+    border: 1.5px solid #ef4444;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(239,68,68,0.06);
+  }
+  .strategy-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .strategy-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .strategy-col.solution {
+    background: #f9fdf9;
+    border: 1px solid #c8e6c9;
+  }
+  .hazard-tag {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .safe-tag {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+
+  /* 4. 실전 비용/예산 견적 영수증 (.infographic-receipt-box) */
+  .infographic-receipt-box {
+    background: #ffffff;
+    border: 2px dashed #9ca3af;
+    border-radius: 12px;
+    padding: 24px 22px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+  }
+  .receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 16px;
+    font-size: 0.88em;
+  }
+  .receipt-table th {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid #d1d5db;
+  }
+  .receipt-table td {
+    padding: 8px 10px;
+    border-bottom: 1px dashed #e5e7eb;
+    color: #4b5563;
+  }
+  .receipt-total {
+    background: #f9fdf9;
+    border-top: 2px solid #388e3c;
+    padding: 12px 16px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 800;
+    color: #1b5e20;
+  }
+
+  /* 5. 필수 점검 & 준비물 체크리스트 (.infographic-checklist-box) */
+  .infographic-checklist-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .checklist-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .checklist-col {
+    flex: 1;
+    min-width: 190px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .checklist-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 6px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .checklist-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 6. 단계별 신청/절차 플로우차트 (.infographic-flow-box) */
+  .infographic-flow-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .flow-steps {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-top: 10px;
+  }
+  .flow-card {
+    flex: 1;
+    min-width: 130px;
+    background: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 12px 10px;
+    text-align: center;
+  }
+  .flow-step-num {
+    font-size: 0.72em;
+    font-weight: 800;
+    color: #388e3c;
+    background: #e8f5e9;
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+  }
+  .flow-title {
+    font-size: 0.88em;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 4px;
+  }
+  .flow-desc {
+    font-size: 0.78em;
+    color: #666;
+    line-height: 1.4;
+  }
+
+  /* 7. 4분할 핵심 수치 매트릭스 (.infographic-stat-box) */
+  .infographic-stat-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .stat-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .stat-card {
+    flex: 1;
+    min-width: 130px;
+    background: #f9fdf9;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 14px 10px;
+    text-align: center;
+  }
+  .stat-icon { font-size: 1.6em; margin-bottom: 4px; }
+  .stat-label { font-size: 0.8em; color: #666; font-weight: 600; margin-bottom: 4px; }
+  .stat-value { font-size: 1.15em; font-weight: 800; color: #388e3c; }
+  .stat-sub { font-size: 0.75em; color: #777; margin-top: 2px; }
+
+  /* 8. 평가 지표 & 코스/제품 스코어카드 (.infographic-scorecard-box) */
+  .infographic-scorecard-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .scorecard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .scorecard-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .score-label {
+    width: 110px;
+    font-size: 0.86em;
+    font-weight: 700;
+    color: #1b5e20;
+  }
+  .score-bar-bg {
+    flex: 1;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .score-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #e8f5e9, #388e3c);
+    border-radius: 5px;
+  }
+  .score-value {
+    width: 45px;
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: 800;
+    color: #388e3c;
+  }
+  .score-grade {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 0.72em;
+    font-weight: 800;
+    background: #e8f5e9;
+    color: #388e3c;
+  }
+
+  /* 9. 장단점 & 추천 vs 비추천 대조 카드 (.infographic-procon-box) */
+  .infographic-procon-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .procon-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .pro-col {
+    flex: 1;
+    min-width: 220px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .con-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .pro-badge {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .con-badge {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .procon-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 5px 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.06);
+  }
+  .procon-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 10. 핵심 질문 & 해법 Q&A 매트릭스 (.infographic-faq-box) */
+  .infographic-faq-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .faq-card {
+    background: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .faq-q {
+    font-size: 0.88em;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .faq-q-badge {
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .faq-a {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 11. 진화형 범용 인포그래픽 프리미티브 (.infographic-custom-box) */
+  .infographic-custom-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .info-callout {
+    background: #f9fdf9;
+    border-left: 4px solid #388e3c;
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.84em;
+    color: #1b5e20;
+    line-height: 1.5;
+    margin: 8px 0;
+  }
+  .info-pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 8px 0;
+  }
+  .info-pill {
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 4px 10px;
+    font-size: 0.78em;
+    font-weight: 600;
+    color: #374151;
+  }
+  .info-pill.active {
+    background: #e8f5e9;
+    border-color: #388e3c;
+    color: #388e3c;
+    font-weight: 700;
+  }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>치과 치료 실손보험 청구 되나 — 급여 vs 비급여 항목 비교표와 1~4세대 세대별 보장 범위 체크리스트</h1>
+<div class="intro-box">
+<strong>실손의료보험에서 치과 치료는 국민건강보험이 적용되는 '급여' 항목의 본인부담금만 보장되며, 임플란트·크라운·레진·치아교정 등 '비급여' 치료는 전 세대 표준약관상 원칙적으로 보장 대상에서 제외(면책)됩니다.</strong><br/><br/>
+치료 목적의 사랑니 발치, 잇몸치료(치주염), 신경치료, 연 1회 건강보험 스케일링, 파노라마 X-ray 등은 통원 실손으로 자기부담금을 공제하고 환급받을 수 있습니다. 1세대(2009년 이전)부터 4세대까지 세대별 치과 보장 약관 차이 비교표, 상해 사고로 인한 치아 파손 시 예외 보장 기준, 치과 데스크 필수 발급 서류 3가지와 모바일 앱 청구 요령까지 금융감독원 표준약관 기준으로 명쾌하게 정리해 드립니다.
+</div>
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 대표 메인 썸네일 생성 영역</span>
+      <span class="ph-file">images/261021/7_ins_dental_treatment_indemnity_insurance_coverage_guide_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-7-1">A realistic and professional conceptual still life photograph representing Korean medical indemnity health insurance coverage for dental treatments. On a clean wooden desk, a dental medical clinic billing receipt with itemized national health insurance coverage stamps sits alongside an official indemnity insurance policy handbook, a smartphone displaying a mobile insurance claim submission screen, and a clean professional dental teeth model tool. A soft daylight illumination casts gentle reflections on a digital calculator showing calculated deductible numbers. Organized, authoritative healthcare and insurance finance atmosphere, ultra-high detail 8k resolution, photorealistic quality, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-7-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">치과 진료비 영수증 급여·비급여 항목 구분과 실손보험 모바일 청구 서류 / AI 제작 이미지</div>
+</div>
+
+<!-- 인포그래픽 1: 4대 핵심 지표 매트릭스 -->
+
+<!-- 2번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="치과 치료 실손보험 청구 4대 핵심 지표 / 인포그래픽 카드" src="../../images/261021/7_ins_dental_treatment_indemnity_insurance_coverage_guide_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">치과 치료 실손보험 청구 4대 핵심 지표 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>01 | 치과 치료 실손보험 청구의 기본 대원칙 — 급여 보장과 비급여 면책 기준</h2>
+치과 치료를 받고 수십만 원에서 수백만 원의 진료비가 나왔을 때, "내가 가입한 실손의료보험(실비)으로 청구할 수 있을까?" 궁금해하는 분들이 많습니다.<br/><br/>
+금융감독원의 실손의료보험 표준약관(질병통원의료비 항목)에 명시된 기본 대원칙은 단 한 문장으로 요약됩니다.<br/><br/>
+<strong>"치과 치료(한국표준질병사인분류 K00~K08)로 인한 의료비는 국민건강보험법에서 정한 '급여' 본인부담금에 한하여 보장하며, '비급여' 의료비는 보상하지 아니한다."</strong><br/><br/>
+즉, 치과 진료비 영수증을 펼쳤을 때 좌측의 <strong>'급여' 란에 찍힌 본인부담금은 실손보험으로 청구하여 돌려받을 수 있지만</strong>, 우측의 <strong>'비급여' 란에 찍힌 고액의 치료비는 원칙적으로 보험사에서 1원도 지급하지 않는 면책(免責) 사항</strong>입니다.<br/><br/>
+많은 분들이 치과 치료 전체가 실손에서 제외된다고 오해하여 마땅히 받을 수 있는 급여 진료비 환급을 포기하거나, 반대로 임플란트나 지르코니아 크라운 같은 고가의 비급여 보철 치료도 실손이 될 것으로 기대했다가 청구 거절 통보를 받고 분쟁을 겪곤 합니다.<br/><br/>
+따라서 병원에 가기 전 어떤 치료가 급여이고 어떤 치료가 비급여인지 정확한 경계를 알고 영수증을 확인하는 것이 필수적입니다.
+
+<h2>02 | 실손 청구 가능한 대표 급여 항목 — 사랑니 발치·잇몸치료·신경치료</h2>
+치과에서 받는 진료 중 국민건강보험 혜택이 적용되어 실손보험 청구가 가능한 대표적인 <strong>'급여' 항목</strong>들은 다음과 같습니다.<br/><br/>
+첫째, <strong>'사랑니 발치 및 단순 발치'</strong>입니다. 잇몸 속에 묻혀 염증을 유발하는 매복 사랑니나 충치로 손상된 치아를 발치하는 시술은 100% 건강보험 급여 항목입니다. 엑스레이 및 CT 촬영비, 마취비, 발치 수술비, 지혈제(급여 인정 기준) 등이 모두 포함되어 통원 실손으로 환급받을 수 있습니다.<br/><br/>
+둘째, <strong>'치주질환(잇몸병) 치료'</strong>입니다. 치은염이나 치주염으로 인해 잇몸이 붓고 피가 날 때 진행하는 치주소파술(잇몸 속 치석 제거), 치근활택술 등 잇몸 치료는 급여 적용 대상입니다.<br/><br/>
+셋째, <strong>'신경치료(근관치료)'</strong>입니다. 치아 내부 신경에 염증이 생겼을 때 근관을 소독하고 충전재를 채워 넣는 모든 신경치료 과정은 건강보험 급여가 적용됩니다.<br/><br/>
+넷째, <strong>'아말감 및 글래스아아이오노머(GI) 충치 충전'</strong>입니다. 레진이나 인레이는 비급여지만, 국가가 인정한 아말감이나 흰색 치과용 시멘트인 GI 재료로 때우는 충치 치료는 급여 항목에 해당합니다.<br/><br/>
+다섯째, 만 19세 이상 국민이라면 누구나 연 1회(매년 1월 1일~12월 31일) 적용되는 <strong>'건강보험 스케일링(치석제거)'</strong> 역시 급여 본인부담금(약 1만 5천 원~1만 7천 원 선)에 대해 실손 청구가 가능합니다.
+
+<!-- 인포그래픽 2: 급여 vs 비급여 비교 매트릭스 -->
+
+<!-- 3번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="치과 치료 항목별 국민건강보험 급여 vs 비급여 실손 보장 대조표 / 인포그래픽 카드" src="../../images/261021/7_ins_dental_treatment_indemnity_insurance_coverage_guide_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">치과 치료 항목별 국민건강보험 급여 vs 비급여 실손 보장 대조표 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>03 | 실손 청구 불가능한 비급여 항목 — 임플란트·크라운·레진·인레이의 면책 사유</h2>
+환자 입장에서 가장 큰 목돈이 들어가는 치료들은 안타깝게도 대부분 실손보험에서 보장하지 않는 <strong>'비급여' 항목</strong>에 집중되어 있습니다.<br/><br/>
+대표적인 면책 항목들의 실무 기준을 명확히 알아두셔야 합니다.<br/><br/>
+첫째, <strong>'임플란트 및 브릿지, 틀니'</strong>입니다. 인공 치아를 턱뼈에 식립하는 임플란트는 1개당 100만~150만 원 이상의 고액이 발생하지만, 전 세대 실손보험 약관상 비급여 보철 치료로 분류되어 실손 청구가 절대 불가능합니다 (단, 만 65세 이상 어르신 평생 2개 건강보험 급여 적용 시 급여 본인부담금 30%는 청구 가능).<br/><br/>
+둘째, 신경치료 후 치아 파절을 막기 위해 씌우는 <strong>'골드 크라운, 지르코니아 크라운'</strong>입니다. 신경치료 자체는 급여라 실손이 되지만, 그 위에 씌우는 40만~60만 원 상당의 크라운 보철물은 비급여이므로 청구할 수 없습니다.<br/><br/>
+셋째, 충치 치료 시 심미성을 위해 가장 많이 시술하는 <strong>'광중합형 복합레진 및 인레이/온레이'</strong>입니다. 치아 색상과 동일하게 메우는 레진(치아당 8만~15만 원)과 본을 떠서 때우는 골드/세라믹 인레이(치아당 25만~35만 원)는 건강보험 비급여 항목이므로 실손 환급 대상이 아닙니다 (단, 만 12세 이하 어린이의 영구치 충치 레진 치료는 건강보험 급여가 적용되므로 실손 청구 가능).<br/><br/>
+넷째, <strong>치아 교정, 미백, 잇몸 성형 등 심미 개선 목적의 치료</strong> 역시 치료 목적이 아닌 외모 개선으로 분류되어 전액 면책됩니다.
+
+<h2>04 | 1세대부터 4세대까지 가입 시기별 실손보험 치과 보장 약관 차이점</h2>
+실손의료보험은 가입 시기에 따라 1세대(2009년 9월 이전), 2세대(2009년 10월~2017년 3월), 3세대(2017년 4월~2021년 6월), 4세대(2021년 7월 이후)로 세대가 나뉩니다.<br/><br/>
+치과 치료와 관련해서는 가입 세대별로 약관 규정에 미세한 차이가 존재하므로 본인의 증권을 반드시 확인해야 합니다.<br/><br/>
+<strong>1. 1세대 실손보험 (2009년 9월 이전 가입자):</strong><br/>
+1세대 중에서도 '일반상해의료비' 특약에 가입되어 있는 경우, 상해로 인한 치과 치료뿐만 아니라 약관에 따라 치과 통원 치료 시 비급여 항목까지 일부 보장되는 파격적인 상품이 극소수 존재합니다. 또한 질병입원의료비 특약의 경우 질병으로 치과 병원에 '입원'하여 치료받았을 때 한하여 비급여가 보장되는 상품도 있으므로, 2009년 이전 가입자라면 반드시 보험사 콜센터에 본인 약관의 '치과 질병코드 면책 조항'을 확인해보셔야 합니다.<br/><br/>
+<strong>2. 2세대 및 3세대 표준화 실손 (2009년 10월~2021년 6월):</strong><br/>
+표준약관이 도입되면서 치과의 질병 치료(K00~K08)는 '급여 의료비'만 보장하고 '비급여'는 명확히 면책하도록 통일되었습니다. 통원 1회당 의원 1만 원, 종합병원 1만 5천 원, 상급종합병원 2만 원(또는 급여 10~20%)의 공제금액을 뺀 나머지 급여 본인부담금이 지급됩니다.<br/><br/>
+<strong>3. 4세대 실손보험 (2021년 7월 이후 현재):</strong><br/>
+급여와 비급여가 완전히 분리되었습니다. 치과 급여 항목에 대해 <strong>통원 1회당 최소 1만 원(상급종합병원 2만 원)과 급여 의료비의 20% 중 큰 금액을 공제</strong>한 후 지급됩니다.
+
+<!-- 인포그래픽 3: 1~4세대 보장 스코어카드 -->
+
+<!-- 4번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="1~4세대 실손의료보험 치과 치료 보장 범위 및 자기부담률 비교 / 인포그래픽 카드" src="../../images/261021/7_ins_dental_treatment_indemnity_insurance_coverage_guide_4.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">1~4세대 실손의료보험 치과 치료 보장 범위 및 자기부담률 비교 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>05 | 연 1회 건강보험 적용 스케일링과 잇몸치료 연계 시 실손 청구 요령</h2>
+많은 분들이 일상적으로 받는 <strong>'연 1회 정기 건강보험 스케일링'</strong>도 실손보험 청구가 가능할까요? 결론부터 말씀드리면 <strong>"가능하지만 공제금액에 따라 환급 여부가 달라진다"</strong>입니다.<br/><br/>
+만 19세 이상 성인의 연 1회 건강보험 스케일링 진료비는 동네 치과의원 기준 총 3만 4천 원 안팎이며, 이 중 환자가 치과 데스크에서 직접 결제하는 <strong>본인부담금은 약 1만 6천 원~1만 7천 원 선</strong>입니다.<br/><br/>
+만약 본인의 실손보험 의원급 통원 공제금액이 1만 원(1세대 5천 원, 2~3세대 1만 원)이라면, 1만 6천 원 중 1만 원을 뺀 <strong>약 6천 원 안팎을 정상적으로 환급</strong>받으실 수 있습니다.<br/><br/>
+단, 4세대 실손보험이거나 공제금액이 1만 5천 원 이상인 경우 본인부담금과 공제액 차이가 미미하여 환급액이 몇백 원에 불과하거나 발생하지 않을 수 있습니다.<br/><br/>
+여기서 가장 유용한 실무 팁은 <strong>'잇몸 치료와 연계하는 방법'</strong>입니다.<br/><br/>
+단순 예방 목적이 아니라 잇몸에 붓기나 출혈이 있어 스케일링 후 치주소파술(잇몸 긁어내기)이나 잇몸 소독 등 치료 목적의 잇몸 시술을 함께 진행할 경우, 당일 총 급여 본인부담금이 3만~5만 원 선으로 증가하게 됩니다.<br/><br/>
+이 경우 의원급 공제금액 1만 원을 제하고도 <strong>2만~4만 원 상당의 의료비를 실손보험으로 깔끔하게 환급</strong>받으실 수 있습니다.
+
+<h2>06 | 질병이 아닌 상해(넘어짐·사고)로 치아가 부러졌을 때의 예외적 보장 기준</h2>
+치아가 손상된 원인이 충치나 풍치 같은 '질병'이 아니라, 길을 걷다 넘어지거나 교통사고, 운동 중 충돌 등 <strong>'급격하고도 우연한 외래의 사고(상해)'</strong>인 경우에는 보장 기준이 완전히 달라질 수 있습니다.<br/><br/>
+금융감독원 분쟁조정 사례에 따르면, 상해 사고로 인해 치아가 부러지거나 빠져서 치료를 받는 경우 <strong>'상해의료비' 혹은 '상해통원의료비'</strong> 특약이 적용됩니다.<br/><br/>
+상해의료비의 경우 질병과 달리 치과 치료 비급여 면책 조항이 적용되지 않는 상품이 많아, 사고로 손상된 치아의 <strong>레진 수복, 크라운 씌우기, 심지어 임플란트 식립 비용까지 약관에 따라 보상</strong>받을 수 있는 길이 열립니다.<br/><br/>
+이를 인정받기 위해서는 치과에 처음 방문했을 때 의사에게 사고 경위를 정확히 진술하여 <strong>초진기록지(진료차트)에 '넘어져서 부딪힘', '외상으로 인한 치아 파절' 등의 상해 원인이 반드시 명시</strong>되어야 합니다.<br/><br/>
+만약 초진기록지에 단순히 '치아 통증'이나 '치아 마모'로만 기재된다면 보험사는 이를 질병으로 간주하여 비급여 전체를 지급 거절하므로 초진 시 상해 사실을 의무기록에 남기는 것이 결정적으로 중요합니다.
+
+<!-- 인포그래픽 4: 청구 서류 체크리스트 -->
+
+<!-- 5번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="치과 방문 시 챙겨야 할 실손 청구 필수 서류 3열 체크리스트 / 인포그래픽 카드" src="../../images/261021/7_ins_dental_treatment_indemnity_insurance_coverage_guide_5.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">치과 방문 시 챙겨야 할 실손 청구 필수 서류 3열 체크리스트 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>07 | 치과 데스크에 요청해야 할 필수 서류 3가지 — 영수증·세부내역서·초진기록지</h2>
+치과 진료를 마치고 수납할 때 데스크에 어떤 서류를 요청해야 할지 몰라 유료 진단서를 비싸게 발급받는 실수를 하시는 분들이 많습니다.<br/><br/>
+통원 의료비 청구 시에는 비용이 드는 유료 진단서가 전혀 필요 없으며, 병원에서 <strong>무료로 즉시 발급해주는 서류 3가지</strong>만 챙기시면 충분합니다.<br/><br/>
+<strong>1. 진료비 계산서·영수증:</strong><br/>
+신용카드 매출전표나 간이영수증은 절대 인정되지 않습니다. 국민건강보험공단 규격의 '진료비 계산서·영수증'이어야 하며, 급여 본인부담금과 비급여 금액이 명확히 구분되어 기재되어 있어야 합니다.<br/><br/>
+<strong>2. 진료비 세부산정내역서:</strong><br/>
+어떤 치료를 받았는지 항목별 행위 수가와 급여 코드가 적힌 내역서입니다. 보험사 심사팀에서 사랑니 발치인지, 신경치료인지, 약제 투여인지 확인하는 핵심 서류입니다. 의료법상 환자가 요구하면 병원은 무료로 즉시 발급해주어야 합니다.<br/><br/>
+<strong>3. 환자보관용 처방전:</strong><br/>
+진료 후 약국에서 소염진통제나 항생제를 처방받았다면 처방전에 적힌 '질병분류기호(예: K05 치주염, K04 치수염 등)'를 통해 질병 코드를 입증할 수 있습니다.<br/><br/>
+단, 상해로 인한 청구이거나 청구 금액이 10만 원을 초과하여 질병 확인이 필요한 경우에는 1~2천 원 수수료가 드는 '초진진료기록지'나 '통원확인서(진단코드 기재)'를 추가로 구비하시면 됩니다.
+
+<!-- 인포그래픽 5: 실전 모의 영수증 환급 정산표 -->
+
+<!-- 6번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="치과 복합 진료 시 실손보험 청구 모의 정산 영수증 / 인포그래픽 카드" src="../../images/261021/7_ins_dental_treatment_indemnity_insurance_coverage_guide_6.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">치과 복합 진료 시 실손보험 청구 모의 정산 영수증 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>08 | 보험금 청구 모바일 앱 접수 순서와 10만 원 이하 간편 청구 팁</h2>
+서류를 모두 준비하셨다면 보험사 지점을 직접 방문하거나 팩스를 보낼 필요 없이 스마트폰 앱으로 1분 만에 청구를 마칠 수 있습니다.<br/><br/>
+가입하신 보험사의 모바일 공식 앱(삼성화재, 현대해상, DB손해보험, 메리츠화재, KB손해보험 등)을 실행합니다.<br/><br/>
+로그인 후 메인 화면의 [보험금 청구] 메뉴로 들어갑니다.<br/><br/>
+청구 대상자(본인)를 선택하고 사고 유형에서 <strong>'질병' 또는 '상해'</strong>를 체크합니다.<br/><br/>
+치료받은 치아 부위와 진료 내용(예: "충치로 인한 사랑니 발치 및 신경치료")을 간단히 2~3줄로 입력합니다.<br/><br/>
+이어 스마트폰 카메라로 치과에서 받아온 <strong>진료비 영수증과 세부내역서를 평평한 곳에 놓고 그림자가 지지 않도록 선명하게 촬영</strong>하여 첨부합니다.<br/><br/>
+환급받을 본인 명의 은행 계좌를 확인하고 [청구 완료] 버튼을 누르면 접수가 완료됩니다.<br/><br/>
+통상 10만 원 이하의 소액 통원 치료비는 서류 심사가 매우 신속하여 접수 당일 오후 혹은 다음 날 오전에 신청 계좌로 보험금이 즉시 입금됩니다.
+
+<!-- 인포그래픽 6: FAQ 카드 -->
+
+<!-- 7번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="치과 실손보험 청구 자주 묻는 질문 FAQ / 인포그래픽 카드" src="../../images/261021/7_ins_dental_treatment_indemnity_insurance_coverage_guide_7.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">치과 실손보험 청구 자주 묻는 질문 FAQ / 인포그래픽 카드</div>
+</div>
+
+
+<h2>09 | 치과 실손보험 청구 총정리와 똑똑한 환자 권리 찾기</h2>
+치과 치료는 비급여 보철이 많아 실손보험 혜택을 전혀 볼 수 없다고 지레 짐작하고 수만 원의 환급금을 그냥 지나치는 분들이 여전히 많습니다.<br/><br/>
+사랑니 발치, 잇몸 치료, 신경치료, 정기 스케일링 등 우리가 치과를 찾는 가장 흔한 원인의 상당수는 국민건강보험이 보장하는 정당한 '급여' 항목입니다.<br/><br/>
+치과 진료를 마치신 후에는 반드시 진료비 계산서·영수증과 세부내역서를 발급받아 급여 란의 본인부담금을 꼼꼼히 확인하고 모바일 앱으로 간편하게 청구해 보세요.<br/><br/>
+정당하게 낸 보험료에 대한 혜택을 꼼꼼히 챙기는 것은 현명한 금융 소비자의 당연한 권리입니다.<br/><br/>
+과거 3년 이내에 치과 치료를 받은 내역이 있다면 지금 바로 치과 데스크에 영수증 재발급을 요청하여 잠자고 있는 내 보험금을 알뜰하게 돌려받으시기 바랍니다.
+
+<div class="recommend-area">
+<strong>📌 함께 읽으면 좋은 가을 여행 &amp; 생활 실무 추천 글</strong><br/><br/>
+• <a href="../261020/lease_moving_out_cancellation_transfer_checklist.html">이사 전 해지·이전 체크리스트 — 인터넷·도시가스·전기 요금 정산과 우체국 주소이전 순서</a><br/>
+  • <a href="../261020/hot_youth_leap_account_subsidy_expansion_calculation.html">2026 청년도약계좌 기여금 상한 매칭 확대 — 월 납입액별 정부 기여금 얼마 더 늘어나나 계산</a>
+</div>
+<div class="tags">
+  <span class="tag">#치과실손보험</span>
+  <span class="tag">#치과실비청구</span>
+  <span class="tag">#사랑니실비</span>
+  <span class="tag">#스케일링실손보험</span>
+  <span class="tag">#임플란트실비</span>
+  <span class="tag">#치과급여비급여</span>
+  <span class="tag">#실손보험청구서류</span>
+  <span class="tag">#4세대실손치과</span>
+  <span class="tag">#치과치료비보험</span>
+</div>
+</body>
+</html>

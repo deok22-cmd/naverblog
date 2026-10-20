@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>아파트·빌라 겨울 외풍 막는 법 — 문풍지 vs 뽁뽁이 vs 단열필름 비용 대비 효과와 셀프 시공 순서</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+
+  /* ========================================================
+     🎨 다채널 인포그래픽 아키타입 CSS 시스템
+     ========================================= */
+  .infographic-box, [class*="infographic-"] {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif;
+  }
+  .infographic-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    border-bottom: 2px dashed #c8e6c9;
+    padding-bottom: 12px;
+  }
+  .infographic-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 1.1em;
+    color: #1b5e20;
+  }
+  .infographic-badge {
+    display: inline-block;
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.75em;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+  }
+
+  /* 1. 비교 매트릭스 카드 (.infographic-compare-box) */
+  .infographic-compare-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .compare-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .compare-col {
+    flex: 1;
+    min-width: 150px;
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 14px 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  }
+  .compare-col.highlight {
+    background: #f9fdf9;
+    border: 1.5px solid #388e3c;
+  }
+  .compare-col-title {
+    font-size: 0.95em;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 6px;
+  }
+  .compare-col-badge {
+    display: inline-block;
+    background: #388e3c;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .compare-row {
+    font-size: 0.82em;
+    color: #444;
+    line-height: 1.55;
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .compare-row:last-child {
+    border-bottom: none;
+  }
+
+  /* 2. 일정/동선 타임라인 로드맵 (.infographic-timeline-box) */
+  .infographic-timeline-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  .timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .timeline-badge {
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.78em;
+    font-weight: 800;
+    padding: 4px 9px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+  .timeline-content {
+    flex: 1;
+  }
+  .timeline-title {
+    font-size: 0.92em;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 4px;
+  }
+  .timeline-desc {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 3. 코스/난코스 전술 공략도 (.infographic-strategy-box) */
+  .infographic-strategy-box {
+    background: #ffffff;
+    border: 1.5px solid #ef4444;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(239,68,68,0.06);
+  }
+  .strategy-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .strategy-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .strategy-col.solution {
+    background: #f9fdf9;
+    border: 1px solid #c8e6c9;
+  }
+  .hazard-tag {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .safe-tag {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+
+  /* 4. 실전 비용/예산 견적 영수증 (.infographic-receipt-box) */
+  .infographic-receipt-box {
+    background: #ffffff;
+    border: 2px dashed #9ca3af;
+    border-radius: 12px;
+    padding: 24px 22px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+  }
+  .receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 16px;
+    font-size: 0.88em;
+  }
+  .receipt-table th {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid #d1d5db;
+  }
+  .receipt-table td {
+    padding: 8px 10px;
+    border-bottom: 1px dashed #e5e7eb;
+    color: #4b5563;
+  }
+  .receipt-total {
+    background: #f9fdf9;
+    border-top: 2px solid #388e3c;
+    padding: 12px 16px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 800;
+    color: #1b5e20;
+  }
+
+  /* 5. 필수 점검 & 준비물 체크리스트 (.infographic-checklist-box) */
+  .infographic-checklist-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .checklist-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .checklist-col {
+    flex: 1;
+    min-width: 190px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .checklist-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 6px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .checklist-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 6. 단계별 신청/절차 플로우차트 (.infographic-flow-box) */
+  .infographic-flow-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .flow-steps {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-top: 10px;
+  }
+  .flow-card {
+    flex: 1;
+    min-width: 130px;
+    background: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 12px 10px;
+    text-align: center;
+  }
+  .flow-step-num {
+    font-size: 0.72em;
+    font-weight: 800;
+    color: #388e3c;
+    background: #e8f5e9;
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+  }
+  .flow-title {
+    font-size: 0.88em;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 4px;
+  }
+  .flow-desc {
+    font-size: 0.78em;
+    color: #666;
+    line-height: 1.4;
+  }
+
+  /* 7. 4분할 핵심 수치 매트릭스 (.infographic-stat-box) */
+  .infographic-stat-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .stat-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .stat-card {
+    flex: 1;
+    min-width: 130px;
+    background: #f9fdf9;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 14px 10px;
+    text-align: center;
+  }
+  .stat-icon { font-size: 1.6em; margin-bottom: 4px; }
+  .stat-label { font-size: 0.8em; color: #666; font-weight: 600; margin-bottom: 4px; }
+  .stat-value { font-size: 1.15em; font-weight: 800; color: #388e3c; }
+  .stat-sub { font-size: 0.75em; color: #777; margin-top: 2px; }
+
+  /* 8. 평가 지표 & 코스/제품 스코어카드 (.infographic-scorecard-box) */
+  .infographic-scorecard-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .scorecard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .scorecard-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .score-label {
+    width: 110px;
+    font-size: 0.86em;
+    font-weight: 700;
+    color: #1b5e20;
+  }
+  .score-bar-bg {
+    flex: 1;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .score-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #e8f5e9, #388e3c);
+    border-radius: 5px;
+  }
+  .score-value {
+    width: 45px;
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: 800;
+    color: #388e3c;
+  }
+  .score-grade {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 0.72em;
+    font-weight: 800;
+    background: #e8f5e9;
+    color: #388e3c;
+  }
+
+  /* 9. 장단점 & 추천 vs 비추천 대조 카드 (.infographic-procon-box) */
+  .infographic-procon-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .procon-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .pro-col {
+    flex: 1;
+    min-width: 220px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .con-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .pro-badge {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .con-badge {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .procon-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 5px 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.06);
+  }
+  .procon-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 10. 핵심 질문 & 해법 Q&A 매트릭스 (.infographic-faq-box) */
+  .infographic-faq-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .faq-card {
+    background: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .faq-q {
+    font-size: 0.88em;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .faq-q-badge {
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .faq-a {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 11. 진화형 범용 인포그래픽 프리미티브 (.infographic-custom-box) */
+  .infographic-custom-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .info-callout {
+    background: #f9fdf9;
+    border-left: 4px solid #388e3c;
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.84em;
+    color: #1b5e20;
+    line-height: 1.5;
+    margin: 8px 0;
+  }
+  .info-pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 8px 0;
+  }
+  .info-pill {
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 4px 10px;
+    font-size: 0.78em;
+    font-weight: 600;
+    color: #374151;
+  }
+  .info-pill.active {
+    background: #e8f5e9;
+    border-color: #388e3c;
+    color: #388e3c;
+    font-weight: 700;
+  }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>아파트·빌라 겨울 외풍 막는 법 — 문풍지 vs 뽁뽁이 vs 단열필름 비용 대비 효과와 셀프 시공 순서</h1>
+<div class="intro-box">
+<strong>겨울철 아파트와 빌라 난방열 손실의 약 35%는 창호 틈새 바람과 단창 유리면을 통해 발생하며, 문풍지·에어캡(뽁뽁이)·단열필름을 셀프로 시공하면 방 3개 기준 약 3만~5만 원의 자재비만으로 실내 온도를 2~3℃ 끌어올릴 수 있습니다.</strong><br/><br/>
+전문 틈막이 시공 업체를 부를 경우 창문당 5만~10만 원(전체 30만~50만 원 선)의 견적이 발생하지만, 취약 부위별로 자재를 적절히 배분하면 셀프로도 90% 이상의 외풍 차단 효과를 거둘 수 있습니다. 3대 단열 자재 비교표, 창틀 하부 풍지판 설치법, 들뜸 없는 에어캡 밀착 시공 4단계, 그리고 셀프 vs 전문 업체 비용 견적 영수증까지 완벽하게 정리해 드립니다.
+</div>
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 대표 메인 썸네일 생성 영역</span>
+      <span class="ph-file">images/261021/6_repair_winter_draft_proofing_diy_cost_compare_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-1">A clean, highly realistic photograph of DIY home winter window draft insulation and weatherstripping in a modern Korean apartment living room. On the clean wooden floor next to a large double-glazed sliding window, neatly arranged winter draft-proofing materials are displayed: rolls of transparent bubble wrap, high-density gray pile weatherstripping tape, clear silicone draft stoppers, a water spray bottle, and a utility knife. One window panel has neatly applied bubble wrap reflecting gentle winter morning sunlight, while another shows a person's hands wearing work gloves pressing a gray weatherstrip into the window frame groove. Practical home repair atmosphere, crisp focus, shot on full frame camera, 8k resolution, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">아파트 창호 겨울 외풍 차단 셀프 시공 자재와 틈새 문풍지 부착 작업 / AI 제작 이미지</div>
+</div>
+
+<!-- 인포그래픽 1: 4대 핵심 지표 매트릭스 -->
+
+<!-- 2번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="겨울 창호 외풍 차단 4대 핵심 지표 / 인포그래픽 카드" src="../../images/261021/6_repair_winter_draft_proofing_diy_cost_compare_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">겨울 창호 외풍 차단 4대 핵심 지표 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>01 | 난방비 줄줄 새는 주범, 겨울철 창호 틈새와 유리창 열손실 메커니즘</h2>
+날씨가 영하권으로 떨어지면 보일러를 아무리 높여 틀어도 방바닥만 뜨겁고 코끝이 시린 '웃풍(외풍)' 현상에 시달리는 가정이 많습니다.<br/><br/>
+건축물 에너지 분석 데이터에 따르면, 일반 주택이나 아파트에서 손실되는 전체 난방열의 약 30~40%가 창문과 샷시 틈새를 통해 빠져나갑니다.<br/><br/>
+벽체나 천장 단열이 잘 되어 있는 신축 건물이라 할지라도 개폐 구조를 가진 창호 시스템의 미세한 틈새를 완벽하게 밀폐하지 못하면 밑 빠진 독에 물 붓기처럼 난방비가 줄줄 새어나갑니다.<br/><br/>
+열손실 경로는 크게 두 가지로 구분됩니다.<br/><br/>
+첫째는 차가운 바깥공기가 창틀의 미세한 유격 사이로 직접 밀고 들어오는 <strong>'대류성 틈새 외풍'</strong>입니다. 샷시 레일 하부와 창문 겹침 부위는 구조상 창문 개폐를 위한 유격이 존재할 수밖에 없는데, 오래된 건물일수록 샷시가 처지면서 틈새가 5~10mm까지 벌어져 황소바람을 유발합니다.<br/><br/>
+둘째는 유리창 표면을 통해 실내 열기가 바깥으로 빼앗기는 <strong>'전도성 열손실'</strong>입니다. 얇은 단판 유리나 구형 이중창은 바깥 냉기가 유리 표면을 차갑게 식히고, 이 차가워진 유리가 실내 공기를 다시 냉각시키며 하강 기류를 만들어 방안을 서늘하게 만듭니다.<br/><br/>
+따라서 외풍을 완벽하게 차단하기 위해서는 '창틀 틈새 막기(문풍지·풍지판)'와 '유리면 전도열 차단(에어캡·단열필름)'이라는 두 가지 방어선을 동시에 구축해야 합니다.
+
+<h2>02 | 창틀 틈새 외풍의 원인 진단 — 샷시 유격과 풍지판 마모 자가 점검법</h2>
+시공에 앞서 우리 집 창문의 어느 부위에서 가장 많은 바람이 새어 들어오는지 정확하게 진단하는 것이 급선무입니다.<br/><br/>
+원인을 정확히 모른 채 엉뚱한 부위에 테이프만 덕지덕지 붙이면 자재만 낭비되고 문이 닫히지 않는 낭패를 겪기 십상입니다.<br/><br/>
+간단한 도구로 외풍 취약 부위를 찾아내는 3가지 자가 진단법을 추천합니다.<br/><br/>
+첫째는 <strong>'휴지(티슈) 테스트'</strong>입니다. 창문을 닫은 상태에서 얇은 미용 티슈 한 장을 들고 창틀 상하좌우와 두 창문이 겹치는 중앙부로 천천히 가져가 봅니다. 휴지가 깃발처럼 펄럭이거나 안쪽으로 빨려 들어간다면 해당 부위에 강력한 외풍이 유입되고 있다는 명백한 증거입니다.<br/><br/>
+둘째는 <strong>'창틀 하부 풍지판 점검'</strong>입니다. 샷시 하단 레일 구석을 살펴보면 플라스틱이나 고무로 된 작은 틈막이 조각(풍지판)이 있어야 합니다. 구축 아파트나 빌라는 이 풍지판이 삭아 부스러졌거나 아예 탈락하여 휑하니 구멍이 뚫려 있는 경우가 대부분입니다.<br/><br/>
+셋째는 <strong>'모헤어(털실) 마모도 확인'</strong>입니다. 창문 측면 홈에 심겨 있는 회색 털실이 닳아 가루가 날리거나 털이 주저앉아 있다면 창문과 창틀 사이의 기밀성이 완전히 상실된 상태입니다.<br/><br/>
+진단 결과 틈새 바람이 주원인인지, 유리면 냉기가 주원인인지를 파악한 후 적절한 자재를 조합해야 낭비 없이 시공할 수 있습니다.
+
+<!-- 인포그래픽 2: 3대 단열 자재 비교 -->
+
+<!-- 3번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="겨울철 3대 창호 단열 자재 성능 및 비용 비교 매트릭스 / 인포그래픽 카드" src="../../images/261021/6_repair_winter_draft_proofing_diy_cost_compare_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">겨울철 3대 창호 단열 자재 성능 및 비용 비교 매트릭스 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>03 | 문풍지 vs 뽁뽁이(에어캡) vs 단열필름 장단점과 수명 비교표</h2>
+시중에서 판매되는 3대 외풍 차단 자재는 각각의 특성과 시공 부위가 완전히 다릅니다.<br/><br/>
+<strong>1. 틈새 문풍지:</strong> 창문과 창틀 사이의 '공기 유입 구멍'을 물리적으로 틀어막는 자재입니다. 스펀지형, 털실 모헤어형, 투명 우레탄·실리콘형으로 나뉩니다. 창문을 여닫을 때 간섭이 없으면서도 틈새바람을 90% 이상 차단해주며, 사계절 내내 붙여둘 수 있어 실용성이 매우 뛰어납니다.<br/><br/>
+<strong>2. 단열 에어캡(뽁뽁이):</strong> 유리창에 공기층(Air Pocket)을 형성하여 열전도를 차단하는 자재입니다. 3중 구조로 제작된 전용 단열 에어캡은 유리창 표면 온도를 2~3도 높여주며, 접착제 없이 분무기 물만으로 쉽게 붙일 수 있습니다. 가격 대비 보온 효과가 가장 우수하지만 외부 시야가 불투명해진다는 단점이 있습니다.<br/><br/>
+<strong>3. 열차단 단열필름:</strong> 유리창의 맑은 시야를 그대로 유지하면서 적외선과 자외선을 반사·흡수하는 고기능성 필름입니다. 거실 대형 창문처럼 바깥 조망이 중요한 공간에 주로 쓰입니다. 한 번 부착하면 5년 이상 반영구적으로 사용 가능하지만, 필름 재단과 헤라 기포 제거 작업이 필요해 시공 난이도가 가장 높습니다.<br/><br/>
+공간별 최적의 조합은 <strong>거실 창은 단열필름 + 문풍지</strong>, <strong>침실과 베란다는 3중 뽁뽁이 + 모헤어 문풍지</strong>를 함께 시공하는 것입니다.<br/><br/>
+이렇게 용도별로 하이브리드 구성을 취하면 시야 확보와 완벽한 보온이라는 두 마리 토끼를 모두 잡을 수 있습니다.
+
+<h2>04 | 스펀지형·모헤어형·투명 실리콘형 문풍지 종류별 부착 위치와 규격 선택법</h2>
+문풍지를 구매할 때 가장 흔히 저지르는 실수는 규격을 잘못 선택하여 창문이 닫히지 않거나 반대로 틈새가 메워지지 않는 경우입니다.<br/><br/>
+문풍지는 재질별로 적합한 부착 위치가 정해져 있습니다.<br/><br/>
+<strong>① 고밀도 모헤어 문풍지 (털실형):</strong> 창문틀 상단과 하단 레일 틈새, 그리고 두 창문이 맞물리는 측면 홈에 부착합니다. 털실의 유연성 덕분에 창문을 여닫을 때 뻑뻑한 저항감 없이 부드럽게 슬라이딩되면서도 미세한 바람을 촘촘하게 걸러냅니다. 털 길이는 5mm, 7mm, 10mm 규격이 있으므로 창틀 유격 깊이에 맞춰 선택합니다.<br/><br/>
+<strong>② 투명 우레탄·실리콘 문풍지 (날개형):</strong> 창문 하단과 바닥 레일 사이, 혹은 방문 하부 틈새에 붙입니다. 투명한 연질 고무 날개가 바닥에 밀착되어 아래에서 올라오는 냉기를 완벽히 차단하며, 투명 재질이라 인테리어를 해치지 않습니다.<br/><br/>
+<strong>③ 스펀지 문풍지:</strong> 가격이 가장 저렴하지만 복원력이 약하고 햇빛에 삭아 부스러지기 쉬우므로, 자주 여닫지 않는 베란다 다용도실 문이나 붙박이장 틈새에 한정하여 사용하는 것이 좋습니다.<br/><br/>
+부착 전에는 반드시 접착 부위의 유분과 먼지를 알코올 티슈로 깨끗이 닦아내고 완전히 건조한 뒤 부착해야 겨우내 떨어지지 않습니다.<br/><br/>
+기온이 너무 낮은 날 부착할 경우 접착 테이프의 점착력이 떨어질 수 있으므로, 헤어드라이어로 창틀을 살짝 데운 뒤 붙이면 접착력이 비약적으로 상승합니다.
+
+<!-- 인포그래픽 3: 4단계 시공 플로우 -->
+
+<!-- 4번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="창호 단열 에어캡 들뜸 없는 4단계 완벽 시공 플로우 / 인포그래픽 카드" src="../../images/261021/6_repair_winter_draft_proofing_diy_cost_compare_4.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">창호 단열 에어캡 들뜸 없는 4단계 완벽 시공 플로우 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>05 | 물만 뿌려 붙이는 3중 단열 뽁뽁이 들뜸 없이 완벽 밀착시키는 시공 요령</h2>
+단열 뽁뽁이를 붙였는데 며칠 지나지 않아 모서리부터 힘없이 떨어지는 경험을 하신 분들이 많습니다.<br/><br/>
+들뜸 없이 봄철까지 짱짱하게 유지되는 <strong>완벽 밀착 시공 4단계 비결</strong>을 공개합니다.<br/><br/>
+<strong>1단계: 유리창 세척</strong><br/>
+창문에 묻은 먼지와 기름때를 유리세정제나 소독용 알코올로 깨끗하게 닦아냅니다. 이물질이 남아 있으면 표면장력이 약해져 물방울이 쉽게 말라버립니다.<br/><br/>
+<strong>2단계: 2mm 작게 정밀 재단</strong><br/>
+유리창 실리콘 코킹 부위 위로 에어캡이 올라타면 실리콘의 둥근 모서리 때문에 공기가 유입되어 100% 떨어집니다. 반드시 실리콘 경계 안쪽의 순수 유리면 치수를 재고, <strong>사방 2mm 정도 작게 재단</strong>해야 모서리가 뜨지 않습니다.<br/><br/>
+<strong>3단계: 주방세제 한 방울 희석수 분무</strong><br/>
+맹물만 뿌리면 물의 표면장력 때문에 물방울이 맺혀 흘러내립니다. 분무기 물에 <strong>주방세제(퐁퐁)를 딱 한 방울</strong>만 떨어뜨려 흔들어 뿌리면 물이 유리 전체에 얇고 균일한 수막을 형성하여 흡착력이 3배 이상 강력해집니다.<br/><br/>
+<strong>4단계: 부착면 구분과 기포 제거</strong><br/>
+에어캡은 볼록한 면과 평평한 비닐 면이 있습니다. <strong>유리에 붙이는 면은 평평한 면</strong>입니다. 중앙부터 손바닥으로 가볍게 누른 뒤 마른 수건이나 플라스틱 헤라로 중심에서 바깥쪽으로 쓸어내리며 공기를 빼주면 완벽하게 밀착됩니다.<br/><br/>
+이렇게 시공해 두면 겨우내 강풍이 불어도 전혀 떨어지지 않고 봄철 철거 시에도 물기만 닦아내면 끈끈이 자국 없이 말끔하게 분리할 수 있습니다.
+
+<h2>06 | 시야는 살리고 온도는 지키는 자외선 차단 단열필름 셀프 시공 순서</h2>
+거실 창문처럼 바깥 조망이 필수적인 공간에는 불투명한 뽁뽁이 대신 <strong>투명 열차단 단열필름</strong>이 가장 훌륭한 대안입니다.<br/><br/>
+단열필름은 적외선을 차단해 겨울철에는 실내 난방열이 밖으로 방출되는 것을 막아주고, 여름철에는 뜨거운 태양열 유입을 차단하는 사계절 에너지 세이빙 자재입니다.<br/><br/>
+셀프 시공 시에는 전문가용 고무 헤라와 커터칼, 세제 희석 분무기를 준비합니다.<br/><br/>
+먼저 유리창을 커터칼날로 긁어내듯 미세한 페인트나 실리콘 잔여물까지 완벽하게 제거해야 필름 시공 시 기포가 생기지 않습니다.<br/><br/>
+재단 시에는 유리창보다 상하좌우 1~2cm 여유 있게 넉넉하게 자른 후, 필름 뒷면의 투명 이면지를 벗겨내면서 접착면과 유리창에 세제수를 아낌없이 흠뻑 분사합니다.<br/><br/>
+물이 충분히 뿌려진 상태에서는 필름이 유리에 바로 달라붙지 않고 미끄러지므로 손쉽게 위치를 잡을 수 있습니다.<br/><br/>
+위치가 잡히면 고무 헤라로 상단 중앙부터 十자 형태로 물기를 밀어낸 뒤 대각선 방향으로 강하게 쓸어내려 기포와 물기를 완전히 제거합니다.<br/><br/>
+마지막으로 창틀 실리콘 라인을 따라 자를 대고 남은 여분의 필름을 칼로 깔끔하게 잘라내면 전문가가 시공한 것처럼 투명하고 깨끗한 단열창이 완성됩니다.<br/><br/>
+초보자라도 2인 1조로 작업하면 거실 대형 창문 1개를 30분 만에 완성도 높게 시공할 수 있습니다.
+
+<!-- 인포그래픽 4: 자가 진단 체크리스트 -->
+
+<!-- 5번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="창호 외풍 취약 부위 자가 진단 및 시공 준비물 체크리스트 / 인포그래픽 카드" src="../../images/261021/6_repair_winter_draft_proofing_diy_cost_compare_5.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">창호 외풍 취약 부위 자가 진단 및 시공 준비물 체크리스트 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>07 | 창틀 하부 바람길을 틀어막는 풍지판(풍막이) 설치 방법과 방충망 간섭 방지</h2>
+창문에 문풍지와 뽁뽁이를 아무리 꼼꼼히 붙여도 방바닥으로 여전히 찬바람이 스멀스멀 들어온다면 범인은 100% <strong>'창틀 하부 모서리 틈새'</strong>입니다.<br/><br/>
+슬라이딩 창문 레일 하단 양 끝에는 창문이 교차하며 지나갈 수 있도록 사각형의 큰 빈 공간(틈새)이 존재합니다.<br/><br/>
+이 빈 구멍은 외부 바람이 그대로 실내로 직행하는 '바람 고속도로' 역할을 합니다.<br/><br/>
+이곳을 막아주는 핵심 부품이 바로 <strong>'풍지판(풍막이)'</strong>입니다.<br/><br/>
+개당 1,500원~3,000원에 불과한 연질 고무 풍지판을 레일 규격에 맞게 구매한 뒤, 레일 턱에 끼우고 나사나 강력 양면테이프로 고정해주면 하부 유입 외풍의 90% 이상이 단숨에 차단됩니다.<br/><br/>
+설치 시 가장 주의해야 할 점은 <strong>'방충망과의 간섭'</strong>입니다.<br/><br/>
+방충망 레일과 창문 레일의 위치를 확인하지 않고 풍지판을 너무 두껍게 붙이면 방충망이 걸려 움직이지 않거나 찢어질 수 있습니다.<br/><br/>
+반드시 창문과 방충망을 끝까지 밀어본 상태에서 간섭이 생기지 않는 위치에 부착해야 하며, 여닫힘을 방해하지 않는 브러시(모헤어) 일체형 풍지판을 선택하는 것이 가장 안전합니다.<br/><br/>
+풍지판 하단에는 빗물이 빠져나가는 물구멍이 있으므로, 물구멍은 미세 방충망 스티커로 막아 벌레와 외풍을 동시에 차단해주는 디테일이 필요합니다.
+
+<!-- 인포그래픽 5: 셀프 vs 업체 비용 비교 영수증 -->
+
+<!-- 6번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="아파트 창호 단열 셀프 DIY vs 전문 틈막이 시공 견적 비교 영수증 / 인포그래픽 카드" src="../../images/261021/6_repair_winter_draft_proofing_diy_cost_compare_6.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">아파트 창호 단열 셀프 DIY vs 전문 틈막이 시공 견적 비교 영수증 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>08 | 방 3개 아파트 셀프 자재비(3만~5만 원) vs 전문 외풍 차단 업체 견적 비교</h2>
+창호 외풍 차단 작업을 셀프로 진행할 것인지, 전문 시공 업체를 부를 것인지는 비용과 내구성 측면에서 큰 차이가 납니다.<br/><br/>
+국민 평형인 전용 84㎡(32~34평형) 아파트를 기준으로 객관적인 비용을 비교해 드립니다.<br/><br/>
+<strong>전문 틈막이 시공 업체</strong>에 의뢰할 경우, 플라스틱 레일 쫄대와 특수 브러시를 피스로 고정하는 방식으로 시공됩니다.<br/><br/>
+창문 1개당 시공 단가는 5만~8만 원 선이며, 거실 이중창과 안방, 작은방 2개, 주방창까지 전체 시공할 경우 <strong>총 견적은 35만~50만 원 선</strong>에 달합니다. 내구성이 5~8년 이상 오래 가고 마감이 깔끔하다는 장점이 있지만 초기 목돈 부담이 큽니다.<br/><br/>
+반면, 온라인 쇼핑몰이나 다이소에서 자재를 구매하여 <strong>셀프(DIY)로 시공할 경우</strong>, 3중 단열 뽁뽁이 2롤(약 16,000원), 모헤어 문풍지 5롤(약 15,000원), 창틀 풍지판 8개(약 12,000원), 소독용 알코올과 분무기(약 5,000원)를 합쳐 <strong>총 자재비 약 4만~5만 원 선</strong>이면 온 집안 시공을 끝낼 수 있습니다.<br/><br/>
+업체 견적 대비 무려 <strong>약 35만 원 이상의 비용을 절약</strong>할 수 있으며, 차단 효과 역시 틈새를 꼼꼼히 메운다면 전문 업체 시공 대비 85~90% 수준의 훌륭한 단열 성능을 발휘합니다.<br/><br/>
+전세나 월세 세입자의 경우 이사 갈 때 원상복구 의무가 있으므로, 못이나 피스 자국을 남기지 않고 봄에 쉽게 뗄 수 있는 셀프 테이프 방식 시공이 훨씬 유리합니다.
+
+<!-- 인포그래픽 6: FAQ 카드 -->
+
+<!-- 7번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="창호 외풍 차단 자주 묻는 질문 FAQ / 인포그래픽 카드" src="../../images/261021/6_repair_winter_draft_proofing_diy_cost_compare_7.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">창호 외풍 차단 자주 묻는 질문 FAQ / 인포그래픽 카드</div>
+</div>
+
+
+<h2>09 | 겨울 외풍 차단 셀프 시공 총정리와 결로 예방 관리 수칙</h2>
+창호 틈새 외풍을 차단하는 일은 큰돈을 들이지 않고도 우리 가족의 건강을 지키고 난방비를 획기적으로 줄일 수 있는 가장 실속 있는 집수리 기술입니다.<br/><br/>
+유리창에는 3중 에어캡이나 단열필름을 부착하고, 샷시 레일에는 모헤어 문풍지와 하부 풍지판을 꼼꼼히 설치하여 틈새바람을 완벽히 봉쇄해 보세요.<br/><br/>
+이와 함께 두꺼운 암막 커튼을 창문 바닥까지 길게 늘어뜨려 설치하면 창가에서 내려오는 찬 공기를 한 번 더 막아주는 삼중 방어막이 완성됩니다.<br/><br/>
+다만 외풍을 완벽히 틀어막은 밀폐된 집안에서는 요리나 샤워로 인해 실내 습도가 급격히 올라가 창틀 결로와 곰팡이가 발생하기 쉽습니다.<br/><br/>
+따라서 보온에만 치중하지 마시고, 아침과 저녁으로 하루 두 번 창문을 활짝 열어 10분간 신선한 공기를 순환시키는 환기 수칙을 반드시 병행해주셔야 합니다.<br/><br/>
+단열과 환기가 균형을 이룰 때 비로소 곰팡이 걱정 없이 따뜻하고 쾌적한 친환경 겨울철 보금자리를 누릴 수 있습니다.<br/><br/>
+이번 주말, 단돈 몇만 원의 자재로 온 집안의 틈새바람을 빈틈없이 틀어막고 올겨울을 따뜻하고 알뜰하게 보내시기 바랍니다.
+
+<div class="recommend-area">
+<strong>📌 함께 읽으면 좋은 가을 여행 &amp; 생활 실무 추천 글</strong><br/><br/>
+• <a href="../261020/house_septic_tank_fall_cleaning_cost_service_guide.html">전원주택 정화조 가을 청소 시기와 비용 — 지자체 대행업체 부르는 법과 과태료 예방 체크리스트</a><br/>
+  • <a href="../261020/lease_moving_out_cancellation_transfer_checklist.html">이사 전 해지·이전 체크리스트 — 인터넷·도시가스·전기 요금 정산과 우체국 주소이전 순서</a>
+</div>
+<div class="tags">
+  <span class="tag">#겨울외풍차단</span>
+  <span class="tag">#창문외풍막는법</span>
+  <span class="tag">#문풍지셀프시공</span>
+  <span class="tag">#단열뽁뽁이</span>
+  <span class="tag">#단열필름시공</span>
+  <span class="tag">#창문단열</span>
+  <span class="tag">#난방비절약</span>
+  <span class="tag">#샷시틈새바람</span>
+  <span class="tag">#풍지판설치</span>
+</div>
+</body>
+</html>
