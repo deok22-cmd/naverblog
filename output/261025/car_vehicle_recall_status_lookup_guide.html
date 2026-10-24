@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>내 차와 중고차 리콜 대상 여부 차량번호 조회 방법 — 자동차리콜센터 무상수리 예약 팁</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+
+  /* ========================================================
+     🎨 다채널 인포그래픽 아키타입 CSS 시스템
+     ========================================= */
+  .infographic-box, [class*="infographic-"] {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif;
+  }
+  .infographic-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    border-bottom: 2px dashed #c8e6c9;
+    padding-bottom: 12px;
+  }
+  .infographic-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 1.1em;
+    color: #1b5e20;
+  }
+  .infographic-badge {
+    display: inline-block;
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.75em;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+  }
+
+  /* 1. 비교 매트릭스 카드 (.infographic-compare-box) */
+  .infographic-compare-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .compare-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .compare-col {
+    flex: 1;
+    min-width: 150px;
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 14px 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  }
+  .compare-col.highlight {
+    background: #f9fdf9;
+    border: 1.5px solid #388e3c;
+  }
+  .compare-col-title {
+    font-size: 0.95em;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 6px;
+  }
+  .compare-col-badge {
+    display: inline-block;
+    background: #388e3c;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .compare-row {
+    font-size: 0.82em;
+    color: #444;
+    line-height: 1.55;
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .compare-row:last-child {
+    border-bottom: none;
+  }
+
+  /* 2. 일정/동선 타임라인 로드맵 (.infographic-timeline-box) */
+  .infographic-timeline-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  .timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .timeline-badge {
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.78em;
+    font-weight: 800;
+    padding: 4px 9px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+  .timeline-content {
+    flex: 1;
+  }
+  .timeline-title {
+    font-size: 0.92em;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 4px;
+  }
+  .timeline-desc {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 3. 코스/난코스 전술 공략도 (.infographic-strategy-box) */
+  .infographic-strategy-box {
+    background: #ffffff;
+    border: 1.5px solid #ef4444;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(239,68,68,0.06);
+  }
+  .strategy-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .strategy-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .strategy-col.solution {
+    background: #f9fdf9;
+    border: 1px solid #c8e6c9;
+  }
+  .hazard-tag {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .safe-tag {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+
+  /* 4. 실전 비용/예산 견적 영수증 (.infographic-receipt-box) */
+  .infographic-receipt-box {
+    background: #ffffff;
+    border: 2px dashed #9ca3af;
+    border-radius: 12px;
+    padding: 24px 22px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+  }
+  .receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 16px;
+    font-size: 0.88em;
+  }
+  .receipt-table th {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid #d1d5db;
+  }
+  .receipt-table td {
+    padding: 8px 10px;
+    border-bottom: 1px dashed #e5e7eb;
+    color: #4b5563;
+  }
+  .receipt-total {
+    background: #f9fdf9;
+    border-top: 2px solid #388e3c;
+    padding: 12px 16px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 800;
+    color: #1b5e20;
+  }
+
+  /* 5. 필수 점검 & 준비물 체크리스트 (.infographic-checklist-box) */
+  .infographic-checklist-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .checklist-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .checklist-col {
+    flex: 1;
+    min-width: 190px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .checklist-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 6px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .checklist-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 6. 단계별 신청/절차 플로우차트 (.infographic-flow-box) */
+  .infographic-flow-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .flow-steps {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-top: 10px;
+  }
+  .flow-card {
+    flex: 1;
+    min-width: 130px;
+    background: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 12px 10px;
+    text-align: center;
+  }
+  .flow-step-num {
+    font-size: 0.72em;
+    font-weight: 800;
+    color: #388e3c;
+    background: #e8f5e9;
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+  }
+  .flow-title {
+    font-size: 0.88em;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 4px;
+  }
+  .flow-desc {
+    font-size: 0.78em;
+    color: #666;
+    line-height: 1.4;
+  }
+
+  /* 7. 4분할 핵심 수치 매트릭스 (.infographic-stat-box) */
+  .infographic-stat-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .stat-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .stat-card {
+    flex: 1;
+    min-width: 130px;
+    background: #f9fdf9;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 14px 10px;
+    text-align: center;
+  }
+  .stat-icon { font-size: 1.6em; margin-bottom: 4px; }
+  .stat-label { font-size: 0.8em; color: #666; font-weight: 600; margin-bottom: 4px; }
+  .stat-value { font-size: 1.15em; font-weight: 800; color: #388e3c; }
+  .stat-sub { font-size: 0.75em; color: #777; margin-top: 2px; }
+
+  /* 8. 평가 지표 & 코스/제품 스코어카드 (.infographic-scorecard-box) */
+  .infographic-scorecard-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .scorecard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .scorecard-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .score-label {
+    width: 110px;
+    font-size: 0.86em;
+    font-weight: 700;
+    color: #1b5e20;
+  }
+  .score-bar-bg {
+    flex: 1;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .score-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #e8f5e9, #388e3c);
+    border-radius: 5px;
+  }
+  .score-value {
+    width: 45px;
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: 800;
+    color: #388e3c;
+  }
+  .score-grade {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 0.72em;
+    font-weight: 800;
+    background: #e8f5e9;
+    color: #388e3c;
+  }
+
+  /* 9. 장단점 & 추천 vs 비추천 대조 카드 (.infographic-procon-box) */
+  .infographic-procon-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .procon-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .pro-col {
+    flex: 1;
+    min-width: 220px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .con-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .pro-badge {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .con-badge {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .procon-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 5px 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.06);
+  }
+  .procon-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 10. 핵심 질문 & 해법 Q&A 매트릭스 (.infographic-faq-box) */
+  .infographic-faq-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .faq-card {
+    background: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .faq-q {
+    font-size: 0.88em;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .faq-q-badge {
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .faq-a {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 11. 진화형 범용 인포그래픽 프리미티브 (.infographic-custom-box) */
+  .infographic-custom-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .info-callout {
+    background: #f9fdf9;
+    border-left: 4px solid #388e3c;
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.84em;
+    color: #1b5e20;
+    line-height: 1.5;
+    margin: 8px 0;
+  }
+  .info-pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 8px 0;
+  }
+  .info-pill {
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 4px 10px;
+    font-size: 0.78em;
+    font-weight: 600;
+    color: #374151;
+  }
+  .info-pill.active {
+    background: #e8f5e9;
+    border-color: #388e3c;
+    color: #388e3c;
+    font-weight: 700;
+  }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+
+<h1>내 차와 중고차 리콜 대상 여부 차량번호 조회 방법 — 자동차리콜센터 무상수리 예약 팁</h1>
+
+<div class="intro-box">
+<strong>주행 안전과 직결된 결함을 무상으로 수리해 주는 자동차 '리콜(제작결함 시정조치)'은 차량번호 하나만 입력하면 한국교통안전공단 자동차리콜센터 누리집에서 1분 만에 대상 여부와 미조치 내역을 즉시 조회할 수 있습니다.</strong><br><br>
+많은 운전자가 주소 이전이나 우편물 분실로 인해 리콜 통지서를 제때 받지 못해 에어백 오작동, 브레이크 밀림, 엔진 화재 위험 등 치명적인 결함을 안은 채 도로를 달리고 있습니다. 특히 중고차를 구매할 때 이전 차주가 리콜을 받지 않고 방치했는지 여부를 사전에 조회하는 것은 나와 가족의 생명을 지키는 필수 절차입니다. 차량번호 조회 절차부터 공식 서비스센터 예약 요령, 그리고 리콜 발표 전 자비로 수리한 비용을 전액 환급받는 청구 방법까지 실전 정보를 총정리해 드립니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 대표 메인 썸네일 생성 영역</span>
+      <span class="ph-file">images/261025/7_car_vehicle_recall_status_lookup_guide_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-7-1">A crisp, professional, high-detail eye-level photograph of a certified automobile service center technician in a clean branded uniform inspecting a modern passenger car raised on a hydraulic lift. The technician holds a digital diagnostic tablet displaying vehicle diagnostic data. In the background, an orderly, brightly lit dealership service bay with professional automotive maintenance equipment. Clean natural workshop lighting, authentic modern automotive industry ambiance, ultra-high resolution, realistic mechanical textures of shiny alloy wheels and clean brake components, 8k resolution, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-7-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">공식 서비스센터에서 리콜 무상점검 진단을 받는 승용차와 전문 정비 시스템 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 리콜과 무상수리의 차이 — 안전 결함 강제 시정과 일반 편의 결함 보상의 기준</h2>
+운전자들이 정비소에서 흔히 접하는 '리콜'과 '무상수리'는 언뜻 비슷해 보이지만, 법적 구속력과 위험도 측면에서 완전히 다른 제도입니다.<br><br>
+**리콜(Recall, 제작결함 시정조치)**은 자동차가 안전기준에 적합하지 않거나 조향, 제동, 연료 누유, 에어백, 배터리 화재 등 운전자의 생명과 직결되는 '안전 및 환경 결함'이 발견되었을 때 국토교통부의 명령 또는 제작사의 자발적 신고에 의해 진행되는 법적 강제 조치입니다. 기한에 제한 없이 제조사가 끝까지 100% 무상으로 부품을 교체해 주어야 합니다.<br><br>
+반면 **무상수리(Free Repair)**는 안전과 직접적인 관련은 없으나 오디오 잡음, 도어 잠금 불량, 실내 내장재 소음 등 소비자의 편의성과 관련된 하자나 품질 문제를 제조사가 서비스 차원에서 자발적으로 고쳐주는 것입니다. 무상수리는 통상 1~2년 등 유효기간이 정해져 있어 기한이 지나면 유상으로 전환되므로, 안내를 받았다면 기한 내에 신속히 입고해야 합니다.
+
+<!-- 인포그래픽 카드 1: 4대 핵심 수치 매트릭스 -->
+
+<!-- 2번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="자동차 리콜 제도 4대 핵심 지표 / 인포그래픽 카드" src="../../images/261025/7_car_vehicle_recall_status_lookup_guide_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">자동차 리콜 제도 4대 핵심 지표 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>02 | 자동차리콜센터(car.go.kr) 차량번호 조회 3분 완성 절차</h2>
+내 차가 현재 리콜 대상인지, 혹은 과거에 리콜을 받았는지 확인하는 가장 확실하고 신속한 방법은 한국교통안전공단이 운영하는 '자동차리콜센터'를 이용하는 것입니다.<br><br>
+과거에는 복잡한 17자리 '차대번호(VIN)'를 일일이 등록증에서 찾아 입력해야 했지만, 현재는 공인인증서 로그인 없이 **자동차 등록번호(예: 12가 3456)**와 소유자 성명만 입력하면 즉시 전산 조회가 가능합니다.<br><br>
+조회 결과 화면에는 해당 차종의 결함 장치(예: ABS 브레이크 모듈, 에어백 인플레이터 등), 결함 발생 원인, 시정조치 기간, 공식 무상수리 방법, 그리고 차주가 조치를 완료했는지 여부가 '시정 완료' 또는 '미시정'으로 명확하게 표시됩니다.
+
+<!-- 인포그래픽 카드 2: 단계별 절차 플로우 -->
+
+<!-- 3번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="리콜 조회부터 수리 완료 4단계 / 인포그래픽 카드" src="../../images/261025/7_car_vehicle_recall_status_lookup_guide_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">리콜 조회부터 수리 완료 4단계 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>03 | 한국교통안전공단(TS) 자동차365 앱을 통한 모바일 간편 조회 방법</h2>
+스마트폰을 이용해 이동 중이거나 중고차 매매 단지 현장에서 실시간으로 리콜 여부를 확인하고 싶다면 국토교통부와 한국교통안전공단이 공동 개발한 '자동차365(car365.go.kr)' 모바일 앱을 추천합니다.<br><br>
+자동차365 앱의 '중고차 매매 차량 조회' 메뉴를 활용하면 차량번호 하나로 리콜 대상 여부는 물론이고, 과거 정기검사 이력, 침수차 여부, 보험사 전손·분난 사고 이력, 주행거리 조작 여부까지 한 화면에서 종합적으로 검증할 수 있습니다.<br><br>
+특히 간편 본인인증을 등록해 두면 내 차에 새로운 리콜이나 무상수리가 발표될 때마다 카카오톡 알림톡이나 푸시 알림으로 실시간 공지를 받아볼 수 있어 우편물 누락 걱정을 원천 해소할 수 있습니다.
+
+<!-- 인포그래픽 카드 3: 비교 매트릭스 -->
+
+<!-- 4번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="법적 리콜 vs 무상수리 제도 비교표 / 인포그래픽 카드" src="../../images/261025/7_car_vehicle_recall_status_lookup_guide_4.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">법적 리콜 vs 무상수리 제도 비교표 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>04 | 중고차 구매 전 리콜 이행 여부 확인 필수성 — 성능상태점검기록부 대조법</h2>
+중고차를 구매할 때 카히스토리 사고 이력만큼 중요하게 확인해야 하는 것이 바로 '리콜 시정조치 미이행 여부'입니다.<br><br>
+중고차 딜러가 제시하는 '중고자동차 성능·상태점검기록부' 1페이지 하단에는 반드시 '리콜 대상 및 시정조치 여부' 항목이 인쇄되어 있어야 합니다. 이 항목이 공란이거나 '미시정'으로 체크되어 있다면 구매 계약 전에 딜러에게 리콜 수리를 완료한 후 출고해 줄 것을 특약에 명시해야 합니다.<br><br>
+만약 리콜 미시정 상태로 차량을 인도받게 되면, 추후 구매자가 직접 부품 예약 후 평일에 서비스센터를 방문해 장시간 대기해야 하는 번거로움이 발생할 뿐만 아니라, 이전 차주의 방치로 인한 안전사고 위험을 고스란히 떠안게 됩니다.
+
+<h2>05 | 리콜 통지서 우편을 분실했을 때 대처법 — 제조사 고객센터 및 직영 서비스센터 확인</h2>
+자동차관리법상 제조사는 리콜 대상 차량 소유주에게 자동차등록원부상 주소지로 등기 또는 일반 우편을 통해 안내문을 발송하도록 규정되어 있습니다.<br><br>
+그러나 이사를 가고 주소 이전을 제때 하지 않았거나, 우편함 확인을 소홀히 해 통지서를 분실했더라도 전혀 걱정하실 필요가 없습니다. 리콜은 우편 통지서 종이를 지참하지 않아도 전산 시스템상으로 대상 여부가 100% 조회되기 때문입니다.<br><br>
+현대자동차(블루핸즈/하이테크센터), 기아(오토큐), 르노코리아, KG모빌리티(쌍용), 쉐보레 등 해당 차량 브랜드의 고객센터 대표번호로 전화를 걸어 차량번호만 불러주면 즉시 전산 조회가 가능하며 가까운 지정 정비소로 입고 예약을 도와줍니다.
+
+<table class="info-table">
+  <thead>
+    <tr>
+      <th>제조사명</th>
+      <th>고객센터 대표번호</th>
+      <th>공식 예약 앱 / 누리집</th>
+      <th>정비 네트워크</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>현대자동차</strong></td>
+      <td>080-600-6000</td>
+      <td>마이현대(myHyundai) 앱</td>
+      <td>직영 하이테크센터 &amp; 블루핸즈</td>
+    </tr>
+    <tr>
+      <td><strong>기아 (KIA)</strong></td>
+      <td>080-200-2000</td>
+      <td>기아 빅(Kia VIK) 앱</td>
+      <td>직영 서비스센터 &amp; Auto Q</td>
+    </tr>
+    <tr>
+      <td><strong>르노코리아</strong></td>
+      <td>080-300-3000</td>
+      <td>MY 르노코리아 앱</td>
+      <td>엔젤센터 &amp; 지정 협력점</td>
+    </tr>
+    <tr>
+      <td><strong>KG모빌리티</strong></td>
+      <td>080-500-5582</td>
+      <td>KG 모빌리티 공식 누리집</td>
+      <td>광역 서비스센터 &amp; 지정정비공장</td>
+    </tr>
+    <tr>
+      <td><strong>한국GM (쉐보레)</strong></td>
+      <td>080-3000-5000</td>
+      <td>쉐보레 공식 홈페이지</td>
+      <td>직영 서비스센터 &amp; 바로서비스</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>06 | 리콜 수리 예약 방법과 소요 시간 — 직영 서비스센터 vs 지정 협력점 예약 팁</h2>
+리콜 예약 시 많은 운전자가 무조건 대형 '직영 서비스센터(하이테크센터)'만 고집하다가 2~3달 뒤에나 예약이 잡히는 불편을 겪곤 합니다.<br><br>
+간단한 ECU(전자제어장치) 소프트웨어 무선 업데이트나 단순 센서·휴즈 교체 등 경정비에 해당하는 리콜은 동네 가까운 지정 협력점(블루핸즈, 오토큐 등)에서도 당일 30분~1시간 만에 신속하게 수리를 마칠 수 있습니다.<br><br>
+반면, 엔진 어셈블리 교체, 고전압 배터리 팩 교체, 변속기 탈부착 등 대작업이 수반되는 중대 리콜은 리프트 설비와 전문 장비를 갖춘 대형 직영 하이테크센터로 입고해야 안전합니다. 따라서 고객센터 상담 시 작업 난이도를 확인하고 경작업은 협력 정비소를 우선 공략하세요.
+
+<!-- 인포그래픽 카드 4: 점검 체크리스트 -->
+
+<!-- 5번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="리콜 입고 전 차주 점검 체크리스트 / 인포그래픽 카드" src="../../images/261025/7_car_vehicle_recall_status_lookup_guide_5.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">리콜 입고 전 차주 점검 체크리스트 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>07 | 이미 자비로 수리한 경우 비용 보상 청구 절차 — 영수증과 결함 확인서 제출 요령</h2>
+자동차관리법 제31조의2에 따라, 제조사가 결함을 인정하고 **리콜을 공식 발표하기 전 1년 이내에 차주가 동일한 결함으로 자비를 들여 사설 정비소나 센터에서 수리한 경우**, 제조사는 그 수리비 전액을 차주에게 현금으로 보상해야 할 법적 의무가 있습니다.<br><br>
+보상을 청구하려면 세 가지 필수 서류가 필요합니다: ① 정비업체에서 발행한 **자동차 점검·정비명세서(수리 부품과 공임이 명시된 공식 서식)**, ② 카드 결제 영수증 또는 세금계산서, ③ 본인 명의 통장 사본입니다.<br><br>
+제조사 공식 직영 서비스센터 고객상담실(보상담당팀)에 구비 서류를 제출하면 심사를 거쳐 통상 14~30일 이내에 차주가 결제했던 부품대와 공임 일체가 지정된 은행 계좌로 전액 입금됩니다.
+
+<!-- 인포그래픽 카드 5: 자비 수리비 환급 모의 영수증 -->
+
+<!-- 6번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="리콜 자비 수리비 환급 모의 정산서 / 인포그래픽 카드" src="../../images/261025/7_car_vehicle_recall_status_lookup_guide_6.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">리콜 자비 수리비 환급 모의 정산서 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>08 | 리콜을 안 받고 방치했을 때의 불이익 — 정기검사 통과 여부와 안전사고 책임</h2>
+'당장 운전하는 데 지장이 없다'는 이유로 리콜 수리를 미루고 방치하면 심각한 안전 위험뿐만 아니라 법적·행정적 불이익이 뒤따릅니다.<br><br>
+첫째, 한국교통안전공단 자동차 정기(종합)검사 시 미이행 리콜 항목이 검사관 단말기에 즉각 표출되며, 검사 적합 판정을 받더라도 **'리콜 미이행 시정권고'** 처분을 받게 됩니다. 특히 배출가스 관련 환경 리콜의 경우 검사 불합격 판정의 사유가 될 수 있습니다.<br><br>
+둘째, 리콜 통지를 받았음에도 불구하고 장기간 방치하다가 해당 결함으로 인해 주행 중 화재나 추돌 사고가 발생했을 경우, 보험사 및 법원 판례에서 차주의 '관리상 과실'이 참작되어 보험금 지급이 삭감되거나 배상 책임 비율이 높아질 수 있습니다.
+
+<h2>09 | 리콜 시정조치 완료 확인서 발급 및 내 차 이력 갱신 확인법</h2>
+서비스센터에서 리콜 무상수리를 마쳤다면 반드시 현장에서 정비사로부터 **'자동차 제작결함 시정조치 완료 확인서'** 또는 정비명세서를 발급받아 보관해야 합니다.<br><br>
+수리 완료 후 약 3~5일(영업일 기준)이 지나면 제조사 전산망에서 국토교통부 자동차관리정보시스템(VMIS)으로 완료 데이터가 자동 전송됩니다.<br><br>
+이후 다시 자동차리콜센터 누리집이나 자동차365 앱에 접속해 내 차량번호를 조회했을 때 상태 표시가 '미시정'에서 **'시정 완료'**로 정상 변경되었는지 최종적으로 확인하는 것이 안전한 차량 관리의 마침표입니다.
+
+<h2>10 | 자동차 리콜 조회 및 무상수리 필수 체크리스트와 FAQ</h2>
+자동차 리콜과 관련해 차주들이 가장 많이 헷갈려하는 3대 빈발 질문을 일문일답으로 명쾌하게 정리했습니다.
+
+<!-- 인포그래픽 카드 6: 핵심 FAQ 매트릭스 -->
+
+<!-- 7번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="자동차 리콜 자주 묻는 질문 FAQ / 인포그래픽 카드" src="../../images/261025/7_car_vehicle_recall_status_lookup_guide_7.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">자동차 리콜 자주 묻는 질문 FAQ / 인포그래픽 카드</div>
+</div>
+
+
+<div class="tip-box">
+  <h4>💡 리콜 입고 전 무상 기본점검 요청 팁</h4>
+  <p>리콜 부품 교체를 위해 서비스센터에 예약 입고할 때, 제조사에서 연 1회 제공하는 '무상 정기점검(엔진오일 누유, 타이어 공기압, 배터리 전압, 부동액 체크)'을 함께 신청하세요.</p>
+  <p>리콜 작업과 동시에 차량 전체의 컨디션을 공짜로 점검받을 수 있어 정비 시간을 2배로 알차게 활용할 수 있습니다.</p>
+</div>
+
+<div class="recommend-area">
+  <strong>함께 읽으면 좋은 여행 &amp; 생활 정보</strong><br>
+  • <a href="../261021/repair_winter_draft_proofing_diy_cost_compare.html">아파트·빌라 겨울 외풍 막는 법 — 문풍지 vs 뽁뽁이 vs 단열필름 비용 대비 효과와 셀프 시공 순서</a><br>
+  • <a href="../261021/hot_city_gas_winter_cashback_application_guide.html">2026 도시가스 절약 캐시백 신청 기간 — 전년 대비 3%만 줄여도 돌려받는 환급금 계산법</a>
+</div>
+
+<div class="tags">
+  <span class="tag">#자동차리콜조회</span>
+  <span class="tag">#자동차리콜센터</span>
+  <span class="tag">#차량번호리콜조회</span>
+  <span class="tag">#자동차365</span>
+  <span class="tag">#리콜무상수리</span>
+  <span class="tag">#중고차리콜확인</span>
+  <span class="tag">#리콜비용환급</span>
+  <span class="tag">#자동차정기검사리콜</span>
+  <span class="tag">#현대차리콜</span>
+  <span class="tag">#기아차리콜</span>
+</div>
+
+</body>
+</html>
