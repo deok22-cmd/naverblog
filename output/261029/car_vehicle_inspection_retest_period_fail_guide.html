@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>자동차 정기검사 불합격 시 재검사 기간과 수수료 — 빈발 불합격 항목 5가지와 재검사 예약 절차</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+
+  /* ========================================================
+     🎨 다채널 인포그래픽 아키타입 CSS 시스템
+     ========================================= */
+  .infographic-box, [class*="infographic-"] {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif;
+  }
+  .infographic-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    border-bottom: 2px dashed #c8e6c9;
+    padding-bottom: 12px;
+  }
+  .infographic-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 1.1em;
+    color: #1b5e20;
+  }
+  .infographic-badge {
+    display: inline-block;
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.75em;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+  }
+
+  /* 1. 비교 매트릭스 카드 (.infographic-compare-box) */
+  .infographic-compare-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .compare-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .compare-col {
+    flex: 1;
+    min-width: 150px;
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 14px 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  }
+  .compare-col.highlight {
+    background: #f9fdf9;
+    border: 1.5px solid #388e3c;
+  }
+  .compare-col-title {
+    font-size: 0.95em;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 6px;
+  }
+  .compare-col-badge {
+    display: inline-block;
+    background: #388e3c;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .compare-row {
+    font-size: 0.82em;
+    color: #444;
+    line-height: 1.55;
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .compare-row:last-child {
+    border-bottom: none;
+  }
+
+  /* 2. 일정/동선 타임라인 로드맵 (.infographic-timeline-box) */
+  .infographic-timeline-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  .timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .timeline-badge {
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.78em;
+    font-weight: 800;
+    padding: 4px 9px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+  .timeline-content {
+    flex: 1;
+  }
+  .timeline-title {
+    font-size: 0.92em;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 4px;
+  }
+  .timeline-desc {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 3. 코스/난코스 전술 공략도 (.infographic-strategy-box) */
+  .infographic-strategy-box {
+    background: #ffffff;
+    border: 1.5px solid #ef4444;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(239,68,68,0.06);
+  }
+  .strategy-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .strategy-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .strategy-col.solution {
+    background: #f9fdf9;
+    border: 1px solid #c8e6c9;
+  }
+  .hazard-tag {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .safe-tag {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+
+  /* 4. 실전 비용/예산 견적 영수증 (.infographic-receipt-box) */
+  .infographic-receipt-box {
+    background: #ffffff;
+    border: 2px dashed #9ca3af;
+    border-radius: 12px;
+    padding: 24px 22px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+  }
+  .receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 16px;
+    font-size: 0.88em;
+  }
+  .receipt-table th {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid #d1d5db;
+  }
+  .receipt-table td {
+    padding: 8px 10px;
+    border-bottom: 1px dashed #e5e7eb;
+    color: #4b5563;
+  }
+  .receipt-total {
+    background: #f9fdf9;
+    border-top: 2px solid #388e3c;
+    padding: 12px 16px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 800;
+    color: #1b5e20;
+  }
+
+  /* 5. 필수 점검 & 준비물 체크리스트 (.infographic-checklist-box) */
+  .infographic-checklist-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .checklist-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .checklist-col {
+    flex: 1;
+    min-width: 190px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .checklist-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 6px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .checklist-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 6. 단계별 신청/절차 플로우차트 (.infographic-flow-box) */
+  .infographic-flow-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .flow-steps {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-top: 10px;
+  }
+  .flow-card {
+    flex: 1;
+    min-width: 130px;
+    background: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 12px 10px;
+    text-align: center;
+  }
+  .flow-step-num {
+    font-size: 0.72em;
+    font-weight: 800;
+    color: #388e3c;
+    background: #e8f5e9;
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+  }
+  .flow-title {
+    font-size: 0.88em;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 4px;
+  }
+  .flow-desc {
+    font-size: 0.78em;
+    color: #666;
+    line-height: 1.4;
+  }
+
+  /* 7. 4분할 핵심 수치 매트릭스 (.infographic-stat-box) */
+  .infographic-stat-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .stat-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .stat-card {
+    flex: 1;
+    min-width: 130px;
+    background: #f9fdf9;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 14px 10px;
+    text-align: center;
+  }
+  .stat-icon { font-size: 1.6em; margin-bottom: 4px; }
+  .stat-label { font-size: 0.8em; color: #666; font-weight: 600; margin-bottom: 4px; }
+  .stat-value { font-size: 1.15em; font-weight: 800; color: #388e3c; }
+  .stat-sub { font-size: 0.75em; color: #777; margin-top: 2px; }
+
+  /* 8. 평가 지표 & 코스/제품 스코어카드 (.infographic-scorecard-box) */
+  .infographic-scorecard-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .scorecard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .scorecard-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .score-label {
+    width: 110px;
+    font-size: 0.86em;
+    font-weight: 700;
+    color: #1b5e20;
+  }
+  .score-bar-bg {
+    flex: 1;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .score-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #e8f5e9, #388e3c);
+    border-radius: 5px;
+  }
+  .score-value {
+    width: 45px;
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: 800;
+    color: #388e3c;
+  }
+  .score-grade {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 0.72em;
+    font-weight: 800;
+    background: #e8f5e9;
+    color: #388e3c;
+  }
+
+  /* 9. 장단점 & 추천 vs 비추천 대조 카드 (.infographic-procon-box) */
+  .infographic-procon-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .procon-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .pro-col {
+    flex: 1;
+    min-width: 220px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .con-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .pro-badge {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .con-badge {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .procon-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 5px 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.06);
+  }
+  .procon-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 10. 핵심 질문 & 해법 Q&A 매트릭스 (.infographic-faq-box) */
+  .infographic-faq-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .faq-card {
+    background: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .faq-q {
+    font-size: 0.88em;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .faq-q-badge {
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .faq-a {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 11. 진화형 범용 인포그래픽 프리미티브 (.infographic-custom-box) */
+  .infographic-custom-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .info-callout {
+    background: #f9fdf9;
+    border-left: 4px solid #388e3c;
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.84em;
+    color: #1b5e20;
+    line-height: 1.5;
+    margin: 8px 0;
+  }
+  .info-pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 8px 0;
+  }
+  .info-pill {
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 4px 10px;
+    font-size: 0.78em;
+    font-weight: 600;
+    color: #374151;
+  }
+  .info-pill.active {
+    background: #e8f5e9;
+    border-color: #388e3c;
+    color: #388e3c;
+    font-weight: 700;
+  }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>자동차 정기검사 불합격 시 재검사 기간과 수수료 — 빈발 불합격 항목 5가지와 재검사 예약 절차</h1>
+<div class="intro-box">
+  <strong>📌 자동차 정기검사 불합격 대처 및 재검사 핵심 3줄 요약</strong><br><br>
+  1. <strong>법정 재검사 기간:</strong> 검사 부적합 판정을 받은 날의 '다음 날'부터 기산하여 정확히 10일 이내(또는 원래 검사 유효기간 만료일 중 더 긴 기간)에 재검사를 완료해야 합니다.<br>
+  2. <strong>재검사 수수료:</strong> 법정 재검사 기간 내에 동일한 검사소(TS 교통안전공단 또는 동일 민간검사소)를 방문하여 불합격 항목만 다시 검사받을 경우 수수료는 전액 0원(무료)입니다.<br>
+  3. <strong>기한 초과 시 불이익:</strong> 10일 재검사 기한을 단 하루라도 넘기면 신규 검사비(3만~6만 원)를 전액 다시 납부해야 할 뿐만 아니라, 검사 지연 과태료(최대 60만 원)가 부과되므로 즉시 조치해야 합니다.
+</div>
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 대표 메인 썸네일 생성 영역</span>
+      <span class="ph-file">images/261029/7_car_vehicle_inspection_retest_period_fail_guide_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-7-1">A modern clean automotive vehicle safety inspection center in Korea with automotive technicians inspecting a car chassis and headlights on a hydraulic lift. Digital diagnostic computer screens showing emissions and brake test results, well-lit indoor automotive testing bay, organized diagnostic tools. Professional Korean automotive mechanic wearing uniform explaining inspection checklist to a car owner. Photorealistic, 8k resolution, ultra detailed, natural workshop lighting.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-7-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">자동차 정기검사 불합격 후 재검사 측정 및 점검 절차 / AI 제작 이미지</div>
+</div>
+
+<!-- 2번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="자동차 재검사 핵심 4대 법정 지표 / 인포그래픽 카드" src="../../images/261029/7_car_vehicle_inspection_retest_period_fail_guide_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">자동차 재검사 핵심 4대 법정 지표 / 인포그래픽 카드</div>
+</div>
+
+<h2>01 | 자동차 정기검사 불합격 시 필수 대처법과 핵심 직답 요약</h2>
+<p>
+자동차를 소유한 운전자라면 누구나 정기적으로 받아야 하는 의무 절차가 바로 자동차 정기검사(또는 종합검사)입니다. 검사소에 차를 입고시키고 대기실에서 결과를 기다리다가, 모니터에 빨간색 글씨로 '부적합(불합격)' 판정이 뜨는 순간 대부분의 운전자들은 당혹감과 함께 과태료나 막대한 수리비 걱정에 휩싸이게 됩니다.<br><br>
+하지만 자동차 검사에서 불합격 판정을 받았다고 해서 너무 당황하거나 패닉에 빠질 필요는 전혀 없습니다. 불합격은 벌금을 내라는 처벌이 아니라, 차량의 안전이나 환경 기준에 미달하는 결함 부위가 발견되었으니 정해진 기간 내에 수리하여 다시 확인을 받으라는 '시정 권고' 조치이기 때문입니다.<br><br>
+가장 핵심적인 원칙은 **'불합격 판정을 받은 다음 날부터 계산하여 10일 이내에 재검사를 완료하는 것'**입니다. 이 법정 재검사 기간 내에 수리를 마치고 다시 검사소를 찾으면 추가 검사 수수료가 전액 면제(0원)되며, 오직 불합격 판정을 받았던 결함 항목에 대해서만 5분 내외로 신속하게 확인 검사를 받게 됩니다. 불합격 통지서를 받았을 때 운전자가 즉시 취해야 할 단계별 행동 요령을 알기 쉽게 풀어드립니다.
+</p>
+<h2>02 | 정기검사와 종합검사의 차이 및 불합격 판정 기준</h2>
+<p>
+자동차 검사는 크게 **정기검사**와 **종합검사**로 나뉩니다. 정기검사는 신차 등록 후 일정 주기(비사업용 승용차 기준 신차 4년 후 최초, 이후 2년마다)로 차량의 조향, 제동, 등화, 하체 구조 등 순수 안전도 위주로 점검하는 검사입니다. 반면 종합검사는 수도권 및 인구 50만 이상 대도시 등 대기관리권역에 등록된 차량을 대상으로 정기검사 항목에 더해 실제 도로 주행 상태를 모사한 정밀 배출가스 검사(부하검사)를 추가로 실시하는 보다 엄격한 검사입니다.<br><br>
+불합격(부적합) 판정 기준은 자동차관리법 및 대기환경보전법 시행규칙에 엄격하게 규정되어 있습니다. 검사 항목은 크게 조향계통(토우각·사이드슬립), 주행장치(타이어 마모 및 휠 굴절), 제동계통(앞·뒤 제동력 및 좌우 편차), 등화장치(전조등 밝기·광축 및 램프 점등), 배출가스(일산화탄소 CO, 탄화수소 HC, 질소산화물 NOx, 매연 농도), 계기판 경고등 및 불법 튜닝 여부로 구성됩니다.<br><br>
+이 중 단 한 가지 항목이라도 허용 법정 기준치를 벗어나면 전체 판정이 '부적합'으로 처리됩니다. 불합격 판정이 내려지면 검사원은 운전자에게 '자동차 기능종합진단서(부적합 통지서)'를 발급하며, 여기에는 부적합 판정을 받은 구체적인 부품 명칭, 기준 수치, 측정 수치가 명확히 기재되어 있어 정비소에 전달할 수리 지침서 역할을 하게 됩니다.
+</p>
+
+<!-- 3번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="TS 직영 검사소 vs 민간 지정 검사소 비교 / 인포그래픽 카드" src="../../images/261029/7_car_vehicle_inspection_retest_period_fail_guide_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">TS 직영 검사소 vs 민간 지정 검사소 비교 / 인포그래픽 카드</div>
+</div>
+
+<h2>03 | 불합격 통지서 수령 후 법정 재검사 기간 계산법</h2>
+<p>
+자동차 검사에서 부적합 판정을 받았을 때 가장 중요한 것은 '달력 계산'입니다. 자동차관리법 시행규칙 제77조에 따르면, 재검사 기간은 **"부적합 통지를 받은 날의 다음 날부터 계산하여 10일 이내"**로 명시되어 있습니다. 예를 들어 10월 29일에 불합격 통지를 받았다면, 당일은 기산되지 않고 다음 날인 10월 30일부터 1일 차로 계산하여 11월 8일까지가 법정 재검사 기한이 됩니다.<br><br>
+단, 예외적인 혜택 조항이 있습니다. 만약 원래 정기검사를 받아야 하는 지정 유효기간(만료일 전후 31일, 총 62일의 검사 가능 기간)의 만료일이 위의 '10일 기한'보다 뒤에 남아 있다면, **둘 중 더 늦은 날짜까지 재검사 기간이 자동으로 연장**됩니다. 예를 들어 정기검사 기간 만료일이 11월 20일인데 10월 29일에 검사를 받아 불합격했다면, 10일 후인 11월 8일이 아니라 본래 만료일인 11월 20일까지 재검사를 받을 수 있습니다.<br><br>
+또한 재검사 기간의 마지막 날(만료일)이 토요일, 일요일, 또는 법정 공휴일인 경우에는 '민법의 기간 계산 원칙'에 따라 **그다음 첫 번째 평일(월요일 등)까지 기한이 자동 연장**됩니다. 불합격 통지서 우측 상단에 인쇄된 '재검사 만료일자'를 반드시 형광펜으로 체크해 두고 기한을 넘기지 않도록 일정을 잡으셔야 합니다.
+</p>
+<h2>04 | 재검사 수수료 무료 조건과 기한 초과 시 발생하는 불이익</h2>
+<p>
+많은 운전자들이 재검사를 받으면 검사비를 또다시 내야 하는 것으로 오해하곤 합니다. 하지만 정해진 **법정 재검사 기간 내에 동일한 검사소를 방문하면 재검사 수수료는 전액 0원(무료)**입니다. 정기검사 수수료(약 2만~3만 원)나 종합검사 수수료(약 5만~6만 원)를 다시 결제할 필요 없이, 문제가 되었던 불합격 항목만 검사 라인에서 빠르게 재측정받고 적합 스티커를 교부받게 됩니다.<br><br>
+그러나 이 10일의 재검사 기간을 단 하루라도 넘기게 되면 혹독한 경제적 불이익이 발생합니다. 첫째, 기존의 불합격 검사 기록 자체가 완전히 무효화되므로 **신규 검사 수수료 전액을 다시 결제하고 모든 항목을 처음부터 다시 검사**받아야 합니다.<br><br>
+둘째, 더욱 심각한 문제는 **'자동차 정기검사 미수검 과태료'**가 부과된다는 점입니다. 자동차관리법 개정으로 검사 지연 과태료가 대폭 상향되어, 검사 유효기간 만료일로부터 30일 이내인 경우 기본 4만 원이 부과되고, 31일째부터는 3일 초과 시마다 1만 원씩 가산되어 **최대 60만 원까지 과태료 폭탄**을 맞게 됩니다. 10일 기한을 지키는 것만으로도 수십만 원의 생돈 낭비를 막을 수 있습니다.
+</p>
+
+<!-- 4번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="자동차 재검사 원스톱 4단계 절차 / 인포그래픽 카드" src="../../images/261029/7_car_vehicle_inspection_retest_period_fail_guide_4.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">자동차 재검사 원스톱 4단계 절차 / 인포그래픽 카드</div>
+</div>
+
+<h2>05 | 가장 자주 걸리는 5대 빈발 불합격 항목 분석과 대책</h2>
+<p>
+한국교통안전공단의 통계에 따르면 자동차 검사 불합격 원인의 80% 이상이 특정 5가지 항목에 집중되어 있습니다. 이 빈발 항목들의 특성과 대처법을 미리 알고 있으면 불필요한 과잉 정비를 피하고 빠르게 통과할 수 있습니다.<br><br>
+첫째, 불합격률 1위는 단연 **'등화장치(램프류) 불량'**입니다. 번호판을 비추는 번호등 전구 단선, 브레이크등(제동등) 전구 나감, 전조등 전구 규격 부적합, 미인증 사제 LED 램프 장착 등이 대표적입니다. 둘째는 **'배출가스 기준치 초과'**입니다. 가솔린·LPG 차량의 일산화탄소(CO)나 탄화수소(HC) 초과, 디젤(경유) 차량의 매연 농도 초과나 DPF(매연저감장치) 차압 센서 이상으로 인해 불합격됩니다.<br><br>
+셋째는 **'제동력(브레이크) 기준 미달 및 편차'**입니다. 전축 또는 후축의 브레이크 패드가 편마모되어 좌우 바퀴의 제동력 차이가 8% 이상 벌어지거나, 사이드 주차브레이크의 제동력이 기준치(차량 무게의 20% 이상)에 미달하는 경우입니다. 넷째는 **'조향계통 사이드슬립(토우각) 불량'**으로 타이어 정렬이 틀어져 바퀴가 1m 주행 시 좌우로 ±5mm 이상 미끄러지는 현상입니다. 다섯째는 **'불법 구조변경 및 튜닝'**으로 차체 하부 부식, 화물차 난간대 임의 개조, 허용 기준을 초과한 전면 유리 틴팅(선팅) 등이 지적됩니다.
+</p>
+<h2>06 | 현장 즉시 조치 가능한 셀프 전구 교체 코너 활용 꿀팁</h2>
+<p>
+만약 불합격 사유가 번호등, 제동등, 차폭등 등 단순한 '전구 단선' 때문이라면 카센터로 차를 몰고 갈 필요가 전혀 없습니다. 한국교통안전공단 직영 검사소나 대부분의 민간 검사소에는 검사소 출구 쪽에 **'원스톱 자가 정비 코너(셀프 전구 교체 코너)'**가 별도로 마련되어 있습니다.<br><br>
+이곳에는 십자드라이버, 복스 렌치 등 필요한 공구와 함께 규격별 정품 전구(전구당 1,000~2,000원 상당)가 비치되어 있습니다. 손재주가 없는 분이라도 현장에 상주하는 자원봉사자나 정비 안내원의 도움을 받아 3분 만에 전구를 새것으로 교체할 수 있습니다. 일부 지자체 공단 검사소에서는 번호판등이나 제동등 전구를 무료로 무상 지원하기도 합니다.<br><br>
+전구를 교체한 즉시 검사관에게 확인을 요청하면, 다른 검사 라인에 다시 줄을 설 필요 없이 검사관이 육안으로 점등 상태를 확인하고 그 자리에서 전산에 '적합'으로 즉시 변경 처리해 줍니다. 검사소를 떠나기 전 10분만 투자하면 재방문의 번거로움 없이 당일 원스톱으로 검사를 완결 지을 수 있는 최고의 꿀팁입니다.
+</p>
+
+<!-- 5번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="5대 빈발 불합격 항목별 해결 전략 공략도 / 인포그래픽 카드" src="../../images/261029/7_car_vehicle_inspection_retest_period_fail_guide_5.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">5대 빈발 불합격 항목별 해결 전략 공략도 / 인포그래픽 카드</div>
+</div>
+
+<h2>07 | 정비업체 수리 후 정비명세서 지참과 재검사 예약 방법</h2>
+<p>
+배출가스, 브레이크 제동력, 조향계통 등 전문적인 수리가 필요한 항목으로 불합격 판정을 받았다면, 카센터나 1·2급 공업사에 방문하여 정비를 의뢰해야 합니다. 이때 카센터 정비사에게 검사소에서 발급받은 '자동차 기능종합진단서'를 반드시 보여주어야 정확한 부위만 타깃으로 수리하여 과잉 청구를 막을 수 있습니다.<br><br>
+수리를 마친 후에는 반드시 카센터로부터 **'정비점검내역서(정비명세서)'**를 교부받아 챙겨두셔야 합니다. 특히 배출가스 관련 항목이나 조향계통의 경우, 재검사 접수처에서 공인 정비업체의 수리 내역서를 확인 서류로 요구하는 경우가 많기 때문입니다.<br><br>
+수리가 완료되었다면 재검사 일정을 잡아야 합니다. 한국교통안전공단 직영 검사소의 경우 재검사 차량에 한해 사전 온라인 예약 없이 당일 검사소 접수실로 방문하면 우선 순번으로 재검 라인에 진입시켜 주는 '재검사 패스트트랙'을 운영합니다. 민간 지정 검사소 역시 전화 문의 후 방문하시면 대기 없이 곧바로 해당 항목만 신속하게 재측정을 진행해 줍니다.
+</p>
+<h2>08 | 재검사 기간 내 미수검 시 과태료 부과 기준표</h2>
+<p>
+재검사 기한을 가볍게 생각하고 차일피일 미루다 법정 10일 기한을 넘기는 순간, 지자체 교통행정과 전산망을 통해 과태료 처분 사전통지서가 차량 등록지로 자동 발송됩니다. 자동차관리법 제84조 및 동법 시행령에 따른 검사 지연 과태료 부과 기준은 매우 엄격합니다.<br><br>
+검사 지연 기간이 **만료일로부터 30일 이내인 경우 기본 4만 원**의 과태료가 부과됩니다. 이후 31일째부터는 매 3일이 초과할 때마다 1만 원씩 과태료가 눈덩이처럼 불어납니다. 지연 기간이 115일을 초과하게 되면 **법정 상한선인 최고 60만 원**의 과태료가 최종 부과됩니다.<br><br>
+과태료 부과에도 불구하고 검사를 끝내 받지 않고 1년 이상 방치할 경우, 관할 지자체장은 해당 차량에 대해 '운행정지 명령(운행정지 처분)'을 내리게 됩니다. 운행정지 명령이 내려진 차량을 도로에서 운행하다 적발되면 1년 이하의 징역 또는 1천만 원 이하의 벌금형이라는 무거운 형사 처벌을 받게 되며, 번호판이 강제 영치되므로 기한 내 재검사는 필수적입니다.
+</p>
+
+<!-- 6번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="재검사 기한 준수 vs 기한 초과 낭비 비용 모의 영수증 / 인포그래픽 카드" src="../../images/261029/7_car_vehicle_inspection_retest_period_fail_guide_6.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">재검사 기한 준수 vs 기한 초과 낭비 비용 모의 영수증 / 인포그래픽 카드</div>
+</div>
+
+<h2>09 | 정기검사 당일 재검사 합격을 위한 사전 자가진단 체크리스트</h2>
+<p>
+정비소에서 수리를 마쳤거나 불합격 항목을 조치한 후 재검사소로 출발하기 전, 운전자가 스스로 5분만 투자해 점검하면 100% 한 번에 합격할 수 있는 사전 자가진단 체크리스트를 공유합니다.<br><br>
+첫째, 자동차 시동을 걸고 비상등을 켠 뒤 차에서 내려 앞뒤 방향지시등, 번호판등, 후미등이 정상 점등되는지 육안으로 확인합니다. 기어를 P에 두고 브레이크 페달을 고정하거나 동승자에게 밟아달라고 하여 양쪽 브레이크등과 보조제동등에 불이 모두 들어오는지 체크합니다. 둘째, 타이어 트레드 홈에 100원짜리 동전을 거꾸로 끼워 이순신 장군의 사모(모자)가 가려지는지 마모도를 확인하고 공기압을 적정치로 맞춥니다.<br><br>
+셋째, 계기판에 엔진 경고등, ABS 경고등, 에어백 경고등 등 노란색이나 빨간색 경고등이 켜져 있는지 확인합니다. 배출가스 검사 전에는 계기판에 어떠한 엔진 경고등도 점등되어 있지 않아야 검사가 개시됩니다. 넷째, 차량등록증 원본을 지참했는지 확인합니다(모바일 등록증도 가능하지만 종이 등록증 지참 시 처리가 빠릅니다). 철저한 사전 준비로 재검사 라인을 가뿐하게 통과하시기 바랍니다.
+</p>
+
+<!-- 7번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="검사소 출발 전 5분 자가진단 체크리스트 / 인포그래픽 카드" src="../../images/261029/7_car_vehicle_inspection_retest_period_fail_guide_7.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">검사소 출발 전 5분 자가진단 체크리스트 / 인포그래픽 카드</div>
+</div>
+
+
+<!-- 8번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="자동차 재검사 자주 묻는 질문 TOP 3 / 인포그래픽 카드" src="../../images/261029/7_car_vehicle_inspection_retest_period_fail_guide_8.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">자동차 재검사 자주 묻는 질문 TOP 3 / 인포그래픽 카드</div>
+</div>
+
+<div class="recommend-area">
+  <strong>함께 읽으면 좋은 여행 &amp; 생활 정보</strong><br>
+  • <a href="../261025/car_vehicle_recall_status_lookup_guide.html">내 차와 중고차 리콜 대상 여부 차량번호 조회 방법 — 자동차리콜센터 무상수리 예약 팁</a><br>
+  • <a href="../261025/house_fall_garden_cleanup_cover_crop.html">가을 텃밭 여름 채소 정리와 빈 밭 녹비 작물 심는 법 — 호밀·헤어리베치 파종 시기와 토양 관리</a>
+</div>
+<div class="tags">
+  <span class="tag">#자동차정기검사불합격</span>
+  <span class="tag">#자동차재검사기간</span>
+  <span class="tag">#자동차재검사수수료</span>
+  <span class="tag">#정기검사재검사비용</span>
+  <span class="tag">#자동차검사과태료</span>
+  <span class="tag">#배출가스불합격</span>
+  <span class="tag">#제동력불합격</span>
+  <span class="tag">#등화장치불합격</span>
+  <span class="tag">#TS교통안전공단</span>
+  <span class="tag">#자동차검사예약</span>
+</div>
+</body>
+</html>

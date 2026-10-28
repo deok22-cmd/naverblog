@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>2027 수능일 대중교통 증차 시간과 직장인 출근 시간 조정 — 지하철·버스 집중 배차 및 비상 수송 지원</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+
+  /* ========================================================
+     🎨 다채널 인포그래픽 아키타입 CSS 시스템
+     ========================================= */
+  .infographic-box, [class*="infographic-"] {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif;
+  }
+  .infographic-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    border-bottom: 2px dashed #c8e6c9;
+    padding-bottom: 12px;
+  }
+  .infographic-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 1.1em;
+    color: #1b5e20;
+  }
+  .infographic-badge {
+    display: inline-block;
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.75em;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+  }
+
+  /* 1. 비교 매트릭스 카드 (.infographic-compare-box) */
+  .infographic-compare-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .compare-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .compare-col {
+    flex: 1;
+    min-width: 150px;
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 14px 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  }
+  .compare-col.highlight {
+    background: #f9fdf9;
+    border: 1.5px solid #388e3c;
+  }
+  .compare-col-title {
+    font-size: 0.95em;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 6px;
+  }
+  .compare-col-badge {
+    display: inline-block;
+    background: #388e3c;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .compare-row {
+    font-size: 0.82em;
+    color: #444;
+    line-height: 1.55;
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .compare-row:last-child {
+    border-bottom: none;
+  }
+
+  /* 2. 일정/동선 타임라인 로드맵 (.infographic-timeline-box) */
+  .infographic-timeline-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  .timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .timeline-badge {
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.78em;
+    font-weight: 800;
+    padding: 4px 9px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+  .timeline-content {
+    flex: 1;
+  }
+  .timeline-title {
+    font-size: 0.92em;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 4px;
+  }
+  .timeline-desc {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 3. 코스/난코스 전술 공략도 (.infographic-strategy-box) */
+  .infographic-strategy-box {
+    background: #ffffff;
+    border: 1.5px solid #ef4444;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(239,68,68,0.06);
+  }
+  .strategy-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .strategy-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .strategy-col.solution {
+    background: #f9fdf9;
+    border: 1px solid #c8e6c9;
+  }
+  .hazard-tag {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .safe-tag {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+
+  /* 4. 실전 비용/예산 견적 영수증 (.infographic-receipt-box) */
+  .infographic-receipt-box {
+    background: #ffffff;
+    border: 2px dashed #9ca3af;
+    border-radius: 12px;
+    padding: 24px 22px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+  }
+  .receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 16px;
+    font-size: 0.88em;
+  }
+  .receipt-table th {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid #d1d5db;
+  }
+  .receipt-table td {
+    padding: 8px 10px;
+    border-bottom: 1px dashed #e5e7eb;
+    color: #4b5563;
+  }
+  .receipt-total {
+    background: #f9fdf9;
+    border-top: 2px solid #388e3c;
+    padding: 12px 16px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 800;
+    color: #1b5e20;
+  }
+
+  /* 5. 필수 점검 & 준비물 체크리스트 (.infographic-checklist-box) */
+  .infographic-checklist-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .checklist-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .checklist-col {
+    flex: 1;
+    min-width: 190px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .checklist-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 6px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .checklist-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 6. 단계별 신청/절차 플로우차트 (.infographic-flow-box) */
+  .infographic-flow-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .flow-steps {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-top: 10px;
+  }
+  .flow-card {
+    flex: 1;
+    min-width: 130px;
+    background: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 12px 10px;
+    text-align: center;
+  }
+  .flow-step-num {
+    font-size: 0.72em;
+    font-weight: 800;
+    color: #388e3c;
+    background: #e8f5e9;
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+  }
+  .flow-title {
+    font-size: 0.88em;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 4px;
+  }
+  .flow-desc {
+    font-size: 0.78em;
+    color: #666;
+    line-height: 1.4;
+  }
+
+  /* 7. 4분할 핵심 수치 매트릭스 (.infographic-stat-box) */
+  .infographic-stat-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .stat-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .stat-card {
+    flex: 1;
+    min-width: 130px;
+    background: #f9fdf9;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 14px 10px;
+    text-align: center;
+  }
+  .stat-icon { font-size: 1.6em; margin-bottom: 4px; }
+  .stat-label { font-size: 0.8em; color: #666; font-weight: 600; margin-bottom: 4px; }
+  .stat-value { font-size: 1.15em; font-weight: 800; color: #388e3c; }
+  .stat-sub { font-size: 0.75em; color: #777; margin-top: 2px; }
+
+  /* 8. 평가 지표 & 코스/제품 스코어카드 (.infographic-scorecard-box) */
+  .infographic-scorecard-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .scorecard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .scorecard-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .score-label {
+    width: 110px;
+    font-size: 0.86em;
+    font-weight: 700;
+    color: #1b5e20;
+  }
+  .score-bar-bg {
+    flex: 1;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .score-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #e8f5e9, #388e3c);
+    border-radius: 5px;
+  }
+  .score-value {
+    width: 45px;
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: 800;
+    color: #388e3c;
+  }
+  .score-grade {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 0.72em;
+    font-weight: 800;
+    background: #e8f5e9;
+    color: #388e3c;
+  }
+
+  /* 9. 장단점 & 추천 vs 비추천 대조 카드 (.infographic-procon-box) */
+  .infographic-procon-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .procon-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .pro-col {
+    flex: 1;
+    min-width: 220px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .con-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .pro-badge {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .con-badge {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .procon-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 5px 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.06);
+  }
+  .procon-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 10. 핵심 질문 & 해법 Q&A 매트릭스 (.infographic-faq-box) */
+  .infographic-faq-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .faq-card {
+    background: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .faq-q {
+    font-size: 0.88em;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .faq-q-badge {
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .faq-a {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 11. 진화형 범용 인포그래픽 프리미티브 (.infographic-custom-box) */
+  .infographic-custom-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .info-callout {
+    background: #f9fdf9;
+    border-left: 4px solid #388e3c;
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.84em;
+    color: #1b5e20;
+    line-height: 1.5;
+    margin: 8px 0;
+  }
+  .info-pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 8px 0;
+  }
+  .info-pill {
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 4px 10px;
+    font-size: 0.78em;
+    font-weight: 600;
+    color: #374151;
+  }
+  .info-pill.active {
+    background: #e8f5e9;
+    border-color: #388e3c;
+    color: #388e3c;
+    font-weight: 700;
+  }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>2027 수능일 대중교통 증차 시간과 직장인 출근 시간 조정 — 지하철·버스 집중 배차 및 비상 수송 지원</h1>
+<!-- hot-dday: 2026-11-19 | src: https://www.moe.go.kr -->
+<div class="intro-box">
+  <strong>📌 2027 수능일 교통 대책 및 출근 시간 조정 핵심 3줄 요약</strong><br><br>
+  1. <strong>시험 일정:</strong> 2026년 11월 19일(목) 전국 시험장에서 치러지며, 수험생은 오전 8시 10분까지 지정된 시험실 입실을 완료해야 합니다.<br>
+  2. <strong>출근 시간 조정:</strong> 교통 혼잡 분산을 위해 전국 관공서, 공공기관, 금융기관 및 주요 기업체의 출근 시간이 오전 9시에서 10시로 1시간 늦춰집니다.<br>
+  3. <strong>대중교통 집중 배차:</strong> 아침 러시아워 집중 배차 시간이 기존 07~09시(2시간)에서 06~10시(4시간)로 대폭 확대되어 지하철과 시내버스가 최대 편수로 증편 운행됩니다.
+</div>
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 대표 메인 썸네일 생성 영역</span>
+      <span class="ph-file">images/261029/5_hot_csat_public_transport_schedule_rush_hour_traffic_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-1">Korean police officers assisting high school students arriving on time for the national college entrance exam CSAT on a crisp autumn morning. Police patrol cars with flashing lights stationed near a subway station entrance in Seoul, assisting students with transparent clipboards and backpacks. Warm autumn morning sunlight, modern city street background with city buses and autumn trees, inspiring and supportive atmosphere. Ultra realistic photography, 8k resolution, authentic Korean context.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">2027 수능일 수험생 긴급 수송 지원과 대중교통 증차 / AI 제작 이미지</div>
+</div>
+
+<!-- 2번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="2027 수능일 핵심 교통 및 운영 지표 / 인포그래픽 카드" src="../../images/261029/5_hot_csat_public_transport_schedule_rush_hour_traffic_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">2027 수능일 핵심 교통 및 운영 지표 / 인포그래픽 카드</div>
+</div>
+
+<h2>01 | 2027 수능일 대중교통 증차와 출근 시간 조정 핵심 요약</h2>
+<p>
+2026년 11월 19일 목요일, 전국 80여 개 시험지구 1,300여 개 시험장에서 2027학년도 대학수학능력시험(수능)이 일제히 치러집니다. 교육부와 국토교통부, 경찰청 및 전국 지방자치단체는 수능 당일 수험생들이 안전하고 원활하게 시험장에 도착할 수 있도록 범정부 차원의 '수능 당일 교통 및 소음 통제 종합 대책'을 가동합니다. 인생의 중요한 관문을 통과하는 수험생들이 도로 위의 정체나 대중교통 지연으로 인해 시험을 망치는 일이 없도록 국가의 모든 수송 역량이 총동원됩니다.<br><br>
+가장 눈에 띄는 변화는 아침 출근 시간대 대중교통의 전면적인 확대 편성입니다. 평소 오전 7시부터 9시까지 2시간 동안 운영되던 출근 혼잡 시간대(러시아워) 집중 배차 시간이 수능 당일에는 **오전 6시부터 오전 10시까지 총 4시간으로 2배 확대**됩니다. 지하철 운행 횟수가 대폭 늘어나고, 시내버스와 마을버스는 배차 간격을 최소화하여 수험생들의 이동 편의를 최우선으로 지원합니다.<br><br>
+동시에 수험생 등교 시간대 도로 정체를 원천 차단하기 위해 전국 시·군·구 관공서와 공공기관, 은행 및 금융기관, 주요 대기업의 **출근 시간이 기존 9시에서 오전 10시로 1시간 늦춰집니다.** 일반 시민들과 직장인 여러분께서도 수능 당일 아침에는 자가용 운행을 최대한 자제하고 지하철 등 대중교통을 이용해 수험생들의 수송로를 열어주는 따뜻한 배려가 절실히 요구됩니다.
+</p>
+<h2>02 | 2026년 11월 19일 목요일 수능 시험 일정과 수험생 입실 시간</h2>
+<p>
+수능 당일 수험생이 반드시 숙지해야 할 가장 엄격한 규칙은 입실 완료 시각입니다. 모든 수험생은 **시험 당일 오전 8시 10분까지 지정된 시험실에 반드시 착석**을 완료해야 합니다. 8시 10분 이후에는 교문 및 건물 출입문이 닫히며, 8시 40분 1교시 국어영역 시작 전 본인 확인 및 시험 유의사항 안내가 엄격히 진행되므로 지각 시 원칙적으로 시험 응시가 불가능해질 수 있습니다.<br><br>
+시험장 입실은 오전 6시 30분부터 가능하므로, 낯선 환경에 적응하고 마음의 안정을 찾기 위해서는 가급적 오전 7시 30분에서 7시 40분 사이에 여유 있게 고사장에 도착하는 것이 좋습니다. 시험장 입실 전날인 11월 18일(수)에는 예비소집이 실시되므로, 반드시 본인의 수험표를 수령하고 시험장 위치와 대중교통 이동 동선을 사전에 직접 확인해 두어야 당일 당황하는 사고를 방지할 수 있습니다. 당일 입실 시간 임박 시 심리적 불안감이 극대화될 수 있습니다.<br><br>
+시험 시간표는 1교시 국어(08:40~10:00), 2교시 수학(10:30~12:10), 점심시간(12:10~13:00), 3교시 영어(13:10~14:20), 4교시 한국사 및 탐구(14:50~16:37), 5교시 제2외국어/한문(17:05~17:45) 순으로 진행됩니다. 수험생들은 신분증과 수험표를 전날 밤 미리 투명 파일에 챙겨두고, 아날로그 시계와 보온 도시락을 철저히 점검해야 합니다. 전자담배나 스마트워치는 부정행위 물품이므로 절대 소지해서는 안 됩니다.
+</p>
+
+<!-- 3번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="수능일 평일 대비 교통 운영 변경 비교 / 인포그래픽 카드" src="../../images/261029/5_hot_csat_public_transport_schedule_rush_hour_traffic_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">수능일 평일 대비 교통 운영 변경 비교 / 인포그래픽 카드</div>
+</div>
+
+<h2>03 | 관공서·공공기관·기업체 출근 시간 10시 조정 기준과 대상 기관</h2>
+<p>
+수능 아침 교통 대란을 방지하기 위한 핵심 행정 조치는 전국적인 출근 시간 시차제 운영입니다. 정부는 중앙행정기관, 지방자치단체, 공기업 등 전 공공기관의 출근 시각을 **기존 오전 9시에서 오전 10시로 1시간 늦추도록 공식 지정**하였습니다. 이를 통해 아침 7시에서 8시 사이 도로로 쏟아져 나오는 통근 차량을 분산시켜 수험생들의 이동로를 확보합니다. 공무원과 공공기관 직원들은 10시 출근에 맞춰 시차 출퇴근제를 적용받습니다.<br><br>
+공공기관뿐만 아니라 민간 부문에서도 적극적인 동참이 이루어집니다. 전국은행연합회의 결정에 따라 시중 은행, 저축은행, 농·축협 등 금융기관의 영업점 오픈 시간이 오전 9시에서 오전 10시로 일제히 변경되며, 마감 시간 역시 오후 4시에서 오후 5시로 1시간 순연됩니다. 한국거래소(KRX)의 유가증권시장(코스피), 코스닥시장, 코넥스 시장의 정규 주식 매매 거래 개시 시간 역시 오전 10시로 1시간 늦춰집니다.<br><br>
+일반 사기업 및 대기업 역시 정부의 협조 요청에 따라 부서별 유연근무제나 오전 10시 출근을 적극 권장하고 있습니다. 수험생을 자녀로 둔 직장인들은 물론, 일반 직장인 여러분도 당일 은행 업무나 관공서 민원 방문 일정이 있다면 10시 이후로 스케줄을 조정하셔야 헛걸음하는 불편을 겪지 않습니다. 주식 거래자들 또한 장 개장 시각이 10시로 늦춰진다는 점을 염두에 두어야 합니다.
+</p>
+<h2>04 | 수도권 지하철 집중 배차 시간 4시간 확대와 증편 운행 계획</h2>
+<p>
+수도권 교통의 대동맥인 서울 지하철 1~9호선 및 신분당선, 경의중앙선 등 광역철도는 수능 당일 수험생 등교 시간대에 맞춰 총력 수송 태세에 돌입합니다. 통상 아침 7시부터 9시까지 운영되던 출근 집중 배차 시간을 **오전 6시부터 오전 10시까지 4시간으로 대폭 연장**합니다. 이 조치는 수험생뿐만 아니라 10시로 출근 시간이 미뤄진 일반 직장인들의 수송까지 완벽히 감당하기 위함입니다.<br><br>
+이 시간대 동안 지하철 운행 횟수는 총 30~40회 이상 추가 증편되며, 열차 간 배차 간격이 2~3분대로 촘촘하게 좁혀집니다. 만일의 열차 고장이나 신호 장애 등 돌발 사태에 대비해 주요 환승 거점역(신도림, 사당, 왕십리, 종로3가 등)에는 비상 대기 예비 열차가 항시 대기하여 비상 상황 발생 시 즉각 투입됩니다. 열차 지연으로 인한 수험생 피해를 원천 차단하는 이중 안전망입니다.<br><br>
+또한 서울교통공사와 코레일은 역무원 및 지원 인력을 개찰구와 승강장에 집중 배치하여 수험생 시험장 방향 출구 안내를 돕고, 역사 내 엘리베이터와 에스컬레이터의 안전 점검을 완료하여 병목 현상을 방지합니다. 수험생들은 지하철 지연이나 돌발 정체를 피하기 위해 환승 구간이 적은 최단 경로를 미리 파악해 두는 것이 유리하며, 티머니 카드 잔액을 미리 충전해 두어야 개찰구 지체를 막을 수 있습니다.
+</p>
+
+<!-- 4번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="수능일 시간대별 종합 교통 및 행정 통제 로드맵 / 인포그래픽 카드" src="../../images/261029/5_hot_csat_public_transport_schedule_rush_hour_traffic_4.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">수능일 시간대별 종합 교통 및 행정 통제 로드맵 / 인포그래픽 카드</div>
+</div>
+
+<h2>05 | 시내버스·마을버스 배차 간격 단축과 시험장 경유 노선 안내</h2>
+<p>
+지하철역에서 다소 떨어진 주택가나 외곽 시험장에 배정된 수험생들을 위해 시내버스와 마을버스 역시 총력 수송 체계를 갖춥니다. 각 지자체는 시험장을 경유하는 버스 노선의 배차 간격을 평소 출근 시간대보다 20~30% 이상 단축하여 촘촘하게 운행하도록 버스운송사업조합과 협의를 마쳤습니다. 버스 정류장에서 기다리는 대기 시간을 최소화하기 위한 특단의 조치입니다.<br><br>
+특히 시험장을 경유하는 시내버스와 마을버스의 전면 유리창에는 **'수능 시험장 경유 노선'** 안내 표지판이 부착되며, 시험장 인근 정류소에 도착할 때마다 "이번 정류소는 ○○고등학교 수능 시험장입니다. 수험생 여러분 힘내십시오"라는 격려 및 하차 안내 방송이 송출됩니다. 수험생들이 실수로 정류장을 지나치지 않도록 세심하게 배려한 조치입니다.<br><br>
+또한 아침 6시 30분부터 8시 10분 사이에는 지자체 관용 차량과 모범운전자회, 녹색어머니회의 자원봉사 차량 수백 대가 주요 버스 정류장과 지하철역 인근에 비상 대기합니다. 대중교통이 지연되거나 환승에 차질이 빚어진 수험생을 발견하는 즉시 시험장까지 무료로 신속하게 태워주는 '빈차 태워주기' 운동이 대대적으로 전개됩니다. 도움이 필요한 수험생은 주저 없이 손을 들어 차량 지원을 요청할 수 있습니다.
+</p>
+<h2>06 | 지각 위기 수험생을 위한 112 순찰차 비상 수송 및 자원봉사 거점</h2>
+<p>
+수능 날 아침이면 차량 고장, 버스 오탑승, 교통 체증 등 예기치 못한 돌발 상황으로 인해 입실 마감 시간(오전 8시 10분)에 쫓기는 수험생들이 매년 발생합니다. 경찰청은 이러한 지각 위기 수험생들을 위해 전국 주요 지하철역과 교차로 등 교통 요충지 수백 곳에 **'수험생 비상 수송 거점'**을 설치하고 112 순찰차와 경찰 오토바이(싸이카)를 전진 배치합니다.<br><br>
+만약 아침 7시 30분이 넘은 시각에 도로가 꽉 막혀 제시간에 도착하기 어렵다고 판단된다면, 주저하지 말고 **112에 전화를 걸어 "수험생 긴급 수송 요청"을 접수**해야 합니다. 경찰 112 종합상황실에서는 위치 정보를 기반으로 가장 가까운 순찰차나 싸이카를 현장으로 즉시 출동시켜 사이렌을 울리며 안전하고 빠르게 시험장 정문까지 에스코트합니다. 신호등 통제 지원을 받아 촌각을 다투는 수험생을 살려냅니다.<br><br>
+지하철역 출구에 나와 있는 모범운전자회 자원봉사자나 경찰관에게 수험표를 보여주며 도움을 요청해도 즉시 비상 수송 차량에 탑승할 수 있습니다. 다만, 순찰차 긴급 수송은 긴급한 상황에 처한 수험생을 위한 공공 서비스이므로, 사소한 지각 우려로 남용하기보다는 30분 이상 일찍 집을 나서는 철저한 시간 관리가 기본이 되어야 합니다.
+</p>
+
+<!-- 5번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="수험생 지각 위기 비상 수송 4단계 대처법 / 인포그래픽 카드" src="../../images/261029/5_hot_csat_public_transport_schedule_rush_hour_traffic_5.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">수험생 지각 위기 비상 수송 4단계 대처법 / 인포그래픽 카드</div>
+</div>
+
+<h2>07 | 영어 듣기평가 시간대(13:10~13:35) 항공기 및 소음 통제 조치</h2>
+<p>
+수능 시험 당일 가장 정적이고 삼엄한 긴장감이 흐르는 시간은 바로 3교시 영어영역 듣기평가가 진행되는 **오후 1시 10분부터 1시 35분까지 총 25분간**입니다. 이 시간대에는 수험생들이 오직 스피커에서 흘러나오는 영어 발음에 집중할 수 있도록 국가적인 차원의 강력한 소음 통제 조치가 시행됩니다. 단 한 번의 외부 소음으로도 수험생의 1년 노력이 물거품이 될 수 있기 때문입니다.<br><br>
+국토교통부 항공 통제에 따라 이 25분 동안에는 비상착륙 등 불가피한 상황을 제외하고 **전국 모든 공항에서 항공기 이륙과 착륙이 전면 금지**됩니다. 비행 중인 항공기는 상공 3km 이상 안전 고도에서 선회하며 대기해야 합니다. 또한 국방부와 주한미군은 시험장 주변 군부대의 사격 훈련, 포사격, 야외 기동 훈련 및 군용 헬기 운항을 전면 중지합니다. 국제선과 국내선을 막론하고 모든 하늘길이 잠시 숨을 죽입니다.<br><br>
+지상에서도 철저한 통제가 이루어집니다. 시험장 주변 도로를 통과하는 기차와 지하철은 서행 운행하며 기적(경적)을 울리지 못하도록 조치됩니다. 시험장 인근 건설 공사장에서는 소음 발생 공사가 전면 중단되며, 운전자들 역시 시험장 주변 1km 이내에서는 절대 경적을 울리지 말고 서행 운전해야 합니다. 온 국민이 한마음으로 수험생들의 1분을 지켜주는 시간입니다.
+</p>
+<h2>08 | 수능 당일 일반 운전자 필수 주의사항 — 시험장 반경 200m 주정차 금지</h2>
+<p>
+수능 당일 자가용을 운전하는 일반 시민과 학부모 운전자들이 반드시 지켜야 할 도로교통법상 주의사항이 있습니다. 모든 수험장 학교 교문 앞과 **반경 200m 이내 도로변은 주정차가 전면 금지**되는 절대 주정차 금지 구역으로 설정됩니다. 자녀를 시험장에 바래다주는 학부모 차량도 학교 정문 바로 앞까지 진입할 수 없습니다. 교문 앞 혼잡은 후속 수험생들의 진입을 가로막는 치명적인 원인이 됩니다.<br><br>
+학부모 차량은 시험장 200m 전방 안전지대에서 수험생을 신속히 하차시킨 후 곧바로 차량을 이동해야 하며, 교문 앞 도로에 비상등을 켠 채 대기하거나 정차하는 행위는 극심한 병목 현상을 유발하므로 경찰과 불법 주정차 단속 요원에 의해 즉시 견인 조치 및 과태료가 부과됩니다. 수험생을 배웅할 때에는 미리 포옹과 격려를 나누고 안전한 곳에서 내려주는 것이 성숙한 부모의 배려입니다.<br><br>
+또한 시험장 주변 교차로에서는 신호 위반, 끼어들기, 꼬리물기 행위에 대한 경찰의 집중 단속이 실시됩니다. 수험생을 태운 차량이 신속히 지나갈 수 있도록 양보 운전을 실천해 주시고, 수험생 입실 완료 시각인 오전 8시 10분까지는 가급적 시험장 주변 도로로의 진입을 우회하여 주시기 바랍니다. 성숙한 시민 의식이 수험생들의 발걸음을 가볍게 만듭니다.
+</p>
+
+<!-- 6번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="수능 당일 시민 및 운전자 협조 수칙 3열 / 인포그래픽 카드" src="../../images/261029/5_hot_csat_public_transport_schedule_rush_hour_traffic_6.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">수능 당일 시민 및 운전자 협조 수칙 3열 / 인포그래픽 카드</div>
+</div>
+
+<h2>09 | 수험생 수송 종합상황실 비상 연락망과 수험표 분실 시 대처법</h2>
+<p>
+수능 당일 아침 수험생들이 가장 흔히 겪는 패닉 상황 중 하나가 바로 '수험표 분실'입니다. 만약 집이나 이동 중에 수험표를 분실했거나 집에 두고 왔다는 사실을 뒤늦게 깨달았더라도 절대 당황하거나 집으로 되돌아갈 필요가 없습니다. 현장에서 즉시 재발급받을 수 있는 비상 구제 절차가 마련되어 있습니다. 시간을 허비하며 되돌아가다 입실 마감 시간을 넘기는 것이 가장 위험합니다.<br><br>
+수험표를 분실했을 때는 신분증(주민등록증, 운전면허증, 여권, 청소년증 등)과 여권용 규격 사진 1매를 지참하고, **시험 당일 아침 7시 30분까지 시험장 본부(시험관리본부)**로 찾아가면 즉시 '임시 수험표'를 발급받아 정상적으로 시험에 응시할 수 있습니다. 만약 사진이 없더라도 시험장 관리본부에서 본인 확인 서약서 작성 및 임시 확인 조치를 거쳐 응시가 가능하도록 배려하므로 발걸음을 돌리지 말고 시험실로 직행해야 합니다.<br><br>
+각 시·도 교육청과 경찰청은 당일 아침 6시부터 '수능 교통 및 비상 수송 종합상황실'을 가동합니다. 대중교통 관련 문의는 각 지자체 다산콜센터(서울 120 등)를 이용하시고, 이동 중 긴급 구호나 호송이 필요한 경우 국번 없이 112(경찰) 또는 119(소방)로 즉시 연락하시기 바랍니다. 오랜 시간 땀 흘려 준비해 온 모든 수험생 여러분의 빛나는 노력이 온전히 결실을 맺기를 진심으로 응원합니다.
+</p>
+
+<!-- 7번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="2027 수능일 교통 및 행정 FAQ TOP 3 / 인포그래픽 카드" src="../../images/261029/5_hot_csat_public_transport_schedule_rush_hour_traffic_7.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">2027 수능일 교통 및 행정 FAQ TOP 3 / 인포그래픽 카드</div>
+</div>
+
+<div class="recommend-area">
+  <strong>함께 읽으면 좋은 여행 &amp; 생활 정보</strong><br>
+  • <a href="../261025/hot_korea_sale_festa_calendar_shopping_guide.html">2026 코리아세일페스타 참여 업체와 할인 캘린더 — 백화점·대형마트 생필품 세일 기간 총정리</a><br>
+  • <a href="../261025/travel_hwaseong_yulam_hot_spring_charcoal_spa.html">경기 화성 율암온천 참숯가마와 노천탕 이용 팁 — 수도권 당일치기 목욕 요금과 준비물 안내</a>
+</div>
+<div class="tags">
+  <span class="tag">#2027수능</span>
+  <span class="tag">#수능대중교통</span>
+  <span class="tag">#수능출근시간</span>
+  <span class="tag">#수능지하철증차</span>
+  <span class="tag">#수능입실시간</span>
+  <span class="tag">#112비상수송</span>
+  <span class="tag">#영어듣기평가소음통제</span>
+  <span class="tag">#수능은행영업시간</span>
+  <span class="tag">#수험생응원</span>
+  <span class="tag">#수능교통대책</span>
+</div>
+</body>
+</html>
