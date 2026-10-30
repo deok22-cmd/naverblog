@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>부고 알림 문자 작성법과 양식 — 상주 고인 관계 빈소 발인 일시와 장례식장 계좌 표기 예시 5선</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+
+  /* ========================================================
+     🎨 다채널 인포그래픽 아키타입 CSS 시스템
+     ========================================= */
+  .infographic-box, [class*="infographic-"] {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif;
+  }
+  .infographic-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    border-bottom: 2px dashed #c8e6c9;
+    padding-bottom: 12px;
+  }
+  .infographic-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 1.1em;
+    color: #1b5e20;
+  }
+  .infographic-badge {
+    display: inline-block;
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.75em;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+  }
+
+  /* 1. 비교 매트릭스 카드 (.infographic-compare-box) */
+  .infographic-compare-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .compare-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .compare-col {
+    flex: 1;
+    min-width: 150px;
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 14px 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  }
+  .compare-col.highlight {
+    background: #f9fdf9;
+    border: 1.5px solid #388e3c;
+  }
+  .compare-col-title {
+    font-size: 0.95em;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 6px;
+  }
+  .compare-col-badge {
+    display: inline-block;
+    background: #388e3c;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .compare-row {
+    font-size: 0.82em;
+    color: #444;
+    line-height: 1.55;
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .compare-row:last-child {
+    border-bottom: none;
+  }
+
+  /* 2. 일정/동선 타임라인 로드맵 (.infographic-timeline-box) */
+  .infographic-timeline-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  .timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .timeline-badge {
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.78em;
+    font-weight: 800;
+    padding: 4px 9px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+  .timeline-content {
+    flex: 1;
+  }
+  .timeline-title {
+    font-size: 0.92em;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 4px;
+  }
+  .timeline-desc {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 3. 코스/난코스 전술 공략도 (.infographic-strategy-box) */
+  .infographic-strategy-box {
+    background: #ffffff;
+    border: 1.5px solid #ef4444;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(239,68,68,0.06);
+  }
+  .strategy-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .strategy-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .strategy-col.solution {
+    background: #f9fdf9;
+    border: 1px solid #c8e6c9;
+  }
+  .hazard-tag {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .safe-tag {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+
+  /* 4. 실전 비용/예산 견적 영수증 (.infographic-receipt-box) */
+  .infographic-receipt-box {
+    background: #ffffff;
+    border: 2px dashed #9ca3af;
+    border-radius: 12px;
+    padding: 24px 22px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+  }
+  .receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 16px;
+    font-size: 0.88em;
+  }
+  .receipt-table th {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid #d1d5db;
+  }
+  .receipt-table td {
+    padding: 8px 10px;
+    border-bottom: 1px dashed #e5e7eb;
+    color: #4b5563;
+  }
+  .receipt-total {
+    background: #f9fdf9;
+    border-top: 2px solid #388e3c;
+    padding: 12px 16px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 800;
+    color: #1b5e20;
+  }
+
+  /* 5. 필수 점검 & 준비물 체크리스트 (.infographic-checklist-box) */
+  .infographic-checklist-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .checklist-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .checklist-col {
+    flex: 1;
+    min-width: 190px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .checklist-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 6px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .checklist-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 6. 단계별 신청/절차 플로우차트 (.infographic-flow-box) */
+  .infographic-flow-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .flow-steps {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-top: 10px;
+  }
+  .flow-card {
+    flex: 1;
+    min-width: 130px;
+    background: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 12px 10px;
+    text-align: center;
+  }
+  .flow-step-num {
+    font-size: 0.72em;
+    font-weight: 800;
+    color: #388e3c;
+    background: #e8f5e9;
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+  }
+  .flow-title {
+    font-size: 0.88em;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 4px;
+  }
+  .flow-desc {
+    font-size: 0.78em;
+    color: #666;
+    line-height: 1.4;
+  }
+
+  /* 7. 4분할 핵심 수치 매트릭스 (.infographic-stat-box) */
+  .infographic-stat-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .stat-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .stat-card {
+    flex: 1;
+    min-width: 130px;
+    background: #f9fdf9;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 14px 10px;
+    text-align: center;
+  }
+  .stat-icon { font-size: 1.6em; margin-bottom: 4px; }
+  .stat-label { font-size: 0.8em; color: #666; font-weight: 600; margin-bottom: 4px; }
+  .stat-value { font-size: 1.15em; font-weight: 800; color: #388e3c; }
+  .stat-sub { font-size: 0.75em; color: #777; margin-top: 2px; }
+
+  /* 8. 평가 지표 & 코스/제품 스코어카드 (.infographic-scorecard-box) */
+  .infographic-scorecard-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .scorecard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .scorecard-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .score-label {
+    width: 110px;
+    font-size: 0.86em;
+    font-weight: 700;
+    color: #1b5e20;
+  }
+  .score-bar-bg {
+    flex: 1;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .score-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #e8f5e9, #388e3c);
+    border-radius: 5px;
+  }
+  .score-value {
+    width: 45px;
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: 800;
+    color: #388e3c;
+  }
+  .score-grade {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 0.72em;
+    font-weight: 800;
+    background: #e8f5e9;
+    color: #388e3c;
+  }
+
+  /* 9. 장단점 & 추천 vs 비추천 대조 카드 (.infographic-procon-box) */
+  .infographic-procon-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .procon-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .pro-col {
+    flex: 1;
+    min-width: 220px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .con-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .pro-badge {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .con-badge {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .procon-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 5px 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.06);
+  }
+  .procon-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 10. 핵심 질문 & 해법 Q&A 매트릭스 (.infographic-faq-box) */
+  .infographic-faq-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .faq-card {
+    background: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .faq-q {
+    font-size: 0.88em;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .faq-q-badge {
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .faq-a {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 11. 진화형 범용 인포그래픽 프리미티브 (.infographic-custom-box) */
+  .infographic-custom-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .info-callout {
+    background: #f9fdf9;
+    border-left: 4px solid #388e3c;
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.84em;
+    color: #1b5e20;
+    line-height: 1.5;
+    margin: 8px 0;
+  }
+  .info-pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 8px 0;
+  }
+  .info-pill {
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 4px 10px;
+    font-size: 0.78em;
+    font-weight: 600;
+    color: #374151;
+  }
+  .info-pill.active {
+    background: #e8f5e9;
+    border-color: #388e3c;
+    color: #388e3c;
+    font-weight: 700;
+  }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>부고 알림 문자 작성법과 양식 — 상주 고인 관계 빈소 발인 일시와 장례식장 계좌 표기 예시 5선</h1>
+
+<div class="intro-box">
+  <strong>📌 부고 알림 문자 작성법과 양식 핵심 3줄 요약</strong><br><br>
+  1. <strong>6대 필수 기재 항목:</strong> 부고 문자에는 ① 고인 성함 및 상주와의 관계(부친상/모친상 등), ② 별세 일시, ③ 빈소(장례식장 이름·호실·상세 도로명 주소), ④ 발인 일시 및 장지, ⑤ 상주 및 유족 명단, ⑥ 마음 전하실 곳(계좌번호 및 예금주)이 누락 없이 명시되어야 합니다.<br>
+  2. <strong>발송 시점 및 수단:</strong> 임종 직후가 아니라 장례식장 빈소 배정과 발인 일시가 최종 확정된 후(통상 임종 후 2~4시간 이내)에 발송해야 혼선을 막을 수 있으며, 최근 스미싱 우려로 모바일 링크 단독 전송보다는 핵심 텍스트를 반드시 본문에 병기해야 합니다.<br>
+  3. <strong>계좌 표기 예절:</strong> 부의금 계좌를 안내할 때는 "부득이하게 직접 조문을 오지 못하시는 분들을 위해 마음 전하실 곳을 조심스럽게 안내해 드립니다"와 같이 정중한 양해 문구를 반드시 선행하여 표기하는 것이 예의입니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 대표 메인 썸네일 생성 영역</span>
+      <span class="ph-file">images/261031/7_rite_obituary_notice_message_writing_format_template_samples_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-7-1">A respectful and solemn composition showing a modern smartphone displaying a neatly formatted formal Korean obituary message (bugo) lying on a dark, elegant wooden table next to a pure white chrysanthemum flower and a traditional black-edged white condolences envelope. Soft, gentle indoor lighting creates a deeply reverent, quiet, and peaceful atmosphere. Clean and minimalist funeral etiquette concept with thoughtful attention to cultural Korean traditions. Ultra-realistic photography, 8k resolution, crisp details, beautiful shallow depth of field, warm respectful tones.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-7-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">순백의 국화꽃과 함께 정갈하게 정리된 부고 알림 문자 양식을 확인하는 모습 / AI 제작 이미지</div>
+</div>
+
+<!-- 인포그래픽 1: 점검 체크리스트 -->
+
+<!-- 2번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="📋 부고 알림 문자 발송 전 필수 6대 요소 누락 점검표 필수 항목 / 인포그래픽 카드" src="../../images/261031/7_rite_obituary_notice_message_writing_format_template_samples_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">📋 부고 알림 문자 발송 전 필수 6대 요소 누락 점검표 필수 항목 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>01 | 갑작스러운 비보, 상주가 가장 먼저 작성해야 하는 부고 알림 문자의 중요성</h2>
+<p>
+사랑하는 부모님이나 가족과의 예기치 못한 영원한 이별은 그 누구에게나 감당하기 힘든 커다란 슬픔과 당혹감을 안겨줍니다. 하지만 황망한 슬픔 속에서도 상주와 유족은 고인의 마지막 길을 외롭지 않고 품격 있게 모시기 위해 현실적이고 신속한 행정 및 의전 절차를 진행해야 합니다. 그중에서도 고인의 별세 소식을 친인척과 지인들에게 공식적으로 알리는 '부고 알림 문자(訃告)'는 장례식의 첫 단추를 꿰는 가장 중요한 과업입니다.<br><br>
+부고장은 단순한 비보의 전달을 넘어, 고인을 추모하고자 하는 조문객들이 일정과 동선을 계획하고 예의를 갖출 수 있도록 돕는 실질적인 안내장입니다. 만약 경황이 없다는 이유로 빈소 주소나 호실, 발인 일시를 누락하거나 오기입하게 되면, 조문객들이 헛걸음을 하거나 장례식장에서 큰 혼선이 빚어질 수 있습니다.<br><br>
+과거에는 신문 부고란이나 종이 부고장을 돌렸지만, 오늘날에는 모바일 문자메시지(SMS/LMS)와 카카오톡 메시지가 가장 보편적인 수단으로 자리 잡았습니다. 따라서 슬픔 중에도 마음을 가다듬고 필수 항목이 정갈하게 담긴 표준 부고 문안을 작성해 두어야 신속하고 정확하게 지인들에게 부고를 전할 수 있습니다.
+</p>
+
+<h2>02 | 부고장에 반드시 포함해야 하는 6대 필수 핵심 기재 사항</h2>
+<p>
+부고 문자를 작성할 때 문장이 너무 길거나 불필요한 미사여구가 많으면 정작 중요한 핵심 정보가 한눈에 들어오지 않습니다. 조문객의 입장에서 가장 신속하게 파악해야 하는 정보는 정확히 6가지입니다.<br><br>
+첫째, **'고인의 성함과 상주와의 관계'**입니다. 받는 사람이 상주의 친구나 직장 동료인 경우가 많으므로 "○○○의 부친 고 ○○○ 옹께서"와 같이 누구의 부모님인지, 또는 배우자인지를 첫머리에 명확하게 밝혀야 합니다. 둘째, **'별세 일시'**입니다. 영면하신 날짜와 대략적인 시간(오전/오후)을 기재합니다. 셋째, **'빈소 정보'**입니다. 장례식장의 정확한 명칭은 물론, 층수와 호실 번호(예: 서울아산병원 장례식장 2층 23호), 그리고 내비게이션이나 택시 이용을 위한 도로명 상세 주소를 반드시 포함해야 합니다.<br><br>
+넷째, **'발인 일시 및 장지'**입니다. 발인 날짜와 정확한 시간(예: 11월 2일 오전 7시 30분), 그리고 고인이 최종적으로 안치될 장지(예: 서울시립승화원 및 분당메모리얼파크)를 기재합니다. 다섯째, **'유족(상주) 명단'**입니다. 상주(장남, 자녀), 며느리, 사위, 손자 등의 관계와 이름을 명시하여 조문객이 방명록을 쓰거나 조의금을 전달할 때 대상을 명확히 알 수 있게 합니다. 여섯째, **'마음 전하실 곳(계좌번호)'**입니다. 거리나 개인 사정으로 직접 조문하지 못하는 분들을 배려하여 은행명, 계좌번호, 예금주를 조심스러운 문구와 함께 덧붙입니다.
+</p>
+
+<!-- 인포그래픽 2: 단계별 절차 플로우 -->
+
+<!-- 3번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="🔄 임종부터 부고 발송까지 4단계 실무 대응 플로우 장례 초기 절차 / 인포그래픽 카드" src="../../images/261031/7_rite_obituary_notice_message_writing_format_template_samples_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">🔄 임종부터 부고 발송까지 4단계 실무 대응 플로우 장례 초기 절차 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>03 | 헷갈리기 쉬운 가족 관계별 호칭 정리 (부친상·모친상·빙부상·빙모상·조부모상)</h2>
+<p>
+부고 문자를 작성할 때 가장 많은 실수가 나오는 부분이 바로 상주와 고인의 관계를 나타내는 전통 경조사 한자 호칭입니다. 평소 자주 쓰지 않는 단어이다 보니 잘못된 단어를 기재하여 결례를 범하는 경우가 적지 않습니다. 상황에 맞는 올바른 호칭을 명확히 알아두어야 합니다.<br><br>
+가장 흔한 부친상과 모친상의 경우 남의 부친을 높여 부를 때는 '춘부장(春府丈)', 모친은 '자당(慈堂)'이라 칭하지만, 상주 본인이 부고장을 보낼 때는 겸양의 의미를 담아 **'부친상(父親喪)'**, **'모친상(母親喪)'**으로 명기하는 것이 표준입니다. 돌아가신 아버지를 지칭할 때는 '선친(先親)' 또는 '선고(先考)', 어머니는 '선비(先妣)'라는 표현을 쓰기도 합니다.<br><br>
+배우자의 부모님이 돌아가셨을 때의 호칭도 주의해야 합니다. 아내의 아버지가 돌아가신 경우는 **'빙부상(氷父喪)'** 또는 **'장인상'**이라 부르며, 아내의 어머니가 돌아가신 경우는 **'빙모상(氷母喪)'** 또는 **'장모상'**이라 부릅니다. 남편의 부모님이 돌아가셨을 때는 **'시아버지상'**, **'시어머니상'**(한자로는 시부상, 시모상)으로 알기 쉽게 표기하는 것이 요즘의 추세입니다. 할아버지나 할머니의 경우에는 **'조부상(祖父喪)'**, **'조모상(祖母喪)'**으로 표기합니다. 굳이 어려운 한자어를 고집하기보다는 지인들이 직관적으로 이해할 수 있는 순우리말 병기(예: 장인상, 시모상)를 사용하는 것도 매우 좋습니다.
+</p>
+
+<!-- 인포그래픽 3: 비교 매트릭스 카드 -->
+
+<!-- 4번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="⚖️ 상주와 고인의 관계별 올바른 부고 공식 호칭 대조표 호칭 가이드 / 인포그래픽 카드" src="../../images/261031/7_rite_obituary_notice_message_writing_format_template_samples_4.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">⚖️ 상주와 고인의 관계별 올바른 부고 공식 호칭 대조표 호칭 가이드 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>04 | 상황별 즉시 복사해 쓰는 실전 부고 알림 문자 템플릿 5선</h2>
+<p>
+경황이 없는 상황에서 바로 활용할 수 있도록, 가장 널리 쓰이는 상황별 부고 문자 표준 양식 5가지를 정리했습니다. 각 괄호 안의 정보를 실제 상황에 맞게 수정하여 사용하시면 됩니다.
+</p>
+
+<h3>1. 표준 정중형 부고장 (일반 지인·친인척 대상)</h3>
+<div class="step-box">
+[부고]<br><br>
+○○○의 부친(고 ○○○ 옹, 향년 ○○세)께서 2026년 ○월 ○일 숙환으로 별세하셨기에 삼가 부고를 전해드립니다.<br><br>
+황망한 마음에 일일이 찾아뵙고 인사드리지 못하고 문자로 비보를 전해드리게 됨을 너그럽게 혜량하여 주시기 바랍니다.<br><br>
+• 빈소: ○○병원 장례식장 ○호실 (도로명 주소: ○○시 ○○구 ○○로 ○○)<br>
+• 발인: 2026년 ○월 ○일(○) 오전 ○시 ○분<br>
+• 장지: ○○승화원 및 ○○추모공원<br>
+• 상주: 장남 ○○○, 차남 ○○○, 자부 ○○○, 사위 ○○○, 딸 ○○○ 배상<br><br>
+※ 마음 전하실 곳: ○○은행 123-456-789012 (예금주: ○○○)<br>
+(직접 찾아뵙지 못하는 분들을 위해 조심스럽게 계좌를 안내해 드립니다.)
+</div>
+
+<h3>2. 직장 및 거래처 공지용 약식 부고 (사내 게시판 및 업무 지인용)</h3>
+<div class="step-box">
+[부고 알림 - ○○팀 ○○○ 팀장]<br><br>
+○○부서 ○○○ 팀장의 모친(고 ○○○ 여사, 향년 ○○세)께서 별세하셨음을 알려드립니다.<br><br>
+• 빈소: ○○대학교병원 장례식장 ○호실<br>
+• 주소: ○○시 ○○구 ○○로 ○○<br>
+• 발인: 2026년 ○월 ○일(○) 오전 ○시<br>
+• 장지: ○○시립승화원<br>
+• 사우회 계좌: ○○은행 123-456-789012 (예금주: ○○○)<br><br>
+삼가 고인의 명복을 빕니다.
+</div>
+
+<h3>3. 가족장(스몰 장례) 정중 안내형 (조문·부의 사양)</h3>
+<div class="step-box">
+[부고]<br><br>
+저희의 어머님(고 ○○○ 여사)께서 평안히 영면하셨습니다.<br><br>
+생전 고인의 뜻과 유족들의 뜻을 모아 장례는 가족과 친지들만 모시고 조용하고 소박하게 '가족장'으로 치르기로 하였습니다.<br><br>
+고인을 기억해 주시는 모든 분들의 따뜻한 마음만 감사히 받으며, 조문과 부의금, 화환은 정중히 사양하오니 너그러운 마음으로 양해해 주시기 바랍니다.<br><br>
+마음으로 고인의 명복을 빌어주시면 감사하겠습니다.<br><br>
+유족 일동 배상
+</div>
+
+<h3>4. 모바일 부고장 링크 포함형 (카카오톡 및 모바일 안내)</h3>
+<div class="step-box">
+[부고 안내]<br><br>
+○○○의 빙부(장인어른 고 ○○○ 옹)께서 별세하셨습니다.<br><br>
+상세한 빈소 위치, 오시는 길, 대중교통 및 마음 전하실 곳은 아래 모바일 부고장 링크를 통해 확인해 주시기 바랍니다.<br><br>
+• 빈소: ○○의료원 장례식장 ○호실<br>
+• 발인: 2026년 ○월 ○일(○) 오전 ○시<br>
+• 모바일 부고장 링크: https://bugo.link/xxxxxx<br><br>
+※ 스미싱 문자가 아니오니 안심하시고 확인하시기 바랍니다.<br>
+상주 ○○○ 배상
+</div>
+
+<h3>5. 기독교(천주교) 종교별 부고 문구 (소천·선종)</h3>
+<div class="step-box">
+[부고 - 하나님의 부르심을 받아 천국으로 가셨습니다]<br><br>
+○○교회 ○○○ 집사의 부친(고 ○○○ 장로, 향년 ○○세)께서 2026년 ○월 ○일 하나님의 품에 안기어 평안히 소천(천주교의 경우: 선종)하셨습니다.<br><br>
+천국 환송(영결)의 자리에 함께하셔서 위로와 기도를 나누어 주시기 바랍니다.<br><br>
+• 위로예배: 2026년 ○월 ○일(○) 오후 ○시<br>
+• 천국환송예배(발인): 2026년 ○월 ○일(○) 오전 ○시<br>
+• 빈소: ○○장례식장 ○호실<br>
+• 장지: ○○추모원 기독교전용관<br>
+• 상주: ○○○ 배상
+</div>
+
+<h2>05 | 결례 없이 조심스럽게 마음 전할 계좌번호(조의금) 표기하는 정중한 문구 예절</h2>
+<p>
+부고 문자를 보낼 때 상주들이 가장 고민하고 망설이는 부분이 바로 '계좌번호(부의금 송금처)'를 넣을 것인가 말 것인가의 문제입니다. 부고장에 대놓고 계좌번호만 덜렁 적어놓으면 마치 조의금을 독촉하는 것처럼 비쳐 상대방에게 거부감이나 불쾌감을 줄 수 있기 때문입니다.<br><br>
+하지만 오늘날에는 지방이나 해외에 거주하거나, 바쁜 생업과 건강상의 이유로 직접 장례식장을 찾지 못하는 지인들이 훨씬 많습니다. 이들에게 조의를 표할 수 있는 통로를 열어주는 것 역시 상주의 배려에 해당합니다. 실제로 많은 조문객들이 "부고장에 계좌가 적혀 있지 않아 따로 상주에게 계좌를 묻는 것이 오히려 상중에 결례가 될까 봐 망설여졌다"고 토로합니다.<br><br>
+따라서 계좌번호를 기재할 때는 반드시 **정중한 양해와 조심스러운 심정을 담은 수식 문구**를 함께 적어야 합니다. 예를 들어, **"부득이한 사정으로 직접 찾아뵙지 못하는 분들을 위해 조심스럽게 마음 전하실 곳을 남깁니다"**, 혹은 **"먼 곳에서 따뜻한 마음으로 위로를 전하고자 하시는 분들을 위해 안내해 드립니다"**와 같은 배려 깊은 문장을 계좌번호 상단에 덧붙여야 합니다. 또한 불필요하게 여러 자녀의 계좌를 나열하지 말고, 대표 상주(장남 등) 1명의 계좌로 단일화하는 것이 훨씬 정갈하고 예의 바르게 보입니다.
+</p>
+
+<!-- 인포그래픽 4: 핵심 수치 매트릭스 -->
+
+<!-- 5번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="🔢 부고장 작성 및 발송 골든타임 수치 매트릭스 의전 지표 / 인포그래픽 카드" src="../../images/261031/7_rite_obituary_notice_message_writing_format_template_samples_5.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">🔢 부고장 작성 및 발송 골든타임 수치 매트릭스 의전 지표 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>06 | 모바일 부고장 링크 발송 vs 순수 텍스트 문자 발송의 장단점과 스미싱 예방 요령</h2>
+<p>
+최근 상조회사나 장례식장에서 제공하는 '모바일 부고장 웹 링크' 서비스가 널리 보급되었습니다. 모바일 부고장은 고인의 영정 사진과 함께 장례식장 지도(네이버 지도·카카오맵 연동), 내비게이션 바로가기, 조의금 송금(카카오페이 연동), 화환 주문 기능까지 한 화면에 깔끔하게 제공하므로 시각적으로 매우 편리합니다.<br><br>
+하지만 최근 부고 문자를 사칭한 악성 스미싱(Smishing) 금융 사기 범죄가 기승을 부리면서, 출처가 불분명한 웹 링크(URL)가 포함된 문자를 클릭하기를 극도로 꺼리는 사회적 분위기가 팽배해 있습니다. 특히 어르신들이나 직장 동료들은 부고 문자에 링크만 덩그러니 들어있을 경우 해킹이나 스미싱으로 오인하여 아예 열어보지 않고 삭제하는 경우가 허다합니다.<br><br>
+따라서 가장 안전하고 신뢰받는 부고 발송 방식은 **'장문 텍스트(LMS)와 모바일 링크의 병행'**입니다. 문자의 본문에 고인 성함, 빈소, 발인 일시 등 6대 핵심 정보를 텍스트로 전부 기재한 후, 하단에 "※ 내비게이션 및 상세 약도는 모바일 부고장을 확인해 주세요 (스미싱 문자가 아니오니 안심하시기 바랍니다)"라는 안내 문구와 함께 링크를 첨부하는 것입니다. 이렇게 하면 수신자가 굳이 링크를 누르지 않고 문자 본문만 읽어도 조문 정보를 완벽하게 파악할 수 있어 의심과 불편을 완전히 해소할 수 있습니다.
+</p>
+
+<!-- 인포그래픽 5: 장단점 대조표 -->
+
+<!-- 6번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="⚖️ 모바일 부고 링크 vs 텍스트 문자 발송 방식 비교 발송 수단 대조 / 인포그래픽 카드" src="../../images/261031/7_rite_obituary_notice_message_writing_format_template_samples_6.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">⚖️ 모바일 부고 링크 vs 텍스트 문자 발송 방식 비교 발송 수단 대조 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>07 | 수신자 그룹 분리(친인척, 직장, 지인)와 심야 시간대 부고 문자 발송 주의사항</h2>
+<p>
+부고 문자를 보낼 때 휴대전화 주소록 전체에 무차별적으로 단체 문자를 발송하는 것은 피해야 합니다. 수신자와의 친분 관계와 상황에 따라 문자의 어조와 담아야 할 정보가 달라져야 하기 때문입니다.<br><br>
+주소록을 크게 **'친인척 그룹'**, **'직장 및 업무 거래처 그룹'**, **'동창 및 개인 지인 그룹'** 세 가지로 나누어 발송하는 것이 좋습니다. 친인척 그룹에는 집안 어른들의 호칭과 상세한 장지 일정까지 담긴 정중한 전통 문안을 보내고, 직장 및 거래처에는 소속 부서와 직책이 명시된 격식 있는 공지형 문안을 보냅니다. 평소 연락이 뜸했던 지인이나 업무상 스쳐 지나간 인연에게까지 계좌번호가 포함된 부고장을 무차별 전송하는 것은 자칫 부담을 주는 결례가 될 수 있으므로 수신 명단을 한 번 더 정갈하게 선별해야 합니다.<br><br>
+발송 시간대 역시 각별한 주의가 필요합니다. 임종이 밤 11시 이후 늦은 밤이나 새벽에 발생한 경우, 직계 가족과 친척들에게는 즉시 유선으로 알리더라도, 일반 지인이나 직장 동료들에게는 수면을 방해하지 않도록 날이 밝는 **익일 오전 7시 30분에서 8시 이후**에 부고 문자를 발송하는 것이 품격 있는 예의입니다.
+</p>
+
+<!-- 인포그래픽 6: FAQ 매트릭스 -->
+
+<!-- 7번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="❓ 부고 알림 문자 작성 시 자주 묻는 질문 FAQ TOP 3 FAQ 직답 / 인포그래픽 카드" src="../../images/261031/7_rite_obituary_notice_message_writing_format_template_samples_7.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">❓ 부고 알림 문자 작성 시 자주 묻는 질문 FAQ TOP 3 FAQ 직답 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>08 | 조문객 맞이 준비와 장례 후 감사 답례 문자 발송 기본 가이드</h2>
+<p>
+부고 문자를 성공적으로 발송했다면, 이제 빈소를 찾아올 조문객들을 맞이할 준비를 해야 합니다. 장례식장 입구의 전자 안내판에 고인과 상주의 이름이 올바르게 표출되는지 확인하고, 방명록과 조의금 접수대, 제단 꽃장식과 제사 준비를 점검합니다. 빈소에 조문객이 들어서면 정중하게 맞절을 올리고, 따뜻한 위로의 말씀에 깊은 감사를 표합니다.<br><br>
+장례식의 모든 절차(발인과 안치)가 무사히 끝났다면, 마지막으로 반드시 챙겨야 할 의전이 바로 **'장례 감사 답례 문자'**입니다. 바쁜 일상과 먼 길을 마다하지 않고 빈소를 찾아와 슬픔을 함께 나누어 준 조문객들과, 멀리서 마음을 담아 조의금을 보내준 분들에게 장례가 끝난 직후(발인 다음 날 또는 늦어도 3일 이내)에 정성스러운 감사의 뜻을 전해야 합니다.<br><br>
+"황망한 중에 따뜻한 위로와 격려를 보내주신 덕분에 어머님의 장례를 무사히 마칠 수 있었습니다. 일일이 찾아뵙고 인사드리지 못함을 널리 혜량하여 주시기 바라며, 귀댁에 늘 평안과 행복이 깃들기를 기원합니다"와 같이 진심 어린 답례 문자를 보내는 것은 상주로서 지녀야 할 마지막 품격이자 아름다운 도리입니다.
+</p>
+
+<h2>09 | 슬픔 속에서도 품격을 지키는 부고장 작성 총평</h2>
+<p>
+부고 알림 문자는 고인의 영원한 안식을 세상에 알리고, 남은 가족들이 마지막 효와 도리를 다하기 위한 성스러운 첫걸음입니다. 비통한 슬픔에 눈앞이 캄캄하더라도, 차분하게 호흡을 가다듬고 필수 항목을 점검하여 정갈한 부고장을 작성해야 합니다.<br><br>
+정확한 고인과의 관계 호칭, 빈소의 도로명 주소와 호실 번호, 발인 일시, 그리고 조심스럽고 정중한 계좌 안내 문구에 이르기까지 정성을 다해 다듬어진 부고 문자는 슬픔 속에서도 유족의 품격을 빛나게 해줍니다.<br><br>
+예기치 않게 상을 당해 경황이 없으실 전국의 모든 상주와 유족분들께 깊은 애도와 위로의 마음을 전합니다. 오늘 정리해 드린 표준 작성 원칙과 템플릿을 차분히 활용하셔서, 고인의 마지막 가시는 길을 존엄하고 따뜻한 추모의 물결로 배웅하시기를 바랍니다.
+</p>
+
+<div class="recommend-area">
+  <strong>📌 함께 읽으면 좋은 경조사 및 생활 실무 추천 글</strong><br><br>
+  • <a href="../261029/travel_icheon_termeden_german_spa_fall_guide.html">이천 테르메덴 가을 독일식 스파 이용 팁과 할인 예매 — 마운틴 야외 온천풀 이용 시간과 주차 꿀팁</a><br>
+  • <a href="../261029/car_vehicle_inspection_retest_period_fail_guide.html">자동차 정기검사 불합격 시 재검사 기간과 수수료 — 빈발 불합격 항목 5가지와 재검사 예약 절차</a>
+</div>
+
+<div class="tags">
+  <span class="tag">#부고문자작성법</span>
+  <span class="tag">#부고알림문자</span>
+  <span class="tag">#부고장양식</span>
+  <span class="tag">#부고문자예시</span>
+  <span class="tag">#부친상모친상호칭</span>
+  <span class="tag">#빙부상빙모상</span>
+  <span class="tag">#부고계좌표기</span>
+  <span class="tag">#모바일부고장</span>
+  <span class="tag">#장례답례문자</span>
+  <span class="tag">#경조사예절</span>
+</div>
+
+</body>
+</html>

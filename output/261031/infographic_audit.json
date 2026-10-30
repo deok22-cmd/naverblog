@@ -1,0 +1,609 @@
+{
+  "targetDate": "261031",
+  "auditTimestamp": "2026-10-30T19:23:32.739Z",
+  "totalArticlesInspected": 7,
+  "articlesUpdated": 7,
+  "totalCardsRendered": 42,
+  "averageCardsPerArticle": "6.0",
+  "distinctArchetypesUsed": 8,
+  "archetypeDistribution": {
+    "핵심 수치 매트릭스": 7,
+    "타임라인/동선 로드맵": 5,
+    "비교 매트릭스": 7,
+    "점검 체크리스트": 7,
+    "장단점/추천 대조표": 5,
+    "핵심 Q&A 매트릭스": 7,
+    "단계별 절차 플로우": 3,
+    "비용/견적 영수증": 1
+  },
+  "cards": [
+    {
+      "article": "travel_hwasun_manyeonsan_healing_forest_autumn_walk.html",
+      "slug": "travel_hwasun_manyeonsan_healing_forest_autumn_walk",
+      "imgNum": 2,
+      "fileName": "1_travel_hwasun_manyeonsan_healing_forest_autumn_walk_2.png",
+      "archetype": "stat",
+      "archetypeName": "핵심 수치 매트릭스",
+      "caption": "📊 만연산 치유의 숲 오감길 핵심 지표 한눈에 보기 트레킹 팩트",
+      "dimensions": {
+        "width": 780,
+        "height": 280,
+        "aspectRatio": "2.78"
+      }
+    },
+    {
+      "article": "travel_hwasun_manyeonsan_healing_forest_autumn_walk.html",
+      "slug": "travel_hwasun_manyeonsan_healing_forest_autumn_walk",
+      "imgNum": 3,
+      "fileName": "1_travel_hwasun_manyeonsan_healing_forest_autumn_walk_3.png",
+      "archetype": "timeline",
+      "archetypeName": "타임라인/동선 로드맵",
+      "caption": "🗺️ 만연산 오감길 단풍 힐링 추천 산책 동선 코스 동선",
+      "dimensions": {
+        "width": 780,
+        "height": 476,
+        "aspectRatio": "1.64"
+      }
+    },
+    {
+      "article": "travel_hwasun_manyeonsan_healing_forest_autumn_walk.html",
+      "slug": "travel_hwasun_manyeonsan_healing_forest_autumn_walk",
+      "imgNum": 4,
+      "fileName": "1_travel_hwasun_manyeonsan_healing_forest_autumn_walk_4.png",
+      "archetype": "compare",
+      "archetypeName": "비교 매트릭스",
+      "caption": "⚖️ 만연산 치유의 숲 탐방 코스 비교 매트릭스 코스 선택 가이드",
+      "dimensions": {
+        "width": 780,
+        "height": 388,
+        "aspectRatio": "2.01"
+      }
+    },
+    {
+      "article": "travel_hwasun_manyeonsan_healing_forest_autumn_walk.html",
+      "slug": "travel_hwasun_manyeonsan_healing_forest_autumn_walk",
+      "imgNum": 5,
+      "fileName": "1_travel_hwasun_manyeonsan_healing_forest_autumn_walk_5.png",
+      "archetype": "checklist",
+      "archetypeName": "점검 체크리스트",
+      "caption": "📋 만연산 오감길 가을 힐링 걷기 필수 점검 체크리스트 산책 준비",
+      "dimensions": {
+        "width": 780,
+        "height": 472,
+        "aspectRatio": "1.65"
+      }
+    },
+    {
+      "article": "travel_hwasun_manyeonsan_healing_forest_autumn_walk.html",
+      "slug": "travel_hwasun_manyeonsan_healing_forest_autumn_walk",
+      "imgNum": 6,
+      "fileName": "1_travel_hwasun_manyeonsan_healing_forest_autumn_walk_6.png",
+      "archetype": "procon",
+      "archetypeName": "장단점/추천 대조표",
+      "caption": "⚖️ 만연산 치유의 숲 오감길 방문 전 체크포인트 방문 장단점 대조",
+      "dimensions": {
+        "width": 780,
+        "height": 379,
+        "aspectRatio": "2.06"
+      }
+    },
+    {
+      "article": "travel_hwasun_manyeonsan_healing_forest_autumn_walk.html",
+      "slug": "travel_hwasun_manyeonsan_healing_forest_autumn_walk",
+      "imgNum": 7,
+      "fileName": "1_travel_hwasun_manyeonsan_healing_forest_autumn_walk_7.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "❓ 만연산 치유의 숲 오감길 자주 묻는 질문 TOP 3 FAQ 직답",
+      "dimensions": {
+        "width": 780,
+        "height": 418,
+        "aspectRatio": "1.87"
+      }
+    },
+    {
+      "article": "travel_jeonju_arboretum_autumn_foliage_glass_greenhouse.html",
+      "slug": "travel_jeonju_arboretum_autumn_foliage_glass_greenhouse",
+      "imgNum": 2,
+      "fileName": "2_travel_jeonju_arboretum_autumn_foliage_glass_greenhouse_2.png",
+      "archetype": "stat",
+      "archetypeName": "핵심 수치 매트릭스",
+      "caption": "📊 한국도로공사 전주수목원 핵심 이용 지표 수목원 팩트",
+      "dimensions": {
+        "width": 780,
+        "height": 303,
+        "aspectRatio": "2.57"
+      }
+    },
+    {
+      "article": "travel_jeonju_arboretum_autumn_foliage_glass_greenhouse.html",
+      "slug": "travel_jeonju_arboretum_autumn_foliage_glass_greenhouse",
+      "imgNum": 3,
+      "fileName": "2_travel_jeonju_arboretum_autumn_foliage_glass_greenhouse_3.png",
+      "archetype": "timeline",
+      "archetypeName": "타임라인/동선 로드맵",
+      "caption": "🗺️ 전주수목원 가을 감성 2시간 완벽 추천 동선 추천 코스",
+      "dimensions": {
+        "width": 780,
+        "height": 546,
+        "aspectRatio": "1.43"
+      }
+    },
+    {
+      "article": "travel_jeonju_arboretum_autumn_foliage_glass_greenhouse.html",
+      "slug": "travel_jeonju_arboretum_autumn_foliage_glass_greenhouse",
+      "imgNum": 4,
+      "fileName": "2_travel_jeonju_arboretum_autumn_foliage_glass_greenhouse_4.png",
+      "archetype": "compare",
+      "archetypeName": "비교 매트릭스",
+      "caption": "⚖️ 전주 3대 가을 명소 스펙 및 특성 비교 매트릭스 여행지 비교",
+      "dimensions": {
+        "width": 780,
+        "height": 429,
+        "aspectRatio": "1.82"
+      }
+    },
+    {
+      "article": "travel_jeonju_arboretum_autumn_foliage_glass_greenhouse.html",
+      "slug": "travel_jeonju_arboretum_autumn_foliage_glass_greenhouse",
+      "imgNum": 5,
+      "fileName": "2_travel_jeonju_arboretum_autumn_foliage_glass_greenhouse_5.png",
+      "archetype": "checklist",
+      "archetypeName": "점검 체크리스트",
+      "caption": "📋 전주수목원 방문 관람 규정 및 필수 에티켓 체크리스트 관람 수칙",
+      "dimensions": {
+        "width": 780,
+        "height": 433,
+        "aspectRatio": "1.80"
+      }
+    },
+    {
+      "article": "travel_jeonju_arboretum_autumn_foliage_glass_greenhouse.html",
+      "slug": "travel_jeonju_arboretum_autumn_foliage_glass_greenhouse",
+      "imgNum": 6,
+      "fileName": "2_travel_jeonju_arboretum_autumn_foliage_glass_greenhouse_6.png",
+      "archetype": "procon",
+      "archetypeName": "장단점/추천 대조표",
+      "caption": "⚖️ 전주 한국도로공사 전주수목원 방문 전 장단점 대조 솔직 평가",
+      "dimensions": {
+        "width": 780,
+        "height": 379,
+        "aspectRatio": "2.06"
+      }
+    },
+    {
+      "article": "travel_jeonju_arboretum_autumn_foliage_glass_greenhouse.html",
+      "slug": "travel_jeonju_arboretum_autumn_foliage_glass_greenhouse",
+      "imgNum": 7,
+      "fileName": "2_travel_jeonju_arboretum_autumn_foliage_glass_greenhouse_7.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "❓ 전주수목원 방문객 최다 질문 FAQ TOP 3 FAQ 직답",
+      "dimensions": {
+        "width": 780,
+        "height": 437,
+        "aspectRatio": "1.78"
+      }
+    },
+    {
+      "article": "travel_cheonan_taejo_gakwonsa_bronze_buddha_autumn.html",
+      "slug": "travel_cheonan_taejo_gakwonsa_bronze_buddha_autumn",
+      "imgNum": 2,
+      "fileName": "3_travel_cheonan_taejo_gakwonsa_bronze_buddha_autumn_2.png",
+      "archetype": "stat",
+      "archetypeName": "핵심 수치 매트릭스",
+      "caption": "📊 천안 각원사 청동대불 및 사찰 핵심 지표 사찰 팩트",
+      "dimensions": {
+        "width": 780,
+        "height": 303,
+        "aspectRatio": "2.57"
+      }
+    },
+    {
+      "article": "travel_cheonan_taejo_gakwonsa_bronze_buddha_autumn.html",
+      "slug": "travel_cheonan_taejo_gakwonsa_bronze_buddha_autumn",
+      "imgNum": 3,
+      "fileName": "3_travel_cheonan_taejo_gakwonsa_bronze_buddha_autumn_3.png",
+      "archetype": "timeline",
+      "archetypeName": "타임라인/동선 로드맵",
+      "caption": "🗺️ 태조산 각원사 가을 단풍 힐링 순례 2시간 추천 코스 추천 동선",
+      "dimensions": {
+        "width": 780,
+        "height": 565,
+        "aspectRatio": "1.38"
+      }
+    },
+    {
+      "article": "travel_cheonan_taejo_gakwonsa_bronze_buddha_autumn.html",
+      "slug": "travel_cheonan_taejo_gakwonsa_bronze_buddha_autumn",
+      "imgNum": 4,
+      "fileName": "3_travel_cheonan_taejo_gakwonsa_bronze_buddha_autumn_4.png",
+      "archetype": "compare",
+      "archetypeName": "비교 매트릭스",
+      "caption": "⚖️ 천안 가을 3대 사찰 스펙 및 매력 비교 매트릭스 사찰 비교",
+      "dimensions": {
+        "width": 780,
+        "height": 449,
+        "aspectRatio": "1.74"
+      }
+    },
+    {
+      "article": "travel_cheonan_taejo_gakwonsa_bronze_buddha_autumn.html",
+      "slug": "travel_cheonan_taejo_gakwonsa_bronze_buddha_autumn",
+      "imgNum": 5,
+      "fileName": "3_travel_cheonan_taejo_gakwonsa_bronze_buddha_autumn_5.png",
+      "archetype": "checklist",
+      "archetypeName": "점검 체크리스트",
+      "caption": "📋 각원사 가을 단풍 순례 방문객 필수 점검표 방문 준비",
+      "dimensions": {
+        "width": 780,
+        "height": 433,
+        "aspectRatio": "1.80"
+      }
+    },
+    {
+      "article": "travel_cheonan_taejo_gakwonsa_bronze_buddha_autumn.html",
+      "slug": "travel_cheonan_taejo_gakwonsa_bronze_buddha_autumn",
+      "imgNum": 6,
+      "fileName": "3_travel_cheonan_taejo_gakwonsa_bronze_buddha_autumn_6.png",
+      "archetype": "procon",
+      "archetypeName": "장단점/추천 대조표",
+      "caption": "⚖️ 천안 각원사 가을 단풍 여행 장점 vs 유의사항 방문 솔직 평가",
+      "dimensions": {
+        "width": 780,
+        "height": 379,
+        "aspectRatio": "2.06"
+      }
+    },
+    {
+      "article": "travel_cheonan_taejo_gakwonsa_bronze_buddha_autumn.html",
+      "slug": "travel_cheonan_taejo_gakwonsa_bronze_buddha_autumn",
+      "imgNum": 7,
+      "fileName": "3_travel_cheonan_taejo_gakwonsa_bronze_buddha_autumn_7.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "❓ 천안 각원사 방문객 최다 질문 FAQ TOP 3 FAQ 직답",
+      "dimensions": {
+        "width": 780,
+        "height": 418,
+        "aspectRatio": "1.87"
+      }
+    },
+    {
+      "article": "travel_asan_gongseri_church_autumn_zelkova_tree_trail.html",
+      "slug": "travel_asan_gongseri_church_autumn_zelkova_tree_trail",
+      "imgNum": 2,
+      "fileName": "4_travel_asan_gongseri_church_autumn_zelkova_tree_trail_2.png",
+      "archetype": "stat",
+      "archetypeName": "핵심 수치 매트릭스",
+      "caption": "📊 아산 공세리성당 핵심 지표 및 역사 팩트 성당 팩트",
+      "dimensions": {
+        "width": 780,
+        "height": 315,
+        "aspectRatio": "2.48"
+      }
+    },
+    {
+      "article": "travel_asan_gongseri_church_autumn_zelkova_tree_trail.html",
+      "slug": "travel_asan_gongseri_church_autumn_zelkova_tree_trail",
+      "imgNum": 3,
+      "fileName": "4_travel_asan_gongseri_church_autumn_zelkova_tree_trail_3.png",
+      "archetype": "timeline",
+      "archetypeName": "타임라인/동선 로드맵",
+      "caption": "🗺️ 공세리성당 가을 감성 순례 90분 완벽 동선 순례 동선",
+      "dimensions": {
+        "width": 780,
+        "height": 546,
+        "aspectRatio": "1.43"
+      }
+    },
+    {
+      "article": "travel_asan_gongseri_church_autumn_zelkova_tree_trail.html",
+      "slug": "travel_asan_gongseri_church_autumn_zelkova_tree_trail",
+      "imgNum": 4,
+      "fileName": "4_travel_asan_gongseri_church_autumn_zelkova_tree_trail_4.png",
+      "archetype": "compare",
+      "archetypeName": "비교 매트릭스",
+      "caption": "⚖️ 아산 가을 3대 감성 명소 매력 및 스펙 비교 아산 가을 명소",
+      "dimensions": {
+        "width": 780,
+        "height": 449,
+        "aspectRatio": "1.74"
+      }
+    },
+    {
+      "article": "travel_asan_gongseri_church_autumn_zelkova_tree_trail.html",
+      "slug": "travel_asan_gongseri_church_autumn_zelkova_tree_trail",
+      "imgNum": 5,
+      "fileName": "4_travel_asan_gongseri_church_autumn_zelkova_tree_trail_5.png",
+      "archetype": "checklist",
+      "archetypeName": "점검 체크리스트",
+      "caption": "📋 공세리성당 순례 관람 에티켓 및 방문 점검표 순례 수칙",
+      "dimensions": {
+        "width": 780,
+        "height": 433,
+        "aspectRatio": "1.80"
+      }
+    },
+    {
+      "article": "travel_asan_gongseri_church_autumn_zelkova_tree_trail.html",
+      "slug": "travel_asan_gongseri_church_autumn_zelkova_tree_trail",
+      "imgNum": 6,
+      "fileName": "4_travel_asan_gongseri_church_autumn_zelkova_tree_trail_6.png",
+      "archetype": "procon",
+      "archetypeName": "장단점/추천 대조표",
+      "caption": "⚖️ 아산 공세리성당 가을 여행 장단점 솔직 비교 솔직 대조",
+      "dimensions": {
+        "width": 780,
+        "height": 379,
+        "aspectRatio": "2.06"
+      }
+    },
+    {
+      "article": "travel_asan_gongseri_church_autumn_zelkova_tree_trail.html",
+      "slug": "travel_asan_gongseri_church_autumn_zelkova_tree_trail",
+      "imgNum": 7,
+      "fileName": "4_travel_asan_gongseri_church_autumn_zelkova_tree_trail_7.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "❓ 아산 공세리성당 방문객 최다 질문 FAQ TOP 3 FAQ 직답",
+      "dimensions": {
+        "width": 780,
+        "height": 418,
+        "aspectRatio": "1.87"
+      }
+    },
+    {
+      "article": "hot_csat_aftermath_schedule_score_report_application_dates.html",
+      "slug": "hot_csat_aftermath_schedule_score_report_application_dates",
+      "imgNum": 2,
+      "fileName": "5_hot_csat_aftermath_schedule_score_report_application_dates_2.png",
+      "archetype": "stat",
+      "archetypeName": "핵심 수치 매트릭스",
+      "caption": "📊 2027학년도 수능 후 4대 마일스톤 확정 날짜표 공식 일정",
+      "dimensions": {
+        "width": 780,
+        "height": 303,
+        "aspectRatio": "2.57"
+      }
+    },
+    {
+      "article": "hot_csat_aftermath_schedule_score_report_application_dates.html",
+      "slug": "hot_csat_aftermath_schedule_score_report_application_dates",
+      "imgNum": 3,
+      "fileName": "5_hot_csat_aftermath_schedule_score_report_application_dates_3.png",
+      "archetype": "timeline",
+      "archetypeName": "타임라인/동선 로드맵",
+      "caption": "🗺️ 2027 수능 후 대입 전형 단계별 마스터 플랜 타임라인 일정 로드맵",
+      "dimensions": {
+        "width": 780,
+        "height": 546,
+        "aspectRatio": "1.43"
+      }
+    },
+    {
+      "article": "hot_csat_aftermath_schedule_score_report_application_dates.html",
+      "slug": "hot_csat_aftermath_schedule_score_report_application_dates",
+      "imgNum": 4,
+      "fileName": "5_hot_csat_aftermath_schedule_score_report_application_dates_4.png",
+      "archetype": "compare",
+      "archetypeName": "비교 매트릭스",
+      "caption": "⚖️ 수능 성적 지표별 산출 원리와 정시 반영 비교 매트릭스 성적 지표 분석",
+      "dimensions": {
+        "width": 780,
+        "height": 499,
+        "aspectRatio": "1.56"
+      }
+    },
+    {
+      "article": "hot_csat_aftermath_schedule_score_report_application_dates.html",
+      "slug": "hot_csat_aftermath_schedule_score_report_application_dates",
+      "imgNum": 5,
+      "fileName": "5_hot_csat_aftermath_schedule_score_report_application_dates_5.png",
+      "archetype": "flow",
+      "archetypeName": "단계별 절차 플로우",
+      "caption": "🔄 수능 직후 대입 성공을 위한 4단계 실전 행동 플로우 실전 프로세스",
+      "dimensions": {
+        "width": 780,
+        "height": 299,
+        "aspectRatio": "2.61"
+      }
+    },
+    {
+      "article": "hot_csat_aftermath_schedule_score_report_application_dates.html",
+      "slug": "hot_csat_aftermath_schedule_score_report_application_dates",
+      "imgNum": 6,
+      "fileName": "5_hot_csat_aftermath_schedule_score_report_application_dates_6.png",
+      "archetype": "checklist",
+      "archetypeName": "점검 체크리스트",
+      "caption": "📋 수능 후 학사 일정 및 대입 전형 필수 점검 체크리스트 수험생 점검표",
+      "dimensions": {
+        "width": 780,
+        "height": 433,
+        "aspectRatio": "1.80"
+      }
+    },
+    {
+      "article": "hot_csat_aftermath_schedule_score_report_application_dates.html",
+      "slug": "hot_csat_aftermath_schedule_score_report_application_dates",
+      "imgNum": 7,
+      "fileName": "5_hot_csat_aftermath_schedule_score_report_application_dates_7.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "❓ 수능 후 대입 일정 관련 수험생·학부모 최다 질문 FAQ TOP 3 FAQ 직답",
+      "dimensions": {
+        "width": 780,
+        "height": 457,
+        "aspectRatio": "1.71"
+      }
+    },
+    {
+      "article": "repair_wallpaper_mold_removal_repetition_prevention_guide.html",
+      "slug": "repair_wallpaper_mold_removal_repetition_prevention_guide",
+      "imgNum": 2,
+      "fileName": "6_repair_wallpaper_mold_removal_repetition_prevention_guide_2.png",
+      "archetype": "compare",
+      "archetypeName": "비교 매트릭스",
+      "caption": "⚖️ 락스 희석액 vs 시판 전용 곰팡이 제거제 스펙 및 성능 비교 약품 비교",
+      "dimensions": {
+        "width": 780,
+        "height": 388,
+        "aspectRatio": "2.01"
+      }
+    },
+    {
+      "article": "repair_wallpaper_mold_removal_repetition_prevention_guide.html",
+      "slug": "repair_wallpaper_mold_removal_repetition_prevention_guide",
+      "imgNum": 3,
+      "fileName": "6_repair_wallpaper_mold_removal_repetition_prevention_guide_3.png",
+      "archetype": "flow",
+      "archetypeName": "단계별 절차 플로우",
+      "caption": "🔄 벽지 곰팡이 셀프 박멸 및 재발 방지 4단계 시공 플로우 시공 순서",
+      "dimensions": {
+        "width": 780,
+        "height": 299,
+        "aspectRatio": "2.61"
+      }
+    },
+    {
+      "article": "repair_wallpaper_mold_removal_repetition_prevention_guide.html",
+      "slug": "repair_wallpaper_mold_removal_repetition_prevention_guide",
+      "imgNum": 4,
+      "fileName": "6_repair_wallpaper_mold_removal_repetition_prevention_guide_4.png",
+      "archetype": "checklist",
+      "archetypeName": "점검 체크리스트",
+      "caption": "📋 벽지 곰팡이 손상도 및 재도배 판단 자가진단표 자가 진단",
+      "dimensions": {
+        "width": 780,
+        "height": 433,
+        "aspectRatio": "1.80"
+      }
+    },
+    {
+      "article": "repair_wallpaper_mold_removal_repetition_prevention_guide.html",
+      "slug": "repair_wallpaper_mold_removal_repetition_prevention_guide",
+      "imgNum": 5,
+      "fileName": "6_repair_wallpaper_mold_removal_repetition_prevention_guide_5.png",
+      "archetype": "receipt",
+      "archetypeName": "비용/견적 영수증",
+      "caption": "🧾 방 1칸 외벽 단열 도배 시공 견적 영수증 비교 실전 견적",
+      "dimensions": {
+        "width": 780,
+        "height": 599,
+        "aspectRatio": "1.30"
+      }
+    },
+    {
+      "article": "repair_wallpaper_mold_removal_repetition_prevention_guide.html",
+      "slug": "repair_wallpaper_mold_removal_repetition_prevention_guide",
+      "imgNum": 6,
+      "fileName": "6_repair_wallpaper_mold_removal_repetition_prevention_guide_6.png",
+      "archetype": "stat",
+      "archetypeName": "핵심 수치 매트릭스",
+      "caption": "🔢 결로 및 곰팡이 원천 차단 4대 환경 수치 매트릭스 환경 지표",
+      "dimensions": {
+        "width": 780,
+        "height": 303,
+        "aspectRatio": "2.57"
+      }
+    },
+    {
+      "article": "repair_wallpaper_mold_removal_repetition_prevention_guide.html",
+      "slug": "repair_wallpaper_mold_removal_repetition_prevention_guide",
+      "imgNum": 7,
+      "fileName": "6_repair_wallpaper_mold_removal_repetition_prevention_guide_7.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "❓ 벽지 곰팡이 셀프 제거 시 자주 묻는 질문 FAQ TOP 3 FAQ 직답",
+      "dimensions": {
+        "width": 780,
+        "height": 477,
+        "aspectRatio": "1.64"
+      }
+    },
+    {
+      "article": "rite_obituary_notice_message_writing_format_template_samples.html",
+      "slug": "rite_obituary_notice_message_writing_format_template_samples",
+      "imgNum": 2,
+      "fileName": "7_rite_obituary_notice_message_writing_format_template_samples_2.png",
+      "archetype": "checklist",
+      "archetypeName": "점검 체크리스트",
+      "caption": "📋 부고 알림 문자 발송 전 필수 6대 요소 누락 점검표 필수 항목",
+      "dimensions": {
+        "width": 780,
+        "height": 601,
+        "aspectRatio": "1.30"
+      }
+    },
+    {
+      "article": "rite_obituary_notice_message_writing_format_template_samples.html",
+      "slug": "rite_obituary_notice_message_writing_format_template_samples",
+      "imgNum": 3,
+      "fileName": "7_rite_obituary_notice_message_writing_format_template_samples_3.png",
+      "archetype": "flow",
+      "archetypeName": "단계별 절차 플로우",
+      "caption": "🔄 임종부터 부고 발송까지 4단계 실무 대응 플로우 장례 초기 절차",
+      "dimensions": {
+        "width": 780,
+        "height": 299,
+        "aspectRatio": "2.61"
+      }
+    },
+    {
+      "article": "rite_obituary_notice_message_writing_format_template_samples.html",
+      "slug": "rite_obituary_notice_message_writing_format_template_samples",
+      "imgNum": 4,
+      "fileName": "7_rite_obituary_notice_message_writing_format_template_samples_4.png",
+      "archetype": "compare",
+      "archetypeName": "비교 매트릭스",
+      "caption": "⚖️ 상주와 고인의 관계별 올바른 부고 공식 호칭 대조표 호칭 가이드",
+      "dimensions": {
+        "width": 780,
+        "height": 470,
+        "aspectRatio": "1.66"
+      }
+    },
+    {
+      "article": "rite_obituary_notice_message_writing_format_template_samples.html",
+      "slug": "rite_obituary_notice_message_writing_format_template_samples",
+      "imgNum": 5,
+      "fileName": "7_rite_obituary_notice_message_writing_format_template_samples_5.png",
+      "archetype": "stat",
+      "archetypeName": "핵심 수치 매트릭스",
+      "caption": "🔢 부고장 작성 및 발송 골든타임 수치 매트릭스 의전 지표",
+      "dimensions": {
+        "width": 780,
+        "height": 338,
+        "aspectRatio": "2.31"
+      }
+    },
+    {
+      "article": "rite_obituary_notice_message_writing_format_template_samples.html",
+      "slug": "rite_obituary_notice_message_writing_format_template_samples",
+      "imgNum": 6,
+      "fileName": "7_rite_obituary_notice_message_writing_format_template_samples_6.png",
+      "archetype": "procon",
+      "archetypeName": "장단점/추천 대조표",
+      "caption": "⚖️ 모바일 부고 링크 vs 텍스트 문자 발송 방식 비교 발송 수단 대조",
+      "dimensions": {
+        "width": 780,
+        "height": 379,
+        "aspectRatio": "2.06"
+      }
+    },
+    {
+      "article": "rite_obituary_notice_message_writing_format_template_samples.html",
+      "slug": "rite_obituary_notice_message_writing_format_template_samples",
+      "imgNum": 7,
+      "fileName": "7_rite_obituary_notice_message_writing_format_template_samples_7.png",
+      "archetype": "faq",
+      "archetypeName": "핵심 Q&A 매트릭스",
+      "caption": "❓ 부고 알림 문자 작성 시 자주 묻는 질문 FAQ TOP 3 FAQ 직답",
+      "dimensions": {
+        "width": 780,
+        "height": 457,
+        "aspectRatio": "1.71"
+      }
+    }
+  ]
+}
