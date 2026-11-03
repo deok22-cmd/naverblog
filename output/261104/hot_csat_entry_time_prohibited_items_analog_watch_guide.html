@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>2027 수능 시험장 입실 시간과 반입 금지 물품 — 아날로그 시계 기준과 지각 시 112 지원</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+
+  /* ========================================================
+     🎨 다채널 인포그래픽 아키타입 CSS 시스템
+     ========================================= */
+  .infographic-box, [class*="infographic-"] {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif;
+  }
+  .infographic-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    border-bottom: 2px dashed #c8e6c9;
+    padding-bottom: 12px;
+  }
+  .infographic-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 1.1em;
+    color: #1b5e20;
+  }
+  .infographic-badge {
+    display: inline-block;
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.75em;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+  }
+
+  /* 1. 비교 매트릭스 카드 (.infographic-compare-box) */
+  .infographic-compare-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .compare-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .compare-col {
+    flex: 1;
+    min-width: 150px;
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 14px 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  }
+  .compare-col.highlight {
+    background: #f9fdf9;
+    border: 1.5px solid #388e3c;
+  }
+  .compare-col-title {
+    font-size: 0.95em;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 6px;
+  }
+  .compare-col-badge {
+    display: inline-block;
+    background: #388e3c;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .compare-row {
+    font-size: 0.82em;
+    color: #444;
+    line-height: 1.55;
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .compare-row:last-child {
+    border-bottom: none;
+  }
+
+  /* 2. 일정/동선 타임라인 로드맵 (.infographic-timeline-box) */
+  .infographic-timeline-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  .timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .timeline-badge {
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.78em;
+    font-weight: 800;
+    padding: 4px 9px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+  .timeline-content {
+    flex: 1;
+  }
+  .timeline-title {
+    font-size: 0.92em;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 4px;
+  }
+  .timeline-desc {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 3. 코스/난코스 전술 공략도 (.infographic-strategy-box) */
+  .infographic-strategy-box {
+    background: #ffffff;
+    border: 1.5px solid #ef4444;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(239,68,68,0.06);
+  }
+  .strategy-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .strategy-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .strategy-col.solution {
+    background: #f9fdf9;
+    border: 1px solid #c8e6c9;
+  }
+  .hazard-tag {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .safe-tag {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+
+  /* 4. 실전 비용/예산 견적 영수증 (.infographic-receipt-box) */
+  .infographic-receipt-box {
+    background: #ffffff;
+    border: 2px dashed #9ca3af;
+    border-radius: 12px;
+    padding: 24px 22px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+  }
+  .receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 16px;
+    font-size: 0.88em;
+  }
+  .receipt-table th {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid #d1d5db;
+  }
+  .receipt-table td {
+    padding: 8px 10px;
+    border-bottom: 1px dashed #e5e7eb;
+    color: #4b5563;
+  }
+  .receipt-total {
+    background: #f9fdf9;
+    border-top: 2px solid #388e3c;
+    padding: 12px 16px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 800;
+    color: #1b5e20;
+  }
+
+  /* 5. 필수 점검 & 준비물 체크리스트 (.infographic-checklist-box) */
+  .infographic-checklist-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .checklist-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .checklist-col {
+    flex: 1;
+    min-width: 190px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .checklist-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 6px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .checklist-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 6. 단계별 신청/절차 플로우차트 (.infographic-flow-box) */
+  .infographic-flow-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .flow-steps {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-top: 10px;
+  }
+  .flow-card {
+    flex: 1;
+    min-width: 130px;
+    background: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 12px 10px;
+    text-align: center;
+  }
+  .flow-step-num {
+    font-size: 0.72em;
+    font-weight: 800;
+    color: #388e3c;
+    background: #e8f5e9;
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+  }
+  .flow-title {
+    font-size: 0.88em;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 4px;
+  }
+  .flow-desc {
+    font-size: 0.78em;
+    color: #666;
+    line-height: 1.4;
+  }
+
+  /* 7. 4분할 핵심 수치 매트릭스 (.infographic-stat-box) */
+  .infographic-stat-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .stat-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .stat-card {
+    flex: 1;
+    min-width: 130px;
+    background: #f9fdf9;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 14px 10px;
+    text-align: center;
+  }
+  .stat-icon { font-size: 1.6em; margin-bottom: 4px; }
+  .stat-label { font-size: 0.8em; color: #666; font-weight: 600; margin-bottom: 4px; }
+  .stat-value { font-size: 1.15em; font-weight: 800; color: #388e3c; }
+  .stat-sub { font-size: 0.75em; color: #777; margin-top: 2px; }
+
+  /* 8. 평가 지표 & 코스/제품 스코어카드 (.infographic-scorecard-box) */
+  .infographic-scorecard-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .scorecard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .scorecard-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .score-label {
+    width: 110px;
+    font-size: 0.86em;
+    font-weight: 700;
+    color: #1b5e20;
+  }
+  .score-bar-bg {
+    flex: 1;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .score-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #e8f5e9, #388e3c);
+    border-radius: 5px;
+  }
+  .score-value {
+    width: 45px;
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: 800;
+    color: #388e3c;
+  }
+  .score-grade {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 0.72em;
+    font-weight: 800;
+    background: #e8f5e9;
+    color: #388e3c;
+  }
+
+  /* 9. 장단점 & 추천 vs 비추천 대조 카드 (.infographic-procon-box) */
+  .infographic-procon-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .procon-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .pro-col {
+    flex: 1;
+    min-width: 220px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .con-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .pro-badge {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .con-badge {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .procon-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 5px 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.06);
+  }
+  .procon-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 10. 핵심 질문 & 해법 Q&A 매트릭스 (.infographic-faq-box) */
+  .infographic-faq-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .faq-card {
+    background: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .faq-q {
+    font-size: 0.88em;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .faq-q-badge {
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .faq-a {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 11. 진화형 범용 인포그래픽 프리미티브 (.infographic-custom-box) */
+  .infographic-custom-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .info-callout {
+    background: #f9fdf9;
+    border-left: 4px solid #388e3c;
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.84em;
+    color: #1b5e20;
+    line-height: 1.5;
+    margin: 8px 0;
+  }
+  .info-pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 8px 0;
+  }
+  .info-pill {
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 4px 10px;
+    font-size: 0.78em;
+    font-weight: 600;
+    color: #374151;
+  }
+  .info-pill.active {
+    background: #e8f5e9;
+    border-color: #388e3c;
+    color: #388e3c;
+    font-weight: 700;
+  }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>2027 수능 시험장 입실 시간과 반입 금지 물품 — 아날로그 시계 기준과 지각 시 112 지원</h1>
+
+<!-- hot-dday: 2026-11-19 | src: https://www.moe.go.kr -->
+
+<div class="intro-box">
+  <strong>📌 2027 수능 당일 시험장 입실 및 반입 물품 핵심 3줄 요약</strong><br><br>
+  1. <strong>최종 입실 마감 시간:</strong> 2026년 11월 19일(목) 치러지는 2027학년도 대학수학능력시험에서 모든 수험생은 오전 8시 10분까지 지정된 시험실 좌석에 반드시 착석을 완료해야 하며, 1교시 국어 미응시자도 동일하게 8시 10분까지 입실 확인을 마쳐야 합니다.<br>
+  2. <strong>반입 금지 물품 및 시계 기준:</strong> 스마트폰, 스마트워치, 블루투스 이어폰, 전자사전 등 통신·전자식 화면(LCD·LED)이 있는 모든 전자기기는 시험장 반입이 일절 금지되며(미제출 시 부정행위 처리·시험 무효), 시계는 시침·분침(초침)만 있는 순수 기계식 아날로그 시계만 소지할 수 있습니다.<br>
+  3. <strong>돌발 지각 시 112 긴급 수송 지원:</strong> 수능 당일 아침 교통 체증이나 돌발 사고로 8시 10분 입실이 촉박해질 경우, 망설이지 말고 112 또는 119에 즉시 연락하면 경찰 순찰차와 싸이카의 비상 수송 에스코트를 받아 시험장까지 신속히 이동할 수 있습니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 대표 메인 썸네일 생성 영역</span>
+      <span class="ph-file">images/261104/5_hot_csat_entry_time_prohibited_items_analog_watch_guide_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-1">A serious and realistic close-up shot of a Korean high school student's desk on the morning of the College Scholastic Ability Test (CSAT). Neatly arranged on the wooden desk are the official exam slip (test registration card), a national identification card, a black computer marker, a wooden pencil, a white eraser, and a classic pure analog wristwatch with simple metal hands and no digital display. Soft natural morning sunlight streams in from a classroom window in the background. Clean composition, photorealistic, 8k resolution, crisp focus on the analog watch and exam materials, calm and focused atmosphere.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">수능 시험장 책상 위에 정갈하게 준비된 아날로그 시계와 수험표, 신분증 및 필기도구 / AI 제작 이미지</div>
+</div>
+
+<!-- 인포그래픽 1: 핵심 수치 매트릭스 -->
+
+<!-- 2번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="2027 수능 당일 핵심 타임라인 및 규정 지표 / 인포그래픽 카드" src="../../images/261104/5_hot_csat_entry_time_prohibited_items_analog_watch_guide_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">2027 수능 당일 핵심 타임라인 및 규정 지표 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>01 | 2027학년도 수능 시험일(2026년 11월 19일)과 시험장 최종 입실 마감 시각 08:10</h2>
+<p>
+2026년 11월 19일 목요일, 전국의 수십만 수험생들이 지난 학창 시절의 모든 땀과 열정을 쏟아붓는 2027학년도 대학수학능력시험이 전국 지정 고사장에서 일제히 치러집니다. 수능 시험 당일 아침 수험생과 학부모가 가장 엄격하게 준수해야 할 제1원칙은 바로 **'오전 8시 10분까지 지정된 시험실 입실 완료'** 규정입니다.<br><br>
+시험장 학교 건물은 당일 오전 6시 30분부터 개방됩니다. 너무 일찍 도착하는 것도 긴장감을 높이고 쌀쌀한 아침 날씨에 체온을 떨어뜨릴 수 있지만, 입실 마감에 임박하여 8시 언저리에 헐레벌떡 도착하는 것은 뇌의 인지 기능과 호흡을 불안정하게 만들어 1교시 국어 영역에 치명적인 악영향을 미칩니다. 전문가들은 입실 마감 30분 전인 **오전 7시 30분에서 7시 40분 사이**에 시험실에 도착하는 것을 '황금 시간대'로 권장합니다.<br><br>
+시험실에 7시 40분경 안착해야 본인의 수험번호가 부착된 책상과 의자의 흔들림을 미리 점검하고, 화장실 위치를 파악하며, 준비해 온 요약 노트를 훑어보면서 차분하게 심호흡을 할 수 있는 30분의 귀중한 '멘탈 예열 시간'을 확보할 수 있습니다. 8시 10분이 지나면 시험장 정문이 통제되고 본인 확인 절차가 본격적으로 시작되므로 절대로 1분이라도 지체해서는 안 됩니다.
+</p>
+
+<h2>02 | 수능 교시별 시험 시간표와 입실 완료 기준 — 1교시 미응시자 유의사항</h2>
+<p>
+2027학년도 수능은 오전 8시 40분 1교시 국어 영역을 시작으로 오후 5시 45분 5교시 제2외국어/한문 영역까지 장장 9시간이 넘는 마라톤 레이스로 진행됩니다. 각 교시별 본령 타종 시각과 시험 시간은 철저하게 통제되며, 매 교시 시작 10분 전까지는 반드시 자신의 좌석에 착석해야 합니다.<br><br>
+- <strong>1교시 국어:</strong> 08:40 ~ 10:00 (80분)<br>
+- <strong>2교시 수학:</strong> 10:30 ~ 12:10 (100분)<br>
+- <strong>점심시간:</strong> 12:10 ~ 13:00 (50분, 개인 도시락 취식)<br>
+- <strong>3교시 영어:</strong> 13:07 ~ 14:20 (70분, 13:07부터 듣기평가 방송 진행)<br>
+- <strong>4교시 한국사 및 탐구:</strong> 14:50 ~ 16:37 (107분, 한국사 필수 응시 후 탐구 선택)<br>
+- <strong>5교시 제2외국어/한문:</strong> 17:05 ~ 17:45 (40분, 미응시자 대기실 대기 후 조기 퇴실)<br><br>
+여기서 많은 수험생들이 혼선을 빚는 중요한 규정이 바로 '1교시 국어 미응시자'의 입실 시간입니다. 수시 최저학력기준 등을 이유로 1교시 국어를 선택하지 않은 수험생이라 할지라도 시험장에 늦게 출근하듯 올 수 있는 것이 아닙니다. 1교시 미응시자 역시 **모든 수험생과 똑같이 오전 8시 10분까지 배정된 시험실에 정상 입실**하여 수험표 및 본인 확인을 거친 후, 감독관의 인솔에 따라 지정된 '대기실'로 이동하여 2교시 시작 전까지 대기해야 합니다. 이를 어길 경우 시험 응시 자격 자체가 제한될 수 있으므로 주의해야 합니다.
+</p>
+
+<!-- 인포그래픽 2: 타임라인 로드맵 -->
+
+<!-- 3번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="수능 당일 아침 시간대별 완벽 타임라인 로드맵 / 인포그래픽 카드" src="../../images/261104/5_hot_csat_entry_time_prohibited_items_analog_watch_guide_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">수능 당일 아침 시간대별 완벽 타임라인 로드맵 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>03 | 시험장 반입 금지 물품 완벽 리스트 — 스마트워치·블루투스 이어폰과 전자사전</h2>
+<p>
+수능 시험장에서 매년 가장 안타깝게 발생하는 부정행위 적발 사례의 70% 이상은 놀랍게도 '시험장 반입 금지 물품을 가방에 넣어두었다가 적발되는 경우'입니다. 수험생 본인은 부정행위를 할 의도가 전혀 없었더라도, 규정된 전자기기를 소지하고 있는 행위 그 자체만으로 고등교육법령에 따라 **당해 연도 시험이 전면 무효 처리**되는 엄벌을 받게 됩니다.<br><br>
+교육부와 한국교육과정평가원이 고시한 **'시험장 반입 금지 물품'**은 다음과 같습니다:<br>
+- 휴대전화(스마트폰 및 피처폰 일체)<br>
+- 스마트기기(스마트워치, 스마트밴드, 태블릿PC 등)<br>
+- 디지털카메라, 캠코더, 전자사전, 전자계산기, MP3 플레이어, PMP<br>
+- 블루투스 이어폰(에어팟, 버즈 등 무선 이어폰 일체) 및 블루투스 헤드셋<br>
+- 전자담배(아이코스, 릴, 액상형 전자담배 일체)<br>
+- 결제 및 통신(블루투스 등) 기능 또는 전자식 화면 표시기(LCD, LED)가 있는 시계<br><br>
+이들 물품은 원칙적으로 시험장에 아예 가져오지 않는 것이 가장 안전합니다. 만약 등굣길 연락 등을 위해 부득이하게 시험장에 가져왔다면, 반드시 **1교시 시작 전(08:10~08:25 사이) 감독관의 안내에 따라 전원을 완전히 끈 후 제출**해야 합니다. 만약 가방에 넣어두었더라도 제출하지 않고 시험장 내에 보관하다가 적발되거나 시험 도중 알람이나 진동이 울리면 즉시 현장에서 부정행위자로 간주되어 퇴실 조치 및 시험 무효 처분을 받게 되므로 각별히 명심해야 합니다.
+</p>
+
+<h2>04 | 아날로그 시계의 명확한 허용 기준 — 시침·분침이 있는 순수 기계식 시계만 가능</h2>
+<p>
+수능 시험장 교실에는 시계가 원칙적으로 비치되어 있지 않거나, 비치되어 있더라도 시간 오차로 인한 분쟁을 방지하기 위해 감독관이 종이로 가려두는 경우가 일반적입니다. 따라서 수험생 본인이 개인 시계를 지참하여 교시별 남은 시간을 스스로 안배하는 것이 절대적으로 중요합니다.<br><br>
+하지만 시계의 종류에 대한 규정은 매년 극도로 엄격해지고 있습니다. 수능 시험실에서 소지할 수 있는 유일한 시계는 **'통신·결제 기능(블루투스 등) 및 전자식 화면 표시기(LCD, LED 등)가 전혀 없는 순수 기계식 아날로그시계'**뿐입니다. 즉, 초침·분침·시침이 물리적으로 돌아가는 전통적인 바늘시계만 휴대 가능합니다.<br><br>
+많은 수험생들이 실수하는 대표적인 예가 '카시오(CASIO) 수능 시계' 중 바늘 아래쪽에 조그맣게 날짜나 디지털 숫자가 표시되는 '하이브리드 시계'입니다. 시계판 안에 단 1mm의 액정 화면(LCD)이라도 포함되어 있다면 크기와 관계없이 무조건 반입 금지 물품으로 분류됩니다. 또한 스마트워치(애플워치, 갤럭시워치 등)의 화면을 아날로그 바늘 테마로 바꿔놓았다 하더라도 전자기기이므로 즉시 부정행위가 됩니다. 반드시 1만~2만 원대의 단순한 무음 아날로그 손목시계를 사전 준비해 초침 소리가 거슬리지 않는지 며칠 전부터 미리 차고 연습하는 것이 좋습니다.
+</p>
+
+<!-- 인포그래픽 3: 비교 매트릭스 -->
+
+<!-- 4번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="수능 시험장 반입 물품 3대 영역 분류 기준 대조표 / 인포그래픽 카드" src="../../images/261104/5_hot_csat_entry_time_prohibited_items_analog_watch_guide_4.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">수능 시험장 반입 물품 3대 영역 분류 기준 대조표 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>05 | 시험 중 소지 가능 물품과 개인 필기도구 지참 규정 (흑색 연필·컴퓨터용 사인펜)</h2>
+<p>
+수능 시험실에서는 시험의 공정성을 위해 수험생들에게 공식 필기도구를 현장에서 일괄 지급합니다. 1교시 시작 전 모든 수험생에게는 '한국교육과정평가원 전용 수능 샤프 1자루(흑색 샤프심 5개 내장)'와 '검은색 컴퓨터용 사인펜 1개'가 기본 지급되며, 시험실당 5개씩의 흰색 수정테이프가 비치되어 감독관에게 요청 시 언제든 빌려 쓸 수 있습니다.<br><br>
+그렇다면 수험생이 개인적으로 챙겨가 시험 중에 책상 위에 올려놓고 사용할 수 있는 필기도구는 어디까지일까요? 교육부 공식 지침상 시험 중 수험생이 개인 지참할 수 있는 물품은 다음과 같습니다:<br>
+- 신분증 (주민등록증, 운전면허증, 기간 만료 전 여권, 청소년증 등)<br>
+- 수험표<br>
+- 흑색 연필 및 지우개 (수학 풀이나 국어 지문 밑줄용으로 매우 유용)<br>
+- 0.5mm 흑색 샤프심 (지급된 샤프 안에 보충하여 사용 가능)<br>
+- 흰색 수정테이프 (개인용 지참 가능하며 OMR 답안지 수정 시 본인 것 사용 권장)<br>
+- 순수 아날로그시계<br><br>
+반대로 **개인이 가져온 샤프, 볼펜, 형광펜, 예비 마킹용 플러스펜** 등은 시험 중에 책상 위에 올려두거나 소지해서는 안 됩니다. 특히 개인 샤프를 몰래 사용하다가 감독관에게 적발되면 압수 조치되며, 이중 마킹이나 OMR 판독 오류의 원인이 되는 개인 유색 필기구 사용은 본인에게 심각한 불이익으로 이어질 수 있습니다. 시험 중에는 반드시 평가원 지급 수능 샤프와 컴퓨터용 사인펜, 그리고 허용된 개인 흑색 연필만을 사용하시기 바랍니다.
+</p>
+
+<h2>06 | 1교시 시작 전 미제출 전자기기 적발 시 처벌 규정 — 당해 시험 무효 처리 기준</h2>
+<p>
+해마다 수능이 끝나면 '엄마가 도시락 가방에 넣어준 휴대전화에서 알람이 울려 시험이 무효 처리되었다', '깜빡 잊고 주머니에 무선이어폰을 넣고 있다가 금속탐지기에 걸렸다'는 가슴 아픈 사연들이 뉴스에 보도됩니다. 수능 시험장 복도와 고사장 입구에서는 수능 부정행위 방지를 위해 이동식 금속탐지기 검색이 불시에 이루어지며, 시험 도중 감독관의 육안 점검도 철저하게 진행됩니다.<br><br>
+현행 고등교육법 제34조 제4항 및 교육부 훈령에 따르면, 시험장 반입 금지 물품을 1교시 시작 전 감독관에게 제출하지 않고 임의로 소지하고 있는 행위는 고의성 유무를 불문하고 **'부정행위'**로 확정됩니다. 이 경우 수험생이 작성한 당일 모든 영역의 시험 답안은 전액 0점 처리되며, **당해 연도 수능 응시 자체가 무효**가 됩니다.<br><br>
+만약 다른 수험생에게 무전이나 인터넷을 통해 답안을 전송받거나 사전에 계획된 조직적 부정행위를 저지른 경우에는 당해 시험 무효는 물론 향후 1년간 수능 응시 자격이 원천 정지되는 형사 고발 수준의 중벌을 받게 됩니다. 따라서 시험 당일 1교시 본령이 울리기 전, 감독관이 "반입 금지 물품 제출하라"고 공지할 때 주머니와 가방을 다시 한번 샅샅이 뒤져 전자기기를 100% 제출하는 것만이 지난 수년간의 노력을 안전하게 지키는 유일한 길입니다.
+</p>
+
+<!-- 인포그래픽 4: 점검 체크리스트 -->
+
+<!-- 5번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="수험생 전날 밤 가방 속 필수 준비물 최종 점검 체크리스트 / 인포그래픽 카드" src="../../images/261104/5_hot_csat_entry_time_prohibited_items_analog_watch_guide_5.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">수험생 전날 밤 가방 속 필수 준비물 최종 점검 체크리스트 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>07 | 수험표 분실 시 당일 아침 시험관리본부 긴급 재발급 절차와 필요 준비물</h2>
+<p>
+수능 당일 아침 시험장에 도착했는데 수험표가 보이지 않거나 집에서 깜빡 잊고 출발했다는 사실을 깨달았을 때, 당황하여 집으로 다시 되돌아가서는 절대로 안 됩니다. 되돌아가다가 8시 10분 입실 시간을 놓쳐 시험을 아예 치르지 못하는 비극이 발생할 수 있기 때문입니다.<br><br>
+수험표를 분실했더라도 당황하지 마시고 **오전 7시 30분까지 해당 시험장의 '시험관리본부'**로 곧바로 찾아가면 현장에서 즉시 **'임시 수험표'**를 재발급받을 수 있습니다. 시험장 교문 안으로 들어가 안내 교사에게 "수험표를 분실했습니다"라고 말하면 1층에 마련된 시험관리본부로 신속하게 안내해 줍니다.<br><br>
+임시 수험표를 재발급받기 위해서는 **본인의 신분증(주민등록증·청소년증 등)**과 **응시원서에 부착했던 동일한 규격의 여권용 사진 1매**가 필요합니다. 만약 사진마저 챙겨오지 못했더라도 시험관리본부에서 수험생 본인 확인 서약서 작성 및 임시 확인 절차를 거쳐 시험 응시가 가능하도록 적극적인 행정 지원을 제공하므로, 절대로 겁먹거나 당황하지 말고 침착하게 시험관리본부의 문을 두드리시기 바랍니다.
+</p>
+
+<h2>08 | 수능 당일 아침 지각 위기 시 112·119 비상 수송 지원 요청 방법과 동선 팁</h2>
+<p>
+수능 당일 아침은 전국의 관공서와 주요 기업체의 출근 시간이 오전 10시로 1시간 늦춰지고, 지하철과 시내버스가 집중 배차되지만 예상치 못한 교통사고나 기상 악화, 지하철 지연 등으로 인해 입실 마감 8시 10분에 쫓기는 돌발 위기 상황이 언제든 발생할 수 있습니다.<br><br>
+이럴 때는 주저하지 말고 즉시 **경찰 비상 전화 112 또는 소방 긴급 전화 119**로 전화를 걸어 도움을 요청해야 합니다. 경찰청은 수능 당일 전국 주요 지하철역 환승 거점과 주요 교차로마다 '수험생 비상 수송 거점'을 설치하고 경찰 순찰차와 기동대 싸이카, 모범운전자회 차량을 대규모로 전진 배치합니다.<br><br>
+112에 전화를 걸어 "수능 수험생인데 현재 OO역 인근에서 극심한 정체로 입실이 촉박합니다"라고 위치를 정확히 알리면, 가장 인접한 순찰차가 즉시 출동하여 사이렌을 울리며 시험장 정문 앞까지 안전하고 신속하게 에스코트 수송을 지원합니다. 또한 주요 지하철역 출구 앞에는 '수험생 무료 수송 순찰차'가 대기하고 있으므로, 시간이 촉박할 경우 정복 경찰관에게 수험표를 보여주고 순찰차에 탑승하여 이동하면 지각 위기를 극복할 수 있습니다.
+</p>
+
+<!-- 인포그래픽 5: 장단점/추천 대조표 -->
+
+<!-- 6번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="수능 시계 선택: 허용 아날로그시계 vs 불허 전자/스마트시계 대조표 / 인포그래픽 카드" src="../../images/261104/5_hot_csat_entry_time_prohibited_items_analog_watch_guide_6.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">수능 시계 선택: 허용 아날로그시계 vs 불허 전자/스마트시계 대조표 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>09 | 완벽한 준비가 최고의 실력을 만든다 — 수능 전날 밤 최종 가방 점검 수칙</h2>
+<p>
+대학수학능력시험이라는 거대한 시험대에서 수험생이 지닌 본래의 실력을 온전히 100% 발휘하기 위한 마지막 퍼즐 조각은 바로 '마음의 평정심'입니다. 그리고 그 평정심은 수능 전날 밤 철저하고 빈틈없이 준비된 가방 속 준비물에서 비롯됩니다.<br><br>
+수능 전날 밤 9시 이전에는 공부 책상을 정리하고 가방 챙기기를 완료해야 합니다. 수험표와 신분증은 투명 지퍼백에 함께 담아 가방 앞주머니에 넣고, 아날로그시계의 배터리가 정상 작동하는지 시간을 맞추어 확인합니다. 깎아둔 연필과 지우개, 수정테이프를 필통에 정돈하고, 당일 입을 옷은 얇은 옷을 3~4겹 겹쳐 입을 수 있도록 미리 옷걸이에 걸어두세요.<br><br>
+자신을 믿고 깊은 잠을 청하시기 바랍니다. 긴 시간 동안 수없이 많은 문제집을 풀고 자신과의 싸움을 이겨내 온 여러분의 노력은 결코 배신하지 않을 것입니다. 시험 당일 아침, 여유 있는 걸음으로 7시 40분 고사장에 도착하여 스스로에게 "나는 충분히 준비되었고, 오늘 최고의 하루를 만들어낼 것이다"라는 당당한 주문을 걸어주세요. 전국의 모든 수험생 여러분의 빛나는 결실을 진심으로 뜨겁게 응원합니다.
+</p>
+
+<!-- 인포그래픽 6: FAQ 매트릭스 -->
+
+<!-- 7번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="2027 수능 시험장 입실 및 준비물 최다 질문 FAQ TOP 3 / 인포그래픽 카드" src="../../images/261104/5_hot_csat_entry_time_prohibited_items_analog_watch_guide_7.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">2027 수능 시험장 입실 및 준비물 최다 질문 FAQ TOP 3 / 인포그래픽 카드</div>
+</div>
+
+
+<div class="recommend-area">
+  <strong>📌 함께 읽으면 좋은 2027 수능 대입 실무 추천 글</strong><br><br>
+  • <a href="../261031/hot_csat_aftermath_schedule_score_report_application_dates.html">수능 끝나고 뭘 먼저 해야 하나 — 가채점부터 성적 발표와 정시 원서접수 날짜 순서표</a><br>
+  • <a href="../261031/rite_obituary_notice_message_writing_format_template_samples.html">부고 알림 문자 작성법과 양식 — 상주 고인 관계 빈소 발인 일시와 장례식장 계좌 표기 예시 5선</a>
+</div>
+
+<div class="tags">
+  <span class="tag">#2027수능입실시간</span>
+  <span class="tag">#수능반입금지물품</span>
+  <span class="tag">#수능아날로그시계</span>
+  <span class="tag">#수능시계기준</span>
+  <span class="tag">#수능지각112지원</span>
+  <span class="tag">#수험표분실재발급</span>
+  <span class="tag">#수능준비물체크리스트</span>
+  <span class="tag">#수능샤프필기도구</span>
+  <span class="tag">#수능부정행위처벌</span>
+  <span class="tag">#수능시간표안내</span>
+</div>
+
+</body>
+</html>

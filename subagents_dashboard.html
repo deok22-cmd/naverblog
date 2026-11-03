@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <header>
     <div>
       <h1>🤖 서브에이전트 운영 & 모니터링 대시보드</h1>
-      <div class="sub">Antigravity Subagent Orchestration & Automated Task Health Center (업데이트: 2026-10-31 04:23:45)</div>
+      <div class="sub">Antigravity Subagent Orchestration & Automated Task Health Center (업데이트: 2026-11-04 04:27:12)</div>
       <div class="nav-links">
         <a class="nav-btn" href="dashboard.html">📊 블로그 4채널 운영 대시보드</a>
         <a class="nav-btn" href="prompt_helper.html">🎨 이미지 프롬프트 헬퍼</a>
@@ -208,18 +208,18 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="lbl">등록된 서브에이전트 수</div>
     </div>
     <div class="kpi">
-      <div class="val" style="color:var(--ok);">6</div>
+      <div class="val" style="color:var(--ok);">5</div>
       <div class="lbl">정상 작동 (Healthy)</div>
     </div>
     <div class="kpi">
-      <div class="val" style="color:var(--ink3);">0</div>
+      <div class="val" style="color:var(--bad);">1</div>
       <div class="lbl">오류 / 주의 필요</div>
     </div>
     <div class="kpi">
-      <div class="val" style="color:#10b981;">29.23 GB</div>
-      <div class="lbl">C: 드라이브 여유 (24.6%) · <strong>쾌적</strong></div>
+      <div class="val" style="color:#10b981;">28.67 GB</div>
+      <div class="lbl">C: 드라이브 여유 (24.2%) · <strong>쾌적</strong></div>
       <div class="kpi-disk-bar">
-        <div class="kpi-disk-fill" style="width:75.4%; background:#10b981;"></div>
+        <div class="kpi-disk-fill" style="width:75.8%; background:#10b981;"></div>
       </div>
     </div>
   </div>
@@ -249,11 +249,11 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="info-item">
               <span class="info-label">최근 실행</span>
-              <span class="info-val">🕒 2026-10-25 04:00:15</span>
+              <span class="info-val">🕒 2026-11-01 04:00:14</span>
             </div>
             <div class="info-item">
               <span class="info-label">실행 소요 시간</span>
-              <span class="info-val">⚡ 3.68초</span>
+              <span class="info-val">⚡ 3.02초</span>
             </div>
             <div class="info-item">
               <span class="info-label">실행 스크립트</span>
@@ -264,7 +264,7 @@ document.addEventListener('DOMContentLoaded', function() {
           
 
           <div class="summary-box">
-            <span class="summary-title">최근 실행 결과:</span> 2,444개 파일 삭제 완료 (2,103.7 MB 확보, C: 여유 27.61 GB) (사용 중 20개 안전 건너뜀)
+            <span class="summary-title">최근 실행 결과:</span> 2,089개 파일 삭제 완료 (1,096.9 MB 확보, C: 여유 28.52 GB) (사용 중 22개 안전 건너뜀)
           </div>
 
           <div class="log-accordion">
@@ -274,22 +274,22 @@ document.addEventListener('DOMContentLoaded', function() {
             </button>
             <div class="accordion-content" id="log-disk-cleaner" style="display:none;">
               
-              <div class="log-box"><strong>최근 실행 로그 (Tail):</strong><pre>[04:00:14]         삭제: agy.exe.1790535608659445200.old
-[04:00:14]         삭제: agy.exe.1792522813647492000.old
-[04:00:14]   [5/8] 앱 구버전 설치 잔여 패키지 및 확장 휴지통 정리
-[04:00:14]         정리: C:\Users\User\AppData\Roaming\Antigravity IDE\CachedExtensionVSIXs\.trash
-[04:00:14]   [6/8] 윈도우 업데이트 다운로드 캐시 정리: C:\Windows\SoftwareDistribution\Download
-[04:00:14]   [7/8] 사용자 Temp 폴더 정리: C:\Users\User\AppData\Local\Temp
-[04:00:15]   [8/8] 루트 임시 폴더 정리: C:\Temp
-[04:00:15]   [8/8] 루트 임시 폴더 정리: C:\tmp
-[04:00:15] 
+              <div class="log-box"><strong>최근 실행 로그 (Tail):</strong><pre>[04:00:13]         삭제: agy.exe.1790535608659445200.old
+[04:00:13]         삭제: agy.exe.1793386815967863300.old
+[04:00:13]   [5/8] 앱 구버전 설치 잔여 패키지 및 확장 휴지통 정리
+[04:00:13]         정리: C:\Users\User\AppData\Roaming\Antigravity IDE\CachedExtensionVSIXs\.trash
+[04:00:13]   [6/8] 윈도우 업데이트 다운로드 캐시 정리: C:\Windows\SoftwareDistribution\Download
+[04:00:13]   [7/8] 사용자 Temp 폴더 정리: C:\Users\User\AppData\Local\Temp
+[04:00:14]   [8/8] 루트 임시 폴더 정리: C:\Temp
+[04:00:14]   [8/8] 루트 임시 폴더 정리: C:\tmp
+[04:00:14] 
 === 정리 완료 요약 ===
-[04:00:15] 결과 상태     : SUCCESS
-[04:00:15] 소요 시간     : 3.68초
-[04:00:15] 삭제된 파일   : 2,444개
-[04:00:15] 확보된 용량   : 2,103.7 MB (2.05 GB)
-[04:00:15] 정리 후 C:여유: 27.61 GB (전체 118.67 GB)
-[04:00:15] 사용 중 건너뜀: 20개</pre></div>
+[04:00:14] 결과 상태     : SUCCESS
+[04:00:14] 소요 시간     : 3.02초
+[04:00:14] 삭제된 파일   : 2,089개
+[04:00:14] 확보된 용량   : 1,096.9 MB (1.07 GB)
+[04:00:14] 정리 후 C:여유: 28.52 GB (전체 118.67 GB)
+[04:00:14] 사용 중 건너뜀: 22개</pre></div>
             </div>
           </div>
         </div>
@@ -345,7 +345,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
         
 
-        <div class="agent-card border-ok" id="card-fact-checker">
+        <div class="agent-card border-bad" id="card-fact-checker">
           <div class="card-header">
             <div>
               <div class="card-title-row">
@@ -354,7 +354,7 @@ document.addEventListener('DOMContentLoaded', function() {
               </div>
               <div class="agent-desc">2026년 기준 일정, 장소, 금액(입장료/주차료/할인), 법정 규정 등을 정밀 팩트체크하여 오기 시 자동 보정 및 신뢰도 검증 로그 기록</div>
             </div>
-            <div class="status-wrap"><span class="badge badge-ok">✔️ 정상 완료</span></div>
+            <div class="status-wrap"><span class="badge badge-bad">⚠️ 오류/주의</span></div>
           </div>
 
           <div class="info-grid">
@@ -364,11 +364,11 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="info-item">
               <span class="info-label">최근 실행</span>
-              <span class="info-val">🕒 2026-10-31 04:22:53</span>
+              <span class="info-val">🕒 2026-11-04 04:26:54</span>
             </div>
             <div class="info-item">
               <span class="info-label">실행 소요 시간</span>
-              <span class="info-val">⚡ 211.72초</span>
+              <span class="info-val">⚡ 35.69초</span>
             </div>
             <div class="info-item">
               <span class="info-label">실행 스크립트</span>
@@ -376,10 +376,10 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
           </div>
 
-          <div class="chips-row"><span class="kpi-chip chip-score">🎯 신뢰도 98.1%</span> <span class="kpi-chip chip-ok">✔️ 정상 98건</span> <span class="kpi-chip chip-warn">✏️ 보정 7건</span> <span class="kpi-chip chip-info">📌 참고 2건</span></div>
+          <div class="chips-row"><span class="kpi-chip chip-score">🎯 신뢰도 0.0%</span> <span class="kpi-chip chip-ok">✔️ 정상 0건</span></div>
 
           <div class="summary-box">
-            <span class="summary-title">최근 실행 결과:</span> 원고 7건 중 107개 팩트 검증 완료 (정상: 98개, 보정: 7개, 참고: 2개, 신뢰도: 98.1%)
+            <span class="summary-title">최근 실행 결과:</span> 원고 7건 중 0개 팩트 검증 완료 (정상: 0개, 보정: 0개, 참고: 0개, 신뢰도: 0.0%)
           </div>
 
           <div class="log-accordion">
@@ -388,26 +388,32 @@ document.addEventListener('DOMContentLoaded', function() {
               <span id="arr-fact-checker">▼</span>
             </button>
             <div class="accordion-content" id="log-fact-checker" style="display:none;">
-              
-              <div class="log-box"><strong>최근 실행 로그 (Tail):</strong><pre>[04:21:46]       제목: 화순 만연산 치유의 숲 오감길 단풍 걷기 — 무장애 데크로드 소요시간과 동구리호수...
-[04:22:21]       ✏️ 보정 완료: '약 3.5km' ➡️ '약 7km' (오감길 데크로드는 편도 약 3.1km입니다. 동구리호수공원 주차장에서 출발하여 만연사 입구까지 왕복하는 코스는 데크로드 왕복 거리(6.2km)에 주차장에서 데크로드 입구까지의 거리를 더하면 약 6.5km~7km 내외가 됩니다. 따라서 '약 3.5km'는 실제 왕복 거리에 비해 현저히 짧아 사실과 다릅니다. 소요 시간(1시간 20분~1시간 30분)은 약 7km를 걷는 데 적절한 시간으로 판단됩니다.)
-[04:22:21]       💾 원고 파일 저장 완료: 1건 보정 반영
-[04:22:22] [7/7] 검증 중: travel_jeonju_arboretum_autumn_foliage_glass_greenhouse.html
-[04:22:22]       제목: 전주 한국도로공사 전주수목원 가을 단풍 코스 — 유리온실 풍경쉼터 포토존과 관람 ...
-[04:22:52]       ✏️ 보정 완료: '약 10만 평' ➡️ '약 8만 7천 평 (29만㎡)' (한국도로공사 전주수목원의 공식 면적은 29만㎡이며, 이는 약 8만 7천 평에 해당합니다. 10만 평은 약 33만㎡입니다.)
-[04:22:52]       ✏️ 보정 완료: '약 10만 평' ➡️ '약 8만 7천 평' (한국도로공사 전주수목원의 공식 면적 29만㎡는 약 8만 7천 평에 해당합니다. 10만 평은 약 33만㎡입니다.)
-[04:22:52]       📌 참고 사항: 오전 9시 30분~10시 30분 사이가 인물과 배경의 노출 차이가 적어 가장 아름다운 사진을 완성할 수 있는 골든타임입니다. (이는 사진 촬영을 위한 주관적인 추천 시간이며, 공식적인 규정이나 확정된 일정은 아닙니다.)
-[04:22:52]       ✏️ 보정 완료: '무료 (공영 주차)' ➡️ '무료 (공영 주차 유료)' (전주 덕진공원 자체는 무료이나, 공영 주차장은 유료로 운영됩니다.)
-[04:22:52]       💾 원고 파일 저장 완료: 3건 보정 반영
-[04:22:53] 
+              <div class="err-box"><strong>⚠️ 감지된 오류/경고:</strong><pre>hot_csat_entry_time_prohibited_items_analog_watch_guide.html 팩트체크 API 호출 실패: HTTP Error 402: Payment Required
+ins_insurance_cancellation_surrender_value_reduction_grace.html 팩트체크 API 호출 실패: HTTP Error 402: Payment Required
+repair_bathroom_exhaust_fan_cleaning_replacement_cost.html 팩트체크 API 호출 실패: HTTP Error 402: Payment Required
+travel_chungju_tangeumdae_autumn_pine_forest_walk.html 팩트체크 API 호출 실패: HTTP Error 402: Payment Required
+travel_miryang_ice_valley_cable_car_autumn_eoksae.html 팩트체크 API 호출 실패: HTTP Error 402: Payment Required
+travel_mungyeong_gomosanseong_tokkibiri_autumn_foliage.html 팩트체크 API 호출 실패: HTTP Error 402: Payment Required
+travel_paju_gamaksan_suspension_bridge_autumn_trail.html 팩트체크 API 호출 실패: HTTP Error 402: Payment Required</pre></div>
+              <div class="log-box"><strong>최근 실행 로그 (Tail):</strong><pre>[04:26:43]       ⚠️ API 호출 오류: HTTP Error 402: Payment Required
+[04:26:43]       ✔️ 모든 팩트 정상 확인 (0개 항목)
+[04:26:44] [6/7] 검증 중: travel_mungyeong_gomosanseong_tokkibiri_autumn_foliage.html
+[04:26:44]       제목: 경북 문경 고모산성과 토끼비리 가을 단풍길 — 진남교반 절경과 영남대로 옛길 걷기...
+[04:26:48]       ⚠️ API 호출 오류: HTTP Error 402: Payment Required
+[04:26:48]       ✔️ 모든 팩트 정상 확인 (0개 항목)
+[04:26:49] [7/7] 검증 중: travel_paju_gamaksan_suspension_bridge_autumn_trail.html
+[04:26:49]       제목: 경기 파주 감악산 출렁다리와 운계폭포 가을 단풍 — 수도권 당일치기 둘레길 코스...
+[04:26:53]       ⚠️ API 호출 오류: HTTP Error 402: Payment Required
+[04:26:53]       ✔️ 모든 팩트 정상 확인 (0개 항목)
+[04:26:54] 
 === 팩트체크 완료 요약 ===
-[04:22:53] 결과 상태     : SUCCESS
-[04:22:53] 소요 시간     : 211.72초
-[04:22:53] 검증 팩트 수  : 107개
-[04:22:53] 정상 확인     : 98개
-[04:22:53] 자동 보정 반영: 7개
-[04:22:53] 참고 알림     : 2개
-[04:22:53] 신뢰도 지수   : 98.1%</pre></div>
+[04:26:54] 결과 상태     : ERROR
+[04:26:54] 소요 시간     : 35.69초
+[04:26:54] 검증 팩트 수  : 0개
+[04:26:54] 정상 확인     : 0개
+[04:26:54] 자동 보정 반영: 0개
+[04:26:54] 참고 알림     : 0개
+[04:26:54] 신뢰도 지수   : 0.0%</pre></div>
             </div>
           </div>
         </div>
@@ -482,7 +488,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="info-item">
               <span class="info-label">최근 실행</span>
-              <span class="info-val">🕒 2026-10-31 04:23:45</span>
+              <span class="info-val">🕒 2026-11-04 04:27:12</span>
             </div>
             <div class="info-item">
               <span class="info-label">실행 소요 시간</span>
@@ -532,7 +538,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="info-item">
               <span class="info-label">최근 실행</span>
-              <span class="info-val">🕒 2026-10-31 04:23:45</span>
+              <span class="info-val">🕒 2026-11-04 04:27:12</span>
             </div>
             <div class="info-item">
               <span class="info-label">실행 소요 시간</span>
