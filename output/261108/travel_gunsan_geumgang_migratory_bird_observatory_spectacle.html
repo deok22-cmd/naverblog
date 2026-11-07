@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>군산 금강철새조망대 가창오리 군무 언제 보나 — 금강하구둑 드라이브 코스와 일몰 관람 명당</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #00796b; padding-bottom: 12px; color: #004d40; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e0f2f1; padding: 12px 15px; border-left: 6px solid #00796b; margin-top: 50px; color: #004d40; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #004d40; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #b2dfdb; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #00796b; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf9; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #b2dfdb; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #00796b; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #00796b; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #b2dfdb; border-left: 4px solid #00796b; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #00796b; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+
+  /* ========================================================
+     🎨 다채널 인포그래픽 아키타입 CSS 시스템
+     ========================================= */
+  .infographic-box, [class*="infographic-"] {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif;
+  }
+  .infographic-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    border-bottom: 2px dashed #b2dfdb;
+    padding-bottom: 12px;
+  }
+  .infographic-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 1.1em;
+    color: #004d40;
+  }
+  .infographic-badge {
+    display: inline-block;
+    background: #00796b;
+    color: #ffffff;
+    font-size: 0.75em;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+  }
+
+  /* 1. 비교 매트릭스 카드 (.infographic-compare-box) */
+  .infographic-compare-box {
+    background: #ffffff;
+    border: 1.5px solid #b2dfdb;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .compare-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .compare-col {
+    flex: 1;
+    min-width: 150px;
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 14px 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  }
+  .compare-col.highlight {
+    background: #f9fdf9;
+    border: 1.5px solid #00796b;
+  }
+  .compare-col-title {
+    font-size: 0.95em;
+    font-weight: 800;
+    color: #004d40;
+    margin-bottom: 6px;
+  }
+  .compare-col-badge {
+    display: inline-block;
+    background: #00796b;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .compare-row {
+    font-size: 0.82em;
+    color: #444;
+    line-height: 1.55;
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .compare-row:last-child {
+    border-bottom: none;
+  }
+
+  /* 2. 일정/동선 타임라인 로드맵 (.infographic-timeline-box) */
+  .infographic-timeline-box {
+    background: #f9fdf9;
+    border: 1.5px solid #b2dfdb;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  .timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .timeline-badge {
+    background: #00796b;
+    color: #ffffff;
+    font-size: 0.78em;
+    font-weight: 800;
+    padding: 4px 9px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+  .timeline-content {
+    flex: 1;
+  }
+  .timeline-title {
+    font-size: 0.92em;
+    font-weight: 700;
+    color: #004d40;
+    margin-bottom: 4px;
+  }
+  .timeline-desc {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 3. 코스/난코스 전술 공략도 (.infographic-strategy-box) */
+  .infographic-strategy-box {
+    background: #ffffff;
+    border: 1.5px solid #ef4444;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(239,68,68,0.06);
+  }
+  .strategy-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .strategy-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .strategy-col.solution {
+    background: #f9fdf9;
+    border: 1px solid #b2dfdb;
+  }
+  .hazard-tag {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .safe-tag {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+
+  /* 4. 실전 비용/예산 견적 영수증 (.infographic-receipt-box) */
+  .infographic-receipt-box {
+    background: #ffffff;
+    border: 2px dashed #9ca3af;
+    border-radius: 12px;
+    padding: 24px 22px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+  }
+  .receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 16px;
+    font-size: 0.88em;
+  }
+  .receipt-table th {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid #d1d5db;
+  }
+  .receipt-table td {
+    padding: 8px 10px;
+    border-bottom: 1px dashed #e5e7eb;
+    color: #4b5563;
+  }
+  .receipt-total {
+    background: #f9fdf9;
+    border-top: 2px solid #00796b;
+    padding: 12px 16px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 800;
+    color: #004d40;
+  }
+
+  /* 5. 필수 점검 & 준비물 체크리스트 (.infographic-checklist-box) */
+  .infographic-checklist-box {
+    background: #ffffff;
+    border: 1.5px solid #b2dfdb;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .checklist-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .checklist-col {
+    flex: 1;
+    min-width: 190px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .checklist-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 6px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .checklist-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 6. 단계별 신청/절차 플로우차트 (.infographic-flow-box) */
+  .infographic-flow-box {
+    background: #f9fdf9;
+    border: 1.5px solid #b2dfdb;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .flow-steps {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-top: 10px;
+  }
+  .flow-card {
+    flex: 1;
+    min-width: 130px;
+    background: #ffffff;
+    border: 1px solid #b2dfdb;
+    border-radius: 8px;
+    padding: 12px 10px;
+    text-align: center;
+  }
+  .flow-step-num {
+    font-size: 0.72em;
+    font-weight: 800;
+    color: #00796b;
+    background: #e0f2f1;
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+  }
+  .flow-title {
+    font-size: 0.88em;
+    font-weight: 700;
+    color: #004d40;
+    margin-bottom: 4px;
+  }
+  .flow-desc {
+    font-size: 0.78em;
+    color: #666;
+    line-height: 1.4;
+  }
+
+  /* 7. 4분할 핵심 수치 매트릭스 (.infographic-stat-box) */
+  .infographic-stat-box {
+    background: #ffffff;
+    border: 1.5px solid #b2dfdb;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .stat-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .stat-card {
+    flex: 1;
+    min-width: 130px;
+    background: #f9fdf9;
+    border: 1px solid #b2dfdb;
+    border-radius: 8px;
+    padding: 14px 10px;
+    text-align: center;
+  }
+  .stat-icon { font-size: 1.6em; margin-bottom: 4px; }
+  .stat-label { font-size: 0.8em; color: #666; font-weight: 600; margin-bottom: 4px; }
+  .stat-value { font-size: 1.15em; font-weight: 800; color: #00796b; }
+  .stat-sub { font-size: 0.75em; color: #777; margin-top: 2px; }
+
+  /* 8. 평가 지표 & 코스/제품 스코어카드 (.infographic-scorecard-box) */
+  .infographic-scorecard-box {
+    background: #ffffff;
+    border: 1.5px solid #b2dfdb;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .scorecard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .scorecard-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .score-label {
+    width: 110px;
+    font-size: 0.86em;
+    font-weight: 700;
+    color: #004d40;
+  }
+  .score-bar-bg {
+    flex: 1;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .score-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #e0f2f1, #00796b);
+    border-radius: 5px;
+  }
+  .score-value {
+    width: 45px;
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: 800;
+    color: #00796b;
+  }
+  .score-grade {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 0.72em;
+    font-weight: 800;
+    background: #e0f2f1;
+    color: #00796b;
+  }
+
+  /* 9. 장단점 & 추천 vs 비추천 대조 카드 (.infographic-procon-box) */
+  .infographic-procon-box {
+    background: #ffffff;
+    border: 1.5px solid #b2dfdb;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .procon-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .pro-col {
+    flex: 1;
+    min-width: 220px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .con-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .pro-badge {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .con-badge {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .procon-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 5px 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.06);
+  }
+  .procon-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 10. 핵심 질문 & 해법 Q&A 매트릭스 (.infographic-faq-box) */
+  .infographic-faq-box {
+    background: #f9fdf9;
+    border: 1.5px solid #b2dfdb;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .faq-card {
+    background: #ffffff;
+    border: 1px solid #b2dfdb;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .faq-q {
+    font-size: 0.88em;
+    font-weight: 800;
+    color: #004d40;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .faq-q-badge {
+    background: #00796b;
+    color: #ffffff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .faq-a {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 11. 진화형 범용 인포그래픽 프리미티브 (.infographic-custom-box) */
+  .infographic-custom-box {
+    background: #ffffff;
+    border: 1.5px solid #b2dfdb;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .info-callout {
+    background: #f9fdf9;
+    border-left: 4px solid #00796b;
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.84em;
+    color: #004d40;
+    line-height: 1.5;
+    margin: 8px 0;
+  }
+  .info-pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 8px 0;
+  }
+  .info-pill {
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 4px 10px;
+    font-size: 0.78em;
+    font-weight: 600;
+    color: #374151;
+  }
+  .info-pill.active {
+    background: #e0f2f1;
+    border-color: #00796b;
+    color: #00796b;
+    font-weight: 700;
+  }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#00796b'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>군산 금강철새조망대 가창오리 군무 언제 보나 — 금강하구둑 드라이브 코스와 일몰 관람 명당</h1>
+
+<div class="intro-box">
+  <strong>📌 군산 금강철새조망대와 가창오리 군무 3줄 핵심 요약</strong><br><br>
+  1. <strong>하늘을 뒤덮는 30만 마리의 교향곡:</strong> 전북 군산시 성산면에 위치한 금강철새조망대와 금강하구둑 일대는 매년 11월 시베리아에서 날아온 30~40만 마리의 가창오리(Baikal Teal)가 집단 월동하는 국내 최고의 철새 생태 명소입니다.<br>
+  2. <strong>해질녘 17시 20분의 마법:</strong> 낮 동안 금강 수면에서 휴식을 취하던 수십만 마리의 가창오리가 일몰 직후 먹이 활동을 위해 일제히 날아오르며 붉은 노을빛 하늘에 거대한 파도와 소용돌이를 그리는 군무는 일생에 꼭 봐야 할 장관입니다.<br>
+  3. <strong>11층 전망타워와 드라이브 명당:</strong> 360도 회전식 망원경을 갖춘 11층 철새전망타워와 금강하구둑 자전거길, 그리고 나포 십자들녘 제방도로는 바람을 피해 안전하고 쾌적하게 군무를 포착할 수 있는 최고의 명당입니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 대표 메인 썸네일 생성 영역</span>
+      <span class="ph-file">images/261108/4_travel_gunsan_geumgang_migratory_bird_observatory_spectacle_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-4-1">A cinematic and breathtaking wide-angle photograph of hundreds of thousands of Baikal teals performing an incredible synchronized murmuration (aerial flock dance) over the Geumgang River estuary in Gunsan, South Korea. The flock forms a massive undulating wave that swoops across a dramatic crimson and golden sunset sky. In the foreground, the modern 11-story Geumgang Migratory Bird Observatory tower rises beside the riverbank reed beds. The mirror-like surface of the river reflects the fiery dusk light. High dynamic range, 8k resolution, National Geographic style wildlife landscape, sharp focus on bird silhouettes against the glowing horizon, ultra realistic.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-4-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">금강하구 붉은 노을 위로 수십만 마리 가창오리가 펼치는 거대한 공중 파도 군무 / AI 제작 이미지</div>
+</div>
+
+<!-- 인포그래픽 1: 4분할 핵심 수치 매트릭스 -->
+
+<!-- 2번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="군산 금강철새조망대 4대 핵심 탐방 지표 / 인포그래픽 카드" src="../../images/261108/4_travel_gunsan_geumgang_migratory_bird_observatory_spectacle_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">군산 금강철새조망대 4대 핵심 탐방 지표 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>01 | 30만 마리가 그리는 하늘의 교향곡 — 금강하구 가창오리 군무의 경이로움</h2>
+<p>
+전북 군산시와 충남 서천군을 가르는 금강의 하구(Estuary)는 바다와 민물이 만나는 비옥한 기수역으로, 드넓은 갯벌과 무성한 갈대밭, 그리고 인근의 광활한 나포 십자들녘이 어우러진 천혜의 생태 보고입니다. 이곳은 가을이 깊어지는 11월이 되면 전 세계 어디에서도 찾아보기 힘든 경이로운 자연의 대서사시가 펼쳐지는 무대로 변모합니다.<br><br>
+그 주인공은 바로 몸길이 약 40cm 남짓한 소형 오리류인 '가창오리(Baikal Teal)'입니다. 얼굴에 녹색과 노란색의 독특한 태극 문양을 띠고 있어 '태극오리'라고도 불리는 이 새들은 시베리아 레나강 유역에서 번식을 마친 뒤 매년 10월 말부터 한반도 금강하구로 날아듭니다. 놀랍게도 전 세계 가창오리 개체수의 90% 이상이 이곳 금강하구와 인근 고창 동림저수지 등 서해안 일대에 집결하여 겨울을 납니다.<br><br>
+낮 동안에는 맹금류의 공격을 피하기 위해 강 한가운데 조밀하게 뭉쳐 평화롭게 잠을 자다가, 땅거미가 깔리는 일몰 직후가 되면 신비로운 군무를 시작합니다. 30만 마리가 넘는 거대한 무리가 단 1초의 오차도 없이 일사불란하게 방향을 틀며 하늘 위로 솟구쳤다 곤두박질치는 모습은 자연이 지휘하는 웅장한 교향곡을 시각화해 놓은 듯한 충격을 안겨줍니다.
+</p>
+
+<!-- 인포그래픽 2: 타임라인/동선 로드맵 카드 -->
+
+<!-- 3번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="금강하구 철새 탐조 및 군산 당일 여행 로드맵 / 인포그래픽 카드" src="../../images/261108/4_travel_gunsan_geumgang_migratory_bird_observatory_spectacle_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">금강하구 철새 탐조 및 군산 당일 여행 로드맵 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>02 | 11층 높이에서 조망하는 금강 물줄기 — 군산 금강철새조망대 시설 안내</h2>
+<p>
+군산시 성산면 철새로에 위치한 '금강철새조망대'는 금강하구의 생태계를 한눈에 조망할 수 있는 국내 최고의 탐조 전문 타워입니다. 지상 11층(해발 65m) 규모의 전망타워는 강변 절벽 위에 세워져 있어, 충남 서천의 신성리 갈대밭과 금강하구둑, 멀리 서해로 빠져나가는 금강 본류가 파노라마로 시원하게 펼쳐집니다.<br><br>
+11층 전망대에는 360도 전 방향을 조망할 수 있는 통유리창과 함께 초고배율 광학 망원경이 설치되어 있습니다. 바람이 매섭게 부는 늦가을에도 따뜻한 실내에서 모래톱에 앉아 깃털을 다듬는 저어새나 잠수를 즐기는 논병아리, 맹금류인 참수리의 날카로운 비행을 손에 잡힐 듯 선명하게 관찰할 수 있어 탐조 초보자나 어린이에게 최적의 환경을 제공합니다.<br><br>
+타워 하부에는 철새신체탐험관, 조류공원, 부화체험장 등 다양한 부대시설이 자리 잡고 있습니다. 특히 새의 몸속 구조를 거대한 모형으로 만들어 내부를 걸어 다니며 배울 수 있는 신체탐험관은 가족 단위 관람객에게 인기가 높습니다. 현재 조망대 시설은 공공 생태 복지 차원에서 상시 무료 또는 매우 저렴한 요금으로 개방되고 있어 부담 없이 방문할 수 있습니다.
+</p>
+
+<!-- 인포그래픽 3: 일몰 군무 포착 명당 공략도 카드 -->
+
+<!-- 4번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="금강 가창오리 일몰 군무 3대 명당 공략도 / 인포그래픽 카드" src="../../images/261108/4_travel_gunsan_geumgang_migratory_bird_observatory_spectacle_4.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">금강 가창오리 일몰 군무 3대 명당 공략도 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>03 | 가창오리 군무 언제 볼 수 있나 — 해질녘 17시 20분의 마법과 관측 적기</h2>
+<p>
+가창오리 군무를 성공적으로 감상하기 위해서는 정확한 시간대와 계절적 타이밍을 숙지하는 것이 필수적입니다. 가창오리는 주행성(낮에 활동)이 아닌 야행성 조류이기 때문에 한낮에는 절대 대규모 군무를 펼치지 않습니다. 낮 동안에는 포식자의 위협이 적은 금강 한가운데 모래톱에 빽빽하게 모여 깃털을 고르며 잠을 청합니다.<br><br>
+군무가 시작되는 마법의 시간은 '일몰 후 10분~20분 사이'입니다. 11월 기준 군산 지역의 일몰 시각은 대략 오후 5시 15분에서 5시 25분 사이입니다. 해가 서산 너머로 완전히 넘어가고 하늘이 붉은빛에서 푸르스름한 어스름(매직아워)으로 변하는 바로 그 순간, 리더 오리의 신호와 함께 거대한 군무의 막이 오릅니다.<br><br>
+군무는 약 15분에서 25분 동안 숨 가쁘게 이어지다가, 무리가 어둠 속 나포들녘이나 서천들녘의 논바닥으로 흩어지며 끝이 납니다. 따라서 오후 4시 40분까지는 관람 포인트에 미리 도착해 삼각대와 카메라 세팅을 마치고 고요히 숨을 죽이며 기다리셔야 결정적 순간을 놓치지 않습니다.
+</p>
+
+<h2>04 | 사진작가들이 숨겨둔 일몰 군무 명당 — 나포 십자들녘 제방길 포인트</h2>
+<p>
+전국의 야생동물 사진작가들과 조류 전문가들이 이구동성으로 꼽는 최고의 가창오리 군무 촬영지는 조망대에서 상류 쪽으로 약 7km 떨어진 '군산시 나포면 십자들녘 제방길'입니다. 간척 사업으로 조성된 바둑판 모양의 비옥한 논들이 금강변을 따라 넓게 펼쳐져 있는 곳입니다.<br><br>
+가창오리 무리가 낮 동안 머물던 강 수면에서 날아올라 먹이를 먹기 위해 들판으로 이동하는 길목이 바로 이 십자들녘 상공입니다. 제방길에 차를 대고 서 있으면, 수십만 마리의 오리 떼가 만들어낸 거대한 검은 구름이 관람객의 머리 위 30~50m 상공을 스치듯 지나가는 압도적인 전율을 맛볼 수 있습니다.<br><br>
+수십만 개의 날갯짓이 만들어내는 '쉬이익- 웅웅-' 하는 거대한 공기 마찰음은 마치 거대한 폭포수가 쏟아지는 듯한 웅장함을 선사합니다. 이때 붉게 타오르는 서쪽 하늘을 배경으로 실루엣을 포착하면 평생 간직할 걸작 사진을 완성할 수 있습니다. 단, 좁은 농로 제방길이므로 다른 차량의 통행에 방해가 되지 않도록 갓길 주차에 각별히 유의하셔야 합니다.
+</p>
+
+<!-- 인포그래픽 4: 탐방 만족도 평가 스코어카드 -->
+
+<!-- 5번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="군산 금강 철새 탐방 요소별 만족도 분석 / 인포그래픽 카드" src="../../images/261108/4_travel_gunsan_geumgang_migratory_bird_observatory_spectacle_5.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">군산 금강 철새 탐방 요소별 만족도 분석 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>05 | 조망대 내부 생태체험 시설 — 조류공원과 곤충체험관, 부화체험장</h2>
+<p>
+금강철새조망대는 전망타워 외에도 아이들의 눈높이에 맞춘 다채로운 야외 생태 시설이 알차게 갖추어져 있습니다. 타워 뒤편으로 이어지는 '조류공원'에는 다치거나 구조되어 야생으로 돌아가지 못하는 천연기념물 독수리와 수리부엉이, 왜가리, 원앙 등을 가까이서 관찰할 수 있는 동물원이 마련되어 있습니다.<br><br>
+또한 '부화체험관'에서는 유정란에서 병아리가 알을 깨고 나오는 실제 부화 과정을 날짜별 인큐베이터를 통해 실시간으로 관찰할 수 있어 생명의 신비로움을 생생하게 배울 수 있습니다. 식물원과 곤충생태관에서는 금강 유역에 자생하는 다양한 수생식물과 희귀 곤충 표본들을 함께 만나볼 수 있습니다.<br><br>
+야외 산책로에는 생태 연못과 물레방아, 철새 쉼터가 아기자기하게 꾸며져 있어 일몰 군무를 기다리는 오후 시간 동안 가족과 함께 한가롭게 산책을 즐기기에 더없이 훌륭합니다.
+</p>
+
+<h2>06 | 금강 자전거길과 수변 드라이브 코스 — 하구둑에서 익산 웅포나루까지</h2>
+<p>
+금강철새조망대 앞을 지나는 강변 도로는 국토종주 금강자전거길의 핵심 구간이자 환상적인 드라이브 코스입니다. 금강하구둑에서 시작하여 조망대를 거쳐 익산 웅포 곰개나루까지 이어지는 약 15km의 수변 도로는 신호등이 거의 없고 차량 통행이 한적하여 여유로운 늦가을 정취를 만끽할 수 있습니다.<br><br>
+도로 우측으로는 유유히 흐르는 은빛 금강 물줄기가 끝없이 동행하고, 좌측으로는 가을 억새와 갈대꽃이 흩날립니다. 자전거를 타고 강바람을 가르며 달리면 물가에서 먹이를 찾던 백로와 왜가리가 인기척에 놀라 푸드덕 날아오르는 평화로운 풍경을 마주하게 됩니다.<br><br>
+해질 무렵 자전거길 쉼터에 잠시 멈춰 서서 강물 위로 떨어지는 붉은 낙조를 바라보면, 바쁜 일상에서 쌓였던 번뇌가 강물과 함께 서해로 씻겨 내려가는 듯한 깊은 치유와 평온을 경험할 수 있습니다.
+</p>
+
+<h2>07 | 늦가을 강바람 대비 방한 팁 — 핫팩과 방한모, 삼각대 고정 요령</h2>
+<p>
+금강하구의 일몰 관람을 계획하신다면 방한 대책을 철저하게 세우셔야 합니다. 강과 바다가 만나는 하구 지형의 특성상 해가 지기 시작하면 서해에서 불어오는 습하고 매서운 강바람(칼바람)이 온몸을 파고들며 체감온도를 영하권으로 급격히 떨어뜨립니다.<br><br>
+두꺼운 롱패딩이나 방풍 기능이 있는 겉옷은 기본이며, 귀를 덮는 털모자(비니), 넥워머나 목도리, 방한 장갑을 반드시 착용해야 합니다. 주머니 속에 넣을 대용량 핫팩을 1~2개 챙기시면 야외에서 30분 이상 대기할 때 손가락이 곱는 것을 방지할 수 있습니다.<br><br>
+특히 카메라로 군무를 촬영하실 분들은 삼각대 운용에 주의하셔야 합니다. 강변의 돌풍으로 인해 삼각대가 흔들리거나 쓰러질 위험이 있으므로, 삼각대 중앙 고리에 무거운 가방을 걸어 무게중심을 낮추고 셔터스피드는 최소 1/500초 이상으로 확보해야 빠르게 날아가는 철새의 날갯짓을 선명하게 포착할 수 있습니다.
+</p>
+
+<!-- 인포그래픽 5: 핵심 질문 Q&A 박스 -->
+
+<!-- 6번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="군산 금강 가창오리 군무 자주 묻는 질문 FAQ / 인포그래픽 카드" src="../../images/261108/4_travel_gunsan_geumgang_migratory_bird_observatory_spectacle_6.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">군산 금강 가창오리 군무 자주 묻는 질문 FAQ / 인포그래픽 카드</div>
+</div>
+
+
+<h2>08 | 관람 시간과 주차장 이용 안내 — 주말 가족 나들이 방문 체크포인트</h2>
+<p>
+금강철새조망대의 운영 시간은 오전 9시부터 오후 5시까지이며(입장 마감 16:30), 매주 월요일은 정기 휴관일입니다. 야외 공원과 옥외 탐조 시설은 일몰 시간대까지 자유롭게 개방되므로 늦은 오후에 도착하셔도 야외 군무 관람에는 아무런 지장이 없습니다.<br><br>
+주차장은 조망대 정문 앞과 도로 건너편에 대형 버스와 승용차 수백 대를 수용할 수 있는 아스팔트 주차장이 마련되어 있으며 전액 무료로 이용하실 수 있습니다. 전기차 완속 충전기도 구비되어 있습니다.<br><br>
+다만 일몰 군무를 보기 위해 나포 십자들녘으로 이동하실 경우, 농로 제방길은 도로 폭이 협소하므로 반드시 교행이 가능한 갓길 공터에 차를 대셔야 합니다. 농기계의 통행을 방해하지 않는 성숙한 주차 매너를 지켜주시기 바랍니다.
+</p>
+
+<h2>09 | 군산 문학·역사 연계 여행 — 채만식문학관과 경암동 철길마을, 중동호떡</h2>
+<p>
+철새들의 경이로운 군무를 감상한 후에는 군산 시내로 이동하여 군산만의 독특한 근대 문화유산과 정겨운 미식 투어로 여행을 풍성하게 채워보시기 바랍니다.<br><br>
+철새조망대에서 차로 5분 거리인 '채만식문학관'은 일제강점기 군산의 수탈과 민중의 애환을 풍자한 소설 '탁류'의 작가 백릉 채만식 선생을 기리는 곳입니다. 금강을 내려다보는 배 모양의 건축물 안에서 선생의 육필 원고와 문학 세계를 깊이 있게 음미할 수 있습니다.<br><br>
+시내로 들어서면 낡은 기찻길을 사이에 두고 아기자기한 레트로 상점들이 늘어선 '경암동 철길마을'이 기다립니다. 추억의 달고나 만들기, 쫀드기 굽기, 옛날 교복 입기 체험을 즐기며 학창 시절의 향수에 젖어볼 수 있습니다. 여행의 마지막은 70년 전통을 자랑하는 군산 명물 '중동호떡'이나 진한 국물의 짬뽕 한 그릇으로 따뜻하게 달래보시길 추천합니다.
+</p>
+
+<table class="info-table">
+  <tr>
+    <th>구분</th><th>상세 정보</th><th>이용 팁</th>
+  </tr>
+  <tr>
+    <td><strong>위치</strong></td>
+    <td>전북특별자치도 군산시 성산면 철새로 120 (금강철새조망대)</td>
+    <td>내비게이션: 금강철새조망대 검색 (대형 무료 주차장)</td>
+  </tr>
+  <tr>
+    <td><strong>운영 시간</strong></td>
+    <td>09:00 ~ 17:00 (입장 마감 16:30 / 매주 월요일 휴관)</td>
+    <td>야외 탐조 데크는 일몰 시간대까지 자유 개방</td>
+  </tr>
+  <tr>
+    <td><strong>관람 요금</strong></td>
+    <td>무료 개방 (공공 생태 테마파크)</td>
+    <td>11층 전망타워 무료 관람 및 망원경 이용 가능</td>
+  </tr>
+  <tr>
+    <td><strong>군무 관측지</strong></td>
+    <td>나포 십자들녘 제방길, 금강하구둑 수변 데크</td>
+    <td>일몰 20분 전(17:00 전후) 현장 도착 대기 필수</td>
+  </tr>
+</table>
+
+<div class="recommend-area">
+  <strong>📌 함께 읽으면 좋은 가을 여행 추천지</strong><br><br>
+  · <a href="../261104/travel_chungju_tangeumdae_autumn_pine_forest_walk.html">충북 충주 탄금대 남한강 가을 솔숲길 산책 — 열두대 단풍 바위와 감자옹심이 한 그릇</a><br>
+  · <a href="../261104/travel_miryang_ice_valley_cable_car_autumn_eoksae.html">경남 밀양 영남알프스 얼음골 케이블카 단풍 — 사자평 억새 평원과 천황산 코스 안내</a>
+</div>
+
+<div class="tags">
+  <span class="tag">#군산철새조망대</span>
+  <span class="tag">#금강철새조망대</span>
+  <span class="tag">#가창오리군무</span>
+  <span class="tag">#금강하구둑</span>
+  <span class="tag">#군산가볼만한곳</span>
+  <span class="tag">#나포십자들</span>
+  <span class="tag">#채만식문학관</span>
+  <span class="tag">#가을철새탐조</span>
+  <span class="tag">#군산당일치기</span>
+</div>
+
+</body>
+</html>

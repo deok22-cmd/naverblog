@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>교통사고 났을 때 현장 대처 순서와 보험 접수 방법 — 과실비율 인정기준 조회와 렌터카 대차 청구 절차</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+
+  /* ========================================================
+     🎨 다채널 인포그래픽 아키타입 CSS 시스템
+     ========================================= */
+  .infographic-box, [class*="infographic-"] {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif;
+  }
+  .infographic-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    border-bottom: 2px dashed #c8e6c9;
+    padding-bottom: 12px;
+  }
+  .infographic-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 1.1em;
+    color: #1b5e20;
+  }
+  .infographic-badge {
+    display: inline-block;
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.75em;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+  }
+
+  /* 1. 비교 매트릭스 카드 (.infographic-compare-box) */
+  .infographic-compare-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .compare-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .compare-col {
+    flex: 1;
+    min-width: 150px;
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 14px 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  }
+  .compare-col.highlight {
+    background: #f9fdf9;
+    border: 1.5px solid #388e3c;
+  }
+  .compare-col-title {
+    font-size: 0.95em;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 6px;
+  }
+  .compare-col-badge {
+    display: inline-block;
+    background: #388e3c;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .compare-row {
+    font-size: 0.82em;
+    color: #444;
+    line-height: 1.55;
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .compare-row:last-child {
+    border-bottom: none;
+  }
+
+  /* 2. 일정/동선 타임라인 로드맵 (.infographic-timeline-box) */
+  .infographic-timeline-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  .timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .timeline-badge {
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.78em;
+    font-weight: 800;
+    padding: 4px 9px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+  .timeline-content {
+    flex: 1;
+  }
+  .timeline-title {
+    font-size: 0.92em;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 4px;
+  }
+  .timeline-desc {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 3. 코스/난코스 전술 공략도 (.infographic-strategy-box) */
+  .infographic-strategy-box {
+    background: #ffffff;
+    border: 1.5px solid #ef4444;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(239,68,68,0.06);
+  }
+  .strategy-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .strategy-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .strategy-col.solution {
+    background: #f9fdf9;
+    border: 1px solid #c8e6c9;
+  }
+  .hazard-tag {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .safe-tag {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+
+  /* 4. 실전 비용/예산 견적 영수증 (.infographic-receipt-box) */
+  .infographic-receipt-box {
+    background: #ffffff;
+    border: 2px dashed #9ca3af;
+    border-radius: 12px;
+    padding: 24px 22px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+  }
+  .receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 16px;
+    font-size: 0.88em;
+  }
+  .receipt-table th {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid #d1d5db;
+  }
+  .receipt-table td {
+    padding: 8px 10px;
+    border-bottom: 1px dashed #e5e7eb;
+    color: #4b5563;
+  }
+  .receipt-total {
+    background: #f9fdf9;
+    border-top: 2px solid #388e3c;
+    padding: 12px 16px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 800;
+    color: #1b5e20;
+  }
+
+  /* 5. 필수 점검 & 준비물 체크리스트 (.infographic-checklist-box) */
+  .infographic-checklist-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .checklist-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .checklist-col {
+    flex: 1;
+    min-width: 190px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .checklist-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 6px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .checklist-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 6. 단계별 신청/절차 플로우차트 (.infographic-flow-box) */
+  .infographic-flow-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .flow-steps {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-top: 10px;
+  }
+  .flow-card {
+    flex: 1;
+    min-width: 130px;
+    background: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 12px 10px;
+    text-align: center;
+  }
+  .flow-step-num {
+    font-size: 0.72em;
+    font-weight: 800;
+    color: #388e3c;
+    background: #e8f5e9;
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+  }
+  .flow-title {
+    font-size: 0.88em;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 4px;
+  }
+  .flow-desc {
+    font-size: 0.78em;
+    color: #666;
+    line-height: 1.4;
+  }
+
+  /* 7. 4분할 핵심 수치 매트릭스 (.infographic-stat-box) */
+  .infographic-stat-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .stat-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .stat-card {
+    flex: 1;
+    min-width: 130px;
+    background: #f9fdf9;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 14px 10px;
+    text-align: center;
+  }
+  .stat-icon { font-size: 1.6em; margin-bottom: 4px; }
+  .stat-label { font-size: 0.8em; color: #666; font-weight: 600; margin-bottom: 4px; }
+  .stat-value { font-size: 1.15em; font-weight: 800; color: #388e3c; }
+  .stat-sub { font-size: 0.75em; color: #777; margin-top: 2px; }
+
+  /* 8. 평가 지표 & 코스/제품 스코어카드 (.infographic-scorecard-box) */
+  .infographic-scorecard-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .scorecard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .scorecard-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .score-label {
+    width: 110px;
+    font-size: 0.86em;
+    font-weight: 700;
+    color: #1b5e20;
+  }
+  .score-bar-bg {
+    flex: 1;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .score-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #e8f5e9, #388e3c);
+    border-radius: 5px;
+  }
+  .score-value {
+    width: 45px;
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: 800;
+    color: #388e3c;
+  }
+  .score-grade {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 0.72em;
+    font-weight: 800;
+    background: #e8f5e9;
+    color: #388e3c;
+  }
+
+  /* 9. 장단점 & 추천 vs 비추천 대조 카드 (.infographic-procon-box) */
+  .infographic-procon-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .procon-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .pro-col {
+    flex: 1;
+    min-width: 220px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .con-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .pro-badge {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .con-badge {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .procon-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 5px 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.06);
+  }
+  .procon-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 10. 핵심 질문 & 해법 Q&A 매트릭스 (.infographic-faq-box) */
+  .infographic-faq-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .faq-card {
+    background: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .faq-q {
+    font-size: 0.88em;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .faq-q-badge {
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .faq-a {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 11. 진화형 범용 인포그래픽 프리미티브 (.infographic-custom-box) */
+  .infographic-custom-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .info-callout {
+    background: #f9fdf9;
+    border-left: 4px solid #388e3c;
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.84em;
+    color: #1b5e20;
+    line-height: 1.5;
+    margin: 8px 0;
+  }
+  .info-pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 8px 0;
+  }
+  .info-pill {
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 4px 10px;
+    font-size: 0.78em;
+    font-weight: 600;
+    color: #374151;
+  }
+  .info-pill.active {
+    background: #e8f5e9;
+    border-color: #388e3c;
+    color: #388e3c;
+    font-weight: 700;
+  }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>교통사고 났을 때 현장 대처 순서와 보험 접수 방법 — 과실비율 인정기준 조회와 렌터카 대차 청구 절차</h1>
+
+<div class="intro-box">
+  <strong>📌 교통사고 발생 시 현장 대처와 보험 처리 3줄 핵심 요약</strong><br><br>
+  1. <strong>가장 먼저 2차 사고 예방 대피:</strong> 사고 발생 직후 도로 위에서 시비나 과실을 따지지 말고, 비상점멸등을 켜고 트렁크를 개방한 뒤 탑승자 전원이 즉시 가드레일 밖 안전지대로 대피하는 것이 생명을 지키는 제1원칙입니다.<br>
+  2. <strong>스마트폰 증거 확보 5대 앵글:</strong> 안전이 확보된 상태에서 차량 파손 부위 초근접 촬영, 앞바퀴 정렬 방향, 차선 노면 표시, 원거리 20~30m 4방향 파노라마, 상대 차량 블랙박스 유무를 빠르게 촬영하고 보험사 대표번호로 다이렉트 접수합니다.<br>
+  3. <strong>과실비율 조회와 렌터카 청구:</strong> 손해보험협회 과실비율 정보포털(accident.knia.or.kr)을 통해 법적 인정기준을 확인하며, 상대방 과실로 차량 수리 시 피해자는 동급 최저가 렌터카를 대차받거나 대여 요금의 35%에 해당하는 교통비를 현금으로 청구할 수 있습니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 대표 메인 썸네일 생성 영역</span>
+      <span class="ph-file">images/261108/7_car_traffic_accident_response_fault_ratio_rental_claim_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-7-1">A crisp and realistic urban road scene following a minor traffic accident in South Korea. Two modern passenger cars are stopped safely near the shoulder with emergency hazard lights flashing. A calm driver is carefully taking detailed evidence photos of the car bumper damage and lane markings using a smartphone. In the background, a safety warning triangle is placed appropriately. Clear daylight, professional consumer safety advice atmosphere, high detail, 8k resolution, authentic Korean road traffic scenario, informative and reassuring tone.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-7-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">교통사고 현장 비상등 점멸 후 안전한 증거 사진 촬영 및 보험 접수 요령 / AI 제작 이미지</div>
+</div>
+
+<!-- 인포그래픽 1: 4분할 핵심 수치 매트릭스 -->
+
+<!-- 2번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="교통사고 처리 4대 핵심 기준 수치 / 인포그래픽 카드" src="../../images/261108/7_car_traffic_accident_response_fault_ratio_rental_claim_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">교통사고 처리 4대 핵심 기준 수치 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>01 | 당황하지 않고 침착하게 — 교통사고 발생 직후 5분 골든타임 행동 요령</h2>
+<p>
+아무리 베테랑 운전자라 하더라도 도로 위에서 쾅 하는 충돌음과 함께 교통사고가 발생하면 극심한 당황과 충격에 휩싸이게 됩니다. 심장이 두근거리고 이성적인 판단이 마비되기 쉬운 사고 직후 5분 동안 어떤 행동을 취하느냐에 따라 내 생명의 안전과 향후 과실비율 산정의 결과가 180도 달라집니다.<br><br>
+사고 발생 순간 가장 먼저 해야 할 일은 심호흡을 크게 하고 기어를 'P(주차)'에 놓은 뒤 시동을 끄고 비상점멸등을 켜는 것입니다. 그다음 운전자 자신과 동승자의 부상 여부를 빠르게 확인해야 합니다. 만약 목이나 허리에 극심한 통증이 있거나 피를 흘리는 부상자가 있다면 환자를 억지로 움직이지 말고 즉시 119에 구조 요청을 해야 합니다.<br><br>
+단순 접촉 사고라 하더라도 도로 한가운데에서 차 문을 열고 나와 상대 운전자와 삿대질을 하며 "왜 끼어들었냐", "당신 과실이다"라며 언성을 높이는 것은 절대 금물입니다. 현장에서의 감정싸움은 과실비율 결정에 아무런 법적 효력이 없을 뿐만 아니라, 뒤따라오는 차량에 치이는 끔찍한 2차 사고를 자초하는 가장 위험한 행동입니다.
+</p>
+
+<!-- 인포그래픽 2: 현장 즉시 조치 4단계 플로우 -->
+
+<!-- 3번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="교통사고 현장 즉시 조치 4단계 절차 / 인포그래픽 카드" src="../../images/261108/7_car_traffic_accident_response_fault_ratio_rental_claim_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">교통사고 현장 즉시 조치 4단계 절차 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>02 | 2차 사고를 막는 안전 대피 — 비상등 점멸과 가드레일 밖 이동 원칙</h2>
+<p>
+고속도로나 자동차전용도로에서 교통사고가 발생했을 때 가장 두려워해야 할 것은 최초의 충돌이 아니라 뒤이어 시속 100km로 덮쳐오는 '2차 사고'입니다. 경찰청 통계에 따르면 고속도로 2차 사고의 치사율은 약 54%로, 일반 교통사고 치사율의 무려 5배가 넘는 무시무시한 살인 흉기입니다.<br><br>
+차량이 주행 차로에 멈춰 섰다면 비상점멸등을 켜고 트렁크 리드를 위로 활짝 열어 후방 차량에 이상 상황임을 시각적으로 알립니다. 주간에는 후방 100m, 야간에는 후방 200m 지점에 안전삼각대나 불꽃신호기를 설치하는 것이 원칙이지만, 고속 주행 차량이 쌩쌩 달리는 야간 도로에 삼각대를 놓으러 걸어가는 행위 자체가 매우 위험하므로 무리하게 설치하려 하지 마십시오.<br><br>
+사진 촬영도 안전이 100% 확보된 찰나에만 진행해야 하며, 1분 이내로 핵심만 찍었다면 지체 없이 운전자와 동승자 전원이 고속도로 **가드레일 바깥쪽(방호벽 너머 언덕 풀숲)**으로 몸을 완전히 피해야 합니다. "차 안에 가만히 앉아 있는 것이 안전하다"는 생각은 고속도로에서 절대로 통하지 않습니다.
+</p>
+
+<!-- 인포그래픽 3: 현장 사진 필수 체크리스트 카드 -->
+
+<!-- 4번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="교통사고 현장 증거 사진 5대 필수 앵글 / 인포그래픽 카드" src="../../images/261108/7_car_traffic_accident_response_fault_ratio_rental_claim_4.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">교통사고 현장 증거 사진 5대 필수 앵글 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>03 | 과실비율을 뒤집는 결정적 증거 — 스마트폰 현장 촬영 5가지 필수 각도</h2>
+<p>
+블랙박스가 대중화되었지만, 충돌 당시의 충격으로 영상이 누락되거나 왜곡된 화각으로 인해 가해자와 피해자가 뒤바뀌는 분쟁이 여전히 빈번합니다. 사고 직후 스마트폰으로 촬영한 몇 장의 현장 사진은 향후 보험사 과실 협상과 분쟁조정위원회에서 법적 판결문 못지않은 결정적 효력을 발휘합니다.<br><br>
+반드시 확보해야 할 5대 앵글은 다음과 같습니다. 첫째, **'파손 부위 초근접 사진'**으로 충돌 높이와 스크래치의 깊이, 방향을 통해 상대 차의 속도와 진입 각도를 역추적할 수 있습니다. 둘째, 가장 중요한 **'앞바퀴의 조향 각도'**입니다. 바퀴가 어느 방향으로 꺾여 있는지는 차선 변경이나 급차선 변경 시도 여부를 판가름하는 핵심 물증이 됩니다.<br><br>
+셋째, **'차선과 노면 표시선'**입니다. 차량이 흰색 실선(차선변경 금지구간)을 밟았는지, 황색 중앙선을 침범했는지가 사진에 담겨야 합니다. 넷째, **'20~30m 원거리 4방향 사진'**으로 교차로 진입 상황과 신호등 상태, 도로의 형태를 전체적으로 조망할 수 있어야 합니다. 마지막 다섯째는 **'상대방 차량의 블랙박스 설치 유무 및 전원 램프 점멸 여부'**입니다. 상대방이 추후 불리한 블랙박스 영상을 "고장 났다"며 고의로 은폐하는 것을 사전에 차단할 수 있습니다.
+</p>
+
+<h2>04 | 사설 견인차(렉카) 갈고리 걸기 전 거부하는 법 — 보험사 무료 견인 이용</h2>
+<p>
+사고가 발생하면 귀신같이 알고 현장에 가장 먼저 사이렌을 울리며 달려오는 이들이 있습니다. 바로 사설 견인차(렉카)들입니다. 당황한 운전자에게 다가와 "도로가 막히니 갓길까지만 빼주겠다", "동의서에 서명만 하라"며 친절을 가장해 유도하지만, 일단 견인 고리(갈고리)를 차에 거는 순간 수십만 원에서 100만 원이 넘는 바가지 견인료와 구난 작업비, 대기료 청구서가 날아옵니다.<br><br>
+사설 견인차의 부당 청구를 막는 대처법은 명확합니다. 차 문을 닫고 창문을 살짝 내린 채, 스마트폰 동영상 녹음 기능을 켜고 큰 목소리로 **"견인을 원하지 않습니다. 제 보험사 견인차를 이미 불렀으니 제 차에 손대지 마십시오"**라고 분명하게 구두 거부 의사를 밝혀야 합니다. 이 거부 음성을 녹음해 두면 추후 사설 렉카가 무단으로 차를 걸었을 때 형사 고소 및 구난료 거부의 강력한 근거가 됩니다.<br><br>
+운전자가 가입한 자동차보험에는 '긴급출동 견인 서비스'가 기본 포함되어 있습니다. 기본 10km에서 특약에 따라 50~60km까지 **전액 무료 견인**이 제공되므로, 사설 렉카를 절대 이용할 이유가 없습니다. 또한 고속도로 위성사고라면 한국도로공사가 운영하는 **'긴급견인서비스(콜센터 1588-2504)'**를 요청하면 인근 휴게소나 졸음쉼터 등 가장 가까운 안전지대까지 무료로 차량을 견인해 줍니다.
+</p>
+
+<!-- 인포그래픽 4: 렌터카 vs 교통비 비교표 -->
+
+<!-- 5번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="사고 수리 기간 이동 수단 비교 / 인포그래픽 카드" src="../../images/261108/7_car_traffic_accident_response_fault_ratio_rental_claim_5.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">사고 수리 기간 이동 수단 비교 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>05 | 보험사 사고 접수 실무 — 가해자·피해자 대인·대물 접수번호 발급 절차</h2>
+<p>
+현장 정리가 일단락되었다면 본인이 가입한 자동차보험사 대표 콜센터(현대해상, 삼성화재, DB손보, KB손보 등)로 즉시 전화를 걸어 사고를 접수해야 합니다. "내가 피해자인데 내 보험사를 왜 부르냐"며 상대 보험사만 기다리는 운전자가 많지만, 현장에 내 보험사 출동 기사가 나와야 상대방 측의 일방적인 과실 주장이나 왜곡을 현장에서 방어해 줄 수 있습니다.<br><br>
+접수는 크게 '대물 접수(차량 및 시설물 파손 수리)'와 '대인 접수(사람의 부상 치료)' 두 가지로 나뉩니다. 사고 경위에 따라 상대방 보험사로부터 문자메시지로 **'사고 접수번호(대물/대인)'**를 발급받아야 정비공장에 차를 입고시키고 병원에 입원 또는 통원 치료를 받을 수 있습니다.<br><br>
+병원 원무과에 가서 접수할 때 상대방 보험사 이름과 '대인 접수번호'만 제시하면 지불보증서가 병원으로 팩스 전송되어 환자가 병원비를 1원도 결제하지 않고 전액 보험 처리로 정밀 검사(X-ray, MRI 등)와 물리치료를 받을 수 있습니다.
+</p>
+
+<h2>06 | 내 과실 몇 대 몇일까? — 손해보험협회 과실비율 인정기준 포털 조회법</h2>
+<p>
+교통사고 처리에서 가장 첨예하게 부딪히는 부분이 바로 '과실비율(Fault Ratio)'입니다. 과실비율에 따라 상대방 차량 수리비 분담금과 내 보험료의 향후 3년간 할증 여부가 결정되기 때문입니다. 많은 운전자가 보험사 직원이 임의로 정하는 수치에 끌려다니기 십상입니다.<br><br>
+하지만 과실비율은 보험사 직원의 기분에 따라 정해지는 것이 아니라, 법원 판례와 도로교통법을 종합해 정리한 공적 기준에 따릅니다. 스마트폰이나 PC로 **손해보험협회 '과실비율 정보포털(accident.knia.or.kr)'**에 접속하면 차대차 사고, 차대사람 사고, 고속도로, 교차로 등 사고 유형별 표준 과실 도표와 판례를 누구나 투명하게 검색할 수 있습니다.<br><br>
+도표에는 '기본 과실'과 함께 방향지시등 미점등(-10%), 현저한 과실(-10%), 중과실(-20%) 등 구체적인 수정요소가 명시되어 있습니다. 내 사고 유형의 표준 도표를 직접 찾아 캡처한 뒤, 보험사 보상 담당자에게 제시하며 논리적으로 반박하면 부당하게 과실이 잡히는 피해를 완벽하게 방어할 수 있습니다.
+</p>
+
+<h2>07 | 수리 기간 렌터카(대차) 받는 법 — 동급 최저가 기준과 교통비 35% 환급</h2>
+<p>
+피해 차량이 정비공장에 입고되어 수리를 받는 기간 동안 운전자는 대체 이동 수단을 보장받을 법적 권리가 있습니다. 자동차보험 대물배상 약관상 피해자는 수리 기간 동안 '렌터카 대차'를 받거나, 차를 렌트하지 않는 대신 '교통비'를 현금으로 지급받는 것 중 하나를 선택할 수 있습니다.<br><br>
+2016년 자동차보험 표준약관 개정 이후 렌터카 지급 기준은 차량 가액이 아닌 **'배기량과 연식이 유사한 동급의 최저가 렌터카'**로 변경되었습니다. 예를 들어 10년 된 외제차 BMW 520d(2,000cc)가 파손되었더라도 동급 배기량인 국산 쏘나타나 K5 렌터카 비용 기준으로 지급됩니다. 차량 수리 기간은 통상 최대 25일(단독 사고 등 특수 사유 시 30일) 한도로 인정됩니다.<br><br>
+만약 집에 다른 여유 차량이 있거나 재택근무로 인해 굳이 차를 탈 필요가 없다면 **'교통비 현금 수령'**을 강력히 추천합니다. 대여 렌터카 통상 요금의 **35%**에 해당하는 금액을 수리 일수만큼 계산하여 내 통장으로 현금 입금해 줍니다. 쏘나타 기준 하루 약 4~5만 원의 교통비가 산정되므로 일주일 수리 시 약 30만 원 상당의 쏠쏠한 현금 보상을 받을 수 있습니다.
+</p>
+
+<!-- 인포그래픽 5: 핵심 질문 Q&A 박스 -->
+
+<!-- 6번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="교통사고 처리 핵심 궁금증 FAQ / 인포그래픽 카드" src="../../images/261108/7_car_traffic_accident_response_fault_ratio_rental_claim_6.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">교통사고 처리 핵심 궁금증 FAQ / 인포그래픽 카드</div>
+</div>
+
+
+<h2>08 | 가해자가 접수를 거부할 때 — 경찰서 신고와 피해자 직접청구권 행사</h2>
+<p>
+사고 현장에서는 잘못을 인정하던 가해자가 귀가 후 태도를 돌변하여 "나도 다쳤다", "내 과실을 인정할 수 없으니 대인 접수를 못 해준다"며 배 째라는 식으로 나오는 경우가 종종 발생합니다. 이때 억울하다고 감정적으로 다툴 필요 없이 법이 보장한 합법적 절차를 밟으시면 됩니다.<br><br>
+첫 번째 단계는 관할 경찰서 교통조사계에 방문하여 정식 사고 접수를 하는 것입니다. 블랙박스 영상과 현장 사진을 제출하면 경찰관이 현장 조사와 가해자 조사를 거쳐 가해자와 피해자를 명확히 가른 뒤 **'교통사고 사실확인원'**을 공식 발급해 줍니다. 신호위반, 중앙선 침범 등 12대 중과실 사고인 경우 가해자는 형사 처벌 대상이 됩니다.<br><br>
+두 번째 단계는 **'피해자 직접청구권(상법 제724조 제2항)'**의 행사입니다. 발급받은 교통사고 사실확인원과 병원 진단서를 첨부하여 상대방 보험회사에 직접 손해배상 청구서를 제출하면, 가해자의 동의 여부와 무관하게 보험회사는 피해자에게 치료비 지불보증과 합의금 지급 절차를 강제로 개시해야 합니다.
+</p>
+
+<h2>09 | 합의는 언제 어떻게? — 성급한 합의 금지와 자동차상해(자상) 특약 활용</h2>
+<p>
+사고 후 며칠 지나지 않아 상대 보험사 대인 보상 직원으로부터 "치료비 포함해서 합의금 100만 원에 일찍 마무리하시죠"라는 전화를 받게 됩니다. 보험사는 조기 종결을 통해 손해액을 줄이려 하지만, 성급하게 합의서에 서명하거나 동의 문자를 보내서는 절대 안 됩니다.<br><br>
+교통사고 후유증은 근육과 인대가 긴장해 있다가 사고 3~7일 후부터 서서히 나타나며, 심한 경우 디스크(추간판 탈출증)나 뇌진탕 증세로 악화될 수 있습니다. 한 번 합의를 마치고 나면 추후 통증이 재발하더라도 추가 치료비를 보험사로부터 청구할 수 없습니다. 따라서 최소 2~3주 동안 충분한 통원 및 한방 치료(침, 추나, 한약 등)를 받으며 몸 상태가 완전히 회복되는 것을 확인한 후 합의에 응해야 합니다.<br><br>
+만약 상대방이 무보험 차량이거나 뺑소니를 쳤거나 과실 분쟁이 장기화될 때는, 내가 가입한 자동차보험의 **'자동차상해(자상)'** 또는 **'무보험차상해'** 담보를 활용해 내 보험사로부터 치료비와 합의금을 먼저 지급받으십시오. 내 보험사가 나에게 먼저 보상금을 지급한 뒤, 가해자에게 구상권을 청구해 돈을 받아내므로 피해자는 분쟁의 스트레스 없이 치료에만 전념할 수 있습니다.
+</p>
+
+<table class="info-table">
+  <tr>
+    <th>구분</th><th>상세 정보</th><th>대응 팁</th>
+  </tr>
+  <tr>
+    <td><strong>현장 안전 조치</strong></td>
+    <td>비상등 점멸 → 트렁크 개방 → 가드레일 밖 대피</td>
+    <td>2차 사고 예방이 최우선 (도로 위 시비 금지)</td>
+  </tr>
+  <tr>
+    <td><strong>사설 렉카 대응</strong></td>
+    <td>"보험사 견인 불렀으니 손대지 마세요" 거부 음성 녹음</td>
+    <td>보험사 무료 견인(10~50km) 및 도로공사 긴급견인 이용</td>
+  </tr>
+  <tr>
+    <td><strong>과실비율 확인</strong></td>
+    <td>손해보험협회 과실비율 정보포털 (accident.knia.or.kr)</td>
+    <td>사고 유형별 표준 도표 및 판례 캡처 후 보험사 제시</td>
+  </tr>
+  <tr>
+    <td><strong>대차 보상 선택</strong></td>
+    <td>동급 최저가 렌터카 대차 vs 통상 요금의 35% 현금 교통비</td>
+    <td>차량 운행 필요성에 따라 현금 수령 선택 가능</td>
+  </tr>
+</table>
+
+<div class="recommend-area">
+  <strong>📌 함께 읽으면 좋은 자동차 실무 추천글</strong><br><br>
+  · <a href="../261104/hot_csat_entry_time_prohibited_items_analog_watch_guide.html">2027 수능 시험장 입실 시간과 반입 금지 물품 — 아날로그 시계 기준과 지각 시 112 지원</a><br>
+  · <a href="../261104/repair_bathroom_exhaust_fan_cleaning_replacement_cost.html">욕실 환풍기 고장·악취 — 청소 vs 교체 판단 기준과 비용</a>
+</div>
+
+<div class="tags">
+  <span class="tag">#교통사고대처법</span>
+  <span class="tag">#교통사고현장조치</span>
+  <span class="tag">#과실비율인정기준</span>
+  <span class="tag">#교통사고렌터카</span>
+  <span class="tag">#대차교통비35</span>
+  <span class="tag">#사설렉카거부</span>
+  <span class="tag">#보험사무료견인</span>
+  <span class="tag">#피해자직접청구권</span>
+  <span class="tag">#교통사고합의요령</span>
+</div>
+
+</body>
+</html>
