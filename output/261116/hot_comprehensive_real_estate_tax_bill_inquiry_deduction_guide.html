@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>2026년도 종합부동산세 고지서 발송일과 홈택스 세액 열람 — 1가구 1주택 기본공제와 납부 기한 안내</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+
+  /* ========================================================
+     🎨 다채널 인포그래픽 아키타입 CSS 시스템
+     ========================================= */
+  .infographic-box, [class*="infographic-"] {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif;
+  }
+  .infographic-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    border-bottom: 2px dashed #c8e6c9;
+    padding-bottom: 12px;
+  }
+  .infographic-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 1.1em;
+    color: #1b5e20;
+  }
+  .infographic-badge {
+    display: inline-block;
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.75em;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+  }
+
+  /* 1. 비교 매트릭스 카드 (.infographic-compare-box) */
+  .infographic-compare-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .compare-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .compare-col {
+    flex: 1;
+    min-width: 150px;
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 14px 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  }
+  .compare-col.highlight {
+    background: #f9fdf9;
+    border: 1.5px solid #388e3c;
+  }
+  .compare-col-title {
+    font-size: 0.95em;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 6px;
+  }
+  .compare-col-badge {
+    display: inline-block;
+    background: #388e3c;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .compare-row {
+    font-size: 0.82em;
+    color: #444;
+    line-height: 1.55;
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .compare-row:last-child {
+    border-bottom: none;
+  }
+
+  /* 2. 일정/동선 타임라인 로드맵 (.infographic-timeline-box) */
+  .infographic-timeline-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  .timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .timeline-badge {
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.78em;
+    font-weight: 800;
+    padding: 4px 9px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+  .timeline-content {
+    flex: 1;
+  }
+  .timeline-title {
+    font-size: 0.92em;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 4px;
+  }
+  .timeline-desc {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 3. 코스/난코스 전술 공략도 (.infographic-strategy-box) */
+  .infographic-strategy-box {
+    background: #ffffff;
+    border: 1.5px solid #ef4444;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(239,68,68,0.06);
+  }
+  .strategy-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .strategy-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .strategy-col.solution {
+    background: #f9fdf9;
+    border: 1px solid #c8e6c9;
+  }
+  .hazard-tag {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .safe-tag {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+
+  /* 4. 실전 비용/예산 견적 영수증 (.infographic-receipt-box) */
+  .infographic-receipt-box {
+    background: #ffffff;
+    border: 2px dashed #9ca3af;
+    border-radius: 12px;
+    padding: 24px 22px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+  }
+  .receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 16px;
+    font-size: 0.88em;
+  }
+  .receipt-table th {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid #d1d5db;
+  }
+  .receipt-table td {
+    padding: 8px 10px;
+    border-bottom: 1px dashed #e5e7eb;
+    color: #4b5563;
+  }
+  .receipt-total {
+    background: #f9fdf9;
+    border-top: 2px solid #388e3c;
+    padding: 12px 16px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 800;
+    color: #1b5e20;
+  }
+
+  /* 5. 필수 점검 & 준비물 체크리스트 (.infographic-checklist-box) */
+  .infographic-checklist-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .checklist-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .checklist-col {
+    flex: 1;
+    min-width: 190px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .checklist-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 6px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .checklist-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 6. 단계별 신청/절차 플로우차트 (.infographic-flow-box) */
+  .infographic-flow-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .flow-steps {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-top: 10px;
+  }
+  .flow-card {
+    flex: 1;
+    min-width: 130px;
+    background: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 12px 10px;
+    text-align: center;
+  }
+  .flow-step-num {
+    font-size: 0.72em;
+    font-weight: 800;
+    color: #388e3c;
+    background: #e8f5e9;
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+  }
+  .flow-title {
+    font-size: 0.88em;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 4px;
+  }
+  .flow-desc {
+    font-size: 0.78em;
+    color: #666;
+    line-height: 1.4;
+  }
+
+  /* 7. 4분할 핵심 수치 매트릭스 (.infographic-stat-box) */
+  .infographic-stat-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .stat-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .stat-card {
+    flex: 1;
+    min-width: 130px;
+    background: #f9fdf9;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 14px 10px;
+    text-align: center;
+  }
+  .stat-icon { font-size: 1.6em; margin-bottom: 4px; }
+  .stat-label { font-size: 0.8em; color: #666; font-weight: 600; margin-bottom: 4px; }
+  .stat-value { font-size: 1.15em; font-weight: 800; color: #388e3c; }
+  .stat-sub { font-size: 0.75em; color: #777; margin-top: 2px; }
+
+  /* 8. 평가 지표 & 코스/제품 스코어카드 (.infographic-scorecard-box) */
+  .infographic-scorecard-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .scorecard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .scorecard-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .score-label {
+    width: 110px;
+    font-size: 0.86em;
+    font-weight: 700;
+    color: #1b5e20;
+  }
+  .score-bar-bg {
+    flex: 1;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .score-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #e8f5e9, #388e3c);
+    border-radius: 5px;
+  }
+  .score-value {
+    width: 45px;
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: 800;
+    color: #388e3c;
+  }
+  .score-grade {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 0.72em;
+    font-weight: 800;
+    background: #e8f5e9;
+    color: #388e3c;
+  }
+
+  /* 9. 장단점 & 추천 vs 비추천 대조 카드 (.infographic-procon-box) */
+  .infographic-procon-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .procon-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .pro-col {
+    flex: 1;
+    min-width: 220px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .con-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .pro-badge {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .con-badge {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .procon-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 5px 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.06);
+  }
+  .procon-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 10. 핵심 질문 & 해법 Q&A 매트릭스 (.infographic-faq-box) */
+  .infographic-faq-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .faq-card {
+    background: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .faq-q {
+    font-size: 0.88em;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .faq-q-badge {
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .faq-a {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 11. 진화형 범용 인포그래픽 프리미티브 (.infographic-custom-box) */
+  .infographic-custom-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .info-callout {
+    background: #f9fdf9;
+    border-left: 4px solid #388e3c;
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.84em;
+    color: #1b5e20;
+    line-height: 1.5;
+    margin: 8px 0;
+  }
+  .info-pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 8px 0;
+  }
+  .info-pill {
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 4px 10px;
+    font-size: 0.78em;
+    font-weight: 600;
+    color: #374151;
+  }
+  .info-pill.active {
+    background: #e8f5e9;
+    border-color: #388e3c;
+    color: #388e3c;
+    font-weight: 700;
+  }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<!-- hot-dday: 2026-12-01 | src: https://www.nts.go.kr -->
+<h1>2026년도 종합부동산세 고지서 발송일과 홈택스 세액 열람 — 1가구 1주택 기본공제와 납부 기한 안내</h1>
+
+<div class="intro-box">
+  <strong>💡 2026년 종합부동산세 정기 고지 3줄 핵심 요약</strong><br><br>
+  1. <strong>고지서 발송 및 납부 기간</strong>: 국세청 종합부동산세 납세고지서는 11월 20일 전후 모바일(카카오페이·국민비서) 및 우편으로 발송되며, 정기 납부 기한은 <strong>2026년 12월 1일(화)부터 12월 15일(화)까지</strong>입니다.<br><br>
+  2. <strong>1주택자 기본공제 및 감면</strong>: 1가구 1주택자는 공시가격 12억 원까지 전액 공제되며(부부 공동명의 각 9억씩 총 18억 원 공제 가능), 고령자 및 장기보유 세액공제를 합산하여 최대 80%까지 세액을 감면받을 수 있습니다.<br><br>
+  3. <strong>홈택스 사전 열람 및 분납</strong>: 국세청 홈택스 및 손택스 앱에서 공인인증서 로그인으로 결정세액을 즉시 열람할 수 있으며, 납부세액이 250만 원을 초과할 경우 6개월 무이자 분할 납부 신청이 가능합니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 대표 메인 썸네일 생성 영역</span>
+      <span class="ph-file">images/261116/5_hot_comprehensive_real_estate_tax_bill_inquiry_deduction_guide_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-1">A professional, photorealistic still-life editorial photograph of modern real estate tax administration in South Korea. On a clean contemporary wooden office desk, an official tax notice document from the National Tax Service is neatly placed alongside a high-end laptop displaying the Hometax digital portal. A modern calculator, sleek ballpoint pen, and a miniature model of a stylish modern Korean apartment building sit nearby. Soft, natural morning daylight illuminates the workspace, conveying a professional, transparent, and organized financial planning atmosphere. Sharp focus, ultra-detailed textures, 8k resolution, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">2026년도 국세청 종합부동산세 고지 안내와 홈택스 전자세액 열람 / AI 제작 이미지</div>
+</div>
+
+
+<!-- 2번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="2026 종합부동산세 핵심 4대 지표 매트릭스 / 인포그래픽 카드 / 인포그래픽 카드" src="../../images/261116/5_hot_comprehensive_real_estate_tax_bill_inquiry_deduction_guide_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">2026 종합부동산세 핵심 4대 지표 매트릭스 / 인포그래픽 카드 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>01 | 2026년 종합부동산세 정기 고지 개시 — 11월 하순 발송 일정과 납부 기간</h2>
+<p>
+매년 연말이 다가오면 부동산 시장과 전국의 주택 소유자들의 이목이 집중되는 대표적인 국세 행정이 바로 '종합부동산세(종부세) 정기 고지'입니다. 과세기준일인 매년 6월 1일 현재 전국의 주택 및 토지 공시가격을 인별로 합산하여 일정 기준 금액을 초과하는 부동산 보유자에게 부과되는 보유세입니다.<br><br>
+2026년도 종합부동산세 고지서는 국세청에서 11월 20일(금)을 전후하여 전국 납세 의무자들에게 순차적으로 일제히 발송됩니다. 최근 전자고지 신청 납세자가 크게 늘어남에 따라 종이 고지서에 앞서 카카오페이, 네이버 전자문서, 국민비서 등 모바일 전자고지가 11월 20일경 먼저 발송되며, 종이 우편 고지서는 11월 24일 전후로 각 가정과 사업장에 배달됩니다.<br><br>
+올해 종합부동산세의 법정 정기 납부 기간은 <strong>2026년 12월 1일(화)부터 12월 15일(화)까지</strong> 보름간입니다. 이 기한을 넘길 경우 하루만 늦어도 3%의 납부지연가산세가 즉시 가산되며, 이후 매일 0.022%씩 가산세가 눈덩이처럼 불어나므로 사전 세액 확인과 납부 계획 수립이 필수적입니다.
+</p>
+
+<h2>02 | 국세청 홈택스·손택스 모바일 세액 열람 — 사전 고지세액 조회 방법</h2>
+<p>
+우편 고지서가 도착하기를 기다리지 않고도 본인의 종부세 부과 여부와 정확한 결정세액을 가장 빠르고 안전하게 확인하는 방법은 국세청 온라인 시스템을 이용하는 것입니다. 국세청은 고지서 인쇄 및 발송 직후인 11월 21일경부터 온라인 포털 '홈택스(Hometax)'와 모바일 앱 '손택스'를 통해 종부세 결정세액 사전 열람 서비스를 개시합니다.<br><br>
+열람 방법은 매우 간단합니다. 홈택스 웹사이트 또는 스마트폰 손택스 앱에 접속한 뒤 간편인증(카카오톡, 토스, PASS, 네이버 등)이나 공동·금융인증서로 본인 로그인을 진행합니다. 상단 메뉴에서 <strong>[세금신고·납부] ➔ [종합부동산세] ➔ [정기고지 세액조회]</strong> 메뉴를 차례로 클릭하면, 올해 본인에게 부과된 종부세 본세와 농어촌특별세(종부세액의 20%), 그리고 합산된 총 납부세액이 일목요연하게 표시됩니다.<br><br>
+화면에서는 단순히 최종 세액뿐만 아니라 합산된 주택별 공시가격 명세서와 적용된 기본공제 금액, 공정시장가액비율, 세율, 세액공제 금액까지 세부 산출 내역을 투명하게 다운로드받아 검토할 수 있습니다. 고지 내역에 이의가 있거나 특례 신청이 누락되었는지 사전에 확인할 수 있는 결정적인 골든타임입니다.
+</p>
+
+
+<!-- 3번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="국세청 홈택스 종부세 세액 열람 및 전자납부 4단계 절차 / 인포그래픽 카드 / 인포그래픽 카드" src="../../images/261116/5_hot_comprehensive_real_estate_tax_bill_inquiry_deduction_guide_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">국세청 홈택스 종부세 세액 열람 및 전자납부 4단계 절차 / 인포그래픽 카드 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>03 | 2026년 종부세 1가구 1주택 기본공제액 — 12억 원 공제와 부부 공동명의 18억 원 기준</h2>
+<p>
+종합부동산세 계산의 출발점이자 가장 중요한 기준선은 바로 '기본공제 금액'입니다. 2026년 현행 세법상 1세대 1주택자의 기본공제 금액은 <strong>공시가격 12억 원</strong>입니다. 즉, 보유하고 있는 단독명의 1주택의 공시가격 합산액이 12억 원(시세 기준 약 17억~18억 원 안팎) 이하인 실수요자는 종합부동산세 과세 대상에서 전액 비과세로 제외됩니다.<br><br>
+주택을 부부 공동명의(지분 50:50)로 소유하고 있는 경우에는 각각 인별 과세 원칙에 따라 1인당 기본공제 9억 원씩, 부부 합산 <strong>총 18억 원</strong>의 공시가격까지 종부세가 0원으로 전액 면제됩니다. 시세 약 25억~26억 원 수준의 고가 주택이라 하더라도 부부 공동명의로 분산되어 있다면 종부세 부담을 원천 차단할 수 있는 막강한 절세 혜택입니다.<br><br>
+만약 부부 공동명의 주택의 공시가격이 18억 원을 초과하고 주택 소유자가 고령이거나 장기보유자인 경우에는, 9월 특례 신청 기간을 통해 '1세대 1주택자 단독명의 특례'를 선택했을 때 12억 원 기본공제에 최대 80%의 세액공제를 적용받는 것이 유리한지 꼼꼼히 비교하여 고지서에 반영되었는지 확인하셔야 합니다.
+</p>
+
+
+<!-- 4번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="단독명의 vs 부부 공동명의 1주택 종부세 공제 혜택 비교 / 인포그래픽 카드 / 인포그래픽 카드" src="../../images/261116/5_hot_comprehensive_real_estate_tax_bill_inquiry_deduction_guide_4.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">단독명의 vs 부부 공동명의 1주택 종부세 공제 혜택 비교 / 인포그래픽 카드 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>04 | 다주택자 공제액 및 중과세율 기준 — 9억 원 기본공제와 과세표준 구간</h2>
+<p>
+주택을 2채 이상 소유하고 있는 다주택자의 경우에는 1인당 기본공제 금액이 <strong>공시가격 9억 원</strong>으로 적용됩니다. 전국에 보유하고 있는 모든 주택의 공시가격을 개인별로 합산한 뒤 9억 원을 차감한 잔여 금액이 과세표준 산정의 기초가 됩니다.<br><br>
+세율 체계에 있어서도 과거의 징벌적 중과세율이 상당 부분 합리화되었습니다. 일반 2주택자(조정대상지역 여부 무관) 및 과세표준 12억 원 이하의 3주택 이상 보유자는 일반 누진세율(0.5% ~ 2.7%)이 적용되어 세부담이 대폭 완화되었습니다.<br><br>
+다만, 과세표준이 12억 원을 초과하는 3주택 이상 다주택자의 경우에는 여전히 최고 5.0%의 중과세율이 적용되므로, 보유 주택의 공시가격 합계와 과세표준 구간을 정밀하게 점검해야 합니다. 상속주택이나 지방 저가주택, 일시적 2주택 등 세법상 주택 수 산정에서 제외되는 특례 요건이 고지서에 정상적으로 반영되었는지를 대조하는 것이 무엇보다 중요합니다.
+</p>
+
+<h2>05 | 고령자·장기보유 세액공제 최대 80% — 중복 적용 요건과 감면 혜택 계산</h2>
+<p>
+종합부동산세에서 실거주 1세대 1주택자를 보호하기 위해 마련된 가장 강력한 감면 장치는 바로 '고령자 세액공제'와 '장기보유 세액공제'입니다. 이 두 제도는 중복 적용이 가능하며, 두 공제율을 합산하여 <strong>최대 80% 한도</strong>까지 최종 산출세액을 깎아줍니다.<br><br>
+고령자 세액공제는 과세기준일 현재 만 60세 이상인 주택 소유자에게 연령대별로 차등 적용됩니다. 만 60세 이상 65세 미만은 20%, 만 65세 이상 70세 미만은 30%, 만 70세 이상은 무려 40%의 세액공제가 주어집니다.<br><br>
+장기보유 세액공제는 해당 주택을 5년 이상 보유했을 때부터 적용됩니다. 5년 이상 10년 미만 보유 시 20%, 10년 이상 15년 미만 보유 시 40%, 15년 이상 장기 보유한 경우에는 단독으로 50%의 공제율을 적용받습니다. 예를 들어 만 70세 이상의 은퇴자가 1주택을 15년 이상 보유해왔다면, 고령자 40% + 장기보유 50% = 90%이지만 한도 규정에 따라 총 80%가 감면되어 본래 세액의 20%만 납부하면 됩니다.
+</p>
+
+
+<!-- 5번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="공시가격 15억 원 1주택자 모의 종부세 산출 영수증 / 인포그래픽 카드 / 인포그래픽 카드" src="../../images/261116/5_hot_comprehensive_real_estate_tax_bill_inquiry_deduction_guide_5.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">공시가격 15억 원 1주택자 모의 종부세 산출 영수증 / 인포그래픽 카드 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>06 | 공정시장가액비율과 세부담 상한선 — 2026년 종부세 세액 계산 구조 총정리</h2>
+<p>
+종합부동산세의 세액이 산출되는 정밀한 공식 구조를 이해하고 있으면 고지서에 적힌 금액이 과다하게 청구되었는지를 즉시 검증할 수 있습니다. 종부세 과세표준은 <strong>[ (주택 공시가격 합계 - 기본공제) × 공정시장가액비율 ]</strong>로 계산됩니다.<br><br>
+2026년 주택분 공정시장가액비율은 부동산 시장의 안정과 납세자의 과도한 보유세 부담 완화를 위해 법정 하한선인 <strong>60%</strong>로 유지되고 있습니다. 즉, 기본공제를 제외하고 남은 초과 금액 전부에 세금이 매겨지는 것이 아니라 그중 60%에 대해서만 과세표준이 형성되므로 실질적인 세부담 체감률이 크게 낮아집니다.<br><br>
+아울러 급격한 공시가격 상승으로 인한 세액 폭등을 방지하기 위해 '세부담 상한선'이 법률로 정해져 있습니다. 당해 연도에 납부할 종부세액과 재산세액의 합계액은 전년도에 부과된 총 세액의 150%를 초과할 수 없도록 엄격히 제한됩니다. 전년 대비 세부담이 1.5배 이상 급증하지 않도록 상한선이 자동으로 적용되어 고지서에 반영됩니다.
+</p>
+
+<h2>07 | 종부세 250만 원 초과 시 무이자 분납 제도 — 신청 기한과 분할 납부 기준</h2>
+<p>
+부동산 가격 상승으로 인해 일시불로 납부하기에 세액이 다소 부담스러운 납세자들을 위해 국세청은 '종합부동산세 분할 납부(분납) 제도'를 운영하고 있습니다. 별도의 이자 부담(가산금) 없이 세금을 나누어 낼 수 있는 매우 유용한 납세 편의 제도입니다.<br><br>
+분납 신청 자격은 종합부동산세(농특세 제외 본세 기준) 납부세액이 <strong>250만 원을 초과</strong>하는 경우입니다. 분납 기간은 법정 납부 기한인 12월 15일로부터 <strong>6개월 이내(2027년 6월 15일까지)</strong>이며, 납세자의 현금 흐름에 맞춰 분할 납부할 수 있습니다.<br><br>
+구체적인 분납 금액 기준은 납부세액에 따라 두 구간으로 나뉩니다. 납부세액이 250만 원 초과 500만 원 이하인 경우에는 250만 원을 초과하는 금액에 대해 분납이 가능하며(예: 세액 400만 원인 경우 12월 15일까지 250만 원 납부 후 나머지 150만 원은 6월 15일까지 납부), 세액이 500만 원을 초과하는 경우에는 총세액의 50% 이하 금액을 6개월 뒤로 나누어 낼 수 있습니다. 분납을 원하는 납세자는 12월 15일까지 홈택스를 통해 반드시 분납 신청서를 접수해야 합니다.
+</p>
+
+
+<!-- 6번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="종부세 고지서 수령 즉시 확인할 필수 점검 체크리스트 / 인포그래픽 카드 / 인포그래픽 카드" src="../../images/261116/5_hot_comprehensive_real_estate_tax_bill_inquiry_deduction_guide_6.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">종부세 고지서 수령 즉시 확인할 필수 점검 체크리스트 / 인포그래픽 카드 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>08 | 과세 대상 오류나 이의가 있을 때 — 고지서 수령 후 불복 청구 및 이의신청 절차</h2>
+<p>
+국세청에서 고지된 세액을 확인했을 때 사실과 다른 주택이 포함되었거나, 멸실된 건축물이 과세 대상에 올랐거나, 상속주택 특례나 1주택자 고령·장기보유 세액공제가 전산 누락되어 과도한 세금이 청구되었다고 판단될 경우에는 즉시 법적인 불복 절차를 밟아야 합니다.<br><br>
+가장 신속한 1차 조치는 고지서에 기재된 관할 세무서 재산세과 종합부동산세 담당자에게 유선으로 연락하여 과세 자료의 전산 오류 여부를 확인하고 정정을 요청하는 것입니다. 명백한 공시가격 오기나 주택 수 합산 착오인 경우 세무서 직권으로 감액 경정 고지서를 재발송해 줍니다.<br><br>
+만약 법리 해석이나 과세 요건에 대한 분쟁으로 세무서와의 원만한 조정이 어려운 경우에는, 종합부동산세 납세고지서를 받은 날(도달일)로부터 <strong>90일 이내</strong>에 국세기본법에 따른 '이의신청', '심판청구(조세심판원)' 또는 '감사원 심사청구'를 공식 제기할 수 있습니다. 단, 불복 청구를 진행하더라도 납부 기한(12월 15일)까지 세금을 납부하지 않으면 가산세가 붙으므로 일단 납부한 뒤 환급을 청구하는 것이 안전합니다.
+</p>
+
+<h2>09 | 12월 15일 납부 마감일 준수 안내 — 납부지연가산세 방지와 카카오페이·신용카드 납부</h2>
+<p>
+종합부동산세는 국세이므로 납세자의 편의를 위해 매우 다양한 전자 납부 수단을 제공하고 있습니다. 은행 창구를 직접 찾아갈 필요 없이 금융결제원 인터넷지로, 국세청 홈택스, 거래 은행 인터넷뱅킹, 그리고 스마트폰 간편결제를 통해 365일 24시간 실시간 납부가 가능합니다.<br><br>
+특히 고지서에 인쇄된 국세 전자납부번호(19자리)를 이용하면 카카오페이, 네이버페이, 페이코 등 모바일 간편결제 앱에서 터치 몇 번으로 손쉽게 세금을 결제할 수 있습니다. 또한 시중 신용카드 납부도 전면 허용되어 일시불 현금 지출이 부담스러울 경우 신용카드 무이자 할부(카드사별 2~6개월 이벤트)를 활용하는 것도 현명한 자금 운용법입니다 (단 신용카드 결제 시 국세 납부 대행수수료 신용카드 0.8%, 체크카드 0.5% 별도 발생).<br><br>
+다시 한번 강조하지만 납부 기한인 <strong>2026년 12월 15일(화) 23:30까지</strong> 납부가 완료되지 않으면 3%의 가산세가 즉시 부과됩니다. 11월 20일경 고지서가 발송되면 미루지 말고 미리 세액을 확인하고 납부 일정을 챙겨 불필요한 가산세 손실을 예방하시기 바랍니다.
+</p>
+
+
+<!-- 7번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="2026 종합부동산세 자주 묻는 질문 FAQ / 인포그래픽 카드 / 인포그래픽 카드" src="../../images/261116/5_hot_comprehensive_real_estate_tax_bill_inquiry_deduction_guide_7.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">2026 종합부동산세 자주 묻는 질문 FAQ / 인포그래픽 카드 / 인포그래픽 카드</div>
+</div>
+
+
+<table class="info-table">
+  <tr>
+    <th>항목</th><th>상세 규정 및 기준</th><th>비고 및 안내</th>
+  </tr>
+  <tr>
+    <td><strong>과세 기준일</strong></td>
+    <td>매년 6월 1일 현재 주택 소유자</td>
+    <td>소유권 이전 등기 접수일 기준</td>
+  </tr>
+  <tr>
+    <td><strong>고지서 발송일</strong></td>
+    <td>2026년 11월 20일(금) 전후 발송</td>
+    <td>모바일 전자문서 우선 발송 후 우편 배달</td>
+  </tr>
+  <tr>
+    <td><strong>법정 납부 기간</strong></td>
+    <td><strong>2026.12.01(화) ~ 2026.12.15(화)</strong></td>
+    <td>마감일 경과 시 3% 납부지연가산세 부과</td>
+  </tr>
+  <tr>
+    <td><strong>1주택 기본공제</strong></td>
+    <td>공시가격 12억 원 공제 (단독명의)</td>
+    <td>부부 공동명의 시 1인당 9억(총 18억) 공제</td>
+  </tr>
+  <tr>
+    <td><strong>세액공제 한도</strong></td>
+    <td>고령자(최대40%) + 장기보유(최대50%)</td>
+    <td>합산 최대 80% 한도 감면 적용</td>
+  </tr>
+  <tr>
+    <td><strong>무이자 분납</strong></td>
+    <td>납부세액 250만 원 초과 시 6개월 분납</td>
+    <td>2027년 6월 15일까지 분할 납부 신청</td>
+  </tr>
+</table>
+
+<div class="recommend-area">
+  <strong>📌 함께 읽으면 좋은 세무·생활 행정 실무 가이드</strong><br><br>
+  · <a href="../261112/hot_earned_income_tax_credit_late_application_deadline_payout.html">2026 근로장려금 기한 후 신청 마감일과 지급일 — 95% 감액 지급 기준과 홈택스 신청 방법</a><br>
+  · <a href="../261112/house_roof_gutter_fall_leaf_cleaning_leak_prevention_guide.html">전원주택 지붕 홈통 낙엽 청소 시기와 배수구 거름망 설치 — 겨울 누수 예방과 셀프 코킹 체크리스트</a>
+</div>
+
+<div class="tags">
+  <span class="tag">#종합부동산세</span>
+  <span class="tag">#종부세고지서</span>
+  <span class="tag">#종부세발송일</span>
+  <span class="tag">#종부세기본공제</span>
+  <span class="tag">#1가구1주택종부세</span>
+  <span class="tag">#홈택스종부세열람</span>
+  <span class="tag">#종부세납부기한</span>
+  <span class="tag">#종부세분납</span>
+  <span class="tag">#부부공동명의종부세</span>
+  <span class="tag">#부동산세금</span>
+</div>
+
+</body>
+</html>
