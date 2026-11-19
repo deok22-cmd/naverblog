@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>양변기 물 계속 샐 때 부속품 교체 — 필밸브 셀프 교체 vs 업체 출장 비용 비교</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+
+  /* ========================================================
+     🎨 다채널 인포그래픽 아키타입 CSS 시스템
+     ========================================= */
+  .infographic-box, [class*="infographic-"] {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif;
+  }
+  .infographic-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    border-bottom: 2px dashed #c8e6c9;
+    padding-bottom: 12px;
+  }
+  .infographic-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 1.1em;
+    color: #1b5e20;
+  }
+  .infographic-badge {
+    display: inline-block;
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.75em;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+  }
+
+  /* 1. 비교 매트릭스 카드 (.infographic-compare-box) */
+  .infographic-compare-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .compare-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .compare-col {
+    flex: 1;
+    min-width: 150px;
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 14px 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  }
+  .compare-col.highlight {
+    background: #f9fdf9;
+    border: 1.5px solid #388e3c;
+  }
+  .compare-col-title {
+    font-size: 0.95em;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 6px;
+  }
+  .compare-col-badge {
+    display: inline-block;
+    background: #388e3c;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .compare-row {
+    font-size: 0.82em;
+    color: #444;
+    line-height: 1.55;
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .compare-row:last-child {
+    border-bottom: none;
+  }
+
+  /* 2. 일정/동선 타임라인 로드맵 (.infographic-timeline-box) */
+  .infographic-timeline-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  .timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .timeline-badge {
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.78em;
+    font-weight: 800;
+    padding: 4px 9px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+  .timeline-content {
+    flex: 1;
+  }
+  .timeline-title {
+    font-size: 0.92em;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 4px;
+  }
+  .timeline-desc {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 3. 코스/난코스 전술 공략도 (.infographic-strategy-box) */
+  .infographic-strategy-box {
+    background: #ffffff;
+    border: 1.5px solid #ef4444;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(239,68,68,0.06);
+  }
+  .strategy-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .strategy-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .strategy-col.solution {
+    background: #f9fdf9;
+    border: 1px solid #c8e6c9;
+  }
+  .hazard-tag {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .safe-tag {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+
+  /* 4. 실전 비용/예산 견적 영수증 (.infographic-receipt-box) */
+  .infographic-receipt-box {
+    background: #ffffff;
+    border: 2px dashed #9ca3af;
+    border-radius: 12px;
+    padding: 24px 22px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+  }
+  .receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 16px;
+    font-size: 0.88em;
+  }
+  .receipt-table th {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid #d1d5db;
+  }
+  .receipt-table td {
+    padding: 8px 10px;
+    border-bottom: 1px dashed #e5e7eb;
+    color: #4b5563;
+  }
+  .receipt-total {
+    background: #f9fdf9;
+    border-top: 2px solid #388e3c;
+    padding: 12px 16px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 800;
+    color: #1b5e20;
+  }
+
+  /* 5. 필수 점검 & 준비물 체크리스트 (.infographic-checklist-box) */
+  .infographic-checklist-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .checklist-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .checklist-col {
+    flex: 1;
+    min-width: 190px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .checklist-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 6px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .checklist-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 6. 단계별 신청/절차 플로우차트 (.infographic-flow-box) */
+  .infographic-flow-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .flow-steps {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-top: 10px;
+  }
+  .flow-card {
+    flex: 1;
+    min-width: 130px;
+    background: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 12px 10px;
+    text-align: center;
+  }
+  .flow-step-num {
+    font-size: 0.72em;
+    font-weight: 800;
+    color: #388e3c;
+    background: #e8f5e9;
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+  }
+  .flow-title {
+    font-size: 0.88em;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 4px;
+  }
+  .flow-desc {
+    font-size: 0.78em;
+    color: #666;
+    line-height: 1.4;
+  }
+
+  /* 7. 4분할 핵심 수치 매트릭스 (.infographic-stat-box) */
+  .infographic-stat-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .stat-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .stat-card {
+    flex: 1;
+    min-width: 130px;
+    background: #f9fdf9;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 14px 10px;
+    text-align: center;
+  }
+  .stat-icon { font-size: 1.6em; margin-bottom: 4px; }
+  .stat-label { font-size: 0.8em; color: #666; font-weight: 600; margin-bottom: 4px; }
+  .stat-value { font-size: 1.15em; font-weight: 800; color: #388e3c; }
+  .stat-sub { font-size: 0.75em; color: #777; margin-top: 2px; }
+
+  /* 8. 평가 지표 & 코스/제품 스코어카드 (.infographic-scorecard-box) */
+  .infographic-scorecard-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .scorecard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .scorecard-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .score-label {
+    width: 110px;
+    font-size: 0.86em;
+    font-weight: 700;
+    color: #1b5e20;
+  }
+  .score-bar-bg {
+    flex: 1;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .score-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #e8f5e9, #388e3c);
+    border-radius: 5px;
+  }
+  .score-value {
+    width: 45px;
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: 800;
+    color: #388e3c;
+  }
+  .score-grade {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 0.72em;
+    font-weight: 800;
+    background: #e8f5e9;
+    color: #388e3c;
+  }
+
+  /* 9. 장단점 & 추천 vs 비추천 대조 카드 (.infographic-procon-box) */
+  .infographic-procon-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .procon-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .pro-col {
+    flex: 1;
+    min-width: 220px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .con-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .pro-badge {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .con-badge {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .procon-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 5px 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.06);
+  }
+  .procon-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 10. 핵심 질문 & 해법 Q&A 매트릭스 (.infographic-faq-box) */
+  .infographic-faq-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .faq-card {
+    background: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .faq-q {
+    font-size: 0.88em;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .faq-q-badge {
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .faq-a {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 11. 진화형 범용 인포그래픽 프리미티브 (.infographic-custom-box) */
+  .infographic-custom-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .info-callout {
+    background: #f9fdf9;
+    border-left: 4px solid #388e3c;
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.84em;
+    color: #1b5e20;
+    line-height: 1.5;
+    margin: 8px 0;
+  }
+  .info-pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 8px 0;
+  }
+  .info-pill {
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 4px 10px;
+    font-size: 0.78em;
+    font-weight: 600;
+    color: #374151;
+  }
+  .info-pill.active {
+    background: #e8f5e9;
+    border-color: #388e3c;
+    color: #388e3c;
+    font-weight: 700;
+  }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<h1>양변기 물 계속 샐 때 부속품 교체 — 필밸브 셀프 교체 vs 업체 출장 비용 비교</h1>
+
+<div class="intro-box">
+  <strong>💡 양변기 물샘 원인 진단 & 셀프 수리 3줄 핵심 요약</strong><br><br>
+  1. <strong>지속적인 물소리의 정체</strong>: 물탱크에서 '쉬익~' 하거나 멈추지 않고 물이 흐르는 현상의 90% 이상은 수위를 감지하는 '필밸브(볼탑)' 고장 또는 바닥 배수 구멍을 막는 '고무 플래퍼(사이펀 마개)'의 경화·노후화 때문입니다.<br><br>
+  2. <strong>비용 절감 비교</strong>: 철물점이나 온라인에서 부속품 세트(필밸브 단품 6,000~8,000원, 전체 세트 13,000~18,000원)를 구매해 30분 만에 셀프 교체하면 설비 업체 출장 교체비(70,000~100,000원) 대비 80% 이상 비용을 절약할 수 있습니다.<br><br>
+  3. <strong>실전 작업 요령</strong>: 앵글밸브 차단 후 몽키스패너 하나로 교체가 가능하며, 변기 물탱크 형태(투피스 vs 원피스)에 맞는 호환 부속을 구매하고 조립 시 고무 패킹 방향과 수위 조절 볼탑 높이를 정확히 세팅해야 재누수를 방지할 수 있습니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 대표 메인 썸네일 생성 영역</span>
+      <span class="ph-file">images/261120/6_repair_toilet_water_leak_fill_valve_diy_replacement_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-6-1">A crisp, professional high-resolution instructional photograph of a bathroom DIY home repair in progress. A modern clean white ceramic toilet water tank with the ceramic lid safely removed, revealing the inner plumbing mechanics. A person's hand wearing a protective blue nitrile glove carefully installing a new high-quality plastic toilet fill valve using an adjustable wrench. The clean bathroom is well-lit with soft neutral white lighting. Tools such as a monkey wrench, Teflon tape, and new replacement plumbing parts rest neatly on a dry towel beside the toilet. Crisp focus, clean realistic textures of porcelain and plastic valves, 8k resolution, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-6-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">양변기 물탱크 내부 필밸브 부속품 셀프 교체 작업 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 쉬익~ 물 채워지는 소리가 멈추지 않을 때 — 변기 물샘의 주원인 필밸브 고장 진단</h2>
+<p>
+화장실 문을 닫아두어도 밤마다 어디선가 가늘게 '쉬익~' 하는 소리가 들리거나, 변기 물을 내린 지 한참이 지났는데도 물탱크에 물이 계속 채워지는 소리가 멈추지 않는다면 양변기 내부 부속품의 수명이 다했다는 명백한 신호입니다. 이를 대수롭지 않게 방치할 경우 24시간 내내 수돗물이 하수구로 버려져 다음 달 수도요금 고지서에 수만 원에서 십수만 원의 '수도세 폭탄'이 청구되는 원인이 됩니다.<br><br>
+변기 물탱크 내부의 핵심 부속품은 물이 차오르면 부력으로 급수를 차단하는 '필밸브(Fill Valve, 볼탑)'와, 레버를 누를 때 열렸다가 닫히며 물을 배출하는 '고무 플래퍼(마개)', 그리고 물이 넘치지 않도록 방지하는 '오버플로우 관'으로 구성되어 있습니다. 이 중에서도 물소리가 멈추지 않는 증상의 가장 흔한 원인은 바로 필밸브 내부의 고무 다이어프램 패킹이 수돗물의 염소 성분과 물때로 인해 삭거나 찢어져 수위가 차올라도 밸브가 완전히 닫히지 않기 때문입니다.<br><br>
+물이 계속 유입되면 오버플로우 관 상단으로 잉여 수량이 지속적으로 넘쳐흘러 변기 보울(도기 안쪽)로 쉼 없이 흘러내리게 됩니다. 양변기 부속품은 통상 3~5년 정도 사용하면 소모품으로서 고무 부품의 탄성이 떨어지므로, 물소리가 비정상적으로 길어지거나 미세한 물결이 변기 표면에서 계속 흔들린다면 즉각적인 점검과 교체 작업이 필요합니다.
+</p>
+
+<!-- 인포그래픽 카드 1: 스탯 박스 -->
+
+<!-- 2번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="변기 누수 방치 시 손실 및 셀프 수리 비용 지표 / 인포그래픽 카드" src="../../images/261120/6_repair_toilet_water_leak_fill_valve_diy_replacement_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">변기 누수 방치 시 손실 및 셀프 수리 비용 지표 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>02 | 필밸브 고장 vs 고무 플래퍼(마개) 노후화 — 누수 위치 10초 판별 체크리스트</h2>
+<p>
+본격적인 부품 구매에 앞서 누수가 발생하는 구체적인 원인 부위를 정확히 파악해야 불필요한 이중 지출을 막을 수 있습니다. 변기 물샘은 크게 '필밸브 고장으로 인한 오버플로우 누수'와 '고무 플래퍼 마개 노후로 인한 바닥 배수구 누수' 두 가지로 완벽하게 구분됩니다. 이를 확인하는 방법은 10초면 충분할 정도로 매우 간단합니다.<br><br>
+변기 물탱크 도기 뚜껑을 조심스럽게 들어 올려 안전한 바닥에 내려놓은 뒤 물탱크 내부 수위를 확인합니다. 만약 물탱크 안의 수위가 수직으로 솟아 있는 '오버플로우 관(원통형 플라스틱 파이프)' 꼭대기 높이까지 차올라 파이프 안쪽 구멍으로 물이 콸콸 넘쳐 들어가고 있다면, 이는 100% 필밸브가 급수를 잠그지 못해 발생하는 '필밸브 고장'입니다.<br><br>
+반대로 수위가 오버플로우 관 한참 아래에 머물러 있는데도 불구하고 필밸브에서 주기적으로 칙칙 소리를 내며 물을 보충하고 변기 안쪽으로 물이 가늘게 새어 나가고 있다면, 이는 물탱크 바닥의 '고무 플래퍼(개폐 마개)'가 노후화되어 물을 제대로 밀폐하지 못하고 밑으로 흘려보내기 때문입니다. 고무마개를 손으로 만졌을 때 검은 탄가루가 묻어나오거나 굳어 있다면 고무마개만 교체해도 해결되지만, 한 부품이 노후되었다면 다른 부속도 곧 고장 나므로 전체 세트를 교체하는 것이 가장 현명합니다.
+</p>
+
+<!-- 인포그래픽 카드 2: 체크리스트 박스 -->
+
+<!-- 3번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="변기 물샘 원인 자가 진단 10초 체크리스트 / 인포그래픽 카드" src="../../images/261120/6_repair_toilet_water_leak_fill_valve_diy_replacement_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">변기 물샘 원인 자가 진단 10초 체크리스트 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>03 | 셀프 DIY 자재비 vs 배관 설비 기사 출장비 항목별 상세 비교표</h2>
+<p>
+양변기 부속품 교체를 셀프로 진행할 때 얻을 수 있는 가장 즉각적인 혜택은 바로 '압도적인 비용 절감'입니다. 많은 소비자들이 양변기 수리를 배관 기술자만 할 수 있는 전문 영역으로 오해하여 설비 업체나 열쇠집 기사를 부르곤 합니다. 하지만 실제로 기사가 방문하여 작업하는 데 걸리는 시간은 15~20분에 불과합니다.<br><br>
+전문 설비 업체를 부를 경우 기본 출장비 30,000~40,000원에 기술 공임비 40,000~50,000원, 그리고 부품 대금 20,000원이 가산되어 총 80,000원에서 많게는 100,000원(원피스 변기의 경우 120,000원 이상)이 청구됩니다. 만약 야간이나 주말에 긴급 출장을 요청한다면 할증 요금까지 붙어 비용 부담은 더욱 가중됩니다.<br><br>
+반면 셀프로 부품을 구매하여 직접 교체할 경우 국산 고급형(와토스코리아 등 KS 인증 제품) 필밸브 단품은 약 6,000~8,000원, 레버와 고무 플래퍼, 볼탑, 고압 호스까지 모두 포함된 풀세트도 13,000~18,000원이면 온라인이나 동네 철물점에서 손쉽게 구매할 수 있습니다. 즉, 몽키스패너 하나만 있으면 단돈 1만 원대로 전문 기사를 부르는 것과 100% 동일한 완벽한 수리를 완성할 수 있습니다.
+</p>
+
+<!-- 인포그래픽 카드 3: 비교 매트릭스 박스 -->
+
+<!-- 4번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="변기 부속 교체 셀프 DIY vs 전문 설비 업체 비용 비교 / 인포그래픽 카드" src="../../images/261120/6_repair_toilet_water_leak_fill_valve_diy_replacement_4.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">변기 부속 교체 셀프 DIY vs 전문 설비 업체 비용 비교 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>04 | 양변기 부속품 호환 규격 확인법 — 원피스 vs 투피스 변기 구분과 부품 구매 팁</h2>
+<p>
+부품을 구매하기 전 가장 먼저 확인해야 할 필수 사항은 우리 집 변기가 '투피스(Two-Piece)'인지 '원피스(One-Piece)'인지 확인하는 작업입니다. 변기 형태에 따라 사용하는 내부 부속품의 규격과 체결 방식이 완전히 다르기 때문에 잘못된 부속을 사면 설치 자체가 불가능합니다.<br><br>
+구분 방법은 아주 직관적입니다. 사람이 앉는 하부 도기와 뒤쪽 물탱크 도기가 중간에 틈이 있어 분리되는 형태라면 '투피스 변기'입니다. 일반 가정집과 아파트의 80% 이상이 이 투피스 변기를 사용하며, 시중에서 흔히 파는 '측면 레버형 투피스 양변기 부속 세트'를 구매하면 제조사(대림바스, 계림, 아메리칸스탠다드, 로얄 등)와 상관없이 99% 완벽하게 호환됩니다.<br><br>
+반면 하부 도기와 물탱크가 이음새 없이 하나의 도기 덩어리로 매끄럽게 연결되어 있는 형태라면 '원피스 변기'입니다. 호텔이나 신축 고급 아파트에 주로 설치되는 원피스 변기는 높이가 낮고 수압이 약해 특수 설계된 전용 부속품(원피스 전용 필밸브 및 와이어 개폐형 사이펀)을 사용해야 합니다. 따라서 온라인 주문 시 반드시 제품 상세 설명에서 '투피스용'인지 '원피스용'인지 확인하고 구매하셔야 반품의 번거로움을 피할 수 있습니다.
+</p>
+
+<!-- 인포그래픽 카드 4: 단계별 플로우 박스 -->
+
+<!-- 5번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="양변기 필밸브 셀프 분해 및 조립 4단계 절차 / 인포그래픽 카드" src="../../images/261120/6_repair_toilet_water_leak_fill_valve_diy_replacement_5.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">양변기 필밸브 셀프 분해 및 조립 4단계 절차 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>05 | 준비물과 필수 공구 — 몽키스패너, 첼라, 바가지, 테프론 테이프와 안전 장갑</h2>
+<p>
+작업을 시작하기 전 필요한 준비물을 미리 바닥에 세팅해 두면 중간에 물이 뚝뚝 떨어지는 상태로 공구를 찾으러 다니는 불상사를 방지할 수 있습니다. 다행히 양변기 부속 교체는 고가의 전동 공구나 특수 장비가 전혀 필요하지 않으며, 가정에 구비된 기본 공구 몇 가지만으로 충분히 완결할 수 있습니다.<br><br>
+가장 핵심적인 필수 공구는 너트를 풀고 조일 수 있는 '몽키스패너(길이 200~250mm)' 1개입니다. 만약 좁은 틈새의 너트를 잡기 편한 '첼라(워터펌프 플라이어)'가 있다면 작업이 한결 수월해집니다. 또한 물탱크 하부 너트를 풀 때 바닥으로 흘러나오는 잔수를 받아낼 '낮은 바가지'나 마른 수건 2~3장을 변기 밑바닥에 미리 깔아두어야 욕실 바닥이 흥건해지는 것을 막을 수 있습니다.<br><br>
+도기 내부의 좁은 공간에서 부품을 만지다 보면 도기의 날카로운 모서리에 손을 베일 수 있으므로 접지력이 우수한 '코팅 안전 장갑'이나 라텍스 장갑을 착용하는 것이 좋습니다. 배관 연결부 나사선에 감아 미세 누수를 차단해 주는 '테프론 테이프'도 1개 준비해 두면 체결부의 밀폐력을 한층 높일 수 있습니다.
+</p>
+
+<h2>06 | 단계별 필밸브 셀프 분해 순서 — 수도 앵글밸브 차단부터 기존 부속 해체까지</h2>
+<p>
+본격적인 작업의 첫 단계는 무조건 '수도 공급 차단'입니다. 변기 뒤쪽 벽면 하단에 연결된 은색 조절 밸브(앵글밸브)를 시계 방향(오른쪽)으로 뻑뻑해질 때까지 끝까지 돌려 잠급니다. 일자 드라이버 홈으로 되어 있는 경우 일자 드라이버나 동전을 이용해 돌려줍니다. 밸브를 잠근 뒤 변기 레버를 눌러 물탱크 안의 물을 완전히 배출합니다.<br><br>
+물을 내린 후에도 바닥에 2~3cm가량 고여 있는 잔수는 바가지나 스펀지, 마른 수건을 이용해 최대한 깨끗이 닦아내어 비워줍니다. 이제 변기 물탱크 밑바닥 아래쪽을 들여다보면 앵글밸브에서 올라온 주름관 고압 호스가 물탱크 하부에 너트로 체결되어 있는 것을 볼 수 있습니다. 몽키스패너로 고압 호스 상단 너트를 반시계 방향으로 돌려 풀어 분리합니다.<br><br>
+고압 호스를 분리하고 나면 필밸브 본체를 도기에 고정하고 있는 커다란 플라스틱 너트(보통 흰색이나 회색 삼각형 모양)가 나타납니다. 이 고정 너트를 몽키스패너나 손으로 반시계 방향으로 돌려 완전히 풀어내면, 물탱크 안쪽에서 기존 고장 난 필밸브를 쑥 위로 들어 올려 손쉽게 빼낼 수 있습니다.
+</p>
+
+<!-- 인포그래픽 카드 5: 실전 비용 영수증 박스 -->
+
+<!-- 6번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="변기 부속품 교체 DIY 실전 자재 구매 영수증 / 인포그래픽 카드" src="../../images/261120/6_repair_toilet_water_leak_fill_valve_diy_replacement_6.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">변기 부속품 교체 DIY 실전 자재 구매 영수증 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>07 | 신규 필밸브 완벽 조립 및 볼탑 수위 조절 — 누수 방지 패킹 결합 요령</h2>
+<p>
+새 필밸브를 조립할 때 누수를 방지하기 위해 가장 중요하게 챙겨야 할 핵심 부품은 바로 '삼각 고무 패킹(원뿔형 바킹)'입니다. 이 고무 패킹은 필밸브 나사 기둥에 끼워져 물탱크 안쪽 바닥의 타공 구멍을 안쪽에서 압착하여 막아주는 역할을 합니다. 패킹의 뾰족한 쪽이 아래(구멍 방향)를 향하도록 방향을 정확히 맞추어 필밸브 기둥 밑에 밀착시킨 뒤 물탱크 안에서 구멍으로 내려꽂아야 합니다.<br><br>
+물탱크 밑바닥으로 튀어나온 나사선에 플라스틱 고정 너트를 손으로 돌려 끼운 뒤, 몽키스패너로 단단하게 조여줍니다. 이때 너무 과도하게 무리한 힘으로 조이면 플라스틱 나사산이 뭉개지거나 도기가 파손될 수 있으므로, 손으로 꽉 조인 상태에서 스패너로 1/2바퀴에서 1바퀴 정도만 더 탄탄하게 조여주는 것이 정석입니다.<br><br>
+필밸브 고정이 끝났다면 필밸브 상단에 달린 얇은 고무 호스(보충수 호스)를 오버플로우 관 상단 클립에 꽂아줍니다. 이 작은 호스는 변기 물을 내린 뒤 변기 보울 안에 고이는 봉수(냄새 차단용 고임물)를 채워주는 결정적인 역할을 하므로 반드시 관 안쪽으로 물이 들어가도록 꽂아야 합니다. 마지막으로 볼탑에 달린 수위 조절 플라스틱 레버나 나사를 돌려, 물탱크 물이 오버플로우 관 상단보다 약 2~3cm 아래에서 멈추도록 적정 수위를 세팅합니다.
+</p>
+
+<h2>08 | 시공 후 작동 테스트와 미세 누수 점검법 — 물탱크 잉크 테스트 노하우</h2>
+<p>
+모든 부품 결합과 고압 호스 체결이 완료되었다면 벽면의 앵글밸브를 천천히 반시계 방향으로 돌려 수돗물을 다시 통수시킵니다. 밸브를 열자마자 체결 부위에서 물이 뿜어져 나오지 않는지 눈으로 확인하며 물탱크에 물이 차오르는 과정을 지켜봅니다.<br><br>
+물이 차오르면서 부표가 서서히 떠오르고, 설정해 둔 수위(오버플로우관 2~3cm 아래)에 도달했을 때 '딸깍' 소리와 함께 물 공급이 완전히 차단되는지 확인합니다. 이때 물탱크 하부 너트와 고압 호스 연결부 밑에 마른 휴지 한 장을 대어보아 물방울이 한 방울이라도 배어 나오지 않는지 꼼꼼하게 살핍니다. 만약 미세한 물방울이 맺힌다면 너트를 1/4바퀴 정도만 살짝 더 조여줍니다.<br><br>
+시공 후 미세한 누수가 있는지 확실하게 검증하는 프로 설비 기사들의 노하우는 바로 '식용 색소(또는 잉크) 테스트'입니다. 물이 가득 찬 물탱크 안에 파란색 잉크나 붉은색 식용 색소를 대여섯 방울 떨어뜨려 물을 진하게 물들입니다. 15분 동안 변기 물을 내리지 않고 그대로 둔 뒤, 변기 안쪽 도기에 받아진 고임물에 파란색 색소가 번져 나오는지 관찰합니다. 물이 전혀 물들지 않고 투명함을 유지한다면 고무 플래퍼 마개까지 완벽하게 밀폐된 100점짜리 시공입니다.
+</p>
+
+<!-- 인포그래픽 카드 6: 핵심 질문 FAQ 박스 -->
+
+<!-- 7번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="변기 부속 교체 DIY 자주 묻는 질문 3가지 / 인포그래픽 카드" src="../../images/261120/6_repair_toilet_water_leak_fill_valve_diy_replacement_7.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">변기 부속 교체 DIY 자주 묻는 질문 3가지 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>09 | 변기 부속 교체 시 흔히 저지르는 4가지 실수와 긴급 대처 매뉴얼</h2>
+<p>
+초보자가 셀프 교체 시 무심코 저지르기 쉬운 대표적인 4가지 실수와 그에 대한 해결책을 미리 숙지해 두면 작업 중 당황하지 않고 완벽하게 대처할 수 있습니다. 첫 번째 실수는 '고무 패킹 누락 및 방향 역전'입니다. 물탱크 안쪽 바닥에 닿는 원뿔형 고무 패킹을 깜빡하고 너트 쪽(바깥쪽)에 끼우거나 거꾸로 끼우면 물을 채우자마자 바닥으로 폭포수처럼 물이 샙니다. 패킹은 무조건 도기 안쪽에 위치해야 합니다.<br><br>
+두 번째는 '레버 줄 길이 조절 실패'입니다. 플래퍼 마개와 손잡이 레버를 잇는 쇠사슬 줄을 너무 팽팽하게 묶으면 마개가 덜 닫혀 바닥으로 물이 계속 새고, 반대로 너무 느슨하게 묶으면 레버를 끝까지 눌러도 마개가 충분히 열리지 않아 물이 시원하게 내려가지 않습니다. 줄을 살짝 늘어뜨렸을 때 2~3마디 정도 여유가 생기도록 맞추는 것이 이상적입니다.<br><br>
+세 번째는 '도기 체결 너트의 과도한 조임'입니다. 물이 샐까 봐 몽키스패너로 온 힘을 다해 조이면 도기에 미세한 균열(크랙)이 가면서 변기 물탱크 자체가 깨질 위험이 있습니다. 네 번째는 '플로트 볼탑과 벽면 간섭'입니다. 필밸브를 설치할 때 볼탑이 물탱크 벽면이나 다른 부속품에 닿아 걸리지 않도록 방향을 잘 잡고 너트를 고정해야 오작동이 없습니다. 이 4가지만 주의하면 누구나 전문가 못지않은 완벽한 셀프 수리를 성공할 수 있습니다.
+</p>
+
+<table class="info-table">
+  <tr>
+    <th>구분</th><th>세부 내용</th><th>시공 꿀팁 및 유의사항</th>
+  </tr>
+  <tr>
+    <td><strong>고장 증상</strong></td>
+    <td>쉬익~ 물소리 지속, 수위 상승, 보울 표면 물결</td>
+    <td>24시간 미세 누수 시 수도세 누진 폭탄 유발</td>
+  </tr>
+  <tr>
+    <td><strong>핵심 원인</strong></td>
+    <td>필밸브 다이어프램 패킹 경화 또는 플래퍼 노후</td>
+    <td>오버플로우관 수위 넘침 확인으로 10초 판별</td>
+  </tr>
+  <tr>
+    <td><strong>자재 비용</strong></td>
+    <td>필밸브 단품 7,000원 / 전체 세트 13,000원대</td>
+    <td>설비 출장비(8~10만 원) 대비 80% 이상 절감</td>
+  </tr>
+  <tr>
+    <td><strong>필수 공구</strong></td>
+    <td>몽키스패너(또는 첼라), 마른 수건, 바가지</td>
+    <td>도기 파손 방지용 장갑 착용 필수</td>
+  </tr>
+  <tr>
+    <td><strong>소요 시간</strong></td>
+    <td>초보자 기준 약 20~30분 내외 완결</td>
+    <td>투피스 vs 원피스 규격 사전 확인 필수</td>
+  </tr>
+  <tr>
+    <td><strong>사후 점검</strong></td>
+    <td>식용 색소(잉크) 테스트로 미세 누수 100% 검증</td>
+    <td>보충수 호스 오버플로우관 체결 확인 필수</td>
+  </tr>
+</table>
+
+<div class="recommend-area">
+  <strong>📌 함께 읽으면 좋은 생활 시설 수리 및 직장 실무 정보</strong><br><br>
+  · <a href="../261116/repair_washbasin_popup_drain_pipe_trap_diy_replacement.html">세면대 폽업·트랩 누수 — 셀프 교체 vs 설비 업체 비용 비교와 분해 조립 순서</a><br>
+  · <a href="../261116/labor_parental_leave_allowance_amount_calculation_post_payout.html">육아휴직 급여 얼마 — 월급별 계산표와 사후지급금 받는 시점</a>
+</div>
+
+<div class="tags">
+  <span class="tag">#변기물계속샐때</span>
+  <span class="tag">#변기필밸브교체</span>
+  <span class="tag">#양변기부속교체</span>
+  <span class="tag">#변기물소리</span>
+  <span class="tag">#변기수리비용</span>
+  <span class="tag">#셀프집수리</span>
+  <span class="tag">#변기누수</span>
+  <span class="tag">#화장실DIY</span>
+  <span class="tag">#변기볼탑교체</span>
+  <span class="tag">#수도세절약</span>
+</div>
+
+</body>
+</html>

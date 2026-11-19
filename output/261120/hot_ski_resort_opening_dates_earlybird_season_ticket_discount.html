@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>2026 전국 주요 스키장 개장일과 얼리버드 시즌권·리프트권 할인권 오픈 시점</title>
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font-family: 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.9; color: #222; max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.6em; font-weight: 800; border-bottom: 5px solid #388e3c; padding-bottom: 12px; color: #1b5e20; text-align: center; }
+  h2 { font-size: 1.2em; font-weight: 700; background: #e8f5e9; padding: 12px 15px; border-left: 6px solid #388e3c; margin-top: 50px; color: #1b5e20; }
+  h3 { font-size: 1.05em; font-weight: 700; color: #1b5e20; margin: 24px 0 8px; }
+  .intro-box { background: #f9fdf9; border: 2px solid #c8e6c9; padding: 25px; border-radius: 10px; margin: 30px 0; }
+  .info-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+  .info-table th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; font-size: 0.9em; }
+  .info-table td { padding: 9px 12px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+  .info-table tr:nth-child(even) td { background: #f1faf1; }
+  .img-area { margin: 30px 0; text-align: center; }
+  .img-placeholder { border: 2px dashed #c8e6c9; border-radius: 8px; padding: 20px; background: #f9fdf9; }
+  .ph-head { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 700; color: #388e3c; font-size: 0.9em; }
+  .ph-file { font-size: 0.82em; color: #888; font-family: monospace; }
+  .prompt-text { font-size: 0.82em; color: #555; line-height: 1.6; text-align: left; white-space: pre-wrap; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin: 10px 0; }
+  .copy-btn { background: #388e3c; color: #fff; border: none; border-radius: 4px; padding: 6px 14px; font-size: 0.85em; cursor: pointer; }
+  .img-caption { font-size: 0.88em; color: #666; margin-top: 8px; font-style: italic; }
+  .info-box { background: #f9fdf9; border: 1px solid #c8e6c9; border-left: 4px solid #388e3c; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .step-box { background: #fff; border: 1px solid #eee; border-left: 4px solid #388e3c; padding: 15px 20px; margin: 15px 0; }
+  .tip-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .warn-box { background: #fff3e0; border-left: 4px solid #ff6b00; padding: 15px 18px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .recommend-area { background: #f8f9fa; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 10px; }
+  .tag { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 5px; margin: 3px; font-size: 0.85em; color: #666; border: 1px solid #ddd; }
+
+  /* ========================================================
+     🎨 다채널 인포그래픽 아키타입 CSS 시스템
+     ========================================= */
+  .infographic-box, [class*="infographic-"] {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif;
+  }
+  .infographic-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    border-bottom: 2px dashed #c8e6c9;
+    padding-bottom: 12px;
+  }
+  .infographic-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 1.1em;
+    color: #1b5e20;
+  }
+  .infographic-badge {
+    display: inline-block;
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.75em;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+  }
+
+  /* 1. 비교 매트릭스 카드 (.infographic-compare-box) */
+  .infographic-compare-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .compare-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .compare-col {
+    flex: 1;
+    min-width: 150px;
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 14px 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  }
+  .compare-col.highlight {
+    background: #f9fdf9;
+    border: 1.5px solid #388e3c;
+  }
+  .compare-col-title {
+    font-size: 0.95em;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 6px;
+  }
+  .compare-col-badge {
+    display: inline-block;
+    background: #388e3c;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .compare-row {
+    font-size: 0.82em;
+    color: #444;
+    line-height: 1.55;
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .compare-row:last-child {
+    border-bottom: none;
+  }
+
+  /* 2. 일정/동선 타임라인 로드맵 (.infographic-timeline-box) */
+  .infographic-timeline-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  .timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .timeline-badge {
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.78em;
+    font-weight: 800;
+    padding: 4px 9px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+  .timeline-content {
+    flex: 1;
+  }
+  .timeline-title {
+    font-size: 0.92em;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 4px;
+  }
+  .timeline-desc {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 3. 코스/난코스 전술 공략도 (.infographic-strategy-box) */
+  .infographic-strategy-box {
+    background: #ffffff;
+    border: 1.5px solid #ef4444;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(239,68,68,0.06);
+  }
+  .strategy-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .strategy-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .strategy-col.solution {
+    background: #f9fdf9;
+    border: 1px solid #c8e6c9;
+  }
+  .hazard-tag {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .safe-tag {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+
+  /* 4. 실전 비용/예산 견적 영수증 (.infographic-receipt-box) */
+  .infographic-receipt-box {
+    background: #ffffff;
+    border: 2px dashed #9ca3af;
+    border-radius: 12px;
+    padding: 24px 22px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+  }
+  .receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 16px;
+    font-size: 0.88em;
+  }
+  .receipt-table th {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid #d1d5db;
+  }
+  .receipt-table td {
+    padding: 8px 10px;
+    border-bottom: 1px dashed #e5e7eb;
+    color: #4b5563;
+  }
+  .receipt-total {
+    background: #f9fdf9;
+    border-top: 2px solid #388e3c;
+    padding: 12px 16px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 800;
+    color: #1b5e20;
+  }
+
+  /* 5. 필수 점검 & 준비물 체크리스트 (.infographic-checklist-box) */
+  .infographic-checklist-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .checklist-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .checklist-col {
+    flex: 1;
+    min-width: 190px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .checklist-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 6px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .checklist-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 6. 단계별 신청/절차 플로우차트 (.infographic-flow-box) */
+  .infographic-flow-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .flow-steps {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-top: 10px;
+  }
+  .flow-card {
+    flex: 1;
+    min-width: 130px;
+    background: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 12px 10px;
+    text-align: center;
+  }
+  .flow-step-num {
+    font-size: 0.72em;
+    font-weight: 800;
+    color: #388e3c;
+    background: #e8f5e9;
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+  }
+  .flow-title {
+    font-size: 0.88em;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 4px;
+  }
+  .flow-desc {
+    font-size: 0.78em;
+    color: #666;
+    line-height: 1.4;
+  }
+
+  /* 7. 4분할 핵심 수치 매트릭스 (.infographic-stat-box) */
+  .infographic-stat-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .stat-grid {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .stat-card {
+    flex: 1;
+    min-width: 130px;
+    background: #f9fdf9;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 14px 10px;
+    text-align: center;
+  }
+  .stat-icon { font-size: 1.6em; margin-bottom: 4px; }
+  .stat-label { font-size: 0.8em; color: #666; font-weight: 600; margin-bottom: 4px; }
+  .stat-value { font-size: 1.15em; font-weight: 800; color: #388e3c; }
+  .stat-sub { font-size: 0.75em; color: #777; margin-top: 2px; }
+
+  /* 8. 평가 지표 & 코스/제품 스코어카드 (.infographic-scorecard-box) */
+  .infographic-scorecard-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .scorecard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .scorecard-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .score-label {
+    width: 110px;
+    font-size: 0.86em;
+    font-weight: 700;
+    color: #1b5e20;
+  }
+  .score-bar-bg {
+    flex: 1;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .score-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #e8f5e9, #388e3c);
+    border-radius: 5px;
+  }
+  .score-value {
+    width: 45px;
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: 800;
+    color: #388e3c;
+  }
+  .score-grade {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 0.72em;
+    font-weight: 800;
+    background: #e8f5e9;
+    color: #388e3c;
+  }
+
+  /* 9. 장단점 & 추천 vs 비추천 대조 카드 (.infographic-procon-box) */
+  .infographic-procon-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .procon-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .pro-col {
+    flex: 1;
+    min-width: 220px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .con-col {
+    flex: 1;
+    min-width: 220px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .pro-badge {
+    display: inline-block;
+    background: #16a34a;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .con-badge {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .procon-item {
+    font-size: 0.82em;
+    color: #374151;
+    line-height: 1.5;
+    padding: 5px 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.06);
+  }
+  .procon-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 10. 핵심 질문 & 해법 Q&A 매트릭스 (.infographic-faq-box) */
+  .infographic-faq-box {
+    background: #f9fdf9;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .faq-card {
+    background: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .faq-q {
+    font-size: 0.88em;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .faq-q-badge {
+    background: #388e3c;
+    color: #ffffff;
+    font-size: 0.72em;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .faq-a {
+    font-size: 0.82em;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* 11. 진화형 범용 인포그래픽 프리미티브 (.infographic-custom-box) */
+  .infographic-custom-box {
+    background: #ffffff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 35px 0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .info-callout {
+    background: #f9fdf9;
+    border-left: 4px solid #388e3c;
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.84em;
+    color: #1b5e20;
+    line-height: 1.5;
+    margin: 8px 0;
+  }
+  .info-pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 8px 0;
+  }
+  .info-pill {
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 4px 10px;
+    font-size: 0.78em;
+    font-weight: 600;
+    color: #374151;
+  }
+  .info-pill.active {
+    background: #e8f5e9;
+    border-color: #388e3c;
+    color: #388e3c;
+    font-weight: 700;
+  }
+</style>
+<script>
+function copyPrompt(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector(`button[onclick="copyPrompt('${id}')"]`);
+    const orig = btn.innerText;
+    btn.innerText = '복사 완료!'; btn.style.background = '#27ae60';
+    setTimeout(() => { btn.innerText = orig; btn.style.background = '#388e3c'; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+<!-- hot-dday: 2026-11-27 | src: https://www.yongpyong.co.kr -->
+<h1>2026 전국 주요 스키장 개장일과 얼리버드 시즌권·리프트권 할인권 오픈 시점</h1>
+
+<div class="intro-box">
+  <strong>💡 2026~2027 전국 주요 스키장 개장 & 얼리버드 예매 3줄 핵심 요약</strong><br><br>
+  1. <strong>전국 1차 개장 D-day 확정</strong>: 강원권 고지대 대표 리조트인 모나용평과 하이원리조트가 11월 27일(금) 1차 슬로프 개장을 목표로 인공 제설에 본격 돌입하며, 비발디파크와 엘리시안 강촌은 12월 초순(12/4~12/5 안팎) 순차 개장합니다.<br><br>
+  2. <strong>얼리버드 할인 골든타임</strong>: 11월 하순까지 진행되는 모바일 1차 리프트권 사전 예매 및 통합 시즌패스(X5 등) 활용 시 정가 대비 최대 40~55% 할인된 가격으로 실속 있는 겨울 레저를 준비할 수 있습니다.<br><br>
+  3. <strong>첫 출격 실전 팁</strong>: 개장 초기에는 초·중급 메인 슬로프 위주로 우선 오픈되므로 현장 슬로프 운영 현황과 수도권 무료 셔틀버스 사전 예약 노선을 반드시 확인하고 출발해야 합니다.
+</div>
+
+<div class="img-area">
+  <div class="img-placeholder">
+    <div class="ph-head">
+      <span>📷 AI 대표 메인 썸네일 생성 영역</span>
+      <span class="ph-file">images/261120/5_hot_ski_resort_opening_dates_earlybird_season_ticket_discount_1.png</span>
+    </div>
+    <pre class="prompt-text" id="prompt-5-1">A cinematic, hyper-realistic winter sports photograph of a major ski resort slope in Gangwon-do, South Korea during early winter. Fresh, sparkling white artificial and natural snow blankets the wide, perfectly groomed ski slopes. Modern powerful snow guns (snow cannons) line the edges of the runs, actively spraying fine plumes of white snow into the cold azure sky. Ski lifts and modern gondolas operate gracefully against a majestic snow-capped mountain ridge. Bright crisp winter morning sunlight, detailed textures of powdery snow and mountain evergreen pine trees, professional sports photography, 8k resolution, 1:1 aspect ratio.</pre>
+    <button class="copy-btn" onclick="copyPrompt('prompt-5-1')">📋 프롬프트 복사하기</button>
+  </div>
+  <div class="img-caption">2026~2027 겨울 시즌 개막을 앞두고 제설 작업 중인 스키장 슬로프 / AI 제작 이미지</div>
+</div>
+
+<h2>01 | 2026~2027 겨울 스키 시즌 개막 카운트다운 — 전국 스키장 개장 윤곽과 기상 조건</h2>
+<p>
+아침저녁으로 수은주가 영하권으로 곤두박질치고 본격적인 겨울 추위가 찾아오면서, 새하얀 설원을 기다려온 전국의 스키어와 스노보더들의 가슴이 다시 뛰기 시작했습니다. 2026~2027 동계 시즌은 11월 중순부터 북서쪽에서 강력한 대륙성 찬 공기가 한반도로 주기적으로 남하하면서, 강원권 산간 고지대를 중심으로 제설을 위한 최적의 기온 조건(영하 3℃ 이하, 습도 60% 이하)이 완벽하게 형성되고 있습니다.<br><br>
+스키장 개장의 성패는 단순히 자연 강설량에만 의존하지 않고, 최첨단 인공 제설기(팬 제설기 및 건 제설기)를 얼마나 집중적으로 가동하여 베이스 슬로프에 단단한 설포(설층)를 균일하게 다져놓느냐에 달려 있습니다. 각 리조트 제설팀은 밤낮없이 영하의 기온을 틈타 24시간 풀가동 체제에 돌입했으며, 슬로프 바닥에 약 50~70cm 이상의 단단한 얼음층을 먼저 형성한 뒤 그 위에 부드러운 인공 파우더 스노우를 덮는 정밀 제설 작업이 한창입니다.<br><br>
+올해는 기상청 겨울 장기 예보상 11월 하순부터 12월 초순 사이 평년보다 다소 낮은 기온 분포가 예상됨에 따라, 지난 시즌 대비 2~3일가량 개장 시점이 앞당겨지거나 안정적인 설질 속에서 개막전이 치러질 것으로 전망됩니다. 개장 초기에는 안전사고 예방을 위해 전체 슬로프가 아닌 초·중급 대표 코스 1~2개면을 우선 오픈하며, 기온 하강에 맞춰 상급자 코스까지 순차적으로 확대 운영됩니다.
+</p>
+
+<!-- 인포그래픽 카드 1: 스탯 박스 -->
+
+<!-- 2번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="2026 전국 스키장 개장 및 시즌권 핵심 지표 / 인포그래픽 카드" src="../../images/261120/5_hot_ski_resort_opening_dates_earlybird_season_ticket_discount_2.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">2026 전국 스키장 개장 및 시즌권 핵심 지표 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>02 | 강원권 1차 개장 스키장 — 모나용평·하이원 11월 27일 개장 목표 및 제설 현황</h2>
+<p>
+국내 스키의 메카이자 매년 가장 먼저 은빛 문을 열어젖히는 강원도 평창과 정선 일대의 대형 리조트들이 2026 동계 시즌의 화려한 포문을 엽니다. 해발 1,458m 발왕산 자락에 위치한 '모나용평'과 해발 1,340m 백운산 자락에 자리한 '하이원리조트'는 모두 오는 11월 27일(금요일) 동시 1차 개장을 목표로 공식 카운트다운에 들어갔습니다.<br><br>
+모나용평은 전통적으로 가장 먼저 오픈하는 초·중급자 전용 슬로프인 '옐로우'와 '핑크' 슬로프에 대형 팬 제설기 수십 대를 집중 배치하여 이미 빽빽한 설포 작업을 마친 상태입니다. 올 시즌 개장 당일에는 개막 기념 리프트권 파격 할인 및 방문객 대상 웰컴 패키지 증정 이벤트가 준비되어 있어 전국 각지에서 모여든 스키어들의 뜨거운 열기가 예상됩니다.<br><br>
+하이원리조트 역시 마운틴 베이스에서 밸리 허브로 이어지는 메인 초급 슬로프인 '아테나 1·2' 코스를 우선 개방할 예정입니다. 하이원 특유의 완만한 경사도와 광폭 슬로프, 그리고 최신식 곤돌라 시스템을 가동하여 개장 첫 주말부터 쾌적하고 안전한 라이딩 환경을 제공할 계획입니다. 강원권 대형 리조트의 개장은 본격적인 겨울 스포츠 축제의 시작을 알리는 신호탄입니다.
+</p>
+
+<!-- 인포그래픽 카드 2: 타임라인 로드맵 박스 -->
+
+<!-- 3번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="2026 전국 주요 스키장 권역별 개장 예상 일정표 / 인포그래픽 카드" src="../../images/261120/5_hot_ski_resort_opening_dates_earlybird_season_ticket_discount_3.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">2026 전국 주요 스키장 권역별 개장 예상 일정표 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>03 | 수도권 접근성 No.1 비발디파크 & 엘리시안 강촌 — 12월 초순 순차 오픈 일정</h2>
+<p>
+서울 및 수도권 당일치기 스키어들이 가장 손꼽아 기다리는 곳은 단연 강원도 홍천의 '소노펠리체 비발디파크'와 춘천의 '엘리시안 강촌'입니다. 이들 스키장은 수도권에서 차량으로 1시간에서 1시간 30분이면 도착할 수 있는 압도적인 지리적 접근성과 함께 대규모 심야·새벽 스키를 운영하여 직장인과 학생들에게 폭발적인 인기를 누립니다.<br><br>
+비발디파크는 11월 하순부터 밤샘 인공 제설에 돌입하여 12월 4일(금) 혹은 5일(토) 오픈을 목표로 최종 준비를 서두르고 있습니다. 가장 대중적인 초급 '발라드'와 중급 '재즈' 슬로프가 1차로 열리며, 스노위랜드(눈썰매 테마파크)도 12월 중순경 연계 개방될 예정입니다. 수도권 전역에서 출발하는 직행 무료 셔틀버스가 개장과 동시에 운행을 개시하므로 자차가 없는 뚜벅이 스키어들에게도 최상의 편의를 제공합니다.<br><br>
+경춘선 ITX-청춘 열차나 전철을 타고 백양리역에 내리면 바로 슬로프와 연결되는 엘리시안 강촌 역시 12월 첫 주말 개장을 준비하고 있습니다. 이동에 따른 교통 정체 스트레스가 전혀 없다는 독보적인 장점 덕분에 주말 당일치기 나들이객들에게 최적의 선택지로 손꼽힙니다.
+</p>
+
+<h2>04 | 경기권 곤지암리조트 및 충청·영남권 스키장 개장 예상 캘린더</h2>
+<p>
+경기도 광주에 위치한 '곤지암리조트'는 서울 강남권에서 불과 40분 거리에 위치하여 수도권 최고의 프리미엄 스키장으로 자리 잡았습니다. 곤지암리조트는 최적의 슬로프 환경과 안전을 보장하기 위해 도입한 '슬로프 정원제'와 '모바일 퀵 패스' 시스템으로 유명합니다. 곤지암의 개장 예정 시기는 경기 남부권의 기온 추이를 감안하여 12월 둘째 주(12월 11일~12일경)로 조율되고 있습니다.<br><br>
+중부권 최대 규모를 자랑하는 전북 무주의 '덕유산리조트'는 해발 1,520m 설천봉에서 시작되는 장엄한 설경과 국내 최장 길이(6.1km)를 자랑하는 실크로드 슬로프로 명성이 자자합니다. 덕유산리조트는 12월 초순 개장을 목표로 하고 있으며, 곤돌라를 이용해 정상 향적봉 눈꽃 산행까지 함께 즐길 수 있어 일반 관광객들의 수요도 대단히 높습니다.<br><br>
+영남권 유일의 스키장인 경남 양산의 '에덴밸리리조트'는 남부 지방의 온화한 기후 특성상 영하권 기온이 안정적으로 유지되는 12월 중순(12월 18일 안팎) 개장을 목표로 막바지 시설 점검에 매진하고 있습니다. 부산, 울산, 대구, 창원 등 영남권 스키어들이 당일치기로 손쉽게 스키와 보드를 즐길 수 있는 소중한 레저 공간입니다.
+</p>
+
+<!-- 인포그래픽 카드 3: 비교 매트릭스 박스 -->
+
+<!-- 4번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="2026 전국 대표 스키장별 스펙 및 접근성 비교 / 인포그래픽 카드" src="../../images/261120/5_hot_ski_resort_opening_dates_earlybird_season_ticket_discount_4.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">2026 전국 대표 스키장별 스펙 및 접근성 비교 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>05 | 스키장 얼리버드 시즌패스(X5 등) 가격 비교와 1차 사전 구매 혜택 분석</h2>
+<p>
+시즌 내내 여러 번 스키장을 방문할 계획이라면 가장 먼저 고려해야 할 필수 아이템은 '얼리버드 시즌패스'입니다. 최근 몇 년간 국내 스키 시장의 대세로 자리 잡은 것은 개별 리조트 전용 시즌권을 넘어 복수의 대형 리조트를 무제한으로 이용할 수 있는 통합 시즌권, 이른바 'X5 시즌패스(용평, 하이원, 웰리힐리, 엘리시안, 에덴밸리 연합)'입니다.<br><br>
+1차 얼리버드 판매 기간(9~10월)을 놓쳤더라도, 개막 직전인 11월 하순까지 온라인 오픈마켓 및 리조트 공식 앱을 통해 '최종 얼리버드 차수' 판매가 진행되고 있습니다. 2026~2027 시즌패스는 성인 기준 약 40만 원대 중후반에서 50만 원대 초반에 가격이 형성되어 있으며, 19세 이하 자녀 1인 무료 등록(동반 자녀권) 혜택이나 워터파크·사우나 무료 이용권, 케이블카 무료 탑승권 등 파격적인 부가 혜택이 패키지로 제공됩니다.<br><br>
+한 시즌 동안 스키장을 최소 4~5회 이상 방문할 예정이라면 주간 리프트권을 매번 단품으로 구매하는 것보다 시즌패스를 구매하는 것이 비용 면에서 압도적으로 유리합니다. 또한 리프트 발권 창구에서 줄을 서지 않고 모바일 바코드로 곧바로 게이트를 통과할 수 있어 현장 대기 시간을 획기적으로 줄일 수 있습니다.
+</p>
+
+<!-- 인포그래픽 카드 4: 실전 견적 영수증 박스 -->
+
+<!-- 5번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="스키장 당일치기 2인 이용 비용 견적 영수증 / 인포그래픽 카드" src="../../images/261120/5_hot_ski_resort_opening_dates_earlybird_season_ticket_discount_5.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">스키장 당일치기 2인 이용 비용 견적 영수증 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>06 | 당일치기 스키어를 위한 주간권·야간권 리프트권 모바일 사전 할인 예매법</h2>
+<p>
+시즌패스를 구매할 만큼 자주 가지 않는 주말 나들이 스키어라면, 현장 매표소에서 제값을 다 주고 리프트권을 발권하는 것은 절대 금물입니다. 스키장 현장 매표소의 정상 리프트 요금은 4시간권 기준 6~7만 원대, 6시간권 기준 8~9만 원대에 육박하지만, 스마트폰 모바일 예매를 조금만 미리 챙기면 누구나 손쉽게 35~50%의 할인을 받을 수 있습니다.<br><br>
+가장 보편적인 할인 방법은 '소셜커머스 및 야놀자, 여기어때, 네이버 예약' 등 온라인 플랫폼의 얼리버드 예매를 이용하는 것입니다. 개장 직전부터 12월 초순까지 한정 수량으로 풀리는 1차 얼리버드 예매권을 구매하면 주중 및 주말 구분 없이 정가 대비 40% 이상 저렴한 가격으로 바코드를 확보할 수 있습니다. 당일 미사용 시 100% 무료 취소가 가능한 상품인지 환불 규정을 체크하는 것이 안전합니다.<br><br>
+둘째는 '제휴 신용카드 현장 할인'입니다. 신한, 비씨, KB국민, NH농협, 삼성 등 주요 카드사별로 1인 4매까지 전월 실적과 무관하게 30~40%의 현장 할인을 제공하며, 매주 특정 요일(예: 수요일 레이디스 데이, 금요일 심야 데이)에는 50% 반값 특별 프로모션이 진행되므로 각 리조트 홈페이지의 '이달의 제휴 카드 이벤트'를 미리 조회해 두는 것이 큰 도움이 됩니다.
+</p>
+
+<h2>07 | 스키장 렌탈샵 vs 리조트 직영 장비·의류 대여 비용 비교와 선택 기준</h2>
+<p>
+장비가 없는 초보자나 가볍게 스키장을 찾는 분들이 가장 고민하는 부분은 스키장 내부의 '리조트 직영 렌탈'을 이용할 것인가, 아니면 스키장 입구 국도변에 늘어선 '외부 사설 렌탈샵'을 이용할 것인가 하는 점입니다. 두 방식은 편의성과 가성비 면에서 극명한 차이를 보입니다.<br><br>
+리조트 직영 렌탈의 최대 장점은 단연 '이동의 편리함'입니다. 차에 부피가 큰 스키 플레이트나 부츠를 싣고 다닐 필요 없이 슬로프 바로 앞 렌탈 하우스에서 장비를 수령하고 라이딩 후 즉시 반납할 수 있어 동선이 매우 간결합니다. 다만 직영 장비는 렌탈 회전율이 높아 장비가 다소 노후화되었거나 디자인이 획일적일 수 있으며, 의류의 경우 최신 유행 스타일을 기대하기 어렵습니다.<br><br>
+반면 외부 사설 렌탈샵은 동일한 비용으로 올해 새로 입고된 최신형 신상 스키복(오버핏 아노락, 멜빵 바지 등)과 하이엔드 부츠, 바인딩을 선택할 수 있어 스타일과 패션을 중시하는 젊은 층에게 압도적인 지지를 받습니다. 또한 스키장 주차장까지 장비를 실어다 주는 '픽업 및 배달 서비스'를 제공하는 샵들이 많아 사전 예약 시 배달 여부를 확인하면 직영 못지않은 편의성을 누릴 수 있습니다.
+</p>
+
+<!-- 인포그래픽 카드 5: 체크리스트 박스 -->
+
+<!-- 6번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="스키장 첫 출격 전 필수 안전 및 준비물 체크리스트 / 인포그래픽 카드" src="../../images/261120/5_hot_ski_resort_opening_dates_earlybird_season_ticket_discount_6.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">스키장 첫 출격 전 필수 안전 및 준비물 체크리스트 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>08 | 첫 출격 전 필수 안전 체크리스트 — 헬멧 의무화, 시즌 초반 슬로프 이용 주의점</h2>
+<p>
+설레는 마음으로 스키장 슬로프에 서기 전, 부상 없는 즐거운 시즌을 위해 반드시 기억해야 할 가장 중요한 원칙은 바로 '철저한 안전 수칙 준수'입니다. 최근 전국 주요 스키장들은 슬로프 내 충돌 사고로 인한 뇌진탕 등 중대 인명사고를 예방하기 위해 '안전 헬멧 착용 의무화' 규정을 대폭 강화하고 있으며, 헬멧 미착용 시 리프트 탑승을 현장에서 제지하는 리조트가 늘고 있습니다.<br><br>
+개장 초기(11~12월 초)의 슬로프는 인공 눈의 비중이 높아 자연설에 비해 빙판화(아이스반) 현상이 발생하기 쉽습니다. 특히 해질녘 기온이 급격히 떨어지는 오후 4시부터 6시 사이 정설 시간대 전후로는 눈 표면이 딱딱하게 얼어붙어 엣지가 미끄러지기 쉬우므로 과속을 절대 삼가야 합니다.<br><br>
+또한 자신의 실력에 맞는 슬로프를 선택하는 것이 무엇보다 중요합니다. 초보자가 과욕을 부려 중·상급 슬로프에 진입할 경우 자신뿐만 아니라 다른 이용객의 안전까지 위협할 수 있습니다. 슬로프 중앙에서 휴식을 취하거나 앉아 있는 행위는 절대 금물이며, 휴식이 필요할 때는 반드시 슬로프 가장자리 안전 그물망 쪽으로 신속히 이동하여 대기해야 합니다.
+</p>
+
+<!-- 인포그래픽 카드 6: 핵심 질문 FAQ 박스 -->
+
+<!-- 7번째 이미지: 자동 렌더링 인포그래픽 카드 -->
+<div class="img-area">
+<img alt="스키장 개장 및 이용객 자주 묻는 질문 3가지 / 인포그래픽 카드" src="../../images/261120/5_hot_ski_resort_opening_dates_earlybird_season_ticket_discount_7.png" style="width:100%; border-radius:8px; display:block; margin:0 auto;"/>
+<div class="img-caption">스키장 개장 및 이용객 자주 묻는 질문 3가지 / 인포그래픽 카드</div>
+</div>
+
+
+<h2>09 | 스키장 무료 셔틀버스 노선 예약과 수도권 탑승지 정보 총정리</h2>
+<p>
+장거리 운전 피로와 기름값, 톨게이트 비용을 아끼고 싶다면 각 리조트에서 수도권 전역을 대상으로 운행하는 '직행 셔틀버스'를 적극적으로 활용해 보시기 바랍니다. 대표적으로 비발디파크는 서울 강남, 광화문, 신촌, 노원, 잠실뿐만 아니라 인천, 부천, 수원, 일산, 분당 등 수도권 주요 거점 50여 개 정류장에서 매일 아침 직행 셔틀버스를 무료로 운행합니다.<br><br>
+하이원리조트와 모나용평 등 강원 남부권 원정 스키장들의 경우 전문 관광버스 여행사(예: 경기고속, 대원관광 등)와 연계하여 서울 주요 지하철역(사당, 종합운동장, 동대문 등)에서 정기 셔틀버스를 유료(왕복 2~3만 원대)로 운행하고 있습니다. 자차를 운전할 경우 빙판길 운전의 피로도와 스키 후 극심한 졸음운전 위험이 따르지만, 셔틀버스를 이용하면 따뜻한 차 안에서 편안하게 숙면을 취하며 다녀올 수 있어 가성비와 안전성 모두 뛰어납니다.<br><br>
+새하얀 설원 위를 미끄러지며 짜릿한 스피드와 상쾌한 겨울바람을 만끽하는 스키와 스노보드의 계절. 철저한 사전 정보 확인과 알뜰한 얼리버드 예매를 통해 2026~2027 동계 시즌의 첫 출격을 누구보다 안전하고 활기차게 열어보시기 바랍니다.
+</p>
+
+<table class="info-table">
+  <tr>
+    <th>리조트명</th><th>위치 권역</th><th>개장 목표일</th><th>특화 장점 및 비고</th>
+  </tr>
+  <tr>
+    <td><strong>모나용평</strong></td>
+    <td>강원 평창군 대관령면</td>
+    <td>2026.11.27 (금) 예정</td>
+    <td>발왕산 최상급 설질, 옐로우·핑크 슬로프 1차 오픈</td>
+  </tr>
+  <tr>
+    <td><strong>하이원리조트</strong></td>
+    <td>강원 정선군 사북읍</td>
+    <td>2026.11.27 (금) 예정</td>
+    <td>아테나 초급 코스 개방, 완만한 광폭 슬로프 최적</td>
+  </tr>
+  <tr>
+    <td><strong>비발디파크</strong></td>
+    <td>강원 홍천군 서면</td>
+    <td>2026.12.04 (금) 예정</td>
+    <td>수도권 1시간 거리, 전역 무료 셔틀버스 매일 운행</td>
+  </tr>
+  <tr>
+    <td><strong>엘리시안 강촌</strong></td>
+    <td>강원 춘천시 남산면</td>
+    <td>2026.12.05 (토) 예정</td>
+    <td>경춘선 전철 백양리역 직결, 뚜벅이 당일치기 최강</td>
+  </tr>
+  <tr>
+    <td><strong>곤지암리조트</strong></td>
+    <td>경기 광주시 도척면</td>
+    <td>2026.12.11 (금) 예정</td>
+    <td>서울 강남 40분, 슬로프 정원제 쾌적한 프리미엄 스키</td>
+  </tr>
+  <tr>
+    <td><strong>무주덕유산</strong></td>
+    <td>전북 무주군 설천면</td>
+    <td>2026.12.05 (토) 예정</td>
+    <td>국내 최장 6.1km 실크로드, 덕유산 눈꽃 곤돌라 연계</td>
+  </tr>
+</table>
+
+<div class="recommend-area">
+  <strong>📌 함께 읽으면 좋은 초겨울 힐링 여행 및 생활 정보</strong><br><br>
+  · <a href="../261116/travel_incheon_ganghwa_seokmodo_mineral_hot_spring_sunset_drive.html">인천 강화 석모도 미네랄 온천 노천탕과 서해 낙조 — 겨울 해수온천 이용 요금과 일몰 명당</a><br>
+  · <a href="../261116/hot_comprehensive_real_estate_tax_bill_inquiry_deduction_guide.html">2026년도 종합부동산세 고지서 발송일과 홈택스 세액 열람 — 1가구 1주택 기본공제와 납부 기한 안내</a>
+</div>
+
+<div class="tags">
+  <span class="tag">#2026스키장개장일</span>
+  <span class="tag">#전국스키장개장일</span>
+  <span class="tag">#용평리조트개장</span>
+  <span class="tag">#하이원리조트개장</span>
+  <span class="tag">#비발디파크개장</span>
+  <span class="tag">#스키장시즌권</span>
+  <span class="tag">#X5시즌패스</span>
+  <span class="tag">#리프트권할인</span>
+  <span class="tag">#스키장셔틀버스</span>
+  <span class="tag">#겨울스포츠</span>
+</div>
+
+</body>
+</html>
